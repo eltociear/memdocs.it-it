@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/03/2020
+ms.date: 03/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d364c77266e51b3dcbc19c237e93f17e6f8d1aa
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7817a747a01a137fd29ee8aae117cd604da233a5
+ms.sourcegitcommit: 4815f07c8c0399c077b71721c6e6b61047c75ae6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352163"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79437107"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Impostazioni di Windows 10 (e versioni successive) per la protezione dei dispositivi con Intune
 
@@ -343,7 +343,7 @@ Le regole del firewall personalizzate supportano le opzioni seguenti:
   - **Percorso file**: è necessario specificare un percorso di file per un'app nel dispositivo client, che può essere un percorso assoluto o un percorso relativo. Ad esempio:  C:\Windows\System\Notepad.exe o %WINDIR%\Notepad.exe.  
     Provider di servizi di configurazione Firewall: [FirewallRules/*FirewallRuleName*/App/FilePath](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#filepath)  
 
-  - **Servizio Windows**: specificare il nome breve del servizio Windows se si tratta di un servizio e non di un'applicazione che invia o riceve traffico. Per trovare il nome breve del servizio, usare il comando di PowerShell **Get-Service**.  
+  - **Servizio Windows** - Specificare il nome breve del servizio Windows se si tratta di un servizio e non di un'applicazione che invia o riceve traffico. Per trovare il nome breve del servizio, usare il comando di PowerShell **Get-Service**.  
     Provider di servizi di configurazione Firewall: [FirewallRules/*FirewallRuleName*/App/ServiceName](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#servicename)  
 
   - **Tutto** - *Non è disponibile alcuna configurazione aggiuntiva*.  
@@ -562,7 +562,7 @@ Queste impostazioni si applicano in modo specifico alle unità dati del sistema 
     - **Richiedere il PIN di avvio con TPM**
 
     > [!TIP]
-    > Per installare BitLocker in modo automatico e invisibile all'utente in un dispositivo aggiunto ad Azure AD che esegue Windows 1809 o versione successiva, questa impostazione deve essere impostata su *Richiedi PIN di avvio con TPM*. Per altre informazioni, vedere [Abilitare automaticamente BitLocker nei dispositivi](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
+    > Per installare BitLocker in modo automatico e invisibile all'utente in un dispositivo aggiunto ad Azure AD che esegue Windows 1809 o versione successiva, questa impostazione non deve essere impostata su *Richiedi PIN di avvio con TPM*. Per altre informazioni, vedere [Abilitare automaticamente BitLocker nei dispositivi](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
 
   - **Chiave di avvio TPM compatibile**  
     **Impostazione predefinita**: Consenti la chiave di avvio con TPM  
@@ -574,7 +574,7 @@ Queste impostazioni si applicano in modo specifico alle unità dati del sistema 
     - **Richiedi la chiave di avvio con TPM**  
 
     > [!TIP]
-    > Per installare BitLocker in modo automatico e invisibile all'utente in un dispositivo aggiunto ad Azure AD che esegue Windows 1809 o versione successiva, questa impostazione deve essere impostata su *Richiedi la chiave di avvio con TPM*. Per altre informazioni, vedere [Abilitare automaticamente BitLocker nei dispositivi](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
+    > Per installare BitLocker in modo automatico e invisibile all'utente in un dispositivo aggiunto ad Azure AD che esegue Windows 1809 o versione successiva, questa impostazione non deve essere impostata su *Richiedi la chiave di avvio con TPM*. Per altre informazioni, vedere [Abilitare automaticamente BitLocker nei dispositivi](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
 
   - **Chiave di avvio e PIN TPM compatibile**  
     **Impostazione predefinita**: Consenti la chiave di avvio e il PIN con TPM  
@@ -585,7 +585,7 @@ Queste impostazioni si applicano in modo specifico alle unità dati del sistema 
     - **Richiedi la chiave di avvio e il PIN con TPM**   
 
     > [!TIP]  
-    > Per installare BitLocker in modo automatico e invisibile all'utente in un dispositivo aggiunto ad Azure AD che esegue Windows 1809 o versione successiva, questa impostazione deve essere impostata su *Richiedi la chiave di avvio e il PIN con TPM*. Per altre informazioni, vedere [Abilitare automaticamente BitLocker nei dispositivi](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
+    > Per installare BitLocker in modo automatico e invisibile all'utente in un dispositivo aggiunto ad Azure AD che esegue Windows 1809 o versione successiva, questa impostazione non deve essere impostata su *Richiedi la chiave di avvio e il PIN con TPM*. Per altre informazioni, vedere [Abilitare automaticamente BitLocker nei dispositivi](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
 
 - **Lunghezza minima del PIN**  
     **Impostazione predefinita**: Non configurato  
@@ -1649,240 +1649,6 @@ Usare queste opzioni per configurare le impostazioni di sicurezza locali nei dis
   - **Manuale**
   - **Automatic** (Automatica)
   - **Disabilitato**
-
-## <a name="user-rights"></a>Diritti utente
-
-- **Accesso a Gestione credenziali come chiamante trusted**  
-  **Impostazione predefinita**: Non configurato  
-  CSP: [UserRights/AccessCredentialManagerAsTrustedCaller](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-accesscredentialmanagerastrustedcaller)
-
-  Questo diritto utente viene usato da Gestione credenziali durante le operazioni di backup e ripristino. Le credenziali salvate degli utenti potrebbero essere compromesse se questo privilegio viene assegnato ad altre entità.
-  - **Non configurato**
-  - **Consentito**
-
-- **Concessione dell'accesso locale**  
-  **Impostazione predefinita**: Non configurato  
-  CSP: [UserRights/AllowLocalLogOn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-allowlocallogon)
-
-  Questo diritto utente consente di determinare quali utenti possono accedere al computer.
-  - **Non configurato**
-  - **Consentito**
-
-- **Autorizzazione dell'accesso dalla rete**  
-  **Impostazione predefinita**: Non configurato  
-  CSP: [UserRights/AccessFromNetwork](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-accessfromnetwork)
-
-  Questo diritto utente consente di determinare quali utenti e gruppi sono autorizzati a connettersi al computer sulla rete.
-  - **Non configurato**
-  - **Consentito**
-
-- **Funzionamento come parte del sistema operativo**  
-  **Impostazione predefinita**: Non configurato  
-  CSP: [UserRights/ActAsPartOfTheOperatingSystem](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-actaspartoftheoperatingsystem)
-
-  Funzionamento come parte del sistema operativo
-  - **Non configurato**
-  - **Consentito**  
-
-- **Esecuzione del backup di file e directory**  
-  **Impostazione predefinita**: Non configurato  
-  CSP: [UserRights/BackupFilesAndDirectories](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-backupfilesanddirectories)
-
-  Questo diritto utente consente di determinare quali utenti possono ignorare le autorizzazioni di file, directory, Registro di sistema e di altri oggetti permanenti durante il backup di file e directory.
-  - **Non configurato**
-  - **Consentito**
-
-- **Modifica dell'ora di sistema**  
-  **Impostazione predefinita**: Non configurato  
-  CSP: [UserRights/ChangeSystemTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-changesystemtime)
-
-  Questo diritto utente consente di determinare quali utenti e gruppi possono modificare l'ora e la data del clock interno del computer.
-  - **Non configurato**
-  - **Consentito**
-
-- **Creazione di oggetti globali**  
-  **Impostazione predefinita**: Non configurato  
-  CSP: [UserRights/CreateGlobalObjects](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createglobalobjects)
-
-  Questa impostazione di sicurezza consente di determinare se gli utenti possono creare oggetti globali disponibili per tutte le sessioni. Gli utenti che possono creare oggetti globali possono influire sui processi in esecuzione nelle sessioni di altri utenti e questo potrebbe provocare un errore dell'applicazione o il danneggiamento dei dati.
-  - **Non configurato**
-  - **Consentito**
-
-- **Creazione di un file di paging**  
-  **Impostazione predefinita**: Non configurato  
-  CSP: [UserRights/CreatePageFile](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createpagefile)
-
-  Questo diritto utente consente di determinare quali utenti e gruppi possono chiamare un'API interna e modificare le dimensioni di un file di paging.
-  - **Non configurato**
-  - **Consentito**
-
-- **Creazione di oggetti condivisi permanentemente**  
-  **Impostazione predefinita**: Non configurato  
-  CSP: [UserRights/CreatePermanentSharedObjects](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createpermanentsharedobjects)
-
-  Questo diritto utente consente di determinare quali account possono essere usati dai processi per creare un oggetto directory usando Object Manager.
-  - **Non configurato**
-  - **Consentito**
-
-- **Creazione di collegamenti simbolici**  
-  **Impostazione predefinita**: Non configurato  
-  CSP: [UserRights/CreateSymbolicLinks](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createsymboliclinks)
-
-  Questo diritto utente consente di determinare se l'utente può creare un collegamento simbolico dal computer a cui è connesso.
-  - **Non configurato**
-  - **Consentito**
-
-- **Creazione di token**  
-  **Impostazione predefinita**: Non configurato  
-  CSP: [UserRights/CreateToken](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createtoken)
-
-  Questo diritto utente consente di determinare quali utenti/gruppi possono essere usati dai processi per creare un token che può essere quindi usato per ottenere l'accesso a qualsiasi risorsa locale quando il processo usa un'API interna per creare un token di accesso.
-  - **Non configurato**
-  - **Consentito**
-
-- **Esecuzione del debug di un programma**  
-  **Impostazione predefinita**: Non configurato  
-    CSP: [UserRights/DebugPrograms](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-debugprograms)
-
-  Questo diritto utente consente di determinare quali utenti possono collegare un debugger a qualsiasi processo o al kernel.
-  - **Non configurato**
-  - **Consentito**
-
-- **Rifiuto dell'accesso dalla rete**  
-  **Impostazione predefinita**: Non configurato  
-  CSP: [UserRights/DenyAccessFromNetwork](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-denyaccessfromnetwork)
-
-  Questo diritto utente consente di determinare quali utenti non sono autorizzati ad accedere a un computer sulla rete.
-  - **Non configurato**
-  - **Consentito**
-
-- **Rifiuto dell'accesso come servizio**  
-  **Impostazione predefinita**: Non configurato  
-  CSP: [UserRights/DenyLocalLogOn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-denylocallogon)
-
-  Questa impostazione di sicurezza consente di determinare quali account del servizio non sono autorizzati a registrare un processo come servizio.
-  - **Non configurato**
-  - **Consentito**
-
-- **Rifiuto dell'accesso tramite Servizi Desktop remoto**  
-  **Impostazione predefinita**: Non configurato  
-  CSP: [UserRights/DenyRemoteDesktopServicesLogOn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-denyremotedesktopserviceslogon)
-
-  Questo diritto utente consente di determinare quali utenti e gruppi non sono autorizzati ad accedere come client di Servizi Desktop remoto.
-  - **Non configurato**
-  - **Consentito**
-
-- **Abilitazione di delega**  
-  **Impostazione predefinita**: Non configurato  
-  CSP: [UserRights/EnableDelegation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-enabledelegation)
-
- Questo diritto utente consente di determinare quali utenti possono configurare l'impostazione Trusted per la delega in un oggetto utente o computer.
-  - **Non configurato**
-  - **Consentito**
-
-- **Generazione di controlli di sicurezza**  
-  **Impostazione predefinita**: Non configurato  
-  CSP: [UserRights/GenerateSecurityAudits](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-generatesecurityaudits)
-
-  Questo diritto utente consente di determinare quali account possono essere usati da un processo per aggiungere voci al log di sicurezza. Il log di sicurezza viene usato per tenere traccia dell'accesso non autorizzato al sistema.
-  - **Non configurato**
-  - **Consentito**
-
-- **Rappresentazione di un client**  
-  **Impostazione predefinita**: Non configurato  
-  CSP: [UserRights/ImpersonateClient](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-impersonateclient)
-
-  L'assegnazione di questo diritto utente a un utente consente ai programmi in esecuzione per conto di tale utente di rappresentare un client. Se si rende obbligatorio questo diritto utente per questo tipo di rappresentazione, si impedisce a un utente non autorizzato di convincere un client a connettersi a un servizio creato e quindi di rappresentare tale client. Questa operazione può elevare le autorizzazioni dell'utente non autorizzato a livelli amministrativi o di sistema.
-  - **Non configurato**
-  - **Consentito**
-
-- **Aumento della priorità di pianificazione**  
-  **Impostazione predefinita**: Non configurato  
-  CSP: [UserRights/IncreaseSchedulingPriority](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-increaseschedulingpriority)
-
-  Questo diritto utente consente di determinare quali account possono usare un processo con accesso di tipo Proprietà di scrittura a un altro processo per incrementare la priorità di esecuzione assegnata all'altro processo.
-  - **Non configurato**
-  - **Consentito**
-
-- **Caricamento e scaricamento di driver di dispositivo**  
-  **Impostazione predefinita**: Non configurato  
-  CSP: [UserRights/LoadUnloadDeviceDrivers](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-loadunloaddevicedrivers)
-
-  Questo diritto utente consente di determinare quali utenti possono caricare e scaricare dinamicamente i driver di dispositivo o altro codice nella modalità kernel.
-  - **Non configurato**
-  - **Consentito**
-
-- **Blocco delle pagine in memoria**  
-  **Impostazione predefinita**: Non configurato  
-  CSP: [UserRights/LockMemory](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-lockmemory)
-
-  Questo diritto utente determina quali account possono usare un processo per mantenere i dati nella memoria fisica, impedendo al sistema di eseguire il paging dei dati nella memoria virtuale su disco.
-  - **Non configurato**
-  - **Consentito**
-
-- **Gestione dei log di controllo e di sicurezza**  
-  **Impostazione predefinita**: Non configurato  
-  CSP: [UserRights/ManageAuditingAndSecurityLog](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-manageauditingandsecuritylog)
-
-  Questo diritto utente consente di determinare quali utenti possono specificare opzioni di controllo dell'accesso a oggetti per singole risorse, ad esempio file, oggetti di Active Directory e chiavi del Registro di sistema.
-  - **Non configurato**
-  - **Consentito**
-
-- **Esecuzione di attività di manutenzione volume**  
-  **Impostazione predefinita**: Non configurato  
-  CSP: [UserRights/ManageVolume](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-managevolume)
-
-  Questo diritto utente consente di determinare quali utenti e gruppi possono eseguire attività di manutenzione in un volume, ad esempio la deframmentazione remota.
-  - **Non configurato**
-  - **Consentito**
-
-- **Modifica dei valori di ambiente firmware**  
-  **Impostazione predefinita**: Non configurato  
-  CSP: [UserRights/ModifyFirmwareEnvironment](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-modifyfirmwareenvironment)
-
-  Questo diritto utente consente di determinare chi può modificare i valori dell'ambiente del firmware.
-  - **Non configurato**
-  - **Consentito**
-
-- **Modifica di un'etichetta dell'oggetto**  
-  **Impostazione predefinita**: Non configurato  
-  CSP: [UserRights/ModifyObjectLabel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-modifyobjectlabel)
-
-  Questo diritto utente consente di determinare quali account utente possono modificare l'etichetta di integrità degli oggetti, ad esempio file, chiavi del Registro di sistema o processi di cui sono proprietari altri utenti.
-  - **Non configurato**
-  - **Consentito**
-
-- **Profilo del singolo processo**  
-  **Impostazione predefinita**: Non configurato  
-  CSP: [UserRights/ProfileSingleProcess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-profilesingleprocess)
-
-  Questo diritto utente consente di determinare quali utenti possono usare gli strumenti di monitoraggio delle prestazioni per monitorare le prestazioni dei processi di sistema.
-  - **Non configurato**
-  - **Consentito**
-
-- **Arresto remoto**  
-  **Impostazione predefinita**: Non configurato  
-  CSP: [UserRights/RemoteShutdown](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-remoteshutdown)
-
-  Questo diritto utente consente di determinare quali utenti sono autorizzati ad arrestare un computer da una posizione remota in rete. L'uso non appropriato di questo diritto utente può provocare scenari di tipo Denial of Service.
-  - **Non configurato**
-  - **Consentito**
-  
-- **Ripristino di file e directory**  
-  **Impostazione predefinita**: Non configurato  
-  CSP: [UserRights/RestoreFilesAndDirectories](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-restorefilesanddirectories)
-  
-  Questo diritto utente consente di determinare quali utenti possono ignorare le autorizzazioni di file, directory, Registro di sistema e altri oggetti permanenti durante il ripristino dei file e delle directory sottoposti a backup e consente di determinare quali utenti possono configurare qualsiasi entità di sicurezza valida come proprietario di un oggetto.
-  - **Non configurato**
-  - **Consentito**
-  
-- **Acquisizione della proprietà di oggetti o file**  
-  **Impostazione predefinita**: Non configurato  
-  CSP: [UserRights/TakeOwnership](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-takeownership)
-
-  Questo diritto utente consente di determinare quali utenti possono acquisire la proprietà di eventuali oggetti a protezione diretta nel sistema, inclusi oggetti di Active Directory, file e cartelle, stampanti, chiavi del Registro di sistema, processi e thread.
-  - **Non configurato**
-  - **Consentito**
 
 ## <a name="next-steps"></a>Passaggi successivi
 

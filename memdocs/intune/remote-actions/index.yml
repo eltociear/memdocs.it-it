@@ -1,0 +1,85 @@
+### YamlMime:Landing
+title: Eseguire le azioni del dispositivo in modalità remota con Intune
+summary: Intune offre agli amministratori la possibilità di eseguire le azioni del dispositivo in modalità remota. Usando queste azioni remote dal portale di Intune, è possibile riavviare i dispositivi, reimpostare i passcode, individuare i dispositivi smarriti o rubati e altro ancora.
+metadata:
+  title: Eseguire le azioni del dispositivo in remoto con Intune
+  description: Intune consente di eseguire le azioni in modalità remota.
+  services: service
+  ms.service: microsoft-intune
+  ms.subservice: remote-actions
+  ms.topic: landing-page
+  ms.collection: collection
+  author: ErikjeMS
+  ms.author: erikje
+  ms.date: 09/13/2019
+  ms.openlocfilehash: 0c2340fffb2e3680ae4d137f9c0c944a72babf35
+  ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+  ms.translationtype: HT
+  ms.contentlocale: it-IT
+  ms.lasthandoff: 03/13/2020
+  ms.locfileid: "79333635"
+landingContent:
+- title: Eseguire le azioni del dispositivo in modalità remota
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Panoramica della gestione dei dispositivi
+      url: device-management.md
+  - linkListType: how-to-guide
+    links:
+    - text: Rinominare il dispositivo
+      url: device-rename.md
+    - text: Visualizzare i dettagli del dispositivo
+      url: device-inventory.md
+    - text: Inviare notifiche personalizzate ai dispositivi
+      url: custom-notifications.md
+    - text: Sincronizzare il dispositivo
+      url: device-sync.md
+    - text: Amministrare in remoto i dispositivi con TeamViewer
+      url: teamviewer-support.md
+    - text: Usare le azioni in blocco del dispositivo
+      url: bulk-device-actions.md
+- title: Rimuovere e riavviare
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Rimuovere, cancellare, ritirare, annullare la registrazione
+      url: devices-wipe.md
+    - text: Installazione da zero di Windows
+      url: device-fresh-start.md
+    - text: Riavviare un dispositivo
+      url: device-restart.md
+- title: Azioni utente
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Disconnettere l'utente
+      url: device-logout-user.md
+    - text: Trovare l'utente primario
+      url: find-primary-user.md
+    - text: Rimuovere un utente
+      url: device-remove-user.md
+- title: Blocchi e password
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Bloccare il dispositivo
+      url: device-remote-lock.md
+    - text: Reimpostare il passcode del dispositivo
+      url: device-passcode-reset.md
+    - text: Reimpostazione del PIN di Windows 10
+      url: device-lost-mode.md
+- title: Azioni del dispositivo Apple
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Individuare i dispositivi iOS/iPadOS
+      url: device-locate.md
+    - text: Attivare la modalità con supervisione di iOS/iPadOS
+      url: device-supervised-mode.md
+    - text: Attivare la modalità di dispositivo perso di iOS/iPadOS
+      url: device-lost-mode.md
+    - text: Cancellare i dati dal dispositivo macOS
+      url: device-erase.md
+    - text: Disabilitare Blocco attivazione
+      url: device-activation-lock-disable.md

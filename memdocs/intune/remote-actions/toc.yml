@@ -49,7 +49,9 @@
           href: device-rename.md
         - name: Inviare notifiche
           href: custom-notifications.md
-        - name: Controllo remoto dei dispositivi mobili
+        - name: Assistenza remota ai dispositivi mobili
+          href: remote-assist-mobile-devices.md
+        - name: Usare TeamViewer per l'amministrazione remota
           href: teamviewer-support.md
         - name: Sincronizzare il dispositivo
           href: device-sync.md

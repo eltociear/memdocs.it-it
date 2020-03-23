@@ -81,6 +81,8 @@
           href: android-enroll-device-administrator.md
         - name: Gestire dispositivi con profilo di lavoro Android Enterprise
           href: android-enterprise-overview.md
+        - name: Spostare i dispositivi dell'amministratore dei dispositivi nella gestione del profilo di lavoro
+          href: android-move-device-admin-work-profile.md
         - name: Registrazione per dispositivi mobili Samsung KNOX
           href: android-samsung-knox-mobile-enroll.md
           displayName: kda; kme

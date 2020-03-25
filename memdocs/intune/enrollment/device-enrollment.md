@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a81d0cad6e7fa985733675912ada6f446eb501d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4aaa8bcee3684c73fa5ec3d488fd3107585dfc61
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359404"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086161"
 ---
 # <a name="what-is-device-enrollment"></a>Che cos'è la registrazione dei dispositivi?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -39,7 +39,7 @@ Per impostazione predefinita, i dispositivi di tutte le piattaforme sono autoriz
 |:---:|:---:|:---:|:---:|:---:|
 | | I dispositivi vengono cancellati durante la registrazione. | Associa ogni dispositivo a un utente.| In caso affermativo, gli utenti non possono annullare la registrazione di dispositivi. | |
 |**[BYOD](#bring-your-own-device)** | No| Sì | No | [Altre informazioni](apple-mdm-push-certificate-get.md)|
-|**[DEM](#device-enrollment-manager)**| No |No |No | [Altre informazioni](device-enrollment-program-enroll-ios.md)|
+|**[DEM](#device-enrollment-manager)**| No |No |No | [Altre informazioni](device-enrollment-manager-enroll.md)|
 |**[DEP](#apple-device-enrollment-program)**| Sì | Facoltativo | Facoltativo|[Altre informazioni](device-enrollment-program-enroll-ios.md)|
 |**[USB-SA](#usb-sa)**| Sì | Facoltativo | No| [Altre informazioni](apple-configurator-enroll-ios.md)|
 |**[USB-Direct](#usb-direct)**| No | No | No|[Altre informazioni](apple-configurator-enroll-ios.md)|
@@ -67,7 +67,7 @@ Per impostazione predefinita, i dispositivi di tutte le piattaforme sono autoriz
 
 | **Personale** | **Metodi di registrazione** | **Ripristino necessario** | **Affinità utente** | **Locked** | **Informazioni dettagliate**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**Android Device Admin**|**Avviato dall'utente tramite portale aziendale** | No | Sì | No | [Altre informazioni](https://docs.microsoft.com/user-help/enroll-device-android-company-portal)|
+|**Android Device Admin**|**Avviato dall'utente tramite portale aziendale** | No | Sì | No | [Altre informazioni](https://docs.microsoft.com/mem/intune/user-help/enroll-device-android-company-portal)|
 |**Profilo aziendale di Android Enterprise**|**Avviato dall'utente tramite portale aziendale**| No | Sì | No | [Altre informazioni](android-work-profile-enroll.md)|
 
 

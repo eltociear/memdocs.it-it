@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a38664640b448d6770d4728a9a9918e251c37e3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 93fba17973571a9981269eb0b9fc98dae20cb920
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79344701"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085867"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Risolvere i problemi di registrazione dei dispositivi in Microsoft Intune
 
@@ -47,8 +47,8 @@ Prima di iniziare la risoluzione dei problemi, verificare di aver configurato In
 
 Gli utenti dei dispositivi gestiti possono raccogliere log di registrazione e diagnostica da sottoporre all'analisi dell'amministratore. Le istruzioni per raccogliere i log sono disponibili nell'articolo:
 
-- [Inviare gli errori di registrazione all'amministratore IT](https://docs.microsoft.com/user-help/send-enrollment-errors-to-your-it-admin-android)
-- [Inviare gli errori iOS/iPadOS all'amministratore IT](https://docs.microsoft.com/user-help/send-errors-to-your-it-admin-ios)
+- [Inviare gli errori di registrazione all'amministratore IT](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-using-cable-android)
+- [Inviare gli errori iOS/iPadOS all'amministratore IT](https://docs.microsoft.com/mem/intune/user-help/send-errors-to-your-it-admin-ios)
 
 
 ## <a name="general-enrollment-issues"></a>Problemi di registrazione generali

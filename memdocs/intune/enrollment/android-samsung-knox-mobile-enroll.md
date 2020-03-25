@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d7ec41361571647cc417dc34ad29522d50477eb
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b530e4590d50190160695049e2b72f03a0384131
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339566"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233583"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>Registrare automaticamente i dispositivi Android usando Knox Mobile Enrollment di Samsung
 
@@ -61,7 +61,7 @@ Quando la società è registrata correttamente, è possibile creare il profilo M
 - Per creare un profilo MDM per Android, selezionare **Device Admin** (Amministratore del dispositivo) come tipo di profilo nel portale di Knox. 
 - Per creare un profilo MDM per Android Enterprise, selezionare **Device Owner** (Proprietario dispositivo) come tipo di profilo nel portale di Knox.  
 
-### <a name="for-android"></a>Per Android
+### <a name="for-android-enterprise"></a>Per Android Enterprise
 
 | Campi del profilo MDM| Necessaria? | Valori | 
 |-------------------|-----------|-------| 
@@ -78,7 +78,7 @@ Quando la società è registrata correttamente, è possibile creare il profilo M
 
 \* Questo campo non è obbligatorio per completare la creazione del profilo nel portale di Knox. È tuttavia necessario compilare questo campo in modo che il profilo possa registrare correttamente il dispositivo in Intune.
 
-### <a name="for-android-enterprise"></a>Per Android Enterprise
+### <a name="for-android"></a>Per Android
 
 Per indicazioni dettagliate, vedere le istruzioni per la [creazione del profilo Samsung](https://docs.samsungknox.com/KME-Getting-Started/Content/create-profiles.htm).
 

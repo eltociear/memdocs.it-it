@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 718ca1a6b17ff967df2267aa9f9b27cd2d5980a6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 38c3c4adb7029303eaad34b1d5a9fdef774c0f00
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79343180"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086439"
 ---
 # <a name="add-wi-fi-settings-for-android-enterprise-dedicated-and-fully-managed-devices-in-microsoft-intune"></a>Aggiungere le impostazioni Wi-Fi per i dispositivi Android Enterprise dedicati e completamente gestiti in Microsoft Intune
 
@@ -31,7 +31,7 @@ Questo articolo descrive queste impostazioni. [Usare le impostazioni Wi-Fi nei d
 
 ## <a name="before-you-begin"></a>Prima di iniziare
 
-[Creare un profilo di dispositivo](wi-fi-settings-configure.md#create-a-device-profile).
+[Creare un profilo di dispositivo](wi-fi-settings-configure.md).
 
 ## <a name="device-owner-only"></a>Solo proprietario del dispositivo
 

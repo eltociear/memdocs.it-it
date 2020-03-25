@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 842b262c2ae19a7a026d87600df5ffb0e80cf9b8
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 969dbcbe3fe1b1a155769bec6403b889b3d326bc
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359235"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086095"
 ---
 # <a name="set-up-iosipados-and-ipados-user-enrollment-preview"></a>Configurare la registrazione utente iOS/iPadOS e iPadOS (anteprima)
 
@@ -59,7 +59,7 @@ Un profilo di registrazione definisce le impostazioni applicate a un gruppo di d
 
     - **Registrazione dispositivi**: tutti gli utenti del profilo usano Registrazione dispositivi.
     - **Registrazione utenti**: tutti gli utenti del profilo usano Registrazione utenti.
-    - **Determinazione in base alla scelta utente**: tutti gli utenti del gruppo potranno scegliere il tipo di registrazione da usare. Quando registrano i propri dispositivi, gli utenti vedranno visualizzate le opzioni **Sono il proprietario del dispositivo** e **(Società) possiede il dispositivo** tra cui scegliere. Se scelgono la seconda opzione, il dispositivo verrà registrato usando la registrazione dispositivi. Se l'utente sceglie **Sono il proprietario del dispositivo**, otterrà un'altra opzione per proteggere l'intero dispositivo o solo le app e i dati correlati al lavoro. La scelta dell'utente finale sulla proprietà del dispositivo determina il tipo di registrazione implementato nel dispositivo. Questa scelta dell'utente viene riflessa anche nell'attributo Proprietà del dispositivo in Intune. Per altre informazioni sull'esperienza utente, vedere [Configurare l'accesso del dispositivo iOS/iPadOS alle risorse aziendali](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-ios).
+    - **Determinazione in base alla scelta utente**: tutti gli utenti del gruppo potranno scegliere il tipo di registrazione da usare. Quando registrano i propri dispositivi, gli utenti vedranno visualizzate le opzioni **Sono il proprietario del dispositivo** e **(Società) possiede il dispositivo** tra cui scegliere. Se scelgono la seconda opzione, il dispositivo verrà registrato usando la registrazione dispositivi. Se l'utente sceglie **Sono il proprietario del dispositivo**, otterrà un'altra opzione per proteggere l'intero dispositivo o solo le app e i dati correlati al lavoro. La scelta dell'utente finale sulla proprietà del dispositivo determina il tipo di registrazione implementato nel dispositivo. Questa scelta dell'utente viene riflessa anche nell'attributo Proprietà del dispositivo in Intune. Per altre informazioni sull'esperienza utente, vedere [Configurare l'accesso del dispositivo iOS/iPadOS alle risorse aziendali](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp).
     
 5. Selezionare **Avanti**.
 

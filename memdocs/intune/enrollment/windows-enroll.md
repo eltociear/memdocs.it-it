@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c2a32561f66f3170b41209cb4d324e368768878
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 1f4d51cbd5c8bc6c82822d5e26191c01d2e1bb1d
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79344428"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220150"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Configurare la registrazione dei dispositivi Windows
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Questo articolo offre agli amministratori IT informazioni utili per semplificare la registrazione dei dispositivi Windows per gli utenti. Dopo aver [configurato Intune](../fundamentals/setup-steps.md) gli utenti registrano i dispositivi Windows [accedendo](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-windows) con l'account aziendale o dell'istituto di istruzione.  
+Questo articolo offre agli amministratori IT informazioni utili per semplificare la registrazione dei dispositivi Windows per gli utenti. Dopo aver [configurato Intune](../fundamentals/setup-steps.md) gli utenti registrano i dispositivi Windows [accedendo](https://docs.microsoft.com/mem/intune/user-help/windows-enrollment-company-portal) con l'account aziendale o dell'istituto di istruzione.  
 
 L'amministratore di Intune può semplificare la registrazione nei modi seguenti:
 
@@ -111,7 +111,7 @@ Informare gli utenti sulla modalità di registrazione dei dispositivi Windows e 
 > [!NOTE]
 > Gli utenti finali devono accedere al sito Web del portale aziendale attraverso Microsoft Edge per visualizzare le app Windows assegnate per le versioni di Windows specifiche. Altri browser, inclusi Google Chrome, Mozilla Firefox e Internet Explorer, non supportano questo tipo di filtro.
 
-Per istruzioni sulla registrazione da parte dell'utente finale, vedere [Registrare il dispositivo Windows in Intune](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-windows). È anche possibile invitare gli utenti a leggere [Quali sono le informazioni visibili per l'azienda quando si registra il dispositivo in Intune?](https://docs.microsoft.com/user-help/what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows).
+Per istruzioni sulla registrazione da parte dell'utente finale, vedere [Registrare il dispositivo Windows in Intune](../user-help/windows-enrollment-company-portal.md). È anche possibile invitare gli utenti a leggere [Quali sono le informazioni visibili per l'azienda quando si registra il dispositivo in Intune?](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
 
 >[!IMPORTANT]
 > Se la registrazione MDM automatica non è abilitata e vengono usati dispositivi Windows 10 aggiunti ad Azure AD, saranno visibili due record nella console di Intune dopo la registrazione. Per evitare questo problema assicurarsi che gli utenti con dispositivi aggiunti ad Azure AD passino ad **Account** > **Accedi all'azienda o all'istituto di istruzione** e **Connetti** usando lo stesso account. 

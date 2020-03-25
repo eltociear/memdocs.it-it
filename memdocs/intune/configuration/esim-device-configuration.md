@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,18 +16,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f12282acebaa90d3afe868bb28743444d01001d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: e4e9a37e2dbb725a06d304d345fd085dabbc5e14
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79343492"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087000"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Configurare i profili cellulare eSIM in Intune - Anteprima pubblica
 
 eSIM è un chip SIM incorporato, che consente di accedere a Internet su una connessione alla rete cellulare in un dispositivo che supporta la tecnologia eSIM, ad esempio [Surface LTE Pro](https://www.microsoft.com/surface/business/surface-pro). Con un eSIM, non è necessario ottenere una scheda SIM dall'operatore di telefonia mobile. Chi viaggia in tutto il mondo può anche passare da un operatore di telefonia mobile a un altro e da un piano dati a un altro per rimanere sempre connesso.
 
 Ad esempio è possibile avere un piano di rete dati per il lavoro e un altro piano con un altro operatore per uso personale. Mentre si è in viaggio, è possibile ottenere l'accesso a Internet cercando operatori di telefonia mobile con piani dati nell'area in cui ci si trova.
+
+Questa funzionalità si applica a:
+
+- Windows 10 e versioni successive
 
 In Intune è possibile importare un file contenente i codici di attivazione monouso resi disponibili dall'operatore di telefonia mobile. Per configurare i piani di rete dati nel modulo eSIM, distribuire tali codici di attivazione nei dispositivi che supportano eSIM. Quando Intune installa il codice di attivazione, il modulo hardware eSIM usa i dati del codice di attivazione per contattare l'operatore di telefonia mobile. Al termine dell'operazione, il profilo eSIM viene scaricato sul dispositivo e configurato per l'attivazione del cellulare.
 

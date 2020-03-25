@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 58069b074db2d885ad63f03c4ba5877458bc7bc1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8bc627e7b9efb68e8d5cb777b5d8e659b06cab92
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364071"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086812"
 ---
 # <a name="android-enterprise-device-settings-to-configure-vpn-in-intune"></a>Impostazioni del dispositivo Android Enterprise per la configurazione della rete privata virtuale (VPN) in Intune
 
@@ -35,7 +35,7 @@ Per altre informazioni sui profili VPN in Intune, vedere [Profili VPN](vpn-setti
 
 ## <a name="before-you-begin"></a>Prima di iniziare
 
-[Creare un profilo di configurazione del dispositivo](vpn-settings-configure.md#create-a-device-profile) e scegliere **Android Enterprise**.
+[Creare un profilo di configurazione del dispositivo](vpn-settings-configure.md) e scegliere **Android Enterprise**.
 
 ## <a name="device-owner-only"></a>Solo proprietario del dispositivo
 

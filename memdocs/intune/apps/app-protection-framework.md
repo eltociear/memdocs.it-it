@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cfb0012dfc2cedb72c64a54c16b567dffff84c9e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: cd6956a9bdb19f25e39dd8cfb8e7e685d60f7b8c
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342296"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083547"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>Framework di protezione dei dati con criteri di protezione delle app 
 
@@ -55,7 +55,7 @@ Come indicato nella tabella, è necessario eseguire tutte le modifiche apportate
 
 Durante il test delle modifiche ai criteri di protezione delle app, tenere presenti i [tempi di distribuzione](app-protection-policy-delivery.md). Lo stato della distribuzione dei criteri di protezione delle app per un determinato utente può essere monitorato. Per altre informazioni, vedere [Come monitorare i criteri di protezione delle app](app-protection-policies-monitor.md).
 
-Le singole impostazioni dei criteri di protezione per ogni app possono essere convalidate nei dispositivi tramite Edge e l'URL *about:Intunehelp*. Per altre informazioni, vedere [Esaminare i log di protezione delle app client](app-protection-policy-settings-log.md) e [Gestire l'accesso Web usando Microsoft Edge con Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs).
+Le singole impostazioni dei criteri di protezione per ogni app possono essere convalidate nei dispositivi tramite Edge e l'URL *about:Intunehelp*. Per altre informazioni, vedere [Esaminare i log di protezione delle app client](app-protection-policy-settings-log.md) e [Gestire l'accesso Web usando Microsoft Edge con Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs).
 
 ## <a name="app-data-protection-framework-settings"></a>Impostazioni del framework di protezione dei dati con criteri di protezione delle app
 

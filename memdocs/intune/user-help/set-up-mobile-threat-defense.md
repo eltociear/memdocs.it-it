@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 889c7ef6d45a51a4aed86bf1a76842feb6f6251a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b5df63a14f27b657c585eb43e09b02368d969939
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79336108"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084408"
 ---
 # <a name="install-mobile-threat-defense"></a>Installare Mobile Threat Defense   
 
@@ -79,9 +79,9 @@ Per altre informazioni sulla registrazione dei dispositivi, vedere [Registrare i
 Se l'installazione non riesce, contattare il responsabile del supporto IT. Visitare il [sito Web Portale aziendale](https://go.microsoft.com/fwlink/?linkid=2010980) per trovare le informazioni di contatto dell'organizzazione.  
 
 È anche possibile inviare i log dell'app al responsabile del supporto IT per fornire più contesto sull'installazione.  
-* Utenti Android: [caricare e inviare i log tramite posta elettronica](https://docs.microsoft.com/user-help/send-logs-to-your-it-admin-by-email-android) dall'app Portale aziendale.   
+* Utenti Android: [caricare e inviare i log tramite posta elettronica](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android) dall'app Portale aziendale.   
 
-* Utenti di dispositivi iOS: [recuperare e inviare i log](https://docs.microsoft.com/intune/apps/manage-microsoft-edge#use-microsoft-edge-on-ios-to-access-managed-app-logs) da Microsoft Edge per iOS.  
+* Utenti di dispositivi iOS: [recuperare e inviare i log](https://docs.microsoft.com/intune/apps/manage-microsoft-edge#use-microsoft-edge-to-access-managed-app-logs) da Microsoft Edge per iOS.  
 
 ## <a name="resolve-a-threat"></a>Risolvere una minaccia  
 Se una minaccia supera il livello di minaccia configurato, l'organizzazione può procedere in due modi:  

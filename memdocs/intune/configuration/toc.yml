@@ -15,36 +15,20 @@
       href: tutorial-walkthrough-administrative-templates.md
 - name: Guide pratiche
   items:
-    - name: Creare un profilo
+    - name: Panoramica
       href: device-profile-create.md
-    - name: Modelli amministrativi in Windows
-      items:
-        - name: Modelli amministrativi in Windows
-          href: administrative-templates-windows.md
-        - name: Aggiornare Office usando i modelli amministrativi
-          href: administrative-templates-update-office.md
-      displayName: 'ADMX, GPO, group policy'
-    - name: Funzionalità dei dispositivi in iOS/iPadOS e macOS
-      href: device-features-configure.md
+    - name: Impostazioni dispositivo personalizzate
+      href: custom-settings-configure.md
+      displayName: oma-uri
     - name: Limitare le impostazioni del dispositivo e le funzionalità
       href: device-restrictions-configure.md
-      displayName: Device restrictions
-    - name: Aggiornare Windows
-      href: delivery-optimization-windows.md
-      displayName: delivery optimization; updates
-    - name: Impostazioni BIOS in Windows
-      href: device-firmware-configuration-interface-windows.md
-      displayName: 'DFCI, firmware'
-    - name: Aggiunta a un dominio in Windows
-      href: domain-join-configure.md
-    - name: Aggiornare Windows e la modalità S
-      href: edition-upgrade-configure-windows-10.md
+      displayName: device restrictions
     - name: Posta elettronica
-      href: email-settings-configure.md
-    - name: Chioschi e dispositivi dedicati
-      href: kiosk-settings.md
-    - name: Dispositivi multiutente condivisi
-      href: shared-user-device-settings.md
+      items:
+        - name: Configurare la posta elettronica
+          href: email-settings-configure.md
+        - name: Problemi e risoluzioni
+          href: troubleshoot-email-profiles-in-microsoft-intune.md
     - name: Connessione
       href: vpn-settings-configure.md
       items:
@@ -54,46 +38,82 @@
           href: vpn-setting-configure-per-app.md
     - name: Rete Wi-Fi
       href: wi-fi-settings-configure.md
-      displayName: wifi
+      displayName: 'wifi, wireless'
       items:
         - name: Wi-Fi con chiave precondivisa
           href: wi-fi-profile-shared-key.md
+          displayName: 'psk, oma-uri, eap'
         - name: Risoluzione dei problemi relativi al Wi-Fi
           href: troubleshoot-wi-fi-profiles.md
+    - name: Modelli amministrativi in Windows
+      displayName: 'admx, gpo, group policy'
+      items:
+        - name: Modelli amministrativi
+          href: administrative-templates-windows.md
+        - name: Aggiornare Office usando i modelli amministrativi
+          href: administrative-templates-update-office.md
+    - name: Impostazioni BIOS in Windows
+      href: device-firmware-configuration-interface-windows.md
+      displayName: 'dfci, firmware'
+    - name: Aggiunta a un dominio in Windows
+      href: domain-join-configure.md
+      displayName: 'enrollment, active directory, azure ad joined, join domain'
+    - name: Aggiornare Windows
+      href: delivery-optimization-windows.md
+      displayName: 'delivery optimization, windows updates'
+    - name: Aggiornare Windows e la modalità S
+      href: edition-upgrade-configure-windows-10.md
+    - name: Funzionalità dei dispositivi in iOS/iPadOS e macOS
+      href: device-features-configure.md
+      displayName: 'airprint, home screen, lock screen, sso, single sign-on'
     - name: Estensioni in macOS
       href: kernel-extensions-overview-macos.md
-    - name: App di istruzione Test ed esami
-      href: education-settings-configure.md
+      displayName: 'kernel extensions, system extensions'
+    - name: File delle preferenze in macOS
+      href: preference-file-settings-macos.md
+      displayName: 'property list files, plist'
     - name: Estensioni di mobilità nei dispositivi Zebra
-      href: android-zebra-mx-overview.md
-      displayName: mx
+      displayName: 'mx, android, stagenow'
+      items:
+        - name: Amministrare dispositivi Android con MX
+          href: android-zebra-mx-overview.md
+        - name: Log di StageNow e problemi comuni
+          href: android-zebra-mx-logs-troubleshoot.md
     - name: OEMConfig su Android Enterprise
       href: android-oem-configuration-overview.md
+      displayName: 'original equipment manufacturers, schema'
+    - name: Chioschi e dispositivi dedicati
+      href: kiosk-settings.md
+      displayName: 'single app, multi app'
+    - name: Dispositivi multiutente condivisi
+      href: shared-user-device-settings.md
+      displayName: 'shared pc, education'
+    - name: App di istruzione Test ed esami
+      href: education-settings-configure.md
     - name: Rete cellulare con eSIM in Windows
       href: esim-device-configuration.md
+      displayName: embedded sim
     - name: 'Spese per telecomunicazioni in Android, iOS/iPad'
       href: telecom-expenses-monitor.md
-    - name: Impostazioni dispositivo personalizzate
-      href: custom-settings-configure.md
-    - name: Assegnare profili
-      href: device-profile-assign.md
-    - name: Monitorare i profili
-      href: device-profile-monitor.md
+      displayName: saaswedo datalert
+    - name: Distribuzione e monitoraggio
+      items:
+        - name: Assegnare profili
+          href: device-profile-assign.md
+          displayName: 'deploy, push'
+        - name: Monitorare i profili
+          href: device-profile-monitor.md
     - name: Risoluzione dei problemi
       items:
         - name: Risolvere problemi relativi a criteri e profili
           href: troubleshoot-policies-in-microsoft-intune.md
-        - name: Problemi relativi al profilo di posta elettronica e soluzioni
-          href: troubleshoot-email-profiles-in-microsoft-intune.md
-        - name: Log di StageNow e problemi comuni
-          href: android-zebra-mx-logs-troubleshoot.md
         - name: Domande e risposte comuni
           href: device-profile-troubleshoot.md
 - name: Riferimento
   items:
     - name: Impostazioni del profilo di configurazione
       items:
-        - name: Android
+        - name: Amministratore dispositivo Android
           items:
             - name: Limitazioni del dispositivo
               href: device-restrictions-android.md
@@ -146,8 +166,6 @@
               href: ../protect/endpoint-protection-macos.md?toc=/intune/configuration/toc.json&bc=/intune/configuration/breadcrumb/toc.json
             - name: Estensioni
               href: kernel-extensions-settings-macos.md
-            - name: File delle preferenze
-              href: preference-file-settings-macos.md
             - name: Connessione
               href: vpn-settings-macos.md
             - name: Wi-Fi

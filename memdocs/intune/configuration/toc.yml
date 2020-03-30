@@ -15,9 +15,9 @@
       href: tutorial-walkthrough-administrative-templates.md
 - name: Guide pratiche
   items:
-    - name: Panoramica
+    - name: Panoramica del profilo
       href: device-profile-create.md
-    - name: Impostazioni dispositivo personalizzate
+    - name: Impostazioni personalizzate
       href: custom-settings-configure.md
       displayName: oma-uri
     - name: Limitare le impostazioni del dispositivo e le funzionalità
@@ -30,16 +30,18 @@
         - name: Problemi e risoluzioni
           href: troubleshoot-email-profiles-in-microsoft-intune.md
     - name: Connessione
-      href: vpn-settings-configure.md
       items:
+        - name: Configurare la VPN
+          href: vpn-settings-configure.md
         - name: VPN per app per Android
           href: android-pulse-secure-per-app-vpn.md
         - name: VPN per app per iOS/iPadOS
           href: vpn-setting-configure-per-app.md
-    - name: Rete Wi-Fi
-      href: wi-fi-settings-configure.md
-      displayName: 'wifi, wireless'
+    - name: Wi-Fi
       items:
+        - name: Configurare la rete Wi-Fi
+          href: wi-fi-settings-configure.md
+          displayName: 'wifi, wireless'
         - name: Wi-Fi con chiave precondivisa
           href: wi-fi-profile-shared-key.md
           displayName: 'psk, oma-uri, eap'
@@ -48,7 +50,7 @@
     - name: Modelli amministrativi in Windows
       displayName: 'admx, gpo, group policy'
       items:
-        - name: Modelli amministrativi
+        - name: Creare modelli amministrativi
           href: administrative-templates-windows.md
         - name: Aggiornare Office usando i modelli amministrativi
           href: administrative-templates-update-office.md
@@ -75,7 +77,7 @@
     - name: Estensioni di mobilità nei dispositivi Zebra
       displayName: 'mx, android, stagenow'
       items:
-        - name: Amministrare dispositivi Android con MX
+        - name: Configurare MX per l'amministratore di dispositivi Android
           href: android-zebra-mx-overview.md
         - name: Log di StageNow e problemi comuni
           href: android-zebra-mx-logs-troubleshoot.md
@@ -115,6 +117,12 @@
       items:
         - name: Amministratore dispositivo Android
           items:
+            - name: Personalizzato
+              items:
+                - name: Impostazioni personalizzate
+                  href: custom-settings-android.md
+                - name: Consentire o bloccare le app per Samsung KNOX Standard
+                  href: samsung-knox-apps-allow-block.md
             - name: Limitazioni del dispositivo
               href: device-restrictions-android.md
             - name: Posta elettronica
@@ -123,13 +131,10 @@
               href: vpn-settings-android.md
             - name: Wi-Fi
               href: wi-fi-settings-android.md
-            - name: Personalizzato
-              href: custom-settings-android.md
-              items:
-                - name: Consentire o bloccare le app per Samsung KNOX Standard
-                  href: samsung-knox-apps-allow-block.md
         - name: Android Enterprise
           items:
+            - name: Personalizzato
+              href: custom-settings-android-for-work.md
             - name: Limitazioni del dispositivo
               href: device-restrictions-android-for-work.md
             - name: Posta elettronica
@@ -138,10 +143,10 @@
               href: vpn-settings-android-enterprise.md
             - name: Wi-Fi
               href: wi-fi-settings-android-enterprise.md
-            - name: Personalizzato
-              href: custom-settings-android-for-work.md
         - name: iOS/iPadOS
           items:
+            - name: Personalizzato
+              href: custom-settings-ios.md
             - name: Funzionalità del dispositivo
               href: ios-device-features-settings.md
             - name: Limitazioni del dispositivo
@@ -152,12 +157,12 @@
               href: vpn-settings-ios.md
             - name: Wi-Fi
               href: wi-fi-settings-ios.md
-            - name: Personalizzato
-              href: custom-settings-ios.md
             - name: ID di bundle per le app predefinite
               href: bundle-ids-built-in-ios-apps.md
         - name: macOS
           items:
+            - name: Personalizzato
+              href: custom-settings-macos.md
             - name: Funzionalità del dispositivo
               href: macos-device-features-settings.md
             - name: Limitazioni del dispositivo
@@ -170,10 +175,10 @@
               href: vpn-settings-macos.md
             - name: Wi-Fi
               href: wi-fi-settings-macos.md
-            - name: Personalizzato
-              href: custom-settings-macos.md
         - name: Windows 10 e versioni successive
           items:
+            - name: Personalizzato
+              href: custom-settings-windows-10.md
             - name: Ottimizzazione recapito
               href: delivery-optimization-settings.md
             - name: Limitazioni del dispositivo
@@ -190,28 +195,26 @@
               href: ../protect/identity-protection-windows-settings.md?toc=/intune/configuration/toc.json&bc=/intune/configuration/breadcrumb/toc.json
             - name: Modalità tutto schermo
               href: kiosk-settings-windows.md
-            - name: Connessione
-              href: vpn-settings-windows-10.md
-            - name: Wi-Fi
-              href: wi-fi-settings-windows.md
             - name: Valutazione sicura
               href: education-settings-windows.md
             - name: Dispositivo multiutente condiviso
               href: shared-user-device-settings-windows.md
-            - name: Personalizzato
-              href: custom-settings-windows-10.md
+            - name: Connessione
+              href: vpn-settings-windows-10.md
+            - name: Wi-Fi
+              href: wi-fi-settings-windows.md
         - name: Windows Holographic for Business
           items:
+            - name: Personalizzato
+              href: custom-settings-windows-holographic.md
             - name: Limitazioni del dispositivo
               href: device-restrictions-windows-holographic.md
-            - name: Dispositivo multiutente condiviso
-              href: shared-user-device-settings-windows-holographic.md
             - name: Aggiornamento dell'edizione e cambio di modalità
               href: holographic-upgrade.md
             - name: Modalità tutto schermo
               href: kiosk-settings-holographic.md
-            - name: Personalizzato
-              href: custom-settings-windows-holographic.md
+            - name: Dispositivo multiutente condiviso
+              href: shared-user-device-settings-windows-holographic.md
         - name: Windows 8.1
           items:
             - name: Limitazioni del dispositivo
@@ -222,11 +225,11 @@
               href: wi-fi-settings-import-windows-8-1.md
         - name: Windows Phone 8.1
           items:
+            - name: Personalizzato
+              href: custom-settings-windows-phone-8-1.md
             - name: Limitazioni del dispositivo
               href: device-restrictions-windows-phone-8-1.md
             - name: Posta elettronica
               href: email-settings-windows-phone-8-1.md
             - name: Connessione
               href: vpn-settings-windows-phone-8-1.md
-            - name: Personalizzato
-              href: custom-settings-windows-phone-8-1.md

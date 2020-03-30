@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d8c7c60b4d9d1831aaabb9886345865234ce6351
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 607e2303cbec9ec7fc069db602d51684b71e6575
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364617"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083837"
 ---
 # <a name="troubleshoot-and-see-potential-issues-on-android-zebra-devices-in-microsoft-intune"></a>Risolvere e individuare i potenziali problemi relativi ai dispositivi Android Zebra in Microsoft Intune
 
@@ -57,7 +57,7 @@ Per ottenere i log dopo che il profilo è già stato distribuito con Intune, con
 Nel dispositivo i log vengono salvati in `/sdcard/Android/data/com.microsoft.windowsintune.companyportal/files`
 
 ### <a name="get-logs-from-email"></a>Ottenere i log tramite posta elettronica
-Per ottenere i log dopo che il profilo è già stato distribuito con Intune, gli utenti finali possono inviare i log con un messaggio di posta elettronica usando un'app di posta elettronica nel dispositivo. Nel dispositivo Zebra aprire l'app Portale aziendale e [inviare i log](https://docs.microsoft.com/user-help/send-logs-to-your-it-admin-by-email-android). L'uso della funzionalità di invio dei log crea anche un ID di evento imprevisto PowerLift, a cui è possibile fare riferimento se si contatta il supporto tecnico Microsoft.
+Per ottenere i log dopo che il profilo è già stato distribuito con Intune, gli utenti finali possono inviare i log con un messaggio di posta elettronica usando un'app di posta elettronica nel dispositivo. Nel dispositivo Zebra aprire l'app Portale aziendale e [inviare i log](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android). L'uso della funzionalità di invio dei log crea anche un ID di evento imprevisto PowerLift, a cui è possibile fare riferimento se si contatta il supporto tecnico Microsoft.
 
 ## <a name="read-the-logs"></a>Leggere i log
 
@@ -139,7 +139,7 @@ Quando i dispositivi meno recenti effettuano l'accesso con l'app Portale azienda
 
 Se i servizi Google Play non sono disponibili, il completamento di alcune attività potrebbe richiedere fino a 8 ore. In [Limitazioni dell'app Portale aziendale di Intune per Android](https://support.microsoft.com/help/3211588/limitations-of-intune-company-portal-app-for-android-in-china) (viene aperto un altro sito Web Microsoft) sono disponibili informazioni utili.
 
-### <a name="device-spoofing-suspected-shows-in-intune"></a>In Intune viene visualizzato il messaggio "Sospetto spoofing del dispositivo"
+### <a name="device-spoofing-suspected-shows-in-intune"></a>Sospetto spoofing del dispositivo in Intune
 
 Questo errore indica che Intune sospetta che un dispositivo Android non Zebra stia segnalando il modello e il produttore come dispositivo Zebra.
 

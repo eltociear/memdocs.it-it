@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,14 @@ search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26f2998c6b166e1f45c839d7006551867b8deb80
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8d2f671e88b1221961e978d1945e28c7cec474cb
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364084"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086497"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Impostazioni dei dispositivi Windows 10 e Windows Holographic per l'aggiunta di connessioni VPN con Intune
-
-
 
 È possibile aggiungere e configurare connessioni VPN per i dispositivi tramite Microsoft Intune. Questo articolo illustra le impostazioni e le funzionalità comunemente usate per creare reti private virtuali (VPN). Queste impostazioni e funzionalità VPN vengono usate nei profili di configurazione del dispositivo di Intune di cui viene eseguito il push o la distribuzione nei dispositivi.
 
@@ -46,8 +44,8 @@ A seconda delle impostazioni selezionate, è possibile che non tutti i valori si
 
 - **Nome della connessione**: immettere un nome per la connessione. Questo nome viene visualizzato dagli utenti finali nel momento in cui esplorano l'elenco delle connessioni VPN disponibili nel dispositivo.
 - **Server**: aggiungere uno o più server VPN a cui si connettono i dispositivi. Quando si aggiunge un server, si immettono le informazioni seguenti:
-  - **Descrizione**: immettere un nome descrittivo per il server, ad esempio **Server VPN Contoso**
-  - **Indirizzo IP o FQDN**: immettere l'indirizzo IP o il nome di dominio completo del server VPN a cui si connettono i dispositivi, ad esempio **192.168.1.1** o **vpn.contoso.com**
+  - **Descrizione**: immettere un nome descrittivo per il server, ad esempio **Server VPN Contoso**.
+  - **Indirizzo IP o FQDN**: immettere l'indirizzo IP o il nome di dominio completo (FQDN) del server VPN a cui si connettono i dispositivi, ad esempio **192.168.1.1** o **vpn.contoso.com**.
   - **Server predefinito**: abilita il server come server predefinito usato dai dispositivi per stabilire la connessione. Impostare un solo server come server predefinito.
   - **Importa**: selezionare un file che include un elenco di server separati da virgole nel formato: descrizione, indirizzo IP o FQDN, server predefinito. Scegliere **OK** per importare i server nell'elenco **Server**.
   - **Esporta**: esporta l'elenco dei server in un file con valori delimitati da virgole (CSV).
@@ -68,10 +66,10 @@ A seconda delle impostazioni selezionate, è possibile che non tutti i valori si
   - **PPTP**
 
   Quando si sceglie un tipo di connessione VPN, potrebbe essere richieste anche le impostazioni seguenti:  
-  - **Sempre online**: scegliere **Abilita** per connettersi automaticamente alla connessione VPN quando si verificano gli eventi seguenti: 
+  - **Sempre online**: scegliere **Abilita** per connettersi automaticamente alla connessione VPN quando si verificano gli eventi seguenti:
     - Gli utenti accedono ai propri dispositivi
     - La rete del dispositivo cambia
-    - Lo schermo del dispositivo si riattiva dopo essere stato disattivato 
+    - Lo schermo del dispositivo si riattiva dopo essere stato disattivato
 
   - **Metodo di autenticazione**: specificare come si vuole eseguire l'autenticazione degli utenti nel server VPN. L'uso dei **certificati** offre funzionalità avanzate, ad esempio un'esperienza completamente automatica, VPN su richiesta e VPN per singole app.
   - **Ricorda le credenziali a ogni accesso**: memorizza nella cache le credenziali di autenticazione.

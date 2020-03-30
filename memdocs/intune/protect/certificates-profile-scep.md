@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 03/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 387817dfcf929b985c0836779510e3d6c0f9795a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 10accc0c59dc0d97e2f3ac4739335dd1e2cd4cba
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79353619"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084955"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Creare e assegnare profili di certificato SCEP in Intune
 
@@ -35,28 +35,31 @@ Dopo aver [configurato l'infrastruttura](certificates-scep-configure.md) per sup
 
 1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selezionare **Dispositivi** > **Profili di configurazione** > **Crea profilo**.
+2. Selezionare e passare a **Dispositivi** > **Profili di configurazione** > **Crea profilo**.
 
 3. Immettere le proprietà seguenti:
+   - **Piattaforma**: scegliere la piattaforma dei dispositivi.
+   - **Profilo**: Selezionare **Certificato SCEP**
 
-4. Immettere **Nome** e **Descrizione** per il profilo certificato SCEP.
+     Per la piattaforma **Android Enterprise**, *Tipo di profilo* è suddiviso in due categorie: *Solo proprietario del dispositivo* e *Solo profilo di lavoro*. Assicurarsi di selezionare il profilo di certificato SCEP corretto per i dispositivi gestiti.  
 
-5. Nell'elenco a discesa **Piattaforma** selezionare una [piattaforma di dispositivo supportata](certificates-configure.md#supported-platforms-and-certificate-profiles) per questo certificato SCEP.
+     I profili di certificato SCEP per il profilo *Solo proprietario del dispositivo* presentano le limitazioni seguenti:
 
-6. Nell'elenco a discesa **Tipo di profilo** selezionare **Certificato SCEP**.  
+      1. In Monitoraggio la generazione di report per i certificati non è disponibile per i profili di certificato SCEP del proprietario del dispositivo.
 
-   Per la piattaforma **Android Enterprise**, *Tipo di profilo* è suddiviso in due categorie: *Solo proprietario del dispositivo* e *Solo profilo di lavoro*. Assicurarsi di selezionare il profilo di certificato SCEP corretto per i dispositivi gestiti.  
+      2. Non è possibile usare Intune per revocare i certificati di cui è stato effettuato il provisioning tramite profili certificato SCEP per i proprietari del dispositivo. È possibile gestire la revoca tramite un processo esterno o direttamente con l'autorità di certificazione.
 
-   I profili di certificato SCEP per il profilo *Solo proprietario del dispositivo* presentano le limitazioni seguenti:
+      3. Per i dispositivi Android Enterprise dedicati, i profili certificato SCEP sono supportati solo per la configurazione e l'autenticazione della rete Wi-Fi.  I profili certificato SCEP per i dispositivi Android Enterprise dedicati non sono supportati per l'autenticazione di app o reti VPN.
 
-   1. In Monitoraggio la generazione di report per i certificati non è disponibile per i profili di certificato SCEP del proprietario del dispositivo.
+4. Selezionare **Crea**.
 
-   2. Non è possibile usare Intune per revocare i certificati di cui è stato effettuato il provisioning tramite profili certificato SCEP per i proprietari del dispositivo. È possibile gestire la revoca tramite un processo esterno o direttamente con l'autorità di certificazione. 
+5. In **Informazioni di base** immettere le proprietà seguenti:
+   - **Nome**: immettere un nome descrittivo per il profilo. Assegnare ai profili nomi che possano essere identificati facilmente in un secondo momento. Un nome di profilo efficace, ad esempio, è *Profilo SCEP per l'intera azienda*.
+   - **Descrizione**: Immettere una descrizione del profilo. Questa impostazione è facoltativa ma consigliata.
 
-   4. Per i dispositivi Android Enterprise dedicati, i profili certificato SCEP sono supportati solo per la configurazione e l'autenticazione della rete Wi-Fi.  I profili certificato SCEP per i dispositivi Android Enterprise dedicati non sono supportati per l'autenticazione di app o reti VPN.   
+6. Selezionare **Avanti**.
 
-   
-7. Selezionare **Impostazioni** e quindi completare le configurazioni seguenti:
+7. In **Impostazioni di configurazione** completare le configurazioni seguenti:
 
    - **Tipo di certificato**:
 
@@ -209,7 +212,7 @@ Dopo aver [configurato l'infrastruttura](certificates-scep-configure.md) per sup
 
    - **Certificato radice**:
 
-     Selezionare il *profilo certificato attendibile* configurato in precedenza e assegnato a utenti e dispositivi applicabili per questo profilo di certificato SCEP. Il profilo di certificato attendibile viene usato per eseguire il provisioning di utenti e dispositivi con il certificato CA radice attendibile. Per informazioni sul profilo di certificato attendibile, vedere [Esportare il certificato CA radice attendibile](certificates-configure.md#export-the-trusted-root-ca-certificate) e [Creare profili di certificato attendibili](certificates-configure.md#create-trusted-certificate-profiles) in *Usare i certificati per l'autenticazione in Intune*. Se sono disponibili un'autorità di certificazione radice e un'autorità di certificazione emittente, selezionare il profilo del certificato radice attendibile associato all'autorità di certificazione emittente.
+     Selezionare il *profilo certificato attendibile* configurato in precedenza e assegnato a utenti e dispositivi applicabili per questo profilo di certificato SCEP. Il profilo di certificato attendibile viene usato per eseguire il provisioning di utenti e dispositivi con il certificato CA radice attendibile. Per informazioni sul profilo di certificato attendibile, vedere [Esportare il certificato CA radice attendibile](certificates-configure.md#export-the-trusted-root-ca-certificate) e [Creare profili di certificato attendibili](certificates-configure.md#create-trusted-certificate-profiles) in *Usare i certificati per l'autenticazione in Intune*. Se sono disponibili un'autorità di certificazione radice e un'autorità di certificazione emittente, selezionare il profilo del certificato radice trusted che convalida l'autorità di certificazione emittente.
 
    - **Utilizzo chiavi avanzato**:
 
@@ -223,7 +226,21 @@ Dopo aver [configurato l'infrastruttura](certificates-scep-configure.md) per sup
 
      specificare uno o più URL per i server del servizio Registrazione dispositivi di rete che emettono certificati tramite SCEP. Ad esempio, immettere *https://ndes.contoso.com/certsrv/mscep/mscep.dll* . È possibile aggiungere altri URL di SCEP per il bilanciamento del carico, se necessario, perché viene eseguito il push degli URL in modo casuale nel dispositivo con il profilo. Se uno dei server SCEP non è disponibile, la richiesta SCEP avrà esito negativo ed è possibile che durante sincronizzazioni successive del dispositivo la richiesta del certificato venga effettuata sullo stesso server non attivo.
 
-8. Selezionare **OK** e quindi **Crea**. Il profilo viene creato e visualizzato nell'elenco *Configurazione del dispositivo - Profili*.
+8. Selezionare **Avanti**.
+
+9. In **Tag ambito** (facoltativo) assegnare un tag per filtrare il profilo a gruppi IT specifici, ad esempio `US-NC IT Team` o `JohnGlenn_ITDepartment`. Per altre informazioni sui tag di ambito, vedere [Usare il controllo degli accessi in base al ruolo (RBAC) e i tag di ambito per l'infrastruttura IT distribuita](../fundamentals/scope-tags.md).
+
+   Selezionare **Avanti**.
+
+10. In **Assegnazioni** selezionare l'utente o i gruppi che riceveranno il profilo. Per altre informazioni sull'assegnazione di profili, vedere [Assegnare profili utente e dispositivo](../configuration/device-profile-assign.md).
+
+    Selezionare **Avanti**.
+
+11. (*Solo per Windows 10*) In **Regole di applicabilità** specificare regole di applicabilità per perfezionare l'assegnazione di questo profilo. È possibile scegliere di assegnare o non assegnare il profilo in base all'edizione del sistema operativo o alla versione di un dispositivo.
+
+   Per altre informazioni, vedere [Regole di applicabilità](../configuration/device-profile-create.md#applicability-rules) in *Creare un profilo di dispositivo in Microsoft Intune*.
+
+12. In **Rivedi e crea** rivedere le impostazioni. Quando si seleziona Crea, le modifiche vengono salvate e il profilo viene assegnato. Il criterio viene visualizzato anche nell'elenco dei profili.
 
 ### <a name="avoid-certificate-signing-requests-with-escaped-special-characters"></a>Evitare le richieste di firma del certificato con caratteri speciali di escape
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eaaa9095becbcac7840d5babc2a099e7ec84af03
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: dbb8e5644390c589756af5a69f2fdd5a829866a1
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79362017"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084014"
 ---
 # <a name="use-and-manage-zebra-devices-with-zebra-mobility-extensions-in-microsoft-intune"></a>Utilizzare e gestire i dispositivi Zebra con Mobility Extensions di Zebra in Microsoft Intune
-
-
 
 Intune include un'ampia gamma di funzionalità, tra cui la gestione delle app e la configurazione delle impostazioni del dispositivo. Queste funzionalità e impostazioni predefinite gestiscono i dispositivi Android prodotti da Zebra Technologies, noti anche come "dispositivi Zebra".
 
@@ -36,7 +34,9 @@ Questo articolo illustra come utilizzare Mobility Extensions (MX) di Zebra sui d
 
 Questa funzionalità si applica a:
 
-- Android
+- Amministratore dispositivo Android
+
+Per i dispositivi Android Enterprise usare [OEMConfig](android-oem-configuration-overview.md).
 
 La società può usare dispositivi Zebra per la vendita al dettaglio, nell’ambiente di produzione e altro ancora. Ad esempio, nel caso in cui l’ambiente di un rivenditore al dettaglio includa migliaia di dispositivi mobili Zebra utilizzati dagli assistenti alle vendite. Intune consente di gestire questi dispositivi come parte della soluzione MDM.
 
@@ -139,14 +139,14 @@ Creare un profilo di configurazione del dispositivo in Intune:
 
     - **Nome**: immettere un nome descrittivo per il nuovo profilo.
     - **Descrizione**: Immettere una descrizione del profilo. Questa impostazione è facoltativa ma consigliata.
-    - **Piattaforma**: Selezionare **Android**.
+    - **Piattaforma**: Selezionare **Amministratore di dispositivi Android**.
     - **Tipo di profilo**: selezionare **Profilo MX (solo Zebra)** .
 
 4. In **MX profile in .xml format (Profilo MX in formato .xml)** , aggiungere il file del profilo XML [esportato da StageNow](#step-4-create-a-device-management-profile-in-stagenow) (in questo articolo).
 5. Selezionare **OK** > **Crea** per salvare le modifiche. Il criterio viene creato e visualizzato nell'elenco.
 
     > [!TIP]
-    > Per motivi di sicurezza, non sarà possibile vedere il testo XML del profilo dopo averlo salvato. Il testo è crittografato e viene sostituito da asterischi (`****`). Per riferimento, è consigliabile salvare le copie dei profili MX prima di aggiungerli a Intune.
+    > Per motivi di sicurezza, non sarà possibile visualizzare il testo XML del profilo dopo averlo salvato. Il testo è crittografato e viene sostituito da asterischi (`****`). Per riferimento, è consigliabile salvare le copie dei profili MX prima di aggiungerli a Intune.
 
 Il profilo è stato creato, ma non è ancora operativo. [Assegnare il profilo](device-profile-assign.md) e [monitorarne lo stato](device-profile-monitor.md).
 

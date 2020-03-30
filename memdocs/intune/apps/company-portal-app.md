@@ -1,135 +1,121 @@
 ---
-title: Come configurare l'app Portale aziendale
+title: Come personalizzare le app Portale aziendale Intune, il sito Web Portale aziendale e l'app Intune
 titleSuffix: Microsoft Intune
-description: Informazioni su come applicare specifiche personalizzazioni aziendali all'app Portale aziendale Intune.
+description: Informazioni su come applicare personalizzazioni specifiche dell'azienda alle app Portale aziendale Intune, al sito Web Portale aziendale e all'app Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/24/2020
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: dec6f258-ee1b-4824-bf66-29053051a1ae
-ms.reviewer: mghadial
+ms.reviewer: esthermsft
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36d26eb7f644731082407e816358b74c515333cb
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c1ec6d4ebe860a1c20ad1a11bd7e63086858a82c
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79340164"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084247"
 ---
-# <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Come configurare l'app Portale aziendale di Microsoft Intune
+# <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Come personalizzare le app Portale aziendale Intune, il sito Web Portale aziendale e l'app Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+Le app Portale aziendale, il sito Web Portale aziendale e l'app Intune in Android consentono agli utenti di accedere ai dati aziendali ed eseguire attività comuni. Le attività comuni possono includere la registrazione dei dispositivi, l'installazione di app e la ricerca di informazioni, ad esempio di assistenza dal reparto IT. Inoltre, consentono agli utenti di accedere in modo sicuro alle risorse aziendali. L'esperienza utente finale offre diverse pagine, ad esempio Pagina iniziale, App, Dettagli app, Dispositivi e Dettagli dispositivo. Per trovare rapidamente le app all'interno del Portale aziendale, è possibile filtrare le app nella pagina App.
 
-Il portale aziendale di Microsoft Intune è il punto in cui gli utenti possono accedere ai dati aziendali ed eseguire attività comuni quali la registrazione dei dispositivi, l'installazione di app e la ricerca delle informazioni di assistenza del reparto IT. Dall'app Portale aziendale l'utente può anche accedere in modo sicuro alle risorse aziendali. L'app Portale aziendale è costituita da diverse pagine, ad esempio Pagina iniziale, App, Dettagli app, Dispositivi e Dettagli dispositivo. Per trovare rapidamente le app all'interno del Portale aziendale, è possibile filtrare le app nella pagina App.
+## <a name="customizing-the-user-experience"></a>Personalizzazione dell'esperienza utente
 
-> [!IMPORTANT]
-> Per supportare Firebase Cloud Messaging (FCM) di Google, è necessario aggiornare l'app Portale aziendale per Android alla versione più recente.  
+Con la personalizzazione dell'esperienza utente finale sarà possibile offrire agli utenti finali un'esperienza familiare e utile. A questo scopo, passare all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), selezionare **Amministrazione del tenant** > **Personalizzazione** e quindi configurare le impostazioni necessarie. Queste impostazioni si applicano alle app Portale aziendale, al sito Web Portale aziendale e all'app Intune in Android.
 
-> [!Tip]
-> Quando si personalizza il portale aziendale, le configurazioni vengono applicate sia al sito Web che alle app Portale aziendale. Si noti che gli utenti devono avere una licenza di Intune assegnata per accedere al sito Web del portale aziendale.
+## <a name="branding"></a>Personalizzazione
 
-Con la personalizzazione del Portale aziendale si offrirà agli utenti finali un'esperienza familiare e utile. A questo scopo, passare all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), selezionare **Amministrazione del tenant** > **Personalizzazione** e quindi configurare le impostazioni necessarie.
+La tabella seguente fornisce i dettagli di personalizzazione per l'esperienza utente finale:
 
-Quando si installa un'applicazione iOS/iPadOS dal Portale aziendale, viene inviata una richiesta. Ciò avviene quando l'app iOS/iPadOS è collegata all'App Store, a un programma Volume Purchase Program (VPP) oppure a un'app line-of-business. La richiesta consente agli utenti di accettare l'azione o consentire la gestione dell'app. Nella richiesta sarà visualizzato il nome della società o, quando il nome della società non è disponibile, sarà visualizzato **Portale aziendale**. 
-
-> [!Note]
-> Se si usa Azure per enti pubblici, l'utente finale riceve i log delle app per prendere decisioni in merito alla condivisione quando avvia il processo per visualizzare la Guida per un problema. Se tuttavia non si usa Azure per enti pubblici, il portale aziendale per Windows 10 invierà i log delle app direttamente a Microsoft quando l'utente avvia il processo per visualizzare la Guida per un problema. Inviando i log delle app a Microsoft sarà più semplice risolvere i problemi. 
-
-## <a name="company-information-and-privacy-statement"></a>Informazioni e informativa sulla privacy della società
-Il nome dell'azienda viene visualizzato come titolo del portale aziendale. L'informativa sulla privacy viene visualizzata quando un utente fa clic sul relativo collegamento.
-
-| Nome del campo | Lunghezza massima | Altre informazioni |
+| Nome del campo | Altre informazioni |
 |---|---|---|
-|**Nome società**| 40 | Questo nome viene visualizzato come titolo del portale aziendale e appare come testo nell'intera esperienza utente Intune. |
-| **URL dell'informativa sulla privacy** |     79     | È possibile indicare l'informativa sulla privacy della propria azienda che verrà visualizzata quando gli utenti fanno clic sui collegamenti relativi alla privacy dal portale aziendale. Immettere un URL valido nel formato `<https://www.contoso.com>`. |
+| **Nome organizzazione** | Questo nome viene visualizzato nella messaggistica nell'esperienza utente finale. Può essere impostato anche per la visualizzazione nelle intestazioni usando l'impostazione **Mostra su intestazione**. La lunghezza massima è di 40 caratteri. |
+| **Colore** | Scegliere **Standard** per selezionare tra cinque colori standard. Scegliere **Personalizzato** per selezionare un colore specifico in base a un valore in formato esadecimale. |
+| **Colore del tema** | Impostare il colore del tema da visualizzare nell'esperienza utente finale. Il colore del testo verrà impostato automaticamente su nero o bianco in modo che sia visibile sul colore del tema selezionato. |
+| **Mostra su intestazione** | Specificare se l'intestazione nelle esperienze utente finale deve includere **il logo e il nome della società**, **solo il logo della società** o **solo il nome della società**. Le caselle di anteprima seguenti visualizzano solo i logo, non il nome.  |
+| **Carica il logo per lo sfondo con colore del tema** | Caricare il logo che si desidera visualizzare sopra il colore del tema selezionato. Per assicurare un aspetto ottimale, caricare un logo con uno sfondo trasparente. È possibile visualizzare il risultato nella casella di anteprima sotto l'impostazione.<p>Dimensioni massime immagine: 400 x 400 px<br>Dimensioni massime del file:   750 kB<br>Tipo di file: PNG, JPG o JPEG |
+| **Carica il logo per lo sfondo bianco o chiaro** | Caricare il logo da visualizzare sopra gli sfondi di colore bianco o chiaro. Per assicurare un aspetto ottimale, caricare un logo con uno sfondo trasparente. È possibile visualizzare il risultato su uno sfondo bianco nella casella di anteprima sotto l'impostazione.<p>Dimensioni massime immagine: 400 x 400 px<br>Dimensioni massime del file: 750 kB<br>Tipo di file: PNG, JPG o JPEG |
+| **Carica l'immagine del marchio** | Caricare un'immagine del marchio dell'organizzazione.<p><ul><li>Larghezza immagine consigliata: Maggiore di 1125 px (deve essere almeno 650 px)</li><li>Dimensioni massime immagine: 1,3 MB</li><li>Tipo di file: PNG, JPG o JPEG</li><li>Viene visualizzato nelle posizioni seguenti:</li><ul><li>Portale aziendale iOS/iPadOS: Immagine di sfondo nella pagina del profilo dell'utente.</li><li>Sito Web del portale aziendale:   Immagine di sfondo nella pagina del profilo dell'utente.</li><li>App Intune Android: Nel menu e come immagine di sfondo nella pagina del profilo dell'utente.</li></ul></ul> |
 
 > [!NOTE]
-> In conformità con i criteri Microsoft e Apple, non si vendono per alcun motivo a terze parti i dati raccolti dal servizio.
+> Quando si installa un'applicazione iOS/iPadOS dal Portale aziendale, viene inviata una richiesta. Ciò avviene quando l'app iOS/iPadOS è collegata all'App Store, a un programma Volume Purchase Program (VPP) oppure a un'app line-of-business. La richiesta consente agli utenti di accettare l'azione o consentire la gestione dell'app. Nella richiesta sarà visualizzato il nome della società o, quando il nome della società non è disponibile, sarà visualizzato **Portale aziendale**.
 
-## <a name="support-information"></a>Informazioni di supporto
-Immettere le informazioni di supporto della società, in modo da garantire al dipendente un contatto per le domande relative a Intune.
+### <a name="brand-image-best-practices"></a>Procedure consigliate per l'immagine del marchio
 
-|Nome del campo|Lunghezza massima|Altre informazioni|
-|---|---|---|
-|**Nome di contatto** | 40 | Questo nome viene visualizzato nella pagina **Guida e supporto tecnico**. |
-|**Numero di telefono** | 20 | Questo numero di contatto viene visualizzato nella pagina **Guida e supporto tecnico** che consente ai dipendenti di contattare l'organizzazione per ottenere supporto. |
-|**Indirizzo di posta elettronica**| 40 | Questo indirizzo di contatto viene visualizzato nella pagina **Guida e supporto tecnico**. È necessario immettere un indirizzo di posta elettronica valido nel formato `alias@domainname.com`. |
-|**Nome del sito Web**| 40 | Questo è il nome descrittivo visualizzato per l'URL del sito Web del supporto tecnico. Se si specifica l'URL del sito Web senza un nome descrittivo, nella pagina **Guida e supporto tecnico** del Portale aziendale verrà visualizzato Vai al sito Web IT. |
-|**URL del sito Web**| 150 | Se si dispone di un sito Web di supporto che si desidera venga usato dagli utenti, è necessario specificare qui l'URL. Il formato dell'URL deve essere `https://www.contoso.com`. Se non si specifica un URL, nella pagina **Guida e supporto tecnico** di Portale aziendale non verranno visualizzate informazioni sul sito Web del supporto tecnico. |
-| **Informazioni aggiuntive**| 120 | Vengono visualizzate nella pagina **Guida e supporto tecnico**. |
+L'immagine del marchio può migliorare la fiducia dell'utente presentando un forte senso di marchio dell'organizzazione. Di seguito sono riportati alcuni suggerimenti che è possibile prendere in considerazione per l'acquisizione, la scelta e l'ottimizzazione dell'immagine per le diverse posizioni di visualizzazione.
 
-
-## <a name="company-identity-branding-customization"></a>Personalizzazione del branding dell'identità aziendale
-È possibile personalizzare il portale aziendale con logo, nome dell'azienda, colore del tema e sfondo.
-
-### <a name="theme-color-and-logo-in-the-company-portal"></a>Colore del tema e logo nel portale aziendale
-È possibile applicare un colore del tema al portale aziendale. Selezionare un colore standard o immettere un codice esadecimale a sei cifre corrispondente a un colore personalizzato.
-
-|Nome del campo|Altre informazioni|
-|---|---|
-|**Select a standard color or enter a six-digit hex code** (Selezionare un colore standard o immettere un codice esadecimale a sei cifre)| Scegliere **Standard** per selezionare visivamente un colore. Scegliere **Personalizzato** per selezionare un colore specifico in base a un valore in formato esadecimale.|
-|**Choose theme color** (Scegliere il colore del tema)| Selezionare un colore del tema da applicare al portale aziendale. È possibile scegliere un colore standard o immettere un codice esadecimale specifico. |
-|**Display** (Schermo)| Specificare se visualizzare il **logo e il nome della società**, **solo il logo della società** o solo il **nome della società**. |
-|**Upload your company logo** (Carica il logo della società)|È possibile caricare il logo della società da visualizzare nel portale aziendale. Si noti che il colore del testo viene selezionato automaticamente per offrire il massimo livello di contrasto. Per assicurare un aspetto ottimale, caricare un logo con uno sfondo trasparente.<p><ul><li>Dimensioni massime dell'immagine: 400x400 px</li><li>Dimensioni massime del file: 750 kB</li><li>Tipo di file: PNG, JPG o JPEG</li></ul>|
-
-Dopo aver caricato il logo, l'area di anteprima visualizza il logo con il colore del tema. Se si sceglie di visualizzare il nome della società, il nome verrà visualizzato in nero o in bianco nel portale aziendale in modo da offrire il massimo livello di contrasto in base al colore del tema. L'area di anteprima nella schermata non visualizzerà il nome della società. 
-
-### <a name="logo-to-use-on-white-or-light-backgrounds"></a>Logo da usare su sfondi bianchi o chiari
-Scegliere un logo adatto a sfondi bianchi o chiari.
-
-|Nome del campo|Altre informazioni|
-|---|---|
-|**Upload your logo** (Carica il logo)| Questa opzione è disponibile se si è scelto di visualizzare il logo della società. Per assicurare un aspetto ottimale, caricare un logo con uno sfondo trasparente.<p><ul><li>Dimensioni massime dell'immagine: 400x400 px</li><li>Dimensioni massime del file: 750 kB</li><li>Tipo di file: PNG, JPG o JPEG</li></ul>|
-
-### <a name="brand-image-for-company-portal"></a>Immagine del marchio per il portale aziendale
-
-Visualizzare un'immagine del marchio che rifletta il marchio della società. Dopo aver salvato le modifiche è possibile scegliere **Visualizzare l'anteprima delle impostazioni nel portale Web di Intune** nella parte superiore del riquadro per verificare come vengono visualizzate le configurazioni. Si noti che l'immagine del marchio può essere visualizzata in anteprima solo in un dispositivo iOS/iPadOS e non nel portale Web di Intune. 
-
-|Nome del campo|Altre informazioni|
-|---|---|
-|**Upload your brand image** (Caricare immagine del marchio)| Questa opzione consente di visualizzare un'immagine del marchio. Nell'app Portale aziendale iOS/iPadOS viene visualizzata come immagine di sfondo nella pagina del profilo dell'utente.<p><ul><li>Larghezza dell'immagine consigliata: Maggiore di 1125px (deve essere almeno 650 px)</li><li>Dimensioni massime dell'immagine: 1,3 MB</li><li>Tipo di file: PNG, JPG o JPEG</li></ul>|
-
-L'immagine del marchio può migliorare la fiducia dell'utente nel portale aziendale presentando un forte senso di marchio della società. Di seguito sono riportati alcuni suggerimenti che è possibile prendere in considerazione per l'acquisizione, la scelta e l'ottimizzazione dell'immagine per il portale aziendale. 
-
-- Rivolgersi al reparto marketing o pubblicità. È possibile che il reparto abbia già a disposizione un set di immagini del marchio approvate. Il reparto può anche aiutare l'utente ad adattare le immagini alle esigenze specifiche. 
-
-- Prendere in considerazione sia la composizione verticale che quella orizzontale. L'immagine deve avere uno sfondo sufficiente che circonda il punto focale. L'immagine può essere ritagliata in diversi modi in base alle dimensioni del dispositivo, all'orientamento e alla piattaforma. 
-
-- Evitare di usare un'immagine generica. L'immagine deve riflettere il marchio della società ed essere familiare agli utenti. Se non è disponibile alcuna immagine, è preferibile non usare un'immagine generica che non ha alcun significato per l'utente. 
-
-- Rimuovere i metadati non necessari. Il file di immagine può includere i metadati, ad esempio il profilo della fotocamera, la posizione geografica, il titolo, il sottotitolo e così via. Usare uno strumento di ottimizzazione delle immagini per rimuovere queste informazioni per mantenere la qualità e rispettare il limite di dimensione del file. 
-
-Dopo l'aggiunta o la modifica di un'immagine del marchio in Intune, l'utente finale potrebbe non vedere la modifica nei dispositivi iOS/iPadOS fino a quando il portale aziendale non riconosce la modifica all'avvio e viene quindi riavviato per visualizzare l'immagine del marchio. 
+- Rivolgersi al reparto marketing o pubblicità. È possibile che il reparto abbia già a disposizione un set di immagini del marchio approvate. Il reparto può anche aiutare l'utente ad adattare le immagini alle esigenze specifiche.
+- Prendere in considerazione sia la composizione verticale che quella orizzontale. L'immagine deve avere uno sfondo sufficiente che circonda il punto focale. L'immagine può essere ritagliata in diversi modi in base alle dimensioni del dispositivo, all'orientamento e alla piattaforma.
+- Evitare di usare un'immagine generica. L'immagine deve riflettere il marchio dell'organizzazione ed essere familiare agli utenti. Se non è disponibile alcuna immagine, è preferibile non usare un'immagine generica che non ha alcun significato per l'utente.
+- Rimuovere i metadati non necessari. Il file di immagine può includere i metadati, ad esempio il profilo della fotocamera, la posizione geografica, il titolo, il sottotitolo e così via. Usare uno strumento di ottimizzazione delle immagini per rimuovere queste informazioni per mantenere la qualità e rispettare il limite di dimensione del file.
 
 ### <a name="brand-image-examples"></a>Esempi di immagini di marchio
 
-L'immagine seguente mostra un esempio di immagine del marchio per iPad:
+L'immagine seguente mostra un esempio di immagine del marchio in un iPhone:
 
-![Screenshot dell'immagine del marchio per iPad di esempio](./media/company-portal-app/company-portal-app-03.png)
+<img alt="Screenshot of example iPhone branding image" src="./media/company-portal-app/company-portal-app-01.png" width="250">
 
-L'immagine seguente mostra un esempio di immagine del marchio iPhone:
+L'immagine seguente mostra un esempio dell'immagine del marchio nell'app Intune per Android:
 
-![Screenshot dell'immagine del marchio per iPhone di esempio](./media/company-portal-app/company-portal-app-02.png)
+<img alt="Screenshot of example #1 for Intune app for Android branding image" src="./media/company-portal-app/company-portal-app-02.png" width="250">
 
-## <a name="privacy-statement-customization"></a>Personalizzazione dell'informativa sulla privacy
+<img alt="Screenshot of example #2 for Intune app for Android branding image" src="./media/company-portal-app/company-portal-app-03.png" width="250">
 
-È possibile personalizzare l'informativa sulla privacy visualizzata per l'organizzazione nei dispositivi iOS/iPadOS gestiti. Questo messaggio elenca gli elementi che l'organizzazione non può visualizzare o eseguire nei dispositivi iOS/iPadOS gestiti.
+## <a name="support-information"></a>Informazioni di supporto
 
-In **Personalizzazione del Portale aziendale** > **Messaggio sulla gestione dei dispositivi e sulla privacy**, è possibile:
+Immettere le informazioni sul supporto dell'organizzazione per consentire ai dipendenti di porre domande. Le informazioni sul supporto vengono visualizzate nelle pagine **Supporto**, **Guida e supporto** e **Supporto tecnico** nell'esperienza utente finale.
 
-- Accettare **Predefinito** per usare l'elenco come illustrato, oppure
-- Scegliere **Personalizzato** per personalizzare gli elementi che l'organizzazione non può visualizzare o eseguire nei dispositivi iOS/iPadOS gestiti. È possibile usare [Markdown](https://daringfireball.net/projects/markdown/) per aggiungere punti elenco, grassetto, corsivo e collegamenti.
+| Nome del campo | Lunghezza massima | Altre informazioni |
+|------------------------|----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Nome contatto | 40 | Questo è il nome della persona che gli utenti potranno raggiungere quando contatteranno il supporto tecnico. |
+| Numero di telefono | 20 | Questo numero consente agli utenti di contattare il supporto tecnico. |
+| Indirizzo di posta elettronica | 40 | Questo indirizzo e-mail è l'indirizzo a cui gli utenti inviano messaggi di posta elettronica per richiedere il supporto. È necessario immettere un indirizzo di posta elettronica valido nel formato `alias@domainname.com`. |
+| Nome sito Web | 40 | Questo è il nome descrittivo visualizzato in alcune posizioni per l'URL del sito Web del supporto tecnico. Se si specifica un URL del sito Web di supporto e nessun nome descrittivo, viene visualizzato l'URL nelle esperienze utente finale.  |
+| URL del sito Web | 150 | Sito Web di supporto che deve essere usato dagli utenti. Il formato dell'URL deve essere `https://www.contoso.com`.  |
+| Informazioni aggiuntive | 120 | Inserire quindi eventuali messaggi aggiuntivi relativi al supporto per gli utenti. |
 
-## <a name="company-portal-derived-credentials-for-ios-devices"></a>Credenziali derivate del portale aziendale per i dispositivi iOS
+## <a name="configuration"></a>Configurazione
+
+La tabella seguente offre ulteriori dettagli di configurazione:
+
+| Nome del campo | Lunghezza massima | Altre informazioni |
+|------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| URL dell'informativa sulla privacy | 79 | Impostare l'informativa sulla privacy dell'organizzazione in modo che venga visualizzata quando gli utenti fanno clic sui collegamenti per la privacy. Immettere un URL valido nel formato `https://www.contoso.com`. |
+| Messaggio sulla privacy nel Portale aziendale per iOS/iPadOS | 520 | Mantenere il valore predefinito o impostare un messaggio personalizzato per elencare gli elementi che l'organizzazione può o non può visualizzare nei dispositivi iOS/iPadOS gestiti. È possibile usare il markdown per aggiungere punti elenco, grassetto, corsivo e collegamenti. |
+| Registrazione del dispositivo | N/D | Specificare se e in che modo richiedere agli utenti di registrarsi nella gestione dei dispositivi mobili. I dettagli sono forniti di seguito. |
+
+### <a name="device-enrollment-setting-options"></a>Opzioni di impostazione della registrazione dei dispositivi
+
+> [!NOTE]
+> Per il supporto per l'impostazione della registrazione dei dispositivi è necessario che gli utenti finali dispongano delle versioni del Portale aziendale seguenti:
+> - Portale aziendale in iOS/iPadOS: versione 4.4 o successiva
+> - Portale aziendale in Android: versione 5.0.4715.0 o successiva 
+
+|    Opzioni di registrazione dei dispositivi    |    Descrizione    |    Richieste di elenco di controllo    |    Notifica    |    Stato dei dettagli del dispositivo    |    Stato dei dettagli dell'app (per app che richiedono la registrazione)    |
+|-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
+|    Disponibile, con richieste di conferma    |    Esperienza predefinita con richieste di registrazione in tutte le posizioni possibili.    |    Sì    |    Sì    |    Sì    |    Sì    |
+|    Disponibile, senza richieste di conferma    |    L'utente può eseguire la registrazione tramite lo stato nei dettagli del dispositivo per il dispositivo corrente o dalle app che richiedono la registrazione.    |    No    |    No    |    Sì    |    Sì    |
+|    Non disponibile    |    Gli utenti non possono eseguire la registrazione.    |    No    |    No    |    No    |    No<sup>(1)</sup>    |
+
+<sup>(1)</sup> **Problema noto:** Se si impostano le app per richiedere la registrazione per l'installazione e si imposta anche la registrazione dei dispositivi su "Non disponibile", l'app Portale aziendale in Android continuerà a offrire agli utenti istruzioni per la registrazione. Questo problema verrà risolto a breve.
+
+> [!NOTE]
+> Se si usa Azure per enti pubblici, l'utente finale riceve i log delle app per prendere decisioni in merito alla condivisione quando avvia il processo per visualizzare la Guida per un problema. Se tuttavia non si usa Azure per enti pubblici, il portale aziendale invierà i log delle app direttamente a Microsoft quando l'utente avvia il processo per visualizzare la Guida per un problema. Inviando i log delle app a Microsoft sarà più semplice risolvere i problemi.
+
+> [!NOTE]
+> In conformità con i criteri Microsoft e Apple, i dati raccolti dal servizio non vengono venduti per alcun motivo a terze parti.
+
+## <a name="company-portal-derived-credentials-for-iosipados-devices"></a>Credenziali derivate del portale aziendale per i dispositivi iOS/iPadOS
 
 Intune supporta la verifica dell'identità personale (PIV, Personal Identity Verification) e le credenziali derivate CAC (Common Access Card) in collaborazione con i provider di credenziali DISA Purebred, Entrust Datacard e Intercede. Gli utenti finali eseguiranno ulteriori passaggi dopo la registrazione del dispositivo iOS/iPadOS per verificarne l'identità nell'applicazione Portale aziendale. Le credenziali derivate verranno abilitate per gli utenti impostando prima di tutto un provider di credenziali per il tenant, quindi specificando come destinazione un profilo che usa credenziali derivate per utenti o dispositivi.
 
@@ -138,9 +124,9 @@ Intune supporta la verifica dell'identità personale (PIV, Personal Identity Ver
 
 Per altre informazioni sulle credenziali derivate per i dispositivi iOS/iPadOS, vedere [Usare le credenziali derivate in Microsoft Intune](../protect/derived-credentials.md).
 
-## <a name="dark-mode-for-ios-company-portal"></a>Modalità scura per il portale aziendale iOS
+## <a name="dark-mode-for-iosipados-company-portal"></a>Modalità scura per il portale aziendale iOS/iPadOS
 
-La modalità scura è disponibile per il portale aziendale iOS. Gli utenti possono scaricare le app aziendali, gestire i propri dispositivi e ottenere supporto tecnico nella combinazione di colori scelta in base alle impostazioni del dispositivo. Il portale aziendale iOS adatterà automaticamente le impostazioni del dispositivo dell'utente finale per la modalità scura o chiara.
+La modalità scura è disponibile per il portale aziendale iOS/iPadOS. Gli utenti possono scaricare le app, gestire i propri dispositivi e ottenere supporto tecnico nella combinazione di colori scelta in base alle impostazioni del dispositivo. Il portale aziendale iOS/iPadOS adatterà automaticamente le impostazioni del dispositivo dell'utente finale per la modalità scura o chiara.
 
 ## <a name="windows-company-portal-keyboard-shortcuts"></a>Tasti di scelta rapida per il portale aziendale di Windows
 
@@ -168,13 +154,14 @@ I tasti di scelta rapida seguenti sono disponibili nell'app Portale aziendale di
 
 Gli utenti finali potranno anche visualizzare i tasti di scelta rapida disponibili nell'app Portale aziendale di Windows.
 
-![Screenshot dei tasti di scelta rapida disponibili nell'app Portale aziendale di Windows](./media/company-portal-app/company-portal-app-01.png)
+![Screenshot dei tasti di scelta rapida disponibili nell'app Portale aziendale di Windows](./media/company-portal-app/company-portal-app-04.png)
 
 ## <a name="user-self-service-device-actions-from-the-company-portal"></a>Azioni self-service che l'utente può eseguire nel dispositivo dal Portale aziendale
 
-Gli utenti possono eseguire azioni nei dispositivi locali o remoti tramite l'app Portale aziendale o il sito Web. Le azioni che un utente può eseguire variano in base alla configurazione e alla piattaforma del dispositivo. In tutti i casi, le azioni sui dispositivi remoti possono essere eseguite solo dall'utente primario del dispositivo.
+Gli utenti possono eseguire azioni nei dispositivi locali o remoti tramite l'app Portale aziendale, il sito Web o l'app Intune in Android. Le azioni che un utente può eseguire variano in base alla configurazione e alla piattaforma del dispositivo. In tutti i casi, le azioni sui dispositivi remoti possono essere eseguite solo dall'utente primario del dispositivo.
+
 - **Ritiro**: rimuove il dispositivo dalla Gestione di Intune. Nell'app Portale aziendale e nel sito Web questa azione viene visualizzata come **Rimuovi**.
-- **Cancellazione**: questa azione avvia la reimpostazione del dispositivo. Nel sito Web del Portale aziendale viene visualizzato come **Ripristina** o **Ripristino delle impostazioni predefinite** nell'app Portale aziendale per iOS.
+- **Cancellazione**: questa azione avvia la reimpostazione del dispositivo. Nel sito Web del Portale aziendale viene visualizzato come **Ripristina** o **Ripristino delle impostazioni predefinite** nell'app Portale aziendale per iOS/iPadOS.
 - **Ridenominazione**: questa azione modifica il nome del dispositivo che l'utente può visualizzare nel Portale aziendale. Non modifica il nome del dispositivo locale, ma solo l'elenco nel Portale aziendale.
 - **Sincronizzazione**: questa azione avvia la sincronizzazione del dispositivo con il servizio Intune. Viene visualizzato come **Verifica stato** nel Portale aziendale.
 - **Blocco remoto**: blocca il dispositivo e richiede un PIN per poterlo sbloccare.
@@ -199,10 +186,10 @@ Alcune piattaforme e configurazioni non consentono azioni self-service nel dispo
 <sup>(2)</sup> Il **recupero chiavi** per MacOS è disponibile solo tramite il portale Web.<br>
 <sup>(3) </sup> tutte le azioni remote sono disabilitate se si usa la registrazione di un manager di registrazione dispositivi.<br>
 <sup>(4)</sup> La **ridenominazione** modifica solo il nome del dispositivo nell'app Portale aziendale o nel portale Web, non nel dispositivo.<br>
-<sup>(5)</sup> La **cancellazione** non è disponibile nei dispositivi iOS registrati dall'utente.<br>
+<sup>(5)</sup> La **cancellazione** non è disponibile nei dispositivi iOS/iPadOS registrati dall'utente.<br>
 <sup>(6)</sup> La **reimpostazione del passcode** non è supportata in alcune configurazioni di Android e Android Enterprise. Per altre informazioni, vedere [Reimpostare o rimuovere il passcode di un dispositivo in Intune](../remote-actions/device-passcode-reset.md).<br>
 <sup>(7)</sup> Il **ritiro** e la **cancellazione** non sono disponibili in scenari di proprietari di dispositivi Android Enterprise (COPE, COBO, COSU).<br> 
-<sup>(8)</sup> La **reimpostazione del passcode** non è supportata nei dispositivi iOS registrati dall'utente.
+<sup>(8)</sup> La **reimpostazione del passcode** non è supportata nei dispositivi iOS/iPadOS registrati dall'utente.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

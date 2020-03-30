@@ -6,24 +6,24 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 3/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: c87fd2bd-7f53-4f1b-b985-c34f2d85a7bc
-ms.reviewer: elocholi
+ms.reviewer: arnab
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9760029effc873b510bf37b779c054c9a0574a20
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6ab840653d7090ed925af0db08f410e236392234
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79353151"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80219844"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Imporre la conformità nei computer Mac gestiti con Jamf Pro
 
@@ -41,7 +41,10 @@ Le procedure descritte in questo articolo richiedono l'accesso alle console di I
 
 2. Selezionare **Dispositivi** > **Criteri di conformità**. Se si usa un criterio creato in precedenza, selezionare il criterio nella console e quindi andare al passaggio successivo di questa procedura. Per creare un nuovo criterio, selezionare **Crea criterio**, quindi specificare i dettagli per un criterio con *Piattaforma* impostata su **macOS**. Configurare *Impostazioni* e *Azioni per la non conformità* in modo da soddisfare i requisiti dell'organizzazione, quindi selezionare **Crea** per salvare il criterio.
 
-3. Nel riquadro *Panoramica* dei criteri selezionare **Assegnazioni**. Usare le opzioni disponibili per configurare quali utenti e gruppi di sicurezza di Azure Active Directory (Azure AD) ricevono questo criterio. L'integrazione di Jamf con Intune non supporta i criteri di conformità che fanno riferimento a gruppi di dispositivi.
+3. Nel riquadro *Panoramica* dei criteri selezionare **Assegnazioni**. Usare le opzioni disponibili per configurare quali utenti e gruppi di sicurezza di Azure Active Directory (Azure AD) ricevono questo criterio. **L'integrazione di Jamf con Intune non supporta i criteri di conformità destinati a gruppi di dispositivi.**
+
+> [!NOTE]
+> L'integrazione di Jamf con Intune supporta solo i gruppi di utenti di AAD. I criteri di conformità dei dispositivi destinati a gruppi di dispositivi non verranno applicati.
 
 4. Quando si seleziona **Salva** i criteri vengono distribuiti agli utenti.  
 

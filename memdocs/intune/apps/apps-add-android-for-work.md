@@ -1,12 +1,12 @@
 ---
-title: Assegnare app Google Play gestite a dispositivi Android Enterprise
+title: Aggiungere e assegnare app Google Play gestite a dispositivi Android Enterprise
 titleSuffix: Microsoft Intune
 description: Informazioni su come sincronizzare e assegnare app ai dispositivi Android Enterprise dalla versione gestita di Google Play Store.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/22/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dec2b1ace9b9b8a5c27ef468969a52f05e1bdcca
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b6dab926a59e69f5afb6c2f40ea7e315afed49f8
+ms.sourcegitcommit: e37d5d3f5bdb39a8f89ba0376b31c06aaf3c5d27
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79341451"
+ms.lasthandoff: 03/22/2020
+ms.locfileid: "80117286"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Aggiungere app Google Play gestite a dispositivi Android Enterprise con Intune
 
@@ -33,7 +33,7 @@ Per facilitare la configurazione e l'uso delle funzionalità di gestione di Andr
 
 - **[Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune)** - Usata per gli scenari di Android Enterprise completamente gestiti. Questa app viene installata automaticamente nei dispositivi completamente gestiti durante il processo di registrazione del dispositivo.
 - **[Microsoft Authenticator](https://play.google.com/store/apps/details?id=com.azure.authenticator)** - Consente di accedere agli account se si usa la verifica a due fattori. Questa app viene installata automaticamente nei dispositivi completamente gestiti durante il processo di registrazione del dispositivo.
-- **[Portale aziendale di Intune](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)** - Usare per gli scenari con criteri di protezione app e profili di lavoro di Android Enterprise.
+- **[Portale aziendale di Intune](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)** - Usare per gli scenari con criteri di protezione app e profili di lavoro di Android Enterprise. Questa app viene installata automaticamente nei dispositivi completamente gestiti durante il processo di registrazione del dispositivo.
 - **[Schermata iniziale gestita](https://play.google.com/store/apps/details?id=com.microsoft.launcher.enterprise)** - Usata per gli scenari di più app dedicate in modalità tutto schermo Android Enterprise. Gli amministratori IT devono creare un'assegnazione per installare questa app in dispositivi dedicati che verranno usati in scenari di più app in modalità tutto schermo.
 
 >[!NOTE]
@@ -183,7 +183,7 @@ Se è stata approvata un'app dallo Store e l'app non è ancora visualizzata nel 
 
 ## <a name="assigning-a-managed-google-play-app-to-android-enterprise-work-profile-devices"></a>Assegnazione di un'app Google Play gestita a dispositivi con profilo di lavoro Android Enterprise
 
-Quando l'app viene visualizzata nel nodo **Licenze dell'app** del riquadro del carico di lavoro **App**, è possibile [assegnarla come qualsiasi altra app](/intune-azure/manage-apps/deploy-apps) assegnandola ai gruppi di utenti.
+Quando l'app viene visualizzata nel nodo **Licenze dell'app** del riquadro del carico di lavoro **App**, è possibile [assegnarla come qualsiasi altra app](/mem/intune/apps/apps-deploy) assegnandola ai gruppi di utenti.
 
 Dopo essere stata assegnata, l'app viene installata o resa disponibile per l'installazione nei dispositivi degli utenti selezionati come destinazione. All'utente del dispositivo non viene chiesto di approvare l'installazione. Per altre informazioni sui dispositivi con profilo di lavoro Android Enterprise, vedere [Configurare la registrazione di dispositivi con profilo di lavoro Android Enterprise](../enrollment/android-work-profile-enroll.md). 
 
@@ -197,7 +197,7 @@ I [dispositivi Android Enterprise completamente gestiti](../enrollment/android-f
 Per impostazione predefinita, un dispositivo Android Enterprise completamente gestito non consentirà ai dipendenti di installare le app che non sono approvate dall'organizzazione. Inoltre, i dipendenti non saranno in grado di rimuovere le app installate in base ai criteri. Per offrire agli utenti un accesso completo a Google Play Store per installare le app anziché un accesso limitato alle app approvate in Google Play Store gestito, è possibile impostare **Consenti l'accesso a tutte le app in Google Play Store** su **Consenti**. Con questa impostazione, l'utente può accedere a tutte le app in Google Play Store usando il proprio account aziendale, ma gli acquisti possono essere limitati. È possibile rimuovere la restrizione relativa agli acquisti consentendo agli utenti di aggiungere nuovi account al dispositivo. Questa operazione consentirà agli utenti finali di acquistare app da Google Play Store usando account personali nonché di effettuare acquisti in-app. Per altre informazioni, vedere [Impostazioni dei dispositivi Android Enterprise per consentire o limitare l'uso delle funzionalità tramite Intune](../configuration/device-restrictions-android-for-work.md). 
 
 > [!NOTE]
-> L'app Microsoft Intune e l'app Microsoft Authenticator verranno installate come app richieste su tutti i dispositivi completamente gestiti durante l'onboarding. L'installazione automatica di queste app offre il supporto dell'accesso condizionale e consente agli utenti dell'app Microsoft Intune di visualizzare e risolvere i problemi di conformità. 
+> L'app Microsoft Intune, l'app Microsoft Authenticator e l'app Portale aziendale verranno installate come app richieste su tutti i dispositivi completamente gestiti durante l'onboarding. L'installazione automatica di queste app offre il supporto dell'accesso condizionale e consente agli utenti dell'app Microsoft Intune di visualizzare e risolvere i problemi di conformità. 
 
 ## <a name="manage-android-enterprise-app-permissions"></a>Gestire le autorizzazioni per le app Android Enterprise
 Android Enterprise richiede l'approvazione delle app nella console Web della versione gestita di Google Play prima di sincronizzarle con Intune e assegnarle agli utenti. Poiché Android Enterprise consente di eseguire automaticamente il push delle app ai dispositivi degli utenti, è necessario accettare le autorizzazioni dell'app per conto di tutti gli utenti. Gli utenti non vedono le autorizzazioni durante l'installazione delle app. È quindi importante comprendere le autorizzazioni.

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db3146bbaae3362e97c8c076823b58dbcd57c4af
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6aa9195e8d0559a106be323108487579eb068b91
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339072"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084802"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>Controllare, esportare o eliminare i dati personali in Intune
 
@@ -45,7 +45,7 @@ Questi eventi di controllo vengono conservati per un anno. Gli amministratori de
 
 ## <a name="export-personal-data"></a>Esportare i dati personali
 
-Gli amministratori possono esportare dati personali degli utenti finali, inclusi gli account, i dati del servizio e i log associati ai fini della conformità con le Richieste del soggetto interessato. Dipende dall'amministratore e dall'organizzazione decidere se fornire o meno al soggetto interessato una copia dei dati personali o se esistono motivi aziendali legittimi per trattenerli. Se si decide di procedere, è possibile fornire una copia del documento effettivo, una versione appositamente redatta o uno screenshot delle parti che si ritiene appropriato condividere.
+Gli amministratori possono esportare dati personali degli utenti finali, inclusi gli account, i dati del servizio e i log associati ai fini della conformità con le Richieste del soggetto interessato. Dipende dall'amministratore e dall'organizzazione decidere se offrire o meno al soggetto interessato una copia dei dati personali o se esistono motivi aziendali legittimi per trattenerli. Se si decide di procedere, è possibile fornire una copia del documento effettivo, una versione appositamente redatta o uno screenshot delle parti che si ritiene appropriato condividere.
 
 Per esportare i dati personali di un utente, è possibile usare: 
 - Il pannello dei dispositivi MDM di Intune per esportare un elenco di dispositivi. È anche possibile copiare direttamente i dati del dispositivo.
@@ -60,13 +60,13 @@ Esistono tre modi per rimuovere i dati personali dalla gestione di Intune:
 
 ### <a name="delete-a-user-from-intune"></a>Eliminare un utente da Intune
 
-Per eliminare i dati personali di un utente finale da Intune, un amministratore deve [eliminare l'utente da Azure Active Directory (AAD)](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user). Quando l'utente viene eliminato da AAD (eliminazione definitiva), Intune riceve il segnale di eliminazione da AAD e quindi avvia automaticamente l'eliminazione di tutti i dati personali dell'utente dal servizio Intune. Le informazioni dell'utente verranno eliminate dal servizio Intune entro 30 giorni dall'azione di rimozione.
+Per eliminare i dati personali di un utente finale da Intune, un amministratore deve [eliminare l'utente da Azure Active Directory (AAD)](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user). Quando l'utente viene eliminato da AAD (eliminazione definitiva), Intune riceve il segnale di eliminazione da AAD, quindi avvia automaticamente la rimozione di tutti i dati personali dell'utente dal servizio Intune. Le informazioni dell'utente verranno eliminate dal servizio Intune entro 30 giorni dall'azione di rimozione.
 
 ### <a name="reset-device-to-factory-settings"></a>Ripristino delle impostazioni predefinite del dispositivo
 Il ripristino delle impostazioni predefinite consente di ripristinare tutti i dati e le impostazioni personali e dell'azienda sulle impostazioni di fabbrica originali. È utile per fornire un dispositivo al dipendente successivo. I file dell'utente, le applicazioni installate dall'utente e le impostazioni non predefinite vengono rimosse e questi dati vengono eliminati dal servizio di Intune entro 30 giorni dall'azione di rimozione.
 
 ### <a name="user-self-removal-from-intune-management"></a>Rimozione in autonomia dell'utente dalla gestione di Intune
-Gli utenti possono rimuovere i dispositivi personali [Windows, Android o Apple](https://docs.microsoft.com/user-help/unenroll-your-device-from-intune-android) dalla gestione di Intune senza intervento dell'amministratore.   
+Gli utenti possono rimuovere i dispositivi personali [Windows, Android o Apple](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-android) dalla gestione di Intune senza intervento dell'amministratore.   
 
 ### <a name="retire"></a>Ritiro
 L'azione **Ritira** consente di rimuovere i dati di cui è stato eseguito il provisioning da Intune, ad esempio le applicazioni aziendali, i dati sulle app gestite in Intune, le impostazioni dei criteri e i profili di posta elettronica sottoposti a provisioning con Intune. Questa azione lascia i dati personali dell'utente nel dispositivo.

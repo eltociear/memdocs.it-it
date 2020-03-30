@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0f475f6f204225e00424e08afb8c69e20e21e815
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4b8de67a77b2122c5db4dddbb82a4966c20e1936
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342023"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233496"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Come creare e assegnare criteri di protezione delle app
 
@@ -58,7 +58,7 @@ Quando si crea un criterio di protezione delle app per app iOS/iPadOS e Android,
 
     Il valore **Piattaforma** viene impostato in base alla scelta effettuata in precedenza.
 
-    ![Screenshot della pagina Informazioni di base del riquadro Crea criterio](/media/app-protection-policies/app-protection-add-policies-01.png)
+    ![Screenshot della pagina Informazioni di base del riquadro Crea criterio](./media/app-protection-policies/app-protection-add-policies-01.png)
 
 5. Fare clic su **Avanti** per visualizzare la pagina **App**.<br>
     La pagina **App** consente di scegliere come applicare questo criterio alle app su dispositivi diversi. È necessario aggiungere almeno un'app.<p>
@@ -123,7 +123,7 @@ Per visualizzare immediatamente l'effetto delle modifiche, l'utente finale deve 
     
     | Valore/opzione | Descrizione |
     |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | Specifica come destinatari le app in tutti i tipi di dispositivo | Usare questa opzione per destinare i criteri alle app nei dispositivi con qualsiasi stato di gestione. Scegliere **No** per destinare i criteri ad app su tipi di dispositivi specifici. Per altre informazioni, vedere [Assegnare i criteri di protezione delle app in base allo stato di gestione del dispositivo](#target-app-protection-policies-based-on-device-management-state) |
+    | Specifica come destinatari le app in tutti i tipi di dispositivo | Usare questa opzione per destinare i criteri alle app nei dispositivi con qualsiasi stato di gestione. Scegliere **No** per destinare i criteri ad app su tipi di dispositivi specifici. Per questa impostazione può essere necessaria una configurazione aggiuntiva dell'app. Per altre informazioni, vedere [Target app protection policies based on device management state](#target-app-protection-policies-based-on-device-management-state) (Assegnare i criteri di protezione delle app in base allo stato di gestione del dispositivo). |
     |     Tipi di dispositivi | Usare questa opzione per specificare se i criteri di applicano ai dispositivi gestiti MDM o ai dispositivi non gestiti. Per i criteri di protezione delle app iOS/iPadOS selezionare **Non gestito** o **Gestito** per i dispositivi. Per i criteri di protezione delle app Android selezionare **Non gestito**, **Amministratore di dispositivi Android** e **Android Enterprise**.  |
     | App pubbliche | Fare clic su **Select public apps** (Selezionare le app pubbliche) per scegliere le app di destinazione. |
     | App personalizzate | Fare clic su **Select custom apps** (Selezionare le app personalizzate) per selezionare le app personalizzate di destinazione in base a un ID di bundle. |
@@ -178,10 +178,9 @@ Per creare questi criteri, passare ad **App** > **Criteri di protezione delle ap
 - **Amministratore di dispositivi Android**: dispositivi gestiti da Intune che usano l'API di amministrazione dei dispositivi Android.
 - **Android Enterprise**: dispositivi gestiti da Intune che usano i profili di lavoro Android Enterprise o la gestione dei dispositivi completa di Android Enterprise.
 
-> [!NOTE]
-> I dispositivi Android richiederanno di installare l'app Portale aziendale Intune indipendentemente dal tipo di dispositivo scelto. Ad esempio, se si seleziona "Android Enterprise", la richiesta verrà visualizzata anche agli utenti con dispositivi Android non gestiti.
+In Android i dispositivi Android richiederanno di installare l'app Portale aziendale Intune indipendentemente dal tipo di dispositivo scelto. Ad esempio, se si seleziona "Android Enterprise", la richiesta verrà visualizzata anche agli utenti con dispositivi Android non gestiti.
 
-Per iOS/iPadOS, sono necessarie impostazioni di configurazione delle app aggiuntive per assegnare le impostazioni dei criteri di protezione delle app alle app nei dispositivi registrati in Intune:
+Per iOS/iPadOS, per applicare la selezione "Tipo di dispositivo" ai "dispositivi non gestiti", sono necessarie altre impostazioni di configurazione dell'app. Queste configurazioni comunicheranno al servizio APP gestito che una determinata app è gestita e che non verranno applicate le impostazioni dell'APP:
 
 - È necessario configurare **IntuneMAMUPN** per tutte le applicazioni gestite da MDM. Per altre informazioni, vedere [Come gestire il trasferimento di dati tra app iOS/iPadOS in Microsoft Intune](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
 - È necessario configurare **IntuneMAMDeviceID** per tutte le applicazioni gestite di terze parti e line-of-business. È necessario impostare **IntuneMAMDeviceID** sul token dell'ID del dispositivo. Ad esempio, `key=IntuneMAMDeviceID, value={{deviceID}}` Per altre informazioni, vedere [Aggiungere criteri di configurazione delle app per i dispositivi iOS/iPadOS gestiti](app-configuration-policies-use-ios.md).

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4d5fe8ed78aa5537552ecf3db12eabd2bb6fbde
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 79bb7e627043e439c7438c2fc4afcfdee5a44406
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359287"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086121"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>Registrare i dispositivi iOS/iPadOS in Intune
 
@@ -46,7 +46,7 @@ Prima di abilitare i dispositivi iOS/iPadOS, completare i passaggi seguenti:
 - La registrazione dispositivi può essere considerata la registrazione BYOD tipica. Offre agli amministratori un'ampia gamma di opzioni di gestione.
 - La registrazione utente è un processo di registrazione più semplificato che offre agli amministratori un subset di opzioni di gestione dei dispositivi. Questa funzionalità è attualmente disponibile in anteprima. 
 
-Dopo aver completato i prerequisiti e assegnato le licenze utente, gli utenti possono scaricare l'app Portale aziendale Intune da App Store e seguire le istruzioni di registrazione nell'app. È possibile personalizzare l'informativa sulla privacy del portale aziendale nei dispositivi iOS/iPadOS come descritto nella sezione relativa alla [personalizzazione dell'informativa sulla privacy](../apps/company-portal-app.md#privacy-statement-customization).
+Dopo aver completato i prerequisiti e assegnato le licenze utente, gli utenti possono scaricare l'app Portale aziendale Intune da App Store e seguire le istruzioni di registrazione nell'app. È possibile personalizzare l'Informativa sulla privacy del Portale aziendale nei dispositivi iOS/iPadOS come illustrato in [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md#configuration) (Come personalizzare le app Portale aziendale, il sito Web Portale aziendale e l'app Intune).
 
 ## <a name="company-owned-iosipados-devices"></a>Dispositivi iOS/iPadOS di proprietà dell'azienda
 

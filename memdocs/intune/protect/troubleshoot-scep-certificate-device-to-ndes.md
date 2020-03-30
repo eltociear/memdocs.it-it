@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72e8f8a19ef27eee039090f146c46488ed1e1205
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 55660497751f1961c9c579ba1d800900189db782
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79350577"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526462"
 ---
 # <a name="troubleshoot-device-to-ndes-server-communication-for-scep-certificate-profiles-in-microsoft-intune"></a>Risolvere i problemi di comunicazione tra dispositivo e server NDES per i profili di certificato SCEP in Microsoft Intune
 
@@ -165,7 +165,7 @@ Usare la procedura seguente per testare l'URL specificato nel profilo di certifi
 
 2. Aprire un Web browser e passare all'URL del server SCEP. Il risultato dovrebbe essere: **Errore HTTP 403.0 - Accesso negato**. Questo risultato indica che l'URL funziona correttamente.
 
-   Se non viene visualizzato questo errore, selezionare il collegamento corrispondente all'errore per visualizzare le indicazioni specifiche per il problema:
+   Se non viene visualizzato questo errore, selezionare il collegamento più simile all'errore visualizzato per ottenere le indicazioni specifiche per il problema:
    - [Viene visualizzato un messaggio generale relativo al servizio Registrazione dispositivi di rete (NDES)](#general-ndes-message)
    - [Viene visualizzato "Errore: HTTP 503, servizio non disponibile"](#http-error-503)
    - [Viene visualizzato l'errore "GatewayTimeout"](#gatewaytimeout)
@@ -243,6 +243,19 @@ Se il pool di applicazioni SCEP non è stato avviato, controllare il registro ev
 
   ![Autorizzazioni IIS](../protect/media/troubleshoot-scep-certificate-device-to-ndes/iis-permissions.png)
 
+- **Causa 4**: Il certificato del modulo NDESPolicy è scaduto.
+
+  Il log CAPI2 (vedere la risoluzione della Causa 2) visualizzerà gli errori relativi al certificato a cui fa riferimento "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP\Modules\NDESPolicy\NDESCertThumbprint" al di fuori del periodo di validità del certificato.
+
+  **Risoluzione**: aggiornare il riferimento con l'identificazione personale di un certificato valido.
+  1. Identificare un certificato di sostituzione:
+     - Rinnovare il certificato esistente
+     - Selezionare un certificato diverso con proprietà simili come ad esempio oggetto, EKU, tipo di chiave, lunghezza e così via.
+     - Registrare un nuovo certificato
+  2. Esportare la chiave del Registro di sistema `NDESPolicy` per eseguire il backup dei valori correnti.
+  3. Sostituire i dati del valore del Registro di sistema `NDESCertThumbprint` con l'identificazione personale del nuovo certificato, rimuovendo tutti gli spazi vuoti e convertendo il testo in minuscolo.
+  4. Riavviare i pool di applicazioni IIS NDES o eseguire `iisreset` da un prompt dei comandi con privilegi elevati.
+
 #### <a name="gatewaytimeout"></a>GatewayTimeout
 
 Quando si passa all'URL del server SCEP, viene visualizzato l'errore seguente:
@@ -289,7 +302,7 @@ Quando si passa all'URL del server SCEP, viene visualizzato l'errore seguente: `
 
   **Risoluzione**: usare il dominio predefinito di *yourtenant.msappproxy.net* per l'URL esterno SCEP nella configurazione di Application Proxy.
 
-#### <a name="internal-server-error"></a>500 - Errore interno del server
+#### <a name="500---internal-server-error"></a><a name="internal-server-error"></a>500 - Errore interno del server
 
 Quando si passa all'URL del server SCEP, viene visualizzato l'errore seguente:
 

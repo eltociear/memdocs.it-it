@@ -1,12 +1,11 @@
 ---
-title: Personalizzare il profilo VPN per app per Android
-titleSuffix: Microsoft Intune
-description: Informazioni su come creare un profilo VPN per app specifiche per i dispositivi Android gestiti da Microsoft Intune.
+title: Personalizzare il profilo VPN per app per Android in Microsoft Intune - Azure | Microsoft Docs
+description: Informazioni su come creare un profilo VPN per app specifiche per i dispositivi amministratore di dispositivi Android gestiti da Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9fbcf60d3707097a323a05bf36d2cfe3902d5214
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d58ab666929e1e28cab4e19f2e2cec668f428452
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79340008"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083879"
 ---
 # <a name="use-a-microsoft-intune-custom-profile-to-create-a-per-app-vpn-profile-for-android-devices"></a>Usare un profilo personalizzato di Microsoft Intune per creare un profilo VPN per ogni app per dispositivi Android
 
@@ -44,14 +43,23 @@ Dopo aver assegnato i criteri ai gruppi di utenti o ai dispositivi Android, gli 
 2. Selezionare **Dispositivi** > **Profili di configurazione** > **Crea profilo**.
 3. Immettere le proprietà seguenti:
 
-    - **Nome**: immettere un nome descrittivo per il profilo. Assegnare ai profili nomi che possano essere identificati facilmente in un secondo momento. Ad esempio un buon nome di profilo è **Profilo VPN Android per app per l'intera azienda**.
+    - **Piattaforma**: Selezionare **Amministratore di dispositivi Android**.
+    - **Profilo**: selezionare **VPN**.
+
+4. Selezionare **Crea**.
+5. In **Informazioni di base** immettere le proprietà seguenti:
+
+    - **Nome**: immettere un nome descrittivo per il profilo. Assegnare ai profili nomi che possano essere identificati facilmente in un secondo momento. Ad esempio, un buon nome di profilo è **Profilo VPN amministratore di dispositivi Android per app per l'intera azienda**.
     - **Descrizione**: Immettere una descrizione del profilo. Questa impostazione è facoltativa ma consigliata.
-    - **Piattaforma**: Selezionare **Android**.
-    - **Tipo di profilo**: selezionare **VPN**.
 
-4. Scegliere **Impostazioni** > **Configura**. Configurare quindi il profilo VPN. Per altre informazioni, vedere [Come configurare le impostazioni VPN](vpn-settings-configure.md) e [Impostazioni VPN di Intune per dispositivi Android](vpn-settings-android.md).
+6. Selezionare **Avanti**.
+7. In **Impostazioni di configurazione** configurare le impostazioni del profilo:
 
-Prendere nota del valore **Nome connessione** specificato quando si crea il profilo VPN. Questo nome sarà necessario nel passaggio successivo. Ad esempio **MyAppVpnProfile**.
+    - [Impostazioni VPN per i dispositivi amministratore di dispositivi Android](vpn-settings-android.md).
+
+    Prendere nota del valore **Nome connessione** specificato quando si crea il profilo VPN. Questo nome sarà necessario nel passaggio successivo. In questo esempio il nome della connessione è **MyAppVpnProfile**.
+
+8. Selezionare **Avanti** e continuare a creare il profilo. Per altre informazioni, vedere [Creare profili VPN](vpn-settings-configure.md#create-the-profile).
 
 ## <a name="step-2-create-a-custom-configuration-policy"></a>Passaggio 2: Creare criteri di configurazione personalizzati
 
@@ -61,7 +69,7 @@ Prendere nota del valore **Nome connessione** specificato quando si crea il prof
 
     - **Nome**: Immettere un nome descrittivo per il profilo personalizzato. Assegnare ai profili nomi che possano essere identificati facilmente in un secondo momento. Ad esempio un buon nome di profilo è **Profilo VPN Android OMA-URI personalizzato per l'intera azienda**.
     - **Descrizione**: Immettere una descrizione del profilo. Questa impostazione è facoltativa ma consigliata.
-    - **Piattaforma**: Selezionare **Android**.
+    - **Piattaforma**: Selezionare **Amministratore di dispositivi Android**.
     - **Tipo di profilo**: Selezionare **Personalizzato**.
 
 4. Scegliere **Impostazioni** > **Configura**.
@@ -72,7 +80,8 @@ Prendere nota del valore **Nome connessione** specificato quando si crea il prof
     - **Tipo di dati**: Immettere **String**.
     - **Valore**: Immettere un elenco separato da punti e virgola dei pacchetti da associare al profilo. Se ad esempio si vuole che Excel e il browser Google Chrome usino la connessione VPN, immettere `com.microsoft.office.excel;com.android.chrome`.
 
-![Esempio di criteri personalizzati VPN per app Android](./media/android-pulse-secure-per-app-vpn/android_per_app_vpn_oma_uri.png)
+    > [!div class="mx-imgBorder"]
+    >![Esempio di criterio personalizzato della VPN per app di amministratore di dispositivi Android](./media/android-pulse-secure-per-app-vpn/android_per_app_vpn_oma_uri.png)
 
 ### <a name="set-your-app-list-to-blacklist-or-whitelist-optional"></a>Impostare l'elenco di app come blacklist o whitelist (facoltativo)
 
@@ -87,3 +96,8 @@ Usare il valore *BLACKLIST* per specificare un elenco di app che **non possono**
 ## <a name="step-3-assign-both-policies"></a>Passaggio 3: Assegnare entrambi i criteri
 
 [Assegnare entrambi i profili di dispositivo](device-profile-assign.md) agli utenti o ai dispositivi appropriati.
+
+## <a name="next-steps"></a>Passaggi successivi
+
+- Per un elenco di tutte le impostazioni VPN di amministratore di dispositivi Android, vedere [Impostazioni dei dispositivi Android per configurare la VPN](vpn-settings-android.md).
+- Per altre informazioni sulle impostazioni VPN e Intune, vedere [Creare profili VPN per la connessione ai server VPN in Intune](vpn-settings-configure.md).

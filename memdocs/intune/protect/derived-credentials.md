@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3724e425ab284d63dbe1e64dcd236509744abe10
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 50d32a76e638d88adc7a72d103c84e73544079cb
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352345"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084897"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Usare le credenziali derivate in Microsoft Intune
 
@@ -33,7 +33,7 @@ Le credenziali derivate sono un'implementazione delle linee guida del National I
 
 **Con l'implementazione di Intune** :
 
-- L'amministratore di Intune configura il tenant in modo che funzioni con un emittente di credenziali derivate supportato. Non è necessario configurare impostazioni specifiche di Intune nel sistema dell'emittente di credenziali derivate.
+- L'amministratore di Intune configura il tenant in modo che funzioni con un emittente di credenziali derivate supportato. Non è necessario configurare impostazioni specifiche di Intune nel sistema dell'emittente delle credenziali derivate.
 
 - L'amministratore di Intune specifica le **credenziali derivate** come *metodo di autenticazione* per gli oggetti seguenti:
 
@@ -102,11 +102,11 @@ Informazioni generali:
 
 ### <a name="2-review-the-end-user-workflow-for-your-chosen-issuer"></a>2) Esaminare il flusso di lavoro dell'utente finale per l'emittente prescelto
 
-Di seguito sono riportate alcune considerazioni chiave per ogni partner supportato.  Acquisire familiarità con queste informazioni per assicurarsi che i criteri e le configurazioni di Intune non impediscano a utenti e dispositivi di completare correttamente la registrazione delle credenziali derivate da tale emittente.
+Di seguito sono riportate alcune considerazioni chiave per ogni partner supportato.  Acquisire familiarità con queste informazioni per assicurarsi che i criteri e le configurazioni di Intune non impediscano a utenti e dispositivi di completare la registrazione delle credenziali derivate da tale emittente.
 
 #### <a name="disa-purebred"></a>DISA Purebred
 
-Esaminare il [flusso di lavoro degli utenti per DISA Purebred](https://docs.microsoft.com/user-help/enroll-ios-device-disa-purebred). I requisiti principali per questo flusso di lavoro includono:
+Esaminare il [flusso di lavoro degli utenti per DISA Purebred](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-disa-purebred). I requisiti principali per questo flusso di lavoro includono:
 
 - Gli utenti devono accedere a un computer o a un chiosco multimediale in cui possono usare la smart card per l'autenticazione con l'emittente.
 
@@ -122,7 +122,7 @@ Per informazioni su come ottenere e configurare l'app DISA Purebred, vedere [Dis
 
 #### <a name="entrust-datacard"></a>Entrust Datacard
 
-Esaminare il [flusso di lavoro degli utenti per Entrust Datacard](https://docs.microsoft.com/user-help/enroll-ios-device-entrust-datacard). I requisiti principali per questo flusso di lavoro includono:
+Esaminare il [flusso di lavoro degli utenti per Entrust Datacard](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-entrust-datacard). I requisiti principali per questo flusso di lavoro includono:
 
 - Gli utenti devono accedere a un computer o a un chiosco multimediale in cui possono usare la smart card per l'autenticazione con l'emittente.
 
@@ -132,7 +132,7 @@ Esaminare il [flusso di lavoro degli utenti per Entrust Datacard](https://docs.m
 
 #### <a name="intercede"></a>Intercede
 
-Esaminare il [flusso di lavoro degli utenti per Intercede](https://docs.microsoft.com/user-help/enroll-ios-device-intercede). I requisiti principali per questo flusso di lavoro includono:
+Esaminare il [flusso di lavoro degli utenti per Intercede](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-intercede). I requisiti principali per questo flusso di lavoro includono:
 
 - Gli utenti devono accedere a un computer o a un chiosco multimediale in cui possono usare la smart card per l'autenticazione con l'emittente.
 
@@ -148,7 +148,7 @@ Un certificato radice trusted viene usato con le credenziali derivate per verifi
 
 Creare istruzioni e fornire agli utenti su come avviare il processo di registrazione per le credenziali derivate e spostarsi nel flusso di lavoro di registrazione delle credenziali derivate per l'emittente prescelto.
 
-Si consiglia di fornire un URL tramite il quale accedere alle istruzioni. Questo URL viene specificato quando si configura l'emittente di credenziali derivate per il tenant e tale URL viene reso disponibile all'interno dell'app Portale aziendale. Se non si specifica un URL personalizzato, Intune fornisce un collegamento a dettagli generici. Questi dettagli non possono coprire tutti gli scenari e potrebbero non essere accurati per l'ambiente in uso.
+Si consiglia di fornire un URL tramite il quale accedere alle istruzioni. Questo URL viene specificato quando si configura l'emittente di credenziali derivate per il tenant e tale URL viene reso disponibile all'interno dell'app Portale aziendale. Se non si specifica un URL personalizzato, Intune offre un collegamento a dettagli generici. Questi dettagli non possono coprire tutti gli scenari e potrebbero non essere precisi per l'ambiente in uso.
 
 ### <a name="5-deploy-intune-policies-that-require-derived-credentials"></a>5) Distribuire i criteri di Intune che richiedono credenziali derivate
 
@@ -175,7 +175,7 @@ Prima di creare criteri che richiedono l'uso di credenziali derivate, configurar
 
 5. Specificare un **URL della guida per le credenziali derivate** per fornire un collegamento a un percorso che includa istruzioni personalizzate per consentire agli utenti di ottenere le credenziali derivate per l'organizzazione. Le istruzioni devono essere specifiche per l'organizzazione e per il flusso di lavoro necessario per ottenere le credenziali dall'emittente prescelto. Il collegamento viene visualizzato nell'app Portale aziendale e deve essere accessibile dal dispositivo.
 
-   Se non si specifica un URL personalizzato, Intune fornisce un collegamento a dettagli generici che non possono coprire tutti gli scenari. Queste linee guida generiche potrebbero non essere accurate per l'ambiente in uso.
+   Se non si specifica un URL personalizzato, Intune offre un collegamento a dettagli generici che non possono coprire tutti gli scenari. Queste linee guida generiche potrebbero non essere accurate per l'ambiente in uso.
 
 6. Selezionare una o più opzioni per **Tipo di notifica**. I tipi di notifica sono i metodi usati per informare gli utenti sugli scenari seguenti:
 
@@ -221,17 +221,34 @@ Oltre a distribuire l'app con Intune, configurare una rete VPN per app di Intune
 Usare le credenziali derivate per l'autenticazione basata su certificati per siti e applicazioni Web. Per distribuire una credenziale derivata per l'autenticazione dell'app:
 
 1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+
 2. Selezionare **Dispositivi** > **Profili di configurazione** > **Crea profilo**.
-3. Immettere le impostazioni seguenti:
 
-    - **Nome**: immettere un nome descrittivo per il profilo. Assegnare ai profili nomi che possano essere identificati facilmente in un secondo momento. Ad esempio, un nome di profilo valido è **Credenziali derivate per profilo dispositivi iOS/iPadOS**.
-    - **Descrizione**: immettere una descrizione che offra una panoramica dell'impostazione e altri dettagli importanti.
-    - **Piattaforma**: Selezionare **iOS/iPadOS**.
-    - **Tipo di profilo**: Selezionare **Credenziali derivate**.
+3. Immettere le proprietà seguenti:
+   - **Piattaforma**: Selezionare la piattaforma dei dispositivi che riceveranno questo profilo.
+   - **Profilo**: Selezionare **Credenziale derivata**.
 
-4. Selezionare **OK** per salvare le modifiche.
-5. Al termine, selezionare **OK** > **Crea** per creare il profilo di Intune. Una volta completata l'operazione, il profilo viene visualizzato nell'elenco **Dispositivi - Profili di configurazione**.
-6. Selezionare il nuovo profilo > **Assegnazioni**. Selezionare i gruppi che devono ricevere i criteri.
+4. Selezionare **Crea**.
+
+5. In **Informazioni di base** immettere le proprietà seguenti:
+
+   - **Nome**: immettere un nome descrittivo per il profilo. Assegnare ai profili nomi che possano essere identificati facilmente in un secondo momento. Ad esempio, un nome di profilo valido è **Credenziali derivate per profilo dispositivi iOS/iPadOS**.
+   - **Descrizione**: Immettere una descrizione del profilo. Questa impostazione è facoltativa ma consigliata.
+
+6. Selezionare **Avanti**.
+
+7. In **Impostazioni di configurazione** impostare **Usa una credenziale derivata per l'autenticazione dell'app** su **Sì**, quindi selezionare **Avanti**.
+
+8. In **Tag ambito** (facoltativo) assegnare un tag per filtrare il profilo a gruppi IT specifici, ad esempio `US-NC IT Team` o `JohnGlenn_ITDepartment`. Per altre informazioni sui tag di ambito, vedere [Usare il controllo degli accessi in base al ruolo (RBAC) e i tag di ambito per l'infrastruttura IT distribuita](../fundamentals/scope-tags.md).
+
+   Selezionare **Avanti**.
+
+9. In **Assegnazioni** selezionare l'utente o i gruppi che riceveranno il profilo. Per altre informazioni sull'assegnazione di profili, vedere [Assegnare profili utente e dispositivo](../configuration/device-profile-assign.md).
+
+    Selezionare **Avanti**.
+
+10. In **Rivedi e crea** rivedere le impostazioni. Quando si seleziona Crea, le modifiche vengono salvate e il profilo viene assegnato. Il criterio viene visualizzato anche nell'elenco dei profili.
+
  
 Gli utenti ricevono l'app o la notifica tramite posta elettronica in base alle impostazioni specificate durante la configurazione dell'emittente delle credenziali derivate. La notifica informa l'utente di avviare il Portale aziendale in modo che sia possibile elaborare i criteri delle credenziali derivate.
 

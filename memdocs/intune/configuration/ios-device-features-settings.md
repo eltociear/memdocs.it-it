@@ -1,11 +1,11 @@
 ---
 title: Impostazioni delle funzionalità dei dispositivi iOS/iPadOS in Microsoft Intune - Azure | Microsoft Docs
-description: Visualizzare tutte le impostazioni per configurare i dispositivi iOS/iPadOS per le impostazioni di AirPrint, layout della schermata iniziale, notifiche delle app, dispositivi condivisi, Single Sign-On e filtro del contenuto Web in Microsoft Intune. Usare queste impostazioni in un profilo di configurazione del dispositivo per configurare i dispositivi iOS/iPadOS per l'uso di queste funzionalità Apple nell'organizzazione.
+description: Visualizzare tutte le impostazioni per configurare i dispositivi iOS/iPadOS per AirPrint, layout della schermata iniziale, notifiche delle app, dispositivi condivisi, Single Sign-On e filtro del contenuto Web in Microsoft Intune. Usare queste impostazioni in un profilo di configurazione del dispositivo per configurare i dispositivi iOS/iPadOS per l'uso di queste funzionalità Apple nell'organizzazione.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/09/2020
+ms.date: 03/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 351c6ade59d98ce620b939c5ff6238e650390a5f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fafca25fb0e374d281f8ef593cb5fa7f35d82979
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361081"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086955"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>Impostazioni dei dispositivi iOS e iPadOS per usare le funzionalità iOS/iPadOS comuni in Intune
 
-Intune include alcune impostazioni predefinite per consentire agli utenti di iOS/iPadOS di usare diverse funzionalità Apple nei dispositivi. Gli amministratori, ad esempio, possono controllare come gli utenti di iOS/iPadOS usano le stampanti AirPrint, aggiungere app e cartelle al dock e alle pagine nella schermata iniziale, visualizzare le notifiche delle app, visualizzare i dettagli dei tag degli asset nella schermata di blocco, usare l'autenticazione Single Sign-On e autenticare gli utenti con i certificati.
+Intune include alcune impostazioni predefinite per consentire agli utenti di iOS/iPadOS di usare diverse funzionalità Apple nei dispositivi. Ad esempio è possibile controllare le stampanti AirPrint, aggiungere app e cartelle al dock e alle pagine nella schermata iniziale, visualizzare le notifiche delle app, visualizzare i dettagli dei tag degli asset nella schermata di blocco, usare l'autenticazione Single Sign-On e usare l'autenticazione basata su certificati.
 
 Usare queste funzionalità per controllare i dispositivi iOS/iPadOS nella soluzione di gestione di dispositivi mobili (MDM).
 
@@ -48,7 +48,7 @@ L'articolo elenca queste impostazioni e descrive la funzione di ogni impostazion
 - **Indirizzo IP**: immettere l'indirizzo IPv4 o IPv6 della stampante. Se si usano i nomi host per identificare le stampanti, è possibile ottenere l'indirizzo IP effettuando il ping della stampante nel terminale. Per informazioni più dettagliate, vedere Ottenere l'indirizzo IP e il percorso (in questo articolo).
 - **Percorso**: il percorso è in genere `ipp/print` per le stampanti di rete. Per informazioni più dettagliate, vedere Ottenere l'indirizzo IP e il percorso (in questo articolo).
 - **Porta**: immettere la porta di ascolto della destinazione AirPrint. Se si omette questa proprietà, AirPrint usa la porta predefinita. Disponibile in iOS 11.0+ e iPadOS 13.0+.
-- **TLS**: scegliere **Abilita** per proteggere le connessioni AirPrint con Transport Layer Security (TLS). Disponibile in iOS 11.0+ e iPadOS 13.0+.
+- **TLS**: **Abilita** protegge le connessioni AirPrint con Transport Layer Security (TLS). Disponibile in iOS 11.0+ e iPadOS 13.0+.
 
 Per aggiungere server AirPrint, è possibile:
 
@@ -81,7 +81,7 @@ Questa funzionalità si applica a:
 
 ### <a name="dock"></a>Dock
 
-Usare le impostazioni di **Dock** per aggiungere fino a sei elementi o cartelle al dock della schermata iOS/iPadOS. Molti dispositivi supportano un minor numero di elementi. I dispositivi iPhone, ad esempio, supportano al massimo quattro elementi. In questo caso, nel dispositivo verranno visualizzati solo i primi quattro elementi aggiunti.
+Usare le impostazioni di **Dock** per aggiungere fino a sei elementi o cartelle al dock su schermo. Molti dispositivi supportano un minor numero di elementi. I dispositivi iPhone, ad esempio, supportano al massimo quattro elementi. In questo caso, nel dispositivo verranno visualizzati solo i primi quattro elementi aggiunti.
 
 È possibile aggiungere fino a **sei** elementi (app e cartelle in combinazione) per il dock del dispositivo.
 
@@ -283,8 +283,32 @@ Questa funzionalità si applica a:
 - **Tipo di estensione dell'app per accesso Single Sign-On**: scegliere il tipo di estensione dell'app per l'accesso Single Sign-On. Le opzioni disponibili sono:
 
   - **Non configurata**: non vengono usate le estensioni dell'app. Per disabilitare un'estensione dell'app, è possibile impostare il tipo di estensione dell'app per l'accesso Single Sign-On su **Non configurato**.
-  - **Reindirizzamento**: usare un'estensione dell'app di reindirizzamento generica e personalizzabile per eseguire l'accesso Single Sign-On con flussi di autenticazione moderni. Assicurarsi di conoscere l'ID estensione dell'app dell'organizzazione.
-  - **Credenziali**: usare un'estensione dell'app per le credenziali personalizzabile e generica per eseguire l'accesso Single Sign-On con i flussi di autenticazione challenge-and-response (richiesta e risposta). Assicurarsi di conoscere l'ID estensione dell'app dell'organizzazione.
+  - **Reindirizzamento**: usare un'estensione dell'app di reindirizzamento generica e personalizzabile per usare Single Sign-On con i flussi di autenticazione moderni. Assicurarsi di conoscere l'ID estensione dell'app dell'organizzazione.
+
+    Nei dispositivi iOS/iPadOS 13.0+ è possibile configurare l'**estensione dell'app per accesso Single Sign-On di Microsoft Azure AD** usando questo tipo di estensione dell'app di reindirizzamento SSO. L'estensione Microsoft Azure AD consente il Single Sign-On tra app Microsoft e app dell'organizzazione che usano Azure AD per l'autenticazione. L'estensione Azure AD funge da broker di autenticazione avanzato e offre miglioramenti della sicurezza e dell'esperienza dell'utente finale. Tutte le app che in precedenza usavano l'autenticazione tramite broker con l'app Microsoft Authenticator continuano a ottenere l'accesso Single Sign-On con l'estensione SSO. L'estensione SSO Azure AD non supporta ancora l'accesso Single Sign-On tramite browser. Per altre informazioni su SSO e sul broker di autenticazione iOS/iPadOS, vedere [Configurare SSO in macOS e iOS/iPadOS](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-macos-ios).  
+
+    **Per configurare l'estensione Microsoft Azure AD per iOS:**
+
+    1. Impostare **Tipo di estensione dell'app per accesso Single Sign-On** su **Reindirizzamento**.
+    2. Impostare **ID estensione** su `com.microsoft.azureauthenticator.ssoextension`.
+    3. Impostare **ID team** su `SGGM6D27TK`.
+    4. Nell'impostazione **URL** immettere gli URL seguenti:
+
+        - `https://login.microsoftonline.com`
+        - `https://login.windows.net`
+        - `https://login.microsoft.com`
+        - `https://sts.windows.net`
+        - `https://login.partner.microsoftonline.cn`
+        - `https://login.chinacloudapi.cn`
+        - `https://login.microsoftonline.de`
+        - `https://login.microsoftonline.us`
+        - `https://login.usgovcloudapi.net`
+        - `https://login-us.microsoftonline.com`
+
+    > [!IMPORTANT]
+    > Per ottenere l'accesso SSO con l'estensione Microsoft Azure AD per iOS/iPadOS, installare prima l'app Microsoft Authenticator iOS/iPados nel dispositivo. Authenticator rende disponibile l'estensione Azure AD al dispositivo e le impostazioni dell'estensione dell'app SSO MDM attivano l'estensione Azure AD. Quando Authenticator e il profilo dell'estensione dell'app SSO sono installati nel dispositivo, gli utenti devono immettere le credenziali per accedere e creare una sessione. La sessione viene quindi usata su diverse applicazioni senza richiedere agli utenti di eseguire di nuovo l'autenticazione.
+
+  - **Credenziali**: usare un'estensione dell'app per le credenziali personalizzabile e generica per usare Single Sign-On con i flussi di autenticazione challenge-and-response (richiesta e risposta). Assicurarsi di conoscere l'ID estensione dell'app dell'organizzazione.
   - **Kerberos**: usare l'estensione Kerberos predefinita di Apple, inclusa in iOS 13.0+ e iPadOS 13.0+. Questa opzione è una versione specifica di Kerberos dell'estensione dell'app **Credenziali**.
 
   > [!TIP]
@@ -303,7 +327,7 @@ Questa funzionalità si applica a:
   - Tutti i domini nei profili di Intune dell'estensione dell'app Single Sign-On devono essere univoci. Non è possibile ripetere un dominio in un profilo di estensione dell'app di accesso, anche se si usano tipi diversi di estensioni dell'app per l'accesso Single Sign-On.
   - Questi domini non fanno distinzione tra maiuscole e minuscole.
 
-- **URL** (solo reindirizzamento): immettere i prefissi URL dei provider di identità per cui l'estensione dell'app di reindirizzamento esegue l'accesso Single Sign-On. Quando un utente viene reindirizzato a questi URL, l'estensione dell'app per l'accesso Single Sign-On interviene e richiede l'accesso Single Sign-On.
+- **URL** (solo reindirizzamento): immettere i prefissi URL dei provider di identità per cui l'estensione dell'app di reindirizzamento usa l'accesso Single Sign-On. Quando gli utenti vengono reindirizzati a questi URL, l'estensione dell'app per l'accesso Single Sign-On interviene e richiede l'accesso Single Sign-On.
 
   - Tutti gli URL nei profili di estensione dell'app per l'accesso Single Sign-On di Intune devono essere univoci. Non è possibile ripetere un dominio in un profilo di estensione dell'app per l'accesso Single Sign-On, anche se si usano tipi diversi di estensioni dell'app per l'accesso Single Sign-On.
   - Gli URL devono iniziare con http://o https://.
@@ -320,7 +344,7 @@ Questa funzionalità si applica a:
 
   - **Aggiungi**: selezionare questa impostazione per aggiungere le chiavi di configurazione.
 
-- **Utilizzo di Keychain** (solo Kerberos): scegliere **Blocca** per impedire il salvataggio e l'archiviazione delle password in Keychain. Se bloccato, all'utente non viene richiesto di salvare la password e deve immettere nuovamente la password quando il ticket Kerberos scade. **Non configurato** (impostazione predefinita) consente il salvataggio e l'archiviazione delle password in Keychain. Agli utenti non viene richiesto di immettere nuovamente la password quando il ticket scade.
+- **Utilizzo di Keychain** (solo Kerberos): scegliere **Blocca** per impedire il salvataggio e l'archiviazione delle password in Keychain. Se l'impostazione è bloccata, non viene richiesto agli utenti di salvare la password e gli utenti devono immettere nuovamente la password quando il ticket Kerberos scade. **Non configurato** (impostazione predefinita) consente il salvataggio e l'archiviazione delle password in Keychain. Agli utenti non viene richiesto di immettere nuovamente la password quando il ticket scade.
 - **Face ID, Touch ID o passcode** (solo Kerberos): **Richiedi** impone agli utenti di immettere Face ID, Touch ID o passcode del dispositivo quando sono necessarie le credenziali per aggiornare il ticket Kerberos. **Non configurato** (impostazione predefinita) non richiede agli utenti di usare la biometria o il passcode del dispositivo per aggiornare il ticket Kerberos. Se l'impostazione **Utilizzo di Keychain** è bloccata, non è applicabile.
 - **Area di autenticazione predefinita** (solo Kerberos): scegliere **Abilita** per impostare il valore **Area di autenticazione** immesso come area di autenticazione predefinita. **Non configurato** (impostazione predefinita) non imposta un'area di autenticazione predefinita.
 

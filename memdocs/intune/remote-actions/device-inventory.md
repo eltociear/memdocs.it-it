@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df00db079a7e6b73ba24dc612b5cb6b2250c3898
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 50c56cff5f6b58894ff1abb24dad397d7e6c2c1e
+ms.sourcegitcommit: cd2cbc23b8909df3a000d8ad4140e87052d6de5a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79338188"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79508475"
 ---
 # <a name="see-device-details-in-intune"></a>Visualizzare i dettagli del dispositivo in Intune
 
@@ -36,7 +36,7 @@ Questo articolo illustra come visualizzare tutti i dispositivi e le relative pro
 1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Selezionare **Dispositivi** > **Tutti i dispositivi** > selezionare uno dei dispositivi elencati per aprirne i dettagli:
 
-   - **Panoramica** visualizza il nome del dispositivo ed elenca alcune delle proprietà chiave, ad esempio se è un dispositivo Bring Your Own Device (BYOD), quando è stato registrato e altro ancora. È possibile eseguire le seguenti attività sul dispositivo:
+   - **Panoramica** visualizza il nome del dispositivo ed elenca alcune proprietà chiave del dispositivo, ad esempio se è un dispositivo personale o aziendale, il numero di serie, l'utente primario e altro ancora. È possibile eseguire le seguenti attività sul dispositivo:
       - [Ritira](devices-wipe.md#retire)
       - [Cancellazione](devices-wipe.md#wipe)
       - [Eliminazione](devices-wipe.md#delete-devices-from-the-intune-portal)

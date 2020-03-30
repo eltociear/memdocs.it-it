@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8efa125b78e1265861f55b258cd264d7640154b2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2e143530c5e9965a3717c632c1af7fcbc28a664f
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79360795"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526292"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Impostazioni relative alle funzionalità dei dispositivi macOS in Intune
 
@@ -130,7 +130,7 @@ Questa funzionalità si applica a:
 - **Tipo di estensione dell'app per accesso Single Sign-On**: scegliere il tipo di estensione dell'app per l'accesso Single Sign-On per le credenziali. Le opzioni disponibili sono:
 
   - **Non configurata**: non vengono usate le estensioni dell'app. Per disabilitare un'estensione dell'app, impostare il tipo di estensione dell'app per l'accesso Single Sign-On su **Non configurato**.
-  - **Reindirizzamento**: usare un'estensione dell'app di reindirizzamento generica e personalizzabile per eseguire l'accesso Single Sign-On con flussi di autenticazione moderni. Assicurarsi di conoscere l'estensione e l'ID team dell'estensione dell'app dell'organizzazione.
+  - **Reindirizzamento**: usare un'estensione dell'app di reindirizzamento generica e personalizzabile per eseguire l'accesso Single Sign-On con flussi di autenticazione moderni. Assicurarsi di conoscere l'estensione e l'ID team per l'estensione dell'app dell'organizzazione.
   - **Credenziali**: usare un'estensione dell'app per le credenziali personalizzabile e generica per eseguire l'accesso Single Sign-On con i flussi di autenticazione challenge-and-response (richiesta e risposta). Assicurarsi di conoscere l'ID estensione e l'ID team dell'estensione dell'app per l'accesso Single Sign-On dell'organizzazione.  
   - **Kerberos**: usare l'estensione Kerberos predefinita di Apple, inclusa in macOS Catalina 10.15 e versioni successive. Questa opzione è una versione specifica di Kerberos dell'estensione dell'app **Credenziali**.
 
@@ -140,7 +140,7 @@ Questa funzionalità si applica a:
 - **ID estensione** (reindirizzamento e credenziali): immettere l'identificatore dell'aggregazione che identifica l'estensione dell'app per l'accesso Single Sign-On, ad esempio `com.apple.ssoexample`.
 - **ID team** (reindirizzamento e credenziali): immettere l'identificatore del team dell'estensione dell'app per l'accesso Single Sign-On. Un identificatore del team è una stringa alfanumerica (numeri e lettere) di 10 caratteri generata da Apple, ad esempio `ABCDE12345`. 
 
-  [Locate your Team ID](https://help.apple.com/developer-account/#/dev55c3c710c) (Individuare l'ID team) (apre il sito Web di Apple) include ulteriori informazioni.
+  [Locate your Team ID](https://help.apple.com/developer-account/#/dev55c3c710c) (Individuare l'ID del team) (apre il sito Web di Apple) include ulteriori informazioni.
 
 - **Area autenticazione** (credenziali e Kerberos): immettere il nome dell'area di autenticazione. Il nome dell'area di autenticazione deve essere in lettere maiuscole, ad esempio `CONTOSO.COM`. In genere, il nome dell'area di autenticazione corrisponde al nome di dominio DNS, ma in lettere maiuscole.
 
@@ -154,7 +154,7 @@ Questa funzionalità si applica a:
   - Tutti gli URL nei profili di estensione dell'app per l'accesso Single Sign-On di Intune devono essere univoci. Non è possibile ripetere un dominio in un profilo di estensione dell'app per l'accesso Single Sign-On, anche se si usano tipi diversi di estensioni dell'app per l'accesso Single Sign-On.
   - Gli URL devono iniziare con http://o https://.
 
-- **configurazione aggiuntiva** (reindirizzamento e credenziali): immettere i dati aggiuntivi specifici dell'estensione da passare all'estensione dell'app per l'accesso SSO:
+- **Configurazione aggiuntiva** (reindirizzamento e credenziali): immettere i dati aggiuntivi specifici dell'estensione da passare all'estensione dell'app per l'accesso SSO:
   - **Chiave**: immettere il nome dell'elemento che si vuole aggiungere, ad esempio `user name`.
   - **Tipo**: immettere il tipo di dati. Le opzioni disponibili sono:
 
@@ -193,7 +193,7 @@ Questa funzionalità si applica a:
   
 - **Codice del sito di Active Directory** (solo Kerberos): immettere il nome del sito Active Directory che deve essere usato dall'estensione Kerberos. Potrebbe non essere necessario modificare questo valore poiché l'estensione Kerberos potrebbe trovare automaticamente il codice del sito Active Directory.
 - **Nome cache** (solo Kerberos): immettere il nome GSS (Generic Security Services) della cache Kerberos. Probabilmente non è necessario impostare questo valore.  
-- **Messaggio relativo ai requisiti per le password** (solo Kerberos): immettere una versione in formato testo dei requisiti per le password dell'organizzazione visualizzati agli utenti. Il messaggio viene visualizzato se non sono richiesti i requisiti di complessità delle password di Active Directory o non si immette la lunghezza minima della password.  
+- **Messaggio relativo ai requisiti per le password** (solo Kerberos): immettere una versione in formato testo dei requisiti per le password dell'organizzazione visualizzati agli utenti. Il messaggio viene visualizzato se non sono richiesti i requisiti di complessità delle password di Active Directory o non si specifica la lunghezza minima della password.  
 - **ID aggregazione di app** (solo Kerberos): **aggiungere** gli identificatori delle aggregazioni di app che devono usare l'accesso Single Sign-On nei dispositivi. Queste app ricevono l'accesso al Ticket Granting Ticket Kerberos, il ticket di autenticazione, ed eseguono l'autenticazione degli utenti per i servizi a cui sono autorizzati ad accedere.
 - **Mapping dell'area di autenticazione dei domini** (solo Kerberos): **aggiungere** i suffissi DNS di dominio che devono essere mappati all'area di autenticazione. Usare questa impostazione quando i nomi DNS degli host non corrispondono al nome dell'area di autenticazione. Probabilmente non è necessario creare questo mapping da dominio ad area di autenticazione personalizzato.
 - **Certificato PKINIT** (solo Kerberos): **selezionare** il certificato PKINIT (Public Key Cryptography for Initial Authentication) che può essere usato per l'autenticazione Kerberos. È possibile scegliere tra i certificati [PKCS](../protect/certficates-pfx-configure.md) o [SCEP](../protect/certificates-scep-configure.md) aggiunti in Intune. Per altre informazioni sui certificati, vedere [Usare i certificati per l'autenticazione in Microsoft Intune](../protect/certificates-configure.md).
@@ -219,7 +219,7 @@ Questa funzionalità si applica a:
 
   `osascript -e 'id of app "ExampleApp"'`
 
-- **Dominio**: immettere il dominio del sito Web da associare a un'app. Il dominio include un tipo di servizio e un nome host completo, ad esempio `webcredentials:www.contoso.com`.
+- **Dominio**: immettere il dominio del sito Web da associare a un'app. Il dominio include un tipo di servizio e un nome host completo, ad esempio `webcredentials: www.contoso.com`.
 
   È possibile cercare tutti i sottodomini di un dominio associato immettendo `*.` (un carattere jolly asterisco e un punto) prima dell'inizio del dominio. Il punto è obbligatorio. I domini esatti hanno una priorità più alta rispetto ai domini con caratteri jolly. Di conseguenza, i modelli dei domini padre vengono individuati *se* non viene trovata una corrispondenza nel sottodominio completo.
 

@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ab825416226ef0b395862ae26a934013136ca61b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ac81ceced473eacc32a3fca566f7c36eb7a262e2
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352267"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084871"
 ---
 # <a name="use-device-encryption-with-intune"></a>Usare la crittografia dei dispositivi con Intune
 
@@ -97,7 +97,7 @@ Dopo che Intune ha crittografato un dispositivo macOS con FileVault, è possibil
 
 ### <a name="retrieve-personal-recovery-key-from-mem-encrypted-macos-devices"></a>Recuperare la chiave di ripristino personale dai dispositivi macOS crittografati MEM
 
-Gli utenti finali recuperano la propria chiave di ripristino personale (chiave di FileVault) usando l'app Portale aziendale iOS. Il dispositivo con la chiave di ripristino personale deve essere registrato in Intune e crittografato con FileVault in Intune. Con l'app Portale aziendale iOS l'utente finale può aprire una pagina Web che include la chiave di ripristino personale di FileVault. La chiave di ripristino può essere recuperata anche da Intune selezionando **Dispositivi** > *il dispositivo macOS crittografato e registrato* > **Ottieni la chiave di ripristino**. 
+Gli utenti finali possono recuperare la chiave di ripristino personale (chiave di FileVault) usando l'app Portale aziendale iOS, l'app Portale aziendale Android o l'app Intune Android. Il dispositivo con la chiave di ripristino personale deve essere registrato in Intune e crittografato con FileVault in Intune. Usando l'app Portale aziendale iOS, l'app Portale aziendale Android, l'app Intune Android o il sito Web Portale aziendale, l'utente finale può visualizzare la chiave di ripristino di **FileVault** necessaria per accedere ai dispositivi Mac. Gli utenti finali possono selezionare **Dispositivi** > *dispositivo macOS crittografato e registrato* > **Ottieni la chiave di ripristino**. Il browser visualizzerà il Portale aziendale Web e la chiave di ripristino. 
 
 ## <a name="bitlocker-encryption-for-windows-10"></a>Crittografia BitLocker per Windows 10
 

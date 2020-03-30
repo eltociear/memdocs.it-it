@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/22/2019
+ms.date: 03/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 700e255c55db1f216d605f5c54aa0c474e7f48b5
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2ab229e0ef0d2cdefe41f991efc8c45c988979db
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79353736"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085068"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Usare i certificati per l'autenticazione in Microsoft Intune
 
@@ -38,7 +38,7 @@ Usare i certificati con Intune per autenticare gli utenti in applicazioni e riso
 
 Per distribuire questi certificati, verranno creati e assegnati profili di certificato ai dispositivi.
 
-Ogni singolo profilo di certificato creato supporta un'unica piattaforma. Ad esempio, se si usano i certificati PKCS, verrà creato un profilo di certificato PKCS per Android e un profilo di certificato PKCS separato per iOS/iPadOS. Se si usano anche i certificati SCEP per queste due piattaforme, verrà creato un profilo di certificato SCEP per Android e un altro per iOS/iPadOS.
+Ogni singolo profilo di certificato creato supporta un'unica piattaforma. Se, ad esempio, si usano certificati PKCS, si creerà un profilo di certificato PKCS per Android e un profilo di certificato PKCS separato per iOS/iPadOS. Se per queste due piattaforme si usano anche certificati SCEP, si creerà un profilo di certificato SCEP per Android e un altro per iOS/iPadOS.
 
 ### <a name="general-considerations-when-you-use-a-microsoft-certification-authority"></a>Considerazioni generali se si usa un'autorità di certificazione Microsoft
 
@@ -107,31 +107,47 @@ Creare un profilo di certificato attendibile separato per ogni piattaforma del d
 
 1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selezionare **Dispositivi** > **Profili di configurazione** > **Crea profilo**.
+2. Selezionare e passare a **Dispositivi** > **Profili di configurazione** > **Crea profilo**.
 
-   ![Passare a Intune e creare un nuovo profilo per un certificato attendibile](./media/certficates-pfx-configure/certificates-pfx-configure-profile-new.png)
+   ![Passare a Intune e creare un nuovo profilo per un certificato attendibile](./media/certificates-configure/certificates-configure-profile-new.png)
 
 3. Immettere le proprietà seguenti:
+   - **Piattaforma**: Scegliere la piattaforma dei dispositivi che riceveranno questo profilo.
+   - **Profilo**: selezionare **Certificato attendibile**
+  
+4. Selezionare **Crea**.
 
-   - **Nome** del profilo
-   - Inserire eventualmente una **Descrizione**
-   - **Piattaforma** in cui distribuire il profilo
-   - Impostare **Tipo di profilo** su **Certificato attendibile**
+5. In **Informazioni di base** immettere le proprietà seguenti:
+   - **Nome**: immettere un nome descrittivo per il profilo. Assegnare ai profili nomi che possano essere identificati facilmente in un secondo momento. Un nome di profilo efficace, ad esempio, è *Profilo certificato attendibile per l'intera azienda*.
+   - **Descrizione**: Immettere una descrizione del profilo. Questa impostazione è facoltativa ma consigliata.
 
-4. Selezionare **Impostazioni** e individuare il file con estensione cer del certificato CA radice attendibile esportato per essere usato con questo profilo di certificato, quindi selezionare **OK**.
+6. Selezionare **Avanti**.
 
-5. Solo per i dispositivi Windows 8.1 e Windows 10, selezionare l'**Archivio di destinazione** per il certificato attendibile da:
+7. In **Impostazioni di configurazione** specificare il file con estensione cer per il certificato CA radice attendibile esportato in precedenza. 
+
+   Solo per i dispositivi Windows 8.1 e Windows 10, selezionare l'**Archivio di destinazione** per il certificato attendibile da:
 
    - **Archivio certificati computer - Radice**
    - **Archivio certificati computer - Intermedio**
    - **Archivio certificati utente - Intermedio**
 
-6. Al termine scegliere **OK**, tornare alla pagina **Crea profilo** e selezionare **Crea**.
+   ![Creare un profilo e caricare un certificato attendibile](./media/certificates-configure/certificates-configure-profile-fill.png)
 
-Il profilo viene visualizzato nell'elenco dei profili nella finestra *Dispositivi - Profili di configurazione* con il tipo di profilo **Certificato attendibile**. Assicurarsi di assegnare questo profilo ai dispositivi che useranno certificati SCEP o PKCS. Per assegnare il profilo ai gruppi, vedere [Come assegnare i profili di dispositivo con Microsoft Intune](../configuration/device-profile-assign.md).
+8. Selezionare **Avanti**.
 
-> [!NOTE]
-> È possibile che nei dispositivi Android venga visualizzato un messaggio che indica che un certificato attendibile è stato installato da terze parti.
+9. In **Tag ambito** (facoltativo) assegnare un tag per filtrare il profilo a gruppi IT specifici, ad esempio `US-NC IT Team` o `JohnGlenn_ITDepartment`. Per altre informazioni sui tag di ambito, vedere [Usare il controllo degli accessi in base al ruolo (RBAC) e i tag di ambito per l'infrastruttura IT distribuita](../fundamentals/scope-tags.md).
+
+   Selezionare **Avanti**.
+
+10. In **Assegnazioni** selezionare l'utente o i gruppi che riceveranno il profilo. Per altre informazioni sull'assegnazione di profili, vedere [Assegnare profili utente e dispositivo](../configuration/device-profile-assign.md).
+
+    Selezionare **Avanti**.
+
+11. (*Solo per Windows 10*) In **Regole di applicabilità** specificare regole di applicabilità per perfezionare l'assegnazione di questo profilo. È possibile scegliere di assegnare o non assegnare il profilo in base all'edizione del sistema operativo o alla versione di un dispositivo.
+
+  Per altre informazioni, vedere [Regole di applicabilità](../configuration/device-profile-create.md#applicability-rules) in *Creare un profilo di dispositivo in Microsoft Intune*.
+
+12. In **Rivedi e crea** rivedere le impostazioni. Quando si seleziona Crea, le modifiche vengono salvate e il profilo viene assegnato. Il criterio viene visualizzato anche nell'elenco dei profili.
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 

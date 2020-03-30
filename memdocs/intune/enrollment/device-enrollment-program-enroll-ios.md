@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d40c4f352d3e7b94ef6e6c2f16a28d188c4e9ad1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: af4dce0d2bb7ef150d5332a9c58357513425cf50
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339384"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220201"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-device-enrollment-program"></a>Registrare automaticamente i dispositivi iOS/iPadOS con il programma Device Enrollment Program di Apple
 
@@ -195,6 +195,9 @@ Ora che è stato installato il token, è possibile creare un profilo di registra
 
 11. Scegliere se si vuole che i dispositivi con questo profilo possano **eseguire la sincronizzazione con i computer**. Se si sceglie **Consenti Apple Configurator per certificato**, è necessario selezionare un certificato in **Certificati di Apple Configurator**.
 
+     > [!NOTE]
+     > Se **Sincronizza con computer** è impostata su **Rifiuta tutto**, la funzionalità della porta sarà limitata sui dispositivi iOS e iPadOS. La porta può essere usata solo per il caricamento. L'uso di iTunes o Apple Configurator sulla porta non è consentito.
+
 12. Se si sceglie **Consenti Apple Configurator per certificato** nel passaggio precedente, scegliere un certificato di Apple Configurator da importare.
 
 13. È possibile specificare un formato di denominazione per i dispositivi che viene applicato automaticamente alla registrazione e per ogni archiviazione successiva. Per creare un modello di denominazione, selezionare **Sì** in **Applica il modello di nome di dispositivo**. Nella casella **Modello del nome del dispositivo** immettere quindi il modello da usare per i nomi che usano questo profilo. È possibile specificare un formato modello che include il tipo di dispositivo e il numero di serie. 
@@ -278,6 +281,10 @@ Fino a questo punto sono state abilitate la gestione e la sincronizzazione tra A
 Vedere [Registrare il dispositivo iOS/iPadOS in Intune con Device Enrollment Program](../user-help/enroll-your-device-dep-ios.md).
 
 ## <a name="renew-a-dep-token"></a>Rinnovare un token DEP  
+
+> [!NOTE]
+> Oltre a rinnovare il token DEP annualmente, sarà necessario rinnovare il token del programma di registrazione in Intune e Apple Business Manager quando la password dell'ID Apple gestito viene modificata per l'utente che ha configurato il token in Apple Business Manager, oppure quando l'utente abbandona l'organizzazione di Apple Business Manager.
+
 1. Passare a deploy.apple.com.  
 2. In **Gestisci i server** scegliere il server MDM associato al file di token da rinnovare.
 3. Scegliere **Genera nuovo token**.

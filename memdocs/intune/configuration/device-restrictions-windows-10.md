@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/10/2020
+ms.date: 03/23/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8586e5c25ec3db4a736d84381e691ecebe6fae32
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 71e8b874e50fc1300124d748dfb70963acae089b
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361679"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220099"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Impostazioni dei dispositivi Windows 10 (e versioni successive) per consentire o limitare l'uso delle funzionalità tramite Intune
 
@@ -376,7 +376,7 @@ Questo profilo di restrizioni per i dispositivi è direttamente correlato al pro
 - **Salva la cronologia esplorazioni**: **Sì** (impostazione predefinita) consente di salvare la cronologia esplorazioni in Microsoft Edge. **No** impedisce di salvare la cronologia esplorazioni.
 - **Cancella i dati di esplorazione all'uscita** (solo desktop): **Sì** cancella la cronologia e i dati di esplorazione quando l'utente esce da Microsoft Edge. **No** (impostazione predefinita) usa il valore predefinito del sistema operativo, che potrebbe memorizzare nella cache i dati di esplorazione.
 - **Sincronizza le impostazioni del browser tra i dispositivi di un utente**: scegliere la modalità di sincronizzazione delle impostazioni del browser tra i dispositivi. Le opzioni disponibili sono:
-  - **Consenti**: consente la sincronizzazione delle impostazioni del browser Microsoft Edge tra i dispositivi dell'utente
+  - **Consenti**: consente la sincronizzazione delle impostazioni del browser Microsoft Edge tra i dispositivi dell'utente.
   - **Blocca e consenti l'override dell'utente**: blocca la sincronizzazione delle impostazioni del browser Microsoft Edge tra i dispositivi dell'utente. Gli utenti possono modificare questa impostazione.
   - **Blocca**: blocca la sincronizzazione delle impostazioni del browser Microsoft Edge tra i dispositivi degli utenti. Gli utenti non possono sostituire questa impostazione.
 
@@ -474,7 +474,7 @@ Queste impostazioni usano il [provider di servizi di configurazione per i criter
 
 ## <a name="per-app-privacy-exceptions"></a>Eccezioni alla privacy per app
 
-È possibile aggiungere app che devono avere un comportamento diverso in relazione alla privacy da quello definito in "Privacy predefinita".
+È possibile aggiungere app che devono avere un comportamento di privacy diverso da quello definito in "Privacy predefinita".
 
 - **Nome pacchetto**: nome della famiglia di pacchetti dell'app.
 - **Nome app**: nome dell'app.
@@ -898,6 +898,11 @@ Queste impostazioni usano il [provider di servizi di configurazione per i criter
   [Provider di servizi di configurazione Defender/ThreatSeverityDefaultAction](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-threatseveritydefaultaction)
 
 ### <a name="microsoft-defender-antivirus-exclusions"></a>Esclusioni di Antivirus Microsoft Defender
+
+È possibile escludere determinati file dalle analisi di Microsoft Defender Antivirus modificando gli elenchi di esclusione. **In genere non è necessario applicare esclusioni**. Microsoft Defender Antivirus include una serie di esclusioni automatiche basate su comportamenti noti del sistema operativo e file di gestione tipici, ad esempio quelli usati nella gestione aziendale, nella gestione dei database e in altri scenari e situazioni aziendali.
+
+> [!WARNING]
+> **La definizione di esclusioni riduce la protezione offerta da Microsoft Defender Antivirus**. Valutare sempre i rischi associati all'implementazione di esclusioni. Verificare di escludere solo i file non dannosi.
 
 - **File e cartelle da escludere dalle analisi e dalla protezione in tempo reale**: Aggiunge uno o più file e cartelle come **C:\Percorso** o **%ProgramFiles%\Percorso\nomefile.exe** all'elenco di esclusione. Questi file e cartelle non sono inclusi in alcuna scansione in tempo reale o pianificata.
 - **Estensioni di file da escludere dalle analisi e dalla protezione in tempo reale**: Aggiungere uno o più estensioni di file come **jpg** o **txt** all'elenco delle esclusioni. I file con queste estensioni non vengono inclusi nelle analisi in tempo reale o pianificate.

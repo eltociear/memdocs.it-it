@@ -1,11 +1,11 @@
 ---
 title: Configurare impostazioni VPN per dispositivi iOS/iPadOS in Microsoft Intune - Azure | Microsoft Docs
-description: Aggiungere o creare un profilo di configurazione VPN usando le impostazioni di configurazione della rete privata virtuale (VPN), inclusi i dettagli della connessione, i metodi di autenticazione e lo split tunneling nelle impostazioni di base; le impostazioni VPN personalizzate con l'identificatore e le coppie chiave-valore; le impostazioni VPN per app che includono gli URL Safari e VPN su richiesta con SSID o domini di ricerca DNS; le impostazioni del proxy per includere uno script di configurazione, un indirizzo IP o FQDN e una porta TCP nei dispositivi che eseguono iOS/iPadOS in Microsoft Intune.
+description: Aggiungere o creare un profilo di configurazione VPN nei dispositivi iOS/iPadOS usando le impostazioni di configurazione della rete privata virtuale (VPN). Configurare i dettagli della connessione, i metodi di autenticazione, lo split tunneling e le impostazioni VPN personalizzate con l'identificatore, le coppie chiave-valore, le impostazioni VPN per app che includono gli URL Safari e le VPN su richiesta con SSID o domini di ricerca DNS, nonché le impostazioni del proxy in modo che includa uno script di configurazione, un indirizzo IP o FQDN e una porta TCP in Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 80ff24193c607003889c2246bb9199db795f1623
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 74e889419dcaaa75c2a31fe16931dddd84d1a967
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79360457"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086543"
 ---
 # <a name="add-vpn-settings-on-ios-and-ipados-devices-in-microsoft-intune"></a>Aggiungere impostazioni VPN in dispositivi iOS e iPadOS in Microsoft Intune
 
@@ -82,10 +82,10 @@ Le impostazioni visualizzate nell'elenco seguente sono determinate dal tipo di c
 
 - **Abilita il controllo accesso alla rete** (Cisco AnyConnect, Citrix SSO, F5 Access): quando si sceglie **Accetto**, l'ID dispositivo viene incluso nel profilo VPN. Questo ID può essere usato per l'autenticazione della rete VPN per consentire o impedire l'accesso alla rete.
 
-    **Quando si usa Cisco AnyConnect con ISE**, assicurarsi di:
+  **Quando si usa Cisco AnyConnect con ISE**, assicurarsi di:
 
-    - Se non è già stato fatto, integrare ISE con Intune per NAC come descritto in **Configure Microsoft Intune as an MDM Server** (Configurare Microsoft Intune come server MDM) in [Cisco Identity Services Engine Administrator Guide](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html) (Manuale dell'amministratore di Cisco Identity Services Engine).
-    - Abilitare il controllo accesso alla rete nel profilo VPN.
+  - Se non è già stato fatto, integrare ISE con Intune per NAC come descritto in **Configurare Microsoft Intune come server MDM** in [Cisco Identity Services Engine Administrator Guide](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html).
+  - Abilitare il controllo accesso alla rete nel profilo VPN.
 
   **Quando si usa Citrix SSO con Gateway**, assicurarsi di:
 
@@ -107,6 +107,34 @@ Le impostazioni visualizzate nell'elenco seguente sono determinate dal tipo di c
 ## <a name="ikev2-settings"></a>Impostazioni IKEv2
 
 Queste impostazioni si applicano quando si sceglie **Tipo di connessione** > **IKEv2**.
+
+- **Always-on VPN** (VPN sempre attiva): scegliere **Abilita** per impostare un client VPN in modo che si connetta e riconnetta automaticamente alla VPN. Le connessioni VPN sempre attive rimangono connesse o si connettono immediatamente quando l'utente blocca il dispositivo, il dispositivo viene riavviato o la rete wireless viene modificata. Se l'opzione è impostata su **Disabilita** (impostazione predefinita), la VPN sempre attiva per tutti i client VPN è disabilitata. Se abilitata, configurare anche:
+
+  - **Interfaccia di rete**: tutte le impostazioni di IKEv2 sono valide solo per l'interfaccia di rete scelta. Le opzioni disponibili sono:
+    - **Wi-Fi e rete dati** (impostazione predefinita): le impostazioni di IKEv2 si applicano alle interfacce Wi-Fi e cellulari del dispositivo.
+    - **Rete cellulare**: le impostazioni di IKEv2 si applicano solo all'interfaccia di rete cellulare del dispositivo. Selezionare questa opzione se si esegue la distribuzione nei dispositivi con l'interfaccia Wi-Fi disabilitata o rimossa.
+    - **Wi-Fi**: Le impostazioni di IKEv2 si applicano solo all'interfaccia Wi-Fi del dispositivo.
+  - **Disabilitazione della configurazione VPN da parte dell'utente**: **Abilita** consente agli utenti di disattivare la VPN sempre attiva. **Disabilita** (impostazione predefinita) impedisce agli utenti di disattivarla. Il valore predefinito di tale impostazione è l'opzione più sicura.
+  - **Segreteria telefonica**: consente di scegliere come gestire il traffico della segreteria telefonica quando la VPN sempre attiva è abilitata. Le opzioni disponibili sono:
+    - **Imponi il traffico di rete attraverso la VPN** (impostazione predefinita): si tratta dell'impostazione con il livello di sicurezza più alto.
+    - **Consenti il passaggio del traffico di rete all'esterno della VPN**
+    - **Rilascia il traffico di rete**
+  - **AirPrint**: consente di scegliere come gestire il traffico di AirPrint quando la VPN sempre attiva è abilitata. Le opzioni disponibili sono:
+    - **Imponi il traffico di rete attraverso la VPN** (impostazione predefinita): si tratta dell'impostazione con il livello di sicurezza più alto.
+    - **Consenti il passaggio del traffico di rete all'esterno della VPN**
+    - **Rilascia il traffico di rete**
+  - **Servizi per rete dati**: in iOS 13.0 e versioni successive consente di scegliere come gestire il traffico dati della rete cellulare quando la VPN sempre attiva è abilitata. Le opzioni disponibili sono:
+    - **Imponi il traffico di rete attraverso la VPN** (impostazione predefinita): si tratta dell'impostazione con il livello di sicurezza più alto.
+    - **Consenti il passaggio del traffico di rete all'esterno della VPN**
+    - **Rilascia il traffico di rete**
+  - **Consenti il passaggio del traffico da app di rete non native di tipo Captive all'esterno della VPN**: una rete captive fa riferimento a hotspot Wi-Fi in genere disponibili in ristoranti e hotel. Le opzioni disponibili sono:
+    - **No**: forza tutto il traffico delle app della rete captive nel tunnel della VPN.
+    - **Sì, tutte le app**: consente a tutto il traffico delle app della rete captive di ignorare la VPN.
+    - **Sì, app specifiche**: **aggiunge** un elenco di app della rete captive il cui traffico può ignorare la VPN. Immettere gli identificatori del bundle dell'app della rete captive. Immettere ad esempio `com.contoso.app.id.package`.
+
+  - **Passaggio del traffico di app di tipo Captive WebSheet all'esterno della VPN**: Captive WebSheet è un Web browser incorporato che gestisce l'accesso captive. **Abilita** consente al traffico dell'app browser di ignorare la VPN. **Disabilita** (impostazione predefinita) impone al traffico WebSheet di usare la VPN sempre attiva. Il valore predefinito è l'opzione più sicura.
+  - **Intervallo keep-alive (secondi) per NAT (Network Address Translation)** : per rimanere connesso alla VPN, il dispositivo invia i pacchetti di rete per rimanere attivo. Immettere un valore in secondi per la frequenza di invio dei pacchetti, da 20 a 1440. Ad esempio, immettere il valore `60` per inviare i pacchetti di rete alla VPN ogni 60 secondi. Per impostazione predefinita, questo valore è configurato su `110` secondi.
+  - **Esegui l'offload di keep-alive per NAT nell'hardware quando il dispositivo è in modalità sospensione**: quando un dispositivo è in stato di sospensione, **Abilita** (impostazione predefinita) fa sì che il protocollo NAT invii continuamente pacchetti keep-alive, in modo che il dispositivo rimanga connesso alla VPN. L'opzione **Disabilita** disattiva questa funzionalità.
 
 - **Identificatore remoto**: immettere indirizzo IP di rete, FQDN, UserFQDN o ASN1DN del server IKEv2. Ad esempio, immettere `10.0.0.3` o `vpn.contoso.com`. In genere, viene immesso lo stesso valore di [**Nome della connessione**](#base-vpn-settings) (in questo articolo). Il valore tuttavia varia a seconda delle impostazioni del server IKEv2.
 
@@ -193,8 +221,8 @@ Queste impostazioni si applicano quando si sceglie **Tipo di connessione** > **I
   - **SSID o domini di ricerca DNS**: selezionare se la condizione usa o meno **SSID** della rete wireless o **Domini di ricerca DNS**. Scegliere **Aggiungi** per configurare uno o più SSID o domini di ricerca.
   - **Probe della stringa dell'URL**: Facoltativo. Immettere un URL che viene usato dalla regola come test. Se il dispositivo accede all'URL senza reindirizzamento, la connessione VPN viene avviata. Il dispositivo si connette quindi all'URL di destinazione. L'utente non visualizza il sito del probe della stringa dell'URL.
 
-    Ad esempio, un probe della stringa dell'URL è l'URL di un server Web di controllo che verifica la conformità del dispositivo prima della connessione VPN. In alternativa, l'URL verifica la capacità della VPN di connettersi a un sito prima di connettere il dispositivo all'URL di destinazione tramite la VPN.
-.
+    Ad esempio, un probe della stringa dell'URL è l'URL di un server Web di controllo che verifica la conformità del dispositivo prima della connessione VPN. In alternativa, l'URL verifica la capacità della VPN di connettersi a un sito prima che il dispositivo si connetta all'URL di destinazione tramite la VPN.
+
   - **Azione del dominio**: scegliere una delle opzioni seguenti:
     - Connetti se necessario
     - Non connettere mai

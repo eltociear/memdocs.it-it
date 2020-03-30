@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7eb597aec20e8010d8694475d2af5d8033a809f0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 9c8c78106125b45f52b45cb5fc6494b8e13b7a15
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352891"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084941"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Quali sono le modalità d'uso comuni dell'accesso condizionale con Intune?
 
@@ -83,7 +83,7 @@ L'accesso condizionale per i PC offre funzionalità simili a quelle disponibili 
 
 #### <a name="corporate-owned"></a>Dispositivi di proprietà dell'azienda
 
-- **Aggiunta a un dominio AD locale:** questa opzione viene usata generalmente dalle organizzazioni che hanno già familiarità con la gestione dei PC tramite i criteri di gruppo di Active Directory o con Configuration Manager.
+- **Aggiunto ad Azure AD ibrido:** questa opzione viene usata generalmente dalle organizzazioni che hanno già familiarità con la gestione dei PC tramite i criteri di gruppo di Active Directory o con Configuration Manager.
 
 - **Aggiunta a un dominio AD e gestione tramite Intune:** questo scenario è destinato alle organizzazioni che adottano un approccio cloud-first (ovvero usano principalmente i servizi cloud con l'obiettivo di ridurre l'uso di infrastrutture locali) o esclusivamente cloud (nessuna infrastruttura locale). Azure AD Join funziona in modo ottimale in un ambiente ibrido, consentendo l'accesso alle risorse e alle app sia cloud che locali. Il dispositivo viene aggiunto ad Azure AD e viene registrato in Intune. I criteri corrispondenti possono essere usati come criteri di accesso condizionale per l'accesso alle risorse aziendali.
 

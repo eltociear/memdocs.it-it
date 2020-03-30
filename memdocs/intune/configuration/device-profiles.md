@@ -5,28 +5,28 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: karthib
+ms.reviewer: mikedano
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ade4842564188c457af94a22fe49d3d18d791ebb
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 420340e18eb4e638ed7bde049e6b548037c54f87
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361874"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087090"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Applicare funzionalità e impostazioni nei dispositivi usando i profili dei dispositivi in Microsoft Intune
 
-Microsoft Intune include impostazioni e funzionalità che è possibile abilitare o disabilitare in dispositivi diversi all'interno dell'organizzazione. Queste impostazioni e funzionalità vengono aggiunte ai "profili di configurazione". È possibile creare i profili per diversi dispositivi e diverse piattaforme, tra cui iOS/iPadOS, Android e Windows. Usare quindi Intune per applicare o "assegnare" il profilo ai dispositivi.
+Microsoft Intune include impostazioni e funzionalità che è possibile abilitare o disabilitare in dispositivi diversi all'interno dell'organizzazione. Queste impostazioni e funzionalità vengono aggiunte ai "profili di configurazione". È possibile creare profili per dispositivi diversi e piattaforme diverse, tra cui iOS/iPadOS, Amministratore di dispositivi Android, Android Enterprise e Windows. Usare quindi Intune per applicare o "assegnare" il profilo ai dispositivi.
 
 Nell'ambito della soluzione di gestione di dispositivi mobili (MDM), usare questi profili di configurazione per completare diverse attività. Di seguito sono riportati alcuni esempi di profili:
 
@@ -55,7 +55,7 @@ Vengono configurati [certificati](../protect/certificates-configure.md) attendib
 
 Questa funzionalità supporta: 
 
-- Android
+- Amministratore dispositivo Android
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -69,7 +69,7 @@ Le [impostazioni personalizzate](custom-settings-configure.md) consentono agli a
 
 Questa funzionalità supporta:
 
-- Android
+- Amministratore dispositivo Android
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -108,7 +108,7 @@ Questa funzionalità supporta:
 
 Questa funzionalità supporta:
 
-- Android
+- Amministratore dispositivo Android
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -143,7 +143,7 @@ Il profilo [Impostazioni di posta elettronica](email-settings-configure.md) cons
 
 Questa funzionalità supporta: 
 
-- Android
+- Amministratore dispositivo Android
 - Android Enterprise
 - iOS/iPadOS
 - Windows Phone 8.1
@@ -241,7 +241,7 @@ Le reti private virtuali (VPN) offrono agli utenti accesso remoto sicuro alla re
 
 Questa funzionalità supporta: 
 
-- Android
+- Amministratore dispositivo Android
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -255,7 +255,7 @@ Questa funzionalità supporta:
 
 Questa funzionalità supporta: 
 
-- Android
+- Amministratore dispositivo Android
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -276,7 +276,7 @@ Le [estensioni di mobilità nei dispositivi Zebra](android-zebra-mx-overview.md)
 
 Questa funzionalità supporta:
 
-- Android (Estensioni di mobilità)
+- Amministratore di dispositivi Android (Mobility Extensions)
 
 ## <a name="manage-and-troubleshoot"></a>Monitorare e risolvere problemi
 

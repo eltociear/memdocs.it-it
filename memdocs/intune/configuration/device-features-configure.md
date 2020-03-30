@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48f890888d9bdb9d1df67596fb9125534e90a4d2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c0f1552d2edc6bfa5f6bdb255f156bcfb77a4990
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79350135"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084102"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Aggiungere impostazioni relative alle funzionalità dei dispositivi iOS, iPadOS e macOS in Intune
 
@@ -76,7 +76,7 @@ I domini associati consentono di creare una relazione tra i domini, ad esempio `
 
 Per un elenco delle impostazioni che è possibile configurare in Intune, vedere l'articolo sui [domini associati in macOS](macos-device-features-settings.md#associated-domains).
 
-Per altre informazioni su questa funzionalità, vedere l'articolo sull'[impostazione dei domini associati di un'app](https://developer.apple.com/documentation/security/password_autofill/setting_up_an_app_s_associated_domains) nel sito Web di Apple.
+Per altre informazioni su questa funzionalità, vedere l'articolo sull'[impostazione dei domini associati di un'app](https://developer.apple.com/documentation/security/password_autofill/setting_up_an_app_s_associated_domains) nel sito Web Apple.
 
 Si applica a:
 
@@ -149,16 +149,16 @@ Si applica a:
 
 ## <a name="single-sign-on-app-extension"></a>Estensione dell'app Single Sign-On
 
-Queste impostazioni configurano un'estensione dell'app che abilita l'accesso Single Sign-On (SSO) per i dispositivi iOS, iPadOS e macOS. La maggior parte delle app line-of-business e dei siti Web dell'organizzazione richiede un certo livello di autenticazione utente sicura. In molti casi l'autenticazione richiede di immettere ripetutamente le stesse credenziali. SSO consente agli utenti di accedere alle app e ai siti Web dopo aver immesso le credenziali una sola volta. Dopo l'accesso, gli utenti possono accedere automaticamente alle app e ai siti Web oppure usare Face ID, Touch ID o il passcode Apple per ottenere l'accesso.
+Queste impostazioni configurano un'estensione dell'app che abilita l'accesso Single Sign-On (SSO) per i dispositivi iOS, iPadOS e macOS. La maggior parte delle app line-of-business e dei siti Web dell'organizzazione richiede un certo livello di autenticazione utente sicura. In molti casi l'autenticazione richiede di immettere ripetutamente le stesse credenziali. SSO consente agli utenti di accedere alle app e ai siti Web dopo aver immesso le credenziali una sola volta. SSO offre anche un'esperienza di autenticazione migliore per gli utenti e riduce il numero di richieste di credenziali ripetute.
 
-In Intune usare queste impostazioni per configurare un'estensione dell'app SSO creata dall'organizzazione, dal provider di identità o da Apple. L'estensione dell'app SSO gestisce l'autenticazione per gli utenti. Queste impostazioni configurano le estensioni dell'app SSO di tipo reindirizzamento e credenziali.
+In Intune usare queste impostazioni per configurare un'estensione dell'app SSO creata dalla propria organizzazione, dal provider di identità, da Microsoft o da Apple. L'estensione dell'app SSO gestisce l'autenticazione per gli utenti. Queste impostazioni configurano le estensioni dell'app SSO di tipo reindirizzamento e credenziali.
 
-- Il tipo reindirizzamento è progettato per i protocolli di autenticazione moderni come OAuth e SAML2.
-- Il tipo credenziali è progettato per i flussi di autenticazione con richiesta e risposta. È possibile scegliere tra un'estensione con credenziali specifiche di Kerberos di Apple e un'estensione con credenziali generiche.
+- Il tipo reindirizzamento è progettato per i protocolli di autenticazione moderni, come OAuth e SAML2. Microsoft dispone di un'estensione dell'app Single Sign-On di tipo redirect Azure AD per iOS/iPadOS che può essere abilitata con le impostazioni dell'estensione dell'app Single Sign-On.
+- Il tipo credenziali è progettato per i flussi di autenticazione con richiesta e risposta. È possibile scegliere tra un'estensione Apple con credenziali specifiche di Kerberos o un'estensione con credenziali generiche.
 
 Per un elenco delle impostazioni che è possibile configurare in Intune, vedere [Estensione dell'app Single Sign-On per iOS/iPadOS](ios-device-features-settings.md#single-sign-on-app-extension) ed [Estensione dell'app Single Sign-On per macOS](macos-device-features-settings.md#single-sign-on-app-extension).
 
-Per altre informazioni sullo sviluppo di un'estensione dell'app SSO, vedere l'articolo su [Enterprise SSO estendibile](https://developer.apple.com/videos/play/tech-talks/301) sul sito Web di Apple. Per leggere la descrizione della funzionalità di Apple, vedere [Impostazioni del payload "Estensioni Single Sign-On"](https://support.apple.com/guide/mdm/single-sign-on-extensions-mdmfd9cdf845/web). 
+Per altre informazioni sullo sviluppo di un'estensione dell'app SSO, vedere l'articolo su [Enterprise SSO estendibile](https://developer.apple.com/videos/play/tech-talks/301) nel sito Web Apple. Per leggere la descrizione della funzionalità di Apple, vedere [Impostazioni del payload "Estensioni Single Sign-On"](https://support.apple.com/guide/mdm/single-sign-on-extensions-mdmfd9cdf845/web). 
 
 > [!NOTE]
 > La funzionalità di **estensione dell'app Single Sign-On** è diversa dalla funzionalità **Single Sign-On**:
@@ -167,7 +167,7 @@ Per altre informazioni sullo sviluppo di un'estensione dell'app SSO, vedere l'ar
 >
 > - Le impostazioni **Estensione dell'app per l'accesso Single Sign-On** definiscono le estensioni che possono essere usate dai provider di identità o dalle organizzazioni per offrire un'esperienza di accesso aziendale senza problemi. Le impostazioni **Single Sign-On** definiscono le informazioni sull'account Kerberos per gli utenti che accedono a server o app.
 >
-> - L'**estensione dell'app Single Sign-On** usa il sistema operativo Apple per l'autenticazione. Potrebbe quindi offrire un'esperienza dell'utente finale migliore rispetto a quella di **Single Sign-On**.
+> - L'**estensione dell'app Single Sign-On** usa il sistema operativo Apple per l'autenticazione. Potrebbe quindi offrire un'esperienza utente finale migliore rispetto a **Single Sign-On**.
 >
 > - Dal punto di vista dello sviluppo, con l'impostazione **Estensione dell'app per l'accesso Single Sign-On** è possibile usare qualsiasi tipo di autenticazione SSO con reindirizzamento o credenziali. Con **Single Sign-On** è possibile usare solo l'autenticazione SSO Kerberos.
 >
@@ -194,7 +194,7 @@ Si applica a:
 
 ## <a name="web-content-filter"></a>Filtro contenuto Web
 
-Queste impostazioni possono usare l'algoritmo AutoFilter integrato di Apple per valutare le pagine Web e bloccare il contenuto e il linguaggio non adatti ai minori. È anche possibile creare un elenco di collegamenti Web consentiti e di collegamenti Web limitati. Ad esempio, è possibile consentire l'apertura solo dei siti Web di `contoso`.
+Queste impostazioni usano l'algoritmo AutoFilter integrato di Apple per valutare le pagine Web e bloccare il contenuto e il linguaggio non adatti ai minori. È anche possibile creare un elenco di collegamenti Web consentiti e di collegamenti Web limitati. Ad esempio, è possibile consentire l'apertura solo dei siti Web di `contoso`.
 
 Per un elenco delle impostazioni che è possibile configurare in Intune, vedere [Filtro contenuto Web in iOS/iPadOS](ios-device-features-settings.md#web-content-filter).
 

@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7cdd92948aed51eb37b4774d2521a1d28cd8245f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fe5fce47d6a0480596bc09d82456c7636fe84d51
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79344610"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526275"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Risolvere i problemi di registrazione dei dispositivi Windows in Microsoft Intune
 
@@ -321,6 +321,8 @@ Errore 0x80070774: Si è verificato un errore. Assicurarsi che le informazioni d
 Questo problema si verifica in genere prima che il dispositivo venga riavviato in uno scenario Autopilot di Azure AD ibrido, se si verifica il timeout del dispositivo durante la schermata di accesso iniziale. Significa che il controller di dominio non è stato trovato o raggiunto correttamente a causa di problemi di connettività. In alternativa, significa che il dispositivo è entrato in uno stato che non ne consente l'aggiunta al dominio.
 
 **Causa:** la causa più comune è l'uso di Aggiunta ad Azure AD ibrido e la configurazione della funzionalità Assegna utente nel profilo di Autopilot. Se usata, durante la visualizzazione della schermata di accesso iniziale la funzionalità Assegna utente esegue un'aggiunta ad Azure AD per il dispositivo, ponendolo in uno stato a causa del quale non può unirsi al dominio locale. La funzionalità Assegna utente deve quindi essere usata solo all'interno di scenari Autopilot di Aggiunta ad Azure AD standard.  La funzionalità non deve essere usata all'interno di scenari Aggiunta ad Azure AD ibrido.
+
+Un'altra causa possibile di questo errore è che il dispositivo AzureAD associato all'oggetto Autopilot è stato eliminato. Per risolvere il problema, eliminare l'oggetto Autopilot e reimportare l'hash per generarne uno nuovo.
 
 #### <a name="resolution"></a>Soluzione
 

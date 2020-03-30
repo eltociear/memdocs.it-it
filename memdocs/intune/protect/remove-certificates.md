@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: lacranda
-ms.openlocfilehash: cba46d5b4b203cdbb67fb5f6b6b116a21ebacb32
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b6303d7d98e718c2a4f54b199bf90a3bd0684bf8
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79338929"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084754"
 ---
 # <a name="remove-scep-and-pkcs-certificates-in-microsoft-intune"></a>Rimuovere i certificati SCEP e PKCS in Microsoft Intune
 
@@ -91,7 +91,6 @@ I certificati PKCS *rimangono* nel dispositivo (i certificati non vengono revoca
 - Un amministratore rimuove l'utente o il gruppo da Azure AD.
 - Un amministratore modifica o aggiorna il profilo PKCS.
 - Il profilo certificato viene rimosso dall'assegnazione del gruppo.
-
 
 ## <a name="ios-devices"></a>Dispositivi iOS
 
@@ -190,8 +189,8 @@ Un certificato radice viene rimosso quando:
 - Un amministratore esegue l'azione di [ritiro](../remote-actions/devices-wipe.md#retire).
 
 I certificati PKCS *rimangono* nel dispositivo (i certificati non vengono revocati né rimossi) quando:
-- Un utente perde la licenza di Intune.
 
+- Un utente perde la licenza di Intune.
 - Un amministratore ritira la licenza di Intune.
 - Un amministratore rimuove l'utente o il gruppo da Azure AD.
 - Un amministratore modifica o aggiorna il profilo PKCS.
@@ -228,7 +227,23 @@ I certificati SCEP *rimangono* nel dispositivo (i certificati non vengono revoca
 
 ### <a name="pkcs-certificates"></a>Certificati PKCS
 
-I certificati PKCS non sono supportati in macOS.
+Un certificato PKCS viene revocato *e* rimosso quando:
+
+- Un utente annulla la registrazione.
+- Un amministratore esegue l'azione di [ritiro](../remote-actions/devices-wipe.md#retire).
+
+Un certificato radice viene rimosso quando:
+
+- Un utente annulla la registrazione.
+- Un amministratore esegue l'azione di [ritiro](../remote-actions/devices-wipe.md#retire).
+
+I certificati PKCS rimangono nel dispositivo (i certificati non vengono revocati né rimossi) quando:
+
+- Un utente perde la licenza di Intune.
+- Un amministratore ritira la licenza di Intune.
+- Il profilo certificato viene rimosso dall'assegnazione del gruppo. Il profilo viene rimosso.
+- Un amministratore rimuove l'utente o il gruppo da Azure AD.
+- Un amministratore modifica o aggiorna il profilo PKCS.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

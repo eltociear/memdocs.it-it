@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/08/2020
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17a3a3b38b28eda0e4bde9c353482d0234fa3329
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5a98b57fe8cc2d9d2af3c0095297eb676796029f
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354321"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085218"
 ---
 # <a name="automate-email-and-add-actions-for-noncompliant-devices-in-intune"></a>Automatizzare la posta elettronica e aggiungere azioni per i dispositivi non conformi in Intune
 
@@ -40,7 +40,16 @@ Sono disponibili diversi tipi di azioni:
 
 - **Contrassegna il dispositivo come non conforme**: è possibile creare una pianificazione (in numero di giorni) dopo la quale il dispositivo viene contrassegnato come non conforme. È possibile configurare l'azione in modo che venga applicata immediatamente oppure concedere all'utente un periodo di tolleranza entro il quale dovrà adeguarsi ai criteri di conformità.
 
-Questo articolo illustra come:
+- **Retire the noncompliant device** (Ritira dispositivo non conforme): Questa azione rimuovere tutti i dati aziendali dal dispositivo e rimuovere il dispositivo dalla gestione di Intune. Per impedire la cancellazione accidentale di un dispositivo, questa azione supporta una pianificazione minima di 30 giorni. Questa azione è supportata dalle piattaforme seguenti:
+  - Android
+  - iOS
+  - macOS
+  - Windows 10 Mobile
+  - Windows Phone 8.1 e versioni successive
+
+  Altre informazioni sul [ritiro dei dispositivi](../remote-actions/devices-wipe.md#retire).
+  
+  Questo articolo illustra come:
 
 - Creare un modello di notifica tramite messaggio
 - Creare un'azione per la non conformità, ad esempio l'invio di un messaggio di posta elettronica o il blocco remoto di un dispositivo
@@ -76,7 +85,7 @@ Per inviare il messaggio di posta elettronica agli utenti, creare un modello di 
    - **Piè di pagina del messaggio di posta elettronica: includere il nome dell'azienda**
    - **Piè di pagina del messaggio di posta elettronica: includere le informazioni sul contatto**
 
-   Il logo che si carica nell'ambito della personalizzazione del Portale aziendale viene usato per i modelli di posta elettronica. Per altre informazioni sulla personalizzazione del Portale aziendale, vedere [Personalizzazione dell'identità aziendale](../apps/company-portal-app.md#company-identity-branding-customization).
+   Il logo che si carica nell'ambito della personalizzazione del Portale aziendale viene usato per i modelli di posta elettronica. Per altre informazioni sulla personalizzazione del Portale aziendale, vedere [Personalizzazione dell'identità aziendale](../apps/company-portal-app.md#customizing-the-user-experience).
 
    ![Esempio di messaggio di notifica di Intune relativo alla conformità](./media/actions-for-noncompliance/actionsfornoncompliance-1.PNG)
 
@@ -112,11 +121,13 @@ Oltre all'azione predefinita per contrassegnare i dispositivi come non conformi,
 
    - **Blocca in remoto il dispositivo non conforme**: quando il dispositivo non è conforme, bloccare il dispositivo. Questa azione obbliga l'utente a immettere un PIN o un passcode per sbloccare il dispositivo.
 
-5. Configurare i valori per l'opzione **Pianifica**: immettere il numero di giorni (da 0 a 365) dal rilevamento della non conformità, dopo cui attivare l'azione nei dispositivi degli utenti. Dopo questo periodo di tolleranza, è possibile applicare un criterio di [accesso condizionale](conditional-access-intune-common-ways-use.md). Se si immette **0** (zero) come numero di giorni, l'accesso condizionale viene applicato **immediatamente**. Ad esempio, se un dispositivo non è conforme, usare l'accesso condizionale per bloccare immediatamente l'accesso alla posta elettronica, a SharePoint e ad altre risorse dell'organizzazione.
+   - **Retire the noncompliant device** (Ritira dispositivo non conforme): quando il dispositivo non è conforme, rimuovere tutti i dati aziendali dal dispositivo e rimuovere il dispositivo dalla gestione di Intune. Per impedire la cancellazione accidentale di un dispositivo, questa azione supporta una pianificazione minima di **30** giorni.
+
+5. Configurare i valori per l'opzione **Pianifica**: immettere il numero di giorni (da 0 a 365) dal rilevamento della non conformità, dopo cui attivare l'azione nei dispositivi degli utenti. Il *ritiro del dispositivo non conforme* supporta un minimo di 30 giorni. Dopo questo periodo di tolleranza, è possibile applicare un criterio di [accesso condizionale](conditional-access-intune-common-ways-use.md). Se si immette **0** (zero) come numero di giorni, l'accesso condizionale viene applicato **immediatamente**. Ad esempio, se un dispositivo non è conforme, usare l'accesso condizionale per bloccare immediatamente l'accesso alla posta elettronica, a SharePoint e ad altre risorse dell'organizzazione.
 
    Quando si crea un criterio di conformità, viene creata automaticamente l'azione **Contrassegna il dispositivo come non conforme**, che viene impostata su **0** giorni (immediatamente). Con questa azione, durante l'archiviazione del dispositivo ne viene valutata immediatamente la conformità. Se si usa anche l'accesso condizionale, questo viene applicato immediatamente. Se si vuole consentire un periodo di tolleranza, modificare il valore di **Pianifica** nell'azione **Contrassegna il dispositivo come non conforme**.
 
-   Nei criteri di conformità si vuole, ad esempio, anche inviare una notifica all'utente. A questo scopo, è possibile aggiungere l'azione **Invia un messaggio di posta elettronica all'utente finale**. In questa azione **Invia messaggio** si imposta **Pianifica** su 2 giorni. Se il dispositivo o l'utente finale viene ancora valutato come non conforme il giorno 2, il messaggio di posta elettronica viene inviato il giorno 2. Se si vuole inviare nuovamente il messaggio di posta elettronica all'utente il giorno 5 della mancata conformità, aggiungere un'altra azione e impostare **Pianifica** su 5 giorni.
+  Nei criteri di conformità si vuole, ad esempio, anche inviare una notifica all'utente. A questo scopo, è possibile aggiungere l'azione **Invia un messaggio di posta elettronica all'utente finale**. In questa azione **Invia messaggio** si imposta **Pianifica** su due giorni. Se il dispositivo o l'utente finale viene ancora valutato come non conforme il giorno due, il messaggio di posta elettronica viene inviato il giorno due. Se si vuole inviare nuovamente il messaggio di posta elettronica all'utente il giorno cinque della mancata conformità, aggiungere un'altra azione e impostare **Pianifica** su cinque giorni.
 
    Per altre informazioni sulla conformità e sulle azioni predefinite, vedere la [panoramica della conformità](device-compliance-get-started.md).
 

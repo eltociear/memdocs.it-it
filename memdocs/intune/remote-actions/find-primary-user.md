@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c30cc122931588149120efa10710627826c50e2c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 06d5e2163303b9766d41bcb0bd7581dc41bf6980
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79337967"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80219827"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>Trovare l'utente primario di un dispositivo Intune
 
@@ -43,8 +43,11 @@ L'utente primario di un dispositivo può essere aggiornato per i dispositivi Win
 3. Selezionare un nuovo utente e scegliere **Seleziona**.
 
 Dopo che l'utente primario è stato aggiornato, verrà aggiornato anche nei pannelli del dispositivo di Intune e Azure AD.
-
-Non è possibile modificare l'utente primario nei dispositivi Windows 10 con co-gestione.
+>[!NOTE]
+>1. La diffusione degli aggiornamenti all'utente primario in Endpoint Manager e Azure AD può richiedere fino a 10 minuti.
+>2. Non è attualmente possibile cambiare l'utente primario nei dispositivi Windows 10 con co-gestione. 
+>3. Il cambiamento dell'utente primario del dispositivo non comporta alcuna modifica all'appartenenza a gruppi locali, ad esempio l'aggiunta o la rimozione di utenti dal gruppo locale "Administrators"
+>4. Il cambiamento dell'utente primario non comporta il cambiamento dell'utente "Registrato da". 
 
 
 ## <a name="what-is-the-primary-user"></a>Che cos'è l'utente primario?
@@ -56,7 +59,7 @@ La proprietà utente primario viene usata per eseguire il mapping di un utente c
 ### <a name="company-portal-app"></a>App Portale aziendale
 L'app Portale aziendale presuppone che l'account utente connesso al portale aziendale sia l'utente primario del dispositivo. Se come utente primario è stato assegnato un altro utente, nel portale aziendale viene visualizzato un avviso simile al seguente:
 
-"Il dispositivo è già assegnato a un altro utente nell'organizzazione. Contattare il servizio di supporto della società per informazioni su come diventare l'utente primario del dispositivo. È possibile continuare a usare l'app Portale aziendale, ma le funzionalità saranno limitate".
+"Questo dispositivo è già assegnato a un utente dell'organizzazione. Contattare il servizio di supporto della società per informazioni su come diventare l'utente primario del dispositivo. È possibile continuare a usare il Portale aziendale, ma le funzionalità disponibili saranno limitate".
 
 Se a un dispositivo Intune non è assegnato un utente primario, l'app Portale aziendale lo rileva come dispositivo condiviso. I dispositivi condivisi sono visivamente identificabili grazie all'etichetta "condiviso" visualizzata sul riquadro del dispositivo. In questa modalità è possibile continuare a usare l'app Portale aziendale per richiedere e installare le app disponibili. Le azioni self-service (reimpostazione/ridenominazione/ritiro) non sono però disponibili.  
 

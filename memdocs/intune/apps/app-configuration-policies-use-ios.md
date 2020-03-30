@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a110b268c31f4e1ee5dada6554215b648449f01
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 28ce4e7d80e79f752bded8f0cdf03494aa629e1b
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342426"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233457"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>Aggiungere criteri di configurazione delle app per i dispositivi iOS/iPadOS gestiti
 
@@ -106,7 +106,7 @@ I caratteri \{\{ e \}\} vengono usati solo dai tipi di token e non devono essere
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Consentire solo gli account dell'organizzazione configurati nelle app con identità multiple 
 
-Per i dispositivi iOS/iPadOS, usare le coppie chiave/valore seguenti:
+L'amministratore di Microsoft Intune può controllare gli account utente che vengono aggiunti alle app Microsoft nei dispositivi gestiti. Può limitare l'accesso agli account utente consentiti dell'organizzazione e bloccare gli account personali nei dispositivi registrati. Per i dispositivi iOS/iPadOS, usare le coppie chiave/valore seguenti:
 
 | **Key** | **Valori** |
 |----|----|
@@ -114,7 +114,10 @@ Per i dispositivi iOS/iPadOS, usare le coppie chiave/valore seguenti:
 | IntuneMAMUPN | <ul><li>UPN dell'account a cui è consentito l'accesso all'app.</li><li> Per i dispositivi registrati in Intune, è possibile usare il token <code>{{userprincipalname}}</code> per rappresentare l'account utente registrato.</li></ul>  |
 
    > [!NOTE]
-   > Se si consentono solo account dell'organizzazione configurati con identità multiple, è necessario usare OneDrive per iOS 10.34 o versione successiva, Outlook per iOS 2.99.0 o versione successiva o Microsoft Edge per iOS 44.8.7 o versione successiva e all'app devono essere destinati [criteri di protezione delle app Intune](app-protection-policy.md).
+   > Le app seguenti elaborano la configurazione dell'app precedente e consentono solo account aziendali:
+   > - Microsoft Edge per iOS (44.8.7 e versioni successive)
+   > - OneDrive per iOS (10.34 e versioni successive)
+   > - Outlook per iOS (2.99.0 o versioni successive)
 
 ## <a name="enter-xml-data"></a>Immettere i dati XML
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/22/2020
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3fc6b9fc427ab6e0dc0488061378e78060527676
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b30d2a3ef7c85557222aa39740417a1a6fd463f1
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361978"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084123"
 ---
 # <a name="add-web-apps-to-microsoft-intune"></a>Aggiungere app Web a Microsoft Intune
 
@@ -37,9 +37,10 @@ Intune crea un collegamento all'app Web nel dispositivo dell'utente. Per i dispo
 
 > [!Note]
 > Per avviare app Web, è necessario che nel dispositivo dell'utente sia installato un browser. 
-
-> [!Note]
-> Per i dispositivi gestiti da Amministratore di dispositivi Android, vedere [Collegamenti Web di Google Play gestito](apps-add-android-for-work.md#managed-google-play-web-links)
+> 
+> Per i dispositivi Android Enterprise, vedere [Collegamenti Web di Google Play gestito](apps-add-android-for-work.md#managed-google-play-web-links).
+> 
+> Per i dispositivi iOS, le clip Web (app Web aggiunte) verranno aperte in Microsoft Edge anziché in Intune Managed Browser quando devono essere aperte in un browser protetto. Le clip Web iOS precedenti devono essere reindirizzate per assicurarsi che vengano aperte in Microsoft Edge anziché in Managed Browser.
 
 ## <a name="add-a-web-app-to-intune"></a>Aggiungere un'app Web a Intune
 Per aggiungere un'app a Intune come collegamento a un'app nel Web, eseguire le operazioni seguenti:

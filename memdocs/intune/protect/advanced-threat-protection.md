@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/19/2019
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 398737a89c302031cfbed87709d031077f90fb6a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: edc3bb23097a26753a9e54b0b520e6fc22be3a69
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354269"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085207"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Applicare la conformità per Microsoft Defender ATP con l'accesso condizionale in Intune
 
@@ -100,7 +100,7 @@ Il primo passaggio consiste nel configurare la connessione da servizio a servizi
 > - Vengono usati da Intune MTD per richiedere che i dispositivi vengano registrati in Azure AD in modo da avere un ID dispositivo prima di comunicare con i partner MTD. L'ID è necessario per consentire ai dispositivi di segnalare correttamente lo stato a Intune.
 > - Non ha alcun effetto su altre app o risorse cloud.
 > - Sono diversi dai criteri di accesso condizionale che è possibile creare per facilitare la gestione di MTD.
-> - Per impostazione predefinita non interagiscono con altri criteri di accesso condizionale usati per la valutazione.
+> - Per impostazione predefinita, non interagiscono con altri criteri di accesso condizionale usati per la valutazione.
 >
 > Per visualizzare i criteri di accesso condizionale classici, in [Azure](https://portal.azure.com/#home) passare a **Azure Active Directory** > **Accesso condizionale** > **Criteri classici**.
 
@@ -136,24 +136,26 @@ Quando è stata stabilita la connessione a Microsoft Defender ATP, Intune ha ric
 
 I criteri di conformità determinano il livello di rischio considerato accettabile per un dispositivo.
 
-### <a name="create-the-compliance-policy"></a>Creare i criteri di conformità
+Se non si ha familiarità con la creazione dei criteri di conformità, fare riferimento alla procedura [Creare un criterio](../protect/create-compliance-policy.md#create-the-policy) dall’articolo *Creare criteri di conformità in Microsoft Intune*. Le informazioni seguenti sono specifiche per la configurazione di Defender ATP nell'ambito dei criteri di conformità.
 
 1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selezionare **Dispositivi** > **Criteri di conformità** > **Crea criterio**.
-3. Immettere un **nome** e una **descrizione**.
-4. In **Piattaforma** selezionare **Windows 10 e versioni successive**.
-5. In **Impostazioni**  selezionare **Microsoft Defender ATP** .
-6. Impostare **Richiedi che il dispositivo si trovi al massimo al punteggio di rischio del computer** sul livello preferito.
+
+2. Selezionare **Dispositivi** > **Criteri di conformità** > **Criteri** > **Crea criterio**.
+
+3. Per **Piattaforma** selezionare *Windows 10 e versioni successive*, quindi selezionare **Crea** per aprire la finestra di configurazione **Crea criterio**.
+
+4. Nella scheda **Informazioni di base** specificare un **Nome** per identificare facilmente i criteri in un secondo momento. È anche possibile specificare una **Descrizione**.
+  
+5. Nella scheda **Impostazioni di conformità** espandere il gruppo **Microsoft Defender ATP** e impostare **Richiedi che il dispositivo si trovi al massimo al punteggio di rischio del computer** sul livello preferito.
 
    Le classificazioni dei livelli delle minacce vengono [determinate da Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/alerts-queue).
 
-   - **Cancella**: questo livello è il più sicuro. Nel dispositivo non possono essere presenti minacce per poter accedere alle risorse aziendali. Se viene rilevata qualsiasi minaccia, il dispositivo viene valutato come non conforme. Per gli utenti di Microsoft Defender ATP il valore è *Sicuro*.
+   - **Cancella**: questo livello è il più sicuro. Nel dispositivo non possono essere presenti minacce per poter accedere alle risorse aziendali. Se viene rilevata qualsiasi minaccia, il dispositivo viene valutato come non conforme. Microsoft Defender ATP usa il valore *Sicuro*.
    - **Bassa**: il dispositivo è conforme se sono presenti solo minacce di livello basso. I dispositivi con un livello di minaccia medio o alto non sono conformi.
    - **Media**: il dispositivo è conforme se le minacce presenti nel dispositivo sono di livello basso o medio. Se viene rilevata la presenza di minacce di livello alto, il dispositivo viene determinato come non conforme.
    - **Alta**: questo livello è il meno sicuro e consente tutti i livelli di minaccia. Sono quindi considerati conformi i dispositivi con un livello di minaccia alto, medio o basso.
 
-7. Scegliere **OK** e **Crea** per salvare le modifiche e creare i criteri.
-8. [Assegnare i criteri di conformità del dispositivo](create-compliance-policy.md#assign-the-policy) ai gruppi applicabili.
+6. Completare la configurazione dei criteri, inclusa l'assegnazione dei criteri ai gruppi applicabili.
 
 ## <a name="create-a-conditional-access-policy"></a>Creare criteri di accesso condizionale
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f12ea7e320e3334d1925c8ab04905cd84ed56c82
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c57a201d71d3a8278499636c6ca794b437e11e9a
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79341659"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083814"
 ---
 # <a name="app-protection-policies-overview"></a>Panoramica dei criteri di protezione app
 
@@ -205,6 +205,9 @@ Per un esempio di contesto "personale", si consideri un utente che ha iniziato u
 Per un esempio di contesto di lavoro o "aziendale", si consideri un utente che avvia l'app OneDrive usando l'account aziendale. Nel contesto di lavoro, non può spostare i file in una posizione di archiviazione personale. Quando in seguito tale utente usa OneDrive con il proprio account personale, può copiare e spostare i dati da OneDrive senza restrizioni.
 
 Outlook offre una visualizzazione combinata sia dei messaggi di posta elettronica "personali" che di quelli "aziendali". In questa situazione l'app Outlook richiede il PIN di Intune all'avvio.
+
+  >[!NOTE]
+  > Sebbene Edge si trovi nel contesto "aziendale", l'utente può spostare intenzionalmente i file di contesto "aziendali" OneDrive in una posizione di archiviazione cloud personale sconosciuta. Per evitare che questo succeda, vedere [Specificare l'elenco dei siti consentiti o bloccati per Microsoft Edge](../apps/manage-microsoft-edge.md#specify-allowed-or-blocked-sites-list-for-microsoft-edge) e configurare l'elenco dei siti consentiti o bloccati per Edge.
 
 Per altre informazioni sulle identità multiple in Intune, vedere [MAM e identità multiple](apps-supported-intune-apps.md).
 

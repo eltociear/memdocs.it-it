@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,14 @@ search.appverid: MET150
 ms.reviewer: maholdaa
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: befd2ba9894d8b5d4f7fac32a96d4ed4cae6337a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ab544d285e49fd3914a8e9867c35ad9ed97f5fe8
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364253"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087022"
 ---
 # <a name="android-enterprise-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Impostazioni dei dispositivi Android Enterprise per configurare posta elettronica, autenticazione e sincronizzazione in Intune
-
-
 
 Questo articolo elenca e descrive le diverse impostazioni di posta elettronica che è possibile controllare nei dispositivi Android Enterprise. Usare queste impostazioni nella propria soluzione di gestione di dispositivi mobili (MDM) per configurare un server di posta elettronica, usare SSL per crittografare i messaggi di posta elettronica a altro ancora.
 
@@ -35,16 +33,16 @@ Per altre informazioni sui profili di posta elettronica in Intune, vedere [Confi
 
 ## <a name="before-you-begin"></a>Prima di iniziare
 
-Creare un [profilo di configurazione del dispositivo](email-settings-configure.md#create-a-device-profile) (scegliere il profilo di lavoro) o creare un [criterio di configurazione dell'app](../apps/app-configuration-policies-use-android.md).
+Creare un [profilo di configurazione del dispositivo](email-settings-configure.md) (scegliere il profilo di lavoro) o creare un [criterio di configurazione dell'app](../apps/app-configuration-policies-use-android.md).
 
 ## <a name="android-enterprise"></a>Android Enterprise
 
-- **App di posta elettronica**: selezionare **Gmail** o **Nine Work**
+- **App di posta elettronica**: selezionare **Gmail** o **Nine Work**.
 - **Server di posta elettronica**: immettere il nome host del server Exchange dell'azienda. Immettere ad esempio `outlook.office365.com`.
 - **Attributo nome utente da AAD**: questo nome è l'attributo che Intune ottiene da Azure Active Directory (Azure AD). Intune genera in modo dinamico il nome utente usato da questo profilo. Le opzioni disponibili sono:
 
-  - **Nome entità utente**: ottiene il nome, ad esempio `user1` o `user1@contoso.com`
-  - **Nome utente**: ottiene solo il nome, ad esempio `user1`
+  - **Nome entità utente**: ottiene il nome, ad esempio `user1` o `user1@contoso.com`.
+  - **Nome utente**: ottiene solo il nome, ad esempio `user1`.
 
 - **Attributo indirizzo di posta elettronica da AAD**: questo nome è l'attributo di posta elettronica che Intune ottiene da AD. Intune genera in modo dinamico l'indirizzo di posta elettronica usato da questo profilo. Le opzioni disponibili sono:
   - **Nome entità utente**:  usa come indirizzo di posta elettronica il nome dell'entità completo, ad esempio `user1@contoso.com` o `user1`.

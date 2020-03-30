@@ -6,24 +6,24 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/22/2019
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 7fc95d17-098e-4da5-8a09-a96476569dd9
-ms.reviewer: srik
+ms.reviewer: crisk
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b746317ef15065af246cfd977f6e9d745ef4dea7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: cf732907b9123dfe8cbd72970556ecfbb5380733
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79362680"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086040"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Come ottenere supporto per Microsoft Intune
 
@@ -36,7 +36,6 @@ L'amministratore di Intune può usare l'opzione **Guida e supporto tecnico** per
 >
 > Per informazioni sulla risoluzione dei problemi relativi a Microsoft Intune, vedere la [sezione Risoluzione dei problemi](help-desk-operators.md) della documentazione di Intune.
 
-
 ## <a name="help-and-support-experience"></a>Esperienza di Guida e supporto tecnico
 
 L’esperienza di Guida e supporto tecnico per Intune è disponibile nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) e in tutti i pannelli o tutte le pagine di Intune nel portale di Azure.
@@ -48,14 +47,13 @@ L'esperienza *Guida e supporto tecnico* è simile a quella offerta dall'[interfa
 
 ### <a name="options-to-access-help-and-support"></a>Opzioni per accedere a Guida e supporto tecnico
 
-Quando si usa un tenant appena creato per Intune, è possibile che *Guida e supporto tecnico* non si apra e un messaggio indichi che
+Quando si usa un tenant appena creato per Intune, è possibile che *Guida e supporto tecnico* non si apra e un messaggio indichi che:
 
 - *si è verificato un problema sconosciuto. In questo caso è necessario aggiornare la pagina e, se il problema persiste, creare un caso nell'[interfaccia di amministrazione di M365](https://admin.microsoft.com) facendo riferimento all'ID sessione specificato.*
 
-I dettagli dell'errore includono un *ID sessione*, i dettagli dell'*estensione* e altro ancora. 
- 
-Questo problema si verifica quando l'account del nuovo tenant non è stato ancora autenticato nell'**interfaccia di amministrazione di M365** all'indirizzo https://admin.microsoft.com o nel **portale di Office 365** all'indirizzo https://portal.office.com. Per risolvere il problema, selezionare il collegamento all'*interfaccia di amministrazione di M365* nel messaggio o visitare https://portal.office.com e accedere. Dopo l'autenticazione in uno dei siti, *Guida e supporto tecnico* per Intune diventa accessibile.
+I dettagli dell'errore includono un *ID sessione*, i dettagli dell'*estensione* e altro ancora.
 
+Questo problema si verifica quando l'account del nuovo tenant non è stato autenticato nell'**interfaccia di amministrazione di M365** all'indirizzo https://admin.microsoft.com o nel **portale di Office 365** all'indirizzo https://portal.office.com. Per risolvere il problema, selezionare il collegamento all'*interfaccia di amministrazione di M365* nel messaggio o visitare https://portal.office.com e accedere. Dopo l'autenticazione in uno dei siti, *Guida e supporto tecnico* per Intune diventa accessibile.
 
 **Accedere a Guida e supporto tecnico**:
 
@@ -67,18 +65,28 @@ Questo problema si verifica quando l'account del nuovo tenant non è stato ancor
   > Se l'istanza di Intune è ospitata nel cloud privato per enti pubblici, noto anche come cloud sovrano, ad esempio Azure per enti pubblici, vedere [Supporto di Intune per il cloud privato per enti pubblici](#intune-support-for-private-cloud-for-government) più avanti in questo articolo. L'esperienza *Guida e supporto tecnico* di Intune sarà disponibile nel cloud privato per enti pubblici non prima del prossimo anno.
 
 - **Nell'interfaccia di amministrazione di Microsoft Endpoint Manager**
-  - Dopo aver selezionato un'area funzionale per Intune, selezionare l'opzione **Guida e supporto tecnico**.
-  - Da qualsiasi nodo dell'interfaccia di amministrazione di Microsoft Endpoint Manager selezionare l'icona **?** nell'angolo superiore destro del portale e quindi usare l'elenco a discesa per selezionare il servizio per il quale si vuole ottenere assistenza. L'icona **?** nell'interfaccia di amministrazione di Microsoft Endpoint Manager supporta più servizi ed è necessario selezionare il servizio specifico per il quale si vuole ottenere assistenza.  
 
-    ![Selezionare il servizio](./media/get-support/select-a-service.png)
+  - Da qualsiasi nodo dell'interfaccia di amministrazione di Microsoft Endpoint Manager selezionare l'icona **?** nell'angolo superiore destro del portale e quindi usare l'elenco a discesa per selezionare il tipo di gestione per il quale si vuole ottenere assistenza. L'interfaccia di amministrazione di Microsoft Endpoint Manager supporta i tipi di gestione seguenti ed è necessario selezionare quello per il quale si vuole ottenere assistenza, come ad esempio Intune:
 
-    Dopo aver selezionato un servizio, verrà visualizzata la relativa pagina *Guida e supporto tecnico* in cui sarà possibile specificare i dettagli per [trovare le soluzioni](#find-solutions) per un problema specifico.
+    - Configuration Manager (include Desktop Analytics)
+    - Intune
+    - Co-gestione  
 
-    Quando i risultati della ricerca non sembrano soddisfare le aspettative per il servizio, verificare di aver selezionato il servizio corretto. Il servizio selezionato è visualizzato sotto *Guida e supporto tecnico*.  Se non è stato selezionato il servizio corretto, fare clic su *Seleziona un servizio* per tornare all'elenco a discesa di selezione dei servizi.
+    > [!div class="mx-imgBorder"]
+    > ![Selezionare il tipo di gestione](./media/get-support/select-management-type.png)
 
-    ![Confermare il servizio](./media/get-support/confirm-your-service-selection.png)
+    Dopo aver selezionato un tipo di gestione, si apre la pagina *Guida e supporto tecnico* in cui è possibile specificare i dettagli per [trovare le soluzioni](#find-solutions) per un problema specifico. I dettagli vengono filtrati in base al tipo di gestione selezionato.
 
-###  <a name="the-support-experience"></a>Esperienza di supporto tecnico
+     Se non è stato selezionato il tipo di gestione corretto **(1)** , fare clic su *Selezionare un tipo di gestione* **(2)** per tornare all'elenco a discesa di selezione del tipo di gestione:
+
+    > [!div class="mx-imgBorder"]
+    > ![Confermare il tipo di gestione](./media/get-support/confirm-management-selection.png)
+
+  - Se si apre Guida e supporto tecnico da **Risoluzione dei problemi e supporto tecnico** > **Guida e supporto tecnico**, il tipo di gestione selezionato non verrà visualizzato di seguito a *Guida e supporto tecnico*.
+
+  - Se si esegue il drill-down in qualsiasi altro nodo, ad esempio *Dispositivi*, *App* o *Utenti* e quindi si seleziona *Guida e supporto tecnico*, non sarà possibile selezionare un tipo di gestione e il tipo non verrà visualizzato di seguito a *Guida e supporto tecnico*. In questo caso si presuppone che il tipo di gestione sia *Intune*. Se non si vuole che il contesto sia Intune, usare l'opzione **?** in modo che sia possibile selezionare un tipo di gestione diverso.
+
+### <a name="the-support-experience"></a>Esperienza di supporto tecnico
 
   Quando si accede a Guida e supporto tecnico, il portale visualizza la finestra **Serve aiuto?** :
 
@@ -124,7 +132,7 @@ Il riquadro *Richieste di servizio* visualizza la cronologia del caso. I casi at
 
 Se si dispone di un numero di caso di supporto attivo, è possibile immetterlo qui per passare al relativo problema oppure è possibile selezionare una qualsiasi richiesta dall'elenco delle richieste attive e chiuse per visualizzare altre informazioni corrispondenti.
 
-Dopo aver visualizzato i dettagli relativi a una richiesta, selezionare la freccia sinistra visualizzata nella parte superiore della finestra di Richieste di servizio, appena sopra le tre icone del riquadro *Serve aiuto?* . La freccia indietro apre nuovamente l'elenco delle richieste di assistenza aperte.
+Dopo aver visualizzato i dettagli relativi a una richiesta, selezionare la freccia sinistra visualizzata nella parte superiore della finestra delle richieste di servizio, appena sopra le tre icone del riquadro *Serve aiuto?* . La freccia indietro apre nuovamente l'elenco delle richieste di assistenza aperte.
 
 #### <a name="premier-and-unified-support-customers"></a>Clienti con contratto di supporto Premier e Unified
 
@@ -144,8 +152,7 @@ Se si seleziona un problema di gravità **A** o **Critico**, l'utente può solo 
 Non è più possibile usare l'esperienza *Guida e supporto* di Azure per ottenere assistenza per Intune, a meno che la sottoscrizione non faccia parte di un cloud privato per enti pubblici.
 Se l'istanza di Intune non è eseguita in un cloud privato per enti pubblici, l'esplorazione di *Guida e supporto* di Azure determina il reindirizzamento dell'utente all'esperienza *Guida e supporto tecnico* di Intune per creare e gestire le richieste di assistenza:
 
-Quando si usa **Guida e supporto** nel riquadro di spostamento a sinistra oppure l'opzione **?** per aprire il riquadro *Guida e supporto* e selezionare **Guida e supporto**, si aprirà la pagina *Guida e supporto* di Azure. 
-
+Quando si usa **Guida e supporto** nel riquadro di spostamento a sinistra oppure l'opzione **?** per aprire il riquadro *Guida e supporto* e selezionare **Guida e supporto**, si aprirà la pagina *Guida e supporto* di Azure.
 
 Selezionare **+ Nuova richiesta di supporto** in questa pagina per aprire la scheda *Informazioni di base* della pagina *Guida e supporto - Nuova richiesta di supporto*.
 
@@ -159,7 +166,6 @@ In questa pagina:
   Verrà visualizzato un collegamento che reindirizza l'utente alla [pagina Guida e supporto tecnico di Intune](https://aka.ms/intunehelpsupport).
   
   ![Nuova richiesta di supporto](./media/get-support/new-request.png)
-
 
 ## <a name="intune-support-for-private-cloud-for-government"></a>Supporto di Intune per il cloud privato per enti pubblici
 

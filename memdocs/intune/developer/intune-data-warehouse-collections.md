@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 03/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d3fbfa5ebd8e9ba54d5725cd650cba9c31b3537
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 9b8ffa656aa468b50569518aaff503fec1d21027
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79360288"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086230"
 ---
 # <a name="intune-data-warehouse-collections"></a>Raccolte del data warehouse di Intune
 
@@ -222,6 +222,7 @@ L'entità **device** elenca tutti i dispositivi registrati in gestione e le prop
 | DeviceRegistrationState    | Chiave dell'attributo stato di registrazione client per il dispositivo.                                                                                                                      |
 | OwnerTypeKey               | Chiave dell'attributo tipo di proprietario per questo dispositivo: aziendale, personale o sconosciuto.                                                                                                    |
 | EnrolledDateTime           | Data e ora in cui è stato registrato questo dispositivo.                                                                                                                                         |
+| EthernetMacAddress           | Identificatore di rete univoco del dispositivo.                                                                                                                                        |
 | LastSyncDateTime           | Ultima archiviazione nota con Intune.                                                                                                                                              |
 | ManagementAgentKey         | Chiave dell'agente di gestione associato al dispositivo.                                                                                                                             |
 | ManagementStateKey         | Chiave dello stato di gestione associato al dispositivo, che indica lo stato più recente di un'azione remota o se è jailbroken/rooted.                                                |
@@ -243,13 +244,16 @@ L'entità **device** elenca tutti i dispositivi registrati in gestione e le prop
 | MEID                       | MEID                                                                                                                                                                                   |
 | isSupervised               | Stato del dispositivo con supervisione                                                                                                                                                               |
 | FreeStorageSpaceInBytes    | Spazio di archiviazione disponibile in byte.                                                                                                                                                                 |
-| TotalStorageSpaceInBytes   | Spazio di archiviazione totale in byte.                                                                                                                                                                |
+| TotalStorageSpaceInBytes   | Capacità di archiviazione totale in byte.                                                                                                                                                                |
 | EncryptionState            | Stato della crittografia nel dispositivo.                                                                                                                                                      |
 | SubscriberCarrier          | Gestore telefonico del sottoscrittore del dispositivo                                                                                                                                                       |
 | PhoneNumber                | Numero di telefono del dispositivo                                                                                                                                                             |
 | IMEI                       | IMEI                                                                                                                                                                                   |
 | CellularTechnology         | Tecnologia cellulare del dispositivo                                                                                                                                                    |
 | WiFiMacAddress             | MAC Wi-Fi                                                                                                                                                                              |
+| Modello                      | Modello del dispositivo.                                                                                                                                                                      |
+| Office365Version           | Versione di Office 365 installato nel dispositivo.                                                                                                                             |
+| PhysicalMemoryInBytes      | Memoria fisica in byte.                                                                                                                                                          |
 
 
 ## <a name="devicetypes"></a>deviceTypes

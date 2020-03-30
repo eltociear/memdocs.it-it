@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e1fe46894a9905cba4267e8ff9baa949dde5709a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5bafd916ef31bea50dabb2de5012d693039ca741
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79351487"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084830"
 ---
 # <a name="network-access-control-nac-integration-with-intune"></a>Integrazione del controllo di accesso alla rete (NAC) con Intune
 
@@ -65,36 +65,35 @@ L'elenco seguente è una panoramica del funzionamento dell'integrazione di NAC c
 8. Dopo che il dispositivo è registrato e conforme, la soluzione partner NAC Ottiene lo stato da Intune.
 9. La connessione viene stabilita correttamente e consente al dispositivo di accedere alle risorse aziendali.
 
-## <a name="use-nac-for-vpn-on-your-iosipados-devices"></a>Usare il controllo accesso alla rete per VPN nei dispositivi iOS/iPadOS  
+## <a name="use-nac-for-vpn-on-your-iosipados-devices"></a>Usare il controllo accesso alla rete per VPN nei dispositivi iOS/iPadOS
 
 Il controllo di accesso alla rete è disponibile nelle reti VPN seguenti senza abilitarlo nel profilo VPN:
 
-  - Controllo di accesso alla rete per Cisco Legacy AnyConnect
-  - F5 Access Legacy
-  - Citrix VPN
+- Controllo di accesso alla rete per Cisco Legacy AnyConnect
+- F5 Access Legacy
+- Citrix VPN
 
-NAC è inoltre supportato per Cisco AnyConnect, Citrix SSO e F5 Access. 
+NAC è inoltre supportato per Cisco AnyConnect, Citrix SSO e F5 Access.
 
-### <a name="to-enable-nac-for-cisco-anyconnect-for-ios"></a>Per abilitare NAC per Cisco AnyConnect per iOS:
+### <a name="to-enable-nac-for-cisco-anyconnect-for-ios"></a>Per abilitare il controllo accesso alla rete per Cisco AnyConnect per iOS
 
-  - Integrare ISE con Intune per NAC come descritto nel collegamento seguente.
-  - Impostare l'opzione **Abilita il controllo accesso alla rete** nel profilo VPN su **Sì**.
+- Integrare ISE con Intune per NAC come descritto nel collegamento seguente.
+- Impostare l'opzione **Abilita il controllo accesso alla rete** nel profilo VPN su **Sì**.
 
-### <a name="to-enable-nac-for-citrix-sso"></a>Per abilitare il controllo accesso alla rete per Citrix SSO:
+### <a name="to-enable-nac-for-citrix-sso"></a>Per abilitare il controllo accesso alla rete per Citrix SSO
 
-  - Usare Citrix Gateway 12.0.59 o versione successiva.  
-  - Gli utenti devono avere installato Citrix SSO 1.1.6 o versione successiva.
-  - [Integrare NetScaler con Intune per il controllo accesso alla rete](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html) come descritto nella documentazione del prodotto Citrix.
-  - Nel profilo VPN selezionare **Base settings** > **Enable Network Access Control (NAC)** > **I agree** (Impostazioni di base > Abilita controllo di accesso alla rete > Accetto).
+- Usare Citrix Gateway 12.0.59 o versione successiva.  
+- Gli utenti devono avere installato Citrix SSO 1.1.6 o versione successiva.
+- [Integrare NetScaler con Intune per il controllo accesso alla rete](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html) come descritto nella documentazione del prodotto Citrix.
+- Nel profilo VPN selezionare **Base settings** > **Enable Network Access Control (NAC)** > **I agree** (Impostazioni di base > Abilita controllo di accesso alla rete > Accetto).
 
+### <a name="to-enable-nac-for-f5-access"></a>Per abilitare il controllo accesso alla rete per F5 Access
 
-### <a name="to-enable-nac-for-f5-access"></a>Per abilitare il controlli di accesso alla rete per F5 Access:
+- Usare F5 BIG-IP 13.1.1.5 o versione successiva.
+- Integrare BIG-IP con Intune per il controllo di accesso alla rete. Per la procedura, vedere [Overview: Configuring APM for device posture checks with endpoint management systems](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) della Guida di F5.
+- Nel profilo VPN selezionare **Base settings** > **Enable Network Access Control (NAC)** > **I agree** (Impostazioni di base > Abilita controllo di accesso alla rete > Accetto).
 
-  - Usare F5 BIG-IP 13.1.1.5. BIG-IP 14 non è supportata.
-  - Integrare BIG-IP con Intune per il controllo di accesso alla rete. Per la procedura, vedere [Overview: Configuring APM for device posture checks with endpoint management systems](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) della Guida di F5.
-  - Nel profilo VPN selezionare **Base settings** > **Enable Network Access Control (NAC)** > **I agree** (Impostazioni di base > Abilita controllo di accesso alla rete > Accetto).
-
-  La connessione VPN viene interrotta ogni 24 ore per motivi di sicurezza. La VPN può essere riconnessa immediatamente.
+La connessione VPN viene interrotta ogni 24 ore per motivi di sicurezza. La VPN può essere riconnessa immediatamente.
 
 Stiamo collaborando con i partner per rilasciare una soluzione di controllo accesso alla rete per i client più recenti. Quando le soluzioni saranno pronte, questo articolo verrà aggiornato con altre informazioni.
 

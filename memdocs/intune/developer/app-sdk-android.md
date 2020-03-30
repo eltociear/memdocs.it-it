@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4354d4b5aeb0957790d469a2a3fd5c6787aa93eb
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 367a632b082ad5d58221f33ca9a191fb229f8f66
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363772"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086326"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Guida a Microsoft Intune App SDK per sviluppatori di Android
 
@@ -297,7 +297,7 @@ Oltre alle classi base, anche alcune classi che l'app potrebbe usare senza deriv
 | android.preference.PreferenceActivity | MAMPreferenceActivity |
 | android.support.multidex.MultiDexApplication | MAMMultiDexApplication |
 | android.widget.TextView | MAMTextView |
-| android.widget.AutoCompleteTextView | MAMAutoCompleteTextView |
+| android.widget.AutoCompleteTextView |    MAMAutoCompleteTextView |
 | android.widget.CheckedTextView | MAMCheckedTextView |
 | android.widget.EditText | MAMEditText |
 | android.inputmethodservice.ExtractEditText | MAMExtractEditText |
@@ -324,7 +324,7 @@ Oltre alle classi base, anche alcune classi che l'app potrebbe usare senza deriv
 |--|--|
 | android.support.v7.app.AlertDialog.Builder | MAMAlertDialogBuilder |
 | android.support.v7.app.AppCompatActivity | MAMAppCompatActivity |
-| android.support.v7.widget.AppCompatAutoCompleteTextView | MAMAppCompatAutoCompleteTextView |
+| android.support.v7.widget.AppCompatAutoCompleteTextView |    MAMAppCompatAutoCompleteTextView |
 | android.support.v7.widget.AppCompatCheckedTextView | MAMAppCompatCheckedTextView |
 | android.support.v7.widget.AppCompatEditText | MAMAppCompatEditText |
 | android.support.v7.widget.AppCompatMultiAutoCompleteTextView | MAMAppCompatMultiAutoCompleteTextView |
@@ -695,7 +695,7 @@ Le notifiche seguenti vengono inviate all'app e alcune possono richiedere la par
 La notifica `MANAGEMENT_REMOVED` indica che un utente precedentemente gestito tramite criteri non verrà più gestito da criteri MAM di Intune. Questa condizione non richiede la cancellazione dei dati utente o la disconnessione dell'utente (se fosse necessaria la cancellazione, verrebbe inviata una notifica `WIPE_USER_DATA`). È possibile che molte app non debbano gestire tale notifica. Le app che usano `MAMDataProtectionManager`, tuttavia, dovrebbero [considerare con attenzione questa notifica](#data-protection).
 
 Quando MAM chiama il ricevente `MANAGEMENT_REMOVED` dell'app, saranno vere le condizioni seguenti:
-* MAM ha già decrittografato file crittografati in precedenza (ma non i buffer di dati protetti) appartenenti all'app. I file nei percorsi pubblici nella scheda SD che non appartengono direttamente all'app (ad esempio, le cartelle Documenti o Download) non vengono decrittografati.
+* MAM ha già decrittografato file crittografati in precedenza (ma non i buffer di dati protetti) appartenenti all'app. I file nei percorsi pubblici nella scheda SD che non appartengono direttamente all'app, come ad esempio le cartelle Documenti o Download, non vengono decrittografati.
 * I nuovi file o buffer di dati protetti creati dal metodo ricevente (o qualsiasi altro codice in esecuzione dopo l'avvio del ricevente) non verranno crittografati.
 * L'app ha comunque accesso alle chiavi di crittografia, quindi le operazioni come la decrittografia dei buffer di dati avranno esito positivo.
 
@@ -970,7 +970,7 @@ Quando un account viene registrato per la prima volta, ha uno stato iniziale `PE
 | `NOT_LICENSED` | L'utente non ha una licenza per Intune oppure il tentativo di contattare il servizio MAM di Intune non è riuscito.  L'app deve continuare in uno stato non gestito (normale) e l'utente non deve essere bloccato.  Verranno eseguiti periodicamente nuovi tentativi di registrazione, nel caso in cui in futuro l'utente disponga di una licenza. |
 | `ENROLLMENT_SUCCEEDED` | Il tentativo di registrazione ha avuto esito positivo oppure l'utente è già registrato.  Nel caso di una registrazione con esito positivo, verrà inviata una notifica di aggiornamento dei criteri prima di questa notifica.  L'accesso ai dati aziendali deve essere consentito. |
 | `ENROLLMENT_FAILED` | Il tentativo di registrazione non è riuscito.  Maggiori dettagli sono disponibili nei log del dispositivo.  L'app non deve consentire l'accesso ai dati aziendali in questo stato, perché è stato stabilito in precedenza che l'utente ha una licenza per Intune.|
-| `WRONG_USER` | Un solo utente per dispositivo può registrare un'app con il servizio MAM. Questo risultato indica che l'utente per il quale è stato distribuito il risultato (il secondo utente) è specificato come destinazione con i criteri MAM, ma è già stato registrato un altro utente. Poiché non è possibile applicare i criteri MAM per il secondo utente, l'app non deve consentire l'accesso ai dati di questo utente (possibilmente rimuovendo l'utente dall'app), a meno che o finché la registrazione per questo utente non venga completata in un secondo momento. Simultaneamente alla distribuzione di questo risultato `WRONG_USER`, MAM visualizzerà l'opzione per rimuovere l'account esistente. Se l'utente umano risponde in modo affermativo, poco dopo sarà effettivamente possibile registrare il secondo utente. Fino a quando il secondo utente rimane registrato, MAM riproverà a eseguire periodicamente la registrazione. |
+| `WRONG_USER` | Un solo utente per dispositivo può registrare un'app con il servizio MAM. Questo risultato indica che l'utente per il quale è stato distribuito il risultato (il secondo utente) è specificato come destinazione con i criteri MAM, ma è già stato registrato un altro utente. Poiché non è possibile applicare i criteri MAM per il secondo utente, l'app non deve consentire l'accesso ai dati di questo utente, e per far ciò può anche rimuoverlo dall'app, a meno che o finché la registrazione per questo utente non venga completata in un secondo momento. Simultaneamente alla distribuzione di questo risultato `WRONG_USER`, MAM visualizzerà l'opzione per rimuovere l'account esistente. Se l'utente umano risponde in modo affermativo, poco dopo sarà effettivamente possibile registrare il secondo utente. Fino a quando il secondo utente rimane registrato, MAM riproverà a eseguire periodicamente la registrazione. |
 | `UNENROLLMENT_SUCCEEDED` | L'annullamento della registrazione è avvenuto correttamente.|
 | `UNENROLLMENT_FAILED` | La richiesta di annullamento della registrazione non è riuscita.  Maggiori dettagli sono disponibili nei log del dispositivo. In generale, questo problema non si verifica se l'app passa un UPN valido (né null né vuoto). Non esistono correzioni dirette e affidabili che possano essere eseguite dall'app. Se questo valore viene ricevuto quando si annulla la registrazione di un UPN valido, segnalare un bug al team MAM di Intune.|
 | `PENDING` | Il tentativo di registrazione iniziale per l'utente è in corso.  L'app può bloccare l'accesso ai dati aziendali fino a quando non è noto il risultato della registrazione, ma ciò non è necessario. |
@@ -1027,9 +1027,9 @@ public interface MAMComplianceManager {
 }
 ```
 
-Il metodo `remediateCompliance()` viene chiamato per tentare di inserire l'app nella gestione per soddisfare le condizioni richieste affinché AAD possa concedere il token richiesto.  I primi quattro parametri possono essere estratti dall'eccezione ricevuta dal metodo `AuthenticationCallback.onError()` di ADAL (vedere l'esempio di codice riportato di seguito).  Il parametro finale è un valore booleano che controlla se viene visualizzata un'esperienza utente durante il tentativo di conformità.  Questa è una semplice interfaccia di blocco di operazione in corso, fornita come impostazione predefinita pe le app che non hanno l'esigenza di visualizzare un'esperienza utente personalizzata durante questa operazione.  Il blocco verrà attivato solo mentre è in corso la correzione per la conformità e non verrà visualizzato il risultato finale.  L'app deve registrare un destinatario delle notifiche per gestire l'esito positivo o negativo del tentativo di correzione per la conformità (vedere sotto).
+Il metodo `remediateCompliance()` viene chiamato per tentare di inserire l'app nella gestione per soddisfare le condizioni richieste affinché AAD possa concedere il token richiesto.  I primi quattro parametri possono essere estratti dall'eccezione ricevuta dal metodo `AuthenticationCallback.onError()` di ADAL (vedere l'esempio di codice riportato di seguito).  Il parametro finale è un valore booleano che controlla se viene visualizzata un'esperienza utente durante il tentativo di conformità.  Questa è una semplice interfaccia di blocco di operazione in corso, disponibile come impostazione predefinita per le app che non hanno l'esigenza di visualizzare un'esperienza utente personalizzata durante questa operazione.  Il blocco verrà attivato solo mentre è in corso la correzione per la conformità e non verrà visualizzato il risultato finale.  L'app deve registrare un destinatario delle notifiche per gestire l'esito positivo o negativo del tentativo di correzione per la conformità (vedere sotto).
 
-Il metodo `remediateCompliance()` potrebbe eseguire una registrazione MAM come parte delle procedure per ottenere la conformità.  L'app può ricevere una notifica di registrazione se ha registrato un destinatario per le notifiche di registrazione.  Per il `MAMServiceAuthenticationCallback` registrato dell'app verrà chiamato il metodo `acquireToken()` per ottenere un token per la registrazione MAM. `acquireToken()` verrà chiamato prima che l'app abbia acquisito il token, in modo che qualsiasi attività di gestione o di creazione di account che l'app esegue dopo la corretta acquisizione del token non possa ancora essere stata eseguita.  Il callback deve essere in grado di acquisire un token in questo caso.  Se non è possibile restituire un token da `acquireToken()`, il tentativo di correzione per la conformità avrà esito negativo.  Se si chiama `updateToken()` in un secondo momento con un token valido per la risorsa richiesta, il tentativo di correzione per la conformità verrà ripetuto immediatamente con il token specificato.
+Il metodo `remediateCompliance()` potrebbe eseguire una registrazione MAM come parte delle procedure per ottenere la conformità.  L'app può ricevere una notifica di registrazione se ha registrato un destinatario per le notifiche di registrazione.  Per l'oggetto `MAMServiceAuthenticationCallback` registrato dell'app verrà chiamato il metodo `acquireToken()` per ottenere un token per la registrazione MAM. `acquireToken()` verrà chiamato prima che l'app abbia acquisito il token, in modo che qualsiasi attività di gestione o di creazione di account che l'app esegue dopo la corretta acquisizione del token non possa ancora essere stata eseguita.  Il callback deve essere in grado di acquisire un token in questo caso.  Se non è possibile restituire un token da `acquireToken()`, il tentativo di correzione per la conformità avrà esito negativo.  Se si chiama `updateToken()` in un secondo momento con un token valido per la risorsa richiesta, il tentativo di correzione per la conformità verrà ripetuto immediatamente con il token specificato.
 
 > [!NOTE]
 > L'acquisizione di token invisibile all'utente sarà comunque possibile in `acquireToken()`, perché l'utente avrà già ricevuto indicazione di installare il broker e registrare il dispositivo prima di ricevere l'errore `ADALError.AUTH_FAILED_INTUNE_POLICY_REQUIRED`.  In questo modo il broker avrà a disposizione un token di aggiornamento valido nella cache, che consente l'esito positivo dell'acquisizione invisibile all'utente del token richiesto.
@@ -1079,7 +1079,7 @@ Il metodo `getComplianceStatus()` restituisce il risultato del tentativo di corr
 | PENDING | Il tentativo di correzione per la conformità non è riuscito perché il servizio non aveva ancora ricevuto la risposta di stato quando è stato superato il limite di tempo. L'app deve ritentare più tardi l'acquisizione del token. |
 | COMPANY_PORTAL_REQUIRED | L'app Portale aziendale deve essere installata nel dispositivo in ordine per completare la correzione per la conformità.  Se l'app Portale aziendale è già installata nel dispositivo, è necessario riavviarla.  In questo caso, verrà visualizzata una finestra di dialogo per richiedere all'utente di riavviare l'app. |
 
-Se lo stato di conformità è `MAMCAComplianceStatus.COMPLIANT`, l'app deve avviare nuovamente l'acquisizione del token originale (per la propria risorsa). Se il tentativo di correzione per la conformità non è riuscito, i metodi `getComplianceErrorTitle()` e `getComplianceErrorMessage()` restituiranno stringhe localizzate che l'app può visualizzare facoltativamente all'utente finale.  La maggior parte dei casi di errore non può essere corretta dall'app, quindi in generale potrebbe essere preferibile generare un errore per la creazione dell'account o l'accesso e consentire all'utente di riprovare più tardi.  Se un errore persiste, i log MAM possono essere utili per determinare la causa.  L'utente finale può inviare i log usando le istruzioni riportate [qui](https://docs.microsoft.com/user-help/send-logs-to-your-it-admin-by-email-android "Inviare i log al supporto tecnico dell'azienda tramite posta elettronica").
+Se lo stato di conformità è `MAMCAComplianceStatus.COMPLIANT`, l'app deve avviare nuovamente l'acquisizione del token originale (per la propria risorsa). Se il tentativo di correzione per la conformità non è riuscito, i metodi `getComplianceErrorTitle()` e `getComplianceErrorMessage()` restituiranno stringhe localizzate che l'app può visualizzare facoltativamente all'utente finale.  La maggior parte dei casi di errore non può essere corretta dall'app, quindi in generale potrebbe essere preferibile generare un errore per la creazione dell'account o l'accesso e consentire all'utente di riprovare più tardi.  Se un errore persiste, i log MAM possono essere utili per determinare la causa.  L'utente finale può inviare i log usando le istruzioni riportate [qui](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android "Inviare i log al supporto tecnico dell'azienda tramite posta elettronica").
 
 Poiché `MAMComplianceNotification` estende `MAMUserNotification`, è disponibile anche l'identità dell'utente per cui è stato eseguito il tentativo di correzione.
 
@@ -1206,7 +1206,7 @@ Un oggetto BackupAgent consente di definire in modo molto più esplicito i dati 
 
 **Ripristino di identità multiple:**
 
-La guida al backup dei dati specifica un algoritmo generale per il ripristino dei dati dell'applicazione e fornisce un esempio di codice nella sezione relativa all'[estensione di BackupAgent](https://developer.android.com/guide/topics/data/keyvaluebackup.html#BackupAgent). Per un corretto ripristino di identità multiple, è necessario seguire la struttura generale fornita in questo esempio di codice con particolare attenzione a quanto segue:
+La guida al backup dei dati specifica un algoritmo generale per il ripristino dei dati dell'applicazione e un esempio di codice nella sezione relativa all'[estensione di BackupAgent](https://developer.android.com/guide/topics/data/keyvaluebackup.html#BackupAgent). Per un corretto ripristino di identità multiple, è necessario seguire la struttura generale fornita in questo esempio di codice con particolare attenzione a quanto segue:
 
 1. È necessario usare un ciclo `while(data.readNextHeader())` per scorrere le entità di backup. Nel codice precedente `data` è il nome della variabile locale per l'oggetto **MAMBackupDataInput** passato all'app subito dopo il ripristino.
 
@@ -1445,7 +1445,7 @@ Per usare `MAMAsyncTask`, è sufficiente ereditare da essa anziché da `AsyncTas
 ```
 
 ### <a name="file-protection"></a>Protezione dei file
-A ogni file è associata un'identità al momento della creazione in base all'identità a livello di processo e thread. Questa identità verrà usata sia per la crittografia dei file che per la cancellazione selettiva. Verranno crittografati solo i file la cui identità è gestita e ha criteri che richiedono la crittografia. La cancellazione selettiva predefinita dell'SDK cancellerà solo i file associati all'identità per cui è stata richiesta una cancellazione. L'app può richiedere o modificare l'identità di un file usando la classe `MAMFileProtectionManager`.
+A ogni file è associata un'identità al momento della creazione in base all'identità a livello di processo e thread. Questa identità verrà usata sia per la crittografia dei file che per la cancellazione selettiva. Verranno crittografati solo i file la cui identità è gestita e ha criteri che richiedono la crittografia. La cancellazione selettiva predefinita dell'SDK cancellerà solo i file associati all'identità per cui è stata richiesta una cancellazione. L'app può eseguire una query sull'identità di un file oppure modificarla usando la classe `MAMFileProtectionManager`.
 
 ```java
 public final class MAMFileProtectionManager {
@@ -1457,12 +1457,12 @@ public final class MAMFileProtectionManager {
     * this method will silently do nothing.
     *
     * @param identity
-    *       Identity to set.
+    *         Identity to set.
     * @param file
-    *       File to protect.
+    *         File to protect.
     *
     * @throws IOException
-    *       If the file cannot be protected.
+    *         If the file cannot be protected.
     */
    public static void protect(final File file, final String identity) throws IOException;
 
@@ -1864,7 +1864,7 @@ Intune SDK mantiene il contratto fornito dall'API Android, ma è possibile che v
 Intune App SDK per Android non controlla la raccolta di dati dall'app. L'applicazione Portale aziendale registra dati generati dal sistema per impostazione predefinita. Questi dati vengono inviati a Microsoft Intune. In base ai criteri Microsoft, non vengono raccolte informazioni personali.
 
 > [!NOTE]
-> Se l'utente finale sceglie di non inviare questi dati, deve disattivare la telemetria in Impostazioni nell'app Portale aziendale. Per altre informazioni, vedere [Disattivare la raccolta dati di utilizzo di Microsoft](https://docs.microsoft.com/user-help/turn-off-microsoft-usage-data-collection-android). 
+> Se l'utente finale sceglie di non inviare questi dati, deve disattivare la telemetria in Impostazioni nell'app Portale aziendale. Per altre informazioni, vedere [Disattivare la raccolta dati di utilizzo di Microsoft](https://docs.microsoft.com/mem/intune/user-help/turn-off-microsoft-usage-data-collection-android). 
 
 ## <a name="recommended-android-best-practices"></a>Procedure consigliate per Android
 

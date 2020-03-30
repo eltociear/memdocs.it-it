@@ -17,12 +17,12 @@ ms.reviewer: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 335841a8642429e36c277673fd8a238d486366c9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f685f1f3d009d7ba7a1dc061ec3025b2f8c96b5f
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79350616"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084647"
 ---
 # <a name="troubleshoot-integration-of-jamf-pro-with-microsoft-intune"></a>Risolvere i problemi di integrazione di Jamf Pro con Microsoft Intune
 
@@ -89,8 +89,8 @@ Dopo aver configurato l'integrazione di Intune e Jamf Pro e aver distribuito i c
 Ad esempio, quando si apre Microsoft Teams viene visualizzato un messaggio di richiesta simile a quello nell'esempio seguente:
 
 ``` 
-  Microsoft Teams wants to sign using key “Microsoft Workplace Join Key” in your keychain.  
-  To allow this, enter the “login” keychain password 
+  Microsoft Teams wants to sign using key "Microsoft Workplace Join Key" in your keychain.  
+  To allow this, enter the "login" keychain password 
 ```
 
 **Causa**: Queste richieste vengono generate da Jamf Pro per ogni app applicabile che richiede la registrazione in Azure AD. 
@@ -118,7 +118,7 @@ Se i dispositivi Mac non riescono a eseguire la registrazione, le cause possono 
 
 #### <a name="cause-2"></a>Causa 2  
 
-**L'app**Jamf Native macOS Connector** non è stata creata nel tenant di Azure AD o il consenso per il connettore è stato firmato da un account che non dispone dei diritti di amministratore globale**  
+**L'app **Jamf Native macOS Connector** non è stata creata nel tenant di Azure AD o il consenso per il connettore è stato firmato da un account che non ha i diritti di amministratore globale**  
 
   **Risoluzione**  
   Vedere la sezione *Configuring macOS Intune Integration* (Configurazione dell'integrazione di macOS con Intune) in [Integrating with Microsoft Intune](https://docs.jamf.com/10.13.0/jamf-pro/administrator-guide/Integrating_with_Microsoft_Intune.html) (Integrazione con Microsoft Intune) sul sito docs.jamf.com. 
@@ -156,7 +156,7 @@ Nell'app Portale aziendale, l'utente potrebbe visualizzare **`Not registered`** 
 
 **Risoluzione**  
 Per modificare l'origine di registrazione da Intune a Jamf:
-1. [Annullare la registrazione del dispositivo macOS da Intune](https://docs.microsoft.com/user-help/unenroll-your-device-from-intune-macos). Per evitare ulteriori complicazioni per i dispositivi che non vengono rimossi completamente da Intune, vedere [*Causa 6*](#cause-6) in questo elenco di cause.  
+1. [Annullare la registrazione del dispositivo macOS da Intune](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-macos). Per evitare ulteriori complicazioni per i dispositivi che non vengono rimossi completamente da Intune, vedere [*Causa 6*](#cause-6) in questo elenco di cause.  
 
 2. Nel dispositivo usare Jamf Self Service per aprire l'app Portale aziendale e quindi registrare il dispositivo in Intune. Per questa attività è necessario avere [usato Jamf per distribuire l'app Portale aziendale per macOS](conditional-access-assign-jamf.md#deploy-the-company-portal-app-for-macos-in-jamf-pro) e avere [creato un criterio in Jamf Pro che registra il dispositivo degli utenti con Azure AD](conditional-access-assign-jamf.md#create-a-policy-in-jamf-pro-to-have-users-register-their-devices-with-azure-active-directory).  
 
@@ -242,9 +242,9 @@ Se si annulla la registrazione di un dispositivo da Jamf ma il dispositivo non �
 Durante la registrazione, l'utente di un dispositivo macOS riceve la richiesta seguente per consentire l'accesso di JamfAAD a una chiave nel portachiavi: 
 
 ```
-   JamfAAD wants to access key “Microsoft Workplace Join Key" in your keychain. 
+   JamfAAD wants to access key "Microsoft Workplace Join Key" in your keychain. 
     
-   To allow this, enter the “login” keychain password
+   To allow this, enter the "login" keychain password
 ```
 
 **Risoluzione**  

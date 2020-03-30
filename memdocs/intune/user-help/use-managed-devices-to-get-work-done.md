@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 63090c61039c5029e6a8b80f53232191e1beb99a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 95f9677b95dc9dde4b12e60e3006b4cee5081471
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79347067"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233414"
 ---
 # <a name="what-is-device-enrollment"></a>Che cos'è la registrazione dei dispositivi?
 Per ottenere l'accesso alle risorse aziendali o dell'istituto di istruzione dal dispositivo, è necessario registrarlo nell'app Portale aziendale Intune o nell'app Microsoft Intune. 
@@ -79,13 +79,13 @@ In Portale aziendale è possibile registrare i dispositivi seguenti:
 
 Durante la rimozione, Portale aziendale annulla la registrazione del dispositivo. Il dispositivo perde l'accesso a Portale aziendale. Potrebbero essere rimossi anche i dati aziendali o dell'istituto di istruzione. 
 
-Durante la reimpostazione di un dispositivo, il Portale aziendale tenta di reimpostare le impostazioni predefinite del computer o del dispositivo stesso. Tutti i dati aziendali o dell'istituto di istruzione e tutti i dati personali vengono rimossi dal dispositivo. Una reimpostazione è utile se, ad esempio, si perde il dispositivo. È possibile reimpostarlo in modalità remota dal sito Web Portale aziendale.  
+Durante la reimpostazione di un dispositivo, il Portale aziendale tenta di ripristinare le impostazioni predefinite del produttore del computer o del dispositivo stesso. Tutti i dati aziendali o dell'istituto di istruzione e tutti i dati personali vengono rimossi dal dispositivo. Una reimpostazione è utile se, ad esempio, si perde il dispositivo. È possibile reimpostarlo in modalità remota dal sito Web Portale aziendale.  
 
 ## <a name="can-you-remove-a-device-from-the-microsoft-intune-app"></a>È possibile rimuovere un dispositivo dall'app Microsoft Intune?
 No, non è possibile rimuovere un dispositivo di proprietà dell'azienda dall'app Microsoft Intune.  
 
 ## <a name="what-if-i-cant-see-my-device-in-the-company-portal-or-microsoft-intune-app"></a>Cosa fare se il dispositivo non è visibile nell'app Microsoft Intune o Portale aziendale?
-Per visualizzare un dispositivo in Portale aziendale, deve prima essere registrato. Se dopo la registrazione non vengono ancora visualizzati tutti i dispositivi, provare a eseguire la sincronizzazione o controllare l'accesso tramite Portale aziendale. Non saranno più visualizzati i dispositivi di proprietà e gestiti dall'azienda.
+Per visualizzare un dispositivo in Portale aziendale, deve prima essere registrato. Se dopo la registrazione non vengono ancora visualizzati tutti i dispositivi, provare a eseguire la sincronizzazione o controllare l'accesso tramite Portale aziendale. Non saranno più visualizzati i dispositivi di proprietà dall'azienda e gestiti da questa.
 
 Nell'app Microsoft Intune viene visualizzato solo il dispositivo attualmente in uso. Altri dispositivi registrati non saranno visibili all'utente nell'app.  
 
@@ -111,5 +111,3 @@ Se si è pronti ad accedere all'account aziendale o dell'istituto di istruzione,
 * [Registrare il dispositivo iOS fornito dall'organizzazione](enroll-your-device-dep-ios.md)
 * [Registrare il dispositivo macOS](enroll-your-device-in-intune-macos-cp.md)
 * [Registrare il dispositivo macOS fornito dall'organizzazione](enroll-company-device-macos.md)
-
-

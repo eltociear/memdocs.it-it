@@ -1,12 +1,12 @@
 ---
 title: Configurare un servizio di gestione delle spese per telecomunicazioni in Microsoft Intune - Azure | Microsoft Docs
 titleSuffix: ''
-description: Integrare Microsoft Intune con il servizio di gestione delle spese per telecomunicazioni Saaswedo per monitorare il consumo dei dati e impostare soglie o limiti nei dispositivi Android, iOS e iPadOS.
+description: Integrare Microsoft Intune con il servizio di gestione delle spese per telecomunicazioni Saaswedo per monitorare il consumo dei dati e impostare soglie o limiti nei dispositivi Amministratore di dispositivi Android, iOS e iPadOS.
 keywords: Saaswedo
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,22 +18,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7a11151b874e34d12b71b3429f55603d5e6f2a11
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 62fe18a086630a768976220b8de7469f53f25cc4
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361536"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086952"
 ---
 # <a name="set-up-a-telecom-expense-management-service-in-intune"></a>Configurare un servizio di gestione delle spese per telecomunicazioni in Intune
 
-Con Intune è possibile gestire le spese per telecomunicazioni relative al consumo dei dati nei dispositivi mobili di proprietà dell'organizzazione. Intune si integra con la [gestione delle spese per telecomunicazioni Datalert](http://datalert.biz/get-started) di Saaswedo. Datalert è una soluzione di gestione delle spese per telecomunicazioni in tempo reale che gestisce il consumo dei dati delle telecomunicazioni. Aiuta a evitare addebiti onerosi e imprevisti relativi al consumo di dati e al roaming per i dispositivi gestiti da Intune.
+Con Intune è possibile gestire le spese per telecomunicazioni relative al consumo dei dati nei dispositivi mobili di proprietà dell'organizzazione. Intune si integra con la [gestione delle spese per telecomunicazioni Datalert](http://datalert.biz/get-started) di Saaswedo. Datalert è una soluzione di gestione delle spese per telecomunicazioni in tempo reale che gestisce il consumo dei dati delle telecomunicazioni. Può contribuire a evitare addebiti imprevisti relativi al consumo di dati e al roaming per i dispositivi gestiti da Intune.
 
-L'integrazione con Datalert consente di impostare, monitorare e applicare limiti al consumo di dati a livello nazionale e in roaming. Quando i limiti superano le soglie definite, vengono automaticamente attivati gli avvisi. È anche possibile configurare il servizio in modo da applicare azioni diverse, ad esempio la disabilitazione del roaming o il superamento della soglia, a singoli utenti o gruppi. La console di gestione di Datalert include report con il consumo dei dati e le informazioni di monitoraggio.
+L'integrazione con Datalert consente di impostare, monitorare e applicare limiti al consumo di dati a livello nazionale e in roaming. Quando i limiti superano le soglie definite, vengono automaticamente attivati avvisi. È anche possibile configurare il servizio in modo da applicare azioni diverse a utenti o gruppi, ad esempio la disabilitazione del roaming o il superamento della soglia. La console di gestione di Datalert include report con il consumo dei dati e le informazioni di monitoraggio.
 
 L'immagine seguente illustra l'integrazione tra Intune e Datalert:
 
-  ![Diagramma dell'integrazione tra Intune e Datalert](./media/telecom-expenses-monitor/tem-datalert-intune-solution-diagram.png)
+> [!div class="mx-imgBorder"]
+> ![Diagramma dell'integrazione tra Intune e Datalert](./media/telecom-expenses-monitor/tem-datalert-intune-solution-diagram.png)
 
 Per usare il servizio Datalert con Intune, sono disponibili alcune impostazioni di configurazione in Datalert e Intune. Questo articolo illustra come:
 
@@ -44,7 +45,7 @@ Per usare il servizio Datalert con Intune, sono disponibili alcune impostazioni 
 
 ## <a name="supported-platforms"></a>Piattaforme supportate
 
-- Android 4.4 e dispositivi più recenti che supportano Knox (Samsung)
+- Amministratore di dispositivi Android 4.4 e dispositivi più recenti che supportano Knox (Samsung)
 
   Le [versioni di Android che supportano Knox](https://seap.samsung.com/faq/what-versions-android-support-knox-standard-and-knox-premium-sdks-0) (viene aperto il sito Web Samsung) includono l'elenco delle versioni supportate di Knox.
 
@@ -84,7 +85,8 @@ Intune si integra con i provider di gestione delle spese per telecomunicazioni s
 
     L'immagine seguente illustra i segni di spunta verdi visualizzati quando la connessione viene stabilita correttamente:
 
-      ![Pagina Datalert con connessione riuscita](./media/telecom-expenses-monitor/tem-datalert-connection.png)
+      > [!div class="mx-imgBorder"]
+      > ![Pagina Datalert con connessione riuscita](./media/telecom-expenses-monitor/tem-datalert-connection.png)
 
 7. In **Datalert App / ADAL Consent** (App Datalert/Consenso ADAL) impostare l'opzione su **On**. Nella pagina di autenticazione Microsoft selezionare **Accetta**.
 
@@ -92,7 +94,8 @@ Intune si integra con i provider di gestione delle spese per telecomunicazioni s
 
     L'immagine seguente illustra i segni di spunta verdi visualizzati quando la connessione viene stabilita correttamente:
 
-      ![Pagina Datalert con connessione riuscita](./media/telecom-expenses-monitor/tem-datalert-adal-consent.png)
+      > [!div class="mx-imgBorder"]
+      > ![Pagina Datalert con connessione riuscita](./media/telecom-expenses-monitor/tem-datalert-adal-consent.png)
 
 8. In **MDM Profiles management (optional)** (Gestione profili MDM, facoltativa) impostare l'opzione su **On**. Questa impostazione consente a Datalert di leggere i profili disponibili in Intune per facilitare la configurazione dei criteri. 
 
@@ -102,7 +105,8 @@ Intune si integra con i provider di gestione delle spese per telecomunicazioni s
 
     L'immagine seguente illustra i segni di spunta verdi visualizzati quando la connessione viene stabilita correttamente:
 
-   ![Pagina Datalert con connessione riuscita](./media/telecom-expenses-monitor/tem-datalert-mdm-profiles.png)
+    > [!div class="mx-imgBorder"]
+    > ![Pagina Datalert con connessione riuscita](./media/telecom-expenses-monitor/tem-datalert-mdm-profiles.png)
 
 ### <a name="step-2-confirm-telecom-expense-management-is-active-in-intune"></a>Passaggio 2: Verificare che la gestione delle spese per telecomunicazioni sia attiva in Intune
 
@@ -112,7 +116,8 @@ Dopo il completamento del passaggio 1, la connessione è automaticamente abilita
 
 2. Selezionare **Amministrazione del tenant** > **Connettori e token** > **Gestione delle spese per telecomunicazioni**. Individuare lo stato di connessione **Attiva**:
 
-   ![Pagina di Intune con stato Attiva per la connessione Datalert](./media/telecom-expenses-monitor/tem-azure-portal-enable-service.png)
+    > [!div class="mx-imgBorder"]
+    > ![Pagina di Intune con stato attivo della connessione Datalert](./media/telecom-expenses-monitor/tem-azure-portal-enable-service.png)
 
 ### <a name="step-3-deploy-the-datalert-app-to-devices"></a>Passaggio 3: Distribuire l'app Datalert ai dispositivi
 
@@ -131,7 +136,8 @@ Per creare categorie di dispositivi in Intune, vedere [Eseguire il mapping a gru
 
 Gli utenti visualizzano queste categorie durante la registrazione ([Registrare dispositivi Android](../enrollment/android-enroll.md)). A seconda della categoria scelta dall'utente, il dispositivo registrato viene aggiunto al gruppo di dispositivi corrispondente.
 
-  ![Schermata del riquadro Aggiungi criteri](./media/telecom-expenses-monitor/tem-dynamic-membership-rules.png)
+> [!div class="mx-imgBorder"]
+> ![Screenshot del riquadro Aggiungi criteri](./media/telecom-expenses-monitor/tem-dynamic-membership-rules.png)
 
 #### <a name="add-the-datalert-app-to-intune"></a>Aggiungere l'app Datalert a Intune
 
@@ -145,11 +151,13 @@ La procedura descritta di seguito consente di aggiungere l'app Datalert. Viene u
 
 4. Scegliere l'app **Datalert** > **Seleziona**:
 
-   ![Aggiungere l'app Datalert dall'App Store alle app client di Intune](./media/telecom-expenses-monitor/tem-select-app-from-apple-app-store.png)
+    > [!div class="mx-imgBorder"]
+    > ![Aggiungere l'app Datalert dall'App Store alle app client di Intune](./media/telecom-expenses-monitor/tem-select-app-from-apple-app-store.png)
 
 5. Immettere eventuali proprietà aggiuntive, ad esempio informazioni sull'app e tag di ambito:
 
-   ![Immettere le proprietà dell'app, ad esempio il nome e la descrizione, scegliere il sistema operativo e altre impostazioni per l'app in Intune](./media/telecom-expenses-monitor/tem-steps-to-create-the-app.png)
+    > [!div class="mx-imgBorder"]
+    > ![Immettere le proprietà dell'app, ad esempio il nome e la descrizione, scegliere il sistema operativo e altre impostazioni per l'app in Intune](./media/telecom-expenses-monitor/tem-steps-to-create-the-app.png)
 
 6. Selezionare **OK** > **Aggiungi** per salvare le modifiche. L'app Datalert viene visualizzata nell'elenco.
 
@@ -161,15 +169,17 @@ La procedura descritta di seguito consente di aggiungere l'app Datalert. Viene u
 
     In questi passaggi si sceglierà se l'installazione dell'app sarà obbligatoria o facoltativa per il gruppo. Nell'esempio riportato di seguito l'installazione è obbligatoria. Se obbligatoria, gli utenti devono installare l'app Datalert dopo la registrazione del dispositivo.
 
-   ![Schermata del riquadro Aggiungi criteri](./media/telecom-expenses-monitor/tem-assign-datalert-app-to-device-group.png)
+    > [!div class="mx-imgBorder"]
+    > ![Screenshot del riquadro Aggiungi criteri](./media/telecom-expenses-monitor/tem-assign-datalert-app-to-device-group.png)
 
 ### <a name="step-4-add-organization-phone-lines-to-the-datalert-console"></a>Passaggio 4: Aggiungere le linee telefoniche dell'organizzazione alla console di Datalert
 
-La comunicazione tra i servizi Intune e Datalert è stata ora configurata. A questo punto, aggiungere le linee telefoniche a pagamento dell'organizzazione alla console di Datalert. Immettere inoltre soglie e azioni per eventuali violazioni di utilizzo della rete dati o del roaming. È possibile aggiungere manualmente le linee telefoniche aziendali a pagamento alla console di Datalert oppure aggiungerle automaticamente dopo la registrazione del dispositivo in Intune.
+La comunicazione tra i servizi Intune e Datalert è stata ora configurata. A questo punto, aggiungere le linee telefoniche a pagamento dell'organizzazione alla console di Datalert. Immettere soglie e azioni per eventuali violazioni di utilizzo della rete dati o del roaming. È possibile aggiungere manualmente le linee telefoniche aziendali a pagamento alla console di Datalert oppure aggiungerle automaticamente dopo la registrazione del dispositivo in Intune.
 
 Per impostare questi elementi, visitare [Datalert setup for Microsoft Intune](http://www.datalert.fr/microsoft-intune/intune-setup) (Configurazione di Datalert per Microsoft Intune) nel sito Web di Datalert. Nella scheda **Settings** (Impostazioni) seguire i passaggi della configurazione guidata.
 
-  ![Schermata del riquadro Aggiungi criteri](./media/telecom-expenses-monitor/tem-add-phone-lines-to-datalert-console.png)
+> [!div class="mx-imgBorder"]
+> ![Screenshot del riquadro Aggiungi criteri](./media/telecom-expenses-monitor/tem-add-phone-lines-to-datalert-console.png)
 
 Il servizio Datalert è ora attivo. Avvia il monitoraggio del consumo dei dati e la disabilitazione della rete dati e del roaming dei dati nei dispositivi che superano i limiti di utilizzo configurati.
 
@@ -177,8 +187,8 @@ Il servizio Datalert è ora attivo. Avvia il monitoraggio del consumo dei dati e
 
 Per l'esperienza utente finale possono risultare utili gli articoli seguenti:
 
-- [Registrare il dispositivo iOS/iPadOS nella gestione delle spese per telecomunicazioni](https://docs.microsoft.com/user-help/enroll-your-device-with-telecom-expense-management-ios)
-- [Registrare il dispositivo Android nella gestione delle spese per telecomunicazioni](https://docs.microsoft.com/user-help/enroll-your-device-with-telecom-expense-management-android)
+- [Registrare il dispositivo iOS/iPadOS nella gestione delle spese per telecomunicazioni](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-with-telecom-expense-management-ios)
+- [Registrare il dispositivo Android nella gestione delle spese per telecomunicazioni](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-with-telecom-expense-management-android)
 
 ## <a name="turn-off-the-datalert-service"></a>Disattivare il servizio Datalert
 

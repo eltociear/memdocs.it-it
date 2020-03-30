@@ -1,11 +1,11 @@
 ---
 title: Limitare le funzionalità dei i dispositivi tramite i criteri in Microsoft Intune - Azure | Microsoft Docs
-description: Aggiungere un profilo del dispositivo per limitare le funzionalità dei dispositivi Android, macOS, iOS, iPadOS, Windows Phone e Windows 10 in Microsoft Intune
+description: Aggiungere un profilo del dispositivo per limitare le funzionalità dell'amministratore di dispositivi Android e dei dispositivi Android Enterprise, macOS, iOS, iPadOS, Windows Phone e Windows 10 in Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,16 +15,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28cf0b8bffc06a0b5a56165c1e9eeab780c453c7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7f1e421a344122dbd4cf59a49ea56ef0ba2bb125
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361822"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087076"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>Configurare le impostazioni relative alle restrizioni dei dispositivi in Microsoft Intune
-
-
 
 Intune include criteri di limitazioni dei dispositivi che consentono agli amministratori di controllare i dispositivi Android, iOS/iPadOS, macOS e Windows. Queste limitazioni consentono di controllare una vasta gamma di impostazioni e funzionalità per proteggere le risorse dell'organizzazione. Gli amministratori sono ad esempio in grado di:
 
@@ -48,7 +46,7 @@ Questo articolo illustra come creare un profilo di limitazioni del dispositivo. 
     - **Descrizione**: immettere una descrizione del criterio. Questa impostazione è facoltativa ma consigliata.
     - **Piattaforma**: scegliere la piattaforma dei dispositivi. Le opzioni disponibili sono:  
 
-        - **Android**
+        - **Amministratore di dispositivi Android**
         - **Android Enterprise**
         - **iOS/iPadOS**
         - **macOS**
@@ -62,7 +60,7 @@ Questo articolo illustra come creare un profilo di limitazioni del dispositivo. 
 
 4. Le impostazioni configurabili variano in base alla piattaforma scelta. Scegliere la piattaforma per le impostazioni dettagliate:
 
-    - [Impostazioni Android](device-restrictions-android.md)
+    - [Impostazioni dell'amministratore di dispositivi Android](device-restrictions-android.md)
     - [Impostazioni Android Enterprise](device-restrictions-android-for-work.md)
     - [Impostazioni di iOS/iPadOS](device-restrictions-ios.md)
     - [Impostazioni macOS](device-restrictions-macos.md)

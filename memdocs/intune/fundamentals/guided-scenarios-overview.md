@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b833e5265387637a35bfcdf79f4ae5f37558de61
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: dc536d4c2c0d06a768d42d4a796ec56cf80c0d66
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79343960"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401435"
 ---
 # <a name="intune-guided-scenarios-overview"></a>Panoramica degli scenari guidati di Intune 
 
@@ -46,7 +46,7 @@ Gli scenari guidati offrono funzionalità specifiche. Le informazioni dettagliat
 
 ### <a name="launching"></a>Avvio  
 
-Tutti gli scenari guidati sono disponibili dal **[portale di gestione dei dispositivi](https://devicemanagement.microsoft.com)**  > **Risoluzione dei problemi e supporto tecnico** > **Scenari guidati**. 
+Tutti gli scenari guidati sono disponibili dal **[portale di gestione dei dispositivi](https://endpoint.microsoft.com)**  > **Risoluzione dei problemi e supporto tecnico** > **Scenari guidati**. 
 
 Lo scenario guidato inizia con un'introduzione che illustra lo scopo dello scenario ed eventuali prerequisiti necessari per completare la configurazione. A questo punto, vengono controllate le autorizzazioni di amministratore per verificare che siano disponibili tutti i privilegi necessari per completare lo scenario.  
 

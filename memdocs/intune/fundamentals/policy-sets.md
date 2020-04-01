@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1598be8f5f54f1f509194aed0232730bd821624b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8583c625277735d653143f5cf87c56c350bdc1ff
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79357116"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326712"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>Usare i set di criteri per raggruppare raccolte di oggetti di gestione
 
@@ -63,7 +63,7 @@ Quando si crea un set di criteri, si crea una singola unità di assegnazione e s
     - **Nome set di criteri** - Specificare un nome per il set di criteri.
     - **Descrizione** - Specificare facoltativamente una descrizione per il set di criteri.
    <p>
-   <img alt="Create policy set - Basics" src="/media/policy-sets/policy-sets-01.png">
+      <img alt="Create policy set - Basics" src="./media/policy-sets/policy-sets-01.png">
 
 4. Fare clic su **Avanti: Gestione delle applicazioni**.<br>
    Nella pagina **Gestione delle applicazioni** e possibile aggiungere facoltativamente [app](../apps/apps-add.md), [criteri di configurazione delle app](../apps/app-configuration-policies-overview.md) e [criteri di protezione delle app](../apps/app-protection-policy.md) al set di criteri. Per informazioni sulla gestione delle app, vedere [Informazioni sulla gestione delle app in Microsoft Intune](../apps/app-management.md).

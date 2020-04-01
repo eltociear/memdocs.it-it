@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 83107121b05b2126e4c6b2b377baf57ee069f917
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 893981700ede9587a980faa0e4d6b0384c24e3d4
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79343986"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401494"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Guida introduttiva: Provare Microsoft Intune gratuitamente
 
@@ -64,7 +64,7 @@ Prima di configurare Microsoft Intune, esaminare i requisiti seguenti:
 
 Se non è già stato effettuato l'accesso al portale, completare i passaggi seguenti:
 
-1. Aprire una nuova finestra del browser e immettere **https://devicemanagement.microsoft.com** nella barra degli indirizzi. 
+1. Aprire una nuova finestra del browser e immettere **https://endpoint.microsoft.com** nella barra degli indirizzi. 
 2. Usare l'ID utente assegnato nei passaggi precedenti per eseguire l'accesso ( *yourID@yourdomain* . onmicrosoft.com).
 
     ![Immagine della pagina di accesso al portale](./media/free-trial-sign-up/azure-portal-signin.png)
@@ -126,7 +126,7 @@ Come accennato in precedenza, se l'organizzazione ha il proprio dominio personal
 ## <a name="admin-experiences"></a>Esperienze di amministrazione
 
 Sono due i portali che verranno usati più spesso:
-- L'interfaccia di amministrazione di Microsoft Endpoint Manager ([https://devicemanagement.microsoft.com/](https://devicemanagement.microsoft.com/)) consente di esplorare le [funzionalità di Intune](what-is-intune.md). Si tratta della posizione in cui l'amministratore lavora con Intune.
+- L'interfaccia di amministrazione di Microsoft Endpoint Manager ([https://endpoint.microsoft.com/](https://endpoint.microsoft.com/)) consente di esplorare le [funzionalità di Intune](what-is-intune.md). Si tratta della posizione in cui l'amministratore lavora con Intune.
 - L'interfaccia di amministrazione di Microsoft 365 ([https://admin.microsoft.com](https://admin.microsoft.com)) è la posizione in cui è possibile aggiungere e gestire gli utenti se non si usa Azure Active Directory a tale scopo. È anche possibile gestire altri aspetti del proprio account, incluse la fatturazione e il supporto tecnico.
 
 ## <a name="next-steps"></a>Passaggi successivi

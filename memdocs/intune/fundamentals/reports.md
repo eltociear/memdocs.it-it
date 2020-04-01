@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 63034080c883452edadb3ae7812d936b841910e7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d4e377e0cd9ad15d1d3a0ac9fb5c088dc1366d48
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79356583"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326756"
 ---
 # <a name="intune-reports"></a>Report di Intune
 I report di Microsoft Intune consentono di monitorare in modo più efficace e proattivo l'integrità e l'attività degli endpoint all'interno dell'organizzazione e offrono anche altri dati di reporting in Intune. Ad esempio, sarà possibile visualizzare i report su conformità del dispositivo, integrità del dispositivo e tendenze del dispositivo. Inoltre, è possibile creare report personalizzati per ottenere dati più specifici. 

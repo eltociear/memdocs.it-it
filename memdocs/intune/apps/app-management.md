@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5acf0db721accf058a10dafcf8165abeddafe7c7
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 185cfbf49c9a6623559a2b50f0184980286e03eb
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083730"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80358707"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Informazioni sulla gestione delle app in Microsoft Intune
 
@@ -71,7 +71,7 @@ Intune offre un'ampia gamma di funzionalità che consente di usare le app necess
 <sup>1</sup> Considerare l'uso di [Windows Information Protection](../protect/windows-information-protection-configure.md) per proteggere le applicazioni sui dispositivi che eseguono Windows 10.<br>
 <sup>2</sup> Si applica solo ai dispositivi gestiti da Intune.<br>
 <sup>3</sup> Intune supporta le app disponibili in Google Play Store gestito per i dispositivi Android Enterprise.<br>
-<sup>4</sup> Intune non supporta l'installazione di un collegamento a un'app come collegamento Web per i dispositivi Android Enterprise standard. Tuttavia, i collegamenti Web sono supportati per i [dispositivi Android Enterprise dedicati con più app](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings). 
+<sup>4</sup> Intune non supporta l'installazione di un collegamento a un'app come collegamento Web per i dispositivi Android Enterprise standard. Tuttavia, i collegamenti Web sono supportati per i [dispositivi Android Enterprise dedicati con più app](../configuration/device-restrictions-android-for-work.md#dedicated-devices). 
 
 
 ## <a name="get-started"></a>Operazioni preliminari

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 07dd2269b35310b2d312031e1f6c38e0d813b37a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7d6fdb0e019c4c61a83beed63c6d2470a0ed04b1
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364682"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326045"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Usare e gestire i dispositivi Android Enterprise con OEMConfig in Microsoft Intune
 
@@ -153,7 +153,6 @@ Rispetto alle app standard, le app OEMConfig espandono i privilegi delle configu
 | --- | --- | ---|
 | Samsung | com.samsung.android.knox.kpu | [Guida dell'amministratore di Knox Service Plugin](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) |
 | Zebra Technologies | com.zebra.oemconfig.common | [Panoramica di Zebra OEMConfig](http://techdocs.zebra.com/oemconfig ) |
-| Datalogic | com.datalogic.oemconfig | [Documentazione dell'utente per Datalogic OEMConfig](https://datalogic.github.io/oemconfig/) |
 | Honeywell | com.honeywell.oemconfig |  |
 | Kyocera | jp.kyocera.enterprisedeviceconfig |  |
 | SpectraLink - Codici a barre | com.spectralink.barcode.service |  |

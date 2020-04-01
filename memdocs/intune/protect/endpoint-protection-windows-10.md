@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7817a747a01a137fd29ee8aae117cd604da233a5
-ms.sourcegitcommit: 4815f07c8c0399c077b71721c6e6b61047c75ae6
+ms.openlocfilehash: aaec456a5ff9864fedf5e95f317bc484ddfc4d82
+ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79437107"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80275068"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Impostazioni di Windows 10 (e versioni successive) per la protezione dei dispositivi con Intune
 
@@ -798,7 +798,7 @@ Le regole per la riduzione della superficie di attacco consentono di evitare i c
 
 - **Contrassegna il furto di credenziali dal sottosistema dell'autorità di protezione locale Windows**  
   **Impostazione predefinita**: Non configurato  
-  Regola: [Blocca il furto di credenziali dal sottosistema dell'autorità di protezione locale di Windows (lsass.exe)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-credential-stealing-from-the-windows-local-security-authority-subsystem-lsassexe)
+  Regola: [Blocca il furto di credenziali dal sottosistema dell'autorità di protezione locale di Windows (lsass.exe)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
 
   Evitare azioni e app che generalmente vengono usate dal malware per infettare i computer.  
 

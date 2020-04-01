@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0b2bb9a6220a599cc0e403e6c71f3b8907bbab0e
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: c047c0f54e64dbe17b6bd9e9082272e80fe7566c
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80085826"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401465"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Novità di Microsoft Intune - mesi precedenti
 
@@ -229,7 +229,7 @@ Quando si usa l'[API Graph di Intune](https://docs.microsoft.com/graph/api/resou
 ### <a name="microsoft-365-device-management"></a>Gestione dei dispositivi per Microsoft 365
 
 #### <a name="improved-administration-experience-in-microsoft-365-device-management---5551239---"></a>Esperienza di amministrazione migliorata in Gestione dei dispositivi per Microsoft 365<!-- 5551239 -->
-Un'esperienza di amministrazione semplificata e aggiornata è ora disponibile a livello generale nell'area di lavoro specializzata di Gestione dei dispositivi per Microsoft 365 all'indirizzo[https://devicemanagement.microsoft.com](https://devicemanagement.microsoft.com) e include:
+Un'esperienza di amministrazione semplificata e aggiornata è ora disponibile a livello generale nell'area di lavoro specializzata di Gestione dei dispositivi per Microsoft 365 all'indirizzo[https://endpoint.microsoft.com](https://endpoint.microsoft.com) e include:
 
 - **Navigazione aggiornata**: Disponibilità di una navigazione di primo livello semplificata che raggruppa logicamente le funzionalità.
 - **Nuovi filtri della piattaforma**: È possibile selezionare una singola piattaforma, per visualizzare solo i criteri e le app relativi alla piattaforma selezionata, nelle pagine Dispositivi e App.
@@ -238,7 +238,7 @@ Per altre informazioni su questi miglioramenti, vedere il [post di blog Enterpri
 
 #### <a name="introducing-endpoint-security-node-in-microsoft-365-device-management---5630102---"></a>Introduzione al nodo Endpoint Security in Gestione dei dispositivi per Microsoft 365<!-- 5630102 -->
 
-Il nodo **Endpoint Security** è ora disponibile a livello generale nell'area di lavoro specializzata di Gestione dei dispositivi per Microsoft 365 in https://devicemanagement.microsoft.com, che raggruppa le funzionalità di protezione degli endpoint, ad esempio:
+Il nodo **Endpoint Security** è ora disponibile a livello generale nell'area di lavoro specializzata di Gestione dei dispositivi per Microsoft 365 in https://endpoint.microsoft.com, che raggruppa le funzionalità di protezione degli endpoint, ad esempio:
 
 - Baseline di sicurezza:  Gruppo preconfigurato di impostazioni che consentono di applicare il gruppo noto di impostazioni e i valori predefiniti consigliati da Microsoft.
 - Attività relative alla sicurezza: Possibilità di usufruire della gestione delle minacce e delle vulnerabilità di Microsoft Defender ATP e di usare Intune per correggere i punti deboli degli endpoint.
@@ -527,7 +527,7 @@ In questo aggiornamento sono state aggiunte le funzionalità seguenti:
 - **Dispositivi dedicati** > **Più app**: **Controllo volume dei file multimediali** consente agli utenti di controllare il volume dei file multimediali del dispositivo usando un dispositivo di scorrimento. 
 - **Dispositivi dedicati** > **Più app**:  **Abilitare uno screen saver**, caricare un'immagine personalizzata e controllare quando viene visualizzato lo screen saver.
 
-Per visualizzare le impostazioni correnti, passare alle [impostazioni dei dispositivi Android Enterprise per consentire o limitare l'uso delle funzionalità tramite Intune](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings).
+Per visualizzare le impostazioni correnti, passare alle [impostazioni dei dispositivi Android Enterprise per consentire o limitare l'uso delle funzionalità tramite Intune](../configuration/device-restrictions-android-for-work.md#dedicated-devices).
 
 Si applica a:
 
@@ -1461,7 +1461,7 @@ Si applica a:
 #### <a name="kiosk-devices-are-now-called-dedicated-devices-on-android-enterprise-devices---3598402-----"></a>I dispositivi "in modalità tutto schermo" sono ora chiamati "dispositivi dedicati" nei dispositivi Android Enterprise<!-- 3598402   -->
 Per allinearsi con la terminologia di Android, la definizione **in modalità tutto schermo** viene cambiata in **dispositivi dedicati** per i dispositivi Android Enterprise (**Configurazione del dispositivo** > **Profili** > **Crea profilo** > ** Android Enterprise per la piattaforma > **Solo proprietario del dispositivo** > **Limitazioni del dispositivo** > **Dispositivi dedicati**).
 
-Per visualizzare le impostazioni disponibili, passare a [Impostazioni dei dispositivi per consentire o limitare l'uso delle funzionalità](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings).
+Per visualizzare le impostazioni disponibili, passare a [Impostazioni dei dispositivi per consentire o limitare l'uso delle funzionalità](../configuration/device-restrictions-android-for-work.md#dedicated-devices).
 
 Si applica a:  
 Android Enterprise
@@ -2106,7 +2106,7 @@ Quando Intune installa Office nei computer dell'utente finale, i Language Pack s
 ### <a name="monitor-and-troubleshoot"></a>Monitorare e risolvere i problemi
 
 #### <a name="new-intune-support-experience-in-the-microsoft-365-device-management-portal---3076965---"></a>Nuova esperienza di supporto di Intune nel portale di Gestione dei dispositivi per Microsoft 365<!-- 3076965 -->
-Verrà implementata una nuova esperienza di Guida e supporto tecnico per Intune nel [portale di Gestione dei dispositivi per Microsoft 365]( https://devicemanagement.microsoft.com). La nuova esperienza consente di descrivere il problema con parole proprie e di ricevere informazioni dettagliate per la risoluzione dei problemi e contenuti Web per la correzione. Queste soluzioni sono offerte tramite un algoritmo di apprendimento automatico basato su regole, creato in base alle indagini condotte tra gli utenti.  
+Verrà implementata una nuova esperienza di Guida e supporto tecnico per Intune nel [portale di Gestione dei dispositivi per Microsoft 365]( https://endpoint.microsoft.com). La nuova esperienza consente di descrivere il problema con parole proprie e di ricevere informazioni dettagliate per la risoluzione dei problemi e contenuti Web per la correzione. Queste soluzioni sono offerte tramite un algoritmo di apprendimento automatico basato su regole, creato in base alle indagini condotte tra gli utenti.  
 
 Oltre alle indicazioni specifiche per il problema, è anche possibile usare il nuovo flusso di lavoro di creazione di un caso per aprire un caso di supporto tramite posta elettronica o telefono.  
 
@@ -2148,7 +2148,7 @@ Con i dispositivi inclusi nell'elenco seguente o se si vuole registrare un dispo
 ### <a name="device-management"></a>Gestione dei dispositivi
 
 #### <a name="microsoft-365-device-management-administration-center---3078424---"></a>Interfaccia di amministrazione di Gestione dispositivi Microsoft 365<!-- 3078424 -->
-Una delle promesse di Microsoft 365 era quella di semplificare le procedure amministrative. Nel corso degli anni, quindi, sono stati integrati i servizi di back-end di Microsoft 365 per offrire scenari end-to-end, come l'accesso condizionale di Intune e Azure AD. La nuova [interfaccia di amministrazione di Microsoft 365](https://devicemanagement.microsoft.com) è il centro in cui consolidare, semplificare e integrare l'esperienza di amministrazione. Quest'area di lavoro specializzata per la gestione dei dispositivi consente di accedere facilmente a tutte le informazioni e attività per la gestione dei dispositivi e delle app che servono all'organizzazione. Prevediamo che diventerà l'area di lavoro cloud principale per i team informatici degli utenti finali.
+Una delle promesse di Microsoft 365 era quella di semplificare le procedure amministrative. Nel corso degli anni, quindi, sono stati integrati i servizi di back-end di Microsoft 365 per offrire scenari end-to-end, come l'accesso condizionale di Intune e Azure AD. La nuova [interfaccia di amministrazione di Microsoft 365](https://endpoint.microsoft.com) è il centro in cui consolidare, semplificare e integrare l'esperienza di amministrazione. Quest'area di lavoro specializzata per la gestione dei dispositivi consente di accedere facilmente a tutte le informazioni e attività per la gestione dei dispositivi e delle app che servono all'organizzazione. Prevediamo che diventerà l'area di lavoro cloud principale per i team informatici degli utenti finali.
 
 
 <!-- ########################## -->

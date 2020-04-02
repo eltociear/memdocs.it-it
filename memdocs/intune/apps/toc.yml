@@ -26,6 +26,8 @@
     - name: Criteri di protezione delle app e profili di lavoro (Android)
       href: android-deployment-scenarios-app-protection-work-profiles.md
       displayName: app-we; without; without enrollment
+    - name: Usare Intune senza GMS
+      href: manage-without-gms.md
     - name: DOMANDE FREQUENTI SU MAM
       href: mam-faq.md
 - name: Guide pratiche

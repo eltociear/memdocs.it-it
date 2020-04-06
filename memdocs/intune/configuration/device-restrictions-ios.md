@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/16/2020
+ms.date: 03/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ea0968d15572fa9c3bde1e4d133dcb8b4c980274
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 897366ba9b7bae15050c0aa5e392ba5255a90b24
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80087041"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407827"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Impostazioni dei dispositivi iOS e iPadOS per consentire o limitare l'uso delle funzionalità tramite Intune
 
@@ -43,16 +43,16 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Le impostazioni si applicano a: Tutti i tipi di registrazione
 
-- **Condividi i dati di utilizzo**: **Blocca** impedisce al dispositivo di inviare dati di diagnostica e di utilizzo ad Apple. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'invio di questi dati.
+- **Condividi i dati di utilizzo**: **Blocca** impedisce ai dispositivi di inviare dati di diagnostica e di utilizzo ad Apple. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'invio di questi dati.
 
-- **Acquisizione schermo**: **Blocca** impedisce la creazione di screenshot o acquisizioni di schermate nel dispositivo. In iOS/iPadOS 9.0 e versioni successive blocca anche le registrazioni dello schermo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita il sistema operativo può consentire agli utenti di acquisire il contenuto dello schermo come immagine o come video.
+- **Acquisizione schermo**: **Blocca** impedisce la creazione di screenshot o acquisizioni di schermate nei dispositivi. In iOS/iPadOS 9.0 e versioni successive blocca anche le registrazioni dello schermo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita il sistema operativo può consentire agli utenti di acquisire il contenuto dello schermo come immagine o come video.
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Le impostazioni si applicano a: Registrazione del dispositivo, Registrazione automatica dei dispositivi (con supervisione)
 
-- **Certificati TLS non attendibili**: **Blocca** non consente i certificati TLS (Transport Layer Security) non attendibili nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire i certificati TLS.
-- **Blocca gli aggiornamenti PKI in modalità wireless**: **Blocca** impedisce agli utenti di ricevere gli aggiornamenti software a meno che il dispositivo non sia connesso a un computer. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire a un dispositivo di ricevere gli aggiornamenti software senza essere connesso a un computer.
-- **Limita il rilevamento annunci**: scegliere **Limita** per disabilitare l'identificatore di annunci pubblicitari del dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe mantenere abilitata l'impostazione.
-- **Attendibilità dell'app aziendale**: **Blocca** rimuove il pulsante **Attendibilità di Enterprise Developer** in Impostazioni > Generale > Gestione di profili e dispositivi nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di scegliere se considerare attendibili le app che non vengono scaricate da App Store.
+- **Certificati TLS non attendibili**: **Blocca** non consente i certificati TLS (Transport Layer Security) non attendibili nei dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire i certificati TLS.
+- **Blocca gli aggiornamenti PKI in modalità wireless**: **Blocca** impedisce agli utenti di ricevere gli aggiornamenti software a meno che i dispositivi non siano connessi a un computer. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire a un dispositivo di ricevere gli aggiornamenti software senza essere connesso a un computer.
+- **Limita il rilevamento annunci**: **Limita** disabilita l'identificatore di annunci pubblicitari del dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe mantenere abilitata l'impostazione.
+- **Attendibilità dell'app aziendale**: **Blocca** rimuove il pulsante **Attendibilità di Enterprise Developer** in Impostazioni > Generale > Gestione di profili e dispositivi nei dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di scegliere se considerare attendibili le app che non vengono scaricate da App Store.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Le impostazioni si applicano a: Registrazione automatica dei dispositivi (supervisione)
 
@@ -64,7 +64,7 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
   - iOS 9.3.2 e versioni successive
   - iPadOS 13.0 e versioni successive
 
-- **Osservazione schermo remoto da parte dell'app Classroom**: **Blocca** impedisce all'app Classroom di visualizzare lo schermo del dispositivo da remoto. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire all'app Classroom di Apple di visualizzare lo schermo.
+- **Osservazione schermo remoto da parte dell'app Classroom**: **Blocca** impedisce all'app Classroom di visualizzare lo schermo dei dispositivi da remoto. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire all'app Classroom di Apple di visualizzare lo schermo.
 
   Per usare questa impostazione, impostare l'opzione **Acquisizione schermo** su **Blocca**.
 
@@ -72,37 +72,37 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
   - iOS 9.3 e versioni successive
   - iPadOS 13.0 e versioni successive
 
-- **Osservazione schermo non richiesta da parte dell'app Classroom**: Se impostata su **Consenti**, gli insegnanti possono osservare lo schermo dei dispositivi iOS/iPadOS degli studenti con l'app Classroom senza che questi ne siano a conoscenza. I dispositivi degli studenti registrati in una classe con l'app Classroom concedono automaticamente l'autorizzazione al docente del corso. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe bloccare questa funzionalità.
+- **Osservazione schermo non richiesta da parte dell'app Classroom**: **Consenti** permette ai docenti di osservare lo schermo dei dispositivi iOS/iPadOS degli studenti con l'app Classroom senza che questi ne siano a conoscenza. I dispositivi degli studenti registrati in una classe con l'app Classroom concedono automaticamente l'autorizzazione al docente del corso. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe bloccare questa funzionalità.
 
   Per usare questa impostazione, impostare l'opzione **Acquisizione schermo** su **Blocca**.
 
-- **Modifica dell'account**: se è impostata su **Blocca**, gli utenti non possono aggiornare le impostazioni specifiche del dispositivo dall'app delle impostazioni iOS/iPadOS. Ad esempio, gli utenti non possono creare nuovi account di dispositivo o modificare il nome utente o la password. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di modificare queste impostazioni.
+- **Modifica dell'account**: **Blocca** impedisce agli utenti di aggiornare le impostazioni specifiche del dispositivo dall'app Impostazioni iOS/iPadOS. Ad esempio, gli utenti non possono creare nuovi account di dispositivo o modificare il nome utente o la password. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di modificare queste impostazioni.
 
   Questa funzionalità si applica anche alle impostazioni accessibili dall'app delle impostazioni iOS/iPadOS, ad esempio Posta elettronica, Contatti, Calendario, Twitter e altro ancora. Non si applica alle app con impostazioni dell'account non configurabili dall'app delle impostazioni iOS/iPadOS, ad esempio Microsoft Outlook.
 
-- **Orario schermo**: **Blocca** impedisce agli utenti di impostare le proprie restrizioni in Orario schermo (impostazioni del dispositivo). Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di configurare restrizioni nel dispositivo, ad esempio il controllo genitori o le restrizioni relative a contenuti e privacy.
+- **Orario schermo**: **Blocca** impedisce agli utenti di impostare le proprie restrizioni in Orario schermo (impostazioni del dispositivo). Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di configurare restrizioni nei dispositivi, ad esempio il controllo genitori o le restrizioni relative a contenuti e privacy.
 
   Questa impostazione è stata rinominata da **Abilitazione delle restrizioni nelle impostazioni del dispositivo**. Impatto della modifica:  
   
   - iOS 11.4.1 e versioni precedenti: **Blocca** impedisce agli utenti di impostare le proprie restrizioni nelle impostazioni del dispositivo. Il comportamento rimane invariato. Non si verifica nessun cambiamento per gli utenti.
   - iOS 12.0 e versioni successive: **Blocca** impedisce agli utenti di impostare un **Orario schermo** personalizzato nelle impostazioni del dispositivo (Impostazioni > Generale > Orario schermo), incluse restrizioni relative a contenuti e privacy. Nei dispositivi aggiornati a iOS 12.0 non verrà più visualizzata la scheda delle restrizioni nelle impostazioni del dispositivo (Impostazioni > Generale > Gestione dei dispositivi > Profilo di gestione > Restrizioni). Queste impostazioni sono in **Orario schermo**.
   
-- **Uso dell'opzione di cancellazione di tutti i contenuti e tutte le impostazioni sul dispositivo**: scegliere **Blocca** per impedire agli utenti di usare l'opzione di cancellazione di tutti i contenuti e tutte le impostazioni nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di accedere a queste impostazioni.
-- **Modifica del nome dispositivo**: scegliere **Blocca** per impedire la modifica del nome del dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di modificare il nome del dispositivo.
-- **Modifica delle impostazioni di notifica**: scegliere **Blocca** per impedire la modifica delle impostazioni di notifica. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di modificare le impostazioni di notifica del dispositivo.
-- **Modifica dello sfondo**: **Blocca** impedisce di cambiare lo sfondo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di modificare lo sfondo del dispositivo.
-- **Modifiche al profilo di configurazione**: **Blocca** impedisce di apportare modifiche al profilo di configurazione nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di installare profili di configurazione.
-- **Blocco attivazione**: Scegliere **Consenti** per abilitare il blocco attivazione su dispositivi iOS/iPadOS con supervisione. Blocco attivazione rende più difficile la riattivazione di un dispositivo perso o rubato.
-- **Blocca la rimozione di app**: **Blocca** impedisce agli utenti di rimuovere le app. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di rimuovere le app dal dispositivo.
-- **Consenti gli accessori USB durante il blocco del dispositivo**: Selezionando **Consenti** gli accessori USB sono autorizzati a scambiare dati con un dispositivo che è rimasto bloccato per più di un'ora. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non aggiornare la modalità con restrizioni USB nel dispositivo e impedire agli accessori USB di trasferire i dati dal dispositivo se questo rimane bloccato per più di un'ora.
-- **Imponi data e ora automatiche**: **Rendi obbligatorio** impone ai dispositivi con supervisione di impostare la data e l'ora automaticamente. Il fuso orario del dispositivo viene aggiornato quando il dispositivo dispone di connessioni alla rete cellulare o Wi-Fi con i servizi di posizione abilitati.
+- **Uso dell'opzione di cancellazione di tutti i contenuti e tutte le impostazioni sul dispositivo**: **Blocca** impedisce l'uso dell'opzione di cancellazione di tutti i contenuti e tutte le impostazioni nei dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di accedere a queste impostazioni.
+- **Modifica del nome dispositivo**: **Blocca** impedisce la modifica del nome del dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di modificare il nome dei dispositivi.
+- **Modifica delle impostazioni di notifica**: **Blocca** impedisce la modifica delle impostazioni di notifica. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di modificare le impostazioni di notifica del dispositivo.
+- **Modifica dello sfondo**: **Blocca** impedisce di cambiare lo sfondo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di modificare lo sfondo dei dispositivi.
+- **Modifiche al profilo di configurazione**: **Blocca** impedisce di apportare modifiche al profilo di configurazione nei dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di installare profili di configurazione.
+- **Blocco attivazione**: **Consenti** abilita il blocco attivazione nei dispositivi iOS/iPadOS con supervisione. Blocco attivazione rende più difficile la riattivazione di un dispositivo perso o rubato. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
+- **Blocca la rimozione di app**: **Blocca** impedisce la rimozione delle app. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di rimuovere le app dai dispositivi.
+- **Consenti gli accessori USB durante il blocco del dispositivo**: **Consenti** permette agli accessori USB di scambiare dati con dispositivi che sono rimasti bloccati per più di un'ora. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non aggiornare la modalità con restrizioni USB nei dispositivi e impedire agli accessori USB di trasferire i dati dai dispositivi se questi rimangono bloccati per più di un'ora.
+- **Imponi data e ora automatiche**: **Rendi obbligatorio** impone ai dispositivi con supervisione di impostare la data e l'ora automaticamente. Il fuso orario del dispositivo viene aggiornato quando il dispositivo dispone di connessioni alla rete cellulare o Wi-Fi con i servizi di posizione abilitati. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
 - **Richiedi agli studenti di chiedere l'autorizzazione per lasciare un corso Classroom**: **Rendi obbligatorio** impone agli studenti registrati in un corso non gestito che usa l'app Classroom di richiedere l'autorizzazione al docente per lasciare il corso. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non imporre agli studenti di richiedere l'autorizzazione.
 
   Questa funzionalità si applica a:  
   - iOS 11.3 e versioni successive
   - iPadOS 13.0 e versioni successive
 
-- **Consenti a Classroom di bloccare un'app e bloccare il dispositivo senza prompt**: **Abilita** consente al docente di bloccare le app o bloccare il dispositivo usando l'app Classroom senza richiedere conferma allo studente. Con il blocco delle app, il dispositivo può accedere solo alle app specificate dal docente. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe impedire ai docenti di bloccare app o dispositivi usando l'app Classroom senza chiedere conferma allo studente.
+- **Consenti a Classroom di bloccare un'app e bloccare il dispositivo senza prompt**: **Abilita** consente al docente di bloccare le app o bloccare i dispositivi usando l'app Classroom senza richiedere conferma allo studente. Con il blocco delle app, i dispositivi possono accedere solo alle app specificate dal docente. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe impedire ai docenti di bloccare app o dispositivi usando l'app Classroom senza chiedere conferma allo studente.
 
   Questa funzionalità si applica a:  
   - iOS 11.0 e versioni successive
@@ -114,16 +114,16 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
   - iOS 11.0 e versioni successive
   - iPadOS 13.0 e versioni successive
 
-- **Blocca la creazione di VPN**: **Blocca** impedisce agli utenti di creare le impostazioni di configurazione VPN. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di creare VPN nel dispositivo.
-- **Modifica delle impostazioni di eSIM**: **Blocca** impedisce agli utenti di rimuovere o aggiungere un piano per telefoni cellulari alla eSIM presente nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di modificare queste impostazioni.
+- **Blocca la creazione di VPN**: **Blocca** impedisce agli utenti di creare le impostazioni di configurazione VPN. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di creare VPN nei dispositivi.
+- **Modifica delle impostazioni di eSIM**: **Blocca** impedisce agli utenti di rimuovere o aggiungere un piano per telefoni cellulari alla eSIM presente nei dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di modificare queste impostazioni.
 
   Questa funzionalità si applica a:  
   - iOS 12.1 e versioni successive
   - iPadOS 13.0 e versioni successive
 
-- **Rinvia gli aggiornamenti software**: Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe visualizzare gli aggiornamenti software sul dispositivo quando vengono rilasciati da Apple. Ad esempio, se un aggiornamento iOS/iPadOS viene rilasciato da Apple in una data specifica, questo viene normalmente visualizzato nel dispositivo in prossimità della data di rilascio.
+- **Rinvia gli aggiornamenti software**: **Abilita** consente di posticipare la visualizzazione degli aggiornamenti software nei dispositivi, da 0 a 90 giorni. Questa impostazione non controlla quando gli aggiornamenti vengono installati o meno.
 
-  **Abilita** consente di posticipare la visualizzazione degli aggiornamenti software nei dispositivi, da 0 a 90 giorni. Questa impostazione non controlla quando gli aggiornamenti vengono installati o meno. 
+  Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe visualizzare gli aggiornamenti software nei dispositivi quando Apple li rilascia. Ad esempio, se un aggiornamento iOS/iPadOS viene rilasciato da Apple in una data specifica, questo viene normalmente visualizzato nei dispositivi in prossimità della data di rilascio.  
 
   - **Posticipa la visibilità degli aggiornamenti software**: immettere un valore compreso tra 0 e 90 giorni. Quando l'intervallo di ritardo scade, gli utenti ricevono una notifica per l'aggiornamento alla versione del sistema operativo meno recente disponibile quando è stato attivato il ritardo.
 
@@ -137,7 +137,7 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Le impostazioni si applicano a: Tutti i tipi di registrazione
 
-- **Password**: **Rendi obbligatorio** richiede all'utente finale di immettere una password per accedere al dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di accedere al dispositivo senza immettere una password.
+- **Password**: **Rendi obbligatorio** richiede agli utenti di immettere una password per accedere ai dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di accedere ai dispositivi senza immettere una password.
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Le impostazioni si applicano a: Registrazione del dispositivo, Registrazione automatica dei dispositivi (con supervisione)
 
@@ -152,24 +152,28 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
 
 - **Password semplici**: **Blocca** richiede password più complesse. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire password semplici, come `0000` e `1234`.
 
-- **Tipo di password richiesto**: scegliere il tipo di password richiesto dall'organizzazione. Le opzioni disponibili sono:
+- **Tipo di password richiesto**: immettere il livello di complessità della password richiesto dall'organizzazione. Le opzioni disponibili sono:
   - **Impostazione predefinita dispositivo**
-  - **Numerica**
-  - **Alfanumerica**
-- **Numero di caratteri non alfanumerici nella password**: immettere il numero di simboli, ad esempio `#` o `@`, che è necessario includere nella password.
+  - **Numerica**: la password deve essere composta solo da numeri, ad esempio 123456789.
+  - **Alfanumerica**: include lettere maiuscole, lettere minuscole e caratteri numerici.
+- **Numero di caratteri non alfanumerici nella password**: immettere il numero di simboli, ad esempio `#` o `@`, che è necessario includere nella password, da 1 a 4. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
 
-- **Lunghezza minima password**: immettere la lunghezza minima della password che l'utente deve immettere, da 4 a 14 caratteri. Nei dispositivi registrati dall'utente immettere una lunghezza compresa tra 4 e 6 caratteri.
+- **Lunghezza minima password**: immettere la lunghezza minima per la password, da 4 a 16 caratteri. Nei dispositivi registrati dall'utente immettere una lunghezza compresa tra 4 e 6 caratteri.
   
   > [!NOTE]
-  > Per i dispositivi registrati dall'utente, gli utenti possono impostare un PIN superiore a 6 cifre. Tuttavia, non vengono applicate più di 6 cifre sul dispositivo. Un amministratore, ad esempio, imposta una lunghezza minima di `8`. Nei dispositivi registrati dall'utente agli utenti viene richiesto di impostare solo un PIN di 6 cifre. Intune non impone un PIN superiore a 6 cifre nei dispositivi registrati dall'utente.
+  > Per i dispositivi registrati dall'utente, gli utenti possono impostare un PIN superiore a 6 cifre. Tuttavia, non vengono applicate più di 6 cifre nei dispositivi. Un amministratore, ad esempio, imposta una lunghezza minima di `8`. Nei dispositivi registrati dall'utente agli utenti viene richiesto di impostare solo un PIN di 6 cifre. Intune non impone un PIN superiore a 6 cifre nei dispositivi registrati dall'utente.
 
-- **Numero di errori di accesso prima della cancellazione dei dati del dispositivo**: immettere il numero di accessi non riusciti consentiti prima della cancellazione del dispositivo (da 4 a 11).
+- **Numero di errori di accesso prima della cancellazione dei dati del dispositivo**: immettere il numero di accessi non riusciti consentiti prima della cancellazione del dispositivo, da 4 a 11.
   
   iOS/iPadOS ha una funzionalità di sicurezza incorporata che può influire su questa impostazione. Ad esempio, iOS/iPadOS può ritardare l'attivazione del criterio a seconda del numero di errori di accesso. Immettere ripetutamente lo stesso passcode può essere considerato un solo tentativo. La [Guida di sicurezza iOS/iPadOS](https://www.apple.com/business/site/docs/iOS_Security_Guide.pdf) di Apple è una valida risorsa e offre dettagli più specifici sui passcode (apre il sito Web di Apple).
   
-- **Numero massimo di minuti dopo il blocco dello schermo prima che venga richiesta una password**<sup>1</sup>: specificare per quanto tempo il dispositivo rimane inattivo prima che gli utenti debbano immettere di nuovo la password. Se il tempo immesso è più lungo dell'impostazione corrente nel dispositivo, il dispositivo ignora il tempo immesso. Supportato nei dispositivi che eseguono iOS 8.0+ e iPadOS 13.0+.
+- **Numero massimo di minuti dopo il blocco dello schermo prima che venga richiesta una password**<sup>1</sup>: specificare per quanto tempo i dispositivi rimangono inattivi prima che gli utenti debbano immettere di nuovo la password. Se il tempo immesso è più lungo dell'impostazione corrente nel dispositivo, il dispositivo ignora il tempo immesso.
 
-- **Numero massimo di minuti di inattività fino al blocco dello schermo**<sup>1</sup>: immettere il numero massimo di minuti di inattività consentiti nel dispositivo prima del blocco dello schermo.
+  Questa impostazione si applica a:  
+  - iOS 8.0+
+  - iPadOS 13.0+
+
+- **Numero massimo di minuti di inattività fino al blocco dello schermo**<sup>1</sup>: immettere il numero massimo di minuti di inattività consentiti nei dispositivi prima del blocco dello schermo.
 
   **Opzioni iOS/iPadOS**:  
 
@@ -195,11 +199,11 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
   > [!NOTE]
   > L'interfaccia utente di Intune per questa impostazione non separa i valori supportati da iOS e iPadOS. L'interfaccia utente potrebbe essere aggiornata in una delle prossime versioni.
 
-- **Scadenza password (giorni)** : immettere il numero di giorni che devono trascorrere prima che sia necessario cambiare la password del dispositivo.
-- **Impedisci riutilizzo delle password precedenti**: immettere il numero di nuove password da usare prima che una password precedente possa essere usata di nuovo.
-- **Sblocco di Touch ID e Face ID**: **Blocca** impedisce l'uso di un'impronta digitale o del riconoscimento del volto per sbloccare il dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di sbloccare il dispositivo con questi metodi.
+- **Scadenza password (giorni)** : immettere il numero di giorni che devono trascorrere prima che sia necessario cambiare la password del dispositivo, da 1 a 65535.
+- **Impedisci riutilizzo delle password precedenti**: usare questa impostazione per impedire agli utenti di creare password già usate in precedenza. immettere il numero di password usate in precedenza che non è possibile usare, da 1 a 24. Ad esempio, immettere 5 in modo che gli utenti non possano impostare una nuova password uguale alla password corrente o a una qualsiasi delle quattro precedenti. Quando il valore è vuoto, Intune non modifica o aggiorna questa impostazione.
+- **Sblocco di Touch ID e Face ID**: **Blocca** impedisce l'uso di un'impronta digitale o del riconoscimento del volto per sbloccare i dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di sbloccare i dispositivi usando la biometria.
 
-  Il blocco di questa impostazione impedisce anche l'uso dell'autenticazione FaceID per sbloccare il dispositivo.
+  Il blocco di questa impostazione impedisce anche l'uso dell'autenticazione FaceID per sbloccare i dispositivi.
 
   Face ID si applica a:  
   - iOS 11.0 e versioni successive
@@ -207,9 +211,9 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Le impostazioni si applicano a: Registrazione automatica dei dispositivi (supervisione)
 
-- **Modifica del passcode**: **Blocca** impedisce la modifica, l'aggiunta o la rimozione del passcode. Le modifiche alle restrizioni del passcode vengono ignorate nei dispositivi con supervisione dopo il blocco di questa funzionalità. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'aggiunta, la modifica o la rimozione dei passcode.
+- **Modifica del passcode**: **Blocca** impedisce la modifica, l'aggiunta o la rimozione del passcode. Dopo il blocco di questa funzionalità, le modifiche alle restrizioni del passcode vengono ignorate nei dispositivi con supervisione. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'aggiunta, la modifica o la rimozione dei passcode.
 
-  - **Modifica di Touch ID e Face ID**: **Blocca** impedisce agli utenti di modificare, aggiungere o rimuovere le impronte digitali TouchID e Face ID. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di aggiornare le impronte digitali TouchID e Face ID nel dispositivo.
+  - **Modifica di Touch ID e Face ID**: **Blocca** impedisce agli utenti di modificare, aggiungere o rimuovere le impronte digitali TouchID e Face ID. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di aggiornare le impronte digitali Touch ID e Face ID nei dispositivi.
 
     Il blocco di questa impostazione impedisce anche agli utenti di modificare, aggiungere o rimuovere l'autenticazione FaceID.
 
@@ -224,39 +228,40 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
 
   Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire queste funzionalità.
 
-- **Blocca le richieste di prossimità password**: scegliere **Blocca** in modo che il dispositivo di un utente non richieda password dai dispositivi nelle vicinanze. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire queste richieste di password.
+- **Blocca le richieste di prossimità password**: **Blocca** impedisce ai dispositivi di richiedere password dai dispositivi nelle vicinanze. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire queste richieste di password.
 - **Blocca la condivisione delle password**: **Blocca** impedisce la condivisione delle password tra i dispositivi tramite AirDrop. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire la condivisione di queste password.
-- **Richiedi l'autenticazione con Touch ID o Face ID per il riempimento automatico di password o informazioni della carta di credito**: se impostato su **Rendi obbligatorio**, gli utenti devono autenticarsi tramite TouchID o FaceID prima che le password o le informazioni della carta di credito possano essere immesse automaticamente in Safari e altre app. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di controllare questa funzionalità nelle impostazioni del dispositivo.
+- **Richiedi l'autenticazione con Touch ID o Face ID per il riempimento automatico di password o informazioni della carta di credito**: **Rendi obbligatorio** impone agli utenti di autenticarsi tramite TouchID o FaceID prima che le password o le informazioni della carta di credito possano essere immesse automaticamente in Safari e altre app. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di controllare questa funzionalità nelle impostazioni del dispositivo.
 
   Questa funzionalità si applica a:  
   - iOS 11.0 e versioni successive
   - iPadOS 13.0 e versioni successive
   
-<sup>1</sup> Quando si configurano le impostazioni **Numero massimo di minuti di inattività fino al blocco dello schermo** e **Numero massimo di minuti dopo il blocco dello schermo prima che venga richiesta una password**, queste vengono applicate in sequenza. Ad esempio, se si imposta il valore di entrambe le impostazioni su **5** minuti, lo schermo si spegne automaticamente dopo cinque minuti e il dispositivo viene bloccato dopo altri cinque minuti. Se tuttavia gli utenti spengono manualmente lo schermo, la seconda impostazione viene applicata immediatamente. Nello stesso esempio il dispositivo viene bloccato cinque minuti dopo che gli utenti spengono lo schermo.
+<sup>1</sup> Quando si configurano le impostazioni **Numero massimo di minuti di inattività fino al blocco dello schermo** e **Numero massimo di minuti dopo il blocco dello schermo prima che venga richiesta una password**, queste vengono applicate in sequenza. Ad esempio, se si imposta il valore di entrambe le impostazioni su **5** minuti, lo schermo si spegne automaticamente dopo cinque minuti e i dispositivi vengono bloccati dopo altri cinque minuti. Se tuttavia gli utenti spengono manualmente lo schermo, la seconda impostazione viene applicata immediatamente. Nello stesso esempio il dispositivo viene bloccato cinque minuti dopo che gli utenti spengono lo schermo.
 
 ## <a name="locked-screen-experience"></a>Esperienza della schermata di blocco
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Le impostazioni si applicano a: Tutti i tipi di registrazione
 
-- **Accesso al centro di controllo durante il blocco del dispositivo**: **Blocca** impedisce l'accesso all'app Centro di controllo quando il dispositivo è bloccato. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di accedere all'app Centro di controllo quando il dispositivo è bloccato.
-- **Notifiche durante il blocco del dispositivo**: **Blocca** impedisce l'accesso alle notifiche quando il dispositivo è bloccato. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di accedere alle notifiche senza sbloccare il dispositivo.
-- **Visualizzazione Oggi durante il blocco del dispositivo**: **Blocca** impedisce l'accesso alla visualizzazione Oggi quando il dispositivo è bloccato. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di accedere alla visualizzazione Oggi quando il dispositivo è bloccato.
+- **Accesso al centro di controllo durante il blocco del dispositivo**: **Blocca** impedisce l'accesso all'app Centro di controllo quando il dispositivo è bloccato. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di accedere all'app Centro di controllo quando i dispositivi sono bloccati.
+- **Notifiche durante il blocco del dispositivo**: **Blocca** impedisce l'accesso alle notifiche quando i dispositivi sono bloccati. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di accedere alle notifiche senza sbloccare i dispositivi.
+- **Visualizzazione Oggi durante il blocco del dispositivo**: **Blocca** impedisce l'accesso alla visualizzazione Oggi quando i dispositivi sono bloccati. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di accedere alla visualizzazione Oggi quando i dispositivi sono bloccati.
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Le impostazioni si applicano a: Registrazione del dispositivo, Registrazione automatica dei dispositivi (con supervisione)
 
-- **Notifiche di Portafoglio durante il blocco del dispositivo**: **Blocca** impedisce l'accesso all'app Portafoglio quando il dispositivo è bloccato. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di accedere all'app Portafoglio mentre il dispositivo è bloccato.
+- **Notifiche di Portafoglio durante il blocco del dispositivo**: **Blocca** impedisce l'accesso all'app Portafoglio quando i dispositivi sono bloccati. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'accesso all'app Portafoglio mentre i dispositivi sono bloccati.
 
 ## <a name="app-store-doc-viewing-gaming"></a>App Store, visualizzazione documenti, giochi
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Le impostazioni si applicano a: Tutti i tipi di registrazione
 
-- **Visualizzazione dei documenti aziendali nelle app non gestite**: **Blocca** impedisce la visualizzazione di documenti aziendali in app non gestite. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di visualizzare documenti aziendali in qualsiasi app. Ad esempio, può essere necessario impedire agli utenti il salvataggio di file dall'app OneDrive a Dropbox. Configurare questa impostazione come **Blocca**. Dopo aver ricevuto i criteri, ad esempio dopo un riavvio, il dispositivo non consente più il salvataggio.
+- **Visualizzazione dei documenti aziendali nelle app non gestite**: **Blocca** impedisce la visualizzazione di documenti aziendali in app non gestite. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di visualizzare documenti aziendali in qualsiasi app.
 
+  Ad esempio, può essere necessario impedire agli utenti il salvataggio di file dall'app OneDrive a Dropbox. Configurare questa impostazione come **Blocca**. Dopo aver ricevuto i criteri, ad esempio dopo un riavvio, i dispositivi non consentiranno più il salvataggio.
 
   > [!NOTE]
   > Quando questa impostazione è bloccata, vengono bloccate anche le tastiere di terze parti installate dall'App Store.
 
-  - **Consenti alle app gestite di leggere da contatti in account di contatti non gestiti**: Quando questa opzione è impostata su **Consenti**, le app non gestite, ad esempio l'app Contatti di iOS/iPadOS predefinita, possono leggere e accedere alle informazioni dei contatti dalle app gestite, inclusa l'app per dispositivi mobili Outlook. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe impedire la lettura, inclusa la rimozione di duplicati, dall'app Contatti incorporata nel dispositivo.  
+  - **Consenti alle app gestite di leggere da contatti in account di contatti non gestiti**: **Consenti** permette alle app non gestite, ad esempio l'app Contatti di iOS/iPadOS predefinita, di leggere e accedere alle informazioni dei contatti dalle app gestite, inclusa l'app Outlook per dispositivi mobili. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe impedire la lettura, inclusa la rimozione di duplicati, dall'app Contatti incorporata nei dispositivi.  
   
     Questa impostazione consente o impedisce la lettura delle informazioni dei contatti. Non controlla la sincronizzazione dei contatti tra le app.
   
@@ -264,7 +269,7 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
 
   Per altre informazioni su queste due impostazioni e sull'effetto che producono sulla sincronizzazione per l'esportazione dei contatti di Outlook per iOS/iPadOS, vedere [Suggerimento per il supporto: Usare le impostazioni del profilo personalizzato di Intune con l'app Contatti nativa di iOS/iPadOS](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Use-Intune-custom-profile-settings-with-the-iOS/ba-p/298453).
 
-- **Considera AirDrop come destinazione non gestita**: **Rendi obbligatorio** forza la considerazione di AirDrop come obiettivo di rilascio non gestito. Impedisce alle app gestite di inviare dati tramite Airdrop. 
+- **Considera AirDrop come destinazione non gestita**: **Rendi obbligatorio** forza la considerazione di AirDrop come obiettivo di rilascio non gestito. Impedisce alle app gestite di inviare dati tramite Airdrop. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
 - **Visualizzazione di documenti non aziendali nelle app aziendali**: **Blocca** impedisce la visualizzazione di documenti non aziendali in app aziendali. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di visualizzare qualsiasi documento nelle app aziendali gestite.
 
   **Blocca** impedisce anche la sincronizzazione per l'esportazione dei contatti in Outlook per iOS/iPadOS. Per altre informazioni, vedere [Suggerimento per il supporto: Abilitazione della sincronizzazione dei contatti di Outlook per iOS/iPadOS con i controlli MDM di iOS12](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Enabling-Outlook-iOS-Contact-Sync-with-iOS12-MDM/ba-p/298453).
@@ -274,11 +279,11 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
 - **Richiedi la password di iTunes Store per tutti gli acquisti**: se si seleziona **Rendi obbligatorio**, gli utenti dovranno immettere la password dell'ID Apple per ogni acquisto in-app o su iTunes. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire gli acquisti senza richiedere ogni volta una password.
 - **Acquisti in-app**: **Blocca** impedisce gli acquisti in-app dallo Store. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire gli acquisti dallo Store dall'interno di un'app in esecuzione.
 - **Scarica da iBook Store i contenuti contrassegnati come 'Erotici'** : **Blocca** impedisce agli utenti di scaricare da iBook Store contenuti multimediali contrassegnati come erotici. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di scaricare libri della categoria "Erotici".
-- **Consenti alle app gestite di scrivere contatti in account di contatti non gestiti**: Quando questa opzione è impostata su **Consenti**, le app gestite, ad esempio l'app per dispositivi mobili Outlook, possono salvare o sincronizzare le informazioni dei contatti, inclusi i contatti commerciali e aziendali, con l'app Contatti di iOS/iPadOS predefinita. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe impedire alle app gestite di salvare o sincronizzare le informazioni dei contatti con l'app Contatti di iOS/iPadOS predefinita nel dispositivo.
+- **Consenti alle app gestite di scrivere contatti in account di contatti non gestiti**: **Consenti** permette alle app gestite, ad esempio l'app Outlook per dispositivi mobili, di salvare o sincronizzare le informazioni dei contatti, inclusi i contatti commerciali e aziendali, con l'app Contatti di iOS/iPadOS predefinita. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe impedire alle app gestite di salvare o sincronizzare le informazioni dei contatti con l'app Contatti di iOS/iPadOS predefinita nei dispositivi.
   
   Per usare questa impostazione, impostare **Visualizzazione dei documenti aziendali nelle app non gestite** su **Blocca**.
 
-- **Area classificazioni**: scegliere l'area di classificazioni da usare per i download consentiti. Scegliere quindi le classificazioni consentite per **Film**, **Programmi TV** e **App**.
+- **Area classificazioni**: scegliere l'area di classificazioni da usare per i download consentiti. Selezionare quindi le classificazioni consentite per **Film**, **Programmi TV** e **App**.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Le impostazioni si applicano a: Registrazione automatica dei dispositivi (supervisione)
 
@@ -286,7 +291,7 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
 
   A partire da iOS/iPadOS 13.0, questa impostazione richiede dispositivi con supervisione.
 
-  - **Installazione di app dall'App Store**: scegliere **Blocca** per bloccare l'App Store nella schermata iniziale del dispositivo. Gli utenti possono continuare a usare iTunes o Apple Configurator per installare le app. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire App Store nella schermata iniziale.
+  - **Installazione di app dall'App Store**: **Blocca** non visualizza l'App Store nella schermata iniziale del dispositivo. Gli utenti possono continuare a usare iTunes o Apple Configurator per installare le app. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire App Store nella schermata iniziale.
   - **Download automatici delle app**: **Blocca** impedisce il download automatico delle app acquistate in altri dispositivi. Non influisce sugli aggiornamenti delle app esistenti. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire il download nel dispositivo di app acquistate in altri dispositivi iOS/iPadOS.
 
 - **Musica di iTunes, podcast o notizie con contenuti espliciti**: **Blocca** impedisce la riproduzione di musica di iTunes, podcast o notizie con contenuti espliciti. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire al dispositivo di accedere ai contenuti classificati come per adulti dallo Store.
@@ -297,8 +302,8 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
 
   A partire da iOS/iPadOS 13.0, questa impostazione richiede dispositivi con supervisione.
 
-- **Game Center**: **Blocca** impedisce l'uso dell'app Game Center. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'uso dell'app Game Center nel dispositivo.
-- **Gioco multiplayer**: **Blocca** impedisce il gioco in modalità multiplayer. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di giocare in modalità multiplayer nel dispositivo.
+- **Game Center**: **Blocca** impedisce l'uso dell'app Game Center. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'uso dell'app Game Center nei dispositivi.
+- **Gioco multiplayer**: **Blocca** impedisce il gioco in modalità multiplayer. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di giocare in modalità multiplayer nei dispositivi.
 
   A partire da iOS/iPadOS 13.0, questa impostazione richiede dispositivi con supervisione.
 
@@ -312,22 +317,22 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Le impostazioni si applicano a: Tutti i tipi di registrazione
 
-- **Siri**: **Blocca** impedisce l'accesso a Siri. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'uso dell'assistente vocale Siri nel dispositivo.
-  - **Siri durante il blocco del dispositivo**: **Blocca** impedisce l'accesso a Siri quando il dispositivo è bloccato. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'uso dell'assistente vocale Siri quando il dispositivo è bloccato.
+- **Siri**: **Blocca** impedisce l'accesso a Siri. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'uso dell'assistente vocale Siri nei dispositivi.
+  - **Siri durante il blocco del dispositivo**: **Blocca** impedisce l'accesso a Siri quando i dispositivi sono bloccati. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'uso dell'assistente vocale Siri quando i dispositivi sono bloccati.
 
-- **Avvisi in caso di illeciti di Safari**: **Rendi obbligatorio** abilita la visualizzazione degli avvisi di illeciti nel Web browser del dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe disabilitare questa funzionalità.
+- **Avvisi in caso di illeciti di Safari**: **Rendi obbligatorio** abilita la visualizzazione degli avvisi di illeciti nel Web browser dei dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe disabilitare questa funzionalità.
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Le impostazioni si applicano a: Registrazione del dispositivo, Registrazione automatica dei dispositivi (con supervisione)
 
 - **Ricerca Spotlight per la restituzione di risultati da Internet**: **Blocca** impedisce a Spotlight di restituire risultati da una ricerca su Internet. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire alla ricerca Spotlight di connettersi a Internet per restituire i risultati della ricerca.
 
-- **Cookie di Safari**: scegliere la modalità di gestione dei cookie nel dispositivo. Le opzioni disponibili sono:
+- **Cookie di Safari**: Selezionare la modalità di gestione dei cookie nei dispositivi. Le opzioni disponibili sono:
   - Consenti
   - Blocca tutti i cookie
   - Consenti i cookie dai siti Web visitati
   - Consenti i cookie dal sito Web corrente
 
-- **JavaScript in Safari**: **Blocca** impedisce l'esecuzione degli script Java del browser nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'esecuzione degli script Java.
+- **JavaScript in Safari**: **Blocca** impedisce l'esecuzione degli script Java nel browser dei dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'esecuzione degli script Java.
 
 - **Popup di Safari**: **Blocca** disabilita il blocco popup nel Web browser. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire il blocco popup.
 
@@ -335,39 +340,44 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
 
 - **Fotocamera**: **Blocca** impedisce l'accesso alla fotocamera nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'accesso alla fotocamera del dispositivo.
 
+  Intune gestisce solo l'accesso alla fotocamera del dispositivo. Non ha accesso alle immagini o ai video.
+
   A partire da iOS/iPadOS 13.0, questa impostazione richiede dispositivi con supervisione.
 
-  - **FaceTime**: **Blocca** impedisce l'accesso all'app FaceTime. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'accesso all'app FaceTime nel dispositivo.
+  - **FaceTime**: **Blocca** impedisce l'accesso all'app FaceTime. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'accesso all'app FaceTime nei dispositivi.
 
     A partire da iOS/iPadOS 13.0, questa impostazione richiede dispositivi con supervisione.
 
-- **Filtro di Siri per le espressioni volgari**: **Rendi obbligatorio** impedisce a Siri di usare espressioni volgari.
+- **Filtro di Siri per le espressioni volgari**: **Rendi obbligatorio** impedisce a Siri di usare espressioni volgari. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
 
   Per usare questa impostazione, impostare l'opzione **Siri** su **Blocca**.
+
+  Questa funzionalità si applica a:  
+  - iOS 11.0 e versioni successive
 
 - **Consenti a Siri di eseguire query sul contenuto generato dall'utente da Internet**: **Blocca** impedisce a Siri di accedere a siti Web per rispondere a domande. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire a Siri di accedere al contenuto generato dall'utente da Internet.
 
   Per usare questa impostazione, impostare l'opzione **Siri** su **Blocca**.
 
-- **Apple News**: **Blocca** impedisce l'accesso all'app Apple News nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'uso dell'app Apple News.
+- **Apple News**: **Blocca** impedisce l'accesso all'app Apple News nei dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'uso dell'app Apple News.
 - **iBooks Store**: **Blocca** impedisce l'accesso all'iBooks Store. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di cercare e acquistare libri da iBooks Store.
-- **App Messages sul dispositivo**: **Blocca** impedisce agli utenti di usare l'app Messages per iMessage. Se il dispositivo supporta i messaggi di testo, gli utenti possono comunque inviare e ricevere messaggi di testo tramite SMS. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'uso dell'app Messages per inviare e leggere messaggi tramite Internet.
+- **App Messages sul dispositivo**: **Blocca** impedisce agli utenti di usare l'app Messages per iMessage. Se i dispositivi supportano i messaggi di testo, gli utenti possono comunque inviare e ricevere messaggi di testo tramite SMS. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'uso dell'app Messages per inviare e leggere messaggi tramite Internet.
 - **Podcast**: **Blocca** impedisce agli utenti di usare l'app Podcasts. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'uso dell'app Podcasts.
 - **Servizio Music**: **Blocca** ripristina la modalità classica per l'app Music e disabilita il servizio Music. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'uso dell'app Apple Music.
-- **Servizio iTunes Radio**: **Blocca** impedisce agli utenti di usare l'app iTunes Radio. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'uso dell'app iTunes Radio.
-- **iTunes Store**: Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'uso di iTunes nei dispositivi. **Blocca** impedisce agli utenti di usare iTunes nel dispositivo.
+- **Servizio iTunes Radio**: **Blocca** impedisce di usare l'app iTunes Radio. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'uso dell'app iTunes Radio.
+- **iTunes Store**: **Blocca** impedisce l'uso di iTunes nei dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire iTunes.
 
   Questa funzionalità si applica a:  
   - iOS 4.0 e versioni successive
   - iPadOS 13.0 e versioni successive
 
-- **Trova il mio iPhone**: Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire di usare la funzionalità dell'app Trova il mio per ottenere la posizione approssimativa del dispositivo. **Blocca** impedisce questa funzionalità nell'app Trova il mio. 
+- **Trova il mio iPhone**: **Blocca** impedisce questa funzionalità nell'app Trova il mio. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire di usare la funzionalità dell'app Trova il mio per ottenere la posizione approssimativa del dispositivo.
 
   Questa funzionalità si applica a:  
   - iOS 13.0 e versioni successive
   - iPadOS 13.0 e versioni successive
 
-- **Trova i miei amici**: Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire di usare la funzionalità dell'app Trova il mio per trovare familiari e amici da un dispositivo Apple o da iCloud.com. **Blocca** impedisce questa funzionalità nell'app Trova il mio.
+- **Trova i miei amici**: **Blocca** impedisce questa funzionalità nell'app Trova il mio. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire di usare la funzionalità dell'app Trova il mio per trovare familiari e amici da un dispositivo Apple o da iCloud.com.
 
   Questa funzionalità si applica a:  
   - iOS 13.0 e versioni successive
@@ -377,13 +387,13 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
 
 - **Ricerca Spotlight per la restituzione di risultati da Internet**: **Blocca** impedisce a Spotlight di restituire risultati da una ricerca su Internet. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire alla ricerca Spotlight di connettersi a Internet per restituire i risultati della ricerca.
 
-- **Impedisci la rimozione di app di sistema dal dispositivo**: **Blocca** impedisce la rimozione di app di sistema dal dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di rimuovere app di sistema dal dispositivo.
+- **Impedisci la rimozione di app di sistema dal dispositivo**: **Blocca** impedisce la rimozione di app di sistema dai dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di rimuovere app di sistema dal dispositivo.
 
-- **Safari**: **Blocca** impedisce l'uso del browser Safari nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di usare il browser Safari.
+- **Safari**: **Blocca** impedisce l'uso del browser Safari nei dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di usare il browser Safari.
 
   A partire da iOS/iPadOS 13.0, questa impostazione richiede dispositivi con supervisione.
 
-- **Riempimento automatico di Safari**: **Blocca** disabilita la funzionalità di riempimento automatico in Safari nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di modificare le impostazioni di completamento automatico nel Web browser.
+- **Riempimento automatico di Safari**: **Blocca** disabilita la funzionalità di riempimento automatico in Safari nei dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di modificare le impostazioni di completamento automatico nel Web browser.
 
   A partire da iOS/iPadOS 13.0, questa impostazione richiede dispositivi con supervisione.
 
@@ -393,9 +403,9 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
 
 - **Elenco di tipi di app con restrizioni**: consente di creare un elenco di app che gli utenti non sono autorizzati a installare o usare. Le opzioni disponibili sono:
 
-  - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione. Gli utenti hanno accesso alle app assegnate e alle app predefinite.
-  - **App non consentite**: elenco di app non gestite da Intune di cui si vuole evitare l'installazione nel dispositivo. Agli utenti non viene impedito di installare un'app vietata. Tuttavia, se un utente installa un'app da questo elenco, verrà segnalato in Intune.
-  - **App approvate**: app che gli utenti sono autorizzati a installare. Gli utenti non devono installare app che non sono elencate. Le app gestite da Intune sono automaticamente consentite. Agli utenti non viene impedito di installare un'app non inclusa nell'elenco approvato. Tuttavia, se lo fanno, verrà segnalato in Intune.
+  - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'accesso alle app assegnate e alle app predefinite.
+  - **App non consentite**: elencare le app non gestite da Intune che gli utenti non sono autorizzati a installare ed eseguire. Agli utenti non viene impedito di installare un'app vietata. Se un utente installa un'app da questo elenco, verrà segnalato in Intune.
+  - **App approvate**: Elencare le app che gli utenti sono autorizzati a installare. Per mantenere la conformità, gli utenti non devono installare altre app. Le app gestite da Intune sono consentite automaticamente, inclusa l'app Portale aziendale. Agli utenti non viene impedito di installare un'app non inclusa nell'elenco approvato. Tuttavia, se lo fanno, verrà segnalato in Intune.
 
 Per aggiungere app a questi elenchi, è possibile:
 
@@ -412,7 +422,10 @@ Per aggiungere app a questi elenchi, è possibile:
 
 ## <a name="show-or-hide-apps"></a>Mostrare o nascondere app
 
-Si applica ai dispositivi che eseguono iOS 9.3+ e iPadOS 13.0+.
+Questa funzionalità si applica a:
+
+- iOS 9.3 e versioni successive
+- iPadOS 13.0 e versioni successive
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Le impostazioni si applicano a: Registrazione automatica dei dispositivi (supervisione)
 
@@ -447,34 +460,33 @@ Per aggiungere le app, è possibile:
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Le impostazioni si applicano a: Registrazione del dispositivo, Registrazione automatica dei dispositivi (con supervisione)
 
-Nota necessaria per il roaming dei dati (suggerimento o nota importante per non creare confusione tra i clienti): questa impostazione non verrà visualizzata nel profilo di gestione del dispositivo di destinazione. Ciò è dovuto al fatto che questa impostazione viene considerata un'azione remota del dispositivo e ogni volta che lo stato del roaming dei dati cambia nel dispositivo, il servizio Intune la bloccherà nuovamente. Anche se questa impostazione non è presente nel profilo di gestione, funziona se nella console di amministrazione i report indicano un esito positivo. 
 - **Dati in roaming**: **Blocca** impedisce il roaming dei dati nella rete cellulare. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire il roaming dei dati quando il dispositivo si trova in una rete cellulare.
 
   > [!IMPORTANT]
-  > Questa impostazione viene considerata un'azione remota del dispositivo, pertanto non viene visualizzata nel profilo di gestione del dispositivo. Ogni volta che lo stato del roaming dei dati cambia nel dispositivo, l'opzione **Dati in roaming** viene bloccata dal servizio Intune. In Intune, se lo stato del report indica un esito positivo, l'impostazione funziona anche se non viene visualizzata nel profilo di gestione del dispositivo.
+  > Questa impostazione viene considerata un'azione remota del dispositivo, pertanto non viene visualizzata nel profilo di gestione dei dispositivi. Ogni volta che lo stato del roaming dei dati cambia nel dispositivo, l'opzione **Dati in roaming** viene bloccata dal servizio Intune. In Intune, se lo stato del report indica un esito positivo, l'impostazione funziona anche se non viene visualizzata nel profilo di gestione del dispositivo.
 
-- **Recupero in background globale durante il roaming**: **Blocca** impedisce l'uso della funzionalità di recupero in background globale durante il roaming nella rete cellulare. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire al dispositivo di recuperare dati, ad esempio messaggi di posta elettronica, durante il roaming in una rete cellulare.
-- **Composizione vocale**: **Blocca** impedisce agli utenti di usare la funzionalità di composizione vocale nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire la composizione vocale nel dispositivo.
-- **Chiamate in roaming**: **Blocca** impedisce le chiamate in roaming nella rete cellulare. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire le chiamate in roaming quando il dispositivo è su una rete cellulare.
+- **Recupero in background globale durante il roaming**: **Blocca** impedisce l'uso della funzionalità di recupero in background globale durante il roaming nella rete cellulare. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire ai dispositivi di recuperare dati, ad esempio messaggi di posta elettronica, durante il roaming in una rete cellulare.
+- **Composizione vocale**: **Blocca** impedisce l'uso della funzionalità di composizione vocale nei dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire la composizione vocale nei dispositivi.
+- **Chiamate in roaming**: **Blocca** impedisce le chiamate in roaming nella rete cellulare. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire le chiamate in roaming quando i dispositivi sono su una rete cellulare.
 - **Hotspot personale**: **Blocca** disattiva l'hotspot personale nei dispositivi a ogni sincronizzazione del dispositivo. Questa impostazione potrebbe non essere compatibile con alcuni gestori. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe mantenere la configurazione dell'hotspot personale come configurazione predefinita impostata dall'utente.
 
   > [!IMPORTANT]
-  > Questa impostazione viene considerata un'azione remota del dispositivo, pertanto non viene visualizzata nel profilo di gestione del dispositivo. Ogni volta che lo stato dell'hotspot personale cambia nel dispositivo, l'opzione **Hotspot personale** viene bloccata dal servizio Intune. In Intune, se lo stato del report indica un esito positivo, l'impostazione funziona anche se non viene visualizzata nel profilo di gestione del dispositivo.
+  > Questa impostazione viene considerata un'azione remota del dispositivo, pertanto non viene visualizzata nel profilo di gestione dei dispositivi. Ogni volta che lo stato dell'hotspot personale cambia nel dispositivo, l'opzione **Hotspot personale** viene bloccata dal servizio Intune. In Intune, se lo stato del report indica un esito positivo, l'impostazione funziona anche se non viene visualizzata nel profilo di gestione del dispositivo.
 
-- **Regole di utilizzo della rete cellulare (solo app gestite)** : consente di definire i tipi di dati che possono essere usati dalle app gestite nelle reti cellulari. Le opzioni disponibili sono:
+- **Regole di utilizzo della rete cellulare (solo app gestite)** : **Consenti** definisce i tipi di dati che possono essere usati dalle app gestite nelle reti cellulari. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Le opzioni disponibili sono:
   - **Blocca l'uso della rete dati**: consente di bloccare l'uso della rete dati selezionando **Tutte le app gestite** oppure **Scegliere app specifiche**.
   - **Blocca l'uso della rete dati durante il roaming**: consente di bloccare l'uso della rete dati durante il roaming selezionando **Tutte le app gestite** oppure **Scegliere app specifiche**.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Le impostazioni si applicano a: Registrazione automatica dei dispositivi (supervisione)
 
 - **Modifiche alle impostazioni dell'utilizzo della rete dati dell'app**: **Blocca** impedisce di apportare modifiche alle impostazioni di utilizzo della rete dati dell'app. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire all'utente di controllare le app che possono usare la rete dati.
-- **Modifiche alle impostazioni del piano per telefoni cellulari**: **Blocca** impedisce agli utenti di modificare le impostazioni nel piano cellulare. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di apportare modifiche.
+- **Modifiche alle impostazioni del piano per telefoni cellulari**: **Blocca** impedisce di modificare le impostazioni nel piano cellulare. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di apportare modifiche.
 
   Questa funzionalità si applica a:  
   - iOS 11.0 e versioni successive
   - iPadOS 13.0 e versioni successive
 
-- **Modifica utente dell'hotspot personale**: quando questa opzione è impostata su **Blocca**, gli utenti non possono modificare l'impostazione dell'hotspot personale. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti finali di abilitare o disabilitare l'hotspot personale.
+- **Modifica utente dell'hotspot personale**: **Blocca** impedisce la modifica dell'impostazione hotspot personale. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti finali di abilitare o disabilitare l'hotspot personale.
 
   Se si blocca questa impostazione e si blocca l'opzione **Hotspot personale**, l'hotspot personale viene disattivato.
 
@@ -482,13 +494,13 @@ Nota necessaria per il roaming dei dati (suggerimento o nota importante per non 
   - iOS 12.2 e versioni successive
   - iPadOS 13.0 e versioni successive
 
-- **Aggiungi reti Wi-Fi solo tramite profili di configurazione**: **Rendi obbligatorio** forza il dispositivo a usare solo reti Wi-Fi configurate tramite profili di configurazione di Intune. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire al dispositivo di usare altre reti Wi-Fi.
+- **Aggiungi reti Wi-Fi solo tramite profili di configurazione**: **Rendi obbligatorio** forza i dispositivi a usare solo reti Wi-Fi configurate tramite profili di configurazione di Intune. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire ai dispositivi di usare altre reti Wi-Fi.
 
-  Quando questa opzione è impostata su **Rendi obbligatorio**, verificare che il dispositivo disponga di un profilo Wi-Fi. Se non si assegna un profilo Wi-Fi, questa impostazione potrebbe impedire la connessione del dispositivo a Internet. In altre parole, se il profilo di limitazioni del dispositivo viene assegnato prima di un profilo Wi-Fi, la connessione del dispositivo a Internet potrebbe essere bloccata.
+  Quando questa opzione è impostata su **Rendi obbligatorio**, verificare che il dispositivo disponga di un profilo Wi-Fi. Se non si assegna un profilo Wi-Fi, questa impostazione potrebbe impedire la connessione dei dispositivi a Internet. In altre parole, se il profilo di limitazioni del dispositivo viene assegnato prima di un profilo Wi-Fi, la connessione del dispositivo a Internet potrebbe essere bloccata.
   
   Se non è possibile connettersi, annullare la registrazione del dispositivo ed eseguirla nuovamente con un profilo Wi-Fi. Impostare quindi questa opzione su **Rendi obbligatorio** in un profilo di limitazioni del dispositivo e assegnare il profilo al dispositivo.
 
-- **Wi-Fi sempre attivato**: quando questa opzione è impostata su **Rendi obbligatorio**, il Wi-Fi rimane attivo nell'app Impostazioni. Non può essere disattivato in Impostazioni o nel centro di controllo, anche quando il dispositivo è in modalità aereo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di controllare l'attivazione o la disattivazione del Wi-Fi.
+- **Wi-Fi sempre attivato**: **Rendi obbligatorio** mantiene il Wi-Fi attivato nell'app Impostazioni. Non può essere disattivato in Impostazioni o nel centro di controllo, anche quando il dispositivo è in modalità aereo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di attivare o disattivare il Wi-Fi.
 
   La configurazione di questa impostazione non impedisce agli utenti di selezionare una rete Wi-Fi.
 
@@ -500,22 +512,22 @@ Nota necessaria per il roaming dei dati (suggerimento o nota importante per non 
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Le impostazioni si applicano a: Tutti i tipi di registrazione
 
-- **Rilevamento del polso per l'Apple Watch associato**: **Rendi obbligatorio** forza l'uso del rilevamento del polso in un Apple Watch associato. Se richiesto, l'Apple Watch non visualizza notifiche se non è indossato. 
+- **Rilevamento del polso per l'Apple Watch associato**: **Rendi obbligatorio** forza l'uso del rilevamento del polso in un Apple Watch associato. Se richiesto, l'Apple Watch non visualizza notifiche se non è indossato. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Le impostazioni si applicano a: Registrazione del dispositivo, Registrazione automatica dei dispositivi (con supervisione)
 
-- **Richiedi la password associata alle richieste AirPlay in uscita**: **Rendi obbligatorio** richiede una password di associazione quando gli utenti usano AirPlay per trasmettere contenuti ad altri dispositivi di Apple. **Non configurato** (impostazione predefinita) consente agli utenti di trasmettere contenuti con AirPlay senza immettere una password.
+- **Richiedi la password associata alle richieste AirPlay in uscita**: **Rendi obbligatorio** richiede una password di associazione quando si usa AirPlay per trasmettere contenuti ad altri dispositivi Apple. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di trasmettere contenuti con AirPlay senza immettere una password.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Le impostazioni si applicano a: Registrazione automatica dei dispositivi (supervisione)
 
-- **AirDrop**: **Blocca** impedisce l'uso di AirDrop nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'uso della funzionalità AirDrop per scambiare contenuti con dispositivi vicini.
-- **Associazione di Apple Watch**: **Blocca** impedisce l'associazione con un Apple Watch. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire al dispositivo l'associazione con un Apple Watch.
-- **Modifica Bluetooth**: **Blocca** impedisce agli utenti finali di modificare le impostazioni Bluetooth nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di modificare queste impostazioni.
-- **Associazione di host per controllare i dispositivi a cui può essere associato un dispositivo iOS/iPadOS**: Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'impostazione dell'associazione di host in modo che l'amministratore possa stabilire a quali dispositivi può essere associato un dispositivo iOS/iPadOS. **Blocca** impedisce l'associazione di host.
-- **Blocca AirPrint**: **Blocca** impedisce l'uso della funzionalità AirPrint nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di usare AirPrint.
-  - **Impedisci l'archiviazione di credenziali AirPrint in Keychain**: **Blocca** impedisce l'archiviazione Keychain di nome utente e password nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'archiviazione di nome utente e password per AirPrint nell'app Keychain.
-  - **Richiedi un certificato TLS attendibile per AirPrint**: **Rendi obbligatorio** forza il dispositivo a usare certificati attendibili per le comunicazioni di stampa TLS.
-  - **Impedisci l'individuazione iBeacon delle stampanti AirPrint**: **Blocca** impedisce ai beacon Bluetooth AirPrint dannosi di eseguire il phishing del traffico di rete. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'annuncio delle stampanti AirPrint nel dispositivo.
+- **AirDrop**: **Blocca** impedisce l'uso di AirDrop nei dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'uso della funzionalità AirDrop per scambiare contenuti con dispositivi vicini.
+- **Associazione di Apple Watch**: **Blocca** impedisce l'associazione con un Apple Watch. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire ai dispositivi l'associazione con un Apple Watch.
+- **Modifica Bluetooth**: **Blocca** impedisce agli utenti di modificare le impostazioni Bluetooth nei dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di modificare queste impostazioni.
+- **Associazione di host per controllare i dispositivi a cui può essere associato un dispositivo iOS/iPadOS**: **Blocca** impedisce l'associazione di host. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'impostazione dell'associazione di host in modo che l'amministratore possa stabilire a quali dispositivi può essere associato un dispositivo iOS/iPadOS.
+- **Blocca AirPrint**: **Blocca** impedisce l'uso della funzionalità AirPrint nei dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di usare AirPrint.
+  - **Impedisci l'archiviazione di credenziali AirPrint in Keychain**: **Blocca** impedisce l'archiviazione in Keychain di nome utente e password nei dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'archiviazione di nome utente e password per AirPrint nell'app Keychain.
+  - **Richiedi un certificato TLS attendibile per AirPrint**: **Rendi obbligatorio** forza i dispositivi a usare certificati attendibili per le comunicazioni di stampa TLS. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
+  - **Impedisci l'individuazione iBeacon delle stampanti AirPrint**: **Blocca** impedisce ai beacon Bluetooth AirPrint dannosi di eseguire il phishing del traffico di rete. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'annuncio delle stampanti AirPrint nei dispositivi.
 - **Blocca la configurazione di nuovi dispositivi vicini**: **Blocca** disabilita la richiesta per la configurazione di nuovi dispositivi che si trovano nelle vicinanze. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire le richieste che gli utenti possono usare per connettersi ad altri dispositivi Apple nelle vicinanze.
 
   Questa funzionalità si applica a:  
@@ -532,13 +544,13 @@ Nota necessaria per il roaming dei dati (suggerimento o nota importante per non 
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Le impostazioni si applicano a: Registrazione automatica dei dispositivi (supervisione)
 
-- **Ricerca della definizione della parola**: **Blocca** impedisce all'utente di evidenziare una parola e quindi di cercarne la definizione nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'accesso alla funzionalità di ricerca della definizione.
-- **Tastiere predittive**: Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'uso di tastiere predittive per suggerire le parole desiderate dagli utenti. **Blocca** impedisce questa funzionalità.
-- **Correzione automatica**: Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire al dispositivo di correggere automaticamente le parole errate. **Blocca** impedisce l'uso della correzione automatica.
-- **Controllo ortografico tastiera**: Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'uso del controllo ortografico nel dispositivo. **Blocca** non consente il correttore ortografico.
-- **Tasti di scelta rapida**: Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'uso di tasti di scelta rapida nel dispositivo. **Blocca** impedisce agli utenti di usare tasti di scelta rapida.
+- **Ricerca della definizione della parola**: **Blocca** impedisce di evidenziare una parola e quindi di cercarne la definizione. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'accesso alla funzionalità di ricerca della definizione.
+- **Tastiere predittive**: **Blocca** impedisce l'uso di tastiere predittive per suggerire le parole che gli utenti potrebbero voler scrivere. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire questa funzionalità.
+- **Correzione automatica**: **Blocca** impedisce l'uso della correzione automatica. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire ai dispositivi di correggere automaticamente le parole errate.
+- **Controllo ortografico tastiera**: **Blocca** impedisce il controllo ortografico. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'uso del controllo ortografico nei dispositivi.
+- **Tasti di scelta rapida**: **Blocca** impedisce agli utenti di usare tasti di scelta rapida. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'uso di tasti di scelta rapida nei dispositivi.
 - **Dettatura**: **Blocca** impedisce agli utenti di immettere testo con l'input vocale. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di usare l'input tramite dettatura.
-- **QuickPath**: Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di usare QuickPath, che permette un input continuo sulla tastiera del dispositivo. Gli utenti possono digitare scorrendo il dito sui tasti per creare le parole. **Blocca** impedisce agli utenti di usare QuickPath. 
+- **QuickPath**: **Blocca** impedisce agli utenti di usare QuickPath. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di usare QuickPath, che permette un input continuo sulla tastiera del dispositivo. Gli utenti possono digitare scorrendo il dito sui tasti per creare le parole.
 
   Questa funzionalità si applica a:  
   - iOS 13.0 e versioni successive
@@ -548,25 +560,25 @@ Nota necessaria per il roaming dei dati (suggerimento o nota importante per non 
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Le impostazioni si applicano a: Tutti i tipi di registrazione
 
-- **Backup crittografato**: selezionare **Rendi obbligatorio** in modo che i backup del dispositivo debbano essere crittografati.
-- **Sincronizzazione delle app gestite nel cloud**: Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire alle app gestite di Intune di sincronizzare i dati con l'account iCloud dell'utente. **Blocca** impedisce la sincronizzazione dei dati in iCloud.
-- **Blocca il backup di libri aziendali**: **Blocca** impedisce agli utenti di eseguire il backup di libri aziendali. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire il backup di questi libri.
+- **Backup crittografato**: selezionare **Rendi obbligatorio** in modo che i backup del dispositivo debbano essere crittografati. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
+- **Sincronizzazione delle app gestite nel cloud**: **Blocca** impedisce alle app gestite da Intune di sincronizzare i dati con l'account iCloud dell'utente. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire la sincronizzazione di questi dati in iCloud.
+- **Blocca il backup di libri aziendali**: **Blocca** impedisce di eseguire il backup di libri aziendali. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire il backup di questi libri.
 - **Blocca la sincronizzazione di metadati di libri aziendali (note e informazioni di rilievo)** : **Blocca** impedisce la sincronizzazione di note e informazioni di rilievo nei libri aziendali. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire la sincronizzazione.
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Le impostazioni si applicano a: Registrazione del dispositivo, Registrazione automatica dei dispositivi (con supervisione)
 
-- **Sincronizzazione dello streaming foto in iCloud**: Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di abilitare nel dispositivo la funzionalità **Il mio streaming foto**, per sincronizzare le foto in iCloud e renderle disponibili in tutti i dispositivi degli utenti. **Blocca** impedisce la sincronizzazione dello streaming foto in iCloud. Il blocco di questa funzionalità può causare la perdita di dati. 
-- **Libreria foto di iCloud**: **Blocca** disattiva l'uso della libreria foto di iCloud per archiviare foto e video nel cloud. Eventuali foto non scaricate completamente dalla Libreria foto di iCloud nel dispositivo vengono rimosse dal dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'uso della libreria foto di iCloud.
-- **Flusso di foto condivise**: **Blocca** disattiva **Condivisione foto iCloud** sul dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire il flusso di foto condivise.
-- **Handoff**: Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di avviare il lavoro in un dispositivo iOS/iPadOS e quindi di continuare il lavoro avviato in un altro dispositivo iOS/iPadOS o macOS. **Blocca** impedisce l'handoff.
+- **Sincronizzazione dello streaming foto in iCloud**: **Blocca** impedisce la sincronizzazione dello streaming foto in iCloud. Il blocco di questa funzionalità può causare la perdita di dati. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di abilitare nel dispositivo la funzionalità **Il mio streaming foto**, per sincronizzare le foto in iCloud e renderle disponibili in tutti i dispositivi degli utenti.
+- **Libreria foto di iCloud**: **Blocca** disattiva l'uso della libreria foto di iCloud per archiviare foto e video nel cloud. Eventuali foto non scaricate completamente dalla Libreria foto di iCloud nei dispositivi vengono rimosse dal dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'uso della libreria foto di iCloud.
+- **Flusso di foto condivise**: **Blocca** disattiva **Condivisione foto iCloud** sui dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire il flusso di foto condivise.
+- **Handoff**: **Blocca** impedisce agli utenti di iniziare a lavorare su un dispositivo iOS/iPadOS e quindi di continuare il lavoro su un altro dispositivo iOS/iPadOS o macOS. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire questo passaggio.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Le impostazioni si applicano a: Registrazione automatica dei dispositivi (supervisione)
 
-- **Backup in iCloud**: Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di eseguire il backup del dispositivo iCloud. **Blocca** impedisce agli utenti di eseguire il backup del dispositivo in iCloud.
+- **Backup in iCloud**: **Blocca** impedisce agli utenti di eseguire il backup dei dispositivi in iCloud. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di eseguire il backup dei dispositivi in iCloud.
 
   A partire da iOS/iPadOS 13.0, questa impostazione richiede dispositivi con supervisione.
 
-- **Blocca la sincronizzazione dei documenti di iCloud**: Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire la sincronizzazione di documenti e coppie chiave-valore nello spazio di archiviazione iCloud. **Blocca** impedisce a iCloud di sincronizzare documenti e dati.
+- **Blocca la sincronizzazione dei documenti di iCloud**: **Blocca** impedisce a iCloud di sincronizzare documenti e dati. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire la sincronizzazione di documenti e coppie chiave-valore nello spazio di archiviazione iCloud.
 
   A partire da iOS/iPadOS 13.0, questa impostazione richiede dispositivi con supervisione.
 
@@ -595,13 +607,13 @@ Ad esempio, in un ambiente scolastico o universitario, aggiungere un'app che con
 - **App da eseguire in modalità tutto schermo**: scegliere il tipo di app da eseguire in modalità tutto schermo. Le opzioni disponibili sono:
   - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non applicare le impostazioni della modalità tutto schermo. Il dispositivo non viene eseguito in modalità tutto schermo.
   - **App dello Store**: immettere l'URL di un'app in iTunes App Store.
-  - **App gestite**: scegliere un'app aggiunta a Intune.
+  - **App gestite**: Selezionare un'app aggiunta in precedenza a Intune.
   - **App predefinita**: immettere l'[ID bundle](bundle-ids-built-in-ios-apps.md) dell'app predefinita.
 
-- **Tocco per l'accesso facilitato**: **Rendi obbligatorio** richiede la presenza dell'impostazione di accessibilità Tocco per l'accesso facilitato nel dispositivo. Questa funzionalità offre supporto agli utenti per i movimenti sullo schermo che potrebbero risultare difficili. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non eseguire o abilitare questa funzionalità in modalità tutto schermo.
+- **Tocco per l'accesso facilitato**: **Rendi obbligatorio** richiede la presenza dell'impostazione di accessibilità Tocco per l'accesso facilitato nei dispositivi. Questa funzionalità offre supporto agli utenti per i movimenti sullo schermo che potrebbero risultare difficili. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non eseguire o abilitare questa funzionalità in modalità tutto schermo.
 - **Inverti colori**: **Rendi obbligatorio** rende disponibile l'impostazione di accessibilità Inverti colori in modo che gli utenti con problemi visivi possano regolare la visualizzazione sullo schermo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non eseguire o abilitare questa funzionalità in modalità tutto schermo.
-- **Audio mono**: **Rendi obbligatorio** consente di rendere disponibile l'impostazione di accessibilità Audio mono nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non eseguire o abilitare questa funzionalità in modalità tutto schermo.
-- **Controllo vocale**: **Rendi obbligatorio** abilita il controllo vocale nel dispositivo e consente agli utenti di controllare completamente il sistema operativo usando i comandi di Siri. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe disabilitare il controllo vocale nel dispositivo.
+- **Audio mono**: **Rendi obbligatorio** consente di rendere disponibile l'impostazione di accessibilità Audio mono nei dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non eseguire o abilitare questa funzionalità in modalità tutto schermo.
+- **Controllo vocale**: **Rendi obbligatorio** abilita il controllo vocale nei dispositivi e consente agli utenti di controllare completamente il sistema operativo usando i comandi di Siri. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe disabilitare il controllo vocale nei dispositivi.
 
   Questa impostazione si applica a:  
   - iOS 13.0 e versioni successive
@@ -610,17 +622,17 @@ Ad esempio, in un ambiente scolastico o universitario, aggiungere un'app che con
   > [!TIP]
   > Se sono disponibili app line-of-business per l'organizzazione e non sono abilitate per il **controllo vocale** il giorno 0 quando viene rilasciata la versione iOS 13.0, è consigliabile lasciare questa opzione impostata su **Non configurato**.
 
-- **VoiceOver**: **Rendi obbligatorio** consente di rendere disponibile l'impostazione di accessibilità VoiceOver nel dispositivo per leggere a voce alta il testo sullo schermo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non eseguire o abilitare questa funzionalità in modalità tutto schermo.
-- **Zoom**: **Rendi obbligatorio** rende disponibile l'impostazione Zoom nel dispositivo per consentire agli utenti di usare il tocco per ingrandire la schermata. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non eseguire o abilitare questa funzionalità in modalità tutto schermo.
-- **Blocco automatico**: **Blocca** impedisce il blocco automatico del dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire questa funzionalità.
-- **Commutatore suoneria**: **Blocca** disabilita il commutatore della suoneria nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire questa funzionalità.
+- **VoiceOver**: **Rendi obbligatorio** consente di rendere disponibile l'impostazione di accessibilità VoiceOver per leggere a voce alta il testo sullo schermo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non eseguire o abilitare questa funzionalità in modalità tutto schermo.
+- **Zoom**: **Rendi obbligatorio** rende disponibile l'impostazione Zoom per consentire agli utenti di usare il tocco per ingrandire la schermata. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non eseguire o abilitare questa funzionalità in modalità tutto schermo.
+- **Blocco automatico**: **Blocca** impedisce il blocco automatico dei dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire questa funzionalità.
+- **Commutatore suoneria**: **Blocca** disabilita il commutatore della suoneria nei dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire questa funzionalità.
 - **Rotazione schermo**: **Blocca** impedisce la modifica dell'orientamento dello schermo quando gli utenti ruotano il dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire questa funzionalità.
-- **Pulsante Sospensione schermo**: **Blocca** disabilita il pulsante di riattivazione dalla sospensione dello schermo del dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire questa funzionalità.
-- **Tocco**: **Blocca** disabilita il touchscreen nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di usare il touchscreen.
-- **Pulsanti volume**: **Blocca** impedisce l'uso dei pulsanti del volume nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'uso dei pulsanti del volume.
+- **Pulsante Sospensione schermo**: **Blocca** disabilita il pulsante di riattivazione dalla sospensione dello schermo dei dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire questa funzionalità.
+- **Tocco**: **Blocca** disabilita il touchscreen nei dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di usare il touchscreen.
+- **Pulsanti volume**: **Blocca** impedisce l'uso dei pulsanti del volume nei dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'uso dei pulsanti del volume.
 - **Controllo del tocco per l'accesso facilitato**: **Consenti** permette agli utenti di usare la funzione di tocco per l'accesso facilitato. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe disabilitare questa funzionalità.
 - **Controllo dell'inversione colori**: **Consenti** abilita la regolazione dell'inversione colori per permettere agli utenti di modificare la funzione di inversione colori. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe disabilitare questa funzionalità.
-- **Pronuncia per il testo selezionato**: **Consenti** rende disponibile le impostazioni di accessibilità Selezione comandi vocali nel dispositivo. Questa funzionalità legge ad alta voce il testo selezionato dagli utenti. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe disabilitare questa funzionalità.
+- **Pronuncia per il testo selezionato**: **Consenti** rende disponibili le impostazioni di accessibilità Selezione comandi vocali nel dispositivo. Questa funzionalità legge ad alta voce il testo selezionato dagli utenti. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe disabilitare questa funzionalità.
 - **Modifica del controllo vocale**: **Consenti** permette agli utenti di modificare lo stato del controllo vocale nei dispositivi in uso. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe impedire agli utenti di modificare lo stato del controllo vocale nei dispositivi.
 
   Questa impostazione si applica a:  
@@ -631,7 +643,7 @@ Ad esempio, in un ambiente scolastico o universitario, aggiungere un'app che con
 - **Controllo dello zoom**: **Consenti** permette agli utenti di modificare lo zoom. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe impedire le modifiche allo zoom.
 
 > [!NOTE]
-> Prima di poter configurare un dispositivo iOS/iPadOS per la modalità tutto schermo, è necessario usare lo strumento Apple Configurator o il programma di registrazione del dispositivo di Apple per attivare la modalità con supervisore del dispositivo. Vedere la Guida di Apple sull'uso dello strumento Apple Configurator.
+> Prima di poter configurare un dispositivo iOS/iPadOS per la modalità tutto schermo, è necessario usare lo strumento Apple Configurator o il programma di registrazione del dispositivo di Apple per attivare la modalità con supervisione dei dispositivi. Vedere la Guida di Apple sull'uso dello strumento Apple Configurator.
 > Se l'app per iOS/iPadOS specificata viene installata dopo aver assegnato il profilo, il dispositivo attiva la modalità tutto schermo solo dopo il riavvio.
 
 ## <a name="domains"></a>Domains

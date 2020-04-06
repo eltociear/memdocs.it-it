@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79bb7e627043e439c7438c2fc4afcfdee5a44406
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: e7d7f35d6d6b11875c722d4969f5776040ca0dfc
+ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086121"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80256454"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>Registrare i dispositivi iOS/iPadOS in Intune
 
@@ -52,23 +52,23 @@ Dopo aver completato i prerequisiti e assegnato le licenze utente, gli utenti po
 
 Per le organizzazioni che acquistano dispositivi per i propri utenti, Intune supporta i seguenti metodi di registrazione dei dispositivi iOS/iPadOS di proprietà dell'azienda:
 
-- Device Enrollment Program (DEP) di Apple
+- Registrazione automatica del dispositivo di Apple
 - Apple School Manager
 - Registrazione con Assistente configurazione e Apple Configurator
 - Registrazione diretta con Apple Configurator
 
 È anche possibile registrare i dispositivi iOS/iPadOS di proprietà dell'azienda con un account [Manager di registrazione dispositivi](device-enrollment-manager-enroll.md).
 
-## <a name="device-enrollment-program"></a>Programma di registrazione dispositivi
+## <a name="automated-device-enrollment"></a>Registrazione automatica dei dispositivi
 
-Le organizzazioni possono ora acquistare i dispositivi iOS/iPadOS con Device Enrollment Program (DEP) di Apple. DEP consente di distribuire un profilo di registrazione in modalità wireless per portare i dispositivi nella gestione. Per altre informazioni, vedere [Device Enrollment Program](device-enrollment-program-enroll-ios.md).
+Le organizzazioni possono ora acquistare i dispositivi iOS/iPadOS con Registrazione automatica del dispositivo di Apple. Registrazione automatica del dispositivo consente di distribuire un profilo di registrazione in modalità wireless per includere i dispositivi nella gestione. Per altre informazioni, vedere [Device Enrollment Program](device-enrollment-program-enroll-ios.md).
 
 ## <a name="user-enrollment"></a>Registrazione utenti
 La registrazione utente offre agli amministratori un subset di opzioni di gestione semplificato rispetto ad altri metodi di registrazione. Per altre informazioni, vedere [Azioni e opzioni supportate per la registrazione utente](ios-user-enrollment-supported-actions.md) e [Configurare la registrazione utente iOS/iPadOS e iPadOS](ios-user-enrollment.md).
 
 ## <a name="apple-school-manager"></a>Apple School Manager
 
-Apple School Manager è un programma di acquisto e registrazione dei dispositivi per le scuole. Analogamente a DEP, consente di distribuire un profilo per registrare i dispositivi nella gestione. Altre informazioni su [Apple School Manager](apple-school-manager-set-up-ios.md).
+Apple School Manager è un programma di acquisto e registrazione dei dispositivi per le scuole. Analogamente a Registrazione automatica del dispositivo, consente di distribuire un profilo per registrare i dispositivi nella gestione. Altre informazioni su [Apple School Manager](apple-school-manager-set-up-ios.md).
 
 ## <a name="apple-configurator"></a>Apple Configurator
 
@@ -79,7 +79,7 @@ Apple School Manager è un programma di acquisto e registrazione dei dispositivi
 
 Altre informazioni sulla [Registrazione con Apple Configurator](apple-configurator-enroll-ios.md).
 
-## <a name="use-the-company-portal-on-dep-enrolled-or-apple-configurator-enrolled-devices"></a>Usare il portale aziendale nei dispositivi registrati con il programma di registrazione dispositivi o Apple Configurator
+## <a name="use-the-company-portal-on-ade-enrolled-or-apple-configurator-enrolled-devices"></a>Usare il Portale aziendale nei dispositivi registrati con Registrazione automatica del dispositivo o Apple Configurator
 
 I dispositivi configurati con affinità utente possono installare ed eseguire l'app Portale aziendale per scaricare le app e gestire i dispositivi. Dopo che gli utenti ricevono i dispositivi, devono eseguire alcuni passaggi supplementari per completare l'Assistente configurazione e installare l'app del portale aziendale.
 

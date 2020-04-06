@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 03/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 mr.reviewer: karthib
-ms.openlocfilehash: 64a11cf9dca110a4a802ddff3e9176ec1ce88345
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4071614c7cb93194eef00f49aa2e1759ba1028f6
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352176"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359248"
 ---
 # <a name="add-endpoint-protection-settings-in-intune"></a>Aggiungere le impostazioni di Endpoint Protection in Intune
 
@@ -45,23 +45,38 @@ Prima di creare un profilo, rivedere gli articoli seguenti che illustrano in det
 
 2. Selezionare **Dispositivi** > **Profili di configurazione** > **Crea profilo**.
 
-3. Inserire un **Nome** e una **Descrizione** per il profilo di Endpoint Protection.
+3. Immettere le proprietà seguenti:
 
-4. Dall'elenco a discesa **Piattaforma** selezionare la piattaforma del dispositivo a cui si desiderano applicare le impostazioni personalizzate. Attualmente, è possibile scegliere una tra le piattaforme seguenti per le impostazioni delle restrizioni del dispositivo:
+    - **Piattaforma**: scegliere la piattaforma dei dispositivi. Le opzioni disponibili sono:
 
-   - **macOS**
-   - **Windows 10 e versioni successive**
+        - **macOS**
+        - **Windows 10 e versioni successive**
 
-5. Dall'elenco a discesa **Tipo di profilo** scegliere **Endpoint Protection**.
+    - **Profilo**: selezionare **Endpoint Protection**.
 
-6. Le impostazioni configurabili variano in base alla piattaforma scelta. Vedere:
+4. Selezionare **Crea**.
+5. In **Informazioni di base** immettere le proprietà seguenti:
+
+    - **Nome**: immettere un nome descrittivo per il criterio. Assegnare ai criteri nomi che possano essere identificati facilmente in un secondo momento. Ad esempio, un nome di criterio valido è **macOS: profilo di Endpoint Protection che configura il firewall per tutti i dispositivi macOS**.
+    - **Descrizione**: immettere una descrizione del criterio. Questa impostazione è facoltativa ma consigliata.
+
+6. Selezionare **Avanti**.
+
+7. In **Impostazioni di configurazione** le impostazioni configurabili variano in base alla piattaforma scelta. Scegliere la piattaforma per le impostazioni dettagliate:
 
    - [Impostazioni macOS](endpoint-protection-macos.md)
    - [Impostazioni Windows 10](endpoint-protection-windows-10.md)
 
-7. Dopo aver configurato le impostazioni applicabili, selezionare **Crea** nella pagina **Crea profilo**.
+8. Selezionare **Avanti**.
+9. In **Tag ambito** (facoltativo) assegnare un tag per filtrare il profilo a gruppi IT specifici, ad esempio `US-NC IT Team` o `JohnGlenn_ITDepartment`. Per altre informazioni sui tag di ambito, vedere [Usare il controllo degli accessi in base al ruolo (RBAC) e i tag di ambito per l'infrastruttura IT distribuita](../fundamentals/scope-tags.md).
 
-   Il profilo viene creato e visualizzato nella pagina dell'elenco dei profili. Per assegnare il profilo ai gruppi, vedere [Come assegnare i profili di dispositivo con Microsoft Intune](../configuration/device-profile-assign.md).
+    Selezionare **Avanti**.
+
+10. In **Assegnazioni** selezionare gli utenti o i gruppi che riceveranno il profilo. Per altre informazioni sull'assegnazione di profili, vedere [Assegnare profili utente e dispositivo](../configuration/device-profile-assign.md).
+
+    Selezionare **Avanti**.
+
+11. In **Rivedi e crea** rivedere le impostazioni. Quando si seleziona **Crea**, le modifiche vengono salvate e il profilo viene assegnato. Il criterio viene visualizzato anche nell'elenco dei profili.
 
 ## <a name="add-custom-firewall-rules-for-windows-10-devices"></a>Aggiungere regole del firewall personalizzate per dispositivi Windows 10
 
@@ -75,7 +90,7 @@ Quando si pianificano profili con regole del firewall personalizzate tenere pres
 
 - Quando non è possibile applicare una regola, tutte le regole nel profilo vengono segnalate come non riuscite. Intune non è in grado di identificare quale singola regola non è andata a buon fine.  
 
-Le regole del firewall che Intune può gestire sono descritte in dettaglio nel [provider del servizio di configurazione (CSP) firewall]( https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) di Windows. Per esaminare l'elenco delle impostazioni personalizzate del firewall per i dispositivi Windows 10 supportati da Intune, vedere [Regole del firewall personalizzate](endpoint-protection-windows-10.md#firewall-rules).
+Le regole del firewall che Intune può gestire sono descritte in dettaglio nel [provider del servizio di configurazione (CSP) firewall](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) di Windows. Per esaminare l'elenco delle impostazioni personalizzate del firewall per i dispositivi Windows 10 supportati da Intune, vedere [Regole del firewall personalizzate](endpoint-protection-windows-10.md#firewall-rules).
 
 ### <a name="to-add-custom-firewall-rules-to-an-endpoint-protection-profile"></a>Per aggiungere regole del firewall personalizzate a un profilo Endpoint Protection
 
@@ -83,20 +98,22 @@ Le regole del firewall che Intune può gestire sono descritte in dettaglio nel [
 
 2. Selezionare **Dispositivi** > **Profili di configurazione** > **Crea profilo**.
 
-3. In *Piattaforma* selezionare **Windows 10 e versioni successive** e in *Tipo di profilo* selezionare **Endpoint Protection**.
+3. In *Piattaforma* selezionare **Windows 10 e versioni successive** e in *Profilo* selezionare **Endpoint Protection**.
 
-4. Selezionare **Microsoft Defender Firewall** per aprire la pagina di configurazione, quindi in *Regole del firewall* selezionare **Aggiungi** per aprire la pagina **Crea regola**.
+    Selezionare **Crea**.
 
-5. Specificare le impostazioni per la regola del firewall e quindi fare clic su **OK** per salvarle. Per esaminare le opzioni di regole del firewall personalizzate disponibili nella documentazione, vedere [Regole del firewall personalizzate](endpoint-protection-windows-10.md#firewall-rules).
+4. Immettere un **Nome** per il profilo > **Avanti**.
+5. In **Impostazioni di configurazione** selezionare **Microsoft Defender Firewall**. In *Regole del firewall* selezionare **Aggiungi** per aprire la pagina **Crea regola**.
 
-6. Dopo il salvataggio, la regola viene visualizzata nella pagina *Microsoft Defender Firewall* nell'elenco di regole.
+6. Specificare le impostazioni per la regola del firewall e quindi fare clic su **OK** per salvarle. Per esaminare le opzioni di regole del firewall personalizzate disponibili nella documentazione, vedere [Regole del firewall personalizzate](endpoint-protection-windows-10.md#firewall-rules).
 
-7. Per modificare una regola, selezionare la regola nell'elenco per aprire la pagina **Modifica regola**.
+    1. La regola viene visualizzata nella pagina *Microsoft Defender Firewall* nell'elenco di regole.
+    2. Per modificare una regola, selezionare la regola nell'elenco per aprire la pagina **Modifica regola**.
+    3. Per eliminare una regola da un profilo, selezionare i puntini di sospensione **(…)** per la regola e quindi selezionare **Elimina**.
+    4. Per modificare l'ordine di visualizzazione delle regole selezionare l'icona *freccia su o freccia giù* nella parte superiore dell'elenco regole.
 
-8. Per eliminare una regola da un profilo, selezionare i puntini di sospensione **(…)** per la regola e quindi selezionare **Elimina**.
-
-9. Per modificare l'ordine di visualizzazione delle regole selezionare l'icona *freccia su o freccia giù* nella parte superiore dell'elenco regole.
+7. Selezionare **Avanti** fino a raggiungere **Rivedi e crea**. Quando si seleziona **Crea**, le modifiche vengono salvate e il profilo viene assegnato. Il criterio viene visualizzato anche nell'elenco dei profili.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per assegnare un profilo ai gruppi, vedere [Come assegnare i profili di dispositivo](../configuration/device-profile-assign.md).
+Il profilo è stato creato, ma potrebbe non essere ancora operativo. [Assegnare il profilo](../configuration/device-profile-assign.md) e [monitorarne lo stato](../configuration/device-profile-monitor.md).

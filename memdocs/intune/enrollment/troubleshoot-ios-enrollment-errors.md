@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad456ef7cc88ccb24079010479bd8f27292eb73d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 07612080f170c5f2bef448aa616a4422508218d1
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363265"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326927"
 ---
 # <a name="troubleshoot-iosipados-device-enrollment-problems-in-microsoft-intune"></a>Risoluzione dei problemi di registrazione dei dispositivi iOS/iPadOS in Microsoft Intune
 
@@ -41,7 +41,7 @@ Raccogliere le informazioni seguenti sul problema:
 - Quanti utenti sono interessati? Sono interessati tutti gli utenti o solo alcuni?
 - Quanti dispositivi sono interessati? Sono interessati tutti i dispositivi o solo alcuni?
 - Che cos'è l'autorità MDM?
-- Come viene eseguita la registrazione? Si tratta di profili di registrazione BYOD (Bring Your Own Device) o Apple Device Enrollment Program (DEP)?
+- Come viene eseguita la registrazione? Si tratta di profili di registrazione BYOD (Bring Your Own Device) o di Registrazione automatica del dispositivo Apple?
 
 ## <a name="error-messages"></a>Messaggi di errore
 
@@ -106,7 +106,7 @@ Se la società usa più domini per le credenziali dell'utente, creare record CNA
 **Causa:** l'utente che tenta di registrare il dispositivo non dispone di una licenza di Microsoft Intune.
 
 #### <a name="resolution"></a>Soluzione
-1. Passare all'[interfaccia di amministrazione di Office 365](https://portal.office.com/adminportal/home#/homepage), quindi scegliere **Utenti > Utenti attivi**.
+1. Passare all'[interfaccia di amministrazione di Office 365](https://admin.microsoft.com), quindi scegliere **Utenti > Utenti attivi**.
 2. Selezionare l'account utente a cui si vuole assegnare una licenza utente di Intune e quindi scegliere **Licenze di prodotto > Modifica**.
 3. **Attivare** la licenza che si vuole assegnare all'utente, quindi scegliere **Salva**.
 4. Registrare nuovamente il dispositivo.
@@ -136,7 +136,7 @@ Se la società usa più domini per le credenziali dell'utente, creare record CNA
 **Causa:** l'utente tenta di registrare più dispositivi rispetto al limite consentito.
 
 #### <a name="resolution"></a>Soluzione
-1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager ](https://go.microsoft.com/fwlink/?linkid=2109431)scegliere **Dispositivi** > **Tutti i dispositivi** e verificare il numero di dispositivi registrati dall'utente.
+1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager ](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **Tutti i dispositivi** e verificare il numero di dispositivi registrati dall'utente.
     > [!NOTE]
     > È anche consigliabile accedere con l'utente interessato al [portale utenti di Intune](https://portal.manage.microsoft.com/) e controllare i dispositivi registrati. Potrebbero essere presenti dispositivi che vengono visualizzati nel [portale utenti di Intune](https://portal.manage.microsoft.com/) ma non nel [portale di amministrazione di Intune](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview). Questi dispositivi vengono comunque conteggiati nel limite di registrazione dispositivi.
 2. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **Restrizioni registrazione** > verificare il limite di registrazione dispositivi. Per impostazione predefinita, il limite è impostato su 15. 
@@ -157,7 +157,7 @@ Se la società usa più domini per le credenziali dell'utente, creare record CNA
 **Causa:** l'utente che tenta di registrare il dispositivo non ha una licenza di Intune valida.
 
 #### <a name="resolution"></a>Soluzione
-1. Passare all'[interfaccia di amministrazione di Microsoft 365](https://portal.office.com/adminportal/home#/homepage), quindi scegliere **Utenti** > **Utenti attivi**.
+1. Passare all'[interfaccia di amministrazione di Microsoft 365](https://admin.microsoft.com), quindi scegliere **Utenti** > **Utenti attivi**.
 2. Selezionare l'account utente interessato > **Licenze di prodotto** > **Modifica**.
 3. Verificare che all'utente sia assegnata una licenza di Intune valida.
 4. Registrare nuovamente il dispositivo.
@@ -166,7 +166,7 @@ Se la società usa più domini per le credenziali dell'utente, creare record CNA
 
 **Causa:** l'utente che tenta di registrare il dispositivo non ha una licenza di Intune valida.
 
-1. Passare all'[interfaccia di amministrazione di Microsoft 365](https://portal.office.com/adminportal/home#/homepage), quindi scegliere **Utenti** > **Utenti attivi**.
+1. Passare all'[interfaccia di amministrazione di Microsoft 365](https://admin.microsoft.com), quindi scegliere **Utenti** > **Utenti attivi**.
 2. Selezionare l'account utente interessato, quindi scegliere **Licenze di prodotto** > **Modifica**.
 3. Verificare che all'utente sia assegnata una licenza di Intune valida.
 4. Registrare nuovamente il dispositivo.
@@ -203,7 +203,7 @@ Rinnovare il certificato APN, quindi eseguire di nuovo la registrazione del disp
 
 ### <a name="xpc_type_error-connection-invalid"></a>Connessione XPC_TYPE_ERROR non valida
 
-Quando si attiva un dispositivo gestito da DEP a cui è assegnato un profilo di registrazione, la registrazione ha esito negativo e viene visualizzato il messaggio di errore seguente:
+Quando si attiva un dispositivo gestito da Registrazione automatica del dispositivo a cui è assegnato un profilo di registrazione, la registrazione ha esito negativo e viene visualizzato il messaggio di errore seguente:
 
 ```
 asciidoc
@@ -213,7 +213,7 @@ iPhone com.apple.accessibility.AccessibilityUIServer(MobileAsset)[288] <Notice>:
 iPhone mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR Connection invalid <error: 0x1a49aebc0> { count = 1, transaction: 0, voucher = 0x0, contents = "XPCErrorDescription" => <string: 0x1a49aee18> { length = 18, contents = "Connection invalid" }
 ```
 
-**Causa:** si è verificato un problema di connessione tra il dispositivo e il servizio DEP di Apple.
+**Causa:** si è verificato un problema di connessione tra il dispositivo e il servizio Registrazione automatica del dispositivo di Apple.
 
 #### <a name="resolution"></a>Soluzione
 Risolvere il problema di connessione oppure usare una connessione di rete diversa per registrare il dispositivo. Se il problema persiste, potrebbe essere anche necessario contattare Apple.
@@ -221,20 +221,20 @@ Risolvere il problema di connessione oppure usare una connessione di rete divers
 
 ## <a name="other-issues"></a>Altri problemi
 
-### <a name="dep-enrollment-doesnt-start"></a>La registrazione DEP non viene avviata
-Quando si attiva un dispositivo gestito da DEP a cui è assegnato un profilo di registrazione, il processo di registrazione di Intune non viene avviato.
+### <a name="ade-enrollment-doesnt-start"></a>Il processo di Registrazione automatica del dispositivo non viene avviato
+Quando si accende un dispositivo gestito da Registrazione automatica del dispositivo a cui è assegnato un profilo di registrazione, il processo di registrazione di Intune non viene avviato.
 
-**Causa:** si crea il profilo di registrazione prima di aver caricato il token DEP in Intune.
+**Causa:** il profilo di registrazione è stato creato prima di aver caricato il token di Registrazione automatica del dispositivo in Intune.
 
 #### <a name="resolution"></a>Soluzione
 
 1. Modificare il profilo di registrazione. È possibile apportare qualsiasi modifica al profilo. Lo scopo è aggiornare l'ora di modifica del profilo.
-2. Sincronizzare i dispositivi gestiti tramite DEP: Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS** > **Registrazione di iOS** > **Token del programma di registrazione** > scegliere un token > **Sincronizza ora**. Viene inviata una richiesta di sincronizzazione ad Apple.
+2. Sincronizzare i dispositivi gestiti tramite Registrazione automatica del dispositivo: Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS** > **Registrazione di iOS** > **Token del programma di registrazione** > scegliere un token > **Sincronizza ora**. Viene inviata una richiesta di sincronizzazione ad Apple.
 
-### <a name="dep-enrollment-stuck-at-user-login"></a>Registrazione DEP bloccata all'accesso dell'utente
-Quando si attiva un dispositivo gestito da DEP a cui è assegnato un profilo di registrazione, la configurazione iniziale si blocca dopo che l'utente immette le credenziali.
+### <a name="ade-enrollment-stuck-at-user-login"></a>Registrazione automatica del dispositivo bloccata all'accesso dell'utente
+Quando si accende un dispositivo gestito da Registrazione automatica del dispositivo a cui è assegnato un profilo di registrazione, la configurazione iniziale si blocca dopo che l'utente immette le credenziali.
 
-**Causa:** è abilitata l'autenticazione a più fattori (MFA). Attualmente l'autenticazione a più fattori non funziona durante la registrazione nei dispositivi DEP.
+**Causa:** è abilitata l'autenticazione a più fattori (MFA). Attualmente l'autenticazione a più fattori non funziona durante la registrazione nei dispositivi gestiti con Registrazione automatica del dispositivo.
 
 #### <a name="resolution"></a>Soluzione
 Disabilitare l'autenticazione a più fattori, quindi eseguire di nuovo la registrazione del dispositivo.

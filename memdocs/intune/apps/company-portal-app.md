@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1ec6d4ebe860a1c20ad1a11bd7e63086858a82c
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: e6a3152966dee507cde690d9be8f5a7e210c7945
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084247"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407744"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Come personalizzare le app Portale aziendale Intune, il sito Web Portale aziendale e l'app Intune
 
@@ -45,7 +45,7 @@ La tabella seguente fornisce i dettagli di personalizzazione per l'esperienza ut
 | **Mostra su intestazione** | Specificare se l'intestazione nelle esperienze utente finale deve includere **il logo e il nome della società**, **solo il logo della società** o **solo il nome della società**. Le caselle di anteprima seguenti visualizzano solo i logo, non il nome.  |
 | **Carica il logo per lo sfondo con colore del tema** | Caricare il logo che si desidera visualizzare sopra il colore del tema selezionato. Per assicurare un aspetto ottimale, caricare un logo con uno sfondo trasparente. È possibile visualizzare il risultato nella casella di anteprima sotto l'impostazione.<p>Dimensioni massime immagine: 400 x 400 px<br>Dimensioni massime del file:   750 kB<br>Tipo di file: PNG, JPG o JPEG |
 | **Carica il logo per lo sfondo bianco o chiaro** | Caricare il logo da visualizzare sopra gli sfondi di colore bianco o chiaro. Per assicurare un aspetto ottimale, caricare un logo con uno sfondo trasparente. È possibile visualizzare il risultato su uno sfondo bianco nella casella di anteprima sotto l'impostazione.<p>Dimensioni massime immagine: 400 x 400 px<br>Dimensioni massime del file: 750 kB<br>Tipo di file: PNG, JPG o JPEG |
-| **Carica l'immagine del marchio** | Caricare un'immagine del marchio dell'organizzazione.<p><ul><li>Larghezza immagine consigliata: Maggiore di 1125 px (deve essere almeno 650 px)</li><li>Dimensioni massime immagine: 1,3 MB</li><li>Tipo di file: PNG, JPG o JPEG</li><li>Viene visualizzato nelle posizioni seguenti:</li><ul><li>Portale aziendale iOS/iPadOS: Immagine di sfondo nella pagina del profilo dell'utente.</li><li>Sito Web del portale aziendale:   Immagine di sfondo nella pagina del profilo dell'utente.</li><li>App Intune Android: Nel menu e come immagine di sfondo nella pagina del profilo dell'utente.</li></ul></ul> |
+| **Carica l'immagine del marchio** | Caricare un'immagine del marchio dell'organizzazione.<p><ul><li>Larghezza immagine consigliata: Maggiore di 1125 px (deve essere almeno 650 px)</li><li>Dimensioni massime immagine: 1,3 MB</li><li>Tipo di file: PNG, JPG o JPEG</li><li>Viene visualizzato nelle posizioni seguenti:</li><ul><li>Portale aziendale iOS/iPadOS: Immagine di sfondo nella pagina del profilo dell'utente.</li><li>Sito Web del portale aziendale:   Immagine di sfondo nella pagina del profilo dell'utente.</li><li>App Intune Android: nel menu e come immagine di sfondo nella pagina del profilo dell'utente.</li></ul></ul> |
 
 > [!NOTE]
 > Quando si installa un'applicazione iOS/iPadOS dal Portale aziendale, viene inviata una richiesta. Ciò avviene quando l'app iOS/iPadOS è collegata all'App Store, a un programma Volume Purchase Program (VPP) oppure a un'app line-of-business. La richiesta consente agli utenti di accettare l'azione o consentire la gestione dell'app. Nella richiesta sarà visualizzato il nome della società o, quando il nome della società non è disponibile, sarà visualizzato **Portale aziendale**.
@@ -193,4 +193,4 @@ Alcune piattaforme e configurazioni non consentono azioni self-service nel dispo
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- [Aggiungere manualmente l'app Portale aziendale di Windows 10 usando Microsoft Intune](company-portal-app.md)
+- [Aggiungere app](apps-add.md)

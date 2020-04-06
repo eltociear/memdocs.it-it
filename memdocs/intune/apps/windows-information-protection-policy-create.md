@@ -1,12 +1,12 @@
 ---
 title: Criteri di protezione delle app Windows Information Protection (WIP)
 titleSuffix: Microsoft Intune
-description: Creare e distribuire criteri di protezione delle app Windows Information Protection (WIP) con Microsoft Intune
+description: Creare e distribuire criteri di Windows Information Protection (WIP) con Microsoft Intune
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 03/25/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4ea664594744facd36f3f92900a1e80c48053904
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6e7305d33b1c40c2624c5c860f59922a5817c818
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79345689"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326094"
 ---
-# <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Creare e distribuire criteri di protezione delle app Windows Information Protection (WIP) con Intune
+# <a name="create-and-deploy-windows-information-protection-wip-policy-with-intune"></a>Creare e distribuire criteri di Windows Information Protection (WIP) con Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-È possibile usare i criteri di protezione delle app con app Windows 10 per proteggere le app senza registrare i dispositivi.
+È possibile usare i criteri di Windows Information Protection (WIP) con app Windows 10 per proteggere le app senza registrare i dispositivi.
 
 ## <a name="before-you-begin"></a>Prima di iniziare
 
@@ -49,10 +49,10 @@ ms.locfileid: "79345689"
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Configurare il provider MAM prima di creare un criterio di protezione dell'app di WIP. Altre informazioni su [come configurare il provider MAM con Intune](app-protection-policies-configure-windows-10.md).  
+Configurare il provider MAM prima di creare un criterio WIP. Altre informazioni su [come configurare il provider MAM con Intune](app-protection-policies-configure-windows-10.md).  
 
 > [!IMPORTANT]
-> WIP non supporta più identità e può essere presente una sola identità gestita alla volta.
+> WIP non supporta più identità e può essere presente una sola identità gestita alla volta. Per ulteriori informazioni sulle funzionalità e le limitazioni di WIP, vedere [Proteggere i dati aziendali con Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
 
 È inoltre necessario avere la licenza e l'aggiornamento seguenti:
 
@@ -63,7 +63,7 @@ Configurare il provider MAM prima di creare un criterio di protezione dell'app d
 
 
 
-## <a name="to-add-a-wip-app-protection-policy"></a>Per aggiungere criteri di protezione delle app WIP
+## <a name="to-add-a-wip-policy"></a>Per aggiungere criteri WIP
 
 Dopo aver configurato Intune nell'organizzazione, è possibile creare criteri specifici di WIP.
 
@@ -76,7 +76,7 @@ Dopo aver configurato Intune nell'organizzazione, è possibile creare criteri sp
 3. Aggiungere i valori seguenti:
     - **Nome:** digitare un nome (obbligatorio) per i nuovi criteri.
     - **Descrizione:** (facoltativo) digitare una descrizione.
-    - **Piattaforma:** scegliere **Windows 10** come piattaforma supportata per i criteri di protezione delle app.
+    - **Piattaforma:** scegliere **Windows 10** come piattaforma supportata per il criterio WIP.
     - **Stato registrazione:** scegliere **Senza registrazione** come stato di registrazione per i criteri.
 4. Scegliere **Crea**. I criteri vengono creati e visualizzati nella tabella nel riquadro **Criteri di protezione delle app**.
 

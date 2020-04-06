@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 03/31/2020
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5988da854eecd528119a7e2591fc083dcdbc29bf
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: 26576212f4df86681210956669320ed4b124025d
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220227"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488111"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>Esercitazione: Usare il cloud per configurare Criteri di gruppo nei dispositivi Windows 10 con modelli ADMX e Microsoft Intune
 
@@ -39,7 +39,7 @@ Sono disponibili modelli ADMX per i servizi seguenti:
 
 Per altre informazioni sui criteri ADMX, vedere [Informazioni sui criteri supportati da ADMX](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies).
 
-In Microsoft Intune, questi modelli sono inclusi nel servizio Intune e sono disponibili come profili di tipo **Modelli amministrativi**. In questo profilo vengono configurate le impostazioni da includere e quindi il profilo viene assegnato ai dispositivi.
+Questi modelli sono inclusi in Microsoft Intune e sono disponibili come profili di tipo **Modelli amministrativi**. In questo profilo vengono configurate le impostazioni da includere e quindi il profilo viene assegnato ai dispositivi.
 
 In questa esercitazione:
 
@@ -68,7 +68,7 @@ Questa funzionalità si applica a:
 
 - In un controller di dominio di Active Directory locale (DC):
 
-  1. Copiare i modelli di Office e Microsoft Edge seguenti nell'[archivio centrale (cartella SYSVOL)](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra):
+  1. Copiare i modelli di Office e Microsoft Edge seguenti nell'[archivio centrale (cartella sysvol)](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra):
 
       - [Modelli amministrativi di Office](https://www.microsoft.com/download/details.aspx?id=49030)
       - [Modelli amministrativi di Microsoft Edge > File dei criteri](https://www.microsoftedgeinsider.com/en-us/enterprise)
@@ -78,7 +78,9 @@ Questa funzionalità si applica a:
       - I Criteri di gruppo creati con questi modelli sono denominati **OfficeandEdge**. Questo sarà il nome visualizzato nelle immagini.
       - Il computer amministratore di Windows 10 Enterprise usato è denominato **computer Admin**.
 
-      In alcune organizzazioni, un amministratore di dominio ha due account, un account di lavoro di dominio tipico e un account amministratore di dominio diverso usato solo per le attività di amministratore di dominio, ad esempio Criteri di gruppo.
+      In alcune organizzazioni, un amministratore di dominio dispone di due account:  
+        - Un account di lavoro di dominio tipico
+        - Un account amministratore di dominio diverso usato solo per le attività di amministratore di dominio, ad esempio Criteri di gruppo
 
       Lo scopo di questo **computer Admin** è consentire agli amministratori di eseguire l'accesso con il proprio account amministratore di dominio e accedere agli strumenti progettati per la gestione di Criteri di gruppo.
 
@@ -123,7 +125,7 @@ I criteri locali vengono applicati nell'ordine LSDOU: locale, sito, dominio e un
 
 In Intune i criteri vengono applicati agli utenti e ai gruppi creati. Non esiste una gerarchia. Se due criteri aggiornano la stessa impostazione, l'impostazione viene visualizzata come conflitto. Se due criteri di conformità sono in conflitto, viene applicato il criterio più restrittivo. Se due profili di configurazione sono in conflitto, l'impostazione non viene applicata. Per altre informazioni, vedere [Domande frequenti, problemi e soluzioni con i criteri e i profili dei dispositivi](device-profile-troubleshoot.md#if-multiple-policies-are-assigned-to-the-same-user-or-device-how-do-i-know-which-settings-gets-applied).
 
-Nei passaggi successivi verranno creati gruppi di sicurezza e verranno aggiunti utenti ai gruppi. È possibile aggiungere un utente a più gruppi. È ad esempio normale per un utente avere più dispositivi, ad esempio Surface Pro per il lavoro e un dispositivo mobile Android per uso personale. È anche normale che un utente acceda alle risorse aziendali da più dispositivi.
+Nei passaggi successivi verranno creati gruppi di sicurezza e verranno aggiunti utenti a questi gruppi. È possibile aggiungere un utente a più gruppi. È ad esempio normale per un utente avere più dispositivi, ad esempio Surface Pro per il lavoro e un dispositivo mobile Android per uso personale. È anche normale che un utente acceda alle risorse aziendali da più dispositivi.
 
 1. Nell'interfaccia di amministrazione di Endpoint Manager selezionare **Gruppi** > **Nuovo gruppo**.
 
@@ -235,10 +237,20 @@ In questa sezione viene creato un modello amministrativo in Intune, vengono esam
     - **Descrizione**: Immettere una descrizione del profilo. Questa impostazione è facoltativa ma consigliata.
 
 5. Selezionare **Avanti**.
-6. Nell'elenco a discesa di **Impostazioni di configurazione** selezionare **Tutti i prodotti**. Verranno visualizzate tutte le impostazioni. In queste impostazioni si notino le proprietà seguenti:
+6. In **Impostazioni di configurazione** sono disponibili impostazioni che si applicano ai dispositivi (**Configurazione computer**) e impostazioni che si applicano agli utenti **(Configurazione utente**):
 
-    - Il valore **Percorso** per il criterio è lo stesso di Gestione Criteri di gruppo o GPEdit.
-    - L'impostazione si applica a utenti o dispositivi.
+    > [!div class="mx-imgBorder"]
+    > ![Applicare le impostazioni del modello ADMX a utenti e dispositivi in Microsoft Intune Endpoint Manager](./media/tutorial-walkthrough-administrative-templates/administrative-templates-choose-computer-user-configuration.png)
+
+7. Espandere **Configurazione computer** > **Microsoft Edge** > selezionare **Impostazioni di SmartScreen**. Si noti il percorso del criterio e tutte le impostazioni disponibili:
+
+    > [!div class="mx-imgBorder"]
+    > ![Vedere le impostazioni dei criteri di Microsoft Edge SmartScreen nei modelli ADMX in Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/computer-configuration-microsoft-edge-smartscreen-path.png)
+
+8. In Cerca immettere **download**. Si noti che le impostazioni dei criteri vengono filtrate:
+
+    > [!div class="mx-imgBorder"]
+    > ![Filtrare le impostazioni dei criteri di Microsoft Edge SmartScreen nel modello ADMX in Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/computer-configuration-microsoft-edge-smartscreen-search-download.png)
 
 ### <a name="open-group-policy-management"></a>Aprire Gestione Criteri di gruppo
 
@@ -254,7 +266,7 @@ In questa sezione viene illustrato un criterio in Intune e il criterio corrispon
 3. Fare clic con il pulsante destro del mouse sul criterio **OfficeandEdge** > **Modifica**. Verrà aperta l'app Editor Gestione Criteri di gruppo.
 
     > [!div class="mx-imgBorder"]
-    > ![Fare clic con il pulsante destro del mouse sui Criteri di gruppo ADMX di Office e Edge e scegliere Modifica](./media/tutorial-walkthrough-administrative-templates/open-group-policy-management.png)
+    > ![Fare clic con il pulsante destro del mouse sui Criteri di gruppo ADMX di Office e Microsoft Edge, quindi scegliere Modifica](./media/tutorial-walkthrough-administrative-templates/open-group-policy-management.png)
 
     **OfficeandEdge** sono Criteri di gruppo che includono i modelli ADMX di Office e Microsoft Edge. Questi criteri sono descritti in [Prerequisiti](#prerequisites) (in questo articolo).
 
@@ -269,18 +281,18 @@ In questa sezione viene illustrato un criterio in Intune e il criterio corrispon
     > ![Vedere le opzioni delle impostazioni Configurazione computer in Criteri di gruppo](./media/tutorial-walkthrough-administrative-templates/prevent-enabling-lock-screen-camera-admx-policy.png)
 
 5. Nell'interfaccia di amministrazione di Endpoint Manager passare a **Modello amministrativo - Dispositivi Windows 10 per studenti**.
-6. Selezionare **Tutti i prodotti** nell'elenco a discesa e cercare **Personalizzazione**:
+6. Selezionare **Configurazione computer** > **Pannello di controllo**  > **Personalizzazione**. Notare le impostazioni disponibili:
 
     > [!div class="mx-imgBorder"]
-    > ![Cercare Personalizzazione nel modello amministrativo in Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/search-personalization-administrative-template.png)
+    > ![Percorso dell'impostazione dei criteri di personalizzazione in Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/computer-configuration-control-panel-personalization-path.png)
 
-    Notare le impostazioni disponibili.
-
-    Il tipo di impostazione è **Dispositivo** e il percorso è **\Pannello di controllo\Personalizzazione**. Questo percorso è simile a quello appena visto in Editor Gestione Criteri di gruppo. Aprendo l'impostazione si vedranno le stesse opzioni **Non configurata**, **Attivata** e **Disattivata** disponibili in Editor Gestione Criteri di gruppo.
+    Il tipo di impostazione è **Dispositivo** e il percorso è **/Pannello di controllo/Personalizzazione**. Questo percorso è simile a quello appena visto in Editor Gestione Criteri di gruppo. Se si apre l'impostazione **Impedisci l'abilitazione della fotocamera nella schermata di blocco** si vedranno le stesse opzioni **Non configurata**, **Attivata** e **Disattivata** disponibili in Editor Gestione Criteri di gruppo.
 
 #### <a name="compare-a-user-policy"></a>Confrontare un criterio utente
 
-1. Nel modello amministrativo cercare **inprivate browsing**. Si noti il percorso e che l'impostazione si applica a utenti e dispositivi.
+1. Nel modello di amministrazione selezionare **Configurazione computer** > **Tutte le impostazioni** e cercare **inprivate browsing**. Si noti il percorso.
+
+    Eseguire la stessa operazione per **Configurazione utente**. Selezionare **Tutte le impostazioni** e cercare **inprivate browsing**.
 
 2. In **Editor Gestione Criteri di gruppo** trovare le impostazioni utente e dispositivo corrispondenti:
 
@@ -296,9 +308,11 @@ In questa sezione viene illustrato un criterio in Intune e il criterio corrispon
 #### <a name="compare-an-edge-policy"></a>Confrontare un criterio di Edge
 
 1. Nell'interfaccia di amministrazione di Endpoint Manager passare a **Modello amministrativo - Dispositivi Windows 10 per studenti**.
-2. Selezionare **Edge versione 77 e successive** nell'elenco a discesa.
-3. Cercare **avvio**. Notare le impostazioni disponibili.
-4. In Editor Gestione Criteri di gruppo individuare le impostazioni seguenti:
+2. Espandere **Configurazione computer** > **Microsoft Edge** > **Startup, homepage and new tab page** (Pagina iniziale, home page e pagina Nuova scheda). Notare le impostazioni disponibili.
+
+    Eseguire la stessa operazione per **Configurazione utente**.
+
+3. In Editor Gestione Criteri di gruppo individuare le impostazioni seguenti:
 
     - Dispositivo: espandere **Configurazione computer** > **Criteri** > **Modelli amministrativi** > **Microsoft Edge** > **Startup, homepage and new tab page** (Avvio, pagina iniziale e pagina nuova scheda).
     - Utente: espandere **Configurazione utente** > **Criteri** > **Modelli amministrativi** > **Microsoft Edge** > **Startup, homepage and new tab page** (Avvio, pagina iniziale e pagina nuova scheda).
@@ -311,12 +325,12 @@ In questa sezione viene illustrato un criterio in Intune e il criterio corrispon
 
 In questo modello vengono configurate alcune impostazioni di Internet Explorer per bloccare i dispositivi condivisi da più studenti.
 
-1. In **Modello amministrativo - Dispositivi Windows 10 per studenti** cercare **Disattiva InPrivate Browsing** e selezionare il criterio per i dispositivi:
+1. In **Modello amministrativo - Dispositivi Windows 10 per studenti** espandere **Configurazione computer**, selezionare **Tutte le impostazioni** e cercare **Disattiva InPrivate Browsing**:
 
     > [!div class="mx-imgBorder"]
     > ![Criterio per i dispositivi Disattiva InPrivate Browsing in un modello amministrativo in Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/turn-off-inprivate-browsing-administrative-template.png)
 
-2. In questa finestra notare la descrizione e i valori che è possibile impostare. Queste opzioni sono simili a quelle visualizzate in Criteri di gruppo.
+2. Selezionare l'impostazione **Disattiva InPrivate Browsing**. In questa finestra notare la descrizione e i valori che è possibile impostare. Queste opzioni sono simili a quelle visualizzate in Criteri di gruppo.
 3. Selezionare **Abilitata** > **OK** per salvare le modifiche.
 4. Configurare anche le impostazioni di Internet Explorer seguenti. Assicurarsi di selezionare **OK** per salvare le modifiche.
 
@@ -343,7 +357,7 @@ In questo modello vengono configurate alcune impostazioni di Internet Explorer p
 
 ### <a name="assign-your-template"></a>Assegnare il modello
 
-1. Ne modello selezionare **Assegnazioni** > **Selezionare i gruppi da includere**:
+1. Nel modello selezionare **Avanti** fino a raggiungere **Assegnazioni**. Scegliere **Selezionare i gruppi da includere**:
 
     > [!div class="mx-imgBorder"]
     > ![Selezionare il profilo del modello amministrativo nell'elenco dei profili di configurazione del dispositivo in Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/filter-administrative-template-device-configuration-profiles-list.png)
@@ -352,7 +366,7 @@ In questo modello vengono configurate alcune impostazioni di Internet Explorer p
 
     Se si usa questa esercitazione in un ambiente di produzione, valutare la possibilità di aggiungere gruppi vuoti. L'obiettivo è quello di fare pratica con l'assegnazione del modello.
 
-3. Selezionare **Avanti** per passare alla scheda **Rivedi e crea**. Selezionare **Crea** per salvare le modifiche.
+3. Selezionare **Avanti**. In **Rivedi e crea** selezionare **Crea** per salvare le modifiche.
 
 Subito dopo il salvataggio, il profilo viene applicato ai dispositivi quando vengono sincronizzati con Intune. Se i dispositivi sono connessi a Internet, è possibile che ciò avvenga immediatamente. Per altre informazioni sui tempi di aggiornamento dei criteri, vedere [Quanto tempo è necessario ai dispositivi per ottenere criteri, un profilo o un'app dopo l'assegnazione?](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 
@@ -380,11 +394,20 @@ In questa sezione viene creato un modello amministrativo di OneDrive in Intune p
     - **Descrizione**: Immettere una descrizione del profilo. Questa impostazione è facoltativa ma consigliata.
 
 5. Selezionare **Avanti**.
-6. In **Impostazioni di configurazione** selezionare **Office** dall'elenco a discesa. **Abilitare** le impostazioni seguenti. Assicurarsi di selezionare **OK** per salvare le modifiche.
+6. In **Impostazioni di configurazione** configurare le impostazioni seguenti. Assicurarsi di selezionare **OK** per salvare le modifiche.
 
-    - **Consenti l'accesso automatico degli utenti al client di sincronizzazione di OneDrive con le proprie credenziali di Windows**
-    - **Usa File di OneDrive su richiesta**
-    - **Impedisci agli utenti di sincronizzare gli account personali di OneDrive**
+    - **Configurazione computer** > **Tutte le impostazioni**:
+      - **Consenti l'accesso automatico degli utenti al client di sincronizzazione di OneDrive con le proprie credenziali di Windows**
+        - **Tipo**: Dispositivo
+        - **Valore**: Abilitato
+      - **Usa File di OneDrive su richiesta**
+        - **Tipo**: Dispositivo
+        - **Valore**: Abilitato
+
+    - **Configurazione utente** > **Tutte le impostazioni**:
+      - **Impedisci agli utenti di sincronizzare gli account personali di OneDrive**
+        - **Tipo**: Utente
+        - **Valore**: Abilitato
 
 Al termine, le impostazioni saranno simili alle seguenti:
 
@@ -395,12 +418,12 @@ Per altre informazioni sulle impostazioni client di OneDrive, vedere [Usare Crit
 
 ### <a name="assign-your-template"></a>Assegnare il modello
 
-1. Ne modello selezionare **Assegnazioni** > **Selezionare i gruppi da includere**
+1. Nel modello selezionare **Avanti** fino a raggiungere **Assegnazioni**. Scegliere **Selezionare i gruppi da includere**:
 2. Viene visualizzato un elenco di utenti e gruppi esistenti. Selezionare il gruppo **Tutti i dispositivi Windows** creato in precedenza > **Seleziona**.
 
     Se si usa questa esercitazione in un ambiente di produzione, valutare la possibilità di aggiungere gruppi vuoti. L'obiettivo è quello di fare pratica con l'assegnazione del modello.
 
-3. Selezionare **Avanti** per passare alla scheda **Rivedi e crea**. Selezionare **Crea** per salvare le modifiche.
+3. Selezionare **Avanti**. In **Rivedi e crea** selezionare **Crea** per salvare le modifiche.
 
 A questo punto sono stati creati alcuni modelli amministrativi che sono stati assegnati ai gruppi creati. Il passaggio successivo consiste nel creare un modello amministrativo usando Windows PowerShell e l'API Microsoft Graph per Intune.
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6eefc9f07a6c0cf442468b14d6d74567b8c15861
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 78dec649f5486e0dcf56f92b8ac16d176d119653
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79348822"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322330"
 ---
 # <a name="troubleshoot-device-actions-in-intune"></a>Risolvere i problemi delle azioni dei dispositivi in Intune
 
@@ -69,7 +69,7 @@ Si tratta di un comportamento previsto. Google non consente il ripristino delle 
 Perché il ritiro di un dispositivo non ha l'effetto di revocare i token di accesso. Per attenuare questa condizione è possibile usare i criteri di accesso condizionale.
 
 ### <a name="how-can-i-monitor-a-retirewipe-action-after-it-was-issued"></a>In che modo è possibile monitorare un'azione di ritiro o cancellazione dei dati dopo che è stata avviata?
-In [Interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), passare ad **Amministrazione del tenant** > **Log di controllo**.
+Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) passare ad **Amministrazione del tenant** > **Log di controllo**.
 
 ### <a name="why-do-wipes-sometimes-show-as-pending-indefinitely"></a>Per quale motivo le azioni di cancellazione dei dati vengono talvolta visualizzate come In sospeso per un periodo illimitato?
 I dispositivi non sempre segnalano il proprio stato al servizio Intune prima dell'avvio della reimpostazione. L'azione viene quindi visualizzata come In sospeso. Se si è certi che l'azione è stata eseguita, eliminare il dispositivo dal servizio.

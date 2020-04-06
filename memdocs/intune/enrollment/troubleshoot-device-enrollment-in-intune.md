@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93fba17973571a9981269eb0b9fc98dae20cb920
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: af60c91e52bcee643166729f3a3ac57ae232c4d9
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80085867"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327000"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Risolvere i problemi di registrazione dei dispositivi in Microsoft Intune
 
@@ -286,9 +286,9 @@ Per risolvere il problema, è necessario che gli utenti selezionino il pulsante 
 Dopo aver eseguito la registrazione, vengono ripristinati il corretto funzionamento dei dispositivi e l'accesso alle risorse aziendali.
 
 ### <a name="verify-ws-trust-13-is-enabled"></a>Verificare che WS-Trust 1.3 sia abilitato
-**Problema** I dispositivi iOS/iPadOS DEP (Device Enrollment Program) non possono essere registrati
+**Problema** Non è possibile registrare i dispositivi iOS/iPadOS gestiti tramite Registrazione automatica del dispositivo
 
-La registrazione dei dispositivi DEP con affinità utente richiede un endpoint WS-Trust 1.3 Username/Mixed per essere abilitato a richiedere token utente. Active Directory abilita questo endpoint per impostazione predefinita. Per ottenere un elenco di endpoint abilitati, usare il cmdlet Get-AdfsEndpoint di PowerShell e cercare l'endpoint trust/13/UsernameMixed. Ad esempio:
+Per registrare dispositivi gestiti con Registrazione automatica del dispositivo con affinità utente è necessario abilitare un endpoint nome utente/misto WS-Trust 1.3 per la richiesta di token utente. Active Directory abilita questo endpoint per impostazione predefinita. Per ottenere un elenco di endpoint abilitati, usare il cmdlet Get-AdfsEndpoint di PowerShell e cercare l'endpoint trust/13/UsernameMixed. Ad esempio:
 
       Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
 

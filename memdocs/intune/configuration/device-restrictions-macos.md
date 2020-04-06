@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c4ffe68585d58b4bc61d6302d7772fd2e19855c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 50dd3d245b9a89836e3858d71a7ad124189e0973
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361744"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407859"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>Impostazioni dei dispositivi macOS per consentire o limitare l'uso delle funzionalità tramite Intune
-
-
 
 Questo articolo descrive le diverse impostazioni che è possibile controllare nei dispositivi macOS. Usare queste impostazioni nella propria soluzione di gestione di dispositivi mobili (MDM) per abilitare o disabilitare funzionalità, impostare regole per le password, consentire o limitare l'uso di app specifiche e altro ancora.
 
@@ -42,85 +40,89 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
 
 ### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Le impostazioni si applicano a: Registrazione dei dispositivi e registrazione automatica dei dispositivi
 
-- **Ricerca della definizione**: **Blocca** impedisce all'utente di evidenziare una parola e quindi di cercarne la definizione nel dispositivo. **Non configurato** (impostazione predefinita) consente l'accesso alla funzionalità di ricerca della definizione.
-- **Dettatura**: **Blocca** impedisce all'utente di immettere testo con l'input vocale. **Non configurato** (impostazione predefinita) consente all'utente di usare l'input con dettatura.
-- **Memorizzazione nella cache dei contenuti**: scegliere **Non configurato** (impostazione predefinita) per abilitare la memorizzazione dei contenuti nella cache. La memorizzazione del contenuto nella cache consente di archiviare i dati di app e Web browser, download e altro ancora localmente nel dispositivo. Selezionare **Blocca** per impedire che questi dati siano archiviati nella cache.
+- **Ricerca della definizione**: **Blocca** impedisce all'utente di evidenziare una parola e quindi di cercarne la definizione nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire la funzionalità di ricerca della definizione.
+- **Dettatura**: **Blocca** impedisce agli utenti di immettere testo con l'input vocale. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di usare l'input tramite dettatura.
+- **Memorizzazione nella cache dei contenuti**: **Blocca** impedisce la memorizzazione del contenuto nella cache. La memorizzazione del contenuto nella cache consente di archiviare i dati di app e Web browser, download e altro ancora localmente nei dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe abilitare la memorizzazione del contenuto nella cache.
 
   Per altre informazioni sulla memorizzazione del contenuto nella cache in macOS, vedere [Gestire la cache dei contenuti sul Mac](https://support.apple.com/guide/mac-help/manage-content-caching-on-mac-mchl3b6c3720/mac) (viene aperto un altro sito Web).
 
   Questa funzionalità si applica a:  
   - macOS 10.13 e versioni successive
 
-- **Rinvia gli aggiornamenti software**: se impostato su **Non configurato** (impostazione predefinita), gli aggiornamenti software vengono visualizzati nel dispositivo non appena rilasciati da Apple. Ad esempio, se un aggiornamento macOS viene rilasciato da Apple in una data specifica, questo viene normalmente visualizzato nel dispositivo in prossimità della data di rilascio. Gli aggiornamenti della seed build sono consentiti senza posticipazioni.
-
-  **Abilita** consente di posticipare la visualizzazione degli aggiornamenti software nei dispositivi, da 0 a 90 giorni. Questa impostazione non controlla quando gli aggiornamenti vengono installati o meno. 
+- **Rinvia gli aggiornamenti software**: **Abilita** consente di posticipare la visualizzazione degli aggiornamenti software nei dispositivi, da 0 a 90 giorni. Questa impostazione non controlla quando gli aggiornamenti vengono installati o meno. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe visualizzare gli aggiornamenti nei dispositivi quando Apple li rilascia. Ad esempio, se un aggiornamento macOS viene rilasciato da Apple in una data specifica, questo viene normalmente visualizzato nei dispositivi in prossimità della data di rilascio. Gli aggiornamenti della seed build sono consentiti senza posticipazioni.  
 
   - **Posticipa la visibilità degli aggiornamenti software**: immettere un valore compreso tra 0 e 90 giorni. Quando l'intervallo di ritardo scade, gli utenti ricevono una notifica per l'aggiornamento alla versione del sistema operativo meno recente disponibile quando è stato attivato il ritardo.
 
-    Ad esempio, se un aggiornamento di macOS è disponibile il **1° gennaio** e **Posticipa la visibilità** è impostato su **5 giorni**, l'aggiornamento non viene visualizzato come disponibile. Il **sesto giorno** dopo il rilascio, l'aggiornamento sarà disponibile e gli utenti finali possono installarlo.
+    Ad esempio, se un aggiornamento di macOS è disponibile il **1° gennaio** e **Posticipa la visibilità** è impostato su **5 giorni**, l'aggiornamento non viene visualizzato come disponibile. Il **sesto giorno** dopo il rilascio, l'aggiornamento diventa disponibile e gli utenti possono installarlo.
 
     Questa funzionalità si applica a:  
     - macOS 10.13.4 e versioni successive
 
-- **Screenshot**: il dispositivo deve essere registrato con la registrazione automatica dei dispositivi (DEP) di Apple. Se l'impostazione è **Blocca**, gli utenti non possono salvare uno screenshot dello schermo. Inoltre, l'app Classroom non è in grado di osservare le schermate remote. **Non configurato** (impostazione predefinita) consente agli utenti di acquisire gli screenshot e consente all'app Classroom di visualizzare le schermate remote.
+- **Screenshot**: il dispositivo deve essere registrato con la registrazione automatica dei dispositivi (DEP) di Apple. **Blocca** impedisce agli utenti di salvare screenshot dello schermo. Inoltre, l'app Classroom non è in grado di osservare le schermate remote. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di acquisire gli screenshot e consente all'app Classroom di visualizzare le schermate remote.
 
 ### <a name="settings-apply-to-automated-device-enrollment"></a>Le impostazioni si applicano a: Registrazione automatica dei dispositivi
 
-- **Osservazione in remoto dello schermo tramite l'app Classroom**: **Disabilita** impedisce ai docenti di usare l'app Classroom per visualizzare gli schermi degli studenti. **Non configurato** (impostazione predefinita) consente agli insegnanti di visualizzare le schermate degli studenti.
+- **Osservazione in remoto dello schermo tramite l'app Classroom**: **Disabilita** impedisce ai docenti di usare l'app Classroom per visualizzare gli schermi degli studenti. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire ai docenti di visualizzare gli schermi degli studenti.
 
   Per usare questa impostazione, impostare **Screenshot** su **Non configurato** (gli screenshot sono consentiti).
 
-- **Osservazione schermo non richiesta da parte dell'app Classroom**: **Consenti** consente a docenti di visualizzare gli schermi degli studenti senza richiedere il loro consenso. **Non configurato** (impostazione predefinita) richiede il consenso dello studente prima che l'insegnante possa visualizzare le schermate.
+- **Osservazione schermo non richiesta da parte dell'app Classroom**: **Consenti** consente ai docenti di visualizzare gli schermi degli studenti senza richiedere il loro consenso. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe richiedere agli studenti di dare il loro consenso prima che i docenti possano visualizzare gli schermi.
 
   Per usare questa impostazione, impostare **Screenshot** su **Non configurato** (gli screenshot sono consentiti).
 
-- **Gli studenti devono richiedere l'autorizzazione per abbandonare la lezione di Classroom**: con l'impostazione **Rendi obbligatorio** gli studenti iscritti a un corso di Classroom non gestito devono ottenere l'approvazione del docente per abbandonare il corso. **Non configurato** (impostazione predefinita) consente allo studente di uscire dal corso quando vuole.
+- **Gli studenti devono richiedere l'autorizzazione per abbandonare la lezione di Classroom**: con l'impostazione **Rendi obbligatorio** gli studenti iscritti a un corso di Classroom non gestito devono ottenere l'approvazione del docente per abbandonare il corso. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli studenti di abbandonare il corso quando vogliono.
 
-- **I docenti possono bloccare automaticamente dispositivi o app nell'app Classroom**: con l'impostazione **Consenti** i docenti possono bloccare il dispositivo o l'app di uno studente senza l'approvazione da parte dello studente. **Non configurato** (impostazione predefinita) richiede il consenso dello studente prima che l'insegnante possa bloccare il dispositivo o l'app.
+- **I docenti possono bloccare automaticamente dispositivi o app nell'app Classroom**: con l'impostazione **Consenti** i docenti possono bloccare il dispositivo o l'app di uno studente senza l'approvazione da parte dello studente. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe richiedere agli studenti di dare il loro consenso prima che i docenti possano bloccare il dispositivo o l'app.
 
-- **Gli utenti possono partecipare automaticamente a una lezione di Classroom**: con l'impostazione **Consenti** gli studenti possono partecipare a una lezione senza inviare richieste al docente. **Non configurato** (impostazione predefinita) richiede l'approvazione dell'insegnante per consentire la partecipazione a una lezione.
+- **Gli utenti possono partecipare automaticamente a una lezione di Classroom**: con l'impostazione **Consenti** gli studenti possono partecipare a una lezione senza inviare richieste al docente. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe richiedere l'approvazione del docente per la partecipazione a una lezione.
 
 ## <a name="password"></a>Password
 
 ### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Le impostazioni si applicano a: Registrazione dei dispositivi e registrazione automatica dei dispositivi
 
-- **Password**: selezionare **Rendi obbligatorio** per richiedere all'utente finale di immettere una password per accedere al dispositivo. **Non configurato** (impostazione predefinita) non richiede una password. Non impone inoltre alcuna restrizione, ad esempio il blocco delle password semplici o l'impostazione di una lunghezza minima.
-  - **Tipo di password richiesto**: specificare se la password può essere solo numerica o se deve essere di tipo alfanumerico, ovvero contenere lettere e numeri.
+- **Password**: **Rendi obbligatorio** richiede agli utenti di immettere una password per accedere ai dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non richiedere una password. Non impone inoltre alcuna restrizione, ad esempio il blocco delle password semplici o l'impostazione di una lunghezza minima.
+  - **Tipo di password richiesto**: immettere il livello di complessità della password richiesto dall'organizzazione. Le opzioni disponibili sono:
+    - **Non configurata**: Intune non modifica o aggiorna questa impostazione.
+    - **Numerica**: la password deve essere composta solo da numeri, ad esempio 123456789.
+    - **Alfanumerica**: include lettere maiuscole, lettere minuscole e caratteri numerici.
 
     Questa funzionalità si applica a:  
     - macOS 10.10.3 e versioni successive
 
-  - **Numero di caratteri non alfanumerici nella password**: Specificare il numero di caratteri complessi richiesti per la password, da **0** a **4**.<br>Un carattere complesso è un simbolo, ad esempio " **?** ".
-  - **Lunghezza minima password**: Immettere la lunghezza minima della password che l'utente deve configurare, compresa tra **4** e **16** caratteri.
-  - **Password semplici**: Consentire l'uso di password semplici come **0000** o **1234**.
-  - **Numero massimo di minuti dopo il blocco dello schermo prima che venga richiesta una password**: Specificare per quanto tempo il computer deve essere inattivo prima che sia richiesta una password per sbloccarlo.
-  - **Numero massimo di minuti di inattività fino al blocco dello schermo**: specificare per quanto tempo il computer deve rimanere inattivo prima che venga bloccato lo schermo.
-  - **Scadenza password (giorni)** : Specificare quanti giorni devono trascorrere prima che l'utente sia obbligato a cambiare la password, da **1** a **255** giorni.
-  - **Impedisci riutilizzo delle password precedenti**: immettere il numero di password usate in precedenza che non possono essere riutilizzate, da **1** a **24**.
+  - **Numero di caratteri non alfanumerici nella password**: immettere il numero di caratteri complessi richiesti per la password, da 0 a 4. Un carattere complesso è un simbolo, ad esempio `?`
+  - **Lunghezza minima password**: immettere la lunghezza minima per la password, da 4 a 16 caratteri.
+  - **Password semplici**: consente l'uso di password semplici, ad esempio `0000` o `1234`.
+  - **Numero massimo di minuti dopo il blocco dello schermo prima che venga richiesta una password**: immettere il periodo di tempo per cui i dispositivi devono essere inattivi prima che venga richiesta una password per sbloccarli. Quando il valore è vuoto o impostato su **Non configurato**, Intune non modifica o aggiorna questa impostazione.
+  - **Numero massimo di minuti di inattività fino al blocco dello schermo**: immettere il periodo di tempo per cui i dispositivi devono rimanere inattivi prima che lo schermo venga bloccato automaticamente. Ad esempio, immettere 5 per bloccare i dispositivi dopo 5 minuti di inattività. Quando il valore è vuoto o impostato su **Non configurato**, Intune non modifica o aggiorna questa impostazione.
+  - **Scadenza password (giorni)** : immettere il numero di giorni che devono trascorrere prima che sia necessario cambiare la password del dispositivo, da 1 a 65535. Ad esempio, immettere `90` per impostare la scadenza della password dopo 90 giorni. Quando la password scade, agli utenti viene chiesto di creare una nuova password. Quando il valore è vuoto, Intune non modifica o aggiorna questa impostazione.
+  - **Impedisci riutilizzo delle password precedenti**: usare questa impostazione per impedire agli utenti di creare password già usate in precedenza. immettere il numero di password usate in precedenza che non è possibile usare, da 1 a 24. Ad esempio, immettere 5 in modo che gli utenti non possano impostare una nuova password uguale alla password corrente o a una qualsiasi delle quattro precedenti. Quando il valore è vuoto, Intune non modifica o aggiorna questa impostazione.
 
-- **Impedisci all'utente di modificare il passcode**: scegliere **Blocca** per impedire la modifica, l'aggiunta o la rimozione del passcode. **Non configurato** (impostazione predefinita) consente l'aggiunta, la modifica o la rimozione dei passcode.
-- **Impedisci lo sblocco tramite impronta digitale**: scegliere **Blocca** per impedire l'uso di un'impronta digitale per sbloccare il dispositivo. **Non configurato** (impostazione predefinita) consente all'utente di sbloccare il dispositivo tramite impronta digitale.
+- **Impedisci all'utente di modificare il passcode**: **Blocca** impedisce la modifica, l'aggiunta o la rimozione del passcode. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'aggiunta, la modifica o la rimozione dei passcode.
+- **Impedisci lo sblocco tramite impronta digitale**: **Blocca** impedisce l'uso di impronte digitali per sbloccare i dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di sbloccare il dispositivo tramite impronta digitale.
 
-- **Blocca il riempimento automatico delle password**: scegliere **Blocca** per impedire l'uso della funzionalità di riempimento automatico delle password in macOS. La scelta di **Blocca** comporta anche le conseguenze seguenti:
+- **Blocca il riempimento automatico delle password**: **Blocca** impedisce l'uso della funzionalità di riempimento automatico delle password in macOS. La scelta di **Blocca** comporta anche le conseguenze seguenti:
 
   - Agli utenti non viene richiesto di usare una password salvata in Safari o in qualsiasi app.
   - Le password complesse automatiche sono disabilitate e non vengono consigliate password complesse agli utenti.
 
-  **Non configurato** (impostazione predefinita) consente queste funzionalità.
+  Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire queste funzionalità.
 
-- **Blocca le richieste di prossimità password**: scegliere **Blocca** in modo che il dispositivo di un utente non richieda password dai dispositivi nelle vicinanze. **Non configurato** (impostazione predefinita) consente queste richieste di password.
+- **Blocca le richieste di prossimità password**: **Blocca** impedisce ai dispositivi di richiedere password dai dispositivi nelle vicinanze. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire queste richieste di password.
 
-- **Blocca la condivisione delle password**: **Blocca** impedisce la condivisione delle password tra i dispositivi tramite AirDrop. **Non configurato** (impostazione predefinita) consente di condividere le password.
+- **Blocca la condivisione delle password**: **Blocca** impedisce la condivisione delle password tra i dispositivi tramite AirDrop. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire la condivisione di queste password.
 
 ## <a name="built-in-apps"></a>App predefinite
 
 ### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Le impostazioni si applicano a: Registrazione dei dispositivi e registrazione automatica dei dispositivi
 
-- **Blocca il riempimento automatico di Safari**: **Blocca** disabilita la funzionalità di riempimento automatico in Safari nel dispositivo. **Non configurato** (impostazione predefinita) consente agli utenti di modificare le impostazioni di completamento automatico nel Web browser.
-- **Blocca la fotocamera**: scegliere **Blocca** per impedire l'accesso alla fotocamera nel dispositivo. **Non configurato** (impostazione predefinita) consente l'accesso alla fotocamera del dispositivo.
-- **Blocca Apple Music**: **Blocca** ripristina la modalità classica per l'app Music e disabilita il servizio Music. **Non configurato** (impostazione predefinita) consente l'uso dell'app Apple Music.
-- **Blocca i risultati della ricerca Internet di Spotlight**: **Blocca** impedisce a Spotlight di restituire risultati da una ricerca su Internet. **Non configurato** (impostazione predefinita) consente alla ricerca Spotlight di connettersi a Internet per fornire i risultati della ricerca.
-- **Impedisci il trasferimento di file con iTunes**: **Blocca** disabilita i servizi di condivisione file dell'applicazione. **Non configurato** (impostazione predefinita) consente i servizi di condivisione file dell'applicazione.
+- **Blocca il riempimento automatico di Safari**: **Blocca** disabilita la funzionalità di riempimento automatico in Safari nei dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di modificare le impostazioni di completamento automatico nel Web browser.
+- **Blocca la fotocamera**: **Blocca** impedisce l'accesso alla fotocamera nei dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'accesso alla fotocamera del dispositivo.
+
+  Intune gestisce solo l'accesso alla fotocamera del dispositivo. Non ha accesso alle immagini o ai video.
+
+- **Blocca Apple Music**: **Blocca** ripristina la modalità classica per l'app Music e disabilita il servizio Music. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'uso dell'app Apple Music.
+- **Blocca i risultati della ricerca Internet di Spotlight**: **Blocca** impedisce a Spotlight di restituire risultati da una ricerca su Internet. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire alla ricerca Spotlight di connettersi a Internet per ottenere i risultati della ricerca.
+- **Impedisci il trasferimento di file con iTunes**: **Blocca** disabilita i servizi di condivisione file dell'applicazione. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire i servizi di condivisione file dell'applicazione.
 
   Questa funzionalità si applica a:  
   - macOS 10.13 e versioni successive
@@ -131,12 +133,13 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
 
 - **Elenco di tipi di app con restrizioni**: consente di creare un elenco di app che gli utenti non sono autorizzati a installare o usare. Le opzioni disponibili sono:
 
-  - **Non configurato** (impostazione predefinita): non sono previste restrizioni da Intune. Gli utenti hanno accesso alle app assegnate e alle app predefinite.
-  - **App non consentite**: elenco di app non gestite da Intune di cui si vuole evitare l'installazione nel dispositivo. Agli utenti non viene impedito di installare un'app vietata. Tuttavia, se un utente installa un'app da questo elenco, verrà segnalato in Intune.
-  - **App approvate**: app che gli utenti sono autorizzati a installare. Gli utenti non devono installare app che non sono elencate. Le app gestite da Intune sono automaticamente consentite. Agli utenti non viene impedito di installare un'app non inclusa nell'elenco approvato. Tuttavia, se lo fanno, verrà segnalato in Intune.
+  - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, gli utenti potrebbero avere accesso alle app assegnate e alle app predefinite.
+  - **App non consentite**: elencare le app non gestite da Intune che gli utenti non sono autorizzati a installare ed eseguire. Agli utenti non viene impedito di installare un'app vietata. Se un utente installa un'app da questo elenco, verrà segnalato in Intune.
+  - **App approvate**: Elencare le app che gli utenti sono autorizzati a installare. Per mantenere la conformità, gli utenti non devono installare altre app. Le app gestite da Intune sono consentite automaticamente, inclusa l'app Portale aziendale. Agli utenti non viene impedito di installare un'app non inclusa nell'elenco approvato. Tuttavia, se lo fanno, verrà segnalato in Intune.
+
 - **ID bundle dell'app**: immettere l'[ID bundle](bundle-ids-built-in-ios-apps.md) dell'app desiderata. È possibile mostrare o nascondere le app predefinite e le app line-of-business. Il sito Web di Apple include un elenco di [app Apple predefinite](https://support.apple.com/HT208094).
 - **Nome app**: immettere il nome dell'app desiderata. È possibile mostrare o nascondere le app predefinite e le app line-of-business. Il sito Web di Apple include un elenco di [app Apple predefinite](https://support.apple.com/HT208094).
-- **Autore**: immettere l'autore dell'app desiderata.
+- **Autore**: immettere l'autore dell'app.
 
 Per aggiungere app a questi elenchi, è possibile:
 
@@ -147,23 +150,23 @@ Per aggiungere app a questi elenchi, è possibile:
 
 ### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Le impostazioni si applicano a: Registrazione dei dispositivi e registrazione automatica dei dispositivi
 
-- **Blocca AirDrop**: **Blocca** impedisce l'uso di AirDrop nel dispositivo. **Non configurato** (impostazione predefinita) consente l'uso della funzionalità AirDrop per scambiare contenuti con dispositivi vicini.
-- **Blocca lo sbocco automatico di Apple Watch**: **Blocca** impedisce agli utenti di sbloccare il proprio dispositivo macOS con Apple Watch. **Non configurato** (impostazione predefinita) consente agli utenti di sbloccare il proprio dispositivo macOS con Apple Watch.
+- **Blocca AirDrop**: **Blocca** impedisce l'uso di AirDrop nei dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'uso della funzionalità AirDrop per scambiare contenuti con dispositivi vicini.
+- **Blocca lo sbocco automatico di Apple Watch**: **Blocca** impedisce agli utenti di sbloccare il proprio dispositivo macOS con Apple Watch. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di sbloccare il proprio dispositivo macOS con Apple Watch.
 
 ## <a name="cloud-and-storage"></a>Cloud e risorse di archiviazione
 
 ### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Le impostazioni si applicano a: Registrazione dei dispositivi e registrazione automatica dei dispositivi
 
-- **Blocca la sincronizzazione Keychain con iCloud**: scegliere **Blocca** per disabilitare la sincronizzazione delle credenziali archiviate in Keychain su iCloud. **Non configurato** (impostazione predefinita) consente agli utenti di sincronizzare queste credenziali.
-- **Blocca la sincronizzazione dei documenti di iCloud**: **Blocca** impedisce a iCloud di sincronizzare documenti e dati. **Non configurato** (impostazione predefinita) consente la sincronizzazione di documenti e coppie chiave-valore nello spazio di archiviazione iCloud.
-- **Blocca il backup della posta elettronica di iCloud**: **Blocca** impedisce la sincronizzazione di iCloud nell'app di posta macOS. **Non configurato** (impostazione predefinita) consente la sincronizzazione della posta con iCloud.
-- **Blocca il backup dei contatti iCloud**: **Blocca** impedisce a iCloud di sincronizzare i contatti del dispositivo. **Non configurato** (impostazione predefinita) consente la sincronizzazione dei contatti tramite iCloud.
-- **Blocca il backup dei calendari di iCloud**: **Blocca** impedisce la sincronizzazione di iCloud nell'app calendario macOS. **Non configurato** (impostazione predefinita) consente la sincronizzazione del calendario con iCloud.
-- **Blocca il backup dei promemoria di iCloud**: **Blocca** impedisce la sincronizzazione di iCloud nell'app per i promemoria macOS. **Non configurato** (impostazione predefinita) consente la sincronizzazione dei promemoria con iCloud.
-- **Blocca il backup dei segnalibri di iCloud**: **Blocca** impedisce a iCloud di sincronizzare i segnalibri dei dispositivi. **Non configurato** (impostazione predefinita) consente la sincronizzazione dei preferiti con iCloud.
-- **Blocca il backup delle note di iCloud**: **Blocca** impedisce a iCloud di sincronizzare le note dei dispositivi. **Non configurato** (impostazione predefinita) consente la sincronizzazione delle note con iCloud.
-- **Blocca la libreria foto iCloud**: **Blocca** disabilita la libreria foto di iCloud e impedisce a iCloud di sincronizzare le foto dei dispositivi. Eventuali foto non scaricate completamente dalla Libreria foto di iCloud vengono rimosse dall'archivio locale nel dispositivo. **Non configurato** (impostazione predefinita) consente di sincronizzare le foto tra il dispositivo e la Libreria foto di iCloud.
-- **Handoff**: **Non configurato** (impostazione predefinita) consente agli utenti di avviare il lavoro in un dispositivo macOS e quindi continuare il lavoro avviato in un altro dispositivo iOS/iPadOS o macOS. **Blocca** impedisce la funzionalità di consegna nel dispositivo. 
+- **Blocca la sincronizzazione Keychain con iCloud**: **Blocca** disattiva la sincronizzazione delle credenziali archiviate in Keychain con iCloud. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di sincronizzare queste credenziali.
+- **Blocca la sincronizzazione dei documenti di iCloud**: **Blocca** impedisce a iCloud di sincronizzare documenti e dati. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire la sincronizzazione di documenti e coppie chiave-valore nello spazio di archiviazione iCloud.
+- **Blocca il backup della posta elettronica di iCloud**: **Blocca** impedisce la sincronizzazione di iCloud nell'app di posta macOS. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire la sincronizzazione della posta su iCloud.
+- **Blocca il backup dei contatti iCloud**: **Blocca** impedisce a iCloud di sincronizzare i contatti del dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire la sincronizzazione dei contatti usando iCloud.
+- **Blocca il backup dei calendari di iCloud**: **Blocca** impedisce la sincronizzazione di iCloud nell'app calendario macOS. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire la sincronizzazione del calendario su iCloud.
+- **Blocca il backup dei promemoria di iCloud**: **Blocca** impedisce la sincronizzazione di iCloud nell'app per i promemoria macOS. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire la sincronizzazione dei promemoria su iCloud.
+- **Blocca il backup dei segnalibri di iCloud**: **Blocca** impedisce a iCloud di sincronizzare i segnalibri dei dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire la sincronizzazione dei segnalibri su iCloud.
+- **Blocca il backup delle note di iCloud**: **Blocca** impedisce a iCloud di sincronizzare le note dei dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire la sincronizzazione delle note su iCloud.
+- **Blocca la libreria foto iCloud**: **Blocca** disabilita la libreria foto di iCloud e impedisce a iCloud di sincronizzare le foto dei dispositivi. Eventuali foto non scaricate completamente dalla libreria foto di iCloud vengono rimosse dall'archivio locale nei dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire la sincronizzazione delle foto tra il dispositivo e la libreria foto di iCloud.
+- **Handoff**: questa funzionalità consente agli utenti di avviare il lavoro in un dispositivo macOS e quindi continuare il lavoro avviato in un altro dispositivo iOS/iPadOS o macOS. **Blocca** impedisce la funzionalità Handoff nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire questa funzionalità nei dispositivi.
 
   Questa funzionalità si applica a:  
   - macOS 10.15 e versioni successive

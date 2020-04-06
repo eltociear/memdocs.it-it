@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 03/30/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d8ff51b8b20c5f6505cb341f666ce043b086b3b
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: 677f85874ddf206b716e70a0cc6c659e10b99fef
+ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220184"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438815"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Novità di Microsoft Intune
 
-Informazioni sulle novità di Microsoft Intune ogni settimana, oltre ad [avvisi importanti](#notices), [versioni precedenti](whats-new-archive.md) e informazioni su [come vengono rilasciati gli aggiornamenti del servizio Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728). 
+Per informazioni sulle novità di Microsoft Intune ogni settimana, vedere l'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). oltre ad [avvisi importanti](#notices), [versioni precedenti](whats-new-archive.md) e informazioni su [come vengono rilasciati gli aggiornamenti del servizio Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728). 
 
 > [!Note]
 > La distribuzione di ogni [aggiornamento mensile](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728), che può impiegare fino a tre giorni, avviene nell'ordine seguente:
@@ -55,6 +55,59 @@ Informazioni sulle novità di Microsoft Intune ogni settimana, oltre ad [avvisi 
 -->  
 
 <!-- ########################## -->
+## <a name="week-of-march-30-2020"></a>Settimana del 30 marzo 2020
+
+### <a name="new-url-for-the-microsoft-endpoint-manager-admin-center---3704810---"></a>Nuovo URL per l'interfaccia di amministrazione di Microsoft Endpoint Manager<!-- 3704810 -->
+In linea con l'annuncio di Microsoft Endpoint Manager in occasione di Ignite l'anno scorso, l'URL per l'interfaccia di amministrazione di Microsoft Endpoint Manager (in precedenza Gestione dispositivi Microsoft 365) è stato modificato in [https://endpoint.microsoft.com](https://endpoint.microsoft.com). L'URL del centro di amministrazione precedente ([https://devicemanagement.microsoft.com](https://devicemanagement.microsoft.com)) continuerà a funzionare, ma è consigliabile iniziare ad accedere all'interfaccia di amministrazione di Microsoft Endpoint Manager usando il nuovo URL.
+
+Per altre informazioni, vedere [Semplificare le attività IT usando l'interfaccia di amministrazione di Microsoft Endpoint Manager](what-is-device-management.md#simplify-it-tasks-using-the-device-management-admin-center).
+
+### <a name="app-management"></a>Gestione delle app
+
+#### <a name="script-support-for-macos-devices-public-preview---4280361-wnready---"></a>Supporto degli script per i dispositivi macOS (anteprima pubblica)<!-- 4280361 wnready -->
+È possibile aggiungere e distribuire script nei dispositivi macOS. Questo supporto consente di configurare i dispositivi macOS oltre le normali possibilità usando le funzionalità MDM native nei dispositivi macOS. Per altre informazioni, vedere [Usare gli script della shell nei dispositivi macOS in Intune](../apps/macos-shell-scripts.md).
+
+<!-- ########################## -->
+## <a name="week-of-march-24-2020"></a>Settimana del 24 marzo 2020
+
+### <a name="improved-user-interface-experience-when-creating-device-restrictions-profiles-on-android-and-android-enterprise-devices---5841361---"></a>Esperienza migliorata dell'interfaccia utente per la creazione dei profili di limitazioni dei dispositivi in dispositivi Android e Android Enterprise<!-- 5841361 -->
+
+L'esperienza per la creazione di un profilo per i dispositivi Android e Android Enterprise nell'interfaccia di amministrazione di Endpoint Manager è stata aggiornata. Questa modifica ha effetto sui profili di configurazione dei dispositivi seguenti (**Dispositivi** > **Profili di configurazione** > **Crea profilo** > **Amministratore di dispositivi Android** o **Android Enterprise** per la piattaforma):
+
+- Limitazioni dei dispositivi: Amministratore dispositivo Android
+- Limitazioni dei dispositivi: Proprietario del dispositivo Android Enterprise
+- Limitazioni dei dispositivi: Profilo di lavoro di Android Enterprise
+
+Per altre informazioni sulle restrizioni dei dispositivi che è possibile configurare, vedere [Amministratore di dispositivi Android](../configuration/device-restrictions-android.md) e [Android Enterprise](../configuration/device-restrictions-android-for-work.md).
+
+### <a name="improved-user-interface-experience-when-creating-configuration-profiles-on-iosipados-and-macos-devices---5569002-5568997---"></a>Esperienza migliorata dell'interfaccia utente per la creazione dei profili di configurazione nei dispositivi iOS/iPadOS e macOS<!-- 5569002 5568997 -->
+
+L'esperienza per la creazione di un profilo per i dispositivi iOS o macOS nell'interfaccia di amministrazione di Endpoint Manager è stata aggiornata. Questa modifica ha effetto sui profili di configurazione dei dispositivi elencati di seguito (**Dispositivi** > **Profili di configurazione** > **Crea profilo** > **iOS/iPadOS** o **macOS** per la piattaforma):
+
+- Personalizzata: iOS/iPadOS, macOS
+- Funzionalità del dispositivo: iOS/iPadOS, macOS
+- Limitazioni del dispositivo: iOS/iPadOS, macOS
+- Endpoint Protection: macOS
+- Estensioni: macOS
+- File delle preferenze: macOS
+
+### <a name="hide-from-user-configuration-setting-in-device-features-on-macos-devices---6524869---"></a>Impostazione Nascondi dalla configurazione utente nelle funzionalità del dispositivo per i dispositivi macOS<!-- 6524869 -->
+
+Quando si crea un profilo di configurazione delle funzionalità del dispositivo nei dispositivi macOS, è disponibile una nuova impostazione **Nascondi dalla configurazione utente** (**Dispositivi** > **Profili di configurazione** > **Crea profilo** > **macOS** per la piattaforma > **Funzionalità del dispositivo** per il profilo >**Elementi di accesso**).
+
+Questa funzionalità imposta il segno di spunta Nascondi di un'app nell'elenco delle app degli elementi di accesso **Utenti e gruppi** nei dispositivi macOS. I profili esistenti mostrano questa impostazione all'interno dell'elenco come non configurata. Per configurare questa impostazione, gli amministratori possono aggiornare i profili esistenti.
+
+Con l'impostazione **Nascondi** la casella di controllo Nascondi viene selezionata per l'app e gli utenti non possono modificarla. Inoltre, l'app viene nascosta dagli utenti dopo l'accesso ai dispositivi.
+
+> [!div class="mx-imgBorder"]
+> ![Nascondere le app nei dispositivi macOS dopo che gli utenti hanno eseguito l'accesso al dispositivo in Microsoft Intune ed Endpoint Manager](./media/whats-new/macos-hide-checkmark-users-groups-login-items-apps-list.png)
+
+Per altre informazioni sull'impostazione che è possibile configurare, vedere [Impostazioni delle funzionalità dei dispositivi macOS](../configuration/macos-device-features-settings.md).
+
+Questa funzionalità si applica a:
+
+- macOS
+
 ## <a name="week-of-march-16-2020-2003-service-release"></a>Settimana del 16 marzo 2020 (versione del servizio 2003)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -183,7 +236,7 @@ In questi dispositivi non conformi gli utenti visualizzeranno il messaggio **Pas
 2. Registrazione nella gestione del profilo di lavoro
 3. Risoluzione dei problemi di conformità 
  
-Google sta riducendo il supporto per l'amministratore di dispositivi nelle nuove versioni di Android con l'obiettivo di passare a una gestione dei dispositivi moderna, più ricca e sicura con Android Enterprise.  Intune può offrire supporto completo per i dispositivi Android gestiti dall'amministratore di dispositivi che eseguono Android 10 e versioni successive solo fino al secondo trimestre del 2020. I dispositivi gestiti dall'amministratore di dispositivi (tranne i dispositivi Samsung) che eseguono Android 10 o versione successiva in seguito non potranno più essere gestiti interamente. In particolare, i dispositivi interessati non riceveranno nuovi requisiti per le password. Per altre informazioni, vedere questo [avviso](#decreasing-support-for-android-device-administrator).
+Google sta riducendo il supporto per l'amministratore di dispositivi nelle nuove versioni di Android con l'obiettivo di passare a una gestione dei dispositivi moderna, più ricca e sicura con Android Enterprise.  Intune può offrire supporto completo per i dispositivi Android gestiti dall'amministratore di dispositivi che eseguono Android 10 e versioni successive solo fino al secondo trimestre del 2020. I dispositivi gestiti dall'amministratore di dispositivi (tranne i dispositivi Samsung) che eseguono Android 10 o versione successiva in seguito non potranno più essere gestiti interamente. In particolare, i dispositivi interessati non riceveranno nuovi requisiti per le password.
 
 Per altre informazioni su questa impostazione, vedere [Aggiornare i dispositivi Android da amministratore di dispositivi alla gestione del profilo di lavoro](../enrollment/android-move-device-admin-work-profile.md). 
 
@@ -295,7 +348,11 @@ Prima di installare questo aggiornamento, vedere l'articolo su [Configuration Ma
 È ora possibile eseguire i comandi in blocco per le azioni remote seguenti: riavvio, ridenominazione, reimpostazione di Autopilot, cancellazione ed eliminazione. Per visualizzare le nuove azioni in blocco, passare a [Interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Dispositivi** > **Tutti i dispositivi** > **Azioni in blocco**.
 
 #### <a name="all-devices-list-improved-search-sort-and-filter--6179023--"></a>Funzionalità di ricerca, ordinamento e filtro migliorate per l'elenco Tutti i dispositivi<!--6179023-->
-Per l'elenco Tutti i dispositivi sono state migliorate le funzionalità di ricerca, ordinamento, filtro e ottimizzazione delle prestazioni. Per altre informazioni, vedere [questo suggerimento per il supporto](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-changes-in-all-devices-list-and-reporting-in-intune/ba-p/1220946).
+Per l'elenco Tutti i dispositivi sono state migliorate le funzionalità di ricerca, ordinamento, filtro e ottimizzazione delle prestazioni. Per altre informazioni, vedere [questo suggerimento per il supporto](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-changes-in-all-devices-list-and-reporting-in-intune/ba-p/1220946).  
+
+### <a name="app-management"></a>Gestione delle app  
+####  <a name="improved-sign-in-experience-in-company-portal-for-android"></a>Esperienza di accesso aggiornata nel Portale aziendale per Android    
+Il layout di diverse schermate di accesso nell'app Portale aziendale per Android è stato aggiornato per rendere l'esperienza più moderna, semplice e ordinata per gli utenti. Per informazioni sui miglioramenti, vedere [Novità dell'interfaccia utente dell'app](https://docs.microsoft.com/mem/intune/fundamentals/whats-new-app-ui).
 
 <!-- ########################## -->
 ## <a name="week-of-february-24-2020"></a>Settimana del 24 febbraio 2020
@@ -405,7 +462,7 @@ Il nome dell'opzione nell'interfaccia di amministrazione di Microsoft Endpoint M
 ### <a name="role-based-access-control"></a>Controllo di accesso in base ai ruoli
 
 #### <a name="intune-roles-user-interface-changes-coming--5801612-----"></a>Modifiche all'interfaccia utente dei ruoli di Intune presto disponibili<!--5801612   -->
-L'esperienza utente per [Interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Amministrazione del tenant** > **Ruoli** è stata migliorata per essere più semplice e intuitiva. La nuova esperienza fornisce le stesse impostazioni e gli stessi dettagli attualmente presenti, ma consentirà di visualizzare e definire i ruoli tramite un processo simile a una procedura guidata.
+L'esperienza utente per l'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Amministrazione del tenant** > **Ruoli** è stata migliorata per essere più semplice e intuitiva. La nuova esperienza fornisce le stesse impostazioni e gli stessi dettagli attualmente presenti, ma consentirà di visualizzare e definire i ruoli tramite un processo simile a una procedura guidata.
 
 <!-- ########################## -->
 ## <a name="week-of-february-17-2020"></a>Settimana del 17 febbraio 2020

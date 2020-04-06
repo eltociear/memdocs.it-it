@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/17/2020
+ms.date: 03/25/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fafca25fb0e374d281f8ef593cb5fa7f35d82979
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 69ca92125728ec8fdac27c229f8aacc5c0ef29c0
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086955"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359399"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>Impostazioni dei dispositivi iOS e iPadOS per usare le funzionalità iOS/iPadOS comuni in Intune
 
@@ -33,7 +33,7 @@ L'articolo elenca queste impostazioni e descrive la funzione di ogni impostazion
 
 ## <a name="before-you-begin"></a>Prima di iniziare
 
-[Creare un profilo di configurazione del dispositivo iOS/iPadOS](device-features-configure.md).
+[Creare un profilo delle funzionalità del dispositivo iOS/iPadOS](device-features-configure.md).
 
 > [!NOTE]
 > Queste impostazioni si applicano a diversi tipi di registrazione, con alcune impostazioni che si applicano a tutte le opzioni di registrazione. Per altre informazioni sui diversi tipi di registrazione, vedere [Registrazione di iOS/iPadOS](../enrollment/ios-enroll.md).
@@ -81,11 +81,11 @@ Questa funzionalità si applica a:
 
 ### <a name="dock"></a>Dock
 
-Usare le impostazioni di **Dock** per aggiungere fino a sei elementi o cartelle al dock su schermo. Molti dispositivi supportano un minor numero di elementi. I dispositivi iPhone, ad esempio, supportano al massimo quattro elementi. In questo caso, nel dispositivo verranno visualizzati solo i primi quattro elementi aggiunti.
+Usare le impostazioni di **Dock** per aggiungere fino a sei elementi o cartelle al dock su schermo. Molti dispositivi supportano un minor numero di elementi. I dispositivi iPhone, ad esempio, supportano al massimo quattro elementi. In questo caso, nei dispositivi verranno visualizzati solo i primi quattro elementi aggiunti.
 
 È possibile aggiungere fino a **sei** elementi (app e cartelle in combinazione) per il dock del dispositivo.
 
-- **Aggiungi**: consente di aggiungere app o cartelle al dock nel dispositivo.
+- **Aggiungi**: aggiungere app o cartelle al dock nei dispositivi.
 - **Tipo**: aggiungere un'**App** o una **Cartella**:
 
   - **App**: scegliere questa opzione per aggiungere le app al dock nella schermata. Immettere:
@@ -113,11 +113,13 @@ Usare le impostazioni di **Dock** per aggiungere fino a sei elementi o cartelle 
 
 Nell'esempio seguente la schermata del dock mostra solo le app Safari, Mail e Borsa. L'app Mail viene selezionata per visualizzarne le proprietà:
 
-![Impostazioni del dock iOS/iPadOS di esempio](./media/ios-device-features-settings/FfFiUcP.png)
+> [!div class="mx-imgBorder"]
+> ![Impostazioni del dock iOS/iPadOS di esempio](./media/ios-device-features-settings/FfFiUcP.png)
 
 Quando si assegnano i criteri a un iPhone, il dock è simile all'immagine seguente:
 
-![Esempio di layout del dock iOS/iPadOS su iPhone](./media/ios-device-features-settings/bAgCe8F.png)
+> [!div class="mx-imgBorder"]
+> ![Esempio di layout del dock iOS/iPadOS su iPhone](./media/ios-device-features-settings/bAgCe8F.png)
 
 ### <a name="pages"></a>.NET
 
@@ -134,7 +136,7 @@ Aggiungere le pagine che verranno visualizzate nella schermata iniziale e le app
 
   È possibile aggiungere fino a **60** elementi (app e cartelle in combinazione) in un dispositivo.
 
-  - **Aggiungi**: consente di aggiungere app o cartelle a una pagina nel dispositivo.
+  - **Aggiungi**: aggiungere app o cartelle a una pagina nei dispositivi.
 
     - **Tipo**: aggiungere un'**App** o una **Cartella**:
 
@@ -147,7 +149,7 @@ Aggiungere le pagine che verranno visualizzate nella schermata iniziale e le app
 
         Le app aggiunte a una pagina in una cartella vengono disposte da sinistra a destra e nello stesso ordine dell'elenco. Se si aggiungono più app di quelle che può contenere una pagina, le app vengono spostate in un'altra pagina.
 
-        - **Nome cartella**: immettere un nome per la cartella. Questo nome viene visualizzato agli utenti nel dispositivo.
+        - **Nome cartella**: immettere un nome per la cartella. Questo nome viene visualizzato agli utenti nei dispositivi.
         - **Aggiungi**: consente di aggiungere pagine alla cartella. Immettere anche le proprietà seguenti:
 
           - **Nome della pagina**: Immettere un nome per la pagina. Questo nome viene usato per riferimento nell'interfaccia di amministrazione di Microsoft Endpoint Manager. *Non* viene visualizzato nel dispositivo iOS/iPadOS.
@@ -158,11 +160,13 @@ Aggiungere le pagine che verranno visualizzate nella schermata iniziale e le app
 
 Nell'esempio seguente viene aggiunta una nuova pagina denominata **Contoso**. La pagina visualizza le app Trova amici e Impostazioni. L'app Impostazioni viene selezionata per visualizzarne le proprietà:
 
-![Esempio di impostazioni della schermata iniziale di iOS/iPadOS in Intune](./media/ios-device-features-settings/Jc2OxyX.png)
+> [!div class="mx-imgBorder"]
+> ![Esempio di impostazioni della schermata iniziale di iOS/iPadOS in Intune](./media/ios-device-features-settings/Jc2OxyX.png)
 
 Quando si assegnano i criteri a un iPhone, la pagina è simile all'immagine seguente:
 
-![Dispositivo iOS/iPadOS con schermata iniziale modificata in Intune](./media/ios-device-features-settings/Bd37PHa.png)
+> [!div class="mx-imgBorder"]
+> ![Dispositivo iOS/iPadOS con schermata iniziale modificata in Intune](./media/ios-device-features-settings/Bd37PHa.png)
 
 ## <a name="app-notifications"></a>Notifiche delle app
 
@@ -170,18 +174,19 @@ Quando si assegnano i criteri a un iPhone, la pagina è simile all'immagine segu
 
 - **Aggiungi**: consente di aggiungere notifiche per le app:
 
-    ![Aggiungere la notifica dell'app nel profilo iOS/iPadOS in Intune](./media/ios-device-features-settings/ios-macos-app-notifications.png)
+  > [!div class="mx-imgBorder"]
+  > ![Aggiungere la notifica dell'app nel profilo iOS/iPadOS in Intune](./media/ios-device-features-settings/ios-macos-app-notifications.png)
 
   - **ID bundle dell'app**: immettere l'**ID bundle dell'app** che si vuole aggiungere. Per alcuni esempi, vedere [ID di bundle per le app iOS/iPadOS predefinite](bundle-ids-built-in-ios-apps.md).
-  - **Nome app**: immettere il nome dell'app che si vuole aggiungere. Questo nome viene usato per riferimento nell'interfaccia di amministrazione di Microsoft Endpoint Manager. *Non* verrà visualizzato nel dispositivo.
-  - **Autore**: immettere l'autore dell'app da aggiungere. Questo nome viene usato per riferimento nell'interfaccia di amministrazione di Microsoft Endpoint Manager. *Non* verrà visualizzato nel dispositivo.
-  - **Notifiche**: **abilitare** o **disabilitare** l'invio di notifiche al dispositivo da parte dell'app.
+  - **Nome app**: immettere il nome dell'app che si vuole aggiungere. Questo nome viene usato per riferimento nell'interfaccia di amministrazione di Microsoft Endpoint Manager. *Non* verrà visualizzato nei dispositivi.
+  - **Autore**: immettere l'autore dell'app da aggiungere. Questo nome viene usato per riferimento nell'interfaccia di amministrazione di Microsoft Endpoint Manager. *Non* verrà visualizzato nei dispositivi.
+  - **Notifiche**: selezionare **Abilita** o **Disabilita** per l'invio di notifiche ai dispositivi da parte dell'app.
     - **Mostra nel centro notifiche**: **Abilita** consente all'app di visualizzare notifiche nel centro notifiche del dispositivo. **Disabilita** impedisce all'app di visualizzare notifiche nel centro notifiche.
-    - **Mostra nella schermata di blocco**: selezionare **Abilita** per visualizzare le notifiche dall'app nella schermata di blocco del dispositivo. **Disabilita** impedisce all'app di visualizzare notifiche nella schermata di blocco.
-    - **Tipo di avviso**: quando il dispositivo è sbloccato, scegliere come visualizzare la notifica. Le opzioni disponibili sono:
+    - **Mostra nella schermata di blocco**: **Abilita** mostra le notifiche dell'app nella schermata di blocco del dispositivo. **Disabilita** impedisce all'app di visualizzare notifiche nella schermata di blocco.
+    - **Tipo di avviso**: scegliere come visualizzare la notifica quando i dispositivi vengono sbloccati. Le opzioni disponibili sono:
       - **Nessuno**: non vengono visualizzate notifiche.
       - **Banner**: viene brevemente viene visualizzato un banner con la notifica.
-      - **Modale**: la notifica viene visualizzata e l'utente deve chiuderla manualmente prima di continuare a usare il dispositivo.
+      - **Modale**: la notifica viene visualizzata e gli utenti devono chiuderla manualmente prima di continuare a usare il dispositivo.
     - **Badge sull'icona dell'app**: selezionare **Abilita** per aggiungere un badge all'icona dell'app. Il badge indica che l'app ha inviato una notifica.
     - **Suoni**: selezionare **Abilita** per riprodurre un suono quando viene recapitata una notifica.
 
@@ -196,9 +201,9 @@ Questa funzionalità si applica a:
 
 - **Informazioni sui tag asset**: immettere informazioni sul tag asset del dispositivo. Ad esempio, immettere `Owned by Contoso Corp` o `Serial Number: {{serialnumber}}`.
 
-  Il testo immesso viene visualizzato nella finestra di accesso e nella schermata di blocco di accesso del dispositivo.
+  Il testo immesso viene visualizzato nella finestra di accesso e nella schermata di blocco nei dispositivi.
 
-- **Nota a piè di pagina della schermata di blocco**: immettere una nota che può contribuire alla restituzione del dispositivo in caso di furto o smarrimento. È possibile immettere qualsiasi testo. Ad esempio, `If found, call Contoso at ...`.
+- **Nota a piè di pagina della schermata di blocco**: immettere una nota utile per la restituzione dei dispositivi in caso di furto o smarrimento. È possibile immettere qualsiasi testo. Ad esempio, `If found, call Contoso at ...`.
 
   Per aggiungere informazioni specifiche del dispositivo in questi campi è anche possibile usare token di dispositivo. Per visualizzare, ad esempio, il numero di serie, immettere `Serial Number: {{serialnumber}}`. Nella schermata di blocco il testo è simile a `Serial Number 123456789ABC`. Quando si immettono le variabili, assicurarsi di usare le parentesi graffe `{{ }}`. I [token di configurazione delle app](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) includono un elenco delle variabili che è possibile usare. È anche possibile usare `deviceName` o qualsiasi altro valore specifico del dispositivo.
 
@@ -209,15 +214,16 @@ Questa funzionalità si applica a:
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Le impostazioni si applicano a: Registrazione del dispositivo, Registrazione automatica dei dispositivi (con supervisione)
 
-- **Attributo nome utente da AAD**: Intune cerca questo attributo per ogni utente in Azure AD e quindi popola il campo corrispondente (ad esempio UPN) prima di generare il file XML da installare nel dispositivo. Le opzioni disponibili sono:
+- **Attributo nome utente da AAD**: Intune cerca questo attributo per ogni utente in Azure AD Intune popola quindi il campo corrispondente (ad esempio UPN) prima di generare il file XML da installare nei dispositivi. Le opzioni disponibili sono:
 
   - **Nome entità utente**: l'UPN viene analizzato nel modo seguente:
 
-    ![Attributo SSO di nome utente iOS/iPadOS in Intune](./media/ios-device-features-settings/User-name-attribute.png)
+    > [!div class="mx-imgBorder"]
+    > ![Attributo SSO di nome utente iOS/iPadOS in Intune](./media/ios-device-features-settings/User-name-attribute.png)
 
     È anche possibile sovrascrivere l'area di autenticazione con il testo immesso nella casella di testo **Area di autenticazione**.
 
-    Contoso, ad esempio, ha più aree, tra cui Europa, Asia e America del Nord. Contoso vuole che gli utenti in Asia usino SSO e l'app richiede l'UPN nel formato `username@asia.contoso.com`. Quando si seleziona **Nome entità utente**, l'area di autenticazione per ogni utente viene recuperata da Azure AD e corrisponde a `contoso.com`. Per gli utenti in Asia, selezionare quindi **Nome entità utente** e immettere `asia.contoso.com`. L'UPN dell'utente finale diventa `username@asia.contoso.com` invece di `username@contoso.com`.
+    Contoso, ad esempio, ha più aree, tra cui Europa, Asia e America del Nord. Contoso vuole che gli utenti in Asia usino SSO e l'app richiede l'UPN nel formato `username@asia.contoso.com`. Quando si seleziona **Nome entità utente**, l'area di autenticazione per ogni utente viene recuperata da Azure AD e corrisponde a `contoso.com`. Per gli utenti in Asia, selezionare quindi **Nome entità utente** e immettere `asia.contoso.com`. L'UPN dell'utente diventa `username@asia.contoso.com` invece di `username@contoso.com`.
 
   - **ID dispositivo Intune**: Intune seleziona automaticamente l'ID dispositivo di Intune.
 
@@ -231,7 +237,7 @@ Questa funzionalità si applica a:
 - **Area di autenticazione**: immettere la parte del dominio dell'URL. Immettere ad esempio `contoso.com`.
 - **Prefissi di URL che useranno l'accesso Single Sign-On**: **aggiungere** tutti gli URL all'interno dell'organizzazione che richiedono l'autenticazione Single Sign-On per gli utenti.
 
-  Quando un utente si connette a uno di questi siti, ad esempio, il dispositivo iOS/iPadOS usa le credenziali Single Sign-On. L'utente non deve immettere credenziali aggiuntive. Se è abilitata l'autenticazione a più fattori, gli utenti devono immettere la seconda autenticazione.
+  Quando un utente si connette a uno di questi siti, ad esempio, il dispositivo iOS/iPadOS usa le credenziali Single Sign-On. Gli utenti non devono immettere credenziali aggiuntive. Se è abilitata l'autenticazione a più fattori, gli utenti devono immettere la seconda autenticazione.
 
   > [!NOTE]
   > Questi URL devono essere nomi di dominio completi formattati in modo appropriato. Apple richiede che siano nel formato `http://<yourURL.domain>`.
@@ -240,13 +246,13 @@ Questa funzionalità si applica a:
 
   I criteri `http://.com` e `https://.com` corrispondono rispettivamente a tutti gli URL HTTP e HTTPS.
 
-- **App che useranno l'accesso Single Sign-On**: **aggiungere** le app dei dispositivi degli utenti finali che potranno usare l'accesso Single Sign-On.
+- **App che useranno l'accesso Single Sign-On**: **Aggiungi** consente di aggiungere app nei dispositivi degli utenti che potranno usare l'accesso Single Sign-On.
 
   La matrice `AppIdentifierMatches` deve includere stringhe corrispondenti agli ID dei bundle dell'app. Queste stringhe possono essere corrispondenze esatte, ad esempio `com.contoso.myapp`. In alternativa, immettere una corrispondenza di prefisso per l'ID del bundle usando il carattere jolly \*. Il carattere jolly deve essere visualizzato dopo un punto (.) e può comparire una sola volta alla fine della stringa, ad esempio `com.contoso.*`. Quando si include un carattere jolly, viene concesso all'account l'accesso a qualsiasi app il cui ID di bundle inizia con il prefisso.
 
   Usare **Nome app** per immettere un nome descrittivo per facilitare l'identificazione dell'ID bundle.
 
-- **Certificato di rinnovo delle credenziali**: Se si usano i certificati per l'autenticazione (non le password), selezionare il certificato SCEP o PFX esistente come certificato di autenticazione. In genere, questo certificato è lo stesso distribuito all'utente per altri profili, ad esempio VPN, Wi-Fi o posta elettronica.
+- **Certificato di rinnovo delle credenziali**: Se si usano i certificati per l'autenticazione (non le password), selezionare il certificato SCEP o PFX esistente come certificato di autenticazione. In genere, questo certificato è lo stesso distribuito agli utenti per altri profili, ad esempio VPN, Wi-Fi o posta elettronica.
 
 ## <a name="web-content-filter"></a>Filtro contenuto Web
 
@@ -263,13 +269,13 @@ Questa funzionalità si applica a:
 
     - **URL bloccati**: **aggiungere** gli URL di cui si vuole impedire l'apertura, indipendentemente dalle impostazioni del filtro Web di Apple.
 
-  - **Solo siti Web specifici** (solo per il Web browser Safari): questi URL vengono aggiunti ai segnalibri del browser Safari. Viene consentito all'utente di visitare **solo** questi siti e non è possibile aprire altri siti. Usare questa opzione solo se si conosce l'elenco esatto degli URL a cui gli utenti possono accedere.
+  - **Solo siti Web specifici** (solo per il Web browser Safari): questi URL vengono aggiunti ai segnalibri del browser Safari. Viene consentito agli utenti di visitare **solo** questi siti e non è possibile aprire altri siti. Usare questa opzione solo se si conosce l'elenco esatto degli URL a cui gli utenti possono accedere.
 
     - **URL**: immettere l'URL del sito Web che si vuole consentire. Immettere ad esempio `https://www.contoso.com`.
     - **Percorso del segnalibro**: questa impostazione è stata modificata da Apple. Tutti i segnalibri vengono inseriti nella cartella **Siti approvati**. I segnalibri non vengono inseriti nel percorso del segnalibro specificato.
     - **Titolo**: immettere un titolo descrittivo per il segnalibro.
 
-    Se non si immettono URL, gli utenti finali possono accedere solo ai siti Web `microsoft.com`, `microsoft.net` e `apple.com`. Questi URL sono automaticamente consentiti da Intune.
+    Se non si immettono URL, gli utenti possono accedere solo ai siti Web `microsoft.com`, `microsoft.net` e `apple.com`. Questi URL sono automaticamente consentiti da Intune.
 
 ## <a name="single-sign-on-app-extension"></a>Estensione dell'app Single Sign-On
 
@@ -282,10 +288,10 @@ Questa funzionalità si applica a:
 
 - **Tipo di estensione dell'app per accesso Single Sign-On**: scegliere il tipo di estensione dell'app per l'accesso Single Sign-On. Le opzioni disponibili sono:
 
-  - **Non configurata**: non vengono usate le estensioni dell'app. Per disabilitare un'estensione dell'app, è possibile impostare il tipo di estensione dell'app per l'accesso Single Sign-On su **Non configurato**.
+  - **Non configurata**: Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non usare le estensioni dell'app. Per disabilitare un'estensione dell'app, è possibile impostare il tipo di estensione dell'app per l'accesso Single Sign-On su **Non configurato**.
   - **Reindirizzamento**: usare un'estensione dell'app di reindirizzamento generica e personalizzabile per usare Single Sign-On con i flussi di autenticazione moderni. Assicurarsi di conoscere l'ID estensione dell'app dell'organizzazione.
 
-    Nei dispositivi iOS/iPadOS 13.0+ è possibile configurare l'**estensione dell'app per accesso Single Sign-On di Microsoft Azure AD** usando questo tipo di estensione dell'app di reindirizzamento SSO. L'estensione Microsoft Azure AD consente il Single Sign-On tra app Microsoft e app dell'organizzazione che usano Azure AD per l'autenticazione. L'estensione Azure AD funge da broker di autenticazione avanzato e offre miglioramenti della sicurezza e dell'esperienza dell'utente finale. Tutte le app che in precedenza usavano l'autenticazione tramite broker con l'app Microsoft Authenticator continuano a ottenere l'accesso Single Sign-On con l'estensione SSO. L'estensione SSO Azure AD non supporta ancora l'accesso Single Sign-On tramite browser. Per altre informazioni su SSO e sul broker di autenticazione iOS/iPadOS, vedere [Configurare SSO in macOS e iOS/iPadOS](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-macos-ios).  
+    Nei dispositivi iOS/iPadOS 13.0+ è possibile configurare l'**estensione dell'app per accesso Single Sign-On di Microsoft Azure AD** usando questo tipo di estensione dell'app di reindirizzamento SSO. L'estensione Microsoft Azure AD consente il Single Sign-On tra app Microsoft e app dell'organizzazione che usano Azure AD per l'autenticazione. L'estensione Azure AD funge da broker di autenticazione avanzato e offre miglioramenti della sicurezza e dell'esperienza utente. Tutte le app che in precedenza usavano l'autenticazione tramite broker con l'app Microsoft Authenticator continuano a ottenere l'accesso Single Sign-On con l'estensione SSO. L'estensione SSO Azure AD non supporta ancora l'accesso Single Sign-On tramite browser. Per altre informazioni su SSO e sul broker di autenticazione iOS/iPadOS, vedere [Configurare SSO in macOS e iOS/iPadOS](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-macos-ios).  
 
     **Per configurare l'estensione Microsoft Azure AD per iOS:**
 
@@ -306,7 +312,7 @@ Questa funzionalità si applica a:
         - `https://login-us.microsoftonline.com`
 
     > [!IMPORTANT]
-    > Per ottenere l'accesso SSO con l'estensione Microsoft Azure AD per iOS/iPadOS, installare prima l'app Microsoft Authenticator iOS/iPados nel dispositivo. Authenticator rende disponibile l'estensione Azure AD al dispositivo e le impostazioni dell'estensione dell'app SSO MDM attivano l'estensione Azure AD. Quando Authenticator e il profilo dell'estensione dell'app SSO sono installati nel dispositivo, gli utenti devono immettere le credenziali per accedere e creare una sessione. La sessione viene quindi usata su diverse applicazioni senza richiedere agli utenti di eseguire di nuovo l'autenticazione.
+    > Per ottenere l'accesso SSO con l'estensione Microsoft Azure AD per iOS/iPadOS, installare prima l'app Microsoft Authenticator iOS/iPadOS nei dispositivi. Authenticator rende disponibile l'estensione Azure AD ai dispositivi e le impostazioni dell'estensione dell'app SSO MDM attivano l'estensione Azure AD. Quando Authenticator e il profilo dell'estensione dell'app SSO sono installati nei dispositivi, gli utenti devono immettere le credenziali per accedere e creare una sessione. La sessione viene quindi usata su diverse applicazioni senza richiedere agli utenti di eseguire di nuovo l'autenticazione.
 
   - **Credenziali**: usare un'estensione dell'app per le credenziali personalizzabile e generica per usare Single Sign-On con i flussi di autenticazione challenge-and-response (richiesta e risposta). Assicurarsi di conoscere l'ID estensione dell'app dell'organizzazione.
   - **Kerberos**: usare l'estensione Kerberos predefinita di Apple, inclusa in iOS 13.0+ e iPadOS 13.0+. Questa opzione è una versione specifica di Kerberos dell'estensione dell'app **Credenziali**.
@@ -344,9 +350,9 @@ Questa funzionalità si applica a:
 
   - **Aggiungi**: selezionare questa impostazione per aggiungere le chiavi di configurazione.
 
-- **Utilizzo di Keychain** (solo Kerberos): scegliere **Blocca** per impedire il salvataggio e l'archiviazione delle password in Keychain. Se l'impostazione è bloccata, non viene richiesto agli utenti di salvare la password e gli utenti devono immettere nuovamente la password quando il ticket Kerberos scade. **Non configurato** (impostazione predefinita) consente il salvataggio e l'archiviazione delle password in Keychain. Agli utenti non viene richiesto di immettere nuovamente la password quando il ticket scade.
-- **Face ID, Touch ID o passcode** (solo Kerberos): **Richiedi** impone agli utenti di immettere Face ID, Touch ID o passcode del dispositivo quando sono necessarie le credenziali per aggiornare il ticket Kerberos. **Non configurato** (impostazione predefinita) non richiede agli utenti di usare la biometria o il passcode del dispositivo per aggiornare il ticket Kerberos. Se l'impostazione **Utilizzo di Keychain** è bloccata, non è applicabile.
-- **Area di autenticazione predefinita** (solo Kerberos): scegliere **Abilita** per impostare il valore **Area di autenticazione** immesso come area di autenticazione predefinita. **Non configurato** (impostazione predefinita) non imposta un'area di autenticazione predefinita.
+- **Utilizzo di Keychain** (solo Kerberos): **Blocca** impedisce il salvataggio e l'archiviazione delle password in Keychain. Se l'impostazione è bloccata, non viene richiesto agli utenti di salvare la password e gli utenti devono immettere nuovamente la password quando il ticket Kerberos scade. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire il salvataggio e l'archiviazione delle password in Keychain. Agli utenti non viene richiesto di immettere nuovamente la password quando il ticket scade.
+- **Face ID, Touch ID o passcode** (solo Kerberos): **Richiedi** impone agli utenti di immettere Face ID, Touch ID o passcode del dispositivo quando sono necessarie le credenziali per aggiornare il ticket Kerberos. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non richiedere agli utenti di usare la biometria o il passcode del dispositivo per aggiornare il ticket Kerberos. Se l'impostazione **Utilizzo di Keychain** è bloccata, non è applicabile.
+- **Area di autenticazione predefinita** (solo Kerberos): **Abilita** imposta il valore **Area di autenticazione** immesso come area di autenticazione predefinita. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non impostare un'area di autenticazione predefinita.
 
   > [!TIP]
   > - **Abilitare** questa impostazione se si stanno configurando più estensioni dell'app per l'accesso Single Sign-On Kerberos nell'organizzazione.
@@ -371,8 +377,8 @@ Può verificarsi un comportamento imprevisto quando un profilo senza immagine vi
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Le impostazioni si applicano a: Registrazione automatica dei dispositivi (supervisione)
 
-- **Posizione di visualizzazione dello sfondo**: Scegliere una posizione nel dispositivo per visualizzare l'immagine. Le opzioni disponibili sono:
-  - **Non configurata**: un'immagine personalizzata non viene aggiunta al dispositivo. Il dispositivo usa l'impostazione predefinita del sistema operativo.
+- **Posizione di visualizzazione dello sfondo**: scegliere una posizione nei dispositivi per visualizzare l'immagine. Le opzioni disponibili sono:
+  - **Non configurata**: Intune non modifica o aggiorna questa impostazione. Un'immagine personalizzata non viene aggiunta ai dispositivi. Per impostazione predefinita, il sistema operativo potrebbe impostare la propria immagine.
   - **Schermata di blocco**: aggiunge l'immagine alla schermata di blocco.
   - **Home screen** (Schermata iniziale): aggiunge l'immagine alla schermata iniziale.
   - **Schermata di blocco e schermata iniziale**: usa la stessa immagine nella schermata di blocco e nella schermata iniziale.

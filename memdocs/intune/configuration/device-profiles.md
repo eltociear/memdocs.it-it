@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 420340e18eb4e638ed7bde049e6b548037c54f87
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 386e59fe3a7156a8bb74ed39a1b2fcad6ad91dad
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80087090"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359312"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Applicare funzionalità e impostazioni nei dispositivi usando i profili dei dispositivi in Microsoft Intune
 
@@ -53,7 +53,7 @@ Questa funzionalità supporta:
 
 Vengono configurati [certificati](../protect/certificates-configure.md) attendibili SCEP e PKCS che vengono assegnati ai dispositivi. Questi certificati autenticano i profili Wi-Fi, VPN e di posta elettronica.
 
-Questa funzionalità supporta: 
+Questa funzionalità supporta:
 
 - Amministratore dispositivo Android
 - Android Enterprise
@@ -84,6 +84,15 @@ Usare queste impostazioni per controllare la modalità di download degli aggiorn
 Questa funzionalità supporta:
 
 - Windows 10 e versioni successive
+
+## <a name="derived-credential"></a>Credenziale derivata
+
+Le [credenziali derivate](../protect/derived-credentials.md) sono certificati su smart card che consentono di eseguire l'autenticazione, la firma e la crittografia. In Intune è possibile creare profili con queste credenziali da usare per app, profili di posta elettronica, connessione a VPN, S/MIME e Wi-Fi.
+
+Questa funzionalità supporta:
+
+- Android Enterprise
+- iOS/iPadOS
 
 ## <a name="device-features"></a>Funzionalità del dispositivo
 
@@ -133,7 +142,7 @@ Questa funzionalità supporta:
 
 ## <a name="education"></a>Education
 
-Le [impostazioni di Education - Windows 10](education-settings-configure.md) consentono di configurare le opzioni per l'[app Test ed esami di Windows](https://education.microsoft.com/gettrained/win10takeatest). Quando si configurano queste opzioni, nessun'altra app può essere eseguita sul dispositivo finché il test non è completato.
+Le [impostazioni di Education - Windows 10](education-settings-configure.md) consentono di configurare le opzioni per l'[app Test ed esami di Windows](https://docs.microsoft.com/education/windows/take-tests-in-windows-10). Quando si configurano queste opzioni, nessun'altra app può essere eseguita sul dispositivo finché il test non è completato.
 
 Le [impostazioni di Education - iOS/iPadOS](../fundamentals/education-settings-configure-ios-shared.md) usano l'app Classroom iOS/iPadOS, progettata per gestire l'insegnamento e controllare i dispositivi degli studenti in aula. È possibile configurare i dispositivi iPad in modo che molti studenti possano condividere un unico dispositivo.
 
@@ -141,7 +150,7 @@ Le [impostazioni di Education - iOS/iPadOS](../fundamentals/education-settings-c
 
 Il profilo [Impostazioni di posta elettronica](email-settings-configure.md) consente di creare, assegnare e gestire le impostazioni di posta elettronica di Exchange ActiveSync nei dispositivi. I profili di posta elettronica garantiscono coerenza e consentono di ridurre le chiamate al supporto. Grazie ad essi gli utenti finali possono accedere alla posta elettronica aziendale dai dispositivi personali senza alcuna configurazione manuale. 
 
-Questa funzionalità supporta: 
+Questa funzionalità supporta:
 
 - Amministratore dispositivo Android
 - Android Enterprise
@@ -151,12 +160,13 @@ Questa funzionalità supporta:
 
 ## <a name="endpoint-protection"></a>Protezione degli endpoint
 
-Con le [impostazioni di Endpoint Protection per Windows 10](../protect/endpoint-protection-windows-10.md) è possibile configurare le impostazioni di BitLocker e Microsoft Defender per i dispositivi Windows 10.
+[Endpoint Protection](../protect/endpoint-protection-configure.md) configura le impostazioni di BitLocker e Microsoft Defender per i dispositivi Windows 10. Configurare quindi il firewall, il gateway e altre risorse nei dispositivi macOS.
 
 Per l'onboarding di Microsoft Defender Advanced Threat Protection (MDATP) in Microsoft Intune, vedere [Configure endpoints using Mobile Device Management (MDM) tools](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm) (Configurare endpoint con gli strumenti di gestione dei dispositivi mobili).
 
 Questa funzionalità supporta:
 
+- macOS
 - Windows 10 e versioni successive
 
 ## <a name="esim-cellular---public-preview"></a>Cellulare eSIM - Anteprima pubblica
@@ -192,7 +202,15 @@ Questa funzionalità supporta:
 
 - Windows 10 e versioni successive
 
-Impostazioni per la modalità tutto schermo disponibili anche come restrizioni del dispositivo per [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings) e [iOS/iPadOS](device-restrictions-ios.md#kiosk).
+Impostazioni per la modalità tutto schermo disponibili anche come restrizioni del dispositivo per [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices) e [iOS/iPadOS](device-restrictions-ios.md#kiosk).
+
+## <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
+
+[Microsoft Defender Advanced Threat Protection (ATP)](../protect/advanced-threat-protection.md) si integra con Intune per monitorare e proteggere i dispositivi. È possibile impostare i livelli di rischio e determinare cosa accade se i dispositivi superano tale livello. In combinazione con l'accesso condizionale, è possibile evitare attività dannose nell'organizzazione.
+
+Questa funzionalità supporta:
+
+- Windows 10 e versioni successive
 
 ## <a name="oemconfig"></a>OEMConfig
 
@@ -206,11 +224,18 @@ Questa funzionalità supporta:
 
 Gli [script PowerShell nei dispositivi Windows 10](../apps/intune-management-extension.md) usano Intune Management Extension per caricare gli script PowerShell in Intune, quindi eseguono tali script nei dispositivi. L'argomento descrive anche cosa è necessario per usare le estensioni, come aggiungerle a Intune e altre informazioni importanti.
 
-
 Questa funzionalità supporta:
 
 - Windows 10 e versioni successive
 - Windows Holographic for Business
+
+## <a name="preference-file"></a>File delle preferenze
+
+I [file delle preferenze](preference-file-settings-macos.md) nei dispositivi macOS includono informazioni sulle app. Ad esempio, è possibile usare i file delle preferenze per controllare le impostazioni del Web browser, personalizzare le app e altro ancora.
+
+Questa funzionalità supporta:
+
+- macOS
 
 ## <a name="shared-multi-user-device"></a>Dispositivo multiutente condiviso
 
@@ -260,14 +285,6 @@ Questa funzionalità supporta:
 - iOS/iPadOS
 - macOS
 - Windows 8.1 (solo importazione)
-- Windows 10 e versioni successive
-
-## <a name="windows-information-protection-profile"></a>Profilo Windows Information Protection
-
-[Windows Information Protection](../protect/windows-information-protection-configure.md) offre la protezione dalla perdita di dati senza interferire con l'esperienza del dipendente. Consente anche di proteggere le app e i dati aziendali da perdite di dati accidentali su dispositivi di proprietà dell'azienda e dispositivi personali che i dipendenti usano al lavoro. L'uso di Windows Information Protection non richiede modifiche all'ambiente o ad altre app.
-
-Questa funzionalità supporta:
-
 - Windows 10 e versioni successive
 
 ## <a name="zebra-mobility-extensions-mx"></a>Estensioni di mobilità nei dispositivi Zebra

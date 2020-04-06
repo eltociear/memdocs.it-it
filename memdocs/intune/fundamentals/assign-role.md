@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4ea84b0b378030a02c73da20b4a59d0b65ca288
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a679df157a2623012d19fab2370792cac73f6f2b
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363148"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326812"
 ---
 # <a name="assign-a-role-to-an-intune-user"></a>Assegnare un ruolo a un utente di Intune
 
@@ -32,7 +32,7 @@ Per creare, modificare o assegnare ruoli, l'account deve disporre di una delle s
 - **Amministratore globale**
 - **Amministratore del servizio Intune**
 
-1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), scegliere **Amministrazione del tenant** > **Ruoli** > **Tutti i ruoli**.
+1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Amministrazione del tenant** > **Ruoli** > **Tutti i ruoli**.
 
 2. Nel pannello **Ruoli di Intune - Tutti i ruoli** scegliere il ruolo predefinito da assegnare > **Assegnazioni** > **Assegna**.
 

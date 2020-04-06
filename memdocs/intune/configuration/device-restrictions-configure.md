@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,22 +15,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f1e421a344122dbd4cf59a49ea56ef0ba2bb125
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 470ca47aa92b30acacc8a251c6d7d1741513bdf1
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80087076"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359222"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>Configurare le impostazioni relative alle restrizioni dei dispositivi in Microsoft Intune
 
 Intune include criteri di limitazioni dei dispositivi che consentono agli amministratori di controllare i dispositivi Android, iOS/iPadOS, macOS e Windows. Queste limitazioni consentono di controllare una vasta gamma di impostazioni e funzionalità per proteggere le risorse dell'organizzazione. Gli amministratori sono ad esempio in grado di:
 
-- Consentire o bloccare l'uso della fotocamera del dispositivo
-- Controllare l'accesso a Google Play, App Store, visualizzazione di documenti e giochi
-- Bloccare app predefinite o creare un elenco di app consentite o non consentite
-- Consentire o impedire il backup di file nel cloud e negli account di archiviazione
-- Impostare una lunghezza minima per le password e bloccare le password semplici
+- Consente o blocca la fotocamera del dispositivo.
+- Controllare l'accesso a Google Play, App Store, visualizzazione di documenti e giochi.
+- Bloccare app predefinite o creare un elenco di app consentite o non consentite.
+- Consentire o impedire il backup di file nel cloud e negli account di archiviazione.
+- Impostare una lunghezza minima per le password e bloccare le password semplici.
 
 Queste funzionalità sono disponibili in Intune e possono essere configurate dall'amministratore. Intune usa "profili di configurazione" per creare e personalizzare queste impostazioni per le esigenze dell'organizzazione. Dopo aver aggiunto queste funzionalità a un profilo, è possibile eseguire il push del profilo o distribuirlo nei dispositivi dell'organizzazione.
 
@@ -42,37 +42,50 @@ Questo articolo illustra come creare un profilo di limitazioni del dispositivo. 
 2. Selezionare **Dispositivi** > **Profili di configurazione** > **Crea profilo**.
 3. Immettere le proprietà seguenti:
 
-    - **Nome**: immettere un nome descrittivo per il criterio. Assegnare ai criteri nomi che possano essere identificati facilmente in un secondo momento. Ad esempio, un nome di criterio valido è **iOS/iPadOS: Blocca fotocamera nei dispositivi**.
-    - **Descrizione**: immettere una descrizione del criterio. Questa impostazione è facoltativa ma consigliata.
     - **Piattaforma**: scegliere la piattaforma dei dispositivi. Le opzioni disponibili sono:  
 
         - **Amministratore di dispositivi Android**
         - **Android Enterprise**
         - **iOS/iPadOS**
         - **macOS**
-        - **Windows Phone 8.1**
-        - **Windows 8.1 e versioni successive**
         - **Windows 10 e versioni successive**
+        - **Windows 8.1 e versioni successive**
+        - **Windows Phone 8.1**
 
-    - **Tipo di profilo**: Selezionare **Limitazioni del dispositivo**.
+    - **Profilo**: Selezionare **Limitazioni del dispositivo**.
 
         Per creare un profilo di restrizione per dispositivi Windows 10 Team come Surface Hub, scegliere **Limitazioni del dispositivo (Windows 10 Team)** .
 
-4. Le impostazioni configurabili variano in base alla piattaforma scelta. Scegliere la piattaforma per le impostazioni dettagliate:
+4. Selezionare **Crea**.
+5. In **Informazioni di base** immettere le proprietà seguenti:
 
-    - [Impostazioni dell'amministratore di dispositivi Android](device-restrictions-android.md)
-    - [Impostazioni Android Enterprise](device-restrictions-android-for-work.md)
-    - [Impostazioni di iOS/iPadOS](device-restrictions-ios.md)
-    - [Impostazioni macOS](device-restrictions-macos.md)
-    - [Impostazioni Windows Phone 8.1](device-restrictions-windows-phone-8-1.md)
+    - **Nome**: immettere un nome descrittivo per il criterio. Assegnare ai criteri nomi che possano essere identificati facilmente in un secondo momento. Ad esempio, un nome di criterio valido è **iOS/iPadOS: Blocca fotocamera nei dispositivi**.
+    - **Descrizione**: immettere una descrizione del criterio. Questa impostazione è facoltativa ma consigliata.
+
+6. Selezionare **Avanti**.
+
+7. In **Impostazioni di configurazione** le impostazioni configurabili variano in base alla piattaforma scelta. Scegliere la piattaforma per le impostazioni dettagliate:
+
+    - [Amministratore di dispositivi Android](device-restrictions-android.md)
+    - [Android Enterprise](device-restrictions-android-for-work.md)
+    - [iOS/iPadOS](device-restrictions-ios.md)
+    - [macOS](device-restrictions-macos.md)
+    - [Windows Phone 8.1](device-restrictions-windows-phone-8-1.md)
     - [Windows 8.1](device-restrictions-windows-8-1.md)
-    - [Impostazioni Windows 10](device-restrictions-windows-10.md)
-    - [Impostazioni Windows 10 Team](device-restrictions-windows-10-teams.md)
-    - [Impostazioni di Windows Holographic for Business](device-restrictions-windows-holographic.md)
+    - [Windows 10 e versioni successive](device-restrictions-windows-10.md)
+    - [Windows 10 Team](device-restrictions-windows-10-teams.md)
+    - [Windows Holographic for Business](device-restrictions-windows-holographic.md)
 
-5. Al termine, selezionare **OK** > **Crea** per salvare le modifiche.
+8. Selezionare **Avanti**.
+9. In **Tag ambito** (facoltativo) assegnare un tag per filtrare il profilo a gruppi IT specifici, ad esempio `US-NC IT Team` o `JohnGlenn_ITDepartment`. Per altre informazioni sui tag di ambito, vedere [Usare il controllo degli accessi in base al ruolo (RBAC) e i tag di ambito per l'infrastruttura IT distribuita](../fundamentals/scope-tags.md).
 
-Il profilo viene creato e visualizzato nell'elenco dei profili.
+    Selezionare **Avanti**.
+
+10. In **Assegnazioni** selezionare gli utenti o i gruppi che riceveranno il profilo. Per altre informazioni sull'assegnazione di profili, vedere [Assegnare profili utente e dispositivo](device-profile-assign.md).
+
+    Selezionare **Avanti**.
+
+11. In **Rivedi e crea** rivedere le impostazioni. Quando si seleziona **Crea**, le modifiche vengono salvate e il profilo viene assegnato. Il criterio viene visualizzato anche nell'elenco dei profili.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

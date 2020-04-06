@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f2883add5a3dbba274201bfeebb7960a312e33da
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 73b471d7eefa8e696b17a949756ce1395530c5f7
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354230"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323203"
 ---
 # <a name="set-up-app-based-conditional-access-policies-with-intune"></a>Configurare criteri di accesso condizionale basato su app con Intune
 
@@ -38,7 +38,7 @@ Per poter usare i criteri di accesso condizionale basato su app è necessario ch
 
 L'accesso condizionale è una tecnologia di Azure Active Directory (Azure AD). Il nodo di accesso condizionale accessibile da *Intune* è lo stesso nodo a cui si accede da *Azure AD*. Poiché il nodo è lo stesso, non è necessario spostarsi fra Intune e Azure AD per configurare i criteri.
 
-Per poter creare criteri di accesso condizionale dall'interfaccia di amministrazione di Microsoft Endpoint Manager è necessario avere una licenza Azure AD Premium.
+Per poter creare criteri di accesso condizionale dall'interfaccia di amministrazione di Microsoft Endpoint Manager, è necessario avere una licenza Azure AD Premium.
 
 ### <a name="to-create-an-app-based-conditional-access-policy"></a>Per creare criteri di accesso condizionale basato su app
 

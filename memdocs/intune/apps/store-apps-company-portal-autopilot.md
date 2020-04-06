@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec131df32e06c1c43b8904dde732b4e6a17a91aa
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 3daf758ed93fb03ac63b062f604a457d033637dc
+ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79334197"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438766"
 ---
 # <a name="add-and-assign-the-windows-10-company-portal-app-for-autopilot-provisioned-devices"></a>Aggiungere e assegnare l'app Portale aziendale di Windows 10 per i dispositivi con provisioning tramite Autopilot
 
@@ -52,9 +52,9 @@ Per i dispositivi di Windows 10 con provisioning tramite Autopilot, è consiglia
 ## <a name="assign-the-company-portal-app"></a>Assegnare l'app Portale aziendale
 
 1. Accedere all' [interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) con l'account amministratore. 
-2. Selezionare la scheda **App** nel riquadro destro.
-3. In **Piattaforma** selezionare **Windows**.
-4. Selezionare **Portale aziendale (offline)** .
+2. Selezionare la scheda**App** nel riquadro destro.
+3. In**Piattaforma** selezionare **Windows**.
+4. Selezionare**Portale aziendale (offline)** .
 5. È necessario attendere che la pianificazione della sincronizzazione venga completata o eseguire una sincronizzazione manuale dall'interfaccia di amministrazione di Microsoft Endpoint Manager.
 6. Assegnare l'app Portale aziendale come app obbligatoria al gruppo di dispositivi Autopilot selezionato.
 

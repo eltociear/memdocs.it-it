@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f8a15199f599cf0fd4f90ea965bcc3e668f3b27
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 44cae6e1e7fdd310a6053cbcb6f19371263d0161
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354412"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326632"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Gestire e usare diverse funzionalità di gestione dei dispositivi nei dispositivi Windows Holographic e HoloLens con Intune
 
@@ -58,7 +58,7 @@ Se si usa l'app Portale aziendale è possibile anche eseguire una delle operazio
 
 **[Creare criteri di conformità dei dispositivi](../protect/compliance-policy-create-windows.md)**
 
-I criteri di conformità sono regole e impostazioni che i dispositivi devono soddisfare per adeguarsi ai criteri di conformità. Usare questi criteri con l'accesso condizionale per bloccare l'accesso alle risorse aziendali per i dispositivi che risultino non conformi. In Intune creare criteri di conformità per consentire o bloccare l'accesso per i dispositivi che eseguono Windows Holographic for Business. È possibile ad esempio creare un criterio che richiede l'abilitazione di Bitlocker.
+I criteri di conformità sono regole e impostazioni che i dispositivi devono soddisfare per adeguarsi ai criteri di conformità. Usare questi criteri con l'accesso condizionale per bloccare l'accesso alle risorse aziendali per i dispositivi che risultino non conformi. In Intune creare criteri di conformità per consentire o bloccare l'accesso per i dispositivi che eseguono Windows Holographic for Business. È possibile ad esempio creare un criterio che richiede l'abilitazione di BitLocker.
 
 Vedere anche **[Introduzione ai criteri di conformità](../protect/device-compliance-get-started.md)** .
 
@@ -107,7 +107,7 @@ Con Intune è possibile creare categorie di dispositivi per aggiungere automatic
 
 ## <a name="device-configuration-profiles"></a>Profili di configurazione dispositivo
 
-**[Introduzione ai profili di configurazione](../configuration/device-profiles.md) e [Creare un profilo](../configuration/device-profile-create.md)**
+**[Introduzione ai profili di configurazione](../configuration/device-profiles.md) e [Panoramica del profilo](../configuration/device-profile-create.md)**
 
 Intune include impostazioni e funzionalità che è possibile abilitare o disabilitare in dispositivi diversi all'interno dell'organizzazione. Queste impostazioni e funzionalità vengono gestite usando i profili. Ad esempio, è possibile creare un profilo che abilita Cortana o usa Microsoft Defender SmartScreen nei dispositivi che eseguono Windows Holographic for Business.
 

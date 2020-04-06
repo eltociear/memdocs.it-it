@@ -5,623 +5,861 @@ description: Impostazioni della baseline di sicurezza supportate da Intune per l
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/05/2019
+ms.date: 03/31/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: shpate
+ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ebea853ac536b182a9cfe35e8b291aea3a776f0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 897b232e841c59fd85d132d1fa9b720c24ac1c9a
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79351201"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488036"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Impostazioni della baseline di Microsoft Defender Advanced Threat Protection per Intune
 
-Vedere le impostazioni della baseline di Microsoft Defender Advanced Threat Protection (in precedenza Windows Defender Advanced Threat Protection) supportate da Microsoft Intune. Le impostazioni predefinite della baseline di Advanced Threat Protection (ATP) rappresentano la configurazione consigliata per ATP e potrebbero non corrispondere ai valori predefiniti della baseline per altre baseline di sicurezza.  
+Vedere le impostazioni della baseline di Microsoft Defender Advanced Threat Protection supportate da Microsoft Intune. Le impostazioni predefinite della baseline di Advanced Threat Protection (ATP) rappresentano la configurazione consigliata per ATP e potrebbero non corrispondere ai valori predefiniti della baseline per altre baseline di sicurezza.
 
-La baseline di Microsoft Defender Advanced Threat Protection è disponibile quando l'ambiente soddisfa i prerequisiti per l'uso di [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites). 
+I dettagli in questo articolo si applicano alla versione 3 della baseline di Microsoft Defender ATP, rilasciata il 1° marzo 2020.
+
+La baseline di Microsoft Defender Advanced Threat Protection è disponibile quando l'ambiente soddisfa i prerequisiti per l'uso di [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites).
 
 Questa baseline è ottimizzata per i dispositivi fisici e attualmente se ne sconsiglia l'uso in macchine virtuali (VM) o endpoint VDI. Alcune impostazioni di base possono influire sulle sessioni interattive remote negli ambienti virtualizzati. Per altre informazioni, vedere [Incremento della conformità alla baseline di sicurezza di Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) nella documentazione di Windows.
 
-## <a name="application-guard"></a>Application Guard  
+## <a name="application-guard"></a>Application Guard
+
 Per altre informazioni, vedere [WindowsDefenderApplicationGuard CSP](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp) (Provider dei servizi di configurazione di WindowsDefenderApplicationGuard) nella documentazione di Windows.  
 
 Quando si usa Microsoft Edge, Microsoft Defender Application Guard protegge l'ambiente dai siti non considerati attendibili dall'organizzazione. Quando gli utenti visitano siti non elencati nei limiti della rete isolata, tali siti vengono aperti in una sessione del browser virtuale di Hyper-V. I siti attendibili sono definiti da un limite di rete.  
 
-- **Application Guard** - *Impostazioni/AllowWindowsDefenderApplicationGuard*  
-  Selezionare *Sì* per attivare questa funzionalità che consente di aprire siti non attendibili in un contenitore del browser virtuale di Hyper-V. Se il valore impostato è *Non configurato*, qualsiasi sito (attendibile e non attendibile) viene aperto nel dispositivo e non in un contenitore virtuale.  
-
-  **Impostazione predefinita**: Sì
- 
-  - **Contenuto esterno nei siti aziendali** - *Impostazioni/BlockNonEnterpriseContent*  
-    Selezionare *Sì* per bloccare il caricamento di contenuti provenienti da siti Web non approvati. Se il valore impostato è *Non configurato*, i siti non aziendali possono essere aperti sul dispositivo. 
- 
-    **Impostazione predefinita**: Sì
-
-  - **Comportamento degli Appunti** - *Impostazioni/ClipboardSettings*  
-    Consente di scegliere le azioni di copia/incolla consentite tra il computer locale e il browser virtuale di Application Guard.  Le opzioni includono:
-    - Non configurato  
-    - Blocca copia e incolla tra computer e browser - Blocca entrambi. I dati non possono essere trasferiti tra il PC e il browser virtuale.  
-    - Consenti copia e incolla solo dal browser al computer - I dati non possono essere trasferiti dal PC al browser virtuale.
-    - Consenti copia e incolla solo dal browser al computer - I dati non possono essere trasferiti dal browser virtuale al PC host.
-    - Consenti copia e incolla tra computer e browser - Nessun blocco dei contenuti.  
-
-    **Impostazione predefinita**: Blocca copia e incolla tra computer e browser  
-
-- **Criteri di isolamento della rete di Windows - Nomi di dominio della rete aziendale**  
-  Per altre informazioni, vedere [Policy CSP - NetworkIsolation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-networkisolation) (Provider dei servizi di configurazione dei criteri - Network Isolation) nella documentazione di Windows.
+- **Attiva Application Guard per Microsoft Edge (opzioni)**  
+  CSP: [Settings/AllowWindowsDefenderApplicationGuard](https://go.microsoft.com/fwlink/?linkid=872350)
   
-  Specifica un elenco di risorse aziendali come domini, intervalli di indirizzi IP e limiti di rete ospitati nel cloud e considerati come siti aziendali da Application Guard.  
-
-  **Impostazione predefinita**: securitycenter.windows.com
-
-## <a name="application-reputation"></a>Reputazione delle applicazioni  
-
-Per altre informazioni, vedere [Policy CSP - SmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen) (Provider di servizi di configurazione dei criteri - SmartScreen) nella documentazione di Windows.
-
-- **Bloccare l'esecuzione di file non verificati**  
-    Impedisce all'utente di eseguire file non verificati. Se il valore è impostato su *Non configurato*, i dipendenti possono ignorare gli avvisi di SmartScreen ed eseguire file dannosi. Impostare su *Sì* in modo che i dipendenti non possano ignorare gli avvisi di SmartScreen ed eseguire file dannosi.  
+  - **Abilitato per Microsoft Edge** (*impostazione predefinita*) - Application Guard apre siti non approvati in un contenitore del browser virtuale di Hyper-V.
+  - **Non configurato** - Qualsiasi sito (attendibile e non attendibile) viene aperto nel dispositivo e non in un contenitore virtuale.  
   
-    **Impostazione predefinita**: Sì
+  Con l'impostazione *Abilitato per Microsoft Edge* è possibile configurare *Blocca i contenuti esterni da siti approvati non aziendali* e *Comportamento degli Appunti*.
 
-- **Richiedere SmartScreen per app e file**  
-  Impostare su *Sì* per abilitare SmartScreen per Windows.  
+  - **Blocca i contenuti esterni da siti approvati non aziendali**  
+    CSP: [Settings/BlockNonEnterpriseContent](https://go.microsoft.com/fwlink/?linkid=872352)
 
-  **Impostazione predefinita**: Sì
+    - **Sì** (*impostazione predefinita*) - Impedisce il caricamento del contenuto dai siti Web non approvati.
+    - **Non configurato** - I siti non aziendali possono essere aperti nel dispositivo.
 
-## <a name="attack-surface-reduction"></a>Riduzione della superficie di attacco  
+  - **Comportamento degli Appunti**  
+    CSP: [Settings/ClipboardSettings](https://go.microsoft.com/fwlink/?linkid=872351)
 
-- **Avviare i processi di tipo figlio per le app di Office**  
-  [Regola di riduzione della superficie di attacco](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) - Impostare su *Blocca* per impedire alle app di Office di creare processi figlio. Le app di Office includono Word, Excel, PowerPoint, OneNote e Access. La creazione di un processo figlio è un comportamento tipico del malware, in particolare degli attacchi basati su macro che tentano di usare le app di Office per avviare o scaricare file eseguibili dannosi.  
+    Consente di scegliere le azioni di copia/incolla consentite tra il computer locale e il browser virtuale di Application Guard. Le opzioni includono:
+    - **Non configurato**  
+    - **Blocca copia e incolla tra computer e browser** (*impostazione predefinita*) - Blocca entrambi. I dati non possono essere trasferiti tra il PC e il browser virtuale.
+    - **Consenti copia e incolla solo dal browser al computer** - I dati non possono essere trasferiti dal PC al browser virtuale.
+    - **Consenti copia e incolla solo dal computer al browser** - I dati non possono essere trasferiti dal browser virtuale al PC host.
+    - **Consenti copia e incolla tra computer e browser** - Nessun blocco dei contenuti.
 
-  **Impostazione predefinita**: Blocca
+- **Criterio di isolamento della rete Windows**  
+  CSP: [CSP Criteri - NetworkIsolation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-networkisolation)
 
-- **Tipo di esecuzione del payload scaricato tramite script**  
-  [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)- Specificare un livello di rilevamento per le applicazioni potenzialmente indesiderate scaricate o di cui si tenta l'installazione.  
+  Specificare un elenco di *domini di rete*, ovvero le risorse aziendali ospitate nel cloud che Application Guard considera siti aziendali
+  - **Configura** (*impostazione predefinita*)
+  - **Non configurato**
 
-  **Impostazione predefinita**: Blocca 
+  Con l'impostazione *Configura* è poi possibile definire i *Domini di rete*.
 
-- **Impedire il tipo di intercettazione delle credenziali**  
-  Impostare su *Abilita* per [proteggere le credenziali di dominio derivate con Windows Defender Credential Guard](https://docs.microsoft.com/windows/security/identity-protection/credential-guard/credential-guard). Microsoft Defender Credential Guard usa la sicurezza basata su virtualizzazione per isolare i segreti in modo che solo il software di sistema con privilegi possa accedervi. L'accesso non autorizzato a questi segreti può causare attacchi con furto di credenziali, ad esempio Pass-the-Hash o Pass-The-Ticket. Microsoft Defender Credential Guard impedisce questi attacchi proteggendo gli hash delle password NTLM, i Ticket Granting Ticket Kerberos e le credenziali archiviate dalle applicazioni come credenziali di dominio.  
+  - **Domini di rete**  
+    Selezionare **Aggiungi** e specificare i domini, gli intervalli di indirizzi IP e i limiti di rete. Per impostazione predefinita, viene configurato il dominio *securitycenter.windows.com*.
 
-  **Impostazione predefinita**: Abilitare
+## <a name="bitlocker"></a>BitLocker
 
-- **Esecuzione del contenuto del messaggio di posta elettronica**  
-  [Regola di riduzione della superficie di attacco](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) - Se impostata su *Blocca*, questa regola blocca l'esecuzione e l'avvio dei tipi di file seguenti da un messaggio di posta elettronica visualizzato in Microsoft Outlook o nella posta sul Web (ad esempio Gmail.com o Outlook.com):  
+Per altre informazioni, vedere [Impostazioni di Criteri di gruppo per BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings) nella documentazione di Windows.
 
-  - File eseguibili, ad esempio con estensione exe, dll o scr  
-  - File di script, ad esempio file con estensione ps di PowerShell, con estensione vbs di VisualBasic o con estensione js di JavaScript  
-  - File di archivio di script  
+- **Richiedi la crittografia delle schede di memoria (solo dispositivi mobili)**  
+  CSP: [RequireStorageCardEncryption](https://go.microsoft.com/fwlink/?linkid=872524)
 
-  **Impostazione predefinita**: Blocca
+  Questa impostazione si applica solo ai dispositivi con SKU Windows Mobile e Mobile Enterprise.
+  - **Sì** (*impostazione predefinita*) - La crittografia delle schede di memoria è obbligatoria per i dispositivi mobili.
+  - **Non configurato** - Viene ripristinata l'impostazione predefinita del sistema operativo, che non richiede la crittografia delle schede di memoria.
 
-- **Avvio di Adobe Reader in un processo figlio**  
-  [Regola di riduzione della superficie di attacco](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) - *Abilitare* questa regola per impedire ad Adobe Reader di creare un processo figlio. Tramite tecniche di ingegneria sociale oppure exploit, il malware può scaricare e avviare payload aggiuntivi e uscire da Adobe Reader.  
+- **Abilita la crittografia completa del disco per le unità del sistema operativo e le unità dati fisse**  
+  CSP: [RequireDeviceEncryption](https://go.microsoft.com/fwlink/?linkid=872523)
 
-  **Impostazione predefinita**: Abilitare
+  Se l'unità è stata crittografata prima dell'applicazione di questo criterio, non viene eseguita alcuna azione aggiuntiva. Se le opzioni e il metodo di crittografia corrispondono a quelli di questo criterio, la configurazione dovrebbe avere esito positivo. Se un'opzione di configurazione BitLocker attiva non corrisponde a questo criterio, la configurazione restituirà probabilmente un errore.
+  
+  Per applicare questo criterio a un disco già crittografato, decrittografare l'unità e riapplicare i criteri MDM. L'impostazione predefinita di Windows non richiede la crittografia unità BitLocker, tuttavia per la registrazione o l'accesso con aggiunta ad Azure AD e account Microsoft (MSA) potrebbe essere applicata automaticamente la crittografia abilitando BitLocker con crittografia XTS-AES a 128 bit.
 
-- **Codice macro offuscato in script**  
-  [Regola di riduzione della superficie di attacco](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) - Malware e altre minacce possono tentare di offuscare o nascondere il codice dannoso in alcuni file di script. Questa regola impedisce l'esecuzione degli script offuscati.  
-    
-  **Impostazione predefinita**: Blocca
+  - **Sì** (*impostazione predefinita*) - Impone l'uso di BitLocker.
+  - **Non configurato** - BitLocker non viene imposto.
 
-- **Processo non attendibile in USB**  
-  [Regola di riduzione della superficie di attacco](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) - Se impostata su *Blocca*, i file eseguibili non firmati o non attendibili di unità USB rimovibili e schede SD non possono essere eseguiti.
+- **Criterio Unità di sistema BitLocker**  
+  [Impostazioni di Criteri di gruppo di BitLocker](https://go.microsoft.com/fwlink/?linkid=2067025)
 
-  I file eseguibili includono:
-  - File eseguibili, ad esempio con estensione exe, dll o scr
-  - File di script, ad esempio file con estensione ps di PowerShell, con estensione vbs di VisualBasic o con estensione js di JavaScript  
+  - **Configura** (*impostazione predefinita*)
+  - **Non configurato**
 
-  **Impostazione predefinita**: Blocca
+  Con l'impostazione *Configura* è poi possibile configurare l'impostazione *Configura il metodo di crittografia per le unità del sistema operativo*.
 
-- **Inserimento in altri processi per app di Office**  
-  [Regola di riduzione della superficie di attacco](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) - Se impostata su *Blocca*, le app di Office, ad esempio Word, Excel, PowerPoint e OneNote non possono inserire codice in altri processi. L'inserimento di codice è tipico comportamento del malware per eseguire codice malware nel tentativo di nascondere l'attività ai motori di analisi antivirus.  
+  - **Configura il metodo di crittografia per le unità del sistema operativo**  
+    CSP: [EncryptionMethodByDriveType](https://go.microsoft.com/fwlink/?linkid=872526)  
+    Questa impostazione è disponibile quando *BitLocker - Impostazioni dell'unità di sistema* è impostato su *Configura*.  
 
-  **Impostazione predefinita**: Blocca
+    Configurare il metodo di crittografia e il livello di codifica per le unità di sistema.  *XTS-AES a 128 bit* è il metodo di crittografia predefinito di Windows e il valore consigliato.
 
-- **Consentire importazioni Win32 da codice macro in Office**  
-  [Regola di riduzione della superficie di attacco](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) - Se impostata su *Blocca*, questa regola prova a bloccare l file di Office contenenti codice macro che può importare DLL Win32. I file di Office includono Word, Excel, PowerPoint e OneNote. Il malware può usare il codice della macro in file di Office per importare e caricare le DLL Win32, che vengono quindi usate per eseguire chiamate API e favorire altre infezioni in tutto il sistema.  
+    - **Non configurato** (*impostazione predefinita*)
+    - **AES 128bit CBC**
+    - **AES 256bit CBC**
+    - **AES 128bit XTS**
+    - **AES 256bit XTS**
 
-  **Impostazione predefinita**: Blocca
+- **BitLocker - Impostazioni dell'unità fissa**  
+  [Impostazioni di Criteri di gruppo di BitLocker](https://go.microsoft.com/fwlink/?linkid=2067018)
 
-- **Avvio di app di comunicazione di Office in un processo figlio**  
-  [Regola di riduzione della superficie di attacco](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) - Se impostata su *Abilita*, questa regola impedisce a Outlook di creare processi figlio. Bloccando la creazione di un processo figlio, questa regola consente di proteggere il sistema da attacchi di ingegneria sociale e impedisce agli exploit di sfruttare una vulnerabilità in Outlook.  
+  - **Configura** (*impostazione predefinita*)
+  - **Non configurato**
 
-  **Impostazione predefinita**: Abilitare
+  Con l'impostazione *Configura* è poi possibile configurare *Blocca l'accesso in scrittura alle unità dati fisse non protette tramite BitLocker* e *Configura il metodo di crittografia per le unità dati fisse*.
 
-- **Contenuto per la creazione o l'avvio di eseguibile nelle app di Office**  
-  [Regola di riduzione della superficie di attacco](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) - Se impostata su *Blocca*, le app di Office non possono creare contenuto eseguibile. Le app di Office includono Word, Excel, PowerPoint, OneNote e Access.  
+  - **Blocca l'accesso in scrittura alle unità dati fisse non protette tramite BitLocker**  
+    CSP: [FixedDrivesRequireEncryption](https://go.microsoft.com/fwlink/?linkid=872534)  
+    Questa impostazione è disponibile quando *BitLocker - Impostazioni dell'unità fissa* è impostato su *Configura*.
 
-  Questa regola è rivolta ai tipici comportamenti usati da componenti aggiuntivi e script sospetti e dannosi (estensioni) che creano o avviano file eseguibili. Si tratta di una tipica tecnica malware. Le estensioni non possono essere usate dalle app di Office. Queste estensioni usano generalmente Windows Scripting Host (file con estensione wsh) per eseguire script che automatizzano determinate attività oppure aggiungono funzionalità create dall'utente.
+    - **Non configurato** (*impostazione predefinita*) - I dati possono essere scritti in unità fisse non crittografate.
+    - **Sì** - Windows non consente la scrittura di dati in unità fisse non protette da BitLocker. Se un'unità fissa non è crittografata, l'utente dovrà completare la configurazione guidata di BitLocker per l'unità prima che venga concesso l'accesso in scrittura.
 
-  **Impostazione predefinita**: Blocca
+  - **Configura il metodo di crittografia per le unità dati fisse**  
+    CSP: [EncryptionMethodByDriveType](hhttps://go.microsoft.com/fwlink/?linkid=872526)  
+    Questa impostazione è disponibile quando *BitLocker - Impostazioni dell'unità fissa* è impostato su *Configura*.
 
-## <a name="bitlocker"></a>BitLocker  
+    Configurare il metodo di crittografia e il livello di codifica per i dischi di unità dati fisse. *XTS-AES a 128 bit* è il metodo di crittografia predefinito di Windows e il valore consigliato.
 
-Per altre informazioni, vedere [Impostazioni di Criteri di gruppo per BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings) nella documentazione di Windows.  
+    - **Non configurato** (*impostazione predefinita*)
+    - **AES 128bit CBC**
+    - **AES 256bit CBC**
+    - **AES 128bit XTS**
+    - **AES 256bit XTS**
 
-- **Crittografa i dispositivi**  
-  Selezionare *Sì* per abilitare la crittografia dei dispositivi BitLocker. In base all'hardware del dispositivo e alla versione di Windows, agli utenti potrebbe essere richiesto di confermare che non sia presente alcuna crittografia di terze parti nel dispositivo. L'attivazione della crittografia di Windows mentre è attiva la crittografia di terze parti rende instabile il dispositivo.  
+- **BitLocker - Impostazioni dell'unità rimovibile**  
+  [Impostazioni di Criteri di gruppo di BitLocker](https://go.microsoft.com/fwlink/?linkid=2067140)
 
-   **Impostazione predefinita**: Sì
+  - **Configura** (*impostazione predefinita*)
+  - **Non configurato**
 
-- **Criterio per le unità rimovibili BitLocker**  
-  I valori per questo criterio determinano il livello di crittografia che BitLocker usa per la crittografia delle unità rimovibili. Per una maggiore sicurezza, le aziende controllano il livello di crittografia (AES-256 è un algoritmo più avanzato rispetto a AES-128). Se si seleziona *Sì* per abilitare questa impostazione, è possibile configurare individualmente un algoritmo di crittografia e un livello di codifica per unità dati fisse, unità del sistema operativo e unità dati rimovibili. Per le unità fisse e del sistema operativo è consigliabile usare l'algoritmo XTS-AES. Per le unità rimovibili è consigliabile usare AES-CBC a 128 bit o AES-CBC a 256 bit se l'unità viene usata in altri dispositivi che non eseguono Windows 10 versione 1511 o successiva. La modifica del metodo di crittografia non produce alcun effetto se l'unità è già crittografata o se la crittografia è in corso. In questi casi, l'impostazione di questo criterio viene ignorata. 
+  Con l'impostazione *Configura* è poi possibile configurare *Configura il metodo di crittografia per le unità dati rimovibili* e *Blocca l'accesso in scrittura alle unità dati rimovibili non protette tramite BitLocker*.
 
-  Per i criteri di un'unità rimovibile BitLocker, configurare le impostazioni seguenti:
+  - **Configura il metodo di crittografia per le unità dati rimovibili**  
+    CSP: [EncryptionMethodByDriveType](https://go.microsoft.com/fwlink/?linkid=872526)  
+    Questa impostazione è disponibile quando *BitLocker - Impostazioni dell'unità rimovibile* è impostato su *Configura*.
 
-  - **Richiedere la crittografia per l'accesso in scrittura**  
-    **Impostazione predefinita**: Sì
+    Configurare il metodo di crittografia e il livello di codifica per i dischi di unità dati rimovibili. *XTS-AES a 128 bit* è il metodo di crittografia predefinito di Windows e il valore consigliato.
 
-  - **Metodo di crittografia**  
-    **Impostazione predefinita**: AES a 128 bit CBC
+    - **Non configurato**
+    - **AES 128bit CBC**
+    - **AES 256bit CBC** (*impostazione predefinita*)
+    - **AES 128bit XTS**
+    - **AES 256bit XTS**
 
-- **Crittografa la scheda di memoria (solo dispositivi mobili)** Selezionare *Sì* per crittografare la scheda di memoria del dispositivo mobile.  
+  - **Blocca l'accesso in scrittura alle unità dati rimovibili non protette tramite BitLocker**  
+    CSP: [RemovableDrivesRequireEncryption](https://go.microsoft.com/fwlink/?linkid=872540)  
+    Questa impostazione è disponibile quando *BitLocker - Impostazioni dell'unità rimovibile* è impostato su *Configura*.
 
-   **Impostazione predefinita**: Sì
+    - **Non configurato** (*impostazione predefinita*) - I dati possono essere scritti in unità rimovibili non crittografate.  
+    - **Sì** - Windows non consente la scrittura di dati in unità rimovibili non protette da BitLocker. Se un'unità rimovibile non è crittografata, l'utente deve completare la configurazione guidata di BitLocker per l'unità prima che venga concesso l'accesso in scrittura.
 
-- **Criterio per le unità fisse BitLocker**  
-  I valori per questo criterio determinano il livello di crittografia che BitLocker usa per la crittografia delle unità fisse. Per una maggiore sicurezza, le aziende possono controllare il livello di crittografia (AES-256 è un algoritmo più avanzato rispetto a AES-128). Se si abilita questa impostazione, è possibile configurare individualmente un algoritmo di crittografia e un livello di codifica per unità dati fisse, unità del sistema operativo e unità dati rimovibili. Per le unità fisse e del sistema operativo è consigliabile usare l'algoritmo XTS-AES. Per le unità rimovibili è consigliabile usare AES-CBC a 128 bit o AES-CBC a 256 bit se l'unità viene usata in altri dispositivi che non eseguono Windows 10 versione 1511 o successiva. La modifica del metodo di crittografia non produce alcun effetto se l'unità è già crittografata o se la crittografia è in corso. In questi casi, l'impostazione di questo criterio viene ignorata.
+## <a name="browser"></a>Browser
 
-  Per i criteri di un'unità fissa BitLocker, configurare le impostazioni seguenti:
+- **Richiedere SmartScreen per Microsoft Edge**  
+  CSP: [Browser/AllowSmartScreen](https://go.microsoft.com/fwlink/?linkid=2067029)
 
-  - **Richiedere la crittografia per l'accesso in scrittura**  
-    **Impostazione predefinita**: Sì
+  - **Sì** (*impostazione predefinita*) - Usare SmartScreen per proteggere gli utenti da potenziali tentativi di phishing e da software dannoso.
+  - **Non configurato**
 
-  - **Metodo di crittografia**  
-    **Impostazione predefinita**: AES a 128 bit XTS
+- **Bloccare l'accesso a siti dannosi**  
+  CSP: [Browser/PreventSmartScreenPromptOverride](https://go.microsoft.com/fwlink/?linkid=2067040)  
 
-- **Criterio per le unità di sistema BitLocker**  
-  I valori per questo criterio determinano il livello di crittografia che BitLocker usa per la crittografia delle unità di sistema. Per una maggiore sicurezza, le aziende potrebbero voler controllare il livello di crittografia (AES-256 è un algoritmo più avanzato rispetto a AES-128). Se si abilita questa impostazione, è possibile configurare individualmente un algoritmo di crittografia e un livello di codifica per unità dati fisse, unità del sistema operativo e unità dati rimovibili. Per le unità fisse e del sistema operativo è consigliabile usare l'algoritmo XTS-AES. Per le unità rimovibili è consigliabile usare AES-CBC a 128 bit o AES-CBC a 256 bit se l'unità viene usata in altri dispositivi che non eseguono Windows 10 versione 1511 o successiva. La modifica del metodo di crittografia non produce alcun effetto se l'unità è già crittografata o se la crittografia è in corso. In questi casi, l'impostazione di questo criterio viene ignorata.  
+  - **Sì** (*impostazione predefinita*) - Impedisce agli utenti di ignorare gli avvisi del filtro Microsoft Defender SmartScreen e di accedere al sito.
+  - **Non configurato**
 
-  Per i criteri di un'unità di sistema BitLocker, configurare le impostazioni seguenti:  
+- **Bloccare il download di file non verificati**  
+  CSP: [Browser/PreventSmartScreenPromptOverrideForFiles](https://go.microsoft.com/fwlink/?linkid=2067023)  
 
-  - **Metodo di crittografia**  
-    **Impostazione predefinita**: AES a 128 bit XTS
+  - **Sì** (*impostazione predefinita*) - Impedisce agli utenti di ignorare gli avvisi del filtro Microsoft Defender SmartScreen e di scaricare file non verificati.
+  - **Non configurato**
 
-## <a name="device-control"></a>Controllo dei dispositivi  
-
-- **Analizzare le unità rimovibili durante un'analisi completa**  
-  [Defender/AllowFullScanRemovableDriveScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanremovabledrivescanning) - Se impostato su *Sì*, Defender esegue la ricerca di software dannoso e indesiderato nelle unità rimovibili, ad esempio unità flash USB, durante un'analisi completa. Windows Defender Antivirus analizza tutti i file nei dispositivi USB prima che vengano eseguiti nel dispositivo stesso.
-
-  Impostazione correlata in questo elenco: *Defender/AllowFullScanOnMappedNetworkDrives*  
-
-  **Impostazione predefinita**: Sì
-
-- **Enumerazione di dispositivi esterni non compatibili con la protezione DMA del kernel**  
-   Vedere *DmaGuard/DeviceEnumerationPolicy* in [Policy CSP - DmaGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy) (Provider dei servizi di configurazione dei criteri - DmaGuard)
-
-  Questo criterio offre ulteriore sicurezza nei confronti di dispositivi esterni idonei per DMA, nonché maggiore controllo sull'enumerazione di dispositivi esterni idonei per DMA non compatibili con isolamento e sandboxing della memoria del dispositivo.
-
-  Questo criterio viene applicato solo quando la protezione DMA del kernel è supportata e abilitata dal firmware del sistema. La protezione DMA del kernel è una funzionalità della piattaforma che non può essere controllata tramite criteri o dall'utente finale di un dispositivo, ma deve essere supportata dal sistema in fase di produzione. 
-
-  Per verificare se il sistema supporta la protezione DMA del kernel, eseguire MSINFO32.exe nel sistema e vedere il campo *Kernel DMA Protection* (Protezione DMA kernel) campo nella pagina di riepilogo.  
-
-  Le opzioni includono: 
-  - *Device default* (Dispositivo predefinito) - Dopo l'accesso o il blocco dello schermo, i dispositivi con unità compatibili con il nuovo mapping DMA possono essere enumerati in qualsiasi momento. I dispositivi con unità incompatibili con il nuovo mapping DMA vengono enumerati solo dopo lo sblocco dello schermo da parte dell'utente.
-  - *Allow all* (Consenti tutto) - Tutti i dispositivi PCIe idonei per DMA vengono enumerati in qualsiasi momento
-  - *Block all* (Blocca tutto) - I dispositivi con unità compatibili con il nuovo mapping DMA possono essere enumerati in qualsiasi momento. I dispositivi con unità incompatibili con il nuovo mapping DMA non potranno mai avviare né eseguire DMA in alcun momento.
-
-  **Impostazione predefinita**: Impostazione predefinita dispositivo
-
-- **Installazione di dispositivi hardware per identificatori di dispositivo**  
-  [DeviceInstallation/PreventInstallationOfMatchingDeviceIDs](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-preventinstallationofmatchingdeviceids) - Questo criterio consente di specificare un elenco di ID di hardware Plug and Play e di ID compatibili per i dispositivi di cui si impedisce l'installazione in Windows. L'impostazione di questo criterio ha la precedenza su qualsiasi altra impostazione di criteri che consente a Windows di installare un dispositivo. Se si abilita questo criterio (impostato su *Blocca l'installazione del dispositivo hardware*), si impedisce l'installazione di un dispositivo il cui ID hardware o ID compatibile è presente nell'elenco creato. Se si abilita l'impostazione di questo criterio in un server desktop remoto, il criterio influirà sul reindirizzamento dei dispositivi specificati da un client desktop remoto al server desktop remoto. Se si disabilita o non si configura questo criterio (impostato su *Allow hardware device installation* - Consenti l'installazione del dispositivo hardware), i dispositivi possono essere installati e aggiornati in base a quanto consentito o impedito da altre impostazioni dei criteri.  
-
-  **Impostazione predefinita**: Bloccare l'installazione del dispositivo hardware  
-
-  Quando l'opzione *Blocca l'installazione del dispositivo hardware* è selezionata, sono disponibili le impostazioni seguenti.
-  - **Rimuovere dispositivi hardware corrispondenti**  
-    Questa impostazione è disponibile solo quando l'*installazione di dispositivi hardware per identificatori di dispositivo* è impostata su *Bloccare l'installazione del dispositivo hardware*.  
-
-    **Impostazione predefinita**: Sì
-
-  - **Identificatori di dispositivo hardware bloccati**  
-    Questa impostazione è disponibile solo quando l'*installazione di dispositivi hardware per identificatori di dispositivo* è impostata su *Bloccare l'installazione del dispositivo hardware*. Per configurare questa impostazione, espandere l'opzione, selezionare **+ Aggiungi** e quindi specificare l'identificatore del dispositivo hardware da bloccare.  
-
-    **Impostazione predefinita**: PCI\CC_0C0A
+## <a name="data-protection"></a>Protezione dati
 
 - **Blocca l'accesso diretto alla memoria**  
-  [DataProtection/AllowDirectMemoryAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection#dataprotection-allowdirectmemoryaccess) - Questo criterio consente di bloccare l'accesso diretto alla memoria (DMA) per tutte le porte downstream PCI con collegamento a caldo in un dispositivo fino a quando l'utente non esegue l'accesso a Windows. Dopo l'accesso di un utente, Windows enumererà i dispositivi PCI connessi alle porte PCI collegabili a sistema acceso. Ogni volta che l'utente blocca il computer, l'accesso diretto alla memoria viene bloccato sulle porte PCI collegabili a sistema acceso senza dispositivi figlio finché l'utente non accede di nuovo. I dispositivi già enumerati quando il computer era sbloccato continueranno a funzionare fino a quando non saranno scollegati. 
+  CSP: [DataProtection/AllowDirectMemoryAccess](https://go.microsoft.com/fwlink/?linkid=2067031)  
 
-  L'impostazione di questo criterio viene applicata solo quando è abilitato BitLocker o la crittografia del dispositivo.  
+  L'impostazione di questo criterio viene applicata solo quando è abilitato BitLocker o la crittografia del dispositivo.
 
-  **Impostazione predefinita**: Sì
+  - **Sì** (*impostazione predefinita*) - Impedisce l'accesso diretto alla memoria (Direct Memory Access, DMA) per tutte le porte downstream PCI collegabili a caldo finché un utente non accede a Windows. Dopo l'accesso di un utente, Windows enumera i dispositivi PCI connessi alle porte PCI collegabili a caldo. Ogni volta che l'utente blocca il computer, l'accesso diretto alla memoria viene bloccato sulle porte PCI collegabili a sistema acceso senza dispositivi figlio finché l'utente non accede di nuovo. I dispositivi già enumerati quando il computer era sbloccato continueranno a funzionare fino a quando non saranno scollegati.
+  - **Non configurato**
 
+## <a name="device-guard"></a>Device Guard  
 
-- **Installazione di dispositivi hardware per classi di installazione**  
-  [DeviceInstallation/AllowInstallationOfMatchingDeviceSetupClasses](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-allowinstallationofmatchingdevicesetupclasses) - Questo criterio consente di specificare un elenco di identificatori univoci globali (GUID) di classi di installazione di dispositivi per driver di dispositivo di cui si impedisce l'installazione in Windows. L'impostazione di questo criterio ha la precedenza su qualsiasi altra impostazione di criteri che consente a Windows di installare un dispositivo. Se si abilita questo criterio (impostato su *Blocca l'installazione del dispositivo hardware*), in Windows si impedisce di installare o di aggiornare i driver di dispositivo i cui GUID della classe di installazione sono presenti nell'elenco creato. Se si abilita l'impostazione di questo criterio in un server desktop remoto, l'impostazione del criterio influirà sul reindirizzamento dei dispositivi specificati da un client desktop remoto al server desktop remoto. Se si disabilita o non si configura questo criterio (impostato su *Allow hardware device installation* - Consenti l'installazione del dispositivo hardware), Windows può installare e aggiornare dispositivi possono essere installati e aggiornati in base a quanto consentito o impedito da altre impostazioni dei criteri.  
+- **Attiva Credential Guard**  
+  CSP: [DeviceGuard/ConfigureSystemGuardLaunch](https://go.microsoft.com/fwlink/?linkid=872424)
 
-  **Impostazione predefinita**: Bloccare l'installazione del dispositivo hardware
+  Credential Guard usa Windows Hypervisor per fornire protezioni e ciò richiede che l'avvio protetto e le protezioni DMA siano funzionanti e che siano soddisfatti specifici requisiti hardware.
 
-  Quando l'opzione *Blocca l'installazione del dispositivo hardware* è selezionata, sono disponibili le impostazioni seguenti.  
+  - **Non configurato** - Disabilita l'uso di Credential Guard, che è l'impostazione predefinita di Windows.
+  - **Abilita con blocco UEFI** (*impostazione predefinita*) - Abilita Credential Guard e non ne consente la disabilitazione remota, perché la configurazione di UEFI permanente deve essere cancellata manualmente.
+  - **Abilita senza blocco UEFI** - Abilita Credential Guard e ne consente la disattivazione senza accesso fisico al computer.
 
-  - **Rimuovere dispositivi hardware corrispondenti**  
-    Questa impostazione è disponibile solo quando l'*installazione di dispositivi hardware per classi di installazione* è impostata su *Bloccare l'installazione del dispositivo hardware*.  
- 
-    **Impostazione predefinita**: Sì  
+## <a name="device-installation"></a>Installazione di dispositivi
+
+- **Installazione di dispositivi hardware per identificatori di dispositivo**  
+  [DeviceInstallation/PreventInstallationOfMatchingDeviceIDs](hhttps://go.microsoft.com/fwlink/?linkid=2066794)  
+  
+  L'impostazione di questo criterio consente di specificare un elenco di ID hardware Plug and Play e ID compatibili per i dispositivi la cui installazione non è consentita in Windows. L'impostazione di questo criterio ha la precedenza su qualsiasi altra impostazione di criteri che consente a Windows di installare un dispositivo.  Se si abilita l'impostazione di questo criterio in un server desktop remoto, l'impostazione del criterio influirà sul reindirizzamento dei dispositivi specificati da un client desktop remoto al server desktop remoto.
+
+  - **Non configurato**
+  - **Consenti l'installazione del dispositivo hardware** - I dispositivi possono essere installati o aggiornati in base a quanto consentito o impedito da altre impostazioni di criteri.
+  - **Blocca l'installazione del dispositivo hardware** (*impostazione predefinita*) - A Windows non è consentito installare un dispositivo il cui ID hardware o ID compatibile viene visualizzato in un elenco definito dall'utente.
+
+  Con l'impostazione *Blocca l'installazione del dispositivo hardware* è possibile configurare *Rimuovi i dispositivi hardware corrispondenti* e *Identificatori dei dispositivi hardware bloccati*.
+
+  - **Rimuovere dispositivi hardware corrispondenti**
+
+    Questa impostazione è disponibile solo quando l'*installazione di dispositivi hardware per identificatori di dispositivo* è impostata su *Bloccare l'installazione del dispositivo hardware*.
+    - **Sì**
+    - **Non configurato**
 
   - **Identificatori di dispositivo hardware bloccati**  
-    Questa impostazione è disponibile solo quando l'installazione di dispositivi hardware per classi di installazione è impostata su Blocca l'installazione del dispositivo hardware. Per configurare questa impostazione, espandere l'opzione, selezionare **+ Aggiungi** e quindi specificare l'identificatore del dispositivo hardware da bloccare.  
- 
-    **Impostazione predefinita**: {d48179be-ec20-11d1-b6b8-00c04fa372a7}
+    
+    Questa impostazione è disponibile solo quando l'*installazione di dispositivi hardware per identificatori di dispositivo* è impostata su *Bloccare l'installazione del dispositivo hardware*.
 
-## <a name="endpoint-detection-and-response"></a>Rilevamento endpoint e risposta  
-Per altre informazioni, vedere [WindowsAdvancedThreatProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp) (Provider dei servizi di configurazione - WindowsAdvancedThreatProtection) nella documentazione di Windows.  
+    Selezionare **Aggiungi** e quindi specificare l'identificatore del dispositivo hardware che si vuole bloccare.
 
-- **Accelera la frequenza di creazione di report di telemetria** - *Configurazione/TelemetryReportingFrequency*
+- **Installazione di dispositivi hardware per classi di installazione**  
+  CSP: [DeviceInstallation/AllowInstallationOfMatchingDeviceSetupClasses](https://go.microsoft.com/fwlink/?linkid=2067048)  
+  
+  L'impostazione di questo criterio consente di specificare un elenco di identificatori univoci globali (GUID) della classe di installazione del dispositivo per i driver di dispositivo la cui installazione non è consentita in Windows. L'impostazione di questo criterio ha la precedenza su qualsiasi altra impostazione di criteri che consente a Windows di installare un dispositivo. Se si abilita l'impostazione di questo criterio in un server desktop remoto, l'impostazione del criterio influirà sul reindirizzamento dei dispositivi specificati da un client desktop remoto al server desktop remoto.
+
+  - **Non configurato**
+  - **Consenti l'installazione del dispositivo hardware** - Windows può installare e aggiornare i dispositivi in base a quanto consentito o impedito da altre impostazioni di criteri.
+  - **Blocca l'installazione del dispositivo hardware** (*impostazione predefinita*) - A Windows non è consentito installare un dispositivo i cui GUID di classe di installazione compaiono in un elenco definito dall'utente.
+
+  Con l'impostazione *Blocca l'installazione del dispositivo hardware* è possibile configurare *Rimuovi i dispositivi hardware corrispondenti* e *Identificatori dei dispositivi hardware bloccati*.
+
+  - **Rimuovere dispositivi hardware corrispondenti**
+
+    Questa impostazione è disponibile solo quando l'*installazione di dispositivi hardware per identificatori di dispositivo* è impostata su *Bloccare l'installazione del dispositivo hardware*.
+    - **Sì**
+    - **Non configurato**
+
+  - **Identificatori di dispositivo hardware bloccati**
+
+    Questa impostazione è disponibile solo quando l'*installazione di dispositivi hardware per identificatori di dispositivo* è impostata su *Bloccare l'installazione del dispositivo hardware*.
+
+    Selezionare **Aggiungi** e quindi specificare l'identificatore del dispositivo hardware che si vuole bloccare.
+
+## <a name="dma-guard"></a>DMA Guard
+
+- **Enumerazione di dispositivi esterni non compatibili con la protezione DMA del kernel**  
+  CSP: [DmaGuard/DeviceEnumerationPolicy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
+
+  Questo criterio può offrire ulteriore sicurezza nei confronti di dispositivi esterni idonei per DMA. Consente inoltre maggiore controllo sull'enumerazione di dispositivi esterni idonei per DMA non compatibili con il remapping e/o l'isolamento e il sandboxing della memoria del dispositivo.
+  
+  Questo criterio viene applicato solo quando la protezione DMA del kernel è supportata e abilitata dal firmware del sistema. La protezione DMA del kernel è una funzionalità della piattaforma che deve essere supportata dal sistema al momento della produzione. Per verificare se il sistema supporta la protezione DMA del kernel, controllare il campo della protezione DMA del kernel nella pagina di riepilogo di MSINFO32.exe.
+
+  - **Non configurato** - (*impostazione predefinita*)
+  - **Blocca tutto**
+  - **Consenti tutto**
+
+## <a name="endpoint-detection-and-response"></a>Rilevamento endpoint e risposta
+
+Per altre informazioni sulle impostazioni seguenti, vedere [Provider dei servizi di configurazione WindowsAdvancedThreatProtection](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp) nella documentazione di Windows.
+
+- **Condivisione di esempi per tutti i file**  
+  CSP: [Configuration/SampleSharing](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
+
+  Restituisce o imposta il parametro di configurazione per la condivisione di esempi di Microsoft Defender Advanced Threat Protection.  
+  
+  - **Sì** (*impostazione predefinita*)
+  - **Non configurato**
+
+- **Accelera la frequenza di creazione di report di telemetria**  
+  CSP: [Configuration/TelemetryReportingFrequency](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
 
   Consente di accelerare la frequenza di creazione di report di telemetria di Microsoft Defender Advanced Threat Protection.  
 
-  **Impostazione predefinita**: Sì
+  - **Sì** (*impostazione predefinita*)
+  - **Non configurato**
 
-- **Condivisione di esempi per tutti i file** - *Configurazione/SampleSharing* 
+## <a name="firewall"></a>Firewall
 
-  Restituisce o imposta il parametro di configurazione per la condivisione di esempi di Microsoft Defender Advanced Threat Protection.  
-
-  **Impostazione predefinita**: Sì
-
-## <a name="exploit-protection"></a>Protezione dagli exploit  
-
-- **XML di Protezione dagli exploit**  
-  Per altre informazioni, vedere [Importare, esportare e distribuire configurazioni di protezione dagli exploit](/windows/security/threat-protection/microsoft-defender-atp/import-export-exploit-protection-emet-xml) nella documentazione di Windows.  
-
-  Consente all'amministratore IT di distribuire una configurazione che rappresenta il sistema desiderato e le opzioni di mitigazione delle applicazioni a tutti i dispositivi nell'organizzazione. La configurazione è rappresentata da un XML. 
-
-  La Protezione dagli exploit consente di proteggere i dispositivi da malware che usa gli exploit per la diffusione e l'infezione. Usare l'app Sicurezza di Windows o PowerShell per creare un set di mitigazioni, chiamato configurazione. È quindi possibile esportare la configurazione come file XML e condividerla con più computer in rete in modo che abbiano lo stesso set di impostazioni di mitigazione.
- 
-  È anche possibile convertire e importare un file XML di configurazione EMET esistente in un file XML di configurazione di protezione dagli exploit.
-
-- **Block exploit protection override** (Blocca modifica protezione dagli exploit)  
-  [WindowsDefenderSecurityCenter/DisallowExploitProtectionOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disallowexploitprotectionoverride): impostare su *Sì* per impedire agli utenti di apportare modifiche nell'area delle impostazioni per la protezione dagli exploit in Microsoft Defender Security Center. Se si disabilita o non si configura questa impostazione, gli utenti locali è possono apportare modifiche nell'area delle impostazioni di protezione dagli exploit.  
-  **Impostazione predefinita**: Sì  
-
-## <a name="microsoft-defender-antivirus"></a>Microsoft Defender Antivirus  
-
-Per altre informazioni, vedere [Policy CSP - Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) (Provider di servizi di configurazione dei criteri - Defender) nella documentazione di Windows.
-
-- **Analizza gli script caricati nei Web browser Microsoft**  
-  [Defender/AllowScriptScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscriptscanning): impostare su *Sì* per consentire la funzionalità di analisi degli script di Microsoft Defender.  
-
-  **Impostazione predefinita**: Sì
-
-- **Analizzare i messaggi di posta elettronica in arrivo**  
-  [Defender/AllowEmailScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowemailscanning): impostare su *Sì* per consentire a Microsoft Defender di analizzare i messaggi di posta elettronica.  
-
-  **Impostazione predefinita**: Sì
-
-- **Consenso per l'invio di campioni di Defender**  
-  [Defender/SubmitSamplesConsent](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent): controlla il livello di consenso utente in Microsoft Defender per inviare i dati. Se il consenso necessario è già stato concesso, Microsoft Defender esegue l'invio. In caso contrario (e se l'utente ha specificato che non venga mai inviata una richiesta), viene richiesto il consenso utente (se *Abilita la protezione mediante cloud* è impostata su *Sì*) prima dell'invio dei dati.  
-
-  **Impostazione predefinita**: Invia automaticamente i campioni sicuri
-
-- **Network Inspection System (NIS)**  
-  [Defender/EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection) - Blocca il traffico dannoso rilevato dalle firme in Network Inspection System (NIS).  
- 
-  **Impostazione predefinita**: Sì
-
-- **Intervallo di aggiornamento della firma (in ore)**  
-  [Defender/SignatureUpdateInterval](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdateinterval) - Specifica, in ore, la frequenza con cui il dispositivo controlla i nuovi aggiornamenti delle firme in Defender.  
- 
-  **Impostazione predefinita**: 4
-
-- **Configura la priorità bassa per la CPU per le analisi pianificate**  
-  [Defender/EnableLowCPUPriority](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority) - Se impostato su *Sì*, la priorità della CPU per le analisi è impostata sul valore basso. Se è impostato su *Non configurato*, alla priorità della CPU per le analisi pianificate non viene apportata alcuna modifica.  
-
-    **Impostazione predefinita**: Sì
-
-- **Blocco Defender per protezione all'accesso**  
-  [Defender/AllowOnAccessProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowonaccessprotection): se impostato su *Sì*, la protezione all'accesso di Microsoft Defender è abilitata.  
-
-  **Impostazione predefinita**: Sì
-
-- **Tipo di analisi di sistema da eseguire**  
-  [Defender/ScanParameter](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-scanparameter) - Tipo di analisi di Defender.  
-
-  **Impostazione predefinita**: Analisi veloce
-
-- **Analizza tutti i download**  
-  [Defender/AllowIOAVProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowioavprotection) - Se impostato su *Sì*, Defender analizza tutti i file e gli allegati scaricati.  
-
-  **Impostazione predefinita**: Sì
-
-- **Giorni di attesa prima dell'eliminazione di malware in quarantena**  
-  [Defender/DaysToRetainCleanedMalware](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-daystoretaincleanedmalware) - Specifica il numero di giorni in cui tenere in quarantena gli elementi nel sistema prima che vengano eliminati automaticamente. Se impostato su zero, gli elementi in quarantena non vengono mai eliminati automaticamente.  
-
-  **Impostazione predefinita**: 0
-
-- **Ora di inizio analisi pianificata**  
-  [Defender/ScheduleScanTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescantime) - Pianifica un'ora del giorno per l'analisi dei dispositivi da parte di Defender. 
-  
-  Opzione correlata in questo elenco: *Defender/ScheduleScanDay*   
-
-  **Impostazione predefinita**: 2
-
-- **Protezione fornita dal cloud**  
-  [Defender/AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection): se impostato su *Sì*, Microsoft Defender invia informazioni a Microsoft su qualsiasi problema rilevato. Le informazioni saranno analizzate, saranno raccolti altri dettagli sui problemi riscontrati dall'utente corrente e dagli altri clienti. Verranno quindi offerte soluzioni migliorate.
-
-  Quando il criterio è impostato su *Yes*, è possibile usare *Tipo di consenso per l'invio di campioni di Defender* per consentire agli utenti di controllare l'invio di informazioni dal proprio dispositivo.  
-
-  **Impostazione predefinita**: Sì
-
-- **Azione della Protezione da applicazioni potenzialmente di Defender**  
-  [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection): Antivirus Microsoft Defender può identificare le *applicazioni potenzialmente indesiderate* e impedirne il download e l'installazione negli endpoint della rete. 
- 
-  - Se impostato su *Blocco*, Microsoft Defender blocca le applicazioni potenzialmente indesiderate e le inserisce in un elenco cronologico con altre minacce.
-  - Se impostato su *Controllo*, Microsoft Defender rileva le applicazioni potenzialmente indesiderate, ma non le blocca. Per trovare le informazioni sulle applicazioni per cui Microsoft Defender avrebbe intrapreso un'azione, eseguire una ricerca degli eventi creati in Visualizzatore eventi da Microsoft Defender.  
-  - Se impostato su *Dispositivo predefinito*, la protezione delle applicazioni potenzialmente indesiderate è disattivata.  
- 
-  **Impostazione predefinita**: Blocca
-
-- **Defender - Timeout esteso per il cloud in secondi**  
-  [Defender/CloudExtendedTimeout](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout): specifica la quantità massima di tempo aggiuntivo in cui Antivirus Microsoft Defender deve bloccare un file in attesa di un risultato dal cloud. La durata dell'attesa di base da parte di Microsoft Defender è di 10 secondi. Eventuale tempo aggiuntivo specificato qui (fino a 50 secondi) viene aggiunto ai 10 secondi. Nella maggior parte dei casi l'analisi richiede meno tempo rispetto alla quantità massima indicata. L'estensione della quantità di tempo consente al cloud di analizzare nel dettaglio i file sospetti.  
-
-  Per impostazione predefinita, il valore di estensione è pari a 0 (disabilitato). È consigliabile abilitare questa impostazione e specificare almeno 20 secondi aggiuntivi.  
- 
-  **Impostazione predefinita**: 0
-
-- **Analizza file di archivio**  
-  [Defender/AllowArchiveScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning): impostare su *Sì* per indicare a Microsoft Defender di analizzare i file di archivio.  
-
-  **Impostazione predefinita**: Sì
-
-- **Defender - Pianificazione analisi del sistema**  
-  [Defender/ScheduleScanDay](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday) - Pianifica il giorno in cui Defender analizza i dispositivi. 
- 
-  Opzione correlata in questo elenco: *Defender/ScheduleScanTime*
-
-  **Impostazione predefinita**: Definita dall'utente
-
-- **Monitoraggio del comportamento**  
-  [Defender/AllowBehaviorMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowbehaviormonitoring): impostare su *Sì* per attivare la funzionalità di monitoraggio del comportamento di Microsoft Defender. Integrati in Windows 10, i sensori di monitoraggio del comportamento di Microsoft Defender raccolgono ed elaborano i segnali comportamentali dal sistema operativo e inviano i dati all'istanza cloud isolata privata di Microsoft Defender ATP.  
-
-  **Impostazione predefinita**: Sì
-
-- **Analizzare file aperti da cartelle di rete**  
-  [Defender/AllowScanningNetworkFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles): impostare su *Sì* per indicare a Microsoft Defender di analizzare i file nella rete. L'utente non sarà in grado di rimuovere il malware rilevato dai file di sola lettura.  
-
-  **Impostazione predefinita**: Sì
-
-- **Livello di blocco cloud di Defender**  
-  [Defender/CloudBlockLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel): questo criterio consente di determinare il livello di intervento da parte di Antivirus Microsoft Defender nel bloccare e analizzare i file sospetti. Le opzioni includono:
-
-  - Alto - Protezione elevata e blocco aggressivo dei file sconosciuti durante l'ottimizzazione delle prestazioni del client (maggiori probabilità di falsi positivi)
-  - Alta + - Protezione massima e blocco aggressivo dei file sconosciuti con misure di sicurezza aggiuntive (possibile impatto sulle prestazioni del client)
-  - Tolleranza zero - Blocco di tutti i file eseguibili
-
-  **Impostazione predefinita**: Non configurato
-
-- **Monitoraggio in tempo reale**  
-  [Defender/AllowRealtimeMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring): impostare su *Sì* per consentire il monitoraggio in tempo reale di Microsoft Defender.  
-
-  **Impostazione predefinita**: Sì
-
-- **Limite di utilizzo della CPU durante un'analisi**  
-  [Defender/AvgCPULoadFactor](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-avgcpuloadfactor): specifica la percentuale di utilizzo medio massimo della CPU che Microsoft Defender può usare durante un'analisi.  
-
-  **Impostazione predefinita**: 50
-
-- **Analizza le unità di rete mappate durante un'analisi completa**  
-  [Defender/AllowFullScanOnMappedNetworkDrives](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanonmappednetworkdrives): impostare su *Sì* per indicare a Microsoft Defender di analizzare i file nella rete. L'utente non può rimuovere il malware rilevato dai file di sola lettura.
-
-  Impostazione correlata in questo elenco: *Defender/AllowScanningNetworkFiles*
-
-  **Impostazione predefinita**: Sì
-
-- **Blocca l'accesso dell'utente finale a Defender**  
-  [Defender/AllowUserUIAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowuseruiaccess): impostare su *Sì* per bloccare l'accesso dell'utente finale all'interfaccia utente di Microsoft Defender nel dispositivo.  
-
-  **Impostazione predefinita**: Sì
-
-- **Ora di inizio analisi rapida**  
-  [Defender/ScheduleQuickScanTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulequickscantime) - Pianifica un'ora del giorno per l'analisi rapida da parte di Defender.  
-
-  **Impostazione predefinita**: 2
-
-## <a name="microsoft-defender-firewall"></a>Microsoft Defender Firewall
 Per altre informazioni, vedere [Firewall CSP](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) (Provider dei servizi di configurazione del firewall) nella documentazione di Windows.
 
-- **Periodo di inattività delle associazioni di sicurezza prima dell'eliminazione** - *MdmStore/Global/SaIdleTime*   
-  Le associazioni di sicurezza vengono eliminate dopo che il traffico di rete non viene visualizzato per il numero di secondi specificato.  
-  **Impostazione predefinita**: 300
+- **Disabilita FTP (File Transfer Protocol) con stato**  
+  CSP: [MdmStore/Global/DisableStatefulFtp](https://go.microsoft.com/fwlink/?linkid=872536)  
 
-- **File Transfer Protocol** - *MdmStore/Global/DisableStatefulFtp*   
-  Blocca il protocollo FTP (File Transfer Protocol) con stato.  
-  **Impostazione predefinita**: Sì
+  - **Sì** (*impostazione predefinita*)
+  - **Non configurato** - Il firewall userà FTP per esaminare e filtrare le connessioni di rete secondarie. È quindi possibile che le regole del firewall vengono ignorate.
 
-- **Accodamento pacchetti** - *MdmStore/Global/EnablePacketQueue*    
-  Consente di specificare la modalità di abilitazione del ridimensionamento per il software sul lato ricezione per la ricezione di testo crittografato e l'inoltro di testo normale per lo scenario relativo a gateway con tunnel IPsec. In questo modo si mantiene l'ordine dei pacchetti.  
-  **Impostazione predefinita**: Impostazione predefinita dispositivo
+- **Numero di secondi per cui un'associazione di sicurezza può rimanere inattiva prima di essere eliminata**  
+CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539)
 
-- **Profilo dominio del firewall** - *FirewallRules/FirewallRuleName/Profiles*  
-  Specifica i profili a cui appartiene la regola: Dominio, Privato o Pubblico. Questo valore rappresenta il profilo per le reti connesse ai domini.  
+  Specificare per quanto tempo le associazioni di sicurezza vengono mantenute dopo che il traffico di rete non viene più visualizzato. Quando non è configurato, il sistema elimina un'associazione di sicurezza dopo che è rimasta inattiva per *300* secondi (impostazione predefinita).
+  
+  Il numero deve essere compreso tra **300** e **3600** secondi.
 
-  Impostazioni disponibili:  
-  - **Risposte unicast a broadcast multicast obbligatorie**  
-    **Impostazione predefinita**: Sì
+- **Codifica chiave già condivisa**  
+  CSP: [MdmStore/Global/PresharedKeyEncoding](https://go.microsoft.com/fwlink/?linkid=872541)
 
-  - **Regole per applicazioni autorizzate da Criteri di gruppo unite**  
-    **Impostazione predefinita**: Sì
+   Se la codifica UTF-8 non è richiesta, le chiavi già condivise verranno inizialmente codificate con UTF-8. Successivamente, gli utenti del dispositivo possono scegliere un altro metodo di codifica.
 
-  - **Notifiche in ingresso bloccate**  
-    **Impostazione predefinita**: Sì
-
-  - **Regole per porte globali da Criteri di gruppo unite**  
-    **Impostazione predefinita**: Sì
-
-  - **Modalità mascheramento bloccata**  
-    **Impostazione predefinita**: Sì
-
-  - **Firewall abilitato**  
-    **Impostazione predefinita**: Consentito
-
-  - **Regole di sicurezza connessione da Criteri di gruppo non unite**  
-    **Impostazione predefinita**: Sì
-
-  - **Regole dei criteri da Criteri di gruppo non unite**  
-    **Impostazione predefinita**: Sì
-
-- **Profilo pubblico del firewall** - *FirewallRules/FirewallRuleName/Profiles*  
-  Specifica i profili a cui appartiene la regola: Dominio, Privato o Pubblico. Questo valore rappresenta il profilo per le reti pubbliche. Tali reti sono classificate come pubbliche dagli amministratori nell'host del server. La classificazione viene stabilita la prima volta che l'host si connette alla rete. Queste reti sono in genere quelle di aeroporti, bar e altri luoghi pubblici, in cui i peer nella rete o l'amministratore di rete non sono attendibili.  
-
-  Impostazioni disponibili:
-
-  - **Connessioni in ingresso bloccate**  
-    **Impostazione predefinita**: Sì 
-
-  - **Risposte unicast a broadcast multicast obbligatorie**  
-    **Impostazione predefinita**: Sì  
-
-  - **Modalità mascheramento obbligatoria**  
-    **Impostazione predefinita**: Sì 
- 
-  - **Connessioni in uscita obbligatorie**  
-    **Impostazione predefinita**: Sì  
-
-  - **Regole per applicazioni autorizzate da Criteri di gruppo unite**  
-    **Impostazione predefinita**: Sì  
-
-  - **Notifiche in ingresso bloccate**  
-    **Impostazione predefinita**: Sì  
-
-  - **Regole per porte globali da Criteri di gruppo unite**  
-    **Impostazione predefinita**: Sì
-
-  - **Modalità mascheramento bloccata**  
-    **Impostazione predefinita**: Sì
-
-  - **Firewall abilitato**  
-    **Impostazione predefinita**: Consentito  
-
-  - **Regole di sicurezza connessione da Criteri di gruppo non unite**  
-    **Impostazione predefinita**: Sì  
-
-  - **Traffico in ingresso obbligatorio**  
-    **Impostazione predefinita**: Sì
-
-  - **Regole dei criteri da Criteri di gruppo non unite**  
-    **Impostazione predefinita**: Sì  
-
-- **Profilo privato del firewall** - *FirewallRules/FirewallRuleName/Profiles*  
-  Specifica i profili a cui appartiene la regola: Dominio, Privato o Pubblico. Questo valore rappresenta il profilo per le reti private.  
-
-  Impostazioni disponibili: 
-
-  - **Connessioni in ingresso bloccate**  
-    **Impostazione predefinita**: Sì
-
-  - **Risposte unicast a broadcast multicast obbligatorie**  
-    **Impostazione predefinita**: Sì
-
-  - **Modalità mascheramento obbligatoria**  
-    **Impostazione predefinita**: Sì
-
-  - **Connessioni in uscita obbligatorie**  
-    **Impostazione predefinita**: Sì
-
-  - **Notifiche in ingresso bloccate**  
-    **Impostazione predefinita**: Sì
-
-  - **Regole per porte globali da Criteri di gruppo unite**  
-    **Impostazione predefinita**: Sì
-
-  - **Modalità mascheramento bloccata**  
-    **Impostazione predefinita**: Sì  
-
-  - **Firewall abilitato**  
-    **Impostazione predefinita**: Consentito
-
-  - **Regole per applicazioni autorizzate da Criteri di gruppo non unite**  
-    **Impostazione predefinita**: Sì
-
-  - **Regole di sicurezza connessione da Criteri di gruppo non unite**  
-    **Impostazione predefinita**: Sì
-
-  - **Traffico in ingresso obbligatorio**  
-    **Impostazione predefinita**: Sì
-
-  - **Regole dei criteri da Criteri di gruppo non unite**  
-    **Impostazione predefinita**: Sì  
-
-- **Metodo di codifica chiave pre-condivisa del firewall**  
-  **Impostazione predefinita**: UTF8
+  - **Non configurato**
+  - **Nessuno**
+  - **UTF8** (*impostazione predefinita*)
 
 - **Verifica dell'elenco di revoche di certificati**  
-  **Impostazione predefinita**: Impostazione predefinita dispositivo
+  CSP: [MdmStore/Global/CRLcheck](https://go.microsoft.com/fwlink/?linkid=872548)
 
-## <a name="web--network-protection"></a>Protezione del Web e della rete  
+  Specificare come applicare la verifica dell'elenco di revoche di certificati.  
 
-- **Tipo di protezione di rete**  
-  [Defender/EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection): questo criterio consente di attivare/disattivare la protezione della rete in Microsoft Defender Exploit Guard. La protezione di rete è una funzionalità di Microsoft Defender Exploit Guard che protegge i dipendenti che usano le app dall'accesso a tentativi di phishing, siti che ospitano exploit e contenuti dannosi in Internet. Impedisce anche ai browser di terze parti di connettersi a siti pericolosi.  
+  - **Non configurato** (*impostazione predefinita*) -La verifica dell'elenco di revoche di certificati è disabilitata.
+  - **Nessuno**
+  - **Tentativo**
+  - **Richiedi**
 
-  Se impostato su *Abilita* o su *Modalità di controllo*, gli utenti non possono disattivare la protezione della rete ed è possibile usare Microsoft Defender Security Center per visualizzare le informazioni sui tentativi di connessione.  
- 
-  - L'impostazione *Abilitare* impedisce a utenti e app di connettersi a domini pericolosi.  
-  - L'impostazione *Modalità di controllo* non impedisce a utenti e app di connettersi a domini pericolosi.  
+- **Accodamento di pacchetti**  
+  CSP: [MdmStore/Global/EnablePacketQueue](https://go.microsoft.com/fwlink/?linkid=872551)
 
-  Se l'impostazione è *Definito dall'utente*, agli utenti e alle app non viene impedito di connettersi a domini pericolosi e le informazioni sulle connessioni non sono disponibili in Microsoft Defender Security Center.  
+  Consente di specificare la modalità di abilitazione del ridimensionamento per il software sul lato ricezione per la ricezione di testo crittografato e l'inoltro di testo normale per lo scenario relativo a gateway con tunnel IPsec. Questa impostazione assicura il mantenimento dell'ordine dei pacchetti.
 
-  **Impostazione predefinita**: Modalità di controllo
+  - **Non configurato** (*impostazione predefinita*) - Viene ripristinata l'impostazione predefinita del client per l'accodamento di pacchetti, ovvero disabilitato.
+  - **Disabilitato**
+  - **Accoda in ingresso**
+  - **Accoda in uscita**
+  - **Accoda entrambi**
 
-- **Richiedere SmartScreen per Microsoft Edge**  
-  [Browser/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen): per impostazione predefinita, Microsoft Edge usa Microsoft Defender SmartScreen (attivato) per proteggere gli utenti da potenziali tentativi di phishing e software dannoso. Per impostazione predefinita, questo criterio è abilitato, ovvero è impostato su *Sì*, e impedisce agli utenti di disattivare Microsoft Defender SmartScreen.  Quando il criterio valido per un dispositivo è impostato su Non configurato, gli utenti possono disattivare Microsoft Defender SmartScreen, rimuovendo tuttavia la protezione dal dispositivo.  
+- **Profilo privato del firewall**  
+  [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlink/?linkid=2067041)
 
-  **Impostazione predefinita**: Sì
+  - **Configura** (*impostazione predefinita*)
+  - **Non configurato**
+
+  Con l'impostazione *Configura* è possibile configurare le impostazioni aggiuntive seguenti.
+
+  - **Connessioni in ingresso bloccate**  
+    CSP: [/DefaultInboundAction](https://go.microsoft.com/fwlink/?linkid=872564)
+
+    - **Sì** (*impostazione predefinita*)
+    - **Non configurato**
+
+  - **Risposte unicast a broadcast multicast obbligatorie**  
+    CSP: [/DisableUnicastResponsesToMulticastBroadcast](https://go.microsoft.com/fwlink/?linkid=872562)
+
+    - **Sì** (*impostazione predefinita*)
+    - **Non configurato**
+
+  - **Modalità mascheramento obbligatoria**  
+    CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    - **Sì** (*impostazione predefinita*)
+    - **Non configurato**
+
+  - **Connessioni in uscita obbligatorie**  
+    CSP: [/DefaultOutboundAction](https://aka.ms/intune-firewall-outboundaction)
+
+    - **Sì** (*impostazione predefinita*)
+    - **Non configurato**
+
+  - **Notifiche in ingresso bloccate**  
+    CSP: [/DisableInboundNotifications](https://go.microsoft.com/fwlink/?linkid=872563)
+
+    - **Sì** (*impostazione predefinita*)
+    - **Non configurato**
+
+  - **Regole per porte globali da Criteri di gruppo unite**  
+    CSP: [/GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)
+
+    - **Sì** (*impostazione predefinita*)
+    - **Non configurato**
+
+  - **Modalità mascheramento bloccata**  
+    CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    - **Sì** (*impostazione predefinita*)
+    - **Non configurato**
+
+  - **Firewall abilitato**  
+    CSP: [/EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
+
+    - **Non configurato**
+    - **Bloccato**
+    - **Consentito** (*impostazione predefinita*)
+
+  - **Regole per applicazioni autorizzate da Criteri di gruppo non unite**  
+    CSP: [/AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)
+
+    - **Sì** (*impostazione predefinita*)
+    - **Non configurato**
+
+  - **Regole di sicurezza connessione da Criteri di gruppo non unite**  
+    CSP: [/AllowLocalIpsecPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872568)
+
+    - **Sì** (*impostazione predefinita*)
+    - **Non configurato**
+
+  - **Traffico in ingresso obbligatorio**  
+    CSP: [/Shielded](https://go.microsoft.com/fwlink/?linkid=872561)
+
+    - **Sì** (*impostazione predefinita*)
+    - **Non configurato**
+
+  - **Regole dei criteri da Criteri di gruppo non unite**  
+    CSP: [/AllowLocalPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872567)
+
+    - **Sì** (*impostazione predefinita*)
+    - **Non configurato**
+
+- **Profilo pubblico del firewall**  
+  [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlink/?linkid=2067143)
+
+  - **Configura** (*impostazione predefinita*)
+  - **Non configurato**
+
+  Con l'impostazione *Configura* è possibile configurare le impostazioni aggiuntive seguenti.
+
+  - **Connessioni in ingresso bloccate**  
+    CSP: [/DefaultInboundAction](https://go.microsoft.com/fwlink/?linkid=872564)
+
+    - **Sì** (*impostazione predefinita*)
+    - **Non configurato**
+
+  - **Risposte unicast a broadcast multicast obbligatorie**  
+    CSP: [/DisableUnicastResponsesToMulticastBroadcast](https://go.microsoft.com/fwlink/?linkid=872562)
+
+    - **Sì** (*impostazione predefinita*)
+    - **Non configurato**
+
+  - **Modalità mascheramento obbligatoria**  
+    CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    - **Sì** (*impostazione predefinita*)
+    - **Non configurato**
+
+  - **Connessioni in uscita obbligatorie**  
+    CSP: [/DefaultOutboundAction](https://aka.ms/intune-firewall-outboundaction)
+
+    - **Sì** (*impostazione predefinita*)
+    - **Non configurato**
+
+  - **Regole per applicazioni autorizzate da Criteri di gruppo non unite**  
+    CSP: [/AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)
+
+    - **Sì** (*impostazione predefinita*)
+    - **Non configurato**
+
+  - **Notifiche in ingresso bloccate**  
+    CSP: [/DisableInboundNotifications](https://go.microsoft.com/fwlink/?linkid=872563)
+
+    - **Sì** (*impostazione predefinita*)
+    - **Non configurato**
+
+  - **Regole per porte globali da Criteri di gruppo unite**  
+    CSP: [/GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)
+
+    - **Sì** (*impostazione predefinita*)
+    - **Non configurato**
+
+  - **Modalità mascheramento bloccata**  
+    CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    - **Sì** (*impostazione predefinita*)
+    - **Non configurato**
+
+  - **Firewall abilitato**  
+    CSP: [/EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
+
+    - **Non configurato**
+    - **Bloccato**
+    - **Consentito** (*impostazione predefinita*)
+
+  - **Regole di sicurezza connessione da Criteri di gruppo non unite**  
+    CSP: [/AllowLocalIpsecPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872568)
+
+    - **Sì** (*impostazione predefinita*)
+    - **Non configurato**
+
+  - **Traffico in ingresso obbligatorio**  
+    CSP: [/Shielded](https://go.microsoft.com/fwlink/?linkid=872561)
+
+    - **Sì** (*impostazione predefinita*)
+    - **Non configurato**
+
+  - **Regole dei criteri da Criteri di gruppo non unite**  
+    CSP: [/AllowLocalPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872567)
+
+    - **Sì** (*impostazione predefinita*)
+    - **Non configurato**
+
+- **Profilo di dominio del firewall**  
+  CSP: [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlink/?linkid=2066796)
+
+  - **Risposte unicast a broadcast multicast obbligatorie**  
+    CSP: [/DisableUnicastResponsesToMulticastBroadcast](https://go.microsoft.com/fwlink/?linkid=872562)
+
+  - **Regole per applicazioni autorizzate da Criteri di gruppo non unite**  
+    CSP: [/AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)
+
+    - **Sì** (*impostazione predefinita*)
+    - **Non configurato**  
+
+  - **Notifiche in ingresso bloccate**  
+    CSP: [/DisableInboundNotifications](https://go.microsoft.com/fwlink/?linkid=872563)
+
+    - **Sì** (*impostazione predefinita*)
+    - **Non configurato**
+
+  - **Regole per porte globali da Criteri di gruppo unite**  
+    CSP: [/GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)
+
+    - **Sì** (*impostazione predefinita*)
+    - **Non configurato**
+
+  - **Modalità mascheramento bloccata**  
+    CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    - **Sì** (*impostazione predefinita*)
+    - **Non configurato**
+
+  - **Firewall abilitato**  
+    CSP: [/EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
+
+    - **Non configurato**
+    - **Bloccato**
+    - **Consentito** (*impostazione predefinita*)
+
+  - **Regole di sicurezza connessione da Criteri di gruppo non unite**  
+    CSP: [/AllowLocalIpsecPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872568)
+
+    - **Sì** (*impostazione predefinita*)
+    - **Non configurato**
+
+  - **Regole dei criteri da Criteri di gruppo non unite**  
+    CSP: [/AllowLocalPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872567)
+
+    - **Sì** (*impostazione predefinita*)
+    - **Non configurato**
+
+## <a name="microsoft-defender"></a>Microsoft Defender
+
+- **Esegui l'analisi veloce giornaliera alle ore**  
+  CSP: [Defender/ScheduleQuickScanTime](https://go.microsoft.com/fwlink/?linkid=2114053&clcid=0x409)
   
-- **Bloccare l'accesso a siti dannosi**  
-  [Browser/PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride): per impostazione predefinita, Microsoft Edge consente agli utenti di ignorare gli avvisi di Microsoft Defender SmartScreen sui siti potenzialmente dannosi consentendo agli utenti di continuare a visitare il sito. Se il criterio è abilitato (impostato su *Sì*), Microsoft Edge impedisce agli utenti di ignorare gli avvisi e impedisce loro di continuare a visitare il sito.  
+   Configurare quando viene eseguita l'analisi veloce giornaliera. Per impostazione predefinita, l'esecuzione dell'analisi è impostata sulle **2**.
 
-  **Impostazione predefinita**: Sì
+- **Ora di inizio analisi pianificata**  
+  
+  Per impostazione predefinita, il valore è impostato sulle **2**.
 
-- **Bloccare il download di file non verificati**  
-  [Browser/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles): per impostazione predefinita, Microsoft Edge consente agli utenti di ignorare gli avvisi di Microsoft Defender SmartScreen sui file potenzialmente dannosi, consentendo loro di continuare a scaricare file non verificati. Se questo criterio è abilitato (impostato su *Sì*), gli utenti non possono ignorare gli avvisi né scaricare file non verificati.  
+- **Configura la priorità bassa per la CPU per le analisi pianificate**  
+  CSP: [Defender/EnableLowCPUPriority](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority)  
 
-  **Impostazione predefinita**: Sì
+  -**Sì** (*impostazione predefinita*)
+  - **Non configurato**
 
-## <a name="windows-hello-for-business"></a>Windows Hello for Business  
+- **Impedisci alle app di comunicazione di Office di creare processi figlio**  
+  [Proteggere i dispositivi dagli exploit](https://go.microsoft.com/fwlink/?linkid=874499)  
+
+  Questa regola di ASR viene controllata tramite il GUID seguente: 26190899-1602-49e8-8b27-eb1d0a1ce869.
+  - **Non configurato** - Viene ripristinata l'impostazione predefinita di Windows che non blocca la creazione di processi figlio.
+  - **Definito dall'utente**
+  - **Abilita** (*impostazione predefinita*) - Le applicazioni di comunicazione di Office non possono creare processi figlio.
+  - **Modalità di controllo** - Vengono generati eventi Windows anziché bloccare i processi figlio.
+
+- **Block Adobe Reader from creating child processes** (Impedisci ad Adobe Reader di creare processi figlio)  
+  [Ridurre le superfici di attacco con le regole di riduzione della superficie di attacco](https://go.microsoft.com/fwlink/?linkid=853979)  
+
+  - **Non configurato** - Viene ripristinata l'impostazione predefinita di Windows che non blocca la creazione di processi figlio.
+  - **Definito dall'utente**
+  - **Abilita** (*impostazione predefinita*) -La creazione di processi figlio è bloccata da Adobe Reader.
+  - **Modalità di controllo** - Vengono generati eventi Windows anziché bloccare i processi figlio.
+
+- **Analizza i messaggi di posta elettronica in ingresso**  
+  CSP: [Defender/AllowEmailScanning](https://go.microsoft.com/fwlink/?linkid=2114052&clcid=0x409)
+
+  - **Sì** (*impostazione predefinita*) - Vengono analizzati le cassette postali e i file di posta elettronica, ad esempio PST, DBX, MNX, MIME e BINHEX.
+  - **Non configurato** - Con questa impostazione viene ripristinata l'impostazione predefinita del client, ovvero i file di posta elettronica che non vengono analizzati.
+
+- **Attiva protezione in tempo reale**  
+  CSP: [Defender/AllowRealtimeMonitoring](https://go.microsoft.com/fwlink/?linkid=2114050&clcid=0x409)
+
+  - **Sì** (*impostazione predefinita*) - Il monitoraggio in tempo reale viene applicato e l'utente non può disabilitarlo.
+  - **Non configurato** - Viene ripristinata l'impostazione predefinita del client, ovvero attivata, ma l'utente può modificarla. Per disabilitare il monitoraggio in tempo reale, usare un URI personalizzato.
+
+- **Numero di giorni (0-90) per la conservazione del malware in quarantena**  
+  CSP: [Defender/DaysToRetainCleanedMalware](https://go.microsoft.com/fwlink/?linkid=2114055&clcid=0x409)
+
+  Configurare il numero di giorni di mantenimento degli elementi nella cartella di quarantena, prima della rimozione. Il valore predefinito è zero (**0**), ovvero i file in quarantena non vengono mai rimossi.
+
+- **Defender - Pianificazione analisi del sistema**  
+  CSP: [Defender/ScheduleScanDay](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)
+
+  Pianificare il giorno in cui Defender analizza i dispositivi. Per impostazione predefinita, l'analisi è **Definita dall'utente** ma può essere impostata su *Ogni giorno*, su qualsiasi giorno della settimana o su *Nessuna analisi pianificata*.
+
+- **Quantità di tempo aggiuntiva (0-50 secondi) per l'estensione del timeout di protezione cloud**  
+  CSP: [Defender/CloudExtendedTimeout](https://go.microsoft.com/fwlink/?linkid=2113940&clcid=0x409)
+
+  Defender Antivirus blocca automaticamente i file sospetti per 10 secondi, in modo da poter analizzare i file nel cloud e assicurarsi che siano sicuri. Con questa impostazione è possibile aggiungere fino a 50 secondi a questo timeout.  L'impostazione predefinita del timeout è zero (**0**).
+
+- **Analizza le unità di rete mappate durante un'analisi completa**  
+  CSP: [Defender/AllowFullScanOnMappedNetworkDrives](https://go.microsoft.com/fwlink/?linkid=2113945&clcid=0x409)
+
+  - **Sì** (*impostazione predefinita*) - Durante un'analisi completa vengono incluse le unità di rete mappate.
+  - **Non configurato** - Viene ripristinata l'impostazione predefinita del cliente, ovvero viene disabilitata l'analisi per le unità di rete mappate.
+
+- **Attiva la protezione di rete**  
+  CSP: [Defender/EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=2113939&clcid=0x409)
+  
+  - **Sì** (*impostazione predefinita*) - Blocca il traffico dannoso rilevato dalle firme in Network Inspection System (NIS).
+  - **Non configurato**
+
+- **Analizza tutti i file e gli allegati scaricati**  
+  CSP: [Defender/AllowIOAVProtection](https://go.microsoft.com/fwlink/?linkid=2113934&clcid=0x409)
+
+  - **Sì** (*impostazione predefinita*) - Vengono analizzati tutti i file e gli allegati scaricati. Viene ripristinata l'impostazione predefinita del client, ovvero attivata, ma l'utente può modificarla. Per disabilitare questa impostazione, usare un URI personalizzato.
+  - **Non configurato** - Viene ripristinata l'impostazione predefinita del client, ovvero attivata, ma l'utente può modificarla. Per disabilitare questa impostazione, usare un URI personalizzato.
+
+- **Blocca la protezione all'accesso**  
+  CSP: [Defender/AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935&clcid=0x409)
+
+  - **Sì** (*impostazione predefinita*)
+  - **Non configurato**
+
+- **Analizza gli script del browser**  
+  CSP: [Defender/AllowScriptScanning](https://go.microsoft.com/fwlink/?linkid=2114054&clcid=0x409)
+
+  - **Sì** (*impostazione predefinita*) - La funzionalità di analisi degli script di Microsoft Defender viene applicata e l'utente non può disattivarla.
+  - **Non configurato**- Viene ripristinata l'impostazione predefinita del client, ovvero l'analisi degli script è abilitata, tuttavia l'utente può disattivarla.
+
+- **Blocca l'accesso utente all'app Microsoft Defender**  
+  CSP: [Defender/AllowUserUIAccess](https://go.microsoft.com/fwlink/?linkid=2114043&clcid=0x409)
+
+  - **Sì** (*impostazione predefinita*)- L'interfaccia utente di Microsoft Defender non è accessibile e le notifiche vengono soppresse.
+  - **Non configurato** - Con l'impostazione Sì, l'interfaccia utente di Windows Defender non sarà accessibile e le notifiche verranno soppresse. Con l'impostazione Non configurato verrà ripristinata l'impostazione predefinita del client, ovvero saranno consentite sia l'interfaccia utente che le notifiche.
+
+- **Utilizzo CPU massimo consentito (0-100%) per analisi**  
+  CSP: [Defender/AvgCPULoadFactor](https://go.microsoft.com/fwlink/?linkid=2114046&clcid=0x409)
+
+  Specificare come percentuale la quantità massima di CPU da usare per un'analisi. Il valore predefinito è **50**.
+
+- **Tipo di analisi**  
+  CSP: [Defender/ScanParameter](https://go.microsoft.com/fwlink/?linkid=2114045&clcid=0x409)
+
+  - **Definito dall'utente**
+  - **Disabilitato**
+  - **Analisi veloce** (*impostazione predefinita*)
+  - **Analisi completa**
+
+- **Immettere la frequenza (0-24 ore) per il controllo della disponibilità di aggiornamenti dell'intelligence sulla sicurezza**  
+  CSP: [Defender/SignatureUpdateInterval](https://go.microsoft.com/fwlink/?linkid=2113936&clcid=0x409)
+
+  Specificare la frequenza con cui verificare la presenza di firme aggiornate, in ore. Ad esempio, con il valore 1 il controllo verrà eseguito ogni ora. Se il valore è 2, il controllo viene eseguito ogni due ore e così via.
+
+  Se non viene definito alcun valore, i dispositivi usano l'impostazione predefinita del client, ovvero **8** ore.
+
+- **Consenso per l'invio di campioni di Defender**  
+  CSP: [Defender/SubmitSamplesConsent](https://go.microsoft.com/fwlink/?linkid=2067131)
+
+  Verifica il livello di consenso utente in Microsoft Defender per l'invio di dati. Se il consenso necessario è già stato concesso, Microsoft Defender esegue l'invio. In caso contrario (e se l'utente ha specificato che non venga mai inviata una richiesta), viene richiesto il consenso utente (se *Abilita la protezione mediante cloud* è impostata su *Sì*) prima dell'invio dei dati.
+
+  - **Invia i campioni sicuri automaticamente** (*impostazione predefinita*)
+  - **Chiedi sempre conferma**
+  - **Non inviare mai**
+  - **Invia tutti i campioni automaticamente**
+
+- **Livello di protezione fornita dal cloud**  
+  CSP: [CloudBlockLevel](https://go.microsoft.com/fwlink/?linkid=2113942)
+
+  Consente di configurare l'aggressività con cui Defender Antivirus deve bloccare e analizzare i file sospetti.
+  - **Non configurata** (*impostazione predefinita*): livello di blocco predefinito di Defender.
+  - **Alta**: blocco aggressivo degli elementi sconosciuti e ottimizzazione delle prestazioni del client, con una maggiore probabilità di falsi positivi.
+  - **Alta +** : blocco aggressivo degli elementi sconosciuti, con misure di protezione aggiuntive che possono influire sulle prestazioni del client.
+  - **Tolleranza zero**: blocco di tutti i file eseguibili sconosciuti.
+
+- **Analizza file di archivio**  
+  CSP: [Defender/AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047&clcid=0x409)
+
+  - **Sì** (*impostazione predefinita*) - Viene applicata l'analisi dei file di archivio, ad esempio file ZIP o CAB.
+  - **Non configurata** - Verrà ripristinata l'impostazione predefinita del client, ovvero l'analisi dei file archiviati, ma può essere disabilitata dall'utente.
+
+- **Attiva monitoraggio comportamento**  
+  CSP: [Defender/AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048&clcid=0x409)
+
+  - **Sì** (*impostazione predefinita*) - Il monitoraggio del comportamento viene applicato e l'utente non può disabilitarlo.
+  - **Non configurato** - Viene ripristinata l'impostazione predefinita del client, ovvero attivata, ma l'utente può modificarla. Per disabilitare il monitoraggio in tempo reale, usare un URI personalizzato.
+  
+- **Analizza le unità rimovibili durante un'analisi completa**  
+  CSP: [Defender/AllowFullScanRemovableDriveScanning](https://go.microsoft.com/fwlink/?linkid=2113946&clcid=0x409)
+
+  - **Sì** (*impostazione predefinita*) - Durante un'analisi completa vengono analizzate le unità rimovibili, ad esempio le unità flash USB.
+  - **Non configurato** - Viene ripristinata l'impostazione predefinita del client, che analizza le unità rimovibili, tuttavia l'utente può disabilitare questa analisi.
+  
+- **Analizza file di rete**  
+  CSP: [Defender/AllowScanningNetworkFiles](https://go.microsoft.com/fwlink/?linkid=2114049&clcid=0x409)
+
+  - **Sì** (*impostazione predefinita*) - Microsoft Defender analizza i file di rete.
+  - **Non configurato** - Viene ripristinata l'impostazione predefinita del client, ovvero viene disabilitata l'analisi dei file di rete.
+  
+- **Azione della Protezione da applicazioni potenzialmente di Defender**  
+  CSP: [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
+
+  Consente di specificare il livello di rilevamento per le applicazioni potenzialmente indesiderate (PUA, Potentially Unwanted Application). Defender avvisa gli utenti quando è in corso il download o il tentativo di installazione di software potenzialmente indesiderato in un dispositivo.
+  - **Impostazione predefinita dispositivo**
+  - **Blocca** (*impostazione predefinita*) - Gli elementi rilevati vengono bloccati e visualizzati nella cronologia insieme ad altre minacce.
+  - **Controlla** - Defender rileva le applicazioni potenzialmente indesiderate, ma non esegue alcuna azione. È possibile esaminare le informazioni sulle applicazioni per cui Defender avrebbe intrapreso un'azione cercando gli eventi creati in Visualizzatore eventi da Defender.
+
+- **Attiva la protezione fornita dal cloud**  
+  CSP: [AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
+
+  Per impostazione predefinita, nei dispositivi Windows 10 desktop Defender invia informazioni a Microsoft in merito a eventuali problemi riscontrati. Le informazioni vengono analizzate per acquisire altre informazioni sui problemi riscontrati dall'utente e da altri clienti e offrire soluzioni migliorate.
+
+  - **Sì** (*impostazione predefinita*) - La protezione fornita dal cloud è attiva.  Gli utenti dei dispositivi non possono modificare questa impostazione.
+  - **Non configurata** -Viene ripristinata l'impostazione predefinita del sistema.
+
+- **Impedisci alle applicazioni di Office di inserire codice in altri processi**  
+  [Proteggere i dispositivi dagli exploit](https://go.microsoft.com/fwlink/?linkid=872974)
+
+  Questa regola di ASR viene controllata tramite il GUID seguente: 75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84
+  - **Non configurato** - Viene ripristinata l'impostazione predefinita di Windows, ovvero disattivato.
+  - **Blocca** (*impostazione predefinita*) - Le applicazioni di Office non possono inserire codice in altri processi.
+  - **Modalità di controllo** - Vengono generati eventi di Windows anziché imporre il blocco.
+
+- **Impedisci alle applicazioni di Office di creare contenuto eseguibile**  
+  [Proteggere i dispositivi dagli exploit](https://go.microsoft.com/fwlink/?linkid=872975)
+
+  Questa regola di ASR viene controllata tramite il GUID seguente: 3B576869-A4EC-4529-8536-B80A7769E899
+  - **Non configurato** - Viene ripristinata l'impostazione predefinita di Windows, ovvero disattivato.
+  - **Blocca** (*impostazione predefinita*) - Le applicazioni di Office non possono creare contenuto eseguibile.
+  - **Modalità di controllo** - Vengono generati eventi di Windows anziché imporre il blocco.
+  
+- **Impedisci a JavaScript o VBScript di avviare contenuto eseguibile scaricato**  
+  [Proteggere i dispositivi dagli exploit](https://go.microsoft.com/fwlink/?linkid=872979)
+
+   Questa regola di ASR viene controllata tramite il GUID seguente: D3E037E1-3EB8-44C8-A917-57927947596D
+  - **Non configurato** - Viene ripristinata l'impostazione predefinita di Windows, ovvero disattivato.
+  - **Blocca** (*impostazione predefinita*) - Defender blocca l'esecuzione dei file JavaScript o VBScript scaricati da Internet.
+  - **Modalità di controllo** - Vengono generati eventi di Windows anziché imporre il blocco.
+  
+- **Abilita la protezione di rete**  
+  CSP: [Defender/EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=872618)
+
+  - **Non configurato** - Viene ripristinata l'impostazione predefinita di Windows, ovvero disabilitato.
+  - **Definito dall'utente**
+  - **Abilita** - La protezione della rete è abilitata per tutti gli utenti del sistema.
+  - **Modalità di controllo** (*impostazione predefinita*) - Gli utenti non vengono protetti da domini pericolosi e vengono invece generati eventi di Windows.
+
+- **Blocca processi non attendibili e non firmati eseguiti da USB**  
+  [Proteggere i dispositivi dagli exploit](https://go.microsoft.com/fwlink/?linkid=874502)
+
+  Questa regola di ASR viene controllata tramite il GUID seguente: b2b3f03d-6a65-4F7B-A9C7-1c7ef74a9ba4
+  - **Non configurato** - Viene ripristinata l'impostazione predefinita di Windows, ovvero disattivato.
+  - **Blocca** (*impostazione predefinita*) - Vengono bloccati i processi non attendibili e non firmati eseguiti da un'unità USB.
+  - **Modalità di controllo** - Vengono generati eventi di Windows anziché imporre il blocco.
+
+- **Blocca il furto di credenziali dal sottosistema dell'autorità di protezione locale di Windows (lsass.exe)**  
+  [Proteggere i dispositivi dagli exploit](https://go.microsoft.com/fwlink/?linkid=874499)
+
+  Questa regola di ASR viene controllata tramite il GUID seguente: 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2
+  - **Non configurato** - Viene ripristinata l'impostazione predefinita di Windows, ovvero disattivato.
+  - **Definito dall'utente**
+  - **Abilita** (*impostazione predefinita*) - Vengono bloccati i tentativi di furto delle credenziali tramite Lsass.exe.
+  - **Modalità di controllo** - Gli utenti non vengono protetti da domini pericolosi e vengono invece generati eventi di Windows.
+
+- **Blocca il download di contenuti eseguibili dai client di posta elettronica e posta sul Web**  
+  [Proteggere i dispositivi dagli exploit](https://go.microsoft.com/fwlink/?linkid=872980)
+
+  - **Non configurato** - Viene ripristinata l'impostazione predefinita di Windows, ovvero disattivato.
+  - **Blocca** (*impostazione predefinita*) - Viene bloccato il contenuto eseguibile scaricato dai client di posta elettronica e posta sul Web.
+  - **Modalità di controllo** - Vengono generati eventi di Windows anziché imporre il blocco.
+
+- **Impedisci alle applicazioni di Office di creare processi figlio**  
+  [Proteggere i dispositivi dagli exploit](https://go.microsoft.com/fwlink/?linkid=872976)
+
+  Questa regola di ASR viene controllata tramite il GUID seguente: D4F940AB-401B-4EFC-AADC-AD5F3C50688A
+  - **Non configurato** - Viene ripristinata l'impostazione predefinita di Windows, ovvero disattivato.
+  - **Blocca** (*impostazione predefinita*)
+  - **Modalità di controllo** - Vengono generati eventi di Windows anziché imporre il blocco.
+
+- **Blocca l'esecuzione di script potenzialmente offuscati (js/vbs/ps)**  
+  [Proteggere i dispositivi dagli exploit](https://go.microsoft.com/fwlink/?linkid=872978)
+
+  Questa regola di ASR viene controllata tramite il GUID seguente: 5BEB7EFE-FD9A-4556-801D-275E5FFC04CC
+  - **Non configurato** - Viene ripristinata l'impostazione predefinita di Windows, ovvero disattivato.
+  - **Blocca** (*impostazione predefinita*) - Defender impedirà l'esecuzione di script offuscati.
+  - **Modalità di controllo** - Vengono generati eventi di Windows anziché imporre il blocco.
+
+- **Blocca le chiamate API Win32 dalle macro di Office**  
+  [Proteggere i dispositivi dagli exploit](https://go.microsoft.com/fwlink/?linkid=872977)
+
+  Questa regola di ASR viene controllata tramite il GUID seguente: 92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B
+  - **Non configurato** - Viene ripristinata l'impostazione predefinita di Windows, ovvero disattivato.
+  - **Blocca** (*impostazione predefinita*) - Verrà impedito l'uso di chiamate API Win32 nelle macro di Office.
+  - **Modalità di controllo** - Vengono generati eventi di Windows anziché imporre il blocco.
+
+## <a name="microsoft-defender-security-center"></a>Microsoft Defender Security Center
+
+- **Impedisce agli utenti di modificare l'interfaccia di protezione di Exploit Guard**  
+  CSP: [WindowsDefenderSecurityCenter/DisallowExploitProtectionOverride](https://go.microsoft.com/fwlink/?linkid=2067239)
+
+  - **Sì** (*impostazione predefinita*) -  Impedisce agli utenti di apportare modifiche nell'area delle impostazioni per la protezione dagli exploit in Microsoft Defender Security Center.
+  - **Non configurato** - Gli utenti locali non possono apportare modifiche nell'area delle impostazioni per la protezione dagli exploit.
+
+## <a name="smart-screen"></a>SmartScreen
+
+- **Impedisci agli utenti di ignorare gli avvisi di SmartScreen**  
+  CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
+
+   Questa impostazione richiede l'abilitazione dell'impostazione 'SmartScreen per app e file'.
+  - **Sì** (*impostazione predefinita*) - SmartScreen non mostrerà all'utente un'opzione per ignorare l'avviso ed eseguire l'app. L'avviso verrà visualizzato, ma l'utente potrà ignorarlo.
+  - **Non configurato** - Viene ripristinata l'impostazione predefinita di Windows, che consente all'utente di ignorare gli avvisi.
+
+- **Richiedi app solo dallo Store**  
+
+  - **Sì** (*impostazione predefinita*)
+  - **Non configurato**
+
+- **Attiva Windows SmartScreen**  
+  CSP: [SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)
+
+  - **Sì** (*impostazione predefinita*) - Impone l'uso di SmartScreen per tutti gli utenti.
+  - **Non configurato** - Viene ripristinata l'impostazione predefinita di Windows, che prevede l'abilitazione di SmartScreen, tuttavia gli utenti possono modificare questa impostazione. Per disabilitare SmartScreen, usare un URI personalizzato.
+
+## <a name="windows-hello-for-business"></a>Windows Hello for Business
 
 Per altre informazioni, vedere [PassportForWork CSP](https://docs.microsoft.com/windows/client-management/mdm/passportforwork-csp) (Provider dei servizi di configurazione - PassportForWork) nella documentazione di Windows.
 
-- **Configura Windows Hello for Business** - *IDTenant/Criteri/UsePassportForWork*    
-  Windows Hello for Business è un metodo alternativo per l'accesso a Windows che prevede la sostituzione di password, smart card e smart card virtuali.  
+- **Blocca Windows Hello for Business**  
 
+   Windows Hello for Business è un metodo alternativo per l'accesso a Windows che prevede la sostituzione di password, smart card e smart card virtuali.
 
-  > [!IMPORTANT]
-  > Le opzioni per questa impostazione sono invertite rispetto al significato implicito. Essendo invertito, il valore *Sì* non abilita Windows Hello e viene invece considerato come *Non configurato*. Con l'impostazione *Non configurato*, Windows Hello viene abilitato nei dispositivi che ricevono questa baseline.
-  >
-  > Le descrizioni seguenti sono state modificate per riflettere questo comportamento. L'inversione delle impostazioni verrà corretta in un aggiornamento futuro di questa baseline di sicurezza.
+  - **Non configurato** - I dispositivi effettuano il provisioning di Windows Hello for Business, ovvero l'impostazione predefinita di Windows.
+  - **Disabilitato** (*impostazione predefinita*) - I dispositivi effettuano il provisioning di Windows Hello for Business.
+  - **Abilitato** - I dispositivi non effettuano il provisioning di Windows Hello for Business per qualsiasi utente.
 
-  - Con l'impostazione *Non configurato* Windows Hello viene abilitato e il dispositivo esegue il provisioning di Windows Hello for Business.
-  - Con l'impostazione *Sì* la baseline non influisce sull'impostazione di criteri del dispositivo. Ciò significa che se Windows Hello for Business è disabilitato in un dispositivo, rimane disabilitato. Se è abilitato, rimane abilitato.
-  <!-- expected behavior 
-  - When set to *Yes*, you  enable this policy and the device provisions Windows Hello for Business.  
-  - When set to *Not configured*, the baseline does not affect the policy setting of the device. This means that if Windows Hello for Business is disabled on a device, it remains disabled. If its enabled, it remains enabled. 
-  -->
+  Con l'impostazione *Disabilitato* è possibile configurare le impostazioni seguenti:
 
-  Non è possibile disabilitare Windows Hello for Business tramite questa baseline. È possibile disabilitare Windows Hello for Business quando si configura la [registrazione di Windows](windows-hello.md) o come parte di un profilo di configurazione del dispositivo per la [protezione delle identità](identity-protection-configure.md).  
+  - **Lettere minuscole nel PIN**  
+    - **Non consentito**
+    - **Richiesto**
+    - **Consentito** (*impostazione predefinita*)
 
-Windows Hello for Business è un metodo alternativo per l'accesso a Windows che prevede la sostituzione di password, smart card e smart card virtuali.  
+  - **Caratteri speciali nel PIN**
+    - **Non consentito**
+    - **Richiesto**
+    - **Consentito** (*impostazione predefinita*)
 
-  Se si abilita o non si configura questo criterio, il dispositivo esegue il provisioning di Windows Hello for Business. Se si disabilita questo criterio, il dispositivo non effettua il provisioning di Windows Hello for Business per alcun utente.
-
-  Intune non supporta la disabilitazione di Windows Hello. In alternativa, è possibile impostare il criterio per abilitare Windows Hello for Business (Sì) o per non configurare Windows Hello direttamente (Non configurato). Se il criterio non è configurato, un dispositivo può ricevere la configurazione tramite altri criteri, che possono abilitare o disabilitare questa funzionalità.  
-
-  **Impostazione predefinita**: Sì  
-
-- **Richiedi lettere minuscole nel PIN** - *IDTenant/Criteri/PINComplexity/LowercaseLetters*  
-  **Impostazione predefinita**: Consentito  
-
-- **Richiedi caratteri speciali nel PIN** - *IDTenant/Criteri/PINComplexity/SpecialCharacters*  
-  **Impostazione predefinita**: Consentito  
-
-- **Richiedi lettere maiuscole nel PIN** - *TenantId/Policies/PINComplexity/UppercaseLetters*   
-  **Impostazione predefinita**: Consentito  
-
+  - **Lettere maiuscole nel PIN**
+    - **Non consentito**
+    - **Richiesto**
+    - **Consentito** (*impostazione predefinita*)

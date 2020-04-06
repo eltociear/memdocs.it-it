@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ac81ceced473eacc32a3fca566f7c36eb7a262e2
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: d79f97da88a939d95b68a9ef747da87cf3844598
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084871"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322481"
 ---
 # <a name="use-device-encryption-with-intune"></a>Usare la crittografia dei dispositivi con Intune
 
@@ -43,7 +43,7 @@ La registrazione del dispositivo approvata dall'utente è necessaria per il funz
 
 FileVault è un programma di crittografia per dischi interi incluso in macOS. È possibile usare Intune per configurare FileVault nei dispositivi che eseguono **macOS 10.13 o versione successiva**.
 
-Per configurare FileVault, creare un [profilo di configurazione del dispositivo](../configuration/device-profile-create.md) per Endpoint Protection per la piattaforma macOS. Le impostazioni di FileVault sono una delle categorie di impostazioni disponibili per Endpoint Protection di macOS.
+Per configurare FileVault, creare un [profilo di configurazione del dispositivo](endpoint-protection-configure.md) per Endpoint Protection per la piattaforma macOS. Le impostazioni di FileVault sono una delle categorie di impostazioni disponibili per Endpoint Protection di macOS.
 
 È quindi necessario creare criteri di crittografia dei dispositivi con FileVault. Tali criteri vengono applicati ai dispositivi in due fasi. Prima il dispositivo viene preparato in modo da consentire a Intune di recuperare la chiave di ripristino ed eseguirne il backup. Questa azione è detta deposito. Dopo il deposito della chiave, è possibile avviare la crittografia del disco.
 
@@ -105,7 +105,7 @@ Usare Intune per configurare Crittografia unità BitLocker nei dispositivi che e
 
 BitLocker è disponibile nei dispositivi che eseguono **Windows 10 o versione successiva**.
 
-Configurare BitLocker quando si crea un [profilo di configurazione del dispositivo](../configuration/device-profile-create.md) per Endpoint Protection per la piattaforma Windows 10 o versione successiva. Le impostazioni di BitLocker si trovano nella categoria delle impostazioni Crittografia di Windows per Endpoint Protection di Windows 10.
+Configurare BitLocker quando si crea un [profilo di configurazione del dispositivo](endpoint-protection-configure.md) per Endpoint Protection per la piattaforma Windows 10 o versione successiva. Le impostazioni di BitLocker si trovano nella categoria delle impostazioni Crittografia di Windows per Endpoint Protection di Windows 10.
 
 ![Impostazioni di BitLocker](./media/encrypt-devices/bitlocker-settings.png)
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d201bb3b15c0debb724f974d519a77994aae8e7f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 19660a8b2dc6b804a1ee1a1eaf407261ca9af2b1
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359547"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327248"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-school-manager"></a>Configurare la registrazione di dispositivi iOS/iPadOS con Apple School Manager
 
@@ -31,7 +31,7 @@ ms.locfileid: "79359547"
 
 È possibile configurare Intune per registrare i dispositivi iOS/iPadOS acquistati con il programma [Apple School Manager](https://school.apple.com/). Con Intune e Apple School Manager è possibile registrare un numero elevato di dispositivi iOS/iPadOS senza interventi diretti. Quando uno studente o un insegnante accende il dispositivo, l'Assistente configurazione viene eseguito con impostazioni preconfigurate e il dispositivo viene registrato nella gestione.
 
-Per abilitare la registrazione di Apple School Manager, si usano entrambi i portali di Intune e Apple School Manager. È necessario un elenco di numeri di serie o un numero di ordine di acquisto per poter assegnare i dispositivi a Intune per la gestione. Si creano profili di registrazione DEP contenenti le impostazioni da applicare ai dispositivi durante la registrazione.
+Per abilitare la registrazione di Apple School Manager, si usano entrambi i portali di Intune e Apple School Manager. È necessario un elenco di numeri di serie o un numero di ordine di acquisto per poter assegnare i dispositivi a Intune per la gestione. Si creano profili di Registrazione automatica del dispositivo contenenti le impostazioni da applicare ai dispositivi durante la registrazione.
 
 La registrazione di Apple School Manager non può essere usata con il [programma Device Enrollment Program di Apple](device-enrollment-program-enroll-ios.md) o con il [manager di registrazione dispositivi](device-enrollment-manager-enroll.md).
 
@@ -106,7 +106,7 @@ Ora che è stato installato il token, è possibile creare un profilo di registra
     > Non sono supportate durante l'autenticazione con l'Assistente configurazione di Apple.
 
 6. Scegliere **Impostazioni di gestione dei dispositivi** e specificare se si vogliono includere nella supervisione i dispositivi con questo profilo.
-    I dispositivi **con supervisione** offrono più opzioni di gestione e il blocco attivazione viene disabilitato per impostazione predefinita. È consigliabile usare il programma DEP come meccanismo per l'abilitazione della modalità con supervisione, soprattutto per le organizzazioni che distribuiscono un numero elevato di dispositivi iOS/iPadOS.
+    I dispositivi **con supervisione** offrono più opzioni di gestione e il blocco attivazione viene disabilitato per impostazione predefinita. È consigliabile usare Registrazione automatica del dispositivo come meccanismo per l'abilitazione della modalità con supervisione, soprattutto per le organizzazioni che distribuiscono un numero elevato di dispositivi iOS/iPadOS.
 
     Gli utenti vengono informati che i dispositivi sono inclusi nella supervisione in due modi:
 

@@ -6,26 +6,25 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/10/2019
+ms.date: 03/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa471beb5929a6c5b39267871518f560fe6978f6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2e18fad8f1112681a62bcdacd63c652cfd4ad3ac
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79343427"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359293"
 ---
 # <a name="macos-device-settings-to-configure-and-use-kernel-extensions-in-intune"></a>Impostazioni dei dispositivi macOS per configurare e usare le estensioni del kernel in Intune
-
-
 
 Questo articolo elenca e descrive le diverse impostazioni di estensione del kernel che è possibile controllare nei dispositivi macOS. Usare queste impostazioni nella propria soluzione di gestione di dispositivi mobili (MDM) per aggiungere e gestire le estensioni del kernel sui dispositivi.
 
@@ -44,7 +43,7 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
 
 ### <a name="settings-apply-to-user-approved-automated-device-enrollment"></a>Le impostazioni si applicano a: Registrazione dei dispositivi con approvazione utente automatica
 
-- **Consenti gli override degli utenti**: **Consenti** permette agli utenti di approvare le estensioni del kernel non incluse nel profilo di configurazione. **Non configurato** (impostazione predefinita) impedisce agli utenti di consentire le estensioni non incluse nel profilo di configurazione. Sono quindi consentite solo le estensioni incluse nel profilo di configurazione.
+- **Consenti gli override degli utenti**: **Consenti** permette agli utenti di approvare le estensioni del kernel non incluse nel profilo di configurazione. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo impedisce agli utenti di consentire le estensioni non incluse nel profilo di configurazione. Sono quindi consentite solo le estensioni incluse nel profilo di configurazione.
 
   Per altre informazioni su questa funzionalità, vedere [user-approved kernel extension loading](https://developer.apple.com/library/archive/technotes/tn2459/_index.html) (Caricamento di estensioni del Kernel con approvazione utente) nel sito Web di Apple.
 

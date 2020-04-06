@@ -18,14 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 75b988572a5c22e49547a7ba1521cfc3485f4f03
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: e7dcad93f836ee564e973555bebe1a1f5d7ba3c3
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342205"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323680"
 ---
-# <a name="get-ready-to-configure-app-protection-policies-for-windows-10"></a>Prepararsi alla configurazione dei criteri di protezione delle app per Windows 10 
+# <a name="get-ready-for-windows-information-protection-in-windows-10"></a>Prepararsi per Windows Information Protection in Windows 10 
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
@@ -56,4 +56,4 @@ Abilitare la gestione di applicazioni mobili (MAM) per Windows 10, impostando il
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Creare e distribuire criteri di protezione delle app Windows Information Protection (WIP) con Intune](windows-information-protection-policy-create.md)
+[Creare un criterio WIP](windows-information-protection-policy-create.md)

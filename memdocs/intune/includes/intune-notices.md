@@ -4,15 +4,15 @@ description: Includere file
 author: ErikjeMS
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 11/19/2019
+ms.date: 03/30/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 373aeea9ab4fcbd075ac2ab18f205f3ddd191a39
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0b3af293ebc83c14f85abeb0dbaa38ca5187b267
+ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354438"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438720"
 ---
 Questi avvisi forniscono importanti informazioni utili per prepararsi per le modifiche e le funzionalità di Intune future.
 
@@ -25,22 +25,6 @@ Se nell'organizzazione sono distribuiti dispositivi Windows 10 Mobile, da ora al
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Operazioni di preparazione alla modifica
 È possibile controllare i report di Intune per vedere quali dispositivi o utenti potrebbero essere interessati. Passare a **Dispositivi** > **Tutti i dispositivi** e filtrare in base al sistema operativo. È possibile aggiungere altre colonne per facilitare l'identificazione degli utenti dell'organizzazione che hanno dispositivi che eseguono Windows 10 Mobile. Richiedere agli utenti finali di aggiornare i dispositivi o di interrompere l'uso dei dispositivi per l'accesso aziendale.
 
-
-
-### <a name="plan-for-change-change-in-experience-when-enrolling-android-enterprise-dedicated-devices-in-intune--6114580--"></a>Modifica prevista: Modifica nell'esperienza di registrazione dei dispositivi Android Enterprise dedicati in Intune<!--6114580-->
-Con la versione di novembre abbiamo comunicato l'aggiunta del supporto per la distribuzione del certificato dispositivo SCEP ai dispositivi Android Enterprise dedicati per abilitare l'accesso basato su certificati ai profili Wi-Fi. Questa modifica ha comportato alcune modifiche secondarie del flusso di registrazione per i dispositivi Android Enterprise dedicati. Con l'imminente aggiornamento del servizio di marzo o 2003, sono presenti altre modifiche di cui è necessario essere al corrente.
-
-#### <a name="how-does-this-affect-me"></a>Quali sono le conseguenze di questa modifica?
-Se si gestiscono dispositivi Android Enterprise dedicati nell'ambiente in uso, si inizieranno a vedere alcune modifiche implementate a marzo.
-- Per i dispositivi Android dedicati esistenti registrati prima dell'aggiornamento del servizio del 22 novembre 2019 o 1911: In questi dispositivi è installata l'app Microsoft Intune. Dopo la distribuzione delle modifiche back-end nel servizio Intune a marzo, inizieranno a essere applicati i certificati SCEP distribuiti ai dispositivi e associati ai profili Wi-Fi.
-- Per i dispositivi registrati dopo il 22 novembre 2019 e prima dell'implementazione di questa modifica a marzo: In questi dispositivi è installata l'app Microsoft Intune. I certificati SCEP distribuiti ai dispositivi e associati ai profili Wi-Fi continueranno a essere applicati.
-- Per le nuove registrazioni di dispositivi Android Enterprise dedicati dopo la distribuzione delle modifiche a marzo: Gli utenti finali visualizzeranno una procedura diversa nei dispositivi durante la registrazione. La registrazione continuerà a essere eseguita nello stesso modo (con QR, NFC, Zero Touch o identificatore dispositivo), ma non sarà presente alcun passaggio obbligatorio per l'installazione dell'app. L'app Microsoft Intune verrà invece installata automaticamente nei dispositivi. Gli utenti finali non dovranno toccare "Enable Intune Agent" (Abilita agente di Intune) durante il flusso. I certificati SCEP associati ai profili Wi-Fi possono essere distribuiti a questi dispositivi.
-
-#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Come prepararsi a questo cambiamento?
-È possibile eseguire l'aggiornamento delle linee guida per gli utenti finali e informare il supporto tecnico di questa modifica. La pagina Novità verrà aggiornata e verrà inviata una notifica tramite il Centro messaggi quando questa modifica inizierà a essere implementata.
-
-#### <a name="additional-information"></a>Informazioni aggiuntive
-[Supporto per i certificati SCEP nei dispositivi Android Enterprise dedicati](https://aka.ms/Dedicated_devices_enrollment)
 
 ### <a name="updated-support-statement-for-adobe-acrobat-reader-for-intune-mobile-app--5746776--"></a>È stata aggiornata l'informativa di supporto per l'app per dispositivi mobili 'Adobe Acrobat Reader per Intune'<!--5746776-->
 Nel documento MC188653 della fine di agosto è stato comunicato che l'app per dispositivi mobili Adobe Acrobat Reader per Intune stava avvicinandosi alla scadenza dell'1 dicembre 2019 e che Adobe prevedeva di includere il supporto dei criteri di protezione delle app di Intune all'interno dell'app Acrobat Reader principale. Da allora, abbiamo ricevuto il feedback dei clienti che richiedeva più tempo per continuare a consentire agli amministratori IT di impostare l'app come destinazione e agli utenti finali di iniziare a usare Adobe Acrobat Reader per Intune. Considerato l'utilizzo elevato di Adobe Acrobat Reader per Intune nei dispositivi degli utenti finali e la sua importanza negli scenari aziendali, vogliamo assicurarci che qualsiasi esperienza soddisfi le esigenze di protezione delle app dell'organizzazione. 
@@ -55,7 +39,6 @@ Informare gli utenti finali e il supporto tecnico di questa modifica. È possibi
 
 #### <a name="additional-information"></a>Informazioni aggiuntive
 https://helpx.adobe.com/acrobat/kb/intune-app-end-of-life.html
-
 
 ### <a name="take-action-use-microsoft-edge-for-your-protected-intune-browser-experience--5728447--"></a>Azione: Usare Microsoft Edge per l'esperienza protetta del browser di Intune<!--5728447-->
 Come descritto nel corso dell'ultimo anno, Microsoft Edge per dispositivi mobili supporta la stessa gamma di funzionalità di gestione supportata da Managed Browser, ma garantisce un'esperienza utente molto migliore. Per lasciare spazio alle esperienze consolidate offerte da Microsoft Edge, Intune Managed Browser verrà ritirato. A partire dal 27 gennaio 2020 Intune non supporterà più Intune Managed Browser.  
@@ -77,36 +60,10 @@ Il supporto delle clip Web in iOS e Android sarà disponibile a breve. Dopo il r
 #### <a name="additional-information"></a>Informazioni aggiuntive
 Per altre informazioni vedere la documentazione relativa all'[uso di Microsoft Edge con i criteri di protezione delle app](../apps/manage-microsoft-edge.md) o visualizzare il [post del blog sul supporto](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Use-Microsoft-Edge-for-your-Protected-Intune-Browser-Experience/ba-p/1004269).
 
-
 ### <a name="end-of-support-for-legacy-pc-management"></a>Termine del supporto per la gestione dei PC legacy
 
 La gestione dei PC legacy non sarà più supportata a partire dal 15 ottobre 2020. Aggiornare i dispositivi a Windows 10 e registrarli nuovamente come dispositivi MDM perché continuino a essere gestiti da Intune.
 
 [Altre informazioni](https://go.microsoft.com/fwlink/?linkid=2107122)
-
-### <a name="decreasing-support-for-android-device-administrator--5857738--"></a>Riduzione del supporto per l'amministratore di dispositivi Android<!--5857738-->
-L'amministratore di dispositivi Android, a volte denominato gestione Android "legacy" e rilasciato con Android 2.2, è una modalità di gestione dei dispositivi Android. Funzionalità di gestione migliorate, tuttavia, sono ora disponibili in [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) (con la versione Android 5.0). Con l'obiettivo di passare a una gestione dei dispositivi moderna, più ricca e sicura, Google sta riducendo il supporto per l'amministratore di dispositivi nelle nuove versioni di Android.
-
-#### <a name="how-does-this-affect-me"></a>Quali sono le conseguenze di questa modifica?
-Queste modifiche di Google influiranno sugli utenti di Intune nei modi seguenti:  
-- Intune potrà offrire supporto completo per i dispositivi Android gestiti dall'amministratore di dispositivi che eseguono Android 10 e versioni successive solo fino al secondo trimestre del 2020. I dispositivi gestiti dall'amministratore di dispositivi che eseguono Android 10 o versione successiva in seguito non potranno più essere gestiti interamente. In particolare, i dispositivi interessati non riceveranno nuovi requisiti per le password.
-    - I dispositivi Samsung Knox non saranno interessati in questo intervallo di tempo perché viene fornito il supporto esteso tramite l'integrazione di Intune con la piattaforma Knox. In questo modo si ottiene più tempo per pianificare la transizione dalla gestione dei dispositivi da parte dell'amministratore.    
-- I dispositivi Android gestiti dall'amministratore di dispositivi che continueranno a usare versioni di Android precedenti ad Android 10 non saranno interessati e potranno continuare a essere interamente gestiti con l'amministratore di dispositivi.    
-- Per tutti i dispositivi con Android 10 e versioni successive, Google ha limitato la capacità degli agenti di gestione dell'amministratore di dispositivi come il Portale aziendale di accedere alle informazioni relative all'identificatore del dispositivo. Dopo l'aggiornamento di un dispositivo ad Android 10 o versione successiva, questa limitazione influisce sulle funzionalità di Intune seguenti:  
-    - Il controllo di accesso alla rete per la rete VPN non funzionerà più.   
-    - L'identificazione dei dispositivi come di proprietà dell'azienda con l'IMEI o il numero di serie non contrassegnerà automaticamente i dispositivi come di proprietà dell'azienda.  
-    - L'IMEI e il numero di serie non saranno più visibili agli amministratori IT in Intune. 
-        > [!NOTE]
-        > Ciò interessa solo i dispositivi gestiti dall'amministratore di dispositivi in Android 10 e versioni successive e non i dispositivi gestiti come Android Enterprise. 
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Operazioni di preparazione alla modifica
-Per evitare la riduzione di funzionalità prevista per il terzo trimestre del 2020, è consigliabile attenersi alle indicazioni seguenti:
-- Non eseguire l'onboarding di nuovi dispositivi nella gestione di tipo amministratore di dispositivi.
-- Se si prevede che un dispositivo riceverà un aggiornamento ad Android 10, eseguirne la migrazione dalla gestione di tipo amministratore di dispositivi alla gestione Android Enterprise e/o ai criteri di protezione delle app.
-
-#### <a name="additional-information"></a>Informazioni aggiuntive
-- [Indicazioni di Google per la migrazione da amministratore di dispositivi ad Android Enterprise](http://static.googleusercontent.com/media/android.com/en/enterprise/static/2016/pdfs/enterprise/Android-Enterprise-Migration-Bluebook_2019.pdf)
-- [Documentazione di Google sul piano per deprecare l'API amministratore di dispositivi](https://developers.google.com/android/work/device-admin-deprecation)
-
 
 

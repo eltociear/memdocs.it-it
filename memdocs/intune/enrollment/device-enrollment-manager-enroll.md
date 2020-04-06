@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 14bc0be97a2e74c4666603feb2a4832c6a1e2011
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: e6b0c901cd52edcd674a2d787bc703c371dcf519
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339462"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327147"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Registrare i dispositivi in Intune usando un account del manager di registrazione dispositivi
 
@@ -37,7 +37,7 @@ Gli account utente di tipo manager di registrazione dispositivi e i dispositivi 
 - La cancellazione non può essere eseguita dal portale aziendale. La cancellazione di un dispositivo registrato da un account di manager di registrazione dispositivi può essere eseguita da Intune nel portale di Azure.
 - Visualizzazione del solo dispositivo locale nell'app o nel sito Web del portale aziendale.
 - Gli account utente manager di registrazione dispositivi non possono usare le app Volume Purchase Program (VPP) di Apple con licenze utente VPP Apple poiché è necessario un ID Apple per utente per la gestione delle app.
-- Non è possibile usare gli account utente manager di registrazione dispositivi durante la registrazione dei dispositivi tramite il programma Device Enrollment Program (DEP) di Apple.
+- Non è possibile usare gli account utente manager di registrazione dispositivi durante la registrazione dei dispositivi tramite Registrazione automatica del dispositivo di Apple.
 - I dispositivi possono installare le app VPP se sono dotati delle licenze dispositivo VPP Apple.
 - I dispositivi sono bloccati per l'accesso condizionale ad eccezione di Windows 10 1803+
 - Tutti i dispositivi registrati con gli account di manager di registrazione dispositivi devono avere le licenze appropriate per la gestione da Intune. La licenza può essere una licenza utente di Intune o una licenza dispositivo di Intune.

@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe5fce47d6a0480596bc09d82456c7636fe84d51
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: 04bc86ff697ed7083cacd552cbf9ebe5096a228c
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526275"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326874"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Risolvere i problemi di registrazione dei dispositivi Windows in Microsoft Intune
 
@@ -41,7 +41,7 @@ Raccogliere le informazioni seguenti sul problema:
 - Quanti utenti sono interessati? Sono interessati tutti gli utenti o solo alcuni?
 - Quanti dispositivi sono interessati? Sono interessati tutti i dispositivi o solo alcuni?
 - Che cos'è l'autorità MDM?
-- Come viene eseguita la registrazione? Si tratta di profili di registrazione BYOD (Bring Your Own Device) o Apple Device Enrollment Program (DEP)?
+- Come viene eseguita la registrazione? Si tratta di profili di registrazione BYOD (Bring Your Own Device) o di Registrazione automatica del dispositivo Apple?
 
 ## <a name="error-messages"></a>Messaggi di errore
 
@@ -75,7 +75,7 @@ Esistono diverse soluzioni possibili per questo problema:
  
 
 ##### <a name="check-device-type-restrictions"></a>Controllare le restrizioni sul tipo di dispositivi
-1. Accedere all'[Interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) con un account amministratore globale.
+1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) con un account amministratore globale.
 2. Passare a **Dispositivi** > **Restrizioni registrazione** e quindi selezionare la restrizione **predefinita** in **Restrizioni sul tipo di dispositivi**.    
 3. Selezionare **Piattaforme** e quindi selezionare **Consenti** per **Windows (MDM)** .
 
@@ -141,7 +141,7 @@ Assegnare una licenza di Intune valida all'utente e quindi registrare il disposi
 Per risolvere il problema, usare uno dei metodi seguenti: 
  
 ##### <a name="assign-a-valid-license-to-the-user"></a>Assegnare una licenza valida all'utente
-Passare all'[Interfaccia di amministrazione di Microsoft 365](https://portal.office.com/adminportal/home) e quindi assegnare una licenza di Intune o di Office 365 all'utente.
+Passare all'[Interfaccia di amministrazione di Microsoft 365](https://admin.microsoft.com) e quindi assegnare una licenza di Intune o di Office 365 all'utente.
 
 ##### <a name="correct-the-mdm-terms-of-use-url"></a>Correggere l'URL delle condizioni per l'utilizzo di MDM
   1. Accedere al [portale di Azure](https://portal.azure.com/) e quindi selezionare **Azure Active Directory**.    

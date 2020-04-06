@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0005136193048bac7d9d24311646bf3406a6c800
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 756d835a54a9b020be50a83d95d1925334fda8f1
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354659"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326639"
 ---
 # <a name="device-management-overview"></a>Panoramica della gestione dei dispositivi
 
@@ -84,7 +84,7 @@ Quando si configura Intune, è possibile scegliere di gestire i dispositivi escl
 
 ## <a name="simplify-it-tasks-using-the-device-management-admin-center"></a>Semplificare le attività IT usando il centro di amministrazione Gestione dei dispositivi
 
-Il [centro di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) è una risorsa centralizzata per gestire e completare le attività relative ai dispositivi mobili. Questa area di lavoro include i servizi usati per la gestione dei dispositivi, tra cui Intune e Azure Active Directory, e per la gestione delle app client.
+L'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) è una posizione centralizzata in cui gestire e completare tutte le attività relative ai dispositivi mobili. Questa area di lavoro include i servizi usati per la gestione dei dispositivi, tra cui Intune e Azure Active Directory, e per la gestione delle app client.
 
 Nell'interfaccia di amministrazione di Gestione dei dispositivi è possibile eseguire le operazioni seguenti:
 

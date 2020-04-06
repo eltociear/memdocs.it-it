@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81bfa4d593f723aae46c2af63d550662e35b4017
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c156e0d1b627d285c6654994d6114920f86b2bab
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79349212"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488049"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Gestire gli aggiornamenti software di Windows 10 in Intune
 
@@ -209,7 +209,7 @@ Quando un dispositivo riceve i criteri di aggiornamento delle funzionalità di W
 
 Per l'uso degli aggiornamenti delle funzionalità di Windows 10 in Intune, devono essere soddisfatti i prerequisiti seguenti.
 
-- I dispositivi devono essere registrati nel software MDM di Intune e aggiunti ad Azure AD o registrati con Azure AD.
+- I dispositivi devono essere registrati nel software MDM di Intune ed essere aggiunti ad Azure AD ibrido, aggiunti ad Azure AD o registrati in Azure AD.
 - Per usare i criteri di aggiornamento delle funzionalità con Intune, è necessario che la telemetria sia attivata nei dispositivi, con un'impostazione minima [*Di base*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry). La telemetria è configurata in *Creazione di report e telemetria* come parte dei [criteri di restrizione dei dispositivi](../configuration/device-restrictions-configure.md).
   
   I dispositivi che ricevono criteri per gli aggiornamenti delle funzionalità e i cui dati di telemetria sono impostati su *Non configurato*, il che significa che la telemetria è disattivata, possono installare una versione più recente di Windows rispetto a quella definita nei criteri di aggiornamento delle funzionalità. Il prerequisito per la richiesta di telemetria è attualmente sottoposto a revisione in quanto la funzionalità sta per passare alla disponibilità generale.

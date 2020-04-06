@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 03/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,16 +15,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ef60333b53e03b3a6a8d736817ef27df9a182f1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5e857cdd7028851f14f607739ba7e37c744fa2f1
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352072"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359465"
 ---
 # <a name="macos-endpoint-protection-settings-in-intune"></a>Impostazioni di Endpoint Protection per macOS in Intune  
 
 Questo articolo illustra le impostazioni di Endpoint Protection configurabili per i dispositivi che eseguono macOS. È possibile configurare queste impostazioni usando un profilo di configurazione di dispositivi macOS per [Endpoint Protection](endpoint-protection-configure.md) in Intune.  
+
+## <a name="before-you-begin"></a>Prima di iniziare
+
+[Creare un profilo di Endpoint Protection macOS](endpoint-protection-configure.md).
 
 ## <a name="gatekeeper"></a>Gatekeeper  
 
@@ -97,7 +101,7 @@ Per altre informazioni sulle impostazioni di Apple FileVault, vedere [FDEFileVau
     Le chiavi di ripristino create per i dispositivi sono di tipo *chiave personale*. Configurare le impostazioni seguenti per la chiave personale.  
 
     - **Percorso della chiave di ripristino personale** - Digitare un breve messaggio per l'utente per spiegare come e dove poter recuperare la chiave di ripristino personale. Il testo digitato viene inserito nel messaggio visualizzato nella schermata di accesso quando all'utente viene richiesto di immettere la chiave di ripristino personale nel caso in cui abbia dimenticato la password.  
-      
+
     - **Rotazione della chiave di ripristino personale** - Consente di specificare la frequenza con cui verrà eseguita la rotazione della chiave di ripristino personale per un dispositivo. È possibile selezionare il valore predefinito **Non configurato** oppure un valore compreso tra **1** e **12** mesi.  
 
   - **Disabilita la richiesta alla disconnessione**  
@@ -118,3 +122,8 @@ Per altre informazioni sulle impostazioni di Apple FileVault, vedere [FDEFileVau
 
 Per altre informazioni su FileVault con Intune, vedere [Chiavi di ripristino di FileVault](encryption-monitor.md#filevault-recovery-keys).
 
+## <a name="next-steps"></a>Passaggi successivi
+
+[Assegnare il profilo](../configuration/device-profile-assign.md) e [monitorarne lo stato](../configuration/device-profile-monitor.md).
+
+È anche possibile configurare Endpoint Protection in [dispositivi Windows 10 e versioni successive](endpoint-protection-windows-10.md).

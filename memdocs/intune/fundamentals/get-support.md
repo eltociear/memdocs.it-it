@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf732907b9123dfe8cbd72970556ecfbb5380733
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 2fbb82123f28c5049a60d60572aadcb3d03777b7
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086040"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326950"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Come ottenere supporto per Microsoft Intune
 
@@ -38,7 +38,7 @@ L'amministratore di Intune può usare l'opzione **Guida e supporto tecnico** per
 
 ## <a name="help-and-support-experience"></a>Esperienza di Guida e supporto tecnico
 
-L’esperienza di Guida e supporto tecnico per Intune è disponibile nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) e in tutti i pannelli o tutte le pagine di Intune nel portale di Azure.
+L'esperienza di Guida e supporto tecnico per Intune è disponibile nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) e in tutti i pannelli (o pagine) di Intune nel portale di Azure.
 
 L'esperienza *Guida e supporto tecnico* è simile a quella offerta dall'[interfaccia di amministrazione di Microsoft 365](https://admin.microsoft.com/) e sostituisce l'opzione *Guida e supporto* precedente che rimane disponibile per altri servizi in Azure.
 
@@ -64,7 +64,7 @@ Questo problema si verifica quando l'account del nuovo tenant non è stato auten
   > [!NOTE]  
   > Se l'istanza di Intune è ospitata nel cloud privato per enti pubblici, noto anche come cloud sovrano, ad esempio Azure per enti pubblici, vedere [Supporto di Intune per il cloud privato per enti pubblici](#intune-support-for-private-cloud-for-government) più avanti in questo articolo. L'esperienza *Guida e supporto tecnico* di Intune sarà disponibile nel cloud privato per enti pubblici non prima del prossimo anno.
 
-- **Nell'interfaccia di amministrazione di Microsoft Endpoint Manager**
+- **Dall'interfaccia di amministrazione di Microsoft Endpoint Manager**
 
   - Da qualsiasi nodo dell'interfaccia di amministrazione di Microsoft Endpoint Manager selezionare l'icona **?** nell'angolo superiore destro del portale e quindi usare l'elenco a discesa per selezionare il tipo di gestione per il quale si vuole ottenere assistenza. L'interfaccia di amministrazione di Microsoft Endpoint Manager supporta i tipi di gestione seguenti ed è necessario selezionare quello per il quale si vuole ottenere assistenza, come ad esempio Intune:
 

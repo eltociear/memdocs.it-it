@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/24/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a62b87861bbe2f1d9e498756aedb0acd28bbff5a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c810b6caa47596967cf9e1f2ad4cb3f772064f30
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79349992"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488048"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Usare le baseline di sicurezza per configurare i dispositivi Windows 10 in Intune
 
@@ -76,7 +76,7 @@ Sono disponibili le istanze di baseline di sicurezza seguenti per l'uso con Intu
 
 - **Baseline di Microsoft Defender ATP**
    *(Per usare questa baseline, l'ambiente deve soddisfare i prerequisiti per l'uso di [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites))* .
-  - [Baseline di Microsoft Defender ATP](security-baseline-settings-defender-atp.md)
+  - [Baseline di Microsoft Defender ATP versione 3](security-baseline-settings-defender-atp.md)
 
   > [!NOTE]
   > La baseline di sicurezza di Microsoft Defender ATP è stata ottimizzata per i dispositivi fisici e attualmente se ne sconsiglia l'uso in macchine virtuali (VM) o endpoint VDI. Alcune impostazioni di base possono influire sulle sessioni interattive remote negli ambienti virtualizzati.  Per altre informazioni, vedere [Incremento della conformità alla baseline di sicurezza di Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) nella documentazione di Windows.
@@ -158,7 +158,7 @@ Al momento del salvataggio, dopo il completamento della conversione, la baseline
 
 - Le impostazioni non incluse nella nuova versione della baseline selezionata vengono rimosse e non verranno più applicate da questo profilo di baseline di sicurezza.
 
-  Quando un'impostazione non è più gestita da un profilo di baseline, tale impostazione non viene reimpostata nel dispositivo. Al contrario, l'impostazione nel dispositivo rimane impostata sull'ultima configurazione fino a quando un altro processo gestisce l'impostazione per modificarla. Un profilo di base diverso, un'impostazione di Criteri di gruppo o una configurazione manuale eseguita nel dispositivo sono esempi di processi che possono modificare un'impostazione dopo averne interrotto la gestione.
+  Quando un'impostazione non è più gestita da un profilo di baseline, tale impostazione non viene reimpostata nel dispositivo. Al contrario, l'impostazione nel dispositivo rimane impostata sull'ultima configurazione fino a quando un altro processo gestisce l'impostazione per modificarla. Un profilo di baseline diverso, un'impostazione di Criteri di gruppo o una configurazione manuale eseguita nel dispositivo sono esempi di processi che possono modificare un'impostazione dopo averne interrotto la gestione.
 
 #### <a name="to-change-the-baseline-version-for-a-profile"></a>Per modificare la versione della baseline per un profilo
 

@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/09/2020
+ms.date: 03/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d226888c3d710a7b80357ebb92130b34ab2fef94
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2e83077561ec4492feaf14789cf339e0b3ee86e2
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79360756"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359330"
 ---
 # <a name="add-a-property-list-file-to-macos-devices-using-microsoft-intune"></a>Aggiungere un file di elenco delle proprietà ai dispositivi macOS usando Microsoft Intune
 
@@ -29,17 +29,13 @@ Usando Microsoft Intune, è possibile aggiungere un file di elenco delle proprie
 
 Questa funzionalità si applica a:
 
-- Dispositivi macOS che eseguono la versione 10.7 e successive
+- macOS 10.7 e versioni successive
 
-I file di elenco delle proprietà includono in genere informazioni sulle applicazioni macOS. Per altre informazioni, vedere [About Information Property List Files](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html) (Informazioni sui file di elenco delle proprietà - Sito Web di Apple) e [Impostazioni payload personalizzate](https://support.apple.com/guide/mdm/custom-mdm9abbdbe7/1/web/1).
+I file di elenco delle proprietà includono informazioni sulle applicazioni macOS. Per altre informazioni, vedere [About Information Property List Files](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html) (Informazioni sui file di elenco delle proprietà - Sito Web di Apple) e [Impostazioni payload personalizzate](https://support.apple.com/guide/mdm/custom-mdm9abbdbe7/1/web/1).
 
-Questo articolo descrive le diverse impostazioni del file di elenco delle proprietà che è possibile aggiungere ai dispositivi macOS. Usare queste impostazioni nella propria soluzione di gestione di dispositivi mobili (MDM) per aggiungere l'ID aggregazione dell'app (`com.company.application`) e aggiungere il file con estensione plist.
+Questo articolo descrive le diverse impostazioni del file di elenco delle proprietà che è possibile aggiungere ai dispositivi macOS. Usare queste impostazioni nella propria soluzione di gestione di dispositivi mobili (MDM) per aggiungere l'ID aggregazione dell'app (`com.company.application`) e aggiungere il file con estensione plist dell'app.
 
 Queste impostazioni vengono aggiunte a un profilo di configurazione del dispositivo in Intune e quindi assegnate o distribuite ai dispositivi macOS.
-
-## <a name="before-you-begin"></a>Prima di iniziare
-
-[Creare il profilo](device-profile-create.md).
 
 ## <a name="what-you-need-to-know"></a>Informazioni importanti
 
@@ -48,23 +44,49 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
 - Solo alcune app utilizzano le preferenze gestite e potrebbero non consentire la gestione di tutte le impostazioni.
 - Assicurarsi di caricare i file di elenco delle proprietà che hanno come destinazione le impostazioni dei canali del dispositivo e non le impostazioni dei canali degli utenti. I file dell'elenco delle proprietà hanno come destinazione l'intero dispositivo.
 
-## <a name="preference-file"></a>File delle preferenze
+## <a name="create-the-profile"></a>Creare il profilo
 
-- **Preferenza per il nome di dominio**: i file di elenco delle proprietà in genere sono usati per Web browser (Microsoft Edge), [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) e app personalizzate. Quando si crea una preferenza per il dominio, viene creato anche un ID di aggregazione. Immettere l'ID di aggregazione, ad esempio `com.company.application`. Ad esempio, immettere `com.Contoso.applicationName`, `com.Microsoft.Edge` o `com.microsoft.wdav`.
-- **File di elenco proprietà**: selezionare il file di elenco delle proprietà associato all'app. Assicurarsi che sia un file `.plist` o `.xml`. Caricare, ad esempio, un file `YourApp-Manifest.plist` o `YourApp-Manifest.xml`.
-- **Contenuti del file**: vengono visualizzate le informazioni sulla chiave nel file di elenco delle proprietà. Se è necessario modificare le informazioni sulla chiave, aprire il file di elenco in un altro editor e quindi caricare nuovamente il file in Intune.
+1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Selezionare **Dispositivi** > **Profili di configurazione** > **Crea profilo**.
+3. Immettere le proprietà seguenti:
 
-Verificare che il file sia formattato correttamente. Il file deve contenere solo coppie chiave valore e non deve essere racchiuso tra i tag `<dict>`, `<plist>` o `<xml>`. Il file di elenco delle proprietà, ad esempio, sarà simile al seguente:
+    - **Piattaforma**: Selezionare **macOS**.
+    - **Profilo**: selezionare **File delle preferenze**.
 
-```xml
-<key>SomeKey</key>
-<string>someString</string>
-<key>AnotherKey</key>
-<false/>
-...
-```
+4. Selezionare **Crea**.
+5. In **Informazioni di base** immettere le proprietà seguenti:
 
-Selezionare **OK** > **Crea** per salvare le modifiche. Il profilo verrà creato e visualizzato nell'elenco dei profili.
+    - **Nome**: immettere un nome descrittivo per il criterio. Assegnare ai criteri nomi che possano essere identificati facilmente in un secondo momento. Ad esempio, un nome di criterio valido è **macOS: Aggiungere un file delle preferenze per la configurazione di Microsoft Defender ATP nei dispositivi**.
+    - **Descrizione**: immettere una descrizione del criterio. Questa impostazione è facoltativa ma consigliata.
+
+6. Selezionare **Avanti**.
+
+7. In **impostazioni di configurazione** configurare le impostazioni:
+
+    - **Preferenza per il nome di dominio**: i file di elenco delle proprietà in genere sono usati per Web browser (Microsoft Edge), [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) e app personalizzate. Quando si crea una preferenza per il dominio, viene creato anche un ID di aggregazione. Immettere l'ID di aggregazione, ad esempio `com.company.application`. Ad esempio, immettere `com.Contoso.applicationName`, `com.Microsoft.Edge` o `com.microsoft.wdav`.
+    - **File di elenco proprietà**: selezionare il file di elenco delle proprietà associato all'app. Assicurarsi che sia un file `.plist` o `.xml`. Caricare, ad esempio, un file `YourApp-Manifest.plist` o `YourApp-Manifest.xml`.
+    - **Contenuti del file**: vengono visualizzate le informazioni sulla chiave nel file di elenco delle proprietà. Se è necessario modificare le informazioni sulla chiave, aprire il file di elenco in un altro editor e quindi caricare nuovamente il file in Intune.
+
+    Verificare che il file sia formattato correttamente. Il file deve contenere solo coppie chiave valore e non deve essere racchiuso tra i tag `<dict>`, `<plist>` o `<xml>`. Il file di elenco delle proprietà, ad esempio, sarà simile al seguente:
+
+    ```xml
+    <key>SomeKey</key>
+    <string>someString</string>
+    <key>AnotherKey</key>
+    <false/>
+    ...
+    ```
+
+8. Selezionare **Avanti**.
+9. In **Tag ambito** (facoltativo) assegnare un tag per filtrare il profilo a gruppi IT specifici, ad esempio `US-NC IT Team` o `JohnGlenn_ITDepartment`. Per altre informazioni sui tag di ambito, vedere [Usare il controllo degli accessi in base al ruolo (RBAC) e i tag di ambito per l'infrastruttura IT distribuita](../fundamentals/scope-tags.md).
+
+    Selezionare **Avanti**.
+
+10. In **Assegnazioni** selezionare gli utenti o i gruppi che riceveranno il profilo. Per altre informazioni sull'assegnazione di profili, vedere [Assegnare profili utente e dispositivo](device-profile-assign.md).
+
+    Selezionare **Avanti**.
+
+11. In **Rivedi e crea** rivedere le impostazioni. Quando si seleziona **Crea**, le modifiche vengono salvate e il profilo viene assegnato. Il criterio viene visualizzato anche nell'elenco dei profili.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

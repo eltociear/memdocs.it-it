@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f58c20731395c95e532e28165553743fdef701e9
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 7686be29b819d29aa39ed12d558780dde9bf4159
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083564"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401378"
 ---
 # <a name="review-client-app-protection-logs"></a>Esaminare i log di protezione delle app client
 
@@ -33,6 +33,9 @@ Il processo per abilitare e raccogliere i log varia a seconda della piattaforma:
 - **Dispositivi iOS/iPadOS**: usare Microsoft Edge per iOS/iPadOS per raccogliere i log. Per dettagli, vedere [Gestire l'accesso Web usando Microsoft Edge con Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs). 
 - **Dispositivi Windows 10**: utilizzare *MDMDiag* e i registri eventi. Vedere [Diagnosticare gli errori di MDM in Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) nel contenuto di gestione del client Windows e il blog [Troubleshooting Windows 10 Intune Policy Failures](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (Risoluzione dei problemi dei criteri di Intune in Windows 10).
 - **Dispositivi Android**: usare Microsoft Edge per Android per raccogliere i log. Per dettagli, vedere [Gestire l'accesso Web usando Microsoft Edge con Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs). 
+
+  > [!Note]
+  > Nei dispositivi Android completamente gestiti, in alcuni casi l'app Portale aziendale Intune potrebbe essere visibile in tutte le app. Questo problema può verificarsi quando un'app associata a un criterio di protezione delle app non è installata o non è stata avviata. 
 
 La tabella seguente elenca il nome dell'impostazione dei criteri di protezione delle app e i valori supportati che vengono registrati nel log. Ogni impostazione identifica anche l'impostazione dei criteri presente nel portale di Microsoft Endpoint Manager. Per informazioni dettagliate su ogni impostazione, vedere [Impostazioni dei criteri di protezione delle app iOS/iPadOS](app-protection-policy-settings-ios.md).
 

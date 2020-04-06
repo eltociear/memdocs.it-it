@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4c22da8e3c4fdbcf40c3292476e734dd50f9543a
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 8e44fa26c84537fdcf801192ce8cc22790f320b9
+ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086227"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438797"
 ---
 # <a name="android-device-administrator-enrollment"></a>Registrazione di tipo amministratore di dispositivi Android
 
@@ -32,8 +32,6 @@ L'amministratore di dispositivi Android, a volte denominato gestione Android "le
 Pertanto, al fine di evitare questa riduzione di funzionalità, non è consigliabile registrare nuovi dispositivi tramite il processo di amministratore di dispositivi descritto di seguito.
 
 Per gli stessi motivi, è anche consigliabile eseguire la migrazione dei dispositivi dalla gestione di tipo amministratore di dispositivi se questi verranno aggiornati ad Android 10. 
-
-Per altre informazioni sul supporto di Intune per il supporto di amministratore di dispositivi Android, vedere la [sezione Notifiche](../fundamentals/whats-new.md#decreasing-support-for-android-device-administrator).
 
 Se si decide che gli utenti possano comunque registrare i propri dispositivi Android con la gestione di tipo amministratore di dispositivi, passare alla sezione successiva.  
 

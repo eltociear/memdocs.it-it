@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7538cce4b116098db21e89d491476e8e0cd7f4e5
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 410911a44ca84230c30ccbea394c24b539b77c4f
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086083"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327031"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Configurare la registrazione per i dispositivi macOS in Intune
 
@@ -60,7 +60,7 @@ Per informazioni su altre attività dell'utente finale, vedere gli articoli segu
 
 ## <a name="company-owned-macos-devices"></a>Dispositivi macOS di proprietà dell'azienda
 Per le organizzazioni che acquistano dispositivi per i propri utenti, Intune supporta i seguenti metodi di registrazione dei dispositivi macOS di proprietà dell'azienda:
-- [Device Enrollment Program (DEP) di Apple](device-enrollment-program-enroll-macos.md): le organizzazioni possono ora acquistare i dispositivi macOS tramite Device Enrollment Program (DEP) di Apple. DEP consente di distribuire un profilo di registrazione in modalità wireless per portare i dispositivi nella gestione.
+- [Registrazione automatica del dispositivo di Apple](device-enrollment-program-enroll-macos.md): le organizzazioni possono acquistare dispositivi macOS tramite Registrazione automatica del dispositivo. Registrazione automatica del dispositivo consente di distribuire un profilo di registrazione in modalità wireless per includere i dispositivi nella gestione.
 - [Manager di registrazione dispositivi](device-enrollment-manager-enroll.md): è possibile usare un account del manager di registrazione dispositivi per registrare fino a 1.000 dispositivi.
 
 ## <a name="block-macos-enrollment"></a>Bloccare la registrazione di macOS

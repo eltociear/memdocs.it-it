@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b66777e9c108ab4a6b84e4d4fa0942532685912f
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 2c8c521dc0899b3429de85e95116a6277d724771
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086728"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327282"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>Aggiornare i dispositivi Android da amministratore di dispositivi alla gestione del profilo di lavoro
 
@@ -40,7 +40,7 @@ Quando gli utenti notano che non sono conformi per questo motivo, possono toccar
 - Configurare la gestione dei profili di lavoro Android [connettendo l'account del tenant di Intune all'account di Android Enterprise](connect-intune-android-enterprise.md).
 - [Impostare la registrazione del profilo di lavoro Android Enterprise](android-work-profile-enroll.md) per il gruppo di utenti che passano al profilo di lavoro Android.
 - È consigliabile aumentare i limiti di dispositivi utente. Quando si annulla la registrazione dei dispositivi dalla gestione di amministratore di dispositivi, i record dei dispositivi potrebbero non essere rimossi immediatamente. Per offrire protezione durante questo periodo, potrebbe essere necessario aumentare la capacità dei limiti dei dispositivi in modo che gli utenti possano eseguire la registrazione nella gestione del profilo di lavoro.
-  - [Configurare le impostazioni dispositivo in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal.md#configure-device-settings) per il numero massimo di dispositivi per utente.
+  - [Configurare le impostazioni dispositivo in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#configure-device-settings) per il numero massimo di dispositivi per utente.
   - Modificare le [restrizioni relative al limite dei dispositivi Intune](enrollment-restrictions-set.md#create-a-device-limit-restriction) impostando il limite di dispositivi. 
 
 ## <a name="create-device-compliance-policy"></a>Creare criteri di conformità dei dispositivi
@@ -71,6 +71,7 @@ Quando gli utenti notano che non sono conformi per questo motivo, possono toccar
     > [!NOTE]
     > - Naturalmente, è possibile usare collegamenti in hyper text intuitivo per le comunicazioni con gli utenti. Tuttavia, non usare URL abbreviati perché i collegamenti potrebbero non funzionare se modificati in questo modo.
     > - Se il Portale aziendale Android è aperto e in background, quando un utente tocca il collegamento è possibile che venga visualizzata l'ultima pagina in cui si trovava.
+    > - Gli utenti devono toccare il collegamento in un dispositivo Android. Se invece lo incollano in un browser, non avvierà il Portale aziendale Android. 
 
     Scegliere **Avanti**.
 
@@ -80,7 +81,7 @@ Quando gli utenti notano che non sono conformi per questo motivo, possono toccar
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 
-Il [flusso per l'utente finale per passare alla nuova configurazione di gestione dei dispositivi](https://docs.microsoft.com/mem/intune/user-help/move-to-new-device-management-setup.md) guida gli utenti nel processo di annullamento della registrazione nella gestione amministratore di dispositivi e di configurazione della gestione profilo di lavoro. Gli utenti devono avere [dispositivi registrati con amministratore di dispositivi Android](android-enroll-device-administrator.md) con il Portale aziendale Android versione 5.0.4720.0 o successiva.
+Il [flusso per l'utente finale per passare alla nuova configurazione di gestione dei dispositivi](../user-help/move-to-new-device-management-setup.md) guida gli utenti nel processo di annullamento della registrazione nella gestione amministratore di dispositivi e di configurazione della gestione profilo di lavoro. Gli utenti devono avere [dispositivi registrati con amministratore di dispositivi Android](android-enroll-device-administrator.md) con il Portale aziendale Android versione 5.0.4720.0 o successiva.
 
 ### <a name="user-sees-an-error-after-tapping-resolve"></a>L'utente visualizza un errore quando tocca Risolvi
 Se gli utenti visualizzano un errore dopo aver toccato il pulsante **Risolvi**, è probabile che la causa sia uno dei motivi seguenti:
@@ -103,8 +104,5 @@ Gli utenti potrebbero visualizzare una pagina di errore nel browser quando tocca
 - Il dispositivo Android usa Android 6 o versioni precedenti. 
 
 ## <a name="next-steps"></a>Passaggi successivi
-[Visualizzare il flusso per l'utente finale](https://docs.microsoft.com/mem/intune/user-help/move-to-new-device-management-setup.md)
-
+[Vedere il flusso dell'utente finale](../user-help/move-to-new-device-management-setup.md)
 [Gestire i dispositivi del profilo di lavoro Android con Intune](android-enterprise-overview.md)
-
-

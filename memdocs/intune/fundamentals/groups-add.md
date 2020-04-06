@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5c9a2e8a2fd66eaa4c0d80b4001b2f7fb1fefc7b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 61ca3d5ecc614cee70c1d8a834f29b9db7ad21d2
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79362576"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326826"
 ---
 # <a name="add-groups-to-organize-users-and-devices"></a>Aggiungere gruppi per organizzare utenti e dispositivi
 
@@ -52,7 +52,7 @@ Usare la procedura seguente per creare un nuovo gruppo.
         > [!TIP]
         > Gli utenti e i gruppi creati possono essere visualizzati anche nell'[interfaccia di amministrazione di Microsoft 365](https://admin.microsoft.com), nell'interfaccia di amministrazione di Azure Active Directory e in [Microsoft Intune nel portale di Azure](https://go.microsoft.com/fwlink/?linkid=2090973). Nel tenant dell'organizzazione è possibile creare e gestire i gruppi in tutte queste aree.
         >
-        > Se il ruolo primario è la gestione dei dispositivi, è consigliabile usare l'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+        > Se il ruolo primario svolto è la gestione dei dispositivi, è consigliabile usare l'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
     - **Office 365**: Offre opportunità di collaborazione consentendo ai membri l'accesso a una cassetta postale condivisa, al calendario, ai file, al sito SharePoint e altro ancora. Questa opzione consente anche di concedere a utenti esterni all'organizzazione l'accesso al gruppo. Per altre informazioni, vedere [Informazioni su Gruppi di Office 365](https://support.office.com/article/learn-about-office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2).
 

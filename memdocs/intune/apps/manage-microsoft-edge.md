@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b25d5439aa9d0842cbbee24b5e8759d00f371d4b
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 58e651849632fd06f962edfc90649ad14eeaeda0
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407713"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696548"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Gestire l'accesso Web usando Microsoft Edge con Microsoft Intune
 
@@ -367,14 +367,14 @@ Se l'organizzazione opera in un settore altamente regolamentato o usa una VPN pe
 
 |    Chiave    |    Valore    |
 |-----------|-------------|
-|    `com.microsoft.intune.mam.managedbrowser.disableFeatures`    |    **inprivate** disabilita InPrivate Browsing.   |
+|    `com.microsoft.intune.mam.managedbrowser.disabledFeatures`    |    **inprivate** disabilita InPrivate Browsing.   |
 
 ### <a name="restrict-microsoft-edge-use-to-allowed-accounts-only"></a>Limitare l'uso di Microsoft Edge solo agli account consentiti
 
 Oltre a bloccare InPrivate Browsing e l'esplorazione MSA, è possibile consentire l'uso di Microsoft Edge solo quando l'utente è connesso con il proprio account AAD. Questa funzionalità è disponibile solo per gli utenti registrati in MDM. Per altre informazioni sulla configurazione di questa impostazione, vedere:
 
 >[!NOTE]
-> `com.microsoft.intune.mam.managedbrowser.disableFeatures` può essere usato per disabilitare più funzionalità contemporaneamente. Ad esempio, per disabilitare InPrivate e la password, usare `inprivate| password`.
+> `com.microsoft.intune.mam.managedbrowser.disabledFeatures` può essere usato per disabilitare più funzionalità contemporaneamente. Ad esempio, per disabilitare InPrivate e la password, usare `inprivate|password`.
 
 ## <a name="configure-microsoft-edge-as-a-kiosk-app-on-android-devices"></a>Configurare Microsoft Edge come app in modalità tutto schermo nei dispositivi Android
 

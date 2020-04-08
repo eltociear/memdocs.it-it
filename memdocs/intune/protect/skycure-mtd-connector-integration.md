@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 211db029b681a933b1ac018a070ca3c3d55d67a9
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: 0810205e1b1e8b349d074560ec589b10e85443f1
+ms.sourcegitcommit: 012947b2095979ceb4e9c9f698e9c32f46baa7d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526496"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80525229"
 ---
 # <a name="set-up-symantec-endpoint-protection-mobile-integration-with-intune"></a>Configurare l'integrazione di Symantec Endpoint Protection Mobile con Intune
 
@@ -40,7 +40,7 @@ Completare i passaggi seguenti per integrare la soluzione Symantec Endpoint Prot
 - L'account Azure AD deve essere un account amministratore globale per eseguire l'integrazione.
 ### <a name="network-setup"></a>Configurazione della rete
 
-Per verificare che la rete sia configurata correttamente per l'integrazione con l'installazione di SEP Mobile, vedere l'articolo di Symantec [Configuring SEP Manager after installation](http://techdocs.broadcom.com/content/broadcom/techdocs/us/en/symantec-security-software/endpoint-security-and-management/endpoint-protection/14-2-x/Getting_Started_with_Symantec_Endpoint_Protection__1/installing-with-a-custom-configuration-v116874998-d3814e1541.html) (Configurazione di SEP Manager dopo l'installazione).
+Per verificare che la rete sia configurata correttamente per l'integrazione con l'installazione di SEP Mobile, vedere l'articolo di Symantec [Configuring SEP Manager after installation](http://techdocs.broadcom.com/content/broadcom/techdocs/us/en/symantec-security-software/endpoint-security-and-management/endpoint-protection/all/Managing_a_Custom_Installation_3/Planning_the_Installation_0/network-architecture-considerations-v19543152-d23e65.html) (Configurazione di SEP Manager dopo l'installazione).
 
 ### <a name="full-integration-vs-read-only"></a>Confronto tra integrazione completa e integrazione di sola lettura
 

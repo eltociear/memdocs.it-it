@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19660a8b2dc6b804a1ee1a1eaf407261ca9af2b1
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 1bbca477b389b568d2aca1ab0f9394ec09fe2b24
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327248"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696566"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-school-manager"></a>Configurare la registrazione di dispositivi iOS/iPadOS con Apple School Manager
 
@@ -38,7 +38,6 @@ La registrazione di Apple School Manager non può essere usata con il [programma
 **Prerequisiti**
 - [Certificato push MDM Apple](apple-mdm-push-certificate-get.md)
 - [Autorità di gestione dei dispositivi mobili](../fundamentals/mdm-authority-set.md)
-- [Certificato push MDM Apple](apple-mdm-push-certificate-get.md)
 - Se si usa ADFS, per l'affinità utente è richiesto un [endpoint misto/nome utente WS-Trust 1.3](https://technet.microsoft.com/library/adfs2-help-endpoints). [Altre informazioni](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 - Dispositivi acquistati dal programma [Apple School Management](http://school.apple.com)
 
@@ -120,7 +119,7 @@ Ora che è stato installato il token, è possibile creare un profilo di registra
 
 8. È possibile consentire a più utenti di eseguire l'accesso agli iPad registrati usando un ID Apple gestito. A tale scopo, scegliere **Sì** in **iPad condiviso**. Per eseguire questa operazione, è necessario che le opzioni **Registra senza affinità utente** e **Modalità con supervisione** siano impostate su **Sì**. Gli ID Apple gestiti sono creati nel portale Apple School Manager. Altre informazioni sull'[iPad condiviso](../fundamentals/education-settings-configure-ios-shared.md) e i [requisiti per l'iPad condiviso di Apple](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56).
 
-9. Scegliere se si vuole che i dispositivi con questo profilo possano **eseguire la sincronizzazione con i computer**. Se si sceglie **Consenti Apple Configurator per certificato**, è necessario selezionare un certificato in **Certificati di Apple Configurator**.
+9. Scegliere se si vuole che i dispositivi con questo profilo possano **eseguire la sincronizzazione con i computer**. **Rifiuta tutto** significa che tutti i dispositivi che usano questo profilo non saranno in grado di eseguire la sincronizzazione con i dati in alcun computer. Se si sceglie **Consenti Apple Configurator per certificato**, è necessario selezionare un certificato in **Certificati di Apple Configurator**.
 
 10. Se si sceglie **Consenti Apple Configurator per certificato** nel passaggio precedente, scegliere un certificato di Apple Configurator da importare.
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 04/02/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 52d69b851b67d0a230e71d8aaa6b60b5cb7b2b8d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: ef23854fd3fee0883f6f91415a40ebbcc1b3c240
+ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325699"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80620586"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Procedura per la gestione delle app iOS e macOS acquistate tramite Volume Purchase Program di Apple con Microsoft Intune
 
@@ -46,15 +46,15 @@ I token di percorso sono noti anche come token VPP (Volume Purchase Program) e v
 ## <a name="how-are-purchased-apps-licensed"></a>Come vengono concesse in licenza le app acquistate?
 Le app acquistate possono essere assegnate a gruppi usando due tipi di licenze offerte da Apple per i dispositivi iOS/iPadOS e macOS.
 
-|   | Licenze dispositivo | Licenze utente |
-|-----|------------------|----------------|
-| **Accesso all'App Store** | Non obbligatorio. | Ogni utente finale deve usare un ID Apple univoco quando viene richiesto di accedere all'App Store. |
-| **Configurazione del dispositivo che blocca l'accesso all'App Store** | Le app possono essere installate e aggiornate usando il Portale aziendale. | L'invito a partecipare ad Apple VPP richiede l'accesso all'App Store. Se sono stati impostati criteri per disabilitare l'App Store, le licenze utente per le app VPP non funzionano. |
-| **Aggiornamento automatico delle app** | Configurato dall'amministratore di Intune nelle impostazioni del token VPP Apple in cui il **tipo di assegnazione** dell'app è **obbligatorio**. <br> <br> Se il **tipo di assegnazione** è **disponibile per i dispositivi registrati**, gli aggiornamenti delle app disponibili possono essere installati dal Portale aziendale. | Configurato dall'utente finale nelle impostazioni personali dell'App Store. Questa opzione non può essere gestita dall'amministratore di Intune. |
-| **Registrazione utenti** | Non supportata. | Supportata se si usano ID Apple gestiti. |
-| **Documentazione** | Non supportata. | Supportata. |
-| **Licenze usate** | 1 licenza per dispositivo. La licenza è associata al dispositivo. | 1 licenza per un massimo di 5 dispositivi che usano lo stesso ID Apple personale. La licenza è associata all'utente. <br> <br> Un utente finale associato a un ID Apple personale e a un ID Apple gestito in Intune usa 2 licenze per le app.|
-| **Migrazione delle licenze** | La migrazione delle app può essere eseguita automaticamente dalle licenze utente alle licenze dispositivo. | Non è possibile eseguire la migrazione delle app dalle licenze dispositivo alle licenze utente. |
+|  | Licenze dispositivo | Licenze utente |
+|-----------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Accesso all'App Store | Non obbligatorio. | Ogni utente finale deve usare un ID Apple univoco quando viene richiesto di accedere all'App Store. |
+| Configurazione del dispositivo che blocca l'accesso all'App Store | Le app possono essere installate e aggiornate usando il Portale aziendale. | L'invito a partecipare ad Apple VPP richiede l'accesso all'App Store. Se sono stati impostati criteri per disabilitare l'App Store, le licenze utente per le app VPP non funzionano. |
+| Aggiornamento automatico delle app | Configurato dall'amministratore di Intune nelle impostazioni del token VPP Apple in cui il tipo di assegnazione dell'app è obbligatorio.<p>Se il tipo di assegnazione è disponibile per i dispositivi registrati, gli aggiornamenti delle app disponibili possono essere installati dal Portale aziendale. | Configurato dall'utente finale nelle impostazioni personali dell'App Store. Questa opzione non può essere gestita dall'amministratore di Intune. |
+| Registrazione utenti | Non supportata. | Supportata se si usano ID Apple gestiti. |
+| Documentazione | Non supportata. | Supportata. |
+| Licenze usate | 1 licenza per dispositivo. La licenza è associata al dispositivo. | 1 licenza per un massimo di 5 dispositivi che usano lo stesso ID Apple personale. La licenza è associata all'utente.<p>Un utente finale associato a un ID Apple personale e a un ID Apple gestito in Intune usa 2 licenze per le app. |
+| Migrazione delle licenze | La migrazione delle app può essere eseguita automaticamente dalle licenze utente alle licenze dispositivo. | Non è possibile eseguire la migrazione delle app dalle licenze dispositivo alle licenze utente. |
 
 > [!NOTE]  
 > Nel Portale aziendale non sono visualizzate le app con licenza dispositivo per i dispositivi di registrazione utente perché solo le app con licenza utente possono essere installate nei dispositivi di registrazione utente.
@@ -158,10 +158,10 @@ Agli utenti finali verrà richiesto di installare app VPP in numerosi scenari. N
 
 È possibile revocare tutte le licenze di app iOS/iPadOS o macOS associate al Volume Purchase Program in base a un determinato dispositivo, utente o app.  Esistono tuttavia alcune differenze tra le piattaforme iOS/iPadOS e macOS. 
 
-|   | iOS/iPadOS | macOS |
-|-----|------------------|----------------|
-| **Rimuovere l'assegnazione dell'app** | Quando si rimuove un'app assegnata a un utente, Intune recupera la licenza per l'utente o il dispositivo e disinstalla l'app dal dispositivo. | Quando si rimuove un'app assegnata a un utente, Intune recupera la licenza utente o dispositivo. L'app non viene disinstallata dal dispositivo. |
-| **Revocare la licenza dell'app** | Se revocata, la licenza dell'app per l'utente o il dispositivo viene recuperata. Per rimuovere l'app dal dispositivo, è necessario modificare l'assegnazione in **Disinstalla**. | Se revocata, la licenza dell'app per l'utente o il dispositivo viene recuperata. Un'app macOS con licenza revocata rimane utilizzabile nel dispositivo, ma può essere aggiornata solo quando viene riassegnata una licenza all'utente o al dispositivo. Secondo Apple, un'app che si trova in questa condizione viene rimossa dopo un periodo di tolleranza di 30 giorni. Apple, tuttavia, non offre a Intune il modo di rimuovere l'app usando l'azione di assegnazione Disinstalla.
+|  | iOS/iPadOS | macOS |
+|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Rimuovere l'assegnazione dell'app | Quando si rimuove un'app assegnata a un utente, Intune recupera la licenza per l'utente o il dispositivo e disinstalla l'app dal dispositivo. | Quando si rimuove un'app assegnata a un utente, Intune recupera la licenza utente o dispositivo. L'app non viene disinstallata dal dispositivo. |
+| Revocare la licenza dell'app | Se revocata, la licenza dell'app per l'utente o il dispositivo viene recuperata. Per rimuovere l'app dal dispositivo, è necessario modificare l'assegnazione in **Disinstalla**. | Se revocata, la licenza dell'app per l'utente o il dispositivo viene recuperata. Un'app macOS con licenza revocata rimane utilizzabile nel dispositivo, ma può essere aggiornata solo quando viene riassegnata una licenza all'utente o al dispositivo. Secondo Apple, un'app che si trova in questa condizione viene rimossa dopo un periodo di tolleranza di 30 giorni. Apple, tuttavia, non offre a Intune il modo di rimuovere l'app usando l'azione di assegnazione Disinstalla. |
 
 >[!NOTE]
 > - Intune recupera le licenze delle app quando un dipendente lascia l'azienda e non fa più parte dei gruppi di AAD.

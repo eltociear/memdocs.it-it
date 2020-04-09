@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 756d835a54a9b020be50a83d95d1925334fda8f1
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 32e5d053b6dd579aad25a268604248d4fb5a6072
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326639"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696454"
 ---
 # <a name="device-management-overview"></a>Panoramica della gestione dei dispositivi
 
@@ -76,7 +76,7 @@ Fornire sicurezza e protezione è un compito fondamentale che deve svolgere qual
 
 Esistono un paio di metodi per affrontare la gestione dei dispositivi. In primo luogo, è possibile gestire vari aspetti dei dispositivi facendo leva sulle funzionalità integrate in Intune. Questo metodo si chiama **Gestione di dispositivi mobili (MDM)** . Gli utenti "registrano" i propri dispositivi e usano certificati per comunicare con Intune. Gli amministratori IT eseguono il push delle app nei dispositivi, limitano i dispositivi a un unico sistema operativo, bloccano i dispositivi personali e altro ancora. Se un dispositivo viene smarrito o rubato, sarà possibile anche rimuovere tutti i dati dal dispositivo.
 
-Il secondo metodo, invece, prevede la gestione delle app nei dispositivi. Questo metodo si chiama **Gestione di applicazioni mobili (MAM)** . Gli utenti possono usare i propri dispositivi personali per accedere alle risorse aziendali. Quando gli utenti aprono un'app, ad esempio la posta elettronica o SharePoint, viene richiesta un'autenticazione aggiuntiva. Se un dispositivo viene smarrito o rubato, sarà possibile anche rimuovere tutti i dati dell'organizzazione dal dispositivo.
+Il secondo metodo, invece, prevede la gestione delle app nei dispositivi. Questo metodo si chiama **Gestione di applicazioni mobili (MAM)** . Gli utenti possono usare i propri dispositivi personali per accedere alle risorse aziendali. Quando gli utenti aprono un'app, ad esempio la posta elettronica o SharePoint, viene richiesta un'autenticazione aggiuntiva. Se un dispositivo viene smarrito o rubato, sarà anche possibile rimuovere tutti i dati dell'organizzazione dalle applicazioni gestite da Intune.
 
 È anche possibile combinare tra loro [MDM e MAM](byod-technology-decisions.md).
 

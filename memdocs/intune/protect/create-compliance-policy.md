@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67a26a42efb56c75d9538d9e7fcd2d726327d26d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: b437a72a2380fea215746aa76b35898c6fc60b16
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322999"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551376"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Creare criteri di conformità in Microsoft Intune
 
@@ -58,6 +58,9 @@ Per usare criteri di conformità del dispositivo, attenersi a quanto segue:
 - Registrazione dei dispositivi in Intune (necessaria per visualizzarne lo stato di conformità)
 
 - Registrazione dei dispositivi per un solo utente o senza un utente primario. Non sono supportati dispositivi registrati per più utenti.
+
+> [!NOTE]
+> L'interfaccia utente di Intune verrà aggiornata a un'esperienza a schermo intero. Questa operazione può richiedere alcune settimane. Fino a quando il tenant in uso non riceve l'aggiornamento, il flusso di lavoro per la creazione o la modifica delle impostazioni descritte in questo articolo sarà leggermente diverso.
 
 ## <a name="create-the-policy"></a>Creare i criteri
 

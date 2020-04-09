@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/27/2020
+ms.date: 04/02/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 431d2753b04269e9aacd7ef951ef3f45a076df60
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: bdf779e35125d8da7093e67702e064cff362d6ed
+ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407909"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80620546"
 ---
 # <a name="intune-app-installation-error-reference"></a>Informazioni di riferimento sugli errori di installazione delle app di Intune
 
@@ -59,6 +59,7 @@ I seguenti messaggi di errore e descrizioni contengono dettagli sugli errori di 
 |--------------------|------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 0x87D12906 | -2016335610 | Errore dell'agente MDM di Apple: il comando di installazione dell'app non è riuscito senza che sia stato specificato un motivo di errore. Riprovare a installare l'app. | L'agente MDM di Apple ha segnalato che il comando di installazione ha avuto esito negativo. |
 | 0x87D1313C | -2016333508 | La connessione di rete nel client è stata persa o interrotta. I tentativi successivi dovrebbero avere esito positivo in un ambiente di rete migliore. | Si è persa la connessione di rete mentre l'URL aggiornato del servizio di download veniva inviato al dispositivo. In particolare, non è stato possibile trovare un server con il nome host specificato. |
+| 0x87D1313D | -2016333507 | Non è stato possibile recuperare la licenza per l'app con l'ID di iTunes Store | Sincronizzare il token VPP associato, quindi sincronizzare il dispositivo con Intune. Se il problema persiste, rimuovere l'assegnazione del gruppo e riassegnare l'app VPP con licenza dispositivo. Se il problema persiste, revocare la licenza dell'app dal dispositivo passando ad **App** > **iOS** > *selezionare l'app VPP* > **Licenze dell'app** > *selezionare il dispositivo*. Quindi, revocare la licenza e provare a riassegnare l'app al gruppo di utenti o al gruppo di dispositivi. Se il problema persiste, revocare tutte le licenze VPP per il dispositivo passando a **Dispositivi** > **iOS** > *selezionare il dispositivo* > **Panoramica** > **Revoca le licenze**, quindi ritirare il dispositivo e ripetere la registrazione in Intune.
 | 0x87D11388 | -2016341112 | Il dispositivo iOS/iPadOS è attualmente occupato.  | Il dispositivo iOS/iPadOS era occupato e ciò ha generato un errore. Il dispositivo è stato bloccato. L'utente deve sbloccare il dispositivo per installare l'app. |
 | 0x87D13B64 | -2016330908 | Installazione app non riuscita.  | Si è verificato un errore di installazione dell'app. Sono necessari i log della console iOS/iPadOS per risolvere questo errore. |
 | 0x87D13B66 | -2016330906 | L'app è gestita, ma è scaduta o è stata rimossa dall'utente.  | L'utente ha disinstallato in modo esplicito l'app o l'app è scaduta ma non è stata scaricata o il rilevamento dell'app non corrisponde alla risposta del dispositivo.   Questo errore può verificarsi anche per un bug della piattaforma iOS/iPadOS 9.2.2. |

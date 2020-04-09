@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 mr.reviewer: karthib
-ms.openlocfilehash: 4071614c7cb93194eef00f49aa2e1759ba1028f6
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 6b5d0f88222c8d48da4f91ff3cf8d4628ccb179d
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359248"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551585"
 ---
 # <a name="add-endpoint-protection-settings-in-intune"></a>Aggiungere le impostazioni di Endpoint Protection in Intune
 
@@ -38,6 +38,9 @@ Prima di creare un profilo, rivedere gli articoli seguenti che illustrano in det
 
 - [Impostazioni macOS](endpoint-protection-macos.md)
 - [Impostazioni Windows 10](endpoint-protection-windows-10.md)
+
+> [!NOTE]
+> L'interfaccia utente di Intune verrà aggiornata a un'esperienza a schermo intero. Questa operazione può richiedere alcune settimane. Fino a quando il tenant in uso non riceve l'aggiornamento, il flusso di lavoro per la creazione o la modifica delle impostazioni descritte in questo articolo sarà leggermente diverso.
 
 ## <a name="create-a-device-profile-containing-endpoint-protection-settings"></a>Creare un profilo del dispositivo contenente le impostazioni di Endpoint Protection
 

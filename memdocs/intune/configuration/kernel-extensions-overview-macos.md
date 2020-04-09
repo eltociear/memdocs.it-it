@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5937cd09a5224933004233b8d4efe8a0e47155f3
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 8f9212d275b17db6a40e3133b5363cd13c9d13d6
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359381"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551434"
 ---
 # <a name="add-macos-kernel-extensions-in-intune"></a>Aggiungere le estensioni del kernel macOS in Intune
 
@@ -68,6 +68,9 @@ Questo articolo illustra come creare un profilo di configurazione del dispositiv
 >
 > - [Autenticazione dell'app prima della distribuzione](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution) (si aprirà il sito Web di Apple) 
 > - [Come prepararsi alle modifiche apportate alle estensioni del kernel in macOS High Sierra](https://support.apple.com/en-us/HT208019) (si aprirà il sito Web di Apple)
+
+> [!NOTE]
+> L'interfaccia utente di Intune verrà aggiornata a un'esperienza a schermo intero. Questa operazione può richiedere alcune settimane. Fino a quando il tenant in uso non riceve l'aggiornamento, il flusso di lavoro per la creazione o la modifica delle impostazioni descritte in questo articolo sarà leggermente diverso.
 
 ## <a name="create-the-profile"></a>Creare il profilo
 

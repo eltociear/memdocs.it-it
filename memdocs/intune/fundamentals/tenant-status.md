@@ -6,26 +6,27 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/05/2019
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.assetid: 7954a686-25dc-4fce-b395-324816f46d3b
+ms.reviewer: crisk
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99a34167f8616c6bbf2e441628de0d73aba080c3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d309b295281c88dff717c5f609905b3e541e3fed
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79355894"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696470"
 ---
 # <a name="use-the-intune-tenant-status-page"></a>Usare la pagina Stato del tenant di Intune
 La pagina Stato del tenant di Microsoft Intune è un hub centralizzato in cui è possibile visualizzare dettagli aggiornati e importanti sul tenant. Queste informazioni includono la disponibilità e l'uso di licenze, lo stato del connettore e importanti comunicazioni sul servizio Intune.  
 
-Per visualizzare la dashboard, accedere a [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) e quindi selezionare **Stato del tenant**.  *Stato del tenant* si trova in **Guida e supporto tecnico**.  
+Per visualizzare il dashboard accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), passare ad **Amministrazione del tenant** e selezionare **Stato del tenant**.
 
 La pagina è suddivisa in tre schede:
 

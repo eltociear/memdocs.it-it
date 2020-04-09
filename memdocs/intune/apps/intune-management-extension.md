@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d424163df07dbe6add74bbdab9ec36a7b220b655
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 6c8e1551b49fce5074bd2e88d1d8802f62cca2bb
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324240"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808113"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Usare gli script di PowerShell nei dispositivi Windows 10 in Intune
 
@@ -31,6 +31,9 @@ Usare l'estensione di gestione di Microsoft Intune per caricare script di PowerS
 Questa funzionalità si applica a:
 
 - Windows 10 e versioni successive
+
+> [!NOTE]
+> Dopo che questi prerequisiti dell'estensione di gestione di Intune sono soddisfatti, l'estensione viene installata automaticamente quando uno script di PowerShell o un'app Win32 viene assegnata all'utente o al dispositivo. Per altre informazioni, vedere i [prerequisiti](../apps/intune-management-extension.md#prerequisites) dell'estensione di gestione di Intune.
 
 ## <a name="move-to-modern-management"></a>Passare alla gestione moderna
 
@@ -121,7 +124,34 @@ L'estensione di gestione di Intune ha i prerequisiti seguenti. Dopo che questi p
 
 - Gli utenti finali non devono eseguire l'accesso al dispositivo per eseguire gli script di PowerShell.
 
-- Il client dell'estensione di gestione di Intune esegue il controllo con Intune una volta ogni ora e dopo ogni riavvio, per verificare la presenza di nuovi script o di modifiche. Dopo aver assegnato il criterio ai gruppi di Azure AD, lo script di PowerShell viene eseguito e vengono visualizzati i risultati dell'esecuzione. Dopo essere stato eseguito, lo script non viene eseguito di nuovo a meno che non venga apportata una modifica allo script o ai criteri.
+- L'agente dell'estensione di gestione di Intune esegue il controllo con Intune una volta ogni ora e dopo ogni riavvio, per verificare la presenza di nuovi script o di modifiche. Dopo aver assegnato il criterio ai gruppi di Azure AD, lo script di PowerShell viene eseguito e vengono visualizzati i risultati dell'esecuzione. Dopo essere stato eseguito, lo script non viene eseguito di nuovo a meno che non venga apportata una modifica allo script o ai criteri. Se lo script ha esito negativo, l'agente dell'estensione di gestione di Intune ritenta l'esecuzione dello script per tre volte, nelle tre sincronizzazioni successive dell'agente stesso.
+
+### <a name="failure-to-run-script-example"></a>Esempio di errore di esecuzione dello script
+8:00
+  -  Sincronizzazione
+  -  Esecuzione dello script **ConfigScript01**
+  -  L'esecuzione dello script non riesce
+
+9:00
+  -  Sincronizzazione
+  -  Esecuzione dello script **ConfigScript01**
+  -  L'esecuzione dello script non riesce (conteggio tentativi = 1)
+
+10:00
+  -  Sincronizzazione
+  -  Esecuzione dello script **ConfigScript01**
+  -  L'esecuzione dello script non riesce (conteggio tentativi = 2)
+  
+11:00
+  -  Sincronizzazione
+  -  Esecuzione dello script **ConfigScript01**
+  -  L'esecuzione dello script non riesce (conteggio tentativi = 3)
+
+12:00
+  -  Sincronizzazione
+  - Non vengono eseguiti ulteriori tentativi di esecuzione dello script **ConfigScript01**.
+  - Da questo momento, se non vengono apportate modifiche aggiuntive allo script, non viene eseguito nessun altro tentativo di esecuzione dello script.
+
 
 ## <a name="monitor-run-status"></a>Monitorare lo stato di esecuzione
 

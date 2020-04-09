@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73b471d7eefa8e696b17a949756ce1395530c5f7
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: fadd5817ccd4e591fe92c11cb30041296ac85d61
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323203"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696464"
 ---
 # <a name="set-up-app-based-conditional-access-policies-with-intune"></a>Configurare criteri di accesso condizionale basato su app con Intune
 
@@ -32,7 +32,7 @@ Configurare criteri di accesso condizionale basato su app per le app incluse nel
 Per poter usare i criteri di accesso condizionale basato su app è necessario che i [criteri di protezione delle app di Intune](../apps/app-protection-policies.md) siano applicati alle app in uso.
 
 > [!IMPORTANT]
-> Questo articolo illustra in dettaglio i passaggi per aggiungere un criterio di accesso condizionale basato su app. Si possono usare gli stessi passaggi per aggiungere app come SharePoint Online, Microsoft Teams e Microsoft Exchange Online dall'elenco delle app approvate.
+> Questo articolo illustra in dettaglio i passaggi per aggiungere un criterio di accesso condizionale semplice basato su app. È possibile usare la stessa procedura per altre app cloud. Per altre informazioni, vedere [Pianificare la distribuzione dell'accesso condizionale](https://docs.microsoft.com/azure/active-directory/conditional-access/plan-conditional-access).
 
 ## <a name="create-app-based-conditional-access-policies"></a>Creare criteri di accesso condizionale basato su app
 
@@ -48,7 +48,7 @@ Per poter creare criteri di accesso condizionale dall'interfaccia di amministraz
 
 3. Immettere un **Nome** per i criteri e quindi in *Assegnazioni* selezionare **Utenti e gruppi**. Usare l'opzione Includi o Escludi per aggiungere i gruppi per il criterio e selezionare **Fatto**.
 
-4. Selezionare **Applicazioni cloud o azioni** e scegliere le app da proteggere. Ad esempio, scegliere **Seleziona le app** e quindi selezionare **Office 365 SharePoint Online**e **Office 365 Exchange Online**.
+4. Selezionare **Applicazioni cloud o azioni** e scegliere le app da proteggere. Ad esempio, scegliere **Selezionare le app** e selezionare **Office 365 (anteprima)** .
 
    Selezionare **Fatto** per salvare le modifiche.
 
@@ -56,7 +56,7 @@ Per poter creare criteri di accesso condizionale dall'interfaccia di amministraz
 
    Selezionare **Fatto** per salvare le modifiche.
 
-6. In *Controlli di accesso* selezionare **Concedi** per applicare l'accesso condizionale basato sulla conformità del dispositivo. Ad esempio, selezionare **Concedi accesso** > **Richiedi che i dispositivi siano contrassegnati come conformi**.
+6. In *Controlli di accesso* selezionare **Concedi** per applicare l'accesso condizionale basato sulla conformità del dispositivo. Ad esempio, selezionare **Concedi accesso** > **Richiedi app client approvata** e **Richiedi criteri di protezione delle app (anteprima)** quindi selezionare **Richiedi uno dei controlli selezionati**
 
    Scegliere **OK** per salvare le modifiche.
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4ed859078f7cc6be5a91b303de45f7247248203
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 7c6c8b9d964355b1c08756fc2026a87e30bc7297
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359189"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551518"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Impostazioni relative alle funzionalità dei dispositivi macOS in Intune
 
@@ -82,6 +82,9 @@ Per aggiungere i server AirPrinter, sono necessari l'indirizzo IP della stampant
   Quando si aggiunge un'app, una cartella o un file, assicurarsi di immettere il percorso corretto. Non tutti gli elementi si trovano nella cartella `Applications`. Se gli utenti spostano un elemento da una posizione a un'altra, il percorso viene modificato. Questo elemento spostato non verrà aperto quando l'utente accede.
 
 - **Nasconde dalla configurazione utente**: **Nascondi** non visualizza l'app nell'elenco degli elementi di accesso Utenti e gruppi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo mostra l'elemento avviato all'accesso nell'elenco degli elementi di accesso Utenti e gruppi con l'opzione Nascondi deselezionata.
+
+  > [!NOTE]
+  > Questa impostazione verrà implementata per tutti i clienti nelle prossime due settimane.
 
 ## <a name="login-window"></a>Finestra di accesso
 

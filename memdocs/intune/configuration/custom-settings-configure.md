@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c96de75557a4817f4e5f034689faecf7374cfe3f
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: feb211b1de15aa0400e9ff71b428e2db02ef4b03
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359439"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551356"
 ---
 # <a name="create-a-profile-with-custom-settings-in-intune"></a>Creare un profilo con impostazioni personalizzate in Intune
 
@@ -31,6 +31,9 @@ Le impostazioni personalizzate sono configurate in modo diverso per ogni piattaf
 Per altre informazioni sui profili di configurazione, vedere [Informazioni sui profili di dispositivo in Microsoft Intune](device-profiles.md).
 
 Questo articolo illustra come creare un profilo personalizzato per l'amministratore di dispositivi Android, Android Enterprise, iOS/iPados, macOS e Windows. È anche possibile visualizzare tutte le impostazioni disponibili per le varie piattaforme.
+
+> [!NOTE]
+> L'interfaccia utente di Intune verrà aggiornata a un'esperienza a schermo intero. Questa operazione può richiedere alcune settimane. Fino a quando il tenant in uso non riceve l'aggiornamento, il flusso di lavoro per la creazione o la modifica delle impostazioni descritte in questo articolo sarà leggermente diverso.
 
 ## <a name="create-the-profile"></a>Creare il profilo
 

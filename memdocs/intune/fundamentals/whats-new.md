@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 677f85874ddf206b716e70a0cc6c659e10b99fef
-ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
+ms.openlocfilehash: 00faad5cccf8b2ed3198542868a36cb4699299b8
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438815"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808201"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Novità di Microsoft Intune
 
@@ -55,14 +55,29 @@ Per informazioni sulle novità di Microsoft Intune ogni settimana, vedere l'[int
 -->  
 
 <!-- ########################## -->
+## <a name="week-of-april-6-2020"></a>Settimana del 6 aprile 2020
+
+#### <a name="new-shell-script-settings-for-macos-devices---6884363---"></a>Nuove impostazioni degli script della shell per i dispositivi macOS<!-- 6884363 -->
+Quando si configurano script della shell per i dispositivi macOS, ora è possibile configurare le nuove impostazioni seguenti: 
+- Nascondi le notifiche degli script nei dispositivi
+- Frequenza dello script
+- Numero massimo di nuovi tentativi in caso di errore dello script
+
+Per altre informazioni, vedere [Usare gli script della shell nei dispositivi macOS in Intune](../apps/macos-shell-scripts.md).
+
+<!-- ########################## -->
 ## <a name="week-of-march-30-2020"></a>Settimana del 30 marzo 2020
 
 ### <a name="new-url-for-the-microsoft-endpoint-manager-admin-center---3704810---"></a>Nuovo URL per l'interfaccia di amministrazione di Microsoft Endpoint Manager<!-- 3704810 -->
 In linea con l'annuncio di Microsoft Endpoint Manager in occasione di Ignite l'anno scorso, l'URL per l'interfaccia di amministrazione di Microsoft Endpoint Manager (in precedenza Gestione dispositivi Microsoft 365) è stato modificato in [https://endpoint.microsoft.com](https://endpoint.microsoft.com). L'URL del centro di amministrazione precedente ([https://devicemanagement.microsoft.com](https://devicemanagement.microsoft.com)) continuerà a funzionare, ma è consigliabile iniziare ad accedere all'interfaccia di amministrazione di Microsoft Endpoint Manager usando il nuovo URL.
 
-Per altre informazioni, vedere [Semplificare le attività IT usando l'interfaccia di amministrazione di Microsoft Endpoint Manager](what-is-device-management.md#simplify-it-tasks-using-the-device-management-admin-center).
+Per altre informazioni, vedere [Semplificare le attività IT usando l'interfaccia di amministrazione di Microsoft Endpoint Manager](what-is-device-management.md#simplify-it-tasks-using-the-device-management-admin-center).  
 
-### <a name="app-management"></a>Gestione delle app
+
+### <a name="app-management"></a>Gestione delle app  
+
+#### <a name="company-portal-for-ios-supports-landscape-mode--6048329-wnready---"></a>Il portale aziendale per iOS supporta la modalità orizzontale<!--6048329 wnready -->   
+Gli utenti possono registrare dispositivi, trovare app e ottenere supporto IT usando l'orientamento dello schermo preferito. L'app rileverà automaticamente l'orientamento adattandosi allo schermo in modalità verticale o orizzontale, a meno che gli utenti non blocchino lo schermo in modalità verticale.  
 
 #### <a name="script-support-for-macos-devices-public-preview---4280361-wnready---"></a>Supporto degli script per i dispositivi macOS (anteprima pubblica)<!-- 4280361 wnready -->
 È possibile aggiungere e distribuire script nei dispositivi macOS. Questo supporto consente di configurare i dispositivi macOS oltre le normali possibilità usando le funzionalità MDM native nei dispositivi macOS. Per altre informazioni, vedere [Usare gli script della shell nei dispositivi macOS in Intune](../apps/macos-shell-scripts.md).
@@ -71,6 +86,9 @@ Per altre informazioni, vedere [Semplificare le attività IT usando l'interfacci
 ## <a name="week-of-march-24-2020"></a>Settimana del 24 marzo 2020
 
 ### <a name="improved-user-interface-experience-when-creating-device-restrictions-profiles-on-android-and-android-enterprise-devices---5841361---"></a>Esperienza migliorata dell'interfaccia utente per la creazione dei profili di limitazioni dei dispositivi in dispositivi Android e Android Enterprise<!-- 5841361 -->
+
+> [!NOTE] 
+> L'interfaccia utente di Intune verrà aggiornata a un'esperienza a schermo intero. Questa operazione può richiedere alcune settimane. Fino a quando il tenant in uso non riceve l'aggiornamento, il flusso di lavoro per la creazione o la modifica delle impostazioni sarà leggermente diverso.
 
 L'esperienza per la creazione di un profilo per i dispositivi Android e Android Enterprise nell'interfaccia di amministrazione di Endpoint Manager è stata aggiornata. Questa modifica ha effetto sui profili di configurazione dei dispositivi seguenti (**Dispositivi** > **Profili di configurazione** > **Crea profilo** > **Amministratore di dispositivi Android** o **Android Enterprise** per la piattaforma):
 
@@ -82,6 +100,9 @@ Per altre informazioni sulle restrizioni dei dispositivi che è possibile config
 
 ### <a name="improved-user-interface-experience-when-creating-configuration-profiles-on-iosipados-and-macos-devices---5569002-5568997---"></a>Esperienza migliorata dell'interfaccia utente per la creazione dei profili di configurazione nei dispositivi iOS/iPadOS e macOS<!-- 5569002 5568997 -->
 
+> [!NOTE]
+> L'interfaccia utente di Intune verrà aggiornata a un'esperienza a schermo intero. Questa operazione può richiedere alcune settimane. Fino a quando il tenant in uso non riceve l'aggiornamento, il flusso di lavoro per la creazione o la modifica delle impostazioni sarà leggermente diverso.
+
 L'esperienza per la creazione di un profilo per i dispositivi iOS o macOS nell'interfaccia di amministrazione di Endpoint Manager è stata aggiornata. Questa modifica ha effetto sui profili di configurazione dei dispositivi elencati di seguito (**Dispositivi** > **Profili di configurazione** > **Crea profilo** > **iOS/iPadOS** o **macOS** per la piattaforma):
 
 - Personalizzata: iOS/iPadOS, macOS
@@ -92,6 +113,9 @@ L'esperienza per la creazione di un profilo per i dispositivi iOS o macOS nell'i
 - File delle preferenze: macOS
 
 ### <a name="hide-from-user-configuration-setting-in-device-features-on-macos-devices---6524869---"></a>Impostazione Nascondi dalla configurazione utente nelle funzionalità del dispositivo per i dispositivi macOS<!-- 6524869 -->
+
+> [!NOTE]
+> Questa modifica verrà implementata per tutti i clienti nelle prossime due settimane.
 
 Quando si crea un profilo di configurazione delle funzionalità del dispositivo nei dispositivi macOS, è disponibile una nuova impostazione **Nascondi dalla configurazione utente** (**Dispositivi** > **Profili di configurazione** > **Crea profilo** > **macOS** per la piattaforma > **Funzionalità del dispositivo** per il profilo >**Elementi di accesso**).
 
@@ -187,6 +211,10 @@ Per visualizzare le impostazioni che è possibile limitare, vedere [Impostazioni
 L'icona di notifica per i criteri MAM in sospeso nel pannello di risoluzione dei problemi è stata sostituita da un'icona informativa.
 
 ####  <a name="ui-update-when-configuring-compliance-policy---3961639------"></a>Aggiornamento dell'interfaccia utente durante la configurazione dei criteri di conformità<!-- 3961639    -->
+
+> [!NOTE]
+> L'interfaccia utente di Intune verrà aggiornata a un'esperienza a schermo intero. Questa operazione può richiedere alcune settimane. Fino a quando il tenant in uso non riceve l'aggiornamento, il flusso di lavoro per la creazione o la modifica delle impostazioni sarà leggermente diverso.
+
 È stata aggiornata l'interfaccia utente per la [creazione dei criteri di conformità](../protect/create-compliance-policy.md#create-the-policy) in Microsoft Endpoint Manager (**Dispositivi** > **Criteri di conformità** > **Criteri** > **Crea criterio**). Viene visualizzata una nuova esperienza utente con le stesse impostazioni e gli stessi dettagli usati in precedenza. La nuova esperienza segue un processo di tipo procedura guidata per creare i criteri di conformità e include una pagina in cui è possibile aggiungere *Assegnazioni* per i criteri e una pagina *Rivedi e crea* in cui è possibile esaminare la configurazione prima di creare i criteri.
 
 #### <a name="retire-noncompliant-devices---1827291---------"></a>Ritirare i dispositivi non conformi<!-- 1827291       -->

@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5f32ffb864f40d8cb5402f7d4488b3870686d1a
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: ed5ff548d28a5bc973c43c84861b9b256b41a203
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322510"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696279"
 ---
 # <a name="see-device-details-in-intune"></a>Visualizzare i dettagli del dispositivo in Intune
 
@@ -48,13 +48,19 @@ Questo articolo illustra come visualizzare tutti i dispositivi e le relative pro
       - [Reimpostazione di Autopilot](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset) (solo Windows)
       - [Analisi veloce](../configuration/device-restrictions-windows-10.md) (solo Windows 10)
       - [Analisi completa](../configuration/device-restrictions-windows-10.md) (solo Windows 10)
-       - [Rinominare il dispositivo](device-rename.md)
-      - Avviare una sessione di assistenza remota
+      - Aggiornare l'intelligence sulla sicurezza di Windows Defender
+      - [Rotazione delle chiavi BitLocker](https://docs.microsoft.com/mem/intune/protect/encrypt-devices#to-rotate-the-bitlocker-recovery-key)
+      - [Rinominare il dispositivo](device-rename.md)
+      - [Nuova sessione di assistenza remota](https://docs.microsoft.com/mem/intune/remote-actions/teamviewer-support)
    - Usare **Proprietà** per assegnare una [categoria del dispositivo creata](../enrollment/device-group-mapping.md) e modificare la proprietà del dispositivo scegliendo dispositivo personale o dispositivo aziendale.
    - **Hardware** include vari dettagli sul dispositivo, ad esempio l'ID del dispositivo, il sistema operativo e la versione, lo spazio di archiviazione e così via.
    - **App individuate** visualizza un elenco di tutte le app installate nel dispositivo individuate da Intune con relativa versione. Per altre informazioni, vedere [App individuate da Intune](../apps/app-discovered-apps.md).
    - **Conformità del dispositivo** elenca tutti i criteri di conformità assegnati e indica se il dispositivo è conforme o non conforme.
    - **Configurazione del dispositivo** riporta tutti i criteri di configurazione assegnati al dispositivo e indica se il criterio è riuscito o meno.
+   - **Configurazione delle app** 
+   - **Configurazione della sicurezza degli endpoint**
+   - **Chiavi di ripristino** visualizza le chiavi di BitLocker disponibili rilevate per il dispositivo
+   - **App gestite** elenca tutte le app gestite che Intune ha configurato e distribuito nel dispositivo. 
 
 ## <a name="hardware-device-details"></a>Dettagli dispositivo hardware
 A seconda del gestore telefonico usato dai dispositivi, è possibile che non vengano raccolti tuti i dettagli

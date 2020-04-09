@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c810b6caa47596967cf9e1f2ad4cb3f772064f30
-ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
+ms.openlocfilehash: 618ed802d33f2c50a567f1e18da4689855bbf016
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80488048"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551682"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Usare le baseline di sicurezza per configurare i dispositivi Windows 10 in Intune
 
@@ -62,11 +62,20 @@ Quando si crea un *profilo* di baseline di sicurezza, il profilo usa automaticam
 
 È possibile scegliere di [modificare la versione](#change-the-baseline-version-for-a-profile) di una baseline in uso con un determinato profilo. Questo significa che quando viene pubblicata una nuova versione, non è necessario creare un nuovo profilo di baseline per sfruttarne i vantaggi. Al contrario, quando si è pronti, è possibile selezionare un profilo di baseline e quindi usare l'opzione predefinita per sostituire la versione dell'istanza per il profilo con una nuova.
 
+## <a name="avoid-conflicts"></a>Evitare conflitti
+
+È possibile usare contemporaneamente una o più delle baseline disponibili nell'ambiente Intune. È anche possibile usare più istanze delle stesse baseline di sicurezza con personalizzazioni diverse.
+
+Quando si usano più baseline di sicurezza, esaminare le impostazioni di ognuna per identificare i casi in cui configurazioni della baseline diverse introducono valori in conflitto per la stessa impostazione. Dato che è possibile distribuire baseline di sicurezza progettate per finalità diverse e distribuire più istanze della stessa baseline che include impostazioni personalizzate, si potrebbero generare conflitti di configurazione, che devono essere analizzati e risolti.
+
+In molti casi le baseline di sicurezza gestiscono le stesse impostazioni definibili con [profili di configurazione dei dispositivi](../configuration/device-profiles.md) o altri tipi di criteri. Pertanto, quando si tenta di evitare o risolvere conflitti, tenere presenti i criteri e i profili aggiuntivi per la gestione delle impostazioni.
+
+Per identificare e risolvere i conflitti, usare le informazioni disponibili nei collegamenti seguenti:
+
+- [Risolvere problemi relativi a criteri e profili in Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)
+- [Monitorare le baseline di sicurezza](security-baselines-monitor.md#troubleshoot-using-per-setting-status)
+
 ## <a name="available-security-baselines"></a>Baseline di sicurezza disponibili
-
- È possibile usare contemporaneamente una o più delle baseline disponibili nell'ambiente Intune. È anche possibile usare più istanze delle stesse baseline di sicurezza con personalizzazioni diverse.
-
-Quando si usano più baseline di sicurezza, esaminare le impostazioni di ognuna per identificare i casi in cui baseline diverse introducono valori in conflitto per la stessa impostazione. Dal momento che è possibile distribuire baseline di sicurezza progettate per finalità diverse e distribuire più istanze della stessa baseline che include impostazioni personalizzate, si potrebbero generare [conflitti di configurazione che devono essere analizzati e risolti](security-baselines-monitor.md#troubleshoot-using-per-setting-status).  Tenere anche in considerazione i [profili di configurazione dei dispositivi](../configuration/device-profiles.md), che consentono di configurare molte delle stesse impostazioni delle baseline di sicurezza.
 
 Sono disponibili le istanze di baseline di sicurezza seguenti per l'uso con Intune. Usare i collegamenti per visualizzare le impostazioni per l'istanza più recente di ogni baseline.
 

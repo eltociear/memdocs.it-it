@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 470ca47aa92b30acacc8a251c6d7d1741513bdf1
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 716925f077b7433eab06a6ea2f557c7653d0b03d
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359222"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551429"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>Configurare le impostazioni relative alle restrizioni dei dispositivi in Microsoft Intune
 
@@ -35,6 +35,9 @@ Intune include criteri di limitazioni dei dispositivi che consentono agli ammini
 Queste funzionalità sono disponibili in Intune e possono essere configurate dall'amministratore. Intune usa "profili di configurazione" per creare e personalizzare queste impostazioni per le esigenze dell'organizzazione. Dopo aver aggiunto queste funzionalità a un profilo, è possibile eseguire il push del profilo o distribuirlo nei dispositivi dell'organizzazione.
 
 Questo articolo illustra come creare un profilo di limitazioni del dispositivo. È anche possibile visualizzare tutte le impostazioni disponibili per le varie piattaforme.
+
+> [!NOTE]
+> L'interfaccia utente di Intune verrà aggiornata a un'esperienza a schermo intero. Questa operazione può richiedere alcune settimane. Fino a quando il tenant in uso non riceve l'aggiornamento, il flusso di lavoro per la creazione o la modifica delle impostazioni descritte in questo articolo sarà leggermente diverso.
 
 ## <a name="create-the-profile"></a>Creare il profilo
 

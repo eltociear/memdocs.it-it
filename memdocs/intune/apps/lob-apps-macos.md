@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e798d579341a841d25bea9abb416367fac15c2b
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 6dad4dffba0efadcca0ea5eb7d61960bec1b3f8e
+ms.sourcegitcommit: 0907ee1137773f0482b1d2b9bb344e206d05aede
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324037"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80536827"
 ---
 # <a name="how-to-add-macos-line-of-business-lob-apps-to-microsoft-intune"></a>Come aggiungere app line-of-business (LOB) per macOS in Microsoft Intune
 
@@ -65,8 +65,8 @@ Prima di caricare il file line-of-business in Microsoft Intune, è necessario sc
     - `IntuneAppUtil -h`<br>
     Questo comando mostrerà le informazioni di utilizzo per lo strumento.
     
-    - `IntuneAppUtil -c <source_file> -o <output_file> [-v]`<br>
-    Questo comando esegue il wrapping del file dell'app LOB con estensione *pkg* in un file con estensione *intunemac*.
+    - `IntuneAppUtil -c <source_file> -o <output_directory_path> [-v]`<br>
+    Questo comando esegue il wrapping del file *PKG* dell'app LOB contenuto in `<source_file>` in un file *INTUNEMAC* con lo stesso nome e lo inserisce nella cartella a cui fa riferimento `<output_directory_path>`.
     
     - `IntuneAppUtil -r <filename.intunemac> [-v]`<br>
     Questo comando estrarrà i parametri rilevati e la versione per il file con estensione *intunemac* creato.

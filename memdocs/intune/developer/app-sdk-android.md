@@ -5,7 +5,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/19/2020
+ms.date: 04/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,17 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 367a632b082ad5d58221f33ca9a191fb229f8f66
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 71d5efbf8b61c08e9a2edbc5312c61279571339e
+ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086326"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80620554"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Guida a Microsoft Intune App SDK per sviluppatori di Android
 
 > [!NOTE]
 > Si consiglia di leggere prima [Panoramica di Intune App SDK](app-sdk.md), che illustra le attuali funzionalità dell'SDK e descrive come preparare l'integrazione in ogni piattaforma supportata.
+>
+> Per scaricare l'SDK, vedere [Scaricare i file SDK](../developer/app-sdk-get-started.md#download-the-sdk-files).
 
 Microsoft Intune App SDK per Android consente di integrare i criteri di protezione delle app di Intune, noti anche come criteri **APP** o MAM, nell'app Android nativa. Un'applicazione gestita da Intune è integrata con Intune App SDK. Gli amministratori di Intune possono distribuire facilmente i criteri di protezione delle app nell'app gestita da Intune quando Intune gestisce attivamente l'app.
 

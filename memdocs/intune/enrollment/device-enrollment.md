@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8f91b71d96c936e9808973df145862654f0e516a
-ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
+ms.openlocfilehash: e3636314ee21823b76a09120f92aca45965437d3
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80256641"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808186"
 ---
 # <a name="what-is-device-enrollment"></a>Che cos'è la registrazione dei dispositivi?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -77,7 +77,7 @@ Per impostazione predefinita, i dispositivi di tutte le piattaforme sono autoriz
 |**Android Device Admin**|**(IMEI o SN predichiarato) Avviato dall'utente tramite portale aziendale**| No | Sì | No | [Altre informazioni](corporate-identifiers-add.md)|
 |**Android Device Admin con Zebra Mobility Extensions**|**Avviato dall'utente o da [DEM](#device-enrollment-manager) tramite portale aziendale**| No | Sì, se avviato dall'utente, No se avviato da [DEM](#device-enrollment-manager) | No | [Altre informazioni](../configuration/android-zebra-mx-overview.md)|
 |**Android Enterprise dedicato**|**NFC, token, codice a matrice, Zero Touch**| Sì | No | Configurabile tramite criteri | [Altre informazioni](android-kiosk-enroll.md)|
-|**Android Enterprise completamente gestito**|**NFC, token, codice a matrice, Zero Touch**| Sì | Sì | Configurabile tramite criteri | [Altre informazioni](android-dedicated-devices-fully-managed-enroll.md)|
+|**Android Enterprise completamente gestito**|**NFC, token, codice a matrice, Zero Touch**| Sì | Sì; No se [DEM](device-enrollment.md#device-enrollment-manager) è inizializzato | Configurabile tramite criteri | [Altre informazioni](android-dedicated-devices-fully-managed-enroll.md)|
 
 
 ## <a name="bring-your-own-device"></a>Bring Your Own Device (BYOD)

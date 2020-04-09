@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89d299edfb9542591eaabcf42d0b2069bbde4331
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: d768859d65fff18d6ce94a26b48bb28f57417af6
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327305"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808073"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices"></a>Configurare la registrazione in Intune di dispositivi Android Enterprise completamente gestiti 
 
@@ -65,7 +65,7 @@ Per configurare la gestione di dispositivi Android Enterprise completamente gest
 Se impostata su **Sì**, questa impostazione rende disponibile per il tenant di Intune un token di registrazione (una stringa casuale) e un codice a matrice. Questo token di registrazione singola è valido per tutti gli utenti e non scade. A seconda del sistema operativo Android e della versione del dispositivo, per registrare il dispositivo è possibile usare il token o il codice a matrice.
 
 ## <a name="enroll-the-fully-managed-devices"></a>Registrare i dispositivi completamente gestiti
-È ora possibile [registrare i dispositivi completamente gestiti](android-dedicated-devices-fully-managed-enroll.md).
+Ora è possibile [registrare i dispositivi completamente gestiti](android-dedicated-devices-fully-managed-enroll.md) (ma solo se non usano account DEM).
 
 ## <a name="next-steps"></a>Passaggi successivi
 - [Aggiungere criteri di configurazione dei dispositivi Android Enterprise completamente gestiti](../configuration/device-restrictions-android-for-work.md#device-owner-only)

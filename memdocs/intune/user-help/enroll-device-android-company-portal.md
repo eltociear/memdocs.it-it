@@ -35,7 +35,7 @@ Registrare il dispositivo Android personale o aziendale per ottenere accesso sic
 > Samsung Knox è un tipo di sicurezza che alcuni dispositivi Samsung usano per fornire protezione aggiuntiva oltre all'offerta prevista per i dispositivi Android nativi. Per determinare se il dispositivo è di tipo Samsung Knox, passare a **Impostazioni** > **Informazioni sul dispositivo**. Se non viene visualizzata l'indicazione **Versione Knox**, significa che il dispositivo è un dispositivo Android nativo.
 
 ## <a name="enroll-device"></a>Registrare il dispositivo  
-Assicurarsi di [installare l'app Portale aziendale Intune da Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal). Per l'elenco dei negozi della Cina continentale in cui è disponibile l'app, vedere [Installare l'app Portale aziendale nella Cina continentale](install-company-portal-android-china.md).    
+Assicurarsi di [installare l'app Portale aziendale Intune da Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal). Per l'elenco degli store in Cina in cui è disponibile l'app, vedere [Installare l'app Portale aziendale in Cina](install-company-portal-android-china.md).    
 
 Durante la registrazione potrebbe essere richiesto di scegliere la categoria che descrive meglio come viene usato il dispositivo. Il team di supporto tecnico aziendale usa questa risposta per controllare le app a cui è possibile accedere.  
 

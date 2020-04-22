@@ -189,7 +189,7 @@ Alcune piattaforme e configurazioni non consentono azioni self-service nel dispo
 <sup>(5)</sup> La **cancellazione** non è disponibile nei dispositivi iOS/iPadOS registrati dall'utente.<br>
 <sup>(6)</sup> La **reimpostazione del passcode** non è supportata in alcune configurazioni di Android e Android Enterprise. Per altre informazioni, vedere [Reimpostare o rimuovere il passcode di un dispositivo in Intune](../remote-actions/device-passcode-reset.md).<br>
 <sup>(7)</sup> Il **ritiro** e la **cancellazione** non sono disponibili in scenari di proprietari di dispositivi Android Enterprise (COPE, COBO, COSU).<br> 
-<sup>(8) </sup> La **reimpostazione del passcode** non è supportata nei dispositivi iOS/iPadOS registrati dall'utente.
+<sup>(8)</sup> La **reimpostazione del passcode** non è supportata nei dispositivi iOS/iPadOS registrati dall'utente.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

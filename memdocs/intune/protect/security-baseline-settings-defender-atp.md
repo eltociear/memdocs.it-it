@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a431ad92c285e1a2912e0f387ee5ea514e876ef
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: 67f4d3c08cbad08464d488073c574babcc77dc61
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551758"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81397510"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Impostazioni della baseline di Microsoft Defender Advanced Threat Protection per Intune
 
@@ -133,7 +133,7 @@ Per altre informazioni, vedere [Impostazioni di Criteri di gruppo per BitLocker]
     - **Sì** - Windows non consente la scrittura di dati in unità fisse non protette da BitLocker. Se un'unità fissa non è crittografata, l'utente dovrà completare la configurazione guidata di BitLocker per l'unità prima che venga concesso l'accesso in scrittura.
 
   - **Configura il metodo di crittografia per le unità dati fisse**  
-    CSP: [EncryptionMethodByDriveType](hhttps://go.microsoft.com/fwlink/?linkid=872526)  
+    CSP: [EncryptionMethodByDriveType](https://go.microsoft.com/fwlink/?linkid=872526)  
     Questa impostazione è disponibile quando *BitLocker - Impostazioni dell'unità fissa* è impostato su *Configura*.
 
     Configurare il metodo di crittografia e il livello di codifica per i dischi di unità dati fisse. *XTS-AES a 128 bit* è il metodo di crittografia predefinito di Windows e il valore consigliato.
@@ -215,7 +215,7 @@ Per altre informazioni, vedere [Impostazioni di Criteri di gruppo per BitLocker]
 ## <a name="device-installation"></a>Installazione di dispositivi
 
 - **Installazione di dispositivi hardware per identificatori di dispositivo**  
-  [DeviceInstallation/PreventInstallationOfMatchingDeviceIDs](hhttps://go.microsoft.com/fwlink/?linkid=2066794)  
+  [DeviceInstallation/PreventInstallationOfMatchingDeviceIDs](https://go.microsoft.com/fwlink/?linkid=2066794)  
   
   L'impostazione di questo criterio consente di specificare un elenco di ID hardware Plug and Play e ID compatibili per i dispositivi la cui installazione non è consentita in Windows. L'impostazione di questo criterio ha la precedenza su qualsiasi altra impostazione di criteri che consente a Windows di installare un dispositivo.  Se si abilita l'impostazione di questo criterio in un server desktop remoto, l'impostazione del criterio influirà sul reindirizzamento dei dispositivi specificati da un client desktop remoto al server desktop remoto.
 

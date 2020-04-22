@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 2bf2ceae88ed775ff53324f007567a4677832805
-ms.sourcegitcommit: 954b3aae7916ad14065e6e86a577c5205103a50e
+ms.openlocfilehash: 39331a7ab4a512e449770179af4b04f4c52bec73
+ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80658125"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81668237"
 ---
 <!-- 
 - Feature 1357546
@@ -113,4 +113,4 @@ Articoli di supporto nuovi o aggiornati tra il 21 febbraio e il 19 marzo 2020.
 - [KB 4552181 Ritardi nella distribuzione del contenuto in Configuration Manager Current Branch versione 1910](https://support.microsoft.com/help/4552181)
 - [KB 4550023 Una sequenza di attività di aggiornamento sul posto di Configuration Manager non continua dopo un rollback dell'aggiornamento sul posto di Windows 10](https://support.microsoft.com/help/4550023)
 
-Per sottoscrivere la notifica Atom o RSS dei nuovi articoli di supporto di Configuration Manager, vedere [Aggiornamenti dei contenuti del supporto](https://support.microsoft.com/help/4089498/) e selezionare **Microsoft Endpoint Configuration Manager**.
+Per sottoscrivere la notifica Atom o RSS dei nuovi articoli di supporto di Configuration Manager, vedere [Aggiornamenti dei contenuti del supporto](https://support.microsoft.com/help/4089498/) e selezionare **Microsoft Endpoint Configuration Manager**.  

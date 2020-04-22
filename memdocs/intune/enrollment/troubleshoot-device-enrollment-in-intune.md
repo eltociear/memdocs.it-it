@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af60c91e52bcee643166729f3a3ac57ae232c4d9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: ac29e27c85ad43ccc078c54dd9d5b8b659206f57
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327000"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81397765"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Risolvere i problemi di registrazione dei dispositivi in Microsoft Intune
 
@@ -237,7 +237,7 @@ Per verificare che l'installazione del certificato sia corretta, è possibile us
 
 I passaggi seguenti descrivono solo uno dei numerosi metodi e strumenti che è possibile usare per convalidare la corretta installazione del certificato.
 
-1. Andare allo [strumento Digicert gratuito](ttps://www.digicert.com/help/).
+1. Andare allo [strumento Digicert gratuito](https://www.digicert.com/help/).
 2. Immettere il nome di dominio completo del server ADFS (ad esempio, sts.contoso.com) e selezionare **CONTROLLO SERVER**.
 
 Se il certificato del server è installato correttamente, nei risultati vengono visualizzati tutti i segni di spunta. Se si verifica il problema sopra riportato, viene visualizzata una X rossa nelle sezioni "Certificate Name Matches" (Corrispondenze del nome del certificato) e "SSL Certificate is correctly Installed"(Certificato SSL installato correttamente) del report.

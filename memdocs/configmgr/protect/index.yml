@@ -1,0 +1,100 @@
+### YamlMime:Landing
+title: Documentazione dell'infrastruttura e della protezione dei dati
+summary: Proteggere l'infrastruttura e i dati dall'esposizione o da attacchi dannosi usando Configuration Manager.
+metadata:
+  title: Documentazione dell'infrastruttura e della protezione dei dati
+  titleSuffix: Configuration Manager
+  description: Proteggere l'infrastruttura e i dati dall'esposizione o da attacchi dannosi usando Configuration Manager.
+  ms.product: configuration-manager
+  ms.technology: configmgr-protect
+  ms.topic: landing-page
+  author: mestew
+  ms.author: mstewart
+  ms.date: 01/10/2020
+  ms.openlocfilehash: 44481f1b0fb304ed12a40d100352a9f7a6d8dd39
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: it-IT
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741851"
+landingContent:
+- title: Gestire Crittografia unità BitLocker
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Pianificare la gestione di BitLocker
+      url: plan-design/bitlocker-management.md
+  - linkListType: deploy
+    links:
+    - text: Distribuire la gestione di BitLocker
+      url: deploy-use/bitlocker/deploy-management-agent.md
+    - text: Configurare i portali di BitLocker
+      url: deploy-use/bitlocker/setup-websites.md
+  - linkListType: how-to-guide
+    links:
+    - text: Visualizzare i report di BitLocker
+      url: deploy-use/bitlocker/view-reports.md
+    - text: Usare il sito Web di amministrazione e monitoraggio BitLocker
+      url: deploy-use/bitlocker/helpdesk-portal.md
+- title: Profili certificato
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Introduzione ai profili certificato
+      url: deploy-use/introduction-to-certificate-profiles.md
+  - linkListType: get-started
+    links:
+    - text: Pianificazione delle autorizzazioni dei modelli di certificato per i profili di certificato
+      url: plan-design/planning-for-certificate-template-permissions.md
+    - text: Prerequisiti per i profili certificato
+      url: plan-design/prerequisites-for-certificate-profiles.md
+  - linkListType: deploy
+    links:
+    - text: Configurare l'infrastruttura di certificazione
+      url: deploy-use/certificate-infrastructure.md
+    - text: Creare i profili certificato
+      url: deploy-use/endpoint-configure-alerts.md
+    - text: Distribuire i profili di accesso alle risorse
+      url: deploy-use/endpoint-definition-updates.md
+- title: Attività principali
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Caricamento di Microsoft Defender Advanced Threat Protection
+      url: deploy-use/windows-defender-advanced-threat-protection.md
+    - text: Risolvere i problemi di Windows Defender o del client Endpoint Protection
+      url: deploy-use/troubleshoot-endpoint-client.md
+    - text: Gestire i criteri antimalware e le impostazioni del firewall
+      url: deploy-use/endpoint-antimalware-firewall.md
+    - text: Gestione di Controllo di applicazioni di Windows Defender
+      url: deploy-use/use-device-guard-with-configuration-manager.md
+    - text: Creare e distribuire Windows Defender Application Guard
+      url: deploy-use/create-deploy-application-guard-policy.md
+    - text: Impostazioni di Windows Hello for Business
+      url: deploy-use/windows-hello-for-business-settings.md
+- title: Endpoint Protection
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Panoramica di Endpoint Protection
+      url: deploy-use/endpoint-protection.md
+  - linkListType: get-started
+    links:
+    - text: Pianificare per Endpoint Protection
+      url: plan-design/planning-for-endpoint-protection.md
+  - linkListType: deploy
+    links:
+    - text: Creare un ruolo del sistema del sito del punto di Endpoint Protection
+      url: deploy-use/endpoint-protection-site-role.md
+    - text: Configurare gli avvisi per Endpoint Protection
+      url: deploy-use/endpoint-configure-alerts.md
+    - text: Configurare gli aggiornamenti delle definizioni per Endpoint Protection
+      url: deploy-use/endpoint-definition-updates.md
+  - linkListType: how-to-guide
+    links:
+    - text: Creare e distribuire criteri antimalware per Endpoint Protection
+      url: deploy-use/endpoint-antimalware-policies.md
+    - text: Configurare le impostazioni client personalizzate per Endpoint Protection
+      url: deploy-use/endpoint-protection-configure-client.md
+    - text: Monitorare lo stato di Endpoint Protection
+      url: deploy-use/monitor-endpoint-protection.md

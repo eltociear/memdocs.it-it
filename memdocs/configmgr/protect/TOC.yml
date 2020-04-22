@@ -1,0 +1,144 @@
+- name: Documentazione dell'infrastruttura e della protezione dei dati
+  href: index.yml
+- name: Comprendere ed esplorare
+  items:
+    - name: Panoramica
+      href: understand\protect-data-and-site-infrastructure.md
+- name: Pianificare e progettare
+  items:
+    - name: Pianificare per Endpoint Protection
+      href: plan-design/planning-for-endpoint-protection.md
+    - name: Pianificare la gestione di BitLocker
+      href: plan-design/bitlocker-management.md
+    - name: Pianificare i profili di certificato
+      items:
+        - name: Prerequisiti per i profili certificato
+          href: plan-design/prerequisites-for-certificate-profiles.md
+        - name: Autorizzazioni dei modelli di certificato per i profili di certificato
+          href: plan-design/planning-for-certificate-template-permissions.md
+    - name: Prerequisiti per i profili Wi-Fi e VPN
+      href: plan-design/prerequisites-for-wifi-vpn-profiles.md
+    - name: Sicurezza e privacy
+      items:
+        - name: Profili Wi-Fi e VPN
+          href: plan-design/security-and-privacy-for-wifi-vpn-profiles.md
+        - name: Profili certificato
+          href: plan-design/security-and-privacy-for-certificate-profiles.md
+- name: Distribuire e usare
+  items:
+    - name: Endpoint Protection
+      items:
+        - name: Panoramica di Endpoint Protection
+          href: deploy-use/endpoint-protection.md
+        - name: Configurare Endpoint Protection
+          items:
+            - name: Come configurare Endpoint Protection
+              href: deploy-use/endpoint-protection-configure.md
+            - name: Ruolo del sistema del sito
+              href: deploy-use/endpoint-protection-site-role.md
+            - name: Avvisi
+              href: deploy-use/endpoint-configure-alerts.md
+            - name: Aggiornamenti delle definizioni
+              items:
+                - name: Panoramica degli aggiornamenti delle definizioni
+                  href: deploy-use/endpoint-definition-updates.md
+                - name: Aggiornamenti di ConfigMgr
+                  href: deploy-use/endpoint-definitions-configmgr.md
+                - name: Aggiornamenti di WSUS
+                  href: deploy-use/endpoint-definitions-wsus.md
+                - name: Aggiornamenti di Microsoft
+                  href: deploy-use/endpoint-definitions-microsoft-updates.md
+                - name: Malware Protection Center
+                  href: deploy-use/endpoint-definitions-protection-center.md
+                - name: Aggiornamenti della condivisione di rete
+                  href: deploy-use/endpoint-definitions-network.md
+            - name: Distribuire i criteri
+              href: deploy-use/endpoint-antimalware-policies.md
+            - name: Configurare il client
+              href: deploy-use/endpoint-protection-configure-client.md
+        - name: Criteri di Windows Firewall
+          href: deploy-use/create-windows-firewall-policies.md
+        - name: Microsoft Defender Advanced Threat Protection
+          href: deploy-use/windows-defender-advanced-threat-protection.md
+        - name: Creare e distribuire criteri di Exploit Guard
+          href: deploy-use/create-deploy-exploit-guard-policy.md
+        - name: Creare e distribuire criteri di Application Guard
+          href: deploy-use/create-deploy-application-guard-policy.md
+        - name: Impostazioni di controllo delle applicazioni di Windows Defender
+          href: deploy-use/use-device-guard-with-configuration-manager.md
+        - name: Attività antimalware e firewall
+          href: deploy-use/endpoint-antimalware-firewall.md
+        - name: Scenario di Endpoint Protection
+          href: deploy-use/scenarios-endpoint-protection.md
+        - name: Guida del client di Endpoint Protection
+          href: deploy-use/endpoint-protection-client-help.md
+        - name: Risoluzione dei problemi del client
+          href: deploy-use/troubleshoot-endpoint-client.md
+        - name: Domande frequenti su Windows Defender
+          href: deploy-use/endpoint-protection-client-faq.md
+    - name: Gestione di BitLocker
+      items:
+        - name: Crittografare i dati di ripristino
+          href: deploy-use/bitlocker/encrypt-recovery-data.md
+        - name: Distribuire la gestione di BitLocker
+          href: deploy-use/bitlocker/deploy-management-agent.md
+        - name: Configurare i portali di BitLocker
+          href: deploy-use/bitlocker/setup-websites.md
+        - name: Personalizzare il portale self-service
+          href: deploy-use/bitlocker/customize-self-service-portal.md
+        - name: Visualizzare i report di BitLocker
+          href: deploy-use/bitlocker/view-reports.md
+        - name: Sito Web di amministrazione e monitoraggio
+          href: deploy-use/bitlocker/helpdesk-portal.md
+        - name: Portale self-service
+          href: deploy-use/bitlocker/self-service-portal.md
+    - name: Impostazioni di Windows Hello for Business
+      href: deploy-use/windows-hello-for-business-settings.md
+    - name: Profili certificato
+      items:
+        - name: Introduzione ai profili certificato
+          href: deploy-use/introduction-to-certificate-profiles.md
+        - name: Creare i profili certificato
+          href: deploy-use/create-certificate-profiles.md
+        - name: Configurazione dei profili certificato
+          href: deploy-use/certificate-infrastructure.md
+    - name: Profili Wi-Fi
+      items:
+        - name: Creare profili Wi-Fi
+          href: deploy-use/create-wifi-profiles.md
+    - name: Profili VPN
+      items:
+        - name: Profili VPN
+          href: deploy-use/vpn-profiles.md
+        - name: Creare profili VPN
+          href: deploy-use/create-vpn-profiles.md
+        - name: Trovare un nome di famiglia di pacchetti (PFN) per una rete VPN per app
+          href: deploy-use/find-a-pfn-for-per-app-vpn.md
+    - name: 'Distribuire profili certificato, Wi-Fi, VPN e di posta elettronica'
+      href: deploy-use/deploy-wifi-vpn-email-cert-profiles.md
+    - name: Impostazioni di termini e condizioni
+      href: ../mdm/understand/what-happened-to-hybrid.md?toc=/sccm/protect/toc.json&bc=/sccm/protect/breadcrumb/toc.json
+    - name: Monitorare la protezione
+      items:
+        - name: 'Monitorare i profili Wi-Fi, di posta elettronica e VPN'
+          href: deploy-use/monitor-wifi-email-vpn-profiles.md
+        - name: Monitorare i profili certificato
+          href: deploy-use/monitor-certificate-profiles.md
+        - name: Monitorare Endpoint Protection
+          href: deploy-use/monitor-endpoint-protection.md
+- name: Riferimento tecnico
+  items:
+    - name: Gestione di BitLocker
+      items:
+        - name: Informazioni di riferimento sulle impostazioni
+          href: tech-ref/bitlocker/settings.md
+        - name: Risolvere i problemi relativi a BitLocker
+          href: tech-ref/bitlocker/troubleshoot.md
+        - name: Registri eventi di BitLocker
+          href: tech-ref/bitlocker/about-event-logs.md
+        - name: Registri eventi del client
+          href: tech-ref/bitlocker/client-event-logs.md
+        - name: Registri eventi del server
+          href: tech-ref/bitlocker/server-event-logs.md
+        - name: Codici di non conformità
+          href: tech-ref/bitlocker/non-compliance-codes.md

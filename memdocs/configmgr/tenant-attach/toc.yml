@@ -1,0 +1,8 @@
+- name: Documentazione per il collegamento di tenant
+  href: index.yml
+- name: Distribuire e usare
+  items:
+    - name: Abilitare il collegamento di tenant
+      href: device-sync-actions.md
+    - name: Risolvere i problemi delle azioni del dispositivo
+      href: technical-reference.md

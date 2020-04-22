@@ -1,0 +1,126 @@
+- name: Documentazione sulla gestione delle app
+  href: index.yml
+- name: Comprendere ed esplorare
+  items:
+    - name: Introduzione
+      href: understand/introduction-to-application-management.md
+- name: Operazioni preliminari
+  items:
+    - name: Creare e distribuire un'applicazione
+      href: get-started/create-and-deploy-an-application.md
+- name: Pianificare e progettare
+  items:
+    - name: Pianificare e configurare la gestione delle applicazioni
+      href: plan-design/plan-for-and-configure-application-management.md
+    - name: Pianificare Software Center
+      href: plan-design/plan-for-software-center.md
+    - name: Sicurezza e privacy
+      href: plan-design/security-and-privacy-for-application-management.md
+- name: Distribuire e usare
+  items:
+    - name: Creare applicazioni
+      href: deploy-use/create-applications.md
+      items:
+        - name: Creare applicazioni per computer Mac
+          href: get-started/creating-mac-computer-applications.md
+        - name: Creare applicazioni Windows
+          href: get-started/creating-windows-applications.md
+        - name: Creare applicazioni server Linux e UNIX
+          href: get-started/creating-linux-and-unix-server-applications.md
+        - name: Creare applicazioni Windows Embedded
+          href: get-started/creating-windows-embedded-applications.md
+        - name: Creare condizioni globali
+          href: deploy-use/create-global-conditions.md
+        - name: Creare gruppi di applicazioni
+          href: deploy-use/create-app-groups.md
+        - name: Pacchetti e programmi
+          href: deploy-use/packages-and-programs.md
+        - name: File di definizione del pacchetto
+          href: deploy-use/package-definition-files.md
+    - name: Distribuire applicazioni
+      items:
+        - name: Distribuire applicazioni
+          href: deploy-use/deploy-applications.md
+        - name: Creare una distribuzione in più fasi
+          href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json
+        - name: Approvare le applicazioni
+          href: deploy-use/app-approval.md
+        - name: Installare le applicazioni per un dispositivo
+          href: deploy-use/install-app-for-device.md
+        - name: Condividere un'applicazione
+          href: deploy-use/share-applications.md
+        - name: Simulare le distribuzioni di applicazioni
+          href: deploy-use/simulate-application-deployments.md
+        - name: Distribuire Microsoft Edge versione 77 e successive
+          href: deploy-use/deploy-edge.md
+        - name: Distribuire applicazioni virtuali App-V
+          href: get-started/deploying-app-v-virtual-applications.md
+        - name: Suggerimenti per la risoluzione dei problemi di distribuzione delle app
+          href: deploy-use/troubleshoot-application-deployment.md
+    - name: Monitorare le applicazioni
+      items:
+        - name: Monitorare le applicazioni dalla console
+          href: deploy-use/monitor-applications-from-the-console.md
+        - name: Gestire e monitorare le distribuzioni in più fasi
+          href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json
+        - name: Monitorare l'utilizzo delle app con la misurazione del software
+          href: deploy-use/monitor-app-usage-with-software-metering.md
+    - name: Gestire le applicazioni
+      items:
+        - name: Attività di gestione
+          href: deploy-use/management-tasks-applications.md
+        - name: Affinità utente dispositivo
+          href: deploy-use/link-users-and-devices-with-user-device-affinity.md
+        - name: Microsoft Store per le aziende e gli istituti di istruzione
+          href: deploy-use/manage-apps-from-the-windows-store-for-business.md
+        - name: Ambienti virtuali App-V
+          href: deploy-use/create-app-v-virtual-environments.md
+        - name: Importare ed esportare le applicazioni
+          href: deploy-use/import-export-applications.md
+    - name: Aggiornare e ritirare applicazioni
+      items:
+        - name: Aggiornare e ritirare applicazioni
+          href: deploy-use/update-and-retire-applications.md
+        - name: Rivedere e sostituire le applicazioni
+          href: deploy-use/revise-and-supersede-applications.md
+        - name: Disinstallare applicazioni
+          href: deploy-use/uninstall-applications.md
+    - name: Eseguire e gestire gli script
+      href: deploy-use/create-deploy-scripts.md
+      items:
+        - name: Informazioni sulla sicurezza degli script PowerShell
+          href: deploy-use/learn-script-security.md
+    - name: Package Conversion Manager
+      items:
+        - name: Pianificare l'uso di Package Conversion Manager
+          href: pcm/package-conversion-manager.md
+        - name: Come analizzare e convertire i pacchetti
+          href: pcm/how-to-analyze-and-convert.md
+- name: Risoluzione dei problemi
+  items:
+    - name: Risolvere i problemi relativi alla distribuzione di applicazioni
+      items:
+        - name: Prima di iniziare
+          href: understand/app-deployment-technical-reference.md
+        - name: Criteri di distribuzione delle applicazioni
+          href: understand/deployment-policy-technical-reference.md
+        - name: Distribuzione delle applicazioni per i dispositivi
+          href: understand/device-deployment-technical-reference.md
+        - name: Distribuzione delle applicazioni per gli utenti
+          href: understand/user-deployment-technical-reference.md
+        - name: Componenti client di distribuzione delle applicazioni
+          href: understand/client-components-technical-reference.md
+        - name: Valutazione delle applicazioni
+          href: understand/deployment-evaluation-technical-reference.md
+        - name: Download delle applicazioni
+          href: understand/deployment-download-technical-reference.md
+        - name: Installazione delle applicazioni
+          href: understand/deployment-install-technical-reference.md
+    - name: Risoluzione dei problemi di integrazione di Microsoft Store per le aziende e gli istituti di istruzione
+      href: deploy-use/troubleshoot-microsoft-store-for-business-integration.md
+    - name: Risolvere i problemi di Package Conversion Manager
+      items:
+        - name: Risolvere i problemi di Package Conversion Manager
+          href: pcm/troubleshoot-pcm.md
+        - name: Messaggi di errore per Package Conversion Manager
+          href: pcm/error-messages.md

@@ -1,0 +1,66 @@
+### YamlMime:Landing
+title: Documentazione sulla conformità dei dispositivi
+summary: Configuration Manager offre gli strumenti e le risorse necessari per gestire la configurazione e la conformità dei dispositivi nell'organizzazione.
+metadata:
+  title: Documentazione sulla conformità dei dispositivi
+  titleSuffix: Configuration Manager
+  description: Configuration Manager offre gli strumenti e le risorse necessari per gestire la configurazione e la conformità dei dispositivi nell'organizzazione.
+  ms.product: configuration-manager
+  ms.technology: configmgr-compliance
+  ms.topic: landing-page
+  author: mestew
+  ms.author: mstewart
+  ms.date: 01/25/2020
+  ms.openlocfilehash: 7b66409e8f4082927225246bb5144efb8b65d567
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: it-IT
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741103"
+landingContent:
+- title: Informazioni sulla conformità dei dispositivi
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Introduzione alla conformità dei dispositivi
+      url: understand/ensure-device-compliance.md
+    - text: Introduzione alle impostazioni di conformità
+      url: get-started/get-started-with-compliance-settings.md
+  - linkListType: architecture
+    links:
+    - text: Pianificare e configurare le impostazioni di conformità
+      url: plan-design/plan-for-and-configure-compliance-settings.md
+- title: Operazioni preliminari
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Attività comuni per la gestione della conformità
+      url: plan-design/common-tasks-for-managing-compliance-on-devices-with-the-client.md
+    - text: Creare elementi di configurazione per dispositivi Windows 10
+      url: deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md
+    - text: Creare linee di base di configurazione
+      url: deploy-use/create-configuration-baselines.md
+  - linkListType: deploy
+    links:
+    - text: Distribuire linee di base di configurazione
+      url: deploy-use/deploy-configuration-baselines.md
+  - linkListType: how-to-guide
+    links:
+    - text: Monitorare le impostazioni di conformità
+      url: deploy-use/monitor-compliance-settings.md
+- title: Attività principali
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Creare elementi di configurazione personalizzati
+      url: deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md
+    - text: Creare profili di connessione remota
+      url: deploy-use/create-remote-connection-profiles.md
+    - text: Creare dati utente ed elementi di configurazione dei profili
+      url: deploy-use/create-user-data-and-profiles-configuration-items.md
+  - linkListType: concept
+    links:
+    - text: Profili di OneDrive for Business
+      url: deploy-use/onedrive-profile.md
+    - text: Gestire i dati di configurazione
+      url: deploy-use/management-tasks-for-configuration-data.md

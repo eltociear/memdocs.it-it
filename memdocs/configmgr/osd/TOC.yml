@@ -1,0 +1,148 @@
+- name: Documentazione sulla distribuzione del sistema operativo
+  href: index.yml
+- name: Informazioni generali
+  items:
+    - name: Introduzione alla distribuzione del sistema operativo
+      href: understand/introduction-to-operating-system-deployment.md
+- name: Pianificare e progettare
+  items:
+    - name: Requisiti dell'infrastruttura per la distribuzione del sistema operativo
+      href: plan-design/infrastructure-requirements-for-operating-system-deployment.md
+    - name: Considerazioni sulla pianificazione per l'automazione delle attività
+      href: plan-design/planning-considerations-for-automating-tasks.md
+    - name: Scenari di distribuzione di sistemi operativi aziendali
+      items:
+        - name: Panoramica degli scenari di distribuzione di sistemi operativi
+          href: deploy-use/scenarios-to-deploy-enterprise-operating-systems.md
+        - name: Aggiornare Windows alla versione più recente
+          href: deploy-use/upgrade-windows-to-the-latest-version.md
+        - name: Windows Autopilot per dispositivi esistenti
+          href: deploy-use/windows-autopilot-for-existing-devices.md
+        - name: Aggiornare un computer esistente con una nuova versione di Windows
+          href: deploy-use/refresh-an-existing-computer-with-a-new-version-of-windows.md
+        - name: Installare una nuova versione di Windows in un nuovo computer (bare metal)
+          href: deploy-use/install-new-windows-version-new-computer-bare-metal.md
+        - name: Sostituire un computer esistente e trasferire le impostazioni
+          href: deploy-use/replace-an-existing-computer-and-transfer-settings.md
+    - name: Metodi per distribuire i sistemi operativi aziendali
+      items:
+        - name: Metodi di distribuzione dei sistemi operativi
+          href: deploy-use/methods-to-deploy-enterprise-operating-systems.md
+        - name: Usare PXE per distribuire Windows in rete
+          href: deploy-use/use-pxe-to-deploy-windows-over-the-network.md
+        - name: Usare Software Center per distribuire Windows in rete
+          href: deploy-use/use-software-center-to-deploy-windows-over-the-network.md
+        - name: Usare i supporti di avvio per distribuire Windows in rete
+          href: deploy-use/use-bootable-media-to-deploy-windows-over-the-network.md
+        - name: Usare i supporti autonomi per distribuire Windows senza usare la rete
+          href: deploy-use/use-stand-alone-media-to-deploy-windows-without-using-the-network.md
+        - name: Usare il multicast per distribuire Windows in rete
+          href: deploy-use/use-multicast-to-deploy-windows-over-the-network.md
+        - name: Creare un'immagine per un OEM in modalità produttore computer o per un rivenditore locale
+          href: deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot.md
+    - name: Sicurezza e privacy per la distribuzione del sistema operativo
+      href: plan-design/security-and-privacy-for-operating-system-deployment.md
+    - name: Pianificazione dell'interoperabilità della distribuzione del sistema operativo
+      href: plan-design/planning-for-operating-system-deployment-interoperability.md
+- name: Operazioni preliminari
+  items:
+    - name: Preparare i ruoli del sistema del sito per le distribuzioni del sistema operativo
+      href: get-started/prepare-site-system-roles-for-operating-system-deployments.md
+    - name: Preparazione della distribuzione del sistema operativo
+      items:
+        - name: Preparare la distribuzione del sistema operativo
+          href: get-started/prepare-for-operating-system-deployment.md
+        - name: Immagini d'avvio
+          items:
+            - name: Gestire le immagini di avvio
+              href: get-started/manage-boot-images.md
+            - name: Personalizzare le immagini di avvio
+              href: get-started/customize-boot-images.md
+        - name: Immagini dei sistemi operativi
+          items:
+            - name: Gestire le immagini del sistema operativo
+              href: get-started/manage-operating-system-images.md
+            - name: Personalizzare le immagini del sistema operativo
+              href: get-started/customize-operating-system-images.md
+        - name: Gestire i pacchetti di aggiornamento del sistema operativo
+          href: get-started/manage-operating-system-upgrade-packages.md
+        - name: Gestire i driver
+          href: get-started/manage-drivers.md
+        - name: Gestire lo stato utente
+          href: get-started/manage-user-state.md
+        - name: Operazioni preliminari alle distribuzioni in computer sconosciuti
+          href: get-started/prepare-for-unknown-computer-deployments.md
+        - name: Associare gli utenti a un computer di destinazione
+          href: get-started/associate-users-with-a-destination-computer.md
+    - name: Preparare la peer cache di Windows PE per ridurre il traffico WAN
+      href: get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md
+- name: Distribuire e usare
+  items:
+    - name: Gestire e creare le sequenze di attività
+      href: deploy-use/manage-task-sequences-to-automate-tasks.md
+    - name: Creare sequenze di attività per automatizzare le attività
+      items:
+        - name: Creare una sequenza di attività per installare un sistema operativo
+          href: deploy-use/create-a-task-sequence-to-install-an-operating-system.md
+        - name: Creare una sequenza di attività per aggiornare un sistema operativo
+          href: deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md
+        - name: Passaggi della sequenza di attività per la gestione della conversione da BIOS a UEFI
+          href: deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md
+        - name: Creare una sequenza di attività per acquisire un sistema operativo
+          href: deploy-use/create-a-task-sequence-to-capture-an-operating-system.md
+        - name: Creare una sequenza di attività per acquisire e ripristinare lo stato utente
+          href: deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md
+        - name: Creare una sequenza di attività personalizzata
+          href: deploy-use/create-a-custom-task-sequence.md
+        - name: Creare una sequenza di attività per distribuzioni non di sistema operativo
+          href: deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md
+    - name: Distribuire una sequenza di attività
+      href: deploy-use/deploy-a-task-sequence.md
+    - name: Creare una distribuzione in più fasi
+      href: deploy-use/create-phased-deployment-for-task-sequence.md
+    - name: Gestire e monitorare le distribuzioni in più fasi
+      href: deploy-use/manage-monitor-phased-deployments.md
+    - name: Gestire Windows come servizio
+      href: deploy-use/manage-windows-as-a-service.md
+    - name: Distribuire Windows to Go
+      href: deploy-use/deploy-windows-to-go.md
+    - name: Monitorare le distribuzioni del sistema operativo
+      href: deploy-use/monitor-operating-system-deployments.md
+    - name: Eseguire il debug di una sequenza di attività
+      href: deploy-use/debug-task-sequence.md
+    - name: Configurare la pre-cache del contenuto
+      href: deploy-use/configure-precache-content.md
+    - name: Crea supporto per sequenza di attività
+      items:
+        - name: Panoramica dei supporti per la sequenza di attività
+          href: deploy-use/create-task-sequence-media.md
+        - name: Creare supporti autonomi
+          href: deploy-use/create-stand-alone-media.md
+        - name: Creare supporti pre-installati
+          href: deploy-use/create-prestaged-media.md
+        - name: Creare supporti di avvio
+          href: deploy-use/create-bootable-media.md
+        - name: Creare supporti di acquisizione
+          href: deploy-use/create-capture-media.md
+- name: Informazioni di riferimento tecnico
+  items:
+    - name: Usare l'editor delle sequenze di attività
+      href: understand/task-sequence-editor.md
+    - name: Esperienze utente per la distribuzione del sistema operativo
+      href: understand/user-experience.md
+    - name: Passaggi della sequenza di attività
+      items:
+        - name: Informazioni sui passaggi della sequenza di attività
+          href: understand/task-sequence-steps.md
+        - name: Installa aggiornamenti software
+          href: understand/install-software-updates.md
+        - name: Pre-provisioning di BitLocker in Windows PE
+          href: deploy-use/preprovision-bitlocker-in-windows-pe.md
+    - name: Come usare le variabili della sequenza di attività
+      href: understand/using-task-sequence-variables.md
+    - name: Variabili della sequenza di attività
+      href: understand/task-sequence-variables.md
+    - name: Comandi di preavvio per supporti per sequenza di attività
+      href: understand/prestart-commands-for-task-sequence-media.md
+    - name: Modalità di provisioning
+      href: understand/provisioning-mode.md

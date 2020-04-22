@@ -1,0 +1,56 @@
+### YamlMime:Landing
+title: Documentazione sulla co-gestione
+summary: Con la co-gestione è possibile gestire i dispositivi Windows 10 contemporaneamente tramite Configuration Manager e Microsoft Intune.
+metadata:
+  title: Documentazione sulla co-gestione
+  titleSuffix: Configuration Manager
+  description: Con la co-gestione è possibile gestire i dispositivi Windows 10 contemporaneamente tramite Configuration Manager e Microsoft Intune.
+  ms.product: configuration-manager
+  ms.technology: configmgr-comanage
+  ms.topic: landing-page
+  author: mestew
+  ms.author: mstewart
+  ms.date: 01/10/2020
+  ms.openlocfilehash: bc1bf65ecaf77ded325fcdae19a0d318052b1cc9
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: it-IT
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741001"
+landingContent:
+- title: Informazioni sulla co-gestione
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Informazioni sulla co-gestione
+      url: overview.md
+    - text: Percorsi per la co-gestione
+      url: quickstart-paths.md
+  - linkListType: video
+    links:
+    - text: Accesso condizionale con la co-gestione
+      url: https://channel9.msdn.com/Series/Endpoint-Zone/The-Security-Benefits-of-Conditional-Access/player
+- title: Operazioni preliminari
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Abilitare la co-gestione per i client di Configuration Manager esistenti
+      url: tutorial-co-manage-clients.md
+    - text: Abilitare la co-gestione per nuovi dispositivi basati su Internet
+      url: tutorial-co-manage-new-devices.md
+  - linkListType: video
+    links:
+    - text: Eseguire l'aggiornamento a Windows 10 per la co-gestione
+      url: https://channel9.msdn.com/Series/Endpoint-Zone/Upgrading-to-Windows-10-to-Enable-Co-Management/player
+- title: Attività principali
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Passare i carichi di lavoro di Configuration Manager a Intune
+      url: how-to-switch-workloads.md
+    - text: Monitorare la co-gestione in Configuration Manager
+      url: how-to-monitor.md
+  - linkListType: video
+    links:
+    - text: Windows Autopilot con la co-gestione
+      url: https://channel9.msdn.com/Series/Endpoint-Zone/Using-Windows-Autopilot-with-Co-Management/player

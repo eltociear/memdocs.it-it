@@ -1,0 +1,68 @@
+### YamlMime:Landing
+title: Documentazione sulla gestione delle app
+summary: Usare Configuration Manager per gestire e distribuire applicazioni, script e pacchetti. Automatizzare le distribuzioni o consentire agli utenti di installare app da Software Center.
+metadata:
+  title: Documentazione sulla gestione delle app
+  titleSuffix: Configuration Manager
+  description: Usare Configuration Manager per gestire e distribuire applicazioni, script e pacchetti. Automatizzare le distribuzioni o consentire agli utenti di installare app da Software Center.
+  ms.prod: configuration-manager
+  ms.technology: configmgr-app
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 01/28/2020
+  ms.openlocfilehash: 7fccbe98c6199543554b48f28325b6531d0092c3
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: it-IT
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81740899"
+landingContent:
+- title: Informazioni sulla gestione delle app
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Introduzione alla gestione delle app
+      url: understand/introduction-to-application-management.md
+    - text: Pianificare la gestione delle app
+      url: plan-design/plan-for-and-configure-application-management.md
+    - text: Pianificare Software Center
+      url: plan-design/plan-for-software-center.md
+  - linkListType: tutorial
+    links:
+    - text: Creare e distribuire un'app
+      url: get-started/create-and-deploy-an-application.md
+- title: Operazioni preliminari
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Creare app
+      url: deploy-use/create-applications.md
+    - text: Creare ed eseguire script di PowerShell
+      url: deploy-use/create-deploy-scripts.md
+  - linkListType: deploy
+    links:
+    - text: Distribuire app
+      url: deploy-use/deploy-applications.md
+    - text: Distribuire e aggiornare Microsoft Edge
+      url: deploy-use/deploy-edge.md
+- title: Attività principali
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Creare gruppi di app
+      url: deploy-use/create-app-groups.md
+    - text: Approvare app
+      url: deploy-use/app-approval.md
+    - text: Installare le app per un dispositivo
+      url: deploy-use/install-app-for-device.md
+    - text: Affinità utente dispositivo
+      url: deploy-use/link-users-and-devices-with-user-device-affinity.md
+    - text: Monitorare l'utilizzo delle app con la misurazione del software
+      url: deploy-use/monitor-app-usage-with-software-metering.md
+  - linkListType: reference
+    links:
+    - text: Risolvere i problemi relativi alla distribuzione di app
+      url: understand/app-deployment-technical-reference.md
+    - text: Pacchetti e programmi
+      url: deploy-use/packages-and-programs.md

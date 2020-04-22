@@ -1,0 +1,62 @@
+### YamlMime:Landing
+title: Documentazione di Configuration Manager SDK
+summary: Configuration Manager SDK contiene documenti ed esempi utili per lo sviluppo delle applicazioni che accedono e modificano i dati di Configuration Manager.
+metadata:
+  title: Documentazione SDK
+  titleSuffix: Configuration Manager
+  description: Configuration Manager SDK contiene documenti ed esempi utili per lo sviluppo delle applicazioni che accedono e modificano i dati di Configuration Manager.
+  ms.prod: configuration-manager
+  ms.technology: configmgr-sdk
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 04/01/2020
+  ms.openlocfilehash: 94ad699d6de55ffbbc77722b2e9e4063844f78a3
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: it-IT
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741715"
+landingContent:
+- title: Informazioni su Configuration Manager SDK
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Panoramica di SDK
+      url: core/misc/system-center-configuration-manager-sdk.md
+    - text: Novità
+      url: core/changes/what-s-new-in-the-system-center-configuration-manager-sdk.md
+    - text: Requisiti di SDK
+      url: core/reqs/about-configuration-manager-sdk-requirements.md
+  - linkListType: reference
+    links:
+    - text: Informazioni di riferimento sulle API di Configuration Manager
+      url: reference/configuration-manager-reference.md
+    - text: API REST del servizio di amministrazione
+      url: adminservice/index.yml
+- title: Operazioni preliminari
+  linkLists:
+  - linkListType: architecture
+    links:
+    - text: Introduzione alla programmazione di Configuration Manager
+      url: core/understand/getting-started-with-configuration-manager-programming.md
+    - text: Panoramica dell'architettura
+      url: core/understand/architectural-overview.md
+    - text: Introduzione a PowerShell
+      url: core/understand/getting-started-with-configuration-manager-and-windows-powershell.md
+  - linkListType: reference
+    links:
+    - text: Cmdlet PowerShell di Configuration Manager
+      url: https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps
+- title: Attività principali
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Introduzione a WBEMTEST
+      url: core/understand/introduction-to-wbemtest.md
+  - linkListType: reference
+    links:
+    - text: Viste SQL dello schema di Configuration Manager
+      url: core/understand/configuration-manager-schema-sql-views.md
+    - text: Classe WMI server SMS_R_System
+      url: reference/core/clients/manage/sms_r_system-server-wmi-class.md

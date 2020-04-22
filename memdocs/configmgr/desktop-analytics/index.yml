@@ -1,0 +1,54 @@
+### YamlMime:Landing
+title: Documentazione di Desktop Analytics
+summary: Desktop Analytics è un servizio cloud che si integra con Configuration Manager. Fornisce informazioni dettagliate per facilitare l'aggiornamento dei client Windows.
+metadata:
+  title: Documentazione di Desktop Analytics
+  titleSuffix: Configuration Manager
+  description: Desktop Analytics è un servizio cloud che si integra con Configuration Manager. Fornisce informazioni dettagliate per facilitare l'aggiornamento dei client Windows.
+  ms.prod: configuration-manager
+  ms.technology: configmgr-analytics
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 01/28/2020
+  ms.openlocfilehash: 1c0aa1c481acb18fadeebbdecdcd4759568d2242
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: it-IT
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741409"
+landingContent:
+- title: Informazioni su Desktop Analytics
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Che cos'è Desktop Analytics?
+      url: overview.md
+    - text: Novità
+      url: whats-new.md
+  - linkListType: tutorial
+    links:
+    - text: Windows 10 pilota
+      url: tutorial-windows10.md
+- title: Operazioni preliminari
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Configurare Desktop Analytics
+      url: set-up.md
+    - text: Connettere Configuration Manager
+      url: connect-configmgr.md
+    - text: Registrare i dispositivi
+      url: enroll-devices.md
+- title: Risorse
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Domande frequenti su Desktop Analytics
+      url: faq.md
+    - text: Abilitare la condivisione dei dati
+      url: enable-data-sharing.md
+    - text: Monitorare l'integrità della connessione
+      url: monitor-connection-health.md
+    - text: Risolvere i problemi di Desktop Analytics
+      url: troubleshooting.md

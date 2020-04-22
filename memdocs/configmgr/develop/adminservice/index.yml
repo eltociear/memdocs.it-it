@@ -1,0 +1,32 @@
+### YamlMime:Landing
+title: Documentazione per il servizio di amministrazione
+summary: Documentazione per sviluppatori per l'API REST di Configuration Manager
+metadata:
+  title: Documentazione per il servizio di amministrazione
+  titleSuffix: Configuration Manager
+  description: Caricare i dispositivi Configuration Manager nel servizio cloud ed eseguire azioni su di essi.
+  ms.product: configuration-manager
+  ms.technology: configmgr-sdk
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 04/01/2020
+  ms.openlocfilehash: c6c2e97491982f39db4c149ac0bc38266bc2ea27
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: it-IT
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741681"
+landingContent:
+- title: Informazioni sul servizio di amministrazione
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Che cos'è il servizio di amministrazione
+      url: overview.md
+  - linkListType: how-to-guide
+    links:
+    - text: Configurazione
+      url: set-up.md
+    - text: Uso
+      url: usage.md

@@ -1,0 +1,66 @@
+### YamlMime:Landing
+title: Documentazione sulla gestione degli aggiornamenti software
+summary: Configuration Manager consente di gestire la complessa attività di monitoraggio e applicazione degli aggiornamenti software nei client dell'organizzazione.
+metadata:
+  title: Documentazione sulla gestione degli aggiornamenti software
+  titleSuffix: Configuration Manager
+  description: Configuration Manager consente di gestire la complessa attività di monitoraggio e applicazione degli aggiornamenti software nei client dell'organizzazione.
+  ms.product: configuration-manager
+  ms.technology: configmgr-sum
+  ms.topic: landing-page
+  author: mestew
+  ms.author: mstewart
+  ms.date: 01/10/2020
+  ms.openlocfilehash: aa421de09ee69713097a5efe78b0a9b2a1a71856
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: it-IT
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741171"
+landingContent:
+- title: Informazioni sulla gestione degli aggiornamenti software
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Introduzione agli aggiornamenti software
+      url: understand/software-updates-introduction.md
+    - text: Esempio per la distribuzione e il monitoraggio degli aggiornamenti software mensili
+      url: deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md
+  - linkListType: architecture
+    links:
+    - text: Pianificare gli aggiornamenti software
+      url: plan-design/plan-for-software-updates.md
+    - text: Procedure consigliate per gli aggiornamenti software
+      url: plan-design/software-updates-best-practices.md
+- title: Operazioni preliminari
+  linkLists:
+  - linkListType: deploy
+    links:
+    - text: Installare un punto di aggiornamento software
+      url: get-started/install-a-software-update-point.md
+    - text: Configurare classificazioni e prodotti
+      url: get-started/configure-classifications-and-products.md
+    - text: sincronizzare gli aggiornamenti software
+      url: get-started/synchronize-software-updates.md
+  - linkListType: how-to-guide
+    links:
+    - text: Distribuire automaticamente gli aggiornamenti software
+      url: deploy-use/automatically-deploy-software-updates.md
+    - text: Monitorare gli aggiornamenti software
+      url: deploy-use/monitor-software-updates.md
+- title: Attività principali
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Gestire gli aggiornamenti di Office 365 ProPlus
+      url: deploy-use/manage-office-365-proplus-updates.md
+    - text: Abilitare gli aggiornamenti di terze parti
+      url: deploy-use/third-party-software-updates.md
+    - text: Gestire le impostazioni per gli aggiornamenti software
+      url: get-started/manage-settings-for-software-updates.md
+  - linkListType: concept
+    links:
+    - text: Ottimizzare il recapito degli aggiornamenti di Windows 10
+      url: deploy-use/optimize-windows-10-update-delivery.md
+    - text: Manutenzione degli aggiornamenti software
+      url: deploy-use/software-updates-maintenance.md

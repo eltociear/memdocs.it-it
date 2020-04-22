@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e838ab0123058b90f06814d5a1266072bd95385e
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: e3c939b2b21bc8bfbf82a997c05f24d91c487a9e
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80085771"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81681980"
 ---
 # <a name="whats-new-in-the-intune-classic-portal---previous-months"></a>Novità del portale di Intune classico - mesi precedenti
 
@@ -361,9 +361,9 @@ La nuova app consentirà anche agli utenti di sfruttare altre funzionalità dell
 > [!IMPORTANT]
 > __Un aggiornamento in Intune e Android for Work__ Anche se è possibile distribuire app Android for Work con l'azione __Richiesto__, un'app può essere distribuita solo come __Disponibile__ se è stata eseguita la migrazione dei gruppi di Intune alla nuova esperienza dei gruppi di Azure AD.
 
-__Il plug-in Cordova per Intune App SDK attualmente supporta la gestione di applicazioni mobili senza registrazione__ Gli sviluppatori di app possono ora usare il plug-in Cordova per Intune App SDK per abilitare funzionalità di gestione di applicazioni mobili senza registrazione del dispositivo nelle proprie app basate su Cordova per Android e iOS/iPadOS. Il plug-in Cordova per Intune App SDK è disponibile [qui](https://github.com/msintuneappsdk/cordova-plugin-ms-intune-mam).
+__Il plug-in Cordova per Intune App SDK attualmente supporta la gestione di applicazioni mobili senza registrazione__ Gli sviluppatori di app possono ora usare il plug-in Cordova per Intune App SDK per abilitare funzionalità di gestione di applicazioni mobili senza registrazione del dispositivo nelle proprie app basate su Cordova per Android e iOS/iPadOS.
 
-__Il componente Xamarin per Intune App SDK attualmente supporta la gestione di applicazioni mobili senza registrazione__ Gli sviluppatori di app possono ora usare il componente Xamarin per Intune App SDK per abilitare funzionalità di gestione di applicazioni mobili senza registrazione del dispositivo nelle proprie app basate su Xamarin per Android e iOS/iPadOS. Il componente Xamarin per Intune App SDK è disponibile [qui](https://github.com/msintuneappsdk/intune-app-sdk-xamarin).
+__Il componente Xamarin per Intune App SDK attualmente supporta la gestione di applicazioni mobili senza registrazione__ Gli sviluppatori di app possono ora usare il componente Xamarin per Intune App SDK per abilitare funzionalità di gestione di applicazioni mobili senza registrazione del dispositivo nelle proprie app basate su Xamarin per Android e iOS/iPadOS. Il componente Xamarin per Intune App SDK è disponibile [qui](https://www.npmjs.com/package/cordova-plugin-ms-intune-mam).
 
 ### <a name="notices"></a>Notifiche
 

@@ -1,0 +1,62 @@
+### YamlMime:Landing
+title: Documentazione sulla distribuzione del sistema operativo
+summary: Usare Configuration Manager per distribuire Windows con metodi diversi e automatizzare le attività.
+metadata:
+  title: Documentazione sulla distribuzione del sistema operativo
+  titleSuffix: Configuration Manager
+  description: Usare Configuration Manager per distribuire Windows con metodi diversi e automatizzare le attività.
+  ms.prod: configuration-manager
+  ms.technology: configmgr-osd
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 01/28/2020
+  ms.openlocfilehash: 5c56cef287ee16a8899c16af72d4734c9d1f4bad
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: it-IT
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741953"
+landingContent:
+- title: Informazioni sulla distribuzione del sistema operativo
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Introduzione alla distribuzione del sistema operativo
+      url: understand/introduction-to-operating-system-deployment.md
+    - text: Requisiti dell'infrastruttura
+      url: plan-design/infrastructure-requirements-for-operating-system-deployment.md
+  - linkListType: concept
+    links:
+    - text: Preparare la distribuzione del sistema operativo
+      url: get-started/prepare-for-operating-system-deployment.md
+    - text: Scenari di distribuzione del sistema operativo
+      url: deploy-use/scenarios-to-deploy-enterprise-operating-systems.md
+    - text: Metodi di distribuzione dei sistemi operativi
+      url: deploy-use/methods-to-deploy-enterprise-operating-systems.md
+- title: Operazioni preliminari
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Gestire le sequenze di attività
+      url: deploy-use/manage-task-sequences-to-automate-tasks.md
+    - text: Creare una sequenza di attività per l'aggiornamento del sistema operativo
+      url: deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md
+    - text: Creare una distribuzione in più fasi
+      url: deploy-use/create-phased-deployment-for-task-sequence.md
+    - text: Distribuire una sequenza di attività
+      url: deploy-use/deploy-a-task-sequence.md
+    - text: Eseguire il debug di una sequenza di attività
+      url: deploy-use/debug-task-sequence.md
+- title: Riferimento tecnico
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Usare l'editor delle sequenze di attività
+      url: understand/task-sequence-editor.md
+    - text: Informazioni sui passaggi della sequenza di attività
+      url: understand/task-sequence-steps.md
+    - text: Come usare le variabili della sequenza di attività
+      url: understand/using-task-sequence-variables.md
+    - text: Informazioni di riferimento sulle variabili della sequenza di attività
+      url: understand/task-sequence-variables.md

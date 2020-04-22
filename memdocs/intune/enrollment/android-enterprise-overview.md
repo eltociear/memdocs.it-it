@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: df5cb910d38deaca76ee92246badcebf02a7e4de
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79339605"
 ---
 # <a name="manage-android-work-profile-devices-with-intune"></a>Gestire i dispositivi del profilo di lavoro Android con Intune
@@ -65,7 +65,7 @@ Se si usa l'accesso condizionale di Exchange ActiveSync per un dispositivo con p
 
 I criteri di protezione delle app applicati sono completamente supportati nel profilo di lavoro e nel profilo personale. È possibile pubblicare app line-of-business nella console di pubblicazione di app Android all'indirizzo https://play.google.com/apps/publish. Questa console include un'opzione per impostare le app come private per l'organizzazione. Per altre informazioni, vedere [Aggiungere criteri di conformità per dispositivi con profilo di lavoro Android Enterprise in Intune](../protect/compliance-policy-create-android-for-work.md). Per informazioni generali sui criteri di protezione delle app, vedere [Che cosa sono i criteri di protezione delle app](../apps/app-protection-policy.md)
 
-## <a name="vpn-profiles"></a>Profili VPN
+## <a name="vpn-profiles"></a>profili VPN
 
 Il supporto VPN è simile ai profili VPN Android. Per la gestione di Android Enterprise sono disponibili gli stessi provider di VPN e le stesse opzioni di configurazione di base, con due differenze:
 

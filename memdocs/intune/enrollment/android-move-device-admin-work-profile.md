@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 6f16c39ff0af44918099863be5d23ec9fe564493
-ms.sourcegitcommit: 954b3aae7916ad14065e6e86a577c5205103a50e
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/03/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80624924"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>Aggiornare i dispositivi Android da amministratore di dispositivi alla gestione del profilo di lavoro
@@ -79,9 +79,9 @@ Quando gli utenti notano che non sono conformi per questo motivo, possono toccar
 8. Nella pagina **Assegnazioni** assegnare i criteri a un gruppo che ha dispositivi registrati con la gestione dell'amministratore di dispositivi > **Avanti**.
 9. Nella pagina **Rivedi e crea** confermare tutte le impostazioni e selezionare **Crea**.
 
-## <a name="troubleshooting"></a>Risoluzione dei problemi
+## <a name="troubleshooting"></a>Troubleshooting
 
-Il [flusso per l'utente finale per passare alla nuova configurazione di gestione dei dispositivi](../user-help/move-to-new-device-management-setup.md) guida gli utenti nel processo di annullamento della registrazione nella gestione amministratore di dispositivi e di configurazione della gestione profilo di lavoro. Gli utenti devono avere [dispositivi registrati con amministratore di dispositivi Android](android-enroll-device-administrator.md) con il Portale aziendale Android versione 5.0.4720.0 o successiva.
+Il [flusso per l'utente finale per passare alla nuova configurazione di gestione dei dispositivi](../user-help/move-to-new-device-management-setup.md) guida gli utenti nel processo di annullamento della registrazione nella gestione amministratore di dispositivi e di configurazione della gestione profilo di lavoro. Gli utenti devono avere [Dispositivi registrati con amministratore di dispositivi Android](android-enroll-device-administrator.md) con il Portale aziendale Android versione 5.0.4720.0 o successiva.
 
 ### <a name="user-sees-an-error-after-tapping-resolve"></a>L'utente visualizza un errore quando tocca Risolvi
 Se gli utenti visualizzano un errore dopo aver toccato il pulsante **Risolvi**, è probabile che la causa sia uno dei motivi seguenti:

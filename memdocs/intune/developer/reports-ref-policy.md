@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 5a2f13bddb852b46459c9c79df39dda49ef9549d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79339917"
 ---
 # <a name="reference-for-policy-entities"></a>Informazioni di riferimento per le entità della categoria Policy
@@ -150,7 +150,7 @@ La tabella seguente elenca il numero di dispositivi con stato completato, in sos
 |---------|---------|---------|
 |dateKey|Chiave data in cui l'archiviazione del profilo di configurazione dispositivo è stata registrata nel data warehouse.|20160703|
 |in sospeso|Numero di dispositivi univoci in sospeso.|123|
-|Operazione riuscita|Numero di dispositivi univoci in stato completato.|12|
+|Operazione completata|Numero di dispositivi univoci in stato completato.|12|
 |policyKey|policyKey, può essere unita a policy per ottenere policyName.|Windows 10 baseline|
 |error|Numero di dispositivi univoci in stato di errore.|10|
 |non riuscito|Numero di dispositivi univoci in stato non riuscito.|2|

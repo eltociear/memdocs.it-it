@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 04521681ee6e262f4634cfc96560a5922ce1b8c0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79360236"
 ---
 # <a name="intune-data-warehouse-api-endpoint"></a>Endpoint dell'API data warehouse di Intune
@@ -78,7 +78,7 @@ I filtri di intervallo `DateKey` possono essere usati per limitare la quantità 
 > [!NOTE]
 > Gli esempi di filtro presuppongono che la data odierna sia il 21 febbraio 2019.
 
-|                             Filtro                             |           Ottimizzazione delle prestazioni           |                                          Descrizione                                          |
+|                             Filtra                             |           Ottimizzazione delle prestazioni           |                                          Descrizione                                          |
 |:--------------------------------------------------------------:|:--------------------------------------------:|:---------------------------------------------------------------------------------------------:|
 |    `maxhistorydays=7`                                            |    Completo                                      |    Restituisce dati con `DateKey` tra 20180214 e 20180221.                                     |
 |    `$filter=DateKey eq 20180214`                                 |    Completo                                      |    Restituisce dati con `DateKey` uguale a 20180214.                                                    |

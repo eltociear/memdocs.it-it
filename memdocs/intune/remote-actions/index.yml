@@ -1,5 +1,5 @@
 ### YamlMime:Landing
-title: Eseguire le azioni del dispositivo in modalità remota con Intune
+title: Eseguire le azioni del dispositivo in remoto con Intune
 summary: Intune offre agli amministratori la possibilità di eseguire le azioni del dispositivo in modalità remota. Usando queste azioni remote dal portale di Intune, è possibile riavviare i dispositivi, reimpostare i passcode, individuare i dispositivi smarriti o rubati e altro ancora.
 metadata:
   title: Eseguire le azioni del dispositivo in remoto con Intune
@@ -13,10 +13,10 @@ metadata:
   ms.author: erikje
   ms.date: 09/13/2019
   ms.openlocfilehash: 0c2340fffb2e3680ae4d137f9c0c944a72babf35
-  ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+  ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 03/13/2020
+  ms.lasthandoff: 04/21/2020
   ms.locfileid: "79333635"
 landingContent:
 - title: Eseguire le azioni del dispositivo in modalità remota

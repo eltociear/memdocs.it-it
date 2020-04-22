@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 172d76b8d6f196a40fc66eeaba91b7bb32228ccc
-ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80620515"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Guida per gli sviluppatori di Microsoft Intune App SDK per iOS
@@ -31,7 +31,7 @@ ms.locfileid: "80620515"
 >
 > Per scaricare l'SDK, vedere [Scaricare i file SDK](../developer/app-sdk-get-started.md#download-the-sdk-files).
 
-Microsoft Intune App SDK per iOS consente di integrare i criteri di protezione delle app di Intune, noti anche come criteri APP o MAM, nell'app iOS nativa. Un'applicazione abilitata per la gestione delle applicazioni mobili è un'applicazione integrata con Intune App SDK. Gli amministratori IT possono distribuire i criteri di protezione all'app per dispositivi mobili quando Intune gestisce attivamente l'app.
+Microsoft Intune App SDK per iOS consente di integrare i criteri di protezione delle app di Intune, noti anche come criteri APP o MAM, nell'app iOS nativa. Un'applicazione abilitata per MAM è integrata con Intune App SDK. Gli amministratori IT possono distribuire i criteri di protezione all'app per dispositivi mobili quando Intune gestisce attivamente l'app.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -39,7 +39,7 @@ Microsoft Intune App SDK per iOS consente di integrare i criteri di protezione d
 
 * L'app deve essere destinata a iOS 11 o versione successiva.
 
-* Rivedere le [Condizioni di licenza di Intune App SDK per iOS](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20for%20iOS.pdf). Stampare e conservare una copia delle condizioni di licenza. Scaricando e usando Intune App SDK per iOS, l'utente accetta tali condizioni di licenza.  Se non vengono accettate, non usare il software.
+* Rivedere le [Condizioni di licenza di Intune App SDK per iOS](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20for%20iOS.pdf). Stampare e conservare una copia delle condizioni di licenza. Scaricando e usando Intune App SDK per iOS, l'utente accetta tali condizioni di licenza.  Qualora l'utente non le accetti, non potrà usare il software.
 
 * Scaricare i file per Intune App SDK per iOS in [GitHub](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios).
 
@@ -64,7 +64,7 @@ I file seguenti sono rilevanti per tutte le app/estensioni:
 
 * **IntuneMAMConfigurator**: strumento usato per configurare il file Info.plist dell'app o dell'estensione con le modifiche minime necessarie per la gestione di Intune. A seconda della funzionalità dell'app o dell'estensione, potrebbe essere necessario apportare altre modifiche manuali al file Info.plist.
 
-* **Headers**: espone le API pubbliche di Intune App SDK. Queste intestazioni sono incluse nei framework IntuneMAM/IntuneMAMSwift, quindi gli sviluppatori che utilizzano uno dei framework non devono aggiungere manualmente le intestazioni al progetto. Gli sviluppatori che scelgono di eseguire il collegamento alla libreria statica (libIntuneMAM.a) dovranno includere manualmente queste intestazioni nel progetto.
+* **Intestazioni**: espongono le API pubbliche di Intune App SDK. Queste intestazioni sono incluse nei framework IntuneMAM/IntuneMAMSwift, quindi gli sviluppatori che utilizzano uno dei framework non devono aggiungere manualmente le intestazioni al progetto. Gli sviluppatori che scelgono di eseguire il collegamento alla libreria statica (libIntuneMAM.a) dovranno includere manualmente queste intestazioni nel progetto.
 
 I file di intestazione seguenti includono API, tipi di dati e protocolli resi disponibili agli sviluppatori da Intune App SDK:
 
@@ -95,11 +95,11 @@ L'obiettivo di Intune App SDK per iOS è quello di aggiungere funzionalità di g
 
 ## <a name="build-the-sdk-into-your-mobile-app"></a>Compilare l'SDK nell'app per dispositivi mobili
 
-Per abilitare Intune App SDK, seguire questa procedura:
+Per abilitare Intune App SDK, procedere come segue:
 
-1. **Opzione 1 - Framework (consigliato)** : se si usa Xcode 10.2+ e l'app/estensione contiene codice Swift, collegare `IntuneMAMSwift.framework` e `IntuneMAMSwiftStub.framework` alla destinazione: Trascinare `IntuneMAMSwift.framework` e `IntuneMAMSwiftStub.framework` nell'elenco **Embedded Binaries** (File binari incorporati) della destinazione del progetto.
+1. **Opzione 1 - Framework (scelta consigliata)** : se si usa Xcode 10.2+ e l'app/estensione contiene codice Swift, collegare `IntuneMAMSwift.framework` e `IntuneMAMSwiftStub.framework` alla destinazione: trascinare `IntuneMAMSwift.framework` e `IntuneMAMSwiftStub.framework` nell'elenco **Embedded Binaries** (File binari incorporati) della destinazione del progetto.
 
-    In caso contrario, collegare `IntuneMAM.framework` alla destinazione: Trascinare `IntuneMAM.framework` nell'elenco **Embedded Binaries** (File binari incorporati) della destinazione del progetto.
+    In alternativa, collegare `IntuneMAM.framework` alla destinazione: trascinare `IntuneMAM.framework` nell'elenco **Embedded Binaries** (File binari incorporati) della destinazione del progetto.
 
    > [!NOTE]
    > Se si usa il framework, prima di inviare l'app all'App Store, è necessario eliminare manualmente le architetture del simulatore dal framework universale. Per altri dettagli, vedere [Inviare l'app all'App Store](#submit-your-app-to-the-app-store).
@@ -144,7 +144,7 @@ Per abilitare Intune App SDK, seguire questa procedura:
    >  </array>
    >  ```
 
-4. Dopo avere abilitato la condivisione Keychain, completare i passaggi seguenti per creare un gruppo di accesso separato in cui Intune App SDK archivierà i dati. È possibile creare un gruppo di accesso a Keychain usando l'interfaccia utente o il file di diritti. Se si usa l'interfaccia utente per creare un gruppo di accesso a Keychain, assicurarsi di eseguire questi passaggi:
+4. Dopo avere abilitato la condivisione Keychain, completare i passaggi seguenti per creare un gruppo di accesso separato in cui Intune App SDK archivierà i dati. È possibile creare un gruppo di accesso a Keychain usando l'interfaccia utente o il file dei diritti. Se si usa l'interfaccia utente per creare un gruppo di accesso a Keychain, assicurarsi di eseguire questi passaggi:
 
      a. Se per l'app per dispositivi mobili non sono definiti gruppi di accesso a Keychain, aggiungere l'ID bundle dell'app come **primo** gruppo.
     
@@ -245,37 +245,37 @@ Nel dizionario IntuneMAMSettings è possibile usare le seguenti impostazioni sup
 
 Alcune di queste impostazioni possono essere state descritte nelle sezioni precedenti e alcune non riguardano tutte le app.
 
-Impostazione  | Tipo  | Definizione | Necessaria?
+Impostazione  | Tipo  | Definizione | Necessario?
 --       |  --   |   --       |  --
-ADALClientId  | Stringa  | Identificatore del client Azure AD dell'app. | Obbligatoria per tutte le app che usano MSAL ed eventuali app ADAL che accedono a una risorsa AAD non Intune. |
-ADALAuthority | Stringa | Autorità di Azure AD dell'app in uso. È necessario usare l'ambiente specifico in cui sono stati configurati gli account Azure AD. | Obbligatoria se l'app usa ADAL o MSAL per accedere a una risorsa AAD non Intune. Se questo valore è assente, viene usato un valore predefinito di Intune.|
-ADALRedirectUri  | Stringa  | URI di reindirizzamento di Azure AD dell'app. | ADALRedirectUri o ADALRedirectScheme è obbligatoria per tutte le app che usano MSAL ed eventuali app ADAL che accedono a una risorsa AAD non Intune.  |
-ADALRedirectScheme  | Stringa  | Schema di reindirizzamento di Azure AD dell'app. Può essere usata al posto di ADALRedirectUri se l'URI di reindirizzamento dell'applicazione è nel formato `scheme://bundle_id`. | ADALRedirectUri o ADALRedirectScheme è obbligatoria per tutte le app che usano MSAL ed eventuali app ADAL che accedono a una risorsa AAD non Intune. |
-ADALLogOverrideDisabled | Boolean  | Specifica se l'SDK indirizzerà tutti i log ADAL/MSAL, incluse le eventuali chiamate ADAL dall'app, al proprio file di log. L'impostazione predefinita è NO. Impostare il valore su YES se l'app imposta la richiamata al log ADAL/MSAL. | Facoltativo. |
-ADALCacheKeychainGroupOverride | Stringa  | Specifica il gruppo keychain da usare per la cache ADAL/MSAL al posto di "com.microsoft.adalcache". Si noti che non contiene il prefisso app-id. che verrà aggiunto alla stringa specificata in fase di runtime. | Facoltativo. |
+ADALClientId  | String  | Identificatore del client Azure AD dell'app. | Obbligatoria per tutte le app che usano MSAL ed eventuali app ADAL che accedono a una risorsa AAD non Intune. |
+ADALAuthority | String | Autorità di Azure AD dell'app in uso. È necessario usare l'ambiente specifico in cui sono stati configurati gli account Azure AD. | Obbligatoria se l'app usa ADAL o MSAL per accedere a una risorsa AAD non Intune. Se questo valore è assente, viene usato un valore predefinito di Intune.|
+ADALRedirectUri  | String  | URI di reindirizzamento di Azure AD dell'app. | ADALRedirectUri o ADALRedirectScheme è obbligatoria per tutte le app che usano MSAL ed eventuali app ADAL che accedono a una risorsa AAD non Intune.  |
+ADALRedirectScheme  | String  | Schema di reindirizzamento di Azure AD dell'app. Può essere usata al posto di ADALRedirectUri se l'URI di reindirizzamento dell'applicazione è nel formato `scheme://bundle_id`. | ADALRedirectUri o ADALRedirectScheme è obbligatoria per tutte le app che usano MSAL ed eventuali app ADAL che accedono a una risorsa AAD non Intune. |
+ADALLogOverrideDisabled | Boolean  | Specifica se l'SDK indirizzerà tutti i log ADAL/MSAL, incluse le eventuali chiamate ADAL dall'app, al proprio file di log. L'impostazione predefinita è NO. Impostare il valore su YES se l'app imposta la richiamata al log ADAL/MSAL. | Facoltativo |
+ADALCacheKeychainGroupOverride | String  | Specifica il gruppo keychain da usare per la cache ADAL/MSAL al posto di "com.microsoft.adalcache". Si noti che non contiene il prefisso app-id. che verrà aggiunto alla stringa fornita in fase di runtime. | Facoltativo |
 AppGroupIdentifiers | Matrice di stringhe  | Matrice di gruppi di app della sezione com.apple.security.application-groups dei diritti dell'app. | Necessaria se l'applicazione usa i gruppi di applicazioni. |
-ContainingAppBundleId | Stringa | Specifica l'ID bundle dell'applicazione che contiene l'estensione. | Necessaria per le estensioni iOS. |
-DebugSettingsEnabled| Boolean | Se impostata su Sì, è possibile applicare i criteri di test nell'ambito del bundle delle impostazioni. Le applicazioni *non* dovrebbero essere inviate con questa impostazione abilitata. | Facoltativo. L'impostazione predefinita è No. |
-AutoEnrollOnLaunch| Boolean| Specifica se l'app deve tentare di registrarsi automaticamente all'avvio se viene rilevata un'identità gestita esistente e se tale operazione non è ancora stata compiuta. L'impostazione predefinita è NO. <br><br> Note: se non viene trovata alcuna identità gestita o non è disponibile alcun token valido per l'identità nella cache ADAL/MSAL, il tentativo di registrazione avrà esito negativo senza chiedere le credenziali, a meno che l'app non abbia configurato anche MAMPolicyRequired su YES. | Facoltativo. L'impostazione predefinita è No. |
-MAMPolicyRequired| Boolean| Specifica se viene impedito l'avvio dell'app se non ha i criteri di protezione delle app di Intune. L'impostazione predefinita è NO. <br><br> Note: le app non possono essere inviate all'App Store se MAMPolicyRequired è impostato su YES. Quando si imposta MAMPolicyRequired su YES, anche AutoEnrollOnLaunch deve essere impostato su YES. | Facoltativo. L'impostazione predefinita è No. |
-MAMPolicyWarnAbsent | Boolean| Specifica se l'app avvisa l'utente durante l'avvio se non ha i criteri di protezione delle app di Intune. <br><br> Nota: gli utenti potranno ancora usare l'app senza criteri dopo aver ignorato l'avviso. | Facoltativo. L'impostazione predefinita è No. |
-MultiIdentity | Boolean| Specifica se l'app è compatibile con identità multiple. | Facoltativo. L'impostazione predefinita è No. |
-SafariViewControllerBlockedOverride | Boolean| Disabilitare gli hook SafariViewController di Intune per abilitare l'autenticazione MSAL tramite SFSafariViewController, SFAuthSession o ASWebAuthSession. | Facoltativo. L'impostazione predefinita è No. AVVISO: può causare la perdita di dati se usata in modo errato. Abilitare solo se assolutamente necessario. Per informazioni dettagliate, vedere [Considerazioni speciali sull'uso di MSAL](#special-considerations-when-using-msal).  |
-SplashIconFile <br>SplashIconFile~ipad | Stringa  | Specifica il file dell'icona per la schermata iniziale (avvio) di Intune. | Facoltativo |
-SplashDuration | Numero | Quantità minima di tempo, in secondi, per la visualizzazione della schermata iniziale di Intune all'avvio dell'applicazione. Il valore predefinito è 1,5. | Facoltativo. |
-BackgroundColor| Stringa| Specifica il colore di sfondo per i componenti dell'interfaccia utente di Intune SDK. Accetta una stringa RGB esadecimale nel formato #XXXXXX, dove X può variare da 0 a 9 o da A a F. Il segno di cancelletto può essere omesso.   | Facoltativo. L'impostazione predefinita è il colore di sfondo del sistema, che può variare tra le versioni di iOS e in base all'impostazione della modalità scura di iOS. |
-ForegroundColor| Stringa| Specifica il colore di primo piano per i componenti dell'interfaccia utente di Intune SDK, ad esempio il colore del testo. Accetta una stringa RGB esadecimale nel formato #XXXXXX, dove X può variare da 0 a 9 o da A a F. Il segno di cancelletto può essere omesso.  | Facoltativo. L'impostazione predefinita è il colore dell'etichetta del sistema, che può variare tra le versioni di iOS e in base all'impostazione della modalità scura di iOS. |
-AccentColor | Stringa| Specifica il colore principale dei componenti dell'interfaccia utente di Intune SDK, ad esempio il colore del testo del pulsante e il colore di evidenziazione della casella del PIN. Accetta una stringa RGB esadecimale nel formato #XXXXXX, dove X può variare da 0 a 9 o da A a F. Il segno di cancelletto può essere omesso.| Facoltativo. L'impostazione predefinita è blu. |
-SecondaryBackgroundColor| Stringa| Specifica il colore di sfondo secondario per le schermate MTD. Accetta una stringa RGB esadecimale nel formato #XXXXXX, dove X può variare da 0 a 9 o da A a F. Il segno di cancelletto può essere omesso.   | Facoltativo. Il colore predefinito è il bianco. |
-SecondaryForegroundColor| Stringa| Specifica il colore di primo piano secondario per le schermate MTD, ad esempio il colore del piè di pagina. Accetta una stringa RGB esadecimale nel formato #XXXXXX, dove X può variare da 0 a 9 o da A a F. Il segno di cancelletto può essere omesso.  | Facoltativo. Il colore predefinito è il grigio. |
-SupportsDarkMode| Boolean | Specifica se la combinazione colori dell'interfaccia utente di Intune SDK deve osservare l'impostazione della modalità scura del sistema, se non è stato impostato alcun valore esplicito per BackgroundColor/ForegroundColor/AccentColor | Facoltativo. L'impostazione predefinita è Sì. |
-MAMTelemetryDisabled| Boolean| Specifica se l'SDK non invierà i dati di telemetria al relativo back-end.| Facoltativo. L'impostazione predefinita è No. |
-MAMTelemetryUsePPE | Boolean | Specifica se MAM SDK invierà dati al back-end dati di telemetria PPE. Usare questa impostazione durante il test delle app con i criteri di Intune in modo che i dati di telemetria di test non vengano confusi con i dati dei clienti. | Facoltativo. L'impostazione predefinita è No. |
-MaxFileProtectionLevel | Stringa | Facoltativo. Consente all'app di specificare il massimo `NSFileProtectionType` che può supportare. Questo valore sostituirà il criterio inviato dal servizio se il livello è superiore rispetto a ciò che l'applicazione può supportare. Valori possibili: `NSFileProtectionComplete`, `NSFileProtectionCompleteUnlessOpen`, `NSFileProtectionCompleteUntilFirstUserAuthentication`, `NSFileProtectionNone`.|
+ContainingAppBundleId | String | Specifica l'ID bundle dell'applicazione che contiene l'estensione. | Necessaria per le estensioni iOS. |
+DebugSettingsEnabled| Boolean | Se impostata su Sì, è possibile applicare i criteri di test nell'ambito del bundle delle impostazioni. Le applicazioni *non* dovrebbero essere inviate con questa impostazione abilitata. | Facoltativo L'impostazione predefinita è No. |
+AutoEnrollOnLaunch| Boolean| Specifica se l'app deve tentare di registrarsi automaticamente all'avvio se viene rilevata un'identità gestita esistente e se tale operazione non è ancora stata compiuta. L'impostazione predefinita è NO. <br><br> Note: se non viene trovata alcuna identità gestita o non è disponibile alcun token valido per l'identità nella cache ADAL/MSAL, il tentativo di registrazione avrà esito negativo senza chiedere le credenziali, a meno che l'app non abbia configurato anche MAMPolicyRequired su YES. | Facoltativo L'impostazione predefinita è No. |
+MAMPolicyRequired| Boolean| Specifica se viene impedito l'avvio dell'app se non ha i criteri di protezione delle app di Intune. L'impostazione predefinita è NO. <br><br> Note: le app non possono essere inviate ad App Store se MAMPolicyRequired è impostato su YES. Quando si imposta MAMPolicyRequired su YES, anche AutoEnrollOnLaunch deve essere impostato su YES. | Facoltativo L'impostazione predefinita è No. |
+MAMPolicyWarnAbsent | Boolean| Specifica se l'app avvisa l'utente durante l'avvio se non ha i criteri di protezione delle app di Intune. <br><br> Nota: gli utenti potranno ancora usare l'app senza criterio dopo aver ignorato l'avviso. | Facoltativo L'impostazione predefinita è No. |
+MultiIdentity | Boolean| Specifica se l'app è compatibile con identità multiple. | Facoltativo L'impostazione predefinita è No. |
+SafariViewControllerBlockedOverride | Boolean| Disabilitare gli hook SafariViewController di Intune per abilitare l'autenticazione MSAL tramite SFSafariViewController, SFAuthSession o ASWebAuthSession. | Facoltativo L'impostazione predefinita è No. AVVISO: può causare la perdita di dati se usata in modo errato. Abilitare solo se assolutamente necessario. Per informazioni dettagliate, vedere [Considerazioni speciali sull'uso di MSAL](#special-considerations-when-using-msal).  |
+SplashIconFile <br>SplashIconFile~ipad | String  | Specifica il file dell'icona per la schermata iniziale (avvio) di Intune. | Facoltativo |
+SplashDuration | Numero | Quantità minima di tempo, in secondi, per la visualizzazione della schermata iniziale di Intune all'avvio dell'applicazione. Il valore predefinito è 1,5. | Facoltativo |
+BackgroundColor| String| Specifica il colore di sfondo per i componenti dell'interfaccia utente di Intune SDK. Accetta una stringa RGB esadecimale nel formato #XXXXXX, dove X può variare da 0 a 9 o da A a F. Il segno di cancelletto può essere omesso.   | Facoltativo L'impostazione predefinita è il colore di sfondo del sistema, che può variare tra le versioni di iOS e in base all'impostazione della modalità scura di iOS. |
+ForegroundColor| String| Specifica il colore di primo piano per i componenti dell'interfaccia utente di Intune SDK, ad esempio il colore del testo. Accetta una stringa RGB esadecimale nel formato #XXXXXX, dove X può variare da 0 a 9 o da A a F. Il segno di cancelletto può essere omesso.  | Facoltativo L'impostazione predefinita è il colore dell'etichetta del sistema, che può variare tra le versioni di iOS e in base all'impostazione della modalità scura di iOS. |
+AccentColor | String| Specifica il colore principale dei componenti dell'interfaccia utente di Intune SDK, ad esempio il colore del testo del pulsante e il colore di evidenziazione della casella del PIN. Accetta una stringa RGB esadecimale nel formato #XXXXXX, dove X può variare da 0 a 9 o da A a F. Il segno di cancelletto può essere omesso.| Facoltativo L'impostazione predefinita è blu. |
+SecondaryBackgroundColor| String| Specifica il colore di sfondo secondario per le schermate MTD. Accetta una stringa RGB esadecimale nel formato #XXXXXX, dove X può variare da 0 a 9 o da A a F. Il segno di cancelletto può essere omesso.   | Facoltativo Il colore predefinito è il bianco. |
+SecondaryForegroundColor| String| Specifica il colore di primo piano secondario per le schermate MTD, ad esempio il colore del piè di pagina. Accetta una stringa RGB esadecimale nel formato #XXXXXX, dove X può variare da 0 a 9 o da A a F. Il segno di cancelletto può essere omesso.  | Facoltativo Il colore predefinito è il grigio. |
+SupportsDarkMode| Boolean | Specifica se la combinazione colori dell'interfaccia utente di Intune SDK deve osservare l'impostazione della modalità scura del sistema, se non è stato impostato alcun valore esplicito per BackgroundColor/ForegroundColor/AccentColor | Facoltativo L'impostazione predefinita è Sì. |
+MAMTelemetryDisabled| Boolean| Specifica se l'SDK non invierà i dati di telemetria al relativo back-end.| Facoltativo L'impostazione predefinita è No. |
+MAMTelemetryUsePPE | Boolean | Specifica se MAM SDK invierà dati al back-end dati di telemetria PPE. Usare questa impostazione durante il test delle app con i criteri di Intune in modo che i dati di telemetria di test non vengano confusi con i dati dei clienti. | Facoltativo L'impostazione predefinita è No. |
+MaxFileProtectionLevel | String | Facoltativo Consente all'app di specificare il massimo `NSFileProtectionType` che può supportare. Questo valore sostituirà il criterio inviato dal servizio se il livello è superiore rispetto a ciò che l'applicazione può supportare. Valori possibili: `NSFileProtectionComplete`, `NSFileProtectionCompleteUnlessOpen`, `NSFileProtectionCompleteUntilFirstUserAuthentication`, `NSFileProtectionNone`.|
 OpenInActionExtension | Boolean | Impostare su YES per le estensioni Open In Action. Vedere la sezione Condividere dati tramite UIActivityViewController per maggiori informazioni. |
 WebViewHandledURLSchemes | Matrice di stringhe | Specifica gli schemi URL gestiti dalla visualizzazione Web dell'app. | Obbligatoria se l'app usa una WebView che gestisce gli URL tramite collegamenti e/o JavaScript. |
-DocumentBrowserFileCachePath | Stringa | Se l'app usa [`UIDocumentBrowserViewController`](https://developer.apple.com/documentation/uikit/uidocumentbrowserviewcontroller?language=objc) per esplorare i file in diversi provider di file, è possibile impostare questo percorso relativo sulla home directory nella sandbox dell'applicazione in modo che Intune SDK possa rilasciare i file gestiti decrittografati in tale cartella. | Facoltativo. La directory predefinita è `/Documents/`. |
-VerboseLoggingEnabled | Boolean | Se impostato su YES, Intune effettuerà la registrazione in modalità dettagliata. | Facoltativo. L'impostazione predefinita è NO. |
+DocumentBrowserFileCachePath | String | Se l'app usa [`UIDocumentBrowserViewController`](https://developer.apple.com/documentation/uikit/uidocumentbrowserviewcontroller?language=objc) per esplorare i file in diversi provider di file, è possibile impostare questo percorso relativo sulla home directory nella sandbox dell'applicazione in modo che Intune SDK possa rilasciare i file gestiti decrittografati in tale cartella. | Facoltativo La directory predefinita è `/Documents/`. |
+VerboseLoggingEnabled | Boolean | Se impostato su YES, Intune effettuerà la registrazione in modalità dettagliata. | Facoltativo L'impostazione predefinita è NO. |
 
 ## <a name="receive-app-protection-policy"></a>Ricevere i criteri di protezione delle app
 
@@ -680,7 +680,7 @@ Un'identità è costituita semplicemente dal nome utente di un account (ad esemp
 
 * **Identità del processo**: imposta l'identità a livello di processo e viene usata principalmente per applicazioni a identità singola. Questa identità influisce su attività, file e interfaccia utente.
 
-* **Identità dell'interfaccia utente**: determina quali criteri vengono applicati alle attività dell'interfaccia utente nel thread principale, ad esempio Taglia/Copia/Incolla, PIN, autenticazione e condivisione dati. L'identità dell'interfaccia utente non influisce sulle attività di file come crittografia e backup.
+* **Identità dell'interfaccia utente**: determina quali criteri vengono applicati alle attività dell'interfaccia utente nel thread principale, ad esempio taglia/copia/incolla, PIN, autenticazione e condivisione dati. L'identità dell'interfaccia utente non influisce sulle attività di file come crittografia e backup.
 
 * **Identità del thread**: influisce sui criteri applicati al thread corrente. Questa identità influisce su attività, file e interfaccia utente.
 
@@ -697,7 +697,7 @@ Le app inviano spesso attività sincrone e asincrone alle code del thread. L'SDK
 
 `NSOperationQueue` si basa su GCD, di conseguenza `NSOperations` verrà eseguito sull'identità del thread nel momento in cui sono state aggiunte le attività a `NSOperationQueue`. `NSOperations` o le funzioni inviate direttamente con GCD possono anche modificare l'identità del thread corrente durante l'esecuzione. Questa identità sovrascrive l'identità ereditata dal thread di invio.
 
-### <a name="file-owner"></a>Proprietario dei file
+### <a name="file-owner"></a>Proprietario del file
 
 L'SDK tiene traccia delle identità dei proprietari dei file locali e applica i criteri di conseguenza. Un proprietario del file viene stabilito al momento della creazione del file o quando un file viene aperto in modalità di troncamento. Il proprietario viene impostato sull'identità dell'attività di file effettiva del thread che esegue l'operazione.
 
@@ -724,19 +724,19 @@ Per impostazione predefinita, tutte le app sono considerate a identità singola.
 
 * **Cambio di identità avviato dall'app**:
 
-    All'avvio, si considera che le app con identità multiple sono in esecuzione con un account sconosciuto e non gestito. L'interfaccia utente dell'avvio condizionale non verrà eseguita e all'app non verrà applicato alcun criterio. L'app deve notificare l'SDK ogni volta che l'identità deve essere modificata. In genere, ciò si verifica ogni volta che l'app sta per visualizzare i dati di un account utente specifico,
+    All'avvio, si considera che le app con identità multiple sono in esecuzione con un account sconosciuto e non gestito. L'interfaccia utente di avvio condizionale non verrà eseguita e all'app non verrà applicato alcun criterio. L'app deve notificare l'SDK ogni volta che l'identità deve essere modificata. In genere, ciò si verifica ogni volta che l'app sta per visualizzare i dati di un account utente specifico,
 
-    ad esempio, quando l'utente prova ad aprire un documento, una cassetta postale o una scheda in un notebook. L'app deve inviare una notifica all'SDK prima che venga effettivamente aperto il file, la cassetta postale o la scheda. Questa operazione viene eseguita tramite l'API `setUIPolicyIdentity` in `IntuneMAMPolicyManager`. Questa API deve essere chiamata indipendentemente dal fatto che l'utente sia gestito. Se l'utente è gestito, l'SDK eseguirà le verifiche di avvio condizionale, ad esempio rilevamento jailbreak, PIN e autenticazione.
+    ad esempio, quando l'utente prova ad aprire un documento, una cassetta postale o una scheda in un notebook. L'app deve notificare l'SDK prima che il file, la cassetta postale o la scheda venga effettivamente aperta. Questa operazione viene eseguita tramite l'API `setUIPolicyIdentity` in `IntuneMAMPolicyManager`. Questa API deve essere chiamata indipendentemente dal fatto che l'utente sia gestito. Se l'utente è gestito, l'SDK eseguirà le verifiche di avvio condizionale, ad esempio rilevamento jailbreak, PIN e autenticazione.
 
     Il risultato del cambio d'identità viene restituito all'app in modo sincrono tramite un gestore di completamento. L'app deve rimandare l'apertura del documento, della cassetta postale o della scheda finché non viene restituito un codice risultato di esito positivo. Se il cambio di identità non riesce, l'app deve annullare l'attività.
 
 * **Cambio di identità avviato dall'SDK**:
 
-    In alcuni casi l'SDK deve richiedere all'app di passare a un'identità specifica. Le app con identità multiple devono implementare il metodo `identitySwitchRequired` in `IntuneMAMPolicyDelegate` per gestire tale richiesta.
+    In alcuni casi l'SDK deve richiedere all'app di passare a un'identità specifica. Le app con identità multiple devono implementare il metodo `identitySwitchRequired` in `IntuneMAMPolicyDelegate` per gestire la richiesta.
 
     Quando viene chiamato questo metodo, se l'app riesce a gestire la richiesta per passare all'identità specificata, deve passare `IntuneMAMAddIdentityResultSuccess` al gestore di completamento. Se l'app non riesce a gestire il cambio di identità, deve passare `IntuneMAMAddIdentityResultFailed` al gestore di completamento.
 
-    L'app non deve chiamare `setUIPolicyIdentity` in risposta a questa chiamata. Se l'SDK richiede all'app di passare a un account utente non gestito, la stringa vuota verrà passata alla chiamata `identitySwitchRequired`.
+    L'applicazione non deve chiamare `setUIPolicyIdentity` in risposta a questa chiamata. Se l'SDK richiede all'app di passare a un account utente non gestito, la stringa vuota verrà passata alla chiamata `identitySwitchRequired`.
 
 * **Cancellazione selettiva**:
 

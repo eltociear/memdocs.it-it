@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e1d18a423242300b6c2b66c01c59404cef42ebd9
-ms.sourcegitcommit: b5a9ce31de743879d2a6306cea76be3a093976bb
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79372552"
 ---
 # <a name="how-your-android-users-get-their-apps"></a>Modalità di recupero delle app per gli utenti di Android  
@@ -30,10 +30,10 @@ Questo articolo consente di comprendere come e dove l'amministratore e gli utent
 
 ## <a name="native-non-samsung-knox-standard-android-devices"></a>Dispositivi Android nativi (non Samsung KNOX Standard)   
 
-| Tipo di app | App line-of-business | App di Play Store  |
+| Tipo di App | App line-of-business | App di Play Store  |
 | ------------- |-------------| -----|
 | App disponibili      | Toccare **Installa** nel portale aziendale. Viene visualizzata una notifica, che è possibile toccare per avviare l'installazione. Al termine dell'installazione, la notifica viene rimossa. | Toccare l'app nel Portale aziendale per essere reindirizzati a una pagina dell'app in Play Store, in cui è possibile avviare l'installazione.|
-| Required apps      | **Nei dispositivi che eseguono Android 9.0 e versioni precedenti**, viene visualizzata una notifica che non è possibile chiudere, in cui viene indicata la necessità di scaricare un'app. Toccare la notifica per avviare il download e l'installazione. Al termine dell'installazione, la notifica viene rimossa. **Nei dispositivi che eseguono Android 10 e versioni successive**, viene visualizzata una notifica che non è possibile chiudere, in cui viene indicata la necessità di scaricare un'app. Toccare la notifica per avviare il download e ricevere una nuova notifica per avviare l'installazione dell'app. Al termine dell'installazione, la notifica viene rimossa.| Viene visualizzata una notifica che non è possibile chiudere, in cui viene indicata la necessità di installare un'app. Toccare la notifica per essere reindirizzati a una pagina dell'app in Play Store, in cui è possibile avviare l'installazione. Al termine dell'installazione, la notifica viene rimossa. |
+| Required apps      | **Nei dispositivi che eseguono Android 9.0 e versioni precedenti**, viene visualizzata una notifica che non è possibile chiudere, in cui viene indicata la necessità di scaricare un'app. Toccare la notifica per avviare il download e l'installazione. Al termine dell'installazione, la notifica viene rimossa. **Nei dispositivi che eseguono Android 10 e versioni successive**, viene visualizzata una notifica che non è possibile chiudere, in cui viene indicata la necessità di scaricare un'app. Toccare la notifica per avviare il download e ricevere una nuova notifica per avviare l'installazione dell'app. Al termine dell'installazione, la notifica viene rimossa.| Viene visualizzata una notifica che non è possibile chiudere, indicante la necessità di installare un'app. Toccare la notifica per essere reindirizzati a una pagina dell'app in Play Store, in cui è possibile avviare l'installazione. Al termine dell'installazione, la notifica viene rimossa. |
 
 Per installare [app line-of-business](../apps/lob-apps-android.md), gli utenti finali devono consentire l'installazione da origini sconosciute. Questa impostazione è solitamente disponibile in due posizioni diverse:
 
@@ -44,10 +44,10 @@ In questo caso, l'app Portale aziendale informerà l'utente e lo assisterà per 
 
 ## <a name="samsung-knox-standard-android-devices"></a>Dispositivi Android Samsung KNOX Standard
 
-| Tipo di app | App line-of-business | App di Play Store  |
+| Tipo di App | App line-of-business | App di Play Store  |
 | ------------- |-------------| -----|
 | App disponibili      | Toccare **Installa** nel portale aziendale. L'app viene installata senza ulteriore intervento dell'utente. | Toccare l'app nel Portale aziendale per essere reindirizzati a una pagina dell'app in Play Store, in cui è possibile avviare l'installazione.|
-| Required apps      | **Nei dispositivi che eseguono Android 9.0 e versioni precedenti**, l'app viene installata senza alcun intervento da parte dell'utente. **Nei dispositivi che eseguono Android 10 e versioni successive**, viene visualizzata una notifica che non è possibile chiudere, in cui viene indicata la necessità di scaricare un'app. Toccare la notifica per avviare l'installazione. Al termine dell'installazione, la notifica viene rimossa. | Viene visualizzata una notifica che non è possibile chiudere, in cui viene indicata la necessità di installare un'app. Toccare la notifica per essere reindirizzati a una pagina dell'app in Play Store, in cui è possibile avviare l'installazione. Al termine dell'installazione, la notifica viene rimossa. |
+| Required apps      | **Nei dispositivi che eseguono Android 9.0 e versioni precedenti**, l'app viene installata senza alcun intervento da parte dell'utente. **Nei dispositivi che eseguono Android 10 e versioni successive**, viene visualizzata una notifica che non è possibile chiudere, in cui viene indicata la necessità di scaricare un'app. Toccare la notifica per avviare l'installazione. Al termine dell'installazione, la notifica viene rimossa. | Viene visualizzata una notifica che non è possibile chiudere, indicante la necessità di installare un'app. Toccare la notifica per essere reindirizzati a una pagina dell'app in Play Store, in cui è possibile avviare l'installazione. Al termine dell'installazione, la notifica viene rimossa. |
 
 Le app possono essere gestite o non gestite, come descritto di seguito. Il processo per rendere le app gestite è lo stesso per tutti i tipi di dispositivi Android.
 

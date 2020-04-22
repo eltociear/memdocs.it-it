@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f77fb3b93c2600bf422aa95af267abc3e64ae7ee
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80551338"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Cancellare i dati in modo selettivo usando le azioni di avvio condizionale per i criteri di protezione delle app in Intune
@@ -88,7 +88,7 @@ Per Android è possibile configurare azioni per le impostazioni seguenti usando 
 Usando la **Versione minima del Portale aziendale** è possibile indicare una versione minima definita specifica del Portale aziendale da applicare a un dispositivo di un utente finale. Questa impostazione di avvio condizionale consente di impostare i valori **Blocca accesso**, **Cancella i dati** e **Avvisa** come azioni possibili quando non tutti i valori sono soddisfatti. I formati possibili per questo valore seguono il criterio *[Major].[Minor]* , *[Major].[Minor].[Build]* o *[Major].[Minor].[Build].[Revision]* . Dato che alcuni utenti finali potrebbero voler evitare un aggiornamento immediato forzato delle app, l'opzione Avvisa potrebbe essere la scelta ideale per la configurazione di questa impostazione. Per gli aggiornamenti delle app, Google Play Store ha avuto la buona idea di inviare solo i byte delta, ma questi possono comunque costituire una grande quantità di dati e l'utente potrebbe non voler usare questa procedura se al momento dell'aggiornamento è connesso alla rete mobile. La forzatura di un aggiornamento e il download immediato di un'app aggiornata possono comportare addebiti imprevisti per i dati al momento dell'aggiornamento. L'impostazione **Versione minima del Portale aziendale**, se configurata, influisce su tutti gli utenti finali che ottengono la versione 5.0.4560.0 e le versioni future del Portale aziendale. Questa impostazione non influisce sugli utenti che usano una versione del Portale aziendale precedente alla versione con la quale questa funzionalità viene rilasciata. Gli utenti finali che usano gli aggiornamenti automatici delle app nel proprio dispositivo probabilmente non visualizzeranno alcuna finestra di dialogo di questa funzionalità, dal momento che probabilmente avranno la versione del Portale aziendale più recente. Questa impostazione è presente solo in Android con la protezione delle app per i dispositivi registrati e non registrati.
 
 Per usare l'impostazione **Produttore/i dispositivo**, inserire un elenco di identificatori di modello separati da punto e virgola. I valori non fanno distinzione tra maiuscole e minuscole. È possibile trovare il produttore di un dispositivo Android tramite le impostazioni del dispositivo e nei report di Intune. <br>
-Esempio di input: *Produttore A;Produttore B* 
+Input di esempio: *Produttore A;Produttore B* 
 
 >[!NOTE]
 > Questi sono alcuni dei produttori più comuni segnalati dai dispositivi che usano Intune e possono essere usati come input: Asus; Blackberry; Bq; Gionee; Google; Hmd global; Htc; Huawei; Infinix; Kyocera; Lemobile; Lenovo; Lge; Motorola; Oneplus; Oppo; Samsung; Sharp; Sony; Tecno; Vivo; Vodafone; Xiaomi; Zte; Zuk

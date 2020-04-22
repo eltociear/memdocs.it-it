@@ -18,10 +18,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 88f30f10af5969d202dd8eb252cc82d03d3d921e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79358065"
 ---
 # <a name="intune-migration-guide"></a>Guida alla migrazione a Intune
@@ -36,7 +36,7 @@ Questa guida presenta in dettaglio i diversi aspetti correlati alla migrazione d
 
 La guida suddivide la migrazione in due fasi, che includono entrambe attività, strategie e indicazioni tattiche utili per eseguire passo-passo il processo completo per la migrazione all'ambiente MDM di Intune.
 
-- [Fase 1: Preparare Intune per la gestione di dispositivi mobili](migration-guide-prepare.md)
+- [Fase 1: Preparare Intune per la gestione dei dispositivi mobili](migration-guide-prepare.md)
 
   - [Valutare i requisiti per la gestione dei dispositivi mobili](migration-guide-prepare.md#assess-mdm-requirements)
 
@@ -72,4 +72,4 @@ La guida suddivide la migrazione in due fasi, che includono entrambe attività, 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Fase 1: Preparare Intune per la gestione di dispositivi mobili](migration-guide-prepare.md)
+[Fase 1: Preparare Intune per la gestione dei dispositivi mobili](migration-guide-prepare.md)

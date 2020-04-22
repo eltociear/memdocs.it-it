@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 1f3964ec67c9c78e5aedc70ff4f328a66c59c04b
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80696516"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>Registrare i dispositivi iOS/iPadOS in Intune
@@ -63,7 +63,7 @@ Per le organizzazioni che acquistano dispositivi per i propri utenti, Intune sup
 
 Le organizzazioni possono ora acquistare i dispositivi iOS/iPadOS con Registrazione automatica del dispositivo di Apple. Registrazione automatica del dispositivo consente di distribuire un profilo di registrazione in modalità wireless per includere i dispositivi nella gestione. Per altre informazioni, vedere [Device Enrollment Program](device-enrollment-program-enroll-ios.md).
 
-## <a name="user-enrollment"></a>Registrazione utenti
+## <a name="user-enrollment"></a>Registrazione utente
 La registrazione utente offre agli amministratori un subset di opzioni di gestione semplificato rispetto ad altri metodi di registrazione. Per altre informazioni, vedere [Azioni e opzioni supportate per la registrazione utente](ios-user-enrollment-supported-actions.md) e [Configurare la registrazione utente iOS/iPadOS e iPadOS](ios-user-enrollment.md).
 
 ## <a name="apple-school-manager"></a>Apple School Manager

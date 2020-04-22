@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c5b6762669e4d816010982c63a119bffdec2f055
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79334275"
 ---
 # <a name="quickstart-add-and-assign-a-client-app"></a>Guida introduttiva: Aggiungere e assegnare un'app client
@@ -93,7 +93,7 @@ L'app è stata assegnata al gruppo **Contoso Testers** (Tester Contoso).
     > [!NOTE]
     > Se non sono state assegnate app all'utente di Intune, viene visualizzato il messaggio seguente: *L'amministratore IT non ha reso disponibile alcuna app.*
 
-5. Fare clic su **Installa**.
+5. Fare clic su **Install** (Installa).
 
 Se per le specifiche esigenze aziendali è richiesta l'assegnazione dell'app Portale aziendale alla forza lavoro, è possibile assegnare manualmente l'app Portale aziendale di Windows 10 direttamente da Intune. Per altre informazioni, vedere [Aggiungere manualmente l'app Portale aziendale di Windows 10 usando Microsoft Intune](company-portal-app.md).
 
@@ -101,7 +101,7 @@ Se per le specifiche esigenze aziendali è richiesta l'assegnazione dell'app Por
 
 In questa guida introduttiva le app sono state aggiunte in Intune, assegnate a un gruppo e installate nel dispositivo Windows 10 Desktop registrato. Per altre informazioni sulla gestione delle app in Intune, vedere [Informazioni sulla gestione delle app in Microsoft Intune](app-management.md).
 
-Per seguire questa serie di guide introduttive di Intune, continuare con la guida introduttiva che segue.
+Per seguire questa serie di guide introduttive di Intune, passare alla guida introduttiva che segue.
 
 > [!div class="nextstepaction"]
-> [Avvio rapido: Creare e assegnare un criterio di protezione delle app](quickstart-create-assign-app-policy.md)
+> [Guida introduttiva: Creare e assegnare un criterio di protezione delle app](quickstart-create-assign-app-policy.md)

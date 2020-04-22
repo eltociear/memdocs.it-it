@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: cf5ab63f72484ddbbf311810e232404ab643d2d2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79359846"
 ---
 # <a name="microsoft-intune-data-warehouse-data-model"></a>Modello di dati del data warehouse di Microsoft Intune
@@ -46,10 +46,10 @@ Queste aree contengono le entità significative per l'ambiente Intune. Informazi
 - [Intune Management Extension](reports-ref-intunemanagementextension.md) (Estensione di gestione di Intune)
 - [Criteri](reports-ref-policy.md)
 - [Gestione delle app mobili (MAM)](../apps/app-management.md)
-- [Utente](reports-ref-user.md)
+- [User](reports-ref-user.md)
 - [Associazioni utente-dispositivo](reports-ref-user-device.md)
 
-## <a name="relationships-star-schema-model"></a>Relazioni: modello di schema a stella
+## <a name="relationships-star-schema-model"></a>Relazione: modello di schema a stella
 
 Il warehouse organizza le entità in relazioni significative per il tipo di domande che si vogliono chiedere. È possibile, ad esempio, verificare il numero di installazioni di un'applicazione Android sviluppata internamente. La struttura del data warehouse consente di ottenere informazioni nell'ambiente per dispositivi mobili. A loro volta, gli strumenti di analisi come Microsoft Power BI possono usare il modello di dati del data warehouse per creare visualizzazioni e dashboard dinamici.
 
@@ -57,7 +57,7 @@ Le entità e le relazioni usano un modello di schema a stella, che correla i fat
 
 Un modello di schema a stella è ottimizzato per l'analisi di dati e la flessibilità per poter creare i report necessari a comprendere l'ambiente per dispositivi mobili in continua evoluzione.
 
-## <a name="time-daily-snapshots"></a>Ora: snapshot giornalieri
+## <a name="time-daily-snapshots"></a>Tempo: snapshot giornalieri
 
 Il warehouse si trova a valle rispetto ai dati di Intune. Intune crea uno snapshot giornaliero a mezzanotte UTC e lo archivia nel warehouse. La durata degli snapshot acquisiti varia in base alla tabella dei fatti in uso. Alcune tabelle li mantengono per sette giorni, altre per 30 giorni e altre per periodi ancora più lunghi.
 

@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 32e5d053b6dd579aad25a268604248d4fb5a6072
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80696454"
 ---
 # <a name="device-management-overview"></a>Panoramica della gestione dei dispositivi
@@ -88,7 +88,7 @@ L'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.micr
 
 Nell'interfaccia di amministrazione di Gestione dei dispositivi è possibile eseguire le operazioni seguenti:
 
-- [Registrare i dispositivi](../enrollment/device-enrollment.md)
+- [Registra i dispositivi](../enrollment/device-enrollment.md)
 - [Impostare la conformità dei dispositivi](../protect/device-compliance-get-started.md)
 - [Gestire i dispositivi](../remote-actions/device-management.md)
 - [Gestire le app](../apps/app-management.md)  

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 28ce4e7d80e79f752bded8f0cdf03494aa629e1b
-ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80233457"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>Aggiungere criteri di configurazione delle app per i dispositivi iOS/iPadOS gestiti
@@ -110,7 +110,7 @@ L'amministratore di Microsoft Intune può controllare gli account utente che ven
 
 | **Key** | **Valori** |
 |----|----|
-| IntuneMAMAllowedAccountsOnly | <ul><li>**Attivata**: l'unico account consentito è l'account utente gestito definito dalla chiave [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).</li><li>**Disabled** (o qualsiasi valore che non corrisponda a **Enabled** senza distinzione di maiuscole/minuscole): è consentito qualsiasi account.</li></ul> |
+| IntuneMAMAllowedAccountsOnly | <ul><li>**Enabled**: l'unico account consentito è l'account utente gestito definito dalla chiave [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).</li><li>**Disabled** (o qualsiasi valore che non corrisponda a **Enabled** senza distinzione di maiuscole/minuscole): è consentito qualsiasi account.</li></ul> |
 | IntuneMAMUPN | <ul><li>UPN dell'account a cui è consentito l'accesso all'app.</li><li> Per i dispositivi registrati in Intune, è possibile usare il token <code>{{userprincipalname}}</code> per rappresentare l'account utente registrato.</li></ul>  |
 
    > [!NOTE]
@@ -173,7 +173,7 @@ Intune supporta i tipi di dati seguenti in un elenco di proprietà:
 
 ### <a name="tokens-used-in-the-property-list"></a>Token usati nell'elenco di proprietà
 
-Inoltre, Intune supporta i tipi di token seguenti nell'elenco di proprietà:
+Intune supporta anche i tipi di token seguenti nell'elenco di proprietà:
 - \{\{userprincipalname\}\}, ad esempio **John\@contoso.com**
 - \{\{mail\}\}, ad esempio **John\@contoso.com**
 - \{\{partialupn\}\}, ad esempio **John**

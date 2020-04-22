@@ -18,10 +18,10 @@ ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 535c9b6384c30473a0e4d6e849d41404acfea043
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79346378"
 ---
 # <a name="resolve-a-threat-found-by-lookout-for-work"></a>Risolvere una minaccia rilevata da Lookout for Work  
@@ -52,7 +52,7 @@ Ottenere di nuovo l'accesso alle risorse aziendali quando l'app Lookout for Work
 
 Se si installa un'app che Lookout for Work identifica come una minaccia, si riceverà un messaggio simile a quello illustrato in questo screenshot.  
 
-![Screenshot di esempio che illustra un messaggio di avviso virus di Lookout sopra l'interfaccia dell'app Lookout for Work. Mostra tre pulsanti: "Chiudi", "Altre info" e "Disinstalla".](./media/lookout-virus-alert-android.png)  
+![Screenshot di esempio che illustra un messaggio di avviso virus di Lookout sopra l'interfaccia dell'app Lookout for Work. Sono disponibili tre pulsanti: "Close" (Chiudi), "More Info" (Altre informazioni) e "Uninstall" (Disinstalla).](./media/lookout-virus-alert-android.png)  
 
 Per ottenere di nuovo l'accesso alla posta elettronica e ai dati aziendali, disinstallare l'app sospetta. Se l'app rimane nel dispositivo, non sarà possibile accedere alle risorse aziendali.    
 

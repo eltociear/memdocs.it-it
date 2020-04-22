@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 433bea6442ef52cd970513213d1623faf8aae2ca
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80327471"
 ---
 # <a name="locate-lost-or-stolen-iosipados-devices-with-intune"></a>Individuare i dispositivi iOS/iPadOS persi o rubati con Intune
@@ -42,7 +42,7 @@ Questa funzionalità non è supportata per i sistemi seguenti:
 ## <a name="locate-a-lost-or-stolen-device"></a>Individuare un dispositivo perso o rubato
 
 1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Selezionare **Dispositivi** e quindi selezionare **Tutti i dispositivi**.
+3. Selezionare **Dispositivi** e poi **Tutti i dispositivi**.
 4. Nell'elenco dei dispositivi gestiti scegliere un dispositivo iOS/iPadOS, quindi **...Altre informazioni**. Scegliere l'azione remota **Individua il dispositivo**.
 5. Dopo la localizzazione del dispositivo, la posizione viene visualizzata in **Individua il dispositivo**.
     ![Screenshot di Individua il dispositivo con Intune in Azure](./media/device-locate/locate-device.png)

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 275939c4c97b25f7e9b2ab179a7491d47801e48e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79355062"
 ---
 # <a name="use-policies-to-simplify-windows-pc-management"></a>Usare i criteri per semplificare la gestione dei PC
@@ -46,12 +46,12 @@ Gli utenti visualizzano il client software di Intune come **Microsoft Intune Cen
 
 Microsoft Intune Center viene installato su tutti i computer gestiti. È possibile configurare le seguenti impostazioni in un criterio di Intune e visualizzarle in Microsoft Intune Center:
 
-|Impostazione criterio|Dettagli|
+|Impostazione criterio|Details|
 |------------------|--------------------|
 |**Nome**|Il nome dell'amministratore che gestisce il computer.<br />Lunghezza massima: 40 caratteri|
 |**Numero di telefono**|Il numero di telefono dell'amministratore che gestisce il computer.<br />Lunghezza massima: 20 caratteri|
 |**Indirizzo di posta elettronica**|L'indirizzo di posta elettronica dell'amministratore che gestisce il computer.<br />Lunghezza massima: 40 caratteri|
-|**Nome sito Web**|Il nome del sito Web di supporto per gli utenti.<br />Lunghezza massima: 40 caratteri|
+|**Nome sito Web**|Il nome del sito Web di supporto per gli utenti.<br />>Lunghezza massima: 40 caratteri|
 |**URL sito Web**|L'URL del sito Web di supporto.<br />Lunghezza massima: 150 caratteri|
 |**Note**|Una nota che viene visualizzata agli utenti.<br />Lunghezza massima: 120 caratteri|
 

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 54e81a7b9614e1633fe9061fd13d1b99810ce43c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79351747"
 ---
 # <a name="set-up-lookout-mobile-endpoint-security-integration-with-intune"></a>Configurare l'integrazione di Lookout Mobile Endpoint Security con Intune
@@ -144,7 +144,7 @@ Per informazioni sulle classificazioni dei livelli di minaccia e su come gestire
 >[!IMPORTANT]
 > I livelli di rischio rappresentano un aspetto importante di Mobile Endpoint Security perché l'integrazione con Intune calcola la conformità dei dispositivi in base a questi livelli di rischio in fase di esecuzione.  
 > 
-> L'amministratore di Intune imposta una regola nei criteri per identificare un dispositivo come non conforme se presenta una minaccia attiva con un livello minimo **alto**, **medio** o **basso**. Il calcolo della conformità dei dispositivi in Intune dipende direttamente dai criteri di classificazione delle minacce in Lookout Mobile Endpoint Security.  
+> In altre parole, l'amministratore di Intune imposta una regola nei criteri per identificare un dispositivo come non conforme se presenta una minaccia attiva con un livello minimo di rischio: **alto**, **medio** o **basso**. Il calcolo della conformità dei dispositivi in Intune dipende direttamente dai criteri di classificazione delle minacce in Lookout Mobile Endpoint Security.  
 
 ## <a name="monitor-enrollment"></a>Monitorare la registrazione
 Al termine della configurazione, Lookout Mobile Endpoint Security inizia a eseguire il polling di Azure AD per individuare i dispositivi corrispondenti ai gruppi di registrazione specificati.  È possibile trovare informazioni sui dispositivi registrati passando a **Devices** (Dispositivi) nella console di Lookout MES.  

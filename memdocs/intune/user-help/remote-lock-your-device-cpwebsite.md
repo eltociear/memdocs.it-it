@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 1ac77e4c539c8d5614001f9a326b32536ee07629
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79336485"
 ---
 # <a name="remotely-lock-your-device-from-the-company-portal-website"></a>Bloccare il dispositivo in modalità remota dal sito Web del portale aziendale
@@ -43,11 +43,11 @@ L'impostazione di blocco remoto funziona per:
 
 2. Selezionare il dispositivo da bloccare.  
 
-    ![Screenshot della pagina Dispositivi, con 2 riquadri che illustrano i dispositivi non identificati, denominati in modo generico. Direttamente sotto i dispositivi è presente un banner di colore grigio che richiede all'utente di identificare il dispositivo in uso o aggiungerne uno nuovo.](./media/rename-reset-device-step2-1808.png) 
+    ![Screenshot della pagina Dispositivi, con 2 riquadri che mostrano i dispositivi non identificati, denominati in modo generico. Direttamente sotto i dispositivi è presente un banner di colore grigio che richiede all'utente di identificare il dispositivo in uso o aggiungerne uno nuovo.](./media/rename-reset-device-step2-1808.png) 
 
 3. Selezionare **Blocco remoto**. Se l'opzione Blocca non è visibile nella parte superiore della pagina, selezionare **Altro (...)**  > **Blocco remoto**.  
 
-   ![Pagina dei dettagli per un dispositivo selezionato nel sito Web del portale aziendale, con una serie di collegamenti nella parte superiore tra cui Rinomina, Rimuovi, Reimposta dispositivo, Reimposta passcode e Blocco remoto. ](./media/rename-reset-device-1808.png) 
+   ![Pagina dei dettagli per un dispositivo selezionato nel sito Web Portale aziendale, con una serie di collegamenti nella parte superiore tra cui Rinomina, Rimuovi, Reimposta dispositivo, Reimposta passcode e Blocco remoto. ](./media/rename-reset-device-1808.png) 
 
     ![Vista ingrandita dell'icona Altro, evidenziata con una freccia rossa.](./media/rename-reset-device-step3-more-1808.png)    
 

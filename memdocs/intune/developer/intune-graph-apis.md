@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b6306f89f1e8ed2aefadd2691df4b3b21e2edafe
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79345156"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Come usare Azure AD per accedere alle API di Intune in Microsoft Graph
@@ -140,7 +140,7 @@ Per altre informazioni, vedere:
 - [Autenticazione di Azure AD](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-pass-through-authentication)
 - [Ambiti di autorizzazione dell'applicazione](https://docs.microsoft.com/azure/active-directory/develop/active-directory-v2-scopes)
 
-Quando si concede l'autorizzazione a Microsoft Graph, è possibile specificare gli ambiti seguenti per controllare l'accesso alle funzionalità di Intune. Nella tabella seguente sono riepilogati gli ambiti di autorizzazione dell'API di Intune.  La prima colonna indica il nome della funzionalità, così com'è visualizzato nel portale di Azure, e la seconda colonna specifica il nome dell'ambito di autorizzazione.
+Quando si concede l'autorizzazione a Microsoft Graph, è possibile specificare i seguenti ambiti per controllare l'accesso alle funzionalità di Intune. Nella tabella seguente sono riepilogati gli ambiti di autorizzazione dell'API di Intune.  La prima colonna indica il nome della funzionalità, così com'è visualizzato nel portale di Azure, e la seconda colonna specifica il nome dell'ambito di autorizzazione.
 
 Impostazione _Abilita accesso_ | Nome ambito
 :--|:--
@@ -160,9 +160,9 @@ La tabella elenca le impostazioni nell'ordine in cui sono visualizzate nel porta
 
 Attualmente, tutti gli ambiti di autorizzazione di Intune richiedono l'accesso con privilegi di amministratore.  Ciò significa che sono necessarie credenziali corrispondenti per l'esecuzione di app o script che accedono alle risorse dell'API di Intune.
 
-### <a name="app-ro"></a>DeviceManagementApps.Read.All
+### <a name="devicemanagementappsreadall"></a><a name="app-ro"></a>DeviceManagementApps.Read.All
 
-- Impostazione **Abilita accesso**: __Read Microsoft Intune apps__ (Leggere le app di Microsoft Intune)
+- Impostazione **Abilita accesso**: __Leggere le app di Microsoft Intune__
 
 - Consente l'accesso in lettura alle proprietà e allo stato delle entità seguenti:
   - App client
@@ -170,9 +170,9 @@ Attualmente, tutti gli ambiti di autorizzazione di Intune richiedono l'accesso c
   - Criteri di protezione delle app
   - Configurazioni delle app
 
-### <a name="app-rw"></a>DeviceManagementApps.ReadWrite.All
+### <a name="devicemanagementappsreadwriteall"></a><a name="app-rw"></a>DeviceManagementApps.ReadWrite.All
 
-- Impostazione **Abilita accesso**: __Read and write Microsoft Intune apps__ (Leggere e scrivere le app di Microsoft Intune)
+- Impostazione **Abilita accesso**: __Leggere e scrivere le app di Microsoft Intune__
 
 - Consente le stesse operazioni di __DeviceManagementApps.Read.All__
 
@@ -183,18 +183,18 @@ Attualmente, tutti gli ambiti di autorizzazione di Intune richiedono l'accesso c
   - Criteri di protezione delle app
   - Configurazioni delle app
 
-### <a name="cfg-ro"></a>DeviceManagementConfiguration.Read.All
+### <a name="devicemanagementconfigurationreadall"></a><a name="cfg-ro"></a>DeviceManagementConfiguration.Read.All
 
-- Impostazione **Abilita accesso**: __Lettura della configurazione e dei criteri dei dispositivi di Microsoft Intune__
+- Impostazione **Abilita accesso**: __Leggere la configurazione e i criteri dei dispositivi di Microsoft Intune__
 
 - Consente l'accesso in lettura alle proprietà e allo stato delle entità seguenti:
   - Configurazione dei dispositivi
   - Criteri di conformità dei dispositivi
   - Messaggi di notifica
 
-### <a name="cfg-ra"></a>DeviceManagementConfiguration.ReadWrite.All
+### <a name="devicemanagementconfigurationreadwriteall"></a><a name="cfg-ra"></a>DeviceManagementConfiguration.ReadWrite.All
 
-- Impostazione **Abilita accesso**: __Lettura e scrittura della configurazione e dei criteri dei dispositivi di Microsoft Intune__
+- Impostazione **Abilita accesso**: __Leggere e scrivere la configurazione e i criteri dei dispositivi di Microsoft Intune__
 
 - Consente le stesse operazioni di __DeviceManagementConfiguration.Read.All__
 
@@ -203,9 +203,9 @@ Attualmente, tutti gli ambiti di autorizzazione di Intune richiedono l'accesso c
   - Criteri di conformità dei dispositivi
   - Messaggi di notifica
 
-### <a name="mgd-po"></a>DeviceManagementManagedDevices.PrivilegedOperations.All
+### <a name="devicemanagementmanageddevicesprivilegedoperationsall"></a><a name="mgd-po"></a>DeviceManagementManagedDevices.PrivilegedOperations.All
 
-- Impostazione **Abilita accesso**: __Perform user-impacting remote actions on Microsoft Intune devices__ (Eseguire azioni remote che influiscono sull'utente nei dispositivi di Microsoft Intune)
+- Impostazione **Abilita accesso**: __Eseguire azioni remote che influiscono sull'utente nei dispositivi di Microsoft Intune__
 
 - Consente le seguenti azioni remote in un dispositivo gestito:
   - Ritiro
@@ -217,9 +217,9 @@ Attualmente, tutti gli ambiti di autorizzazione di Intune richiedono l'accesso c
   - Riavviare
   - Eliminazione di un utente da un dispositivo condiviso
 
-### <a name="mgd-ro"></a>DeviceManagementManagedDevices.Read.All
+### <a name="devicemanagementmanageddevicesreadall"></a><a name="mgd-ro"></a>DeviceManagementManagedDevices.Read.All
 
-- Impostazione **Abilita accesso**: __Read Microsoft Intune devices__ (Leggere i dispositivi di Microsoft Intune)
+- Impostazione **Abilita accesso**: __Leggere i dispositivi di Microsoft Intune__
 
 - Consente l'accesso in lettura alle proprietà e allo stato delle entità seguenti:
   - Dispositivo gestito
@@ -228,9 +228,9 @@ Attualmente, tutti gli ambiti di autorizzazione di Intune richiedono l'accesso c
   - Azioni remote
   - Informazioni sul malware
 
-### <a name="mgd-rw"></a>DeviceManagementManagedDevices.ReadWrite.All
+### <a name="devicemanagementmanageddevicesreadwriteall"></a><a name="mgd-rw"></a>DeviceManagementManagedDevices.ReadWrite.All
 
-- Impostazione **Abilita accesso**: __Read and write Microsoft Intune devices__ (Leggere e scrivere i dispositivi di Microsoft Intune)
+- Impostazione **Abilita accesso**: __Leggere e scrivere i dispositivi di Microsoft Intune__
 
 - Consente le stesse operazioni di __DeviceManagementManagedDevices.Read.All__
 
@@ -243,18 +243,18 @@ Attualmente, tutti gli ambiti di autorizzazione di Intune richiedono l'accesso c
   - Disabilitare Blocco attivazione
   - Richiesta di assistenza remota
 
-### <a name="rac-ro"></a>DeviceManagementRBAC.Read.All
+### <a name="devicemanagementrbacreadall"></a><a name="rac-ro"></a>DeviceManagementRBAC.Read.All
 
-- Impostazione **Abilita accesso**: __Read Microsoft Intune RBAC settings__ (Leggere le impostazioni di controllo degli accessi in base al ruolo di Microsoft Intune)
+- Impostazione **Abilita accesso**: __Leggere le impostazioni di controllo degli accessi in base al ruolo di Microsoft Intune__
 
 - Consente l'accesso in lettura alle proprietà e allo stato delle entità seguenti:
   - Assegnazioni di ruolo
   - Definizioni di ruolo
   - Operazioni su risorse
 
-### <a name="rac-rw"></a>DeviceManagementRBAC.ReadWrite.All
+### <a name="devicemanagementrbacreadwriteall"></a><a name="rac-rw"></a>DeviceManagementRBAC.ReadWrite.All
 
-- Impostazione **Abilita accesso**: __Read and write Microsoft Intune RBAC settings__ (Leggere e scrivere le impostazioni di controllo degli accessi in base al ruolo di Microsoft Intune)
+- Impostazione **Abilita accesso**: __Leggere e scrivere le impostazioni di controllo degli accessi in base al ruolo di Microsoft Intune__
 
 - Consente le stesse operazioni di __DeviceManagementRBAC.Read.All__
 
@@ -262,14 +262,14 @@ Attualmente, tutti gli ambiti di autorizzazione di Intune richiedono l'accesso c
   - Assegnazioni di ruolo
   - Definizioni di ruolo
 
-### <a name="svc-ro"></a>DeviceManagementServiceConfig.Read.All
+### <a name="devicemanagementserviceconfigreadall"></a><a name="svc-ro"></a>DeviceManagementServiceConfig.Read.All
 
-- Impostazione **Abilita accesso**: __Read Microsoft Intune configuration__ (Leggere la configurazione di Microsoft Intune)
+- Impostazione **Abilita accesso**: __Leggere la configurazione di Microsoft Intune__
 
 - Consente l'accesso in lettura alle proprietà e allo stato delle entità seguenti:
   - Registrazione del dispositivo
   - Certificato Apple Push Notification Service
-  - Programma di registrazione del dispositivo mobile di Apple
+  - Programma di registrazione del dispositivo mobile di Apple:
   - Volume Purchase Program di Apple
   - Exchange Connector
   - Termini e condizioni
@@ -278,16 +278,16 @@ Attualmente, tutti gli ambiti di autorizzazione di Intune richiedono l'accesso c
   - Personalizzazione
   - Mobile Threat Defense
 
-### <a name="svc-rw"></a>DeviceManagementServiceConfig.ReadWrite.All
+### <a name="devicemanagementserviceconfigreadwriteall"></a><a name="svc-rw"></a>DeviceManagementServiceConfig.ReadWrite.All
 
-- Impostazione **Abilita accesso**: __Read and write Microsoft Intune configuration__ (Leggere e scrivere la configurazione di Microsoft Intune)
+- Impostazione **Abilita accesso**: __Leggere e scrivere la configurazione di Microsoft Intune__
 
 - Consente le stesse operazioni di DeviceManagementServiceConfig.Read.All_
 
 - Le app possono inoltre configurare le funzionalità di Intune seguenti:
   - Registrazione del dispositivo
   - Certificato Apple Push Notification Service
-  - Programma di registrazione del dispositivo mobile di Apple
+  - Programma di registrazione del dispositivo mobile di Apple:
   - Volume Purchase Program di Apple
   - Exchange Connector
   - Termini e condizioni

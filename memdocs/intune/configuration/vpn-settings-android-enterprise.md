@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8bc627e7b9efb68e8d5cb777b5d8e659b06cab92
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086812"
 ---
 # <a name="android-enterprise-device-settings-to-configure-vpn-in-intune"></a>Impostazioni del dispositivo Android Enterprise per la configurazione della rete privata virtuale (VPN) in Intune
@@ -45,7 +45,7 @@ Per altre informazioni sui profili VPN in Intune, vedere [Profili VPN](vpn-setti
   - **Metodo di autenticazione**: scegliere il metodo di autenticazione dei dispositivi al server VPN. Le opzioni disponibili sono:
   
     - **Certificati**: selezionare un profilo di certificato SCEP o PKCS esistente per autenticare la connessione. [Configura certificati](../protect/certificates-configure.md) elenca i passaggi necessari per creare un profilo di certificato.
-    - **Nome utente e password**: al momento dell'accesso al server VPN, agli utenti finali viene chiesto di immettere nome utente e password.
+    - **Nome utente e password**: al momento dell'accesso al server VPN, agli utenti finali viene chiesto di immettere il nome utente e la password.
 
 - **Tipo di connessione**: selezionare il tipo di connessione VPN. Le opzioni disponibili sono:
 
@@ -61,7 +61,7 @@ Per altre informazioni sui profili VPN in Intune, vedere [Profili VPN](vpn-setti
   - **Metodo di autenticazione**: scegliere il metodo di autenticazione dei dispositivi al server VPN. Le opzioni disponibili sono:
   
     - **Certificati**: selezionare un profilo di certificato SCEP o PKCS esistente per autenticare la connessione. [Configura certificati](../protect/certificates-configure.md) elenca i passaggi necessari per creare un profilo di certificato.
-    - **Nome utente e password**: al momento dell'accesso al server VPN, agli utenti finali viene chiesto di immettere nome utente e password.
+    - **Nome utente e password**: al momento dell'accesso al server VPN, agli utenti finali viene chiesto di immettere il nome utente e la password.
 
 - **Tipo di connessione**: selezionare il tipo di connessione VPN. Le opzioni disponibili sono:
 

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d29294f1d9556f195fe70f0e2cb36cc8c9ddcfba
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79357727"
 ---
 # <a name="create-a-design"></a>Creare una progettazione
@@ -209,7 +209,7 @@ Per creare l'elenco dei dispositivi, è possibile [scaricare un modello della ta
 
 Intune supporta sia dispositivi di proprietà dell'azienda che personali. Un dispositivo è considerato di proprietà dell'azienda se viene registrato da un manager di registrazione dispositivi o da un programma di registrazione dispositivi. Ad esempio, un dispositivo viene registrato tramite il programma DEP (Device Enrollment Program) di Apple, contrassegnato come aziendale e inserito in un gruppo di dispositivi che riceve criteri e app aziendali mirati.
 
-Vedere [Sezione 3: Determinare i requisiti degli scenari per i casi d'uso](planning-guide-requirements.md) per altre informazioni sui casi d'uso aziendali e BYOD.
+Per altre informazioni sui casi d'uso aziendali e BYOD, fare riferimento a [Sezione 3: Determinare i requisiti degli scenari per i casi d'uso](planning-guide-requirements.md).
 
 ### <a name="bulk-enrollment"></a>Registrazione in blocco
 
@@ -255,8 +255,8 @@ Usare i criteri di configurazione per gestire le impostazioni di sicurezza e le 
 
 | **Nome criterio** | **Piattaforma per i dispositivi** | **Impostazioni** | **Gruppo di destinazione** |   
 |:---:|:---:|:---:|:---:|
-| Aziendale - iOS | iOS | PIN obbligatorio, lunghezza: 6, Limitazione del backup cloud | Dispositivi aziendali |                                                           
-| Aziendale - Android | Android | PIN obbligatorio, lunghezza: 6, Limitazione del backup cloud | Dispositivi aziendali |                                                           
+| Aziendale - iOS | iOS | PIN obbligatorio, lunghezza: 6, limitazione del backup cloud | Dispositivi aziendali |                                                           
+| Aziendale - Android | Android | PIN obbligatorio, lunghezza: 6, limitazione del backup cloud | Dispositivi aziendali |                                                           
 | BYOD - iOS  | iOS | PIN obbligatorio, lunghezza: 4 | Dispositivi BYOD |
 | BYOD - Android  | Android | PIN obbligatorio, lunghezza: 4 | Dispositivi BYOD |
 
@@ -323,8 +323,8 @@ Di seguito è riportato un esempio di come documentare la progettazione di un pr
 
 | **Tipo** | **Nome profilo** | **Piattaforma per i dispositivi** | **Casi d'uso** |
 |:---:|:---:|:---:|:---:|
-| Connessione | Profilo VPN Cisco AnyConnect | Android, iOS/iPadOS, Windows 10 Mobile | Aziendale, BYOD America del Nord e Germania|
-| Connessione | Pulse Secure | Android | Aziendale, BYOD Asia |
+| VPN | Profilo VPN Cisco AnyConnect | Android, iOS/iPadOS, Windows 10 Mobile | Aziendale, BYOD America del Nord e Germania|
+| VPN | Pulse Secure | Android | Aziendale, BYOD Asia |
 
 Per determinare le esigenze specifiche a livello di profili VPN, è possibile [scaricare un modello della tabella qui sopra](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0).
 

@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 6dc2c1d4f07e601d98bc2f26ec4766e21a8f1bc7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79350668"
 ---
 # <a name="troubleshoot-conditional-access"></a>Risolvere i problemi di accesso condizionale
@@ -110,7 +110,7 @@ Se un dispositivo non è conforme ma continua ad avere accesso, intraprendere le
 - Assicurarsi che il dispositivo venga individuato. Exchange Connector punta a un server Accesso client di Exchange 2010 mentre l'utente è su un server di Exchange 2013? In questo caso, se la regola predefinita di Exchange è Consenti, anche se l'utente è incluso nel gruppo di destinazione, Intune non può riconoscere la connessione del dispositivo a Exchange.
 
 - Verificare l'esistenza o lo stato di accesso del dispositivo in Exchange:
-  - Usare il cmdlet PowerShell seguente per visualizzare un elenco di tutti i dispositivi mobili relativi a una cassetta postale: 'Get-ActiveSyncDeviceStatistics -mailbox mbx'. Se il dispositivo non è incluso nell'elenco, non accede a Exchange.
+  - Usare il cmdlet PowerShell seguente per visualizzare un elenco di tutti i dispositivi mobili relativi a una cassetta postale: "Get-ActiveSyncDeviceStatistics -mailbox mbx". Se il dispositivo non è incluso nell'elenco, non accede a Exchange.
   
   - Se il dispositivo è incluso nell'elenco, usare il cmdlet "Get-CASmailbox -identity:'upn' | fl" per ottenere informazioni dettagliate sullo stato di accesso del dispositivo e passare tali informazioni al supporto tecnico Microsoft.
 

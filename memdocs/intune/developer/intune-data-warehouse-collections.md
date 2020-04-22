@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9b8ffa656aa468b50569518aaff503fec1d21027
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086230"
 ---
 # <a name="intune-data-warehouse-collections"></a>Raccolte del data warehouse di Intune
@@ -38,7 +38,7 @@ L'entità **appRevision** elenca tutte le versioni di un'app.
 | ApplicationId              | Identificatore univoco dell'app, simile ad AppKey, ma è una chiave naturale.        | b66bc706-ffff-7437-0340-032819502773 |
 | Revisione                   | La versione indicata dall'amministratore durante il caricamento del file binario.                   | 2                                    |
 | Titolo                      | Titolo dell'app.                                                                     | Excel                                |
-| Pubblicazione                  | Autore della pubblicazione dell'app.                                                                 | Microsoft                            |
+| Autore                  | Autore della pubblicazione dell'app.                                                                 | Microsoft                            |
 | UploadState                | Stato di caricamento dell'app.                                                              | 1                                    |
 | AppTypeKey                 | Riferimento ad AppType descritto nella sezione seguente.                            | 1                                    |
 | VppProgramTypeKey          | Riferimento a VppProgramType descritto di seguito.                                        | 30876                                |
@@ -57,11 +57,11 @@ L'entità **appType** elenca l'origine dell'installazione di un'app.
 |:-----------:|:-------------------------:|
 | AppTypeID   | ID per il tipo           |
 | AppTypeKey  | Chiave surrogata per la chiave |
-| AppTypeName | Tipo di app                  |
+| AppTypeName | Tipo di App                  |
 
 ### <a name="example"></a>Esempio
 
-| AppTypeID |                Name               |                     Descrizione                     |
+| AppTypeID |                Nome               |                     Descrizione                     |
 |:---------:|:---------------------------------:|:---------------------------------------------------:|
 | 0         | App di Android Store               | Un'app di Android Store.                             |
 | 1         | App LOB Android                 | Un'app line-of-business Android.                  |
@@ -163,7 +163,7 @@ L'entità **DeviceConfigurationProfileDeviceActivity** elenca il numero di dispo
 |:---------:|:---------------------------------------------------------------------------------------------:|:--------:|
 | DateKey   | Chiave della data in cui l'archiviazione del profilo di configurazione dispositivo è stata registrata nel data warehouse. | 20160703 |
 | Pending   | Numero di dispositivi univoci in sospeso.                                                    | 123      |
-| Operazione riuscita | Numero di dispositivi univoci in stato completato.                                                    | 12       |
+| Operazione completata | Numero di dispositivi univoci in stato completato.                                                    | 12       |
 | Errore     | Numero di dispositivi univoci in stato di errore.                                                      | 10       |
 | Operazione non riuscita    | Numero di dispositivi univoci in stato non riuscito.                                                     | 2        |
 
@@ -174,7 +174,7 @@ L'entità **DeviceConfigurationProfileUserActivity** elenca il numero di utenti 
 |------------|----------------------------------------------------------------------------------------------|-----------|
 | DateKey  | Chiave data in cui l'archiviazione del profilo di configurazione dispositivo è stata registrata nel data warehouse.  | 20160703  |
 | Pending  | Numero di utenti univoci in sospeso.  | 123  |
-| Operazione riuscita  | Numero di utenti univoci in stato completato.  | 12  |
+| Operazione completata  | Numero di utenti univoci in stato completato.  | 12  |
 | Errore  | Numero di utenti univoci in stato di errore.  | 10  |
 | Operazione non riuscita  | Numero di utenti univoci in stato non riuscito.  | 2  |
 
@@ -203,7 +203,7 @@ L'entità **DeviceRegistrationState** rappresenta il tipo di registrazione a cui
 | deviceRegistrationStateName | Stato di registrazione                                                                  |
 |    NotRegistered                     |    Non registrato                                                                                                                                                                  |
 |    Registrato                        |       Registrato                                                                                                                                                                   |
-|    Revocato                           |       Lo stato indica che l'amministratore IT ha bloccato il client e che il client può essere sbloccato. Un dispositivo può anche essere nello stato Revocato dopo la cancellazione o il ritiro.        |
+|    Revoked                           |       Lo stato indica che l'amministratore IT ha bloccato il client e che il client può essere sbloccato. Un dispositivo può anche essere nello stato Revocato dopo la cancellazione o il ritiro.        |
 |    KeyConflict                       |    Conflitto di chiave                                                                                                                                                                    |
 |    ApprovalPending                   |    Approvazione in sospeso                                                                                                                                                                |
 |    CertificateReset                  |    Reimpostazione certificato                                                                                                                                                               |
@@ -267,7 +267,7 @@ L'entità **deviceType** rappresenta il tipo di dispositivo a cui fanno riferime
 
 ### <a name="example"></a>Esempio
 
-| deviceTypeID |        Name       |                      Descrizione                      |
+| deviceTypeID |        Nome       |                      Descrizione                      |
 |:------------:|:-----------------:|:-----------------------------------------------------:|
 | -1           | Non disponibile   | Il tipo di dispositivo non è disponibile.                     |
 | 0            | Desktop           | Dispositivo Windows Desktop                              |
@@ -304,7 +304,7 @@ L'entità **deviceEnrollmentType** indica in che modo è stato registrato un dis
 
 ### <a name="example"></a>Esempio
 
-| enrollmentTypeID |                Name                |                                        Descrizione                                       |
+| enrollmentTypeID |                Nome                |                                        Descrizione                                       |
 |:----------------:|:----------------------------------:|:----------------------------------------------------------------------------------------:|
 | 0                | Sconosciuto                            | Il tipo di registrazione non è stato raccolto                                                      |
 | 1                | UserEnrollment                     | Registrazione basata sull'utente tramite il canale BYOD.                                           |
@@ -363,7 +363,7 @@ L'entità **EnrollmentFailureCategory** indica perché la registrazione di un di
 | Non applicabile                  | La categoria di errore della registrazione non è applicabile.                                                            |
 | Non disponibile                   | La categoria di errore della registrazione non è disponibile.                                                             |
 | Sconosciuto                         | Errore sconosciuto.                                                                                                |
-| Autenticazione                  | Autenticazione non riuscita.                                                                                        |
+| Authentication                  | Autenticazione non riuscita.                                                                                        |
 | Autorizzazione                   | La chiamata è stata autenticata, ma non autorizzata alla registrazione.                                                         |
 | AccountValidation               | Non è stato possibile convalidare l'account per la registrazione (account bloccato, registrazione non abilitata).                      |
 | UserValidation                  | Non è stato possibile convalidare l'utente (utente inesistente, licenza mancante).                                           |
@@ -508,7 +508,7 @@ L'entità **MamPlatform** elenca i nomi e i tipi di piattaforma in cui è stata 
 |----------------------------|-----------------------------------------------------------------------------------|---------------------------------------------------------|
 |        PlatformKey         |     Identificatore univoco della piattaforma nel data warehouse, chiave surrogata.      |                           123                           |
 |          Piattaforma          | Identificatore univoco della piattaforma, simile a PlatformKey ma è una chiave naturale. |                           123                           |
-|        PlatformName        |                                   Nome della piattaforma                                   | Non disponibile <br>Nessuno <br>Windows <br>IOS <br>Android. |
+|        PlatformName        |                                   Nome della piattaforma                                   | Non disponibile <br>Nessuno <br>Windows <br>iOS <br>Android. |
 | RowLastModifiedDateTimeUtc | Data e ora in formato UTC dell'ultima modifica della piattaforma nel data warehouse.  |                 23/11/2016 12.00.00                  |
 
 ## <a name="managementagenttypes"></a>managementAgentTypes
@@ -522,7 +522,7 @@ L'entità **managementAgentType** rappresenta gli agenti usati per gestire un di
 
 ### <a name="example"></a>Esempio
 
-| ManagementAgentTypeID |                Name               |                                  Descrizione                                 |
+| ManagementAgentTypeID |                Nome               |                                  Descrizione                                 |
 |:---------------------:|:---------------------------------:|:----------------------------------------------------------------------------:|
 | 1                     | EAS                               | Il dispositivo è gestito tramite Exchange Active Sync                         |
 | 2                     | MDM                               | Il dispositivo è gestito tramite un agente MDM                                   |
@@ -547,7 +547,7 @@ L'entità **ManagementState** fornisce informazioni dettagliate sullo stato del 
 
 ### <a name="example"></a>Esempio
 
-| managementStateID |      Name      |                                                   Descrizione                                                   |
+| managementStateID |      Nome      |                                                   Descrizione                                                   |
 |:-----------------:|:--------------:|:---------------------------------------------------------------------------------------------------------------:|
 | 0                 | Gestiti        | Gestito senza azioni remote in sospeso.                                                                       |
 | 1                 | RetirePending  | C'è un comando di ritiro in sospeso per il dispositivo.                                                             |
@@ -590,7 +590,7 @@ L'entità **ownerType** indica se un dispositivo è aziendale, personale o scono
 |:-------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------:|
 | ownerTypeID   | Identificatore univoco del tipo di proprietario.                                                                                                                                               |                            |
 | ownerTypeKey  | Identificatore univoco del tipo di proprietario nel data warehouse - chiave surrogata.                                                                                                       |                            |
-| ownerTypeName | Rappresenta il tipo di proprietario dei dispositivi:  Corporate - il dispositivo è di proprietà dell'azienda.  Personal - il dispositivo è di proprietà personale (BYOD).   Unknown - nessuna informazione su questo dispositivo. | Corporate   Personal Unknown |
+| ownerTypeName | Rappresenta il tipo di proprietario dei dispositivi: Corporate - il dispositivo è di proprietà aziendale.  Personal - il dispositivo è di proprietà personale (BYOD).   Unknown - nessuna informazione su questo dispositivo. | Corporate   Personal Unknown |
 
 > [!Note]  
 > Per la creazione di gruppi dinamici per i dispositivi in AzureAD, per il filtro `ownerTypeName` è necessario impostare il valore `deviceOwnership` su `Company`. Per altre informazioni, vedere [Regole per i dispositivi](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
@@ -616,7 +616,7 @@ La tabella seguente elenca il numero di dispositivi con stato completato, in sos
 |:---------:|:-----------------------------------------------------------------------------------------------:|:---------------------:|
 | DateKey   | Chiave della data in cui l'archiviazione del profilo di configurazione dispositivo è stata registrata nel data warehouse. | 20160703              |
 | Pending   | Numero di dispositivi univoci in stato sospeso.                                                    | 123                   |
-| Operazione riuscita | Numero di dispositivi univoci in stato completato.                                                    | 12                    |
+| Operazione completata | Numero di dispositivi univoci in stato completato.                                                    | 12                    |
 | PolicyKey | Chiave dei criteri, può essere unita a Policy per ottenere policyName.                                  | Baseline Windows 10 |
 | Errore     | Numero di dispositivi univoci in stato di errore.                                                      | 10                    |
 | Operazione non riuscita    | Numero di dispositivi univoci in stato non riuscito.                                                     | 2                     |
@@ -638,7 +638,7 @@ L'entità **PolicyTypeActivity** elenca il numero cumulativo di dispositivi nell
 | PolicyKey     | Chiave dei criteri, può essere unita a Policy per ottenere policyName.                                | Windows 10 baseline         |
 | PolicyTypeKey | Tipo di chiave dei criteri, può essere unita al tipo di criterio per ottenere il nome del tipo di criterio.             | Criteri di conformità di Windows 10 |
 | Pending       | Numero di dispositivi univoci in sospeso.                                                    | 123                         |
-| Operazione riuscita     | Numero di dispositivi univoci in stato completato.                                                    | 12                          |
+| Operazione completata     | Numero di dispositivi univoci in stato completato.                                                    | 12                          |
 | Errore         | Numero di dispositivi univoci in stato di errore.                                                      | 10                          |
 | Operazione non riuscita        | Numero di dispositivi univoci in stato non riuscito.                                                     | 2                           |
 
@@ -658,7 +658,7 @@ La tabella seguente elenca il numero di utenti con stato completato, in sospeso,
 |:---------:|:---------------------------------------------------------------------------------------------:|:-------------------:|
 | DateKey   | Chiave della data in cui l'archiviazione del profilo di configurazione dispositivo è stata registrata nel data warehouse. | 20160703            |
 | Pending   | Numero di dispositivi univoci in sospeso.                                                    | 123                 |
-| Operazione riuscita | Numero di dispositivi univoci in stato completato.                                                    | 12                  |
+| Operazione completata | Numero di dispositivi univoci in stato completato.                                                    | 12                  |
 | PolicyKey | Chiave dei criteri, può essere unita a Policy per ottenere policyName.                                | Windows 10 baseline |
 | Errore     | Numero di dispositivi univoci in stato di errore.                                                      | 10                  |
 
@@ -675,14 +675,14 @@ L'entità **termsAndConditions** rappresenta i metadati e il contenuto di un cri
 |    title    |    Titolo per questi termini e condizioni.     |    Criteri aziendali di gestione di dispositivi        |
 |    summaryOfTerms    |    Riepilogo delle condizioni fornite all'utente.     |    Accetto i termini e le condizioni.    |
 |    termsAndConditionsBodyText    |    Il corpo del testo per questi termini e condizioni.       |    *Crittografia del dispositivo* Imposizione del PIN di 6 cifre    |
-|    isDeleted    |    Valore true o false per indicare se questo valore viene eliminato.     |    False    |
+|    isDeleted    |    Valore true o false per indicare se questo valore viene eliminato.     |    Falso    |
 |    startDateInclusiveUTC    |    Data di inizio di questi termini e condizioni.     |    23/08/2018 4:01:34    |
 |    endDateEclusiveUTC    |    Data di fine di questi termini e condizioni.     |    31/12/9999 12:00:00    |
 
 ## <a name="userdeviceassociations"></a>userDeviceAssociations
 L'entità **UserDeviceAssociation** contiene le associazioni utente-dispositivo presenti nell'organizzazione.
 
-|        Name        |                                             Descrizione                                            |     Esempio     |
+|        Nome        |                                             Descrizione                                            |     Esempio     |
 |:------------------:|:--------------------------------------------------------------------------------------------------:|:---------------:|
 | UserKey            | Identificatore univoco dell'utente nel data warehouse   (chiave sostitutiva).                            | 123             |
 | DeviceKey          | Identificatore univoco del dispositivo nel data warehouse.                                             | 123             |
@@ -728,7 +728,7 @@ L'entità **vppProgramType** elenca i tipi di programma VPP possibili per un'app
 
 ### <a name="example"></a>Esempio
 
-|             VppProgramID             |         Name        | Descrizione                |
+|             VppProgramID             |         Nome        | Descrizione                |
 |:------------------------------------:|:-------------------:|----------------------------|
 | 3DDA2474-470B-4503-9830-2665C21C1945 | Microsoft           | Programma VPP Microsoft. |
 | 00000000-0000-0000-0000-000000000000 | Non ancora disponibile | Valore predefinito, nessun VPP.   |

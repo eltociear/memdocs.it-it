@@ -16,10 +16,10 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d4e377e0cd9ad15d1d3a0ac9fb5c088dc1366d48
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326756"
 ---
 # <a name="intune-reports"></a>Report di Intune
@@ -123,7 +123,7 @@ Un report specialistico, ad esempio, può correlare i dati di proprietà del dis
 
     ![Riepilogo dei report di Intune](./media/intune-reports/intune-reports-04a.png)
 
-6. Fare clic su **Save**.
+6. Fare clic su **Salva**.
 7. Selezionare quindi **Analisi log** per creare ed eseguire una nuova query di log usando [Log Analytics](reports.md#log-analytics).
 
    ![Log Analytics - Query di log](./media/intune-reports/intune-reports-05.png)

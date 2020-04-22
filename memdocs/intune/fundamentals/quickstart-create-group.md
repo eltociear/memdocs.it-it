@@ -19,13 +19,13 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d7adb23f4709bf3ead07a01cb00d1b38fcb23c40
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79356908"
 ---
-# <a name="quickstart-create-a-group-to-manage-users"></a>Guida introduttiva: Creare un gruppo per gestire gli utenti
+# <a name="quickstart-create-a-group-to-manage-users"></a>Guida introduttiva: creare un gruppo per gestire gli utenti
 
 In questa guida introduttiva si utilizzerà Intune per creare un gruppo basato su un utente esistente. I gruppi vengono usati per gestire gli utenti e controllare l'accesso dei dipendenti alle risorse aziendali. Queste risorse possono essere parte dell'intranet aziendale o essere risorse esterne, ad esempio siti SharePoint, app SaaS o app Web.
 
@@ -64,7 +64,7 @@ Se il gruppo è stato creato correttamente, verrà visualizzato nell'elenco **Tu
 
 In questa guida introduttiva è stato utilizzato Intune per creare un gruppo basato su un utente esistente. Per altre informazioni sull'aggiunta di gruppi in Intune, vedere [Aggiungere gruppi per organizzare utenti e dispositivi](groups-add.md).
 
-Per seguire questa serie di guide introduttive di Intune, continuare con la guida introduttiva che segue.
+Per seguire questa serie di guide introduttive di Intune, passare alla guida introduttiva che segue.
 
 > [!div class="nextstepaction"]
-> [Avvio rapido: configurare la registrazione automatica per i dispositivi Windows 10](../enrollment/quickstart-setup-auto-enrollment.md)
+> [Guida introduttiva: configurare la registrazione automatica per i dispositivi Windows 10](../enrollment/quickstart-setup-auto-enrollment.md)

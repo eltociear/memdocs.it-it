@@ -16,10 +16,10 @@ ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f9bf88dd3a30caeb57b10e0c88c6954d1479d4f2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79349407"
 ---
 # <a name="wandera-mobile-threat-defense-connector-with-intune"></a>Connettore Wandera Mobile Threat Defense con Intune  
@@ -80,7 +80,7 @@ Se nei dispositivi vengono rilevate app dannose, come malware, è possibile bloc
 ![Immagine concettuale dell'accesso concesso dopo la correzione](./media/wandera-mtd-connector/wandera-malicious-apps-unblocked.png)
 
 
-### <a name="control-access-based-on-threat-to-network"></a>Controllare l'accesso in base alle minacce per la rete  
+### <a name="control-access-based-on-threat-to-network"></a>Controllare l'accesso in base alle minacce alla rete  
 
 Rilevare le minacce per la rete, ad esempio attacchi man-in-the-middle e proteggere l'accesso a reti Wi-Fi in base al livello di rischio del dispositivo.  
 
@@ -90,11 +90,11 @@ Rilevare le minacce per la rete, ad esempio attacchi man-in-the-middle e protegg
 
 *Accesso concesso dopo la correzione*:  
 
-![Accesso concesso dopo la correzione](./media/wandera-mtd-connector/wandera-network-wifi-unblocked.png)  
+![Accesso concesso dopo la risoluzione](./media/wandera-mtd-connector/wandera-network-wifi-unblocked.png)  
 
 ## <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Controllare l'accesso a SharePoint Online in base alle minacce alla rete
 
-Rilevare le minacce alla rete, ad esempio attacchi di tipo man-in-the-middle, e impedire la sincronizzazione dei file aziendali in base al rischio per il dispositivo.
+Rilevare le minacce per la rete, ad esempio attacchi man-in-the-middle, e impedire la sincronizzazione dei file aziendali in base al livello di rischio del dispositivo.
 
 *Bloccare SharePoint Online quando vengono rilevate minacce per la rete*:  
 

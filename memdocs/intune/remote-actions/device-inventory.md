@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ed5ff548d28a5bc973c43c84861b9b256b41a203
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80696279"
 ---
 # <a name="see-device-details-in-intune"></a>Visualizzare i dettagli del dispositivo in Intune
@@ -37,11 +37,11 @@ Questo articolo illustra come visualizzare tutti i dispositivi e le relative pro
 3. Selezionare **Dispositivi** > **Tutti i dispositivi** > selezionare uno dei dispositivi elencati per aprirne i dettagli:
 
    - **Panoramica** visualizza il nome del dispositivo ed elenca alcune proprietà chiave del dispositivo, ad esempio se è un dispositivo personale o aziendale, il numero di serie, l'utente primario e altro ancora. È possibile eseguire le seguenti attività sul dispositivo:
-      - [Ritira](devices-wipe.md#retire)
+      - [Ritirare](devices-wipe.md#retire)
       - [Cancellazione](devices-wipe.md#wipe)
-      - [Eliminazione](devices-wipe.md#delete-devices-from-the-intune-portal)
+      - [Elimina](devices-wipe.md#delete-devices-from-the-intune-portal)
       - [Blocco remoto](device-remote-lock.md)
-      - [Sincronizzazione](device-sync.md)
+      - [Sincronizza](device-sync.md)
       - [Reimposta passcode](device-passcode-reset.md)
       - [Riavvia](device-restart.md) (solo Windows)
       - [Fresh Start](device-fresh-start.md) (solo Windows)
@@ -70,7 +70,7 @@ A seconda del gestore telefonico usato dai dispositivi, è possibile che non ven
 
 |Dettagli|Descrizione|Piattaforma| 
 |--------------|----------------------|----|  
-|Name|Nome del dispositivo.|Windows, iOS|
+|Nome|Nome del dispositivo.|Windows, iOS|
 |Nome di gestione|Nome del dispositivo usato solo nella console. Se si modifica questo nome, il nome del dispositivo non viene modificato.|Windows, iOS|
 |UDID|Identificatore univoco del dispositivo.|Windows, iOS|
 |ID dispositivo di Intune|GUID che identifica in modo univoco il dispositivo.|Windows, iOS|

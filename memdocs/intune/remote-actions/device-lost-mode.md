@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 3cf638ba82d1b6e91e3c4c24d5cfd3433df3b010
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326523"
 ---
 # <a name="enable-lost-mode-on-iosipados-devices-with-intune"></a>Abilitare la modalità di dispositivo perso nei dispositivi iOS/iPadOS con Intune
@@ -43,7 +43,7 @@ Questa funzionalità non è supportata per le piattaforme seguenti:
 ## <a name="enable-lost-mode"></a>Abilitare la modalità di dispositivo perso
 
 1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Selezionare **Dispositivi** e quindi selezionare **Tutti i dispositivi**.
+3. Selezionare **Dispositivi** e poi **Tutti i dispositivi**.
 4. Nell'elenco dei dispositivi gestiti scegliere un dispositivo iOS/iPadOS, quindi scegliere **Modalità di dispositivo perso (solo con supervisione)** .
 5. In **Modalità di dispositivo perso** selezionare **Abilita**.
 6. In **Messaggi da visualizzare nella schermata di blocco** digitare un messaggio da visualizzare nella schermata di blocco del dispositivo.

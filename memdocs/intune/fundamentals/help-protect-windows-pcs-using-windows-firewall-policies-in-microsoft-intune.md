@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c1c3c08a8ea50e23b9e3e59a6a6e8f04168f10e2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79362420"
 ---
 # <a name="help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune"></a>Proteggere i PC Windows con criteri di Windows Firewall in Microsoft Intune
@@ -101,7 +101,7 @@ Per tutte queste impostazioni, il valore predefinito è **Sì**.
 
 È possibile configurare le eccezioni che consentono tipi specifici di traffico di rete attraverso il firewall indipendentemente dai valori configurati in precedenza. Nessuna di queste impostazioni è configurata per impostazione predefinita.
 
-|Nome impostazione|Dettagli|
+|Nome impostazione|Details|
 |------------------|--------------------|
 |**BranchCache - recupero contenuto**<br>(Windows 7 o versioni successive)|Consente ai client BranchCache di usare HTTP per recuperare il contenuto da altri client BranchCache in modalità distribuita e dalla cache ospitata in modalità cache ospitata. Viene usato il protocollo HTTP.|
 |**BranchCache - client cache ospitata**<br>(Windows 7 o versioni successive)|Consente ai client BranchCache di usare una cache ospitata. Viene usato il protocollo HTTPS.|

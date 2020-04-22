@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d6f8f3cf9ced5b613323093ed2baafcf65667997
-ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80275085"
 ---
 # <a name="symantec-endpoint-protection-mobile-connector"></a>Connettore Symantec Endpoint Protection Mobile
@@ -94,7 +94,7 @@ Se nei dispositivi vengono rilevate app dannose, come malware, è possibile bloc
 
 ![Immagine dell'accesso concesso in caso di correzione dopo il rilevamento di app dannose](./media/skycure-mobile-threat-defense-connector/symantec-arch-2.png)
 
-### <a name="control-access-based-on-threat-to-network"></a>Controllare l'accesso in base alle minacce per la rete
+### <a name="control-access-based-on-threat-to-network"></a>Controllare l'accesso in base alle minacce alla rete
 
 Rilevare minacce nella rete, come attacchi di tipo **Man-in-the-middle**, e proteggere l'accesso alle reti Wi-Fi in base al livello di rischio del dispositivo.
 

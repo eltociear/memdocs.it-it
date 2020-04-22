@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 1392530643b4846c871b942d8265a7b43ace3124
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79347119"
 ---
 # <a name="remove-your-windows-device-from-management"></a>Rimuovere il dispositivo Windows dalla gestione
@@ -77,7 +77,7 @@ Per rimuovere dalla gestione un dispositivo Windows 10 seguire questa procedura.
 ## <a name="remove-your-windows-81-computer"></a>Rimuovere il computer Windows 8.1
 Per rimuovere da Intune un computer Windows 8.1 seguire questa procedura.
 
-1. Selezionare **Impostazioni PC** > **Rete** > **Area di lavoro**.
+1. Passare a **Impostazioni PC** > **Rete** > **Area di lavoro**.
 2. In **Aggiunta all'area di lavoro** selezionare **Esci**.
 3. In **Turn on device management** (Attiva gestione dei dispositivi) selezionare **Disattiva**.
 4. Nella finestra popup visualizzata selezionare **Disattiva**.

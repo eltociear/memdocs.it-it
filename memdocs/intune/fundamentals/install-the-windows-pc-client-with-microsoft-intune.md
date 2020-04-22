@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a1641efe6899c46a797a8ccf7979b533cb620d19
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79358962"
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Installare il client software di Intune nei PC Windows
@@ -126,8 +126,8 @@ Se agli utenti è stata assegnata una licenza di Intune e l'autorità MDM dell'o
 
 - Per gli utenti dei PC Windows 8.1 o Windows 10 sono disponibili due opzioni di registrazione:
 
-  - **Registrare il PC come dispositivo mobile**: gli utenti scelgono il pulsante **Informazioni sulla procedura di registrazione** e visualizzano le istruzioni per registrare il PC come dispositivo mobile. Il pulsante viene visualizzato in primo piano, poiché la registrazione MDM è l'opzione predefinita e preferita per la registrazione. Tuttavia, l'opzione MDM non è pertinente in questo argomento, che riguarda solo l'installazione del software client.
-  - **Registrare il PC usando il software client di Intune**: è necessario indicare agli utenti di selezionare il collegamento **Fare clic qui per scaricare**, da cui possono accedere alla procedura di installazione del software client.
+  - **Registrare il PC come dispositivo mobile**: gli utenti scelgono il pulsante **Informazioni sull'iscrizione** e visualizzano le istruzioni per registrare il PC come dispositivo mobile. Il pulsante viene visualizzato in primo piano, poiché la registrazione MDM è l'opzione predefinita e preferita per la registrazione. Tuttavia, l'opzione MDM non è pertinente in questo argomento, che riguarda solo l'installazione del software client.
+  - **Registrare il PC usando il software client di Intune**: è necessario indicare agli utenti di selezionare il collegamento **Fare clic qui per scaricare**, che li guida nell'installazione del software client.
 
 Nella tabella seguente sono riepilogate le opzioni.
 

@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c7de0b978c24f28988c62854a249505a0598db95
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084071"
 ---
 # <a name="bundle-ids-for-built-in-ios-and-ipados-apps-you-can-use-in-intune"></a>ID bundle per le app iOS e iPadOS predefinite che è possibile usare in Intune
@@ -29,7 +29,7 @@ Quando si configurano le funzionalità nei dispositivi iOS/iPadOS, è anche poss
 
 ## <a name="bundle-ids"></a>ID bundle
 
-| ID bundle                   | Nome dell'app     | Pubblicazione |
+| ID bundle                   | Nome dell'app     | Autore |
 |-----------------------------|--------------|-----------|
 | com.apple.AppStore          | App Store    | Apple     |
 | com.apple.store.Jolly       | Apple Store  | Apple     |
@@ -56,7 +56,7 @@ Quando si configurano le funzionalità nei dispositivi iOS/iPadOS, è anche poss
 | com.apple.Keynote           | Keynote      | Apple     |
 | com.apple.mobilemail        | Mail         | Apple     |
 | com.apple.Maps              | Maps         | Apple     |
-| com.apple.measure           | Misura      | Apple     |
+| com.apple.measure           | Measure      | Apple     |
 | com.apple.MobileSMS         | Messaggi     | Apple     |
 | com.apple.Music             | Musica        | Apple     |
 | com.apple.news              | Notizie         | Apple     |

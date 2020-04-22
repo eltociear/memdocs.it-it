@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9a1a5b291135f5c6d42a47377d14d6d3d4f13411
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79362329"
 ---
 # <a name="keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune"></a>Mantenere i PC Windows aggiornati con gli aggiornamenti software in Microsoft Intune
@@ -55,17 +55,17 @@ Prima di iniziare a creare e approvare degli aggiornamenti software, configurare
 
 La tabella seguente mostra i valori che possono essere configurati nei criteri e i valori consigliati che vengono usati nel caso in cui i criteri non vengano personalizzati. È possibile trovare queste impostazioni nella sezione **Aggiornamenti** .
 
-  |Impostazione criterio|Dettagli|
+  |Impostazione criterio|Details|
     |------------------|--------------------|
-    |**Frequenza rilevamento aggiornamenti e applicazioni (ore)** |Specifica la frequenza (da 8 a 22 ore) con cui Intune verifica la disponibilità di nuovi aggiornamenti e applicazioni.<br /><br />Valore consigliato: **8** ore.|
-    |**Installazione automatica o richiesta di aggiornamenti e applicazioni** |Specifica se gli aggiornamenti vengono installati automaticamente o se viene chiesto all'utente prima dell'installazione. Tale impostazione consente inoltre di pianificare l'installazione degli aggiornamenti e delle applicazioni.<br /><br />**Installa gli aggiornamenti e le applicazioni automaticamente come pianificato** installa aggiornamenti e applicazioni in base alla pianificazione specificata.<br /><br />L'impostazione del criterio dipendente **Utilizzare la manutenzione automatica per i computer Windows**  specifica se installare aggiornamenti e applicazioni come parte della funzionalità di manutenzione automatica di Windows.<br /><br />**Chiedi all'utente prima di installare** consente di chiedere conferma all'utente prima di installare gli aggiornamenti disponibili.<br /><br />Valori consigliati:<br /><br />Opzione **Installa gli aggiornamenti e le applicazioni automaticamente come pianificato** selezionata<br /><br />**Giorno pianificato: ogni giorno**<br /><br />**Ora pianificata: 3:00**<br /><br />Opzione **Utilizzare la manutenzione automatica per i computer Windows** selezionata|
-    |**Installazione immediata di aggiornamenti che non interrompono Windows** |**Consenti** installa gli aggiornamenti immediatamente dopo il download, ad eccezione degli aggiornamenti che causano l'interruzione o il riavvio di Windows. Gli aggiornamenti vengono installati in base alla configurazione dell'impostazione **Installazione automatica o richiesta di aggiornamenti** .<br /><br />**Non consentire** installa gli aggiornamenti in base alla configurazione dell'impostazione **Installazione automatica o richiesta di aggiornamenti e applicazioni**.<br /><br />Valore consigliato: **Consentito** |
-    |**Posticipa il riavvio di Windows dopo l'installazione di applicazioni e aggiornamenti pianificati (minuti)** |Specifica (da 1 a 30 minuti) il tempo di attesa per riavviare Windows dopo l'installazione delle applicazioni e degli aggiornamenti pianificati.<br /><br />Valore consigliato: **15 minuti** |
-    |**Ritardo dopo il riavvio di Windows per l'installazione di applicazioni e aggiornamenti pianificati non completati (minuti)** |Specifica (da 1 a 60 minuti) il tempo atteso per l'installazione degli aggiornamenti e delle applicazioni dopo il riavvio di Windows quando un aggiornamento pianificato non è stato completato.<br /><br />Valore consigliato: **5 minuti**|
-    |**Consenti all'utente connesso di controllare il riavvio di Windows dopo l'installazione di aggiornamenti pianificati** |Specifica se l'utente connesso può posticipare il riavvio di Windows (se impostata su **Sì**) o se riceverà una notifica del riavvio automatico di Windows (se impostata su **No**). Se, tuttavia, nessun utente è connesso al termine dell'installazione pianificata di aggiornamenti e applicazioni, Windows verrà riavviato automaticamente, se necessario. Se l'impostazione è configurata su **No**, per impostazione predefinita, il periodo di tempo atteso prima che venga riavviato Windows è impostato su 5 minuti.<br /><br />Valore consigliato: **Sì**|
-    |**Chiedi all'utente di riavviare Windows durante gli aggiornamenti obbligatori dell'agente client di Microsoft Intune** |Questa impostazione consente di determinare se viene chiesto agli utenti connessi di riavviare Windows quando è necessario farlo in seguito a un aggiornamento obbligatorio del client di Intune.<br /><br />Valore consigliato: **Sì**|
+    |**Frequenza rilevamento aggiornamenti e applicazioni (ore)** |Specifica la frequenza (da 8 a 22 ore) con cui Intune verifica la disponibilità di nuovi aggiornamenti e applicazioni.<br /><br />Impostazione consigliata: **8** ore.|
+    |**Installazione automatica o richiesta di aggiornamenti e applicazioni** |Specifica se gli aggiornamenti vengono installati automaticamente o se viene chiesto all'utente prima dell'installazione. Tale impostazione consente inoltre di pianificare l'installazione degli aggiornamenti e delle applicazioni.<br /><br />**Installa gli aggiornamenti e le applicazioni automaticamente come pianificato** installa aggiornamenti e applicazioni in base alla pianificazione specificata.<br /><br />L'impostazione del criterio dipendente **Utilizzare la manutenzione automatica per i computer Windows**  specifica se installare aggiornamenti e applicazioni come parte della funzionalità di manutenzione automatica di Windows.<br /><br />**Chiedi all'utente prima di installare** consente di chiedere conferma all'utente prima di installare gli aggiornamenti disponibili.<br /><br />Valori consigliati:<br /><br />Opzione **Installa gli aggiornamenti e le applicazioni automaticamente come pianificato** selezionata<br /><br />**Giorno pianificato: Ogni giorno**<br /><br />**Ora pianificata: 3.00**<br /><br />Opzione **Utilizzare la manutenzione automatica per i computer Windows** selezionata|
+    |**Installazione immediata di aggiornamenti che non interrompono Windows** |**Consenti** installa gli aggiornamenti immediatamente dopo il download, ad eccezione degli aggiornamenti che causano l'interruzione o il riavvio di Windows. Gli aggiornamenti vengono installati in base alla configurazione dell'impostazione **Installazione automatica o richiesta di aggiornamenti** .<br /><br />**Non consentire** installa gli aggiornamenti in base alla configurazione dell'impostazione **Installazione automatica o richiesta di aggiornamenti e applicazioni**.<br /><br />Impostazione consigliata: **Consenti** |
+    |**Posticipa il riavvio di Windows dopo l'installazione di applicazioni e aggiornamenti pianificati (minuti)** |Specifica (da 1 a 30 minuti) il tempo di attesa per riavviare Windows dopo l'installazione delle applicazioni e degli aggiornamenti pianificati.<br /><br />Impostazione consigliata: **15 minuti** |
+    |**Ritardo dopo il riavvio di Windows per l'installazione di applicazioni e aggiornamenti pianificati non completati (minuti)** |Specifica (da 1 a 60 minuti) il tempo atteso per l'installazione degli aggiornamenti e delle applicazioni dopo il riavvio di Windows quando un aggiornamento pianificato non è stato completato.<br /><br />Impostazione consigliata: **5 minuti**|
+    |**Consenti all'utente connesso di controllare il riavvio di Windows dopo l'installazione di aggiornamenti pianificati** |Specifica se l'utente connesso può posticipare il riavvio di Windows (se impostata su **Sì**) o se riceverà una notifica del riavvio automatico di Windows (se impostata su **No**). Se, tuttavia, nessun utente è connesso al termine dell'installazione pianificata di aggiornamenti e applicazioni, Windows verrà riavviato automaticamente, se necessario. Se l'impostazione è configurata su **No**, per impostazione predefinita, il periodo di tempo atteso prima che venga riavviato Windows è impostato su 5 minuti.<br /><br />Impostazione consigliata: **Sì**|
+    |**Chiedi all'utente di riavviare Windows durante gli aggiornamenti obbligatori dell'agente client di Microsoft Intune** |Questa impostazione consente di determinare se viene chiesto agli utenti connessi di riavviare Windows quando è necessario farlo in seguito a un aggiornamento obbligatorio del client di Intune.<br /><br />Impostazione consigliata: **Sì**|
     |**Pianificazione delle installazioni degli aggiornamenti obbligatori dell'agente client di Microsoft Intune** |Consente di pianificare l'installazione degli aggiornamenti del client.<br /><br />Valore consigliato: non configurato|
-    |**Ritardo tra le richieste di riavviare Windows dopo l'installazione di applicazioni e aggiornamenti pianificati (minuti)** |Questa impostazione consente di specificare la frequenza (da 1 a 1440 minuti) con cui l'utente riceve la richiesta di riavviare Windows quando viene installato un aggiornamento pianificato o un'applicazione che richiede il riavvio di Windows e l'utente decide di posticipare il riavvio.<br /><br />Valore consigliato: **30 minuti** |
+    |**Ritardo tra le richieste di riavviare Windows dopo l'installazione di applicazioni e aggiornamenti pianificati (minuti)** |Questa impostazione consente di specificare la frequenza (da 1 a 1440 minuti) con cui l'utente riceve la richiesta di riavviare Windows quando viene installato un aggiornamento pianificato o un'applicazione che richiede il riavvio di Windows e l'utente decide di posticipare il riavvio.<br /><br />Impostazione consigliata: **30 minuti** |
 
 ## <a name="update-software-made-by-microsoft"></a>Aggiornare il software Microsoft
 L'aggiornamento del software Microsoft richiede un intervento minimo da parte dell'utente. Tuttavia, prima di iniziare, è necessario configurare:
@@ -80,7 +80,7 @@ Usare le due procedure seguenti per usare gli aggiornamenti software:
 
 1. Nella [console di amministrazione di Microsoft Intune](https://manage.microsoft.com/) scegliere **Amministrazione** &gt; **Aggiornamenti**.
 
-2. Nella pagina **Impostazioni del servizio: aggiornamenti**, nell'elenco **Categoria prodotto**, selezionare le categorie di aggiornamenti da rendere disponibili per i computer. Si noti che gli aggiornamenti più comuni sono selezionati per impostazione predefinita.
+2. Nella pagina **Impostazioni servizio: aggiornamenti** , nell'elenco **Categoria prodotto** , selezionare le categorie di aggiornamenti da rendere disponibili per i computer. Si noti che gli aggiornamenti più comuni sono selezionati per impostazione predefinita.
 
     > [!IMPORTANT]
     > Per garantire che i computer ricevano gli aggiornamenti approvati dall'amministratore nell'impostazione dei criteri di gruppo di Windows Server Update Services (WSUS), l'impostazione **Specifica il percorso del servizio di aggiornamento Microsoft nella rete Intranet** non deve essere applicata ai computer che sono stati registrati con Intune.
@@ -93,7 +93,7 @@ Usare le due procedure seguenti per usare gli aggiornamenti software:
 
 1. Nella [console di amministrazione di Microsoft Intune](https://manage.microsoft.com/) scegliere **Amministrazione** &gt; **Aggiornamenti**.
 
-2. Nella sezione **Regole di approvazione automatica** della pagina **Impostazioni del server: Aggiornamenti** scegliere **Nuova**.
+2. Nella sezione **Regole di approvazione automatica** della pagina **Impostazioni server: aggiornamenti** scegliere **Nuovo**.
 
 3. Nella pagina **Generale** della procedura guidata Crea regola di approvazione automatica, digitare il nome della nuova regola di approvazione automatica ed eventualmente una descrizione.
 
@@ -114,7 +114,7 @@ Usare le due procedure seguenti per usare gli aggiornamenti software:
 
 7. Nella pagina **Riepilogo** rivedere le impostazioni della nuova regola, quindi scegliere **Fine**.
 
-La nuova regola viene mostrata nella sezione **Regole di approvazione automatica** della pagina **Impostazioni del servizio: Aggiornamenti**.
+La nuova regola viene mostrata nella sezione **Regole di approvazione automatica** della pagina **Impostazioni servizio: aggiornamenti** .
 
 > [!NOTE]
 > Quando si crea una regola di approvazione automatica, verranno approvati soltanto gli aggiornamenti futuri e non quelli precedenti che esistono già in Intune. Per approvare gli aggiornamenti è necessario eseguire la regola di approvazione automatica.
@@ -182,7 +182,7 @@ La nuova regola viene mostrata nella sezione **Regole di approvazione automatica
 
 10. Nella pagina **Codici restituiti** della procedura guidata, è possibile specificare come vengono interpretati i codici restituiti dall'installazione dell'aggiornamento. Per impostazione predefinita, Intune usa i codici restituiti standard del settore per segnalare un'installazione corretta o non riuscita di un pacchetto di aggiornamenti. I codici restituiti forniti sono:
 
-|Codice restituito|Dettagli|
+|Codice restituito|Details|
 |---------------|------------------|
 |**0**|Operazione completata|
 |**3010**|Operazione completata con riavvio|
@@ -205,14 +205,14 @@ Quando gli aggiornamenti sono pronti per essere installati, un messaggio viene v
 
 Quando si seleziona un aggiornamento dall'elenco, sono disponibili ulteriori comandi che consentono di gestire gli aggiornamenti, come illustrato nella tabella riportata di seguito:
 
-|Attività|Dettagli|
+|Attività|Details|
 |--------|--------------------|
 |**Visualizza proprietà**|Visualizza informazioni dettagliate sull'aggiornamento, incluso il numero di computer a cui è applicabile.|
 |**Modifica**|Solo per gli aggiornamenti non Microsoft. Consente di modificare le proprietà dell'aggiornamento.|
 |**Approva**|Approva l'aggiornamento selezionato e consente di configurare i gruppi a cui sarà distribuito. Per altre informazioni, vedere la procedura **Per approvare gli aggiornamenti** in questo argomento.|
 |**Rifiuta**|Rimuove tutte le approvazioni precedenti per l'aggiornamento e nasconde l'aggiornamento dalle visualizzazioni predefinite. Inoltre, l'opzione rimuove tutti i dati di report per l'aggiornamento.<br /><br />Se si desidera individuare un aggiornamento rifiutato in un secondo tempo, impostare il filtro su **Rifiutato** nella pagina **Tutti gli aggiornamenti**. È possibile quindi approvare questo aggiornamento come obbligatorio.<br /><br />Se un aggiornamento è stato rifiutato perché è scaduto in Microsoft Update, l'aggiornamento non può essere approvato nella console di amministrazione di Intune.<br /><br />Se si elimina un criterio Aggiornamenti distribuito nei computer, le impostazioni del criterio Aggiornamenti vengono reimpostate sullo stato predefinito per il sistema operativo installato nei computer.|
-|**Eliminazione**|Solo per gli aggiornamenti non Microsoft. Elimina l'aggiornamento selezionato.|
-|**Carica**|Avvia la procedura guidata **Caricamento aggiornamento** che consente di caricare gli aggiornamenti non Microsoft da distribuire.|
+|**Elimina**|Solo per gli aggiornamenti non Microsoft. Elimina l'aggiornamento selezionato.|
+|**Caricamento**|Avvia la procedura guidata **Caricamento aggiornamento** che consente di caricare gli aggiornamenti non Microsoft da distribuire.|
 
 ### <a name="to-approve-updates"></a>Per approvare gli aggiornamenti
 

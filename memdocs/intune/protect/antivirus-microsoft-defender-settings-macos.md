@@ -17,10 +17,10 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: samyada
 ms.openlocfilehash: 9a0687b9e3938c93cfaebe0e064fd994077a92af
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086689"
 ---
 # <a name="settings-for-microsoft-defender-atp-for-mac-in-microsoft-intune"></a>Impostazioni per Microsoft Defender ATP per Mac in Microsoft Intune
@@ -55,8 +55,8 @@ ms.locfileid: "80086689"
   Consente di configurare la modalità di condivisione dei dati di diagnostica e di utilizzo con Microsoft.
 
   - **Non configurata** (*impostazione predefinita*): l'impostazione viene ripristinata sul valore predefinito di sistema.
-  - **Richiesto**
-  - **Facoltativo**
+  - **Obbligatorio**
+  - **Facoltativa**
 
 - **Cartelle escluse dall'analisi**  
   Selezionare **Aggiungi** e quindi specificare le cartelle da ignorare durante un'analisi.

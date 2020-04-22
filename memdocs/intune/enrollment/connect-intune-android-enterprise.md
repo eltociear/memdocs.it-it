@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 97024c641be4c61561e762751cfabfab2732e4c1
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80327177"
 ---
 # <a name="connect-your-intune-account-to-your-managed-google-play-account"></a>Connettere l'account di Intune all'account di Google Play gestito
@@ -41,7 +41,7 @@ Per facilitare la configurazione e l'uso delle funzionalità di gestione di Andr
 > [!NOTE]
 > A causa dell'interazione tra i domini Google e Microsoft, questa procedura potrebbe richiedere la modifica delle impostazioni del browser.  Verificare che "portal.azure.com" e "play.google.com" si trovino nella stessa area di sicurezza del browser.
 
-1. Se non è stato ancora fatto, preparare la gestione dei dispositivi mobili [impostando l'autorità di gestione dei dispositivi mobili](../fundamentals/mdm-authority-set.md) come **Microsoft Intune**.
+1. Se non è stato già fatto, preparare la gestione dei dispositivi mobili  [impostando l'autorità di gestione dei dispositivi mobili](../fundamentals/mdm-authority-set.md) come **Microsoft Intune**.
 2. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) e scegliere **Dispositivi** > **Android** > **Registrazione Android** > **Google Play gestito**.  Se si usa un ruolo di amministratore di Intune personalizzato, l'accesso richiede le autorizzazioni di lettura e aggiornamento dell'organizzazione.
    
    ![Schermata di registrazione di Android Enterprise](./media/connect-intune-android-enterprise/android-work-bind.png)

@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e4e9a37e2dbb725a06d304d345fd085dabbc5e14
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80087000"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Configurare i profili cellulare eSIM in Intune - Anteprima pubblica
@@ -37,7 +37,7 @@ In Intune è possibile importare un file contenente i codici di attivazione mono
 
 Per distribuire eSIM ai dispositivi mediante Intune sono necessari gli elementi seguenti:
 
-- **Dispositivi abilitati per eSIM**, ad esempio Surface LTE: Verificare se [il dispositivo supporta eSIM](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data). In alternativa, vedere un elenco di [dispositivi noti con supporto eSIM](#esim-capable-devices) (in questo articolo).
+- **Dispositivi che supportano eSIM**, ad esempio Surface LTE: [vedere se il dispositivo supporta eSIM](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data). In alternativa, vedere un elenco di [dispositivi noti con supporto eSIM](#esim-capable-devices) (in questo articolo).
 - **Windows 10 Fall Creators Update PC** (versione 1709 o successiva) che viene registrato e gestito da MDM in Intune
 - **Codici di attivazione** resi disponibili dall'operatore di telefonia mobile. Questi codici di attivazione monouso vengono aggiunti a Intune e distribuiti ai dispositivi che supportano eSIM. Contattare l'operatore di telefonia mobile per ottenere i codici di attivazione eSIM.
 
@@ -148,9 +148,9 @@ Dopo avere creato il profilo del dispositivo, Intune fornisce i grafici. Questi 
 
     Intune visualizza lo stato di distribuzione e installazione del codice di attivazione destinato ai dispositivi.
 
-    - **Il dispositivo non è sincronizzato**: il dispositivo di destinazione non ha contattato Intune da quando sono stati creati i criteri di distribuzione eSIM
+    - **Il dispositivo non è sincronizzato**: il dispositivo di destinazione non ha contattato Intune da quando è stata creato il criterio di distribuzione eSIM
     - **Attivazione in sospeso**: stato intermedio in cui Intune sta installando il codice di attivazione nel dispositivo
-    - **Attivo**: l'installazione del codice di attivazione è riuscita
+    - **Attiva**: l'installazione del codice di attivazione è riuscita
     - **Attivazione non riuscita**: l'installazione del codice di attivazione non è riuscita. Vedere la Guida alla risoluzione dei problemi.
 
 #### <a name="view-the-detailed-device-status"></a>Visualizzare lo stato dettagliato del dispositivo
@@ -160,12 +160,12 @@ Dopo avere creato il profilo del dispositivo, Intune fornisce i grafici. Questi 
 1. Selezionare **Dispositivi** > **Profili cellulare eSIM** > selezionare una sottoscrizione esistente.
 2. Selezionare **Stato del dispositivo**. Intune visualizza dettagli aggiuntivi sul dispositivo:
 
-    - **Nome dispositivo**: nome del dispositivo di destinazione
+    - **Nome del dispositivo**: nome del dispositivo di destinazione
     - **Utente**: utente del dispositivo registrato
     - **ICCID**: codice univoco reso disponibile dall'operatore di telefonia mobile e incluso nel codice di attivazione installato nel dispositivo
     - **Stato attivazione**: stato di distribuzione e installazione Intune del codice di attivazione nel dispositivo
-    - **Stato della rete cellulare**: stato specificato dall'operatore di telefonia mobile. Per la risoluzione dei problemi, contattare l'operatore di telefonia mobile.
-    - **Ultima sincronizzazione**: data dell'ultima comunicazione tra il dispositivo e Intune
+    - **Stato della rete cellulare**: stato comunicato dall'operatore di telefonia mobile. Per la risoluzione dei problemi, contattare l'operatore di telefonia mobile.
+    - **Ultima archiviazione**: data dell'ultima comunicazione tra il dispositivo e Intune
 
 ### <a name="monitor-esim-profile-details-on-the-actual-device"></a>Monitorare i dettagli del profilo eSIM sul dispositivo
 
@@ -193,8 +193,8 @@ Il profilo di eSIM viene rimosso anche quando il dispositivo viene [disattivato]
 - Assicurarsi che il file con estensione csv sia formattato correttamente. Verificare che il file non includa codici duplicati, più operatori di telefonia mobile o piani dati diversi. Tenere presente che ogni file deve essere univoco per un operatore di telefonia mobile e un piano di rete dati.
 - Creare un gruppo di dispositivi Azure AD statico che includa solo i dispositivi eSIM di destinazione.
 - Se si verifica un problema con lo stato della distribuzione, verificare quanto segue:
-  - **File format not proper** (Formato file non corretto): Vedere **Passaggio 1: Aggiungere i codici di attivazione del cellulare** in questo articolo per informazioni su come formattare il file correttamente.
-  - **Cellular activation failure, contact mobile operator** (Errore di attivazione cellulare, contattare l'operatore): È possibile che il codice di attivazione non sia attivato nella rete. In alternativa, è possibile che il download del profilo e l'attivazione del cellulare non sia riuscita.
+  - **Formato di file non corretto**: vedere **Passaggio 1: Aggiungere i codici di attivazione del cellulare** (in questo articolo) per informazioni su come formattare correttamente il file.
+  - **Cellular activation failure, contact mobile operator** (Errore di attivazione cellulare, contattare l'operatore di telefonia mobile): è possibile che il codice di attivazione non sia abilitato nella rete dell'operatore. In alternativa, è possibile che il download del profilo e l'attivazione del cellulare non sia riuscita.
 
 ## <a name="next-steps"></a>Passaggi successivi
 [Configurare i profili di dispositivo](device-profiles.md)

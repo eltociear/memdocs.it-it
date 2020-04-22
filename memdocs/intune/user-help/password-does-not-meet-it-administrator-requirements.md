@@ -18,10 +18,10 @@ ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 695ef28063d44aeba1bb91b63d79085717822912
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79336511"
 ---
 # <a name="device-password-requirements-for-enrolled-devices"></a>Requisiti delle password del dispositivo per i dispositivi registrati
@@ -41,7 +41,7 @@ Per altre informazioni o per conoscere i requisiti specifici dell'organizzazione
 | Messaggio | Procedura di correzione |
 |-----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Password richiesta. | Impostare una password. L'organizzazione richiede l'immissione di una password per sbloccare il dispositivo. |
-| La password è troppo semplice. |  Assicurarsi che la password non contenga numeri in sequenza o ripetuti, come 1234 o 1111. |
+| La password è troppo breve. |  Assicurarsi che la password non contenga numeri in sequenza o ripetuti, come 1234 o 1111. |
 | La password è troppo breve.| Aggiornare o impostare una password con più caratteri. L'organizzazione richiede una determinata lunghezza per la password. L'impostazione scelta può variare, ma la lunghezza minima che può essere richiesta è di 4 caratteri e quella massima è di 16. |
 | La password deve contenere solo numeri. | Impostare una password che contenga solo numeri.|
 | La password deve contenere solo caratteri alfanumerici. | Impostare una password che contenga una combinazione di numeri e lettere.|
@@ -63,11 +63,11 @@ Per altre informazioni o per conoscere i requisiti specifici dell'organizzazione
 | Il passcode è stato usato troppo di recente.| Scegliere un passcode non usato in precedenza. L'organizzazione richiede un periodo di tempo specifico prima di riutilizzare un passcode. |
 |È richiesta l'autenticazione con Touch ID o Face ID. | Configurare Touch ID o Face ID. L'organizzazione richiede di eseguire l'autenticazione con uno di questi metodi prima di usare il riempimento automatico per le password o le informazioni sulla carta di credito. | 
 
-## <a name="macos-password-requirements"></a>Requisiti per le password in macOS
+## <a name="macos-password-requirements"></a>Requisiti per le password macOS
 | Messaggio | Procedura di correzione |
 |-----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Password richiesta. | Impostare una password. L'organizzazione richiede l'immissione di una password per sbloccare il dispositivo. |
-| La password è troppo semplice.|  Assicurarsi che la password non contenga numeri in sequenza o ripetuti, come 1234 o 1111. |
+| La password è troppo breve.|  Assicurarsi che la password non contenga numeri in sequenza o ripetuti, come 1234 o 1111. |
 | La password è troppo breve. | Aggiornare o impostare una password con più caratteri. L'organizzazione richiede una determinata lunghezza per la password.|
 | La password deve contenere solo numeri. | Impostare una password che contenga solo numeri.|
 | La password deve contenere solo caratteri alfanumerici. | Impostare una password che contenga una combinazione di numeri e lettere.|
@@ -79,7 +79,7 @@ Per altre informazioni o per conoscere i requisiti specifici dell'organizzazione
 | Messaggio | Procedura di correzione |
 |-----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Password richiesta. | Impostare una password o un PIN. L'organizzazione richiede l'immissione di una password per sbloccare il dispositivo. |
-| La password è troppo semplice. |  Assicurarsi che la password o il PIN non contenga numeri in sequenza o ripetuti, come 1234 o 1111. |
+| La password è troppo breve. |  Assicurarsi che la password o il PIN non contenga numeri in sequenza o ripetuti, come 1234 o 1111. |
 | La password è troppo breve. | Aggiornare o impostare una password con più caratteri. L'organizzazione richiede una determinata lunghezza per la password.|
 | La password deve contenere numeri. | Impostare una password o un PIN che contenga solo numeri.|
 | La password deve contenere lettere. | Impostare una password che contenga lettere dall'alfabeto.|

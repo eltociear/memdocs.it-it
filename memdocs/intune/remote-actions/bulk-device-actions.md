@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 5f33198e71fd4250ee93207e571bc535abd1c95f
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325379"
 ---
 # <a name="use-bulk-device-actions"></a>Usare le azioni in blocco del dispositivo
@@ -29,10 +29,10 @@ ms.locfileid: "80325379"
 È possibile usare le azioni in blocco del dispositivo per le azioni remote seguenti:
 - [Reimpostazione di Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)
 - [Notifiche personalizzate](custom-notifications.md#send-a-custom-notification-to-a-single-device)
-- [Eliminazione](devices-wipe.md#delete-devices-from-the-intune-portal)
-- [Ridenominazione](device-rename.md)
+- [Elimina](devices-wipe.md#delete-devices-from-the-intune-portal)
+- [Rinomina](device-rename.md)
 - [Riavvia](device-restart.md)
-- [Sincronizzazione](device-sync.md)
+- [Sincronizza](device-sync.md)
 - [Cancellazione](devices-wipe.md#wipe)
 
 ## <a name="use-a-bulk-device-action"></a>Usare un'azione in blocco del dispositivo

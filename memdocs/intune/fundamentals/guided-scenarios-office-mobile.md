@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7aabc09e276c723e9aeaed4ec8eb3dd4c0332b4e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79362511"
 ---
 # <a name="guided-scenario---secure-microsoft-office-mobile-apps"></a>Scenario guidato - Proteggi le app di Office per dispositivi mobili
@@ -101,7 +101,7 @@ Per iniziare, questo scenario guidato consente di pre-selezionare le app per dis
 
 Questo scenario guidato configurerà anche queste app per l'apertura dei collegamenti Web in Microsoft Edge in modo da garantire che i siti di lavoro vengano aperti in un browser protetto.
 
-Modificare l'elenco delle app gestite da criteri che si vuole proteggere. Aggiungere o rimuovere app da questo elenco.
+Modificare l'elenco delle app gestite da criteri da proteggere. Aggiungere o rimuovere app da questo elenco.
 
 Dopo aver selezionato le app fare clic su **Avanti**.
 
@@ -115,12 +115,12 @@ In questo passaggio è necessario configurare i requisiti per l'accesso e la con
 | Selezionare la lunghezza minima del PIN | specificare il numero minimo di cifre in una sequenza di PIN. | 6 |
 | Controlla di nuovo i requisiti di accesso dopo (minuti di inattività) | Se l'app gestita da criteri è inattiva per un periodo superiore al numero di minuti di inattività specificato, l'app richiederà che i requisiti di accesso (ad esempio PIN e impostazioni di avvio condizionale) vengano ricontrollati dopo l'avvio dell'app. | 30 |
 | Stampa dei dati dell'organizzazione | Se viene impostato il blocco, l'app non può stampare i dati protetti. | Blocca |
-| Open policy-managed app links in unmanaged browsers (Apri i collegamenti delle app gestite da criteri nei browser non gestiti) | Se viene impostato il blocco, i collegamenti delle app gestite da criteri devono essere aperti in un browser gestito. | Blocca |
+| Apri i collegamenti alle app gestite da criteri in browser non gestiti | Se viene impostato il blocco, i collegamenti delle app gestite da criteri devono essere aperti in un browser gestito. | Blocca |
 | Copia i dati in app non gestite | Se viene impostato il blocco, i dati gestiti rimarranno nelle app gestite. | Consenti |
 
 ## <a name="step-5---assignments"></a>Passaggio 5 - Assegnazioni
 
-In questo passaggio è possibile scegliere i gruppi di utenti che si vuole includere per assicurarsi che abbiano accesso ai dati aziendali. La protezione delle app viene assegnata agli utenti e non ai dispositivi, quindi i dati aziendali saranno sicuri indipendentemente dal dispositivo usato e dal relativo stato di registrazione.
+In questo passaggio è possibile scegliere i gruppi di utenti da includere per assicurarsi che abbiano accesso ai dati aziendali. La protezione delle app viene assegnata agli utenti e non ai dispositivi, quindi i dati aziendali saranno sicuri indipendentemente dal dispositivo usato e dal relativo stato di registrazione.
 
 Gli utenti a cui non sono assegnati criteri di protezione delle app e impostazioni di accesso condizionale potranno salvare i dati dal profilo aziendale nelle app personali e nello spazio di archiviazione locale non gestito nei dispositivi mobili. Potrebbero anche connettersi a servizi dati aziendali, come Microsoft Exchange, con le app personali.
 

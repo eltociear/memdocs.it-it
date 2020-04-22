@@ -16,10 +16,10 @@ ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 285f323f55d41edab5ccd450deb0244b6fbda874
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79526445"
 ---
 # <a name="sophos-mobile-threat-defense-connector-with-intune"></a>Connettore Sophos Mobile Threat Defense con Intune
@@ -67,7 +67,7 @@ Se nei dispositivi vengono rilevate app dannose, come malware, è possibile impe
 *Accesso concesso dopo la correzione*:  
 ![Immagine concettuale dell'accesso concesso dopo la correzione](./media/sophos-mtd-connector/sophos-malicious-apps-unblocked.png)
 
-### <a name="control-access-based-on-threat-to-network"></a>Controllare l'accesso in base alle minacce per la rete
+### <a name="control-access-based-on-threat-to-network"></a>Controllare l'accesso in base alle minacce alla rete
 
 Rilevare le minacce per la rete, ad esempio attacchi Man-in-the-middle, e proteggere l'accesso alle reti Wi-Fi in base al livello di rischio del dispositivo.  
 

@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 4ff0e650a3eccf057158d3faf28875e42ed90a4d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325035"
 ---
 # <a name="rename-a-device-in-intune"></a>Rinominare un dispositivo in Intune
@@ -46,7 +46,7 @@ Questa funzionalità non supporta attualmente la ridenominazione di dispositivi 
 Quando si rinomina un dispositivo Windows, il nuovo nome deve rispettare le regole seguenti:
 - Massimo 15 caratteri (deve essere minore o uguale a 63 byte, escluso il valore NULL finale)
 - Non è Null o una stringa vuota
-- Caratteri ASCII consentiti: lettere (a-z, A-Z), numeri (0-9) e segni meno
+- Caratteri ASCII consentiti: lettere (a-z, A-Z), numeri (0-9) e trattini
 - Caratteri Unicode consentiti: >= 0x80, devono essere caratteri UTF8 validi, devono essere mappabili a IDN (ovvero RtlIdnToNameprepUnicode ha esito positivo; vedere RFC 3492)
 - I nomi non possono essere composti esclusivamente da numeri
 - Non sono consentiti spazi nel nome

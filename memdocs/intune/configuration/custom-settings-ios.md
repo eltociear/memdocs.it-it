@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8ac931bf20140865e1185c4f401de0141273cdb3
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80359409"
 ---
 # <a name="use-custom-settings-for-ios-and-ipados-devices-in-microsoft-intune"></a>Usare impostazioni personalizzate per i dispositivi iOS e iPadOS in Microsoft Intune
@@ -56,7 +56,7 @@ Questo articolo offre indicazioni sull'uso di Apple Configurator e Apple Profile
 
 ## <a name="custom-configuration-profile-settings"></a>Impostazioni del profilo di configurazione personalizzato
 
-- **Nome del profilo di configurazione personalizzato**: Immettere un nome per il criterio. Questo nome viene visualizzato nel dispositivo e nello stato di Intune.
+- **Nome del profilo di configurazione personalizzato**: immettere un nome per i criteri. Questo nome viene visualizzato nel dispositivo e nello stato di Intune.
 - **File del profilo di configurazione**: passare al profilo di configurazione creato usando Apple Configurator o Apple Profile Manager. Le dimensioni massime del file sono pari a `1000000` di byte (poco meno di 1 MB). Il file importato è visualizzato nell'area **Contenuti del file**.
 
   È anche possibile aggiungere token di dispositivo ai file di configurazione personalizzati. I token del dispositivo vengono usati per aggiungere informazioni specifiche del dispositivo. Per visualizzare, ad esempio, il numero di serie, immettere `{{serialnumber}}`. Nel dispositivo il testo è simile a `123456789ABC`, che è univoco per ogni dispositivo. Quando si immettono le variabili, assicurarsi di usare le parentesi graffe `{{ }}`. I [token di configurazione delle app](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) includono un elenco delle variabili che è possibile usare. È anche possibile usare `deviceid` o qualsiasi altro valore specifico del dispositivo.

@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 607e2303cbec9ec7fc069db602d51684b71e6575
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80083837"
 ---
 # <a name="troubleshoot-and-see-potential-issues-on-android-zebra-devices-in-microsoft-intune"></a>Risolvere e individuare i potenziali problemi relativi ai dispositivi Android Zebra in Microsoft Intune
@@ -61,7 +61,7 @@ Per ottenere i log dopo che il profilo è già stato distribuito con Intune, gli
 
 ## <a name="read-the-logs"></a>Leggere i log
 
-Quando si esaminano i log, è presente un errore ogni volta che compare il tag `<characteristic-error>`. I dettagli dell'errore vengono scritti nella proprietà `desc` del tag `<parm-error>`.
+Quando si esaminano i log, è presente un errore ogni volta che compare il tag `<characteristic-error>`. I dettagli dell'errore vengono scritti nella proprietà `<parm-error>` del tag `desc`.
 
 ## <a name="error-types"></a>Tipi di errore
 

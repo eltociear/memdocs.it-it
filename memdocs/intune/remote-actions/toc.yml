@@ -59,7 +59,7 @@
           href: device-inventory.md
     - name: Azioni in blocco del dispositivo
       href: bulk-device-actions.md
-    - name: Risoluzione dei problemi
+    - name: Troubleshooting
       items:
         - name: Risolvere i problemi delle azioni del dispositivo
           href: troubleshoot-device-actions.md

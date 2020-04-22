@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7aa18316ad1b4473ac70399e1370bfececadbfaf
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79357441"
 ---
 # <a name="develop-a-rollout-plan"></a>Elaborare un piano di implementazione
@@ -37,7 +37,7 @@ In secondo luogo, determinare l'intervallo di tempo per ogni gruppo di destinazi
 * Disponibilità del gruppo al cambiamento
 * Numero di utenti e dispositivi
 * Tipi di piattaforme per i dispositivi
-* Requisiti
+* requisiti
 * Posizione geografica
 * Rischio aziendale
 
@@ -58,7 +58,7 @@ Dopo il progetto pilota, è tutto pronto per avviare un'implementazione completa
 
 - **Area geografica** <br/>Questo approccio prevede la distribuzione per tutti gli utenti in un'area geografica specifica (un continente, un paese o un'area geografica o un edificio della stessa società). Questo tipo di distribuzione graduale consente di concentrarsi sulla specifica posizione degli utenti. In questo modo, è possibile adottare un approccio basato su un [trattamento esclusivo](#user-assisted-enrollment), perché si riduce il numero di posizioni in cui eseguire la distribuzione di Intune contemporaneamente. Poiché è possibile che siano presenti diversi reparti o casi d'uso nella stessa posizione, può essere necessario distribuire diversi casi d'uso nello stesso momento.
 
-- **Platform** <br/>Questo tipo di distribuzione consiste nella distribuzione di piattaforme simili nello stesso momento. Un esempio potrebbe essere: tutti i dispositivi iOS/iPadOS durante il primo mese, seguiti dai dispositivi Android e quindi dai dispositivi Windows. Questo tipo di distribuzione graduale consente di semplificare il supporto help desk, perché sarebbe sufficiente supportare un'unica piattaforma alla volta.
+- **Piattaforma** <br/>Questo tipo di distribuzione consiste nella distribuzione di piattaforme simili nello stesso momento. Un esempio potrebbe essere: tutti i dispositivi iOS/iPadOS durante il primo mese, seguiti dai dispositivi Android e quindi dai dispositivi Windows. Questo tipo di distribuzione graduale consente di semplificare il supporto help desk, perché sarebbe sufficiente supportare un'unica piattaforma alla volta.
 
 Di seguito è riportato un esempio di un piano di implementazione di Intune che include i gruppi di destinazione e le sequenze temporali:
 

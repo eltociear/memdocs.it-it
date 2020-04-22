@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b2e2d5fb2f698d7e0b544dbdbd4ab05f2b94b7ea
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325449"
 ---
 # <a name="quickstart-create-a-password-compliance-policy-for-android-devices"></a>Guida introduttiva: Creare un criterio di conformità della password per i dispositivi Android
@@ -44,7 +44,7 @@ Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](http
 
 Creare questi criteri per richiedere agli utenti di immettere una password di una lunghezza specifica prima di ottenere l'accesso alle informazioni nei dispositivi Android.
 
-1. In Intune selezionare **Dispositivi** > **Criteri di conformità** > **Crea criterio**.
+1. In Intune, selezionare **Dispositivi** > **Criteri di conformità** > **Crea criterio**.
 
 2. Aggiungere **Conformità Android** come **Nome**. Aggiungere anche una **Descrizione**.
 
@@ -74,7 +74,7 @@ Quando non è più necessario, eliminare il criterio. A tale scopo, selezionare 
 
 In questa guida introduttiva è stato usato Intune per creare criteri di conformità per i dispositivi Android della forza lavoro per richiedere una password di almeno sei caratteri. Per altre informazioni sulla creazione dei criteri di conformità, vedere [Introduzione ai criteri di conformità dei dispositivi in Intune](device-compliance-get-started.md).
 
-Per seguire questa serie di guide introduttive di Intune, continuare con la guida introduttiva che segue.
+Per seguire questa serie di guide introduttive di Intune, passare alla guida introduttiva che segue.
 
 > [!div class="nextstepaction"]
-> [Avvio rapido: Inviare notifiche a dispositivi non conformi](quickstart-send-notification.md)
+> [Guida introduttiva: Inviare notifiche a dispositivi non conformi](quickstart-send-notification.md)

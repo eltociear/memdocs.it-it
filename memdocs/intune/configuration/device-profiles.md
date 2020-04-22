@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 386e59fe3a7156a8bb74ed39a1b2fcad6ad91dad
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80359312"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Applicare funzionalità e impostazioni nei dispositivi usando i profili dei dispositivi in Microsoft Intune
@@ -60,7 +60,7 @@ Questa funzionalità supporta:
 - iOS/iPadOS
 - macOS
 - Windows Phone 8.1
-- Windows 8.1
+- Windows 8,1
 - Windows 10 e versioni successive
 
 ## <a name="custom-profile"></a>Profilo personalizzato
@@ -158,7 +158,7 @@ Questa funzionalità supporta:
 - Windows Phone 8.1
 - Windows 10 e versioni successive
 
-## <a name="endpoint-protection"></a>Protezione degli endpoint
+## <a name="endpoint-protection"></a>Endpoint Protection
 
 [Endpoint Protection](../protect/endpoint-protection-configure.md) configura le impostazioni di BitLocker e Microsoft Defender per i dispositivi Windows 10. Configurare quindi il firewall, il gateway e altre risorse nei dispositivi macOS.
 
@@ -258,7 +258,7 @@ Questa funzionalità supporta:
 
 - iOS/iPadOS
 
-## <a name="vpn"></a>Connessione
+## <a name="vpn"></a>VPN
 
 [Impostazioni VPN](vpn-settings-configure.md) assegna le impostazioni VPN agli utenti e ai dispositivi dell'organizzazione in modo che possano connettersi in modo facile e sicuro alla rete. 
 
@@ -271,7 +271,7 @@ Questa funzionalità supporta:
 - iOS/iPadOS
 - macOS
 - Windows Phone 8.1
-- Windows 8.1
+- Windows 8,1
 - Windows 10 e versioni successive
 
 ## <a name="wi-fi"></a>Wi-Fi

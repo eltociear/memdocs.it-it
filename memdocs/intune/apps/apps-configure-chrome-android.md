@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 89d9fce6579b0fdf89299e342969f647c457cc84
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80324835"
 ---
 # <a name="configure-google-chrome-for-android-devices-using-intune"></a>Configurare Google Chrome per dispositivi Android con Intune 
@@ -100,7 +100,7 @@ Avviare Google Chrome. Si vedrà che le impostazioni sono state applicate.
    Scheda in incognito:<br>
    <img alt="Incognito tab" src="./media/apps-configure-chrome-android/incognito-tab.png" width="350">
 
-## <a name="troubleshooting"></a>Risoluzione dei problemi
+## <a name="troubleshooting"></a>Troubleshooting
 
 1. Monitorare nel portale di Intune lo stato della distribuzione dei criteri.
 

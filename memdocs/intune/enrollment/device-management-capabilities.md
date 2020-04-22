@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 2dea6d5af4356526c2df1b23d47fb468c6213e0c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79359456"
 ---
 # <a name="enrolled-device-management-capabilities-of-microsoft-intune"></a>Funzionalità di gestione dei dispositivi registrati di Microsoft Intune
@@ -39,7 +39,7 @@ Gli utenti ottengono l'accesso al portale aziendale da cui possono installare le
 
 ## <a name="device-security-and-configuration"></a>Configurazione e sicurezza dei dispositivi
 
-|Funzionalità|Dettagli|Altre informazioni|
+|Funzionalità|Details|Altre informazioni|
 |--------------|-----------|--------------------|
 |Criteri di configurazione<br><br>Criteri personalizzati| Consentono di gestire molte impostazioni e funzionalità dei dispositivi mobili dell'organizzazione. Ad esempio è possibile impostare una password obbligatoria, limitare il numero di tentativi non riusciti, limitare l'intervallo di tempo prima del blocco dello schermo, impostare la scadenza della password e impedire che vengano usate password già usate in precedenza. È anche possibile controllare l'uso delle funzionalità hardware e software, ad esempio la fotocamera del dispositivo o il Web browser.<br><br>Usare criteri personalizzati quando i criteri di configurazione non includono l'impostazione necessaria. Per i dispositivi iOS/iPadOS è possibile importare le impostazioni esportate dallo strumento Apple Configurator. Per altri dispositivi è possibile usare le impostazioni OMA-URI (Open Mobile Alliance Uniform Resource Identifier) per configurare le impostazioni e le funzionalità nel dispositivo.|[Gestire impostazioni e funzionalità nei dispositivi con i criteri di Microsoft Intune](../protect/device-compliance-get-started.md)|
 |Cancellazione remota, blocco remoto e reimpostazione passcode|Cancella i dati riservati quando un dispositivo viene smarrito o rubato. Ad esempio, è possibile bloccare in remoto il dispositivo, ripristinarne le impostazioni predefinite o cancellare solo i dati aziendali.<br><br>È possibile reimpostare i passcode se gli utenti perdono l'accesso al dispositivo, bloccare i dispositivi persi o rubati o persino cancellarne i dati.|Protezione dei dispositivi con [blocco remoto](../remote-actions/device-remote-lock.md) e [reimpostazione passcode](../remote-actions/device-passcode-reset.md)|
@@ -48,7 +48,7 @@ Gli utenti ottengono l'accesso al portale aziendale da cui possono installare le
 
 ## <a name="app-management"></a>Gestione delle app
 
-|Funzionalità|Dettagli|Altre informazioni|
+|Funzionalità|Details|Altre informazioni|
 |--------------|-----------|--------------------|
 |Gestione e distribuzione delle app|Offre una serie di strumenti che consentono di gestire le app mobili in tutte le fasi del ciclo di vita, inclusa la distribuzione di app da file di installazione e App Store, il monitoraggio dettagliato dello stato delle app e la rimozione delle app.|[Distribuire app in Microsoft Intune](../apps/apps-deploy.md)|
 |Applicazioni conformi e non conformi|Consente di specificare elenchi di app conformi (che gli utenti sono autorizzati a installare) e di app non conformi (che gli utenti non sono autorizzati a installare).|[Impostazioni dei criteri di iOS in Microsoft Intune](../configuration/device-restrictions-ios.md)|
@@ -61,12 +61,12 @@ Gli utenti ottengono l'accesso al portale aziendale da cui possono installare le
 
 ## <a name="company-resource-access"></a>Accesso alle risorse aziendali
 
-|Funzionalità|Dettagli|Altre informazioni|
+|Funzionalità|Details|Altre informazioni|
 |--------------|-----------|--------------------|
 |Profili certificato|Crea e distribuisce profili certificato attendibili e certificati SCEP (Simple Certificate Enrollment Protocol) che possono essere usati per proteggere e autenticare profili Wi-Fi, VPN e di posta elettronica.|[Proteggere l'accesso alle risorse con i profili certificato in Microsoft Intune](../protect/certificates-configure.md)|
 |Profili Wi-Fi|Distribuisce le impostazioni di rete wireless agli utenti. La distribuzione di queste impostazioni consente di ridurre al minimo le operazioni che l'utente deve eseguire per connettersi alla rete aziendale.|[Connessioni Wi-Fi in Microsoft Intune](../configuration/wi-fi-settings-configure.md)|
 |Profili di posta elettronica|Consentono di creare e distribuire le impostazioni di posta elettronica ai dispositivi in modo che gli utenti possano accedere alla posta elettronica aziendale dai dispositivi personali senza alcuna configurazione.|[Configurare l'accesso alla posta elettronica aziendale usando profili di posta elettronica con Microsoft Intune](../configuration/email-settings-configure.md)|
-|Profili VPN|Distribuisce impostazioni VPN agli utenti e ai dispositivi dell'organizzazione. La distribuzione di queste impostazioni consente di ridurre al minimo le operazioni che l'utente deve eseguire per connettersi alle risorse nella rete aziendale.|[Connessioni VPN in Microsoft Intune](../configuration/device-profiles.md#vpn)|
+|profili VPN|Distribuisce impostazioni VPN agli utenti e ai dispositivi dell'organizzazione. La distribuzione di queste impostazioni consente di ridurre al minimo le operazioni che l'utente deve eseguire per connettersi alle risorse nella rete aziendale.|[Connessioni VPN in Microsoft Intune](../configuration/device-profiles.md#vpn)|
 |Criteri di accesso condizionale|Gestisce l'accesso a SharePoint Online e alla posta elettronica di Microsoft Exchange da dispositivi non gestiti da Intune.|[Limitare l'accesso alla posta elettronica e a SharePoint con Microsoft Intune](../protect/app-based-conditional-access-intune.md)|
 
 ## <a name="next-steps"></a>Passaggi successivi

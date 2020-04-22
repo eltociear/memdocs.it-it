@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b29069d4543d4abb4bc403c446441e181d963bdd
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79345559"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Binding Xamarin per Microsoft Intune App SDK
@@ -32,7 +32,7 @@ ms.locfileid: "79345559"
 ## <a name="overview"></a>Panoramica
 I [binding Xamarin per Intune App SDK](https://github.com/msintuneappsdk/intune-app-sdk-xamarin) consentono l'uso dei [criteri di protezione delle app di Intune](../apps/app-protection-policy.md) nelle app per iOS e Android compilate con Xamarin. I binding consentono agli sviluppatori di integrare facilmente le funzionalità di protezione delle app di Intune in un'app basata su Xamarin.
 
-I binding Xamarin per Microsoft Intune App SDK consentono di incorporare i criteri di protezione delle app di Intune, anche noti come criteri APP o MAM, nelle app sviluppate con Xamarin. Un'applicazione abilitata per la gestione delle applicazioni mobili è un'applicazione integrata con Intune App SDK. Gli amministratori IT possono distribuire i criteri di protezione all'app per dispositivi mobili quando Intune gestisce attivamente l'app.
+I binding Xamarin per Microsoft Intune App SDK consentono di incorporare i criteri di protezione delle app di Intune, anche noti come criteri APP o MAM, nelle app sviluppate con Xamarin. Un'applicazione abilitata per MAM è integrata con Intune App SDK. Gli amministratori IT possono distribuire i criteri di protezione all'app per dispositivi mobili quando Intune gestisce attivamente l'app.
 
 ## <a name="whats-supported"></a>Elementi supportati
 
@@ -54,7 +54,7 @@ Le app Xamarin compilate con i binding Xamarin per Intune App SDK possono ora ri
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Leggere le [condizioni di licenza](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20Xamarin%20Component.pdf). Stampare e conservare una copia delle condizioni di licenza. Scaricando e usando i binding Xamarin per Intune App SDK, l'utente accetta tali condizioni di licenza. Se non vengono accettate, non usare il software.
+Leggere le [condizioni di licenza](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20Xamarin%20Component.pdf). Stampare e conservare una copia delle condizioni di licenza. Scaricando e usando i binding Xamarin per Intune App SDK, l'utente accetta tali condizioni di licenza. Qualora l'utente non le accetti, non potrà usare il software.
 
 Intune SDK si basa su [Active Directory Authentication Library (ADAL)](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/) per gli scenari di [autenticazione](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/) e avvio condizionale, che richiedono la configurazione delle app con [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/). 
 
@@ -219,7 +219,7 @@ In caso di mancata sostituzione, è possibile che si verifichino gli errori di c
 > [!NOTE]
 > Il remapper riscrive una dipendenza usata da Visual Studio per il completamento automatico di IntelliSense. Potrebbe essere poi necessario ricaricare e ricompilare il progetto quando il remapper viene aggiunto per IntelliSense affinché le modifiche siano riconosciute correttamente.
 
-#### <a name="troubleshooting"></a>Risoluzione dei problemi
+#### <a name="troubleshooting"></a>Troubleshooting
 * Se viene visualizzata una schermata bianca vuota nell'applicazione all'avvio, può essere necessario forzare l'esecuzione delle chiamate di navigazione sul thread principale.
 * I binding Xamarin di Intune SDK non supportano le app che usano un framework multipiattaforma, ad esempio MvvmCross, a causa di conflitti tra le classi di MvvmCross e MAM di Intune. Anche se alcuni clienti sono riusciti a completare l'integrazione dopo aver spostato le app nel classico framework Xamarin.Forms, non sono disponibili linee guida esplicite o plug-in per gli sviluppatori di app che usano MvvmCross.
 

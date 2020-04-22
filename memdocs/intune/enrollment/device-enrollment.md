@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e3636314ee21823b76a09120f92aca45965437d3
-ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/07/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80808186"
 ---
 # <a name="what-is-device-enrollment"></a>Che cos'è la registrazione dei dispositivi?
@@ -38,46 +38,46 @@ Per impostazione predefinita, i dispositivi di tutte le piattaforme sono autoriz
 | **Metodo** | **Ripristino necessario** | [**Affinità utente**](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) | **Bloccato** | **Informazioni dettagliate** |
 |:---:|:---:|:---:|:---:|:---:|
 | | I dispositivi vengono cancellati durante la registrazione. | Associa ogni dispositivo a un utente.| In caso affermativo, gli utenti non possono annullare la registrazione di dispositivi. | |
-|**[BYOD](#bring-your-own-device)** | No| Sì | No | [Altre informazioni](apple-mdm-push-certificate-get.md)|
+|**[BYOD](#bring-your-own-device)** | No| sì | No | [Altre informazioni](apple-mdm-push-certificate-get.md)|
 |**[DEM](#device-enrollment-manager)**| No |No |No | [Altre informazioni](device-enrollment-manager-enroll.md)|
-|**[Registrazione automatica del dispositivo](#apple-automated-device-enrollment)**| Sì | Facoltativo | Facoltativo|[Altre informazioni](device-enrollment-program-enroll-ios.md)|
-|**[USB-SA](#usb-sa)**| Sì | Facoltativo | No| [Altre informazioni](apple-configurator-enroll-ios.md)|
+|**[Registrazione automatica del dispositivo](#apple-automated-device-enrollment)**| sì | Facoltativo | Facoltativo|[Altre informazioni](device-enrollment-program-enroll-ios.md)|
+|**[USB-SA](#usb-sa)**| sì | Facoltativo | No| [Altre informazioni](apple-configurator-enroll-ios.md)|
 |**[USB-Direct](#usb-direct)**| No | No | No|[Altre informazioni](apple-configurator-enroll-ios.md)|
 
 ## <a name="macos-enrollment-methods"></a>Metodi di registrazione di macOS
-| **Metodo** |  **Ripristino necessario** |  **Affinità utente** | **Locked** | **Informazioni dettagliate**|
+| **Metodo** |  **Ripristino necessario** |  **Affinità utente** | **Bloccato** | **Informazioni dettagliate**|
 |:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#bring-your-own-device)** | No| Sì | No | [Altre informazioni](macos-enroll.md)|
+|**[BYOD](#bring-your-own-device)** | No| sì | No | [Altre informazioni](macos-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| No |No |No  | [Altre informazioni](device-enrollment-manager-enroll.md)|
-|**[Registrazione automatica del dispositivo](#apple-automated-device-enrollment)**| Sì | Facoltativo | Facoltativo|[Altre informazioni](device-enrollment-program-enroll-macos.md)|
+|**[Registrazione automatica del dispositivo](#apple-automated-device-enrollment)**| sì | Facoltativo | Facoltativo|[Altre informazioni](device-enrollment-program-enroll-macos.md)|
 
 ## <a name="windows-enrollment-methods"></a>Metodi di registrazione per Windows
 
-| **Metodo** | **Ripristino necessario** | **Affinità utente** | **Locked** | **Informazioni dettagliate**|
+| **Metodo** | **Ripristino necessario** | **Affinità utente** | **Bloccato** | **Informazioni dettagliate**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#bring-your-own-device)** | No | Sì | No | [Altre informazioni](windows-enroll.md)|
+|**[BYOD](#bring-your-own-device)** | No | sì | No | [Altre informazioni](windows-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| No |No |No |[Altre informazioni](device-enrollment-manager-enroll.md)|
-|**Registrazione automatica** | No |Sì |No | [Altre informazioni](windows-enroll.md#enable-windows-10-automatic-enrollment)|
-|**Autopilot** |Sì |Sì |No | [Altre informazioni](enrollment-autopilot.md)
+|**Registrazione automatica** | No |sì |No | [Altre informazioni](windows-enroll.md#enable-windows-10-automatic-enrollment)|
+|**Autopilot** |sì |sì |No | [Altre informazioni](enrollment-autopilot.md)
 |**Registrazione in blocco** |No |No |No | [Altre informazioni](windows-bulk-enroll.md) |
-|**Co-gestione** |No |Sì |No | [Altre informazioni](https://docs.microsoft.com/configmgr/core/clients/manage/co-management-overview)
-|**Oggetto Criteri di gruppo** |No |Sì |No | [Altre informazioni](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
+|**Co-gestione** |No |sì |No | [Altre informazioni](https://docs.microsoft.com/configmgr/core/clients/manage/co-management-overview)
+|**Oggetto Criteri di gruppo** |No |sì |No | [Altre informazioni](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
 
 ## <a name="android-enrollment-methods"></a>Metodi di registrazione per Android
 
-| **Personale** | **Metodi di registrazione** | **Ripristino necessario** | **Affinità utente** | **Locked** | **Informazioni dettagliate**|
+| **Personale** | **Metodi di registrazione** | **Ripristino necessario** | **Affinità utente** | **Bloccato** | **Informazioni dettagliate**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**Android Device Admin**|**Avviato dall'utente tramite portale aziendale** | No | Sì | No | [Altre informazioni](https://docs.microsoft.com/mem/intune/user-help/enroll-device-android-company-portal)|
-|**Profilo aziendale di Android Enterprise**|**Avviato dall'utente tramite portale aziendale**| No | Sì | No | [Altre informazioni](android-work-profile-enroll.md)|
+|**Android Device Admin**|**Avviato dall'utente tramite portale aziendale** | No | sì | No | [Altre informazioni](https://docs.microsoft.com/mem/intune/user-help/enroll-device-android-company-portal)|
+|**Profilo aziendale di Android Enterprise**|**Avviato dall'utente tramite portale aziendale**| No | sì | No | [Altre informazioni](android-work-profile-enroll.md)|
 
 
-| **Aziendale** | **Metodi di registrazione** | **Ripristino necessario** | **Affinità utente** | **Locked** | **Informazioni dettagliate**|
+| **Aziendale** | **Metodi di registrazione** | **Ripristino necessario** | **Affinità utente** | **Bloccato** | **Informazioni dettagliate**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |**Android Device Admin**|**[DEM](#device-enrollment-manager) avviato tramite portale aziendale**| No | No | No |[Altre informazioni](device-enrollment-manager-enroll.md)|
-|**Android Device Admin**|**(IMEI o SN predichiarato) Avviato dall'utente tramite portale aziendale**| No | Sì | No | [Altre informazioni](corporate-identifiers-add.md)|
+|**Android Device Admin**|**(IMEI o SN predichiarato) Avviato dall'utente tramite portale aziendale**| No | sì | No | [Altre informazioni](corporate-identifiers-add.md)|
 |**Android Device Admin con Zebra Mobility Extensions**|**Avviato dall'utente o da [DEM](#device-enrollment-manager) tramite portale aziendale**| No | Sì, se avviato dall'utente, No se avviato da [DEM](#device-enrollment-manager) | No | [Altre informazioni](../configuration/android-zebra-mx-overview.md)|
-|**Android Enterprise dedicato**|**NFC, token, codice a matrice, Zero Touch**| Sì | No | Configurabile tramite criteri | [Altre informazioni](android-kiosk-enroll.md)|
-|**Android Enterprise completamente gestito**|**NFC, token, codice a matrice, Zero Touch**| Sì | Sì; No se [DEM](device-enrollment.md#device-enrollment-manager) è inizializzato | Configurabile tramite criteri | [Altre informazioni](android-dedicated-devices-fully-managed-enroll.md)|
+|**Android Enterprise dedicato**|**NFC, token, codice a matrice, Zero Touch**| sì | No | Configurabile tramite criteri | [Altre informazioni](android-kiosk-enroll.md)|
+|**Android Enterprise completamente gestito**|**NFC, token, codice a matrice, Zero Touch**| sì | Sì; No se [DEM](device-enrollment.md#device-enrollment-manager) è inizializzato | Configurabile tramite criteri | [Altre informazioni](android-dedicated-devices-fully-managed-enroll.md)|
 
 
 ## <a name="bring-your-own-device"></a>Bring Your Own Device (BYOD)

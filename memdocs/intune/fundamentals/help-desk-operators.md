@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 07aceda512163513632d124d3e17d1041069b229
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80085805"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Usare il portale per la risoluzione dei problemi per offrire assistenza agli utenti aziendali
@@ -61,7 +61,7 @@ Nel riquadro Risoluzione dei problemi scegliere **Selezionare l'utente** per vis
 
 ![Dashboard per la risoluzione dei problemi, con aree numerate descritte dalla tabella seguente](./media/help-desk-operators/troubleshooting-dash.png)
 
-| Area | Name | Descrizione |
+| Area | Nome | Descrizione |
 | ---  | ---  | ---         |
 | 1.   | Stato dell'account  | Mostra lo stato del tenant di Intune corrente come **Attivo** o **Inattivo**.       |
 | 2.   | Selezione utente  | Nome dell'utente attualmente selezionato. Fare clic su **Cambia utente** per scegliere un nuovo utente.       |
@@ -252,7 +252,7 @@ Nella tabella Errori di registrazione sono elencati i tentativi di registrazione
 |-------------|----------|
 | Avvio della registrazione | L'ora in cui l'utente ha iniziato la registrazione. |
 | Sistema operativo | Sistema operativo del dispositivo. |
-| Versione sistema operativo | Versione del sistema operativo del dispositivo. |
+| Versione del sistema operativo | Versione del sistema operativo del dispositivo. |
 | Errore | Motivo dell'errore. |
 
 ### <a name="failure-details"></a>Dettagli errore
@@ -267,7 +267,7 @@ Quando si sceglie la riga di un errore, vengono forniti ulteriori dettagli.
 
 ### <a name="enrollment-errors"></a>Errori di registrazione
 
-| Errore | Dettagli |
+| Errore | Details |
 |-------------|----------|
 | Timeout o errore di iOS/iPadOS | Si è verificato un timeout tra il dispositivo e Intune perché l'utente ha impiegato troppo tempo a completare la registrazione. |
 | L'utente non è stato trovato o non ha la licenza | L'utente non ha una licenza o è stato rimosso dal servizio. |

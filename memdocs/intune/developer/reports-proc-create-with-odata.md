@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 87c1a63ffdfc0b923f636159536f6d6cf6420db9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79360015"
 ---
 # <a name="create-an-intune-report-from-the-odata-feed-with-power-bi"></a>Creare un report di Intune dal feed OData con Power BI
@@ -56,7 +56,7 @@ Installare l'ultima versione di Power BI Desktop. È possibile scaricare Power B
 
 1. Accedere a [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Aprire il riquadro **Data warehouse di Intune** selezionando il collegamento Data warehouse in **Altre attività** sul lato destro del pannello **Microsoft Intune - Panoramica**.
-3. Copiare l'URL del feed personalizzato. ad esempio `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta`
+3. Copiare l'URL del feed personalizzato. Ad esempio: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta`
 4. Aprire Power BI Desktop.
 5. Dalla barra dei menu selezionare **File** > **Recupera dati** > **Feed OData**.
 6. Incollare l'URL del feed personalizzato, copiato nel passaggio precedente, nella casella URL della finestra **Feed OData**.
@@ -93,7 +93,7 @@ Un grafico ad albero mostra i dati gerarchici come caselle all'interno di casell
 ![Visualizzazioni mappa ad albero di Power BI](./media/reports-proc-create-with-odata/reports-create-03-treemap.png)
 
 1. Nel riquadro **Visualizzazioni** trovare e selezionare **Mappa ad albero**. Il grafico **Mappa ad albero** verrà aggiunto al canvas del report.
-2. Individuare la `devices` tabella nel riquadro **campi**.
+2. Individuare la **tabella nel riquadro**campi`devices`.
 3. Espandere la tabella `devices` e selezionare il campo dati `manufacturer`.
 4. Trascinare il campo dati `manufacturer` nel canvas del report e rilasciarlo sul grafico **Mappa ad albero**.
 5. Trascinare il campo dati `deviceKey` dalla tabella `devices` al riquadro **Visualizzazioni** e rilasciarlo nella sezione **Valori** della casella **Aggiungere qui i campi dati**.  
@@ -107,7 +107,7 @@ Un grafico ad albero mostra i dati gerarchici come caselle all'interno di casell
 È possibile aggiungere un filtro alla mappa ad albero per poter rispondere a domande aggiuntive usando l'app.
 
 1. Per aggiungere un filtro, selezionare l'area di disegno report e quindi selezionare l'**icona Filtro dei dati** (![Mappa ad albero con dati e relazioni supportate](./media/reports-proc-create-with-odata/reports-create-slicer.png)) in **Visualizzazioni**. Nel canvas apparirà la visualizzazione **Filtro dei dati** vuota.
-2. Individuare la `ownerTypes` tabella nel riquadro **campi**.
+2. Individuare la **tabella nel riquadro**campi`ownerTypes`.
 3. Espandere la tabella `ownerTypes` e selezionare il campo dati `ownerTypeName`.
 4. Trascinare il campo dati `onwerTypeName` dalla tabella `ownerTypes` al riquadro **Filtri** e rilasciarlo nella sezione **Filtri in questa pagina** della casella **Aggiungere qui i campi dati**.  
 

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: fb8b5eae3c88664caff76da597fc3ab9111f989c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79343856"
 ---
 # <a name="quickstart-create-and-assign-an-app-protection-policy"></a>Guida introduttiva: Creare e assegnare un criterio di protezione delle app
@@ -49,7 +49,7 @@ Usare la procedura seguente per creare un criterio di protezione delle app:
     - **Nome**: *Protezione del contenuto Windows 10*
     - **Descrizione**: *Gli utenti associati a questo criterio non potranno tagliare, copiare o incollare contenuti tra l'app assegnata e altre app non gestite nel dispositivo.*
     - **Piattaforma**: *Windows 10*
-    - **Stato registrazione**: *Con registrazione*
+    - **Stato della registrazione**: *Con registrazione*
 
 3. Selezionare **App protette** per selezionare le app che devono soddisfare il criterio.
 4. Fare clic su **Aggiungi app**.
@@ -83,7 +83,7 @@ Il criterio di protezione delle app è stato assegnato.
 
 In questa guida introduttiva è stato creato e assegnato un criterio di protezione delle app. Gli utenti dell'app a cui è stato assegnato questo criterio non potranno tagliare, copiare o incollare contenuti tra l'app assegnata e altre app non gestite nel dispositivo. Questo tipo di protezione consente di proteggere i dati dell'organizzazione. Per altre informazioni sui criteri di protezione delle app, vedere [Che cosa sono i criteri di protezione delle app?](app-protection-policy.md)
 
-Per seguire questa serie di guide introduttive di Intune, continuare con la guida introduttiva che segue.
+Per seguire questa serie di guide introduttive di Intune, passare alla guida introduttiva che segue.
 
 > [!div class="nextstepaction"]
-> [Avvio rapido: Creare e assegnare un ruolo personalizzato](../fundamentals/create-custom-role.md)
+> [Guida introduttiva: Creare e assegnare un ruolo personalizzato](../fundamentals/create-custom-role.md)

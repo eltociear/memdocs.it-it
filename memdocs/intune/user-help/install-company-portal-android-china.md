@@ -1,5 +1,5 @@
 ---
-title: Installare l'app Portale aziendale Intune in Cina | Microsoft Docs
+title: Installare l'app Portale aziendale Intune nella Cina continentale | Microsoft Docs
 description: ''
 keywords: ''
 author: lenewsad
@@ -20,15 +20,15 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 747127e50485e16b3c129d36f9101113b3250390
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80576880"
 ---
-# <a name="install-company-portal-app-in-mainland-china"></a>Installare l'app Portale aziendale in Cina   
+# <a name="install-company-portal-app-in-mainland-china"></a>Installare l'app Portale aziendale nella Cina continentale   
 
-Installare l'app Portale aziendale Intune per accedere alle risorse aziendali o dell'istituto di istruzione dal proprio dispositivo Android. L'app è disponibile in Cina e può essere installata dagli App Store seguenti: 
+Installare l'app Portale aziendale Intune per accedere alle risorse aziendali o dell'istituto di istruzione dal proprio dispositivo Android. L'app è disponibile nella Cina continentale e può essere installata dagli App Store seguenti: 
 
 * [Baidu](https://go.microsoft.com/fwlink/?linkid=836946)
 * [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: fd7483319443b7a960f8e704442d2b43b6b00c66
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326918"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Configurare la registrazione dei dispositivi Windows
@@ -37,15 +37,15 @@ L'amministratore di Intune può semplificare la registrazione nei modi seguenti:
 - [Registrazione CNAME](#simplify-windows-enrollment-without-azure-ad-premium)
 - [Abilitare la registrazione in blocco](windows-bulk-enroll.md) (sono necessari Azure AD Premium e Progettazione configurazione di Windows)
 
-Due fattori determinano in che modo è possibile semplificare la registrazione dei dispositivi Windows:
+La semplificazione della registrazione dei dispositivi Windows dipende da due fattori:
 
 - **Si usa Azure Active Directory Premium?** <br>[Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) è incluso in Enterprise Mobility + Security e altri piani di licenze.
 - **Quali versioni dei client Windows richiedono la registrazione da parte degli utenti?** <br>I dispositivi Windows 10 possono essere registrati automaticamente mediante l'aggiunta di un account aziendale o dell'istituto di istruzione. Le versioni precedenti devono essere registrate con l'app del portale aziendale.
 
 ||**Azure AD Premium**|**Altro AD**|
 |----------|---------------|---------------|  
-|**Windows 10**|[Registrazione automatica](#enable-windows-10-automatic-enrollment) |Registrazione utenti|
-|**Versioni precedenti di Windows**|Registrazione utenti|Registrazione utenti|
+|**Windows 10**|[Registrazione automatica](#enable-windows-10-automatic-enrollment) |Registrazione utente|
+|**Versioni precedenti di Windows**|Registrazione utente|Registrazione utente|
 
 Le organizzazioni che possono usare la registrazione automatica possono anche configurare la [registrazione in blocco di dispositivi](windows-bulk-enroll.md) usando l'app Progettazione configurazione di Windows.
 
@@ -70,7 +70,7 @@ Per semplificare la registrazione, creare un alias DNS (Domain Name Server), un 
 **Passaggio 1: Creare CNAME** (facoltativo)<br>
 Creare record di risorse CNAME DNS per il dominio della società. Ad esempio, se il sito Web della società è contoso.com, si creerà un record CNAME in DNS che reindirizzi EnterpriseEnrollment.contoso.com a enterpriseenrollment-s.manage.microsoft.com.
 
-Sebbene la creazione di voci DNS CNAME sia facoltativa, i record CNAME semplificano la registrazione per gli utenti. Se non viene trovato alcun record di registrazione CNAME, agli utenti viene richiesto di immettere manualmente il nome del server MDM, enrollment.manage.microsoft.com.
+Sebbene la creazione di voci DNS CNAME sia facoltativa, i record CNAME semplificano la registrazione per gli utenti. Se non viene trovato alcun record CNAME, viene richiesto all'utente di immettere manualmente il nome del server MDM, enrollment.manage.microsoft.com.
 
 |Tipo|Nome dell'host|Punta a|TTL|
 |----------|---------------|---------------|---|

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 428ee1ce93b4f6fe21c4b0180a9df222f3e23e09
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79359755"
 ---
 # <a name="reference-for-mobile-app-management-mam-entities"></a>Informazioni di riferimento per le entità di gestione delle app mobili (MAM)
@@ -30,7 +30,7 @@ ms.locfileid: "79359755"
 La categoria **Gestione delle app mobili** contiene entità per le app per dispositivi mobili come:
 
 - App
-- Instances
+- Istanze
 - Stato di archiviazione
 - Stato di integrità
 - Stato criteri
@@ -126,6 +126,6 @@ L'entità **mamPlatform** elenca i nomi e i tipi di piattaforma in cui è stata 
 |----------------------------|-----------------------------------------------------------------------------------|---------------------------------------------------------|
 |        platformKey         |     Identificatore univoco della piattaforma nel data warehouse, chiave surrogata.      |                           123                           |
 |          piattaforma          | Identificatore univoco della piattaforma, simile a PlatformKey ma è una chiave naturale. |                           123                           |
-|        platformName        |                                   Nome della piattaforma                                   | Non disponibile <br>Nessuno <br>Windows <br>IOS <br>Android. |
+|        platformName        |                                   Nome della piattaforma                                   | Non disponibile <br>Nessuno <br>Windows <br>iOS <br>Android. |
 | rowLastModifiedDateTimeUtc | Data e ora in formato UTC dell'ultima modifica della piattaforma nel data warehouse.  |                 23/11/2016 12.00.00                  |
 

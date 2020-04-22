@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: dfa2c9d9f2535bf336e28a7fe4cf591451d3bf94
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79347678"
 ---
 # <a name="rename-your-device-from-the-company-portal-website"></a>Rinominare il dispositivo dal sito Web del portale aziendale
@@ -34,7 +34,7 @@ Rinominare un dispositivo registrato e gestito dal sito Web del portale aziendal
 
 2. Selezionare il dispositivo da rinominare.
 
-    ![Screenshot della pagina Dispositivi, con 2 riquadri che illustrano i dispositivi non identificati, denominati in modo generico. Direttamente sotto i dispositivi è presente un banner di colore grigio che richiede all'utente di identificare il dispositivo in uso o aggiungerne uno nuovo.](./media/rename-reset-device-step2-1808.png)   
+    ![Screenshot della pagina Dispositivi, con 2 riquadri che mostrano i dispositivi non identificati, denominati in modo generico. Direttamente sotto i dispositivi è presente un banner di colore grigio che richiede all'utente di identificare il dispositivo in uso o aggiungerne uno nuovo.](./media/rename-reset-device-step2-1808.png)   
 
 3. Selezionare **Rinomina**. Se l'opzione Rinomina non è visibile nella parte superiore della pagina, selezionare **Altro (...)**  > **Rinomina**.   
 

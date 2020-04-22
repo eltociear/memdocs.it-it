@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 4da3a8e9e59f1f6a4d1c38354f14163c4773fd7d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325310"
 ---
 # <a name="use-locations-network-fence-in-intune"></a>Usare i percorsi (isolamento di rete) in Intune
@@ -55,13 +55,13 @@ Per creare criteri di conformità basati sul percorso:
 2. Immettere le proprietà seguenti:  
 
    - Obbligatorio. Immettere un **Nome** per il percorso, ad esempio **Reparto di produzione** o **Edificio 44 protetto**.
-   - Facoltativo. Immettere un **Intervallo IPv4** con la notazione CIDR (Classless Interdomain Routing), ad esempio `aaa.bbb.ccc.ddd/n`.
-   - Facoltativo. Immettere l'indirizzo **Gateway IPv4**, ad esempio `aaa.bbb.ccc.ddd`.
-   - Facoltativo. Immettere l'indirizzo **Server DHCP IPv4**, ad esempio `aaa.bbb.ccc.ddd`.
-   - Facoltativo. Immettere un elenco di indirizzi **Server DNS IPv4**. Questa impostazione usa la funzione di **corrispondenza di subset**. Se i server DNS IPv4 del dispositivo sono subset dei valori definiti, il dispositivo viene considerato ALL'INTERNO del limite di isolamento. Assicurarsi di immettere un solo indirizzo per ogni riga, ad esempio:  
+   - Facoltativo Immettere un **Intervallo IPv4** con la notazione CIDR (Classless Interdomain Routing), ad esempio `aaa.bbb.ccc.ddd/n`.
+   - Facoltativo Immettere l'indirizzo **Gateway IPv4**, ad esempio `aaa.bbb.ccc.ddd`.
+   - Facoltativo Immettere l'indirizzo **Server DHCP IPv4**, ad esempio `aaa.bbb.ccc.ddd`.
+   - Facoltativo Immettere un elenco di indirizzi **Server DNS IPv4**. Questa impostazione usa la funzione di **corrispondenza di subset**. Se i server DNS IPv4 del dispositivo sono subset dei valori definiti, il dispositivo viene considerato ALL'INTERNO del limite di isolamento. Assicurarsi di immettere un solo indirizzo per ogni riga, ad esempio:  
      `aaa.bbb.ccc.ddd`  
      `aaa.bbb.ccc.ddd`
-   - Facoltativo. Immettere un elenco di **Suffissi DNS**. Questa impostazione usa la funzione di **corrispondenza di subset**. Se i suffissi DNS del dispositivo sono subset dei valori definiti, il dispositivo viene considerato ALL'INTERNO del limite di isolamento. Assicurarsi di immettere un solo nome di dominio in ogni riga, ad esempio:  
+   - Facoltativo Immettere un elenco di **Suffissi DNS**. Questa impostazione usa la funzione di **corrispondenza di subset**. Se i suffissi DNS del dispositivo sono subset dei valori definiti, il dispositivo viene considerato ALL'INTERNO del limite di isolamento. Assicurarsi di immettere un solo nome di dominio in ogni riga, ad esempio:  
      `contoso.com`  
      `contoso.org`
 

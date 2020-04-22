@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 4f70c8487d9cb30b2a7cced63e6e019541f73704
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80327061"
 ---
 # <a name="quickstart-enroll-your-windows-10-device"></a>Guida introduttiva: Registrare il dispositivo Windows 10
@@ -105,7 +105,7 @@ Per annullare la registrazione del dispositivo Windows, vedere [Rimuovere il dis
 
 In questa guida introduttiva è stato descritto come registrare un dispositivo Windows 10 in Intune. Sono disponibili altri modi per registrare i dispositivi su tutte le piattaforme. Per altre informazioni sull'uso dei dispositivi con Intune, vedere [Usare dispositivi gestiti per lo svolgimento del lavoro](../user-help/use-managed-devices-to-get-work-done.md).
 
-Per seguire questa serie di guide introduttive di Intune, continuare con la guida introduttiva che segue.
+Per seguire questa serie di guide introduttive di Intune, passare alla guida introduttiva che segue.
 
 > [!div class="nextstepaction"]
-> [Avvio rapido: Impostare una lunghezza della password obbligatoria per i dispositivi Android](../protect/quickstart-set-password-length-android.md)
+> [Guida introduttiva: Impostare una lunghezza della password obbligatoria per i dispositivi Android](../protect/quickstart-set-password-length-android.md)

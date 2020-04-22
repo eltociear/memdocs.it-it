@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b437a72a2380fea215746aa76b35898c6fc60b16
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80551376"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Creare criteri di conformità in Microsoft Intune
@@ -52,7 +52,7 @@ Per usare criteri di conformità del dispositivo, attenersi a quanto segue:
   - iOS
   - macOS
   - Windows 10
-  - Windows 8.1
+  - Windows 8,1
   - Windows Phone 8.1
 
 - Registrazione dei dispositivi in Intune (necessaria per visualizzarne lo stato di conformità)
@@ -162,7 +162,7 @@ Per altre informazioni sul monitoraggio dei criteri di conformità dei dispositi
 
 Se un dispositivo ha più criteri di conformità e il dispositivo presenta stati di conformità diversi per due o più dei criteri di conformità assegnati, verrà assegnato un unico stato di conformità risultante. Questa assegnazione si basa su un livello di gravità concettuale assegnato a ogni stato di conformità. I livelli di gravità di ogni stato di conformità sono i seguenti:
 
-|Stato  |Gravità  |
+|Status  |Gravità  |
 |---------|---------|
 |Sconosciuto     |1|
 |NotApplicable     |2|

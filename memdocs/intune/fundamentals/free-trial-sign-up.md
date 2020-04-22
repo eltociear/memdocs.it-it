@@ -19,13 +19,13 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 893981700ede9587a980faa0e4d6b0384c24e3d4
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80401494"
 ---
-# <a name="quickstart-try-microsoft-intune-for-free"></a>Guida introduttiva: Provare Microsoft Intune gratuitamente
+# <a name="quickstart-try-microsoft-intune-for-free"></a>Guida introduttiva: provare Microsoft Intune gratuitamente
 
 Microsoft Intune aiuta a proteggere i dati aziendali del personale tramite la gestione dei dispositivi e delle app. In questa guida introduttiva si creerà una sottoscrizione gratuita per provare Intune in un ambiente di test.
 
@@ -104,7 +104,7 @@ Per altre informazioni sull'autorità MDM, vedere [Impostare l'autorità di gest
 Come accennato in precedenza, se l'organizzazione ha il proprio dominio personalizzato che si vuole usare senza **.onmicrosoft.com**, cambiare questa opzione nell'interfaccia di amministrazione di Microsoft 365. È possibile aggiungere, verificare e configurare il nome di dominio personalizzato usando la procedura seguente.  
 
 > [!IMPORTANT]
-> Non è possibile rinominare o rimuovere la parte **onmicrosoft.com** *iniziale* del nome di dominio. È tuttavia possibile aggiungere, verificare o rimuovere i nomi di dominio *personalizzati* usati con Intune in modo che l'identità aziendale risulti chiara. Per altre informazioni, vedere [Configurare un nome di dominio personalizzato](custom-domain-name-configure.md).
+> Non è possibile rinominare o rimuovere la parte *onmicrosoft.com* **iniziale** del nome di dominio. È tuttavia possibile aggiungere, verificare o rimuovere i nomi di dominio *personalizzati* usati con Intune in modo che l'identità aziendale risulti chiara. Per altre informazioni, vedere [Configurare un nome di dominio personalizzato](custom-domain-name-configure.md).
 
 1. Passare all'[interfaccia di amministrazione di Microsoft 365](https://admin.microsoft.com) e accedere con l'account amministratore.
 
@@ -133,7 +133,7 @@ Sono due i portali che verranno usati più spesso:
 
 In questa guida introduttiva è stata creata una sottoscrizione gratuita per provare Intune in un ambiente di test. Per altre informazioni sulla configurazione di Intune, vedere [Configurare Intune](setup-steps.md).
 
-Per seguire questa serie di guide introduttive di Intune, continuare con la guida introduttiva che segue.
+Per seguire questa serie di guide introduttive di Intune, passare alla guida introduttiva che segue.
 
 > [!div class="nextstepaction"]
-> [Avvio rapido: Creare un utente e assegnargli una licenza](quickstart-create-user.md)
+> [Guida introduttiva: Creare un utente e assegnargli una licenza](quickstart-create-user.md)

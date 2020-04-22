@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 78fce6f5f518227500b3cf42f1d935c0dd88df8c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79359859"
 ---
 # <a name="reference-for-application-entities"></a>Informazioni di riferimento per le entità della categoria Application
@@ -65,11 +65,11 @@ L'entità **appType** elenca l'origine dell'installazione di un'app.
 |---------|------------|
 | appTypeID |ID per il tipo |
 | appTypeKey |Chiave surrogata per la chiave |
-| appTypeName |Tipo di app |
+| appTypeName |Tipo di App |
 
 ### <a name="example"></a>Esempio
 
-| AppTypeID  | Name | Descrizione |
+| AppTypeID  | Nome | Descrizione |
 |---------|------------|--------|
 | 0 |App di Android Store | Un'app di Android Store. |
 | 1 |App di Android LOB | Un'app line-of-business Android. |
@@ -98,7 +98,7 @@ L'entità **vppProgramType** elenca i tipi di programma VPP possibili per un'app
 
 ### <a name="example"></a>Esempio
 
-| VppProgramID  | Name | Descrizione |
+| VppProgramID  | Nome | Descrizione |
 |---------|------------|--------|
 | 3DDA2474-470B-4503-9830-2665C21C1945 | Microsoft | Programma VPP Microsoft. |
 | 00000000-0000-0000-0000-000000000000 | Non ancora disponibile | Valore predefinito, nessun VPP. |

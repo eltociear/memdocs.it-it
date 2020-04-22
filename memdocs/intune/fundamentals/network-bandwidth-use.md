@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 569a80d21efd82b6008c7aa7a613c089a10c6ff3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79357896"
 ---
 # <a name="intune-network-configuration-requirements-and-bandwidth"></a>Requisiti di configurazione di rete di Intune e larghezza di banda
@@ -46,7 +46,7 @@ In questa tabella sono elencate le dimensioni approssimative e la frequenza di c
 |Assistenza remota tramite l'agente Microsoft Easy Assist|6 MB|**Una volta**<br /><br />Ulteriori download sono possibili quando sono disponibili aggiornamenti per questo tipo di contenuto.|
 |Operazioni quotidiane di client|6 MB|**Ogni giorno**<br /><br />Il client di Intune comunica regolarmente con il servizio Intune per verificare la disponibilità di aggiornamenti e criteri nonché per segnalare lo stato del client al servizio.|
 |Aggiornamenti delle definizioni malware di Endpoint Protection|Varia<br /><br />In genere, da 40 KB a 2 MB|**Ogni giorno**<br /><br />Fino a tre volte al giorno.|
-|Aggiornamento del motore Endpoint Protection|5 MB|**Ogni mese**|
+|Aggiornamento del motore Endpoint Protection|5 MB|**Monthly** (Mensile)|
 |Aggiornamenti software|Varia<br /><br />Le dimensioni dipendono dagli aggiornamenti distribuiti.|**Monthly** (Mensile)<br /><br />In genere, gli aggiornamenti software vengono rilasciati il secondo martedì di ogni mese.<br /><br />Un computer appena registrato o distribuito potrebbe usare più larghezza di banda di rete durante il download della serie completa di aggiornamenti rilasciati in precedenza.|
 |Service Pack|Varia<br /><br />Le dimensioni variano per ogni Service Pack distribuito.|**Varia**<br /><br />Dipende da quando si distribuiscono i Service Pack.|
 |Distribuzione del software|Varia<br /><br />Le dimensioni dipendono dal software distribuito.|**Varia**<br /><br />Dipende da quando si distribuisce il software.|
@@ -64,7 +64,7 @@ Un server proxy di memorizzazione nella cache che riceve le richieste di contenu
 Di seguito vengono riportate alcune impostazioni tipiche da usare per un server proxy che memorizza contenuti nella cache per i client di Intune.
 
 
-|          Impostazione           |           Impostazione consigliata           |                                                                                                  Dettagli                                                                                                  |
+|          Impostazione           |           Impostazione consigliata           |                                                                                                  Details                                                                                                  |
 |----------------------------|---------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |         Dimensione della cache         |             da 5 a 30 GB             | Il valore varia in base al numero di computer client della rete e alle configurazioni usate. Per evitare che i file vengano eliminati troppo presto, regolare le dimensioni della cache per l'ambiente. |
 | Dimensione del file nella singola cache |                950 MB                 |                                                                     L'impostazione potrebbe non essere disponibile in tutti i server proxy per la memorizzazione nella cache.                                                                     |
@@ -97,7 +97,7 @@ I client di Intune possono usare BranchCache per ridurre il traffico WAN. I sist
 
 - Windows 7
 - Windows 8.0
-- Windows 8.1
+- Windows 8,1
 - Windows 10
 
 Per usarlo nel computer client, BranchCache deve essere abilitato e configurato per la **modalità cache distribuita**.

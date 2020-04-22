@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d9da6870caed61917d8093e2dd25882cec72d987
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79353255"
 ---
 # <a name="iosipados-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Impostazioni di iOS/iPadOS per contrassegnare un dispositivo come conforme o non conforme in Intune
@@ -51,7 +51,7 @@ Come amministratore di Intune, usare queste impostazioni di conformità per prot
 
 Per informazioni dettagliate sui profili di posta elettronica, vedere [Configurare l'accesso alla posta elettronica aziendale usando profili di posta elettronica con Intune](../configuration/email-settings-configure.md).
 
-## <a name="device-health"></a>Integrità dispositivi
+## <a name="device-health"></a>Integrità del dispositivo
 
 - **Dispositivi jailbroken**:  
   - **Non configurato** (*impostazione predefinita*): questa impostazione non viene valutata per la conformità o la non conformità.
@@ -61,7 +61,7 @@ Per informazioni dettagliate sui profili di posta elettronica, vedere [Configura
   usare questa impostazione per considerare la valutazione del rischio come condizione di conformità. Scegliere il livello di minaccia consentito:  
   - **Non configurato** (*impostazione predefinita*): questa impostazione non viene valutata per la conformità o la non conformità.
   - **Protetto**: questa opzione è la più sicura e indica che il dispositivo non può subire alcuna minaccia. Se viene rilevata la presenza di minacce di qualsiasi livello, il dispositivo viene considerato non conforme.
-  - **Basso**: il dispositivo viene valutato come conforme se sono presenti solo minacce di livello basso. Se sono presenti minacce di livello più alto, lo stato del dispositivo passa a Non conforme.
+  - **Basso**: il dispositivo viene valutato come conforme se sono presenti solo minacce di livello basso. In presenza di minacce di livello superiore, il dispositivo verrà messo in stato di non conformità.
   - **Medio**: il dispositivo viene valutato come conforme se le minacce presenti nel dispositivo sono di livello basso o medio. Se viene rilevata la presenza di minacce di livello alto, il dispositivo viene considerato non conforme.
   - **Alto**: questa opzione è la meno sicura poiché consente tutti i livelli di minaccia. Potrebbe essere utile usare questa soluzione solo per la creazione di report.
 

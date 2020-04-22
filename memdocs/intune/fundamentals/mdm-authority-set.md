@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c8545f7d1ef48cc426f4b8e48aa1832ce3328bf0
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326757"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Impostare l'autorità di gestione dei dispositivi mobili
@@ -67,7 +67,7 @@ In ogni caso, il consenso è strettamente correlato all'esecuzione di un servizi
 
 ## <a name="key-considerations"></a>Considerazioni principali
 Dopo il passaggio alla nuova autorità MDM, è probabile che vi sia un tempo di transizione (fino a otto ore) prima dell'archiviazione del dispositivo e della sua sincronizzazione con il servizio. È necessario configurare le impostazioni nella nuova autorità MDM per garantire che i dispositivi registrati continuino a essere gestiti e protetti dopo la modifica. 
-- I dispositivi devono connettersi con il servizio dopo la modifica, in modo che le impostazioni dalla nuova autorità MDM (versione autonoma di Intune) sostituiscano le impostazioni esistenti nel dispositivo.
+- Dopo la modifica, i dispositivi devono connettersi al servizio, in modo che le impostazioni della nuova autorità MDM (Intune autonomo) sostituiscano le impostazioni esistenti nel dispositivo.
 - Dopo aver cambiato l'autorità MDM, alcune impostazioni di base dell'autorità MDM precedente, come ad esempio i profili, rimarranno nel dispositivo per un massimo di sette giorni o fino a quando il dispositivo stesso non si connetterà al servizio per la prima volta. È consigliabile configurare le app e le impostazioni (criteri, profili, app e così via) nella nuova autorità MDM appena possibile e distribuire le impostazioni ai gruppi di utenti in cui sono presenti utenti che hanno già dispositivi registrati. Non appena un dispositivo si connette al servizio dopo che l'autorità MDM è stata cambiata, riceve le nuove impostazioni dall'autorità MDM impedendo che vi siano vuoti nella gestione e protezione.
 - Per i dispositivi senza utenti associati (generalmente con il Device Enrollment Program per dispositivi iOS/iPadOS o con scenari di registrazione in blocco) non viene eseguita la migrazione alla nuova autorità MDM. Per tali dispositivi è necessario chiamare il supporto tecnico per chiedere assistenza nel passaggio alla nuova autorità MDM.
 
@@ -89,7 +89,7 @@ Non è possibile reimpostare l'autorità MDM su Sconosciuto. L'autorità MDM è 
 
 ## <a name="what-to-expect-after-changing-the-mdm-authority"></a>Conseguenze della modifica dell'autorità MDM
 
-- Quando il servizio Intune rileva che l'autorità MDM di un tenant è cambiata, invia un messaggio di notifica a tutti i dispositivi registrati perché eseguano l'archiviazione e la sincronizzazione con il servizio (questa notifica è al di fuori delle normali archiviazioni pianificate). Di conseguenza, dopo la modifica dell'autorità MDM per il tenant da Intune autonomo, tutti i dispositivi accesi e online si connetteranno al servizio, riceveranno la nuova autorità MDM e da quel momento saranno gestiti dall'autorità MDM. Non ci sono interruzioni per la gestione e protezione di questi dispositivi.
+- Quando il servizio Intune rileva che l'autorità MDM di un tenant è cambiata, invia un messaggio di notifica a tutti i dispositivi registrati perché eseguano l'archiviazione e la sincronizzazione con il servizio (questa notifica è al di fuori delle normali archiviazioni pianificate). Di conseguenza, dopo la modifica dell'autorità MDM per il tenant da Intune autonomo, tutti i dispositivi accesi e online si connetteranno al servizio, riceveranno la nuova autorità MDM e da quel momento saranno gestiti dall'autorità MDM. La gestione e la protezione di questi dispositivi non viene mai interrotta.
 - Anche se i dispositivi sono accesi e online durante (o immediatamente dopo) la modifica nell'autorità MDM, ci sarà un ritardo massimo di otto ore (a seconda del momento della successiva archiviazione periodica pianificata) prima che i dispositivi siano registrati per il servizio con la nuova autorità MDM.    
 
   > [!IMPORTANT]    
@@ -97,7 +97,7 @@ Non è possibile reimpostare l'autorità MDM su Sconosciuto. L'autorità MDM è 
 
 - Gli utenti possono passare rapidamente alla nuova autorità MDM avviando manualmente un'archiviazione dal dispositivo al servizio. Gli utenti possono eseguire facilmente questa modifica usando l'app Portale aziendale e avviando un controllo di conformità del dispositivo.
 - Per verificare che tutto funzioni correttamente dopo che i dispositivi sono stati archiviati e sincronizzati con il servizio dopo la modifica dell'autorità MDM, cercare i dispositivi nella nuova autorità MDM.
-- Quando un dispositivo è offline durante la modifica nell'autorità MDM e quando il dispositivo viene archiviato nel servizio si ha una situazione intermedia. Per garantire che il dispositivo rimanga protetto e funzionale durante questo periodo, i profili seguenti rimangono nel dispositivo per un massimo di sette giorni o fino a quando il dispositivo non si connette con la nuova autorità MDM e riceve le nuove impostazioni che sovrascrivono quelle esistenti:
+- Quando un dispositivo è offline durante la modifica nell'autorità MDM e quando il dispositivo viene archiviato nel servizio si ha una situazione intermedia. Per garantire la protezione e il funzionamento del dispositivo durante questo periodo, i profili riportati di seguito rimarranno nel dispositivo per un massimo di sette giorni o fino a quando il dispositivo non si connetterà alla nuova autorità MDM e non riceverà le nuove impostazioni, che sovrascriveranno quelle esistenti.
   - Profilo di posta elettronica
   - Profilo VPN
   - Profilo certificato

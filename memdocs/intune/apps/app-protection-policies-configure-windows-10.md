@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e7dcad93f836ee564e973555bebe1a1f5d7ba3c3
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80323680"
 ---
 # <a name="get-ready-for-windows-information-protection-in-windows-10"></a>Prepararsi per Windows Information Protection in Windows 10 
@@ -52,7 +52,7 @@ Abilitare la gestione di applicazioni mobili (MAM) per Windows 10, impostando il
    **URL conformità MAM**  
    L'URL di conformità MAM non è supportato per Microsoft Intune. Per applicare i criteri di protezione è necessario che questa casella di input sia lasciata vuota. 
 
-7. Fare clic su **Save**.
+7. Fare clic su **Salva**.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ed0194f0ace1ed1e962a8b993a4e93f7ef487bdc
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084936"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Impostazioni di Windows 10 e versioni successive per contrassegnare un dispositivo come conforme o non conforme in Intune
@@ -39,7 +39,7 @@ Come amministratore di Intune, usare queste impostazioni di conformità per prot
 
 [Creare i criteri di conformità](create-compliance-policy.md#create-the-policy). In **Piattaforma** selezionare **Windows 10 e versioni successive**.
 
-## <a name="device-health"></a>Integrità dispositivi
+## <a name="device-health"></a>Integrità del dispositivo
 
 ### <a name="windows-health-attestation-service-evaluation-rules"></a>Regole di valutazione del servizio di attestazione dell'integrità Windows
 
@@ -65,7 +65,7 @@ Come amministratore di Intune, usare queste impostazioni di conformità per prot
 Altre risorse:
 
 - Per informazioni dettagliate sul funzionamento del servizio di attestazione dell'integrità, vedere [CSP HealthAttestation del dispositivo](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp).
-- [Suggerimento per il supporto: uso delle impostazioni per l'attestazione dell'integrità dei dispositivi come parte dei criteri di conformità di Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643).
+- [Suggerimento per il supporto: uso delle impostazioni per l'attestazione dell'integrità dei dispositivi come parte dei criteri di conformità di Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643)
 
 ## <a name="device-properties"></a>Proprietà dispositivo
 
@@ -229,7 +229,7 @@ Si applica solo ai dispositivi con co-gestione che eseguono Windows 10 e version
   usare questa impostazione per considerare la valutazione del rischio dei servizi Threat Defense come condizione di conformità. Scegliere il livello di minaccia massimo consentito:
   - **Non configurato** (*impostazione predefinita*)  
   - **Cancella**: questa opzione è la più sicura poiché il dispositivo non può avere minacce. Se viene rilevata la presenza di minacce di qualsiasi livello, il dispositivo viene considerato non conforme.
-  - **Basso**: il dispositivo viene valutato come conforme se sono presenti solo minacce di livello basso. Se sono presenti minacce di livello più alto, lo stato del dispositivo passa a Non conforme.
+  - **Basso**: il dispositivo viene valutato come conforme se sono presenti solo minacce di livello basso. In presenza di minacce di livello superiore, il dispositivo verrà messo in stato di non conformità.
   - **Medio**: il dispositivo viene valutato come conforme se le minacce esistenti nel dispositivo sono di livello basso o medio. Se viene rilevata la presenza di minacce di livello alto, il dispositivo viene considerato non conforme.
   - **Alto**: questa opzione è la meno sicura e consente tutti i livelli di minaccia. Potrebbe essere utile usare questa soluzione solo per la creazione di report.
   

@@ -19,10 +19,10 @@ ROBOTS: ''
 ms.custom: intune-enduser; seodec18
 ms.collection: ''
 ms.openlocfilehash: 835823e3bad5e567d9516e454858653bc52aa3f4
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79334613"
 ---
 # <a name="you-need-to-update-your-android-devices-operating-system"></a>È necessario aggiornare il sistema operativo del dispositivo Android
@@ -35,7 +35,7 @@ Se si dispone di un dispositivo Samsung, passare a **Impostazioni** > **Info sul
 
 ## <a name="for-most-android-devices-non-samsung-knox"></a>Per la maggior parte dei dispositivi Android (non Samsung Knox)
 
-Passare a **Impostazioni** > **Info** > **Aggiornamenti software**. Installare l'aggiornamento. Nel dispositivo dovrebbe essere installata la patch di sicurezza corretta.
+Passare a **Impostazioni** > **Info** > **Aggiornamenti software**. Installare l'aggiornamento e nel dispositivo deve essere installata la patch di sicurezza corretta.
 
 ## <a name="for-samsung-knox-android-devices"></a>Per i dispositivi Android Samsung Knox
 

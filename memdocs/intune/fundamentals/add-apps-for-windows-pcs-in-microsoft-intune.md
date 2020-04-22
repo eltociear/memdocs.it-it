@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a2c5590acd870e2623491052ba43bf29e4676568
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79344363"
 ---
 # <a name="add-apps-for-windows-pcs-that-run-the-intune-software-client"></a>Aggiungere app per i PC Windows che eseguono il software client di Intune
@@ -53,7 +53,7 @@ Usare l'Autore del software Intune per configurare le proprietà dell'app e cari
    - **Specificare il percorso dei file di installazione software**. Immettere il percorso dei file di installazione o scegliere **Sfoglia** per selezionare il percorso da un elenco.
    - **Includi sottocartelle e file aggiuntivi dalla stessa cartella**. Alcuni programmi software che usano Windows Installer richiedono file di supporto. Tali file devono trovarsi nella stessa cartella dei file di installazione. Selezionare questa opzione se si vogliono distribuire anche i file di supporto.
 
-   Ad esempio, se si vuole pubblicare un'app denominata Application.msi su Intune, la pagina sarà simile al seguente: ![Pagina Installazione software dell'autore](./media/add-apps-for-windows-pcs-in-microsoft-intune/publisher-for-pc.png)
+   Ad esempio, se si vuole pubblicare un'app denominata Application.msi su Intune, la pagina avrà un aspetto simile al seguente: ![Pagina di installazione del software dell'autore](./media/add-apps-for-windows-pcs-in-microsoft-intune/publisher-for-pc.png)
 
    Questo tipo di installazione usa parte dello spazio di archiviazione cloud.
 
@@ -70,7 +70,7 @@ Usare l'Autore del software Intune per configurare le proprietà dell'app e cari
    - **Categoria** (facoltativo). Selezionare una delle categorie predefinite dell'app. Ciò consentirà agli utenti di trovare più facilmente l'app nel portale aziendale.
    - **Icona** (facoltativo). Caricare un'icona che verrà associata all'app. Questa icona verrà visualizzata insieme all'app quando gli utenti visitano il portale aziendale.
 
-4. Nella pagina **Requisiti** selezionare i requisiti che devono essere soddisfatti prima di poter installare l'app. Scegliere tra:
+4. Nella pagina **Requisiti** selezionare i requisiti che devono essere soddisfatti prima di poter installare l'app. È possibile scegliere tra:
 
    - **Architettura**. Indicare se l'app può essere installata in sistemi operativi a 32 bit o a 64 bit oppure in entrambi.
    - **Sistema operativo**. Selezionare il sistema operativo minimo in cui è possibile installare l'app.
@@ -92,7 +92,7 @@ Usare l'Autore del software Intune per configurare le proprietà dell'app e cari
 
 7. Solo per il tipo di file **Windows Installer** (solo con estensione exe): nella pagina **Codici restituiti** è possibile aggiungere nuovi codici di errore che vengono interpretati da Intune quando l'app viene installata in un PC Windows gestito.
 
-   Per impostazione predefinita, Intune usa i codici restituiti standard del settore per segnalare un'installazione corretta o non riuscita di un pacchetto di app: **0** (operazione riuscita) o **3010** (operazione con riavvio). È anche possibile aggiungere codici restituiti personalizzati all'elenco. Se si specifica un elenco di codici restituiti e l'installazione dell'app restituisce un codice non incluso nell'elenco, questa situazione verrà interpretata come un errore.
+   Per impostazione predefinita, Intune usa i codici restituiti standard del settore per segnalare un'installazione corretta o non riuscita di un pacchetto di app: **0** (Operazione riuscita) o **3010** (Operazione completata con riavvio). È anche possibile aggiungere codici restituiti personalizzati all'elenco. Se si specifica un elenco di codici restituiti e l'installazione dell'app restituisce un codice non incluso nell'elenco, questa situazione verrà interpretata come un errore.
 
 8. Nella pagina **Riepilogo** verificare le informazioni specificate. Al termine, scegliere **Carica**.
 
@@ -104,4 +104,4 @@ L'app viene visualizzata nel nodo **App** dell'area di lavoro **App**.
 
 Il passaggio successivo alla creazione di un'app è la distribuzione. Per altre informazioni, vedere [Assegnare app ai gruppi con Microsoft Intune](../apps/apps-deploy.md).
 
-Per altre informazioni sui suggerimenti e i consigli per distribuire il software in PC Windows, vedere il post di blog [Suggerimento per il supporto: Procedure consigliate per la distribuzione del software Intune nei PC](https://support.microsoft.com/en-US/help/2583929).
+Per altre informazioni sui suggerimenti e trucchi per distribuire il software in PC Windows, vedere il post di blog [Support Tip: Best Practices for Intune Software Distribution to PC’s](https://support.microsoft.com/en-US/help/2583929) (Suggerimento per il supporto: procedure consigliate per la distribuzione del software Intune nei PC).

@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 98451e7ffd6aef9e5fb298af96b91074f39c383e
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325277"
 ---
 # <a name="what-is-microsoft-intune-device-management"></a>Informazioni sulla gestione dei dispositivi in Microsoft Intune
@@ -59,7 +59,7 @@ Le azioni disponibili dipendono dalla piattaforma del dispositivo e dalla config
 - Eseguire azioni remote sui dispositivi:
   - [Reimpostazione di Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)
   - [Rotazione delle chiavi BitLocker](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys) (solo Windows)
-  - [Eliminazione](devices-wipe.md#delete-devices-from-the-intune-portal)
+  - [Elimina](devices-wipe.md#delete-devices-from-the-intune-portal)
   - [Disabilitare il blocco attivazione](device-activation-lock-disable.md) (solo iOS)
   - [Fresh Start](device-fresh-start.md) (solo Windows)
   - [Analisi completa](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) (solo Windows 10)
@@ -71,7 +71,7 @@ Le azioni disponibili dipendono dalla piattaforma del dispositivo e dalla config
   - [Rinominare il dispositivo](device-rename.md)
   - [Reimposta passcode](device-passcode-reset.md)
   - [Riavvia](device-restart.md) (solo Windows)
-  - [Ritira](devices-wipe.md#retire)
+  - [Ritirare](devices-wipe.md#retire)
   - [Aggiorna l'intelligence sulla sicurezza di Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus)
   - [Reimpostazione del PIN di Windows 10](device-windows-pin-reset.md)
   - [Cancellazione](devices-wipe.md#wipe)

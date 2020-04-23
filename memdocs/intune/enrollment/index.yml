@@ -12,12 +12,12 @@ metadata:
   ms.author: dougeby
   manager: dougeby
   ms.date: 08/07/2019
-  ms.openlocfilehash: be5cae95460064287fa347d1ca42626ab75a2809
-  ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+  ms.openlocfilehash: 468bf56722f17fded75c18a722b15e5e55113eec
+  ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 03/13/2020
-  ms.locfileid: "79333941"
+  ms.lasthandoff: 04/23/2020
+  ms.locfileid: "82077955"
 landingContent:
 - title: Informazioni sulla registrazione
   linkLists:
@@ -87,7 +87,7 @@ landingContent:
     links:
     - text: Configurare la registrazione di dispositivi iOS/iPadOS
       url: ios-enroll.md
-    - text: Registrare automaticamente i dispositivi iOS/iPadOS con il programma Device Enrollment Program di Apple
+    - text: Registrare automaticamente i dispositivi iOS/iPadOS con Registrazione automatica del dispositivo di Apple
       url: device-enrollment-program-enroll-ios.md
     - text: Configurare la registrazione utente iOS e iPadOS
       url: ios-user-enrollment.md
@@ -111,7 +111,7 @@ landingContent:
     links:
     - text: Configurare la registrazione di macOS
       url: macos-enroll.md
-    - text: Registrare automaticamente i dispositivi macOS con Device Enrollment Program o Apple School Manager
+    - text: Registrare automaticamente i dispositivi macOS con Registrazione automatica del dispositivo o Apple School Manager
       url: device-enrollment-program-enroll-macos.md
     - text: Configurare la registrazione di dispositivi iOS/iPadOS con Apple Configurator
       url: apple-configurator-enroll-ios.md

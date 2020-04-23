@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: c288ea474fde9466b4b66056445ec93b572b29d2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79347431"
 ---
 # <a name="upload-and-email-logs"></a>Caricare e inviare i log tramite posta elettronica  
@@ -38,7 +38,7 @@ I dettagli relativi all'errore effettivo vengono memorizzati nel dispositivo in 
 ## <a name="upload-and-email-logs-from-company-portal"></a>Caricare e inviare i log tramite posta elettronica da Portale aziendale  
 
 1. Nell'app Portale aziendale è possibile avviare il supporto della posta elettronica in due modi.
-    * Dalla schermata iniziale: Toccare **Menu** > **?** > **Invia messaggio di posta elettronica al supporto**.  
+    * Dalla schermata iniziale: Toccare **Menu** >  **?**  > **Invia messaggio di posta elettronica al supporto**.  
     * Da un messaggio di errore: Toccare **GUIDA** o **INVIA INFORMAZIONI**, se disponibile.  
 
     > [!NOTE]
@@ -52,7 +52,7 @@ I dettagli relativi all'errore effettivo vengono memorizzati nel dispositivo in 
 ## <a name="upload-and-email-logs-from-microsoft-intune-app"></a>Caricare e inviare i log tramite posta elettronica dall'app Microsoft Intune   
 
 1. Nell'app Microsoft Intune è possibile avviare il supporto della posta elettronica in due modi.  
-    * Dalla schermata iniziale: Toccare **Menu** > **?** > **Supporto tecnico**.  
+    * Dalla schermata iniziale: Toccare **Menu** >  **?**  > **Supporto tecnico**.  
     * Da un messaggio di errore: Toccare **GUIDA** o **INVIA INFORMAZIONI**, se disponibile.  
 
     > [!NOTE]

@@ -10,12 +10,12 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 6b7ce4fd1ab09607f167696df35f3b5f19469b0d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3af6f2883ebf17ab19f57762b8b3bf26e3716262
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688989"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075728"
 ---
 # <a name="create-windows-applications-in-configuration-manager"></a>Creare applicazioni Windows in Configuration Manager
 
@@ -124,7 +124,7 @@ A partire dalla versione 2002, è possibile installare applicazioni complesse us
 
 - Definire metadati aggiuntivi per la sequenza di attività dell'app, incluse le informazioni localizzate
 
-È possibile aggiungere una sequenza di attività di distribuzione non di sistema operativo solo come tipo di distribuzione per un'app. Le sequenze di attività a impatto elevato, di distribuzione del sistema operativo o di aggiornamento del sistema operativo non sono supportate. Una distribuzione destinata agli utenti viene comunque eseguita nel contesto utente dell'account di sistema locale.
+È possibile aggiungere una sequenza di attività di distribuzione non di sistema operativo solo come tipo di distribuzione per un'app. Le sequenze di attività a impatto elevato, di distribuzione del sistema operativo o di aggiornamento del sistema operativo non sono supportate. <!--A user-targeted deployment still runs in the user context of the local System account.-->
 
 Quando si aggiunge questo tipo di distribuzione a un'app, configurarne le proprietà nella pagina **Sequenza di attività**. Per altre informazioni, vedere [Opzioni per il tipo di distribuzione **Sequenza di attività**](../deploy-use/create-applications.md#bkmk_dt-ts).
 

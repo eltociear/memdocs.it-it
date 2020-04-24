@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 475cb4e9a4c6c3b90582210b0ebf4a7f69e9f643
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f32eaffe673324699e20fc7c579ea1ac9b38c479
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694289"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076340"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Funzionalità della versione Technical Preview 1511 per Configuration Manager
 
@@ -40,7 +40,7 @@ Per i computer connessi tramite WUfB, Configuration Manager non potrà segnalare
  Prova a completare l'attività seguente e quindi usa le informazioni relative a commenti e suggerimenti nella parte superiore di questo argomento per comunicare i risultati:  
 
 1.  Disabilitare l'agente di Windows Update in modo che non esegua l'analisi rispetto a WSUS, se è stata precedentemente abilitata.   
-    La chiave del Registro di sistema **HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU\useWSUSServer** può essere impostata in modo da indicare se il computer sta eseguendo l'analisi rispetto a Windows Update o WSUS.  Quando il valore è 2, l'analisi non viene eseguita rispetto a WSUS.  
+    La chiave del Registro di sistema **HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU\useWSUSServer** può essere impostata in modo da indicare se il computer sta eseguendo l'analisi rispetto a Windows Update o WSUS.  Se il valore è 2, l'analisi non viene eseguita rispetto a WSUS.  
 
 2.  Prendere nota del nuovo attributo **UseWUServer**, nel nodo **Windows Update** di Esplora inventario risorse di Configuration Manager.  
 
@@ -48,7 +48,7 @@ Per i computer connessi tramite WUfB, Configuration Manager non potrà segnalare
 
 4.  Creare un'impostazione dell'agente client per disabilitare il flusso di lavoro di aggiornamento software e distribuire l'impostazione nella raccolta di computer connessi direttamente a WUfB.  
 
-5.  Lo stato di conformità dei computer gestiti tramite WUfB sarà **Sconosciuto** e quindi questi non verranno conteggiati come parte della percentuale di conformità complessiva.  
+5.  Lo stato di conformità dei computer gestiti tramite Windows Update for Business sarà **Sconosciuto** e quindi questi non verranno conteggiati come parte della percentuale di conformità complessiva.  
 
 ##  <a name="managing-office-365-proplus-client-update-through-configuration-manager"></a><a name="BKMK_Office365ProPlus"></a> Gestione dell'aggiornamento del client Office 365 ProPlus tramite Configuration Manager  
  Configuration Manager ora consente di gestire gli aggiornamenti dei client per desktop di Office 365 usando il flusso di lavoro Gestione aggiornamenti software di Configuration Manager.    

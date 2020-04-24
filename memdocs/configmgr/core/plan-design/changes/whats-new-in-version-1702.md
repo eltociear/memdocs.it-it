@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: a82ff8135fac84c866c819bb78d080111bd1bffa
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: bd9475a72ef8d2b25f026ab76e124c8217ed7ee9
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702599"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82073943"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Novità della versione 1702 di Configuration Manager
 
@@ -92,7 +92,7 @@ Di seguito sono riportate le modifiche relative ad Aggiornamenti e manutenzione:
   È possibile scaricare e installare gli altri aggiornamenti disponibili, anche quando non sono la versione più recente. Se si scarica un aggiornamento precedente, verrà visualizzato un avviso in cui si notifica che l'aggiornamento è stato sostituito da una versione più recente. Per scaricare un aggiornamento *Disponibile per il download*, selezionare l'aggiornamento nella console e quindi fare clic su **Scarica**.
 
 - **Miglioramento della pulizia degli aggiornamenti precedenti**   
-  È stata aggiunta una funzione di pulizia automatica che elimina i download non necessari dalla cartella EasySetupPayload nel server del sito. Poiché è stata introdotta con la versione 1702, la funzione di pulizia inizia a funzionare dopo l'installazione di un aggiornamento successivo, ad esempio un aggiornamento cumulativo, o una futura versione dell'aggiornamento.  
+  È stata aggiunta una funzione di pulizia automatica che elimina i download non necessari dalla cartella 'EasySetupPayload' nel server del sito. Poiché è stata introdotta con la versione 1702, la funzione di pulizia inizia a funzionare dopo l'installazione di un aggiornamento successivo, ad esempio un aggiornamento cumulativo, o una futura versione dell'aggiornamento.  
 
 
 ### <a name="data-warehouse-service-point"></a>Punto di servizio del data warehouse

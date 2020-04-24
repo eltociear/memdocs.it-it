@@ -16,17 +16,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 54271edb7f9c4de240992ca2ca620866c9ca469c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2e1f4512441212d308e97122fe71369eaadd1226
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326234"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077819"
 ---
 # <a name="sync-devices-to-get-the-latest-policies-and-actions-with-intune"></a>Sincronizzare i dispositivi per ottenere i criteri e le azioni più recenti con Intune
 
 
-L'azione del dispositivo **Sincronizza** forza il dispositivo selezionato a eseguire immediatamente l'archiviazione in Intune. Quando un dispositivo esegue l'archiviazione, riceve immediatamente le azioni in sospeso o i criteri assegnati. Questa funzionalità consente di convalidare e risolvere i problemi di criteri assegnati immediatamente, senza attendere la successiva archiviazione pianificata.
+L'azione del dispositivo **Sincronizza** forza il dispositivo selezionato a eseguire immediatamente l'archiviazione in Intune. Quando un dispositivo esegue l'archiviazione, riceve immediatamente le azioni in sospeso o i criteri assegnati. Questa funzionalità consente di convalidare i criteri assegnati e risolvere eventuali problemi immediatamente, senza attendere la successiva archiviazione pianificata.
 
 ## <a name="supported-platforms"></a>Piattaforme supportate
 

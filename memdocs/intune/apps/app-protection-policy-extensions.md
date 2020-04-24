@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d7de306a7d4f632b3eedf321323e12c7ad95b713
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 1dce45d0ad8d44d09345ebfe3fcd358b34a104d6
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79341958"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078380"
 ---
 # <a name="protecting-application-extensions"></a>Protezione delle estensioni delle applicazioni
 
@@ -77,5 +77,5 @@ Se un utente autorizza la condivisione dei dati tra gli account, come accade per
 - Altre informazioni su [LinkedIn information and features in your Microsoft apps](https://go.microsoft.com/fwlink/?linkid=850740) (Informazioni e funzionalità di LinkedIn nelle app Microsoft).
 - Informazioni sul rilascio delle connessioni all'account LinkedIn nella pagina [Roadmap di Office 365](https://products.office.com/en-US/business/office-365-roadmap?filters=%26freeformsearch=linkedin#abc). 
 - Informazioni su [Configuring LinkedIn account connections](https://docs.microsoft.com/azure/active-directory/linkedin-integration) (Configurazione delle connessioni all'account LinkedIn).
-- Per ulteriori informazioni sui dati condivisi tra l'account LinkedIn e l'account Microsoft aziendale o dell'istituto di istruzione, vedere [LinkedIn in Microsoft applications at your work or school](https://www.linkedin.com/help/linkedin/answer/84077) (LinkedIn nelle app Microsoft aziendali o dell'istituto di istruzione).
+- Per altre informazioni sui dati condivisi tra l'account LinkedIn e l'account Microsoft aziendale o dell'istituto di istruzione, vedere [LinkedIn in applicazioni Microsoft con l'account aziendale o dell'istituto di istruzione](https://www.linkedin.com/help/linkedin/answer/84077).
 

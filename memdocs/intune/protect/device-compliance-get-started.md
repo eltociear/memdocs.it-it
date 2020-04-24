@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/13/2020
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ccc5c93d72c026c38616c8fdcfea6f81f153aa0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fd126e59b8162a66815e89d0e80850fe2fe9c2d4
+ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352319"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81771057"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Impostare regole sui dispositivi per consentire l'accesso alle risorse dell'organizzazione tramite Intune
 
@@ -82,7 +82,7 @@ Ai dispositivi conformi alle regole dei criteri è possibile consentire l'access
 
 ## <a name="ways-to-deploy-device-compliance-policies"></a>Modi per distribuire i criteri di conformità dei dispositivi
 
-È possibile distribuire i criteri di conformità a utenti in gruppi di utenti o a dispositivi in gruppi di dispositivi. Quando un criterio di conformità viene distribuito a un utente, la conformità viene controllata su tutti i dispositivi dell'utente. In Windows 10 versione 1803 e nei dispositivi più recenti è consigliabile eseguire la distribuzione ai gruppi di dispositivi *se* l'utente primario non ha registrato il dispositivo. L'uso di gruppi di dispositivi in questo scenario è utile per la creazione di report di conformità.
+È possibile distribuire i criteri di conformità a utenti in gruppi di utenti o a dispositivi in gruppi di dispositivi. Quando un criterio di conformità viene distribuito a un utente, la conformità viene controllata su tutti i dispositivi dell'utente. L'uso di gruppi di dispositivi in questo scenario è utile per la creazione di report di conformità.
 
 Intune include anche un set di impostazioni dei criteri di conformità predefiniti. I criteri predefiniti seguenti vengono valutati in tutti i dispositivi registrati in Intune:
 

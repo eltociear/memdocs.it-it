@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2538a8c9755efe9ecec80358b7d90f10d5f2c33a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 44089df5645b128ba29e481e899d52c90b8c0a42
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80323817"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078397"
 ---
 # <a name="intune-discovered-apps"></a>App individuate da Intune
 
@@ -54,7 +54,7 @@ L'elenco seguente include il tipo di piattaforma app, le app monitorate per i di
 
 | Piattaforma | Per i dispositivi di proprietà personale | Per i dispositivi di proprietà dell'azienda | Ciclo di aggiornamento |
 |------------------------------------------------------------------------|----------------------------------|--------------------------------------------------|---------------------------------------|
-| Nota per le app Windows 10 (app Win32): [Richiede l'estensione di gestione di Intune](intune-management-extension.md) nel dispositivo | Non applicabile | Solo le app gestite | Ogni 24 ore dalla registrazione del dispositivo |
+| Nota per le app Windows 10 (app Win32): [Richiede l'estensione di gestione di Intune](intune-management-extension.md) nel dispositivo | Non applicabile | Tutte le app installate nel dispositivo | Ogni 24 ore dalla registrazione del dispositivo |
 | Windows 10 (app moderne) | Solo app moderne gestite | Tutte le app moderne installate nel dispositivo | Ogni 7 giorni dalla registrazione del dispositivo |
 | Windows 8.1 | Solo le app gestite | Solo le app gestite | Ogni 7 giorni dalla registrazione del dispositivo |
 | Windows Phone 8 | Solo le app gestite | Solo le app gestite | Ogni 7 giorni dalla registrazione del dispositivo |

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae1f0117f6dbf186b3a4bdddb393d053c33c914a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 31eef700f7aa38b70c5e9a2fa75fd3faee4c9713
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79359794"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078057"
 ---
 # <a name="reference-for-devices-entities"></a>Informazioni di riferimento per le entità della categoria Devices
 
@@ -50,7 +50,7 @@ L'entità **deviceTypes** rappresenta il tipo di dispositivo a cui fanno riferim
 
 ### <a name="example"></a>Esempio
 
-| deviceTypeID  | Nome | Descrizione |
+| deviceTypeID  | Name | Descrizione |
 |---------|------------|--------|
 | 0 |Desktop |Dispositivo Windows Desktop |
 | 1 |WindowsRT |Dispositivo WindowsRT |
@@ -118,7 +118,7 @@ L'entità **EnrollmentFailureCategory** indica perché la registrazione di un di
 | Non applicabile                  | La categoria di errore della registrazione non è applicabile.                                                            |
 | Non disponibile                   | La categoria di errore della registrazione non è disponibile.                                                             |
 | Sconosciuto                         | Errore sconosciuto.                                                                                                |
-| Authentication                  | Autenticazione non riuscita.                                                                                        |
+| Autenticazione                  | Autenticazione non riuscita.                                                                                        |
 | Autorizzazione                   | La chiamata è stata autenticata, ma non autorizzata alla registrazione.                                                         |
 | AccountValidation               | Non è stato possibile convalidare l'account per la registrazione (account bloccato, registrazione non abilitata).                      |
 | UserValidation                  | Non è stato possibile convalidare l'utente (utente inesistente, licenza mancante).                                           |
@@ -184,7 +184,7 @@ L'entità **managementStates** fornisce informazioni dettagliate sullo stato del
 
 ### <a name="example"></a>Esempio
 
-| managementStateID  | Nome | Descrizione |
+| managementStateID  | Name | Descrizione |
 |---------|------------|--------|
 | 0 |Gestiti | Gestito senza azioni remote in sospeso. |
 | 1 |RetirePending | C'è un comando di disattivazione in sospeso per il dispositivo. |
@@ -211,7 +211,7 @@ L'entità **ManagementAgentType** rappresenta gli agenti usati per gestire un di
 
 ### <a name="example"></a>Esempio
 
-| ManagementAgentTypeID  | Nome | Descrizione |
+| ManagementAgentTypeID  | Name | Descrizione |
 |---------|------------|--------|
 | 1 |EAS | Il dispositivo è gestito tramite Exchange Active Sync |
 | 2 |MDM | Il dispositivo è gestito tramite un agente MDM |

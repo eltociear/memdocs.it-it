@@ -179,7 +179,7 @@ Dopo aver registrato l'app all'interno di un tenant di Azure e quando viene visu
 3. Fare clic su **Aggiungi un'autorizzazione**.
 4. Fare clic sui **API usate dall'organizzazione**. 
 5. Nella casella di ricerca immettere **Microsoft Mobile Application Management**.
-6. In **Autorizzazioni delegate**selezionare la casella di controllo **DeviceManagementManagedApps.ReadWrite: Read and Write the User's App Management Data** (Leggere e scrivere i dati di gestione delle app dell'utente).
+6. In **Autorizzazioni delegate**selezionare la casella di controllo **DeviceManagementManagedApps.ReadWrite: Read and Write the User's App Management Data** *(Leggere e scrivere i dati di gestione delle app dell'utente).
 7. Fare clic su **Aggiungi autorizzazioni**.
 
 > [!NOTE]

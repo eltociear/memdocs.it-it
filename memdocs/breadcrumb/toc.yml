@@ -1,0 +1,77 @@
+- name: Docs
+  tocHref: /
+  topicHref: /
+  items:
+    - name: Enterprise Mobility + Security
+      tocHref: /enterprise-mobility-security/
+      topicHref: /enterprise-mobility-security/
+      items:
+        - name: Microsoft Endpoint Manager
+          tocHref: /mem/
+          topicHref: /mem/
+          items:
+            - name: Intune
+              tocHref: /mem/intune/
+              topicHref: /mem/intune/
+              items:
+                - name: Guida per gli utenti di Intune
+                  tocHref: /mem/intune/user-help/
+                  topicHref: /mem/intune/user-help/use-managed-devices-to-get-work-done
+                - name: App
+                  tocHref: /mem/intune/apps/
+                  topicHref: /mem/intune/apps/
+                - name: Nozioni di base
+                  tocHref: /mem/intune/fundamentals/
+                  topicHref: /mem/intune/fundamentals/
+                - name: Registrazione
+                  tocHref: /mem/intune/enrollment/
+                  topicHref: /mem/intune/enrollment/
+                - name: Azioni remote
+                  tocHref: /mem/intune/remote-actions/
+                  topicHref: /mem/intune/remote-actions/
+                - name: Configurazione
+                  tocHref: /mem/intune/configuration/
+                  topicHref: /mem/intune/configuration/
+                - name: Protezione
+                  tocHref: /mem/intune/protect/
+                  topicHref: /mem/intune/protect/
+                - name: Sviluppatore
+                  tocHref: /mem/intune/developer/
+                  topicHref: /mem/intune/developer/
+            - name: Configuration Manager
+              tocHref: /mem/configmgr/
+              topicHref: /mem/configmgr/
+              items:
+                - name: Guida della gestione delle applicazioni
+                  tocHref: /mem/configmgr/apps/
+                  topicHref: /mem/configmgr/apps/
+                - name: Co-gestione
+                  tocHref: /mem/configmgr/comanage/
+                  topicHref: /mem/configmgr/comanage/
+                - name: Conformità del dispositivo
+                  tocHref: /mem/configmgr/compliance/
+                  topicHref: /mem/configmgr/compliance/
+                - name: Guida dell'infrastruttura di base
+                  tocHref: /mem/configmgr/core/
+                  topicHref: /mem/configmgr/core/
+                - name: Desktop Analytics
+                  tocHref: /mem/configmgr/desktop-analytics/
+                  topicHref: /mem/configmgr/desktop-analytics/
+                - name: Sviluppatore
+                  tocHref: /mem/configmgr/develop/
+                  topicHref: /mem/configmgr/develop/
+                - name: Gestione dei dispositivi mobili
+                  tocHref: /mem/configmgr/mdm/
+                  topicHref: /mem/configmgr/mdm/
+                - name: Distribuzione del sistema operativo
+                  tocHref: /mem/configmgr/osd/
+                  topicHref: /mem/configmgr/osd/
+                - name: Protezione
+                  tocHref: /mem/configmgr/protect/
+                  topicHref: /mem/configmgr/protect/
+                - name: Aggiornamenti software
+                  tocHref: /mem/configmgr/sum/
+                  topicHref: /mem/configmgr/sum/
+                - name: Collegamento di tenant
+                  tocHref: /mem/configmgr/tenant-attach/
+                  topicHref: /mem/configmgr/tenant-attach/

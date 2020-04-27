@@ -1,0 +1,60 @@
+- name: Documentazione di Desktop Analytics
+  href: index.yml
+- name: Panoramica
+  items:
+    - name: Che cos'è Desktop Analytics?
+      href: overview.md
+    - name: Novità
+      href: whats-new.md
+- name: Esercitazioni
+  items:
+    - name: Windows 10 pilota
+      href: tutorial-windows10.md
+- name: Concetti
+  items:
+    - name: Piani di distribuzione
+      href: about-deployment-plans.md
+    - name: Asset
+      href: about-assets.md
+    - name: Aggiornamenti qualitativi e delle funzionalità
+      href: about-updates.md
+    - name: Valutazione della compatibilità
+      href: compat-assessment.md
+    - name: Monitoraggio dello stato di integrità
+      href: health-status-monitoring.md
+- name: Guide pratiche
+  items:
+    - name: Configurare Desktop Analytics
+      href: set-up.md
+    - name: Connettere Configuration Manager
+      href: connect-configmgr.md
+    - name: Registrare i dispositivi
+      href: enroll-devices.md
+    - name: Creare piani di distribuzione
+      href: create-deployment-plans.md
+    - name: Distribuire nel progetto pilota
+      href: deploy-pilot.md
+    - name: Distribuire nell'ambiente di produzione
+      href: deploy-prod.md
+    - name: Reimpostare l'account
+      href: account-reset.md
+    - name: Chiudere l'account
+      href: account-close.md
+- name: Riferimento
+  items:
+    - name: Abilitare la condivisione dei dati
+      href: enable-data-sharing.md
+    - name: Privacy
+      href: privacy.md
+    - name: Risoluzione dei problemi
+      href: troubleshooting.md
+    - name: Agente di raccolta log
+      href: log-collector.md
+    - name: Monitorare l'integrità della connessione
+      href: monitor-connection-health.md
+    - name: Impostazioni dei criteri di gruppo
+      href: group-policy-settings.md
+    - name: Domande frequenti
+      href: faq.md
+    - name: Ottenere supporto
+      href: get-support.md

@@ -1,0 +1,7 @@
+- name: Microsoft Endpoint Manager
+  href: index.yml
+- name: Panoramica
+  expanded: true
+  items:
+    - name: Panoramica di Microsoft Endpoint Manager
+      href: endpoint-manager-overview.md

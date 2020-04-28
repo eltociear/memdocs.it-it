@@ -1,6 +1,6 @@
 ---
 title: Intune nel client PC Intune legacy e Intune in Azure
-description: Considerazioni sull'uso di Intune in Azure per gestire i dispositivi di Windows dell'organizzazione.
+description: Considerazioni sull'uso di Intune in Azure per gestire i dispositivi Windows dell'organizzazione.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -16,18 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6aebd63cc0d0b1664b406ce07bfe6624b9384071
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 41b5b4116359864c4d1251515d29005b9d9af425
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79342933"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077938"
 ---
 # <a name="intune-on-azure-console-and-legacy-intune-pc-client"></a>Intune nella console di Azure e nel client PC Intune legacy
 
 Intune utilizza un'architettura di servizio dell'applicazione SaaS basata su Azure. Azure offre miglioramenti significativi per scalabilità, capacità e prestazioni. Questo scenario garantisce esperienze di amministrazione di Intune migliorate e flussi di lavoro ottimizzati nel portale di Azure. 
 
-Per l'uso di Intune in Azure per gestire i dispositivi di Windows dell'organizzazione, tenere presente i punti seguenti:
+Per l'uso di Intune in Azure per gestire i dispositivi Windows dell'organizzazione, considerare i punti seguenti:
 
 ## <a name="manage-windows-10-devices-by-using-mdm"></a>Gestire i dispositivi Windows 10 con MDM
 

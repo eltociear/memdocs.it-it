@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 04/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1f3964ec67c9c78e5aedc70ff4f328a66c59c04b
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2c05a5518ff180bcfd3f00f6f59097815e9eed9d
+ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80696516"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82126161"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>Registrare i dispositivi iOS/iPadOS in Intune
 
@@ -35,7 +35,7 @@ Come amministratore di Intune, è possibile configurare la registrazione dei dis
 
 Prima di abilitare i dispositivi iOS/iPadOS, completare i passaggi seguenti:
 
-- [Verificare che il dispositivo sia idoneo per la registrazione dei dispositivi Apple](https://support.apple.com/en-us/HT204142#eligibility).
+- [Assicurarsi che i dispositivi siano supportati](../fundamentals/supported-devices-browsers.md).
 - [Configurare Intune](../fundamentals/setup-steps.md): questi passaggi consentono di impostare l'infrastruttura Intune. In particolare, per la registrazione del dispositivo è necessario [impostare l'autorità di gestione dei dispositivi mobili](../fundamentals/mdm-authority-set.md).
 - [Ottenere un certificato push MDM di Apple](apple-mdm-push-certificate-get.md): Apple richiede un certificato per abilitare la gestione dei dispositivi iOS/iPadOS e macOS.
 
@@ -63,7 +63,7 @@ Per le organizzazioni che acquistano dispositivi per i propri utenti, Intune sup
 
 Le organizzazioni possono ora acquistare i dispositivi iOS/iPadOS con Registrazione automatica del dispositivo di Apple. Registrazione automatica del dispositivo consente di distribuire un profilo di registrazione in modalità wireless per includere i dispositivi nella gestione. Per altre informazioni, vedere [Device Enrollment Program](device-enrollment-program-enroll-ios.md).
 
-## <a name="user-enrollment"></a>Registrazione utente
+## <a name="user-enrollment"></a>Registrazione utenti
 La registrazione utente offre agli amministratori un subset di opzioni di gestione semplificato rispetto ad altri metodi di registrazione. Per altre informazioni, vedere [Azioni e opzioni supportate per la registrazione utente](ios-user-enrollment-supported-actions.md) e [Configurare la registrazione utente iOS/iPadOS e iPadOS](ios-user-enrollment.md).
 
 ## <a name="apple-school-manager"></a>Apple School Manager

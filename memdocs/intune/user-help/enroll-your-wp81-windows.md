@@ -19,16 +19,16 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 84a7f679cc071a3e8d339fd29e278dfde6eef28c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 08a6cf6eed86836c8fe887265faddb1459918aea
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79348198"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074759"
 ---
 # <a name="enroll-your-windows-phone-81-device-in-intune"></a>Registrare il dispositivo Windows Phone 8.1 in Intune  
 
-Registrare i dispositivi per accedere alla posta elettronica, ai file e altre risorse aziendali o dell'istituto di istruzione. La registrazione dei dispositivi consente all'azienda di proteggere i suoi dati. Per altre informazioni sulla registrazione, vedere [Che cosa avviene quando si installa l'app Portale aziendale e si registra il dispositivo Windows in Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) e [Quali sono le informazioni visibili per l'azienda quando si registra il dispositivo?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)  
+Registrare i dispositivi per accedere alla posta elettronica, ai file e altre risorse aziendali o dell'istituto di istruzione. La registrazione dei dispositivi consente all'azienda di proteggere i suoi dati. Per altre informazioni sulla registrazione, vedere [Che cosa avviene quando si installa l'app Portale aziendale e si registra il dispositivo Windows in Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) e [Cosa può e cosa non può essere visualizzato dal supporto tecnico aziendale sul dispositivo](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).  
 
 Per registrare il dispositivo in Intune, seguire le istruzioni che soddisfano le autorizzazioni o lo stato dell'account corrente.
 
@@ -47,7 +47,7 @@ Seguire questi passaggi se è possibile installare l'app Portale aziendale da Mi
 4. Toccare **Portale aziendale** &gt; **Installa**.  
 
 
-    ![Installare il Portale aziendale](./media/WP81-2-CP-install-v2.png)  
+    ![Installare il portale aziendale](./media/WP81-2-CP-install-v2.png)  
 
 Registrare il dispositivo:  
 

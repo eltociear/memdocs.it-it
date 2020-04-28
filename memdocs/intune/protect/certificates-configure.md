@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2019
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7bcc99937cfdf0c286eeb4f7f3d11ff4bf5c0c4f
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 151b258826dcb65b3311b81e3c47bc5c089cb017
+ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322807"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81771222"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Usare i certificati per l'autenticazione in Microsoft Intune
 
@@ -99,7 +99,7 @@ Il file con estensione cer verrà usato quando si [creano profili di certificato
 
 ## <a name="create-trusted-certificate-profiles"></a>Creare profili di certificati attendibili
 
-Creare un profilo di certificato attendibile prima di creare un profilo di certificato SCEP o PKCS oppure un profilo di certificato PKCS importato. La distribuzione di un profilo di certificato attendibile garantisce che ogni dispositivo riconosca la legittimità dell'autorità di certificazione. I profili di certificato SCEP fanno riferimento direttamente a un profilo di certificato attendibile. I profili di certificato PKCS non fanno riferimento direttamente al profilo di certificato attendibile, ma fanno riferimento direttamente al server che ospita la CA. I profili di certificato PKCS importati non fanno riferimento direttamente al profilo di certificato attendibile, ma possono usarlo nel dispositivo. La distribuzione di un profilo di certificato attendibile nei dispositivi garantisce che venga stabilita questa relazione di trust. Quando un dispositivo non considera attendibile la CA radice, i criteri del profilo di certificato SCEP o PKCS avranno esito negativo.
+Creare e distribuire un profilo di certificato attendibile prima di creare un profilo di certificato SCEP o PKCS oppure un profilo di certificato PKCS importato. La distribuzione di un profilo certificato attendibile agli stessi gruppi che ricevono gli altri tipi di profilo certificato garantisce che ogni dispositivo sia in grado di riconoscere la legittimità dell'autorità di certificazione. I profili di certificato SCEP fanno riferimento direttamente a un profilo di certificato attendibile. I profili di certificato PKCS non fanno riferimento direttamente al profilo di certificato attendibile, ma fanno riferimento direttamente al server che ospita la CA. I profili di certificato PKCS importati non fanno riferimento direttamente al profilo di certificato attendibile, ma possono usarlo nel dispositivo. La distribuzione di un profilo di certificato attendibile nei dispositivi garantisce che venga stabilita questa relazione di trust. Quando un dispositivo non considera attendibile la CA radice, i criteri del profilo di certificato SCEP o PKCS avranno esito negativo.
 
 Creare un profilo di certificato attendibile separato per ogni piattaforma del dispositivo che si vuole supportare, così come si farà per i profili di certificato SCEP, PKCS e PKCS importati.
 

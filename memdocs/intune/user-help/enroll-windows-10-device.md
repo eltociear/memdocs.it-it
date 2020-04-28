@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2d5438a83132323f67f9fd9655a8a1bff52439a9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8f3150a887cfbff73976bb697e0b13ea129f003f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79348445"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080080"
 ---
 # <a name="enroll-windows-10-devices-with-intune-company-portal"></a>Registrare dispositivi Windows 10 in Portale aziendale Intune
 
@@ -56,7 +56,7 @@ Questa procedura descrive come registrare un dispositivo che esegue Windows 10, 
 
     ![Aggiungi un account aziendale o dell'istituto di istruzione](./media/w10-enroll-rs1-enter-your-credentials.png)  
 
-    Verrà infine visualizzato un messaggio che la società o l'istituto di istruzione sta registrando il dispositivo.
+    Verrà infine visualizzato un messaggio in cui viene comunicato che la società o l'istituto di istruzione sta registrando il dispositivo.
 
 6. Se l'organizzazione richiede di configurare un PIN per Windows Hello, verrà richiesto di immettere un codice di verifica. Immettere il codice e continuare con le istruzioni visualizzate per creare un PIN.  
 

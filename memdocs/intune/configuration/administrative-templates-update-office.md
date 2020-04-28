@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fcf2139019b1f4d764b55ee31f5961711a71834c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6b0c673eb702e3e9f08209d04bf256c049b10ee6
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80219878"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82022688"
 ---
 # <a name="use-update-channel-and-target-version-settings-to-update-office-365-with-microsoft-intune-administrative-templates"></a>Usare le impostazioni Canale di aggiornamento e Versione di destinazione per aggiornare Office 365 con i modelli amministrativi di Microsoft Intune
 
@@ -37,7 +37,7 @@ Si applica a:
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Assicurarsi di [abilitare Aggiornamenti automatici di Office365 ProPlus](https://docs.microsoft.com/deployoffice/configure-update-settings-for-office-365-proplus) per le app di Office. È possibile eseguire questa operazione usando i criteri di gruppo o il modello ADMX di Office 2016 di Intune:
+Assicurarsi di [abilitare Aggiornamenti automatici di App di Microsoft 365](https://docs.microsoft.com/deployoffice/configure-update-settings-for-office-365-proplus) per le app di Office. È possibile eseguire questa operazione usando i criteri di gruppo o il modello ADMX di Office 2016 di Intune:
 
 > [!div class="mx-imgBorder"]
 > ![Nel modello amministrativo di Intune impostare Abilita aggiornamenti automatici per Office](./media/administrative-templates-update-office/admx-enable-automatic-updates.png)
@@ -78,7 +78,7 @@ Dopo aver assegnato i criteri e dopo la sincronizzazione del dispositivo, è pos
     > ![Esempio di chiave del Registro di sistema L_Updatebranch del modello amministrativo](./media/administrative-templates-update-office/admx-update-branch-registry-key.png)
 
     > [!TIP]
-    > In [Gestire Office 365 ProPlus con Configuration Manager](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) è disponibile un elenco dei valori con il relativo significato. I valori del registro sono basati sul canale di distribuzione selezionato:
+    > In [Gestire App di Microsoft 365 con Configuration Manager](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) è disponibile un elenco dei valori con il relativo significato. I valori del registro sono basati sul canale di distribuzione selezionato:
     >
     >- Canale mensile                - value="Current"
     >- Canale mensile (mirato)     - value="Current"
@@ -98,7 +98,7 @@ A questo punto, i criteri di Intune vengono applicati correttamente al dispositi
     - `UpdateChannel`: chiave dinamica che cambia, a seconda delle impostazioni configurate.
     - `CDNBaseUrl`: impostato quando Office 365 viene installato nel dispositivo.
 
-3. Osservare il valore `UpdateChannel`. Il valore indica la frequenza di aggiornamento di Office. In [Gestire Office 365 ProPlus con Configuration Manager](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) è disponibile un elenco dei valori con la relativa impostazione.
+3. Osservare il valore `UpdateChannel`. Il valore indica la frequenza di aggiornamento di Office. In [Gestire App di Microsoft 365 con Configuration Manager](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) è disponibile un elenco dei valori con la relativa impostazione.
 
     Esaminando l'esempio seguente si noti che `UpdateChannel` è impostato su `http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60`, ovvero **mensile**:
 
@@ -141,7 +141,7 @@ Se si vuole eseguire altre operazioni, è possibile forzare l'aggiornamento alla
 
 ### <a name="step-1-force-the-office-version-to-update"></a>Passaggio 1: Forzare l'aggiornamento della versione di Office
 
-1. Verificare che la versione di Office supporti il canale di aggiornamento scelto. In [Cronologia degli aggiornamenti per Office 365 ProPlus](https://docs.microsoft.com/officeupdates/update-history-office365-proplus-by-date) è disponibile un elenco dei numeri di build che supportano i diversi canali di aggiornamento.
+1. Verificare che la versione di Office supporti il canale di aggiornamento scelto. In [Cronologia degli aggiornamenti per App di Microsoft 365](https://docs.microsoft.com/officeupdates/update-history-office365-proplus-by-date) è disponibile un elenco dei numeri di build che supportano i diversi canali di aggiornamento.
 
 2. Nel [modello amministrativo di Intune](administrative-templates-windows.md#create-the-template) passare all'impostazione **Versione di destinazione** e immettere la versione desiderata.
 
@@ -182,6 +182,6 @@ Provare a usare questi passaggi per testare i criteri prima di distribuirli a tu
 
 [Aggiornare i valori del canale per i client Office 365](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)
 
-[Panoramica del servizio di criteri del cloud di Office per Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service)
+[Panoramica del servizio di criteri del cloud di Office per App di Microsoft 365](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service)
 
 [Usare i modelli di Windows 10 per configurare le impostazioni di criteri di gruppo (modelli ADMX) in Microsoft Intune](administrative-templates-windows.md)

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e28ca9e9b8ed77cdd01b415761fd90308d5b7017
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a36449de6d6ebc437b445309bb64f3a9b448d90f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79352748"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079808"
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Riassegnare i criteri di accesso condizionale dal portale di Intune classico al portale di Azure
 
@@ -86,7 +86,7 @@ Il pannello **Protezione app di Intune**  nel portale di Azure consente agli amm
     ![Immagine che confronta l'interfaccia utente per i gruppi di utenti tra i portali di Intune e di Azure](./media/conditional-access-intune-reassign/reassign-ca-1.png)
 
     > [!IMPORTANT] 
-    > La selezione eseguita per il portale di Azure deve corrispondere alla selezione eseguita per il portale classico. Ad esempio, se sono selezionati tutti gli utenti nel portale di Intune classico, selezionare **Tutti gli utenti** nel portale di Azure. Inoltre, se è stata scelta l'opzione **Gruppi esenti** nel portale di Intune classico, escludere tali gruppi anche nel portale di Azure.
+    > La selezione eseguita per il portale di Azure deve corrispondere alla selezione eseguita per il portale classico. Ad esempio, se sono selezionati tutti gli utenti nel portale di Intune classico, selezionare **Tutti gli utenti** nel portale di Azure. Inoltre, se è stata scelta l'opzione **Gruppi esenti** nel portale di Intune classico, escludere questi gruppi anche nel portale di Azure.
 
 5. Dopo aver scelto il gruppo, fare clic su **Seleziona** e quindi su **Fine**.
 
@@ -154,7 +154,7 @@ Se sono state configurate le impostazioni di Exchange ActiveSync come parte dei 
     ![Immagine del confronto dell'interfaccia utente per i gruppi di utenti tra i portali di Intune e di Azure](./media/conditional-access-intune-reassign/reassign-ca-12.png)
 
     > [!IMPORTANT] 
-    > La selezione effettuata per il portale di Azure deve corrispondere alla selezione effettuata per il portale di Azure. Ad esempio, se sono selezionati tutti gli utenti nel portale di Intune classico, selezionare **Tutti gli utenti** nel portale di Azure. Inoltre, se è stata scelta l'opzione **Gruppi esenti** nel portale di Intune classico, escludere tali gruppi anche nel portale di Azure.
+    > La selezione effettuata per il portale di Azure deve corrispondere alla selezione effettuata per il portale di Azure. Ad esempio, se sono selezionati tutti gli utenti nel portale di Intune classico, selezionare **Tutti gli utenti** nel portale di Azure. Inoltre, se è stata scelta l'opzione **Gruppi esenti** nel portale di Intune classico, escludere questi gruppi anche nel portale di Azure.
 
 5. Dopo aver scelto il gruppo, fare clic su **Seleziona** e quindi su **Fine**.
 
@@ -167,7 +167,7 @@ Se sono state configurate le impostazioni di Exchange ActiveSync come parte dei 
     > [!IMPORTANT] 
     > I criteri di accesso condizionale per i client EAS non possono includere altre app cloud.
 
-8. Nel pannello **Condizioni** scegliere **App client** e quindi scegliere l'app client applicabile. Se si è scelto di bloccare i client che non sono supportati da Intune, usare l'opzione **Applica i criteri solo alle piattaforme supportate**.
+8. Nel pannello **Condizioni** scegliere **App client** e quindi scegliere l'app client applicabile. Se si è scelto di bloccare i client non supportati da Intune, usare l'opzione **Applica i criteri solo alle piattaforme supportate**.
 
     ![Immagine del confronto dell'interfaccia utente delle app client tra i portali di Intune e di Azure](./media/conditional-access-intune-reassign/reassign-ca-15.png)
 

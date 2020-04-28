@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fa9b8bc49e9c5aaf6337988fd980115beea1200b
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 56274fd614dfd521e59c604cf00f18df7c8b1bc3
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79352475"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079723"
 ---
 # <a name="data-intune-sends-to-google"></a>Dati inviati da Intune a Google
 
@@ -34,7 +34,7 @@ Quando la gestione dei dispositivi aziendali Android è abilitata in un disposit
 Nella tabella seguente sono elencati i dati che Microsoft Intune invia a Google quando la gestione dei dispositivi è abilitata in un dispositivo:
 
 
-| Dati inviati a Google | Details | Utilizzato per | Esempio |
+| Dati inviati a Google | Dettagli | Utilizzato per | Esempio |
 |:---:|:---:|:---:|:---:|
 | EnterpriseId | Ha origine in Google al momento dell'associazione dell'account Gmail a Intune. | Identificatore principale usato per le comunicazioni tra Intune e Google.  Queste comunicazioni includono l'impostazione di criteri, la gestione dei dispositivi e l'associazione/annullamento dell'associazione di Android Enterprise con Intune. | Identificatore univoco, formato di esempio: LC04eik8a6 |
 | Policy Body (Insieme di criteri) | Viene originato in Intune quando si salva una nuova app o nuovi criteri di configurazione | Applicazione dei criteri ai dispositivi. | Raccolta di tutte le impostazioni configurate per un'applicazione o per i criteri di configurazione. Può contenere informazioni sui clienti, se visualizzate come parte dei criteri, ad esempio nomi di rete, nomi delle applicazioni e impostazioni specifiche dell'app. |

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f09ffc2bc1d0c1850f20121c869186018cf9ae31
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 944b3d98dc59dcae69f72fef5dfdb1793701f67a
+ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79354425"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82126180"
 ---
 # <a name="using-windows-10-virtual-machines-with-intune"></a>Uso di macchine virtuali Windows 10 con Intune
 
@@ -31,12 +31,15 @@ Intune supporta la gestione di macchine virtuali che eseguono Windows 10 Enterpr
 
 Quando si gestiscono le macchine virtuali Windows 10 con Intune, tenere presente quanto segue:
 
+- Windows 10 Enterprise Multi-Session (Enterprise for Virtual Devices) usato in Desktop virtuale Windows non supporta attualmente la gestione di Intune.
+
 ## <a name="enrollment"></a>Registrazione
 - Non è consigliabile gestire macchine virtuali su richiesta e host sessione con Intune. È necessario registrare ogni macchina virtuale al momento della creazione. Inoltre, l'eliminazione regolare delle macchine virtuali lascia i record di dispositivo orfani in Intune fino a quando non viene eseguita la [pulizia](../remote-actions/devices-wipe.md#automatically-delete-devices-with-cleanup-rules). 
 - I tipi di distribuzione automatica e "White Glove" di Windows Autopilot non sono supportati perché richiedono un Trusted Platform Module (TPM) fisico. 
 - La registrazione Configurazione guidata non è supportata nelle macchine virtuali a cui è possibile accedere solo tramite RDP, ad esempio le macchine virtuali ospitate in Azure. Questa restrizione comporta quanto segue:
     - Windows Autopilot e la configurazione guidata commerciale non sono supportati.
     - Le opzioni della pagina relativa allo stato della registrazione per i criteri del contesto del dispositivo non sono supportate.
+
 
 ## <a name="configuration"></a>Configurazione
 Intune non supporta alcuna configurazione che usi un modulo TPM (Trusted Platform Module) o la gestione hardware, tra cui:

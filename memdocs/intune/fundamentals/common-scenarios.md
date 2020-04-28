@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a9975ffb8ce56659016680304c936fc8bb7d0774
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f2244f484b44673454b1bbb6ba6286c253021517
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79344194"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079264"
 ---
 # <a name="common-ways-to-use-microsoft-intune"></a>Metodi comuni per l'uso di Microsoft Intune
 
@@ -45,7 +45,7 @@ Intune e Microsoft Enterprise Mobility + Security (EMS) offrono un'esclusiva [so
 
 Intune supporta anche l'abilitazione dell'accesso alle applicazioni per dispositivi mobili che richiedono l'accesso protetto ai dati locali, ad esempio i server app line-of-business. Questo tipo di accesso viene in genere eseguito usando [certificati gestiti da Intune](../protect/certificates-configure.md) per il controllo di accesso, combinati con un gateway VPN standard o un proxy nel perimetro, ad esempio il proxy di applicazione di Microsoft Azure Active Directory.
 
-In questi casi, l'unico modo per accedere ai dati aziendali è registrare il dispositivo nel sistema di gestione. Dopo che i dispositivi sono stati registrati, il sistema di gestione garantisce che siano compatibili con i criteri specificati prima di poter accedere ai dati aziendali. In Intune sono anche disponibili lo [strumento di wrapping delle app e App SDK](../developer/apps-prepare-mobile-application-management.md) che consentono di contenere i dati a cui si accede all'interno dell'app line-of-business, in modo che non sia possibile passare i dati aziendali alle app o ai servizi consumer.
+In questi casi, l'unico modo per accedere ai dati aziendali è registrare il dispositivo nel sistema di gestione. Dopo che i dispositivi sono stati registrati, il sistema di gestione garantisce che siano compatibili con i criteri specificati prima di poter accedere ai dati aziendali. In Intune sono anche disponibili [App Wrapping Tool e App SDK](../developer/apps-prepare-mobile-application-management.md) che consentono di contenere i dati a cui si accede all'interno dell'app line-of-business, in modo che non sia possibile passare i dati aziendali alle app o ai servizi consumer.
 
 <!-- Learn more about how to plan and deploy Intune to help secure on-premises email and data. -->
 
@@ -99,4 +99,4 @@ La semplicità dell'esperienza utente in questo caso è essenziale. Per questo m
 
 Talvolta i dipendenti devono usare dispositivi, app o browser che non è possibile gestire, ad esempio i computer pubblici disponibili presso le fiere e negli hotel.
 
-In questi casi è opportuno consentire ai dipendenti di accedere alla posta elettronica aziendale? Con Intune e Microsoft Enterprise Mobility + Security, la risposta può essere semplicemente "no",[ limitando l'accesso alla posta elettronica ai dispositivi gestiti dall'organizzazione](../protect/conditional-access.md). Ciò assicura che i dipendenti con autenticazione avanzata non lascino accidentalmente i dati aziendali su computer non attendibili.
+In questi casi è opportuno consentire ai dipendenti di accedere alla posta elettronica aziendale? Con Intune e Microsoft Enterprise Mobility + Security, la risposta può essere semplicemente "no", [limitando l'accesso alla posta elettronica ai dispositivi gestiti dall'organizzazione](../protect/conditional-access.md). Ciò assicura che i dipendenti con autenticazione avanzata non lascino accidentalmente i dati aziendali su computer non attendibili.

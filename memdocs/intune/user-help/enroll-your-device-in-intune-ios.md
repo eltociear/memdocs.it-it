@@ -19,12 +19,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: aeb2e22348e7197f0abb62ee540c37079f8645f4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 49e598f370669ed55688af6e6a570a932b5bf9d3
+ms.sourcegitcommit: 3ff33493c3f93bf06fdc942d30958a2a4ad03529
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084691"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82137967"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>Configurare l'accesso del dispositivo iOS alle risorse aziendali  
 
@@ -170,13 +170,13 @@ La sospensione per un periodo più lungo di qualche minuto durante la registrazi
 
 8. Nella schermata **Accedi** immettere la password per l'ID Apple gestito. Nella maggior parte dei casi, queste credenziali saranno le stesse usate per accedere all'account aziendale o dell'Istituto di istruzione, a meno che l'organizzazione non abbia fornito un set di credenziali diverso. 
 9. Toccare **Accedi**.  
-10. Un messaggio di operazione completata verrà visualizzato sullo schermo brevemente dopo l'installazione del profilo. Per verificare che il dispositivo sia stato installato, passare alle impostazioni  **Gestione di profili e dispositivi**. Il profilo dovrebbe essere visualizzato in  **Gestione dispositivi mobili**.  
+10. Un messaggio di operazione completata verrà visualizzato sullo schermo brevemente dopo l'installazione del profilo. Per verificare che il dispositivo sia stato installato, passare alle impostazioni **Gestione di profili e dispositivi**. Il profilo verrà visualizzato in **Gestione dispositivi mobili**.  
 
     ![Screenshot di esempio dell'app Impostazioni, impostazioni Gestione di profili e dispositivi con il profilo di gestione.](./media/ios-12-cp-enroll-1904.PNG)  
 
 11. Tornare all'app Portale aziendale. Il Portale aziendale avvierà la sincronizzazione e la configurazione del dispositivo. Il Portale aziendale può richiedere di aggiornare altre impostazioni del dispositivo. Se ciò avviene, toccare **Continua**.    
 
-12. La configurazione sarà completa quando per tutti gli elementi dell'elenco viene visualizzato un segno di spunta verde. Toccare  **Fine**.  
+12. La configurazione sarà completa quando per tutti gli elementi dell'elenco viene visualizzato un segno di spunta verde. Toccare **Fine**.  
 
 ## <a name="it-administrator-support"></a>Supporto per amministratori IT  
 Gli amministratori IT che riscontrano problemi durante la registrazione dei dispositivi possono vedere [Risoluzione dei problemi di registrazione dei dispositivi iOS in Microsoft Intune](https://support.microsoft.com/en-us/help/4039809). Questo articolo elenca gli errori comuni, le cause e le procedure per risolverli.  

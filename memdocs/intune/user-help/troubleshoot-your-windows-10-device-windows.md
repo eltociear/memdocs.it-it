@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 7af5274065217331cf3c7fc2a493374f4c0e2227
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f0ad29e04e2f1d15c94e3ecdc4dbb3c891cd605e
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79335653"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077717"
 ---
 # <a name="troubleshoot-your-windows-10-device-enrollment"></a>Risolvere i problemi di registrazione dei dispositivi Windows 10
 Se il dispositivo è stato registrato, ma non è ancora possibile accedere alla posta elettronica e ai file di lavoro o dell'istituto di istruzione, provare questi passaggi di risoluzione dei problemi.  
@@ -41,7 +41,7 @@ Se il dispositivo è stato registrato, ma non è ancora possibile accedere alla 
 
 ## <a name="troubleshooting-steps-to-follow-if-you-see-access-work-or-school"></a>Passaggi di risoluzione dei problemi da seguire se si visualizza "Accedi all'azienda o all'istituto di istruzione"
 
-1. Se è stata eseguita la procedura sopra descritta, ma non è tuttavia possibile accedere alla posta elettronica e ai file dell'azienda o dell'istituto di istruzione, tornare alla schermata **Access work or school** (Accesso azienda o istituto di istruzione).
+1. Se è stata eseguita la procedura sopra descritta, ma non è tuttavia possibile accedere alla posta elettronica e ai file dell'azienda o dell'istituto di istruzione, tornare alla schermata **Accesso aziendale o dell'istituto di istruzione**.
 
 2. Eseguire una delle operazioni seguenti:
 
@@ -55,7 +55,7 @@ Se il dispositivo è stato registrato, ma non è ancora possibile accedere alla 
 
 Se è stata eseguita la procedura sopra descritta, ma non è tuttavia possibile accedere alla posta elettronica, ai file e ad altri dati dell'azienda o dell'istituto di istruzione, tornare alla schermata **Account** e toccare **Accesso società**.
 
-- Se viene visualizzato l'account aziendale o dell'istituto di istruzione, si è connessi.  
+- Se viene visualizzato l'account aziendale o dell'istituto di istruzione, la connessione è stata stabilita.  
 
 - In caso contrario, toccare **Connetti** e quindi accedere con le credenziali aziendali o dell'istituto di istruzione.
 

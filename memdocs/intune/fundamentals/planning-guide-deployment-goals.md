@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9ff60d5823d7b249e4648b5858ff5ab2dcd5935a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 74fbf1af85fdaef7cebde5c58f7892015b433ff6
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357714"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079230"
 ---
 # <a name="determine-deployment-goals-objectives-and-challenges"></a>Determinare scopi, obiettivi e sfide per la distribuzione
 
-Per un piano di distribuzione efficace è innanzitutto necessario identificare gli scopi e gli obiettivi dell'organizzazione, insieme alle potenziali sfide da affrontare. Esaminiamo ognuna di queste aree più in dettaglio.
+Per un piano di distribuzione efficace è prima necessario identificare gli scopi e gli obiettivi dell'organizzazione, insieme alle potenziali sfide da affrontare. Esaminiamo ognuna di queste aree più in dettaglio.
 
 ## <a name="deployment-goals"></a>Scopi della distribuzione
 

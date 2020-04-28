@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93bacecf2829b1e7119f909c14ce9ab44a8f6d2f
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f4b374d79d689e1ecad8124489fe5023378bd4f1
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79349901"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079077"
 ---
 # <a name="troubleshoot-ndes-reporting-of-certificate-deployments-in-microsoft-intune"></a>Risolvere i problemi relativi alla segnalazione del servizio Registrazione dispositivi di rete della distribuzione di certificati in Microsoft Intune
 
@@ -61,7 +61,7 @@ Se la segnalazione ha avuto esito positivo, nel servizio Registrazione dispositi
 
 ### <a name="troubleshoot-stuck-files"></a>Risolvere i problemi relativi ai file bloccati
 
-Se non viene visualizzato nessun nuovo file creato nella cartella *Succeed* controllare se sono presenti file bloccati nella cartella *Processing*.
+Se non viene visualizzato nessun nuovo file creato nella cartella *Succeed*, verificare se sono presenti file bloccati nella cartella *Processing*.
 
 Verificare che il servizio Intune Connector sia stato avviato nel server NDES e che non siano presenti errori in Ndesconnector.svclog.
 

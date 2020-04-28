@@ -1,5 +1,5 @@
 ---
-title: Che cosa avviene se si annulla la registrazione del dispositivo Windows? | Documentazione Microsoft
+title: Che cosa avviene se si annulla la registrazione del dispositivo Windows? | Microsoft Docs
 description: ''
 keywords: ''
 author: lenewsad
@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 56a7b87f61c522eb7796d201be4b3100d57f8ca1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: bea6ab16baa923d4cc38dee421342636de9e1942
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79346872"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076799"
 ---
 # <a name="what-happens-if-you-unenroll-your-windows-device-from-intune"></a>Che cosa avviene se si annulla la registrazione del dispositivo Windows da Intune?
 
@@ -33,7 +33,7 @@ Usare i collegamenti sul lato destro della pagina in **Contenuto di questo artic
 
 ## <a name="windows-10-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista
 
-- Il dispositivo non è più visualizzato nel portale aziendale e non è più possibile installare app dal portale stesso.
+- Il dispositivo non è più visualizzato nel Portale aziendale Intune e non è più possibile installare app dal portale stesso.
 
 - Il software client Intune, se è installato, verrà rimosso dal computer.
 
@@ -48,7 +48,7 @@ Usare i collegamenti sul lato destro della pagina in **Contenuto di questo artic
 
 Inoltre, per Windows 8.1:
 
-- Non è più possibile usare app aziendali e dati aziendali sul dispositivo.
+- Non è più possibile usare app aziendali e dati aziendali nel dispositivo.
 
 - Alcune app di posta elettronica, ad esempio Windows Mail, non possono più accedere alla posta elettronica aziendale archiviata nel dispositivo.
 
@@ -60,7 +60,7 @@ Inoltre, per Windows 8.1:
 
 - L'app Portale aziendale viene disinstallata dal dispositivo. Ciò significa che il dispositivo non è più visualizzato nel portale aziendale e che non è più possibile installare app dall'app Portale aziendale o dal sito Web del portale aziendale.
 
-- Non è più possibile usare app aziendali e dati aziendali sul dispositivo.
+- Non è più possibile usare app aziendali e dati aziendali nel dispositivo.
 
 - Non saranno più valide le impostazioni modificate nel dispositivo quando questo è stato aggiunto, ad esempio la disattivazione della fotocamera o la richiesta di una password di una certa lunghezza.
 
@@ -71,7 +71,7 @@ Inoltre, per Windows 8.1:
 
 - L'app Portale aziendale viene disinstallata dal dispositivo. Ciò significa che il dispositivo non è più visualizzato nel portale aziendale e che non è possibile installare app dal portale stesso.
 
-- Non è più possibile usare app aziendali e dati aziendali sul dispositivo.
+- Non è più possibile usare app aziendali e dati aziendali nel dispositivo.
 
 - Non saranno più valide le impostazioni modificate nel dispositivo quando questo è stato aggiunto, ad esempio la disattivazione della fotocamera o la richiesta di una password di una certa lunghezza.
 
@@ -85,7 +85,7 @@ Quando si rimuove il dispositivo Windows RT, si verifica quanto segue:
 
 - L'app Portale aziendale viene disinstallata dal dispositivo. Ciò significa che il dispositivo non è più visualizzato nel portale aziendale e che non è possibile installare app dal portale stesso.
 
-- Non è più possibile usare app aziendali e dati aziendali sul dispositivo.
+- Non è più possibile usare app aziendali e dati aziendali nel dispositivo.
 
 - Non saranno più valide le impostazioni modificate nel dispositivo quando questo è stato aggiunto, ad esempio la disattivazione della fotocamera o la richiesta di una password di una certa lunghezza.
 

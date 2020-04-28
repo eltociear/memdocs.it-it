@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 83b2f3952d0805237acf0fe71c4f0f1617618723
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 7f88c352206d087ca6e79f25ec078fabc000de66
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79351149"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079179"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>Impostazioni della baseline di sicurezza MDM per Intune  
 
@@ -143,7 +143,7 @@ Per altre informazioni, vedere [Policy CSP - Browser](https://docs.microsoft.com
   **Impostazione predefinita**: Sì  
   
 - **Bloccare lo strumento per la gestione delle password**  
-  Per impostazione predefinita, Microsoft Edge usa automaticamente lo strumento per la gestione delle password, consentendo agli utenti di gestire le password localmente. La disabilitazione di questo criterio impedisce a Microsoft Edge di usare lo strumento per la gestione delle password. Non configurare questo criterio se si vuole consentire agli utenti di scegliere di salvare e gestire localmente le password tramite lo strumento per la gestione delle password.  
+  Per impostazione predefinita, Microsoft Edge usa automaticamente lo strumento per la gestione delle password, consentendo agli utenti di gestire le password localmente. La disabilitazione di questo criterio impedisce a Microsoft Edge di usare lo strumento per la gestione delle password. Non configurare questo criterio se si vuole consentire agli utenti di scegliere di salvare e gestire le password localmente tramite lo strumento per la gestione delle password.  
   [Altre informazioni](https://go.microsoft.com/fwlink/?linkid=2067128)  
   
   **Impostazione predefinita**: Sì  
@@ -321,7 +321,7 @@ Per altre informazioni, vedere [Policy CSP - DeviceLock](https://docs.microsoft.
       *L'impostazione Sì impedisce l'uso di password semplici.* 
 
   - **Impedisci riutilizzo delle password precedenti**  
-    Specifica il numero di password che possono essere archiviate nella cronologia che non possono essere usate. Il valore include la password corrente dell'utente. Con un'impostazione di *1*, ad esempio, l'utente non può usare nuovamente la password corrente quando sceglie una nuova password. Un'impostazione di *5* significa che un utente non può definire la nuova password uguale alla password corrente o a una qualsiasi delle quattro precedenti.  
+    Specifica il numero di password che possono essere archiviate nella cronologia e non possono essere usate. Il valore include la password corrente dell'utente. Con un'impostazione di *1*, ad esempio, l'utente non può usare nuovamente la password corrente quando sceglie una nuova password. Un'impostazione di *5* significa che un utente non può definire la nuova password uguale alla password corrente o a una qualsiasi delle quattro precedenti.  
     [Altre informazioni](https://go.microsoft.com/fwlink/?linkid=2066795)  
     
     **Impostazione predefinita**: 24  
@@ -543,7 +543,7 @@ Per altre informazioni, vedere [Policy CSP - InternetExplorer](https://docs.micr
   **Impostazione predefinita**: Nessun sito  
 
 - **Internet Explorer - Supporto della crittografia**  
-  Questa impostazione di criteri consente di disattivare il supporto per Transport Layer Security (TLS) 1.0, TLS 1.1, TLS 1.2, Secure Sockets Layer (SSL) 2.0 o SSL 3.0 nel browser. TLS e SSL sono protocolli che consentono di proteggere le comunicazioni tra il browser e il server di destinazione. Quando il browser tenta di configurare una comunicazione protetta con il server di destinazione, il browser e il server negoziano il protocollo e la versione da usare. Il browser e il server tentano di trovare una corrispondenza nel rispettivo elenco di protocolli e versioni supportati e selezionano la corrispondenza preferita. Se si abilita questa impostazione di criteri, il browser negozia o non negozia un tunnel di crittografia usando i metodi di crittografia selezionati nell'elenco a discesa. Se questa impostazione di criteri viene disabilitata o non viene configurata, l'utente può selezionare il metodo di crittografia supportato dal browser.  
+  Questa impostazione di criteri consente di disattivare il supporto per Transport Layer Security (TLS) 1.0, TLS 1.1, TLS 1.2, Secure Sockets Layer (SSL) 2.0 o SSL 3.0 nel browser. TLS e SSL sono protocolli che consentono di proteggere le comunicazioni tra il browser e il server di destinazione. Quando il browser tenta di configurare una comunicazione protetta con il server di destinazione, il browser e il server negoziano il protocollo e la versione da usare. Il browser e il server tentano di trovare una corrispondenza nei rispettivi elenchi di protocolli e versioni supportati e selezionano la corrispondenza preferita. Se si abilita questa impostazione di criteri, il browser negozia o non negozia un tunnel di crittografia usando i metodi di crittografia selezionati nell'elenco a discesa. Se questa impostazione di criteri viene disabilitata o non viene configurata, l'utente può selezionare il metodo di crittografia supportato dal browser.  
   [Altre informazioni](https://go.microsoft.com/fwlink/?linkid=2067057)
 
   **Impostazione predefinita**: 2 elementi:  TLS v1.1 e TLS v1.2  
@@ -692,7 +692,7 @@ Per altre informazioni, vedere [Policy CSP - InternetExplorer](https://docs.micr
   L'impostazione di questo criterio consente di decidere se VBScript può essere eseguito nelle pagine in zone specifiche di Internet Explorer. Le opzioni includono: 
   - *Abilita*: VBScript viene eseguito nelle pagine in zone specifiche, senza nessuna interazione. 
   - *Chiedi conferma*: viene richiesto ai dipendenti se consentono l'esecuzione di VBScript nella zona. 
-  - *Disabilita*: viene impedita l'esecuzione di VBScript nella zona. Se si disabilita o non si configura l'impostazione di questo criterio, VBScript viene eseguito senza alcuna interazione nella zona specificata.    
+  - *Disabilita*: viene impedita l'esecuzione di VBScript nella zona. Se si disabilita o non si configura questa impostazione di criteri, VBScript viene eseguito senza alcuna interazione nella zona specificata.    
 
   [Altre informazioni](https://go.microsoft.com/fwlink/?linkid=2067119)  
   

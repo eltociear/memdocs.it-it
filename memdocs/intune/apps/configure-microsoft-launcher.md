@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0711b407b185b3a9621ff80a371bd3aaa5032ead
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ac4a9797df1ea64a5ffbceca3ea204bd9ed13a6f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80407741"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075541"
 ---
 # <a name="configure-microsoft-launcher"></a>Configurare Microsoft Launcher
 
@@ -49,6 +49,8 @@ Se si aggiungono proprietà con **Progettazione configurazione**, è possibile c
 
    > [!NOTE]
    > Dopo aver configurato le proprietà tramite Progettazione configurazione, anche i dati JSON verranno aggiornati in modo da riflettere solo queste proprietà. Per aggiungere ulteriori chiavi di configurazione nei dati JSON, usare l'[esempio di script JSON](../apps/configure-microsoft-launcher.md#microsoft-launcher-configuration-example) per copiare le righe necessarie per ogni chiave di configurazione. 
+
+Quando si modificano criteri di configurazione delle app creati in precedenza, se sono state configurate proprietà complesse, il processo di modifica visualizza l'editor di dati JSON. Tutte le impostazioni configurate in precedenza verranno mantenute e sarà possibile passare alla finestra di progettazione della configurazione per modificare le impostazioni supportate.
 
 ## <a name="using-configuration-designer"></a>Uso di Progettazione configurazione
 
@@ -84,7 +86,7 @@ In aggiunta all'elenco di impostazioni configurabili riportato nella tabella Pro
 |----------------------------------------------------------------------------------------------------|-------------------|-------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    Set Allow-Listed Applications (Imposta applicazioni dell'elenco elementi consentiti)<br>Chiave JSON:`com.microsoft.launcher.HomeScreen.Applications`    |    BundleArray    | Vedere: [Impostare le applicazioni dell'elenco degli elementi consentiti](configure-microsoft-launcher.md#set-allow-listed-applications)</sup>    |    Consente di definire il set di app visibili nella schermata iniziale tra le app installate nel dispositivo. Per definire le app, immettere il nome del pacchetto delle app da rendere visibili, ad esempio `com.android.settings` rende le impostazioni accessibili nella schermata iniziale. Le app che si aggiungono all'elenco degli elementi consentiti in questa sezione devono essere già installate nel dispositivo perché siano visibili nella schermata iniziale.<p>Proprietà:<ul><li>**Pacchetto:** Nome del pacchetto dell'applicazione</li><li>**Classe:** Attività dell'applicazione, che è specifica per una determinata pagina dell'app. Se questo valore è vuoto, viene usata la pagina predefinita dell'app.</li></ul>      |
 |    Home Screen App Order (Ordine app schermata iniziale)<br>Chiave JSON: `com.microsoft.launcher.HomeScreen.AppOrder`    |    BundleArray    |    Vedere: [Ordine delle app nella schermata iniziale](configure-microsoft-launcher.md#home-screen-app-order)      |    Consente di specificare l'ordine delle app nella schermata iniziale.<p>Proprietà:<br><ul><li>**Tipo:** se si vogliono specificare le posizioni delle app, l'unico tipo supportato è `application`. Se si vogliono specificare le posizioni dei collegamenti Web, il tipo è `weblink`.</li><li>**Posizione:** specifica lo slot dell'icona dell'applicazione nella schermata iniziale. Inizia dalla posizione 1 in alto a sinistra e va da sinistra a destra, dall'alto verso il basso.</li><li>**Pacchetto:** nome del pacchetto dell'applicazione usato per specificare l'ordine delle app.</li><li>**Classe:** un'attività dell'applicazione, specifica per una determinata pagina dell'app. Se questo valore è vuoto, viene usata la pagina predefinita dell'app. Questa proprietà viene usata per l'app.</li><li>**Etichetta:** un'attività dell'applicazione, specifica per una determinata pagina dell'app. Se questo valore è vuoto, viene usata la pagina predefinita dell'app. Questa proprietà viene usata per l'app.</li><li>**Collegamento:** URL da avviare quando l'utente finale fa clic sull'icona del collegamento Web. Questa proprietà viene usata per il collegamento Web.</li></ul>    |
-|    Set Pinned Web Links (Imposta collegamenti Web aggiunti)<br>Chiave JSON: `com.microsoft.launcher.HomeScreen.WebLinks`    |    BundleArray    |    Vedere: [Set Pinned Web Links](configure-microsoft-launcher.md#set-pinned-web-link) (Imposta collegamenti Web aggiunti)      |    Questa chiave consente di aggiungere il sito Web alla schermata iniziale come icona di avvio rapido. In questo modo è possibile assicurarsi che l'utente finale possa accedere in modo semplice e rapido ai siti web essenziali. È possibile modificare la posizione dell'icona di ogni collegamento Web nella configurazione "Home Screen App Order" (Ordine app schermata iniziale)<p>Proprietà:<br><ul><li>**Etichetta:** titolo del collegamento Web visualizzato nella schermata iniziale di Microsoft Launcher.</li><li>**Collegamento:** URL da avviare quando l'utente finale fa clic sull'icona del collegamento Web.</li></ul>    |
+|    Set Pinned Web Links (Imposta collegamenti Web aggiunti)<br>Chiave JSON: `com.microsoft.launcher.HomeScreen.WebLinks`    |    BundleArray    |    Vedere: [Set Pinned Web Links](configure-microsoft-launcher.md#set-pinned-web-link) (Imposta collegamenti Web aggiunti)      |    Questa chiave consente di aggiungere il sito Web alla schermata iniziale come icona di avvio rapido. In questo modo è possibile assicurarsi che l'utente finale possa accedere in modo semplice e rapido ai siti web essenziali. È possibile modificare la posizione dell'icona di ogni collegamento Web nella configurazione "Home Screen App Order" (Ordine app schermata iniziale).<p>Proprietà:<br><ul><li>**Etichetta:** titolo del collegamento Web visualizzato nella schermata iniziale di Microsoft Launcher.</li><li>**Collegamento:** URL da avviare quando l'utente finale fa clic sull'icona del collegamento Web.</li></ul>    |
 
 
 ### <a name="set-allow-listed-applications"></a>Set allow-listed applications (Imposta applicazioni nell'elenco elementi consentiti)

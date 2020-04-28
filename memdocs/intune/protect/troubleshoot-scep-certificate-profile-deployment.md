@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04ee6fea411c0ee231f4a7e9e00cdea45d206943
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 06d2c0b659f3dacb68f5029c23fbd488c06c1fbe
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326619"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079094"
 ---
 # <a name="troubleshoot-deployment-of-a-scep-certificate-profile-to-devices-in-microsoft-intune"></a>Risolvere i problemi di distribuzione di un profilo certificato SCEP ai dispositivi in Microsoft Intune
 
@@ -63,7 +63,7 @@ Esempi di voci chiave:
 
 ### <a name="validate-that-the-iosipados-device-was-sent-the-policy"></a>Verificare che i criteri siano stati inviati al dispositivo iOS/iPadOS
 
-Per verificare che un profilo sia stato inviato al dispositivo previsto, nell'[Interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) passare a **Risoluzione dei problemi e supporto** > **Risoluzione dei problemi**.  Nella finestra *Risoluzione dei problemi* impostare **Assegnazioni** su **Profili di configurazione** e quindi verificare le configurazioni seguenti:
+Per verificare che un profilo sia stato inviato al dispositivo previsto, nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) passare a **Risoluzione dei problemi e supporto** > **Risoluzione dei problemi**.  Nella finestra *Risoluzione dei problemi* impostare **Assegnazioni** su **Profili di configurazione** e quindi verificare le configurazioni seguenti:
 
 1. Specificare un utente che riceve il profilo certificato SCEP.
 

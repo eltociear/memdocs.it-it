@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d193e067a752e89377b4bec903ff4f890add230
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ac6650f06abddd2633e73f39a6bf72d54e344a61
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80325633"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079196"
 ---
 # <a name="troubleshoot-bitlocker-policies-in-microsoft-intune"></a>Risolvere i problemi relativi ai criteri di BitLocker in Microsoft Intune
 
@@ -35,7 +35,7 @@ Con Microsoft Intune, sono disponibili i metodi seguenti per gestire BitLocker n
 
 - **Criteri di configurazione del dispositivo** - Alcune opzioni predefinite dei criteri sono disponibili in Intune quando si crea un profilo di configurazione del dispositivo per gestire Endpoint Protection. Per trovare queste opzioni, [creare un profilo di dispositivo per Endpoint Protection](endpoint-protection-configure.md#create-a-device-profile-containing-endpoint-protection-settings), selezionare **Windows 10 e versioni successive** per *Piattaforma* e quindi selezionare la categoria **Crittografia di Windows** per *Impostazioni*. 
 
-   Per informazioni sulle opzioni e sulle funzionalità disponibili, vedere [Crittografia di Windows](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption).
+   Per informazioni sulle opzioni e sulle funzionalità disponibili, vedere quanto riportato di seguito: [Crittografia di Windows](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption).
 
 - **Baseline di sicurezza** - le [baseline di sicurezza](security-baselines.md) sono gruppi noti di impostazioni e valori predefiniti consigliati dal team di sicurezza competente per proteggere i dispositivi Windows. Diverse origini di baseline, come *Baseline di sicurezza di MDM* o *Baseline di Microsoft Defender ATP* possono gestire le stesse impostazioni e anche impostazioni diverse tra di loro. Possono inoltre gestire le stesse impostazioni gestite con i criteri di configurazione del dispositivo. 
 
@@ -105,7 +105,7 @@ Confirm-SecureBootUEFI
 
 ### <a name="review-the-devices-registry-key-configuration"></a>Esaminare la configurazione della chiave del Registro di sistema del dispositivo
 
-Dopo la distribuzione del criterio di BitLocker in un dispositivo, visualizzare la chiave seguente del Registro di sistema del dispositivo, in cui è possibile esaminare la configurazione delle impostazioni di BitLocker: *HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\current\device\BitLocker*. Ad esempio:
+Dopo aver distribuito i criteri di BitLocker in un dispositivo, visualizzare la chiave del Registro di sistema seguente nel dispositivo ed esaminare la configurazione delle impostazioni di BitLocker:  *HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\current\device\BitLocker*. Ad esempio:
 
 ![Chiave del Registro di sistema di BitLocker](./media/troubleshooting-bitlocker-policies/registry.png)
 

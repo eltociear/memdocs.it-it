@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1a37971928ab2aef8c5e78e9d0eefb748ecf5f04
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4ca133b1995769f1c4cdfdcaf6b3a8256d7e6d5c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79358637"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078847"
 ---
 # <a name="microsoft-intune-service-description"></a>Descrizione del servizio Microsoft Intune
 
@@ -56,17 +56,17 @@ Poiché l'ecosistema MDM cambia di frequente con l'aggiornamento dei sistemi ope
 
 - [Novità di Microsoft Intune](whats-new.md). In questo argomento vengono aggiunti gli aggiornamenti del servizio con cadenza mensile oppure con cadenza settimanale in caso di rilascio di app come Portale aziendale.
 
-- Gli aggiornamenti importanti del servizio vengono anche annunciati nel Centro messaggi dell'[interfaccia di amministrazione di Microsoft 365](https://admin.microsoft.com/). Se si installa l'[app per dispositivi mobili Office 365 Admin](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a) complementare è possibile ricevere notifiche sul dispositivo mobile. Altre informazioni su come lavorare con il [Centro messaggi di Office 365](https://support.office.com/client/results?Shownav=true&ns=O365ENTADMIN&version=15&ver=15&HelpID=O365E_MCManageUpdates).
+- Gli aggiornamenti importanti del servizio vengono anche annunciati nel Centro messaggi dell'[interfaccia di amministrazione di Microsoft 365](https://admin.microsoft.com/). Se si installa l'[app mobile Amministrazione di Office 365](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a) complementare è possibile ricevere notifiche sul dispositivo mobile. Altre informazioni su come lavorare con il [Centro messaggi di Office 365](https://support.office.com/client/results?Shownav=true&ns=O365ENTADMIN&version=15&ver=15&HelpID=O365E_MCManageUpdates).
 
   Alcuni suggerimenti utili:
 
   - I messaggi nel Centro messaggi di Microsoft Office 365 sono visualizzati in modo mirato. Ciò significa che se un'azienda non dispone di un'offerta Intune EDU, i messaggi relativi a Intune EDU non saranno visualizzati.
 
-  - I messaggi hanno una scadenza. Ad esempio, la notifica che il servizio è stato aggiornato con un collegamento alla pagina delle novità probabilmente scadrà prima della successiva notifica di aggiornamento del servizio. In caso contrario, si avrebbe un backlog eccessivo di post che potrebbero non essere più rilevanti.
+  - I messaggi hanno una scadenza. Ad esempio, la notifica che il servizio è stato aggiornato con un collegamento alla pagina delle novità probabilmente scadrà prima della successiva notifica di aggiornamento del servizio. In caso contrario si avrebbe un backlog eccessivo di post che potrebbero non essere più rilevanti.
 
   - L'app per dispositivi mobili Amministrazione di Office 365 consente di eseguire ricerche in tutti i messaggi e di inoltrare le notifiche, se si desidera condividerle con altri utenti dell'organizzazione.
 
-  - Nella pagina di modifica delle preferenze per il Centro messaggi sarà disponibile un interruttore per **Intune**, in modo da visualizzare i messaggi inviati a una sottoscrizione Intune. Se viene visualizzato Gestione dispositivi mobili per Office 365, si tratta di un servizio diverso da Intune.
+  - Nella pagina di modifica delle preferenze per il Centro messaggi sarà disponibile un interruttore per **Intune**, che consente di visualizzare i messaggi inviati a una sottoscrizione Intune. Se viene visualizzato Gestione dispositivi mobili per Office 365, si tratta di un servizio diverso da Intune.
 
 - Microsoft usa anche due blog per condividere i messaggi relativi a EMS e le procedure consigliate per il supporto di Intune:
 
@@ -81,18 +81,18 @@ Poiché l'ecosistema MDM cambia di frequente con l'aggiornamento dei sistemi ope
 
 Per consentire la pianificazione per le modifiche del servizio, viene inviata una notifica almeno da 7 a 90 giorni prima della modifica del servizio, a seconda del relativo impatto. Queste modifiche possono essere dei seguenti tipi:
 
-- Modifiche dell'esperienza dell'utente finale da condividere con il personale di supporto tecnico o gli utenti finali. In genere, viene fornito un preavviso da 7 a 30 giorni per queste modifiche, che sono inoltre documentate nella pagina relativa alle [novità dell'interfaccia utente dell'app Intune](whats-new-app-ui.md). Modifiche come la correzione di un errore di ortografia solitamente non sono riportate nella documentazione. Se invece viene apportata una modifica all'esperienza di registrazione degli utenti finali che ha un impatto sufficientemente significativo sull'interfaccia utente, verrà inviato un messaggio ai clienti nel Centro messaggi di Office 365 e sarà fornito un collegamento alla pagina delle novità dell'interfaccia utente dell'app Intune. In questo modo, i clienti possono essere informati dei cambiamenti e hanno tempo per valutare e aggiornare le linee guida per gli utenti finali prima dell'introduzione delle modifiche nell'ambiente di produzione.
+- Modifiche dell'esperienza dell'utente finale da condividere con il personale di supporto tecnico o gli utenti finali. In genere viene fornito un preavviso da 7 a 30 giorni per queste modifiche, che sono anche documentate nella pagina relativa alle [novità dell'interfaccia utente dell'app Intune](whats-new-app-ui.md). Modifiche come la correzione di un errore di ortografia solitamente non sono segnalate nella documentazione. Se invece viene apportata una modifica all'esperienza di registrazione degli utenti finali che ha un impatto significativo sull'interfaccia utente, viene inviato un messaggio ai clienti nel Centro messaggi di Office 365 e viene specificato un collegamento alla pagina delle novità dell'interfaccia utente dell'app Intune. In questo modo i clienti vengono informati sulle modifiche e hanno tempo per valutare e aggiornare le linee guida per gli utenti finali prima dell'introduzione delle modifiche nell'ambiente di produzione.
 
 - Le modifiche che richiedono un intervento sono denominate **modifiche pianificate** e in genere vengono comunicate con un anticipo di circa 30 giorni. Nel Centro messaggi di Microsoft Office 365 la categoria indica specificamente che si tratta di una modifica pianificata. Se è disponibile una data esatta per l'introduzione della modifica in produzione, sarà anche specificata una data **Act By** (Intervenire entro), che fornisce un'indicazione visiva.
 
-- Per la maggior parte degli elementi deprecati, solitamente viene fornita una comunicazione con 90 giorni di anticipo. Se ad esempio verrà interrotto il supporto per una versione specifica di Internet Explorer, l'obiettivo è fornire un preavviso di 90 giorni. La situazione può tuttavia essere più complicata quando è un'altra azienda ad annunciare la deprecazione. L'azienda produttrice di un browser, ad esempio, ha comunicato che non avrebbe più supportato Silverlight nella propria build più recente. Microsoft ha informato i clienti dell'interruzione del supporto per il browser, ma la notifica ai clienti è stata inviata con un preavviso inferiore a 90 giorni.
+- Per la maggior parte degli elementi deprecati, solitamente viene fornita una comunicazione con 90 giorni di anticipo. Se ad esempio si prevede l'interruzione del supporto per una versione specifica di Internet Explorer, l'obiettivo è garantire un preavviso di 90 giorni. La situazione può tuttavia essere più complicata quando è un'altra azienda ad annunciare la deprecazione. L'azienda produttrice di un browser, ad esempio, ha comunicato che non avrebbe più supportato Silverlight nella propria build più recente. Microsoft ha informato i clienti dell'interruzione del supporto per il browser, ma la notifica ai clienti è stata inviata con un preavviso inferiore a 90 giorni.
 
 - In caso di chiusura del servizio Intune, verrebbe inviata una notifica con un anticipo di 12 mesi.
 
-Infine, nei rari casi in cui sia necessario un intervento in seguito a un evento imprevisto per riportare il servizio alla normalità o venga apportata una modifica importante che potrebbe avere un impatto potenzialmente negativo in base al feedback dei clienti, verrà inviato un messaggio di posta elettronica agli amministratori del servizio, a seconda delle [preferenze impostate per le comunicazioni su Office 365](https://support.office.com/article/Change-your-contact-preferences-for-communications-from-Microsoft-6f70de1b-a64d-4498-bfbd-be8c83a9c0fc) e al fatto che sia stato specificato un indirizzo di posta elettronica valido (e possibilmente aziendale).  
+Infine, nei rari casi in cui risulta necessario un intervento in seguito a un evento imprevisto per riportare il servizio alla normalità o quando viene apportata una modifica importante che potrebbe avere un impatto potenzialmente negativo in base al feedback dei clienti, verrà inviato un messaggio di posta elettronica agli amministratori del servizio, a seconda delle [preferenze impostate per le comunicazioni su Office 365](https://support.office.com/article/Change-your-contact-preferences-for-communications-from-Microsoft-6f70de1b-a64d-4498-bfbd-be8c83a9c0fc) e al fatto che sia stato specificato un indirizzo di posta elettronica valido (e possibilmente aziendale).  
 
 
-<!--- ## Choose the management solution that’s right for you
+<!--- ## Choose the management solution that's right for you
 You can set up Intune in several ways to manage and help protect your company's mobile devices and computers (referred to as **devices** in this article).
 
 - **Intune stand-alone configuration.** Use the web-based admin console in Intune to manage devices in your organization. Intune can be used without any on-premises IT infrastructure. If you use Intune with Active Directory Domain Services, you can use domain user accounts that you manage with Domain Services with Intune.
@@ -100,7 +100,7 @@ You can set up Intune in several ways to manage and help protect your company's 
 --->
 
 ## <a name="language-support"></a>Supporto delle lingue
-Intune viene eseguito nel portale di Azure, che supporta le lingue seguenti: cinese (semplificato), cinese (tradizionale), ceco, olandese, inglese, tedesco, ungherese, italiano, giapponese, portoghese (Brasile), portoghese (Portogallo), russo, spagnolo, inglese, francese, coreano, polacco, svedese e turco.
+Intune viene eseguito nel portale di Azure, che supporta le lingue seguenti: ceco, cinese (semplificato), cinese (tradizionale), coreano, francese, giapponese, inglese, italiano, olandese, polacco, portoghese (Brasile), portoghese (Portogallo), russo, spagnolo, svedese, tedesco, turco e ungherese.
 
 La console di amministrazione di Intune e le app mobili per l'utente supportano le lingue seguenti: danese, greco, finlandese, norvegese e rumeno, oltre a tutte le lingue supportate dal portale di Azure.
 

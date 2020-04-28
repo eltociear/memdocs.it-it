@@ -17,12 +17,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 81864c207cec560ca8b42041f9248560ebcf3b04
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 55c98368619338bb7018be0651f6cde4054cf9cf
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80322449"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079706"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Monitorare la crittografia dei dispositivi con Intune
 
@@ -78,7 +78,7 @@ Quando si seleziona un dispositivo dal report di crittografia, Intune visualizza
 
   Ad esempio: anche se un dispositivo Windows 10 presenta una conformità corrispondente a *Non pronto*, è comunque possibile che supporti la crittografia. Per essere designato come *Pronto*, il dispositivo Windows 10 deve avere un chip TPM. I chip TPM non sono obbligatori per il supporto della crittografia. Per altre informazioni, vedere *Conformità con la crittografia* nella sezione precedente.
 
-- **Stato crittografia**: indica se l'unità del sistema operativo è crittografata. Possono trascorrere fino a 24 ore prima che Intune segnali lo stato di crittografia di un dispositivo o una modifica di tale stato. Questo tempo include quello richiesto per la crittografia del sistema operativo, oltre al tempo richiesto al dispositivo per la segnalazione a Intune.
+- **Stato crittografia**: indica se l'unità del sistema operativo è crittografata. Possono trascorrere fino a 24 ore prima che Intune segnali lo stato di crittografia di un dispositivo o una modifica dello stato. Questo tempo include quello richiesto per la crittografia del sistema operativo, oltre al tempo richiesto al dispositivo per la segnalazione a Intune.
 
   Per velocizzare la creazione di report sullo stato di crittografia di FileVault prima della normale archiviazione del dispositivo, chiedere agli utenti di sincronizzare i dispositivi al termine della crittografia.
 

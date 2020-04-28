@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6e002b62fb00c4e2e8523848c4c64ad7a54ce024
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 257f717243e021e7fd643a6e7ca41644e4369bcd
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357649"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080131"
 ---
 # <a name="determine-use-case-scenario-requirements"></a>Determinare i requisiti degli scenari per i casi d'uso
 
@@ -35,7 +35,7 @@ Possono anche essere presenti gruppi dell'organizzazione per lo scenario relativ
 
 Di seguito sono riportati alcuni esempi di requisiti per i casi d'uso di un'organizzazione, con diversi set di requisiti per ogni caso d'uso e caso d'uso secondario, gruppo dell'organizzazione e piattaforma per dispositivi mobili. È anche possibile usare la tabella seguente per immettere i requisiti per i casi d'uso della propria organizzazione:
 
-| **Casi d'uso** | **Casi d'uso secondari** | **Gruppi** | **Piattaforme per i dispositivi** | **Requisiti** |
+| **Casi d'uso** | **Casi d'uso secondari** | **Gruppi** | **Piattaforme per i dispositivi** | **Requirements** |
 |:---:|:---:|:---:|:---:|:---:|
 | Aziendale | Information Worker | HR, finanza | iOS/iPadOS | Posta elettronica sicura, impostazioni del dispositivo, profili, app |                                                          
 | Aziendale | Dirigenti | HR, finanza | iOS/iPadOS | Posta elettronica sicura, impostazioni del dispositivo, profili, app |                                                         

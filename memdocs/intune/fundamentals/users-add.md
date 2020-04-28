@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 53f95c83cecbfce68b2370c0c0d4f8e98f856e12
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b8239b750da0d04247608486ea7f3a11ca9c8f86
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326703"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077853"
 ---
 # <a name="add-users-and-grant-administrative-permission-to-intune"></a>Aggiungere utenti e concedere autorizzazioni amministrative a Intune
 
@@ -106,7 +106,7 @@ Assegnare agli utenti una o più autorizzazioni di amministratore. Queste autori
 - **Amministratore password**: (Office 365 e Intune) reimposta le password, gestisce le richieste di servizio ed esegue il monitoraggio dell'integrità dei servizi. Gli amministratori password sono limitati alla reimpostazione delle password per gli utenti.
 - **Amministratore dei servizi**: (Office 365 e Intune) apre le richieste di supporto a Microsoft e visualizza il dashboard servizi e il centro messaggi. Ha autorizzazioni di "solo visualizzazione", tranne per l'apertura e la lettura dei ticket di supporto.
 - **Amministratore fatturazione**: (Office 365 e Intune) effettua acquisti, gestisce sottoscrizioni, gestisce ticket di supporto ed esegue il monitoraggio dell'integrità dei servizi.
-- **Amministratore utenti**: (Office 365 e Intune) reimposta le password, esegue il monitoraggio dell'integrità dei servizi, aggiunge ed elimina account utente e gestisce richieste di servizio. L'amministratore Gestione utenti non può eliminare un amministratore globale, creare altri ruoli di amministratore o reimpostare le password per altri amministratori.
+- **Amministratore utenti**: (Office 365 e Intune) reimposta le password, esegue il monitoraggio dell'integrità dei servizi, aggiunge ed elimina account utente e gestisce richieste di servizio. L'amministratore della gestione degli utenti non può eliminare un amministratore globale, creare altri ruoli di amministratore o reimpostare le password per altri amministratori.
 - **Amministratore del servizio Intune**: tutte le autorizzazioni di amministratore globale di Intune ad eccezione dell'autorizzazione per creare gli amministratori con le opzioni **Ruolo della directory**.
 
 L'account usato per creare la sottoscrizione di Microsoft Intune è un amministratore globale. È consigliabile non usare un amministratore globale per attività di gestione quotidiane. Un amministratore non deve avere necessariamente una licenza per Intune per accedere al portale di Azure, ma per poter eseguire determinate attività di gestione come l'impostazione del connettore del servizio Exchange, la licenza di Intune è necessaria.

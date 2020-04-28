@@ -19,12 +19,12 @@ ms.reviewer: kakyker
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2ef7951217b0b6df21a86ca29a8637385aa65715
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a069a70077a2b6b1b484bb8a88960c314488cc70
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79337018"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075915"
 ---
 # <a name="enroll-your-macos-device-using-the-company-portal-app"></a>Registrare il dispositivo macOS con l'app Portale aziendale  
 
@@ -85,12 +85,12 @@ Usare la procedura seguente per registrare il dispositivo macOS nell'organizzazi
 
  ## <a name="troubleshooting-and-feedback"></a>Risoluzione dei problemi e feedback   
 
-Se si verificano problemi durante la registrazione, passare a **?** > **Invia report di diagnostica** per segnalare il problema agli sviluppatori dell'app Microsoft. Queste informazioni vengono usate per contribuire al miglioramento dell'app. Queste informazioni verranno usate anche per risolvere il problema se il personale del supporto IT richiede assistenza agli sviluppatori.  
+Se si verificano problemi durante la registrazione, passare a **?**  > **Invia report di diagnostica** per segnalare il problema agli sviluppatori dell'app Microsoft. Queste informazioni vengono usate per contribuire al miglioramento dell'app. Queste informazioni verranno usate anche per risolvere il problema se il personale del supporto IT richiede assistenza agli sviluppatori.  
 
 Dopo aver segnalato il problema a Microsoft, è possibile inviare i relativi dettagli al personale del supporto IT. Selezionare **Dettagli della posta elettronica**. Digitare una descrizione del problema che si è verificato nel corpo del messaggio di posta elettronica. Per trovare l'indirizzo di posta elettronica del personale di supporto, passare all'app Portale aziendale > **Contatto**. Oppure vedere il [sito Web Portale aziendale](https://go.microsoft.com/fwlink/?linkid=2010980).  
  
 
-Inoltre, il team di Portale aziendale di Microsoft Intune è interessato a conoscere l'opinione degli utenti. Passare a **?** > **Invia commenti e suggerimenti** per condividere suggerimenti e idee.  
+Inoltre, il team di Portale aziendale di Microsoft Intune è interessato a conoscere l'opinione degli utenti. Passare a **?**  > **Invia commenti e suggerimenti** per condividere suggerimenti e idee.  
 
 ## <a name="unverified-profiles"></a>Profili non verificati  
 Quando si visualizzano i profili di gestione di dispositivi mobili (MDM) installati in **Preferenze di sistema** > **Profili**, alcuni profili vengono visualizzati con lo stato non verificato. Purché il profilo di gestione presenti uno stato verificato, non sarà necessario preoccuparsene.  

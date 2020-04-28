@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04a8cd4ce64b566bf2d90ef301c1be44589a53e4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 27033c2452224bc93e335f3517c9548ad65666c4
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79354191"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080148"
 ---
 # <a name="app-based-conditional-access-with-intune"></a>Accesso condizionale basato su app con Intune
 
@@ -64,7 +64,7 @@ In questo esempio l'amministratore ha applicato criteri di protezione delle app 
 
 2. L'utente viene reindirizzato all'App Store per installare un'app broker quando tenta di eseguire l'autenticazione per la prima volta. L'app broker può essere Microsoft Authenticator per iOS o il Portale aziendale Microsoft per i dispositivi Android.
 
-   Se gli utenti tentano di usare un'app di posta elettronica nativa, vengono reindirizzati all'App Store per installare l'app Outlook.
+   Se gli utenti provano a usare un'app di posta elettronica nativa, vengono reindirizzati all'App Store per installare l'app Outlook.
 
 3. L'app broker viene installata nel dispositivo.
 
@@ -72,7 +72,7 @@ In questo esempio l'amministratore ha applicato criteri di protezione delle app 
 
 5. L'app broker verifica l'identità dell'app. È presente un livello di sicurezza che consente all'app broker di verificare se l'app è autorizzata per l'uso da parte dell'utente.
 
-6. L'app broker invia l'ID client dell'app ad Azure AD nell'ambito del processo di autenticazione utente per verificare se è incluso nell'elenco dei criteri approvati.
+6. L'app broker invia l'ID client dell'app ad Azure AD nell'ambito del processo di autenticazione utente, per verificare se è incluso nell'elenco dei criteri approvati.
 
 7. Azure AD consente all'utente di eseguire l'autenticazione e di usare l'app in base all'elenco dei criteri approvati. Se l'app non è presente nell'elenco, Azure AD nega l'accesso all'app.
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 953dbf7883377b95647a1cd1f253306cf41f0fd6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 275bb43552b0dda3409dcd11ef14311334f13fa9
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79351305"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079511"
 ---
 # <a name="privacy-and-personal-data-in-intune"></a>Privacy e dati personali in Intune
 
@@ -35,7 +35,7 @@ Microsoft Intune non usa i dati personali raccolti nell'ambito della fornitura d
 
 ## <a name="your-company-terms-and-conditions"></a>Termini e condizioni dell'azienda
 
-È possibile [includere le informative sulla privacy nei termini e nelle condizioni della propria azienda per gli utenti finali](../apps/company-portal-app.md). Tali informative sulla privacy possono includere informazioni sull'utilizzo e sulla privacy dei dati personali dell'utente finale.
+È possibile [includere le informative sulla privacy nei termini e nelle condizioni della propria azienda per gli utenti finali](../apps/company-portal-app.md). Le informative sulla privacy possono includere informazioni sull'utilizzo e sulla privacy dei dati personali dell'utente finale.
 
 È possibile visualizzare i termini e le condizioni dell'azienda nell'app Portale aziendale di Intune. In questo modo, gli utenti possono esaminare i termini e le condizioni, inclusa l'informativa sulla privacy, prima di registrarsi in Intune e di accedere alle risorse e ai dati aziendali.
 

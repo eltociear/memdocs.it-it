@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: ea760ef125ce2d6d7d0446564be3b2b27a6038ce
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: bee0f037e1695112739a898c75a67d232ea722d8
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79335133"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079944"
 ---
 # <a name="why-enroll-your-android-device"></a>Perché registrare il dispositivo Android  
 
@@ -66,7 +66,7 @@ Quando il dispositivo non è sincronizzato o non soddisfa più i requisiti, il s
 ## <a name="permits-company-support-access-to-your-device"></a>Consente di accedere al supporto aziendale per il dispositivo
 Quando si registra il dispositivo, al supporto tecnico dell'azienda o all'amministratore IT viene concesso l'accesso al dispositivo per motivi limitati e importanti. Gli utenti possono:  
 
-* Ripristinare le impostazioni predefinite dal produttore del dispositivo. Come indicato in precedenza, l'utente può reimpostare personalmente il dispositivo. Tuttavia, se l'utente non riesce ad accedere immediatamente all'app Portale aziendale, l'azienda può reimpostare il dispositivo per conto dell'utente.  
+* Ripristinare le impostazioni predefinite del produttore del dispositivo. Come indicato in precedenza, l'utente può reimpostare personalmente il dispositivo. Tuttavia, se l'utente non riesce ad accedere immediatamente all'app Portale aziendale, l'azienda può reimpostare il dispositivo per conto dell'utente.  
 
 * Rimuovere tutti i dati correlati alla società. L'organizzazione può rimuovere i dati aziendali dal dispositivo se l'utente lascia l'azienda o se il dispositivo diventa non gestito. I dati personali e le impostazioni dell'utente non vengono rimossi e rimangono nel dispositivo.  
 

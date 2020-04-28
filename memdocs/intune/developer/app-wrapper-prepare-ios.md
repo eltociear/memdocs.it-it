@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26204a36000b8c49b65effbfdb5f629fc092df64
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 373a5e55a28c6fab740a86a3ad2ad69c5fa08848
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79345546"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078142"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Preparare le app iOS per i criteri di protezione delle app con lo strumento di wrapping delle app di Intune
 
@@ -217,17 +217,17 @@ Nella cartella IntuneMAMPackager/Contents/MacOS aprire `Parameters.plist`, un mo
 
 | Chiave plist | Tipo |  Valore predefinito | Note |
 |------------------|-----|--------------|-----|
-| Input Application Package Path |String|empty| Uguale a -i|
-| Output Application Package Path |String|empty| Uguale a -o|
-| Provisioning Profile Path |String|empty| Uguale a -p|
-| SHA-1 Certificate Hash |String|empty| Uguale a -c|
-| ADAL Authority |String|empty| Uguale a -aa|
-| ADAL Client ID |String|empty| Uguale a -ac|
-| ADAL Reply URI |String|empty| Uguale a -ar|
+| Input Application Package Path |Stringa|empty| Uguale a -i|
+| Output Application Package Path |Stringa|empty| Uguale a -o|
+| Provisioning Profile Path |Stringa|empty| Uguale a -p|
+| SHA-1 Certificate Hash |Stringa|empty| Uguale a -c|
+| ADAL Authority |Stringa|empty| Uguale a -aa|
+| ADAL Client ID |Stringa|empty| Uguale a -ac|
+| ADAL Reply URI |Stringa|empty| Uguale a -ar|
 | Verbose Enabled |Boolean|false| Uguale a -v|
 | Remove Missing Entitlements |Boolean|false| Uguale a -c|
 | Prevent Default Build Update |Boolean|false| Equivalente all'uso di -b senza argomenti|
-| Build String Override |String|empty| Versione personalizzata di CFBundleVersion dell'app di output con wrapper|
+| Build String Override |Stringa|empty| Versione personalizzata di CFBundleVersion dell'app di output con wrapper|
 | Include Citrix XenMobile App SDK (network-only variant)|Boolean|false| Uguale a -citrix|
 | Extension Provisioning Profile Paths |Matrice di stringhe|empty| Matrice di profili di provisioning estensioni per l'app.
 
@@ -315,11 +315,11 @@ Anche nelle app di cui è stato eseguito il wrapping sarà presente un'opzione p
 
 Lo strumento di wrapping delle app per iOS include alcuni requisiti che devono essere soddisfatti per garantire la completa funzionalità.
 
-|Requisito|Details|
+|Requisito|Dettagli|
 |---------------|-----------|
 |Profilo di provisioning iOS|Verificare che il profilo di provisioning sia valido prima di includerlo. Lo strumento di wrapping delle app non controlla se il profilo di provisioning è scaduto durante l'elaborazione di un'app iOS. Se viene specificato un profilo di provisioning scaduto, lo strumento di wrapping delle app includerà il profilo di provisioning scaduto e il problema si scoprirà solo durante l'installazione dell'app nel dispositivo iOS, che non riuscirà.|
 |Certificato di firma iOS|Assicurarsi che il certificato di firma sia valido prima di specificarlo. Lo strumento non verifica se un certificato è scaduto durante l'elaborazione delle app iOS. Se viene fornito l'hash per un certificato scaduto, lo strumento elaborerà e firmerà l'app, ma l'installazione nei dispositivi non riuscirà.<br /><br />Verificare che il certificato fornito per la firma dell'app di cui è stato eseguito il wrapping abbia una corrispondenza nel profilo di provisioning. Lo strumento non verifica se il profilo di provisioning ha una corrispondenza per il certificato fornito per la firma dell'applicazione con wrapper.|
-|Authentication|Per usare la crittografia, è necessario che il dispositivo disponga di un PIN. Se si tocca la barra di stato nei dispositivi in cui è stata distribuita un'app di cui è stato eseguito il wrapping, verrà richiesto di eseguire di nuovo l'accesso con un account aziendale o dell'istituto di istruzione. I criteri predefiniti per un'app con wrapper prevedono l'*autenticazione al riavvio*. iOS gestisce qualsiasi notifica esterna, come una chiamata telefonica, chiudendo e riavviando l'app.
+|Autenticazione|Per usare la crittografia, è necessario che il dispositivo disponga di un PIN. Se si tocca la barra di stato nei dispositivi in cui è stata distribuita un'app di cui è stato eseguito il wrapping, verrà richiesto di eseguire di nuovo l'accesso con un account aziendale o dell'istituto di istruzione. I criteri predefiniti per un'app con wrapper prevedono l'*autenticazione al riavvio*. iOS gestisce qualsiasi notifica esterna, come una chiamata telefonica, chiudendo e riavviando l'app.
 
 ## <a name="setting-app-entitlements"></a>Impostazione dei diritti delle app
 
@@ -366,7 +366,7 @@ Prima di eseguire il wrapping dell'app, è possibile assegnare *diritti* per con
 
 Se lo strumento di wrapping delle app per iOS visualizza un errore relativo ai diritti, provare le procedure seguenti per la risoluzione dei problemi.
 
-|Problema|Causa|Risoluzione|
+|Problema|Causa|Soluzione|
 |---------|---------|--------------|
 |Impossibile analizzare i diritti generati dall'applicazione di input.|Lo strumento per la disposizione testo per app non è in grado di leggere il file dei diritti che è stato estratto dall'app. Il file dei diritti potrebbe non essere nel formato corretto.|Esaminare il file dei diritti per l'app. Le istruzioni seguenti spiegano come eseguire questa operazione. Quando si esamina il file dei diritti, verificare se sono presenti errori di sintassi. Il file deve essere in formato XML.|
 |I diritti non sono presenti nel profilo di provisioning (sono elencati i diritti mancanti). Ricreare il pacchetto dell'app con un profilo di provisioning a cui sono assegnati tali diritti.|I diritti abilitati nel profilo di provisioning e le funzionalità abilitate nell'app non corrispondono. Questa mancata corrispondenza vale anche per gli ID associati a particolari funzionalità, ad esempio gruppi di app, accesso al portachiavi e così via.|In genere è possibile creare un nuovo profilo di provisioning che abilita le stesse funzionalità dell'app. In caso di mancata corrispondenza tra gli ID del profilo e dell'app, lo strumento per la disposizione testo per app sostituirà gli ID, se è in grado di eseguire l'operazione. Se questo errore viene ancora visualizzato dopo aver creato un nuovo profilo di provisioning, è possibile provare a rimuovere i diritti dall'app usando il parametro -e (vedere la sezione Uso del parametro -e per rimuovere diritti da un'app).|
@@ -421,7 +421,7 @@ Quando si usa lo strumento di wrapping delle app, adottare le procedure consigli
 
 Questa funzionalità è un'integrazione con il wrapper di app Citrix MDX per iOS/iPadOS. L'integrazione è semplicemente un flag della riga di comando facoltativo aggiuntivo, `-citrix` per gli strumenti di wrapping delle app di Intune generali.
 
-### <a name="requirements"></a>requisiti
+### <a name="requirements"></a>Requisiti
 
 Per usare il flag `-citrix` è necessario installare anche il [wrapper di app Citrix MDX per iOS](https://docs.citrix.com/en-us/mdx-toolkit/10/xmob-mdx-kit-app-wrap-ios.html) nello stesso computer macOS. I download sono disponibili in [Citrix XenMobile Downloads](https://www.citrix.com/downloads/xenmobile/) e sono limitati ai clienti Citrix solo dopo l'accesso. Assicurarsi che questo componente venga installato nel percorso predefinito: `/Applications/Citrix/MDXToolkit`. 
 

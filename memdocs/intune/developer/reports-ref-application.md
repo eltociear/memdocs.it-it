@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78fce6f5f518227500b3cf42f1d935c0dd88df8c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4ec35681b6e81eb28c114733cc7913dd90875bfd
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79359859"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023317"
 ---
 # <a name="reference-for-application-entities"></a>Informazioni di riferimento per le entità della categoria Application
 
@@ -65,11 +65,11 @@ L'entità **appType** elenca l'origine dell'installazione di un'app.
 |---------|------------|
 | appTypeID |ID per il tipo |
 | appTypeKey |Chiave surrogata per la chiave |
-| appTypeName |Tipo di App |
+| appTypeName |Tipo di app |
 
 ### <a name="example"></a>Esempio
 
-| AppTypeID  | Nome | Descrizione |
+| AppTypeID  | Name | Descrizione |
 |---------|------------|--------|
 | 0 |App di Android Store | Un'app di Android Store. |
 | 1 |App di Android LOB | Un'app line-of-business Android. |
@@ -77,7 +77,7 @@ L'entità **appType** elenca l'origine dell'installazione di un'app.
 | 3 |App di iOS Store | Un'app dello Store iOS. |
 | 4 |App LOB iOS | Un'app line-of-business iOS. |
 | 5 |App dello Store iOS gestita (MAM?) | Un'app iOSstore abilitata per la gestione. |
-| 6 |O365 Pro Plus Suite | Office 365 Pro Plus Suite per Windows 10. |
+| 6 |O365 Pro Plus Suite | App di Microsoft 365 per Windows 10. |
 | 7 |App Web | Un'app Web. |
 | 8 |App di Windows Phone 8.1 Store | Un'app dello Store per Windows Phone 8.1. |
 | 9 |App di Windows Store | Un'app di Windows Store. |
@@ -98,7 +98,7 @@ L'entità **vppProgramType** elenca i tipi di programma VPP possibili per un'app
 
 ### <a name="example"></a>Esempio
 
-| VppProgramID  | Nome | Descrizione |
+| VppProgramID  | Name | Descrizione |
 |---------|------------|--------|
 | 3DDA2474-470B-4503-9830-2665C21C1945 | Microsoft | Programma VPP Microsoft. |
 | 00000000-0000-0000-0000-000000000000 | Non ancora disponibile | Valore predefinito, nessun VPP. |

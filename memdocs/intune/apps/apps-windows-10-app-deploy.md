@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 58203c09784f0d4a50472ff4ae9cd06957025a1c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 391fa20cf7ba53af649f9f614d9ca02c653c278b
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80324327"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079315"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Distribuzione di app di Windows 10 con Microsoft Intune 
 
@@ -97,7 +97,7 @@ Le app possono essere installate solo nel contesto di dispositivo se sono suppor
 - App Win32
 - App Microsoft Store per le aziende con licenza online
 - App line-of-business (MSI, APPX e MSIX)
-- Office 365 ProPlus
+- App di Microsoft 365 per grandi imprese
 
 Le app line-of-business di Windows (in particolare APPX e MSIX) e le app Microsoft Store per le aziende (app offline) selezionate per l'installazione nel contesto di dispositivo devono essere assegnate a un gruppo di dispositivi. L'installazione non riesce se una di queste app viene distribuita nel contesto utente. Nella console di amministrazione vengono visualizzati lo stato e l'errore seguenti:
   - Stato: Operazione non riuscita.

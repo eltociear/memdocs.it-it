@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 682791256bf0ce40db1dedd1fa6b947efc85b729
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: aa8a18d24fb27b1d1ca7ea7dbe4fad532f85d662
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79352384"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82022722"
 ---
 # <a name="prevent-unauthorized-access-to-company-data-using-microsoft-intune"></a>Impedire l'accesso non autorizzato ai dati aziendali usando Microsoft Intune
 
@@ -36,7 +36,7 @@ Il piano di azione descritto di seguito può essere usato quando sono soddisfatt
 * L'azienda usa Office 365 Exchange Online, SharePoint Online, OneDrive for Business o Yammer.
 * L'azienda ha le licenze per Microsoft 365, Enterprise Mobility + Security (EMS) o Azure Information Protection.
 * L'azienda usa dispositivi che eseguono Windows 7 Service Pack 1 o versione successiva.
-* L'azienda usa Office 365 ProPlus con app 2016 o app 2013, Office Professional Plus 2016, Office Professional Plus 2013 con Service Pack 1 o Office Professional Plus 2010.
+* L'azienda usa App di Microsoft 365 con app 2016 o app 2013, Office Professional Plus 2016, Office Professional Plus 2013 con Service Pack 1 o Office Professional Plus 2010.
 
 ## <a name="action-plan"></a>Piano di azione
 

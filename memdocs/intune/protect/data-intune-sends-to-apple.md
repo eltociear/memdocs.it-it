@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da9ab5fe5a8716e3af0ae02122f51d06e6e55e6f
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 424b835669986d1ede6e2300e9dfaba619034c30
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79352501"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079740"
 ---
 # <a name="data-intune-sends-to-apple"></a>Dati inviati da Intune ad Apple
 
@@ -62,9 +62,9 @@ La tabella seguente elenca i dati che Microsoft Intune invia da un dispositivo a
 | ASM/DEP | os | Sistema operativo del dispositivo: iOS/iPadOS, OSX o tvOS. Questa chiave è valida in X-Server-Protocol-Version 2 e versioni successive. |
 | ASM/DEP | device_family | Famiglia di prodotti Apple del dispositivo: iPad, iPhone, iPod, Mac o AppleTV. Questa chiave è valida in X-Server-Protocol-Version 2 e versioni successive. |
 | ASM/DEP | profile_name | Stringa. Nome leggibile del profilo. |
-| ASM/DEP | support_phone_number | Facoltativo Stringa. Numero di telefono di supporto dell'organizzazione. |
-| ASM/DEP | support_email_address | Facoltativo Stringa. Indirizzo di posta elettronica di supporto dell'organizzazione. Questa chiave è valida in X-Server-Protocol-Version 2 e versioni successive. |
-| ASM/DEP | department | Facoltativo Stringa. Nome del reparto o della posizione definito dall'utente. |
+| ASM/DEP | support_phone_number | Facoltativo. Stringa. Numero di telefono di supporto dell'organizzazione. |
+| ASM/DEP | support_email_address | Facoltativo. Stringa. Indirizzo di posta elettronica di supporto dell'organizzazione. Questa chiave è valida in X-Server-Protocol-Version 2 e versioni successive. |
+| ASM/DEP | department | Facoltativo. Stringa. Nome del reparto o della posizione definito dall'utente. |
 | ASM/DEP | devices | Matrice di stringhe contenente i numeri di serie dei dispositivi. (Può essere vuoto.) |
 | VPP | GUID UserId di Intune | GUID generato da Intune. |
 | VPP | UPN ID Apple gestito | ID Apple specificato dall'amministratore quando configura la connessione del token VPP ad Apple. |

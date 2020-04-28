@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2bd295b0dca016971c34997873994a4fe1bc2c0d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5c521740eb714ac6e80499dfb99d1e9de2df376e
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79334938"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079638"
 ---
 # <a name="install-symantec-endpoint-protection-mobile-on-your-android-device"></a>Installare Symantec Endpoint Protection Mobile nel dispositivo Android
 
@@ -52,7 +52,7 @@ Se si verificano problemi con l'installazione, seguire la procedura di risoluzio
 
    * Se non viene trovata alcuna minaccia, tutti e tre i tipi di minacce saranno visualizzati in verde.
 
-     * La schermata **Dettagli dispositivo** nell'app Portale aziendale indicherà ora la conformità ai requisiti di sicurezza della società.
+     * La schermata **Dettagli dispositivo** nel portale aziendale indicherà ora la conformità ai requisiti di sicurezza della società.
 
      ![Il dispositivo è ora conforme ai criteri](./media/mtd-device-now-compliant-android.png)
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9f0a4b260fcd2698315ba8b777d88b86e203259
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f58723be1a3fed09173a20a585077aef72e0c8f0
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79350005"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079111"
 ---
 # <a name="troubleshoot-the-ndes-policy-module-in-microsoft-intune"></a>Risolvere i problemi del modulo criteri NDES in Microsoft Intune
 
@@ -92,7 +92,7 @@ I browser moderni e i browser nei dispositivi mobili ignorano la voce *Nome comu
 
 ### <a name="ndespluginlog-contains-an-error-403--forbidden-access-is-denied"></a>NDESPlugin.log contiene un errore 403 - Non consentito: Accesso negato
 
-Quando i log seguenti contengono un errore 403 simile a quello visualizzato di seguito, il certificato client potrebbe non essere attendibile o non essere valido:
+Quando i log seguenti contengono un errore 403 simile al seguente, il certificato client potrebbe non essere attendibile o non essere valido:
 
 **NDESPlugin.log**:
 
@@ -125,7 +125,7 @@ Signing certificate could not be retrieved. System.Security.Cryptography.Cryptog
 
 **Risoluzione**: Nel server in cui è installato il connettore aprire l'editor del Registro di sistema, trovare la chiave del Registro di sistema `HKLM\SOFTWARE\Microsoft\MicrosoftIntune\NDESConnector` e quindi controllare se è presente il valore SigningCertificate.
 
-Se questo valore non esiste, riavviare il servizio Intune Connector in services.msc, quindi verificare se il valore viene visualizzato nel Registro di sistema. Se il valore è ancora mancante, un motivo frequente è rappresentato da problemi di connettività di rete tra il server NDES e il servizio Intune.
+Se questo valore non esiste, riavviare il servizio Intune Connector in services.msc, quindi verificare se il valore viene visualizzato nel Registro di sistema. Se il valore è ancora mancante, un motivo frequente sono problemi di connettività di rete tra il server NDES e il servizio Intune.
 
 ## <a name="ndes-passes-the-request-to-issue-the-certificate"></a>NDES passa la richiesta di emissione del certificato
 

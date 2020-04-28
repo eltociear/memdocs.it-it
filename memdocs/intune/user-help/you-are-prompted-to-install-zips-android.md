@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: ee2d862f29866ecaaa758983f847d0a1a598e2f1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ee0cd575da83231723ea869d472da1be599ce477
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79346469"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079621"
 ---
 # <a name="install-zimperium-zips-on-your-android-device"></a>Installare Zimperium zIPS nel dispositivo Android
 
@@ -52,7 +52,7 @@ Se si verificano problemi con l'installazione, seguire la procedura di risoluzio
 
    * Se non viene trovata alcuna minaccia, tutti e tre i tipi di minacce saranno visualizzati in verde.
 
-11. La schermata **Dettagli dispositivo** nell'app Portale aziendale indicherà ora la conformità ai requisiti di sicurezza della società.
+11. La schermata **Dettagli dispositivo** nel portale aziendale indicherà ora la conformità ai requisiti di sicurezza della società.
 
     ![Il dispositivo è ora conforme ai criteri](./media/mtd-device-now-compliant-android.png)
 

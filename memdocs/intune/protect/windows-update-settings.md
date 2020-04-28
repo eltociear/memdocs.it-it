@@ -15,12 +15,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e568a7700a6849993d24be4dd042195a95ab000
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8bb76dbb14fe2deb95c02a18ccc048fc6a4b2538
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79338422"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078958"
 ---
 # <a name="windows-update-settings-for-intune"></a>Impostazioni di aggiornamento di Windows per Intune  
 
@@ -55,14 +55,14 @@ Le impostazioni di aggiornamento specificano quali bit un dispositivo scaricher�
   > A partire da Windows versione 1903, l'uso del *Canale semestrale (mirato)* (SAC-T) è ritirato. In seguito a questa modifica, il canale SAC-T si unisce al *canale semestrale*. Per altre informazioni su questa modifica e sulle conseguenze in Windows Update per le aziende, vedere il post di blog di Windows IT Pro [Windows Update for Business and the retirement of SAC-T](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/Windows-Update-for-Business-and-the-retirement-of-SAC-T/ba-p/339523) (Windows Update per le aziende e il ritiro di SAC-T).  
  
 - **Aggiornamenti ai prodotti Microsoft**  
-  **Impostazione predefinita**: Consenti  
+  **Impostazione predefinita**:  Consenti  
   CSP Windows Update: [Update/AllowMUUpdateService](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowmuupdateservice)
 
   - **Consenti**: selezionare *Consenti* per analizzare gli aggiornamenti delle app in Microsoft Update.  
   - **Blocca**: selezionare Blocca per impedire l'analisi degli aggiornamenti dell'app.  
 
 - **Driver di Windows**  
-  **Impostazione predefinita**: Consenti  
+  **Impostazione predefinita**:  Consenti  
   CSP Windows Update: [Update/ExcludeWUDriversInQualityUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-excludewudriversinqualityupdate)  
 
   - **Consenti**: selezionare *Consenti* per includere i driver di Windows Update durante gli aggiornamenti.  
@@ -118,11 +118,11 @@ Le impostazioni dell'esperienza utente specificano l'esperienza dell'utente fina
     Questa opzione consente di riavviare un dispositivo automaticamente dopo l'installazione dell'aggiornamento. Usare le impostazioni **Orario di attività** per definire un periodo durante il quale i riavvii automatici sono bloccati:  
 
     - **Inizio dell'orario di attività**: consente di specificare un'ora di inizio per impedire i riavvi conseguenti all'installazione degli aggiornamenti.  
-      **Impostazione predefinita**: ore 8  
+      **Impostazione predefinita**: 8:00  
       CSP Windows Update: [Update/ActiveHoursStart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursstart)  
   
     - **Fine dell'orario di attività**: consente di specificare un'ora di fine per impedire i riavvi conseguenti all'installazione degli aggiornamenti.  
-      **Impostazione predefinita**: ore 17  
+      **Impostazione predefinita**: 17:00  
       CSP Windows Update: [Update/ActiveHoursEnd](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
 
   - **Installa e riavvia automaticamente durante la manutenzione**: aggiorna automaticamente il download ed esegue l'installazione durante la Manutenzione automatica quando il dispositivo non è in uso oppure è alimentato a batteria. Quando il riavvio è obbligatorio, il dispositivo viene riavviato in un momento in cui non è in uso. È l'impostazione predefinita per i dispositivi non gestiti.  
@@ -130,11 +130,11 @@ Le impostazioni dell'esperienza utente specificano l'esperienza dell'utente fina
     Questa opzione consente di riavviare un dispositivo automaticamente dopo l'installazione dell'aggiornamento. L'uso delle impostazioni **Orario di attività** non è descritto nelle impostazioni di Windows Update. Questi impostazioni vengono comunque usate da Intune per definire un periodo durante il quale i riavvii automatici sono bloccati:  
 
     - **Inizio dell'orario di attività**: consente di specificare un'ora di inizio per impedire i riavvi conseguenti all'installazione degli aggiornamenti.  
-      **Impostazione predefinita**: ore 8  
+      **Impostazione predefinita**: 8:00  
       CSP Windows Update: [Update/ActiveHoursStart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursstart)  
   
     - **Fine dell'orario di attività**: consente di specificare un'ora di fine per impedire i riavvi conseguenti all'installazione degli aggiornamenti.  
-      **Impostazione predefinita**: ore 17  
+      **Impostazione predefinita**: 17:00  
       CSP Windows Update: [Update/ActiveHoursEnd](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
 
   - **Installa e riavvia automaticamente all'ora pianificata**: consente di specificare un giorno e un'ora per l'installazione. Se non vengono specificati, l'installazione viene eseguita ogni giorno alle 15:00 e dopo un conto alla rovescia di 15 minuti, il dispositivo viene riavviato. Gli utenti che hanno eseguito l'accesso possono ritardare il conto alla rovescia e riavviare.   
@@ -149,7 +149,7 @@ Le impostazioni dell'esperienza utente specificano l'esperienza dell'utente fina
       **Impostazione predefinita**: Qualsiasi giorno  
 
     - **Orario pianificato per l'installazione**: specificare l'ora del giorno in cui si vogliono installare gli aggiornamenti.  
-      **Impostazione predefinita**: ore 3  
+      **Impostazione predefinita**: 15:00  
 
   - **Installa e riavvia automaticamente senza il controllo dell'utente finale**: aggiorna automaticamente il download ed esegue l'installazione durante la Manutenzione automatica quando il dispositivo non è in uso oppure è alimentato a batteria. Quando il riavvio è obbligatorio, il dispositivo viene riavviato in un momento in cui non è in uso. Questa opzione imposta il riquadro di controllo degli utenti finali in sola lettura.  
 
@@ -183,7 +183,7 @@ Le impostazioni dell'esperienza utente specificano l'esperienza dell'utente fina
   - **Blocca**: impedisce agli utenti del dispositivo di accedere all'analisi di Windows Update, di scaricare gli aggiornamenti e di installare le funzionalità.  
 
 - **Richiedi l'approvazione dell'utente per il riavvio in orario non lavorativo**  
-  **Impostazione predefinita**: non configurato  
+  **Impostazione predefinita**: Non configurato  
   CSP Windows Update: [Update/AutoRestartRequiredNotificationDismissal](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
   
   - **Non configurato**  
@@ -218,7 +218,7 @@ Le impostazioni dell'esperienza utente specificano l'esperienza dell'utente fina
   - **Disattiva tutte le notifiche, inclusi gli avvisi di riavvio**  
 
 - **Usa le impostazioni relative alla scadenza**  
-  **Impostazione predefinita**: non configurato  
+  **Impostazione predefinita**: Non configurato  
  
   Consente all'utente di usare le impostazioni di scadenza.  
 
@@ -240,12 +240,12 @@ Le impostazioni dell'esperienza utente specificano l'esperienza dell'utente fina
     Consente di specificare il numero di giorni disponibili per l'utente prima che gli aggiornamenti qualitativi vengano installati automaticamente nei rispettivi dispositivi (2 - 30).
 
   - **Periodo di tolleranza**  
-    **Impostazione predefinita**: *Non configurato* CSP Windows Update: [Update/ConfigureDeadlineGracePeriod]( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
+    **Impostazione predefinita**: *Non configurata* CSP Windows Update: [Update/ConfigureDeadlineGracePeriod]( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
 
     Consente di specificare il numero minimo di giorni dopo la scadenza prima dei riavvii automatici (2 - 7).
 
   - **Riavvio automatico prima della scadenza**  
-    **Impostazione predefinita**: Sì CSP Windows Update: [Update/ConfigureDeadlineNoAutoReboot](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinenoautoreboot)
+    **Impostazione predefinita**:  Sì CSP Windows Update: [Update/ConfigureDeadlineNoAutoReboot](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinenoautoreboot)
 
     Consente di specificare se il dispositivo deve essere riavviato automaticamente prima della scadenza.
     - **Sì**

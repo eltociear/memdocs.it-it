@@ -2,7 +2,7 @@
 title: Valutazione della compatibilità
 titleSuffix: Configuration Manager
 description: Informazioni sulla valutazione della compatibilità per le app e i driver di Windows in Desktop Analytics.
-ms.date: 03/03/2020
+ms.date: 04/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: ea78f726-b1b3-49b0-8141-d916be48c458
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0d5397dca3c8abff056b7944bde7d27794c45401
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: eedd33999ce17417122b2403c777a0b560e5f197
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707819"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82109999"
 ---
 # <a name="compatibility-assessment-in-desktop-analytics"></a>Valutazione della compatibilità in Desktop Analytics
 
@@ -218,4 +218,4 @@ Desktop Analytics elenca e raggruppa in base alla disponibilità anche tutti i d
 
 ## <a name="see-also"></a>Vedere anche
 
-Il FastTrack Center Benefit per Windows 10 offre l'accesso a **Desktop App Assure**. Questo vantaggio è un nuovo servizio progettato per risolvere i problemi relativi alla compatibilità delle app di Windows 10 e Office 365 ProPlus. Per altre informazioni, vedere [Desktop App Assure](https://docs.microsoft.com/fasttrack/win-10-desktop-app-assure).
+Il FastTrack Center Benefit per Windows 10 offre l'accesso a **Desktop App Assure**. Questo vantaggio è un nuovo servizio progettato per risolvere i problemi relativi alla compatibilità di Windows 10 e App di Microsoft 365 per grandi imprese. Per altre informazioni, vedere [Desktop App Assure](https://docs.microsoft.com/fasttrack/win-10-desktop-app-assure).

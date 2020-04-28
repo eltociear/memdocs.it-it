@@ -10,12 +10,12 @@ ms.assetid: 738eddaa-52e2-467f-b453-821ef2884d47
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: aca0f3078c046bbc988a289f548ac11e26747088
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ba5479a4c75d3ab8f91a8439a6799589b93972d0
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696589"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076697"
 ---
 # <a name="how-to-create-and-apply-power-plans-in-configuration-manager"></a>Come creare e applicare combinazioni per il risparmio di energia in Configuration Manager
 
@@ -99,10 +99,10 @@ Le funzionalità di risparmio energia in Configuration Manager consentono di app
 |**Pulsante di alimentazione menu Start**|Specifica l'azione che si verifica quando si preme il pulsante di alimentazione nel menu **Start** del computer. Valori possibili: **Sospendi**, **Iberna** e **Arresta**.|  
 |**Azione pulsante di sospensione**|Specifica l'azione che si verifica quando si preme il pulsante **Sospendi** del computer. Valori possibili: **Non eseguire alcuna operazione**, **Sospendi**, **Iberna** e **Arresta**.|  
 |**Azione chiusura coperchio**|Specifica l'azione che si verifica quando l'utente chiude il coperchio di un computer portatile. Valori possibili: **Non eseguire alcuna operazione**, **Sospendi**, **Iberna** e **Arresta**.|  
-|**Disattiva disco rigido dopo (minuti)**|Specifica per quanto tempo, in minuti, il disco rigido del computer deve essere inattivo prima che venga disattivato. Specificare il valore **0** se non si vuole disattivare il disco rigido del computer.|  
+|**Disattiva disco rigido dopo (minuti)**|Specifica per quanto tempo, in minuti, il disco rigido del computer deve rimanere inattivo prima che il computer venga disattivato. Specificare il valore **0** se non si vuole disattivare il disco rigido del computer.|  
 |**Metti in stato di ibernazione dopo (minuti)**|Specifica per quanto tempo, in minuti, il computer deve essere inattivo prima che venga attivato lo stato di ibernazione. Specificare il valore **0** se non si vuole attivare lo stato di ibernazione per il computer.|  
 |**Azione per batteria in esaurimento**|Specifica l'azione che si verifica quando la batteria del computer raggiunge il livello di notifica di batteria in esaurimento specificato. Valori possibili: **Non eseguire alcuna operazione**, **Sospendi**, **Iberna** e **Arresta**.|  
-|**Azione per batteria quasi scarica**|Specifica l'azione da eseguita quando della batteria raggiunge il livello di notifica di batteria specificato. Quando è attiva l'impostazione **A batteria**, i valori possibili sono **Sospendi**, **Iberna** e **Arresta**. Quando invece è attiva **Alimentazione da rete elettrica**, i valori possibili sono **Non eseguire alcuna operazione**, **Sospendi**, **Iberna** e **Arresta**.|  
+|**Azione per batteria quasi scarica**|Specifica l'azione eseguita quando la batteria del computer raggiunge il livello di notifica di batteria quasi scarica specificato. Quando è attiva l'impostazione **A batteria**, i valori possibili sono **Sospendi**, **Iberna** e **Arresta**. Quando invece è attiva **Alimentazione da rete elettrica**, i valori possibili sono **Non eseguire alcuna operazione**, **Sospendi**, **Iberna** e **Arresta**.|  
 |**Consenti sospensione ibrida**|Impostando l'opzione su **Disattivato** o **Attivato** si specifica se Windows salva un file di ibernazione quando entra in stato di sospensione, che può essere usato per ripristinare lo stato del computer in caso di interruzione dell'alimentazione mentre è in stato di sospensione.<br /><br /> La sospensione ibrida è progettata per i computer desktop e, per impostazione predefinita, non è abilitata nei computer portatili. Nei computer che eseguono Windows 7 l'abilitazione della sospensione ibrida disabilita la funzionalità di ibernazione.|  
 |**Consentire lo stato di standby durante la sospensione dell'azione**|Impostando l'opzione su **Disattivato** o **Attivato** si consente lo stato di standby per il computer, che consuma un po' di energia, ma permette una riattivazione più veloce del computer. Se questa impostazione è impostata su **Disattivato**, il computer può solo entrare in stato ibernazione o essere spento.|  
 |**Inattività richiesta prima della sospensione (%)**|Specifica la percentuale del tempo di inattività per il tempo del processore del computer, prima che il computer possa entrare in stato di sospensione. Nei computer che eseguono Windows 7, questo valore è sempre impostato su **0**.|  

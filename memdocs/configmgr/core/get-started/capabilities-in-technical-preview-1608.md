@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: ab5ad2af9b1cad051346eca28c186e7223e8253a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: fd668760a6b5d1a16cfbb8549063da4f7e8a8b7d
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705499"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074181"
 ---
 # <a name="capabilities-in-technical-preview-1608-for-configuration-manager"></a>Funzionalità della versione Technical Preview 1608 per Configuration Manager
 

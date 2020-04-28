@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 7b2afaf1090b1e7c9c53d403f70c17d3e171cdbf
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f100d28b3fd4ce0d310ddb2f0b4e777c72f72881
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705339"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076204"
 ---
 # <a name="capabilities-in-technical-preview-1701-for-configuration-manager"></a>Funzionalità della versione Technical Preview 1701 per Configuration Manager
 
@@ -44,7 +44,7 @@ In questa anteprima, tuttavia, i gruppi di limiti per i punti di aggiornamento s
 
 Di seguito è descritto il funzionamento per i punti di aggiornamento software con la presente versione Technical Preview:  
 
-- **I nuovi client usano i gruppi di limiti per selezionare i punti di aggiornamento software.** Un client installato dopo aver installato la versione 1701 seleziona un punto di aggiornamento software da quelli associati al gruppo di limiti del client.
+- **I nuovi client usano i gruppi di limiti per selezionare i punti di aggiornamento software.** Un client installato dopo aver installato la versione 1701 seleziona un punto di aggiornamento software tra quelli associati al gruppo di limiti del client.
 
   Viene sostituito il comportamento precedente in cui i client selezionano un punto di aggiornamento software casuale da un elenco di punti che condividono la foresta dei client.   
 
@@ -109,7 +109,7 @@ A tale scopo, modificare un file di configurazione in modo che punti al cloud pe
 
    **Modifiche:**
 
-   Modificare il valore del nome dell'impostazione *FairFaxArmResourceID* in modo che sia uguale a "<https://management.usgovcloudapi.net/”>
+   Modificare il valore del nome dell'impostazione *FairFaxArmResourceID* in modo che sia uguale a "<https://management.usgovcloudapi.net/">
 
    - **Originale:** &lt;setting name="FairFaxArmResourceId" serializeAs="String">   
      &lt;value>&lt;/value>   

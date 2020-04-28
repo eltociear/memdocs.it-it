@@ -10,12 +10,12 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 94ad19c2b405af75c7432bb4601098f980c1e821
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c7ad4e96d9afba7e52d2ff2e5dd3f4f6be0b9a98
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702329"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078703"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Novità della versione 1906 di Configuration Manager Current Branch
 
@@ -371,6 +371,10 @@ Questa versione include i miglioramenti seguenti alla distribuzione del sistema 
 - La sequenza di attività imposta una nuova variabile di sola lettura, **_SMSTSLastContentDownloadLocation**. Questa variabile contiene l'ultimo percorso in cui la sequenza di attività ha scaricato o provato a scaricare contenuto. Esaminare questa variabile anziché analizzare i log del client.<!-- 2840337 -->
 
 - Quando si crea un supporto per sequenza di attività, Configuration Manager non aggiunge un file autorun.inf. Questo file è generalmente bloccato da prodotti antimalware. È ancora possibile includere il file se necessario per lo scenario.<!-- 4090666 -->
+
+### <a name="improvements-to-pxe"></a>Miglioramenti a PXE
+
+L'opzione 82 durante l'handshake DHCP PXE è ora supportata con il risponditore PXE senza WDS. L'opzione 82 non è supportata con WDS.
 
 
 ## <a name="software-center"></a><a name="bkmk_userxp"></a> Software Center

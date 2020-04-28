@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: be5ecd02817d315da4a3bea1f21285eb5a77d77e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 96594731ef64577d30267376d3bcb93268e59a9e
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709359"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075014"
 ---
 # <a name="deploy-bitlocker-management"></a>Distribuire la gestione di BitLocker
 
@@ -194,6 +194,19 @@ Configuration Manager non crittografa nuovamente le unità che sono già protett
 Ad esempio, è stato usato MBAM per crittografare l'unità senza la protezione PIN, ma i criteri di Configuration Manager richiedono un PIN. L'unità non è conforme ai criteri, anche se l'unità è crittografata.
 
 Per risolvere questo problema, disabilitare prima di tutto BitLocker nel dispositivo. Quindi, distribuire un nuovo criterio con le nuove impostazioni.
+
+## <a name="co-management-and-intune"></a>Co-gestione e Intune
+
+<!-- SCCMDocs#2321 -->
+
+Il gestore del client Gestione configurazione per BitLocker è dotato di riconoscimento della co-gestione. Se il dispositivo è co-gestito e si passa il [carico di lavoro Endpoint Protection](../../../comanage/workloads.md#endpoint-protection) a Intune, il client Configuration Manager ignora i criteri di BitLocker. Il dispositivo ottiene i criteri di crittografia di Windows da Intune.
+
+Quando si passa a un'altra autorità di gestione della crittografia, pianificare la [nuova crittografia](#re-encryption).
+
+Per altre informazioni sulla gestione di BitLocker con Intune, vedere gli articoli seguenti:
+
+- [Usare la crittografia dei dispositivi con Intune](../../../../intune/protect/encrypt-devices.md#bitlocker-encryption-for-windows-10)
+- [Risolvere i problemi relativi ai criteri di BitLocker in Microsoft Intune](../../../../intune/protect/troubleshoot-bitlocker-policies.md)
 
 ## <a name="next-steps"></a>Passaggi successivi
 

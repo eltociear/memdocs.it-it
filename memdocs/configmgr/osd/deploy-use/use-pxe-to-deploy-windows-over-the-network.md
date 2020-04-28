@@ -10,12 +10,12 @@ ms.assetid: da5f8b61-2386-4530-ad54-1a5c51911f07
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cff249bf5289ebcf354851258b5c9d598314ce3b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 11045ff31dc3832ac97d62f491561b3cf989813c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709059"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079349"
 ---
 # <a name="use-pxe-to-deploy-windows-over-the-network-with-configuration-manager"></a>Usare PXE per distribuire Windows in rete con Configuration Manager
 
@@ -105,6 +105,9 @@ Per usare la distribuzione del sistema operativo avviata da PXE, configurarla pe
 - Solo supporti e PXE
 
 - Solo supporti e PXE (nascosto)
+
+## <a name="option-82-during-pxe-dhcp-handshake"></a>Opzione 82 durante l'handshake PXE DHCP
+A partire dalla versione 1906, l'opzione 82 durante l'handshake DHCP PXE è supportata con il risponditore PXE senza WDS. Se è richiesta l'opzione 82, assicurarsi di usare il risponditore PXE senza WDS. L'opzione 82 non è supportata con WDS.
 
 ## <a name="deploy-the-task-sequence"></a><a name="BKMK_Deploy"></a> Distribuire la sequenza di attività
 

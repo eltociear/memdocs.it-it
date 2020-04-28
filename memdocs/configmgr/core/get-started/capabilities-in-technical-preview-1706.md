@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e986827cee4911ac2204a8e2f50923dcdd71fed0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d554f4f6e0c68912f4fac91bc1a8db2807b26a04
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705149"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078788"
 ---
 # <a name="capabilities-in-technical-preview-1706-for-configuration-manager"></a>Funzionalità della versione Technical Preview 1706 per Configuration Manager
 
@@ -38,7 +38,7 @@ Questo articolo presenta le funzionalità disponibili nella Technical Preview pe
   - **Blocca il debug USB nel dispositivo**
   - **Blocca app da origini sconosciute**
 
-    Ad esempio, se gli amministratori impostano **Blocca il debug USB nel dispositivo**  su **true**, tutti i dispositivi che non hanno attivato l'USB in esecuzione sono contrassegnati come non conformi.
+    Ad esempio, se gli amministratori impostano **Blocca il debug USB nel dispositivo**  su **true**, tutti i dispositivi per i quali il debug USB non è abilitato sono contrassegnati come non conformi.
 
 **Di seguito sono riportate le nuove funzionalità disponibili con questa versione.**  
 
@@ -176,7 +176,7 @@ La scheda **Riepilogo**:
 
 La scheda **Content Library** (Raccolta contenuto):
 - Visualizzare lo **Stato** per il contenuto che sincronizza dal server del sito Attivo al server del sito in modalità Passivo.
-- È possibile selezionare il contenuto con uno stato di **Non riuscito** e quindi scegliere **Sync selected items** (Sincronizza elementi selezionati) dalla barra multifunzione. Questa azione tenta di sincronizzare nuovamente il contenuto dall'origine del contenuto al server del sito in modalità Passivo. Durante il recupero, lo Stato è visualizzato come **In corso** e dopo la sincronizzazione viene visualizzato come **Operazione riuscita**.
+- È possibile selezionare il contenuto con uno stato di **Non riuscito** e quindi scegliere **Sync selected items** (Sincronizza elementi selezionati) dalla barra multifunzione. Questa azione tenta di sincronizzare nuovamente il contenuto dall'origine del contenuto al server del sito in modalità passiva. Durante il recupero, lo Stato è visualizzato come **In corso** e dopo la sincronizzazione viene visualizzato come **Operazione riuscita**.
 
 ### <a name="try-it-out"></a>Verifica
 Provare a completare le attività seguenti e quindi inviare **Feedback** dalla scheda **Home** della barra multifunzione per comunicarci come è andata:
@@ -186,7 +186,7 @@ Provare a completare le attività seguenti e quindi inviare **Feedback** dalla s
 
 ## <a name="include-trust-for-specific-files-and-folders-in-a-device-guard-policy"></a>Includere attendibilità per file e cartelle specifici in un criterio di Device Guard
 <!-- 1324676 -->
-In questa versione sono state aggiunte altre funzionalità alla gestione del criterio di [Device Guard](../../protect/deploy-use/use-device-guard-with-configuration-manager.md)
+In questa versione sono state aggiunte altre funzionalità alla gestione dei criteri di [Device Guard](../../protect/deploy-use/use-device-guard-with-configuration-manager.md)
 
 Ora è possibile aggiungere facoltativamente attendibilità per file e cartelle specifici in un criterio di Device Guard. Ciò consente di:
 
@@ -289,7 +289,7 @@ Dopo aver configurato i prerequisiti, si è pronti a usare la procedura guidata 
 ## <a name="new-client-settings-for-cloud-services"></a>Nuove impostazioni client per i servizi cloud
 <!-- 1319883 -->
 
-In questa versione sono state aggiunte due nuove impostazioni client di Configuration Manager. Sono disponibili nella sezione **Servizi Cloud**.  Queste impostazioni offrono le funzionalità seguenti:
+In questa versione sono state aggiunte due nuove impostazioni client a Configuration Manager. Queste sono disponibili nella sezione **Servizi Cloud**.  Queste impostazioni offrono le funzionalità seguenti:
 
 - Controllare quali client di Configuration Manager possono accedere a un gateway di gestione del cloud configurato.
 - Registrare automaticamente i client di Configuration Manager appartenenti a un dominio di Windows 10 con Azure Active Directory.

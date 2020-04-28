@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 6c01abda978cec0b971ae41a977b6e016d68ec12
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: fc38d0cbd70faa23f67c7089944b8b4c2cd0f7fc
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704429"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078720"
 ---
 # <a name="what39s-new-in-version-1602-of-configuration-manager"></a>Novità della versione 1602 di Configuration Manager
 
@@ -62,7 +62,7 @@ L'aggiornamento 1602 per Configuration Manager è disponibile solo come aggiorna
 
 -   Gli aggiornamenti disponibili di Windows 10 vengono visualizzati ora solo nel nodo **Manutenzione di Windows 10** \ **Tutti gli aggiornamenti di Windows 10** della console di Configuration Manager. Questi aggiornamenti non vengono più visualizzati nel nodo **Aggiornamenti software** \ **Tutti gli aggiornamenti software** della console.  
 
--   Un piano di manutenzione è considerato una distribuzione ad alto rischio e nella finestra **Seleziona raccolta** vengono visualizzate soltanto le raccolte personalizzate che soddisfano le impostazioni di verifica della distribuzione configurate nelle proprietà del sito. Per altre informazioni, vedere [Impostazioni per gestire le distribuzioni ad alto rischio per Configuration Manager](../../servers/manage/settings-to-manage-high-risk-deployments.md).  
+-   Un piano di manutenzione è considerato una distribuzione ad alto rischio e la finestra **Seleziona raccolta** visualizza solo le raccolte personalizzate che soddisfano le impostazioni di verifica della distribuzione configurate nelle proprietà del sito. Per altre informazioni, vedere [Impostazioni per gestire le distribuzioni ad alto rischio per Configuration Manager](../../servers/manage/settings-to-manage-high-risk-deployments.md).  
 
 -   Gli utenti che avviano un pacchetto di aggiornamento di Windows 10 ricevono ora un messaggio che li informa che stanno per aggiornare il proprio sistema operativo.  
 
@@ -181,7 +181,7 @@ Per informazioni dettagliate, vedere [Attestazione dell'integrità per Configura
 
     -   Avanzate: Consenti agli utenti di modificare le impostazioni di invio automatico dei file di esempio.  
 
-    Inoltre, nella sezione "Impostazioni di esclusione" del criterio antimalware di Endpoint Protection, l'impostazione esistente **Exclude files and folders** (Escludi file e cartelle) ora consente l'esclusione di dispositivi.  
+    In più, nella sezione "Impostazioni di esclusione" dei criteri antimalware di Endpoint Protection, l'impostazione esistente **Exclude files and folders** (Escludi file e cartelle) ora consente l'esclusione di dispositivi.  
 
 Per informazioni dettagliate, vedere [Come creare e distribuire criteri antimalware per Endpoint Protection](../../../protect/deploy-use/endpoint-antimalware-policies.md).  
 

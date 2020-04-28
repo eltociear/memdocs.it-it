@@ -2,7 +2,7 @@
 title: Sincronizzare gli aggiornamenti di Office 365 senza una connessione Internet
 titleSuffix: Configuration Manager
 description: Sincronizzare gli aggiornamenti di Office 365 nel punto di aggiornamento software di livello superiore disconnesso da Internet.
-ms.date: 04/01/2020
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -10,18 +10,21 @@ ms.assetid: a8fa7e7a-bf55-42de-b0c2-c56777dc1508
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 78b97be755659fa06466dd1bb1f6920e2a7be330
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3627d2f7772b7b9e133d742b0ee4f94dba6e457a
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81699469"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110356"
 ---
 # <a name="synchronize-office-365-updates-from-a-disconnected-software-update-point"></a><a name="bkmk_O365"></a> Sincronizzare gli aggiornamenti di Office 365 da un punto di aggiornamento software disconnesso
 
 *Si applica a: Configuration Manager (Current Branch)*
 <!--4065163-->
 A partire da Configuration Manager versione 2002, è possibile usare uno strumento per importare gli aggiornamenti di Office 365 da un server WSUS connesso a Internet in un ambiente di Configuration Manager disconnesso. In passato, quando si esportavano e importavano i metadati per il software aggiornato in ambienti disconnessi, non era possibile distribuire gli aggiornamenti di Office 365. Gli aggiornamenti di Office 365 richiedono metadati aggiuntivi scaricati da un'API di Office e dalla rete CDN di Office, operazione impossibile per gli ambienti disconnessi.
+
+> [!Note]
+> A partire dal 21 aprile 2020, Office 365 ProPlus viene rinominato come **App di Microsoft 365 per grandi imprese**. Per altre informazioni, vedere [Modifica del nome di Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). È comunque possibile che vengano ancora visualizzati riferimenti al nome precedente nella console di Configuration Manager e nella documentazione di supporto mentre la console viene aggiornata.
 
 ## <a name="prerequisites"></a>Prerequisiti
 

@@ -10,12 +10,12 @@ ms.assetid: 8d878443-90e7-46e4-9cd3-99e2a19b2ad0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ebadb47ca67f331ac88f8947b396438893e12386
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 5ca960ddd6a4057da10341063f0b14a7f1d104d1
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690869"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075813"
 ---
 # <a name="cloud-connecting-with-co-management"></a>Connessione al cloud con la co-gestione
 
@@ -29,7 +29,7 @@ Nel video seguente il vicepresidente di Microsoft Brad Anderson presenta questa 
 
 > [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/Cloud-Connecting-with-Co-Management/player]
 
-| Valore immediato | Introduzione |
+| Valore immediato | Guida introduttiva |
 |-----------------|-----------------|
 | - [Accesso condizionale](#bkmk_ca)<br> - [Azioni remote da Intune](#bkmk_remote)<br> - [Integrità del client](#bkmk_client-health)<br> - [Azure AD ibrido](#bkmk_hybrid-aad)<br> - [Windows Autopilot](#bkmk_autopilot) | - [Percorsi per la co-gestione](#bkmk_paths)<br> - [Configurare Azure AD ibrido](#bkmk_setup-hybrid-aad)<br> - [Eseguire l'aggiornamento a Windows 10](#bkmk_upgrade-win10)<br> - [Ottenere assistenza da FastTrack](#bkmk_fasttrack) |
 
@@ -43,7 +43,7 @@ Nel video seguente il vicepresidente di Microsoft Brad Anderson presenta questa 
 | <a name="bkmk_hybrid-aad"></a>**Azure Active Directory (Azure AD)** | Con Azure AD si possono sfruttare i vantaggi a livello di produttività per gli utenti e di sicurezza per le risorse, sia per gli ambienti cloud che locali | [![Anteprima del video su Azure AD ibrido](media/thumbnail-azure-ad.png)](quickstart-hybrid-aad.md) |
 | <a name="bkmk_autopilot"></a>**Windows Autopilot** | Ridurre il tempo, le risorse e la complessità associati a distribuzione, gestione e ritiro o riciclo dei dispositivi. Autopilot crea inoltre una migliore esperienza per gli utenti finali. | [![Anteprima del video su Windows Autopilot](media/thumbnail-autopilot.png)](quickstart-autopilot.md) |
 
-## <a name="getting-started"></a>Introduzione
+## <a name="getting-started"></a>Guida introduttiva
 
 Se si vuole abilitare la co-gestione, iniziare da qui per chiarire eventuali preoccupazioni dal punto di vista tecnico.
 

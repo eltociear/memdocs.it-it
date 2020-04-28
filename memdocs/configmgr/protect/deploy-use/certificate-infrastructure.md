@@ -10,12 +10,12 @@ ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: fe34768de48f52dd4872a63ccf353fda1c691a44
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ca500ebbbbf8b2672492fec383feab49bfea0a52
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705799"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074997"
 ---
 # <a name="configure-certificate-infrastructure"></a>Configurare l'infrastruttura di certificazione
 
@@ -157,7 +157,7 @@ Usare questi passaggi per configurare l'infrastruttura per i certificati SCEP o 
 
     -   Nel server del sistema del sito usare il file *<Percorso di installazione di ConfigMgr\>* \Logs\crpsetup.log e il file *<Percorso di installazione di ConfigMgr\>* Logs\crpmsi.log. Una corretta installazione restituirà un codice di uscita pari a 0.  
 
-    -   Usando un browser, verificare che sia possibile connettersi all'URL del punto di registrazione certificati, ad esempio https://server1.contoso.com/CMCertificateRegistration. Accertarsi che venga visualizzata una pagina di **Errore server** per il nome dell'applicazione con una descrizione HTTP 404.  
+    -   Usando un browser verificare che sia possibile connettersi all'URL del punto di registrazione certificati, ad esempio https://server1.contoso.com/CMCertificateRegistration. Accertarsi che venga visualizzata una pagina di **Errore server** per il nome dell'applicazione con una descrizione HTTP 404.  
 
 11. Individuare il file del certificato esportato per la CA radice che il punto di registrazione certificati ha creato automaticamente nella seguente cartella del computer del server del sito primario: *<Percorso di installazione di ConfigMgr\>* \inboxes\certmgr.box. Salvare questo file in un percorso protetto a cui sarà possibile accedere in modo sicuro quando si installerà il modulo criteri di Configuration Manager nel server che esegue il servizio Registrazione dispositivi di rete.  
 

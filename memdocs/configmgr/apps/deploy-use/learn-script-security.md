@@ -10,12 +10,12 @@ ms.assetid: a0bd093d-67a5-4f74-bf79-dd604889f5ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a0edf83c736c2737f4af2f040159a71bb0348aee
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6b519d60be094bb7c39f738d04322009b36a409f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689309"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075864"
 ---
 # <a name="learn-more-about-powershell-script-security"></a>Informazioni sulla sicurezza degli script PowerShell
 
@@ -24,7 +24,7 @@ ms.locfileid: "81689309"
 È responsabilità dell'amministratore convalidare il linguaggio PowerShell proposto e l'uso dei parametri PowerShell nell'ambiente. Di seguito sono disponibili risorse utili che gli amministratori possono usare per conoscere i punti di forza di PowerShell e le possibili aree di rischio. In questo modo è possibile ridurre le possibili aree di rischio e consentire l'uso di script sicuri.
 
 ## <a name="powershell-script-security"></a>Sicurezza degli script PowerShell
-In Esecuzione script è disponibile una funzionalità che consente di rivedere visivamente e approvare gli script che devono essere eseguiti nell'ambiente. È importante che gli amministratori sappiano che PowerShell può contenere script offuscato. Si tratta di script dannoso e difficilmente rilevabile con un controllo visivo durante il processo di approvazione dello script. Oltre a rivedere visivamente gli script di PowerShell, è consigliabile usare alcuni strumenti di controllo per rilevare problemi che riguardano script sospetti. Questi strumenti non sempre riconoscono la finalità dell'autore PowerShell e pertanto può essere rilevato uno script sospetto. L'uso di tali strumenti richiede tuttavia l'intervento dell'amministratore che deve valutare se la sintassi dello script è dannosa o intenzionale.
+In Esecuzione script è disponibile una funzionalità che consente di rivedere visivamente e approvare gli script che devono essere eseguiti nell'ambiente. È importante che gli amministratori sappiano che PowerShell può contenere script offuscato. Si tratta di script dannoso e difficilmente rilevabile con un controllo visivo durante il processo di approvazione dello script. Oltre a rivedere visivamente gli script di PowerShell, è consigliabile usare alcuni strumenti di controllo per rilevare problemi che riguardano script sospetti. Questi strumenti non sempre riconoscono la finalità dell'autore PowerShell e pertanto potrebbero segnalare uno script sospetto. L'uso di tali strumenti richiede tuttavia l'intervento dell'amministratore che deve valutare se la sintassi dello script è dannosa o intenzionale.
 
 ## <a name="recommendations"></a>Indicazioni
 - Acquisire familiarità con le procedure consigliate per la sicurezza PowerShell usando i vari collegamenti indicati di seguito.
@@ -62,7 +62,7 @@ Il passaggio dei parametri garantisce flessibilità agli script e consente di ri
 - Usare il modulo ["hunter injection"](https://www.powershellgallery.com/packages/InjectionHunter/1.0.0) di PowerShell in PowerShell Gallery.
     - Potrebbero essere riscontrati falsi positivi. Controllare quindi la finalità nel caso in cui siano contrassegnati casi sospetti per determinare se si tratta effettivamente di un problema. 
 - Microsoft Visual Studio offre un analizzatore di script che può essere usato per controllare la sintassi di PowerShell.
-- Questo video intitolato: "DEF CON 25 - Lee Holmes - Get $pwnd: Attacking Battle Hardened Windows Server"(DEF CON 25 - Lee Holmes - Colpito e affondato: Attacco ai danni di Windows Server) offre una panoramica dei tipi di problemi da cui è possibile proteggersi (in particolare la sezione compresa tra 12:20 e 17:50):     <iframe width="560" height="315" src="https://www.youtube.com/embed/ahxMOAAani8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+- Questo video intitolato: "DEF CON 25 - Lee Holmes - Get $pwnd: Attacking Battle Hardened Windows Server" (DEF CON 25 - Lee Holmes - Colpito e affondato: Attacco ai danni di Windows Server) offre una panoramica dei tipi di problemi da cui è possibile proteggersi (in particolare la sezione compresa tra i minuti 12:20 e 17:50):     <iframe width="560" height="315" src="https://www.youtube.com/embed/ahxMOAAani8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## <a name="environment-recommendations"></a>Consigli relativi all'ambiente
 Consigli generali per gli amministratori di PowerShell.

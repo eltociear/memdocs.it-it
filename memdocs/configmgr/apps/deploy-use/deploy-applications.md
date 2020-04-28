@@ -10,12 +10,12 @@ ms.assetid: 2629c376-ec43-4f0e-a78b-4223cc9302bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ec8292256a55b7fc7d99e07b27ee9dee366cb9a3
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a7bbf395a5de98459043609986e51647362e7a0b
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689509"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075337"
 ---
 # <a name="deploy-applications-with-configuration-manager"></a>Distribuire applicazioni con Configuration Manager
 
@@ -265,7 +265,7 @@ Dopo che i client ricevono la distribuzione, si applica il comportamento seguent
 
     - È possibile pianificare queste finestre di dialogo nel gruppo **Agente computer** delle impostazioni del client. Per altre informazioni, vedere [Agente computer](../../core/clients/deploy/about-client-settings.md#computer-agent).  
 
-    - Se non si vuole che l'utente visualizzi questi messaggi, selezionare l'opzione **Nascondi in Software Center e nascondi tutte le notifiche** nella scheda **Esperienza utente** delle proprietà di distribuzione. Per altre informazioni, vedere [Impostazioni dell'esperienza utente per la distribuzione](#bkmk_deploy-ux).  
+    - Se non si vuole che l'utente visualizzi questi messaggi, selezionare l'opzione **Nascondi in Software Center e nascondi tutte le notifiche** nella scheda **Esperienza utente** delle proprietà della distribuzione. Per altre informazioni, vedere [Impostazioni dell'esperienza utente per la distribuzione](#bkmk_deploy-ux).  
 
 - Se l'applicazione è stata distribuita come **Richiesta** e non è stata specificata l'opzione **Chiudi automaticamente eventuali file eseguibili in esecuzione specificati nella scheda Comportamento di installazione della finestra di dialogo relativa alle proprietà del tipo di distribuzione**, l'installazione dell'applicazione ha esito negativo se sono in esecuzione una o più applicazioni tra quelle specificate.  
 

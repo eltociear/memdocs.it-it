@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 9b70850a8ef52c97c4fb7d78537fbc559701210d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a4fa056c9c0708d2cecc0ca5f244e134e22ad10b
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702579"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82073710"
 ---
 # <a name="what39s-new-in-version-1706-of-configuration-manager"></a>Novità della versione 1706 di Configuration Manager
 
@@ -243,7 +243,7 @@ Windows Analytics è un set di soluzioni che consentono di ottenere indicazioni 
 
 ### <a name="updates-to-android-for-work-sharing-configuration"></a>Aggiornamenti della configurazione della condivisione di Android for Work
 <!-- 1338403 -->
-In questa versione sono stati aggiornati i valori per l'impostazione **Consenti la condivisione dei dati tra i profili di lavoro e personali** nel gruppo di impostazioni **Profilo di lavoro**. È anche stata aggiunta un'impostazione personalizzata per bloccare il copia e incolla tra i profili di lavoro e personali.
+In questa versione sono stati aggiornati i valori per l'impostazione **Consenti la condivisione dei dati tra i profili di lavoro e personali** nel gruppo di impostazioni **Profilo di lavoro**. È stata aggiunta anche un'impostazione personalizzata per bloccare le operazioni di copia e incolla tra i profili di lavoro e personali.
 
 
 ### <a name="android-and-ios-enrollment-restrictions"></a>Restrizioni di registrazione di Android e iOS
@@ -254,7 +254,7 @@ Con questa versione, è ora specificare che gli utenti non possono registrare di
 
 ### <a name="include-trust-for-specific-files-and-folders-in-a-device-guard-policy"></a>Includere attendibilità per file e cartelle specifici in un criterio di Device Guard
 <!--1324676-->
-In questa versione sono state aggiunte altre funzionalità alla gestione del criterio di Device Guard.
+In questa versione sono state aggiunte altre funzionalità alla gestione dei criteri di Device Guard.
 
 Ora è possibile aggiungere facoltativamente attendibilità per file e cartelle specifici in un criterio di Device Guard. Ciò consente di:
 

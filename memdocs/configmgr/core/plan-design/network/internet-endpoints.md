@@ -2,7 +2,7 @@
 title: Requisiti per l'accesso a Internet
 titleSuffix: Configuration Manager
 description: Informazioni sugli endpoint Internet a cui consentire l'accesso per usufruire delle funzionalità complete di Configuration Manager.
-ms.date: 04/01/2020
+ms.date: 04/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2edcff868a684d5e108626b7372241dd1ec47d1c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 58afaf564a8afaba4569755575fcc7c1757c5529
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701529"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110135"
 ---
 # <a name="internet-access-requirements"></a>Requisiti per l'accesso a Internet
 
@@ -171,13 +171,16 @@ Potrebbe essere necessario aggiungere endpoint a un firewall posto tra due siste
 
 ## <a name="manage-office-365"></a>Gestire Office 365
 
-Se si usa Configuration Manager per distribuire e aggiornare Office 365, abilitare gli endpoint seguenti:
+> [!NOTE]
+> A partire dal 21 aprile 2020, Office 365 ProPlus viene rinominato come **App di Microsoft 365 per grandi imprese**. Per altre informazioni, vedere [Modifica del nome di Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). È comunque possibile che vengano ancora visualizzati riferimenti al nome precedente nella console di Configuration Manager e nella documentazione di supporto mentre la console viene aggiornata.
+
+Se si usa Configuration Manager per distribuire e aggiornare App di Microsoft 365 per grandi imprese, abilitare gli endpoint seguenti:
 
 <!-- SCCMDocs#929 -->
 
-- `officecdn.microsoft.com` per sincronizzare il punto di aggiornamento software per gli aggiornamenti del client di Office 365
+- `officecdn.microsoft.com` per sincronizzare il punto di aggiornamento software per gli aggiornamenti del client App di Microsoft 365 per grandi imprese
 
-- `config.office.com` per creare configurazioni personalizzate per le distribuzioni di Office 365
+- `config.office.com` per creare configurazioni personalizzate per le distribuzioni di App di Microsoft 365 per grandi imprese
 
 ## <a name="configuration-manager-console"></a>Console di Configuration Manager
 

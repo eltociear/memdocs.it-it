@@ -10,12 +10,12 @@ ms.assetid: 446c83b5-c292-4e74-ba19-0792ac6b3472
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 40fc094d6c1a1acbd31f1d26e6fe6617972f8da5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 95e6ebf1544951b71ca2b60615e3e01b27cc0f3b
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696239"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076680"
 ---
 # <a name="upgrade-clients-in-configuration-manager"></a>Aggiornare i client in Configuration Manager
 
@@ -118,7 +118,7 @@ ms.locfileid: "81696239"
 - Sulla base del fatto che il momento di installazione viene scelto in modo casuale nel corso del periodo specificato, l'aggiornamento automatico è l'unico metodo adatto agli aggiornamenti su larga scala. Altri metodi sono troppo lenti per la distribuzione su larga scala o non sono basati sul criterio di scelta casuale. 
 
     > [!Note]
-    > La distribuzione pilota del client non è valida per gli aggiornamenti su larga scala e non prevede il criterio di scelta casuale.  
+    > La distribuzione pilota del client non è valida per gli aggiornamenti su larga scala perché non prevede il criterio di scelta casuale.  
 - Può essere utilizzato per mantenere automaticamente i client presenti nel sito aggiornati alla versione più recente.  
 
 - Richiede un livello di amministrazione minimo.  

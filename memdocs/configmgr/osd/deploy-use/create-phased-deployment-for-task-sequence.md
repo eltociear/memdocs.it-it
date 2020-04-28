@@ -2,7 +2,7 @@
 title: Creare distribuzioni in fasi
 titleSuffix: Configuration Manager
 description: Usare distribuzioni in più fasi per automatizzare l'implementazione del software in diverse raccolte.
-ms.date: 04/16/2019
+ms.date: 04/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b634ff68-b909-48d2-9e2c-0933486673c5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 75868250b1f35654e01065e7ff610beb293de727
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 5af0b7c90225a1f42d55767a0296d7e2263f956f
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690729"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110458"
 ---
 # <a name="create-phased-deployments-with-configuration-manager"></a>Creare distribuzioni in più fasi con Configuration Manager
 
@@ -117,14 +117,12 @@ Include a timeline diagram
 
 4. Nella pagina **Impostazioni** scegliere un'opzione per ogni impostazione di pianificazione. Per altre informazioni, vedere [Impostazioni delle fasi](#bkmk_settings). Al termine, selezionare **Avanti**.  
 
-5. Nella pagina **Fasi** vedere le due fasi create dalla procedura guidata per le raccolte specificate. Selezionare **Avanti**.   
-
-    > [!Note]  
-    > Questa sezione descrive la procedura per creare automaticamente una distribuzione predefinita in due fasi. La procedura guidata consente di aggiungere, rimuovere, riordinare, modificare o visualizzare le fasi per una distribuzione in più fasi. Per altre informazioni su queste azioni aggiuntive, vedere [Creare una distribuzione in più fasi con fasi configurate manualmente](#bkmk_manual).  
+5. Nella pagina **Fasi** vedere le due fasi create dalla procedura guidata per le raccolte specificate. Selezionare **Avanti**. Queste istruzioni descrivono la procedura per creare automaticamente una distribuzione predefinita in due fasi. La procedura guidata consente di aggiungere, rimuovere, riordinare, modificare o visualizzare le fasi per una distribuzione in più fasi. Per altre informazioni su queste azioni aggiuntive, vedere [Creare una distribuzione in più fasi con fasi configurate manualmente](#bkmk_manual).  
 
 6. Verificare le selezioni nella scheda **Riepilogo** e quindi selezionare **Avanti** per completare la procedura guidata.  
 
-
+> [!NOTE]
+> A partire dal 21 aprile 2020, Office 365 ProPlus viene rinominato come **App di Microsoft 365 per grandi imprese**. Per altre informazioni, vedere [Modifica del nome di Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). È comunque possibile che il nome precedente venga visualizzato in Configuration Manager e nella documentazione corrispondente mentre la console viene aggiornata.  
 
 ## <a name="create-a-phased-deployment-with-manually-configured-phases"></a><a name="bkmk_manual"></a> Creare una distribuzione in più fasi con fasi configurate manualmente
 <!--1358148--> 

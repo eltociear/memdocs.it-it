@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 03a6e7cd49bbb5a65a4364be398961c048d2a1b9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f52d6956cf860de8e45ac4e532500d32bcf077ba
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705679"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074504"
 ---
 # <a name="capabilities-in-technical-preview-1512-for-configuration-manager"></a>Funzionalità della versione Technical Preview 1512 per Configuration Manager
 
@@ -75,7 +75,7 @@ Nella Technical Preview 1512 sono state aggiunte le nuove impostazioni seguenti 
 
      Il motore antimalware può richiedere l'invio a Microsoft di file di esempio per un'ulteriore analisi. Per impostazione predefinita, viene sempre visualizzata una richiesta prima dell'invio di tali campioni. Gli amministratori ora possono gestire le impostazioni seguenti per configurare questo comportamento:  
 
-    -   Avanzata: **Abilitare l'invio automatico di file di esempio per consentire a Microsoft di determinare se alcuni elementi rilevati siano dannosi**:  Impostare questa opzione su "Sì" per abilitare l'invio automatico di file di esempio. L'impostazione predefinita è "No", che indica che l'invio automatico dei file di esempio è disabilitato e verrà visualizzata una richiesta agli utenti prima dell'invio dei campioni.   (Questa impostazione è stata introdotta in System Center 2012 R2 Configuration Manager SP1)  
+    -   Avanzata: **Abilitare l'invio automatico di file di esempio per consentire a Microsoft di determinare se alcuni elementi rilevati siano dannosi**:  Impostare questa opzione su "Sì" per abilitare l'invio automatico di file di esempio. L'impostazione predefinita è "No", che indica che l'invio automatico dei file di esempio è disabilitato e verrà visualizzata una richiesta agli utenti prima dell'invio degli esempi.   (Questa impostazione è stata introdotta in System Center 2012 R2 Configuration Manager SP1)  
 
     -   Avanzate: **Consenti agli utenti di modificare le impostazioni di invio automatico dei file di esempio**: questa impostazione determina se un utente con diritti amministrativi locali in un dispositivo può modificare l'impostazione per l'invio automatico dei file di esempio nell'interfaccia del client. L'impostazione predefinita è "No" e indica che le impostazioni possono essere modificate solo in Configuration Manager e gli amministratori locali di un dispositivo non possono modificare questa configurazione.  
 
@@ -83,7 +83,7 @@ Nella Technical Preview 1512 sono state aggiunte le nuove impostazioni seguenti 
 
          ![TechRef&#95;WinDefender](../../core/get-started/media/TechRef_WinDefender.png "TechRef_WinDefender")  
 
-    Inoltre, l'impostazione esistente **Cartelle e file esclusi** nella sezione "Impostazioni di esclusione" del criterio antimalware di Endpoint Protection è stata migliorata per consentire le esclusioni dei dispositivi. Ad esempio, ora è possibile specificare quanto segue come un'esclusione: **\device\mvfs** (per un file system multiversione). I criteri non convalidano il percorso del dispositivo: i criteri di protezione endpoint sono forniti al motore antimalware nel client che deve essere in grado di interpretare la stringa del dispositivo.  
+    In più, l'impostazione esistente **Exclude files and folders** (Escludi file e cartelle) nella sezione "Impostazioni di esclusione" dei criteri antimalware di Endpoint Protection è stata migliorata per consentire le esclusioni dei dispositivi. Ad esempio, ora è possibile specificare quanto segue come un'esclusione: **\device\mvfs** (per un file system multiversione). I criteri non convalidano il percorso del dispositivo: i criteri di protezione endpoint sono forniti al motore antimalware nel client che deve essere in grado di interpretare la stringa del dispositivo.  
 
 **Prerequisiti per l'uso dei criteri di Endpoint Protection:**  
 

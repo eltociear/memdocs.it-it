@@ -5,17 +5,17 @@ description: La console di Configuration Manager invia avvisi e stati per monito
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/08/2020
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 9afd7b0f-5c8e-48bc-9a65-1f7d74103688
-ms.openlocfilehash: 278f859d58c4feda6fa13522b476ec2beb60f514
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: aa17e58f2687a48895502d1062a22d0c8630aea3
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709489"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110373"
 ---
 # <a name="monitor-software-updates-in-configuration-manager"></a>Monitorare gli aggiornamenti software in Configuration Manager
 
@@ -33,7 +33,7 @@ A partire da Configuration Manager versione 1610, è possibile usare il nuovo da
 <!--4224414-->
 *(Funzionalità introdotta nella versione 1906)*
 
-È possibile esaminare nel dettaglio le statistiche di conformità per individuare i dispositivi che richiedono un aggiornamento software di Office 365 specifico. Per visualizzare l'elenco dei dispositivi, è necessaria l'autorizzazione per visualizzare gli aggiornamenti e le raccolte a cui appartengano i dispositivi. Per eseguire il drill-down nell'elenco dei dispositivi:
+È possibile esaminare nel dettaglio le statistiche di conformità per trovare i dispositivi che richiedono un aggiornamento software delle app Microsoft 365. Per visualizzare l'elenco dei dispositivi, è necessaria l'autorizzazione per visualizzare gli aggiornamenti e le raccolte a cui appartengano i dispositivi. Per eseguire il drill-down nell'elenco dei dispositivi:
 
 1. Passare a **Raccolta software** > **Aggiornamenti software** > **Tutti gli aggiornamenti software**.
 1. Selezionare tutti gli aggiornamenti richiesti da almeno un dispositivo.

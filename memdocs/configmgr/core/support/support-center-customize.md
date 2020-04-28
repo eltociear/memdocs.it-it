@@ -10,12 +10,12 @@ ms.assetid: a6f7f6b7-9ef3-4ffa-a3cf-d877ac55983b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1436f40dc989202725d7b83d551d318b970f9b5d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: fc17437e508ea69a19043c29bf9ad4501cbac3e4
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707439"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078516"
 ---
 # <a name="customize-support-center"></a>Personalizzare Support Center
 
@@ -34,7 +34,7 @@ Per apportare queste modifiche è necessario disporre di autorizzazioni di ammin
 > [!Important]  
 > Il file di configurazione di Support Center è un file in formato XML. È essenziale per il funzionamento di Support Center. La modifica di questo file è consigliata solo agli utenti che hanno familiarità con XML e le espressioni regolari.  
 
-Prima di personalizzare il file di configurazione di Support Center, salvare una copia di backup del file originale. In questo modo sarà possibile ripristinare le funzionalità originali di Support Center se si commettono errori durante la modifica del file. Se non si crea una copia di backup e Support Center non funziona correttamente dopo aver modificato il file di configurazione, reinstallare Support Center. È anche possibile copiare un file di configurazione da un'altra installazione di Support Center.
+Prima di personalizzare il file di configurazione di Support Center, salvare una copia di backup del file originale. In questo modo sarà possibile ripristinare le funzionalità originali di Support Center se si commettono errori durante la modifica del file. Se non si crea una copia di backup e Support Center non funziona correttamente dopo la modifica del file di configurazione, reinstallare Support Center. È anche possibile copiare un file di configurazione da un'altra installazione di Support Center.
 
 
 

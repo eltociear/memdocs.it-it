@@ -10,12 +10,12 @@ ms.assetid: 9fcbcc81-cd6f-496e-b075-ef1afa2b8ccc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: b5f5ee5f8348a3d0a2d059c18edaa964826228e1
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2a99384772895ff2675ade671076163b74cecee2
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692459"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075303"
 ---
 # <a name="create-user-data-and-profiles-configuration-items-in-configuration-manager"></a>Creare elementi di configurazione profili e dati utente in Configuration Manager
 
@@ -25,9 +25,9 @@ Gli elementi di configurazione di profili e dati utente in Configuration Manager
 
 - Reindirizzare la cartella Documenti di un utente a una condivisione di rete.  
 
-- Assicurarsi che specifici file archiviati in rete siano disponibili nel computer di un utente quando la connessione di rete non è disponibile.  
+- Assicurarsi che file specifici archiviati in rete siano disponibili nel computer di un utente quando la connessione di rete non è disponibile.  
 
-- Configurare i file nel profilo mobile di un utente da sincronizzare con una condivisione di rete quando l'utente si connette e si disconnette.  
+- Configurare i file del profilo mobile di un utente da sincronizzare con una condivisione di rete quando l'utente si connette e si disconnette.  
 
   A differenza di altri elementi di configurazione in Configuration Manager, gli elementi di configurazione di profili e dati utente non vengono aggiunti a una linea di base di configurazione da distribuire in un secondo momento. Al contrario, l'elemento di configurazione si distribuisce direttamente usando la finestra di dialogo **Distribuisci elemento di configurazione profili e dati utente** .  
 

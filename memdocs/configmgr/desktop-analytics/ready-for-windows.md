@@ -2,7 +2,7 @@
 title: Ready for Windows
 titleSuffix: Configuration Manager
 description: Informazioni sul ritiro del sito Web Ready for Windows
-ms.date: 10/30/2019
+ms.date: 04/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: da56dbe1a363606e50569db8be10d65d10d1b422
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b3f378ce519085eb1d2714a901e20b29b62b0cd4
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81695569"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82109982"
 ---
 # <a name="ready-for-modern-desktop-retirement-faq"></a>Domande frequenti sul ritiro di Ready for modern desktop
 
@@ -31,6 +31,9 @@ Molti clienti hanno problemi a ottenere Windows 10 e Office 365 ProPlus e a mant
 La directory *Ready for modern desktop* includeva un elenco delle soluzioni software supportate e usate nei dispositivi commerciali che eseguono Windows 10 e Office 365 ProPlus. La directory offre un valido aiuto ai responsabili IT che stanno prendendo in considerazione l'idea di adottare le versioni più recenti di Windows 10 e Office 365 per le distribuzioni.
 
 Il feedback dei responsabili IT è che vorrebbero che questi dati analitici si integrassero con gli strumenti che già usano per pianificare le distribuzioni. Per pianificare e gestire i progetti di aggiornamento di Windows 10 e Office 365 ProPlus, usare [Desktop Analytics](https://aka.ms/dadocs) e le [funzionalità di conformità di Office 365 ProPlus](https://docs.microsoft.com/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) in Configuration Manager. 
+
+> [!Note]
+> A partire dal 21 aprile 2020 Office 365 ProPlus viene rinominato come **App di Microsoft 365 per grandi imprese**. Per altre informazioni, vedere [Modifica del nome di Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). È comunque possibile che vengano ancora visualizzati riferimenti al nome precedente nella console di Configuration Manager e nella documentazione di supporto mentre la console viene aggiornata.
 
 ### <a name="what-is-desktop-analytics"></a>Che cos'è Desktop Analytics?
 

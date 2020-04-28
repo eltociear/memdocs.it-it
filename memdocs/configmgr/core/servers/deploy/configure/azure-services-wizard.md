@@ -10,12 +10,12 @@ ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3a4dee8af68fec8c08cc58b02520f53e13adfbb3
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f36da59c6924f6d2f71d882f601c6dd563840d73
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704889"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82022535"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>Configurare i servizi di Azure da usare con Configuration Manager
 
@@ -273,3 +273,5 @@ Il diagramma seguente è un flusso di dati concettuale per l'interazione tra Con
 4. Il client Configuration Manager richiede il token utente di Azure AD. Il client esegue l'attestazione mediante l'ID applicazione dell'app client di Azure AD, con l'app server come gruppo di destinatari. Per altre informazioni, vedere [Claims in Azure AD Security Tokens](/azure/active-directory/develop/authentication-scenarios#security-tokens) (Attestazioni nei token di sicurezza di Azure AD).  
 
 5. Il client esegue l'autenticazione nel sito presentando il token di Azure AD al gateway di gestione cloud e al punto di gestione locale abilitato per HTTPS.  
+
+Per informazioni più dettagliate, vedere [Flusso di lavoro di autenticazione di Azure AD](../../../clients/manage/azure-ccmsetup.md).

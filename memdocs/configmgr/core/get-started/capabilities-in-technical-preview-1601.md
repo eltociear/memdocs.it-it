@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: ea003aef949f5624591d87dd6105d3a1cff3b691
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2ae184400a3de0d7ab27fffc1ce1e6287593b1ae
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705729"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076306"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-configuration-manager"></a>Funzionalità della versione Technical Preview 1601 per Configuration Manager
 
@@ -79,7 +79,7 @@ Nella Technical Preview 1601 è stato aggiunto il supporto delle funzionalità s
 
     Per usare l'opzione, è necessario creare un criterio di conformità in Configuration Manager con le regole specifiche descritte di seguito e impostare un criterio di accesso condizionale nella console di Intune.  Inoltre, per assicurarsi che l'accesso sia consentito solo ai PC conformi, è necessario impostare il requisito PC Windows per l'opzione **I dispositivi devono essere conformi**. Di seguito sono descritte le regole dei criteri di conformità applicabili ai PC gestiti da Configuration Manager.  
 
-    -   **Richiedi la registrazione in Azure Active Directory:** questa regola controlla se il dispositivo dell'utente è aggiunto all'area di lavoro in Azure AD e in caso contrario il dispositivo viene registrato automaticamente in Azure AD. La registrazione automatica è supportata solo in Windows 8.1. Per i PC con Windows 7, distribuire un file MSI per eseguire la registrazione automatica. Per altre informazioni, vedere [qui](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1).  
+    -   **Richiedi la registrazione in Azure Active Directory:** questa regola controlla se il dispositivo dell'utente è stato aggiunto all'area di lavoro in Azure AD e in caso contrario il dispositivo viene registrato automaticamente in Azure AD. La registrazione automatica è supportata solo in Windows 8.1. Per i PC con Windows 7, distribuire un file MSI per eseguire la registrazione automatica. Per altre informazioni, vedere [qui](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1).  
 
     -   **Tutti gli aggiornamenti richiesti installati con una scadenza precedente a un determinato numero di giorni:** questa regola controlla se il dispositivo dell'utente ha tutti gli aggiornamenti necessari (specificati nella regola **Richiedi aggiornamenti automatici**) entro la scadenza e il periodo di tolleranza specificati dall'utente e installa automaticamente eventuali aggiornamenti necessari in sospeso.  
 
@@ -126,7 +126,7 @@ Nella Technical Preview 1601 è stato aggiunto il supporto delle funzionalità s
 ##  <a name="client-online-status"></a><a name="bkmk_clientStatus"></a> Stato online del client  
 A partire dalla versione Technical Preview 1601, è possibile appurare rapidamente se un client è online o offline nella console di Configuration Manager. Grazie alle icone e alle colonne aggiornate negli elenchi di dispositivi della console, è possibile valutare lo stato dei client nell'ambiente in uso per identificare aree problematiche e altri problemi che richiedono attenzione.  
 
-Un client è online se è attualmente connesso a un ruolo del sistema del sito del punto di gestione di Configuration Manager. Fino a quando il punto di gestione riceve messaggi di tipo ping dal client, il relativo stato è online. Se il punto di gestione non riceve un messaggio per circa 5 minuti, lo stato del client diventa offline.  
+Un client è online se è attualmente connesso a un ruolo del sistema del sito del punto di gestione di Configuration Manager. Fino a quando il punto di gestione riceve messaggi di tipo ping dal client, il relativo stato è online. Se il punto di gestione non riceve un messaggio per circa 5 minuti, lo stato del client passa a offline.  
 
 ### <a name="icons-for-client-status"></a>Icone per lo stato del client  
 
@@ -180,7 +180,7 @@ Un client è online se è attualmente connesso a un ruolo del sistema del sito d
 -   È necessario avere distribuito un'applicazione iOS che supporta la configurazione dell'applicazione.  
 
 #### <a name="try-it-out"></a>Verifica  
- Una volta soddisfatti i prerequisiti sopra indicati, è necessario creare un'applicazione Configuration Manager che usa un tipo di distribuzione iOS. L'app usata deve supportare la configurazione dell'applicazione. Fare riferimento alla documentazione del fornitore dell'applicazione per informazioni su quali elementi specifici (coppie nome/valore), è possibile configurare.  
+ Una volta soddisfatti i prerequisiti sopra indicati, è necessario creare un'applicazione Configuration Manager che usa un tipo di distribuzione iOS. L'app usata deve supportare la configurazione dell'applicazione. Fare riferimento alla documentazione del fornitore dell'applicazione per informazioni su quali elementi specifici (coppie nome/valore) è possibile configurare.  
 
  Associare quindi i criteri di configurazione dell'app al tipo di distribuzione iOS durante la distribuzione di app. È anche possibile distribuire i criteri dal nodo **Criteri di configurazione dell'app**, selezionando un'app e una raccolta esistente come destinazione.  
 

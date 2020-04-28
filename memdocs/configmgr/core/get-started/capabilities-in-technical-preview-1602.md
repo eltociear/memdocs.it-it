@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 65c8feb6381c59cc1fef3fb07a3ad8c33fc67e65
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 64d01598f3d5feb162898761645ac84b1c73b175
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705689"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074470"
 ---
 # <a name="capabilities-in-technical-preview-1602-for-configuration-manager"></a>Funzionalità della versione Technical Preview 1602 per Configuration Manager
 
@@ -42,7 +42,7 @@ Questo articolo presenta le funzionalità disponibili nella Technical Preview pe
 ##  <a name="improvements-to-software-center-in-version-1602"></a><a name="BKMK_SC1601"></a> Miglioramenti di Software Center nella versione 1602  
 
 ### <a name="refresh-pc-machine-and-user-policy-from-software-center"></a>Aggiornare i criteri di computer e utenti da Software Center  
- È stata aggiunta una nuova opzione, **Criteri sincronizzazione**, alla pagina **Opzioni** > **Manutenzione computer** di Software Center che consente al computer di aggiornare i criteri di computer e utenti di Configuration Manager.  
+ È stata aggiunta la nuova opzione **Criteri sincronizzazione** alla pagina **Opzioni** > **Manutenzione computer** di Software Center che consente al computer di aggiornare i criteri di computer e utenti di Configuration Manager.  
 
 ##  <a name="improvements-to-windows-10-servicing"></a><a name="BKMK_Win10Servicing"></a> Miglioramenti della manutenzione di Windows 10  
  Nella Technical Preview 1602 sono stati aggiunti i miglioramenti seguenti per la manutenzione di Windows 10:  

@@ -10,12 +10,12 @@ ms.assetid: 86cd5382-8b41-45db-a4f0-16265ae22657
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a1b9afc8c9cde94488908e4cd9737a58547326f9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c302e839c2a41ba27d160db24928f7e202de78dc
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703669"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110186"
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>Peer cache per i client di Configuration Manager
 
@@ -41,7 +41,7 @@ Usare le impostazioni client per consentire ai client di essere origini di peer 
 
 Un'origine di peer cache deve essere un membro del gruppo di limiti corrente del client di peer cache. Il punto di gestione non include le origini di peer cache di un gruppo di limiti vicino nell'elenco di origini di contenuto che fornisce al client, ma include solo i punti di distribuzione di un gruppo di limiti vicino. Per altre informazioni sui gruppi di limiti correnti e adiacenti, vedere [Gruppi di limiti](../../servers/deploy/configure/boundary-groups.md).<!--SCCMDocs issue 685-->  
 
-Il client di Configuration Manager usa la peer cache per distribuire ad altri client qualsiasi tipo di contenuto presente nella cache, ad esempio file di Office 365 e file di installazione rapida.<!--SMS.500850-->  
+Il client di Configuration Manager usa la peer cache per distribuire ad altri client qualsiasi tipo di contenuto presente nella cache, Questo contenuto include app Microsoft 365 per file aziendali e file di installazione rapida.<!--SMS.500850-->  
 
 La peer cache non sostituisce l'uso di altre soluzioni, come Windows BranchCache o Ottimizzazione recapito, ma viene usata insieme ad altre soluzioni. Queste tecnologie offrono maggiori opzioni per estendere le soluzioni tradizionali di distribuzione del contenuto, ad esempio i punti di distribuzione. La peer cache è una soluzione personalizzata che non dipende da BranchCache. Se si non abilita o non si usa BranchCache, la peer cache funziona comunque.  
 

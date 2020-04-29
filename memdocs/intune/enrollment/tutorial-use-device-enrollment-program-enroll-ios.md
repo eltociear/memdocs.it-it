@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 Customer intent: As an Intune admin, I want to set up the Apple's corporate device enrollment features so that corporate devices can automatically enroll in Intune.
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd99c334866714095a4d87e1e028731ce3ee7c7c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: a3a949738056c9acf33ef09e28f7664690dfd77f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326878"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078907"
 ---
 # <a name="tutorial-use-apples-corporate-device-enrollment-features-in-apple-business-manager-abm-to-enroll-iosipados-devices-in-intune"></a>Esercitazione: Usare le funzionalità Corporate Device Enrollment di Apple in Apple Business Manager (ABM) per registrare i dispositivi iOS/iPadOS in Intune
 Le funzionalità Device Enrollment di Apple Business Manager semplificano la registrazione di dispositivi. Intune supporta anche il portale Device Enrollment Program precedente di Apple, ma è consigliabile iniziare da zero con Apple Business Manager. Con Microsoft Intune e Apple Corporate Device Enrollment, i dispositivi vengono registrati automaticamente in modo sicuro la prima volta che vengono accesi. È pertanto possibile spedire i dispositivi a più utenti senza dover configurare ogni singolo dispositivo. 
@@ -82,37 +82,39 @@ Ora che è stato installato il token, è possibile creare un profilo di registra
 
 1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS** > **Registrazione di iOS** > **Token del programma di registrazione**.
 
-2. Selezionare il token installato, scegliere **Profili** > **Crea profilo**.
+2. Selezionare il token installato, scegliere **Profili** > **Crea profilo** > **iOS**.
 
-3. In **Crea profilo** immettere *TestProfile* per **Nome** e *Test Registrazione automatica del dispositivo per dispositivi iOS/iPadOS* per **Descrizione**. Questi dettagli non vengono visualizzati agli utenti.
+3. Nella pagina **Informazioni di base** immettere *TestProfile* per **Nome** e *Test Registrazione automatica del dispositivo per dispositivi iOS/iPadOS* per **Descrizione**. Questi dettagli non vengono visualizzati agli utenti.
 
-4. Scegliere **iOS** in **Piattaforma**.
+4. Selezionare **Avanti**.
 
-5. Stabilire se i dispositivi dovranno essere registrati con o senza **Affinità utente**. La funzionalità Affinità utente è destinata ai dispositivi che verranno usati da specifici utenti. Se gli utenti vogliono usare il portale aziendale per servizi come l'installazione di app, scegliere **Registra con affinità utente**. Se gli utenti non hanno bisogno del portale aziendale o si vuole eseguire il provisioning del dispositivo per molti utenti, scegliere **Registra senza affinità utente**.
+5. Nella pagina **Impostazioni di gestione** decidere se i dispositivi devono essere registrati con o senza **Affinità utente**. La funzionalità Affinità utente è destinata ai dispositivi che verranno usati da specifici utenti. Se gli utenti vogliono usare il portale aziendale per servizi come l'installazione di app, scegliere **Registra con affinità utente**. Se gli utenti non hanno bisogno del portale aziendale o si vuole eseguire il provisioning del dispositivo per molti utenti, scegliere **Registra senza affinità utente**.
 
-6. Se si sceglie la registrazione con Affinità utente, stabilire se si vuole eseguire l'autenticazione con il portale aziendale o con Apple Setup Assistant. Se si vuole usare Multi-Factor Authentication, consentire agli utenti di cambiare le password dopo il primo accesso o richiedere agli utenti di reimpostare le loro password durante la registrazione, scegliere **Sì** per **Autenticazione con il Portale aziendale invece di Apple Setup Assistant**. Se si vuole usare l'autenticazione HTTP di base fornita da Apple tramite Apple Setup Assistant, scegliere **No**. Se si sceglie **Sì** e si vuole che l'applicazione Portale aziendale venga aggiornata automaticamente nei dispositivi degli utenti finali, distribuire separatamente il Portale aziendale come app richiesta a questi utenti usando il programma Volume Purchase Program (VPP) di Apple.
-
-7. Se si sceglie la registrazione con Affinità utente e Autenticazione con il portale aziendale, stabilire se si vuole installare il portale aziendale con Apple Volume Purchase Program (VPP). Se si installa il portale aziendale con un token di VPP, l'utente non dovrà immettere un ID e una password Apple per scaricare il portale aziendale dallo store durante la registrazione. Scegliere **Usa il token** in **Installa il Portale aziendale con VPP** per selezionare un token di VPP con licenze gratuite del portale aziendale disponibili. Se non si vuole usare VPP per distribuire il portale aziendale, scegliere **Non usare VPP** in **Installa il Portale aziendale con VPP**. 
+6. Se si sceglie di eseguire la registrazione con Affinità utente, viene visualizzata l'opzione **Selezione della posizione per l'autenticazione degli utenti**. Decidere se eseguire l'autenticazione con il portale aziendale o con Apple Setup Assistant.
+   - **Portale aziendale**: Selezionare questa opzione per usare Multi-Factor Authentication, consentire agli utenti di cambiare le password dopo il primo accesso o richiedere agli utenti di reimpostare le password scadute durante la registrazione. Se si vuole che l'applicazione Portale aziendale venga aggiornata automaticamente nei dispositivi degli utenti finali, distribuire separatamente il Portale aziendale come app richiesta a questi utenti usando il programma Volume Purchase Program (VPP) di Apple.
+   - **Assistente configurazione**: Selezionare questa opzione per usare l'autenticazione HTTP di base resa disponibile da Apple con Apple Setup Assistant
+  
+7. Se si sceglie di eseguire la registrazione con Affinità utente e l'autenticazione con il portale aziendale, viene visualizzata l'opzione **Installa Portale aziendale con VPP**. Se si installa il portale aziendale con un token di VPP, l'utente non dovrà immettere un ID e una password Apple per scaricare il portale aziendale dallo store durante la registrazione. Scegliere **Usa il token** in **Installa il Portale aziendale con VPP** per selezionare un token di VPP con licenze gratuite del portale aziendale disponibili. Se non si vuole usare VPP per distribuire il portale aziendale, scegliere **Non usare VPP**. 
 
 8. Se si sceglie la registrazione con Affinità utente, Autenticazione con il portale aziendale e Installa il Portale aziendale con VPP, decidere se si vuole eseguire il portale aziendale in modalità applicazione singola fino all'autenticazione. Questa impostazione consente di assicurarsi che l'utente non abbia accesso ad altre app finché non completa la registrazione aziendale. Se si vuole limitare l'utente a questo flusso fino al completamento della registrazione, scegliere **Sì** in **Esegui il Portale aziendale in modalità applicazione singola fino all'autenticazione**. 
 
-9. Scegliere **Impostazioni di gestione dei dispositivi** e scegliere **Sì** in **Supervisione eseguita**. I dispositivi supervisionati offrono la maggior parte delle opzioni di gestione per i dispositivi iOS/iOS/iPadOS aziendali.
+9. In **Impostazioni di gestione dei dispositivi** scegliere **Sì** in **Supervisione eseguita** (se si è scelta l'opzione **Registra con affinità utente**, verrà impostata automaticamente su **Sì**). I dispositivi supervisionati offrono la maggior parte delle opzioni di gestione per i dispositivi iOS/iOS/iPadOS aziendali.
 
 10. Scegliere **Sì** in **Registrazione bloccata** per assicurarsi che gli utenti non possano rimuovere la gestione dal dispositivo aziendale. 
 
 11. Scegliere un'opzione di **Sincronizza con computer** per determinare se sarà possibile sincronizzare i dispositivi iOS/iPadOS con i computer.
 
-12. Per impostazione predefinita, Apple assegna il nome al dispositivo con il tipo di dispositivo, ad esempio iPad. Se si vuole fornire un modello di nome diverso, scegliere **Sì** in **Applica il modello di nome di dispositivo**. Immettere il nome da applicare ai dispositivi, dove le stringhe *{{SERIAL}}* e *{{DEVICETYPE}}* sostituiranno il numero di serie e il tipo di ogni dispositivo. In caso contrario, scegliere **No** in **Applica il modello di nome di dispositivo**.
+12. Per impostazione predefinita, Apple assegna il nome al dispositivo con il tipo di dispositivo, ad esempio iPad. Se si vuole specificare un altro modello di nome, scegliere **Sì** in **Applica il modello di nome di dispositivo**. Immettere il nome da applicare ai dispositivi, dove le stringhe *{{SERIAL}}* e *{{DEVICETYPE}}* sostituiranno il numero di serie e il tipo di ogni dispositivo. In caso contrario, scegliere **No** in **Applica il modello di nome di dispositivo**.
 
-13. Scegliere **OK**.
+13. Scegliere **Avanti**.
 
-14. Scegliere **Personalizzazione dell'Assistente configurazione** e immettere *Reparto esercitazione* per **Nome del reparto**. Questa stringa viene visualizzata agli utenti quando toccano **Informazioni sulla configurazione** durante l'attivazione del dispositivo.
+14. Nella pagina **Assistente configurazione** immettere *Reparto esercitazione* per **Nome del reparto**. Questa stringa viene visualizzata agli utenti quando toccano **Informazioni sulla configurazione** durante l'attivazione del dispositivo.
 
 15. In **Telefono del reparto** immettere un numero di telefono. Il numero viene visualizzato quando gli utenti toccano il pulsante **Richiesta di assistenza** durante l'attivazione.
 
 16. È possibile scegliere **Mostra** o **Nascondi** per diverse schermate durante l'attivazione del dispositivo. Per un'esperienza di registrazione più semplice possibile, impostare tutte le schermate su **Nascondi**.
 
-17. Scegliere **OK** > **Crea**.
+17. Scegliere **Avanti** per passare alla pagina **Rivedi e crea**. Selezionare **Crea**.
 
 ## <a name="sync-managed-devices-to-intune"></a>Sincronizzare i dispositivi gestiti con Intune
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9dc309cb373d9f06fd68810531d5634eb4c0b7d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 1a18895ecfcb17567170dfae8f07814020a60df1
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325050"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81726014"
 ---
 # <a name="use-teamviewer-to-remotely-administer-intune-devices"></a>Usare TeamViewer per l'amministrazione remota dei dispositivi di Intune
 
@@ -67,7 +67,7 @@ Dopo la configurazione di Connector è possibile iniziare ad amministrare un dis
 Quando si avvia una sessione remota, gli utenti vedono un flag di notifica sull'icona dell'app Portale aziendale nel dispositivo in uso. Viene visualizzata una notifica anche all'apertura dell'app. Gli utenti potranno quindi accettare la richiesta di assistenza remota.
 
 > [!NOTE]
-> Nei dispositivi Windows registrati con metodi "senza utente", come Manager di registrazione dispositivi e WCD, la notifica di TeamViewer non viene visualizzata nell'app Portale aziendale. In questi scenari, è consigliabile generare la sessione usando il portale di TeamViewer.
+> Nei dispositivi Windows registrati con metodi "senza utente", ad esempio Manager di registrazione dispositivi e Progettazione configurazione di Windows, la notifica di TeamViewer non viene visualizzata nell'app Portale aziendale. In questi scenari, è consigliabile generare la sessione usando il portale di TeamViewer.
 
 In TeamViewer è possibile completare una serie di azioni sul dispositivo, inclusa l'acquisizione del controllo del dispositivo. Per informazioni complete sulle operazioni possibili, vedere il [materiale sussidiario per TeamViewer](https://www.teamviewer.com/support/documents/).
 

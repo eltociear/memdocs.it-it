@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf2c3c09ca957b0355669edc536dfd1f0d0e3226
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 38598e0245b0cfe15be4b9303620aea1724933d1
+ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407894"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82166571"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Impostazioni dei dispositivi Android Enterprise per consentire o limitare l'uso delle funzionalità tramite Intune
 
@@ -85,7 +85,7 @@ Queste impostazioni si applicano ai tipi di registrazione Android Enterprise in 
 
 ### <a name="system-security"></a>Protezione del sistema
 
-- **Analisi delle minacce nelle app**: **Rendi obbligatorio** (impostazione predefinita) consente a Google Play Protect di analizzare le app prima e dopo la loro installazione. Se rileva una minaccia, può avvisare gli utenti di rimuovere l'app dal dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non abilitare o eseguire Google Play Protect per analizzare le app.
+- **Analisi delle minacce nelle app**: **Rendi obbligatorio** (impostazione predefinita) consente a Google Play Protect di analizzare le app prima e dopo la loro installazione. Se rileva una minaccia, può avvisare gli utenti di rimuovere l'app dal dispositivo. Quando questa opzione è impostata su **Non configurato**, Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non abilitare o eseguire Google Play Protect per analizzare le app.
 
 ### <a name="dedicated-devices"></a>Dispositivi dedicati
 
@@ -207,6 +207,9 @@ Utilizzare queste impostazioni per configurare un'esperienza di tipo chiosco mul
 - **Numero di giorni rimanenti prima della scadenza della password**: immettere il numero di giorni che devono trascorrere prima che sia necessario cambiare la password del dispositivo, da 1 a 365. Ad esempio, immettere `90` per impostare la scadenza della password dopo 90 giorni. Quando la password scade, agli utenti viene chiesto di creare una nuova password. Quando il valore è vuoto, Intune non modifica o aggiorna questa impostazione.
 - **Numero di password obbligatorie prima che un utente possa riutilizzare una password**: usare questa impostazione per impedire agli utenti di creare password già usate in precedenza. immettere il numero di password usate in precedenza che non è possibile usare, da 1 a 24. Ad esempio, immettere `5` in modo che gli utenti non possano definire una nuova password uguale alla password corrente o a una qualsiasi delle quattro precedenti. Quando il valore è vuoto, Intune non modifica o aggiorna questa impostazione.
 - **Numero di errori di accesso prima della cancellazione dei dati del dispositivo**: immettere il numero di password non corrette consentite prima che il dispositivo venga cancellato, da 4 a 11. `0` (zero) potrebbe disabilitare la funzionalità di cancellazione dei dispositivi. Quando il valore è vuoto, Intune non modifica o aggiorna questa impostazione.
+
+  > [!NOTE]
+  > Ai dispositivi con proprietario del dispositivo non verrà richiesto di impostare una password. Le impostazioni verranno applicate e sarà necessario impostare manualmente la password. Il criterio che impone questo segnalerà l'esito negativo fino a quando non si imposta la password che soddisfa i requisiti.
 
 ### <a name="power-settings"></a>Impostazioni di risparmio energia
 

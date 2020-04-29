@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 04/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb8d5b53e136ea22d1edbad7755e198fd4155285
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: 4ffa3d11b92c38373da22e53b96fe9cf9e520b5b
+ms.sourcegitcommit: af8a3efd361a7f3fa6e98e5126dfb1391966ff76
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551396"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82149179"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Aggiungere impostazioni relative alle funzionalità dei dispositivi iOS, iPadOS e macOS in Intune
 
@@ -37,9 +37,6 @@ Intune include molte funzionalità e numerose impostazioni che consentono agli a
 Intune usa "profili di configurazione" per creare e personalizzare queste impostazioni per le esigenze dell'organizzazione. Dopo aver aggiunto queste funzionalità in un profilo, è possibile eseguire il push o distribuire il profilo nei dispositivi iOS/iPadOS e macOS nell'organizzazione.
 
 Questo articolo descrive le diverse funzionalità che è possibile configurare e le modalità di creazione di un profilo di configurazione del dispositivo. È anche possibile visualizzare tutte le impostazioni disponibili per i dispositivi [iOS/iPadOS](ios-device-features-settings.md) e [macOS](macos-device-features-settings.md).
-
-> [!NOTE]
-> L'interfaccia utente di Intune verrà aggiornata a un'esperienza a schermo intero. Questa operazione può richiedere alcune settimane. Fino a quando il tenant in uso non riceve l'aggiornamento, il flusso di lavoro per la creazione o la modifica delle impostazioni descritte in questo articolo sarà leggermente diverso.
 
 ## <a name="airprint"></a>AirPrint
 
@@ -136,12 +133,12 @@ Si applica a:
 
 La maggior parte delle app line-of-business (LOB) richiedono un certo livello di autenticazione utente per il supporto della sicurezza. In molti casi l'autenticazione richiede di immettere ripetutamente le stesse credenziali. Per migliorare l'esperienza utente, gli sviluppatori possono creare app che usano l'accesso Single Sign-On (SSO). L'uso dell'accesso Single Sign-On riduce il numero di volte in cui un utente deve immettere le credenziali.
 
+Il profilo di accesso Single Sign-On si basa su Kerberos. Kerberos è un protocollo di autenticazione di rete che usa la crittografia a chiave segreta per autenticare le applicazioni client-server. Le impostazioni di Intune definiscono le informazioni sull'account Kerberos durante l'accesso ai server o alle app specificate e gestiscono le verifiche di Kerberos per le pagine Web e le app native. Apple consiglia di usare le impostazioni dell'[estensione dell'app SSO Kerberos](#single-sign-on-app-extension) (in questo articolo) anziché le impostazioni SSO.  
+
 Per usare l'accesso Single Sign-On, assicurarsi di avere:
 
 - Un'app sviluppata in modo da cercare l'archivio delle credenziali utente in Single Sign-On sul dispositivo.
 - Intune configurato per l'accesso Single Sign-On al dispositivo iOS/iPadOS.
-
-![Riquadro Single Sign-On](./media/device-features-configure/sso-blade.png)
 
 Per un elenco delle impostazioni che è possibile configurare in Intune, vedere [Single Sign-On in iOS/iPadOS](ios-device-features-settings.md#single-sign-on).
 
@@ -156,8 +153,8 @@ Queste impostazioni configurano un'estensione dell'app che abilita l'accesso Sin
 
 In Intune usare queste impostazioni per configurare un'estensione dell'app SSO creata dalla propria organizzazione, dal provider di identità, da Microsoft o da Apple. L'estensione dell'app SSO gestisce l'autenticazione per gli utenti. Queste impostazioni configurano le estensioni dell'app SSO di tipo reindirizzamento e credenziali.
 
-- Il tipo reindirizzamento è progettato per i protocolli di autenticazione moderni, come OAuth e SAML2. Microsoft dispone di un'estensione dell'app Single Sign-On di tipo redirect Azure AD per iOS/iPadOS che può essere abilitata con le impostazioni dell'estensione dell'app Single Sign-On.
-- Il tipo credenziali è progettato per i flussi di autenticazione con richiesta e risposta. È possibile scegliere tra un'estensione Apple con credenziali specifiche di Kerberos o un'estensione con credenziali generiche.
+- Il tipo reindirizzamento è progettato per i protocolli di autenticazione moderni, ad esempio OAuth e SAML2. È possibile usare un'estensione di reindirizzamento generica nei dispositivi macOS. Per i dispositivi iOS/iPadOS è possibile scegliere tra l'estensione per l'accesso Single Sign-On di Microsoft Azure AD ([plug-in Microsoft Enterprise Single Sign-On](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)) e un'estensione di reindirizzamento generica.
+- Il tipo credenziali è progettato per i flussi di autenticazione con richiesta e risposta. È possibile scegliere tra un'estensione con credenziali specifiche di Kerberos di Apple e un'estensione con credenziali generiche.
 
 Per un elenco delle impostazioni che è possibile configurare in Intune, vedere [Estensione dell'app Single Sign-On per iOS/iPadOS](ios-device-features-settings.md#single-sign-on-app-extension) ed [Estensione dell'app Single Sign-On per macOS](macos-device-features-settings.md#single-sign-on-app-extension).
 

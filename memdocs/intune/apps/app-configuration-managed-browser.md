@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b62a717217daaffeca5480ac55d0ccef3b10136
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 47b6f624ba5c12cd68322bde5c1f85ad7f0a6430
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323402"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "80862840"
 ---
 # <a name="manage-web-access-using-a-microsoft-intune-policy-protected-browser"></a>Gestire l'accesso Web usando un browser protetto con criteri di Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-L'uso di un browser protetto dai criteri di Intune (Microsoft Edge o Intune Managed Browser) garantisce che l'accesso ai siti Web aziendali venga sempre eseguito con misure di sicurezza applicate.  Quando configurati con Intune, i browser protetti possono sfruttare quanto segue:
+L'uso di un browser protetto da criteri di Intune, ad esempio Microsoft Edge, assicura che l'accesso ai siti Web aziendali sia eseguito sempre con misure di sicurezza applicate. Quando configurati con Intune, i browser protetti possono sfruttare quanto segue:
 
 - Criteri di protezione delle applicazioni
 - Accesso condizionale
@@ -38,11 +38,11 @@ L'uso di un browser protetto dai criteri di Intune (Microsoft Edge o Intune Mana
 - Integrazione del proxy di applicazione di Azure
 
 > [!IMPORTANT]
-> Intune Managed Browser verrà ritirato. Usare Microsoft Edge per l'esperienza protetta del browser di Intune. 
+> Intune Managed Browser è stato ritirato. Usare [Microsoft Edge](../apps/manage-microsoft-edge.md) per l'esperienza protetta del browser di Intune. 
 
 ## <a name="microsoft-edge-support"></a>Supporto di Microsoft Edge
 
-È possibile usare Microsoft Edge per gli scenari aziendali nei dispositivi iOS/iPadOS e Android. Microsoft Edge supporta tutti gli stessi scenari di gestione di Intune Managed Browser con l'aggiunta di miglioramenti all'esperienza utente finale. Le funzionalità aziendali di Microsoft Edge abilitate dai criteri di Intune includono:
+È possibile usare Microsoft Edge per gli scenari aziendali nei dispositivi iOS/iPadOS e Android. Le funzionalità aziendali di Microsoft Edge abilitate dai criteri di Intune includono:
 
 - **Doppia identità**: gli utenti possono aggiungere sia un account aziendale che un account personale per l'esplorazione. Le due identità sono completamente separate, in modo analogo all'architettura e all'esperienza utente di Office 365 e Outlook. Gli amministratori di Intune potranno impostare i criteri desiderati per un'esperienza di esplorazione protetta nell'account aziendale. 
 - **Integrazione dei criteri di protezione delle app di Intune**: ora gli amministratori possono applicare i criteri di protezione delle app a Microsoft Edge, tra cui controllare le operazioni Taglia, Copia e Incolla, impedire le acquisizioni di schermata e assicurare che i collegamenti selezionati dagli utenti si aprano solo in altre app gestite.
@@ -53,7 +53,7 @@ I criteri di protezione di Microsoft Intune per Microsoft Edge contribuiscono a 
 
 ## <a name="getting-started"></a>Guida introduttiva
 
-Microsoft Edge e Intune Managed Browser sono le app Web browser che amministratori e utenti finali possono scaricare dagli app store pubblici per l'uso nell'organizzazione. 
+Microsoft Edge è un'app Web browser che gli utenti, inclusi quelli finali, possono scaricare da App Store pubblici per l'uso nelle organizzazioni. 
 
 Requisiti del sistema operativo per i criteri di browser:
 - Android 4 e versioni successive o
@@ -189,7 +189,7 @@ Usare la procedura precedente per creare una configurazione dell'app Microsoft E
 
 ## <a name="how-to-configure-application-proxy-settings-for-protected-browsers"></a>Come configurare le impostazioni del proxy di applicazione per i browser protetti
 
-Microsoft Edge, Intune Managed Browser e [Azure AD Application Proxy]( https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) possono essere usati insieme per supportare gli scenari seguenti per gli utenti di dispositivi iOS/iPadOS e Android:
+Microsoft Edge e [Azure Active Directory Application Proxy]( https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) possono essere usati insieme per supportare gli scenari seguenti per gli utenti di dispositivi iOS/iPadOS e Android:
 
 - Un utente scarica e accede all'app Microsoft Outlook. I criteri di protezione dell'app di Intune vengono applicati automaticamente. Crittografano i dati salvati e impediscono all'utente il trasferimento di file aziendali ad app non gestite o a percorsi nel dispositivo. Quando l'utente fa quindi clic su un collegamento a un sito intranet in Outlook, è possibile specificare che il collegamento venga aperto in un'applicazione dei browser protetti, anziché in un altro browser. Il browser protetto riconosce che tale sito intranet è stato esposto all'utente tramite il proxy di applicazione. L'utente viene indirizzato automaticamente tramite il proxy di applicazione, per l'autenticazione con il sistema di autenticazione a più fattori applicabile, e l'accesso condizionale prima di raggiungere il sito Intranet. Questo sito, che in precedenza non poteva essere trovato quando l'utente era remoto, è ora accessibile e il collegamento in Outlook funziona come previsto.
 - Un utente remoto apre l'applicazione dei browser protetti e passa a un sito intranet tramite l'URL interno. Il browser protetto riconosce che tale sito intranet è stato esposto all'utente tramite il proxy di applicazione. L'utente viene indirizzato automaticamente tramite il proxy di applicazione, per l'autenticazione con il sistema di autenticazione a più fattori applicabile, e l'accesso condizionale prima di raggiungere il sito Intranet. Questo sito, che in precedenza non poteva essere trovato quando l'utente era remoto, è ora accessibile.
@@ -199,18 +199,17 @@ Microsoft Edge, Intune Managed Browser e [Azure AD Application Proxy]( https://d
 - Configurare le applicazioni interne tramite il proxy di applicazione di Azure AD.
   - Per configurare il proxy di applicazione e pubblicare le applicazioni, vedere la [documentazione del programma di installazione](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy). 
   - [Gli utenti devono essere assegnati](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-add-on-premises-application#add-a-user-for-testing) all'applicazione aziendale per la quale deve avvenire il reindirizzamento. È necessario eseguire questa operazione anche se l'applicazione è impostata sulla modalità Passthrough per la preautenticazione e se il requisito di assegnazione utente è stato disattivato nelle impostazioni del proxy di applicazione.
-- È necessario usare almeno la versione 1.2.0 dell'app Managed Browser.
-- Gli utenti dell'app Managed Browser o Microsoft Edge hanno un [criterio di protezione delle app di Intune](app-protection-policy.md) assegnato all'app.
+- Gli utenti dell'app Microsoft Edge devono avere i [criteri di protezione delle app di Intune](app-protection-policy.md) assegnati all'app.
 
     > [!NOTE]
-    > Possono essere necessarie fino a 24 ore perché l'aggiornamento dei dati di reindirizzamento del proxy di applicazione sia visibile in Managed Browser e Microsoft Edge.
+    > Possono essere necessarie fino a 24 ore perché l'aggiornamento dei dati di reindirizzamento del proxy dell'applicazione sia visibile in Microsoft Edge.
 
 
 #### <a name="step-1-enable-automatic-redirection-to-a-protected-browser-from-outlook"></a>Passaggio 1: Abilitare il reindirizzamento automatico a un browser protetto da Outlook
 Outlook deve essere configurato con i criteri di protezione di app che consentono l'impostazione **Limita il contenuto Web per la visualizzazione in Managed Browser**.
 
 #### <a name="step-2-assign-an-app-configuration-policy-assigned-for-the-protected-browser"></a>Passaggio 2: Assegnare i criteri di configurazione delle app assegnati per il browser protetto
-Questa procedura configura l'app Managed Browser o Microsoft Edge per l'uso del reindirizzamento proxy dell'app. 
+Questa procedura configura l'app Microsoft Edge per l'uso del reindirizzamento proxy dell'app. 
 
 Aprire la scheda **Edge** nelle impostazioni di configurazione per i criteri e selezionare **Abilita** per il valore di reindirizzamento del proxy di applicazione. L'abilitazione di questa impostazione consentirà agli utenti di accedere ai collegamenti aziendali e alle app Web locali pubblicate tramite il proxy di applicazione di Azure.
 
@@ -223,7 +222,7 @@ Questa impostazione consente di configurare la home page visualizzata agli utent
 - Il collegamento alla home page viene visualizzato come icona sotto il controllo di ricerca.  Non può essere modificata o eliminata.
 - Il collegamento alla home page visualizzerà il nome dell'azienda per poterlo distinguere.  Verrà sempre visualizzato come la prima icona.
 
-Usando la procedura per creare una configurazione per l'app Managed Browser o Microsoft Edge, specificare la coppia di chiave-valore seguente:
+Usando la procedura per creare una configurazione dell'app Microsoft Edge, specificare la coppia chiave-valore seguente:
 
 |                                Chiave                                |                                                           Valore                                                            |
 |-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
@@ -237,7 +236,7 @@ Questa impostazione consente di configurare un set di segnalibri disponibili per
 - I segnalibri vengono visualizzati nella parte superiore dell'elenco. Eventuali segnalibri creati dagli utenti vengono visualizzati sotto questi segnalibri.
 - Se è stato abilitato il reindirizzamento di proxy app, è possibile aggiungere le app Web di proxy app usando il relativo URL interno o esterno.
 
-Usando la procedura per creare una configurazione per l'app Managed Browser o Microsoft Edge, specificare la coppia di chiave-valore seguente:
+Usando la procedura per creare una configurazione dell'app Microsoft Edge, specificare la coppia chiave-valore seguente:
 
 |                                Chiave                                 |                                                                                                                                                                                                                                                         Valore                                                                                                                                                                                                                                                          |
 |--------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -245,7 +244,7 @@ Usando la procedura per creare una configurazione per l'app Managed Browser o Mi
 
 ## <a name="how-to-specify-allowed-and-blocked-urls-for-a-protected-browser"></a>Come specificare gli URL consentiti e bloccati per un browser protetto
 
-Usando la procedura per creare una configurazione per l'app Managed Browser o Microsoft Edge, specificare la coppia di chiave-valore seguente:
+Usando la procedura per creare una configurazione dell'app Microsoft Edge, specificare la coppia chiave-valore seguente:
 
 |Chiave|Valore|
 |-|-|
@@ -311,13 +310,13 @@ L'elemento fondamentale dell'esperienza Enterprise per dispositivi mobili di Mic
 
 Uno dei vantaggi di questo modello è la possibilità per gli utenti di aprire, nel proprio contesto personale, un collegamento a un sito non consentito dall'organizzazione, ad esempio un articolo di giornale o altro. Il contesto personale viene infatti mantenuto totalmente separato dal contesto aziendale. Queste transizioni temporanee sono abilitate per impostazione predefinita. 
 
-Usando la procedura per creare una configurazione per l'app Managed Browser o Microsoft Edge, specificare la coppia di chiave-valore seguente:
+Usando la procedura per creare una configurazione dell'app Microsoft Edge, specificare la coppia chiave-valore seguente:
 
 | Chiave                                                                | Valore                                                 |
 |--------------------------------------------------------------------|-------------------------------------------------------|
 | **com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock** | **False** blocca la possibilità di eseguire queste transizioni temporanee |
 
-## <a name="how-to-access-to-managed-app-logs-using-the-managed-browser-on-ios"></a>Come accedere a log di app gestite tramite Managed Browser in iOS
+## <a name="how-to-access-managed-app-logs-using-the-managed-browser-on-ios"></a>Come accedere a log di app gestite tramite Managed Browser in iOS
 
 Gli utenti che hanno installato Managed Browser nel dispositivo iOS/iPadOS possono visualizzare lo stato di gestione di tutte le app pubblicate da Microsoft. Possono anche inviare log per la risoluzione dei problemi delle app iOS/iPadOS gestite installate.
 

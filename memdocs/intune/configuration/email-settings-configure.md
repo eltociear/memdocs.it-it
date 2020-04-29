@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 04/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fdf722acf463bf576b222e5f13da2dcaff64504e
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 096a12ae811b717fec7840ab4fd4d4b41f2c8f17
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086975"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81615729"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>Aggiungere impostazioni di posta elettronica ai dispositivi con Intune
 
@@ -109,7 +109,7 @@ Se l'utente ha già configurato un account di posta elettronica, il profilo di p
 
 - **Android Samsung Knox Standard**: Un profilo di posta elettronica duplicato esistente viene individuato in base all'indirizzo di posta elettronica e viene sovrascritto con il profilo di Intune. Android non usa il nome host per identificare il profilo. Non creare più profili di posta elettronica usando lo stesso indirizzo di posta elettronica in host diversi. I profili si sovrascrivono a vicenda.
 
-- **Profili di lavoro Android**: Intune offre due profili di posta elettronica di lavoro Android, uno per l'app Gmail e uno per l'app Nine Work. Queste app sono disponibili in Google Play Store e vengono installate nel profilo di lavoro del dispositivo. Queste app non creano profili duplicati. Entrambe le app supportano le connessioni a Exchange. Per usare la connettività di posta elettronica, distribuire una di queste app di posta elettronica nei dispositivi degli utenti, quindi creare e distribuire il profilo di posta elettronica appropriato. Le app di posta elettronica, ad esempio Nine Work, potrebbero non essere gratuite. Rivedere i dettagli relativi alla licenza dell'app o contattare l'azienda produttrice per richiedere informazioni.
+- **Profili di lavoro Android**: Intune offre due profili di posta elettronica di lavoro Android, uno per l'app Gmail e uno per l'app Nine Work. Queste app sono disponibili in Google Play Store e vengono installate nel profilo di lavoro del dispositivo. Queste app non creano profili duplicati. Entrambe le app supportano le connessioni a Exchange. Per usare la connettività di posta elettronica, distribuire una di queste app di posta elettronica nei dispositivi degli utenti, quindi creare e distribuire il profilo di posta elettronica appropriato. È possibile usare i profili di configurazione di posta elettronica Gmail e Nine che funzioneranno per entrambi i tipi di registrazione Profilo di lavoro e Proprietario del dispositivo, incluso l'uso di profili certificato per entrambi i tipi di configurazione di posta elettronica. Eventuali criteri per Gmail o Nine creati nell'ambito della configurazione del dispositivo per i profili di lavoro continueranno a essere applicati al dispositivo e non è necessario spostarli nei criteri di configurazione delle app. Le app di posta elettronica, ad esempio Nine Work, potrebbero non essere gratuite. Rivedere i dettagli relativi alla licenza dell'app o contattare l'azienda produttrice per richiedere informazioni. 
 
 ## <a name="changes-to-assigned-email-profiles"></a>Modifiche ai profili di posta elettronica assegnati
 

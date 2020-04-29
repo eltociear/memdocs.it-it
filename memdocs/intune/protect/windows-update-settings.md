@@ -15,12 +15,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8bb76dbb14fe2deb95c02a18ccc048fc6a4b2538
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 0b18af35b0e741540637ecdde74877d1058a7915
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078958"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254708"
 ---
 # <a name="windows-update-settings-for-intune"></a>Impostazioni di aggiornamento di Windows per Intune  
 
@@ -85,8 +85,7 @@ Le impostazioni di aggiornamento specificano quali bit un dispositivo scaricher�
   Periodo di differimento supportato:  
 
   - *Windows versione 1709 e successive*: da 0 a 365 giorni  
-  - *Windows versione 1703*: da 0 a 180 giorni  
-
+  
   Gli aggiornamenti delle funzionalità includono in genere nuove funzionalità per Windows.  
 
 - **Impostare il periodo di disinstallazione degli aggiornamenti delle funzionalità (2-60 giorni)**  
@@ -164,8 +163,6 @@ Le impostazioni dell'esperienza utente specificano l'esperienza dell'utente fina
   
   I risultati di questa impostazione sono diversi a seconda della versione dei dispositivi di Windows:  
  
-  - *Windows versione 1703 e precedenti*: quando si riavvia un dispositivo, vengono eseguite alcune verifiche, ad esempio la ricerca di utenti attivi, i livelli di batteria, eventuali giochi in esecuzione e altro ancora.  
-  
   - *Windows versione 1709 e successive*: durante gli orari di attività, per gli aggiornamenti non vengono eseguiti processi quali analisi, download, installazione e riavvio. Al termine degli orari di attività, i processi di aggiornamento vengono eseguiti, possono riattivare il dispositivo da sospensione, analisi, download e installazione e riavviano il dispositivo dopo aver controllato la batteria e l'alimentazione. 
 
 - **Impedisci all'utente di sospendere gli aggiornamenti Windows**  

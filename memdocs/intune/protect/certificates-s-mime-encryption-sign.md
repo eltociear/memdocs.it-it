@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/10/2018
+ms.date: 04/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b4965f29144131895660796bc3282ba46d6b8101
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b93e850e7a38feb7dd5347670279f6d85b92455b
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79353606"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81725659"
 ---
 # <a name="smime-overview-to-sign-and-encrypt-email-in-intune"></a>Panoramica di S/MIME per firmare e crittografare la posta elettronica in Intune
 
@@ -46,7 +46,7 @@ Per usare certificati di firma, creare nell'autorità di certificazione (CA) un 
 
 I certificati di firma in Intune usano certificati PKCS. [Configurare e usare i certificati PKCS](certficates-pfx-configure.md) descrive come distribuire e usare i certificati PKCS nell'ambiente Intune in uso. Questi passaggi includono:
 
-- Download e installazione del connettore di certificati di Microsoft Intune per il supporto delle richieste di certificato PKCS.
+- Download e installazione del connettore di certificati di Microsoft Intune per il supporto delle richieste di certificato PKCS. Il connettore ha gli stessi requisiti di rete dei [dispositivi gestiti](../fundamentals/intune-endpoints.md#access-for-managed-devices).
 - Creazione di un profilo certificato radice trusted peri dispositivi. Questo passaggio include l'uso di certificati radice trusted e intermedi per l'autorità di certificazione e quindi la distribuzione del profilo ai dispositivi.
 - Creazione di un profilo certificato PKCS tramite il modello di certificato creato. Questo profilo rilascia i certificati di firma ai dispositivi e distribuisce il profilo certificato PKCS a questi ultimi.
 

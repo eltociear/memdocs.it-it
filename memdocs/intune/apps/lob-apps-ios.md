@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5caa8b23950e3ce87f66d6804961a9a2a3e21c6
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 90f943c7eca95a5311023b03e769e4e18ada9249
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324084"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "80863095"
 ---
 # <a name="add-an-ios-line-of-business-app-to-microsoft-intune"></a>Aggiungere un'app line-of-business per iOS a Microsoft Intune
 
@@ -34,7 +34,7 @@ Usare le informazioni di questo articolo per aggiungere un'app line-of-business 
 > [!NOTE]
 > Gli utenti dei dispositivi iOS possono rimuovere alcune delle app iOS predefinite, ad esempio Borsa e Mappe. Non è possibile usare Intune per ridistribuire queste app. Se gli utenti eliminano queste app, devono accedere all'App Store e reinstallarle manualmente.
 >
-> Le app line-of-business iOS hanno un limite massimo di dimensioni di 4 GB per app.
+> Le app line-of-business iOS hanno un limite di dimensioni massimo di 2 GB per app.
 
 > [!NOTE]
 > Gli identificatori del bundle, ad esempio *com.contoso.app*, sono progettati per essere identificatori univoci di un'app. Ad esempio, per installare una versione beta di un'app line-of-business accanto alla versione di produzione a scopo di test, la versione beta deve avere un identificatore univoco diverso (ad esempio *com.contoso.app-beta*). In caso contrario, la versione beta si sovrapporrà a quella di produzione e verrà considerata un aggiornamento. La ridenominazione del file con estensione ipa non ha alcun effetto su questo comportamento.
@@ -80,7 +80,7 @@ Usare le informazioni di questo articolo per aggiungere un'app line-of-business 
 
 ## <a name="step-3---assignments"></a>Passaggio 3: assegnazioni
 
-1. Per l'assegnazione dell'app a gruppi, selezionare **Obbligatoria**, **Disponibile per i dispositivi registrati** o **Disinstalla**. Per altre informazioni, vedere [Aggiungere gruppi per organizzare utenti e dispositivi](../fundamentals/groups-add.md) e [Assegnare app ai gruppi con Microsoft Intune](apps-deploy.md).
+1. Selezionare le assegnazioni ai gruppi **Obbligatoria**, **Disponibile per i dispositivi registrati**, **Disponibile con o senza registrazione** o **Disinstalla** per l'app. Per altre informazioni, vedere [Aggiungere gruppi per organizzare utenti e dispositivi](../fundamentals/groups-add.md) e [Assegnare app ai gruppi con Microsoft Intune](apps-deploy.md).
 2. Fare clic su **Avanti** per visualizzare la pagina **Rivedi e crea**.
 
 ## <a name="step-4---review--create"></a>Passaggio 4 - Verifica e creazione

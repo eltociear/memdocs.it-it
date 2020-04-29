@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/07/2020
+ms.date: 04/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e5a9db094163bcf4f987b881c83d98be655acfd
-ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
+ms.openlocfilehash: f61f0dd7f0f3b343b8f68de0b20b06d0f69212ac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80808097"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81397782"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Aggiungere criteri di configurazione delle app per i dispositivi Android gestiti
 
@@ -47,7 +47,7 @@ I criteri di configurazione delle app in Microsoft Intune specificano le imposta
 8. Fare clic su **Aggiungi** per visualizzare il riquadro **Aggiungi autorizzazioni**.
 9. Fare clic sulle autorizzazioni che si vogliono sostituire. Le autorizzazioni concesse sostituiranno i criteri "Autorizzazioni delle app predefinite" per le app selezionate.
 10. Impostare **Stato dell'autorizzazione** per ogni autorizzazione. È possibile scegliere tra **Chiedi conferma**, **Concedi automaticamente** o **Nega automaticamente**. Per altre informazioni sulle autorizzazioni, vedere [Impostazioni di Android Enterprise per contrassegnare un dispositivo come conforme o non conforme in Intune](../protect/compliance-policy-create-android-for-work.md).
-11. Se l'app gestita supporta le impostazioni di configurazione, nella casella a discesa selezionare **Formato delle impostazioni di configurazione**. Per aggiungere informazioni di configurazione, selezionare uno dei metodi seguenti:
+11. Se l'app gestita supporta le impostazioni di configurazione, viene visualizzata la casella a discesa **Formato delle impostazioni di configurazione**. Per aggiungere informazioni di configurazione, selezionare uno dei metodi seguenti:
     - **Usare la finestra di progettazione della configurazione**
     - **Immettere dati JSON**<br><br>
     Per informazioni dettagliate sull'uso della finestra di progettazione della configurazione, vedere [Usare Progettazione configurazione](#use-the-configuration-designer). Per informazioni dettagliate sull'immissione di dati XML, vedere [Immettere i dati JSON](#enter-json-data).

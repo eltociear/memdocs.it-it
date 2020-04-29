@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 04/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 58e651849632fd06f962edfc90649ad14eeaeda0
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.openlocfilehash: cc1b11fe533499ebe29101c09fb1355cd8d04243
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80696548"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82183076"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Gestire l'accesso Web usando Microsoft Edge con Microsoft Intune
 
@@ -39,8 +39,8 @@ I criteri di protezione di Microsoft Intune per Microsoft Edge contribuiscono a 
 ## <a name="getting-started"></a>Guida introduttiva
 
 È possibile scaricare Microsoft Edge dagli app store pubblici per l'uso nelle organizzazioni. I requisiti del sistema operativo per i criteri del browser sono i seguenti:
-- Android 4 e versioni successive
-- iOS 8.0 e versioni successive
+- Android 5 e versioni successive
+- iOS 12.0 e versioni successive
 
 ## <a name="application-protection-policies-for-microsoft-edge"></a>Criteri di protezione delle applicazioni per Microsoft Edge
 
@@ -129,7 +129,7 @@ Le impostazioni vengono assegnate a gruppi di utenti in Azure AD. Se tale utente
 
 ## <a name="direct-users-to-microsoft-edge-instead-of-the-intune-managed-browser"></a>Indirizzare gli utenti a Microsoft Edge invece che a Intune Managed Browser 
 
-È possibile usare sia Intune Managed Browser che Microsoft Edge come browser protetti dai criteri. Per garantire che gli utenti vengano reindirizzati in modo da usare l'app browser corretta, assegnare a tutte le app gestite da Intune (ad esempio Outlook, OneDrive e SharePoint) l'impostazione di configurazione seguente:
+Microsoft Edge può essere usato come browser protetto con criteri. Per garantire che gli utenti vengano reindirizzati in modo da usare l'app browser corretta, assegnare a tutte le app gestite da Intune (ad esempio Outlook, OneDrive e SharePoint) l'impostazione di configurazione seguente:
 
 |    Chiave    |    Valore    |
 |------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -194,7 +194,7 @@ Analogamente alla configurazione di un collegamento alla home page, è possibile
 
 |    Chiave    |    Valore    |
 |-------------------------------------------------------------------|-------------|
-|    com.microsoft.intune.mam.managedbrowser.managedTopSites   |    Specificare il set di valori e URL. Ogni collegamento a un sito principale è costituito da un titolo e un URL. Separare titolo e URL con il carattere `|`. Ad esempio: <br> `GitHub | https://github.com/||LinkedIn|https://www.linkedin.com`    |
+|    com.microsoft.intune.mam.managedbrowser.managedTopSites   |    Specificare il set di valori e URL. Ogni collegamento a un sito principale è costituito da un titolo e un URL. Separare titolo e URL con il carattere `|`. Ad esempio: <br> `GitHub|https://github.com/||LinkedIn|https://www.linkedin.com`    |
 
 ## <a name="configure-your-organizations-logo-and-brand-color-for-new-tab-pages-in-microsoft-edge"></a>Configurare il logo dell'organizzazione e il colore del marchio per le pagine Nuova scheda in Microsoft Edge
 
@@ -415,7 +415,7 @@ Per informazioni su come visualizzare i log nei dispositivi Android, vedere [Inv
 
 Di seguito sono riportate alcune altre considerazioni su sicurezza e privacy per Microsoft Edge:
 
-- Microsoft Edge non utilizza le impostazioni che gli utenti definiscono per il browser nativo https://docs.microsoft.com/en-us/intune/apps/app-configuration-policies-use-android#allow-only-configured-organization-accounts-in-multi-identity-apps nei propri dispositivi, perché Microsoft Edge non può accedere a tali impostazioni.
+- Microsoft Edge non utilizza le impostazioni che gli utenti definiscono per il browser nativo nei propri dispositivi, perché Microsoft Edge non può accedere a tali impostazioni.
 - È possibile configurare l'opzione **Richiedi PIN semplice per l'accesso** oppure **Richiedi credenziali aziendali per l'accesso** nei criteri di protezione delle app associati a Microsoft Edge. Se un utente seleziona il collegamento alla Guida nella pagina di autenticazione, può esplorare tutti i siti Internet, indipendentemente dal fatto che siano stati aggiunti a un elenco di siti bloccati nei criteri.
 - Microsoft Edge può bloccare l'accesso ai siti solo quando vi si accede direttamente. Non blocca l'accesso quando gli utenti usano servizi intermedi (ad esempio, un servizio di traduzione) per accedere al sito.
 - Per consentire l'autenticazione e l'accesso alla documentazione di Intune, il sito * **.microsoft.com** non è interessato dalle impostazioni degli elenchi di elementi consentiti o bloccati. È sempre consentito.

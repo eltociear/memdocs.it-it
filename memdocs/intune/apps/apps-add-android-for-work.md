@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/02/2020
+ms.date: 04/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a6855abaf09a89303bfadd1a973dd1e1761346af
-ms.sourcegitcommit: 954b3aae7916ad14065e6e86a577c5205103a50e
+ms.openlocfilehash: 728fa69303760252068db454c04ed4431b89602a
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80624897"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81615514"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Aggiungere app Google Play gestite a dispositivi Android Enterprise con Intune
 
@@ -141,8 +141,6 @@ Per altre informazioni sulle app private di Google Play gestito, incluse le doma
 2. Nella console selezionare **Add new application** (Aggiungi nuova applicazione).
 3. Caricare e specificare informazioni sull'app allo stesso modo in cui si pubblicano le altre app in Google Play. È tuttavia necessario selezionare **Only make this application available to my organization (<*organization name*>)** (Rendi disponibile l'app soltanto per la mia organizzazione).
 
-    ![Rendere disponibile l'app soltanto per la propria organizzazione](./media/apps-add-android-for-work/restrict.png)
-
     Questa operazione rende disponibile l'app soltanto per la propria organizzazione. Non sarà disponibile nel Google Play Store pubblico.
 
     Per altre informazioni sul caricamento e sulla pubblicazione di app Android, vedere la [Guida di Play Console di Google](https://support.google.com/googleplay/android-developer/answer/113469).
@@ -218,6 +216,10 @@ In alternativa, è possibile configurare Google Play per approvare di nuovo auto
 ## <a name="additional-managed-google-play-app-reporting-for-android-enterprise-work-profile-devices"></a>Segnalazione app Google Play gestite per dispositivi del profilo di lavoro Android Enterprise
 
 Per le app Google Play gestite distribuite nei dispositivi del profilo di lavoro Android Enterprise, è possibile visualizzare lo stato e il numero di versione dell'app installata in un dispositivo con Intune. 
+
+## <a name="working-with-managed-google-play-closed-testing-tracks"></a>Uso di tracce di test chiuso di Google Play gestito
+
+È possibile distribuire una versione non di produzione di un'app Google Play gestita nei dispositivi registrati in uno scenario Android Enterprise (**profilo di lavoro Android Enterprise**, **Completamente gestito** e **Dedicato**) per eseguire il test. In Intune è possibile verificare se per un'app è stata pubblicata una traccia del test di compilazione di pre-produzione e assegnare la traccia a gruppi di utenti o di dispositivi di AAD. Il flusso di lavoro per l'assegnazione di una versione di produzione a un gruppo attualmente esistente equivale all'assegnazione di un canale non di produzione. Dopo la distribuzione, lo stato di installazione di ogni traccia corrisponderà al numero di versione della traccia in Google Play gestito. Per altre informazioni, vedere [Tracce di test chiuso di Google Play per i test preliminari delle app](https://support.google.com/googleplay/android-developer/answer/3131213).
 
 ## <a name="delete-managed-google-play-apps"></a>Eliminare le app di Google Play gestite
 Se necessario, è possibile eliminare da Microsoft Intune le app di Google Play gestite. Per eliminare un'app Google Play gestita, aprire Microsoft Intune nel portale di Azure e selezionare **App** > **Tutte le app**. Nell'elenco di app selezionare i puntini di sospensione (...) a destra dell'app di Google Play gestita e quindi selezionare **Elimina** nell'elenco visualizzato. Quando si elimina un'app di Google Play gestita dall'elenco di app, l'app risulta automaticamente non approvata.

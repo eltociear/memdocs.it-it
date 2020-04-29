@@ -11,12 +11,12 @@ author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b91f6b11df1b65176711df0ecd907a1764c2e692
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 3892da4f3783e8b169bff576a9945f34cc47c356
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79355088"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81726050"
 ---
 # <a name="using-the-intune-docs"></a>Uso della documentazione di Intune
 
@@ -117,11 +117,11 @@ Per contribuire alla documentazione di Intune, seguire queste linee guida genera
 
 ## <a name="consolidation-of-documentation-for-microsoft-endpoint-manager"></a>Consolidamento della documentazione per Microsoft Endpoint Manager
 
-Per offrire un supporto ancora migliore a scenari combinati per Intune e Configuration Manager, questa libreria di documentazione è stata spostata all'indirizzo [https://docs.microsoft.com/mem/intune](https://docs.microsoft.com/mem/intune). In seguito, la libreria della documentazione di Configuration Manager verrà spostata all'indirizzo `docs.microsoft.com/mem/configmgr`. Tutti i collegamenti verranno reindirizzati automaticamente, in modo da non dover apportare alcuna modifica per poter leggere questi contenuti.
+Per supportare meglio gli scenari combinati per Intune e Configuration Manager, la documentazione di Intune e Configuration Manager è stata consolidata nel sito di Microsoft Endpoint Manager. La documentazione di Intune è ora disponibile all'indirizzo [https://docs.microsoft.com/mem/intune](https://docs.microsoft.com/mem/intune) e la libreria della documentazione di Configuration Manager è disponibile all'indirizzo [https://docs.microsoft.com/mem/configmgr](https://docs.microsoft.com/mem/configmgr). Se si usa un URL precedente, tutti i collegamenti verranno reindirizzati automaticamente. Non è quindi necessario apportare alcuna modifica per poter leggere questi contenuti.
 
 Tuttavia, se si inviano commenti o si contribuisce alla stesura degli articoli, sono necessarie alcune modifiche:
 
-- I problemi di GitHub pre-esistenti rimarranno nel repository originale: [https://github.com/MicrosoftDocs/IntuneDocs/issues](https://github.com/MicrosoftDocs/IntuneDocs/issues).
+- I problemi di GitHub esistenti sono stati mantenuti nel repository originale: [https://github.com/MicrosoftDocs/IntuneDocs/issues](https://github.com/MicrosoftDocs/IntuneDocs/issues) o [https://github.com/MicrosoftDocs/sccmdocs/issues](https://github.com/MicrosoftDocs/sccmdocs/).
 
   - Questi problemi, pertanto, non verranno visualizzati come problemi aperti o chiusi nella sezione dei commenti dell'articolo correlato.
 

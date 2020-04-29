@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 04/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,28 +16,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c5528e5de99e599c968f0c006aa98545b2004e2
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: beea54b7ca244190ec0821d4ce8364369797590a
+ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551555"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82166613"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Applicare la conformità per Microsoft Defender ATP con l'accesso condizionale in Intune
 
-È possibile integrare Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) con Microsoft Intune come soluzione Mobile Threat Defense per impedire violazioni della sicurezza e limitare l'impatto delle violazioni all'interno di un'organizzazione. Microsoft Defender ATP funziona con i dispositivi che eseguono Windows 10 o versioni successive.
+È possibile integrare Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) con Microsoft Intune come soluzione Mobile Threat Defense per impedire violazioni della sicurezza e limitare l'impatto delle violazioni all'interno di un'organizzazione. Microsoft Defender ATP funziona con i dispositivi che eseguono Windows 10 o versioni successive e con i dispositivi Android.
 
 Per un funzionamento corretto, usare le configurazioni seguenti insieme:
 
-- **Stabilire una connessione da servizio a servizio fra Intune e Microsoft Defender ATP**. Questa connessione consente a Microsoft Defender ATP di raccogliere dati sul rischio del computer dai dispositivi Windows 10 gestiti con Intune.
+- **Stabilire una connessione da servizio a servizio fra Intune e Microsoft Defender ATP**. Questa connessione consente a Microsoft Defender ATP di raccogliere dati sul rischio del computer dai dispositivi Windows 10 e Android gestiti con Intune.
 - **Usare un profilo di configurazione del dispositivo per eseguire l'onboarding dei dispositivi in Microsoft Defender ATP**. L'onboarding viene eseguito al fine di configurare i dispositivi per comunicare con Microsoft Defender ATP e rendere disponibili i dati che consentono di valutarne il livello di rischio.
 - **Usare criteri di conformità del dispositivo per impostare il livello di rischio che si vuole consentire**. I livelli di rischio sono segnalati da Microsoft Defender ATP. I dispositivi che superano il livello di rischio consentito sono identificati come non conformi.
 - **Usare criteri di accesso condizionale** per impedire agli utenti di accedere alle risorse aziendali da dispositivi non conformi.
 
 Quando si integra Intune con Microsoft Defender ATP, è possibile sfruttare i vantaggi della gestione di minacce e vulnerabilità di ATP e [usare Intune per risolvere le vulnerabilità degli endpoint identificate dalla gestione stessa](atp-manage-vulnerabilities.md).
-
-> [!NOTE]
-> L'interfaccia utente di Intune verrà aggiornata a un'esperienza a schermo intero. Questa operazione può richiedere alcune settimane. Fino a quando il tenant in uso non riceve l'aggiornamento, il flusso di lavoro per la creazione o la modifica delle impostazioni descritte in questo articolo sarà leggermente diverso.
 
 ## <a name="example-of-using-microsoft-defender-atp-with-intune"></a>Esempio d'uso di Microsoft Defender ATP con Intune
 
@@ -61,7 +58,7 @@ Poiché sono presenti criteri di conformità dei dispositivi Intune per classifi
 Per usare Microsoft Defender ATP con Intune, verificare che gli elementi seguenti siano configurati e pronti per l'uso:
 
 - Tenant con licenza per Enterprise Mobility + Security E3 e Windows E5 (o Microsoft 365 Enterprise E5)
-- Ambiente Microsoft Intune, con dispositivi Windows 10 [gestiti da Intune](../enrollment/windows-enroll.md) che siano anche aggiunti ad Azure AD
+- Ambiente Microsoft Intune, con dispositivi Windows 10 o Android [gestiti da Intune](../enrollment/windows-enroll.md) che siano anche aggiunti ad Azure AD
 - [Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) e accesso a Microsoft Defender Security Center (portale ATP)
 
 > [!NOTE]
@@ -81,15 +78,17 @@ Il primo passaggio consiste nel configurare la connessione da servizio a servizi
 
    ![Selezionare per aprire Microsoft Defender Security Center](./media/advanced-threat-protection/atp-device-compliance-open-microsoft-defender.png)
 
-4. In **Microsoft Defender Security Center**:
-    1. Selezionare **Settings** (Impostazioni)  > **Advanced features** (Funzionalità avanzate).
-    2. Per **Microsoft Intune connection** (Connessione Microsoft Intune) selezionare **On** (Attivata):
+3. In **Microsoft Defender Security Center**:
+   1. Selezionare **Settings** (Impostazioni)  > **Advanced features** (Funzionalità avanzate).
+   2. Per **Microsoft Intune connection** (Connessione Microsoft Intune) selezionare **On** (Attivata):
 
-        ![Abilitare la connessione a Intune](./media/advanced-threat-protection/atp-security-center-intune-toggle.png)
+      ![Abilitare la connessione a Intune](./media/advanced-threat-protection/atp-security-center-intune-toggle.png)
 
-    3. Selezionare **Save preferences** (Salva preferenze).
+   3. Selezionare **Save preferences** (Salva preferenze).
 
-4. Tornare a **Microsoft Defender ATP** nell'interfaccia di amministrazione di Microsoft Endpoint Manager. In **MDM Compliance Policy Settings** (Impostazioni dei criteri di conformità di MDM) impostare **Connetti i dispositivi Windows con versione 10.0.15063 e successiva a Microsoft Defender ATP** su **Attivato**.
+4. Tornare a **Microsoft Defender ATP** nell'interfaccia di amministrazione di Microsoft Endpoint Manager. In **MDM Compliance Policy Settings** (Impostazioni dei criteri di conformità MDM), a seconda delle esigenze aziendali:
+   - Impostare **Connect Windows devices version 10.0.15063 and above to Microsoft Defender ATP** (Connetti i dispositivi Windows con versione 10.0.15063 e successiva a Microsoft Defender ATP) su **On** (Attivata)
+   - Impostare **Connect Android devices of version 6.0.0 and above to Microsoft Defender ATP** (Connetti i dispositivi Android con versione 6.0.0 e successiva a Microsoft Defender ATP) su **On** (Attivata).
 
 5. Selezionare **Salva**.
 
@@ -107,9 +106,9 @@ Il primo passaggio consiste nel configurare la connessione da servizio a servizi
 >
 > Per visualizzare i criteri di accesso condizionale classici, in [Azure](https://portal.azure.com/#home) passare a **Azure Active Directory** > **Accesso condizionale** > **Criteri classici**.
 
-## <a name="onboard-devices-by-using-a-configuration-profile"></a>Eseguire l'onboarding dei dispositivi usando un profilo di configurazione
+## <a name="onboard-windows-devices-by-using-a-configuration-profile"></a>Eseguire l'onboarding dei dispositivi Windows usando un profilo di configurazione 
 
-Dopo aver stabilito la connessione da servizio a servizio tra Intune e Microsoft Defender ATP, eseguire l'onboarding in ATP dei dispositivi gestiti da Intune in modo da poter raccogliere e usare i dati relativi al livello di rischio. Per eseguire l'onboarding dei dispositivi, usare un profilo di configurazione dispositivi per Microsoft Defender ATP.
+Per la piattaforma Windows, dopo aver stabilito la connessione da servizio a servizio tra Intune e Microsoft Defender ATP, eseguire l'onboarding in ATP dei dispositivi gestiti da Intune in modo da poter raccogliere e usare i dati relativi al livello di rischio. Per eseguire l'onboarding dei dispositivi, usare un profilo di configurazione dispositivi per Microsoft Defender ATP.
 
 Quando è stata stabilita la connessione a Microsoft Defender ATP, Intune ha ricevuto un pacchetto di configurazione di onboarding di Microsoft Defender ATP da quest'ultimo. Questo pacchetto viene distribuito ai dispositivi con il profilo di configurazione dispositivi. Il pacchetto di configurazione configura i dispositivi per la comunicazione con i [servizi Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) per analizzare file, rilevare minacce e segnalare il rischio a Microsoft Defender ATP. Dopo l'onboarding di un dispositivo con il pacchetto di configurazione, non è necessario ripetere l'operazione. È possibile eseguire l'onboarding dei dispositivi anche usando un [criterio di gruppo o Microsoft Endpoint Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints).
 
@@ -118,7 +117,7 @@ Quando è stata stabilita la connessione a Microsoft Defender ATP, Intune ha ric
 1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selezionare **Dispositivi** > **Profili di configurazione** > **Crea profilo**.
 3. Immettere un **nome** e una **descrizione**.
-4. In **Piattaforma** selezionare **Windows 10 e versioni successive**.
+4. In **Piattaforma** selezionare **Windows 10 e versioni successive**. 
 5. In **Tipo di profilo** selezionare **Microsoft Defender ATP (Windows 10 Desktop)** .
 6. Configurare le impostazioni:
 
@@ -137,7 +136,7 @@ Quando è stata stabilita la connessione a Microsoft Defender ATP, Intune ha ric
 
 ## <a name="create-and-assign-the-compliance-policy"></a>Creare e assegnare i criteri di conformità
 
-I criteri di conformità determinano il livello di rischio considerato accettabile per un dispositivo.
+Per i dispositivi Windows e Android, i criteri di conformità determinano il livello di rischio considerato accettabile per un dispositivo.
 
 Se non si ha familiarità con la creazione dei criteri di conformità, fare riferimento alla procedura [Creare un criterio](../protect/create-compliance-policy.md#create-the-policy) dall’articolo *Creare criteri di conformità in Microsoft Intune*. Le informazioni seguenti sono specifiche per la configurazione di Defender ATP nell'ambito dei criteri di conformità.
 
@@ -145,9 +144,9 @@ Se non si ha familiarità con la creazione dei criteri di conformità, fare rife
 
 2. Selezionare **Dispositivi** > **Criteri di conformità** > **Criteri** > **Crea criterio**.
 
-3. Per **Piattaforma** selezionare *Windows 10 e versioni successive*, quindi selezionare **Crea** per aprire la finestra di configurazione **Crea criterio**.
+3. Per **Piattaforma** selezionare *Windows 10 e versioni successive*, **Amministratore di dispositivi Android** e/o **Android Enterprise**. Selezionare quindi **Crea** per aprire la finestra di configurazione **Crea criterio**.
 
-4. Nella scheda **Informazioni di base** specificare un **Nome** per identificare facilmente i criteri in un secondo momento. È anche possibile specificare una **Descrizione**.
+4. Specificare un **Nome** per identificare facilmente i criteri in un secondo momento. È anche possibile specificare una **Descrizione**.
   
 5. Nella scheda **Impostazioni di conformità** espandere il gruppo **Microsoft Defender ATP** e impostare **Richiedi che il dispositivo si trovi al massimo al punteggio di rischio del computer** sul livello preferito.
 
@@ -205,7 +204,7 @@ Per altre informazioni sui report, vedere [Report di Intune](../fundamentals/rep
 
 ## <a name="view-onboarding-status"></a>Visualizzare lo stato di onboarding
 
-Per visualizzare lo stato di onboarding di tutti i dispositivi Windows 10 gestiti da Intune, è possibile passare a **Conformità del dispositivo** > **Microsoft Defender ATP**. Da questa pagina è anche possibile avviare la creazione di un profilo di configurazione dispositivi per l'onboarding di altri dispositivi in Microsoft Defender ATP.
+Per visualizzare lo stato di onboarding di tutti i dispositivi Windows 10 gestiti da Intune, è possibile passare a **Amministrazione del tenant** > **Microsoft Defender ATP**. Da questa pagina è anche possibile avviare la creazione di un profilo di configurazione dispositivi per l'onboarding di altri dispositivi in Microsoft Defender ATP.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

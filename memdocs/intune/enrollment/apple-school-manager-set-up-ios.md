@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1bbca477b389b568d2aca1ab0f9394ec09fe2b24
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.openlocfilehash: 63a465e39e8a041c47b6748d9dacdebf3c6ea8a5
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80696566"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078108"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-school-manager"></a>Configurare la registrazione di dispositivi iOS/iPadOS con Apple School Manager
 
@@ -105,7 +105,7 @@ Ora che è stato installato il token, è possibile creare un profilo di registra
     > Non sono supportate durante l'autenticazione con l'Assistente configurazione di Apple.
 
 6. Scegliere **Impostazioni di gestione dei dispositivi** e specificare se si vogliono includere nella supervisione i dispositivi con questo profilo.
-    I dispositivi **con supervisione** offrono più opzioni di gestione e il blocco attivazione viene disabilitato per impostazione predefinita. È consigliabile usare Registrazione automatica del dispositivo come meccanismo per l'abilitazione della modalità con supervisione, soprattutto per le organizzazioni che distribuiscono un numero elevato di dispositivi iOS/iPadOS.
+    I dispositivi **con supervisione** offrono più opzioni di gestione e il blocco attivazione viene disabilitato per impostazione predefinita. È consigliabile usare Registrazione automatica del dispositivo come meccanismo per l'abilitazione della modalità con supervisione di Intune, soprattutto per le organizzazioni che distribuiscono un numero elevato di dispositivi iOS/iPadOS.
 
     Gli utenti vengono informati che i dispositivi sono inclusi nella supervisione in due modi:
 

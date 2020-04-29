@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/25/2019
+ms.date: 04/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,16 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ad666f21b2ff271b99675486835357dfd071773
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 157c61e9f145295f5ef728d12385fa44697a88e2
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326509"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81725649"
 ---
 # <a name="intune-compliance-reports-for-updates"></a>Report di conformità di Intune per gli aggiornamenti
 
-Quando si usa Intune per distribuire aggiornamenti di Windows in dispositivi Windows 10, è possibile visualizzare i dettagli sulla conformità degli aggiornamenti tramite Intune o una soluzione gratuita denominata *Conformità aggiornamenti*, che fa parte di Microsoft Operations Management Suite.
+Quando si usa Intune per distribuire aggiornamenti di Windows in dispositivi Windows 10, è possibile visualizzare i dettagli sulla conformità degli aggiornamenti tramite Intune o una soluzione gratuita denominata *Conformità aggiornamenti*. Conformità aggiornamenti fa parte di Microsoft Operations Management Suite (OMS).
 
 ## <a name="use-intune"></a>Usare Intune
 
@@ -47,13 +47,13 @@ Per esaminare un report sui criteri sullo stato di distribuzione per gli anelli 
 
 ## <a name="use-update-compliance"></a>Usare Conformità aggiornamenti
 
-È possibile monitorare le implementazioni degli aggiornamenti di Windows 10 usando [Conformità aggiornamenti](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor), una soluzione Windows Analytics. Conformità aggiornamenti viene fornito tramite il portale di Azure ed è disponibile gratuitamente per i dispositivi che ne soddisfano i [prerequisiti](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started#update-compliance-prerequisites).  
+È possibile monitorare le implementazioni degli aggiornamenti di Windows 10 usando [Conformità aggiornamenti](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor). Conformità aggiornamenti viene fornito tramite il portale di Azure ed è disponibile gratuitamente per i dispositivi che ne soddisfano i [prerequisiti](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started#update-compliance-prerequisites).  
 
 Quando si usa questa soluzione, è possibile distribuire un ID commerciale in uno qualsiasi dei dispositivi Windows 10 gestiti da Intune per cui si vuole creare report di conformità degli aggiornamenti.  
 
 In Intune usare le impostazioni OMA-URI di un criterio personalizzato per configurare l'ID commerciale. Vedere [Usare le impostazioni personalizzate per dispositivi Windows 10 in Intune](../configuration/custom-settings-windows-10.md).
 
-Il percorso OMA-URI (con distinzione tra maiuscole e minuscole) per configurare l'ID commerciale è: *./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID*  
+Il percorso OMA-URI (con distinzione tra maiuscole e minuscole) per configurare l'ID commerciale è: *./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID*
 
 È ad esempio possibile usare i valori seguenti in **Aggiungi o modifica impostazione URI OMA**:
 

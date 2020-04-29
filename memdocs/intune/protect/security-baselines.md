@@ -5,23 +5,23 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 04/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: shpate
+ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 618ed802d33f2c50a567f1e18da4689855bbf016
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: faf117f3eedbfe7527606d7a0942cab644c700cb
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551682"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81615650"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Usare le baseline di sicurezza per configurare i dispositivi Windows 10 in Intune
 
@@ -46,13 +46,34 @@ Le baseline di sicurezza possono essere utili per definire un flusso di lavoro c
 
 [Baseline della sicurezza di Windows](https://docs.microsoft.com/windows/security/threat-protection/windows-security-baselines) è un'ottima risorsa per scoprire di più su questa funzionalità. [Mobile device management](https://docs.microsoft.com/windows/client-management/mdm/) (Gestione di dispositivi mobili) è una valida fonte di informazioni su MDM e sulle funzionalità disponibili per i dispositivi Windows.
 
+## <a name="available-security-baselines"></a>Baseline di sicurezza disponibili
+
+Sono disponibili le istanze di baseline di sicurezza seguenti per l'uso con Intune. Usare i collegamenti per visualizzare le impostazioni per l'istanza più recente di ogni baseline.
+
+- **Baseline di sicurezza MDM**
+  - [Baseline della sicurezza MDM per maggio 2019](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)
+  - [Anteprima: Baseline della sicurezza MDM per ottobre 2018](security-baseline-settings-mdm-all.md?pivots=mdm-preview)
+
+- **Baseline di Microsoft Defender ATP**
+   *(Per usare questa baseline, l'ambiente deve soddisfare i prerequisiti per l'uso di [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites))* .
+  - [Baseline di Microsoft Defender ATP versione 3](security-baseline-settings-defender-atp.md)
+
+  > [!NOTE]
+  > La baseline di sicurezza di Microsoft Defender ATP è stata ottimizzata per i dispositivi fisici e attualmente se ne sconsiglia l'uso in macchine virtuali (VM) o endpoint VDI. Alcune impostazioni di base possono influire sulle sessioni interattive remote negli ambienti virtualizzati.  Per altre informazioni, vedere [Incremento della conformità alla baseline di sicurezza di Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) nella documentazione di Windows.
+
+- **Baseline di Microsoft Edge**
+  - [Baseline di Microsoft Edge per aprile 2020 (Edge versione 80 e successive)](security-baseline-settings-edge.md?pivots-edge-april-2020)
+  - [Anteprima: Baseline di Microsoft Edge per ottobre 2019 (Edge versione 77 e successive)](security-baseline-settings-edge.md?pivots=edge-october-2019)
+
+È possibile continuare a usare e modificare i profili creati in precedenza basati su un modello di anteprima, anche quando tale modello di anteprima non è più disponibile per la creazione di nuovi profili.
+
+Quando si è pronti per passare a una versione più recente di una baseline in uso, vedere [Modificare la versione della baseline per un profilo](#change-the-baseline-version-for-a-profile) in questo articolo. 
+
 ## <a name="about-baseline-versions-and-instances"></a>Informazioni su versioni e istanze delle baseline di sicurezza
 
 Ogni istanza di una nuova versione di una baseline può aggiungere o rimuovere impostazioni o introdurre altre modifiche. Ad esempio, quando diventano disponibili nuove impostazioni di Windows 10 con le nuove versioni di Windows 10, la baseline di sicurezza MDM potrebbe ricevere una nuova istanza di versione che include le impostazioni più recenti.
 
-Nella console di Intune il riquadro per ogni baseline visualizza il nome del modello di baseline e le informazioni di base su tale baseline. Le informazioni includono il numero di profili esistenti che usano tale tipo di baseline, il numero di istanze separate (versioni) del tipo di baseline disponibili e la data *Ultima pubblicazione* che identifica quando il modello di baseline è stato aggiunto al tenant. L'esempio seguente mostra il riquadro per una baseline di sicurezza MDM molto usata:
-
-![Riquadro della baseline](./media/security-baselines/baseline-tile.png)
+Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), in **Sicurezza degli endpoint** > **Baseline di sicurezza** verrà visualizzato un elenco delle baseline disponibili. L'elenco include il nome del modello di baseline, il numero di profili esistenti che usano il tipo di baseline, il numero di istanze separate (versioni) del tipo di baseline disponibili e la data *Ultima pubblicazione* che indica quando è stata resa disponibile l'ultima versione del modello di baseline.
 
 Per visualizzare altre informazioni sulle versioni delle baseline usate, selezionare un riquadro di baseline per aprire il relativo riquadro *Panoramica* e quindi selezionare **Versioni**. Intune visualizza i dettagli sulle versioni di tale baseline in uso nei profili. Nel riquadro Versioni è possibile selezionare una singola versione per visualizzare ulteriori dettagli sui profili che usano tale versione. È anche possibile selezionare due versioni diverse e quindi scegliere **Compare baselines** (Confronta baseline) per scaricare un file CSV con informazioni dettagliate sulle differenze.
 
@@ -74,26 +95,6 @@ Per identificare e risolvere i conflitti, usare le informazioni disponibili nei 
 
 - [Risolvere problemi relativi a criteri e profili in Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)
 - [Monitorare le baseline di sicurezza](security-baselines-monitor.md#troubleshoot-using-per-setting-status)
-
-## <a name="available-security-baselines"></a>Baseline di sicurezza disponibili
-
-Sono disponibili le istanze di baseline di sicurezza seguenti per l'uso con Intune. Usare i collegamenti per visualizzare le impostazioni per l'istanza più recente di ogni baseline.
-
-- **Baseline di sicurezza MDM**
-  - [Baseline della sicurezza MDM per maggio 2019](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)
-  - [Anteprima: Baseline della sicurezza MDM per ottobre 2018](security-baseline-settings-mdm-all.md?pivots=mdm-preview)
-
-- **Baseline di Microsoft Defender ATP**
-   *(Per usare questa baseline, l'ambiente deve soddisfare i prerequisiti per l'uso di [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites))* .
-  - [Baseline di Microsoft Defender ATP versione 3](security-baseline-settings-defender-atp.md)
-
-  > [!NOTE]
-  > La baseline di sicurezza di Microsoft Defender ATP è stata ottimizzata per i dispositivi fisici e attualmente se ne sconsiglia l'uso in macchine virtuali (VM) o endpoint VDI. Alcune impostazioni di base possono influire sulle sessioni interattive remote negli ambienti virtualizzati.  Per altre informazioni, vedere [Incremento della conformità alla baseline di sicurezza di Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) nella documentazione di Windows.
-
-- **Baseline di Microsoft Edge**
-  - [Anteprima: baseline di Microsoft Edge](security-baseline-settings-edge.md)
-
-È possibile continuare a usare e modificare i profili creati in precedenza basati su un modello di anteprima, anche quando tale modello di anteprima non è più disponibile per la creazione di nuovi profili.
 
 ## <a name="manage-baselines"></a>Gestire le baseline
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2019
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,20 +16,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a775171a72de32af98d8089311b5fe467e560515
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 3da418db81a315e4102b63c34ffc557646d36f70
+ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323140"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82126069"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Creare e assegnare profili di certificato SCEP in Intune
 
 Dopo aver [configurato l'infrastruttura](certificates-scep-configure.md) per supportare i certificati SCEP (Simple Certificate Enrollment Protocol), è possibile creare e quindi assegnare profili di certificato SCEP a utenti e dispositivi in Intune.
 
-> [!IMPORTANT]  
-> Prima di creare profili di certificato SCEP, i dispositivi che useranno un profilo di certificato SCEP devono considerare attendibile l'autorità di certificazione (CA) radice attendibile. Usare un *profilo di certificato attendibile* in Intune per eseguire il provisioning del certificato CA radice attendibile per utenti e dispositivi. Per informazioni sul profilo di certificato attendibile, vedere [Esportare il certificato CA radice attendibile](certificates-configure.md#export-the-trusted-root-ca-certificate) e [Creare profili di certificato attendibili](certificates-configure.md#create-trusted-certificate-profiles) in *Usare i certificati per l'autenticazione in Microsoft Intune*.
-
+> [!IMPORTANT]
+> Per usare un profilo di certificato SCEP, i dispositivi devono considerare attendibile l'autorità di certificazione (CA) radice attendibile. Per stabilire l'attendibilità della CA radice è consigliabile distribuire un [profilo certificato attendibile](../protect/certificates-configure.md#create-trusted-certificate-profiles) allo stesso gruppo che riceve il profilo certificato SCEP. I profili certificato attendibile eseguono il provisioning del certificato CA radice attendibile.
 
 ## <a name="create-a-scep-certificate-profile"></a>Creare un profilo certificato SCEP
 
@@ -95,7 +94,8 @@ Dopo aver [configurato l'infrastruttura](certificates-scep-configure.md) per sup
        - **Numero di serie**
        - **Personalizzato**: quando si seleziona questa opzione, viene visualizzata anche una casella di testo **Personalizzato**. Usare questo campo per immettere un formato di nome soggetto personalizzato, incluse le variabili. Il formato personalizzato supporta due variabili: **CN (Nome comune)** ed **E (Posta elettronica)** . **CN (Nome comune)** può essere impostata su una delle variabili seguenti:
 
-         - **CN={{UserName}}** : nome dell'entità utente (UPN) dell'utente, ad esempio janedoe@contoso.com.
+         - **CN={{UserName}}** : Nome utente, ad esempio janedoe.
+         - **CN={{UserPrincipalName}}** : Nome dell'entità utente (UPN) dell'utente, ad esempio janedoe@contoso.com.\*
          - **CN={{AAD_Device_ID}}** : ID assegnato quando si registra un dispositivo in Azure Active Directory (AD). Questo ID è in genere usato per l'autenticazione con Azure AD.
          - **CN={{SERIALNUMBER}}** : numero di serie (SN) univoco usato in genere dal produttore per identificare un dispositivo.
          - **CN={{IMEINumber}}** : numero IMEI (International Mobile Equipment Identity) univoco usato per identificare un telefono cellulare.
@@ -111,6 +111,8 @@ Dopo aver [configurato l'infrastruttura](certificates-scep-configure.md) per sup
          - **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**
 
          Questo esempio include un formato di nome soggetto che usa le variabili CN ed E, oltre a stringhe per i valori di unità organizzativa (OU), organizzazione (O), località (L), stato (S) e paese (C). L'argomento [Funzione CertStrToName](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) visualizza questa funzione e le relative stringhe supportate.
+         
+         \* Per i profili Solo proprietario del dispositivo Android, l'impostazione **CN={{UserPrincipalName}}** non funziona. I profili Solo proprietario del dispositivo Android possono essere usati per i dispositivi senza utenti, quindi questo profilo non può ottenere il nome dell'entità utente dell'utente. Se questa opzione è realmente necessaria per i dispositivi con utenti, è possibile usare una soluzione alternativa come la seguente: **CN={{UserName}}\@contoso.com** specifica il nome utente e il dominio aggiunti manualmente, ad esempio janedoe@contoso.com
 
       - **Tipo di certificato dispositivo**
 
@@ -224,7 +226,7 @@ Dopo aver [configurato l'infrastruttura](certificates-scep-configure.md) per sup
 
    - **URL server SCEP**:
 
-     specificare uno o più URL per i server del servizio Registrazione dispositivi di rete che emettono certificati tramite SCEP. Ad esempio, immettere *https://ndes.contoso.com/certsrv/mscep/mscep.dll* . È possibile aggiungere altri URL di SCEP per il bilanciamento del carico, se necessario, perché viene eseguito il push degli URL in modo casuale nel dispositivo con il profilo. Se uno dei server SCEP non è disponibile, la richiesta SCEP avrà esito negativo ed è possibile che durante sincronizzazioni successive del dispositivo la richiesta del certificato venga effettuata sullo stesso server non attivo.
+     specificare uno o più URL per i server del servizio Registrazione dispositivi di rete che emettono certificati tramite SCEP. Ad esempio, `https://ndes.contoso.com/certsrv/mscep/mscep.dll`. È possibile aggiungere altri URL di SCEP per il bilanciamento del carico, se necessario, perché viene eseguito il push degli URL in modo casuale nel dispositivo con il profilo. Se uno dei server SCEP non è disponibile, la richiesta SCEP avrà esito negativo ed è possibile che durante sincronizzazioni successive del dispositivo la richiesta del certificato venga effettuata sullo stesso server non attivo.
 
 8. Selezionare **Avanti**.
 
@@ -259,7 +261,7 @@ Quando il nome del soggetto include uno dei caratteri speciali, usare una delle 
 
 **Ad esempio**, si supponga di avere un nome soggetto visualizzato come *Test user (TestCompany, LLC)* .  Una richiesta di firma del certificato che includa un CN con la virgola tra *TestCompany* e *LLC* presenta un problema.  È possibile evitare il problema racchiudendo l'intero CN tra virgolette oppure rimuovendo la virgola tra *TestCompany* e *LLC*:
 
-- **Aggiungere le virgolette**: *CN=* "Test User (TestCompany, LLC)",OU=UserAccounts,DC=corp,DC=contoso,DC=com*
+- **Aggiungere le virgolette**: *CN="Test User (TestCompany, LLC)",OU=UserAccounts,DC=corp,DC=contoso,DC=com*
 - **Rimuovere la virgola**: *CN=Test User (TestCompany LLC),OU=UserAccounts,DC=corp,DC=contoso,DC=com*
 
  I tentativi di escape della virgola tramite l'uso di una barra rovesciata, tuttavia, non riusciranno con un errore nei log CRP:
@@ -282,7 +284,11 @@ Exception:    at Microsoft.ConfigurationManager.CertRegPoint.ChallengeValidation
 
 ## <a name="assign-the-certificate-profile"></a>Assegnare il profilo certificato
 
-La procedura per assegnare i profili di certificato SCEP è uguale a quella per la [distribuzione dei profili di dispositivo](../configuration/device-profile-assign.md) per altri scopi. Tuttavia, tenere presente quanto segue prima di continuare:
+La procedura per assegnare i profili di certificato SCEP è uguale a quella per la [distribuzione dei profili di dispositivo](../configuration/device-profile-assign.md) per altri scopi.
+
+Per usare un profilo certificato SCEP, un dispositivo deve avere ricevuto anche il profilo certificato attendibile che ne esegue il provisioning insieme al certificato CA radice attendibile. Si consiglia di distribuire il profilo certificato radice attendibile e il profilo certificato SCEP agli stessi gruppi.
+
+Tenere presente quanto segue prima di continuare:
 
 - Quando si assegnano profili di certificato SCEP a gruppi, il file del certificato CA radice attendibile (specificato nel *profilo di certificato attendibile*) viene installato nel dispositivo. Il dispositivo usa il profilo di certificato SCEP per creare una richiesta di certificato per tale certificato CA radice attendibile.
 
@@ -293,8 +299,6 @@ La procedura per assegnare i profili di certificato SCEP è uguale a quella per 
 - Per pubblicare rapidamente un certificato in un dispositivo dopo la registrazione del dispositivo, assegnare il profilo certificato a un gruppo di utenti invece che a un gruppo di dispositivi. Se si assegna il profilo certificato a un gruppo di dispositivi, è necessario eseguire una registrazione completa dei dispositivi prima che questi ricevano i criteri.
 
 - Se si usa la co-gestione per Intune e Configuration Manager, in Configuration Manager [impostare il dispositivo di scorrimento del carico di lavoro](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) per Criteri di accesso alle risorse su **Intune** o **Intune pilota**. Questa impostazione consente ai client Windows 10 di avviare il processo di richiesta del certificato.
-
-- Anche se si creano e si assegnano separatamente il profilo di certificato attendibile e il profilo di certificato SCEP, è necessario assegnare entrambi. Se non sono entrambi installati in un dispositivo, i criteri per i certificati SCEP hanno esito negativo. Assicurarsi che tutti i profili di certificati radice attendibili vengano anche distribuiti negli stessi gruppi del profilo SCEP. Ad esempio, se si distribuisce un profilo certificato SCEP a un gruppo di utenti, è necessario distribuire anche il profilo certificato radice attendibile (e intermedio) allo stesso gruppo di utenti.
 
 > [!NOTE]
 > Nei dispositivi iOS/iPadOS, quando un profilo certificato SCEP o un profilo certificato PKCS viene associato a un profilo aggiuntivo, ad esempio un profilo Wi-Fi o VPN, il dispositivo riceve un certificato per ognuno di questi profili aggiuntivi. Ne risulta che il dispositivo iOS/iPadOS riceve più certificati dalla richiesta di certificato SCEP o PKCS. 

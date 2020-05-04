@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 633adc8fa28f422c4b21958675efb53cb2571d39
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: a0cf2096b4a8862a29d47bc05aa29f0cbb48792b
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324737"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023249"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Aggiungere app in Microsoft Intune 
 
@@ -56,8 +56,8 @@ La tabella seguente elenca i tipi di app specifici e descrive come aggiungerli n
 | App di Windows Phone 8.1 Store  | App Store  | Selezionare **Windows Phone 8.1** come **tipo di app** e immettere l'URL di Microsoft Store per l'app. |
 | App di Microsoft Store  | App Store  | Selezionare **Windows** come **tipo di app** e immettere l'URL di Microsoft Store per l'app. |
 | App Google Play gestite | App Store  | Selezionare **Google Play gestito** come **tipo di app**, cercare l'app e selezionarla in Intune. |
-| App di Office 365 per Windows 10  | App Store (Office 365) | Selezionare **Windows 10** in **Famiglia di prodotti Office 365** come **Tipo di app** e quindi selezionare l'app di Office 365 che si vuole installare.  |
-| App di Office 365 per macOS | App Store (Office 365) | Selezionare **macOS** in **Famiglia di prodotti Office 365** come **Tipo di app** e quindi selezionare la famiglia di app di Office 365. |
+| App di Office 365 per Windows 10  | App Store (Office 365) | Selezionare **Windows 10** in **App di Microsoft 365** come **Tipo di app** e quindi selezionare l'app di Office 365 che si vuole installare.  |
+| App di Office 365 per macOS | App Store (Office 365) | Selezionare **macOS** in **App di Microsoft 365** come **Tipo di app** e quindi selezionare la famiglia di prodotti dell'app di Office 365. |
 | Microsoft Edge versione 77 e successive per Windows 10 | App Store | Selezionare **Windows 10** in **Microsoft Edge versione 77 e successive** come **Tipo di app**. |
 | Microsoft Edge versione 77 e successive per macOS | App Store | Selezionare **macOS** in **Microsoft Edge versione 77 e successive** come **Tipo di app**. |
 | App line-of-business Android | App line-of-business | Selezionare **App line-of-business** come **tipo di app**, selezionare il **file del pacchetto dell'app** e quindi immettere un file di installazione Android con estensione **apk**.  |
@@ -121,7 +121,7 @@ Per altre informazioni sui tipi di app necessari per l'organizzazione, vedere "A
 Intune consente di modificare la funzionalità delle app distribuite per allinearle ai criteri aziendali di conformità e sicurezza. Questo controllo consente di determinare le modalità di protezione dei dati aziendali. Le app gestite da Intune vengono abilitate con un set avanzato di criteri di protezione per applicazioni mobili, ad esempio:
 
 - Limitazioni delle funzioni di copia e incolla e salvataggio con nome.
-- Configurazione dei collegamenti Web per l'apertura all'interno dell'app Intune Managed Browser.
+- Configurazione dei collegamenti Web da aprire nell'app Microsoft Edge.
 - Abilitazione dell'uso di identità multiple e dell'accesso condizionale a livello di app.
 
 Le app gestite da Intune possono anche abilitare la protezione dell'app senza richiedere la registrazione, consentendo così di scegliere di applicare i criteri di prevenzione della perdita dei dati senza gestire il dispositivo dell'utente. Nelle app line-of-business e per dispositivi mobili è inoltre possibile incorporare la gestione delle app per dispositivi mobili usando Intune App SDK e lo strumento di wrapping delle app. Per altre informazioni su questi strumenti, vedere [Panoramica di Intune App SDK](../developer/app-sdk.md).

@@ -18,12 +18,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.collection: ''
-ms.openlocfilehash: ccef2c10f4baaac9e417dd4952b1ea6d6cf47e5c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ed3f9f6f01c8dc2df3a89daee991d9f8c61056b9
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79346846"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82210316"
 ---
 # <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>Quali sono le informazioni visibili per l'organizzazione quando si registra il dispositivo?
 
@@ -50,10 +50,13 @@ L'organizzazione non può vedere le informazioni personali di un utente che regi
 - Numero di serie del dispositivo
 - IMEI
 
+ > [!NOTE]
+ > Per i dispositivi Android Enterprise completamente gestiti e dedicati, non sarà possibile visualizzare l'inventario di tutte le app.    
+    
 **Informazioni che l'organizzazione potrebbe visualizzare:**
 
 - Numero di telefono: per i dispositivi di proprietà dell'azienda, può essere visualizzato il numero di telefono completo. Per i dispositivi di proprietà personale, l'organizzazione può visualizzare solo le ultime quattro cifre del numero di telefono. È possibile visualizzare il tipo di proprietà di un singolo dispositivo nella pagina **Dettagli dispositivo** corrispondente.
-- Spazio di archiviazione del dispositivo: se non è possibile installare un'app necessaria, l'organizzazione potrebbe esaminare lo spazio di archiviazione del dispositivo per determinare se lo spazio non è sufficiente.  
-- Posizione: l'organizzazione non può mai visualizzare la posizione del dispositivo, a meno che non sia necessario recuperare un dispositivo iOS supervisionato che è andato perso. Consultare la [documentazione di Apple iOS](https://go.microsoft.com/fwlink/?linkid=853816) per altre informazioni sui dispositivi supervisionati.  
-- Dettagli dell'inventario delle app: se l'organizzazione usa Mobile Threat Defense, può visualizzare dettagli sulle app presenti nel dispositivo iOS. Altre informazioni su [Mobile Threat Defense](you-are-prompted-to-install-mtd-ios.md). Nei dispositivi personali l'organizzazione può visualizzare solo l'inventario delle app gestite. Nei dispositivi di proprietà dell'azienda l'organizzazione può visualizzare l'inventario di tutte le app.
-- Informazioni di rete: alcune informazioni sulle connessioni di rete per dispositivi Android possono essere disponibili per il supporto tecnico dell'organizzazione. Se l'organizzazione esigesse, ad esempio, che i dispositivi rimangano all'interno di un determinato edificio, il dispositivo potrebbe identificare la rete a cui è connesso. 
+- Spazio di archiviazione del dispositivo: se non è possibile installare un'app necessaria, l'organizzazione può esaminare lo spazio di archiviazione del dispositivo per determinare se lo spazio non è sufficiente.  
+- Percorso: l'organizzazione non può mai visualizzare la posizione del dispositivo, a meno che non sia necessario recuperare un dispositivo iOS supervisionato che è andato perso. Consultare la [documentazione di Apple iOS](https://go.microsoft.com/fwlink/?linkid=853816) per altre informazioni sui dispositivi supervisionati.  
+- Dettagli dell'inventario delle app: se la propria organizzazione usa Mobile Threat Defense, può visualizzare dettagli aggiuntivi sulle app presenti nel dispositivo iOS. Altre informazioni su [Mobile Threat Defense](set-up-mobile-threat-defense.md). Nei dispositivi personali l'organizzazione può visualizzare solo l'inventario delle app gestite. Nei dispositivi di proprietà dell'azienda l'organizzazione può visualizzare l'inventario di tutte le app.
+- Informazioni sulla rete: per il supporto tecnico dell'organizzazione possono essere disponibili alcune informazioni sulle connessioni di rete per dispositivi Android. Se l'organizzazione esigesse, ad esempio, che i dispositivi rimangano all'interno di un determinato edificio, il dispositivo potrebbe identificare la rete a cui è connesso. 

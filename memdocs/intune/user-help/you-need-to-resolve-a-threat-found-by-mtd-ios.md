@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/05/2018
+ms.date: 04/27/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,18 +17,18 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 905378b764fe3e8beee7eb90570cb9f871d9fa47
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: bc6780d8956b00e9e0f177c69f067bafa4e8b49e
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79346209"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82182991"
 ---
-# <a name="resolve-a-threat-found-by-a-mobile-threat-defense-app"></a>Risolvere una minaccia rilevata da un'app di Mobile Threat Defense
+# <a name="resolving-a-threat-found-by-a-mobile-threat-defense-app"></a>Risoluzione di una minaccia rilevata da un'app di Mobile Threat Defense
 
-Le app Mobile Threat Defense rilevano e segnalano la presenza di potenziali minacce nei dispositivi. Alcune organizzazioni integrano un servizio Mobile Threat Defense con un provider di gestione di dispositivi mobili, ad esempio Intune. Quando è integrato, il servizio Mobile Threat Defense segnala le minacce, ad esempio app, reti sospette e vulnerabilità del sistema operativo, e invia notifiche all'app Portale aziendale. I dettagli della minaccia e la procedura di correzione saranno quindi disponibili nell'app Mobile Threat Defense.  
+Un'app di Mobile Threat Defense (MTD) avvisa l'utente nel caso in cui rilevi potenziali minacce nel dispositivo, ad esempio app o reti sospette e vulnerabilità del sistema operativo. L'app Portale aziendale invia una notifica quando viene rilevata una minaccia e indica se ha un impatto sull'accesso alle risorse aziendali o dell'istituto di istruzione. Quindi reindirizza l'utente all'app di MTD per informazioni dettagliate sulla minaccia e, se disponibili, i passaggi da eseguire per risolvere il problema. 
 
-Le minacce sono indicate nel portale aziendale come problemi di non conformità non risolti. Se le minacce sono classificate con un livello di rischio elevato, l'azienda revocherà l'accesso alle risorse aziendali. La presenza di minacce nel dispositivo può impedire di:  
+Se una minaccia sembra eccessivamente rischiosa, in base a quanto stabilito dalla propria organizzazione, è possibile che l'accesso dell'utente alle risorse aziendali o dell'istituto di istruzione venga revocato. La presenza di minacce nel dispositivo può impedire di:  
 
 * Connettersi alla posta elettronica aziendale
 * Connettersi al Wi-Fi aziendale
@@ -36,7 +36,7 @@ Le minacce sono indicate nel portale aziendale come problemi di non conformità 
 * Sincronizzare i file aziendali con OneDrive
 * Accedere alle app aziendali
 
-Di seguito sono indicati i servizi Mobile Threat Defense specifici per iOS che l'organizzazione può avere configurato. Selezionare un'app per ottenere altre informazioni sul comportamento. 
+Sono disponibili diverse app del fornitore MTD, tutte con nomi diversi. Di seguito sono riportate alcune app specifiche di iOS che potrebbero essere installate. Selezionare un'app per vedere come funziona con Portale aziendale in relazione agli avvisi in caso di minacce. Per altre informazioni, seguire le istruzioni visualizzate in Portale aziendale e nell'app di MTD o contattare il responsabile del supporto IT. 
 
 
 * [Lookout for Work](you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md)
@@ -44,5 +44,5 @@ Di seguito sono indicati i servizi Mobile Threat Defense specifici per iOS che l
 * [SandBlast Mobile Protect](you-need-to-resolve-a-threat-found-by-checkpoint-ios.md)
 * [Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-ios.md)
 
-Serve ancora assistenza? Rivolgersi al personale del supporto tecnico dell'azienda. È possibile trovare le informazioni di contatto nel [sito Web del portale aziendale](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Serve ancora assistenza? Rivolgersi al responsabile del supporto tecnico. È possibile trovare le informazioni di contatto nel [sito Web del portale aziendale](https://go.microsoft.com/fwlink/?linkid=2010980).  
 

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 27ec9e4c407dd8ef1a94e9c443f62ea5456866dc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8710043244e0b6becebef60890ac1a0ec3105971
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80808147"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254640"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Registrare i dispositivi in Intune usando un account del manager di registrazione dispositivi
 
@@ -43,6 +43,13 @@ Gli account utente di tipo manager di registrazione dispositivi e i dispositivi 
 - Tutti i dispositivi registrati con gli account di manager di registrazione dispositivi devono avere le licenze appropriate per la gestione da Intune. La licenza può essere una licenza utente di Intune o una licenza dispositivo di Intune.
 - Se si stanno [registrando dispositivi con profilo di lavoro Android Enterprise](android-work-profile-enroll.md) usando un account DEM, è possibile registrare un massimo di 10 dispositivi per ogni account.
 - La [registrazione di dispositivi Android Enterprise completamente gestiti](android-fully-managed-enroll.md) con account DEM non è supportata.
+- Applicando una restrizione per i dispositivi Azure AD a un account manager di registrazione dispositivi si evita di raggiungere il limite di 1.000 dispositivi che tali account possono registrare.
+
+## <a name="enrollment-methods-supported-by-dem-accounts"></a>Metodi di registrazione supportati dagli account manager di registrazione dispositivi
+
+- [Windows Autopilot](enrollment-autopilot.md)
+- [Registrazione in blocco di dispositivi Windows](windows-bulk-enroll.md)
+- Avvio da parte di un manager di registrazione dispositivi tramite Portale aziendale
 
 ## <a name="add-a-device-enrollment-manager"></a>Aggiungere un manager di registrazione dispositivi
 
@@ -52,14 +59,13 @@ Gli account utente di tipo manager di registrazione dispositivi e i dispositivi 
 
 3. Nel pannello **Aggiungi utente** immettere un nome entità utente per l'utente manager di registrazione dispositivi, quindi selezionare **Aggiungi**. L'utente manager di registrazione dispositivi viene aggiunto all'elenco di utenti manager di registrazione dispositivi.
 
-## <a name="permissions-for-dem"></a>Autorizzazioni per il manager di registrazione dispositivi
+## <a name="permissions-required-to-create-dem-accounts"></a>Autorizzazioni necessarie per creare account manager di registrazione dispositivi
 
 I ruoli di Azure AD Amministratore globale o Amministratore del servizio Intune sono necessari per
 - assegnare un'autorizzazione di manager di registrazione dispositivi a un account utente di Azure AD
 - visualizzare tutti gli utenti manager di registrazione dispositivi
 
 Se un utente non ha il ruolo Amministratore globale o Amministratore del servizio Intune, ma ha le di autorizzazioni di lettura abilitate per il ruolo Manager di registrazione dispositivi, può visualizzare solo gli utenti manager di registrazione dispositivi che ha creato.
-
 
 ## <a name="remove-device-enrollment-manager-permissions"></a>Rimuovere le autorizzazioni di manager di registrazione dispositivi
 

@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/21/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 897366ba9b7bae15050c0aa5e392ba5255a90b24
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 2640107a4a3b17e2c544041445c8c797ef40b01e
+ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407827"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82166553"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Impostazioni dei dispositivi iOS e iPadOS per consentire o limitare l'uso delle funzionalità tramite Intune
 
@@ -324,7 +324,10 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Le impostazioni si applicano a: Registrazione del dispositivo, Registrazione automatica dei dispositivi (con supervisione)
 
+
 - **Ricerca Spotlight per la restituzione di risultati da Internet**: **Blocca** impedisce a Spotlight di restituire risultati da una ricerca su Internet. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire alla ricerca Spotlight di connettersi a Internet per restituire i risultati della ricerca.
+
+  Questa impostazione viene duplicata nell'interfaccia utente e verrà corretta in una versione futura. Attualmente questa impostazione si applica ai dispositivi con supervisione. In una versione futura questa impostazione si applica ai dispositivi registrati e a quelli con registrazione automatica dei dispositivi e non richiede la supervisione.
 
 - **Cookie di Safari**: Selezionare la modalità di gestione dei cookie nei dispositivi. Le opzioni disponibili sono:
   - Consenti
@@ -334,7 +337,7 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
 
 - **JavaScript in Safari**: **Blocca** impedisce l'esecuzione degli script Java nel browser dei dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'esecuzione degli script Java.
 
-- **Popup di Safari**: **Blocca** disabilita il blocco popup nel Web browser. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire il blocco popup.
+- **Popup di Safari**: **Blocca** blocca tutti i popup nel Web browser Safari. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire il blocco popup.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Le impostazioni si applicano a: Registrazione automatica dei dispositivi (supervisione)
 
@@ -386,6 +389,8 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
 - **Modifiche alle impostazioni dell'app Trova i miei amici**: **Blocca** impedisce di apportare modifiche alle impostazioni dell'app Find My Friends. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di modificare le impostazioni per l'app Trova i miei amici.
 
 - **Ricerca Spotlight per la restituzione di risultati da Internet**: **Blocca** impedisce a Spotlight di restituire risultati da una ricerca su Internet. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire alla ricerca Spotlight di connettersi a Internet per restituire i risultati della ricerca.
+
+  Questa impostazione viene duplicata nell'interfaccia utente e verrà corretta in una versione futura. Attualmente questa impostazione si applica ai dispositivi con supervisione. In una versione futura questa impostazione si applica ai dispositivi registrati e a quelli con registrazione automatica dei dispositivi e non richiede la supervisione.
 
 - **Impedisci la rimozione di app di sistema dal dispositivo**: **Blocca** impedisce la rimozione di app di sistema dai dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di rimuovere app di sistema dal dispositivo.
 
@@ -667,7 +672,6 @@ Ad esempio, in un ambiente scolastico o universitario, aggiungere un'app che con
 La modalità con supervisione iOS/iPadOS può essere abilitata solo durante l'installazione iniziale del dispositivo usando Device Enrollment Program di Apple o Apple Configurator. Dopo aver abilitato la modalità di supervisione, Intune può configurare un dispositivo con le funzionalità seguenti:
 
 - Blocco dell'app (modalità app singola) 
-- Proxy HTTP globale 
 - Disabilitare Blocco attivazione 
 - Modalità applicazione singola autonoma 
 - Filtro contenuto Web 

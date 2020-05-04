@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 04/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 75ef2a03c9f42f0bda78af009f0fb563fbcedb75
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: f609ec62259deffb220c8ee935d0f10a98ae77b5
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220030"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254895"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Usare i modelli di Windows 10 per configurare le impostazioni di Criteri di gruppo in Microsoft Intune
 
@@ -41,7 +41,7 @@ Questo articolo illustra i passaggi da eseguire per creare un modello per dispos
 
 ## <a name="before-you-begin"></a>Prima di iniziare
 
-- Alcune di queste impostazioni sono disponibili a partire da Windows 10 versione 1703 (RS2/build 15063). Alcune impostazioni non sono incluse in tutte le edizioni di Windows. Per un'esperienza ottimale, è consigliabile usare Windows 10 Enterprise versione 1903 (19H1/build 18362) e versioni successive.
+- Alcune di queste impostazioni sono disponibili a partire da Windows 10 versione 1709 (RS2/build 15063). Alcune impostazioni non sono incluse in tutte le edizioni di Windows. Per un'esperienza ottimale, è consigliabile usare Windows 10 Enterprise versione 1903 (19H1/build 18362) e versioni successive.
 
 - Le impostazioni di Windows usano i [provider di servizi di configurazione (CSP) dei criteri di Windows](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies). I provider CSP funzionano in diverse edizioni di Windows, ad esempio Home, Professional, Enterprise e così via. Per verificare se un provider CSP funziona in un'edizione specifica, vedere i [provider di servizi di configurazione (CSP) di criteri di Windows](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies).
 
@@ -102,6 +102,10 @@ Questo articolo illustra i passaggi da eseguire per creare un modello per dispos
     Selezionare **Avanti**.
 
 14. In **Assegnazioni** selezionare l'utente o i gruppi che riceveranno il profilo. Per altre informazioni sull'assegnazione di profili, vedere [Assegnare profili utente e dispositivo](device-profile-assign.md).
+
+    Se il profilo è assegnato a gruppi di utenti, le impostazioni ADMX configurate si applicano a tutti i dispositivi che l'utente registra e a cui accede. Se il profilo è assegnato a gruppi di dispositivi, le impostazioni ADMX configurate si applicano a qualsiasi utente che accede al dispositivo. Questa assegnazione si verifica se l'impostazione ADMX è una configurazione computer (`HKEY_LOCAL_MACHINE`) o una configurazione utente (`HKEY_CURRENT_USER`). Con alcune impostazioni, un'impostazione del computer assegnata a un utente può anche influire sull'esperienza di altri utenti su tale dispositivo.
+    
+    Per altre informazioni, vedere [Gruppi di utenti e gruppi di dispositivi](device-profile-assign.md#user-groups-vs-device-groups).
 
     Selezionare **Avanti**.
 

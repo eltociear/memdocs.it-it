@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0efaaf94f969e0b1b27582027a68b9e59c944b0c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 8ba3563a243b13b874608ad7a3ec918130e5bb80
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326857"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82022705"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Configurare una pagina relativa allo stato della registrazione
  
@@ -41,7 +41,7 @@ La pagina relativa allo stato della registrazione consente agli utenti di conosc
 È anche possibile impostare l'ordine di priorità di ogni profilo per tenere conto delle assegnazioni dei profili in conflitto per lo stesso utente.
 
 > [!NOTE]
-> La pagina relativa allo stato della registrazione può essere destinata solo a un utente che appartiene a un gruppo assegnato e i criteri vengono impostati nel dispositivo al momento della registrazione per tutti gli utenti che usano il dispositivo.  
+> La pagina relativa allo stato della registrazione può essere destinata solo a un utente che appartiene a un gruppo assegnato e i criteri vengono impostati nel dispositivo al momento della registrazione per tutti gli utenti che usano il dispositivo.  La destinazione del dispositivo per i profili della pagina relativa allo stato della registrazione non è attualmente supportata.
 
 ## <a name="available-settings"></a>Impostazioni disponibili
 
@@ -97,6 +97,10 @@ Un utente può appartenere a molti gruppi e avere molti profili della pagina rel
 5. Scegliere **Selezionate** per **Blocca l'uso del dispositivo fino all'installazione delle app necessarie in caso di assegnazione a un utente/dispositivo**.
 6. Scegliere **Selezionare le app** > scegliere le app > **Seleziona** > **Salva**.
 
+Le app incluse in questo elenco vengono usate da Intune per filtrare l'elenco da considerare per il blocco.  Non specifica quali app devono essere installate.  Se, ad esempio, si configura questo elenco in modo da includere "App 1", "App 2" e "App 3" e "App 3" e "App 4" sono assegnate al dispositivo o all'utente, nella pagina relativa allo stato della registrazione verrà rilevata solo "App 3".  "App 4" verrà comunque installata, ma la pagina relativa allo stato della registrazione non attende il completamento.
+
+È possibile specificare al massimo 25 app.
+
 ## <a name="enrollment-status-page-tracking-information"></a>Informazioni incluse nella pagina relativa allo stato della registrazione
 
 La pagina relativa allo stato della registrazione consente di tenere traccia delle informazioni relative a tre fasi: preparazione del dispositivo, configurazione del dispositivo e configurazione dell'account.
@@ -145,10 +149,11 @@ Per la configurazione dell'account, la pagina relativa allo stato della registra
 ### <a name="troubleshooting"></a>Risoluzione dei problemi
 Domande principali per la risoluzione dei problemi.
 
-- Perché le applicazioni non sono state installate durante la fase di configurazione del dispositivo della distribuzione di Autopilot che sta usando la pagina relativa allo stato della registrazione?
-  - Per garantire che le applicazioni vengano installate durante una fase di configurazione di un dispositivo Autopilot, verificare che 
-        1. L'applicazione sia selezionata per bloccare l'accesso nell'elenco delle app selezionate
-        2. Le applicazioni vengono indirizzate allo stesso gruppo di dispositivi Azure AD a cui è assegnato il profilo di Autopilot. 
+- Perché le applicazioni non sono state installate e tracciate tramite la pagina Stato registrazione?
+  - Per assicurarsi che le applicazioni vengano installate e tracciate tramite la pagina Stato registrazione, verificare che:
+      - Le app siano assegnate a un gruppo di Azure AD contenente il dispositivo (per le app destinate ai dispositivi) o l'utente (per le app destinate agli utenti), usando un'assegnazione "obbligatoria".  Le app destinate ai dispositivi vengono tracciate durante la fase dispositivo di ESP, mentre le app destinate agli utenti vengono registrate durante la fase utente di ESP.
+      - È possibile specificare **Impedisci l'uso del dispositivo fino al completamento dell'installazione di tutte le app e di tutti i profili** o includere l'app nell'elenco **Blocca l'uso del dispositivo fino all'installazione delle app necessarie**.
+      - Le app vengono installate in un contesto di dispositivo e non hanno regole di applicabilità del contesto utente.
 
 - Perché viene visualizzata la pagina relativa allo stato della registrazione per le distribuzioni non di Autopilot, ad esempio quando un utente accede per la prima volta a un dispositivo di Configuration Manager registrato in co-gestione?  
   - La pagina relativa allo stato della registrazione indica lo stato dell'installazione per tutti i metodi di registrazione, tra cui
@@ -190,7 +195,6 @@ Domande principali per la risoluzione dei problemi.
 ### <a name="known-issues"></a>Problemi noti
 Di seguito sono riportati i problemi noti. 
 - La disabilitazione del profilo ESP non comporta la rimozione dei criteri ESP dai dispositivi e gli utenti ottengono comunque ESP quando accedono al dispositivo per la prima volta. I criteri non vengono rimossi quando il profilo ESP è disabilitato. Per disabilitare ESP, è necessario distribuire URI OMA. Vedere sopra per le istruzioni su come disabilitare ESP usando URI OMA. 
-- Un riavvio in sospeso causerà sempre un timeout. Il timeout si verifica perché il dispositivo deve essere riavviato. Il riavvio è necessario per consentire il completamento dell'elemento rilevato nella pagina relativa allo stato della registrazione. Un riavvio causerà la chiusura della pagina relativa allo stato della registrazione e dopo il riavvio il dispositivo non verrà immesso durante la configurazione dell'account.  Si consiglia di non richiedere un riavvio con l'installazione dell'applicazione. 
 - Un riavvio durante la configurazione del dispositivo obbliga l'utente a immettere le proprie credenziali prima di passare alla fase di configurazione dell'account. Le credenziali utente non vengono mantenute durante il riavvio. Chiedere all'utente di immettere le credenziali, quindi la pagina relativa allo stato della registrazione può continuare. 
 - La pagina relativa allo stato della registrazione raggiunge sempre il timeout durante l'aggiunta di un account aziendale e dell'istituto di istruzione nelle versioni di Windows 10 precedenti alla 1903. La pagina relativa allo stato della registrazione attende il completamento della registrazione di Azure AD. Il problema è risolto in Windows 10 versione 1903 e successive.  
 - In Azure AD ibrido la distribuzione di Autopilot con ESP richiede più tempo rispetto alla durata del timeout definita nel profilo ESP. Nelle distribuzioni di Autopilot di Azure AD ibrido ESP richiede 40 minuti in più rispetto al valore impostato nel profilo ESP. Questo ritardo concede tempo al connettore AD locale per creare il nuovo record del dispositivo per Azure AD. 

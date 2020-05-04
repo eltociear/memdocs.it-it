@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 82e02795dc9dbcbc0598218418404fe74fdf1226
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: e6a3e2b9026024791ef1a9e4eb5aca08718d8573
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551626"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023164"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>Usare i set di criteri per raggruppare raccolte di oggetti di gestione
 
@@ -89,7 +89,7 @@ I set di criteri, una novità della versione 1910, presentano i seguenti problem
   - App di Android Store
   - App line-of-business Android
   - App line-of-business Android gestite
-  - Office 365 ProPlus Suite (Windows 10)
+  - App di Microsoft 365 (Windows 10)
   - Collegamento Web
   - App iOS/iPadOS predefinita
   - App Android predefinita
@@ -121,6 +121,7 @@ I set di criteri, una novità della versione 1910, presentano i seguenti problem
     Se un criterio viene aggiunto a un set di criteri distribuito a un gruppo, il gruppo viene visualizzato come assegnato direttamente nel carico di lavoro e non come "assegnato tramite il set di criteri". Di conseguenza, MAM non elabora le eliminazioni di assegnazione dei gruppi provenienti da set di criteri.
 
 - MAM non supporta la distribuzione ai gruppi virtuali **Tutti gli utenti** e **Tutti i dispositivi** per tutti i tipi di criteri.
+- Non è possibile selezionare il profilo di configurazione del dispositivo di tipo "Modelli amministrativi" come parte di un set di criteri.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 04/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e5abdfe69d5553be420d96da60f34df93a6b2f4
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: f4dd0b1702b06f3efbed07a70b13a59b271816f8
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083665"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023011"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Criteri di configurazione delle app per Microsoft Intune
 
@@ -72,6 +72,20 @@ Selezionando **App gestite** come **Tipo di registrazione del dispositivo** si f
 
 > [!NOTE]
 > Per le app con più identità, come Microsoft Outlook, è possibile prendere in considerazione le preferenze dell'utente. L'opzione Posta in arrivo evidenziata, ad esempio, rispetta l'impostazione dell'utente e non modifica la configurazione. Altri parametri consentono di controllare se un utente può o meno modificare l'impostazione. Per altre informazioni, vedere [Distribuzione delle impostazioni di configurazione delle app di Outlook per iOS/iPadOS e Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
+
+## <a name="android-app-configuration-policies"></a>Criteri di configurazione delle app Android
+
+Per i criteri di configurazione delle app Android, è possibile selezionare il tipo di registrazione del dispositivo prima di creare un profilo di configurazione dell'app. È possibile tenere conto dei profili certificato basati sul tipo di registrazione (Profilo di lavoro o Proprietario del dispositivo). Questo aggiornamento contiene le informazioni seguenti:
+
+1. Se si crea un nuovo profilo e si seleziona il tipo di registrazione del dispositivo Profilo di lavoro e il profilo di Proprietario del dispositivo, non sarà possibile associare un profilo del certificato ai criteri di configurazione dell'app.
+2. Se viene creato un nuovo profilo ed è selezionato il tipo Solo profilo di lavoro, è possibile usare i criteri di certificato del profilo di lavoro creati con la configurazione del dispositivo.
+3. Se viene creato un nuovo profilo e si seleziona il tipo Solo proprietario del dispositivo, è possibile usare i criteri di certificato del proprietario del dispositivo creati con la configurazione del dispositivo. 
+4. Se si distribuisce un profilo di configurazione Gmail o Nine in un dispositivo Android Enterprise dedicato che non implica un utente, l'operazione avrà esito negativo poiché Intune non riesce a risolvere l'utente.
+
+> [!IMPORTANT]
+> Per impostazione predefinita, i criteri esistenti creati prima del rilascio di questa funzionalità (versione di aprile 2020 - 2004) che non hanno profili certificato associati useranno il tipo di registrazione del dispositivo Profilo di lavoro e profilo di Proprietario del dispositivo. Per impostazione predefinita, poi, i criteri esistenti creati prima del rilascio di questa funzionalità con profili certificato associati useranno il tipo Solo profilo di lavoro.
+> 
+> I criteri esistenti non consentiranno di correggere o emettere nuovi certificati.
 
 ## <a name="validate-the-applied-app-configuration-policy"></a>Convalidare i criteri di configurazione delle app applicati
 
@@ -149,7 +163,7 @@ I dettagli di configurazione dell'applicazione devono corrispondere ai criteri d
 
 ### <a name="android-configuration-on-managed-devices"></a>Configurazione di Android in dispositivi gestiti
 
-È possibile convalidare la configurazione di iOS/iPadOS con il **log di diagnostica Intune** in dispositivi gestiti per la configurazione di app gestite.
+È possibile convalidare la configurazione di Android con il **log di diagnostica Intune** in dispositivi gestiti per la configurazione di app gestite.
 
 Per raccogliere i log da un dispositivo Android, l'utente o l'utente finale deve scaricare i log dal dispositivo tramite una connessione USB (o tramite l'**Esplora file**  equivalente nel dispositivo). Seguire questa procedura:
 

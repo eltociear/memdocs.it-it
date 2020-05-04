@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/12/2020
+ms.date: 04/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e1d18a423242300b6c2b66c01c59404cef42ebd9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4c0c913d3bc1467096090ac4e80d1d9d5f578a1b
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79372552"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82182311"
 ---
 # <a name="how-your-android-users-get-their-apps"></a>Modalità di recupero delle app per gli utenti di Android  
 
@@ -30,30 +30,30 @@ Questo articolo consente di comprendere come e dove l'amministratore e gli utent
 
 ## <a name="native-non-samsung-knox-standard-android-devices"></a>Dispositivi Android nativi (non Samsung KNOX Standard)   
 
-| Tipo di App | App line-of-business | App di Play Store  |
+| Tipo di app | App line-of-business | App di Play Store  |
 | ------------- |-------------| -----|
 | App disponibili      | Toccare **Installa** nel portale aziendale. Viene visualizzata una notifica, che è possibile toccare per avviare l'installazione. Al termine dell'installazione, la notifica viene rimossa. | Toccare l'app nel Portale aziendale per essere reindirizzati a una pagina dell'app in Play Store, in cui è possibile avviare l'installazione.|
-| Required apps      | **Nei dispositivi che eseguono Android 9.0 e versioni precedenti**, viene visualizzata una notifica che non è possibile chiudere, in cui viene indicata la necessità di scaricare un'app. Toccare la notifica per avviare il download e l'installazione. Al termine dell'installazione, la notifica viene rimossa. **Nei dispositivi che eseguono Android 10 e versioni successive**, viene visualizzata una notifica che non è possibile chiudere, in cui viene indicata la necessità di scaricare un'app. Toccare la notifica per avviare il download e ricevere una nuova notifica per avviare l'installazione dell'app. Al termine dell'installazione, la notifica viene rimossa.| Viene visualizzata una notifica che non è possibile chiudere, indicante la necessità di installare un'app. Toccare la notifica per essere reindirizzati a una pagina dell'app in Play Store, in cui è possibile avviare l'installazione. Al termine dell'installazione, la notifica viene rimossa. |
+| Required apps      | Viene visualizzata una notifica che non è possibile chiudere, indicante la necessità di installare un'app. Toccare la notifica per avviare l'installazione. Al termine dell'installazione, la notifica viene rimossa.    | Viene visualizzata una notifica che non è possibile chiudere, in cui viene indicata la necessità di installare un'app. Toccare la notifica per essere reindirizzati a una pagina dell'app in Play Store, in cui è possibile avviare l'installazione. Al termine dell'installazione, la notifica viene rimossa. |
 
-Per installare [app line-of-business](../apps/lob-apps-android.md), gli utenti finali devono consentire l'installazione da origini sconosciute. Questa impostazione è solitamente disponibile in due posizioni diverse:
+Per installare [app line-of-business](../apps/lob-apps-android.md), gli utenti finali devono consentire l'installazione da origini sconosciute. Questa impostazione è in genere disponibile in due posizioni diverse, a seconda della versione di Android:
 
-* **Android 7.1.2 e versioni precedenti**: **Impostazioni** > **Sicurezza** > **Origini sconosciute**
-* **Android 8.0 e versioni successive**: **Impostazioni** > **App e notifiche** > **Accesso speciale** > **Installa app sconosciute** > **Portale aziendale** > **Consenti da questa origine**
+* Android 7.1.2 e versioni precedenti: **Impostazioni** > **Sicurezza** > **Origini sconosciute**
+* Android 8.0 e versioni successive: **Impostazioni** > **App e notifiche** > **Accesso speciale** > **Installa app sconosciute** > **Portale aziendale** > **Consenti da questa origine**
 
 In questo caso, l'app Portale aziendale informerà l'utente e lo assisterà per selezionare l'impostazione appropriata. 
 
 ## <a name="samsung-knox-standard-android-devices"></a>Dispositivi Android Samsung KNOX Standard
 
-| Tipo di App | App line-of-business | App di Play Store  |
+| Tipo di app | App line-of-business | App di Play Store  |
 | ------------- |-------------| -----|
 | App disponibili      | Toccare **Installa** nel portale aziendale. L'app viene installata senza ulteriore intervento dell'utente. | Toccare l'app nel Portale aziendale per essere reindirizzati a una pagina dell'app in Play Store, in cui è possibile avviare l'installazione.|
-| Required apps      | **Nei dispositivi che eseguono Android 9.0 e versioni precedenti**, l'app viene installata senza alcun intervento da parte dell'utente. **Nei dispositivi che eseguono Android 10 e versioni successive**, viene visualizzata una notifica che non è possibile chiudere, in cui viene indicata la necessità di scaricare un'app. Toccare la notifica per avviare l'installazione. Al termine dell'installazione, la notifica viene rimossa. | Viene visualizzata una notifica che non è possibile chiudere, indicante la necessità di installare un'app. Toccare la notifica per essere reindirizzati a una pagina dell'app in Play Store, in cui è possibile avviare l'installazione. Al termine dell'installazione, la notifica viene rimossa. |
+| Required apps      | L'app viene installata senza ulteriore intervento dell'utente.    | Viene visualizzata una notifica che non è possibile chiudere, in cui viene indicata la necessità di installare un'app. Toccare la notifica per essere reindirizzati a una pagina dell'app in Play Store, in cui è possibile avviare l'installazione. Al termine dell'installazione, la notifica viene rimossa. |
 
 Le app possono essere gestite o non gestite, come descritto di seguito. Il processo per rendere le app gestite è lo stesso per tutti i tipi di dispositivi Android.
 
-**App gestite**: queste app sono gestite tramite criteri. Sono state sottoposte a wrapping da Intune o compilate con Intune App SDK. Queste app possono essere gestite da Intune ed è possibile applicarvi criteri dell'applicazione.
+* App gestite: queste app sono gestite tramite criteri. Sono state sottoposte a wrapping da Intune o compilate con Intune App SDK. Queste app possono essere gestite da Intune ed è possibile applicarvi criteri dell'applicazione.
 
-**App non gestite**: queste app non sono gestite tramite criteri. Non sono state sottoposte a wrapping da Intune o non includono Intune App SDK. Non è possibile applicare i criteri dell'applicazione a queste app.
+* App non gestite: queste app non sono gestite tramite criteri. Non sono state sottoposte a wrapping da Intune o non includono Intune App SDK. Non è possibile applicare i criteri dell'applicazione a queste app.
 
 ## <a name="zebra-devices-with-zebra-mobility-extensions"></a>Dispositivi Zebra con Mobility Extensions di Zebra
 

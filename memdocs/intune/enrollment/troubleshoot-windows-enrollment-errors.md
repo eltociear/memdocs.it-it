@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04bc86ff697ed7083cacd552cbf9ebe5096a228c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f74308e5c59adee6810d54ce44cf104514f83056
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326874"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254776"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Risolvere i problemi di registrazione dei dispositivi Windows in Microsoft Intune
 
@@ -304,7 +304,7 @@ Registering your device for mobile management (Previous step failed)
 
 - Il dispositivo deve avere un chip TPM 2.0 fisico. I dispositivi con TPM virtuali, ad esempio le macchine virtuali Hyper-V, o i chip TPM 1.2 non funzionano con la modalità di distribuzione automatica.
 - Nel dispositivo deve essere in esecuzione una delle versioni di Windows seguenti:
-    - Windows 10 build 1703 o versione successiva.
+    - Windows 10 build 1709 o versione successiva.
     - Se si usa Aggiunta ad Azure AD ibrido, Windows 10 build 1809 o versione successiva.
 
 

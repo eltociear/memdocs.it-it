@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/07/2019
+ms.date: 04/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4698c0bf286fab855b0067899c5347b643ee6ce9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 2163f420089dcd8936d6dc64b8ce02c5ff268b53
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325747"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079893"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Configurare l'infrastruttura per il supporto di SCEP con Intune
 
@@ -46,13 +46,14 @@ L'infrastruttura locale seguente deve essere eseguita su server aggiunti a un do
 
   - Il server che ospita il servizio Registrazione dispositivi di rete deve essere aggiunto a un dominio e incluso stessa foresta della CA globale (enterprise).
   - Non è possibile usare il servizio Registrazione dispositivi di rete installato nel server che ospita la CA globale (enterprise).
-  - Connettore di certificati di Microsoft Intune verrà installato nello stesso server che ospita il servizio Registrazione dispositivi di rete.
+  - Il Connettore di certificati di Microsoft Intune verrà installato nello stesso server che ospita il servizio Registrazione dispositivi di rete.
 
   Per altre informazioni sul servizio Registrazione dispositivi di rete, vedere [Linee guida per il servizio Registrazione dispositivi di rete](https://technet.microsoft.com/library/hh831498.aspx) nella documentazione di Windows Server e [Uso di un Modulo criteri con il servizio Registrazione dispositivi di rete](https://technet.microsoft.com/library/dn473016.aspx).
 
 - **Connettore di certificati di Microsoft Intune** - Connettore di certificati di Microsoft Intune è necessario per usare i profili di certificato SCEP con Intune. Questo articolo include istruzioni per l'[installazione di questo connettore](#install-the-intune-certificate-connector).
 
-  Il connettore supporta la modalità FIPS (Federal Information Processing Standard). FIPS non è obbligatorio, ma quando è abilitato è possibile emettere e revocare i certificati.
+  Il connettore supporta la modalità FIPS (Federal Information Processing Standard). Lo standard FIPS non è obbligatorio, ma quando è abilitato è possibile emettere e revocare i certificati.
+  - Il connettore ha gli stessi requisiti di rete dei [dispositivi gestiti](../fundamentals/intune-endpoints.md#access-for-managed-devices).
   - Il connettore deve essere eseguito nello stesso server del ruolo del server Servizio Registrazione dispositivi di rete, ovvero un server che esegue Windows Server 2012 R2 o versione successiva.
   - .NET Framework 4.5 è richiesto dal connettore ed è incluso automaticamente in Windows Server 2012 R2.
   - La sicurezza avanzata di Internet Explorer [deve essere disabilitata nel server che ospita il servizio Registrazione dispositivi di rete](https://technet.microsoft.com/library/cc775800(v=WS.10).aspx) e Connettore di certificati di Microsoft Intune.
@@ -67,7 +68,7 @@ Per consentire ai dispositivi su Internet di ottenere i certificati, è necessar
 
   Il server che ospita WAP [deve installare un aggiornamento](https://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) che abilita il supporto per gli URL lunghi usati dal servizio Registrazione dispositivi di rete. Questo aggiornamento è incluso nell' [aggiornamento cumulativo di dicembre 2014](https://support.microsoft.com/kb/3013769)oppure può essere scaricato singolarmente da [KB3011135](https://support.microsoft.com/kb/3011135).
 
-  Il server proxy applicazione Web deve avere un certificato SSL che corrisponde al nome pubblicato nei client esterni e deve riconoscere come attendibile il certificato SSL usato nel computer che ospita il servizio Registrazione dispositivi di rete NDES. Questi certificati consentono al server proxy applicazione Web di chiudere la connessione SSL dai client e creare una nuova connessione SSL al servizio Registrazione dispositivi di rete.
+  Il server proxy applicazione Web deve avere un certificato SSL che corrisponde al nome pubblicato nei client esterni e deve riconoscere come attendibile il certificato SSL usato nel computer che ospita il servizio Registrazione dispositivi di rete. Questi certificati consentono al server proxy applicazione Web di chiudere la connessione SSL dai client e creare una nuova connessione SSL al servizio Registrazione dispositivi di rete.
 
   Per altre informazioni, vedere [Plan certificates for WAP](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383650(v=ws.11)#plan-certificates) (Pianificare i certificati per WAP) e le [informazioni generali sui server WAP](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn584113(v=ws.11)).
 

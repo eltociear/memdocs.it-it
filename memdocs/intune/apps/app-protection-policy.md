@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 672c978a7e590e8e26f676733bd2903d3684e978
-ms.sourcegitcommit: db511e03f14e6120968b60def8990485eb42529b
+ms.openlocfilehash: de679314bcd3b52ff879fbe9a6340a61d2b7e993
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80611744"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078363"
 ---
 # <a name="app-protection-policies-overview"></a>Panoramica dei criteri di protezione app
 
@@ -167,7 +167,7 @@ Per poter usare l'[app Outlook per dispositivi mobili](https://products.office.c
 ### <a name="word-excel-and-powerpoint"></a>Word, Excel e PowerPoint
 Per poter usare le app [Word, Excel e PowerPoint](https://products.office.com/business/office), sono necessari i requisiti aggiuntivi elencati di seguito:
 
-- L'utente finale deve avere una licenza per [Office 365 Business o Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) collegata all'account Azure Active Directory. La sottoscrizione deve includere le app di Office nei dispositivi mobili e può includere un account di archiviazione cloud con [OneDrive for Business](https://onedrive.live.com/about/business/). È possibile assegnare licenze di Office 365 nell'[interfaccia di amministrazione di Microsoft 365](https://admin.microsoft.com) seguendo queste [istruzioni](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
+- L'utente finale deve avere una licenza per [App di Microsoft 365 Business o Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) collegata all'account Azure Active Directory. La sottoscrizione deve includere le app di Office nei dispositivi mobili e può includere un account di archiviazione cloud con [OneDrive for Business](https://onedrive.live.com/about/business/). È possibile assegnare licenze di Office 365 nell'[interfaccia di amministrazione di Microsoft 365](https://admin.microsoft.com) seguendo queste [istruzioni](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
 
 - L'utente finale deve aver configurato un percorso gestito usando la funzionalità Salva con nome granulare nell'impostazione dei criteri di protezione delle applicazioni "Salva copie dei dati dell'organizzazione". Se il percorso gestito è OneDrive, ad esempio, l'app [OneDrive](https://onedrive.live.com/about/) deve essere configurata nell'app Word, Excel o PowerPoint dell'utente finale.
 
@@ -190,7 +190,7 @@ Tali impostazioni, rese disponibili nella console di amministrazione di OneDrive
 
 Dopo l'abilitazione, le app OneDrive e SharePoint per iOS/iPadOS e Android vengono protette con le impostazioni selezionate per impostazione predefinita. Un professionista IT può modificare questi criteri nella console di Intune per aggiungere più app di destinazione, oltre che modificare qualsiasi impostazione dei criteri. 
 
-Per impostazione predefinita, può essere presente un solo criterio **globale** per ogni tenant. È comunque possibile usare le [API Graph di Intune](../developer/intune-graph-apis.md) per creare criteri globali aggiuntivi per ogni tenant, ma questa operazione non è consigliata. La creazione di criteri globali aggiuntivi non è consigliata perché la risoluzione dei problemi di implementazione di tali criteri può diventare complicata.
+Per impostazione predefinita, può essere presente un solo criterio **globale** per ogni tenant. È comunque possibile usare le [API Graph di Intune](../developer/intune-graph-apis.md) per creare criteri globali aggiuntivi per ogni tenant, ma questa operazione non è consigliata. La creazione di criteri globali aggiuntivi non è consigliata perché la risoluzione dei problemi di implementazione dei criteri può diventare complessa.
 
 Il criterio **globale** si applica a tutti gli utenti del tenant, ma qualsiasi criterio standard di protezione delle app di Intune sostituirà tali impostazioni.
 
@@ -251,7 +251,7 @@ Se si nota che il PIN viene cancellato in alcuni dispositivi, è probabile che s
 **Impostazione di due PIN in app dello stesso editore**<br>
 MAM (in iOS/iPadOS) consente attualmente un PIN a livello di applicazione con caratteri alfanumerici e caratteri speciali denominato "passcode", che richiede la partecipazione di applicazioni, ad esempio WXP, Outlook, Managed Browser, Yammer, per integrare [Intune SDK per iOS](../developer/app-sdk-ios.md). In caso contrario, le impostazioni del passcode non vengono applicate correttamente per le applicazioni di destinazione. Questa è una funzionalità rilasciata in Intune SDK per iOS versione 7.1.12.
 
-Per supportare questa funzionalità e garantire la compatibilità con le versioni precedenti di Intune SDK per iOS/iPadOS, tutti i PIN (numerici o passcode) nella versione 7.1.12 e versioni successive vengono gestiti separatamente dal PIN numerico nelle versioni precedenti dell'SDK. Pertanto, se un dispositivo dispone di applicazioni con le versioni di Intune SDK per iOS prima e dopo la versione 7.1.12 dallo stesso editore, è necessario impostare due PIN. I due PIN (per ogni app) non sono correlati in alcun modo, vale a dire che devono soddisfare i criteri di protezione delle app applicati all'app. Di conseguenza, *solo* se alle app A e B sono applicati gli stessi criteri (in riferimento al PIN), l'utente può configurare lo stesso PIN due volte. 
+Per supportare questa funzionalità e garantire la compatibilità con le versioni precedenti di Intune SDK per iOS/iPadOS, tutti i PIN (numerici o passcode) nella versione 7.1.12 e versioni successive vengono gestiti separatamente dal PIN numerico nelle versioni precedenti dell'SDK. Pertanto, se un dispositivo dispone di applicazioni con le versioni di Intune SDK per iOS prima e dopo la versione 7.1.12 dallo stesso editore, è necessario impostare due PIN. I due PIN (per ogni app) non sono correlati in alcun modo, ovvero devono soddisfare i criteri di protezione delle app applicati all'app. Di conseguenza, *solo* se alle app A e B sono applicati gli stessi criteri (in riferimento al PIN), l'utente può configurare lo stesso PIN due volte. 
 
 Questo comportamento è specifico per il PIN per le applicazioni iOS/iPadOS abilitate per la gestione delle app per dispositivi mobili di Intune. Nel corso del tempo, man mano che le applicazioni adottano versioni successive di Intune SDK per iOS/iPadOS, la necessità di impostare un PIN due volte per le app dello stesso editore diventa un problema minore. Vedere la nota di seguito per un esempio.
 
@@ -300,7 +300,7 @@ Se l'utente sta usando l'app quando viene avviata la cancellazione selettiva, [I
 La protezione delle app di Intune dipende dalla coerenza dell'identità dell'utente tra l'applicazione e [Intune SDK](../developer/app-sdk.md). L'unico modo per garantire questo scenario è tramite l'autenticazione moderna. Esistono scenari in cui le app possono funzionare con una configurazione locale, ma non sono garantiti, né coerenti.
 
 **Modo sicuro per aprire i collegamenti Web da app gestite**<br>
-L'amministratore IT può distribuire e impostare i criteri di protezione delle app per l'[app Intune Managed Browser](app-configuration-managed-browser.md), un Web browser sviluppato da Microsoft Intune che è possibile gestire facilmente con Intune. L'amministratore IT può richiedere che tutti i collegamenti Web nelle app gestite da Intune vengano aperti tramite l'app Managed Browser.
+L'amministratore IT può distribuire e impostare i criteri di protezione delle app per [Microsoft Edge](app-configuration-managed-browser.md), un Web browser che può essere facilmente gestito con Intune. L'amministratore IT può richiedere che tutti i collegamenti Web nelle app gestite da Intune vengano aperti tramite l'app Managed Browser.
 
 ## <a name="app-protection-experience-for-ios-devices"></a>Esperienza di protezione delle app per dispositivi iOS
 

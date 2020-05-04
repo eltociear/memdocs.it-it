@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c156e0d1b627d285c6654994d6114920f86b2bab
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 060fa4af918df05588a858a3883d0bbb96a99334
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80488049"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254674"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Gestire gli aggiornamenti software di Windows 10 in Intune
 
@@ -46,7 +46,7 @@ Per l'uso degli aggiornamenti di Windows per i dispositivi Windows 10 in Intune,
 
 - I PC Windows 10 devono eseguire le versioni di Windows 10 seguenti:
   - **Anelli di aggiornamento di Windows 10**: versione 1607 o successiva
-  - **Aggiornamenti delle funzionalità di Windows 10**: versione 1703 o successiva
+  - **Aggiornamenti delle funzionalità di Windows 10**: versione 1709 o successiva
 
 - Windows Update supporta le edizioni di Windows 10 seguenti:
   - Windows 10

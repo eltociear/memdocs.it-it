@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c047c0f54e64dbe17b6bd9e9082272e80fe7566c
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.openlocfilehash: 5657a26419280871e6739060509a72c4604fc3a7
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80401465"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82255014"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Novità di Microsoft Intune - mesi precedenti
 
@@ -222,7 +222,7 @@ Usare le credenziali derivate come metodo di autenticazione per i profili di con
 
 Per altre informazioni sullo standard, vedere [Derived PIV Credentials](https://www.nccoe.nist.gov/projects/building-blocks/piv-credentials) (Credenziali PIV derivate) nel sito www.nccoe.nist.gov.
 
-#### <a name="use-graph-api-to-specify-a-on-premises-user-principal-name-as-a-variable-for-scep-certificates----5437939----------"></a>Usare API Graph per specificare un nome dell'entità utente locale come variabile per i certificati SCEP<!--  5437939        -->  
+#### <a name="use-graph-api-to-specify-an-on-premises-user-principal-name-as-a-variable-for-scep-certificates----5437939----------"></a>Usare API Graph per specificare un nome dell'entità utente locale come variabile per i certificati SCEP<!--  5437939        -->  
 Quando si usa l'[API Graph di Intune](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-1.0), è possibile specificare onPremisesUserPrincipalName come variabile per il nome alternativo del soggetto (SAN) per i certificati SCEP.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->'
@@ -2011,7 +2011,7 @@ Agli utenti viene ora richiesto un PIN dopo la modifica dei dati biometrici nel 
 Questa funzionalità è disponibile solo per iOS e richiede la partecipazione delle applicazioni che integrano Intune APP SDK per iOS, versione 9.0.1 o successive. L'integrazione dell'SDK è necessaria in modo il comportamento possa essere imposto nelle applicazioni di destinazione. Questa integrazione avviene sistematicamente e dipende dai team delle applicazioni specifiche. Alcune app partecipanti sono WXP, Outlook, Managed Browser e Yammer.
 
 #### <a name="network-access-control-support-on-ios-vpn-clients---1333693---"></a>Supporto del controllo di accesso alla rete nei client VPN iOS<!-- 1333693 -->
-Con questo aggiornamento, è disponibile una nuova impostazione per abilitare il controllo di accesso alla rete quando si crea un profilo di configurazione VPN per Cisco AnyConnect, F5 Access e Citrix SSO per iOS. Questa impostazione consente di includere l'ID controllo di accesso alla rete del dispositivo nel profilo VPN. Non sono attualmente disponibili client VPN o soluzioni partner di controllo di accesso alla rete che supportano questo nuovo ID di controllo di accesso alla rete, ma quando lo saranno, verrà comunicato tramite il [post di blog del supporto](ttps://aka.ms/iOS12_and_vpn).
+Con questo aggiornamento, è disponibile una nuova impostazione per abilitare il controllo di accesso alla rete quando si crea un profilo di configurazione VPN per Cisco AnyConnect, F5 Access e Citrix SSO per iOS. Questa impostazione consente di includere l'ID controllo di accesso alla rete del dispositivo nel profilo VPN. Non sono attualmente disponibili client VPN o soluzioni partner di controllo di accesso alla rete che supportano questo nuovo ID di controllo di accesso alla rete, ma quando lo saranno, verrà comunicato tramite il [post di blog del supporto](https://aka.ms/iOS12_and_vpn).
 
 Per usare il controllo di accesso alla rete, sarà necessario:
 1. Acconsentire esplicitamente per permettere a Intune di includere gli ID dei dispositivi nei profili VPN
@@ -2200,7 +2200,7 @@ Per altre informazioni sulla modalità S, vedere [Ti presentiamo Windows 10 in m
 Si applica alla build [Windows Insider](https://docs.microsoft.com/windows-insider/at-work-pro/) più recente (durante l'anteprima).
 
 #### <a name="windows-defender-atp-configuration-package-automatically-added-to-configuration-profile---2144658---"></a>Pacchetto di configurazione Windows Defender ATP aggiunto automaticamente al profilo di configurazione<!-- 2144658 -->
-Quando vengono usati [Advanced Threat Protection e l'onboarding](../protect/advanced-threat-protection.md#onboard-devices-by-using-a-configuration-profile) in Intune, è necessario prima eseguire il download di un pacchetto di configurazione da aggiungere al profilo di configurazione. Con questo aggiornamento Intune ottiene il pacchetto automaticamente da Windows Defender Security Center e lo aggiunge al profilo.
+Quando vengono usati [Advanced Threat Protection e l'onboarding](../protect/advanced-threat-protection.md#onboard-windows-devices-by-using-a-configuration-profile) in Intune, è necessario prima eseguire il download di un pacchetto di configurazione da aggiungere al profilo di configurazione. Con questo aggiornamento Intune ottiene il pacchetto automaticamente da Windows Defender Security Center e lo aggiunge al profilo.
 Si applica a Windows 10 e versioni successive.
 
 #### <a name="require-users-to-connect-during-device-setup--2311457--"></a>Richiedere agli utenti di connettersi durante la configurazione del dispositivo<!--2311457-->
@@ -2530,7 +2530,7 @@ Nel pannello Tutti i dispositivi è ora possibile cercare codici IMEI e numeri d
 #### <a name="new-all-devices-filter-device-category---1878520---"></a>Nuovo filtro Tutti i dispositivi: Categoria del dispositivo<!-- 1878520 -->
 È ora possibile filtrare l'elenco **Tutti i dispositivi** per categoria di dispositivi. A tale scopo, scegliere **Dispositivi** > **Tutti i dispositivi** > **Filtro** > **Categoria del dispositivo**.
 
-#### <a name="use-teamviewer-to-screen-share-ios-and-macos-devices---1985547---"></a>Usare TeamViewer per condividere lo schermo dei dispositivi iOS e MacOS<!-- 1985547 -->
+#### <a name="use-teamviewer-to-screen-share-ios-and-macos-devices---1985547---"></a>Usare TeamViewer per condividere lo schermo dei dispositivi iOS e macOS<!-- 1985547 -->
 Gli amministratori ora possono connettersi a [TeamViewer](../remote-actions/teamviewer-support.md) e avviare un sessione di condivisione dello schermo con i dispositivi iOS e macOS. Gli utenti di iPhone, iPad e macOS possono condividere gli schermi in tempo reale con altri dispositivi mobili o desktop. 
 
 #### <a name="multiple-exchange-connector-support---2070451---"></a>Supporto di Exchange Connector multipli<!-- 2070451 -->
@@ -2935,7 +2935,7 @@ Tramite Azure Active Directory (Azure AD) è ora possibile limitare l'accesso ai
 L'app Portale aziendale per Android è stata aggiornata e resa conforme alle linee guida di Android [Material Design](https://material.io/). È possibile visualizzare le immagini delle nuove icone nell'articolo [Novità dell'interfaccia utente dell'app](whats-new-app-ui.md).
 
 #### <a name="company-portal-enrollment-improved---1874230-eeready--"></a>Registrazione con il Portale aziendale migliorata<!-- 1874230 eeready-->
-Gli utenti che registrano un dispositivo tramite il portale aziendale in Windows 10 build 1703 e successive possono ora completare il primo passaggio della registrazione senza uscire dall'app.
+Gli utenti che registrano un dispositivo tramite il portale aziendale in Windows 10 build 1709 e successive possono ora completare il primo passaggio della registrazione senza uscire dall'app.
 #### <a name="hololens-and-surface-hub-now-appear-in-device-lists--1725868---"></a>HoloLens e Surface Hub vengono ora visualizzati nell'elenco dei dispositivi<!--1725868 -->
 È stato aggiunto il supporto per la visualizzazione dei dispositivi HoloLens e Surface Hub registrati in Intune nell'app del portale aziendale per Android.
 
@@ -3574,7 +3574,7 @@ Dopo che il profilo è stato inviato al dispositivo, il passaggio successivo cam
 ### <a name="access-to-managed-app-logs-for-ios---1469920---"></a>Accesso ai log di app gestite per iOS<!-- 1469920 -->
 Gli utenti finali che hanno installato Managed Browser possono ora visualizzare lo stato di gestione di tutte le app pubblicate Microsoft e inviare i log per la risoluzione dei problemi delle app iOS gestite.
 
-Per altre informazioni su come abilitare la modalità di risoluzione dei problemi in Managed Browser in un dispositivo iOS, vedere [How to access to managed app logs using the Managed Browser on iOS](../apps/app-configuration-managed-browser.md#how-to-access-to-managed-app-logs-using-the-managed-browser-on-ios) (Come accedere a log di app gestite tramite Managed Browser in iOS).
+Per altre informazioni su come abilitare la modalità di risoluzione dei problemi in Managed Browser in un dispositivo iOS, vedere [How to access to managed app logs using the Managed Browser on iOS](../apps/app-configuration-managed-browser.md) (Come accedere a log di app gestite tramite Managed Browser in iOS).
 
 ### <a name="improvements-to-device-setup-workflow-in-the-company-portal-for-ios-in-version-290---1417174---"></a>Miglioramenti al flusso di lavoro di configurazione dei dispositivi in Portale aziendale per iOS (versione 2.9.0)<!-- 1417174 -->
 
@@ -4025,7 +4025,7 @@ In base ai suggerimenti dei clienti, l'app Portale aziendale per Android è stat
 In base ai suggerimenti degli utenti, nell'app Portale aziendale per Android è stata aggiunta a una nuova azione di menu per avviare la rimozione di Portale aziendale dal dispositivo. Questa azione rimuove il dispositivo dalla gestione di Intune in modo che l'utente possa rimuovere l'app dal dispositivo. È possibile visualizzare queste modifiche nella pagina [Novità dell'interfaccia utente dell'app](whats-new-app-ui.md) e nella [documentazione per gli utenti finali di Android](../user-help/unenroll-your-device-from-intune-android.md).
 
 ### <a name="improvements-to-app-syncing-with-windows-10-creators-update--676505--"></a>Miglioramenti alla sincronizzazione di app con Windows 10 Creators Update<!--676505-->
-L'app Portale aziendale per Windows 10 avvierà ora automaticamente una sincronizzazione per le richieste di installazione di app per dispositivi con Windows 10 Creators Update (1703). Ciò consente di limitare il problema di installazione di app quando lo stato è "In attesa di sincronizzazione". Inoltre, gli utenti saranno in grado di avviare manualmente la sincronizzazione all'interno dell'app. È possibile visualizzare queste modifiche nella pagina delle [novità dell'interfaccia utente dell'app](whats-new-app-ui.md).
+L'app Portale aziendale per Windows 10 avvierà ora automaticamente una sincronizzazione per le richieste di installazione di app per dispositivi con Windows 10 Creators Update (1709). Ciò consente di limitare il problema di installazione di app quando lo stato è "In attesa di sincronizzazione". Inoltre, gli utenti saranno in grado di avviare manualmente la sincronizzazione all'interno dell'app. È possibile visualizzare queste modifiche nella pagina delle [novità dell'interfaccia utente dell'app](whats-new-app-ui.md).
 
 ### <a name="new-guided-experience-for-windows-10-company-portal---1058938---"></a>Nuova esperienza guidata per il Portale aziendale di Windows 10<!---1058938--->
 L'app Portale aziendale per Windows 10 includerà un'esperienza interattiva della procedura dettagliata Intune per i dispositivi che non sono stati identificati o registrati. La nuova esperienza fornisce istruzioni dettagliate che guidano l'utente nella fase di registrazione in Azure Active Directory (obbligatoria per le funzionalità di accesso condizionale) e la registrazione in MDM (obbligatoria per le funzionalità di gestione dei dispositivi). L'esperienza interattiva sarà accessibile dalla home page di Portale aziendale. Gli utenti possono continuare a usare l'app se non completano la registrazione, ma le funzionalità saranno limitate.

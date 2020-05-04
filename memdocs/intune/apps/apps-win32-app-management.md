@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee632901162042f7d777043e6700b796b4badf58
-ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
+ms.openlocfilehash: 8d1933350675a0d36042d1a4bd1e6a26c9a95814
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80620604"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254606"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Intune autonomo - Gestione di app Win32
 
@@ -357,6 +357,11 @@ L'app Portale aziendale mostra inoltre i messaggi aggiuntivi sullo stato dell'in
 ## <a name="set-win32-app-availability-and-notifications"></a>Impostare la disponibilità e le notifiche delle app Win32
 È possibile configurare l'ora di inizio e l'ora di scadenza per un'app Win32. All'ora di inizio, l'estensione di gestione di Intune avvia il download del contenuto dell'app e lo memorizza nella cache. L'app viene installata all'ora di scadenza. Per le app disponibili, l'ora di inizio determina quando l'app sarà visibile nel Portale aziendale e il contenuto verrà scaricato quando l'utente finale richiede l'app dal Portale aziendale. È anche possibile abilitare un periodo di tolleranza per il riavvio. 
 
+> [!IMPORTANT]
+> L'impostazione **Periodo di tolleranza per il riavvio** nella sezione **Assegnazione** è disponibile solo quando **Comportamento riavvio dispositivo** della sezione **Programma** è impostato su una delle opzioni seguenti:
+> - **Determinare il comportamento in base ai codici restituiti**
+> - **Intune forzerà il riavvio obbligatorio del dispositivo**
+
 Impostare la disponibilità dell'app in base a una data e un'ora per un'app obbligatoria seguendo questa procedura:
 
 1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
@@ -405,6 +410,8 @@ I log dell'agente nel computer client si trovano in genere in `C:\ProgramData\Mi
 > **Nei computer client X86**:<br>
 > *C:\Programmi\Microsoft Intune Management Extension\Content*<br>
 > *C:\windows\IMECache*
+>
+> Per altre informazioni, vedere [Raccomandazioni per la ricerca di virus per computer aziendali che eseguono versioni attualmente supportate di Windows](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers).
 
 ### <a name="detecting-the-win32-app-file-version-using-powershell"></a>Rilevare la versione del file dell'app Win32 con PowerShell
 

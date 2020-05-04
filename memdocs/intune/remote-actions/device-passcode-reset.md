@@ -16,18 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87cfb3edf860cfc9de9c479a13dd1ea3fa54e599
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: ef7a076c0a41e84e0028da6655569401f334772c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326467"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078975"
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>Reimpostare o rimuovere il passcode di un dispositivo in Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Questo documento illustra sia la reimpostazione del passcode a livello di dispositivo sia la reimpostazione del passcode del profilo di lavoro nei dispositivi Android Enterprise, chiamati in precedenza dispositivi Android for Work o AfW. È importante tenere presente questa distinzione, perché i requisiti per le due procedure possono variare. Una reimpostazione del passcode a livello di dispositivo reimposta il passcode per l'intero dispositivo. Una reimpostazione del passcode del profilo lavoro reimposta il passcode solo per il profilo di lavoro dell'utente nei dispositivi Android Enterprise.
+Questo documento illustra sia la reimpostazione del passcode a livello di dispositivo sia la reimpostazione del passcode del profilo di lavoro nei dispositivi Android Enterprise, chiamati in precedenza dispositivi Android for Work o AfW. È importante tenere presente questa distinzione, perché i requisiti per le due procedure possono variare. Una reimpostazione del passcode a livello di dispositivo reimposta il passcode per l'intero dispositivo. Una reimpostazione del passcode del profilo di lavoro reimposta il passcode solo per il profilo di lavoro dell'utente nei dispositivi Android Enterprise.
 
 ## <a name="supported-platforms-for-device-level-passcode-reset"></a>Piattaforme supportate per la reimpostazione del passcode a livello di dispositivo
 
@@ -59,13 +59,15 @@ Per creare un nuovo passcode del profilo di lavoro, usare l'azione di Reimposta 
 
 1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) con uno dei ruoli seguenti: Amministratore globale di Azure Active Directory, amministratore del servizio Intune per Azure Active Directory, operatore del supporto tecnico o amministratore dei ruoli.
 2. Selezionare **Dispositivi** e quindi selezionare **Tutti i dispositivi**.
-3. Nell'elenco dei dispositivi gestiti selezionare un dispositivo e scegliere **Rimuovi passcode**.
+3. Nell'elenco dei dispositivi gestiti selezionare un dispositivo e scegliere **Reimposta passcode**.
 
-## <a name="reset-android-work-profile-passcodes"></a>Reimpostare i passcode dei profili di lavoro Android
+## <a name="reset-android-work-profile-and-device-owner-passcodes"></a>Reimpostare i passcode del proprietario del dispositivo e del profilo di lavoro Android
 
 I dispositivi Android Enterprise supportati registrati con un profilo di lavoro ricevono una nuova password per lo sblocco del profilo gestito o una richiesta di profilo gestito per l'utente finale.
 
-Nei dispositivi Android Enterprise che eseguono la versione 8. x o successive, e registrati con un profilo di lavoro, gli utenti finali vengono avvisati di attivare la reimpostazione del passcode non appena la registrazione viene completata. La notifica viene visualizzata se la password di un profilo di lavoro è necessaria e impostata. Dopo l'immissione del passcode, la notifica viene chiusa.
+Nei dispositivi con profilo di lavoro Android Enterprise che eseguono la versione 8. x o successiva gli utenti finali ricevono una notifica che indica di attivare la reimpostazione del passcode non appena la registrazione viene completata. La notifica viene visualizzata se la password di un profilo di lavoro è necessaria e impostata. Dopo l'immissione del passcode, la notifica viene chiusa.
+
+Per i dispositivi con proprietario del dispositivo o profilo di lavoro Android Enterprise che eseguono la versione 8.x o successiva, selezionata la reimpostazione del passcode dalla console, l'amministratore Intune di MEM visualizza un passcode temporaneo. Il passcode temporaneo deve essere immesso nel dispositivo. Il passcode temporaneo per il dispositivo verrà visualizzato nella console per 7 giorni.
 
 
 ## <a name="remove-iosipados-passcodes"></a>Rimuovere i passcode iOS/iPadOS

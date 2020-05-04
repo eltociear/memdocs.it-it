@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 04/10/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a063baf405c9f9886718242f48a47e1e5fe68f5
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 1640928bfb1ca27d4ee72e014adad88db0976a2d
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324511"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078332"
 ---
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>Come cancellare solo i dati aziendali dalle app gestite da Intune
 
@@ -40,9 +40,9 @@ Per rimuovere selettivamente i dati delle app aziendali, creare una richiesta di
 > I contatti sincronizzati direttamente dall'app alla Rubrica nativa vengono rimossi. Tutti i contatti sincronizzati dalla Rubrica nativa a un'altra origine esterna non possono essere cancellati. Attualmente questa opzione è disponibile solo per l'app Microsoft Outlook.
 
 ## <a name="deployed-wip-policies-without-user-enrollment"></a>Criteri WIP distribuiti senza registrazione dell'utente
-I criteri di Windows Information Protection (WIP) possono essere distribuiti senza richiedere agli utenti MDM di registrare il dispositivo Windows 10. Questa configurazione non solo consente alle società di proteggere i documenti aziendali in base alla configurazione WIP, ma permette anche agli utenti di continuare a gestire i dispositivi Windows. Quando i documenti sono protetti da un criterio WIP, i dati protetti possono essere cancellati in modo selettivo da un amministratore di Intune. Selezionando l'utente e il dispositivo e inviando una richiesta di cancellazione, tutti i dati protetti tramite i criteri WIP non saranno più utilizzabili. Da Intune nel portale di Azure selezionare **App client** > **Cancellazione selettiva di app**. Per altre informazioni, vedere [Creare e distribuire criteri di protezione delle app Windows Information Protection (WIP) con Intune](windows-information-protection-policy-create.md).
+I criteri di Windows Information Protection (WIP) possono essere distribuiti senza richiedere agli utenti MDM di registrare il dispositivo Windows 10. Questa configurazione non solo consente alle società di proteggere i documenti aziendali in base alla configurazione WIP, ma permette anche agli utenti di continuare a gestire i dispositivi Windows. Quando i documenti sono protetti da un criterio WIP, i dati protetti possono essere cancellati in modo selettivo da un amministratore di Intune ([amministratore globale o amministratore del servizio Intune](../fundamentals/users-add.md#types-of-administrators)). Selezionando l'utente e il dispositivo e inviando una richiesta di cancellazione, tutti i dati protetti tramite i criteri WIP non saranno più utilizzabili. Da Intune nel portale di Azure selezionare **App client** > **Cancellazione selettiva di app**. Per altre informazioni, vedere [Creare e distribuire criteri di protezione delle app Windows Information Protection (WIP) con Intune](windows-information-protection-policy-create.md).
 
-## <a name="create-a-wipe-request"></a>Creare una richiesta di cancellazione
+## <a name="create-a-device-based-wipe-request"></a>Creare una richiesta di cancellazione basata su dispositivo
 
 1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selezionare **App** > **Cancellazione selettiva di app** > **Crea una richiesta di cancellazione dati**.<br>
@@ -61,6 +61,16 @@ Il servizio crea e tiene traccia di una richiesta di cancellazione dati separata
 
    ![Screenshot del riquadro "App client - Cancellazione selettiva di app"](./media/apps-selective-wipe/apps-selective-wipe-03.png)
 
+## <a name="create-a-user-based-wipe-request"></a>Creare una richiesta di cancellazione basata sull'utente
+
+Se si aggiunge un utente alla cancellazione a livello di utente, i comandi di cancellazione verranno automaticamente inviati a tutte le app in tutti i dispositivi dell'utente.  A ogni sincronizzazione, l'utente continuerà a ricevere i comandi di cancellazione provenienti da tutti i dispositivi.  Per riabilitare un utente, è necessario rimuoverlo dall'elenco.  
+
+1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Selezionare **App** > **Cancellazione selettiva di app** > **Crea una richiesta di cancellazione dati**.<br>
+   Selezionare **User-Level Wipe** (Cancellazione a livello di utente)
+3. Fare clic su **Aggiungi**. Viene visualizzato il riquadro **Seleziona utente**.
+4. Scegliere l'utente per cui si vogliono cancellare i dati dell'app e fare clic su **Seleziona**.
+
 ## <a name="monitor-your-wipe-requests"></a>Monitorare le richieste di cancellazione dati
 
 È possibile avere un report di riepilogo che mostra lo stato generale della richiesta di cancellazione dati e indica il numero di richieste in sospeso ed errori. Per ottenere ulteriori dettagli, seguire questa procedura:
@@ -74,7 +84,7 @@ Sarà anche possibile visualizzare il nome e il tipo del dispositivo, utili dura
 >[!IMPORTANT]
 > L'utente deve aprire l'app affinché venga eseguita la cancellazione dati e l'operazione può richiedere fino a 30 minuti dopo la richiesta.
 
-## <a name="delete-a-wipe-request"></a>Eliminare una richiesta di cancellazione dati
+## <a name="delete-a-device-wipe-request"></a>Eliminare una richiesta di cancellazione dati del dispositivo
 
 Le cancellazioni dati con stato in sospeso rimangono visualizzate fino all'eliminazione manuale. Per eliminare manualmente una richiesta di cancellazione dati:
 
@@ -85,6 +95,14 @@ Le cancellazioni dati con stato in sospeso rimangono visualizzate fino all'elimi
     ![Screenshot dell'elenco di richieste di cancellazione dati nel riquadro Cancellazione selettiva di app](./media/apps-selective-wipe/delete-wipe-request.png)
 
 3. Viene chiesto di confermare l'eliminazione, scegliere **Sì** o **No**, quindi fare clic su **OK**.
+
+## <a name="delete-a-user-wipe-request"></a>Eliminare una richiesta di cancellazione dati dell'utente
+
+Le cancellazioni degli utenti resteranno nell'elenco fino a quando non vengono rimosse da un amministratore. Per rimuovere un utente dall'elenco:
+
+1. Nel riquadro **App client - Cancellazione selettiva di app** selezionare **User-Level Wipe** (Cancellazione a livello di utente).
+2. Nell'elenco fare clic con il pulsante destro del mouse sull'utente che si vuole eliminare, quindi scegliere **Elimina**. 
+
 
 ## <a name="see-also"></a>Vedere anche
 [Che cos'è un criterio di protezione delle app?](app-protection-policy.md)

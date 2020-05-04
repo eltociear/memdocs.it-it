@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 237e281b88492ff7b7e1b5614600662e15761935
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 4babd715df08a905a5ceed6ec881cbfe07f5de19
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407832"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82209874"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Impostazioni dei dispositivi Windows 10 (e versioni successive) per consentire o limitare l'uso delle funzionalità tramite Intune
 
@@ -81,11 +81,13 @@ Queste impostazioni usano il [provider di servizi di configurazione dei criteri 
 
   [ApplicationManagement/AllowGameDVR CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowgamedvr)
 
-- **App solo dallo Store**: questa impostazione determina l'esperienza utente quando gli utenti installano app da posizioni diverse da Microsoft Store. Le opzioni disponibili sono:
+- **App solo dallo Store**: questa impostazione determina l'esperienza utente quando gli utenti installano app da posizioni diverse da Microsoft Store. Non impedisce l'installazione di contenuto da dispositivi USB, condivisioni di rete o altre origini non Internet. Usare un browser attendibile per assicurarsi che queste protezioni funzionino come previsto.
+
+  Le opzioni disponibili sono:
 
   - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti finali di installare app da posizioni diverse da Microsoft Store, incluse le app definite in altre impostazioni di criteri.  
   - **Ovunque**: disattiva i consigli per le app e consente agli utenti di installare le app da qualsiasi percorso.  
-  - **Solo Store**: impone agli utenti finali di installare le app solo da Microsoft Store.
+  - **Solo Store**: La finalità è impedire che i contenuti dannosi influiscano sui dispositivi degli utenti durante il download del contenuto eseguibile da Internet. Quando gli utenti tentano di installare app da Internet, l'installazione è bloccata. Gli utenti visualizzano un messaggio che consiglia di scaricare le app dal Microsoft Store.
   - **Consigli**: quando si installa un'app dal Web che è disponibile in Microsoft Store, gli utenti visualizzano un messaggio che consiglia il download dallo Store.  
   - **Preferenza allo Store**: avvisa gli utenti quando installano app da posizioni diverse da Microsoft Store.
 
@@ -140,10 +142,14 @@ Queste impostazioni usano il [provider di servizi di configurazione per i criter
 
 Queste impostazioni usano il [provider di servizi di configurazione per i criteri relativi agli account](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-accounts), che elenca anche le edizioni di Windows supportate.
 
+> [!IMPORTANT]
+> Il blocco o la disabilitazione di queste impostazioni dell'account Microsoft può influire sugli scenari di registrazione che richiedono l'accesso ad Azure AD da parte degli utenti. Ad esempio, si usa la modalità [White Glove per Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove). In genere, gli utenti visualizzano una finestra di accesso di Azure AD. Quando queste impostazioni sono impostate su **Blocca** o **Disabilita**, è possibile che l'opzione di accesso ad Azure AD non venga visualizzata. Viene invece richiesto agli utenti di accettare il contratto di licenza e creare un account locale e questo potrebbe non essere il risultato sperato.
+
 - **Account Microsoft**: **Blocca** impedisce agli utenti finali di associare un account Microsoft al dispositivo. L'impostazione **Non configurata** (predefinita) consente l'aggiunta e l'uso di un account Microsoft.
+
 - **Account non Microsoft**: **Blocca** impedisce agli utenti finali di aggiungere account non Microsoft tramite l'interfaccia utente. L'impostazione **Non configurata** (predefinita) consente agli utenti di aggiungere account di posta elettronica che non sono associati a un account Microsoft.
 - **Sincronizzazione delle impostazioni per l'account Microsoft**: **Non configurato** (impostazione predefinita) consente la sincronizzazione fra i dispositivi delle impostazioni delle app e dei dispositivi associati a un account Microsoft. **Blocca** impedisce la sincronizzazione.
-- **Assistente per l'accesso all'account Microsoft**: con l'impostazione predefinita **Non configurato** gli utenti finali possono avviare e arrestare il servizio **Assistente per l'accesso all'account Microsoft** (wlidsvc). Questo servizio del sistema operativo consente agli utenti di accedere al proprio account Microsoft. **Disabilita** impedisce agli utenti finali di controllare il servizio Assistente per l'accesso all'account Microsoft (wlidsvc).
+- **Assistente per l'accesso all'account Microsoft**: con l'impostazione predefinita **Non configurato** gli utenti finali possono avviare e arrestare il servizio **Assistente per l'accesso all'account Microsoft** (wlidsvc). Questo servizio del sistema operativo consente agli utenti di accedere al proprio account Microsoft. **Disabilita** consente di configurare il servizio Assistente per l'accesso (wlidsvc) di Microsoft in modo che sia disabilitato e impedisce agli utenti finali di avviarlo manualmente.
 
 ## <a name="cloud-printer"></a>Stampante cloud
 
@@ -669,7 +675,7 @@ Queste impostazioni usano il [provider di servizi di configurazione per i criter
 
 ## <a name="microsoft-defender-smart-screen"></a>Microsoft Defender SmartScreen
 
-- **SmartScreen per Microsoft Edge**: **Rendi obbligatorio** disattiva Microsoft Defender SmartScreen e impedisce agli utenti di riattivarlo. L'impostazione **Non configurata** (predefinita) attiva SmartScreen. Consente di proteggere gli utenti da minacce potenziali e impedisce agli utenti di disattivarla.
+- **SmartScreen per Microsoft Edge**: **Rendi obbligatorio** attiva Microsoft Defender SmartScreen e impedisce agli utenti di disattivarlo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo può attivare SmartScreen e consentire agli utenti di attivarlo e disattivarlo.
 
   Microsoft Edge usa Microsoft Defender SmartScreen (attivato) per proteggere gli utenti da potenziali tentativi di phishing e software dannoso.
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/16/2020
+ms.date: 04/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e6a3152966dee507cde690d9be8f5a7e210c7945
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 7e584019063c6af7f04f5666ba2c38d8199681c5
+ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407744"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81771420"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Come personalizzare le app Portale aziendale Intune, il sito Web Portale aziendale e l'app Intune
 
@@ -31,7 +31,7 @@ Le app Portale aziendale, il sito Web Portale aziendale e l'app Intune in Androi
 
 ## <a name="customizing-the-user-experience"></a>Personalizzazione dell'esperienza utente
 
-Con la personalizzazione dell'esperienza utente finale sarà possibile offrire agli utenti finali un'esperienza familiare e utile. A questo scopo, passare all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), selezionare **Amministrazione del tenant** > **Personalizzazione** e quindi configurare le impostazioni necessarie. Queste impostazioni si applicano alle app Portale aziendale, al sito Web Portale aziendale e all'app Intune in Android.
+Con la personalizzazione dell'esperienza utente finale sarà possibile offrire agli utenti finali un'esperienza familiare e utile. A tale scopo, andare all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) e selezionare **Amministrazione tenant** > **Personalizzazione**, dove è possibile modificare i criteri predefiniti o creare fino a 10 criteri di gruppo mirati. Queste impostazioni si applicano alle app Portale aziendale, al sito Web Portale aziendale e all'app Intune in Android.
 
 ## <a name="branding"></a>Personalizzazione
 
@@ -93,6 +93,7 @@ La tabella seguente offre ulteriori dettagli di configurazione:
 | URL dell'informativa sulla privacy | 79 | Impostare l'informativa sulla privacy dell'organizzazione in modo che venga visualizzata quando gli utenti fanno clic sui collegamenti per la privacy. Immettere un URL valido nel formato `https://www.contoso.com`. |
 | Messaggio sulla privacy nel Portale aziendale per iOS/iPadOS | 520 | Mantenere il valore predefinito o impostare un messaggio personalizzato per elencare gli elementi che l'organizzazione può o non può visualizzare nei dispositivi iOS/iPadOS gestiti. È possibile usare il markdown per aggiungere punti elenco, grassetto, corsivo e collegamenti. |
 | Registrazione del dispositivo | N/D | Specificare se e in che modo richiedere agli utenti di registrarsi nella gestione dei dispositivi mobili. I dettagli sono forniti di seguito. |
+| Notifica relativa alla proprietà del dispositivo | N/D | Inviare una notifica push agli utenti del portale aziendale sia Android che iOS quando il tipo di proprietà del dispositivo cambia da personale ad aziendale. Per impostazione predefinita, questa notifica push è disattivata. Quando la proprietà del dispositivo è impostata su aziendale, Intune ha un accesso più ampio al dispositivo, che include l'inventario completo delle app, la rotazione delle chiavi FileVault, il recupero dei numeri di telefono e alcune azioni remote selezionate. Per altre informazioni, vedere [Modificare la proprietà del dispositivo](../enrollment/corporate-identifiers-add.md#change-device-ownership).  |
 
 ### <a name="device-enrollment-setting-options"></a>Opzioni di impostazione della registrazione dei dispositivi
 
@@ -188,7 +189,7 @@ Alcune piattaforme e configurazioni non consentono azioni self-service nel dispo
 <sup>(4)</sup> La **ridenominazione** modifica solo il nome del dispositivo nell'app Portale aziendale o nel portale Web, non nel dispositivo.<br>
 <sup>(5)</sup> La **cancellazione** non è disponibile nei dispositivi iOS/iPadOS registrati dall'utente.<br>
 <sup>(6)</sup> La **reimpostazione del passcode** non è supportata in alcune configurazioni di Android e Android Enterprise. Per altre informazioni, vedere [Reimpostare o rimuovere il passcode di un dispositivo in Intune](../remote-actions/device-passcode-reset.md).<br>
-<sup>(7)</sup> Il **ritiro** e la **cancellazione** non sono disponibili in scenari di proprietari di dispositivi Android Enterprise (COPE, COBO, COSU).<br> 
+<sup>(7)</sup> Il **ritiro** e la **cancellazione** non sono disponibili in scenari di proprietari di dispositivi Android Enterprise (COPE, COBO, COSU).<br>
 <sup>(8)</sup> La **reimpostazione del passcode** non è supportata nei dispositivi iOS/iPadOS registrati dall'utente.
 
 ## <a name="next-steps"></a>Passaggi successivi

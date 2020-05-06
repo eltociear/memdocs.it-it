@@ -10,12 +10,12 @@ ms.assetid: eab0e09d-b09e-4c14-ab14-c5f87472522e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 075d371a334f26a788c656fe85ec01ae2338eb26
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 91434b70ca514430ab4cfd6815186bc6d6bc33db
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074827"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82210129"
 ---
 # <a name="planning-for-certificate-template-permissions-for-certificate-profiles-in-configuration-manager"></a>Pianificazione per autorizzazioni modello di certificato per profili certificato in Configuration Manager
 
@@ -40,7 +40,7 @@ Le informazioni seguenti illustrano come pianificare la modalità di configurazi
 ## <a name="adding-read-and-enroll-permissions-for-users-and-computers"></a>Aggiunta di autorizzazioni Lettura e Registrazione per utenti e computer  
  L'aggiunta di autorizzazioni di lettura e registrazione potrebbe essere appropriata se un team separato gestisce il team dell'infrastruttura dell'autorità di certificazione (CA) e tale team separato vuole che Configuration Manager verifichi che gli utenti dispongano di un account Active Directory Domain Services valido prima di inviare loro un profilo certificato per richiedere un certificato utente. Per questa configurazione è necessario specificare uno o più gruppi di protezione che contengono gli utenti e quindi concedere loro le autorizzazioni Lettura e Registrazione nei modelli di certificato. In questo scenario, l'amministratore CA gestisce il controllo di protezione.  
 
- Nello stesso modo è possibile specificare uno o più gruppi di protezione che contengono gli utenti e concedono loro le autorizzazioni Lettura e Registrazione nei modelli di certificato. Se si distribuisce un profilo certificato del computer a un computer appartenente a un dominio, all'account di quel computer devono essere concesse le autorizzazioni Lettura e Registrazione. Queste autorizzazioni non sono necessarie se il computer non appartiene a un dominio, ad esempio se è un computer del gruppo di lavoro o un dispositivo mobile personale.  
+ Nello stesso modo è possibile specificare uno o più gruppi di protezione che contengono gli utenti e concedono loro le autorizzazioni Lettura e Registrazione nei modelli di certificato. Se si distribuisce un profilo certificato del computer a un computer appartenente a un dominio, all'account di quel computer devono essere concesse le autorizzazioni Lettura e Registrazione. Queste autorizzazioni non sono necessarie se il computer non è un membro del dominio. Ad esempio, nel caso di un computer di gruppo di lavoro o di un dispositivo mobile personale.  
 
  Sebbene questa configurazione utilizzi un controllo di protezione aggiuntivo, non è raccomandata come procedura consigliata. Il motivo è che gli utenti o proprietari specificati dei dispositivi potrebbero richiedere i certificati indipendentemente da Configuration Manager e specificare valori per l'oggetto del certificato che potrebbero essere usati per rappresentare un altro utente o dispositivo.  
 

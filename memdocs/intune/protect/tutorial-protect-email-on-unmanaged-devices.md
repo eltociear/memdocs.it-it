@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 04/30/2020
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 70f6e3d3fcd0a5f65866e43198b499b321aab836
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 4f32ced29b6bb53f8c091ba1a0f42261a2baa493
+ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079043"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82605219"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>Esercitazione: Proteggere la posta elettronica di Exchange Online nei dispositivi non gestiti
 
@@ -95,7 +95,6 @@ In questa esercitazione si imposteranno criteri di protezione delle app di Intun
    Fare clic su **Avanti** per continuare.
 
 8. Usare la pagina **Assegnazioni** per assegnare i criteri di protezione delle app a gruppi di utenti. Per questa esercitazione non verranno assegnati questi criteri a un gruppo.  
- Non è necessario configurare queste impostazioni.
 
    Fare clic su **Avanti** per continuare.
 

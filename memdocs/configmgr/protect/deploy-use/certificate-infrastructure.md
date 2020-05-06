@@ -10,12 +10,12 @@ ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ca500ebbbbf8b2672492fec383feab49bfea0a52
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 590c6fd336ec19949b5f5b99b25b3104524a52d6
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074997"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82210112"
 ---
 # <a name="configure-certificate-infrastructure"></a>Configurare l'infrastruttura di certificazione
 
@@ -34,7 +34,7 @@ Usare questi passaggi per configurare l'infrastruttura per i certificati SCEP o 
 
 ### <a name="to-install-and-configure-the-network-device-enrollment-service-and-dependencies"></a>Per installare e configurare il servizio Registrazione dispositivi di rete e le dipendenze  
 
-1. Su un server che esegue Windows Server 2012 R2, installare e configurare il ruolo servizio Registrazione dispositivi di rete per il ruolo del server Servizi certificati Active Directory. Per altre informazioni, vedere [Informazioni aggiuntive sul servizio Registrazione dispositivi di rete](https://go.microsoft.com/fwlink/p/?LinkId=309016) nella libreria Servizi certificati Active Directory in TechNet.  
+1. Su un server che esegue Windows Server 2012 R2, installare e configurare il ruolo servizio Registrazione dispositivi di rete per il ruolo del server Servizi certificati Active Directory. Per altre informazioni, vedere [Linee guida per il Servizio Registrazione dispositivi di rete](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\)).
 
 2. Controllare e, se necessario, modificare le autorizzazioni di sicurezza per i modelli di certificato usati dal servizio Registrazione dispositivi di rete:  
 
@@ -44,7 +44,7 @@ Usare questi passaggi per configurare l'infrastruttura per i certificati SCEP o 
 
    -   Per l'account del servizio SCEP usato dal pool di applicazioni del servizio Registrazione dispositivi di rete: autorizzazioni **Lettura** e **Registrazione**.  
 
-        Questo non è un requisito specifico di Configuration Manager ma è parte della configurazione del servizio Registrazione dispositivi di rete. Per altre informazioni, vedere [Informazioni aggiuntive sul servizio Registrazione dispositivi di rete](https://go.microsoft.com/fwlink/p/?LinkId=309016) nella libreria Servizi certificati Active Directory in TechNet.  
+        Questo non è un requisito specifico di Configuration Manager ma è parte della configurazione del servizio Registrazione dispositivi di rete. Per altre informazioni, vedere [Linee guida per il Servizio Registrazione dispositivi di rete](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\)).  
 
    > [!TIP]  
    >  Per identificare i modelli di certificato usati dal servizio Registrazione dispositivi di rete, visualizzare la seguente chiave del Registro di sistema sul server che esegue il servizio Registrazione dispositivi di rete: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP.  
@@ -69,7 +69,7 @@ Usare questi passaggi per configurare l'infrastruttura per i certificati SCEP o 
 
    - Impostare la chiave **MaxRequestBytes** su **16777216**.  
 
-     Per altre informazioni, vedere l'articolo [820129: Impostazioni del Registro di sistema Http.sys per Windows](https://go.microsoft.com/fwlink/?LinkId=309013) nella Microsoft Knowledge Base.  
+     Per altre informazioni, vedere l'articolo del supporto tecnico Microsoft[820129: Impostazioni del Registro di sistema Http.sys per Windows](https://support.microsoft.com/help/820129).
 
 6. Sullo stesso server, in Gestione Internet Information Services (IIS), modificare le impostazioni del filtro richieste per l'applicazione /certsrv/mscep, quindi riavviare il server. Nella finestra di dialogo **Modifica impostazioni di filtro richieste** , verificare che le impostazioni **Limiti richiesta** corrispondano alle seguenti:  
 
@@ -79,7 +79,7 @@ Usare questi passaggi per configurare l'infrastruttura per i certificati SCEP o 
 
    - **Lunghezza massima stringa di query in (byte)** : **65534**  
 
-     Per altre informazioni su queste impostazioni e sulla loro configurazione, vedere [Limiti richiesta](https://go.microsoft.com/fwlink/?LinkId=309014) nella Raccolta informazioni di riferimento IIS.  
+     Per altre informazioni su queste impostazioni e sulla loro configurazione, vedere [Limiti richiesta di IIS](https://docs.microsoft.com/iis/configuration/system.webServer/security/requestFiltering/requestLimits/).
 
 7. Per poter richiedere un certificato il cui periodo di validità è inferiore a quello del modello di certificato in uso: Questa configurazione è disabilitata per impostazione predefinita da una CA globale (enterprise). Per abilitare questa opzione in una CA globale (enterprise), usare lo strumento della riga di comando Certutil, quindi arrestare e riavviare il servizio certificati usando i seguenti comandi:  
 
@@ -89,9 +89,9 @@ Usare questi passaggi per configurare l'infrastruttura per i certificati SCEP o 
 
    3. **net start certsvc**  
 
-      Per altre informazioni, vedere [Strumenti e impostazioni servizi certificati](https://go.microsoft.com/fwlink/p/?LinkId=309015) nella libreria PKI Technologies in TechNet.  
+      Per altre informazioni, vedere [Strumenti e impostazioni di Servizi certificati](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc780742\(v=ws.10\)).
 
-8. Verificare che il servizio Registrazione dispositivi di rete sia in funzione usando il collegamento seguente come esempio: **https://server.contoso.com/certsrv/mscep/mscep.dll** . Verrà visualizzata la pagina Web incorporata del servizio Registrazione dispositivi di rete. Questa pagina Web illustra il servizio e spiega che i dispositivi di rete usano l'URL per inviare richieste di certificati.  
+8. Verificare che il servizio Registrazione dispositivi di rete sia in funzione usando il collegamento seguente come esempio: `https://server.contoso.com/certsrv/mscep/mscep.dll`. Verrà visualizzata la pagina Web incorporata del servizio Registrazione dispositivi di rete. Questa pagina Web illustra il servizio e spiega che i dispositivi di rete usano l'URL per inviare richieste di certificati.  
 
    Ora che il servizio Registrazione dispositivi di rete e le dipendenze sono configurate, è possibile installare e configurare il punto di registrazione certificati.
 
@@ -125,7 +125,7 @@ Usare questi passaggi per configurare l'infrastruttura per i certificati SCEP o 
    - Se si è selezionata l'opzione **Elabora le richieste di certificati SCEP**, configurare quanto segue:
      -   **Nome sito Web**, **Numero porta HTTPS** e **Nome dell'applicazione virtuale** per il punto di registrazione certificati. In questi campi vengono inseriti automaticamente i valori predefiniti. 
      -   **URL per il servizio di registrazione dispositivi di rete e il certificato CA radice**: fare clic su **Aggiungi** e nella finestra di dialogo **Aggiungi URL e certificato CA radice** specificare quanto segue:
-         - **URL per il servizio di registrazione dispositivi di rete**: Specificare l'URL nel formato seguente: https:// *<FQDN_server>* /certsrv/mscep/mscep.dll. Ad esempio, se il nome FQDN del server che esegue il servizio Registrazione dispositivi di rete è server1.contoso.com, digitare **https://server1.contoso.com/certsrv/mscep/mscep.dll** .
+         - **URL per il servizio di registrazione dispositivi di rete**: Specificare l'URL nel formato seguente: https:// *<FQDN_server>* /certsrv/mscep/mscep.dll. Ad esempio, se il nome FQDN del server che esegue il servizio Registrazione dispositivi di rete è server1.contoso.com, digitare `https://server1.contoso.com/certsrv/mscep/mscep.dll`.
          - **Certificato CA radice**: Individuare e selezionare il file del certificato (CER) creato e salvato nel **passaggio 1: Installare e configurare il servizio Registrazione dispositivi di rete e le dipendenze**. Questo certificato CA radice consente al punto di registrazione certificati di convalidare il certificato di autenticazione client che verrà usato dal modulo criteri di Configuration Manager.  
 
    - Se l'opzione **Elabora le richieste di certificati PFX** è selezionata, configurare i dettagli e le credenziali di connessione per la CA selezionata.
@@ -157,7 +157,7 @@ Usare questi passaggi per configurare l'infrastruttura per i certificati SCEP o 
 
     -   Nel server del sistema del sito usare il file *<Percorso di installazione di ConfigMgr\>* \Logs\crpsetup.log e il file *<Percorso di installazione di ConfigMgr\>* Logs\crpmsi.log. Una corretta installazione restituirà un codice di uscita pari a 0.  
 
-    -   Usando un browser verificare che sia possibile connettersi all'URL del punto di registrazione certificati, ad esempio https://server1.contoso.com/CMCertificateRegistration. Accertarsi che venga visualizzata una pagina di **Errore server** per il nome dell'applicazione con una descrizione HTTP 404.  
+    -   Usando un browser verificare che sia possibile connettersi all'URL del punto di registrazione certificati. Ad esempio, `https://server1.contoso.com/CMCertificateRegistration` Accertarsi che venga visualizzata una pagina di **Errore server** per il nome dell'applicazione con una descrizione HTTP 404.  
 
 11. Individuare il file del certificato esportato per la CA radice che il punto di registrazione certificati ha creato automaticamente nella seguente cartella del computer del server del sito primario: *<Percorso di installazione di ConfigMgr\>* \inboxes\certmgr.box. Salvare questo file in un percorso protetto a cui sarà possibile accedere in modo sicuro quando si installerà il modulo criteri di Configuration Manager nel server che esegue il servizio Registrazione dispositivi di rete.  
 
@@ -185,7 +185,7 @@ Usare questi passaggi per configurare l'infrastruttura per i certificati SCEP o 
 
 4. Nella pagina **Cartella di installazione** accettare la cartella di installazione predefinita per il modulo criteri o specificare una cartella alternativa, quindi fare clic su **Avanti**.  
 
-5. Nella pagina **Punto di registrazione certificati** , specificare l'URL del punto di registrazione certificati usando l'FQDN del server del sistema del sito e il nome dell'applicazione virtuale specificato nelle proprietà del punto di registrazione certificati. Il nome dell'applicazione virtuale predefinito è CMCertificateRegistration. Ad esempio, se il nome FQDN del server del sistema del sito è server1.contoso.com e si è usato il nome dell'applicazione virtuale predefinito, specificare **https://server1.contoso.com/CMCertificateRegistration** .  
+5. Nella pagina **Punto di registrazione certificati** , specificare l'URL del punto di registrazione certificati usando l'FQDN del server del sistema del sito e il nome dell'applicazione virtuale specificato nelle proprietà del punto di registrazione certificati. Il nome dell'applicazione virtuale predefinito è CMCertificateRegistration. Ad esempio, se il nome FQDN del server del sistema del sito è server1.contoso.com e si è usato il nome dell'applicazione virtuale predefinito, specificare `https://server1.contoso.com/CMCertificateRegistration`.
 
 6. Accettare la porta predefinita **443** o specificare un numero di porta alternativo usato dal punto di registrazione certificati, quindi fare clic su **Avanti**.  
 

@@ -2,7 +2,7 @@
 title: Creare ed eseguire script
 titleSuffix: Configuration Manager
 description: Creare ed eseguire script di PowerShell in dispositivi client.
-ms.date: 04/01/2020
+ms.date: 04/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1c15106eeecdac0377900d913160bc23614327db
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2113baf43c377379a2a996c59fd13e55072cf898
+ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689659"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82605185"
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Creare ed eseguire gli script di PowerShell dalla console di Configuration Manager
 
@@ -98,7 +98,7 @@ Questa approvazione viene usata principalmente per la fase di test dello svilupp
 >Come procedura consigliata, non consentire a un autore di script di approvare i propri script. Ciò deve essere consentito solo in un ambiente di prova. Valutare con attenzione il potenziale impatto della modifica di questa impostazione in un ambiente di produzione.
 
 ## <a name="security-scopes"></a>ambiti di protezione
-*Introdotti con la versione 1710*  
+  
 La funzionalità Esegui script usa gli ambiti di protezione, una caratteristica esistente di Configuration Manager, per controllare la creazione e l'esecuzione di script tramite l'assegnazione di tag che rappresentano gruppi di utenti. Per altre informazioni sull'uso degli ambiti di protezione, vedere [Configurare l'amministrazione basata su ruoli per Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).
 
 ## <a name="create-security-roles-for-scripts"></a><a name="bkmk_ScriptRoles"></a> Creare ruoli di sicurezza per gli script
@@ -168,11 +168,11 @@ I tre ruoli di sicurezza usati per l'esecuzione di script non vengono creati per
 5. Completare la procedura guidata. Il nuovo script viene visualizzato nell'elenco **Script** con stato **In attesa di approvazione** . Prima di poter eseguire questo script nei dispositivi client, è necessario approvarlo. 
 
 > [!IMPORTANT]
-> Evitare di creare uno script per il riavvio del dispositivo o il riavvio dell'agente di Configuration Manager quando si usa la funzionalità Esegui script. Questa operazione potrebbe causare uno stato di riavvio continuo. Se necessario, sono disponibili miglioramenti delle funzionalità di notifica client che supportano il riavvio dei dispositivi, a partire da Configuration Manager versione 1710. La [colonna Riavvio in sospeso](../../core/clients/manage/manage-clients.md#restart-clients) può essere utile per identificare i dispositivi che richiedono un riavvio. 
+> Evitare di creare uno script per il riavvio del dispositivo o il riavvio dell'agente di Configuration Manager quando si usa la funzionalità Esegui script. Questa operazione potrebbe causare uno stato di riavvio continuo. Se necessario, sono disponibili miglioramenti delle funzionalità di notifica client che supportano il riavvio dei dispositivi. La [colonna Riavvio in sospeso](../../core/clients/manage/manage-clients.md#restart-clients) può essere utile per identificare i dispositivi che richiedono un riavvio. 
 > <!--SMS503978  -->
 
 ## <a name="script-parameters"></a>Parametri di script
-*Introdotti con la versione 1710*  
+
 L'aggiunta di parametri a uno script offre maggiore flessibilità per ogni attività. È possibile includere fino a 10 parametri. La sezione seguente descrive le attuali caratteristiche della funzionalità Esegui script con i parametri di script per tipi di dati *String* e *Integer*. Sono disponibili anche gli elenchi dei valori preimpostati. Se lo script ha tipi di dati non supportati, verrà generato un avviso.
 
 Nella finestra di dialogo **Crea script** fare clic su **Parametri script** in **Script**.
@@ -180,9 +180,8 @@ Nella finestra di dialogo **Crea script** fare clic su **Parametri script** in *
 Ognuno dei parametri di script è associato a una finestra di dialogo per l'aggiunta di altri dettagli e la convalida. Se è presente un parametro predefinito nello script, verrà enumerato nell'interfaccia utente dove può essere impostato. Configuration Manager non sovrascrive il valore predefinito perché non modifica mai lo script direttamente. I valori consigliati precompilati vengono forniti nell'interfaccia utente, ma Configuration Manager non consente l'accesso ai valori predefiniti in fase di esecuzione. È possibile ovviare a ciò modificando lo script in modo che contenga i valori predefiniti corretti. <!--17694323-->
 
 >[!IMPORTANT]
-> Nei valori dei parametri non è consentito l'apostrofo. </br></br>
-> Esiste un problema noto in Configuration Manager versione 1802, a causa del quale i parametri con spazi non vengono passati allo script correttamente. Se nel parametro viene usato uno spazio, solo il primo elemento nel parametro viene passato allo script e tutti gli elementi dopo lo spazio non vengono passati. Gli amministratori possono creare uno script apposito sostituendo gli spazi con caratteri alternativi e convertendoli o usando altri metodi.
-
+> I valori dei parametri non possono contenere virgolette singole. </br></br>
+> Si verifica un problema noto in cui i valori dei parametri che includono o sono racchiusi tra virgolette singole non vengono passati correttamente allo script. Quando si specificano valori di parametri predefiniti contenenti uno spazio all'interno di uno script, usare invece le virgolette doppie. Quando si specificano valori di parametri predefiniti durante la creazione o l'esecuzione di uno **script**, non è necessario racchiudere il valore predefinito tra virgolette doppie o singole, indipendentemente dal fatto che il valore contenga o meno uno spazio.
 
 ### <a name="parameter-validation"></a>Convalida dei parametri
 
@@ -282,22 +281,31 @@ Lo script viene eseguito come account di *sistema* o *computer* nei client di de
 
 ## <a name="script-monitoring"></a>Monitoraggio dello script
 
-Dopo aver avviato l'esecuzione di uno script in una raccolta di dispositivi, usare la procedura seguente per monitorare l'operazione. A partire dalla versione 1710, è possibile monitorare uno script in tempo reale durante la sua esecuzione ed è anche possibile restituire un report per un'esecuzione della funzionalità Esegui script specifica. I dati di stato dello script vengono puliti come parte dell'[attività di manutenzione Elimina operazioni client obsolete](../../core/servers/manage/reference-for-maintenance-tasks.md) o dell'eliminazione dello script.<br>
+Dopo aver avviato l'esecuzione di uno script in una raccolta di dispositivi, usare la procedura seguente per monitorare l'operazione. È possibile monitorare uno script in tempo reale durante l'esecuzione e tornare in seguito allo stato e ai risultati per un'esecuzione della funzionalità Esegui script specifica. I dati di stato dello script vengono puliti come parte dell'[attività di manutenzione Elimina operazioni client obsolete](../../core/servers/manage/reference-for-maintenance-tasks.md) o dell'eliminazione dello script.<br>
 
 ![Monitoraggio dello script - Stato di esecuzione dello script](./media/run-scripts/RS-monitoring-three-bar.png)
 
 1. Nella console di Configuration Manager fare clic su **Monitoraggio**.
 2. Nell'area di lavoro **Monitoraggio** fare clic su **Stato script**.
 3. Nell'elenco **Stato script** sono visualizzati i risultati per ogni script eseguito nei dispositivi client. Un codice di uscita dello script uguale a **0** indica in genere che lo script è stato eseguito correttamente.
-    - A partire da Configuration Manager 1802, l'output dello script viene troncato in corrispondenza di 4 KB per consentire una migliore esperienza di visualizzazione.  <!--510013-->
-   
+
+ 
    ![Monitoraggio script - Script troncato](./media/run-scripts/Script-monitoring-truncated.png)
 
-## <a name="script-output-in-1810"></a>Output dello script nella versione 1810
+## <a name="script-output"></a>Output dello script
 
-È possibile visualizzare l'output degli script dettagliato in formato JSON non elaborato o strutturato. Questo tipo di formattazione rende più facile leggere e analizzare l'output. Se lo script restituisce testo in formato JSON valido, è possibile visualizzare l'output dettagliato come **Output JSON** oppure **Output non elaborato**. In caso contrario, l'unica opzione è **Output dello script**.
+I client restituiscono l'output dello script con la formattazione JSON inviando tramite pipe i risultati dello script al cmdlet [ConvertTo-Json](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-json). Il formato JSON restituisce in modo coerente output dello script leggibile. Per gli script che non restituiscono oggetti come output, il cmdlet ConvertTo-Json converte l'output in una stringa semplice restituita dal client al posto di output in formati JSON.  
 
-### <a name="example-script-output-is-valid-json"></a>Esempio: output dello script in formato JSON valido
+- Gli script con un risultato sconosciuto o dove il client era offline, non vengono visualizzati nei grafici o nel set di dati. <!--507179-->
+- Evitare di restituire un output troppo grande poiché verrà troncato in corrispondenza di 4 KB. <!--508488-->
+- Convertire un oggetto enum in un valore stringa negli script in modo da visualizzarlo correttamente nella formattazione JSON. <!--508377-->
+
+   ![Convertire un oggetto enum in un valore stringa](./media/run-scripts/enum-tostring-JSON.png)
+
+È possibile visualizzare l'output degli script dettagliato in formato JSON non elaborato o strutturato. Questo tipo di formattazione rende più facile leggere e analizzare l'output. Se lo script restituisce testo in formato JSON valido o se l'output può essere convertito in formato JSON tramite il cmdlet di PowerShell [ConvertTo-json](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-json), è possibile visualizzare l'output dettagliato come **output JSON** o **output non elaborato**. In caso contrario, l'unica opzione è **Output dello script**.
+
+### <a name="example-script-output-is-convertible-to-valid-json"></a>Esempio: output dello script convertibile in formato JSON valido
+
 Comando: `$PSVersionTable.PSVersion`  
 
 ``` Output
@@ -307,34 +315,14 @@ Major  Minor  Build  Revision
 ```
 
 ### <a name="example-script-output-isnt-valid-json"></a>Esempio: output dello script non in formato JSON valido
+
 Comando: `Write-Output (Get-WmiObject -Class Win32_OperatingSystem).Caption`  
 
 ``` Output
 Microsoft Windows 10 Enterprise
 ```
 
-- I client 1810 restituiscono un output inferiore a 80 KB al sito su un canale di comunicazione rapida. Questa modifica migliora le prestazioni di visualizzazione dell'output di script o query.  
-
-  - Se l'output di script o query è maggiore di 80 KB, il client invia i dati tramite un messaggio di stato.  
-  - I client pre-1802 continuano a usare i messaggi di stato.
-
-## <a name="script-output-pre-1810"></a>Output dello script pre-1810
-
-- A partire da Configuration Manager versione 1802, l'output dello script viene restituito con la formattazione JSON. Questo formato restituisce in modo coerente un output dello script leggibile. 
-- Gli script con un risultato sconosciuto o dove il client era offline, non vengono visualizzati nei grafici o nel set di dati. <!--507179-->
-- Evitare di restituire un output troppo grande poiché verrà troncato in corrispondenza di 4 KB. <!--508488-->
-- Alcune funzionalità con la formattazione dell'output dello script non sono disponibili quando si esegue Configuration Manager versione 1802 o successiva con una versione di livello inferiore del client. <!--508487-->
-    - Con un client di Configuration Manager precedente alla versione 1802 viene restituito un output di stringhe.
-    -  Con un client di Configuration Manager versione 1802 e successive viene restituita la formattazione JSON.
-        - Ad esempio, si può ottenere il risultato TEXT in una versione del client e "TEXT", ovvero con l'output racchiuso tra virgolette doppie, in un'altra versione. Questi risultati verranno inseriti nel grafico come due categorie diverse.
-        - Se questo comportamento costituisce un problema, prendere in considerazione l'esecuzione dello script su due raccolte diverse. Una con i client precedenti alla versione 1802 e un'altra con i client 1802 e versioni successive. In alternativa, è possibile convertire un oggetto enum in un valore stringa negli script in modo da visualizzarlo correttamente nella formattazione JSON. 
-- Convertire un oggetto enum in un valore stringa negli script in modo da visualizzarlo correttamente nella formattazione JSON. <!--508377-->
-
-   ![Convertire un oggetto enum in un valore stringa](./media/run-scripts/enum-tostring-JSON.png)
-
 ## <a name="log-files"></a>File di registro
-
-A partire dalla versione 1810, la registrazione è stata estesa per agevolare la risoluzione dei problemi.
 
 - Nel client, per impostazione predefinita in C:\Windows\CCM\logs:  
   - **Scripts.log**  

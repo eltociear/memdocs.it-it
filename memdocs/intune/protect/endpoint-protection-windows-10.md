@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/13/2020
+ms.date: 04/23/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aaec456a5ff9864fedf5e95f317bc484ddfc4d82
-ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
+ms.openlocfilehash: fedca34aaf390dfec655e3166f3a153af93a7ce0
+ms.sourcegitcommit: 7b3eed763b394075766ea080968889a8538bfe56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80275068"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506591"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Impostazioni di Windows 10 (e versioni successive) per la protezione dei dispositivi con Intune
 
@@ -748,17 +748,6 @@ Queste impostazioni si applicano in modo specifico alle unità dati fisse.
     - **Backup delle password di ripristino e dei pacchetti di chiavi**  
     - **Backup solo delle password di ripristino**  
 
-  - **Rotazione delle password di ripristino basata su client**  
-    **Impostazione predefinita**: La rotazione delle chiavi è abilitata per i dispositivi aggiunti ad Azure AD  
-    Provider di servizi di configurazione BitLocker: [ConfigureRecoveryPasswordRotation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)  
-    
-    Questa impostazione avvia una rotazione della password di ripristino basata sul client dopo un ripristino dell'unità del sistema operativo (tramite bootmgr o WinRE).  
-
-    - Non configurato  
-    - La rotazione delle chiavi è disabilitata  
-    - La rotazione delle chiavi è abilitata per i dispositivi aggiunti ad Azure AD  
-    - La rotazione delle chiavi è abilitata per i dispositivi aggiunti ad Azure AD e Azure AD ibrido  
-
   - **Archivia le informazioni di ripristino in Azure Active Directory prima di abilitare BitLocker**  
     **Impostazione predefinita**: Non configurato  
  
@@ -942,6 +931,9 @@ Bloccare gli elementi seguenti per contrastare le minacce tramite posta elettron
 > **Nei computer client X86**:  
 > *C:\Programmi\Microsoft Intune Management Extension\Content*  
 > *C:\windows\IMECache*  
+>
+> Per altre informazioni, vedere [Raccomandazioni per la ricerca di virus per computer aziendali che eseguono versioni attualmente supportate di Windows](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers).
+
 
 ### <a name="controlled-folder-access"></a>Accesso controllato alle cartelle  
 
@@ -1264,9 +1256,8 @@ Usare queste opzioni per configurare le impostazioni di sicurezza locali nei dis
   **Impostazione predefinita**: Non configurato  
   Provider di servizi di configurazione LocalPoliciesSecurityOptions: [Devices_AllowUndockWithoutHavingToLogon](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-devices-allowundockwithouthavingtologon)  
 
-  
-  - **Blocca**: gli utenti possono premere il pulsante di espulsione fisico del dispositivo portatile inserito nell'alloggiamento di espansione per disinserire in modo sicuro il dispositivo.  
-  - **Non configurata** - L'utente deve eseguire l'accesso al dispositivo per ricevere l'autorizzazione per disinserire il dispositivo dall'alloggiamento di espansione.  
+  - **Blocca**: l'utente deve eseguire l'accesso al dispositivo per ricevere l'autorizzazione a disinserire il dispositivo dall'alloggiamento di espansione.
+  - **Non configurato**: gli utenti possono premere il pulsante di espulsione fisico del dispositivo portatile inserito nell'alloggiamento di espansione per disinserire in modo sicuro il dispositivo.
 
 - **Installa i driver della stampante per le stampanti condivise**  
   **Impostazione predefinita**:  Non configurato  
@@ -1309,8 +1300,8 @@ Usare queste opzioni per configurare le impostazioni di sicurezza locali nei dis
   Provider di servizi di configurazione LocalPoliciesSecurityOptions: [InteractiveLogon_DoNotRequireCTRLALTDEL](https://go.microsoft.com/fwlink/?linkid=867951)  
 
 
-  - **Abilita**: gli utenti non devono premere CTRL+ALT+CANC per accedere.  
-  - **Non configurato**: agli utenti viene richiesto di premere CTRL+ALT+CANC prima di accedere a Windows.  
+  - **Abilita**: agli utenti viene richiesto di premere CTRL+ALT+CANC prima di accedere a Windows.
+  - **Non configurato**: gli utenti non devono premere CTRL+ALT+CANC per accedere.
 
 - **Comportamento in caso di rimozione della smart card**  
   **Impostazione predefinita**: Blocca workstation   

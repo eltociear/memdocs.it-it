@@ -2,7 +2,7 @@
 title: Sicurezza e privacy per l'amministrazione dei siti
 titleSuffix: Configuration Manager
 description: Ottimizzare protezione e privacy per l'amministrazione del sito in Configuration Manager
-ms.date: 07/26/2019
+ms.date: 04/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 1d58176e-abc0-4087-8583-ce70deb4dcf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 35c2738b363895671528196e99b324fd2fe6f5a7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 923018e35fae1ec1f5e9c0869ef22d43b5de552b
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704579"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82182260"
 ---
 # <a name="security-and-privacy-for-site-administration-in-configuration-manager"></a>Protezione e privacy per l'amministrazione del sito in Configuration Manager
 
@@ -169,7 +169,11 @@ Per altre informazioni sulle diverse tecnologie di riattivazione LAN, vedere [Pi
 
 ### <a name="if-you-use-email-notification-configure-authenticated-access-to-the-smtp-mail-server"></a>Se si usa la notifica via posta elettronica, configurare l'accesso autenticato al server di posta SMTP.
 
-Quando possibile, usare un server di posta elettronica che supporti l'accesso autenticato. Usare l'account computer del server del sito per l'autenticazione. Se è necessario specificare un account utente per l'autenticazione, utilizzare un account che disponga dei privilegi minimi.  
+Quando possibile, usare un server di posta elettronica che supporti l'accesso autenticato. Usare l'account computer del server del sito per l'autenticazione. Se è necessario specificare un account utente per l'autenticazione, utilizzare un account che disponga dei privilegi minimi. 
+
+### <a name="enforce-ldap-channel-binding-and-ldap-signing"></a>Applicare il binding di canale LDAP e la firma LDAP
+
+È possibile migliorare la sicurezza dei controller di dominio di Active Directory configurando il server per rifiutare i binding LDAP SASL (Simple Authentication and Security Layer) che non richiedono la firma o per rifiutare binding semplici LDAP eseguiti su una connessione con testo non crittografato. A partire dalla versione 1910, Configuration Manager supporta l'applicazione di binding di canale LDAP e della firma LDAP. Per altre informazioni, vedere [Requisito 2020 relativo al binding di canale LDAP e alla firma LDAP per Windows](https://support.microsoft.com/help/4520412/2020-ldap-channel-binding-and-ldap-signing-requirements-for-windows). <!--6244453-->
 
 
 ## <a name="security-guidance-for-the-site-server"></a><a name="BKMK_Security_SiteServer"></a> Indicazioni sulla sicurezza per il server del sito

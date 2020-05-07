@@ -10,12 +10,12 @@ ms.assetid: 3e82cd96-0ce0-474a-a597-d65fceadc95a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a13a22cc7e9ced580229306ab3680fca61319992
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2456f530444fa5d9514247edd77cbe7b02f62c38
+ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706389"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82126013"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>Esercitazione: Distribuire Windows 10 a un gruppo pilota
 
@@ -219,8 +219,7 @@ Configuration Manager crea criteri di impostazioni per configurare i dispositivi
 
 Monitorare la configurazione dei dispositivi per Desktop Analytics. Nella console di Configuration Manager passare all'area di lavoro **Raccolta software**, espandere il nodo **Manutenzione di Desktop Analytics** e selezionare il dashboard **Integrità connessione**.  
 
-Configuration Manager sincronizza le raccolte entro 60 minuti dalla creazione della connessione. Nel portale di Desktop Analytics passare a **Pilota globale** e visualizzare le raccolte di dispositivi di Configuration Manager.
-
+Configuration Manager sincronizza le raccolte entro 60 minuti dalla creazione della connessione. Nel portale di Desktop Analytics passare a **Pilota globale** e visualizzare le raccolte di dispositivi di Configuration Manager. Possono essere necessari due o tre giorni per visualizzare i dati completi nel resto del portale. Per altre informazioni, vedere [Latenza dei dati](troubleshooting.md#data-latency).
 
 ## <a name="create-a-desktop-analytics-deployment-plan"></a>Creare un piano di distribuzione di Desktop Analytics
 

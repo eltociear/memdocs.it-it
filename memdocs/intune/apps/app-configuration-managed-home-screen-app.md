@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0d596a0a43c17243431fa47bcac996868fd38066
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: ef8fb81b7be05d21eec5a4d1b544ee1a7d34bd07
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80358690"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693484"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>Configurare l'app Microsoft Managed Home Screen per Android Enterprise
 
@@ -66,7 +66,6 @@ La tabella seguente contiene un elenco delle chiavi di configurazione di Managed
 | Set app icon size (Imposta dimensioni delle icone delle app) | integer | 2 | Consente di impostare le dimensioni delle icone per le app visualizzate nella schermata inziale. È possibile scegliere i valori seguenti in questa configurazione per le diverse dimensioni: 0 (minime), 1 (piccole), 2 (regolari), 3 (grandi) e 4 (massime). |
 | Set app folder icon (Imposta icona delle cartelle di app) | integer | 0 | Consente di definire l'aspetto delle cartelle delle app nella schermata iniziale. È possibile scegliere l'aspetto dai valori seguenti: 0 (quadrato scuro), 1 (cerchio scuro), 2 (quadrato chiaro), 3 (cerchio chiaro). |
 | Set screen orientation (Imposta orientamento schermo) | integer | 1 | Consente di impostare l'orientamento della schermata iniziale sulla modalità verticale, orizzontale o con rotazione automatica. Per impostare l'orientamento, immettere il valore 1 (modalità verticale), 2 (modalità orizzontale) o 3 (rotazione automatica). |
-| Enable device telemetry (Abilita telemetria del dispositivo) | bool | FALSE | Abilita tutti i dati di telemetria acquisiti per la schermata iniziale gestita. Se si abilita questa impostazione, Microsoft potrà acquisire i dati di telemetria sull'utilizzo del dispositivo, ad esempio il numero di volte in cui è stata avviata una specifica app. |
 | Set allow-listed applications (Imposta applicazioni nell'elenco elementi consentiti) | bundleArray | FALSE | Consente di definire il set di app visibili nella schermata iniziale tra le app installate nel dispositivo. Per definire le app, immettere il nome del pacchetto delle app da rendere visibili, ad esempio com.microsoft.emmx per rendere le impostazioni accessibili nella schermata iniziale. Le app da aggiungere nell'elenco elementi consentiti in questa sezione devono essere già installate nel dispositivo per renderle visibili nella schermata iniziale. |
 | Set pinned web links (Imposta collegamenti Web aggiunti) | bundleArray | FALSE | Consente di aggiungere i siti Web come icone di avvio rapido nella schermata iniziale. Con questa configurazione è possibile definire l'URL e aggiungerlo nella schermata iniziale per consentire all'utente finale di avviarlo nel browser con un singolo tocco. |
 | Enable screen saver (Abilita screen saver) | bool | FALSE | Per abilitare o non abilitare la modalità screen saver. Se impostata su True, è possibile configurare **screen_saver_image**, **screen_saver_show_time**, **inactive_time_to_show_screen_saver** e **media_detect_screen_saver**. |
@@ -78,10 +77,17 @@ La tabella seguente contiene un elenco delle chiavi di configurazione di Managed
 | Type of virtual home button (Tipo di pulsante di schermata iniziale virtuale) | string | swipe_up | Usare **swipe_up** per accedere al pulsante della pagina iniziale con un gesto di scorrimento in alto. Usare **float** per accedere a un pulsante della schermata iniziale persistente e permanente che l'utente finale può spostare nella schermata. |
 | Battery and Signal Strength indicator bar (Barra indicatore potenza segnale e batteria) | bool | True  | Se impostata su `True`, visualizza la barra indicatore della potenza del segnale e della batteria. |
 | Exit lock task mode password (Password di uscita dalla modalità blocco attività) | string |   | Immettere un codice di 4-6 cifre da usare per uscire temporaneamente dalla modalità blocco attività per la risoluzione dei problemi. |
+| Show Managed Setting (Mostra Managed Setting) | bool | TRUE | "Managed Setting" è un'app di Managed Home Screen che viene visualizzata solo se sono state configurate impostazioni per l'accesso rapido, tra cui **Show Wi-Fi setting** (Mostra impostazione Wi-Fi), **Show Bluetooth setting** (Mostra impostazione Bluetooth), **Show volume setting** (Mostra impostazione volume) e **Show flashlight setting** (Mostra impostazione torcia). È possibile accedere a queste impostazioni anche scorrendo rapidamente verso il basso dello schermo. Impostare questa chiave su `False` per nascondere l'app "Managed Setting" e fare in modo che gli utenti finali accedano alle impostazioni solo scorrendo rapidamente verso il basso.    |
+| Enable easy access debug menu (Abilita il menu di debug dell'accesso facilitato) | bool | FALSE | Impostare questa impostazione su `True` per accedere al menu di debug dall'app Managed Settings o scorrendo rapidamente verso il basso in Managed Home Screen. Nel menu di debug è attualmente possibile uscire dalla modalità tutto schermo ed è possibile accedervi facendo clic sul pulsante Indietro circa 15 volte. Mantenere questa impostazione impostata su `False` per fare in modo che il punto di ingresso al menu debug sia accessibile solo tramite il pulsante Indietro.   |
 | Show Wi-Fi setting (Mostra impostazioni Wi-Fi) | bool | FALSE | Se impostata su `True`, l'utente finale può attivare o disattivare il Wi-Fi oppure connettersi a reti Wi-Fi diverse.  |
+| Enable Wi-Fi allow-list (Abilita elenco consentiti Wi-Fi) | bool | FALSE | Impostare questa impostazione su `True` e compilare la chiave **Wi-Fi allow-list** (Elenco consentiti Wi-Fi) per limitare le reti Wi-Fi visualizzate in Managed Home Screen. Impostare su `False` per visualizzare tutte le possibili reti Wi-Fi disponibili che il dispositivo ha individuato. Si noti che questa impostazione è rilevante solo se **Show Wi-Fi setting** (Mostra impostazioni Wi-Fi) è stata impostata su `True` e **Enable Wi-Fi allow-list** (Abilita elenco consentiti Wi-Fi) è stata compilata.   |
+| Wi-Fi allow-list (Elenco consentiti Wi-Fi)| bundleArray | FALSE | Consente di elencare tutti gli SSID delle reti Wi-Fi che il dispositivo deve visualizzare in Managed Home Screen. Questo elenco è rilevante solo se **Show Wi-Fi setting** (Mostra impostazioni Wi-Fi) e **Enable Wi-Fi allow-list** (Abilita elenco consentiti Wi-Fi) sono state impostate su `True`. Se una delle due impostazioni è stata impostata su `False`, non è necessario modificare questa configurazione.    |
 | Show Bluetooth setting (Mostra impostazione Bluetooth) | bool | FALSE | Se impostata su `True`, l'utente finale può attivare o disattivare il Bluetooth oppure connettersi ad altri dispositivi abilitati per Bluetooth.   |
+| Show volume setting (Mostra impostazione volume) | bool | FALSE | Se impostata su `True` si consente all'utente finale di accedere a un dispositivo di scorrimento del volume per regolare il volume dei file multimediali.   |
+| Show flashlight setting (Mostra impostazione torcia) | bool | FALSE | Se impostata su `True` si consente all'utente finale di attivare o disattivare la torcia del dispositivo. Se il dispositivo non supporta una torcia, questa impostazione non verrà visualizzata anche se è configurata su `True`.   |
+| Show device info setting (Mostra impostazione informazioni sul dispositivo) | bool | FALSE | Se impostata su `True`, si consente all'utente finale di accedere a informazioni rapide sul dispositivo dall'app Managed Setting o scorrendo rapidamente verso il basso. Le informazioni accessibili includono la marca, il modello e il numero di serie del dispositivo.   |
 | Applications in folder are ordered by name (Le applicazioni nella cartella sono ordinate per nome) | bool | TRUE | Se impostata su `False`, gli elementi in una cartella vengono visualizzati nell'ordine in cui sono specificati. In caso contrario vengono visualizzati in ordine alfabetico nella cartella.   |
-| Application order enabled (Ordine delle applicazioni abilitato) | bool | FALSE | Se impostata su `True` è possibile impostare l'ordine di applicazioni, collegamenti Web e cartelle in Managed Home Screen. Dopo l'abilitazione, impostare l'ordinamento con **app_order**. L'utente finale può attivare o disattivare il Bluetooth e connettersi ad altri dispositivi abilitati per Bluetooth.   |
+| Application order enabled (Ordine delle applicazioni abilitato) | bool | FALSE | Se impostata su `True` è possibile impostare l'ordine di applicazioni, collegamenti Web e cartelle in Managed Home Screen. Dopo averla abilitata, impostare l'ordinamento con **app_order**.   |
 | Application order (Ordine delle applicazioni) | bundleArray | FALSE | Consente di specificare l'ordine di applicazioni, collegamenti Web e cartelle in Managed Home Screen. Per usare questa impostazione, l'impostazione **Lock Home Screen** (Blocca schermata iniziale) deve essere abilitata, l'opzione **Set Grid Size** (Imposta dimensioni griglia) deve essere definita e l'opzione **Application order enabled** (Ordine delle applicazioni abilitato) deve essere impostata su `True`.   |
 
 ## <a name="enter-json-data"></a>Immettere dati JSON
@@ -124,10 +130,6 @@ Di seguito è riportato un esempio di script JSON con tutte le chiavi di configu
         {
             "key": "screen_orientation",
             "valueInteger": 1
-        },
-        {
-            "key": "enable_telemetry",
-            "valueBool": false
         },
         {
             "key": "applications",
@@ -182,6 +184,51 @@ Di seguito è riportato un esempio di script JSON con tutte le chiavi di configu
         {
             "key": "show_bluetooth_setting",
             "valueBool": false
+        },
+        {
+            "key": "show_flashlight_setting",
+            "valueBool": false
+        },
+        {
+            "key": "show_volume_setting",
+            "valueBool": false
+        },
+        {
+            "key": "show_device_info_setting",
+            "valueBool": false
+        },
+        {
+            "key": "show_managed_setting",
+            "valueBool": false
+        },
+        {
+            "key": "enable_easy_access_debugmenu",
+            "valueBool": false
+        },
+        {
+            "key": "enable_wifi_allowlist",
+            "valueBool": false
+        },
+        {
+            "key": "wifi_allowlist",
+            "valueBundleArray": [
+                {
+                    "managedProperty": [
+                        {
+                            "key": "SSID",
+                            "valueString": "name of Wi-Fi network 1 here"
+                        }
+                    ]
+                },   
+                {
+                    "managedProperty": [
+                        {
+                            "key": "SSID",
+                            "valueString": "name of Wi-Fi network 2 here"
+                        }
+                    ]
+                }  
+            ]
         },
         {
             "key": "grid_size",
@@ -335,7 +382,7 @@ Di seguito è riportato un esempio di script JSON con tutte le chiavi di configu
 L'app di schermata iniziale gestita ora consente l'accesso a Google Apps Device Policy per Android. L'app di schermata iniziale gestita è un'utilità di avvio personalizzata usata per i dispositivi registrati in Intune come dispositivi dedicati Android Enterprise (AE) che usano la modalità tutto schermo per più app. È possibile accedere all'app Android Device Policy o guidare gli utenti all'app Android Device Policy per fini di supporto e debug. Questa funzionalità di avvio è disponibile nel momento in cui il dispositivo viene registrato e bloccato nella schermata iniziale gestita. Per usare questa funzionalità non è necessaria alcuna installazione aggiuntiva.
 
 ## <a name="managed-home-screen-debug-screen"></a>Schermata di debug della schermata iniziale gestita
-È possibile accedere alla schermata di debug della schermata iniziale gestita facendo clic sul pulsante **Indietro** fino a quando non viene visualizzata la schermata di debug (fare clic sul pulsante **Indietro** 15 volte o più). Da questa schermata di debug è possibile avviare l'applicazione Android Device Policy, visualizzare e caricare i log o sospendere temporaneamente la modalità tutto schermo per aggiornare il dispositivo. Per altre informazioni su come sospendere la modalità tutto schermo, vedere l'elemento **Esci dalla modalità tutto schermo** nelle [impostazioni dei dispositivi dedicati](../configuration/device-restrictions-android-for-work.md#dedicated-devices) Android Enterprise.
+È possibile accedere alla schermata di debug della schermata iniziale gestita facendo clic sul pulsante **Indietro** fino a quando non viene visualizzata la schermata di debug (fare clic sul pulsante **Indietro** 15 volte o più). Da questa schermata di debug è possibile avviare l'applicazione Android Device Policy, visualizzare e caricare i log o sospendere temporaneamente la modalità tutto schermo per aggiornare il dispositivo. Per altre informazioni su come sospendere la modalità tutto schermo, vedere l'elemento **Esci dalla modalità tutto schermo** nelle [impostazioni dei dispositivi dedicati](../configuration/device-restrictions-android-for-work.md#dedicated-devices) Android Enterprise. Se si vuole accedere alla schermata di debug di Managed Home Screen in modo più semplice, è possibile impostare **Enable easy access debug menu** (Abilita il menu di debug dell'accesso facilitato) su `True` usando i criteri di configurazione dell'applicazione. 
 
 ## <a name="next-steps"></a>Passaggi successivi
 

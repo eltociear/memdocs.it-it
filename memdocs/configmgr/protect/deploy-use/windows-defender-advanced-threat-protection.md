@@ -2,7 +2,7 @@
 title: Microsoft Defender Advanced Threat Protection
 titleSuffix: Configuration Manager
 description: Informazioni su come gestire e monitorare Microsoft Defender Advanced Threat Protection, un nuovo servizio che consente alle organizzazioni di rispondere agli attacchi avanzati.
-ms.date: 04/01/2020
+ms.date: 04/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a5fc033e-828e-4e45-9097-bbbd0697ebdf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 186751bb8b1768b34573e2b614ce992b58fa9232
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a635ae36875984537c18c4850a3526d57ffceb31
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706239"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82210146"
 ---
 # <a name="microsoft-defender-advanced-threat-protection"></a>Microsoft Defender Advanced Threat Protection
 
@@ -29,7 +29,7 @@ Microsoft Defender ATP è un servizio disponibile in [Windows Defender Security 
 
 - Sottoscrizione al servizio online Microsoft Defender Advanced Threat Protection  
 - Computer client che eseguono il client Configuration Manager
-- Client che usano un sistema operativo elencato nella sezione [Sistemi operativi client supportati](#bkmk_os) riportata di seguito. 
+- Client che usano un sistema operativo elencato nella sezione [Sistemi operativi client supportati](#bkmk_os) riportata di seguito.
 
 ### <a name="supported-client-operating-systems"></a><a name="bkmk_os"></a> Sistemi operativi client supportati
 In base alla versione di Configuration Manager in esecuzione, è possibile eseguire l'onboarding dei sistemi operativi client seguenti:
@@ -62,7 +62,7 @@ In base alla versione di Configuration Manager in esecuzione, è possibile esegu
       1. Al termine del processo, copiare i valori per **Chiave dell'area di lavoro** e **ID area di lavoro** dalla sezione **Configura connessione**.
 
 > [!IMPORTANT]
-> Il file di configurazione di Microsoft Defender ATP contiene informazioni riservate che devono essere protette.
+> - Il file di configurazione di Microsoft Defender ATP contiene informazioni riservate che devono essere protette.
 
 ## <a name="onboard-devices"></a>Eseguire l'onboarding dei dispositivi
 
@@ -70,6 +70,7 @@ In base alla versione di Configuration Manager in esecuzione, è possibile esegu
 1. Digitare il **nome** e la **descrizione** per il criterio di Microsoft Defender ATP e selezionare **Onboarding** (Caricamento).
 1. Usare **Sfoglia** per cercare il file di configurazione fornito dal tenant del servizio cloud Microsoft Defender ATP dell'organizzazione.
    - Per **Windows 7 e 8.1** o **Windows Server 2008 R2 SP1, 2012 R2 e 2016**, fornire la **Chiave dell'area di lavoro** e l'**ID dell'area di lavoro**.
+   - Per Configuration Manager versione 2002 saranno necessari i valori **Chiave area di lavoro** e **ID area di lavoro** anche se si esegue l'onboarding solo di dispositivi Windows Server 2019 e Windows Server 1803 o versioni successive. Per ottenere questi valori, selezionare **Impostazioni** > **Onboarding** > **Windows 7 e 8.1** dal [servizio online Microsoft Defender ATP](https://securitycenter.windows.com/). <!--7054188-->
 1. Specificare i file campione che vengono raccolti e condivisi dai dispositivi gestiti per l'analisi.  
 
    - **Nessuno**

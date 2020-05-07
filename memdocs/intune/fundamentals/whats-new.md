@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/06/2020
+ms.date: 04/30/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 00faad5cccf8b2ed3198542868a36cb4699299b8
-ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
+ms.openlocfilehash: bf490c71fdc94b974e53a9d0f388a777e986f13c
+ms.sourcegitcommit: 8a8378b685a674083bfb9fbc9c0662fb0c7dda97
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80808201"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82619577"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Novità di Microsoft Intune
 
@@ -51,8 +51,147 @@ Per informazioni sulle novità di Microsoft Intune ogni settimana, vedere l'[int
 ### Device security
 ### Intune apps
 ### Monitor and troubleshoot
-### Role-based access control
--->  
+
+<!-- ########################## -->
+## <a name="week-of-april-20-2020"></a>Settimana del 20 aprile 2020
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+
+### <a name="device-management"></a>Gestione dei dispositivi
+
+#### <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions---6317104-cm3555758-idready---"></a>Connessione del tenant di Microsoft Endpoint Manager: sincronizzazione e azioni dei dispositivi<!-- 6317104, CM3555758 idready -->
+Microsoft Endpoint Manager ha riunito Configuration Manager e Intune in un'unica console. A partire da Configuration Manager versione 2002, è possibile caricare i dispositivi Configuration Manager nel servizio cloud ed eseguire le azioni necessarie dall'interfaccia di amministrazione. Per altre informazioni, vedere [Collegamento del tenant di Microsoft Endpoint Manager: sincronizzazione e azioni dei dispositivi](../../configmgr/tenant-attach/device-sync-actions.md). 
+
+### <a name="app-management"></a>Gestione delle app
+
+#### <a name="microsoft-office-365-proplus-rename---6368143---"></a>Nuovo nome per Microsoft Office 365 ProPlus<!-- 6368143 -->
+È in corso la modifica del nome di Microsoft Office 365 ProPlus in **App di Microsoft 365 per grandi imprese**. Per altre informazioni, vedere [Modifica del nome di Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). Nella nostra documentazione si parlerà generalmente di App di Microsoft 365. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) è possibile trovare la suite di app selezionando **App** > **Windows** > **Aggiungi**. Per informazioni sull'aggiunta di app, vedere [Aggiungere app in Microsoft Intune](../apps/apps-add.md).
+
+<!-- ########################## -->
+## <a name="week-of-april-13-2020-2004-service-release"></a>Settimana del 13 aprile 2020 (versione del servizio 2004)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="app-management"></a>Gestione delle app
+
+#### <a name="manage-smime-settings-for-outlook-on-android-enterprise-devices---6517085-----"></a>Gestire le impostazioni S/MIME per Outlook in dispositivi Android Enterprise<!-- 6517085   -->
+È possibile usare criteri di configurazione delle app per gestire l'impostazione S/MIME per Outlook nei dispositivi che eseguono Android Enterprise. È anche possibile scegliere se consentire o meno agli utenti del dispositivo di abilitare o disabilitare S/MIME nelle impostazioni di Outlook. Per usare criteri di configurazione delle app per Android, nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) passare ad **App** > **Criteri di configurazione dell'app**  > **Aggiungi** > **Dispositivi gestiti**. Per altre informazioni sulla configurazione delle impostazioni per Outlook, vedere [Impostazioni di configurazione di Microsoft Outlook](../apps/app-configuration-policies-outlook.md).
+
+#### <a name="pre-release-testing-for-managed-google-play-apps---2681933----"></a>Test della versione preliminare per le app gestite di Google Play<!-- 2681933  -->
+Le organizzazioni che usano [percorsi di test chiusi di Google Play per i test di versioni non definitive dell'app](https://support.google.com/googleplay/android-developer/answer/3131213) possono gestire questi percorsi con Intune. È possibile assegnare in modo selettivo app pubblicate nei percorsi di pre-produzione di Google Play ai gruppi pilota per eseguire i test. In Intune è anche possibile verificare se per un'app è stato pubblicato un percorso di test di compilazione di pre-produzione, oltre a poter assegnare tale percorso a gruppi di utenti o di dispositivi di AAD. Questa funzionalità è disponibile per tutti gli scenari di Android Enterprise attualmente supportati (profilo di lavoro, completamente gestito e dedicato). Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) è possibile aggiungere un'app Google Play gestita selezionando **App** > **Android** > **Aggiungi**. Per altre informazioni, vedere [Uso di tracce di test chiuse di Google Play gestito](../apps/apps-add-android-for-work.md#working-with-managed-google-play-closed-testing-tracks).
+
+#### <a name="microsoft-teams-is-now-included-in-the-office-365-suite-for-macos---5903936----"></a>Microsoft Teams è ora incluso nella famiglia di prodotti Office 365 per macOS<!-- 5903936  -->
+Gli utenti a cui viene assegnato Microsoft Office per macOS in Microsoft Endpoint Manager riceveranno ora Microsoft Teams oltre alle app Microsoft Office esistenti (Word, Excel, PowerPoint, Outlook e OneNote). Intune rileverà i dispositivi Mac esistenti nei quali sono installate altre app Office per macOS e tenterà di installare Microsoft Teams in occasione della successiva sincronizzazione del dispositivo con Intune. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) è possibile trovare **Famiglia di prodotti Office 365** per macOS selezionando **App** > **macOS** > **Aggiungi**. Per altre informazioni, vedere [Assegnare Office 365 a dispositivi macOS con Microsoft Intune](../apps/apps-add-office365-macos.md).
+
+#### <a name="update-to-android-app-configuration-policies---6113334----"></a>Aggiornamento dei criteri di configurazione delle app Android<!-- 6113334  -->
+I criteri di configurazione delle app Android sono stati aggiornati per consentire agli amministratori di selezionare il tipo di registrazione del dispositivo prima di creare un profilo di configurazione dell'app. È in corso l'aggiunta della funzionalità per tenere conto dei profili certificato basati sul tipo di registrazione (Profilo di lavoro o Proprietario del dispositivo).  Questo aggiornamento contiene le informazioni seguenti:
+
+1. Se si crea un nuovo profilo e si seleziona il tipo di registrazione del dispositivo Profilo di lavoro e il profilo di Proprietario del dispositivo, non sarà possibile associare un profilo del certificato ai criteri di configurazione dell'app.
+2. Se viene creato un nuovo profilo ed è selezionato il tipo Solo profilo di lavoro, è possibile usare i criteri di certificato del profilo di lavoro creati con la configurazione del dispositivo.
+3. Se viene creato un nuovo profilo e si seleziona il tipo Solo proprietario del dispositivo, è possibile usare i criteri di certificato del proprietario del dispositivo creati con la configurazione del dispositivo. 
+
+> [!IMPORTANT]
+> Per impostazione predefinita, i criteri esistenti creati prima del rilascio di questa funzionalità (versione di aprile 2020 - 2004) che non hanno profili certificato associati useranno il tipo di registrazione del dispositivo Profilo di lavoro e profilo di Proprietario del dispositivo. Per impostazione predefinita, poi, i criteri esistenti creati prima del rilascio di questa funzionalità con profili certificato associati useranno il tipo Solo profilo di lavoro.
+
+Verranno aggiunti anche i profili di configurazione di posta elettronica Gmail e Nine che funzioneranno per entrambi i tipi di registrazione Profilo di lavoro e Proprietario del dispositivo, incluso l'uso di profili certificato per entrambi i tipi di configurazione di posta elettronica.  Eventuali criteri per Gmail o Nine creati nell'ambito della configurazione del dispositivo per i profili di lavoro continueranno a essere applicati al dispositivo e non è necessario spostarli nei criteri di configurazione delle app.
+
+Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) è possibile trovare i criteri di configurazione delle app selezionando **App** > **Criteri di configurazione dell'app**. Per altre informazioni sui criteri di configurazione delle app, vedere [Criteri di configurazione delle app per Microsoft Intune](../apps/app-configuration-policies-overview.md).
+
+#### <a name="push-notification-when-device-ownership-type-is-changed---5575875---"></a>Notifica push quando cambia il tipo di proprietà del dispositivo<!-- 5575875 -->
+È possibile configurare una notifica push da inviare agli utenti del portale aziendale sia Android che iOS quando il tipo di proprietà del dispositivo cambia da Personale ad Aziendale come servizio di cortesia per la privacy. Questa notifica push è disattivata per impostazione predefinita. L'impostazione è disponibile in Microsoft Endpoint Manager selezionando **Amministrazione tenant** > **Personalizzazione**. Per altre informazioni sull'impatto della proprietà dei dispositivi sugli utenti finali, vedere [Modificare la proprietà del dispositivo](../enrollment/corporate-identifiers-add.md#change-device-ownership).
+
+#### <a name="group-targeting-support-for-customization-pane---4722837----"></a>Supporto dell'assegnazione di gruppi nel riquadro Personalizzazione<!-- 4722837  -->
+È possibile assegnare le impostazioni a gruppi di utenti nel riquadro **Personalizzazione**. Per trovare queste impostazioni in Intune, passare all'[Interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), selezionare **Amministrazione del tenant** > **Personalizzazione**. Per altre informazioni sulla personalizzazione, vedere [Come personalizzare le app Portale aziendale Intune, il sito Web Portale aziendale e l'app Intune](../apps/company-portal-app.md).
+
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-configuration"></a>Configurazione del dispositivo
+
+#### <a name="multiple-evaluate-each-connection-attempt-on-demand-vpn-rules-supported-on-ios-ipados-and-macos---6424615----"></a>Più regole VPN su richiesta "Valuta ogni tentativo di connessione" supportate in iOS, iPadOS e macOS<!-- 6424615  -->
+L'esperienza utente di Intune consente più regole VPN su richiesta nello stesso profilo VPN con l'azione **Valuta ogni tentativo di connessione** (**Dispositivi** > **Profili di configurazione** > **Crea profilo** > **iOS/iPadOS** o **macOS** per piattaforma > **VPN** per profilo > **VPN automatico** > **Su richiesta**).
+
+Viene rispettata solo la prima regola dell'elenco. Questo comportamento è stato corretto e Intune valuta tutte le regole dell'elenco. Ogni regola viene valutata nell'ordine in cui viene visualizzata nell'elenco di regole su richiesta.
+
+> [!NOTE]
+> Se si hanno profili VPN esistenti che usano queste regole VPN su richiesta, la correzione viene applicata alla successiva modifica del profilo VPN. Eseguire, ad esempio, una modifica secondaria, come la modifica del nome della connessione, e quindi salvare il profilo.
+>
+> Se per l'autenticazione si usano certificati SCEP, questa modifica causa la riemissione dei certificati per il profilo VPN.
+
+Si applica a:
+- iOS/iPadOS
+- macOS
+
+Per altre informazioni sui profili VPN, vedere [Creare profili VPN](../configuration/vpn-settings-configure.md).
+
+#### <a name="additional-options-in-sso-and-sso-app-extension-profiles-on-iosipados-devices---6504155-----"></a>Opzioni aggiuntive nei profili SSO e di estensione dell'app per l'accesso SSO nei dispositivi iOS/iPadOS<!-- 6504155   -->
+
+Nei dispositivi iOS/iPadOS è possibile:
+- Nei profili SSO (**Dispositivi** > **Profili di configurazione** > **Crea profilo** > **iOS/iPadOS** per la piattaforma > **Funzionalità del dispositivo** per il profilo > **Single Sign-On**), impostare il nome dell'entità Kerberos sul nome dell'account di gestione degli account di sicurezza (SAM) nei profili SSO. 
+- Nei profili di estensione dell'app per l'accesso SSO (**Dispositivi** > **Profili di configurazione** > **Crea profilo** > **iOS/iPadOS** per la piattaforma > **Funzionalità del dispositivo** per il profilo > **Estensione dell'app per l'accesso Single Sign-On**), configurare l'estensione Microsoft Azure AD iOS/iPadOS con meno clic usando un nuovo tipo di estensione dell'app per l'accesso Single Sign-On. È possibile abilitare l'estensione Azure AD per i dispositivi in modalità condivisa e inviare dati specifici dell'estensione a quest'ultima.
+
+Si applica a:
+- iOS/iPadOS 13.0+
+
+Per altre informazioni sull'uso di Single Sign-On nei dispositivi iOS/iPadOS, vedere [Panoramica dell'estensione dell'app Single Sign-On](../configuration/device-features-configure.md#single-sign-on-app-extension) ed [Elenco delle impostazioni di Single Sign-On](../configuration/ios-device-features-settings.md#single-sign-on-app-extension).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-enrollment"></a>Registrazione del dispositivo
+
+#### <a name="delete-apple-automated-device-enrollment-token-when-default-profile-is-present--6393220---"></a>Eliminare il token di registrazione automatica dei dispositivi Apple quando è presente un profilo predefinito<!--6393220 -->
+In precedenza non era possibile eliminare un profilo predefinito, quindi non era possibile eliminare il token di Registrazione automatica dei dispositivi associati a tale profilo. È ora possibile eliminare il token quando:
+- al token non è assegnato alcun dispositivo
+- è presente un profilo predefinito A tale scopo, eliminare il profilo predefinito e quindi eliminare il token associato.
+Per altre informazioni, vedere [Eliminare un token di Registrazione automatica dei dispositivi da Intune](../enrollment/device-enrollment-program-enroll-ios.md#delete-an-ade-token-from-intune).
+
+#### <a name="scaled-up-support-for-apple-automated-device-enrollment-and-apple-configurator-2-devices-profiles-and-tokens--3542402---"></a>Aumento del supporto per Registrazione automatica dei dispositivi Apple e per i dispositivi, i profili e i token di Apple Configurator 2<!--3542402 -->
+Per venire incontro ai reparti e alle organizzazioni IT distribuiti, Intune supporta ora fino a 1000 profili di registrazione per token, 2000 token di Registrazione automatica dei dispositivi (precedentemente nota come Device Enrollment Program) per account di Intune e 75.000 dispositivi per token. Non esiste un limite specifico di dispositivi per profilo di registrazione, al di sotto del numero massimo di dispositivi per token.
+
+Intune supporta ora fino a 1000 profili Apple Configurator 2.
+
+Per altre informazioni, vedere [Volume supportato](../enrollment/device-enrollment-program-enroll-ios.md#supported-volume).
+
+#### <a name="all-devices-page-column-entry-changes--6967616---"></a>Modifiche alle voci di una colonna della pagina Tutti i dispositivi<!--6967616 -->
+Nella pagina **Tutti i dispositivi** le voci della colonna **Gestito da** sono state modificate:
+- Viene ora visualizzata la voce *Intune* anziché *MDM*
+- Viene ora visualizzata la voce *Con co-gestione* anziché *MDM/Agente di ConfigMgr*
+
+I valori di esportazione rimangono invariati.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-management"></a>Gestione dei dispositivi
+
+#### <a name="trusted-platform-manager-tpm-version-information-now-on-device-hardware-page--6224914-idmiss---"></a>Informazioni sulla versione di TPM (Trusted Platform Manager) ora nella pagina Hardware del dispositivo<!--6224914 idmiss -->
+È ora possibile visualizzare il numero di versione di TPM nella pagina Hardware del dispositivo ([Interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Dispositivi** > scegliere un dispositivo > **Hardware** > cercare in **Chassis**).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="monitor-and-troubleshoot"></a>Monitorare e risolvere i problemi
+
+#### <a name="collect-logs-to-better-troubleshoot-scripts-assigned-to-macos-devices---6359853----"></a>Raccogliere i log per risolvere in modo più efficiente i problemi degli script assegnati ai dispositivi macOS<!-- 6359853  -->
+È ora possibile raccogliere i log per rendere più efficiente la risoluzione dei problemi degli script assegnati ai dispositivi macOS. È possibile raccogliere log fino a 60 MB (compressi) o 25 file, a seconda di quale condizione si verifica per prima. Per altre informazioni, vedere [Risolvere i problemi dei criteri di script della shell macOS tramite la raccolta dei log](../apps/macos-shell-scripts.md#troubleshoot-macos-shell-script-policies-using-log-collection).
+ 
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="security"></a>Sicurezza
+
+#### <a name="derived-credentials-to-provision-android-enterprise-fully-managed-devices-with-certificates--4839592------"></a>Credenziali derivate per il provisioning di certificati ai dispositivi Android Enterprise completamente gestiti<!--4839592    -->
+Intune supporta ora l'uso di [credenziali derivate](../protect/derived-credentials.md) come metodo di autenticazione per i dispositivi Android. Le credenziali derivate sono un'implementazione dello standard NIST (National Institute of Standards and Technology) 800-157 per la distribuzione dei certificati nei dispositivi. Il supporto per Android espande il supporto per i dispositivi che eseguono iOS/iPadOS.
+
+Le credenziali derivate si basano sull'uso della verifica dell'identità personale (PIV) o di una scheda (CAC, Common Access Card), ad esempio una smart card. Per ottenere le credenziali derivate per il dispositivo mobile, gli utenti partono dall'app Microsoft Intune e seguono un flusso di lavoro di registrazione specifico per il provider usato. È comune a tutti i provider la necessità di usare una smart card in un computer per l'autenticazione presso il provider delle credenziali derivate. Il provider rilascia quindi al dispositivo un certificato derivato dalla smart card dell'utente.
+
+È possibile usare le credenziali derivate come metodo di autenticazione per i profili di configurazione dei dispositivi per VPN e Wi-Fi. È anche possibile usarle per l'autenticazione delle app e per la firma e la crittografia S/MIME per le applicazioni che le supportano.
+
+Intune ora supporta con Android i provider di credenziali derivate seguenti:
+- Entrust Datacard
+- Intercede
+
+Un terzo provider, DISA Purebred, sarà disponibile per Android in una versione futura.
+
+#### <a name="microsoft-edge-security-baseline-is-now-generally-available--6586139---"></a>La baseline di sicurezza di Microsoft Edge è ora disponibile a livello generale<!--6586139 -->
+
+*Questa nuova baseline verrà implementata nei tenant nelle prossime settimane. Si prevede che la nuova baseline sarà disponibile per tutti i tenant all'inizio di maggio.*
+
+È ora disponibile una nuova versione della [baseline di sicurezza di Microsoft Edge](../protect/security-baselines.md#available-security-baselines), che è stata rilasciata come disponibile a livello generale (GA). La baseline di Edge precedente era in anteprima.  La nuova versione della baseline è di aprile 2020 (versione di Edge 80 e successive). 
+
+Con il rilascio di questa nuova baseline, non sarà più possibile creare profili basati sulle versioni della baseline precedenti, ma sarà possibile continuare a usare i profili creati con tali versioni. È anche possibile scegliere di [aggiornare i profili esistenti per l'uso della versione più recente della baseline](../protect/security-baselines.md#change-the-baseline-version-for-a-profile). 
 
 <!-- ########################## -->
 ## <a name="week-of-april-6-2020"></a>Settimana del 6 aprile 2020
@@ -76,20 +215,16 @@ Per altre informazioni, vedere [Semplificare le attività IT usando l'interfacci
 
 ### <a name="app-management"></a>Gestione delle app  
 
-#### <a name="company-portal-for-ios-supports-landscape-mode--6048329-wnready---"></a>Il portale aziendale per iOS supporta la modalità orizzontale<!--6048329 wnready -->   
+#### <a name="company-portal-for-ios-supports-landscape-mode--6048329----"></a>Il portale aziendale per iOS supporta la modalità orizzontale<!--6048329  -->   
 Gli utenti possono registrare dispositivi, trovare app e ottenere supporto IT usando l'orientamento dello schermo preferito. L'app rileverà automaticamente l'orientamento adattandosi allo schermo in modalità verticale o orizzontale, a meno che gli utenti non blocchino lo schermo in modalità verticale.  
 
-#### <a name="script-support-for-macos-devices-public-preview---4280361-wnready---"></a>Supporto degli script per i dispositivi macOS (anteprima pubblica)<!-- 4280361 wnready -->
+#### <a name="script-support-for-macos-devices-public-preview---4280361----"></a>Supporto degli script per i dispositivi macOS (anteprima pubblica)<!-- 4280361  -->
 È possibile aggiungere e distribuire script nei dispositivi macOS. Questo supporto consente di configurare i dispositivi macOS oltre le normali possibilità usando le funzionalità MDM native nei dispositivi macOS. Per altre informazioni, vedere [Usare gli script della shell nei dispositivi macOS in Intune](../apps/macos-shell-scripts.md).
 
 <!-- ########################## -->
 ## <a name="week-of-march-24-2020"></a>Settimana del 24 marzo 2020
 
 ### <a name="improved-user-interface-experience-when-creating-device-restrictions-profiles-on-android-and-android-enterprise-devices---5841361---"></a>Esperienza migliorata dell'interfaccia utente per la creazione dei profili di limitazioni dei dispositivi in dispositivi Android e Android Enterprise<!-- 5841361 -->
-
-> [!NOTE] 
-> L'interfaccia utente di Intune verrà aggiornata a un'esperienza a schermo intero. Questa operazione può richiedere alcune settimane. Fino a quando il tenant in uso non riceve l'aggiornamento, il flusso di lavoro per la creazione o la modifica delle impostazioni sarà leggermente diverso.
-
 L'esperienza per la creazione di un profilo per i dispositivi Android e Android Enterprise nell'interfaccia di amministrazione di Endpoint Manager è stata aggiornata. Questa modifica ha effetto sui profili di configurazione dei dispositivi seguenti (**Dispositivi** > **Profili di configurazione** > **Crea profilo** > **Amministratore di dispositivi Android** o **Android Enterprise** per la piattaforma):
 
 - Limitazioni dei dispositivi: Amministratore dispositivo Android
@@ -99,10 +234,6 @@ L'esperienza per la creazione di un profilo per i dispositivi Android e Android 
 Per altre informazioni sulle restrizioni dei dispositivi che è possibile configurare, vedere [Amministratore di dispositivi Android](../configuration/device-restrictions-android.md) e [Android Enterprise](../configuration/device-restrictions-android-for-work.md).
 
 ### <a name="improved-user-interface-experience-when-creating-configuration-profiles-on-iosipados-and-macos-devices---5569002-5568997---"></a>Esperienza migliorata dell'interfaccia utente per la creazione dei profili di configurazione nei dispositivi iOS/iPadOS e macOS<!-- 5569002 5568997 -->
-
-> [!NOTE]
-> L'interfaccia utente di Intune verrà aggiornata a un'esperienza a schermo intero. Questa operazione può richiedere alcune settimane. Fino a quando il tenant in uso non riceve l'aggiornamento, il flusso di lavoro per la creazione o la modifica delle impostazioni sarà leggermente diverso.
-
 L'esperienza per la creazione di un profilo per i dispositivi iOS o macOS nell'interfaccia di amministrazione di Endpoint Manager è stata aggiornata. Questa modifica ha effetto sui profili di configurazione dei dispositivi elencati di seguito (**Dispositivi** > **Profili di configurazione** > **Crea profilo** > **iOS/iPadOS** o **macOS** per la piattaforma):
 
 - Personalizzata: iOS/iPadOS, macOS
@@ -113,9 +244,6 @@ L'esperienza per la creazione di un profilo per i dispositivi iOS o macOS nell'i
 - File delle preferenze: macOS
 
 ### <a name="hide-from-user-configuration-setting-in-device-features-on-macos-devices---6524869---"></a>Impostazione Nascondi dalla configurazione utente nelle funzionalità del dispositivo per i dispositivi macOS<!-- 6524869 -->
-
-> [!NOTE]
-> Questa modifica verrà implementata per tutti i clienti nelle prossime due settimane.
 
 Quando si crea un profilo di configurazione delle funzionalità del dispositivo nei dispositivi macOS, è disponibile una nuova impostazione **Nascondi dalla configurazione utente** (**Dispositivi** > **Profili di configurazione** > **Crea profilo** > **macOS** per la piattaforma > **Funzionalità del dispositivo** per il profilo >**Elementi di accesso**).
 
@@ -158,7 +286,7 @@ Per trovare queste impostazioni in Intune, passare all'[Interfaccia di amministr
 #### <a name="users-personal-encrypted-recovery-key---6273943----"></a>Chiave di ripristino crittografata personale dell'utente<!-- 6273943  -->
 È disponibile una nuova funzionalità di Intune che consente agli utenti di recuperare la chiave di ripristino **FileVault** crittografata personale per i dispositivi Mac usando l'applicazione Portale aziendale per Android o l'applicazione Intune per Android. Sia nell'applicazione Portale aziendale che nell'applicazione Intune è disponibile un collegamento che aprirà un'istanza del browser Chrome per accedere al portale aziendale Web in cui l'utente può visualizzare la chiave di ripristino **FileVault** necessaria per accedere ai dispositivi Mac. Per altre informazioni sulla crittografia, vedere [Usare la crittografia dei dispositivi con Intune](../protect/encrypt-devices.md).
 
-#### <a name="optimized-dedicated-device-enrollment----6114580-wnready---"></a>Ottimizzata la registrazione di dispositivi dedicati <!-- 6114580 wnready -->
+#### <a name="optimized-dedicated-device-enrollment----6114580----"></a>Ottimizzata la registrazione di dispositivi dedicati <!-- 6114580  -->
 È in corso l'ottimizzazione della registrazione per i dispositivi Android Enterprise dedicati ed è più semplice applicare i certificati SCEP associati al Wi-Fi ai dispositivi dedicati registrati prima del 22 novembre 2019. Per le nuove registrazioni, l'app di Intune continuerà a essere installata, ma gli utenti finali non dovranno più eseguire il passaggio per l'**abilitazione dell'agente di Intune** durante la registrazione. La fase verrà eseguita automaticamente in background e i certificati SCEP associati al Wi-Fi possono essere distribuiti e impostati senza interazione da parte dell'utente finale.  
 
 Queste modifiche verranno implementate in fasi nel mese di marzo durante le distribuzioni back-end del servizio Intune. Tutti i tenant avranno questo nuovo comportamento entro la fine di marzo. Per le informazioni correlate, vedere [Supporto per i certificati SCEP nei dispositivi Android Enterprise dedicati](https://techcommunity.microsoft.com/t5/intune-customer-success/support-for-scep-certificates-in-android-enterprise-dedicated/ba-p/928147).
@@ -212,9 +340,6 @@ L'icona di notifica per i criteri MAM in sospeso nel pannello di risoluzione dei
 
 ####  <a name="ui-update-when-configuring-compliance-policy---3961639------"></a>Aggiornamento dell'interfaccia utente durante la configurazione dei criteri di conformità<!-- 3961639    -->
 
-> [!NOTE]
-> L'interfaccia utente di Intune verrà aggiornata a un'esperienza a schermo intero. Questa operazione può richiedere alcune settimane. Fino a quando il tenant in uso non riceve l'aggiornamento, il flusso di lavoro per la creazione o la modifica delle impostazioni sarà leggermente diverso.
-
 È stata aggiornata l'interfaccia utente per la [creazione dei criteri di conformità](../protect/create-compliance-policy.md#create-the-policy) in Microsoft Endpoint Manager (**Dispositivi** > **Criteri di conformità** > **Criteri** > **Crea criterio**). Viene visualizzata una nuova esperienza utente con le stesse impostazioni e gli stessi dettagli usati in precedenza. La nuova esperienza segue un processo di tipo procedura guidata per creare i criteri di conformità e include una pagina in cui è possibile aggiungere *Assegnazioni* per i criteri e una pagina *Rivedi e crea* in cui è possibile esaminare la configurazione prima di creare i criteri.
 
 #### <a name="retire-noncompliant-devices---1827291---------"></a>Ritirare i dispositivi non conformi<!-- 1827291       -->
@@ -241,9 +366,9 @@ Le nuove opzioni aziendali sono simili a quelle disponibili per un profilo Wi-Fi
 ### <a name="device-enrollment"></a>Registrazione del dispositivo
 
 #### <a name="configure-if-enrollment-is-available-in-company-portal-for-android-and-ios---4260128----"></a>Stabilire se la registrazione è disponibile nel Portale aziendale per Android e iOS<!-- 4260128  -->
-È possibile specificare nella configurazione se la registrazione dei dispositivi nel Portale aziendale sui dispositivi Android e iOS è disponibile con prompt, disponibile senza prompt o non disponibile per gli utenti. Per trovare queste impostazioni in Intune, passare all'[Interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) e selezionare **Amministrazione del tenant** > **Personalizzazione** > **Modifica** > **Registrazione del dispositivo**.  
+È possibile specificare nella configurazione se la registrazione dei dispositivi nel Portale aziendale sui dispositivi Android e iOS è disponibile con prompt, disponibile senza prompt o non disponibile per gli utenti. Per trovare queste impostazioni in Intune, passare all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) e selezionare **Amministrazione del tenant** > **Personalizzazione** > **Modifica** > **Registrazione del dispositivo**.  
 
-Il supporto per l'impostazione di registrazione del dispositivo richiede che gli utenti finali abbiano le seguenti versioni del Portale aziendale:
+Per il supporto per l'impostazione della registrazione dei dispositivi è necessario che gli utenti finali dispongano delle versioni del Portale aziendale seguenti:
 -    Portale aziendale in iOS: versione 4.4 o successiva
 -    Portale aziendale in Android: versione 5.0.4715.0 o successiva
 
@@ -255,7 +380,7 @@ Per altre informazioni sulla personalizzazione del Portale aziendale esistente, 
 #### <a name="new-android-report-on-android-devices-overview-page---5435435-----"></a>Nuovo report Android nella pagina di panoramica dei dispositivi Android<!-- 5435435   -->
 È stato aggiunto un report alla console di amministrazione di Microsoft Endpoint Manager nella pagina di panoramica dei dispositivi Android che visualizza il numero di dispositivi Android registrati in ogni soluzione di gestione dei dispositivi. Questo grafico (corrispondente al grafico già presente nella console di Azure) mostra il numero di dispositivi registrati con profilo di lavoro, completamente gestiti, dedicati e con registrazione di tipo amministratore di dispositivi. Per visualizzare il report, scegliere **Dispositivi** > **Android** > **Panoramica**.
 
-#### <a name="guide-users-from-android-device-administrator-management-to-work-profile-management--5857738-idready-wnready-wnstaged--"></a>Guidare gli utenti dalla gestione degli amministratori dei dispositivi Android alla gestione del profilo di lavoro<!--5857738 idready wnready wnstaged-->
+#### <a name="guide-users-from-android-device-administrator-management-to-work-profile-management--5857738---wnstaged--"></a>Guidare gli utenti dalla gestione degli amministratori dei dispositivi Android alla gestione del profilo di lavoro<!--5857738   wnstaged-->
 È in corso il rilascio di una nuova impostazione di conformità per la piattaforma degli amministratori dei dispositivi Android. Questa impostazione consente di rendere un dispositivo non conforme se gestito con l'amministratore del dispositivo.
 
 In questi dispositivi non conformi gli utenti visualizzeranno il messaggio **Passa alla configurazione della gestione dei nuovi dispositivi** nella pagina **Aggiorna impostazioni del dispositivo**. Toccando il pulsante **Risolvi**, verranno visualizzate indicazioni dettagliate su:
@@ -532,7 +657,7 @@ L'app Portale aziendale è stata aggiornata per supportare prestazioni migliorat
 Microsoft Intune ora supporta il canale di distribuzione aggiuntivo **Stabile** per l'app Microsoft Edge per macOS. Il canale **Stabile** è il canale consigliato per la distribuzione su larga scala di Microsoft Edge negli ambienti aziendali. Viene aggiornato ogni sei settimane e ogni versione include miglioramenti derivanti dal canale **Beta**. Oltre ai canali **Stabile** e **Beta**, Intune supporta il canale **Dev**. L'anteprima pubblica offre i canali Stabile e Dev per Microsoft Edge 77 e versioni successive per macOS. Per impostazione predefinita, gli aggiornamenti automatici del browser sono attivati. Per altre informazioni, vedere [Aggiungere Microsoft Edge ai dispositivi macOS usando Microsoft Intune](../apps/apps-edge-macos.md).
 
 #### <a name="retirement-of-intune-managed-browser--5728447---"></a>Ritiro di Intune Managed Browser<!--5728447 -->
-Intune Managed Browser verrà ritirato. Usare Microsoft Edge per un'esperienza protetta del browser di Intune. Per altre informazioni, vedere la voce "[Azione: Usare Microsoft Edge per l'esperienza protetta del browser di Intune](whats-new.md#take-action-use-microsoft-edge-for-your-protected-intune-browser-experience)" nella sezione [Notifiche](whats-new.md#notices) più avanti nell'articolo.
+Intune Managed Browser verrà ritirato. Usare Microsoft Edge per l'esperienza protetta del browser di Intune. 
 
 <!-- ########################## -->
 ## <a name="week-of-january-20-2020-2001-service-release"></a>Settimana del 20 gennaio 2020 (versione del servizio 2001)

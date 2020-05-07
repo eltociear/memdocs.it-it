@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5657a26419280871e6739060509a72c4604fc3a7
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: c3adb6f1548c0b332aaa477014f07559ffc826c1
+ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82255014"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82842292"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Novità di Microsoft Intune - mesi precedenti
 
@@ -4187,7 +4187,7 @@ In un profilo di restrizione del dispositivo di Intune è possibile configurare 
 - Specificare se sono consentite le notifiche audio.
 
 ### <a name="configure-ios-apps-to-run-in-single-app-mode-autonomously---737837---"></a>Configurare le app per iOS per l'esecuzione in modo autonomo in Modalità applicazione singola<!-- 737837 -->
-È possibile usare un profilo di dispositivo di Intune per configurare i dispositivi iOS per l'esecuzione delle applicazioni specificate in [Modalità applicazione singola autonoma](../configuration/device-restrictions-ios.md#autonomous-single-app-mode). Quando questa modalità è configurata e l'app è in esecuzione, il dispositivo è bloccato in modo che possa eseguire solo quell'app. Un esempio è quando si configura un'app che consente agli utenti di eseguire un test nel dispositivo. Quando le operazioni dell'app sono state completate o si rimuove questo criterio, il dispositivo torna allo stato normale.
+È possibile usare un profilo di dispositivo di Intune per configurare i dispositivi iOS per l'esecuzione delle applicazioni specificate in [Modalità applicazione singola autonoma](../configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam). Quando questa modalità è configurata e l'app è in esecuzione, il dispositivo è bloccato in modo che possa eseguire solo quell'app. Un esempio è quando si configura un'app che consente agli utenti di eseguire un test nel dispositivo. Quando le operazioni dell'app sono state completate o si rimuove questo criterio, il dispositivo torna allo stato normale.
 
 ### <a name="configure-trusted-domains-for-email-and-web-browsing-on-ios-devices---723765---"></a>Configurare i domini attendibili per posta elettronica ed esplorazione Web nei dispositivi iOS<!-- 723765 -->
 Da un profilo di restrizione del dispositivo iOS è ora possibile configurare le [impostazioni di dominio](../configuration/device-restrictions-ios.md#domains) seguenti:

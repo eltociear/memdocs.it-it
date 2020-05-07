@@ -12,12 +12,12 @@ metadata:
   ms.author: dougeby
   manager: dougeby
   ms.date: 08/07/2019
-  ms.openlocfilehash: 468bf56722f17fded75c18a722b15e5e55113eec
-  ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+  ms.openlocfilehash: c604af033d47061c186bd987310e495d2b118268
+  ms.sourcegitcommit: 5f9d5d22114ae5aeb0270c7fb59c5dced5f48826
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 04/23/2020
-  ms.locfileid: "82077955"
+  ms.lasthandoff: 05/06/2020
+  ms.locfileid: "82862327"
 landingContent:
 - title: Informazioni sulla registrazione
   linkLists:
@@ -65,8 +65,6 @@ landingContent:
     links:
     - text: Connettere l'account di Intune all'account di Google Play gestito
       url: connect-intune-android-enterprise.md
-    - text: Configurare la registrazione dei dispositivi con profilo di lavoro Android Enterprise
-      url: android-work-profile-enroll.md
     - text: Configurare la registrazione dei dispositivi con profilo di lavoro Android Enterprise
       url: android-work-profile-enroll.md
     - text: Configurare la registrazione di dispositivi Android Enterprise dedicati

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d3ae44892cd46a438113fb54dad0e290b8fb148e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 556ddb10f0ba25fc1c3cf4b215d5058d3221c7fe
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707739"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906459"
 ---
 # <a name="checklist-for-installing-update-1702-for-configuration-manager"></a>Elenco di controllo per l'installazione dell'aggiornamento 1702 di Configuration Manager
 
@@ -89,7 +89,7 @@ Per altre informazioni, vedere [Prerequisiti del sito e del sistema del sito](..
 
 **Controllare la versione di Windows Assessment and Deployment Kit (ADK) per Windows 10**: la versione di Windows 10 ADK deve essere 1607 o successiva. Se è necessario aggiornare l'ADK, eseguire questa operazione prima di iniziare l'aggiornamento di Configuration Manager. In questo modo, le immagini di avvio predefinite vengono aggiornate automaticamente alla versione più recente di Windows PE. Le immagini di avvio personalizzate devono essere aggiornate manualmente.
 
-Se si aggiorna il sito prima di aggiornare l'ADK, vedere il blog [Configuration Manager e Windows ADK per Windows 10, versione 1607](https://blogs.technet.microsoft.com/enterprisemobility/2016/09/09/configuration-manager-and-the-windows-adk-for-windows-10-version-1607/) per uno script che può essere usato per rigenerare le immagini di avvio.
+Se si aggiorna il sito prima di aggiornare l'ADK, vedere il blog [Configuration Manager e Windows ADK per Windows 10, versione 1607](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-the-windows-adk-for-windows-10-version/ba-p/274047) per uno script che può essere usato per rigenerare le immagini di avvio.
 
 **Esaminare lo stato del sito e della gerarchia e verificare che non siano presenti problemi non risolti:** Prima di aggiornare un sito, risolvere tutti i problemi operativi per il server del sito, il server del database del sito e i ruoli del sistema del sito installati nei computer remoti. Un aggiornamento del sito può avere esito negativo a causa di problemi operativi esistenti.
 

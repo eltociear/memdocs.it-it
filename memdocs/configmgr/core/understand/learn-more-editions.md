@@ -10,12 +10,12 @@ ms.assetid: 495b87ae-41a4-49ba-abe2-d4f7d22ac0d4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f18ed2180f1d526e2afa4872e8fa9018c7e18721
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 04ed335c65369840085fe44ba2f1b81d7806a0e3
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706879"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906057"
 ---
 # <a name="licensing-and-branches-for-configuration-manager"></a>Licenze e rami per Configuration Manager
 
@@ -32,7 +32,7 @@ Questo articolo illustra i requisiti di licenza per le opzioni di installazione 
 
 I clienti con contratti Software Assurance attivi per le licenze di Configuration Manager, o con diritti di sottoscrizione equivalenti alla data 1 ottobre 2016, hanno diritto a usare la versione 1606 di ottobre 2016 di Configuration Manager. I clienti con diritti per Configuration Manager in data 1 ottobre 2016 o successiva, al momento dell'installazione avranno a disposizione due opzioni con licenza: Current Branch e Long-Term Servicing Branch (LTSB).
 
-Per i termini e le condizioni relativi ai prodotti acquistati tramite i programmi multilicenza Microsoft, vedere [Condizioni di licenza e documentazione](https://go.microsoft.com/fwlink/?LinkId=800052).
+Per i termini e le condizioni relativi ai prodotti acquistati tramite i programmi multilicenza Microsoft, vedere [Condizioni di licenza e documentazione](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?mode=1).
 
 
 ## <a name="licensed-branches"></a>Rami con licenza
@@ -117,7 +117,7 @@ Per altri dettagli sulle licenze dei prodotti, usare le risorse seguenti.
 
 - [Panoramica del Centro servizi per contratti multilicenza](https://www.microsoft.com/Licensing/existing-customer/vlsc-training-and-resources.aspx)
 
-- [Termini per i contratti multilicenza Microsoft per i prodotti](https://go.microsoft.com/fwlink/?LinkId=800052)
+- [Termini per i contratti multilicenza Microsoft per i prodotti](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?mode=1)
 
 - I clienti che hanno acquistato contratti multilicenza possono ottenere un riepilogo delle proprie licenze dal [Centro servizi per contratti multilicenza](https://www.microsoft.com/Licensing/servicecenter/default.aspx). Dal menu **Licenze** scegliere **Riepilogo licenze**.
 

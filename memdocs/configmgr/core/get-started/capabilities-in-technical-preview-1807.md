@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 398f16b8f75d894030d76406807f74bdaa4be9d5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ace27e9035af6696e455382a32365be0e3824d65
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81695949"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905207"
 ---
 # <a name="capabilities-in-configuration-manager-technical-preview-version-1807"></a>Funzionalità in Configuration Manager Technical Preview versione 1807 
 
@@ -82,7 +82,7 @@ L'area di lavoro **Community** include anche i nodi seguenti:
 
 - Usare la console di Configuration Manager in un sistema operativo client.  
 
-    - In alternativa, ma non consigliato: in un sistema operativo server disabilitare [ Protezione avanzata di Internet Explorer](https://go.microsoft.com/fwlink/?LinkId=253461).  
+    - In alternativa, ma non consigliato: in un sistema operativo server disabilitare [ Protezione avanzata di Internet Explorer](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10)).
 
 - Il computer con la console deve avere accesso a Internet e la connettività ai siti seguenti:  
     - `https://aka.ms`  

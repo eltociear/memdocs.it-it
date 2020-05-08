@@ -10,12 +10,12 @@ ms.assetid: be680198-4cea-4378-a686-d52f382ba483
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c7610b0e60f3ea02918c9dd98858a3b2bfd7c712
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f8dd7c4c561ca22c679ee8ae03764ebb20b87664
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708199"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906077"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>Abilitare la condivisione dei dati per Desktop Analytics
 
@@ -74,6 +74,9 @@ Per abilitare la condivisione dei dati, configurare il server proxy per consenti
 > Per la privacy e l'integrità dei dati, Windows verifica la presenza di un certificato SSL Microsoft (associazione del certificato) durante la comunicazione con gli endpoint dei dati di diagnostica. L'intercettazione e l'ispezione SSL non sono possibili. Per usare Desktop Analytics, escludere questi endpoint dall'ispezione SSL.<!-- BUG 4647542 -->
 
 A partire dalla versione 2002, se il server del sito di Configuration Manager non riesce a connettersi agli endpoint necessari per un servizio cloud, genera un messaggio di stato critico con ID 11488. Quando non è in grado di connettersi al servizio, lo stato del componente SMS_SERVICE_CONNECTOR diventa critico. Visualizzare lo stato dettagliato nel nodo [Stato componente](../core/servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus) della console di Configuration Manager.<!-- 5566763 -->
+
+> [!NOTE]
+> Per altre informazioni sugli intervalli di indirizzi IP Microsoft, vedere [Microsoft Public IP Space](https://www.microsoft.com/download/details.aspx?id=53602). Questi indirizzi vengono aggiornati regolarmente. Non esiste alcuna granularità in base al servizio, è possibile usare qualsiasi indirizzo IP compreso in questi intervalli.
 
 ### <a name="server-connectivity-endpoints"></a>Endpoint di connettività del server
 

@@ -10,23 +10,23 @@ ms.assetid: 91f9de33-b277-4500-acd6-e7d90a2947c9
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9917ec8a1ed2072903276de438f49d3f783a1284
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ed155fb61491a273732ed3b974b6ddb5ac29bc89
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692609"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904006"
 ---
 # <a name="health-attestation-for-configuration-manager"></a>Attestazione dell'integrità per Configuration Manager
 
 *Si applica a: Configuration Manager (Current Branch)*
 
-Gli amministratori possono visualizzare l'[attestazione dell'integrità del dispositivo di Windows 10](https://technet.microsoft.com/library/mt592023.aspx) nella console di Configuration Manager.  L'attestazione dell'integrità dei dispositivi consente all'amministratore di assicurare che nei computer client siano abilitate le seguenti configurazioni attendibili di BIOS, TPM e software di avvio:  
+Gli amministratori possono visualizzare l'[attestazione dell'integrità del dispositivo di Windows 10](https://docs.microsoft.com/windows/security/threat-protection/protect-high-value-assets-by-controlling-the-health-of-windows-10-based-devices) nella console di Configuration Manager.  L'attestazione dell'integrità dei dispositivi consente all'amministratore di assicurare che nei computer client siano abilitate le seguenti configurazioni attendibili di BIOS, TPM e software di avvio:  
 
 -   Antimalware ad esecuzione anticipata: l'antimalware ad esecuzione anticipata (ELAM) protegge il computer all'avvio e prima dell'inizializzazione dei driver di terze parti. [Come attivare la funzionalità ELAM](https://gallery.technet.microsoft.com/How-to-turn-on-Early-84552ec5)  
 -   BitLocker: Crittografia unità BitLocker di Windows è un software che consente di crittografare tutti i dati archiviati nel volume del sistema operativo Windows.  [Come attivare BitLocker](https://gallery.technet.microsoft.com/How-to-turn-on-BitLocker-34294d3d)  
--   Avvio protetto: Avvio protetto è uno standard di sicurezza sviluppato dai membri del settore IT per garantire che i computer vengano avviati usando solo software considerato attendibile dal relativo produttore. [Altre informazioni su Avvio protetto](https://technet.microsoft.com/library/hh824987.aspx)  
--   Integrità del codice: Integrità del codice è una funzionalità che migliora la sicurezza del sistema operativo convalidando l'integrità di un driver o di un file di sistema ogni volta che viene caricato nella memoria. [Altre informazioni su Integrità del codice](https://technet.microsoft.com/library/dd348642.aspx)  
+-   Avvio protetto: Avvio protetto è uno standard di sicurezza sviluppato dai membri del settore IT per garantire che i computer vengano avviati usando solo software considerato attendibile dal relativo produttore. [Altre informazioni su Avvio protetto](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh824987(v=win.10))  
+-   Integrità del codice: Integrità del codice è una funzionalità che migliora la sicurezza del sistema operativo convalidando l'integrità di un driver o di un file di sistema ogni volta che viene caricato nella memoria. [Altre informazioni su Integrità del codice](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd348642(v=ws.10))  
 
 Questa funzionalità è disponibile per i PC e le risorse locali gestite da Configuration Manager e i dispositivi mobili gestiti con Microsoft Intune. Gli amministratori possono specificare se la creazione di report avviene tramite cloud o infrastruttura locale. Il monitoraggio locale dell'attestazione dell'integrità del dispositivo consente all'amministratore di controllare i PC client senza accesso a Internet.
 
@@ -34,7 +34,7 @@ Questa funzionalità è disponibile per i PC e le risorse locali gestite da Conf
 
  **Requisiti:**  
 
--   Dispositivi client che eseguono Windows 10 versione 1607 o Windows Server 2016 versione 1607 con [Attestazione dell'integrità del dispositivo abilitata](https://technet.microsoft.com/windows-server-docs/security/device-health-attestation).
+-   Dispositivi client che eseguono Windows 10 versione 1607 o Windows Server 2016 versione 1607 con [Attestazione dell'integrità del dispositivo abilitata](https://docs.microsoft.com/windows-server/security/device-health-attestation).
 -   Dispositivi abilitati per TPM 1.2 o TPM 2.
 -   Quando si usa la gestione cloud, comunicazione tra l'agente client di Configuration Manager e il punto di gestione con il servizio di attestazione dell'integrità *has.spserv.microsoft.com* (porta 443) (gestione cloud). In locale, il client deve essere in grado di comunicare con il punto di gestione abilitato per l'attestazione dell'integrità del dispositivo.
 

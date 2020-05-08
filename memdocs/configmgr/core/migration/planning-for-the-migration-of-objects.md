@@ -10,12 +10,12 @@ ms.assetid: 066caf00-e419-4efb-93d3-ba4ba878297c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9777fb12a2d63a990587386ac33cb2749bf19a4e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 93c3887307c32ea636a6dbb064cda13f4b9130c6
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702819"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905125"
 ---
 # <a name="plan-for-the-migration-of-configuration-manager-objects-to-configuration-manager-current-branch"></a>Pianificare la migrazione degli oggetti di Configuration Manager a Configuration Manager Current Branch
 
@@ -123,7 +123,7 @@ Quando si esegue la migrazione da una gerarchia di origine di System Center 2012
 È possibile eseguire la migrazione di elementi e linee di base di configurazione.  
 
 > [!NOTE]  
->  Gli elementi di configurazione non interpretati delle gerarchie di origine di Configuration Manager 2007 non sono supportati per la migrazione. Non è possibile eseguire la migrazione o importare questi elementi di configurazione nella gerarchia di destinazione. Per altre informazioni sugli elementi di configurazione non interpretati, vedere Uninterpreted Configuration Item (Elemento di configurazione non interpretato) nell'argomento [About Configuration Items in Desired Configuration Management](https://go.microsoft.com/fwlink/?LinkId=103846) (Informazioni sugli elementi di configurazione nella gestione configurazione desiderata) nella libreria della documentazione di Configuration Manager 2007.  
+>  Gli elementi di configurazione non interpretati delle gerarchie di origine di Configuration Manager 2007 non sono supportati per la migrazione. Non è possibile eseguire la migrazione o importare questi elementi di configurazione nella gerarchia di destinazione. Per altre informazioni sugli elementi di configurazione non interpretati, vedere Uninterpreted Configuration Item (Elemento di configurazione non interpretato) nell'argomento [About Configuration Items in Desired Configuration Management](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694136(v=technet.10)#uninterpreted-configuration-item) (Informazioni sugli elementi di configurazione nella gestione configurazione desiderata) nella libreria della documentazione di Configuration Manager 2007.  
 
 È possibile importare pacchetti di configurazione di Configuration Manager 2007. Il processo di importazione converte automaticamente i pacchetti di configurazione in un formato compatibile con Configuration Manager Current Branch.  
 

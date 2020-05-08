@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: e9778b13-c8a3-40eb-8655-34ac8ce9cdaa
-ms.openlocfilehash: c857997bdbeed51286e874dcbecf00b414dfe6a0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: bd384edafd6464073b33a593a56bc88ba2fb0b87
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81699959"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906755"
 ---
 # <a name="introduction-to-software-updates-in-configuration-manager"></a>Introduzione agli aggiornamenti software in Configuration Manager
 
@@ -275,7 +275,7 @@ Per uno scenario di esempio in cui viene illustrato come distribuire gli aggiorn
  Per altre informazioni sul modo in cui Configuration Manager gestisce dispositivi Windows Embedded che usano filtri di scrittura, vedere [Planning for client deployment to Windows Embedded devices in System Center Configuration Manager](../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md) (Pianificazione della distribuzione di client in dispositivi Windows Embedded in System Center Configuration Manager).  
 
 ##  <a name="extend-software-updates-in-configuration-manager"></a><a name="BKMK_ExtendSoftwareUpdates"></a> Estendere gli aggiornamenti software in Configuration Manager  
- Usare System Center Updates Publisher per gestire gli aggiornamenti software che non sono disponibili da Microsoft Update. Dopo aver pubblicato gli aggiornamenti software nel server di aggiornamento e averli sincronizzati in Configuration Manager, è possibile distribuire gli aggiornamenti software nei client di Configuration Manager. Per altre informazioni su System Center Updates Publisher, vedere [Updates Publisher 2011](https://go.microsoft.com/fwlink/p/?LinkId=252947).  
+ Usare System Center Updates Publisher per gestire gli aggiornamenti software che non sono disponibili da Microsoft Update. Dopo aver pubblicato gli aggiornamenti software nel server di aggiornamento e averli sincronizzati in Configuration Manager, è possibile distribuire gli aggiornamenti software nei client di Configuration Manager. Per altre informazioni su System Center Updates Publisher, vedere [Updates Publisher 2011](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
 
 ## <a name="next-steps"></a>Passaggi successivi
 [Plan for software updates](../plan-design/plan-for-software-updates.md) (Pianificare gli aggiornamenti del software)

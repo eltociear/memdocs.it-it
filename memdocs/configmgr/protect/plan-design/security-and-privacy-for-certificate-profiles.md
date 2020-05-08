@@ -10,12 +10,12 @@ ms.assetid: 3393db41-900a-44c5-b950-2d46a35a198c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4b7db4537965b17cd56cc4d996eec576c2b18965
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3825ef9b9b1efd576a31742e0fdbe7c2bc3b1628
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706049"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906842"
 ---
 # <a name="security-and-privacy-for-certificate-profiles-in-configuration-manager"></a>Sicurezza e privacy per i profili certificato in Configuration Manager
 
@@ -27,7 +27,7 @@ ms.locfileid: "81706049"
 
 |Procedura di sicurezza consigliata|Altre informazioni|  
 |----------------------------|----------------------|  
-|Identificare e seguire eventuali procedure consigliate per la protezione per il servizio Registrazione dispositivi di rete, che include la configurazione del sito Web Servizio Registrazione dispositivi di rete in Internet Information Services (IIS) per richiedere SSL e ignorare certificati client.|Vedere [Network Device Enrollment Service Guidance (Informazioni aggiuntive sul servizio Registrazione dispositivi di rete)](https://go.microsoft.com/fwlink/p/?LinkId=309016) nella libreria Servizi certificati Active Directory in TechNet.|  
+|Identificare e seguire eventuali procedure consigliate per la protezione per il servizio Registrazione dispositivi di rete, che include la configurazione del sito Web Servizio Registrazione dispositivi di rete in Internet Information Services (IIS) per richiedere SSL e ignorare certificati client.|Per altre informazioni, vedere [Linee guida per il Servizio Registrazione dispositivi di rete](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)).|  
 |Quando si configurano profili certificato SCEP, scegliere le opzioni più sicure che i dispositivi e l'infrastruttura sono in grado di supportare.|Identificare, implementare e seguire le procedure consigliate per la protezione per i dispositivi e l'infrastruttura.|  
 |Specificare manualmente l'affinità utente dispositivo invece di consentire agli utenti di identificare il dispositivo principale. Inoltre, non abilitare la configurazione basata sulle statistiche di utilizzo.|Se si fa clic sull'opzione **Consenti registrazione dei certificati solo sul dispositivo primario dell'utente** in un profilo certificato SCEP, non considerare autorevoli le informazioni raccolte dagli utenti o dal dispositivo. Se si distribuiscono profili certificato SCEP con questa configurazione e l'affinità utente dispositivo non è specificata da un utente amministratore attendibile, utenti non autorizzati potrebbero ricevere privilegi elevati e potrebbero essere concessi loro certificati per effettuare l'autenticazione.<br /><br /> **Nota:** Se si abilita la configurazione basata sulle statistiche di utilizzo, queste informazioni vengono raccolte usando messaggi di stato che non sono protetti da Configuration Manager. Per limitare questo rischio, utilizzare la firma SMB o IPsec tra computer client e il punto di gestione.|  
 |Non aggiungere autorizzazioni Lettura e Registrazione per utenti ai modelli di certificato, né configurare il punto di registrazione certificati per ignorare la verifica del modello di certificato.|Anche se Configuration Manager supporta il controllo aggiuntivo se si aggiungono le autorizzazioni di protezione Lettura e Registrazione per gli utenti e sebbene sia possibile configurare il punto di registrazione certificati per ignorare questo controllo quando l'autenticazione non è possibile, nessuna delle due configurazioni è una procedura consigliata per la protezione. Per altre informazioni, vedere l'articolo sulla [pianificazione delle autorizzazioni dei modelli di certificato per i profili certificato](../../protect/plan-design/planning-for-certificate-template-permissions.md).|  

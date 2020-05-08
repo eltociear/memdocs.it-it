@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d154dc0ba681a37ebb2155bfa1bcdb6d8734965f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b3e1a2feaddb7384d76790249152c89dfa8ee2d3
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073960"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904809"
 ---
 # <a name="what39s-new-in-version-1610-of-configuration-manager"></a>Novità della versione 1610 di Configuration Manager
 
@@ -29,8 +29,8 @@ L'aggiornamento 1610 per Configuration Manager Current Branch è disponibile com
 > Per installare un nuovo sito, è necessario usare una versione base di Configuration Manager.  
 >
 > Sono disponibili altre informazioni su:    
-> - [Installing new sites](https://technet.microsoft.com/library/mt590197.aspx) (Installare nuovi siti)  
-> - [Installing updates at sites](https://technet.microsoft.com/library/mt607046.aspx) (Installare aggiornamenti nei siti)  
+> - [Installing new sites](../../servers/deploy/install/installing-sites.md) (Installare nuovi siti)  
+> - [Installing updates at sites](../../servers/manage/updates.md) (Installare aggiornamenti nei siti)  
 > - [Baseline and update versions](../../servers/manage/updates.md#bkmk_Baselines) (Versioni di base e di aggiornamento)
 
 Le sezioni seguenti illustrano in dettaglio le modifiche e le nuove funzionalità introdotte nella versione 1610 di Configuration Manager.  
@@ -168,7 +168,7 @@ Questa azione non comporta la disinstallazione dell'applicazione dal dispositivo
 
 ## <a name="filter-by-content-size-in-automatic-deployment-rules"></a>Filtrare per dimensioni del contenuto nelle regole di distribuzione automatica
 È ora possibile filtrare le dimensioni del contenuto per gli aggiornamenti software nelle regole di distribuzione automatica. Ad esempio, per scaricare solo gli aggiornamenti software inferiori a 2 MB, è possibile impostare il filtro **Dimensioni contenuto (KB)** su **< 2048**. Questo filtro impedisce che vengano scaricati in automatico gli aggiornamenti software di grandi dimensioni, al fine di migliorare il supporto della manutenzione Windows semplificata di livello inferiore quando la larghezza di banda è limitata. Per informazioni dettagliate, vedere:
-- [Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/) (Configuration Manager e manutenzione Windows semplificata su sistemi operativi di versioni precedenti)
+- [Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-simplified-windows-servicing-on-down/ba-p/274056) (Configuration Manager e manutenzione Windows semplificata su sistemi operativi di versioni precedenti)
 - [Distribuire automaticamente gli aggiornamenti software](../../../sum/deploy-use/automatically-deploy-software-updates.md)
 
 Per configurare il campo **Dimensioni contenuto (KB)** , eseguire una delle operazioni seguenti:

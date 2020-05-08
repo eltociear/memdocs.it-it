@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/07/2020
+ms.date: 05/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d9da6870caed61917d8093e2dd25882cec72d987
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 536ad36120a8fb5dc4ad0d16b8f265e56260d461
+ms.sourcegitcommit: 56bb5419c41c2e150ffed0564350123135ea4592
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79353255"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82729266"
 ---
 # <a name="iosipados-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Impostazioni di iOS/iPadOS per contrassegnare un dispositivo come conforme o non conforme in Intune
 
@@ -41,9 +41,9 @@ Come amministratore di Intune, usare queste impostazioni di conformità per prot
 
 ## <a name="email"></a>Posta elettronica
 
-- **Rendi obbligatorio un profilo di posta elettronica gestito nei dispositivi mobili**:  
+- **Non è possibile configurare la posta elettronica nel dispositivo**  
   - **Non configurato** (*impostazione predefinita*): questa impostazione non viene valutata per la conformità o la non conformità.
-  - **Rendi obbligatorio**: i dispositivi che non hanno un profilo di posta elettronica gestito da Intune non sono considerati conformi. Un dispositivo potrebbe non avere un profilo di posta elettronica gestito quando non viene specificato correttamente come destinazione oppure se l'utente ha configurato manualmente l'account di posta elettronica nel dispositivo.
+  - **Rendi obbligatorio** - È necessario un account di posta elettronica gestito. Se l'utente ha già un account di posta elettronica nel dispositivo, è necessario rimuovere l'account di posta elettronica in modo che Intune possa configurarne uno correttamente. Se non esiste alcun account di posta elettronica nel dispositivo, l'utente deve contattare l'amministratore IT per configurare un account di posta elettronica gestito.
 
   Il dispositivo è considerato non conforme nelle situazioni seguenti:  
   - Il profilo di posta elettronica viene assegnato a un gruppo di utenti diverso rispetto al gruppo di utenti a cui sono destinati i criteri di conformità.
@@ -51,17 +51,21 @@ Come amministratore di Intune, usare queste impostazioni di conformità per prot
 
 Per informazioni dettagliate sui profili di posta elettronica, vedere [Configurare l'accesso alla posta elettronica aziendale usando profili di posta elettronica con Intune](../configuration/email-settings-configure.md).
 
-## <a name="device-health"></a>Integrità del dispositivo
+## <a name="device-health"></a>Integrità dispositivi
 
-- **Dispositivi jailbroken**:  
+- **Dispositivi jailbroken**  
+  *Supportata per iOS 8.0 e versioni successive*
+
   - **Non configurato** (*impostazione predefinita*): questa impostazione non viene valutata per la conformità o la non conformità.
   - **Blocca**: contrassegnare i dispositivi rooted (jailbroken) come non conformi.  
 
-- **Richiedi che il dispositivo si trovi al massimo al livello di minaccia del dispositivo** *(iOS 8.0 e versioni successive)* :  
-  usare questa impostazione per considerare la valutazione del rischio come condizione di conformità. Scegliere il livello di minaccia consentito:  
+- **Richiedi che il dispositivo si trovi al massimo al livello di minaccia del dispositivo**  
+  *Supportata per iOS 8.0 e versioni successive*
+
+  usare questa impostazione per considerare la valutazione del rischio come condizione di conformità. Scegliere il livello di minaccia consentito:
   - **Non configurato** (*impostazione predefinita*): questa impostazione non viene valutata per la conformità o la non conformità.
   - **Protetto**: questa opzione è la più sicura e indica che il dispositivo non può subire alcuna minaccia. Se viene rilevata la presenza di minacce di qualsiasi livello, il dispositivo viene considerato non conforme.
-  - **Basso**: il dispositivo viene valutato come conforme se sono presenti solo minacce di livello basso. In presenza di minacce di livello superiore, il dispositivo verrà messo in stato di non conformità.
+  - **Basso**: il dispositivo viene valutato come conforme se sono presenti solo minacce di livello basso. Se sono presenti minacce di livello più alto, lo stato del dispositivo passa a Non conforme.
   - **Medio**: il dispositivo viene valutato come conforme se le minacce presenti nel dispositivo sono di livello basso o medio. Se viene rilevata la presenza di minacce di livello alto, il dispositivo viene considerato non conforme.
   - **Alto**: questa opzione è la meno sicura poiché consente tutti i livelli di minaccia. Potrebbe essere utile usare questa soluzione solo per la creazione di report.
 
@@ -69,16 +73,24 @@ Per informazioni dettagliate sui profili di posta elettronica, vedere [Configura
 
 ### <a name="operating-system-version"></a>Versione del sistema operativo  
 
-- **Versione minima del sistema operativo** *(iOS 8.0 e versioni successive)* :  
+- **Versione minima del sistema operativo**  
+  *Supportata per iOS 8.0 e versioni successive*
+
   Quando un dispositivo non soddisfa il requisito relativo alla versione minima del sistema operativo, viene segnalato come non conforme. Viene visualizzato un collegamento con informazioni su come eseguire l'aggiornamento. L'utente finale può scegliere di aggiornare il dispositivo. In seguito, potrà accedere alle risorse dell'organizzazione.
 
-- **Versione massima del sistema operativo** *(iOS 8.0 e versioni successive)* :  
+- **Versione massima del sistema operativo**  
+  *Supportata per iOS 8.0 e versioni successive*
+
   Quando un dispositivo usa una versione del sistema operativo successiva rispetto a quella della regola, l'accesso alle risorse dell'organizzazione viene bloccato. All'utente finale viene chiesto di contattare l'amministratore IT. Il dispositivo non può accedere alle risorse dell'organizzazione finché una regola non viene modificata in modo da consentire la versione del sistema operativo.
 
-- **Versione minima della build del sistema operativo** *(iOS 8.0 e versioni successive)* :  
+- **Versione minima della build del sistema operativo**  
+  *Supportata per iOS 8.0 e versioni successive*
+
   quando Apple pubblica aggiornamenti della sicurezza, in genere viene aggiornato il numero di build e non la versione del sistema operativo. Usare questa funzionalità per immettere un numero di build minimo consentito nel dispositivo.
 
-- **Versione massima della build del sistema operativo** *(iOS 8.0 e versioni successive)* :  
+- **Versione massima della build del sistema operativo*  
+  *Supportata per iOS 8.0 e versioni successive*
+
   quando Apple pubblica aggiornamenti della sicurezza, in genere viene aggiornato il numero di build e non la versione del sistema operativo. Usare questa funzionalità per immettere un numero di build massimo consentito nel dispositivo.
 
 ## <a name="system-security"></a>Protezione del sistema
@@ -88,40 +100,52 @@ Per informazioni dettagliate sui profili di posta elettronica, vedere [Configura
 > [!NOTE]
 > Dopo l'applicazione di criteri di conformità o di configurazione a un dispositivo iOS/iPadOS, agli utenti viene richiesto ogni 15 minuti di impostare un passcode. Tale richiesta viene visualizzata finché non viene impostato un passcode. Quando viene impostato un passcode per il dispositivo iOS/iPadOS, viene avviato automaticamente il processo di crittografia. Il dispositivo resta crittografato fino a quando non viene disabilitato il passcode.
 
-- **Richiedi una password per sbloccare i dispositivi mobili**:  
+- **Richiedi una password per sbloccare i dispositivi mobili**  
   - **Non configurato** (*impostazione predefinita*): questa impostazione non viene valutata per la conformità o la non conformità.  
   - **Rendi obbligatorio**: gli utenti devono immettere una password prima di accedere al dispositivo. I dispositivi iOS/iPadOS che usano una password vengono crittografati.
 
-- **Password semplici**:  
+- **Password semplici**  
+  *Supportata per iOS 8.0 e versioni successive*
+
   - **Non configurato** (*impostazione predefinita*) - Gli utenti possono creare password semplici, ad esempio **1234** o **1111**.
-  - **Blocca**: impedire agli utenti di creare password semplici, ad esempio **1234** o **1111**. 
+  - **Blocca**: impedire agli utenti di creare password semplici, ad esempio **1234** o **1111**.
 
-- **Lunghezza minima password**:  
-  immettere il numero minimo di cifre o caratteri che la password deve avere.  
+- **Lunghezza minima password**  
+  *Supportata per iOS 8.0 e versioni successive*
 
-- **Tipo di password richiesto**:  
+  immettere il numero minimo di cifre o caratteri che la password deve avere.
+
+- **Tipo di password richiesto**  
+  *Supportata per iOS 8.0 e versioni successive*
+
   scegliere se una password deve avere solo caratteri **numerici** oppure una combinazione di numeri e altri caratteri (**alfanumerici**).
 
-- **Numero di caratteri non alfanumerici nella password**:  
-  immettere il numero minimo di caratteri speciali, ad esempio `&`, `#`, `%`, `!` e così via, che è necessario includere nella password. 
+- **Numero di caratteri non alfanumerici nella password**  
+  immettere il numero minimo di caratteri speciali, ad esempio `&`, `#`, `%`, `!` e così via, che è necessario includere nella password.
 
   Se si imposta un numero maggiore, l'utente dovrà creare una password più complessa.
 
-- **Numero massimo di minuti dopo il blocco dello schermo prima che venga richiesta una password** *(iOS 8.0 e versioni successive)* :  
+- **Numero massimo di minuti dopo il blocco dello schermo prima che venga richiesta una password**  
+  *Supportata per iOS 8.0 e versioni successive*
+
   Specificare il periodo di tempo dopo il blocco dello schermo prima che un utente debba immettere una password per accedere al dispositivo. Le opzioni includono il valore predefinito *Non configurato*, *Immediatamente* e da *1 minuto* a *4 ore*.
 
-- **Numero massimo di minuti di inattività fino al blocco dello schermo**:  
+- **Numero massimo di minuti di inattività fino al blocco dello schermo**  
   Immettere il tempo di inattività prima che il dispositivo blocchi lo schermo. Le opzioni includono il valore predefinito *Non configurato*, *Immediatamente* e da *1 minuto* a *15 minuti*.
 
-- **Scadenza password (giorni)** :  
-  selezionare il numero di giorni che mancano alla scadenza della password attuale, quando l'utente deve creare una nuova password. 
+- **Scadenza password (giorni)**  
+  *Supportata per iOS 8.0 e versioni successive*
 
-- **Numero di password precedenti di cui impedire il riutilizzo**  *(iOS 8.0 e versioni successive)* :   
+  selezionare il numero di giorni che mancano alla scadenza della password attuale, quando l'utente deve creare una nuova password.
+
+- **Numero di password precedenti di cui impedire il riutilizzo**  
+  *Supportata per iOS 8.0 e versioni successive*
+
   immettere il numero di password usate in precedenza che non è possibile usare.
 
 ### <a name="device-security"></a>Sicurezza del dispositivo
 
-- **App con restrizioni**:  
+- **App con restrizioni**  
   È possibile creare restrizioni per le app aggiungendo i relativi ID bundle ai criteri. Se in un dispositivo è installata l'app, il dispositivo verrà contrassegnato come non conforme.
 
   - **Nome app**: immettere un nome descrittivo per facilitare l'identificazione dell'ID bundle.

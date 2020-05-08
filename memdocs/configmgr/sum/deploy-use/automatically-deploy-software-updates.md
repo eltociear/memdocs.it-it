@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: eca3227a023561a099804ef0928bfee7a7aff2c6
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: fc2f2644ff042598d3df0ddfc1fd9d4d1adcc34a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110441"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906782"
 ---
 #  <a name="automatically-deploy-software-updates"></a>Distribuire automaticamente gli aggiornamenti software  
 
@@ -85,7 +85,7 @@ Approvare e distribuire automaticamente gli aggiornamenti software usando una re
 
      - Il limite dell'ADR è di 1000 aggiornamenti software.  
 
-     - Se necessario, filtrare le dimensioni del contenuto per gli aggiornamenti software nelle regole di distribuzione automatica. Per altre informazioni, vedere [Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/) (Configuration Manager e manutenzione Windows semplificata su sistemi operativi di livello inferiore).  
+     - Se necessario, filtrare le dimensioni del contenuto per gli aggiornamenti software nelle regole di distribuzione automatica. Per altre informazioni, vedere [Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-simplified-windows-servicing-on-down/ba-p/274056) (Configuration Manager e manutenzione Windows semplificata su sistemi operativi di livello inferiore).  
 
      - A partire dalla versione 1910, è possibile usare **Distribuito** come filtro di aggiornamento per le regole di distribuzione automatica. Questo filtro consente di identificare i nuovi aggiornamenti che potrebbero dover essere distribuiti nelle raccolte pilota o di test. Il filtro di aggiornamento software consente anche di evitare la ridistribuzione di aggiornamenti meno recenti. 
          - Quando si usa il filtro **Distribuito**, tenere presente che è possibile che l'aggiornamento sia già stato distribuito in un'altra raccolta, ad esempio una raccolta pilota o di test. <!--4852033-->

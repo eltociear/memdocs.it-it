@@ -10,12 +10,12 @@ ms.assetid: a2742d52-851e-4abc-b623-d12d91684c0b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 59b0b799fd54e0e613f78b11b48b53b19d20ddbf
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9143c224082f00b882d3cb557b47b737012393fa
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692289"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906331"
 ---
 # <a name="get-started-with-compliance-settings-in-configuration-manager"></a>Introduzione alle impostazioni di conformità in Configuration Manager
 
@@ -107,7 +107,7 @@ Per altre informazioni, vedere [Upgrade Windows devices with the edition upgrade
 
 ## <a name="microsoft-edge-browser-profiles"></a>Profili del browser Microsoft Edge
 <!-- 1357310 -->
-A partire dalla versione 1802 i clienti che usano il Web browser [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) nei client Windows 10 possono creare un criterio delle impostazioni di conformità per definire diverse impostazioni di Microsoft Edge. 
+A partire dalla versione 1802 i clienti che usano il Web browser [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge) nei client Windows 10 possono creare un criterio delle impostazioni di conformità per definire diverse impostazioni di Microsoft Edge. 
 
 Per altre informazioni, vedere [Profili del browser Microsoft Edge](../deploy-use/browser-profiles.md).
 

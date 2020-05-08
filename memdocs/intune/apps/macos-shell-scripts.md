@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/06/2020
+ms.date: 04/30/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba099e3614c11e10ce4cd9ae94668a1648bfc150
-ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
+ms.openlocfilehash: c5839154ab0c884e933e8d11055e745d54503433
+ms.sourcegitcommit: 8a8378b685a674083bfb9fbc9c0662fb0c7dda97
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80808047"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82619543"
 ---
 # <a name="use-shell-scripts-on-macos-devices-in-intune-public-preview"></a>Usare script della shell nei dispositivi macOS in Intune (anteprima pubblica)
 
@@ -39,7 +39,7 @@ Quando si creano e si assegnano script della shell a dispositivi macOS, assicura
  - Devono essere installati gli interpreti della riga di comando per le shell applicabili.
 
 ## <a name="important-considerations-before-using-shell-scripts"></a>Considerazioni importanti preliminari all'uso di script della shell
- - Per usare gli script della shell è necessario che l'agente MDM di Microsoft Intune sia installato correttamente nel dispositivo macOS. Per altre informazioni, vedere [Agente MDM di Microsoft Intune per macOS](macos-shell-scripts.md#microsoft-intune-mdm-agent-for-macos).
+ - Per usare gli script della shell è necessario che l'agente di gestione di Microsoft Intune sia installato correttamente nel dispositivo macOS. Per altre informazioni, vedere [Agente di gestione di Microsoft Intune per macOS](macos-shell-scripts.md#microsoft-intune-management-agent-for-macos).
  - Gli script della shell vengono eseguiti in parallelo nei dispositivi come processi separati.
  - Gli script della shell eseguiti come utente connesso verranno eseguiti per tutti gli account utente attualmente connessi nel dispositivo al momento dell'esecuzione.
  - È necessario che un utente finale esegua l'accesso al dispositivo per eseguire gli script come utente connesso.
@@ -62,7 +62,7 @@ Quando si creano e si assegnano script della shell a dispositivi macOS, assicura
 6. Selezionare **Assegnazioni** > **Selezionare i gruppi da includere**. Viene visualizzato un elenco di gruppi di Azure AD esistenti. Selezionare uno o più gruppi di dispositivi che includono gli utenti i cui dispositivi macOS devono ricevere lo script. Scegliere **Seleziona**. I gruppi selezionati vengono visualizzati nell'elenco e ricevono il criterio di script.
    > [!NOTE]
    > - Gli script della shell in Intune possono essere assegnati solo ai gruppi di sicurezza dei dispositivi di Azure AD. L'assegnazione a gruppi di utenti non è supportata nell'anteprima. 
-   > - Aggiornando le assegnazioni per gli script della shell vengono aggiornate anche le assegnazioni per l'[agente MDM di Microsoft Intune per macOS](macos-shell-scripts.md#microsoft-intune-mdm-agent-for-macos).
+   > - Aggiornando le assegnazioni per gli script della shell vengono aggiornate anche le assegnazioni per l'[agente di gestione di Microsoft Intune per macOS](macos-shell-scripts.md#microsoft-intune-management-agent-for-macos).
 7. In **Rivedi e aggiungi** viene visualizzato un riepilogo delle impostazioni configurate. Selezionare **Aggiungi** per salvare lo script. Quando si seleziona **Aggiungi** il criterio di script viene distribuito ai gruppi scelti.
 
 Lo script creato ora compare nell'elenco di script. 
@@ -78,6 +78,47 @@ Lo script creato ora compare nell'elenco di script.
 Dopo l'esecuzione di uno script, viene restituito uno degli stati seguenti:
 - Uno stato di esecuzione dello script **Operazione non riuscita** indica che lo script ha restituito un codice di uscita diverso da zero oppure che lo script non è valido. 
 - Uno stato di esecuzione dello script di **Operazione riuscita** indica che lo script ha restituito il codice di uscita zero. 
+
+## <a name="troubleshoot-macos-shell-script-policies-using-log-collection"></a>Risolvere i problemi dei criteri di script della shell macOS usando la raccolta dei log
+
+È possibile raccogliere i log del dispositivo per risolvere i problemi di script nei dispositivi macOS. 
+
+### <a name="requirements-for-log-collection"></a>Requisiti per la raccolta di log
+Per raccogliere i log in un dispositivo macOS sono necessari gli elementi seguenti:
+- Specificare il percorso assoluto completo dei file di log.
+- I percorsi di file devono essere separati solo con un punto e virgola (;).
+- La dimensione massima della raccolta di log per il caricamento è 60 MB (compressa) o 25 file, a seconda di quale condizione si verifica per prima.
+- I tipi di file consentiti per la raccolta di log includono le estensioni seguenti: *.log, .zip, .gz, .tar, .txt, .xml, .crash, .rtf*
+
+#### <a name="collect-device-logs"></a>Raccogliere i log dei dispositivi
+1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Nel report **Stato dispositivo** o **Stato utente** selezionare un dispositivo.
+3. Selezionare **Raccogli i log**, specificare i percorsi di cartella dei file di log separati solo da un punto e virgola (;) senza spazi o nuove righe tra i percorsi.<br>È possibile, ad esempio, scrivere più percorsi come `/Path/to/logfile1.zip;/Path/to/logfile2.log`. 
+
+   >[!IMPORTANT]
+   > Più percorsi di file di log separati da virgola, punto, nuova riga o virgolette con o senza spazi causeranno un errore della raccolta dei log. Anche gli spazi non sono consentiti come separatori tra i percorsi.
+
+4. Selezionare **OK**. I log vengono raccolti alla successiva sincronizzazione con Intune dell'agente di gestione di Intune nel dispositivo. La sincronizzazione in genere avviene ogni 8 ore.
+
+   >[!NOTE]
+   > 
+   > - I log raccolti vengono crittografati nel dispositivo, trasmessi e archiviati in Archiviazione di Microsoft Azure per 30 giorni. I log archiviati vengono decrittografati su richiesta e scaricati usando l'interfaccia di amministrazione di Microsoft Endpoint Manager.
+   > - Oltre ai log specificati dall'amministratore, anche i log dell'agente di gestione di Intune vengono raccolti da queste cartelle: `/Library/Logs/Microsoft/Intune` e `~/Library/Logs/Microsoft/Intune`. I nomi dei file di log dell'agente sono `IntuneMDMDaemon date--time.log` e `IntuneMDMAgent date--time.log`. 
+   > - Se un file specificato dall'amministratore è mancante o ha un'estensione di file errata, questi nomi di file sono elencati in `LogCollectionInfo.txt`.     
+
+### <a name="log-collection-errors"></a>Errori di raccolta dei log
+La raccolta dei log può non riuscire a causa di uno dei motivi indicati nella tabella seguente. Per risolvere questi errori, attenersi alla procedura di correzione.
+
+| Codice di errore (esadecimale) | Codice di errore (decimale) | Messaggio di errore | Procedura di correzione |
+|------------------|------------------|---------------|-------------------|
+| 0X87D300D1 | 2016214834 | Le dimensioni del file di log non possono essere superiori a 60 MB. | Verificare che le dimensioni dei log compressi siano inferiori a 60 MB. |
+| 0X87D300D1 | 2016214831 | Il percorso del file di log specificato deve esistere. La cartella dell'utente di sistema non è un percorso valido per i file di log. | Verificare che il percorso del file specificato sia valido e accessibile. |
+| 0X87D300D2 | 2016214830 | Non è stato possibile caricare il file di raccolta di log a causa della scadenza dell'URL di caricamento. | Ritentare l'azione **Raccogli i log**. |
+| 0X87D300D3, 0X87D300D5, 0X87D300D7 | 2016214829, 2016214827, 2016214825 | Non è stato possibile caricare il file di raccolta di log a causa di un errore di crittografia. Riprovare a caricare il log. | Ritentare l'azione **Raccogli i log**. |
+| | 2016214828 | Il numero di file di log supera il limite consentito di 25 file. | È possibile raccogliere solo fino a 25 file di log alla volta. |
+| 0X87D300D6 | 2016214826 | Non è stato possibile caricare il file di raccolta di log a causa di un errore di compressione. Riprovare a caricare il log. | Ritentare l'azione **Raccogli i log**. |
+| | 2016214740 | Non è stato possibile crittografare i log perché non sono stati trovati log compressi. | Ritentare l'azione **Raccogli i log**. |
+| | 2016214739 | I log sono stati raccolti ma non è stato possibile archiviarli. | Ritentare l'azione **Raccogli i log**. |
 
 ## <a name="frequently-asked-questions"></a>Domande frequenti
 ### <a name="why-are-assigned-shell-scripts-not-running-on-the-device"></a>Perché gli script della shell assegnati non vengono eseguiti nel dispositivo?
@@ -95,9 +136,9 @@ Uno script viene eseguito di nuovo solo quando è configurata l'impostazione **N
 ### <a name="what-intune-role-permissions-are-required-for-shell-scripts"></a>Quali autorizzazioni del ruolo di Intune sono necessarie per gli script della shell?
 Il ruolo di Intune assegnato richiede autorizzazioni per le **configurazioni dei dispositivi** per eliminare, assegnare, creare, aggiornare o leggere script della shell.
 
-## <a name="microsoft-intune-mdm-agent-for-macos"></a>Agente MDM di Microsoft Intune per macOS
+## <a name="microsoft-intune-management-agent-for-macos"></a>Agente di gestione di Microsoft Intune per macOS
  ### <a name="why-is-the-agent-required"></a>Perché è necessario l'agente?
- È necessario installare l'agente MDM di Microsoft Intune nei dispositivi macOS gestiti per abilitare funzionalità avanzate di gestione dei dispositivi non supportate dal sistema operativo macOS nativo.
+È necessario installare l'agente di gestione di Microsoft Intune nei dispositivi macOS gestiti per abilitare funzionalità avanzate di gestione dei dispositivi non supportate dal sistema operativo macOS nativo.
  
  ### <a name="how-is-the-agent-installed"></a>Come si installa l'agente?
  L'agente viene installato automaticamente e in modalità invisibile all'utente nei dispositivi macOS gestiti da Intune a cui si assegna almeno uno script della shell nell'interfaccia di amministrazione di Microsoft Endpoint Manager. L'agente viene installato in `/Library/Intune/Microsoft Intune Agent.app` quando applicabile e non compare in **Finder** > **Applicazioni** nei dispositivi macOS. Durante l'esecuzione nei dispositivi macOS, l'agente appare come `IntuneMdmAgent` in **Monitoraggio Attività**.
@@ -125,7 +166,7 @@ In alternativa, è possibile eseguire queste operazioni:
  - L'agente resta in uno stato di errore irreversibile per più di 24 ore (tempo di riattivazione del dispositivo).
 
  ### <a name="how-to-turn-off-usage-data-sent-to-microsoft-for-shell-scripts"></a>Come si può disattivare l'invio a Microsoft di dati di utilizzo per gli script della shell?
- Per disattivare l'invio dei dati di utilizzo a Microsoft da parte dell'agente MDM di Intune, aprire Portale aziendale, selezionare **Menu** > **Preferenze** >  *e deselezionare Consenti a Microsoft di raccogliere i dati di utilizzo*. L'invio dei dati di utilizzo viene disabilitato sia per l'agente MDM di Intune che per Portale aziendale.
+ Per disattivare l'invio dei dati di utilizzo a Microsoft da parte dell'agente di gestione di Intune, aprire Portale aziendale, selezionare **Menu** > **Preferenze** >  *e deselezionare Consenti a Microsoft di raccogliere i dati di utilizzo*. L'invio dei dati di utilizzo verrà così disattivato sia per l'agente di gestione di Intune che per Portale aziendale.
 
 ## <a name="known-issues"></a>Problemi noti
 - **Assegnazione a gruppi di utenti:** gli script della shell assegnati a gruppi di utenti non sono applicabili ai dispositivi. L'assegnazione a gruppi di utenti non è attualmente supportata nell'anteprima. Usare l'assegnazione a gruppi di dispositivi per assegnare gli script.

@@ -10,12 +10,12 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f430979a2189494e977c501a36f9f039f860ca7a
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: f5461f888bfa2b749061eef4000f0d7c5f756b84
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771434"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906753"
 ---
 # <a name="enable-third-party-updates"></a>Abilitare gli aggiornamenti di terze parti 
 
@@ -30,7 +30,7 @@ A partire dalla versione 1806, il nodo **Cataloghi di aggiornamenti software di 
 ## <a name="prerequisites"></a>Prerequisiti 
 - Spazio su disco sufficiente nel punto di aggiornamento software principale, cartella WSUSContent, per archiviare il contenuto binario di origine per gli aggiornamenti software di terze parti.
     - La quantità di memoria richiesta varia in base al fornitore, ai tipi di aggiornamenti e agli aggiornamenti specifici pubblicati per la distribuzione.
-    - Se è necessario spostare la cartella WSUSContent in un'altra unità con maggiore spazio disponibile, vedere il post di blog [How to change the location where WSUS stores updates locally](https://blogs.technet.microsoft.com/sus/2008/05/19/wsus-how-to-change-the-location-where-wsus-stores-updates-locally/) (Come modificare il percorso in cui WSUS archivia aggiornamenti in locale).
+    - Se è necessario spostare la cartella WSUSContent in un'altra unità con maggiore spazio disponibile, vedere il post di blog [How to change the location where WSUS stores updates locally](https://docs.microsoft.com/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally) (Come modificare il percorso in cui WSUS archivia aggiornamenti in locale).
 - Il servizio di sincronizzazione degli aggiornamenti software di terze parti richiede l'accesso a Internet.
     - Per l'elenco di cataloghi partner, è necessario l'accesso a download.microsoft.com sulla porta HTTPS 443. 
     -  Accesso a Internet per tutti i cataloghi di terze parti e i file di contenuto degli aggiornamenti. Potrebbero essere necessarie altre porte diverse dalla 443.
@@ -40,7 +40,7 @@ A partire dalla versione 1806, il nodo **Cataloghi di aggiornamenti software di 
 ## <a name="additional-requirements-when-the-sup-is-remote-from-the-top-level-site-server"></a>Requisiti aggiuntivi quando il punto di aggiornamento software è remoto rispetto al server del sito principale 
 
 1. Quando il punto di aggiornamento software è remoto, è necessario abilitarvi SSL. Ciò richiede un certificato di autenticazione server generato da un'autorità di certificazione interna o un provider pubblico.
-    - [Configurare SSL in WSUS](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol)
+    - [Configurare SSL in WSUS](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol)
         - Quando si configura SSL in WSUS, tenere presente che alcuni dei servizi Web e delle directory virtuali sono sempre HTTP e non HTTPS. 
         - Configuration Manager scarica il contenuto di terze parti per gli aggiornamenti software dalla directory del contenuto WSUS tramite HTTP.   
     - [Configurare SSL nel punto di aggiornamento software](../get-started/install-a-software-update-point.md#configure-ssl-communications-to-wsus)
@@ -234,7 +234,7 @@ La sincronizzazione degli aggiornamenti software di terze parti viene gestita da
 -  Configuration Manager include una nuova versione per il formato di file CAB di catalogo. La nuova versione include i certificati per i file binari del fornitore. Questi certificati vengono aggiunti al nodo **Certificati** sotto **Sicurezza** nell'area di lavoro **Amministrazione** dopo aver approvato e considerato attendibile il catalogo.  
      - È comunque possibile usare la versione del file CAB del catalogo precedente, purché l'URL di download sia https e gli aggiornamenti siano firmati. Il contenuto non verrà pubblicato perché i certificati per i file binari non sono nel file CAB e sono già approvati. Per risolvere il problema, trovare il certificato nel nodo **Certificati**, sbloccarlo e quindi pubblicare di nuovo l'aggiornamento. Se si devono pubblicare più aggiornamenti firmati con certificati diversi, sarà necessario sbloccare ogni certificato usato.
      - Per altre informazioni, vedere i messaggi di stato 11523 e 11524 nella tabella dei messaggi di stato seguente.
--  Quando il servizio di sincronizzazione degli aggiornamenti software di terze parti nel punto di aggiornamento software di livello superiore richiede un server proxy per l'accesso a Internet, i controlli della firma digitale potrebbero non riuscire. Per risolvere questo problema, configurare le impostazioni proxy WinHTTP nel sistema del sito. Per altre informazioni, vedere [Netsh commands for WinHTTP](https://go.microsoft.com/fwlink/p/?linkid=199086) (Comandi Netsh per WinHTTP).
+-  Quando il servizio di sincronizzazione degli aggiornamenti software di terze parti nel punto di aggiornamento software di livello superiore richiede un server proxy per l'accesso a Internet, i controlli della firma digitale potrebbero non riuscire. Per risolvere questo problema, configurare le impostazioni proxy WinHTTP nel sistema del sito. Per altre informazioni, vedere [Netsh commands for WinHTTP](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731131(v=ws.10)) (Comandi Netsh per WinHTTP).
 - Quando si usa Cloud Management Gateway per l'archiviazione del contenuto, il contenuto per gli aggiornamenti di terze parti non viene scaricato nei client se è abilitata l'[impostazione client](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) **Consenti ai client di scaricare contenuto differenziale quando disponibile**. <!--6598587-->
 
 ## <a name="status-messages"></a>Messaggi di stato

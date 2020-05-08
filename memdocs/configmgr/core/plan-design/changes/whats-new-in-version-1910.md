@@ -10,12 +10,12 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 04981e944b838f89af2383678c94e620aaefd7f0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 849dd0bdb0f6583d525df8af3f6d46f8a4a9aecf
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702349"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904665"
 ---
 # <a name="whats-new-in-version-1910-of-configuration-manager-current-branch"></a>Novità della versione 1910 di Configuration Manager Current Branch
 
@@ -46,7 +46,7 @@ Le soluzioni di gestione Microsoft seguenti fanno ora parte del marchio Microsof
 - [Intune](https://docs.microsoft.com/intune)
 - [Desktop Analytics](../../../desktop-analytics/overview.md)
 - [Autopilot](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
-- Altre funzionalità della [console di amministrazione della gestione dei dispositivi](https://go.microsoft.com/fwlink/?linkid=2109094)
+- Altre funzionalità della [console di amministrazione della gestione dei dispositivi](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760)
 
 Per altre informazioni, vedere i post seguenti di Brad Anderson, vicepresidente di Microsoft, per Microsoft 365:
 

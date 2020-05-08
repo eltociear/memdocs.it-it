@@ -10,12 +10,12 @@ ms.assetid: 15a4e323-9f42-4fea-bb14-f2b905d1f77c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4375867e70cb7f2989b78572c7fc8e005f95be73
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c9e8e40a6bdfa129a03e6042985e4956ffb21b5c
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694039"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906325"
 ---
 # <a name="how-to-deploy-clients-to-unix-and-linux-servers-in-configuration-manager"></a>Come distribuire i client in server UNIX e Linux in Configuration Manager
 
@@ -36,7 +36,7 @@ Prima di poter gestire un server Linux o UNIX con Configuration Manager, è nece
  Dopo aver installato il client, specificare le impostazioni client nella console di Configuration Manager per configurare l'agente client in modo analogo ai client basati su Windows. Per altre informazioni, vedere  [Impostazioni client per server Linux e UNIX](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ClientSettingsforLnU).  
 
 ##  <a name="about-client-installation-packages-and-the-universal-agent"></a><a name="BKMK_AboutInstallPackages"></a> Informazioni sui pacchetti di installazione client e sull'agente universale  
- Per installare il client per Linux e UNIX in una piattaforma specifica, è necessario usare il pacchetto di installazione client applicabile al computer in cui si installa il client. I pacchetti di installazione client applicabili sono inclusi in ogni download del client eseguito dall' [Area download Microsoft](https://go.microsoft.com/fwlink/?LinkID=525184). Oltre ai pacchetti di installazione client, il download del client include lo script di **install** che gestisce l'installazione del client in ogni computer.  
+ Per installare il client per Linux e UNIX in una piattaforma specifica, è necessario usare il pacchetto di installazione client applicabile al computer in cui si installa il client. I pacchetti di installazione client applicabili sono inclusi in ogni download del client eseguito dall' [Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=47719). Oltre ai pacchetti di installazione client, il download del client include lo script di **install** che gestisce l'installazione del client in ogni computer.  
 
  Quando si installa un client, è possibile usare lo stesso processo e le stesse proprietà della riga di comando indipendentemente dal pacchetto di installazione client usato.  
 
@@ -69,7 +69,7 @@ Ogni pacchetto di installazione client contiene tutti i file necessari per compl
 
 ###  <a name="to-install-the-configuration-manager-client-on-linux-and-unix-servers"></a><a name="BKMK_ToInstallLnUClinent"></a> Per installare il client di Configuration Manager nei server Linux e UNIX  
 
-1.  In un computer Windows [scaricare il file client appropriato per il server Linux o UNIX](https://go.microsoft.com/fwlink/?LinkID=525184) che si vuole gestire.  
+1.  In un computer Windows [scaricare il file client appropriato per il server Linux o UNIX](https://www.microsoft.com/download/details.aspx?id=47719) che si vuole gestire.  
 
 2.  Eseguire il file autoestraente EXE nel computer Windows per estrarre lo script di installazione e il file TAR di installazione del client.  
 

@@ -10,12 +10,12 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 3af6f2883ebf17ab19f57762b8b3bf26e3716262
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 9e59d850a78a8f45f93769003e7a1de99e5634b3
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075728"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906394"
 ---
 # <a name="create-windows-applications-in-configuration-manager"></a>Creare applicazioni Windows in Configuration Manager
 
@@ -58,7 +58,7 @@ Per configurare un tipo di distribuzione delle app Windows per questa funzionali
 
 Configuration Manager supporta i formati di pacchetto dell'app Windows 10 (con estensione msix) e bundle dell'app (con estensione msixbundle). Windows 10 versione 1809 o versioni successive supportano questi formati.
 
-- Per una panoramica di MSIX, vedere [A closer look at MSIX](https://blogs.msdn.microsoft.com/sgern/2018/06/18/a-closer-look-at-msix/) (MSIX più da vicino).  
+- Per una panoramica di MSIX, vedere [A closer look at MSIX](https://docs.microsoft.com/archive/blogs/sgern/a-closer-look-at-msix) (MSIX più da vicino).  
 
 - Per informazioni su come creare una nuova app MSIX, vedere [MSIX support introduced in Insider Build 17682](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376) (Introduzione del supporto di MSIX nella build di Insider 17682).  
 
@@ -79,7 +79,7 @@ Convertire le applicazioni Windows Installer (con estensione msi) esistenti nel 
 
   - Installare [MSIX Packaging Tool](https://www.microsoft.com/store/productId/9N5LW3JBCXKF) da Microsoft Store  
 
-  - Installare il [driver dello strumento di creazione di pacchetti MSIX](/windows/msix/packaging-tool/tool-known-issues#frameworks-and-drivers)<!--SCCMDocs-pr issue #3091-->  
+  - Installare il [driver dello strumento di creazione di pacchetti MSIX](https://docs.microsoft.com/windows/msix/packaging-tool/tool-known-issues#frameworks-and-drivers)<!--SCCMDocs-pr issue #3091-->  
 
 Non installare altri servizi o app in questo dispositivo. È il sistema di riferimento.
 
@@ -104,7 +104,7 @@ Se il processo non riesce, la pagina di riepilogo punta al file di log con altre
 
 Per usare questa app MSIX, è prima necessario firmarla digitalmente in modo che i client la considerino attendibile. Per altre informazioni su questo processo, vedere gli articoli seguenti:
 
-- [MSIX – The MSIX Packaging Tool – signing the MSIX package](https://blogs.msdn.microsoft.com/sgern/2018/09/06/msix-the-msix-packaging-tool-signing-the-msix-package/) (MSIX - MSIX Packaging Tool - Firma del pacchetto MSIX)
+- [MSIX – The MSIX Packaging Tool – signing the MSIX package](https://docs.microsoft.com/archive/blogs/sgern/msix-the-msix-packaging-tool-signing-the-msix-package) (MSIX - MSIX Packaging Tool - Firma del pacchetto MSIX)
 - [Come firmare un pacchetto di app con SignTool](https://docs.microsoft.com/windows/desktop/appxpkg/how-to-sign-a-package-using-signtool)
 
 Dopo l'accesso all'app, creare un nuovo tipo di distribuzione nell'applicazione in Configuration Manager. Per altre informazioni, vedere [Creare tipi di distribuzione per l'applicazione](../deploy-use/create-applications.md#bkmk_create-dt).

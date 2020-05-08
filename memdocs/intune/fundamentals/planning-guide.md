@@ -13,17 +13,17 @@ ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: a65efa6e-4a48-47f3-8f6e-34a85ca64ced
-ms.reviewer: jeffbu, cgerth
+ms.reviewer: andredm7
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65d4745580a4b0d733ffe14be03f0f9893074586
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 613bb0ddf935815a4022fa483e0aad615c64121a
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82080097"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802039"
 ---
 # <a name="intune-deployment-planning-design-and-implementation-guide"></a>Guida alla pianificazione, progettazione e implementazione della distribuzione di Intune
 
@@ -53,7 +53,10 @@ Questa guida include varie sezioni che descrivono in dettaglio il processo di di
 
 Questa guida offre anche informazioni tecniche aggiuntive e modelli di tabella utilizzabili come supporto durante il processo di pianificazione, progettazione e implementazione della distribuzione di Intune.
 
-- [Risorse aggiuntive: Collegamenti e modelli di tabella](planning-guide-resources.md)
+### <a name="additional-resources"></a>Risorse aggiuntive
+
+- [Guida del modello di verifica (PoC) di Microsoft Endpoint Manager:](https://www.microsoft.com/microsoft-365/partners/endpoint-manager-poc) questa guida è progettata per fornire un framework e istruzioni tecniche su come eseguire correttamente un modello di verifica all'interno dell'organizzazione.
+- [Collegamenti e modelli di tabella](planning-guide-resources.md)
 
 ## <a name="assumptions"></a>Presupposti
 

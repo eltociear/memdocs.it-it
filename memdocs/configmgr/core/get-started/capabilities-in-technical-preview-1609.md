@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: e7e803dd1cbacbbd65a5f2968e217656b088d281
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 51a974247d7281d6134b699a5865f801d1ed6094
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705449"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905714"
 ---
 # <a name="capabilities-in-technical-preview-1609-for-configuration-manager"></a>Funzionalità della versione Technical Preview 1609 per Configuration Manager
 
@@ -51,7 +51,6 @@ Se l'opzione è abilitata, l'assistente configurazione di Apple richiede questo 
 
 Upgrade Analytics consente di valutare e analizzare la leggibilità e la compatibilità dei dispositivi con Windows 10, per consentire aggiornamenti più semplici. L'integrazione di Upgrade Analytics con Configuration Manager consente di accedere ai dati di compatibilità dell'aggiornamento nella console di amministrazione di Configuration Manager e quindi, dall'elenco dei dispositivi, ai dispositivi da aggiornare o correggere.
 
-Per altre informazioni su Upgrade Analytics, vedere in [Get started with Upgrade Analytics](https://technet.microsoft.com/itpro/windows/deploy/upgrade-analytics-get-started) (Introduzione a Upgrade Analytics).
 
 ## <a name="native-connection-types-for-windows-10-vpn-hybrid-profiles"></a>Tipi di connessione nativa per i profili ibridi VPN di Windows 10
 
@@ -348,7 +347,7 @@ Nel dashboard vengono visualizzati i grafici per:
 - Versioni dei client di Office 365
 - Lingue dei client di Office 365
 - Canali dei client di Office 365     
-Per altre informazioni, vedere [Panoramica dei canali di aggiornamento per Office 365 ProPlus](https://technet.microsoft.com/library/mt455210.aspx).
+Per altre informazioni, vedere [Panoramica dei canali di aggiornamento per Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-update-channels).
 - Regole di distribuzione automatica con il client di Office 365 selezionato nel set dei prodotti disponibili.
 
 Sul dashboard è possibile eseguire le azioni seguenti:

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 05/05/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 554bc09aa57306010069df4a85baa70fafdc41a6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 7d8ea221b6c1768055e3ca1839c20ed64e2e3838
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086676"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802022"
 ---
 # <a name="settings-for-windows-10-microsoft-defender-antivirus-policy-in-microsoft-intune"></a>Impostazioni per i criteri di Microsoft Defender Antivirus per Windows 10 in Microsoft Intune
 
@@ -82,7 +82,7 @@ Per ogni impostazione in questo gruppo, è possibile espandere l'impostazione, s
   - **Sì**: impone l'uso del monitoraggio in tempo reale. Gli utenti dei dispositivi non possono modificare questa impostazione.
 
 - **Abilita la protezione sempre attiva**  
-  CSP: [AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935&clcid=0x409)
+  CSP: [AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935)
 
   Consente di configurare la protezione da virus come continuamente attiva, invece che su richiesta.
 
@@ -90,8 +90,16 @@ Per ogni impostazione in questo gruppo, è possibile espandere l'impostazione, s
   - **No**: blocca la protezione sempre attiva nei dispositivi. Gli utenti dei dispositivi non possono modificare questa impostazione.
   - **Sì**: nei dispositivi è attiva la protezione sempre attiva.
 
+- **Monitoraggio dei file in ingresso e in uscita**  
+  CSP: [Defender/RealTimeScanDirection](https://go.microsoft.com/fwlink/?linkid=2113943)
+
+  Configurare questa impostazione per determinare quale attività di file e programmi NTFS viene monitorata.
+  - **Monitora tutti i file** (*impostazione predefinita*)
+  - **Monitora solo i file in ingresso**
+  - **Monitora solo i file in uscita**
+
 - **Attiva monitoraggio comportamento**  
-  CSP: [AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048&clcid=0x409)
+  CSP: [AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048)
 
   Per impostazione predefinita, nei dispositivi desktop Windows 10 Defender usa la funzionalità Monitoraggio comportamento.
 
@@ -109,7 +117,7 @@ Per ogni impostazione in questo gruppo, è possibile espandere l'impostazione, s
   - **Sì**: la protezione di rete è attivata. Gli utenti dei dispositivi non possono modificare questa impostazione.
 
 - **Analizza tutti i file e gli allegati scaricati**  
-  CSP: [EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=2113939&clcid=0x409)
+  CSP: [EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=2113939)
 
   Consente di configurare Defender per l'analisi di tutti i file e di tutti gli allegati scaricati.
 
@@ -118,7 +126,7 @@ Per ogni impostazione in questo gruppo, è possibile espandere l'impostazione, s
   - **Sì**: Defender analizza tutti i file e tutti gli allegati scaricati. Gli utenti dei dispositivi non possono modificare questa impostazione.
 
 - **Analizza gli script usati nei browser Microsoft**  
-  CSP: [AllowScriptScanning](https://go.microsoft.com/fwlink/?linkid=2114054&clcid=0x409)
+  CSP: [AllowScriptScanning](https://go.microsoft.com/fwlink/?linkid=2114054)
 
   Consente di configurare Defender in modo che analizzi gli script.
 
@@ -127,7 +135,7 @@ Per ogni impostazione in questo gruppo, è possibile espandere l'impostazione, s
   - **Sì**: Defender analizza gli script. Gli utenti dei dispositivi non possono modificare questa impostazione.
 
 - **Analizza file di rete**  
-  CSP: [AllowScanningNetworkFiles](https://go.microsoft.com/fwlink/?linkid=2114049&clcid=0x409)
+  CSP: [AllowScanningNetworkFiles](https://go.microsoft.com/fwlink/?linkid=2114049&)
 
   Consente di configurare Defender in modo che analizzi i file di rete.
 
@@ -136,7 +144,7 @@ Per ogni impostazione in questo gruppo, è possibile espandere l'impostazione, s
   - **Sì**: attiva l'analisi dei file di rete. Gli utenti dei dispositivi non possono modificare questa impostazione.
 
 - **Analizza i messaggi di posta elettronica**  
-  CSP: [AllowEmailScanning](https://go.microsoft.com/fwlink/?linkid=2114052&clcid=0x409)
+  CSP: [AllowEmailScanning](https://go.microsoft.com/fwlink/?linkid=2114052)
 
   Consente di configurare Defender in modo che analizzi la posta in arrivo.
 
@@ -147,7 +155,7 @@ Per ogni impostazione in questo gruppo, è possibile espandere l'impostazione, s
 ## <a name="remediation"></a>Soluzione
 
 - **Numero di giorni (0-90) per la conservazione del malware in quarantena**  
-  CSP: [DaysToRetainCleanedMalware](https://go.microsoft.com/fwlink/?linkid=2114055&clcid=0x409)
+  CSP: [DaysToRetainCleanedMalware](https://go.microsoft.com/fwlink/?linkid=2114055)
 
   Specificare il numero di giorni, da zero a 90, per i quali il sistema deve archiviare gli elementi in quarantena prima della loro rimozione automatica. Il valore zero mantiene gli elementi in quarantena e non li rimuove automaticamente.
 
@@ -160,7 +168,7 @@ Per ogni impostazione in questo gruppo, è possibile espandere l'impostazione, s
   - **Invia tutti i campioni automaticamente**
 
 - **Azione da eseguire in app potenzialmente indesiderate**  
-  CSP: [PUAProtection](https://go.microsoft.com/fwlink/?linkid=2114051&clcid=0x409)
+  CSP: [PUAProtection](https://go.microsoft.com/fwlink/?linkid=2114051)
 
   Consente di specificare il livello di rilevamento per le applicazioni potenzialmente indesiderate (PUA, Potentially Unwanted Application). Defender avvisa gli utenti quando è in corso il download o il tentativo di installazione di software potenzialmente indesiderato in un dispositivo.
 
@@ -170,7 +178,7 @@ Per ogni impostazione in questo gruppo, è possibile espandere l'impostazione, s
   - **Modalità di controllo**: Defender rileva le applicazioni potenzialmente indesiderate, ma non esegue alcuna azione. È possibile esaminare le informazioni sulle applicazioni per cui Defender avrebbe intrapreso un'azione cercando gli eventi creati in Visualizzatore eventi da Defender.
 
 - **Azioni per le minacce rilevate**  
-  CSP: [ThreatSeverityDefaultAction](https://go.microsoft.com/fwlink/?linkid=2113938&clcid=0x409)
+  CSP: [ThreatSeverityDefaultAction](https://go.microsoft.com/fwlink/?linkid=2113938)
 
   Consente di specificare l'azione che deve essere eseguita da Defender per il malware rilevato in base al livello di minaccia del malware.
   
@@ -193,7 +201,7 @@ Per ogni impostazione in questo gruppo, è possibile espandere l'impostazione, s
 ## <a name="scan"></a>Analisi
 
 - **Analizza file di archivio**  
-  CSP: [AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047&clcid=0x409)
+  CSP: [AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047)
 
   Configura Defender per l'analisi dei file di archivio, ad esempio i file ZIP o CAB.
 
@@ -203,7 +211,7 @@ Altre informazioni
   - **Sì**: abilita l'analisi dei file di archivio. Gli utenti dei dispositivi non possono modificare questa impostazione.
 
 - **Usa la priorità CPU bassa per le analisi pianificate**  
-  CSP: [EnableLowCPUPriority](https://go.microsoft.com/fwlink/?linkid=2113944&clcid=0x409)
+  CSP: [EnableLowCPUPriority](https://go.microsoft.com/fwlink/?linkid=2113944)
 
   Configura la priorità della CPU per le analisi pianificate.
   - **Non configurata** (*impostazione predefinita*): l'impostazione torna al valore predefinito di sistema, secondo il quale la priorità della CPU non viene modificata.
@@ -211,7 +219,7 @@ Altre informazioni
   - **Sì**: per le analisi pianificate la priorità usata per la CPU è bassa. Gli utenti dei dispositivi non possono modificare questa impostazione.
 
 - **Disabilita l'analisi completa di recupero**  
-  CSP: [DisableCatchupFullScan](https://go.microsoft.com/fwlink/?linkid=2114042&clcid=0x409)
+  CSP: [DisableCatchupFullScan](https://go.microsoft.com/fwlink/?linkid=2114042)
 
   Consente di configurare le analisi di recupero per le analisi complete pianificate. Le analisi di recupero vengono avviate nei casi in cui non è stato possibile eseguire regolarmente un'analisi pianificata. In genere, le analisi pianificate non vengono eseguite perché il computer era spento negli orari in cui dovevano avvenire.
 
@@ -220,7 +228,7 @@ Altre informazioni
   - **Sì**: le analisi di recupero per le analisi complete pianificate vengono imposte e l'utente non può disabilitarle. Se un computer risulta offline per due analisi consecutive pianificate, viene avviata un'analisi di recupero in occasione dell'accesso successivo al computer. Se non è configurata alcuna analisi pianificata, non viene eseguita alcuna analisi di recupero. Gli utenti dei dispositivi non possono modificare questa impostazione.
 
 - **Disabilita l'analisi veloce di recupero**  
-  CSP: [DisableCatchupQuickScan](https://go.microsoft.com/fwlink/?linkid=2113941&clcid=0x409)
+  CSP: [DisableCatchupQuickScan](https://go.microsoft.com/fwlink/?linkid=2113941)
 
   Consente di configurare le analisi di recupero per le analisi veloci pianificate. Le analisi di recupero vengono avviate nei casi in cui non è stato possibile eseguire regolarmente un'analisi pianificata. In genere, le analisi pianificate non vengono eseguite perché il computer era spento negli orari in cui dovevano avvenire.
 
@@ -229,12 +237,12 @@ Altre informazioni
   - **Sì**: le analisi di recupero per le analisi veloci pianificate vengono imposte e l'utente non può disabilitarle. Se un computer risulta offline per due analisi consecutive pianificate, viene avviata un'analisi di recupero in occasione dell'accesso successivo al computer. Se non è configurata alcuna analisi pianificata, non viene eseguita alcuna analisi di recupero. Gli utenti dei dispositivi non possono modificare questa impostazione.
 
 - **Limite di utilizzo della CPU per analisi**  
-  CSP: [AvgCPULoadFactor](https://go.microsoft.com/fwlink/?linkid=2114046&clcid=0x409)
+  CSP: [AvgCPULoadFactor](https://go.microsoft.com/fwlink/?linkid=2114046)
 
   Consente di specificare il fattore di carico medio della CPU per l'analisi di Defender sotto forma di percentuale da zero a 100.
 
 - **Analizza le unità di rete mappate durante un'analisi completa**  
-  CSP: [AllowFullScanOnMappedNetworkDrives](https://go.microsoft.com/fwlink/?linkid=2113945&clcid=0x409)
+  CSP: [AllowFullScanOnMappedNetworkDrives](https://go.microsoft.com/fwlink/?linkid=2113945)
 
   Consente di configurare Defender in modo che analizzi le unità di rete mappate.
 
@@ -243,13 +251,13 @@ Altre informazioni
   - **Sì**: abilita l'analisi delle unità di rete mappate. Gli utenti dei dispositivi non possono modificare questa impostazione.
 
 - **Esegui l'analisi veloce giornaliera alle ore**  
-  CSP: [ScheduleQuickScanTime](https://go.microsoft.com/fwlink/?linkid=2114053&clcid=0x409)
+  CSP: [ScheduleQuickScanTime](https://go.microsoft.com/fwlink/?linkid=2114053)
 
   Consente di selezionare l'ora del giorno in cui Defender deve eseguire le analisi veloci.
   L'impostazione predefinita corrisponde a **Non configurata**
 
 - **Tipo di analisi**  
-  CSP: [ScanParameter](https://go.microsoft.com/fwlink/?linkid=2114045&clcid=0x409)
+  CSP: [ScanParameter](https://go.microsoft.com/fwlink/?linkid=2114045)
 
   Consente di selezionare il tipo dell'analisi eseguita da Defender.
 
@@ -271,14 +279,14 @@ Altre informazioni
 ## <a name="updates"></a>Aggiornamenti
 
 - **Immettere la frequenza (0-24 ore) per il controllo della disponibilità di aggiornamenti dell'intelligence sulla sicurezza**  
-  CSP: [SignatureUpdateInterval](https://go.microsoft.com/fwlink/?linkid=2113936&clcid=0x409)
+  CSP: [SignatureUpdateInterval](https://go.microsoft.com/fwlink/?linkid=2113936)
 
   Specificare l'intervallo in ore (da zero a 24) da usare per il controllo delle firme. Se il valore è zero, non viene verificata la disponibilità di nuove firme. Se il valore è 2, il controllo viene eseguito ogni due ore e così via.
 
 ## <a name="user-experience"></a>Esperienza utente
 
 - **Consenti l'accesso utente all'app Microsoft Defender**  
-  CSP: [AllowUserUIAccess](https://go.microsoft.com/fwlink/?linkid=2114043&clcid=0x409)  
+  CSP: [AllowUserUIAccess](https://go.microsoft.com/fwlink/?linkid=2114043)  
 
   - **Non configurata** (*impostazione predefinita* ): l'impostazione torna al valore predefinito del client, in base al quale l'interfaccia utente e le notifiche sono consentite.
   - **No**: l'interfaccia utente di Defender non è accessibile e le notifiche sono state eliminate.

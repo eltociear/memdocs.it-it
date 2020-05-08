@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 7ec5802a8931bc4397eaf302920f09d8597802fe
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 73aac9e1bfb7b902a7db28ba4be00a2a02277324
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705559"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905688"
 ---
 # <a name="capabilities-in-technical-preview-1607-for-configuration-manager"></a>Funzionalità della versione Technical Preview 1607 per Configuration Manager
 
@@ -62,7 +62,7 @@ In Software Center la personalizzazione viene applicata secondo le regole seguen
 ## <a name="use-the-same-network-adapter-for-multiple-pxe-initiated-deployments"></a>Usare la stessa scheda di rete per più distribuzioni avviate da PXE
 In Technical Preview versione 1607, se si usa una scheda ethernet per creare un'immagine di più dispositivi (ad esempio una scheda ethernet USB usata su più dispositivi), è possibile abilitare una nuova impostazione che consente di immettere gli identificatori hardware per le schede ethernet. Configuration Manager ignora gli identificatori hardware nell'elenco quando si esegue un'installazione di PXE e per la registrazione del client.
 
-Per altre informazioni su questo problema, vedere il [blog del team di supporto di Configuration Manager OSD](https://blogs.technet.microsoft.com/system_center_configuration_manager_operating_system_deployment_support_blog/2015/08/27/reusing-the-same-nic-for-multiple-pxe-initiated-deployments-in-system-center-configuration-manger-osd/).  
+Per altre informazioni su questo problema, vedere il [blog del team di supporto di Configuration Manager OSD](https://techcommunity.microsoft.com/t5/configuration-manager-archive/reusing-the-same-nic-for-multiple-pxe-initiated-deployments-in/ba-p/273721).  
 
 ### <a name="enable-the-feature-to-manage-duplicate-hardware-identifiers"></a>Abilitare la funzionalità per gestire gli identificatori hardware duplicati  
 1. Nella console di Configuration Manager andare su **Amministrazione** > **Panoramica** > **Servizi cloud** > **Aggiornamenti e manutenzione** > **Funzionalità**.

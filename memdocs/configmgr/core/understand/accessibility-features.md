@@ -10,12 +10,12 @@ ms.assetid: 1cb96666-98bf-49a9-85ca-dbb53f0655e9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2ff86df999ab744d590b1ca120a8b566d18f446b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f04b777f030f9e55e1d5b17ace9ec8b83d9f8679
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701259"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906123"
 ---
 # <a name="accessibility-features-in-configuration-manager"></a>Funzionalità di accessibilità in Configuration Manager
 
@@ -89,5 +89,5 @@ Per altre informazioni sui concetti fondamentali relativi allo spostamento nelle
 - [Manuale dell'utente di Software Center](software-center.md)
 
 > [!NOTE]  
-> Le informazioni in questo articolo sono valide solo per gli utenti che acquistano una licenza di prodotti Microsoft negli Stati Uniti. Se il prodotto non è stato acquistato negli Stati Uniti, è possibile usare la scheda informativa della filiale inclusa nel pacchetto software oppure visitare il [sito Web Microsoft sull'accessibilità](https://go.microsoft.com/fwlink/?LinkId=8431) per informazioni di contatto per i servizi di supporto Microsoft. È possibile contattare la filiale locale per stabilire se i tipi di prodotti e servizi illustrati in questa sezione sono disponibili nell'area di interesse. Le informazioni sull'accessibilità sono disponibili anche in altre lingue, compreso il giapponese e il francese.  
+> Le informazioni in questo articolo sono valide solo per gli utenti che acquistano una licenza di prodotti Microsoft negli Stati Uniti. Se il prodotto non è stato acquistato negli Stati Uniti, è possibile usare la scheda informativa della filiale inclusa nel pacchetto software oppure visitare il [sito Web Microsoft sull'accessibilità](https://www.microsoft.com/accessibility/) per informazioni di contatto per i servizi di supporto Microsoft. È possibile contattare la filiale locale per stabilire se i tipi di prodotti e servizi illustrati in questa sezione sono disponibili nell'area di interesse. Le informazioni sull'accessibilità sono disponibili anche in altre lingue, compreso il giapponese e il francese.  
 

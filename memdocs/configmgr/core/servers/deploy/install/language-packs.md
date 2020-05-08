@@ -10,12 +10,12 @@ ms.assetid: cd74e5f5-33f6-4566-8c9d-d6a93bfe71ed
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ec5581567925ee57300274e50288058e06d80ec0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 53aa7e932e782254f63b422526b315f3ce91f397
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700729"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906163"
 ---
 # <a name="language-packs-in-configuration-manager"></a>Language Pack in Configuration Manager
 
@@ -42,7 +42,7 @@ Durante l'installazione di Configuration Manager vengono scaricati i file dei La
 
 ## <a name="server-languages"></a>Lingue server  
 
-Usare la seguente tabella per il mapping tra ID impostazioni locali e una lingua da supportare nei server. Per altre informazioni sugli ID impostazioni locali, vedere [ID impostazioni locali assegnati da Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=252609).  
+Usare la seguente tabella per il mapping tra ID impostazioni locali e una lingua da supportare nei server. Per altre informazioni sugli ID impostazioni locali, vedere [ID impostazioni locali assegnati da Microsoft](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).  
 
 |Lingua server|ID impostazioni locali (LCID)|Codice di tre lettere|  
 |---------------------|------------------------|-----------------------|  
@@ -69,7 +69,7 @@ Usare la seguente tabella per il mapping tra ID impostazioni locali e una lingua
 
 ## <a name="client-languages"></a>Lingue client  
 
-Usare la tabella seguente per eseguire il mapping di un ID impostazioni locali con una lingua da supportare nei computer client. Per altre informazioni sugli ID impostazioni locali, vedere [ID impostazioni locali assegnati da Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=252609).  
+Usare la tabella seguente per eseguire il mapping di un ID impostazioni locali con una lingua da supportare nei computer client. Per altre informazioni sugli ID impostazioni locali, vedere [ID impostazioni locali assegnati da Microsoft](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).  
 
 |Lingua client|ID impostazioni locali (LCID)|Codice di tre lettere|  
 |---------------------|------------------------|-----------------------|  

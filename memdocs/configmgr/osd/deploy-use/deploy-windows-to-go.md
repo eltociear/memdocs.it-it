@@ -10,12 +10,12 @@ ms.assetid: 8eed50f5-80a4-422e-8aa6-a7ccb2171475
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0174cea761da15cc57eeb55fba26070fe664bb76
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: add0d17205cc82b30f3a88558c690a813239b92a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690509"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906940"
 ---
 # <a name="deploy-windows-to-go-with-configuration-manager"></a>Distribuire Windows To Go con Configuration Manager
 
@@ -23,7 +23,7 @@ ms.locfileid: "81690509"
 
 In questo argomento viene illustrato come eseguire il provisioning di Windows To Go in Configuration Manager. Windows To Go è una funzionalità aziendale di Windows 8 che permette di creare un'area di lavoro di Windows To Go che può essere avviata da un'unità esterna connessa tramite USB nei computer che soddisfano i requisiti di certificato di Windows 7 o Windows 8, indipendentemente dal sistema operativo in esecuzione nel computer. Le aree di lavoro di Windows To Go possono utilizzare la stessa immagine che utilizzano le organizzazioni per i desktop e laptop e possono essere gestite allo stesso modo.  
 
- Per altre informazioni su Windows To Go, vedere [Windows To Go: panoramica della funzionalità](https://go.microsoft.com/fwlink/p/?LinkId=263433).  
+ Per altre informazioni su Windows To Go, vedere [Windows To Go: panoramica della funzionalità](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh831833(v=ws.11)).  
 
 ## <a name="provision-windows-to-go"></a>Provisioning di Windows To Go  
  Windows To Go è un sistema operativo archiviato in un'unità esterna con collegamento USB. È possibile eseguire il provisioning dell'unità di Windows To Go esattamente come viene eseguito per le distribuzioni di altri sistemi operativi. Tuttavia, poiché Windows To Go è progettato come soluzione altamente mobile e incentrata sull'utente, è necessario adottare un approccio leggermente diverso al provisioning di queste unità.  

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 04/29/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e857cdd7028851f14f607739ba7e37c744fa2f1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 337f7608b4c75a5a2ce2c85774d2090d549ae1fe
+ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80359465"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587252"
 ---
 # <a name="macos-endpoint-protection-settings-in-intune"></a>Impostazioni di Endpoint Protection per macOS in Intune  
 
@@ -113,6 +113,18 @@ Per altre informazioni sulle impostazioni di Apple FileVault, vedere [FDEFileVau
 
   - **Numero di volte per cui è consentito ignorare**  
   Consente di impostare il numero di volte per cui un utente può ignorare le richieste di abilitazione di FileVault prima che FileVault venga reso obbligatorio per l'accesso dell'utente. 
+
+    > [!IMPORTANT]
+    >
+    > Esiste un problema noto con il valore **Nessun limite, richiedi sempre**. Anziché consentire a un utente di ignorare la crittografia al momento dell'accesso, questa impostazione richiede la crittografia del dispositivo all'accesso successivo. Questo problema dovrebbe essere risolto verso la fine di giugno ed è segnalato in MC210922.
+    >
+    > Dopo la correzione, questa impostazione avrà una nuova opzione zero (**0**), che richiederà ai dispositivi di applicare la crittografia all'accesso successivo di un utente al dispositivo. Inoltre, con l'aggiornamento di Intune per includere questa correzione, tutti i criteri impostati su **Nessun limite, richiedi sempre** verranno aggiornati in modo da usare il nuovo valore **0**, che mantiene il comportamento corrente che prevede la richiesta della crittografia.
+    >
+    > Dopo la correzione di questo problema, è possibile sfruttare la possibilità di ignorare la crittografia obbligatoria riconfigurando questa impostazione per impostare **Nessun limite, richiedi sempre** perché l'impostazione funzionerà come previsto in origine e consentirà agli utenti di ignorare la crittografia del dispositivo.
+    >
+    > In presenza di dispositivi macOS registrati, per visualizzare altre informazioni accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), passare ad **Amministrazione tenant** > **Stato tenant**, selezionare **Integrità del servizio e Centro messaggi** e cercare il messaggio con ID **MC210922**.
+
+    <br> 
 
     - **Non configurato** - Viene richiesta la crittografia del dispositivo prima che sia consentito l'accesso successivo.  
     - Da **1** a **10** - Consente a un utente di ignorare la richiesta per un numero di volte compreso tra 1 e 10 prima che venga richiesta la crittografia nel dispositivo.  

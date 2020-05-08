@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 54e18ae8da6d534e26e37da8fba898e60f5a2986
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 5f85a8ffc81aa91bce09d6a76eeb5a52335d8b23
+ms.sourcegitcommit: dda5e6f00f79737348e850d971f15fc3093d6431
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079842"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82745197"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Monitorare i criteri di conformità dei dispositivi di Intune
 
@@ -102,6 +102,11 @@ Questa azione apre la finestra **Conformità del dispositivo** e visualizza i di
 ![Immagine del dashboard che visualizza altri dettagli sul dispositivo nello stato specifico](./media/compliance-policy-monitor/drill-down-details.png)
 
 Per visualizzare tutti i dispositivi di proprietà di un utente specifico, è anche possibile filtrare il report grafico digitando l'indirizzo di posta elettronica dell'utente.
+
+> [!TIP]
+> Se nessun utente ha eseguito l'accesso al dispositivo, il dispositivo di destinazione dei criteri di conformità del dispositivo invierà un report di conformità a Intune indicando **Account di sistema** come nome dell'entità utente. Ciò si verifica perché i criteri di conformità di un dispositivo sono stati assegnati a un gruppo di utenti o dispositivi e nessun utente aveva eseguito l'accesso al dispositivo al momento della valutazione dei criteri di conformità.
+>
+> Inoltre, in presenza di più utenti che hanno effettuato l'accesso allo stesso dispositivo e se al dispositivo vengono assegnati per coincidenza criteri di conformità con un ambito che copre tutti gli utenti attualmente connessi al dispositivo, il report di conformità potrebbe mostrare lo stesso dispositivo più volte, perché ogni utente che ha eseguito l'accesso al dispositivo deve valutare i criteri di conformità del dispositivo e segnalare lo stato a Intune.
 
 #### <a name="filter-and-columns"></a>Filtro e colonne
 

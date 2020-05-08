@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 426767b65e0fd770a9a41ce9463948007a524c41
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b7643c73d2e9dad00e926bdc3db905016c45860a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078754"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905213"
 ---
 # <a name="capabilities-in-technical-preview-18062-for-configuration-manager"></a>Funzionalità della versione Technical Preview 1806.2 per Configuration Manager
 
@@ -147,7 +147,7 @@ Quando si crea una distribuzione in più fasi e si configura manualmente una fas
 <!--1357427-->
 Configuration Manager supporta ora la distribuzione dei nuovi formati di pacchetto dell'app (con estensione msix) e bundle dell'app (con estensione msixbundle) di Windows 10. Le build più recenti di [Windows Insider Preview](https://insider.windows.com/) supportano attualmente questi nuovi formati.
 
-Per una panoramica di MSIX, vedere [A closer look at MSIX](https://blogs.msdn.microsoft.com/sgern/2018/06/18/a-closer-look-at-msix/) (MSIX più da vicino).
+Per una panoramica di MSIX, vedere [A closer look at MSIX](https://docs.microsoft.com/archive/blogs/sgern/a-closer-look-at-msix) (MSIX più da vicino).
 
 Per informazioni su come creare una nuova app MSIX, vedere [MSIX support introduced in Insider Build 17682](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376) (Introduzione del supporto di MSIX nella build di Insider 17682).
 

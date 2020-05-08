@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: bd9475a72ef8d2b25f026ab76e124c8217ed7ee9
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 6c6ff51edbd04a6d68f2770af123b1ac431542d2
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073943"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904711"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Novità della versione 1702 di Configuration Manager
 
@@ -28,8 +28,8 @@ L'aggiornamento 1702 per Configuration Manager Current Branch è disponibile com
 > Per installare un nuovo sito, è necessario usare una versione base di Configuration Manager.  
 >
 > Sono disponibili altre informazioni su:    
-> - [Installing new sites](https://technet.microsoft.com/library/mt590197.aspx) (Installare nuovi siti)  
-> - [Installing updates at sites](https://technet.microsoft.com/library/mt607046.aspx) (Installare aggiornamenti nei siti)  
+> - [Installing new sites](../../servers/deploy/install/installing-sites.md) (Installare nuovi siti)  
+> - [Installing updates at sites](../../servers/manage/updates.md) (Installare aggiornamenti nei siti)  
 > - [Baseline and update versions](../../servers/manage/updates.md#bkmk_Baselines) (Versioni di base e di aggiornamento)
 
 Le sezioni seguenti illustrano in dettaglio le modifiche e le nuove funzionalità introdotte nella versione 1702 di Configuration Manager.  
@@ -71,7 +71,7 @@ Di seguito sono riportati i miglioramenti apportati all'uso della funzionalità 
 - Facendo clic con il pulsante destro del mouse su qualsiasi oggetto nella console.   
    ![Opzione con clic con il pulsante destro del mouse](./media/feedback-option.png)   
 
-  Quando si seleziona **Commenti e suggerimenti**, il browser visualizza il [sito Web UserVoice di Configuration Manager](https://go.microsoft.com/fwlink/?linkid=617029).
+  Quando si seleziona **Commenti e suggerimenti**, il browser visualizza il [sito Web UserVoice di Configuration Manager](https://configurationmanager.uservoice.com/forums/300492-ideas).
 
 
 ###  <a name="changes-for-updates-and-servicing"></a>Modifiche per Aggiornamenti e manutenzione

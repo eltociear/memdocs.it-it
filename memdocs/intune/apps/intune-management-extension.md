@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6c8e1551b49fce5074bd2e88d1d8802f62cca2bb
-ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
+ms.openlocfilehash: 749377ceecf29d9b900cff108fc4b736d6b8d0f2
+ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80808113"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82605168"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Usare gli script di PowerShell nei dispositivi Windows 10 in Intune
 
@@ -30,7 +30,7 @@ Usare l'estensione di gestione di Microsoft Intune per caricare script di PowerS
 
 Questa funzionalità si applica a:
 
-- Windows 10 e versioni successive
+- Windows 10 e versioni successive (escluso Windows 10 Home)
 
 > [!NOTE]
 > Dopo che questi prerequisiti dell'estensione di gestione di Intune sono soddisfatti, l'estensione viene installata automaticamente quando uno script di PowerShell o un'app Win32 viene assegnata all'utente o al dispositivo. Per altre informazioni, vedere i [prerequisiti](../apps/intune-management-extension.md#prerequisites) dell'estensione di gestione di Intune.
@@ -47,11 +47,14 @@ L'estensione di gestione di Intune integra le funzionalità di gestione MDM disp
 
 L'estensione di gestione di Intune ha i prerequisiti seguenti. Dopo che questi prerequisiti sono soddisfatti, l'estensione di gestione di Intune viene installata automaticamente quando uno script di PowerShell o un'app Win32 viene assegnata all'utente o al dispositivo.
 
-- Dispositivi che eseguono Windows 10 versione 1607 o successiva. Se il dispositivo viene registrato tramite la [registrazione automatica in blocco](../enrollment/windows-bulk-enroll.md), i dispositivi devono eseguire Windows 10 versione 1703 o successiva. L'estensione di gestione di Intune non è supportata in Windows 10 in modalità S, perché la modalità S non consente l'esecuzione di app non dello Store. 
+- Dispositivi che eseguono Windows 10 versione 1607 o successiva. Se il dispositivo viene registrato usando la [registrazione automatica in blocco](../enrollment/windows-bulk-enroll.md), i dispositivi devono eseguire Windows 10 versione 1709 o successiva. L'estensione di gestione di Intune non è supportata in Windows 10 in modalità S, perché la modalità S non consente l'esecuzione di app non dello Store. 
   
 - Dispositivi aggiunti ad Azure Active Directory (AD), tra cui:  
   
   - Aggiunti ad Azure AD ibrido: Dispositivi aggiunti ad Azure Active Directory (AD) e anche ad Active Directory (AD) locale. Per informazioni aggiuntive, vedere [Pianificare l'implementazione dell'aggiunta ad Azure Active Directory ibrido](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan).
+  
+  > [!TIP]
+  > Assicurarsi che i dispositivi siano [aggiunti](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) ad Azure AD. I dispositivi che sono solo [registrati](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) in Azure AD non riceveranno gli script.  
 
 - Dispositivi registrati in Intune, tra cui:
 
@@ -71,8 +74,8 @@ L'estensione di gestione di Intune ha i prerequisiti seguenti. Dopo che questi p
     - [Carico di lavoro App client](https://docs.microsoft.com/configmgr/comanage/workloads#client-apps)
     - [Come trasferire i carichi di lavoro di Configuration Manager a Intune](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads)
   
-> [!TIP]
-> Assicurarsi che i dispositivi siano [aggiunti](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) ad Azure AD. I dispositivi che sono solo [registrati](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) in Azure AD non riceveranno gli script.
+> [!NOTE]
+> Per informazioni sull'uso di macchine virtuali Windows 10, vedere [Uso di macchine virtuali Windows 10 con Intune](../fundamentals/windows-10-virtual-machines.md).
 
 ## <a name="create-a-script-policy-and-assign-it"></a>Creare e assegnare criteri di script
 
@@ -125,6 +128,8 @@ L'estensione di gestione di Intune ha i prerequisiti seguenti. Dopo che questi p
 - Gli utenti finali non devono eseguire l'accesso al dispositivo per eseguire gli script di PowerShell.
 
 - L'agente dell'estensione di gestione di Intune esegue il controllo con Intune una volta ogni ora e dopo ogni riavvio, per verificare la presenza di nuovi script o di modifiche. Dopo aver assegnato il criterio ai gruppi di Azure AD, lo script di PowerShell viene eseguito e vengono visualizzati i risultati dell'esecuzione. Dopo essere stato eseguito, lo script non viene eseguito di nuovo a meno che non venga apportata una modifica allo script o ai criteri. Se lo script ha esito negativo, l'agente dell'estensione di gestione di Intune ritenta l'esecuzione dello script per tre volte, nelle tre sincronizzazioni successive dell'agente stesso.
+
+- Per i dispositivi condivisi, lo script di PowerShell viene eseguito per ogni nuovo utente che accede.
 
 ### <a name="failure-to-run-script-example"></a>Esempio di errore di esecuzione dello script
 8:00

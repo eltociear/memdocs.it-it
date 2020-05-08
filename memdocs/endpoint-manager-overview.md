@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 05/04/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: ''
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 939224776199407abb6a508f25bf5dadbacb882f
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: 1dee569d6f2ce4ed1a3bc278c9c9a886f9d23974
+ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "82135989"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82782258"
 ---
 # <a name="microsoft-endpoint-manager-overview"></a>Panoramica di Microsoft Endpoint Manager
 
@@ -102,11 +102,11 @@ Ad esempio:
 
 ## <a name="what-you-need-to-get-started"></a>Passaggi preliminari
 
+Microsoft Endpoint Manager è una piattaforma per soluzioni che riunisce diverse tecnologie. Non si tratta di una nuova licenza. I servizi vengono concessi in licenza in base alle singole condizioni di licenza. Per altre informazioni, vedere le [condizioni di licenza per il prodotto](https://www.microsoft.com/licensing/product-licensing/products).
+
 Se si usa già Configuration Manager, si avrà a disposizione anche Microsoft Intune per la co-gestione dei dispositivi Windows. Per le altre piattaforme, come iOS/iPadOS e Android, è necessaria una licenza di Intune separata.
 
-Nella maggior parte degli scenari l'opzione migliore è Microsoft 365, perché include Endpoint Manager e Office 365.
-
-Per altre informazioni, vedere [Microsoft 365](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise).
+Nella maggior parte degli scenari l'opzione migliore è Microsoft 365, perché include Endpoint Manager e Office 365. Per altre informazioni, vedere [Microsoft 365](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

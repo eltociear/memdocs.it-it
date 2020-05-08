@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 88234bb3117850bc3280242671ae459308a5262e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d8c1cd6610bd09b2714951d8a755770b6347b2f6
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696029"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905238"
 ---
 # <a name="capabilities-in-technical-preview-1805-for-configuration-manager"></a>Funzionalità della versione Technical Preview 1805 per Configuration Manager
 
@@ -163,8 +163,6 @@ Dopo la transizione di questo carico di lavoro, è comunque possibile continuare
 <!--1358112-->
 
 La funzionalità LEDBAT (Low Extra Delay Background Transport) di Windows Server consente di gestire i trasferimenti di rete in background. Per i punti di distribuzione in esecuzione in versioni supportate di Windows Server, è possibile abilitare un'opzione che consente di regolare il traffico di rete. I client usano la larghezza di banda di rete solo quando è disponibile. 
-
-Per altre informazioni su Windows LEDBAT, vedere il post di blog [New transport advancements](https://blogs.technet.microsoft.com/networking/2016/07/18/announcing-new-transport-advancements-in-the-anniversary-update-for-windows-10-and-windows-server-2016/) (Nuovi miglioramenti per il trasporto).
 
 
 ### <a name="prerequisites"></a>Prerequisiti

@@ -10,12 +10,12 @@ ms.assetid: 1fcc921f-085f-4b0b-9c53-1e0707211076
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c6891a46050bb83e54fb34b97d9129fcb5873785
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f877de32c9915f91d1e2d7f2d90b9b40ab69df11
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701419"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906581"
 ---
 # <a name="additional-information-about-privacy-for-configuration-manager"></a>Altre informazioni sulla privacy per Configuration Manager
 
@@ -91,6 +91,6 @@ Per altre informazioni, vedere [Endpoint Protection](../../../protect/deploy-use
 
 Nella console di Configuration Manager andare all'area di lavoro **Monitoraggio**, selezionare il nodo **Gerarchia siti** e passare a **Vista geografica**. Questa vista consente di usare le mappe fornite da Microsoft Bing Maps per visualizzare la topologia dei server fisici di Configuration Manager. Per abilitare questa funzionalità, le informazioni sulla posizione fornite dall'utente vengono inviate dal server al servizio Web di Bing Maps.
 
-Microsoft usa le informazioni per il funzionamento e il miglioramento delle mappe di Microsoft Bing Maps e di altri siti e servizi Microsoft. Per altre informazioni, vedere l'[Informativa sulla privacy Microsoft](https://go.microsoft.com/fwlink/?LinkId=823548).
+Microsoft usa le informazioni per il funzionamento e il miglioramento delle mappe di Microsoft Bing Maps e di altri siti e servizi Microsoft. Per altre informazioni, vedere l'[Informativa sulla privacy Microsoft](https://privacy.microsoft.com/privacystatement).
 
 È possibile scegliere di non usare la visualizzazione geografica per la gerarchia dei siti. La vista Diagramma gerarchia predefinita consente di visualizzare la gerarchia e non usa il servizio Bing Maps.

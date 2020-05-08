@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: df951bfb44313cfec8dacb8c0df34abb7beb0c56
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f3f38de1d7440ffd0293bde359deeb6be3bbeffb
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703739"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906198"
 ---
 # <a name="recommended-antivirus-exclusions-for-configuration-manager"></a>Esclusioni dell'antivirus consigliate per Configuration Manager
 
@@ -114,10 +114,10 @@ Le esclusioni dei processi sono necessarie solo se i programmi antivirus aggress
 
 Per altre informazioni sulle esclusioni dell'antivirus, vedere gli articoli seguenti:
 
-[Configuration Manager Current Branch Antivirus Exclusions - System Center Premier Field Engineer Blog](https://blogs.technet.microsoft.com/systemcenterpfe/2017/05/24/configuration-manager-current-branch-antivirus-update/) (Esclusioni dell'antivirus per Configuration Manager Current Branch - Blog System Center Premier Field Engineer)
+[Configuration Manager Current Branch Antivirus Exclusions - System Center Premier Field Engineer Blog](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/configuration-manager-current-branch-antivirus-exclusions/ba-p/884831) (Esclusioni dell'antivirus per Configuration Manager Current Branch - Blog System Center Premier Field Engineer)
 
-[Updated System Center 2012 Configuration Manager Antivirus Exclusions with more details on OSD and Boot Images](https://blogs.technet.microsoft.com/systemcenterpfe/2013/01/11/updated-system-center-2012-configuration-manager-antivirus-exclusions-with-more-details-on-osd-and-boot-images-etc/) (Esclusioni dell'antivirus per System Center 2012 Configuration Manager aggiornate con altri dettagli su immagini OSD e di avvio)
+[Updated System Center 2012 Configuration Manager Antivirus Exclusions with more details on OSD and Boot Images](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/updated-system-center-2012-configuration-manager-antivirus/ba-p/884371) (Esclusioni dell'antivirus per System Center 2012 Configuration Manager aggiornate con altri dettagli su immagini OSD e di avvio)
 
-[Come scegliere il software antivirus da eseguire nei computer che eseguono SQL Server](https://support.microsoft.com/en-us/help/309422/how-to-choose-antivirus-software-to-run-on-computers-that-are-running-sql-server)
+[Come scegliere il software antivirus da eseguire nei computer che eseguono SQL Server](https://support.microsoft.com/help/309422/how-to-choose-antivirus-software-to-run-on-computers-that-are-running-sql-server)
 
-[Raccomandazioni per la ricerca di virus per computer aziendali che eseguono versioni attualmente supportate di Windows](https://support.microsoft.com/en-us/help/822158/virus-scanning-recommendations-for-enterprise-computers-that-are-running-currently-supported-versions-of-windows)
+[Raccomandazioni per la ricerca di virus per computer aziendali che eseguono versioni attualmente supportate di Windows](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers-that-are-running-currently-supported-versions-of-windows)

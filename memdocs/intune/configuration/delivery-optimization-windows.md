@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/10/2020
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: kerimh
-ms.openlocfilehash: 71039737a74aebb3066c001536aaf677a0467696
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c37563dee40d776d352dec4e0b8ef11b1dc8f67b
+ms.sourcegitcommit: 7b3eed763b394075766ea080968889a8538bfe56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79345676"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506540"
 ---
 # <a name="delivery-optimization-settings-in-microsoft-intune"></a>Impostazioni di ottimizzazione recapito in Microsoft Intune
 
@@ -39,22 +39,28 @@ Per informazioni sull'ottimizzazione recapito in Windows 10, vedere [Ottimizzazi
 2. Selezionare **Dispositivi** > **Profili di configurazione** > **Crea profilo**.
 
 3. Immettere le proprietà seguenti:
+   - **Piattaforma**: selezionare **Windows 10 e versioni successive**.
+   - **Tipo di profilo**: selezionare **Ottimizzazione recapito**.
 
-    - **Nome**: immettere un nome descrittivo per il nuovo profilo.
-    - **Descrizione**: Immettere una descrizione del profilo. Questa impostazione è facoltativa ma consigliata.
-    - **Piattaforma**: selezionare **Windows 10 e versioni successive**.
-    - **Tipo di profilo**: selezionare **Ottimizzazione recapito**.
+4. Selezionare **Crea**.
 
-4. Scegliere **Impostazioni** > **Configura** e definire come scaricare aggiornamenti e app. Per informazioni sulle impostazioni disponibili, vedere [Impostazioni di ottimizzazione recapito per Intune](delivery-optimization-settings.md).
+5. Nella pagina **Informazioni di base** immettere un nome e una descrizione per il profilo, quindi scegliere **Avanti**.
 
-5. Al termine, selezionare **OK** > **Crea** per salvare le modifiche.
+6. Nella pagina **Impostazioni di configurazione** definire il modo in cui si vogliono scaricare gli aggiornamenti e le app. Per informazioni sulle impostazioni disponibili, vedere [Impostazioni di ottimizzazione recapito per Intune](delivery-optimization-settings.md).
 
-Il profilo viene creato e visualizzato nell'elenco. [Assegnare il profilo](device-profile-assign.md) e quindi [monitorarne lo stato](device-profile-monitor.md).
+   Al termine della configurazione delle impostazioni, selezionare **Avanti**.
 
-<!-- ## Move existing update rings to delivery optimization
+7. Nella pagina **Ambito (tag)** selezionare **Selezionare i tag di ambito** per aprire il riquadro *Seleziona tag* per assegnare tag di ambito al profilo.
+  
+   Selezionare **Avanti** per continuare.
 
-**Delivery optimization** settings replace **Software updates – Windows 10 Update Rings**. Your existing update rings can be easily changed to use the **Delivery optimization** settings. To maintain the same settings when you create a delivery optimization profile, use the same *Delivery optimization download mode* and then set the same settings as you already use. However, you can choose to reconfigure delivery optimization settings to take advantage of the full range of addition settings that the Delivery Optimization profile can manage. 
--->
+8. Nella pagina **Assegnazioni** selezionare i gruppi che riceveranno questo profilo. Per altre informazioni sull'assegnazione di profili, vedere [Assegnare profili utente e dispositivo](../configuration/device-profile-assign.md).
+
+   Selezionare **Avanti**.
+
+9. Nella pagina **Regole di applicabilità** usare le opzioni **Regola**, **Proprietà** e **Valore** per definire il modo in cui il profilo viene applicato all'interno dei gruppi assegnati.
+
+10. Al termine, nella pagina **Rivedi e crea** scegliere **Crea**. Il profilo viene creato e visualizzato nell'elenco. [Assegnare il profilo](device-profile-assign.md) e quindi [monitorarne lo stato](device-profile-monitor.md).
 
 ## <a name="remove-delivery-optimization-from-windows-10-update-rings"></a>Rimuovere Ottimizzazione recapito dagli anelli di aggiornamento di Windows 10
 

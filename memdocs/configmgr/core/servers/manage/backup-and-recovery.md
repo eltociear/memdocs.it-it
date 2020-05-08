@@ -10,12 +10,12 @@ ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 824eaeb939249e1bcc2ed21d5815a0a72dc54797
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 46d2af2d89e41e931add0f77931b442b68835235
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700269"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906469"
 ---
 # <a name="back-up-a-configuration-manager-site"></a>Eseguire il backup di un sito di Configuration Manager
 
@@ -231,7 +231,7 @@ L'ID writer per SMS Writer è: **03ba67dd-dc6d-4729-a038-251f7018463b**.
 Il servizio SMS Writer deve essere eseguito all'interno dell'account di sistema locale.  
 
 ### <a name="volume-shadow-copy-service"></a>Servizio Copia Shadow del volume  
-VSS è un set di API COM che consente di implementare un framework per l'esecuzione dei backup del volume durante la scrittura delle applicazioni di un sistema nei volumi. VSS offre un'interfaccia coerente che consente il coordinamento tra le applicazioni utente per l'aggiornamento dei dati sul disco (il servizio SMS Writer) e quelle che eseguono il backup delle applicazioni (il servizio Gestione backup). Per altre informazioni, vedere [Servizio Copia Shadow del volume](https://go.microsoft.com/fwlink/p/?LinkId=241968).  
+VSS è un set di API COM che consente di implementare un framework per l'esecuzione dei backup del volume durante la scrittura delle applicazioni di un sistema nei volumi. VSS offre un'interfaccia coerente che consente il coordinamento tra le applicazioni utente per l'aggiornamento dei dati sul disco (il servizio SMS Writer) e quelle che eseguono il backup delle applicazioni (il servizio Gestione backup). Per altre informazioni, vedere [Servizio Copia Shadow del volume](https://docs.microsoft.com/windows-server/storage/file-server/volume-shadow-copy-service).  
 
 
 

@@ -28,9 +28,11 @@ La registrazione automatica consente agli utenti di registrare i propri disposit
    - **Tutti**: tutti gli utenti possono registrare automaticamente i dispositivi Windows 10
 
       > [!IMPORTANT]
-      > Per i dispositivi BYOD, l'ambito utente MAM ha la precedenza se sia l'ambito utente MAM che l'ambito utente MDM (registrazione MDM automatica) sono abilitati per tutti gli utenti o gli stessi gruppi di utenti. Il dispositivo userà i criteri di Windows Information Protection (WIP), se configurati, anziché essere registrato in MDM.
+      > Per i dispositivi Windows BYOD, l'ambito utente MAM ha la precedenza se sia l'ambito utente MAM che l'ambito utente MDM (registrazione MDM automatica) sono abilitati per tutti gli utenti o gli stessi gruppi di utenti. Il dispositivo non sarà registrato in MDM e verranno applicati i criteri di Windows Information Protection (WIP), se configurati.
       >
-      > Per i dispositivi aziendali, l'ambito utente MDM ha la precedenza se entrambi gli ambiti sono abilitati. I dispositivi vengono registrati in MDM.
+      > Se si intende abilitare la registrazione automatica per i dispositivi Windows BYOD in un sistema MDM: configurare l'ambito utente MDM per **tutti** gli utenti (o **alcuni** e specificare un gruppo) e configurare l'ambito utente MAM su **nessuno** (o **alcuni** e specificare un gruppo, assicurandosi che gli utenti non siano membri di un gruppo di destinazione sia per l'ambito utente MDM che MAM).
+      >
+      >Per i [dispositivi aziendali](../enrollment/enrollment-restrictions-set.md#blocking-personal-windows-devices), l'ambito utente MDM ha la precedenza se sono abilitati entrambi gli ambiti MDM e MAM. Il dispositivo verrà registrato automaticamente nel sistema MDM configurato.
 
    > [!NOTE]
    > L'ambito utente MDM deve essere impostato su un gruppo di Azure AD contenente oggetti utente.

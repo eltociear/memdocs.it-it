@@ -10,12 +10,12 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 57c60fcdadf3e58b59d33ecf2753789122a38ecc
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: e9e0ec6df5f80b318cb78ed8cddc986b613230e1
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078686"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904541"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Versioni dei sistemi operativi per client e dispositivi supportate da Configuration Manager
 
@@ -209,7 +209,7 @@ Per altre informazioni, vedere [Come distribuire i client in computer Mac](../..
 > [!Important]  
 > Configuration Manager versione 1902 elimina il supporto per Linux e UNIX come client. La deprecazione è stata annunciata con la [versione 1802](../changes/whats-new-in-version-1802.md#deprecation-announcement-for-linux-and-unix-client-support). Per la gestione dei server Linux, è possibile usare la gestione di Microsoft Azure. Le soluzioni di Azure includono un ampio supporto per Linux che nella maggior parte dei casi supera le funzionalità di Configuration Manager, inclusa la gestione end-to-end delle patch per Linux.
 
-I pacchetti di installazione del client per Linux e UNIX non sono inclusi con i supporti di Configuration Manager. Scaricare i **client per altri sistemi operativi** dall'[Area download Microsoft](https://go.microsoft.com/fwlink/?LinkID=525184). Oltre ai pacchetti di installazione client, il download del client include lo script che gestisce l'installazione del client in ogni computer.  
+I pacchetti di installazione del client per Linux e UNIX non sono inclusi con i supporti di Configuration Manager. Scaricare i **client per altri sistemi operativi** dall'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=47719). Oltre ai pacchetti di installazione client, il download del client include lo script che gestisce l'installazione del client in ogni computer.  
 
 ### <a name="requirements-and-limitations"></a>Requisiti e limitazioni
 

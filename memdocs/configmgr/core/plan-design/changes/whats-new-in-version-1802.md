@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 11066470347db0f3ffbfadda9897aed92baa645b
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: e7bc30c4350d96654a0f6a6ae548d63c2928e791
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073603"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904663"
 ---
 # <a name="whats-new-in-version-1802-of-configuration-manager"></a>Novità della versione 1802 di Configuration Manager
 
@@ -169,7 +169,7 @@ A partire da questa versione, è possibile visualizzare un dashboard con informa
 
 ### <a name="microsoft-edge-browser-policies"></a>Criteri del browser Microsoft Edge
 <!-- 1357310 -->
-I clienti che usano il Web browser [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) in client Windows 10 possono creare un criterio delle impostazioni di conformità di Configuration Manager per configurare diverse impostazioni di Microsoft Edge. Per altre informazioni, vedere [Creare il profilo del browser Microsoft Edge](../../../compliance/deploy-use/browser-profiles.md). 
+I clienti che usano il Web browser [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge) in client Windows 10 possono creare un criterio delle impostazioni di conformità di Configuration Manager per configurare diverse impostazioni di Microsoft Edge. Per altre informazioni, vedere [Creare il profilo del browser Microsoft Edge](../../../compliance/deploy-use/browser-profiles.md). 
 
 
 

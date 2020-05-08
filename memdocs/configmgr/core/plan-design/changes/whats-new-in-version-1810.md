@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6a9770dca209669659abf6e4fc9c23d5e6972981
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 2a3b322f868c5c203114de4d974ba6682272c5d7
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073552"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906257"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Novità della versione 1810 di Configuration Manager (Current Branch)
 
@@ -43,7 +43,7 @@ Per conoscere le modifiche relative al supporto prima che siano implementate, ve
 
 A partire dal 14 agosto 2018, la funzionalità di gestione ibrida dei dispositivi mobili è deprecata. Per altre informazioni, vedere [Che ne è stato della gestione di dispositivi mobili ibrida?](../../../mdm/understand/what-happened-to-hybrid.md).<!--Intune feature 2683117-->  
 
-Il supporto di System Center Endpoint Protection (SCEP) per Mac e Linux (tutte le versioni) termina il 31 dicembre 2018. La disponibilità di nuove definizioni di virus per SCEP per Mac e SCEP per Linux potrebbe essere sospesa alla fine del supporto. Per altre informazioni, vedere il [post del blog sulla fine del supporto](https://go.microsoft.com/fwlink/?linkid=870182).
+Il supporto di System Center Endpoint Protection (SCEP) per Mac e Linux (tutte le versioni) termina il 31 dicembre 2018. La disponibilità di nuove definizioni di virus per SCEP per Mac e SCEP per Linux potrebbe essere sospesa alla fine del supporto. Per altre informazioni, vedere il [post del blog sulla fine del supporto](https://techcommunity.microsoft.com/t5/configuration-manager-blog/end-of-support-for-scep-for-mac-and-scep-for-linux-on-december/ba-p/286257).
 
 Le distribuzioni classiche del servizio in Azure sono ora deprecate in Configuration Manager. Iniziare a usare le distribuzioni di Azure Resource Manager per il gateway di gestione cloud e il punto di distribuzione cloud. Per altre informazioni, vedere [Pianificare il gateway di gestione cloud](../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager).
 

@@ -10,12 +10,12 @@ ms.assetid: 6893fce1-7ad5-4151-9ba9-3096871e8e4a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7ba1f41af778602fb95d268c071b5f0d1dde158c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ad92e4906c45b5c720ab35efc055449a27cc0850
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81693389"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906227"
 ---
 # <a name="security-and-privacy-for-migration-to-configuration-manager-current-branch"></a>Sicurezza e privacy per la migrazione a Configuration Manager Current Branch
 
@@ -48,9 +48,9 @@ Quando si esegue la migrazione di dati da un sito di origine a un sito di destin
 
  Per ulteriori informazioni sulla protezione e privacy, vedere uno degli argomenti seguenti:  
 
--   Per altre informazioni sulla privacy per Configuration Manager 2007, vedere [Protezione e privacy per Configuration Manager 2007](https://go.microsoft.com/fwlink/p/?LinkId=216450) nella libreria della documentazione di Configuration Manager 2007.  
+-   Per altre informazioni sulla privacy per Configuration Manager 2007, vedere [Protezione e privacy per Configuration Manager 2007](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb680768(v=technet.10)) nella libreria della documentazione di Configuration Manager 2007.  
 
--   Per altre informazioni sulla privacy per System Center 2012 Configuration Manager, vedere [Protezione e privacy per System Center 2012 Configuration Manager](https://technet.microsoft.com/library/gg682033.aspx) nella libreria della documentazione di System Center 2012 Configuration Manager.  
+-   Per altre informazioni sulla privacy per System Center 2012 Configuration Manager, vedere [Protezione e privacy per System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682033(v=technet.10)) nella libreria della documentazione di System Center 2012 Configuration Manager.  
 
 -   Per altre informazioni sulla privacy per Configuration Manager, vedere [Sicurezza e privacy per Configuration Manager](../../core/plan-design/security/security-and-privacy.md).  
 

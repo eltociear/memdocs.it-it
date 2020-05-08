@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 096a12ae811b717fec7840ab4fd4d4b41f2c8f17
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9657353dd877b380d506e588934e3f6fd29b51c1
+ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81615729"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587026"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>Aggiungere impostazioni di posta elettronica ai dispositivi con Intune
 
@@ -94,6 +94,8 @@ I profili di posta elettronica vengono assegnati ai gruppi di dispositivi, non a
 È possibile proteggere i profili di posta elettronica usando le opzioni seguenti:
 
 - **Certificati**: quando si crea il profilo di posta elettronica, si sceglie un profilo di certificato creato in precedenza in Intune. Questo certificato è noto come certificato di identità. Esegue l'autenticazione in base a un profilo certificato attendibile o a un certificato radice per verificare che il dispositivo di un utente sia autorizzato a connettersi. Il certificato attendibile viene assegnato al computer che autentica la connessione alla posta elettronica. Questo computer è in genere il server di posta nativo.
+
+  Se si usa l'autenticazione basata su certificati per il profilo di posta elettronica, distribuire il profilo di posta elettronica, il profilo certificato e il profilo radice attendibile agli stessi gruppi per assicurarsi che ogni dispositivo sia in grado di riconoscere la legittimità dell'autorità di certificazione.
 
   Per altre informazioni su come creare e usare i profili di certificato in Intune, vedere [Come configurare i certificati con Intune](../protect/certificates-configure.md).
 

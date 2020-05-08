@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9e97322fa8a126203bf6e4d1e7a3703b92ded339
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: baffa150b416b778e41a59fdf4e5a1b686cdae7b
+ms.sourcegitcommit: 4381afb515c06f078149bd52528d1f24b63a2df9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80536841"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82538149"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Informazioni sulla gestione delle app in Microsoft Intune
 
@@ -109,6 +109,11 @@ Nella parte superiore del menu di spostamento del carico di lavoro App sono disp
     - **Categorie di app**: consente di aggiungere ed eliminare nomi di categoria di app.
     - **E-book**: Alcuni App Store consentono di acquistare più licenze per app o libri da eseguire nell'azienda. Per altre informazioni, vedere [Gestire le app e i libri acquistati con Volume Purchase Program con Microsoft Intune](vpp-apps.md).
 - **Guida e supporto tecnico**: consente di risolvere i problemi, richiedere supporto o visualizzare lo stato di Intune. Per altre informazioni, vedere [Risolvere i problemi](../fundamentals/help-desk-operators.md).
+
+### <a name="try-the-interactive-guide"></a>Provare la guida interattiva
+La guida interattiva [Gestire e proteggere le applicazioni per dispositivi mobili e desktop con Microsoft Endpoint Manager](https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager) presenta in modo dettagliato l'interfaccia di amministrazione di Microsoft Endpoint Manager per illustrare come gestire i dispositivi registrati in Intune, imporre la conformità con i criteri e proteggere i dati dell'organizzazione.</br></br>
+
+> [!VIDEO https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager]
 
 ## <a name="additional-information"></a>Informazioni aggiuntive
 Gli elementi seguenti all'interno della console offrono funzionalità correlate alle app:

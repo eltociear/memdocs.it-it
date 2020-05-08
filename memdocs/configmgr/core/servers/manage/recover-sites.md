@@ -10,12 +10,12 @@ ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 14f319cfa1d09cf21cc5da5ed4a9fde9b9b9799b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b17c8c9ed0c1f6f9a5aeb487e07ad3d3dc66cbae
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708529"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82903953"
 ---
 # <a name="recover-a-configuration-manager-site"></a>Ripristinare un sito di Configuration Manager
 
@@ -193,7 +193,7 @@ Usare questa opzione quando non si è verificata alcuna perdita di dati nel serv
 
 Configuration Manager consente il rilevamento delle modifiche per il database del sito in SQL Server. Il rilevamento delle modifiche consente a Configuration Manager di cercare le informazioni sulle modifiche apportate alle tabelle di database dopo un punto di ripristino precedente. Il periodo di conservazione specifica per quanto tempo verranno conservate le informazioni di rilevamento delle modifiche. Per impostazione predefinita, il database del sito è configurato per un periodo di conservazione di cinque giorni. Quando si ripristina un database del sito, il processo di ripristino viene eseguito in modo diverso a seconda che il backup rientri o meno nel periodo di memorizzazione. Se, ad esempio, nel server SQL si verifica un errore e l'ultimo backup risale a sette giorni fa, il backup non è compreso nel periodo di conservazione.
 
-Per altre informazioni sui meccanismi interni di rilevamento delle modifiche di SQL Server, vedere i post di blog seguenti del team di SQL Server: [Change Tracking Cleanup - part 1](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-1/) (Pulizia del rilevamento modifiche - parte 1) e [Change Tracking Cleanup - part 2](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-2) (Pulizia del rilevamento modifiche - parte 2).
+Per altre informazioni sui meccanismi interni di rilevamento delle modifiche di SQL Server, vedere i post di blog seguenti del team di SQL Server: [Change Tracking Cleanup - part 1](https://docs.microsoft.com/archive/blogs/sql_server_team/change-tracking-cleanup-part-1) (Pulizia del rilevamento modifiche - parte 1) e [Change Tracking Cleanup - part 2](https://docs.microsoft.com/archive/blogs/sql_server_team/change-tracking-cleanup-part-2) (Pulizia del rilevamento modifiche - parte 2).
 
 ### <a name="reinitialization-of-site-or-global-data"></a>Reinizializzazione dei dati globali o del sito
 

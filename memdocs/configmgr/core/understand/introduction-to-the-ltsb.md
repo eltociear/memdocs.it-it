@@ -10,12 +10,12 @@ ms.assetid: 694bc29f-a7fd-4e06-815a-1a9c5e9ac563
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eda58982094860ccf075bcd2d1d8ed9e3d3bb2df
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d4f5ff0e1c8c92fbadc286e9909388eb66aa8f7b
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706919"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906097"
 ---
 # <a name="introduction-to-the-long-term-servicing-branch-of-configuration-manager"></a>Introduzione a Long Term Servicing Branch di Configuration Manager
 
@@ -53,7 +53,7 @@ Le integrazioni cloud, così come tutte le funzionalità incluse nell'edizione C
 
 ## <a name="find-ltsb-documentation"></a>Trovare la documentazione di LTSB
 
-LTSB si basa su Current Branch versione 1606. Usare la [documentazione di Current Branch](https://docs.microsoft.com/sccm/) con le avvertenze e le limitazioni specifiche di LTSB. Tali avvertenze e limitazioni sono descritte negli articoli seguenti:
+LTSB si basa su Current Branch versione 1606. Usare la [documentazione di Current Branch](https://docs.microsoft.com/mem/configmgr/) con le avvertenze e le limitazioni specifiche di LTSB. Tali avvertenze e limitazioni sono descritte negli articoli seguenti:
 
 - [Installare LTSB](install-the-ltsb.md)
 - [Aggiornare LTSB a Current Branch](convert-to-current-branch.md)
@@ -68,7 +68,7 @@ I clienti con contratti Software Assurance attivi per le licenze di Configuratio
 
 I clienti che dispongono di diritti perpetui su System Center Configuration Manager o che dopo il 1° ottobre lasciano scadere la sottoscrizione Software Assurance o equivalente possono installare la versione di System Center Configuration Manager LTSB corrente al momento della scadenza.
 
-Per altre informazioni su queste licenze, vedere [I termini e le condizioni relativi ai prodotti acquistati tramite i programmi multilicenza Microsoft](https://go.microsoft.com/fwlink/?LinkId=800052).
+Per altre informazioni su queste licenze, vedere [I termini e le condizioni relativi ai prodotti acquistati tramite i programmi multilicenza Microsoft](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?mode=1).
 
 Per altre informazioni sulla gestione delle licenze per i rami di Configuration Manager, vedere [Licenze e rami per Configuration Manager](learn-more-editions.md).
 

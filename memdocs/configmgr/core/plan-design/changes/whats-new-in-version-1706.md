@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: a4fa056c9c0708d2cecc0ca5f244e134e22ad10b
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: a8a4ce1c3d54311db18decc85f57d3e03298d339
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073710"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904685"
 ---
 # <a name="what39s-new-in-version-1706-of-configuration-manager"></a>Novità della versione 1706 di Configuration Manager
 
@@ -28,8 +28,8 @@ L'aggiornamento 1706 per Configuration Manager Current Branch è disponibile com
 > Per installare un nuovo sito, è necessario usare una versione base di Configuration Manager.  
 >
 > Sono disponibili altre informazioni su:    
-> - [Installing new sites](https://technet.microsoft.com/library/mt590197.aspx) (Installare nuovi siti)  
-> - [Installing updates at sites](https://technet.microsoft.com/library/mt607046.aspx) (Installare aggiornamenti nei siti)  
+> - [Installing new sites](../../servers/deploy/install/installing-sites.md) (Installare nuovi siti)  
+> - [Installing updates at sites](../../servers/manage/updates.md) (Installare aggiornamenti nei siti)  
 > - [Baseline and update versions](../../servers/manage/updates.md#bkmk_Baselines) (Versioni di base e di aggiornamento)  
 
 Le sezioni seguenti illustrano in dettaglio le modifiche e le nuove funzionalità introdotte nella versione 1706 di Configuration Manager.  

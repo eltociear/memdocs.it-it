@@ -10,12 +10,12 @@ ms.assetid: 45a10878-ff48-4318-9c6d-c014b38a4039
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 09618acc1c0950c3eaae79cca59fcf71dc7ef61e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 66770ea14c3ae53bad8e6df61b54c7c5e2d2aaa0
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688519"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904566"
 ---
 # <a name="supported-configurations-for-configuration-manager"></a>Configurazioni supportate per Configuration Manager
 
@@ -27,12 +27,12 @@ Le informazioni in questo e negli argomenti seguenti sono fondamentali per ident
 
 Quando una funzionalità di Configuration Manager richiede configurazioni più specifiche, queste informazioni vengono incluse nella documentazione specifica della funzionalità e vanno ad aggiungersi ai dettagli delle configurazioni generiche.  
 
- I prodotti e le tecnologie descritti negli argomenti seguenti sono supportati da Configuration Manager. Il loro inserimento in questo contesto, tuttavia, non implica un'estensione del normale ciclo di vita del supporto per il singolo prodotto. I prodotti che non rientrano nel ciclo di vita del supporto non sono supportati per l'uso con Configuration Manager. Sono inclusi tutti i prodotti coperti dal programma [ESU sugli aggiornamenti della sicurezza estesa](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates). Per altre informazioni sui cicli di vita del supporto Microsoft, visitare il sito Web [Ciclo di vita del supporto Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=208270) . Per altre informazioni sugli aggiornamenti della sicurezza estesa in Configuration Manager, vedere [Versioni dei sistemi operativi per client e dispositivi supportate da Configuration Manager](supported-operating-systems-for-clients-and-devices.md#bkmk_ESU).
+ I prodotti e le tecnologie descritti negli argomenti seguenti sono supportati da Configuration Manager. Il loro inserimento in questo contesto, tuttavia, non implica un'estensione del normale ciclo di vita del supporto per il singolo prodotto. I prodotti che non rientrano nel ciclo di vita del supporto non sono supportati per l'uso con Configuration Manager. Sono inclusi tutti i prodotti coperti dal programma [ESU sugli aggiornamenti della sicurezza estesa](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates). Per altre informazioni sui cicli di vita del supporto Microsoft, visitare il sito Web [Ciclo di vita del supporto Microsoft](https://support.microsoft.com/lifecycle) . Per altre informazioni sugli aggiornamenti della sicurezza estesa in Configuration Manager, vedere [Versioni dei sistemi operativi per client e dispositivi supportate da Configuration Manager](supported-operating-systems-for-clients-and-devices.md#bkmk_ESU).
 
 > [!NOTE]  
->  Per informazioni sui criteri del ciclo di vita del supporto Microsoft, vedere le domande frequenti nel sito [Criteri relativi al ciclo di vita Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=31976).  
+>  Per informazioni sui criteri del ciclo di vita del supporto Microsoft, vedere le domande frequenti nel sito [Criteri relativi al ciclo di vita Microsoft](https://support.microsoft.com/lifecycle).  
 
- I prodotti e le versioni di prodotto non elencati negli argomenti seguenti non sono supportati con Configuration Manager a meno che non siano annunciati nel blog [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/).  In alcuni casi è possibile che i contenuti del blog anticipino un aggiornamento alla documentazione.
+ I prodotti e le versioni di prodotto non elencati negli argomenti seguenti non sono supportati con Configuration Manager a meno che non siano annunciati nel blog [Enterprise Mobility and Security Blog](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/bg-p/enterprisemobilityandsecurity).  In alcuni casi è possibile che i contenuti del blog anticipino un aggiornamento alla documentazione.
 
 
 -  [Numeri di ridimensionamento e scalabilità](../../../core/plan-design/configs/size-and-scale-numbers.md)  

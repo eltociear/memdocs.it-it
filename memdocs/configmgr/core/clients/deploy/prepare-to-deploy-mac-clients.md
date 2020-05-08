@@ -10,12 +10,12 @@ ms.assetid: 2285a953-6a86-4ed5-97dd-cd57b02bc1ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8d0968a61be4e450bb145b309f61de0d6c212549
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2b5bcbce659601e10f44f06af94eb939767a389a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694819"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906631"
 ---
 # <a name="prepare-to-deploy-client-software-to-macs"></a>Preparare la distribuzione del software client in computer Mac
 
@@ -27,7 +27,7 @@ Seguire questa procedura per assicurarsi di essere pronti a [distribuire il clie
 
 ## <a name="mac-prerequisites"></a>Prerequisiti Mac
 
-Il pacchetto di installazione del client per Mac non viene fornito con i supporti di Configuration Manager. Scaricare i **client per altri sistemi operativi** dall'[Area download Microsoft](https://go.microsoft.com/fwlink/?LinkID=525184).  
+Il pacchetto di installazione del client per Mac non viene fornito con i supporti di Configuration Manager. Scaricare i **client per altri sistemi operativi** dall'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=47719).  
 
 Per l'elenco delle versioni supportate, vedere [Sistemi operativi supportati per client e dispositivi](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mac-computers).
 

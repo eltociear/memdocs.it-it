@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 6402205ae694d719845492b1af37000a0b9335c5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cee161747d5c0b462836b7c3a44e1460173b124c
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705359"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905651"
 ---
 # <a name="capabilities-in-technical-preview-1610-for-configuration-manager"></a>Funzionalità della versione Technical Preview 1610 per Configuration Manager
 
@@ -29,7 +29,7 @@ Questo articolo presenta le funzionalità disponibili nella Technical Preview pe
 
 **Di seguito sono riportate le nuove funzionalità disponibili con questa versione.**  
 ## <a name="filter-by-content-size-in-automatic-deployment-rules"></a>Filtrare per dimensioni del contenuto nelle regole di distribuzione automatica
-È ora possibile filtrare le dimensioni del contenuto per gli aggiornamenti software nelle regole di distribuzione automatica. Ad esempio, è possibile impostare il filtro **Dimensioni contenuto (KB)** su **< 2048** per scaricare solo gli aggiornamenti software inferiori a 2 MB. Questo filtro impedisce che vengano scaricati in automatico gli aggiornamenti software di grandi dimensioni al fine di migliorare il supporto della manutenzione Windows semplificata di livello inferiore quando la larghezza di banda è limitata. Per informazioni dettagliate, vedere [Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/) (Configuration Manager e manutenzione Windows semplificata su sistemi operativi di livello inferiore).
+È ora possibile filtrare le dimensioni del contenuto per gli aggiornamenti software nelle regole di distribuzione automatica. Ad esempio, è possibile impostare il filtro **Dimensioni contenuto (KB)** su **< 2048** per scaricare solo gli aggiornamenti software inferiori a 2 MB. Questo filtro impedisce che vengano scaricati in automatico gli aggiornamenti software di grandi dimensioni al fine di migliorare il supporto della manutenzione Windows semplificata di livello inferiore quando la larghezza di banda è limitata. Per informazioni dettagliate, vedere [Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-simplified-windows-servicing-on-down/ba-p/274056) (Configuration Manager e manutenzione Windows semplificata su sistemi operativi di livello inferiore).
 
 #### <a name="to-configure-the-content-size-field"></a>Per configurare il campo Dimensioni contenuto
 Per configurare il campo **Dimensioni contenuto (KB)** , accedere alla pagina **Aggiornamenti software** nella Creazione guidata delle regole di distribuzione automatica quando si crea un'ADR o accedere alla scheda **Aggiornamenti software** nelle proprietà di un'ADR esistente.

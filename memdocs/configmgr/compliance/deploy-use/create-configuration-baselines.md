@@ -10,12 +10,12 @@ ms.assetid: 678c9622-c61b-47d1-ba25-690616e431c7
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2028974c166e060f445b255db6c5af707725a3f4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1365aec90093ee24ad967e1d68e7c414b4efa254
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81693289"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906654"
 ---
 # <a name="create-configuration-baselines-in-configuration-manager"></a>Creare linee di base di configurazione in Configuration Manager
 
@@ -23,6 +23,9 @@ ms.locfileid: "81693289"
 
 
 Le linee di base di configurazione in Configuration Manager contengono elementi di configurazione predefiniti e, facoltativamente, altre linee di base di configurazione. Dopo aver creato una linea di base di configurazione, è possibile distribuirla in una raccolta in modo che i dispositivi in tale raccolta la scarichino e valutino la propria conformità in base a essa.  
+
+> [!TIP]
+> Non è possibile specificare l'ordine con cui il client Configuration Manager valuta gli elementi di configurazione in una linea di base. Questa impostazione non è deterministica.<!-- MEMDocs#175 -->
 
 ## <a name="configuration-baselines"></a>Linee di base di configurazione
 

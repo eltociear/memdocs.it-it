@@ -10,12 +10,12 @@ ms.assetid: f0f818d4-7f45-402f-8758-dc88bc024953
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 39039347361076ae7c8491f95419187d0af9da85
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7de7d562131f97ac21d1c394b176d3b7f4ce7747
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706749"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906447"
 ---
 # <a name="supported-configurations-for-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>Configurazioni supportate per Long-Term Servicing Branch di System Center Configuration Manager
 
@@ -25,9 +25,9 @@ Questo argomento illustra i sistemi operativi e le dipendenze dei prodotti suppo
 Se non specificato diversamente in questo o negli argomenti specifici per LTSB, le stesse configurazioni e limitazioni che si applicano alla versione 1606 Current Branch riguardano anche LTSB.  Quando si verificano conflitti, usare le informazioni pertinenti all'edizione in uso. In genere, LTSB è più limitato rispetto a Current Branch.
 
 ## <a name="general-statement-of-support"></a>Descrizione generale del supporto
-I prodotti e tecnologie seguenti sono supportati da questo ramo di Configuration Manager. Il loro inserimento in questo contesto, tuttavia, non implica un'estensione del normale ciclo di vita del supporto per un singolo prodotto o versione. I prodotti che non rientrano nel ciclo di vita del supporto non sono supportati per l'uso con Configuration Manager. Per altre informazioni sui cicli di vita del supporto Microsoft, visitare il sito Web [Criteri relativi al ciclo di vita Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=208270) e leggere le [Domande frequenti](https://go.microsoft.com/fwlink/p/?LinkId=31976).
+I prodotti e tecnologie seguenti sono supportati da questo ramo di Configuration Manager. Il loro inserimento in questo contesto, tuttavia, non implica un'estensione del normale ciclo di vita del supporto per un singolo prodotto o versione. I prodotti che non rientrano nel ciclo di vita del supporto non sono supportati per l'uso con Configuration Manager. Per altre informazioni, visitare il sito Web del [ciclo di vita del supporto Microsoft](https://support.microsoft.com/lifecycle) e leggere le Domande frequenti corrispondenti.
 
-I prodotti e le versioni di prodotto non elencati negli argomenti seguenti non sono supportati a meno che non siano annunciati nel blog [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/).
+I prodotti e le versioni di prodotto non elencati negli argomenti seguenti non sono supportati a meno che non siano annunciati nel blog [Enterprise Mobility and Security Blog](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/bg-p/enterprisemobilityandsecurity).
 
 **Limitazioni per il supporto futuro:** LTSB ha un supporto limitato per sistemi operativi client e server futuri e per le dipendenze dei prodotti. L'elenco delle piattaforme per LTSB è fisso per tutta la durata della versione:
 
@@ -45,11 +45,11 @@ LTSB supporta l'uso dei seguenti sistemi operativi di computer Windows come sist
 
 **Sistemi operativi supportati:**
 - Windows Server 2016
-- Windows Server 2012 R2 (x64) - Standard, Datacenter
-- Windows Server 2012 (x64) - Standard, Datacenter
+- Windows Server 2012 R2 (x64): Standard, Datacenter
+- Windows Server 2012 (x64): Standard, Datacenter
 - Windows 10 Enterprise 2015 LTSB (x86, x64)
 - Windows 10 Enterprise 2016 LTSB (x86, x64)
-- Windows 8.1 (x86, x64) - Professional, Enterprise
+- Windows 8.1 (x86, x64): Professional, Enterprise
 - Installazione Server Core di Windows Server 2012
 - Installazione Server Core di Windows Server 2012 R2
 
@@ -61,18 +61,18 @@ Le sezioni seguenti identificano i sistemi operativi client che è possibile ges
 
 **Sistemi operativi supportati:**
 - Windows Server 2016
-- Windows Server 2012 R2 (x64) - Standard, Datacenter (Nota 1)
-- Windows Server 2012 (x64) - Standard, Datacenter (Nota 1)
+- Windows Server 2012 R2 (x64): Standard, Datacenter (Nota 1)
+- Windows Server 2012 (x64): Standard, Datacenter (Nota 1)
 - Windows Storage Server 2012 R2 (x64)
 - Windows Storage Server 2012 (x64)
 - Windows 10 Enterprise 2015 LTSB (x86, x64)
 - Windows 10 Enterprise 2016 LTSB (x86, x64)
-- Windows 8.1 (x86, x64) - Professional, Enterprise
+- Windows 8.1 (x86, x64): Professional, Enterprise
 - Installazione Server Core di Windows Server 2012 R2 (x64) (Nota 2)
 - Installazione Server Core di Windows Server 2012 (x64) (Nota 2)
 
 **(Nota 1)** Le versioni Datacenter sono supportate, ma non certificate per Configuration Manager.  
-**(Nota 2)** Per supportare l'installazione push client, il computer che esegue questa versione del sistema operativo deve eseguire il servizio ruolo file server per il ruolo del server Servizi file e archiviazione. Per altre informazioni sull'installazione di funzionalità di Windows in un computer Server Core, vedere [Installare i ruoli e le funzionalità server in un server Server Core](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx) nella libreria TechNet per Windows Server 2012.
+**(Nota 2)** Per supportare l'installazione push client, il computer che esegue questa versione del sistema operativo deve eseguire il servizio ruolo file server per il ruolo del server Servizi file e archiviazione. Per informazioni sull'installazione di funzionalità di Windows in un computer Server Core, vedere [Installare i ruoli e le funzionalità server in un server Server Core](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574158(v=ws.11)).
 
 ### <a name="windows-embedded"></a>Windows Embedded
 È possibile gestire i dispositivi Windows Embedded seguenti con LTSB installando il software client nel dispositivo.  Per altre informazioni, vedere [Pianificazione della distribuzione del client in dispositivi con Windows Embedded](../clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md).
@@ -131,7 +131,7 @@ Le sezioni seguenti identificano i sistemi operativi client che è possibile ges
 ### <a name="mac-computers"></a>Computer Mac  
  È possibile usare LTSB per gestire i computer Mac OS X con il client di Configuration Manager per Mac.
 
-Il pacchetto di installazione del client per Mac non viene fornito con i supporti di Configuration Manager. È possibile scaricarlo come parte del download dei Client per sistemi operativi aggiuntivi nell'[Area download Microsoft](https://go.microsoft.com/fwlink/?LinkID=525184).  
+Il pacchetto di installazione del client per Mac non viene fornito con i supporti di Configuration Manager. È possibile scaricarlo come parte del download dei Client per sistemi operativi aggiuntivi nell'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=47719).  
 
 Il supporto per i sistemi operativi Mac è limitato a quelli elencati in questa sezione. Il supporto non include sistemi operativi aggiuntivi che potrebbero essere supportati da un aggiornamento futuro a pacchetti di installazione client Mac per Current Branch.
 
@@ -145,7 +145,7 @@ Per altre informazioni, vedere [Come distribuire i client in computer Mac](../cl
 ## <a name="linux-and-unix-servers"></a>Server Linux e UNIX
 È possibile usare LTSB per gestire i server Linux e UNIX con client di Configuration Manager per Linux e UNIX.
 
-I pacchetti di installazione del client per Linux e UNIX non sono inclusi con i supporti di Configuration Manager. È possibile scaricarli come parte del download dei Client per sistemi operativi aggiuntivi nell'[Area download Microsoft](https://go.microsoft.com/fwlink/?LinkID=525184). Oltre ai pacchetti di installazione client, il download del client include lo script di installazione che gestisce l'installazione del client in ogni computer.
+I pacchetti di installazione del client per Linux e UNIX non sono inclusi con i supporti di Configuration Manager. È possibile scaricarli come parte del download dei Client per sistemi operativi aggiuntivi nell'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=47719). Oltre ai pacchetti di installazione client, il download del client include lo script di installazione che gestisce l'installazione del client in ogni computer.
 
 Il supporto per i sistemi operativi Linux e UNIX è limitato a quelli elencati in questa sezione. Il supporto non include sistemi operativi aggiuntivi che potrebbero essere supportati da un aggiornamento futuro a pacchetti client Linux e UNIX per Current Branch.
 
@@ -161,7 +161,7 @@ Il supporto per i sistemi operativi Linux e UNIX è limitato a quelli elencati i
 Le versioni seguenti sono supportate tramite l'uso del file TAR indicato.  
 ### <a name="aix"></a>AIX  
 
-|Versione|File|  
+|Version|File|  
 |-|-|  
 |Versione 5.3 (Power)|ccm-Aix53ppc.&lt;build\>.tar|  
 |Version 6.1 (Power)|ccm-Aix61ppc.&lt;build\>.tar|  
@@ -169,7 +169,7 @@ Le versioni seguenti sono supportate tramite l'uso del file TAR indicato.
 
 ### <a name="centos"></a>CentOS  
 
-|Versione|File|  
+|Version|File|  
 |-|-|  
 |Versione 5 x86|ccm-Universalx86.&lt;build\>.tar|  
 |Versione 5 x64|ccm-Universalx64.&lt;build\>.tar|  
@@ -179,7 +179,7 @@ Le versioni seguenti sono supportate tramite l'uso del file TAR indicato.
 
 ### <a name="debian"></a>Debian  
 
-|Versione|File|    
+|Version|File|    
 |-|-|  
 |Versione 5 x86|ccm-Universalx86.&lt;build\>.tar|  
 |Versione 5 x64|ccm-Universalx64.&lt;build\>.tar|  
@@ -192,7 +192,7 @@ Le versioni seguenti sono supportate tramite l'uso del file TAR indicato.
 
 ### <a name="hp-ux"></a>HP-UX  
 
-|Versione|File|  
+|Version|File|  
 |-|-|  
 |Version 11iv2 IA64|ccm-HpuxB.11.23i64.&lt;build\>.tar|  
 |Versione 11iv2 PA-RISC|ccm-HpuxB.11.23PA.&lt;build\>.tar|  
@@ -201,7 +201,7 @@ Le versioni seguenti sono supportate tramite l'uso del file TAR indicato.
 
 ### <a name="oracle-linux"></a>Oracle Linux  
 
-|Versione|File|    
+|Version|File|    
 |-|-|  
 |Versione 5 x86|ccm-Universalx86.&lt;build\>.tar|  
 |Versione 5 x64|ccm-Universalx64.&lt;build\>.tar|  
@@ -211,7 +211,7 @@ Le versioni seguenti sono supportate tramite l'uso del file TAR indicato.
 
 ### <a name="red-hat-enterprise-linux-rhel"></a>Red Hat Enterprise Linux (RHEL)  
 
-|Versione|File|  
+|Version|File|  
 |-|-|  
 |Versione 4 x86|ccm-RHEL4x86.&lt;build\>.tar|  
 |Versione 4 x64|ccm-RHEL4x64.&lt;build\>.tar|  
@@ -223,7 +223,7 @@ Le versioni seguenti sono supportate tramite l'uso del file TAR indicato.
 
 ### <a name="solaris"></a>Solaris  
 
-|Versione|File|   
+|Version|File|   
 |-|-|  
 |Versione 9 SPARC|ccm-Sol9sparc.&lt;build\>.tar|  
 |Versione 10 x86|ccm-Sol10x86.&lt;build\>.tar|  
@@ -233,7 +233,7 @@ Le versioni seguenti sono supportate tramite l'uso del file TAR indicato.
 
 ### <a name="suse-linux-enterprise-server-sles"></a>SUSE Linux Enterprise Server (SLES)  
 
-|Versione|File|  
+|Version|File|  
 |-|-|  
 |Versione 9 x86|ccm-SLES9x86.&lt;build\>.tar|  
 |Versione 10 SP1 x86|ccm-Universalx86.&lt;build\>.tar|  
@@ -244,7 +244,7 @@ Le versioni seguenti sono supportate tramite l'uso del file TAR indicato.
 
 ### <a name="ubuntu"></a>Ubuntu  
 
-|Versione|File|    
+|Version|File|    
 |-|-|  
 |Versione 10.04 LTS x86|ccm-Universalx86.&lt;build\>.tar|  
 |Versione 10.04 LTS x64|ccm-Universalx64.&lt;build\>.tar|  
@@ -276,11 +276,11 @@ LTSB supporta i sistemi operativi seguenti per eseguire la console di Configurat
 
 **Sistemi operativi supportati:**
 - Windows Server 2016
-- Windows Server 2012 R2 (x64) - Standard, Datacenter
-- Windows Server 2012 (x64) - Standard, Datacenter
+- Windows Server 2012 R2 (x64): Standard, Datacenter
+- Windows Server 2012 (x64): Standard, Datacenter
 - Windows 10 Enterprise 2016 LTSB (x86, x64)
 - Windows 10 Enterprise 2015 LTSB (x86, x64)
-- Windows 8.1 (x86, x64) - Professional, Enterprise
+- Windows 8.1 (x86, x64): Professional, Enterprise
 
 
 ## <a name="sql-server-versions-supported-for-the-site-database-and-reporting-point"></a>Versioni di SQL Server supportate per il database del sito e il punto di reporting
@@ -288,11 +288,11 @@ LTSB supporta le versioni seguenti di SQL Server per ospitare il database del si
 
 **Versioni supportate:**
 
-- SQL Server 2016 - Standard, Enterprise
-- SQL Server 2014 SP2 - Standard, Enterprise
-- SQL Server 2014 SP1 - Standard, Enterprise
-- SQL Server 2012 SP3 - Standard, Enterprise
-- SQL Server 2008 R2 SP3 - Standard, Enterprise, Datacenter
+- SQL Server 2016: Standard, Enterprise
+- SQL Server 2014 SP2: Standard, Enterprise
+- SQL Server 2014 SP1: Standard, Enterprise
+- SQL Server 2012 SP3: Standard, Enterprise
+- SQL Server 2008 R2 SP3: Standard, Enterprise, Datacenter
 - SQL Server 2016 Express
 - SQL Server 2014 Express SP2
 - SQL Server 2014 Express SP1
@@ -303,15 +303,15 @@ Tutti i sistemi del sito LTSB devono essere membri di un dominio Windows Active 
 
 **Livelli supportati:**
 - Windows Server 2008
-- Windows Server 2008 R2
+- Windows Server 2008 R2
 - Windows Server 2012
 - R2 per Windows Server 2012
 
 ## <a name="additional-support-topics-that-apply-to-the-long-term-servicing-branch"></a>Argomenti di supporto aggiuntivo che si applicano a Long-Term Servicing Branch
 Le informazioni negli argomenti Current Branch seguenti sono valide per LTSB:
 - [Numeri di ridimensionamento e scalabilità](../plan-design/configs/size-and-scale-numbers.md)
-- [Prerequisiti del sito e del sistema del sito per System Center Configuration Manager](../plan-design/configs/site-and-site-system-prerequisites.md)
-- [Opzioni di disponibilità elevata](../servers/deploy/configure/high-availability-options.md)
+- [Prerequisiti del sito e del sistema del sito](../plan-design/configs/site-and-site-system-prerequisites.md)
+- [High availability options](../servers/deploy/configure/high-availability-options.md) (Opzioni di disponibilità elevata)
 - [Recommended hardware](../plan-design/configs/recommended-hardware.md) (Hardware consigliato)
-- [Supporto per le funzionalità di Windows e le reti](../plan-design/configs/support-for-windows-features-and-networks.md)
+- [Supporto per le funzionalità e le reti Windows](../plan-design/configs/support-for-windows-features-and-networks.md)
 - [Supporto per gli ambienti di virtualizzazione](../plan-design/configs/support-for-virtualization-environments.md)

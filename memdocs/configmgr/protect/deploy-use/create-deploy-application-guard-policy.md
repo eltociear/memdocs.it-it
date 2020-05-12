@@ -10,12 +10,12 @@ ms.assetid: 33a6c1d9-4dd8-411c-a748-693a5bd2ea5a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 241e7ed9a2195e178cc1aac2ee2a146eea60b093
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b691004742def4c126ba82b07cad1651cbe822f8
+ms.sourcegitcommit: 13ceb4e1cc8c2a10bfa199e301bf9bada8ceb268
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705749"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82923433"
 ---
 # <a name="create-and-deploy-windows-defender-application-guard-policy"></a>Creare e distribuire criteri di Windows Defender Application Guard
 
@@ -25,7 +25,7 @@ ms.locfileid: "81705749"
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Per creare e distribuire criteri di Windows Defender Application Guard, è necessario usare la versione Windows 10 Fall Creators Update (1709). I dispositivi Windows 10 in cui verranno distribuiti i criteri devono essere configurati con criteri di isolamento di rete. Per altre informazioni, vedere [Panoramica di Windows Defender Application Guard](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview).
+Per creare e distribuire criteri di Windows Defender Application Guard, è necessario usare la versione Windows 10 Fall Creators Update (1709). I dispositivi Windows 10 in cui verranno distribuiti i criteri devono essere configurati con [criteri di isolamento di rete](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard#network-isolation-settings). Per altre informazioni, vedere [Panoramica di Windows Defender Application Guard](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview).
 
 ## <a name="create-a-policy-and-to-browse-the-available-settings"></a>Creare un criterio e individuare le impostazioni disponibili
 

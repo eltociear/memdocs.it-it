@@ -10,12 +10,12 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 991b3e2ab654aff56d982c587ccc4bda53694294
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e99efed5d506ddf30e818243ad8b899e8f8b8aca
+ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703259"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82782120"
 ---
 # <a name="task-sequence-variables"></a>Variabili della sequenza di attività
 
@@ -177,7 +177,7 @@ Specifica la marca del computer.
 
 ### <a name="_smstsmdatapath"></a><a name="SMSTSMDataPath"></a> _SMSTSMDataPath
 
-Specifica il percorso definito dalla variabile [SMSTSLocalDataDrive](#SMSTSLocalDataDrive). Quando si definisce SMSTSLocalDataDrive prima dell'inizio della sequenza di attività, impostando ad esempio una variabile di raccolta, Configuration Manager definisce la variabile _SMSTSMDataPath dopo aver avviato la sequenza di attività.
+Specifica il percorso definito dalla variabile [SMSTSLocalDataDrive](#SMSTSLocalDataDrive). Questo percorso specifica la posizione del computer di destinazione in cui la sequenza di attività archivia i file della cache temporanei durante l'esecuzione. Quando si definisce SMSTSLocalDataDrive prima dell'inizio della sequenza di attività, impostando ad esempio una variabile di raccolta, Configuration Manager definisce la variabile _SMSTSMDataPath dopo aver avviato la sequenza di attività.
 
 ### <a name="_smstsmediatype"></a><a name="SMSTSMediaType"></a> _SMSTSMediaType
 
@@ -1592,9 +1592,9 @@ usare questa variabile per modificare la lingua di visualizzazione di un'immagin
 
 ### <a name="smstslocaldatadrive"></a><a name="SMSTSLocalDataDrive"></a> SMSTSLocalDataDrive
 
-Specifica la posizione del computer di destinazione in cui la sequenza di attività archivia i file temporanei durante l'esecuzione.
+Specifica la posizione del computer di destinazione in cui la sequenza di attività archivia i file della cache temporanei durante l'esecuzione.
 
-Impostare questa variabile prima dell'inizio della sequenza di attività, ad esempio impostando una variabile raccolta. Dopo aver avviato la sequenza di attività, Configuration Manager definisce la variabile [_SMSTSMDataPath](#SMSTSMDataPath).
+Impostare questa variabile prima dell'inizio della sequenza di attività, ad esempio impostando una variabile raccolta. Dopo l'avvio della sequenza di attività, Configuration Manager definisce la variabile [_SMSTSMDataPath](#SMSTSMDataPath) in base alla definizione della variabile SMSTSLocalDataDrive.
 
 ### <a name="smstsmp"></a><a name="SMSTSMP"></a> SMSTSMP
 
@@ -1638,7 +1638,7 @@ usare questa variabile per mantenere temporaneamente il contenuto nella cache de
 
 ### <a name="smstspostaction"></a><a name="SMSTSPostAction"></a> SMSTSPostAction
 
-Specifica un comando che viene eseguito al termine della sequenza di attività. Ad esempio, specificare uno script che abilita i filtri di scrittura nei dispositivi incorporati dopo che la sequenza di attività distribuisce un sistema operativo nel dispositivo.
+Specifica un comando che viene eseguito al termine della sequenza di attività. Ad esempio, specificare `shutdown.exe /r /t 30 /f` per riavviare il computer 30 secondi dopo il completamento della sequenza di attività.
 
 ### <a name="smstspreferredadvertid"></a><a name="SMSTSPreferredAdvertID"></a> SMSTSPreferredAdvertID
 

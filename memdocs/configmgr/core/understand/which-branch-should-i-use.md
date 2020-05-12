@@ -10,12 +10,12 @@ ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c7a505296fe51aae996d429fe7da2033d3a787ff
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 542069b82ea4c68a48ccc47b79007fd2fa25322a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706669"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906017"
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>Scelta del ramo di Configuration Manager da usare
 
@@ -47,7 +47,7 @@ Microsoft prevede di rilasciare diversi aggiornamenti per le versioni Current Br
 
 Per installare la versione Current Branch come un nuovo sito, usare [Supporto della versione di base](../servers/manage/updates.md#bkmk_Baselines). Inoltre, usare il supporto di base per aggiornare System Center Configuration Manager 2012 con Service Pack 2 o System Center Configuration Manager 2012 R2 con Service Pack 1. L'accesso a questo supporto dipende dalla licenza scelta dalla propria organizzazione per Configuration Manager.
 
-È anche possibile usare il supporto di base per installare un nuovo sito come copia di valutazione di Current Branch. La versione di valutazione non richiede una licenza. È possibile utilizzare la versione di valutazione per 180 giorni. Supporta l'aggiornamento a una versione con licenza di Current Branch. Per installare solo una copia di valutazione, ottenere il software dal sito Web [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection).
+È anche possibile usare il supporto di base per installare un nuovo sito come copia di valutazione di Current Branch. La versione di valutazione non richiede una licenza. È possibile utilizzare la versione di valutazione per 180 giorni. Supporta l'aggiornamento a una versione con licenza di Current Branch. Per installare solo una copia di valutazione, scaricarla da [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection).
 
 > [!NOTE]
 > Usare il supporto di base per installare siti per una nuova gerarchia di Configuration Manager. Se è stata precedentemente installata una versione di base, usare gli aggiornamenti nella console per aggiornare i siti a una nuova versione.  
@@ -89,7 +89,7 @@ Per installare la versione LTSB come nuovo sito o come aggiornamento da un sito 
 >  
 > Per trovare Configuration Manager versione 1606 in Volume Licensing Service Center (VLSC), passare alla scheda **Downloads and Keys** (Download e codici) di [VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx), cercare `System Center 2016` e selezionare **System Center 2016 Datacenter** o **System Center 2016 Standard**.  
 >  
-> È possibile ottenere una copia di valutazione di System Center 2016 anche da [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview).  
+> È possibile ottenere una copia di valutazione di System Center 2016 anche da [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview).  
 
 ### <a name="features-of-the-ltsb"></a>Funzionalità di LTSB
 

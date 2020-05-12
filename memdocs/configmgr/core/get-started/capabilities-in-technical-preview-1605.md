@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: c38230b44f7f18e3f60cb4c88b31a03e10a37d30
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d52725e0127f7129a3962cd3ef178d2540bb785a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705599"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905743"
 ---
 # <a name="capabilities-in-technical-preview-1605-for-configuration-manager"></a>Funzionalità della versione Technical Preview 1605 per Configuration Manager
 
@@ -192,7 +192,7 @@ In questa versione Technical Preview se il portale aziendale rimane aperto per p
 
 #### <a name="general-prerequisites"></a>Prerequisiti generali  
 
--   Accertarsi di avere completato la [preparazione per Gestione dispositivi mobili locali](https://technet.microsoft.com/library/mt613153.aspx) e di aver [registrato i dispositivi](https://technet.microsoft.com/library/mt627870.aspx).  
+-   Accertarsi di avere completato la [Procedura di preparazione per MDM locale](../../mdm/plan-design/plan-on-premises-mdm.md) e di aver [registrato i dispositivi](../../mdm/deploy-use/enroll-devices-on-premises-mdm.md).  
 
 -   Per la migliore esperienza di installazione delle applicazioni quando si usa il portale aziendale, assicurarsi che Configuration Manager disponga di una connessione attiva a Microsoft Intune.  
 
@@ -284,7 +284,7 @@ In questa versione Technical Preview se il portale aziendale rimane aperto per p
 
 #### <a name="to-create-a-collection-for-a-server-group"></a>Per creare una raccolta per un gruppo di server  
 
-1.  [Creare una raccolta di dispositivi](https://technet.microsoft.com/library/gg712295.aspx) che contenga i computer del gruppo di server.  
+1.  [Creare una raccolta di dispositivi](../clients/manage/collections/create-collections.md) che contenga i computer del gruppo di server.  
 
 2.  Nell'area di lavoro **Asset e conformità** fare clic su **Raccolte di dispositivi**, quindi fare clic con il pulsante destro del mouse sulla raccolta che contiene i computer del gruppo di server e scegliere **Proprietà**.  
 
@@ -325,9 +325,9 @@ In questa versione Technical Preview se il portale aziendale rimane aperto per p
 
 #### <a name="to-deploy-software-updates-to-the-server-group-and-monitor-status"></a>Per distribuire gli aggiornamenti software nel gruppo di server e monitorare lo stato  
 
-1.  [Distribuire gli aggiornamenti software](https://technet.microsoft.com/library/gg712304.aspx) nella raccolta del gruppo di server.  
+1.  [Distribuire gli aggiornamenti software](../../sum/deploy-use/deploy-software-updates.md) nella raccolta del gruppo di server.  
 
-2.  [Monitorare la distribuzione degli aggiornamenti software](https://technet.microsoft.com/library/gg712304.aspx). Oltre alle viste di monitoraggio standard per la distribuzione degli aggiornamenti software, una nuova descrizione dello stato viene visualizzata quando un client è in attesa del proprio turno per installare gli aggiornamenti software. Per il nuovo stato compare **In attesa di blocco**.  
+2.  [Monitorare la distribuzione degli aggiornamenti software](../../sum/deploy-use/monitor-software-updates.md). Oltre alle viste di monitoraggio standard per la distribuzione degli aggiornamenti software, una nuova descrizione dello stato viene visualizzata quando un client è in attesa del proprio turno per installare gli aggiornamenti software. Per il nuovo stato compare **In attesa di blocco**.  
 
 #### <a name="to-clear-the-deployment-locks-for-computers-in-a-server-group"></a>Per cancellare i blocchi di distribuzione per i computer di un gruppo di server  
 

@@ -10,12 +10,12 @@ ms.assetid: c4041e21-21ff-4d95-ab05-14007e0047cf
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 0896204fa994643064676b55b20d63d349c4098b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3352f8aa719e93210124d164d89791214eb20bf5
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689299"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905869"
 ---
 # <a name="management-tasks-for-configuration-manager-applications"></a>Attività di gestione per applicazioni di Configuration Manager
 
@@ -40,7 +40,7 @@ Per altre informazioni sulla creazione di applicazioni e tipi di distribuzione, 
 |**Aggiorna statistiche**|Aggiorna le informazioni visualizzate nel nodo **Distribuzioni** dell'area di lavoro **Monitoraggio** relativo alle applicazioni di questa applicazione.<br /><br /> Vedere [Monitorare le applicazioni dalla console di Configuration Manager](../../apps/deploy-use/monitor-applications-from-the-console.md).|  
 |**Ripristina**|Questa opzione ripristina un'applicazione ritirata tramite l'attività di gestione **Ritira**.|  
 |**Ritira**|Quando si ritira un'applicazione, questa non risulta più disponibile per la distribuzione ma non vengono eliminati né l'applicazione né le distribuzioni dell'applicazione. Le copie esistenti di questa applicazione che sono state installate nei computer client non verranno rimosse. Eventuali revisioni dell'applicazione verranno eliminate da Configuration Manager dopo 60 giorni. Le copie installate dell'applicazione non vengono tuttavia rimosse.<br /><br /> Per eliminare un'applicazione, è necessario prima ritirare l'applicazione, rimuovere tutte le distribuzioni, rimuovere i riferimenti all'applicazione da parte di altre distribuzioni e quindi eliminare tutte le revisioni dell'applicazione.<br /><br /> Vedere [Come rivedere e sostituire le applicazioni](../../apps/deploy-use/revise-and-supersede-applications.md).|  
-|**Export**|Apre l'**Esportazione guidata applicazione** che consente di esportare le applicazioni selezionate in un file con estensione zip che è possibile archiviare o installare in un altro sito. Se si sceglie di esportare il contenuto dell'applicazione, verrà creata una cartella con il contenuto.<br /><br /> È anche possibile esportare le dipendenze dell'applicazione, le relazioni e le condizioni di sostituzione, il contenuto per l'applicazione e le relative dipendenze.<br /><br /> Il cmdlet di Windows PowerShell, **Export-CMApplication**, esegue la stessa funzione. Per altre informazioni, vedere [Export-CMApplication](https://go.microsoft.com/fwlink/p/?LinkID=258880) nella documentazione di riferimento dei cmdlet di System Center 2012 Configuration Manager SP1.|  
+|**Export**|Apre l'**Esportazione guidata applicazione** che consente di esportare le applicazioni selezionate in un file con estensione zip che è possibile archiviare o installare in un altro sito. Se si sceglie di esportare il contenuto dell'applicazione, verrà creata una cartella con il contenuto.<br /><br /> È anche possibile esportare le dipendenze dell'applicazione, le relazioni e le condizioni di sostituzione, il contenuto per l'applicazione e le relative dipendenze.<br /><br /> Il cmdlet di Windows PowerShell, **Export-CMApplication**, esegue la stessa funzione. Per altre informazioni, vedere [Export-CMApplication](https://docs.microsoft.com/powershell/module/configurationmanager/export-cmapplication?view=sccm-ps).|  
 |**Eliminazione**|Elimina l'applicazione attualmente selezionata.<br /><br /> Non è possibile eliminare un'applicazione se esistono altre applicazioni da essa dipendenti, se è presente una distribuzione attiva o se esistono sequenze attività da essa dipendenti.|  
 |**Simula distribuzione**|Apre la **Simulazione guidata distribuzione applicazione** in cui è possibile testare i risultati di una distribuzione di applicazione nei computer senza installare o disinstallare l'applicazione.<br /><br /> Vedere [Come simulare distribuzioni di applicazioni](../../apps/deploy-use/simulate-application-deployments.md).|  
 |**Distribuzione**|Apre la **Distribuzione guidata del software** in cui è possibile distribuire l'applicazione selezionata nelle raccolte di computer presenti nella gerarchia.<br /><br /> Vedere [Come distribuire le applicazioni](../../apps/deploy-use/deploy-applications.md).|  

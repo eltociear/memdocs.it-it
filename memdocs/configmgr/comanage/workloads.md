@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
-ms.openlocfilehash: 8c91ba1c2b4b5ef7072c030eddd9b97dd69933e5
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 928ef8a8ebc90807912f22901743725df9aa67e7
+ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075711"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82842224"
 ---
 # <a name="co-management-workloads"></a>Carichi di lavoro con co-gestione
 
@@ -75,14 +75,13 @@ Il carico di lavoro di Endpoint Protection include l'insieme di funzionalità di
 - Controllo delle applicazioni di Windows Defender  
 - Windows Defender Security Center  
 - Windows Defender Advanced Threat Protection (ora denominato Microsoft Defender Threat Protection)
-- Windows Information Protection  
 
 Per altre informazioni sulla funzionalità Intune, vedere [Endpoint Protection per Microsoft Intune](https://docs.microsoft.com/intune/endpoint-protection-windows-10).
 
 > [!Note]  
 > Quando si passa a questo carico di lavoro, i criteri di Configuration Manager vengono mantenuti nel dispositivo fino a quando non vengono sovrascritti dai criteri di Intune. Questo comportamento garantisce che il dispositivo abbia i criteri di protezione anche durante la transizione.
 >
-> Il carico di lavoro Endpoint Protection fa parte anche della configurazione del dispositivo. Lo stesso comportamento si applica quando si passa al carico di lavoro [Configurazione del dispositivo](#device-configuration).<!-- SCCMDocs.nl-nl issue #4 -->
+> Il carico di lavoro Endpoint Protection fa parte anche della configurazione del dispositivo. Lo stesso comportamento si applica quando si passa al carico di lavoro [Configurazione del dispositivo](#device-configuration).<!-- SCCMDocs.nl-nl issue #4 --> Quando si passa al carico di lavoro di configurazione del dispositivo, sono inclusi anche i criteri per la funzionalità Information Protection di Windows, che non è inclusa nel carico di lavoro di Endpoint Protection.<!-- 4184095 -->
 >
 > Le impostazioni di Microsoft Defender antivirus che fanno parte del tipo di profilo Limitazioni del dispositivo per la configurazione del dispositivo Intune non sono incluse nell'ambito del dispositivo di scorrimento Endpoint Protection. Per gestire Microsoft Defender Antivirus per i dispositivi con co-gestione con il dispositivo di scorrimento Endpoint Protection abilitato, usare i nuovi criteri antivirus in **Interfaccia di amministrazione di Microsoft Endpoint Manager** > **Endpoint Security** > **Antivirus**. Per il nuovo tipo di criteri sono disponibili opzioni nuove e migliorate e sono supportate tutte le stesse impostazioni disponibili nel profilo Limitazioni del dispositivo. <!--6609171-->
 >
@@ -97,6 +96,9 @@ Il carico di lavoro di configurazione dei dispositivi include le impostazioni ge
 È comunque possibile continuare a distribuire le impostazioni da Configuration Manager ai dispositivi con co-gestione, anche se Intune è l'autorità di configurazione del dispositivo. Questa eccezione può essere usata per configurare le impostazioni richieste dall'organizzazione, ma non ancora disponibili in Intune. Specificare questa eccezione in una [linea di base di configurazione di Configuration Manager](../compliance/deploy-use/create-configuration-baselines.md). Abilitare l'opzione **Applica sempre questa baseline anche per client con co-gestione** quando si crea la baseline. È possibile modificarla in un secondo momento nella scheda **Generale** delle proprietà di una baseline esistente.  
 
 Per altre informazioni sulla funzionalità Intune, vedere [Creare un profilo di dispositivo in Microsoft Intune](https://docs.microsoft.com/intune/device-profile-create).  
+
+> [!NOTE]
+> Quando si passa al carico di lavoro di configurazione del dispositivo, sono inclusi anche i criteri per la funzionalità Information Protection di Windows, che non è inclusa nel carico di lavoro di Endpoint Protection.<!-- 4184095 -->
 
 ## <a name="office-click-to-run-apps"></a>App A portata di clic di Office
 

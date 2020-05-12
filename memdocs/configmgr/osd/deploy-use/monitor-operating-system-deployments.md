@@ -2,7 +2,7 @@
 title: Monitorare le distribuzioni del sistema operativo
 titleSuffix: Configuration Manager
 description: Per monitorare gli oggetti di distribuzione del sistema operativo, la console di Configuration Manager offre avvisi, report e diversi indicatori di stato.
-ms.date: 10/06/2016
+ms.date: 05/04/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 08085d94-295c-432f-b5e3-9736bce0193b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9d0a430a1010611bc6a7e0871e8c59ca3d1f8de7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7afab9fbbb443b2f9fb4af15a3805c0b7df7a014
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708479"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802167"
 ---
 # <a name="monitor-operating-system-deployments-in-configuration-manager"></a>Monitorare le distribuzioni del sistema operativo in Configuration Manager
 
@@ -45,6 +45,9 @@ Per monitorare gli oggetti di distribuzione del sistema operativo, la console di
 3.  Fare clic sulla sequenza di attività per cui si vuole monitorare lo stato di distribuzione.  
 
 4.  Nella scheda **Home** fare clic su **Visualizza stato** nel gruppo **Distribuzione**.  
+
+> [!NOTE]  
+> Quando si avvia un aggiornamento viene generato il messaggio di stato 52200. Il messaggio specifica l'utente che ha eseguito l'aggiornamento.  
 
 ##  <a name="operating-system-deployment-reports"></a><a name="BKMK_TSReports"></a> Report sulla distribuzione del sistema operativo  
  Sono disponibili numerosi report di distribuzione del sistema operativo predefiniti. Sono organizzati in diverse categorie e possono essere usati per fornire informazioni specifiche sullo stato della migrazione e sulle distribuzioni di sequenze di attività. Oltre a usare i report preconfigurati, è anche possibile creare report degli aggiornamenti software personalizzati in base alle esigenze dell'azienda. Per altre informazioni, vedere [Operazioni e manutenzione per la creazione di report](../../core/servers/manage/operations-and-maintenance-for-reporting.md).  

@@ -10,12 +10,12 @@ ms.assetid: e67c691e-62ef-4f43-9cfb-0e957d1e7a5f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a20ee62fefd401e56abbf86beed0c4685b19ea39
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f63c52fcd2aaccbfbe04160581318126bc53db12
+ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689739"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643123"
 ---
 # <a name="create-application-groups"></a>Creare gruppi di applicazioni
 
@@ -66,3 +66,4 @@ Per risolvere i problemi relativi alla distribuzione di un gruppo di app, usare 
 - Non includere nel gruppo le app che richiedono il riavvio. In caso contrario, la distribuzione del gruppo potrebbe non riuscire.
 - *Versione 1906*: non è possibile distribuire un gruppo di app a una raccolta utenti.
 - *Versione 1906*: Gli utenti non possono **disinstallare** il gruppo di app in Software Center.
+- Se si elimina un'app che fa parte di un gruppo di app, alla successiva visualizzazione delle proprietà del gruppo di app verrà visualizzato l'avviso seguente: "Unable to load information about all applications in the group." (Non è possibile caricare informazioni su tutte le applicazioni nel gruppo) Apportare una modifica semplice al gruppo di app e salvarlo. Ad esempio, aggiungere uno spazio ai **Commenti amministratore**. Quando si salva la modifica, l'app eliminata viene rimossa dal gruppo.<!-- 7099542 -->

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7397fc17-3ae8-4525-8386-aea8a9cffa06
-ms.openlocfilehash: 08baf595199bdda121f897d507de97cb7e93e620
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f9b9c49bde16754b7a60112905f14da2cd5e48eb
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696349"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906283"
 ---
 # <a name="surface-device-dashboard-in-configuration-manager"></a>Dashboard dei dispositivi Surface in Configuration Manager
 
@@ -57,11 +57,9 @@ Il dashboard dei dispositivi Surface visualizza tre grafici per l'ambiente in us
 
 ## <a name="more-information"></a>Altre informazioni
 
-Per altre informazioni sui dispositivi Surface, vedere:
-- Il sito Web [Surface]( https://go.microsoft.com/fwlink/?linkid=861998).
+Per altre informazioni sui dispositivi Surface, vedere il sito Web [Surface](https://www.microsoft.com/surface).
 
-Per altre informazioni sulla distribuzione degli aggiornamenti del firmware di Surface in Configuration Manager, vedere:
-- [Come gestire gli aggiornamenti dei driver di Surface in Configuration Manager]( https://support.microsoft.com/help/4098906).
+Per altre informazioni sulla distribuzione degli aggiornamenti del firmware Surface in Configuration Manager, vedere [Come gestire gli aggiornamenti di driver Surface](https://support.microsoft.com/help/4098906).
 
 
 

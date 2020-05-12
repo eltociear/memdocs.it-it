@@ -2,7 +2,7 @@
 title: Approvare le applicazioni
 titleSuffix: Configuration Manager
 description: Informazioni sulle impostazioni e i comportamenti per l'approvazione delle applicazioni in Configuration Manager.
-ms.date: 07/26/2019
+ms.date: 05/04/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 20493c86-6454-4b35-8f22-0d049b68b8bb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 37c556aeda37d037fa57fdd1a6be2ab0e751194a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f725c1b7dc380a84cd94e666b98dbd309df3744c
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689759"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802056"
 ---
 # <a name="approve-applications-in-configuration-manager"></a>Approvare le applicazioni in Configuration Manager
 
@@ -45,10 +45,7 @@ Se una richiesta non viene approvata entro 30 giorni, viene rimossa. La reinstal
 
 Quando si richiede l'approvazione per una distribuzione in una raccolta di dispositivi, l'app non viene visualizzata in Software Center. Se si richiede l'approvazione per una distribuzione in una raccolta di utenti, l'app viene visualizzata in Software Center. È comunque possibile nasconderlo dagli utenti con l'impostazione client **Nascondi le applicazioni non approvate nel Software Center**. Per altre informazioni, vedere [Impostazioni client di Software Center](../../core/clients/deploy/about-client-settings.md#software-center).
 
-Dopo avere approvato un'applicazione per l'installazione, è possibile scegliere di negare la richiesta facendo clic su **Nega** nella console di Configuration Manager. Questa azione non provoca la disinstallazione dell'applicazione dai dispositivi da parte del client. Impedisce agli utenti di installare nuove copie dell'applicazione da Software Center.  
-
-> [!Important]  
-> A partire dalla versione 1806, *il comportamento è cambiato* quando si revoca l'approvazione per un'applicazione approvata e installata in precedenza. Ora quando si imposta **Nega** per la richiesta per l'applicazione il client disinstalla l'applicazione dal dispositivo dell'utente.<!--1357891-->  
+Dopo avere approvato un'applicazione per l'installazione, è possibile scegliere di negare la richiesta facendo clic su **Nega** nella console di Configuration Manager. Se gli utenti non hanno ancora installato l'applicazione, questa azione impedisce loro l'installazione di nuove copie dell'applicazione da Software Center. Se in precedenza è già stata approvata e installata un'applicazione, quando si imposta **Nega** nella richiesta per l'applicazione il client disinstalla l'applicazione dal dispositivo dell'utente.<!--1357891-->
 
 A partire dalla versione 1906, se si approva una richiesta di app nella console e poi la si rifiuta, è ora possibile approvarla nuovamente. L'app viene reinstallata nel client dopo l'approvazione.  <!-- 4224910 -->
 
@@ -90,19 +87,17 @@ Le richieste di approvazione dell'applicazione vengono visualizzate nel nodo **R
 
 Dopo avere approvato un'applicazione per l'installazione, è possibile scegliere di negare la richiesta facendo clic su **Nega** nella console di Configuration Manager. Questa azione non provoca la disinstallazione dell'applicazione dai dispositivi da parte del client. Impedisce agli utenti di installare nuove copie dell'applicazione da Software Center.  
 
-
 ## <a name="email-notifications"></a><a name="bkmk_email-approve"></a> Notifiche tramite posta elettronica
 
 <!--1321550-->
 
-A partire dalla versione 1810 è possibile configurare le notifiche tramite posta elettronica per le richieste di approvazione dell'applicazione. Quando un utente richiede un'applicazione, si riceve un messaggio di posta elettronica. Fare clic sui collegamenti nel messaggio di posta elettronica per approvare o rifiutare la richiesta, senza che sia necessario usare la console di Configuration Manager.
+È possibile configurare notifiche tramite posta elettronica per le richieste di approvazione dell'applicazione. Quando un utente richiede un'applicazione, si riceve un messaggio di posta elettronica. Fare clic sui collegamenti nel messaggio di posta elettronica per approvare o rifiutare la richiesta, senza che sia necessario usare la console di Configuration Manager.
 
 È possibile definire gli indirizzi di posta elettronica degli utenti che possono approvare o rifiutare la richiesta durante la creazione di una nuova distribuzione per l'applicazione. Se è necessario modificare l'elenco degli indirizzi di posta elettronica in un secondo momento, passare all'area di lavoro **Monitoraggio**, espandere **Avvisi** e selezionare il nodo **Sottoscrizioni**. Selezionare **Proprietà** da una delle sottoscrizioni **Approva l'applicazione tramite posta elettronica** correlate alla distribuzione dell'applicazione.
 
 Se sono presenti più avvisi, è possibile determinare a quale distribuzione si riferisce ognuno di questi. Aprire le proprietà dell'avviso e visualizzare l'elenco di **Avvisi selezionati** nella scheda Generale. La distribuzione viene abilitata come avviso per questa sottoscrizione.
 
 Gli utenti possono aggiungere un commento alla richiesta da Software Center. Questo commento viene visualizzato nella richiesta dell'applicazione nella console di Configuration Manager. A partire dalla versione 1902 questo commento viene visualizzato anche nel messaggio di posta elettronica. Includere questo commento nel messaggio di posta elettronica consente ai responsabili dell'approvazione di decidere più facilmente se approvare o rifiutare la richiesta.<!--3594063-->
-
 
 ### <a name="prerequisites"></a>Prerequisiti
 
@@ -114,14 +109,20 @@ Con questi prerequisiti, i destinatari ricevono una notifica della richiesta tra
 
 - Configurare la [notifica tramite posta elettronica per gli avvisi](../../core/servers/manage/use-alerts-and-the-status-system.md#to-configure-email-notification-for-alerts).  
 
-- Consentire al provider SMS di usare un certificato.<!--SCCMDocs-pr issue 3135--> Usare una delle seguenti opzioni:  
+    > [!NOTE]
+    > L'utente amministratore che distribuisce l'applicazione deve avere l'autorizzazione per creare un avviso e una sottoscrizione. Se l'utente non ha queste autorizzazioni, viene visualizzato un errore alla fine della **Distribuzione guidata del software**: "Non si dispone dei privilegi di protezione per eseguire questa operazione."<!-- 2810283 -->
 
-    - Abilitare [HTTP avanzato](../../core/plan-design/hierarchy/enhanced-http.md) (scelta consigliata)  
+- Consentire al provider SMS sul sito primario di usare un certificato.<!--SCCMDocs-pr issue 3135--> Usare una delle seguenti opzioni:  
 
-        > [!Note]  
-        > Quando il sito crea un certificato per il provider SMS, non verrà considerato attendibile dal Web browser nel client. In base alle impostazioni di sicurezza, quando si risponde a una richiesta dell'applicazione, potrebbe essere visualizzato un avviso di sicurezza.  
+  - (Consigliata) Abilitare [HTTP avanzato](../../core/plan-design/hierarchy/enhanced-http.md) per il sito primario.
 
-    - Associare manualmente un certificato basato su PKI alla porta 443 in IIS sul server che ospita il ruolo Provider SMS  
+    > [!Note]  
+    > Quando il sito primario crea un certificato per il provider SMS, il certificato non verrà considerato attendibile dal Web browser nel client. In base alle impostazioni di sicurezza, quando si risponde a una richiesta dell'applicazione, potrebbe essere visualizzato un avviso di sicurezza.  
+
+  - Associare manualmente un certificato basato su PKI alla porta 443 in IIS sul server che ospita il ruolo Provider SMS nel sito primario.
+
+> [!NOTE]
+> Se si hanno più siti primari figlio in una gerarchia, configurare questi prerequisiti per ogni sito primario in cui si vuole abilitare questa funzionalità. I collegamenti nella notifica tramite posta elettronica sono relativi al servizio di amministrazione nel sito primario.<!-- 7108472 -->
 
 #### <a name="to-take-action-from-internet"></a>Intraprendere un'azione da Internet
 
@@ -129,36 +130,35 @@ Con questi prerequisiti aggiuntivi facoltativi, i destinatari possono approvare 
 
 - Abilitare il servizio di amministrazione del Provider SMS tramite Cloud Management Gateway. Nella console di Configuration Manager passare all'area di lavoro **Amministrazione**, espandere **Configurazione del sito** e selezionare il nodo **Server e ruoli del sistema del sito**. Selezionare il server con il ruolo Provider SMS. Nel riquadro dei dettagli selezionare il ruolo **Provider SMS** e scegliere **Proprietà** nella barra multifunzione della scheda Ruolo del sito. Selezionare l'opzione **Consenti il traffico di Configuration Manager Cloud Management Gateway per il servizio di amministrazione**.  
 
-    - Provider SMS richiede **.NET 4.5.2** o versioni successive.  
+- Provider SMS richiede **.NET 4.5.2** o versioni successive.  
 
-- [Gateway di gestione cloud](../../core/clients/manage/cmg/plan-cloud-management-gateway.md)  
+- Configurare un [gateway di gestione cloud](../../core/clients/manage/cmg/plan-cloud-management-gateway.md).
 
-- Eseguire l'onboarding del sito in [servizi di Azure](../../core/servers/deploy/configure/azure-services-wizard.md) per la **gestione del cloud**  
+- Eseguire l'onboarding del sito nei [servizi Azure](../../core/servers/deploy/configure/azure-services-wizard.md) per la **gestione cloud**.
 
-    - Abilitare [Individuazione utente Azure AD](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc)  
+- Abilitare l'[individuazione utenti di Azure AD](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc).
 
-    - Configurare manualmente le impostazioni di Azure AD:  
+- Configurare manualmente le impostazioni di Azure AD:  
 
-        1. Passare al [portale di Azure](https://portal.azure.com) come utente con autorizzazioni di *amministratore globale*. Passare ad **Azure Active Directory** e selezionare **Registrazioni app**.  
+    1. Passare al [portale di Azure](https://portal.azure.com) come utente con autorizzazioni di *amministratore globale*. Passare ad **Azure Active Directory** e selezionare **Registrazioni app**.  
 
-        2. Selezionare l'applicazione creata per l'integrazione **Gestione cloud** di Configuration Manager.  
+    1. Selezionare l'applicazione creata per l'integrazione **Gestione cloud** di Configuration Manager.  
 
-        3. Nel menu **Gestisci** selezionare **Autorizzazione**.  
+    1. Nel menu **Gestisci** selezionare **Autorizzazione**.  
 
-            1. Nella sezione **URI di reindirizzamento** incollare il percorso seguente: `https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`  
+        1. Nella sezione **URI di reindirizzamento** incollare il percorso seguente: `https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`  
 
-            2. Sostituire `<CMG FQDN>` con il nome di dominio completo (FQDN) del servizio Cloud Management Gateway (CMG). Ad esempio, GraniteFalls.Contoso.com.  
+        1. Sostituire `<CMG FQDN>` con il nome di dominio completo (FQDN) del servizio Cloud Management Gateway (CMG). Ad esempio, GraniteFalls.Contoso.com.  
 
-            3. Selezionare **Salva**.  
+        1. Selezionare **Salva**.  
 
-        4. Nel menu **Gestisci** selezionare **Manifesto**.  
+    1. Nel menu **Gestisci** selezionare **Manifesto**.  
 
-            1. Nel riquadro Modifica manifesto individuare la proprietà **oauth2AllowImplicitFlow**.  
+        1. Nel riquadro Modifica manifesto individuare la proprietà **oauth2AllowImplicitFlow**.  
 
-            2. Impostarne il valore su **true**. L'intera riga dovrebbe assomigliare, ad esempio, alla riga seguente: `"oauth2AllowImplicitFlow": true,`  
+        1. Impostarne il valore su **true**. L'intera riga dovrebbe assomigliare, ad esempio, alla riga seguente: `"oauth2AllowImplicitFlow": true,`  
 
-            3. Selezionare **Salva**.  
-
+        1. Selezionare **Salva**.  
 
 ### <a name="configure-email-approval"></a>Configurare l'approvazione tramite posta elettronica
 
@@ -177,7 +177,6 @@ Con questi prerequisiti aggiuntivi facoltativi, i destinatari possono approvare 
 > Il collegamento per approvare o rifiutare è monouso. Ad esempio, se si configura un alias di gruppo per ricevere le notifiche e un utente approva la richiesta, un altro utente del gruppo non potrà rifiutarla.  
 
 Rivedere il file **NotiCtrl.log** nel server del sito per la risoluzione dei problemi.
-
 
 ## <a name="maintenance"></a>Manutenzione
 

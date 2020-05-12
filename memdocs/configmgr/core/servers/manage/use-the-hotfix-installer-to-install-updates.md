@@ -10,12 +10,12 @@ ms.assetid: f3058277-c597-4dac-86d1-41b6f7e62b36
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9389f407f8bdbafd057770ff63ed9b139e6600b5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a8eed671b723091f2a43350f42ca82d90e0d9da3
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704269"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906142"
 ---
 # <a name="use-the-hotfix-installer-to-install-updates-for-configuration-manager"></a>Usare il programma di installazione di hotfix per installare gli aggiornamenti per Configuration Manager
 
@@ -169,7 +169,7 @@ Dopo aver installato un pacchetto di aggiornamento che include aggiornamenti per
 Se si rimuove e quindi si reinstalla il provider SMS in un computer, sarà necessario reinstallare l'aggiornamento per il provider SMS in tale computer.  
 
 ###  <a name="update-clients"></a><a name="BKMK_clients"></a> Aggiornare i client  
-Quando si installa un aggiornamento che include aggiornamenti per il client di Configuration Manager è possibile scegliere se aggiornare automaticamente i client con l'installazione dell'aggiornamento oppure aggiornarli manualmente in un secondo momento. Per altre informazioni sull'aggiornamento automatico dei client, vedere [Come aggiornare i client per i computer Windows](https://technet.microsoft.com/library/mt627885.aspx).  
+Quando si installa un aggiornamento che include aggiornamenti per il client di Configuration Manager è possibile scegliere se aggiornare automaticamente i client con l'installazione dell'aggiornamento oppure aggiornarli manualmente in un secondo momento. Per altre informazioni sull'aggiornamento automatico dei client, vedere [Come aggiornare i client per i computer Windows](../../clients/manage/upgrade/upgrade-clients-for-windows-computers.md).  
 
 È possibile distribuire gli aggiornamenti con Updates Publisher o un pacchetto di distribuzione software oppure è possibile scegliere di installare manualmente l'aggiornamento in ogni client. Per altre informazioni su come usare le distribuzioni per installare gli aggiornamenti, vedere la sezione [Distribuire gli aggiornamenti per Configuration Manager](#BKMK_Deploy) in questo argomento.  
 
@@ -207,7 +207,7 @@ Il catalogo per Updates Publisher, **SCUPCatalog.cab**, è disponibile nel perco
 > [!IMPORTANT]  
 > Poiché viene creato utilizzando i percorsi specifici per il server del sito in cui viene installato il pacchetto di aggiornamento, il file SCUPCatalog.cab non può essere utilizzato in altri server del sito.  
 
-Al termine della procedura guidata è possibile importare il catalogo in Updates Publisher e usare gli aggiornamenti software di Configuration Manager per distribuire gli aggiornamenti. Per informazioni su Updates Publisher, vedere [Updates Publisher 2011](https://go.microsoft.com/fwlink/p/?LinkID=83449) nella libreria TechNet per System Center 2012.  
+Al termine della procedura guidata è possibile importare il catalogo in Updates Publisher e usare gli aggiornamenti software di Configuration Manager per distribuire gli aggiornamenti. Per altre informazioni su Updates Publisher, vedere [Updates Publisher 2011](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
 
 Usare la procedura seguente per importare il file SCUPCatalog.cab in Updates Publisher e pubblicare gli aggiornamenti.  
 

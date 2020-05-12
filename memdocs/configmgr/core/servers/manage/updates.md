@@ -10,12 +10,12 @@ ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f38b8662d4d7b5e7897d0c43560a5e2a4672eee6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ffee9d851f00bcac5ed7ba562bdc9db8e0fa2767
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704319"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82903947"
 ---
 # <a name="updates-and-servicing-for-configuration-manager"></a>Aggiornamenti e manutenzione per Configuration Manager
 
@@ -60,11 +60,13 @@ Le versioni supportate seguenti di Configuration Manager sono attualmente dispon
 
 | Version | Data di disponibilità | [Data di fine supporto](current-branch-versions-supported.md) | Versione di base | Aggiornamento nella console |  
 |-------------|-----------|------------|--------------|------------------------|  
-| [**2002**](../../plan-design/changes/whats-new-in-version-2002.md)<br /> (5.00.8968) | Maggio 2020 | 1 ottobre 2021 | Sì<sup>[Nota 1](#bkmk_note1)</sup> | Sì |
+| [**2002**](../../plan-design/changes/whats-new-in-version-2002.md)<br /> (5.00.8968) | 1 aprile 2020 | 1 ottobre 2021 | Sì<sup>[Nota 1](#bkmk_note1)</sup> | Sì |
 | [**1910**](../../plan-design/changes/whats-new-in-version-1910.md)<br /> (5.00.8913) | 29 novembre 2019 | 29 maggio 2021 | No | Sì |
 | [**1906**](../../plan-design/changes/whats-new-in-version-1906.md)<br /> (5.00.8853) | 26 luglio 2019 | 26 gennaio 2021 | No | Sì |
 | [**1902**](../../plan-design/changes/whats-new-in-version-1902.md)<br /> (5.00.8790) | 27 marzo 2019 | 27 settembre 2020 | Sì<sup>[Nota 1](#bkmk_note1)</sup> | Sì |
 | [**1810**](../../plan-design/changes/whats-new-in-version-1810.md)<br /> (5.00.8740) | 27 novembre 2018 | 1 dicembre 2020 | No | Sì |
+
+**Data disponibilità** si riferisce a quando viene rilasciato l'[anello di aggiornamento anticipato](checklist-for-installing-update-2002.md#early-update-ring). I supporti di base saranno disponibili in Volume License Service Center dopo che l'aggiornamento sarà disponibile a livello globale.
 
 <a name="bkmk_note1"></a>
 

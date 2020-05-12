@@ -10,12 +10,12 @@ ms.assetid: fa300181-86cb-4afe-8fbf-895a7572378d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: be314aee43e93b5e3d264c70626e2f0b85e8e7f3
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ce882f6bfc7a0d724688d5df59051dae17d54498
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706379"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693151"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>Novità di Desktop Analytics
 
@@ -121,3 +121,7 @@ La documentazione di Desktop Analytics fa sempre riferimento alla funzionalità 
 <!-- - [What's new in version 1910](../core/plan-design/changes/whats-new-in-version-1910.md#bkmk_da) -->
 
 - [Novità della versione 1906](../core/plan-design/changes/whats-new-in-version-1906.md#bkmk_da)
+
+## <a name="deprecated-features"></a>Funzionalità deprecate
+
+Quando Microsoft prevede di rimuovere una funzionalità significativa del servizio Desktop Analytics, tale modifica viene annunciata in anticipo come funzionalità deprecata di Configuration Manager. Per altre informazioni, vedere [Funzionalità deprecate](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#deprecated-features).

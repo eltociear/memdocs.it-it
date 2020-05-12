@@ -10,12 +10,12 @@ ms.assetid: 24fca61e-9cdb-447a-ad7a-f4d2e4fd6704
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c191debd77502f7d594a77eb3bd0c50cd6854f66
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 84cb878de3eea56dc68180a83fd4b6a32b2d1073
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706699"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906417"
 ---
 # <a name="use-cloud-services-with-configuration-manager"></a>Usare i servizi cloud con Configuration Manager
 
@@ -36,7 +36,7 @@ Anche se non è necessario eseguire il provisioning delle risorse cloud prima di
 
 -   Per informazioni sui punti di distribuzione basati su cloud, vedere [Installare punti di distribuzione basati su cloud](../servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md).
 
--   Per altre informazioni su Azure, vedere [Azure](https://go.microsoft.com/fwlink/p/?LinkId=262965) in MSDN Library.  
+-   Per altre informazioni su Azure, vedere [Cos'è Azure?](https://azure.microsoft.com/overview/what-is-azure/)
 
 ### <a name="azure-virtual-machines-for-cloud-based-infrastructure"></a>Macchine virtuali di Azure (per l'infrastruttura basata su cloud)  
  Configuration Manager supporta l'uso di computer eseguiti in macchine virtuali di Azure analogamente a quando vengono eseguiti in locale all'interno della rete fisica aziendale. È possibile usare le macchine virtuali di Azure negli scenari seguenti:  
@@ -78,12 +78,4 @@ Queste funzionalità aggiuntive non richiedono una sottoscrizione di Azure. Non 
 ##  <a name="security-for-cloud-based-services"></a><a name="BKMK_CloudSec"></a> Sicurezza dei servizi basati su cloud  
  Configuration Manager usa i certificati per il provisioning e l'accesso al contenuto di Azure e per la gestione dei servizi usati. Configuration Manager crittografa i dati archiviati in Azure, ma non introduce ulteriori controlli su dati o sicurezza oltre a quelli forniti da Azure.  
 
- Per altre informazioni, vedere i dettagli relativi ai diversi scenari di risorse basate su cloud. È anche possibile visualizzare gli argomenti seguenti per la sicurezza di Azure:  
-
--   [Azure: gestione degli account di protezione in Azure](https://go.microsoft.com/fwlink/p/?LinkId=262968)  
-
--   [Panoramica sulla protezione di Azure](https://go.microsoft.com/fwlink/p/?LinkId=262970)  
-
--   [Superare gli incroci di protezione nella migrazione cloud](https://go.microsoft.com/fwlink/p/?LinkId=262971)  
-
--   [Protezione dei dati in Azure (parte 1 di 2)](https://go.microsoft.com/fwlink/p/?LinkId=262974)  
+ Per altre informazioni, vedere i dettagli relativi ai diversi scenari di risorse basate su cloud. Vedere anche [Introduzione alla sicurezza di Azure](https://docs.microsoft.com/azure/security/fundamentals/overview).

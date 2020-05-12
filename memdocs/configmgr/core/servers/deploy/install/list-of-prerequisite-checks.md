@@ -2,7 +2,7 @@
 title: Controlli dei prerequisiti
 titleSuffix: Configuration Manager
 description: Informazioni di riferimento sugli specifici controlli dei prerequisiti per gli aggiornamenti di Configuration Manager.
-ms.date: 04/01/2020
+ms.date: 05/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d8fc9abfc9fc09bc3011a3fee30b258023d04c8a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9f0ed1d5913154d90242d1aa2a47efbcf7d22282
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700739"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943791"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Elenco dei controlli dei prerequisiti per Configuration Manager
 
@@ -771,9 +771,9 @@ SELECT * FROM vLogs WHERE ProcedureName = 'spDiagChangeTracking'
 
 Quando si installa un nuovo sito, Configuration Manager installa automaticamente SQL Server Native Client come componente ridistribuibile. Dopo l'installazione del sito, Configuration Manager non aggiorna SQL Server Native Client. L'aggiornamento di SQL Server Native Client potrebbe richiedere un riavvio, che può rallentare il processo di installazione del sito.
 
-Questo controllo garantisce che il sito disponga di una versione supportata di SQL Native Client. A partire dalla versione 1810, la versione minima è SQL 2012 SP4 (`11.*.7001.0`).
+Questo controllo garantisce che il server del sito abbia una versione supportata di SQL Native Client. Il controllo dei prerequisiti non verifica la versione di SQL Native Client nei sistemi del sito remoti.
 
-Questa versione di SQL Native Client supporta TLS 1.2. Per altre informazioni, vedere gli articoli seguenti:
+La versione minima è SQL 2012 SP4 (`11.*.7001.0`). Questa versione di SQL Native Client supporta TLS 1.2. Per altre informazioni, vedere gli articoli seguenti:
 
 - [Supporto di TLS 1.2 per Microsoft SQL Server](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)  
 

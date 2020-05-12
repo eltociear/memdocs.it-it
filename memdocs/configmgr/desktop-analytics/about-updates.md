@@ -2,7 +2,7 @@
 title: Aggiornamenti in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Informazioni sugli aggiornamenti della sicurezza e delle funzionalità in Desktop Analytics.
-ms.date: 08/21/2019
+ms.date: 04/23/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 14ae894c-26fb-4fe3-b51d-e80700122df4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ec510414f11aa312e6c1a7d1d5bfa8126f473fe3
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c09212577cd61e7ddd6c293e2d1dc47dabe036f0
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706579"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693356"
 ---
 # <a name="updates-in-desktop-analytics"></a>Aggiornamenti in Desktop Analytics
 
@@ -46,8 +46,20 @@ I dispositivi eseguono un aggiornamento della sicurezza precedente alla versione
 
 Il dispositivo non è stato valutato da Desktop Analytics. Questo stato include i dispositivi che eseguono Windows 7, Windows 8.1 o Windows 10 registrati per il Programma Windows Insider.  
 
-Se un dispositivo Windows 10 *non è autenticato* con un account Microsoft, Windows non visualizza questi dati. Questa autenticazione viene in genere completata come parte della configurazione guidata dell'Installazione di Windows.<!-- 5148153 -->
+Per visualizzare le tendenze di adozione per gli aggiornamenti della sicurezza, selezionare **Visualizza altro** per una versione specifica di Windows. Il grafico ad area in pila categorizza i dispositivi in base all'aggiornamento della sicurezza installato nel tempo.
 
+Per esaminare lo stato di distribuzione per gli aggiornamenti della sicurezza, selezionare **Visualizza tutto**. In questa visualizzazione i dispositivi sono elencati nelle categorie seguenti:
+
+- Non avviato
+- In corso
+- Completed
+- Richiede attenzione - Dispositivi (ordinati per nome dispositivo)
+- Richiede attenzione - Problemi (ordinati per tipo di problema)
+
+Per visualizzare i dispositivi con nuove informazioni che il servizio sta ancora elaborando, selezionare **Visualizza dati recenti**. Desktop Analytics visualizzerà queste informazioni dopo l'aggiornamento completo dei dati successivo.
+
+  > [!IMPORTANT]
+  > L'opzione di Desktop Analytics **Visualizza dati recenti** è deprecata. Questa azione verrà rimossa in una versione futura del servizio Desktop Analytics. Per altre informazioni, vedere [Funzionalità deprecate](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!--7080949-->  
 
 ## <a name="feature-updates"></a>Aggiornamenti delle funzionalità
 
@@ -77,8 +89,7 @@ I dispositivi eseguono un aggiornamento delle funzionalità successivo alla data
 
 Il dispositivo non è stato valutato da Desktop Analytics. Questo stato include i dispositivi che eseguono Windows 7, Windows 8.1 o Windows 10 registrati per il Programma Windows Insider.
 
-Se un dispositivo Windows 10 *non è autenticato* con un account Microsoft, Windows non visualizza questi dati. Questa autenticazione viene in genere completata come parte della configurazione guidata dell'Installazione di Windows.<!-- 5148153 -->
-
+Selezionare il riquadro per visualizzare le tendenze di adozione per gli aggiornamenti delle funzionalità. Il grafico ad area in pila categorizza i dispositivi in base all'aggiornamento delle funzionalità installato nel tempo.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

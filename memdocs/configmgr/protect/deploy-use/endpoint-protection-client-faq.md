@@ -10,12 +10,12 @@ ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8b89f2dd9f60b43db5c4ce8956f843429b47bc62
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3b206c1556c2e9550ade5c2322acd65ad2b19412
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709249"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906839"
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Domande frequenti relative al client Endpoint Protection
 
@@ -145,7 +145,7 @@ Per rimuovere facilmente e velocemente tutti gli elementi indesiderati o potenzi
 
 -   Assicurarsi che il software antivirus e antispyware, Windows Defender, usi gli aggiornamenti più recenti dalle potenziali minacce (vedere Come mantenere aggiornate le definizioni di virus e spyware). Assicurarsi inoltre di usare sempre la versione più recente di Windows Defender.  
 
--   Scaricare aggiornamenti solo da fonti attendibili. Per i sistemi operativi Windows, usare sempre [Microsoft Update](https://go.microsoft.com/fwlink/?LinkID=96304) (https://go.microsoft.com/fwlink/?LinkID=96304) e per altri prodotti software usare sempre i siti Web legittimi dell'azienda o della persona che produce l'applicazione.  
+-   Scaricare aggiornamenti solo da fonti attendibili. Per i sistemi operativi Windows usare sempre il [catalogo Microsoft Update](https://catalog.update.microsoft.com).  Per altri prodotti software usare sempre i siti Web ufficiali della società o dell'utente che li produce.
 
 -   Se si riceve un messaggio di posta elettronica con un allegato e non si è certi dell'origine, è opportuno eliminarlo immediatamente. Non scaricare applicazioni o file eseguibili da origini sconosciute e prestare attenzione nello scambio di file con altri utenti.  
 

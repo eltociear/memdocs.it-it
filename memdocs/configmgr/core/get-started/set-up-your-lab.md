@@ -10,12 +10,12 @@ ms.assetid: b1970688-0cd2-404f-a17f-9e2aa4a78758
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: a23f6106a8c922b3ff4e8306fb76aec4fd26b148
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 216c61a671d7d06e434fa399bb3bae12e12f7275
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691409"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905172"
 ---
 # <a name="set-up-a-configuration-manager-lab"></a>Configurare un lab di Configuration Manager
 
@@ -31,9 +31,9 @@ Le linee guida disponibili in questo argomento consentono di configurare un ambi
 
 -   **L'ambiente lab usa Windows Server 2012 R2**, in cui verrà installato Configuration Manager.  
 
-     È possibile scaricare una versione di valutazione di Windows Server 2012 R2 da [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012).  
+     È possibile scaricare una versione di valutazione di Windows Server 2012 R2 da [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012).  
 
-     È consigliabile modificare o disabilitare Sicurezza avanzata in Internet Explorer per semplificare l'accesso ad alcuni download a cui viene fatto riferimento durante questi esercizi. Per altre informazioni, vedere [Internet Explorer: Sicurezza avanzata](https://technet.microsoft.com/library/dd883248\(v=ws.10\).aspx).  
+     È consigliabile modificare o disabilitare Sicurezza avanzata in Internet Explorer per semplificare l'accesso ad alcuni download a cui viene fatto riferimento durante questi esercizi. Per altre informazioni, vedere [Internet Explorer: Protezione avanzata di Internet Explorer](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10)).  
 
 -   **Nell'ambiente lab viene usato SQL Server 2012 SP2** per il database del sito.  
 
@@ -45,7 +45,7 @@ Le linee guida disponibili in questo argomento consentono di configurare un ambi
 
     -   **SQL_Latin1_General_CP1_CI_AS** come classe **SQL Collation** .  
 
-    -   **autenticazione di Windows**, [invece dell'autenticazione SQL](https://technet.microsoft.com/library/ms144284.aspx).  
+    -   **autenticazione di Windows**, [invece dell'autenticazione SQL](https://docs.microsoft.com/sql/relational-databases/security/choose-an-authentication-mode?view=sql-server-ver15).  
 
     -   È richiesta un'**istanza di SQL Server** dedicata.  
 
@@ -61,11 +61,11 @@ Le linee guida disponibili in questo argomento consentono di configurare un ambi
 
 -   **Il controller di dominio usa Windows Server 2008 R2** con Active Directory Domain Services. Il controller di dominio funge anche da host per i server DHCP e DNS per l'uso con un nome di dominio completo.  
 
-     Per altre informazioni vedere la [panoramica su Active Directory Domain Services](https://technet.microsoft.com/library/hh831484).  
+     Per altre informazioni, vedere [Panoramica di Active Directory Domain Services](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831484(v=ws.11)).  
 
 -   **Hyper-V viene usato con alcune macchine virtuali** per verificare che le fasi di gestione in questi esercizi funzionino come previsto. È consigliabile avere a disposizione un minimo di tre macchine virtuali con installato Windows 10.  
 
-     Per altre informazioni, vedere la [panoramica di Hyper-V](https://technet.microsoft.com/library/hh831531.aspx).  
+     Per altre informazioni, vedere [Panoramica di Hyper-V](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831531(v=ws.11)).  
 
 -   **Le autorizzazioni di amministratore** saranno necessarie per tutti questi componenti.  
 
@@ -95,7 +95,7 @@ Dopo aver installato tutti questi componenti, sono necessari passaggi aggiuntivi
 Nelle procedure successive sono elencati gli altri passaggi necessari per consentire ai client di Configuration Manager di eseguire query su Active Directory Domain Services per individuare le risorse del sito.  
 
 ##  <a name="create-the-system-management-container"></a><a name="BKMK_CreateSysMgmtLab"></a> Creare il contenitore System Management  
- Configuration Manager non crea automaticamente il contenitore System Management necessario in Active Directory Domain Services quando viene esteso lo schema. Pertanto, sarà necessario crearlo per l'ambiente lab. Questo passaggio è richiesto per [installare ADSI Edit](https://technet.microsoft.com/library/cc773354\(WS.10\).aspx#BKMK_InstallingADSIEdit)  
+ Configuration Manager non crea automaticamente il contenitore System Management necessario in Active Directory Domain Services quando viene esteso lo schema. Pertanto, sarà necessario crearlo per l'ambiente lab. Questo passaggio è richiesto per [installare ADSI Edit](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10)).
 
  Assicurarsi di avere eseguito l'accesso con un account che disponga dell'autorizzazione **Crea tutti gli oggetti figlio** nel contenitore **System** in Servizi di dominio Active Directory.  
 
@@ -129,7 +129,7 @@ Nelle procedure successive sono elencati gli altri passaggi necessari per consen
 
 5.  Fare clic su **OK** per chiudere la console di **ADSI Edit** e completare la procedura.  
 
-     Per altre informazioni su questa procedura, vedere [Estendere lo schema di Active Directory per Configuration Manager](../../core/plan-design/network/extend-the-active-directory-schema.md).  
+     Per altre informazioni, vedere [Estendere lo schema di Active Directory per Configuration Manager](../../core/plan-design/network/extend-the-active-directory-schema.md)  
 
 ##  <a name="extend-the-active-directory-schema-using-extadschexe"></a><a name="BKMK_ExtADSchLab"></a> Estendere lo schema di Active Directory usando extadsch.exe  
  Per questo ambiente lab verrà esteso lo schema di Active Directory in quanto ciò consente di usare tutte le caratteristiche e le funzionalità di Configuration Manager con il minimo carico amministrativo. L'estensione dello schema di Active Directory è una configurazione a livello di foresta eseguita solo una volta per foresta. L'estensione dello schema in modo permanente modifica il set di classi e attributi nella configurazione di Active Directory di base. Questa azione è irreversibile. L'estensione dello schema consente a Configuration Manager di accedere ai componenti che ne consentono un funzionamento efficiente all'interno dell'ambiente lab.  
@@ -139,7 +139,7 @@ Nelle procedure successive sono elencati gli altri passaggi necessari per consen
 
 #### <a name="to-extend-the-active-directory-schema-using-extadschexe"></a>Per estendere lo schema di Active Directory usando extadsch.exe:  
 
-1.  Creare un backup dello stato del sistema del controller di dominio master dello schema. Per altre informazioni sul backup dei controller di dominio master, vedere [Windows Server Backup](https://technet.microsoft.com/library/cc770757.aspx)  
+1.  Creare un backup dello stato del sistema del controller di dominio master dello schema. Per altre informazioni sul backup dei controller di dominio master, vedere [Windows Server Backup](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770757(v=ws.11))  
 
 2.  Passare a **\SMSSETUP\BIN\X64** nel supporto di installazione.  
 
@@ -147,7 +147,7 @@ Nelle procedure successive sono elencati gli altri passaggi necessari per consen
 
 4.  Verificare l'esito positivo dell'estensione dello schema esaminando il file **extadsch.log** disponibile nella radice dell'unità di sistema.  
 
-     Per altre informazioni su questa procedura, vedere [Estendere lo schema di Active Directory per Configuration Manager](../../core/plan-design/network/extend-the-active-directory-schema.md).  
+     Per altre informazioni, vedere [Estendere lo schema di Active Directory per Configuration Manager](../../core/plan-design/network/extend-the-active-directory-schema.md).  
 
 ##  <a name="other-required-tasks"></a><a name="BKMK_OtherTasksLab"></a> Altre attività necessarie  
  È inoltre necessario completare le attività seguenti prima dell'installazione.  
@@ -158,7 +158,7 @@ Nelle procedure successive sono elencati gli altri passaggi necessari per consen
 
  **Installare .NET e attivare Windows Communication Foundation**  
 
- È necessario installare due versioni di .NET Framework, ovvero .NET 3.5.1 e quindi .NET 4.5.2+. È anche necessario attivare Windows Communication Foundation (WCF). WCF è progettato per offrire un approccio gestibile all'elaborazione distribuita, elevati livelli d interoperabilità e supporto diretto per l'orientamento dei servizi. Semplifica inoltre lo sviluppo di applicazioni connesse tramite un modello di programmazione orientato ai servizi. Vedere [Informazioni su Windows Communication Foundation](https://technet.microsoft.com/subscriptions/ms731082\(v=vs.90\).aspx) per altre informazioni su WCF.  
+ È necessario installare due versioni di .NET Framework, ovvero .NET 3.5.1 e quindi .NET 4.5.2+. È anche necessario attivare Windows Communication Foundation (WCF). WCF è progettato per offrire un approccio gestibile all'elaborazione distribuita, elevati livelli d interoperabilità e supporto diretto per l'orientamento dei servizi. Semplifica inoltre lo sviluppo di applicazioni connesse tramite un modello di programmazione orientato ai servizi. Per altre informazioni, vedere [Informazioni su Windows Communication Foundation](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms731082(v=vs.90)).
 
 #### <a name="to-install-net-and-activate-windows-communication-foundation"></a>Per installare .NET e attivare Windows Communication Foundation:  
 
@@ -198,27 +198,15 @@ Nelle procedure successive sono elencati gli altri passaggi necessari per consen
 
 10. Al termine dell'installazione di base di .NET, passare all' [Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=42643) per ottenere il programma di installazione Web per .NET Framework 4.5.2. Fare clic sul pulsante **Scarica** e quindi **eseguire** il programma di installazione. Verranno automaticamente rilevati e installati i componenti necessari nella lingua selezionata.  
 
-Per altre informazioni, vedere gli articoli seguenti relativi alla necessità di tali versioni di .NET Framework:  
-
--   [Versioni e dipendenze di .NET Framework](https://technet.microsoft.com/library/bb822049.aspx)  
-
--   [Procedura dettagliata relativa alla compatibilità delle applicazioni RTM .NET Framework 4](https://technet.microsoft.com/library/dd889541.aspx)  
-
--   [Procedura: Aggiornare un'applicazione Web ASP.NET ad ASP.NET 4](https://technet.microsoft.com/library/dd483478\(VS.100\).aspx)  
-
--   [Domande frequenti relative ai criteri del ciclo di vita del supporto di Microsoft .NET Framework](https://support.microsoft.com/en-us/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update)  
-
--   [CLR Inside Out - In-Process Side-by-Side](https://msdn.microsoft.com/magazine/ee819091.aspx) (Tutto su CLR - Esecuzione affiancata)  
-
 **Abilitare BITS, IIS e RDC**  
 
-Il [Servizio trasferimento intelligente in background (BITS)](https://technet.microsoft.com/library/dn282296.aspx) viene usato per le applicazioni che devono trasferire file in modo asincrono tra un client e un server. Tramite il controllo del flusso dei trasferimenti in primo piano e in background, BITS consente di mantenere la velocità di risposta delle altre applicazioni di rete. Riprenderà anche automaticamente i trasferimenti di file se una sessione di trasferimento viene interrotta.  
+Il [Servizio trasferimento intelligente in background (BITS)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn282296(v=ws.11)) viene usato per le applicazioni che devono trasferire file in modo asincrono tra un client e un server. Tramite il controllo del flusso dei trasferimenti in primo piano e in background, BITS consente di mantenere la velocità di risposta delle altre applicazioni di rete. Riprenderà anche automaticamente i trasferimenti di file se una sessione di trasferimento viene interrotta.  
 
 Sarà necessario installare BITS per questo ambiente lab perché il server del sito verrà usato anche come punto di gestione.  
 
 Internet Information Services (IIS) è un server Web flessibile e scalabile che può essere usato per ospitare qualsiasi elemento sul Web. Viene usato da Configuration Manager per alcuni ruoli del sistema del sito. Per altre informazioni su IIS, vedere [Siti Web per i server del sistema del sito](../../core/plan-design/network/websites-for-site-system-servers.md).  
 
-[Compressione differenziale remota (RDC)](https://technet.microsoft.com/library/cc754372.aspx) è un set di API utilizzabili dalle applicazioni per determinare se sono state apportate modifiche a un set di file. RDC consente all'applicazione di replicare solo le parti modificate di un file, riducendo al minimo il traffico di rete.  
+[Compressione differenziale remota (RDC)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754372(v=ws.11)) è un set di API utilizzabili dalle applicazioni per determinare se sono state apportate modifiche a un set di file. RDC consente all'applicazione di replicare solo le parti modificate di un file, riducendo al minimo il traffico di rete.  
 
 #### <a name="to-enable-bits-iis-and-rdc-site-server-roles"></a>Per abilitare i ruoli del server del sito BITS, IIS e RDC:  
 
@@ -330,7 +318,7 @@ Internet Information Services (IIS) è un server Web flessibile e scalabile che 
 
 7.  Fare clic su **Installa** e verificare che l'installazione sia stata completata correttamente nel riquadro **Notifiche** di **Server Manager**.  
 
-Per impostazione predefinita IIS impedisce l'accesso a diversi tipi di estensioni e percorsi di file tramite comunicazione HTTP o HTTPS. Per abilitare la distribuzione di questi file a sistemi client, sarà necessario configurare il filtro richieste per IIS nel punto di distribuzione. Per altre informazioni, vedere [IIS Request Filtering for distribution points](../../core/plan-design/network/prepare-windows-servers.md#BKMK_IISFiltering) (Filtro richieste IIS per punti di distribuzione).  
+Per impostazione predefinita IIS impedisce l'accesso a diversi tipi di estensioni e percorsi di file tramite comunicazione HTTP o HTTPS. Per abilitare la distribuzione di questi file a sistemi client, sarà necessario configurare il filtro richieste per IIS nel punto di distribuzione. Per altre informazioni, vedere [Filtro richieste IIS per punti di distribuzione](../../core/plan-design/network/prepare-windows-servers.md#BKMK_IISFiltering).  
 
 #### <a name="to-configure-iis-filtering-on-distribution-points"></a>Per configurare il filtro per IIS nei punti di distribuzione:  
 

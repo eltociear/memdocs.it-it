@@ -10,12 +10,12 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 926d1483739b85f787ebc9e2a992ea7ed39633c2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 460c9dd503861ba9f45e85f471bb1cb1274754a0
+ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706189"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82782119"
 ---
 # <a name="plan-for-bitlocker-management"></a>Pianificare la gestione di BitLocker
 
@@ -96,7 +96,7 @@ Consentire agli utenti di ottenere in autonomia una chiave monouso per sbloccare
 
 - Per l'account utente che esegue lo script del programma di installazione del portale sono necessari i diritti di **sysadmin** di SQL per il server di database del sito. Durante il processo di installazione, lo script imposta i diritti di accesso, utente e ruolo SQL per l'account del computer del server Web. È possibile rimuovere questo account utente dal ruolo sysadmin dopo aver completato l'installazione del portale self-service e del sito Web di amministrazione e monitoraggio.
 
-- La gestione di BitLocker non è supportata nelle macchine virtuali. Per questo motivo, alcune funzionalità potrebbero non funzionare come previsto nelle macchine virtuali. Ad esempio, la gestione di BitLocker non avvierà la crittografia nelle unità fisse delle macchine virtuali. Le unità fisse aggiuntive delle macchine virtuali possono essere visualizzate come conformi anche se non sono crittografate.
+- La gestione di BitLocker non è supportata nelle macchine virtuali o nei sistemi operativi server. Per questo motivo, alcune caratteristiche potrebbero non funzionare come previsto nelle macchine virtuali o nei sistemi operativi server. Ad esempio, nelle macchine virtuali la gestione di BitLocker non avvierà la crittografia nelle unità fisse. Inoltre le unità fisse aggiuntive delle macchine virtuali potrebbero essere visualizzate come conformi anche se non sono crittografate.
 
 > [!TIP]
 > Per impostazione predefinita, il passaggio della sequenza di attività **Attiva BitLocker** consente di crittografare solo lo *spazio usato* nell'unità. Gestione BitLocker usa la crittografia del *disco completo*. Configurare questo passaggio della sequenza di attività per abilitare l'opzione **Usa la crittografia del disco completo**. Per altre informazioni, vedere [Passaggi della sequenza di attività - Attiva BitLocker](../../osd/understand/task-sequence-steps.md#BKMK_EnableBitLocker).

@@ -10,12 +10,12 @@ ms.assetid: 8cdb22a6-72d7-41f5-9bed-c098b1bcf675
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b8ba727aff682e3efbba6a91941a5499f9f00e8b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7d6a61324f8c777ba5ed09dd26816152d6f17af9
+ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689319"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643211"
 ---
 # <a name="manage-apps-from-the-microsoft-store-for-business-and-education-with-configuration-manager"></a>Gestire app da Microsoft Store per le aziende e Microsoft Store per la formazione con Configuration Manager
 
@@ -129,6 +129,9 @@ Nella pagina **Configurazioni** della Procedura guidata per i servizi di Azure s
 - **Lingue selezionate**: selezionare le lingue da sincronizzare dallo Store e da visualizzare per gli utenti in Software Center. Se ad esempio l'utente configura Windows per il tedesco, Software Center mostra stringhe in tedesco per l'app dello Store. Questo comportamento richiede che tale lingua sia sincronizzata e che sia disponibile per l'applicazione specifica.
 
 - **Lingua predefinita**: se la lingua dell'utente non è disponibile, selezionare una lingua predefinita da usare.  
+
+> [!NOTE]
+> Configuration Manager non sincronizza l'icona dell'app dall'archivio. Se è necessaria un'icona da visualizzare per l'app in Software Center, aggiungerla manualmente nelle proprietà dell'app. Per altre informazioni, vedere [Specificare manualmente le informazioni sull'applicazione](create-applications.md#bkmk_manual-app).<!-- 2837053 -->
 
 ## <a name="create-and-deploy-the-app"></a><a name="bkmk_deploy"></a> Creare e distribuire l’app
 

@@ -10,12 +10,12 @@ ms.assetid: e0db3311-2303-4013-a906-76b408172d3c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8c6b8df10a9a20c96cd2f8c1a0b6583c9c5f6e4f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 29f063da47dc26789493b2a83ad8e0cfa6885270
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708159"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693298"
 ---
 # <a name="desktop-analytics-faq"></a>Domande frequenti su Desktop Analytics
 
@@ -35,6 +35,9 @@ Quando si configura Desktop Analytics per la prima volta, è possibile che i rep
 - Verificare che i dispositivi inviino i dati di diagnostica al servizio Desktop Analytics. Per altre informazioni, vedere [Abilitare la condivisione dei dati](enable-data-sharing.md).
 - Effettuare il provisioning delle [applicazioni Azure AD](troubleshooting.md#bkmk_AzureADApps) in Azure AD.
 - Controllare i dispositivi associati all'organizzazione negli ultimi sette giorni. Nel [portale di Desktop Analytics](https://aka.ms/desktopanalytics) passare al riquadro **Servizi connessi**. Selezionare **Registra dispositivi** e **Visualizza dati recenti**
+
+  > [!IMPORTANT]
+  > L'opzione di Desktop Analytics **Visualizza dati recenti** è deprecata. Questa azione verrà rimossa in una versione futura del servizio Desktop Analytics. Per altre informazioni, vedere [Funzionalità deprecate](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!--7080949-->  
 
 Se i dispositivi sono configurati correttamente e i dati non vengono ancora visualizzati nell'area di lavoro, [contattare il supporto tecnico Microsoft](https://support.microsoft.com/hub/4343728/support-for-business).
 

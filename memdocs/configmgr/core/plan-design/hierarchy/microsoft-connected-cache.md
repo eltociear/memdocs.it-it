@@ -2,7 +2,7 @@
 title: Microsoft Connected Cache
 titleSuffix: Configuration Manager
 description: Usare il punto di distribuzione di Configuration Manager come server di cache locale per Ottimizzazione recapito
-ms.date: 03/20/2019
+ms.date: 05/05/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e718e62f097a9fec20d7b29deb9f03453931188a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ab54d278caaeeb29bbd8871819de10af97dcf830
+ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696209"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82842207"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Microsoft Connected Cache in Configuration Manager
 
@@ -108,6 +108,20 @@ Per cambiare l'unità dopo l'installazione di Connected Cache:
 - Configurare manualmente le proprietà del punto di distribuzione per usare una lettera di unità specifica.
 
 - Se impostate su automatico, creare innanzitutto il file **no_sms_on_drive.sms**. Apportare quindi alcune modifiche alle proprietà del punto di distribuzione per attivare una modifica della configurazione.
+
+### <a name="automation"></a>Automazione
+
+<!-- SCCMDocs#1911 -->
+
+È possibile usare l'SDK di Configuration Manager per automatizzare la configurazione delle impostazioni della cache connessa di Microsoft in un punto di distribuzione. Come nel caso di tutti i ruoli del sito, usare la [classe WMI SMS_SCI_SysResUse](../../../develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class.md). Per altre informazioni, vedere [Programmazione dei ruoli del sito](../../../develop/osd/about-operating-system-deployment-site-role-configuration.md#programming-the-site-roles).
+
+Quando si aggiorna l'istanza di **SMS_SCI_SysResUse** per il punto di distribuzione, impostare le proprietà seguenti:
+
+- **AgreeDOINCLicense**: impostare su `1` per accettare le condizioni di licenza.
+- **Flags**: abilitare `|= 4`, disabilitare `&= ~4`
+- **DiskSpaceDOINC**: impostare su `Percentage` o `GB`
+- **RetainDOINCCache**: impostare su `0` o `1`
+- **LocalDriveDOINC**: impostare su `Automatic`o su una lettera di unità specifica, ad esempio `C:` o `D:`
 
 ## <a name="verify"></a>Verifica
 

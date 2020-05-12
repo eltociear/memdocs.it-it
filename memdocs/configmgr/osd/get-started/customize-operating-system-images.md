@@ -10,12 +10,12 @@ ms.assetid: 95033a9b-ff13-4b70-b1de-bcb25bcb6024
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9a1dcd3528f4dbaacec81837150d6f8a1ad6c455
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 652a0c5e36ce7c4bacf40531a82fdf4e16197d95
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708959"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906923"
 ---
 # <a name="customize-operating-system-images-with-configuration-manager"></a>Personalizzare le immagini del sistema operativo con Configuration Manager
 
@@ -95,7 +95,7 @@ Le immagini del sistema operativo in Configuration Manager sono file WIM e rappr
     > [!IMPORTANT]  
     >  Il passaggio della sequenza attività [Prepare Windows for Capture](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture) tenta di reimpostare la password dell'amministratore locale nel computer di riferimento su un valore vuoto prima dell'esecuzione di Sysprep. Se è attivato il criterio di protezione locale **La password deve soddisfare i requisiti di complessità** , questo passaggio della sequenza attività non consentirà di reimpostare la password dell'amministratore. In questo caso, disattivare il criterio prima di eseguire la sequenza attività.  
 
-     Per altre informazioni su Sysprep, vedere la [documentazione tecnica di Utilità preparazione sistema (Sysprep)](https://go.microsoft.com/fwlink/?LinkId=280286).  
+     Per altre informazioni su Sysprep, vedere [Panoramica di Sysprep (Utilità preparazione sistema)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview).  
 
 -   **Script e strumenti appropriati necessari per attenuare gli scenari di installazione**  
 

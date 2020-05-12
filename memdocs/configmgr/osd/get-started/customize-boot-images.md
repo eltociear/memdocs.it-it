@@ -10,12 +10,12 @@ ms.assetid: 9cbfc406-d009-446d-8fee-4938de48c919
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1e486ddd8652529000c6ec02266f677e45669111
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cc679ec7e73e9d43902ad70e09fb2a01c95eed65
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708999"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906874"
 ---
 # <a name="customize-boot-images-with-configuration-manager"></a>Personalizzare le immagini d'avvio con Configuration Manager
 
@@ -49,11 +49,7 @@ Ogni versione di Configuration Manager supporta una versione specifica di Window
 
 - **WinPE-WDS-Tools**: installa gli strumenti dei Servizi di distribuzione Windows.  
 
-  È possibile aggiungere altri pacchetti Windows PE. Le seguenti risorse forniscono più informazioni sui componenti facoltativi che è possibile aggiungere all'immagine di avvio.  
-
-- Per Windows PE 5, vedere [WinPE: aggiungere pacchetti (informazioni di riferimento sui componenti facoltativi)](https://msdn.microsoft.com/library/windows/hardware/dn938382\(v=vs.85\).aspx).  
-
-- Per Windows PE 3.1, vedere l'argomento [Aggiungi un pacchetto a un'immagine Windows PE](https://technet.microsoft.com/library/dd799312\(v=WS.10\).aspx) nella libreria della documentazione TechNet per Windows 7.  
+  È possibile aggiungere altri pacchetti Windows PE. Per altre informazioni sui componenti facoltativi che è possibile aggiungere all'immagine di avvio, vedere [WinPE: aggiungere pacchetti (informazioni di riferimento sui componenti facoltativi)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
 
 > [!NOTE]
 >All'avvio di WinPE da un'immagine di avvio personalizzata che include strumenti aggiunti dall'utente, è possibile aprire un prompt dei comandi da WinPE e digitare il nome del file dello strumento per eseguirlo. La posizione di questi strumenti viene aggiunta automaticamente alla variabile di percorso. Il prompt dei comandi può essere aggiunto solo se l'impostazione **Abilita supporto comandi (solo test)** è selezionata nella scheda **Personalizzazione** nella finestra delle proprietà dell'immagine di avvio.
@@ -76,7 +72,7 @@ Ogni versione di Configuration Manager supporta una versione specifica di Window
     Dove C:\WinPEWAIK è la cartella che contiene l'immagine di avvio e C:\WinPEMount è la cartella montata.  
 
    > [!NOTE]
-   >  Per altre informazioni su DISM, vedere l'argomento [DISM - Guida tecnica Gestione e manutenzione immagini distribuzione](https://technet.microsoft.com/library/hh824821.aspx) nella libreria della documentazione TechNet per Windows 8.1 e Windows 8.
+   >  Per altre informazioni, vedere [Informazioni di riferimento su DISM (Gestione e manutenzione immagini distribuzione)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
 
 5. Dopo avere montato l'immagine di avvio, usare DISM per aggiungere componenti facoltativi all'immagine di avvio. In Windows PE 5 i componenti facoltativi a 64 bit si trovano in <*Percorso di installazione*>\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs.  
 
@@ -112,7 +108,7 @@ Ogni versione di Configuration Manager supporta una versione specifica di Window
     **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Programmi (x86)\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-WDS-Tools_en-us.cab"**  
 
    > [!TIP]
-   >  Per altre informazioni sui componenti facoltativi che è possibile aggiungere all'immagine di avvio, vedere l'argomento [Guida componenti facoltativi Windows PE](https://technet.microsoft.com/library/hh824926.aspx) nella libreria della documentazione TechNet per Windows 8.1 e Windows 8.  
+   >  Per altre informazioni sui componenti facoltativi che è possibile aggiungere all'immagine di avvio, vedere [Informazioni di riferimento sui componenti facoltativi Windows PE](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
 
 6. Usare DISM per aggiungere specifici driver all'immagine di avvio, se necessario. Digitare quanto segue per aggiungere driver all'immagine di avvio:  
 
@@ -198,7 +194,7 @@ Ogni versione di Configuration Manager supporta una versione specifica di Window
     Dove C:\WinPEWAIK è la cartella che contiene l'immagine di avvio e C:\WinPEMount è la cartella montata.  
 
    > [!NOTE]
-   >  Per altre informazioni su DISM, vedere l'argomento [Documentazione tecnica su Gestione e manutenzione immagini](https://technet.microsoft.com/library/dd744256\(v=ws.10\).aspx) nella libreria della documentazione TechNet per Windows 7.  
+   > Per altre informazioni, vedere [Informazioni di riferimento su DISM (Gestione e manutenzione immagini distribuzione)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
 
 5. Dopo avere montato l'immagine di avvio, usare DISM per aggiungere componenti facoltativi all'immagine di avvio. In Windows PE 3.1, ad esempio, i componenti facoltativi si trovano in <*PercorsoInstallazione*>\Windows AIK\Tools\PETools\amd64\WinPE_FPs\\.  
 
@@ -228,7 +224,7 @@ Ogni versione di Configuration Manager supporta una versione specifica di Window
     **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Programmi\Windows AIK\Tools\PETools\amd64\WinPE_FPs\en-us\winpe-wds-tools_en-us.cab"**  
 
    > [!TIP]
-   >  Per altre informazioni sui diversi pacchetti che è possibile aggiungere all'immagine di avvio, vedere l'argomento [Aggiungere un pacchetto a un'immagine di Windows PE](https://technet.microsoft.com/library/dd799312\(v=WS.10\).aspx) nella libreria della documentazione TechNet per Windows 7.  
+   >  Per altre informazioni sui diversi pacchetti che è possibile aggiungere all'immagine di avvio, vedere [Aggiungere un pacchetto a un'immagine Windows PE](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd799312(v=ws.10)).
 
 6. Usare DISM per aggiungere specifici driver all'immagine di avvio, se necessario. Se necessario, digitare quanto segue per aggiungere driver all'immagine di avvio:  
 

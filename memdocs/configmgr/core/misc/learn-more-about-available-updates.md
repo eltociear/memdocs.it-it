@@ -10,17 +10,17 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e3f835f3fb583569cf0f2701188a787f1ce2715a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3be8ffa70d27c20f40e0b64d99ff4eebf7c7edbb
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81693339"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906231"
 ---
 # <a name="learn-more-about-available-updates-for-configuration-manager"></a>Altre informazioni sugli aggiornamenti disponibili per Configuration Manager
 
 *Si applica a: Configuration Manager (Current Branch)*
 
-Se si usa una versione finale di Configuration Manager, vedere [Novità](https://technet.microsoft.com/library/mt622084.aspx)  
+Se si usa una versione finale di Configuration Manager, vedere [Novità](/../plan-design/changes/what-has-changed-from-configuration-manager-2012.md).
 
- Se si usa una versione Technical Preview di Configuration Manager, vedere [Technical Preview per Configuration Manager](https://technet.microsoft.com/library/mt595861.aspx)
+Se si usa una versione Technical Preview di Configuration Manager, vedere [Technical Preview per Configuration Manager](../get-started/technical-preview.md).

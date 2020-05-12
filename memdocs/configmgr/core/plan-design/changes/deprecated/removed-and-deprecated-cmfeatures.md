@@ -2,7 +2,7 @@
 title: Funzionalità deprecate
 titleSuffix: Configuration Manager
 description: Informazioni sulle funzionalità che Configuration Manager non supporta più.
-ms.date: 02/25/2020
+ms.date: 05/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 899471b03169f015caef058790b9f58200976c48
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 40eda7184d7be5010bf51e3ac0d30d6d9442203c
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702609"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905071"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Funzionalità rimosse e deprecate per Configuration Manager
 
@@ -29,8 +29,9 @@ Queste informazioni sono soggette a modifica nelle versioni future. È possibile
 
 Le funzionalità seguenti sono deprecate. È ancora possibile usarle al momento, ma Microsoft prevede di terminare il supporto in futuro.
 
-|Funzionalità|Primo annuncio riguardo agli elementi deprecati|Supporto&nbsp;rimosso|  
-|-----------|---|--------------|  
+|Funzionalità|Primo annuncio riguardo agli elementi deprecati|Supporto&nbsp;rimosso|
+|-----------|---|--------------|
+| Opzione di Desktop Analytics **Visualizza dati recenti** per la registrazione e gli aggiornamenti di sicurezza dei dispositivi.<!-- 7080949 --> Per altre informazioni, vedere [Latenza dei dati](../../../../desktop-analytics/troubleshooting.md#data-latency).|Maggio 2020|Luglio 2020|
 |È stata modificata l'implementazione per la condivisione del contenuto da Azure. Usare un gateway di gestione cloud abilitato per il contenuto. Non sarà possibile creare un punto di distribuzione cloud tradizionale in futuro.|Febbraio 2019|DA DEFINIRE<sup>[Nota 1](#bkmk_note1)</sup>|
 |Distribuzione classica del servizio in Azure per il gateway di gestione cloud e il punto di distribuzione cloud. Per altre informazioni, vedere [Pianificare il gateway di gestione cloud](../../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager).|Novembre 2018|DA DEFINIRE<sup>[Nota 1](#bkmk_note1)</sup>|
 
@@ -49,7 +50,7 @@ Le funzionalità seguenti non sono più supportate. In alcuni casi, non sono pi�
 | App Portale aziendale di Configuration Manager | 21 maggio 2019 | Versione 1910 |
 | Catalogo applicazioni, che comprende i due ruoli del sistema del sito: il punto per siti Web del Catalogo applicazioni e il punto per servizi Web. Per altre informazioni, vedere [Rimuovere il catalogo applicazioni](../../../../apps/plan-design/plan-for-and-configure-application-management.md#bkmk_remove-appcat). | 21 maggio 2019 | Versione 1910 |
 |Autenticazione basata su certificato con le impostazioni di Windows Hello for Business in Configuration Manager<br>Per altre informazioni, vedere [Impostazioni di Windows Hello for Business](../../../../protect/deploy-use/windows-hello-for-business-settings.md).|Dicembre 2017|Versione 1910|
-|System Center Endpoint Protection per Mac e Linux<br>Per altre informazioni, vedere il [post del blog sulla fine del supporto](https://go.microsoft.com/fwlink/?linkid=870182).|Ottobre 2018|31 dicembre 2018|
+|System Center Endpoint Protection per Mac e Linux<br>Per altre informazioni, vedere il [post del blog sulla fine del supporto](https://techcommunity.microsoft.com/t5/configuration-manager-blog/end-of-support-for-scep-for-mac-and-scep-for-linux-on-december/ba-p/286257).|Ottobre 2018|31 dicembre 2018|
 |Accesso condizionale in locale<br>Per altre informazioni, vedere [Che ne è stato della gestione di dispositivi mobili ibrida?](../../../../mdm/understand/what-happened-to-hybrid.md).|30 gennaio 2019|1 settembre 2019|
 |Gestione di dispositivi mobili (MDM) ibrida<br>Per altre informazioni, vedere [Che ne è stato della gestione di dispositivi mobili ibrida?](../../../../mdm/understand/what-happened-to-hybrid.md).<br><br>A partire dalla versione 1902 del servizio Intune, prevista per la fine di febbraio 2019, i nuovi clienti non possono creare una nuova connessione ibrida.<!--Intune feature 2683117-->|14 agosto 2018|1 settembre 2019|
 |Estensioni SCAP (Security Content Automation Protocol). <!--3607889--><br>La versione certificata precedente è ancora disponibile nell'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=48741).|Settembre 2018|Versione 1810|
@@ -79,7 +80,7 @@ Con Configuration Manager, il supporto nativo per computer basati su AMT dalla c
 
 Configuration Manager ha rimosso il supporto per Protezione accesso alla rete. Questa funzionalità è stata deprecata in Windows Server 2012 R2 ed è stata rimossa da Windows 10.  
 
-Per alternative a Protezione accesso alla rete, vedere la sezione *Funzionalità deprecata* di [Panoramica dei criteri di rete e dei servizi di accesso](https://technet.microsoft.com/library/hh831683.aspx).
+Per alternative a Protezione accesso alla rete, vedere la sezione *Funzionalità deprecata* di [Panoramica dei criteri di rete e dei servizi di accesso](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831683(v=ws.11)).
 
 ## <a name="see-also"></a>Vedere anche
 

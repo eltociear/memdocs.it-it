@@ -2,7 +2,7 @@
 title: Supporto dei server proxy
 titleSuffix: Configuration Manager
 description: Informazioni sull'utilizzo dei server proxy nei server del sistema del sito di Configuration Manager.
-ms.date: 04/01/2020
+ms.date: 05/05/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9123a87a-0b6f-43c7-b5c2-fac5d09686b1
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5581214dd786bdefd29d0e4d2626de536ad26ace
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 89a2f76f394d3bdf8fd6785429ae0ae60302537a
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701479"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802090"
 ---
 # <a name="proxy-server-support-in-configuration-manager"></a>Supporto dei server proxy in Configuration Manager
 
@@ -50,6 +50,10 @@ Per questa configurazione, il server del sito primario:
 - Per impostazione predefinita, usa l'account di **sistema** del computer per effettuare la connessione. Se necessario, può anche usare l'account del server proxy del sistema del sito.  
 
 - Usa le API del Web browser di Windows.  
+
+### <a name="cloud-management-gateway-connection-point"></a>Punto di connessione del gateway di gestione cloud
+
+Il punto di connessione del gateway di gestione cloud (CMG) è un ruolo locale che comunica con il servizio CMG in Azure. Per altre informazioni, vedere [Pianificare il gateway di gestione cloud](../../clients/manage/cmg/plan-cloud-management-gateway.md).
 
 ### <a name="distribution-point"></a>Punto di distribuzione
 
@@ -111,3 +115,7 @@ A partire da Configuration Manager versione 2002, le funzionalità seguenti usan
     - **Utilizzare le credenziali per connettersi al server proxy**: diversi server proxy richiedono l'autenticazione dell'utente. Per impostazione predefinita, il server del sistema del sito usa il relativo account computer per la connessione al server proxy. Se necessario, abilitare questa opzione. Fare clic su **Imposta** e quindi scegliere **Account esistente** o specificare un valore in **Nuovo account**. Tali credenziali costituiscono l'**account del server proxy del sistema del sito**.  Per altre informazioni, vedere [Account usati in Configuration Manager](../hierarchy/accounts.md).  
 
 4. Scegliere **OK** per salvare la nuova configurazione del server proxy.  
+
+## <a name="next-steps"></a>Passaggi successivi
+
+Se l'organizzazione limita le comunicazioni della rete con Internet tramite un firewall o un dispositivo proxy, è necessario consentire l'accesso agli endpoint Internet. Per altre informazioni, vedere i [requisiti di accesso a Internet](internet-endpoints.md).

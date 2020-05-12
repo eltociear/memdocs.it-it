@@ -10,12 +10,12 @@ ms.assetid: 5db2926f-f03e-49c7-b44b-e89b1a5a6779
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 78fad6f17681fa9822a378844ea4838c50383c82
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ce77c43f49556b3a60e36f05127f82d4d135762a
+ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704819"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643269"
 ---
 # <a name="configure-boundary-groups-for-configuration-manager"></a>Configurare gruppi di limiti per Configuration Manager
 
@@ -211,6 +211,13 @@ Sono disponibili le impostazioni aggiuntive seguenti per i gruppi di limiti per 
 
 Per altre informazioni su come configurare queste impostazioni, vedere [Configurare gruppi di limiti](boundary-group-procedures.md#bkmk_config).
 
+Se un dispositivo si trova in più gruppi di limiti, per queste impostazioni si applicano i comportamenti seguenti:
+
+- **Consenti i download peer in questo gruppo di limiti**: se questa opzione è disabilitata in un gruppo di limiti, il client non userà l'ottimizzazione per il recapito.
+- **Durante i download peer, usa solo i peer entro la stessa subnet**: se è abilitata in uno dei gruppi di limiti, questa impostazione è attiva.
+- **Preferisci i punti di distribuzione rispetto ai peer entro la stessa subnet**: se è abilitata in uno dei gruppi di limiti, questa impostazione è attiva.
+- **Preferisci le origini basate sul cloud rispetto alle origini locali**: se è abilitata in uno dei gruppi di limiti, questa impostazione è attiva.
+
 #### <a name="allow-peer-downloads-in-this-boundary-group"></a><a name="bkmk_bgoptions1"></a> Consenti i download peer in questo gruppo di limiti
 
 Questa opzione è attivata per impostazione predefinita. Il punto di gestione fornisce ai client un elenco di posizioni del contenuto che include le origini peer. Questa impostazione influisce anche sull'applicazione di ID di gruppo per l'[ottimizzazione recapito](../../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization).  
@@ -220,6 +227,9 @@ Esistono due scenari comuni in cui potrebbe essere utile disabilitare questa opz
 - In presenza di un gruppo di limiti che include limiti da posizioni geograficamente dislocate, come una VPN. Due client possono essere inclusi nello stesso gruppo di limiti perché sono connessi tramite VPN, ma trovarsi in luoghi molto lontani non appropriati per la condivisione peer del contenuto.  
 
 - Se si usa un singolo gruppo di limiti di grandi dimensioni per l'assegnazione del sito che non fa riferimento ad alcun punto di distribuzione.  
+
+> [!IMPORTANT]
+> Se un dispositivo è incluso in più di un gruppo di limiti, assicurarsi di abilitare questa impostazione in tutti i gruppi di limiti per il dispositivo. In caso contrario, il client non userà l'ottimizzazione recapito. Ad esempio, non imposta la chiave del Registro di sistema DOGroupID.
 
 #### <a name="during-peer-downloads-only-use-peers-within-the-same-subnet"></a><a name="bkmk_bgoptions2"></a> Durante i download peer, usa solo i peer entro la stessa subnet
 
@@ -289,7 +299,7 @@ Per impostazione predefinita, il punto di gestione classifica le origini di peer
 
 Se è presente una succursale con un collegamento Internet più veloce, è possibile classificare in ordine di priorità i contenuti cloud.  
 
-Nella versione 1902 questa impostazione è **Preferisci le origini basate sul cloud rispetto alle origini locali** . Le origini basate su cloud includono quanto segue:<!-- SCCMDocs#1529 -->
+Nella versione 1902 questa impostazione è **Preferisci le origini basate sul cloud rispetto alle origini locali**. Le origini basate su cloud includono quanto segue:<!-- SCCMDocs#1529 -->
 
 - Punti di distribuzione cloud
 - Microsoft Update (aggiunto nella versione 1902)

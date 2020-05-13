@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 95c7104f949216a6a9f7704ac9bec6a7c2dfa7aa
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 94592505806ec005fcc5abf6aead04ec89422d6e
+ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078091"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82881078"
 ---
 # <a name="move-your-intune-data-warehouse-account-data"></a>Spostare i dati dell'account del data warehouse di Intune 
 
@@ -83,4 +83,4 @@ Il cliente X richiede lo spostamento di un account a partire dal 06/01/2018. In 
 ## <a name="next-steps"></a>Passaggi successivi
 
 - Informazioni sulle [novità di Intune ogni settimana](../fundamentals/whats-new.md), oltre a indicazioni su modifiche previste, avvisi importanti sul servizio e informazioni sulle versioni precedenti.
-- Leggere il [blog di Microsoft Intune](https://go.microsoft.com/fwlink/?LinkID=273882).
+- Leggere il [blog di Microsoft Intune](https://www.microsoft.com/microsoft-365/blog/microsoft-intune/).

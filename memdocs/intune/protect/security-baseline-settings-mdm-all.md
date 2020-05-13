@@ -5,7 +5,7 @@ description: Esaminare le impostazioni predefinite e le impostazioni disponibili
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/07/2020
+ms.date: 05/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -13,16 +13,17 @@ ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
 zone_pivot_groups: windows-mdm-versions
+ms.reviewer: laarrizz
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b40ed9dff0d83639015e70889bf7008e8e68173
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 67bb805df6406226c67084ed832f5cc590b1664a
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80696514"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943910"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Impostazioni della baseline di sicurezza MDM in Windows per Intune
 
@@ -31,10 +32,13 @@ Visualizzare le impostazioni della baseline di sicurezza MDM supportate da Micro
 - Per informazioni sull'uso delle baseline di sicurezza con Intune e su come aggiornare la versione delle baseline nei profili delle baseline di sicurezza, vedere [Usare le baseline di sicurezza](security-baselines.md).
 - La versione della baseline più recente è la **Baseline della sicurezza MDM per maggio 2019**
 
+Per informazioni su cosa è cambiato in questa versione della baseline rispetto alle versioni precedenti, usare l'azione [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) (Confronta baseline) disponibile quando si visualizza il riquadro *Versioni* per questa baseline.
+
 Assicurarsi di selezionare la versione della baseline che si vuole visualizzare.
 <!-- Cookies might be required to enable some browsers to display the zone options -->
 
 ::: zone pivot="mdm-may-2019"
+
 **Baseline della sicurezza MDM per maggio 2019**:  
 > [!NOTE]
 > Nel giugno del 2019 la *Baseline della sicurezza MDM per maggio 2019* è stata rilasciata come disponibile a livello generale (non in anteprima). Questa versione della baseline di sicurezza sostituisce la baseline precedente, ovvero la *Baseline della sicurezza MDM per ottobre 2018*.  I profili creati prima della disponibilità della baseline di maggio 2019 non verranno aggiornati per riflettere le impostazioni e i valori nella versione di maggio 2019.  Sebbene non sia possibile creare nuovi profili in base al modello di anteprima, è possibile modificare e continuare a usare i profili creati in precedenza basati sul modello di anteprima.
@@ -43,6 +47,7 @@ Per informazioni sulle modifiche apportate in questa versione della baseline ris
 
 ::: zone-end
 ::: zone pivot="mdm-preview"
+
 **Anteprima - Baseline della sicurezza MDM per ottobre 2018**:  
 > [!NOTE]
 > Si tratta della versione di anteprima della baseline di sicurezza MDM, rilasciata a ottobre 2018. Questa baseline di anteprima è stata sostituita nel giugno del 2019 dalla versione del modello *Baseline della sicurezza MDM per maggio 2019*, disponibile a livello generale (non in anteprima). I profili creati prima della disponibilità della *Baseline della sicurezza MDM per maggio 2019* non verranno aggiornati in modo da riflettere le impostazioni e i valori presenti nella baseline di sicurezza MDM per maggio 2019. Sebbene non sia possibile creare nuovi profili in base al modello di anteprima, è possibile modificare e continuare a usare i profili creati in precedenza basati sul modello di anteprima.
@@ -144,11 +149,17 @@ Per altre informazioni, vedere [CSP dei criteri - BitLocker](https://docs.micros
 
   Per i criteri di un'unità rimovibile BitLocker, configurare l'impostazione seguente:
 
-  - **Richiedere la crittografia per l'accesso in scrittura**:  
+::: zone-end
+::: zone pivot="mdm-may-2019"
+
+  - **Blocca l'accesso in scrittura alle unità dati rimovibili non protette tramite BitLocker**:  
     **Impostazione predefinita**: Sì
 
 ::: zone-end
 ::: zone pivot="mdm-preview"
+
+  - **Richiedere la crittografia per l'accesso in scrittura**:  
+    **Impostazione predefinita**: Sì
 
 - **Criterio Impostazioni dell'unità rimovibile**:  
   L'impostazione di questo criterio viene usata per controllare il metodo di crittografia e il livello di codifica. I valori di questo criterio determinano il livello di codifica usato da BitLocker per la crittografia. Per una maggiore sicurezza, le aziende potrebbero voler controllare il livello di crittografia (AES-256 è un algoritmo più avanzato rispetto a AES-128). Se si abilita questa impostazione, è possibile configurare individualmente un algoritmo di crittografia e un livello di codifica per unità dati fisse, unità del sistema operativo e unità dati rimovibili. Per le unità fisse e del sistema operativo è consigliabile usare l'algoritmo XTS-AES. Per le unità rimovibili è consigliabile usare AES-CBC a 128 bit o AES-CBC a 256 bit se l'unità viene usata in altri dispositivi che non eseguono Windows 10 versione 1511 o successiva. La modifica del metodo di crittografia non produce alcun effetto se l'unità è già crittografata o se la crittografia è in corso. In questi casi, l'impostazione di questo criterio viene ignorata.  
@@ -282,7 +293,7 @@ Per altre informazioni, vedere [Policy CSP - DataProtection](https://docs.micros
 
 Per altre informazioni, vedere [Policy CSP - DeviceGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceguard) (Provider di servizi di configurazione dei criteri - DeviceGuard) nella documentazione di Windows.
 
-- **Credential Guard**:  
+- **Attiva Credential Guard**:  
   Questa impostazione consente agli utenti di attivare Credential Guard con la sicurezza basata sulla virtualizzazione per proteggere le credenziali al riavvio successivo.  
   [Altre informazioni](https://go.microsoft.com/fwlink/?linkid=2067044)
 
@@ -382,7 +393,7 @@ Per altre informazioni, vedere [Policy CSP - DeviceLock](https://docs.microsoft.
 
     **Impostazione predefinita**: 60
 
-  - **Tipo di password richiesto**:  
+  - **Password richiesta**:  
     Determina il tipo di PIN o password obbligatorio.  
     [Altre informazioni](https://go.microsoft.com/fwlink/?linkid=2067027)
 
@@ -464,24 +475,24 @@ Per altre informazioni, vedere [Policy CSP - EventLogService](https://docs.micro
 Per altre informazioni, vedere [Policy CSP - Experience](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience) (Provider di servizi di configurazione dei criteri - Experience) nella documentazione di Windows.
 
 - **Bloccare Contenuti in evidenza di Windows**:  
-  Consente agli amministratori IT di disattivare tutte le funzionalità di Contenuti in evidenza di Windows, Contenuti in evidenza di Windows nella schermata di blocco, Suggerimenti di Windows, le funzionalità per gli utenti consumer Microsoft e altre funzionalità correlate.  
+  consente agli amministratori IT di disattivare (bloccare) tutte le funzionalità di Windows Spotlight, ovvero Windows Spotlight nella schermata di blocco, Suggerimenti di Windows, le funzionalità per gli utenti consumer Microsoft e altre funzionalità correlate.  
   [Altre informazioni](https://go.microsoft.com/fwlink/?linkid=2067037)
 
   **Impostazione predefinita**: Sì
 
-  Quando *Blocca Windows Spotlight* è impostata su *Sì*, sono disponibili le impostazioni seguenti.
+  Se l'opzione *Blocca Windows Spotlight* è impostata su *Non configurato*, Windows Spotlight non è bloccato nei dispositivi ed è quindi possibile configurare le impostazioni seguenti per bloccare gli elementi selezionati per Windows Spotlight:
 
   - **Bloccare i suggerimenti di terze parti nei Contenuti in evidenza di Windows**:  
     Specifica se consentire o meno i suggerimenti su app e contenuto di autori o distributori di software di terze parti nelle funzionalità di Contenuti in evidenza di Windows come Contenuti in evidenza di Windows nella schermata di blocco, le app suggerite nel menu Start e Suggerimenti di Windows. Gli utenti possono comunque visualizzare i suggerimenti per le funzionalità, le app e i servizi Microsoft.  
     [Altre informazioni](https://go.microsoft.com/fwlink/?linkid=2067045)
 
-    **Impostazione predefinita**: Sì
+    **Impostazione predefinita**: Non configurato
 
   - **Bloccare le funzionalità specifiche per i consumer**:  
     Consente agli amministratori IT di attivare le esperienze solitamente riservate ai consumer, ad esempio i suggerimenti del menu Start, le notifiche sull'appartenenza, l'installazione di app post-OOBE e i riquadri di reindirizzamento.  
     [Altre informazioni](https://go.microsoft.com/fwlink/?linkid=2067054)
 
-    **Impostazione predefinita**: Sì
+    **Impostazione predefinita**: Non configurato
 
 ## <a name="exploit-guard"></a>Exploit Guard
 
@@ -1502,7 +1513,7 @@ Per altre informazioni, vedere [Policy CSP - LocalPoliciesSecurityOptions](https
 
   **Impostazione predefinita**: Sì
   
-- **Consentire le applicazioni con accesso all'interfaccia utente per percorsi sicuri**:  
+- **Consenti solo le applicazioni con accesso all'interfaccia utente per posizioni sicure**:  
   L'impostazione di questo criterio specifica se i programmi con accesso all'interfaccia utente (UIAccess o UIA) possono disabilitare automaticamente il desktop protetto per le richieste di elevazione dei privilegi provenienti da un utente standard.
 
   - *Sì* - I programmi con Automazione interfaccia utente, incluso Assistenza remota di Windows, disabilitano automaticamente il desktop protetto per le richieste di elevazione dei privilegi. Se non si disabilita il criterio "Controllo dell'account utente: alla richiesta di elevazione dei privilegi, passa al desktop protetto", le richieste vengono visualizzate sul desktop interattivo dell'utente invece che sul desktop protetto.
@@ -1540,151 +1551,168 @@ Per altre informazioni, vedere [Policy CSP - LocalPoliciesSecurityOptions](https
 
 Per altre informazioni, vedere [Policy CSP - Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) (Provider di servizi di configurazione dei criteri - Defender) nella documentazione di Windows.
 
-- **Analizza i messaggi di posta in arrivo**:  
-  Consente o impedisce l'analisi della posta elettronica.  
-  [Altre informazioni](https://go.microsoft.com/fwlink/?linkid=2067116)
-
-  **Impostazione predefinita**: Sì
-
-- **Avviare i processi di tipo figlio per le app di Office**:  
-  Alle app di Office non verrà consentito di creare processi figlio. Le app includono Word, Excel, PowerPoint, OneNote e Access. Si tratta di un comportamento tipico del malware, in particolare degli attacchi basati su macro che tentano di usare le app di Office per avviare o scaricare file eseguibili dannosi.  
-  [Altre informazioni](https://go.microsoft.com/fwlink/?linkid=2067121)
-
-  **Impostazione predefinita**: Blocca
-
-- **Tipo di consenso per l'invio di campioni di Defender**:  
-  Verifica il livello di consenso utente in Microsoft Defender per l'invio di dati. Se il consenso necessario è già stato concesso, Microsoft Defender esegue l'invio. In caso contrario, e se l'utente ha specificato di non chiedere mai, viene avviata l'interfaccia utente per la richiesta del consenso utente (se Defender/AllowCloudProtection è consentito) prima dell'invio di dati.  
-  [Altre informazioni](https://go.microsoft.com/fwlink/?linkid=2067131)
-
-  **Impostazione predefinita**: Invia automaticamente i campioni sicuri
-
-- **Intervallo di aggiornamento della firma (in ore)** :  
-  Intervallo di aggiornamento della firma di Defender in ore.
-
-  **Impostazione predefinita**: 4
-
-- **Tipo di esecuzione del payload scaricato tramite script**:  
-  Tipo di esecuzione del payload scaricato tramite script di Defender.
-
-  **Impostazione predefinita**: Blocca
-  
-- **Impedire il tipo di intercettazione delle credenziali**:  
-  Microsoft Defender Credential Guard usa la sicurezza basata su virtualizzazione per isolare i segreti in modo che solo il software di sistema con privilegi possa accedervi. L'accesso non autorizzato a questi segreti può causare attacchi con furto di credenziali, ad esempio Pass-the-Hash o Pass-The-Ticket. Microsoft Defender Credential Guard impedisce questi attacchi proteggendo gli hash delle password NTLM, i Ticket Granting Ticket Kerberos e le credenziali archiviate dalle applicazioni come credenziali di dominio.  
-  [Altre informazioni](https://go.microsoft.com/fwlink/?linkid=2067065)
-  
-  **Impostazione predefinita**: Abilitare
-
-- **Tipo di esecuzione del contenuto del messaggio di posta elettronica**:  
-  Questa regola consente di bloccare l'esecuzione e l'avvio dei tipi di file seguenti da un messaggio di posta elettronica visualizzato in Microsoft Outlook o nella posta sul Web, ad esempio Gmail.com o Outlook.com: file eseguibili, ad esempio file con estensione exe, dll o scr, file di script, ad esempio file PowerShell con estensione ps, file VisualBasic con estensione vbs o file JavaScript con estensione js, e file archivio di script.  
-  [Altre informazioni](https://go.microsoft.com/fwlink/?linkid=2067063)
-
-  **Impostazione predefinita**: Blocca
-
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 
-- **Avvio di Adobe Reader in un processo figlio**:  
+- **Impedisci ad Adobe Reader di creare processi figlio**:  
 Questa regola blocca gli attacchi impedendo ad Adobe Reader di creare processi aggiuntivi. Tramite tecniche di ingegneria sociale oppure exploit, il malware può scaricare e avviare payload aggiuntivi e uscire da Adobe Reader. Bloccando la generazione di processi figlio in Adobe Reader si impedisce la diffusione del malware che tenta di usare Adobe Reader come vettore.
 [Altre informazioni](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
   **Impostazione predefinita**: Abilitare
 
-::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
-
-- **Protezione di rete**:  
-  Questo criterio consente di attivare la protezione di rete (Blocca/Controlla) o di disattivarla in Microsoft Defender Exploit Guard. La protezione di rete è una funzionalità di Microsoft Defender Exploit Guard che protegge i dipendenti che usano le app dall'accesso a tentativi di phishing, siti che ospitano exploit e contenuti dannosi in Internet. Impedisce anche ai browser di terze parti di connettersi a siti pericolosi. Il tipo di valore è un numero intero. Se si abilita questa impostazione, la protezione di rete verrà attivata e i dipendenti non potranno disattivarla. Il comportamento potrà essere controllato dalle opzioni seguenti: Blocca e Controlla. Se si abilita questo criterio impostando l'opzione "Blocca", gli utenti e le app non possono connettersi a domini dannosi. È possibile visualizzare questa attività in Microsoft Defender Security Center. Se si abilita questo criterio impostando l'opzione "Controlla", gli utenti e le app non potranno connettersi a domini dannosi. Tuttavia, sarà possibile visualizzare comunque questa attività in Microsoft Defender Security Center. Se si disabilita questo criterio, gli utenti e le app potranno connettersi a domini dannosi. Non sarà possibile visualizzare attività di rete in Microsoft Defender Security Center. Se non si configura questo criterio, il blocco di rete è disabilitato per impostazione predefinita.  
-  [Altre informazioni](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-network-protection)
+- **Avvio di app di comunicazione di Office in un processo figlio**:  
+  [Proteggere i dispositivi dagli exploit](https://go.microsoft.com/fwlink/?linkid=874499)
 
   **Impostazione predefinita**: Abilitare
+
+- **Immettere la frequenza (0-24 ore) per il controllo della disponibilità di aggiornamenti dell'intelligence sulla sicurezza**  
+  CSP: [Defender/SignatureUpdateInterval](https://go.microsoft.com/fwlink/?linkid=2113936)
+  
+  Specificare la frequenza con cui verificare la presenza di nuove firme. Il valore 1 indica un'ora, 2 due ore e così via.
+
+  **Impostazione predefinita**: 4
+
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019"
 
 - **Giorno pianificato per l'analisi di Defender**:  
   Giorno pianificato per l'analisi di Defender.
 
   **Impostazione predefinita**: Ogni giorno
 
-- **Protezione fornita dal cloud**:  
-  Per proteggere al meglio il PC, Microsoft Defender invierà a Microsoft informazioni su qualsiasi problema che si verificherà. Le informazioni saranno analizzate, saranno raccolti altri dettagli sui problemi riscontrati dall'utente corrente e dagli altri clienti. Verranno quindi offerte soluzioni migliorate.  
-  [Altre informazioni](https://go.microsoft.com/fwlink/?linkid=2067039)
+- **Attiva la protezione fornita dal cloud**:  
+  CSP: [Defender/AllowCloudProtection](https://go.microsoft.com/fwlink/?linkid=2113937)
+  
+  Con l'impostazione Sì Defender invierà a Microsoft informazioni su qualsiasi problema rilevato. Con l'impostazione Non configurata il client tornerà all'impostazione predefinita che abilita la funzionalità, ma consente all'utente di disabilitarla.
 
   **Impostazione predefinita**:  Sì  
 
-- **Azione della Protezione da applicazioni potenzialmente di Defender**:  
-  La funzionalità di protezione da applicazioni potenzialmente indesiderate dell'antivirus Microsoft Defender consente di identificare e bloccare il download e l'installazione delle applicazioni potenzialmente indesiderate negli endpoint di rete. Queste applicazioni non sono considerate virus, malware o altri tipi di minaccia, ma potrebbero agire su endpoint compromettendo le prestazioni e l'uso. Possono essere considerate applicazioni potenzialmente indesiderate anche le applicazioni di dubbia reputazione. Sono applicazioni potenzialmente indesiderate: la creazione di bundle di diversi tipi di software, l'inserimento di annunci nei Web browser, gli strumenti di ottimizzazione per driver e Registro di sistema che rilevano errori e richiedono pagamenti per correggere gli errori, ma rimangono nell'endpoint e non apportano alcuna modifica né alcuna ottimizzazione (noti anche come programmi antivirus non autorizzati). Queste applicazioni possono aumentare il rischio di infezione della rete da parte di malware e incrementare la difficoltà di rilevamento delle infezioni malware e possono causare uno spreco di tempo delle risorse IT per rimuovere il malware dalle applicazioni.  
-  [Altre informazioni](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
+- **Attiva protezione in tempo reale**  
+  CSP: [Defender/AllowRealtimeMonitoring](https://go.microsoft.com/fwlink/?linkid=2114050)
 
-  **Impostazione predefinita**: Blocca  
+  Con l'impostazione Sì verrà applicato il monitoraggio in tempo reale e l'utente non potrà disabilitarlo. Con l'impostazione Non configurata verrà ripristinata l'impostazione predefinita del client, ovvero attivata, ma l'utente può modificarla. Per disabilitare il monitoraggio in tempo reale, usare un URI personalizzato.
 
-- **Tipo di codice macro offuscato in script**:  
-  Il malware e altre minacce possono tentare di offuscare o nascondere il codice dannoso in alcuni file di script. Questa regola impedisce l'esecuzione degli script offuscati.  
-  [Altre informazioni](https://go.microsoft.com/fwlink/?linkid=2067026)
-
-  **Impostazione predefinita**: Blocca
-
-- **Analizza le unità rimovibili durante un'analisi completa**:  
-  Consente a Microsoft Defender di cercare software dannoso e indesiderato in unità rimovibili, ad esempio in unità flash USB, durante un'analisi completa. L'antivirus Microsoft Defender analizza tutti i file nei dispositivi USB prima dell'esecuzione.  
-  [Altre informazioni](https://go.microsoft.com/fwlink/?linkid=2067036)
-
-  **Impostazione predefinita**: Sì  
+  **Impostazione predefinita**:  Sì  
 
 - **Analizza file di archivio**:  
-  Analizza file di archivio di Defender.
+  CSP: [Defender/AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047)
+  
+  Con l'impostazione Sì verrà imposta l'analisi dei file di archivio, ad esempio file ZIP o CAB. Con l'impostazione Non configurata verrà ripristinata l'impostazione predefinita del client, ovvero l'analisi dei file archiviati, ma l'utente può disabilitarla.
 
   **Impostazione predefinita**: Sì
 
-- **Monitoraggio del comportamento**:  
-  Consente o impedisce la funzionalità di monitoraggio del comportamento di Microsoft Defender. Integrati in Windows 10, questi sensori raccolgono ed elaborano i segnali comportamentali dal sistema operativo e inviano i dati dei sensori all'istanza cloud isolata privata di Microsoft Defender ATP.  
-  [Altre informazioni](https://go.microsoft.com/fwlink/?linkid=2067111)
+- **Attiva monitoraggio comportamento**:  
+  CSP: [Defender/AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048)
+
+  Con l'impostazione Sì verrà applicato il monitoraggio del comportamento e l'utente non potrà disabilitarlo. Con l'impostazione Non configurata verrà ripristinata l'impostazione predefinita del client, ovvero attivata, ma l'utente può modificarla. Per disabilitare il monitoraggio in tempo reale, usare un URI personalizzato.
 
   **Impostazione predefinita**: Sì
 
-- **Analizza file aperti da cartelle di rete**:  
-  Se i file sono di sola lettura, non sarà possibile rimuovere eventuale malware rilevato.
+- **Analizza i messaggi di posta in arrivo**:  
+  CSP: [Defender/AllowEmailScanning](https://go.microsoft.com/fwlink/?linkid=2114052)
+
+  Con l'impostazione Sì verranno analizzati le cassette postali e i file di posta elettronica, ad esempio PST, DBX, MNX, MIME e BINHEX. Con l'impostazione Non configurata verrà ripristinata l'impostazione predefinita del client, ovvero i file di posta elettronica non vengono analizzati.
 
   **Impostazione predefinita**: Sì
 
-- **Tipo di processo non attendibile in USB**:  
-  Questa regola consente agli amministratori di impedire l'esecuzione di file eseguibili non firmati o non attendibili da unità removibili USD, incluse le schede SD.  
-  [Altre informazioni](https://go.microsoft.com/fwlink/?linkid=2067100)
+- **Analizza le unità rimovibili durante un'analisi completa**:  
+  CSP: [Defender/AllowFullScanRemovableDriveScanning](https://go.microsoft.com/fwlink/?linkid=2113946)
 
-  **Impostazione predefinita**: Blocca
+  Con l'impostazione Sì, durante un'analisi completa verranno analizzate le unità rimovibili, ad esempio le unità flash USB. Con l'impostazione Non configurata verrà ripristinata l'impostazione predefinita del client, che prevede l'analisi delle unità rimovibili, ma l'utente può disabilitarla.
+  **Impostazione predefinita**: Sì  
 
-- **Tipo di inserimento in altri processi per app di Office**:  
-  Le app di Office, tra cui Word, Excel, PowerPoint e OneNote, non potranno inserire codice in altri processi. Si tratta di un tipico comportamento del malware per eseguire codice malware nel tentativo di nascondere l'attività ai motori di analisi antivirus.  
-  [Altre informazioni](https://go.microsoft.com/fwlink/?linkid=2067019)
+- **Impedisci alle applicazioni di Office di inserire codice in altri processi**:  
+  [Proteggere i dispositivi dagli exploit](https://go.microsoft.com/fwlink/?linkid=872974)
+
+  Con l'impostazione Sì le applicazioni di Office non potranno inserire codice in altri processi. Con l'impostazione Solo controllo verranno generati eventi di Windows anziché imporre il blocco. Con l'impostazione Non configurata verrà ripristinata l'impostazione predefinita di Windows, ovvero disattivato. Questa regola di ASR viene controllata tramite il GUID seguente: 75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84
 
   **Impostazione predefinita**:  Blocca
 
-- **Consentire tipo di importazioni Win32 da codice macro in Office**:  
-  Il malware può usare il codice della macro in file di Office per importare e caricare le DLL Win32 che vengono usate per eseguire chiamate API e favorire altre infezioni in tutto il sistema. Questa regola tenta di bloccare i file di Office che contengono codice macro in grado di importare DLL Win32. Le app incluse sono Word, Excel, PowerPoint e OneNote.  
-  [Altre informazioni](https://go.microsoft.com/fwlink/?linkid=2067130)
+- **Impedisci alle applicazioni di Office di creare contenuto eseguibile**  
+  [Proteggere i dispositivi dagli exploit](https://go.microsoft.com/fwlink/?linkid=872975)
+
+  Con l'impostazione Sì alle applicazioni di Office non sarà consentito creare contenuto eseguibile. Con l'impostazione Solo controllo verranno generati eventi di Windows anziché imporre il blocco. Con l'impostazione Non configurata verrà ripristinata l'impostazione predefinita di Windows, ovvero disattivato. Questa regola di ASR viene controllata tramite il GUID seguente: 3B576869-A4EC-4529-8536-B80A7769E899
+
+  **Impostazione predefinita**:  Blocca
+
+- **Impedisci alle applicazioni di Office di creare processi figlio**  
+  [Proteggere i dispositivi dagli exploit](https://go.microsoft.com/fwlink/?linkid=872976)
+
+  Con l'impostazione Modalità di controllo verranno generati eventi di Windows anziché imporre il blocco. Con l'impostazione Non configurata verrà ripristinata l'impostazione predefinita di Windows, ovvero disattivato. Questa regola di ASR viene controllata tramite il GUID seguente: D4F940AB-401B-4EFC-AADC-AD5F3C50688A
+
+  **Impostazione predefinita**:  Blocca
+
+- **Blocca le chiamate API Win32 dalle macro di Office**:  
+  [Proteggere i dispositivi dagli exploit](https://go.microsoft.com/fwlink/?linkid=872977)
+
+  Con l'impostazione Sì verrà impedito l'uso di chiamate API Win32 nelle macro di Office. Con l'impostazione Solo controllo verranno generati eventi di Windows anziché imporre il blocco. Con l'impostazione Non configurata verrà ripristinata l'impostazione predefinita di Windows, ovvero disattivato. Questa regola di ASR viene controllata tramite il GUID seguente: 92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B
+  
+  **Impostazione predefinita**: Blocca
+
+- **Blocca l'esecuzione di script potenzialmente offuscati (js/vbs/ps)** :  
+  [Proteggere i dispositivi dagli exploit](https://go.microsoft.com/fwlink/?linkid=872978)
+
+  Con l'impostazione Sì Defender impedirà l'esecuzione di script offuscati. Con l'impostazione Solo controllo verranno generati eventi di Windows anziché imporre il blocco. Con l'impostazione Non configurata verrà ripristinata l'impostazione predefinita di Windows, ovvero disattivato. Questa regola di ASR viene controllata tramite il GUID seguente: 5BEB7EFE-FD9A-4556-801D-275E5FFC04CC
+  
+  **Impostazione predefinita**: Blocca
+
+- **Tipo di esecuzione del contenuto del messaggio di posta elettronica**:    
+  [Blocca il download di contenuti eseguibili dai client di posta elettronica e posta sul Web](https://go.microsoft.com/fwlink/?linkid=872980)
+
+  Con l'impostazione Sì verrà bloccato il contenuto eseguibile scaricato dai client di posta elettronica e posta sul Web. Con l'impostazione Solo controllo verranno generati eventi di Windows anziché imporre il blocco. Con l'impostazione Non configurata verrà ripristinata l'impostazione predefinita di Windows, ovvero disattivato.
 
   **Impostazione predefinita**: Blocca
 
-- **Livello di blocco cloud di Defender**:  
-  Livello di blocco cloud di Defender.
+- **Impedire il tipo di intercettazione delle credenziali**:  
+  [Proteggere i dispositivi dagli exploit](https://go.microsoft.com/fwlink/?linkid=874499)
+  
+  Con l'impostazione Sì verranno bloccati i tentativi di furto delle credenziali tramite lsass.exe. Con l'impostazione Solo controllo verranno generati eventi di Windows anziché imporre il blocco. Con l'impostazione Non configurata verrà ripristinata l'impostazione predefinita di Windows, ovvero disattivato. Questa regola di ASR viene controllata tramite il GUID seguente: 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2
 
-  **Impostazione predefinita**: Non configurato
+  **Impostazione predefinita**: Abilitare
 
-- **Monitoraggio in tempo reale**:  
-  Defender richiede il monitoraggio in tempo reale.
+- **Azione della Protezione da applicazioni potenzialmente di Defender**:  
+  CSP: [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)+
 
-  **Impostazione predefinita**: Sì
+  La funzionalità di protezione da applicazioni potenzialmente indesiderate dell'antivirus Microsoft Defender consente di identificare e bloccare il download e l'installazione delle applicazioni potenzialmente indesiderate negli endpoint di rete. Queste applicazioni non sono considerate virus, malware o altri tipi di minaccia, ma potrebbero agire su endpoint compromettendo le prestazioni e l'uso. Possono essere considerate applicazioni potenzialmente indesiderate anche le applicazioni di dubbia reputazione. Sono applicazioni potenzialmente indesiderate: la creazione di bundle di diversi tipi di software, l'inserimento di annunci nei Web browser, gli strumenti di ottimizzazione per driver e Registro di sistema che rilevano errori e richiedono pagamenti per correggere gli errori, ma rimangono nell'endpoint e non apportano alcuna modifica né alcuna ottimizzazione (noti anche come programmi antivirus non autorizzati). Queste applicazioni possono aumentare il rischio di infezione della rete da parte di malware e incrementare la difficoltà di rilevamento delle infezioni malware e possono causare uno spreco di tempo delle risorse IT per rimuovere il malware dalle applicazioni.
+
+  **Impostazione predefinita**: Blocca
+
+- **Blocca i processi non attendibili e non firmati eseguiti da USB**:  
+  [Proteggere i dispositivi dagli exploit](https://go.microsoft.com/fwlink/?linkid=874502)
+  
+  Con l'impostazione Sì verranno bloccati i processi non attendibili o non firmati eseguiti da un'unità USB. Con l'impostazione Solo controllo verranno generati eventi di Windows anziché imporre il blocco. Con l'impostazione Non configurata verrà ripristinata l'impostazione predefinita di Windows, ovvero disattivato. Questa regola di ASR viene controllata tramite il GUID seguente: b2b3f03d-6a65-4F7B-A9C7-1c7ef74a9ba4
+
+  **Impostazione predefinita**: Blocca
+
+- **Protezione di rete**:  
+  [Defender/EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=872618)
+
+  Con l'impostazione Sì la protezione della rete verrà abilitata per tutti gli utenti del sistema. La protezione della rete protegge i dipendenti dall'accesso a tentativi di phishing e a contenuto dannoso su Internet. Sono inclusi i browser di terze parti. Con l'impostazione Solo controllo agli utenti non verrà impedito l'accesso a domini pericolosi, ma verranno generati eventi di Windows. Con l'impostazione Non configurata verrà ripristinata l'impostazione predefinita di Windows, ovvero disabilitato.
+
+  **Impostazione predefinita**: Abilitare
+
+- **Tipo di consenso per l'invio di campioni di Defender**:  
+  [Defender/SubmitSamplesConsent](https://go.microsoft.com/fwlink/?linkid=2067131)
+
+  Verifica il livello di consenso utente in Microsoft Defender per l'invio di dati. Se il consenso necessario è già stato concesso, Microsoft Defender esegue l'invio. In caso contrario, e se l'utente ha specificato di non chiedere mai, viene avviata l'interfaccia utente per la richiesta del consenso utente (se Defender/AllowCloudProtection è consentito) prima dell'invio di dati.
+
+  **Impostazione predefinita**: Invia automaticamente i campioni sicuri
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 
-- **Avvio di app di comunicazione di Office in un processo figlio**:  
-  **Impostazione predefinita**:  Abilitare
+- **Analizza file di rete**  
+  [Defender/AllowScanningNetworkFiles](https://go.microsoft.com/fwlink/?linkid=2114049)
+
+  - **Impostazione predefinita**: Sì
+
+- **Impedisci a JavaScript o VBScript di avviare contenuto eseguibile scaricato**  
+  [Proteggere i dispositivi dagli exploit](https://go.microsoft.com/fwlink/?linkid=872979)
+
+  Con l'impostazione Sì Defender impedirà l'esecuzione dei file JavaScript o VBScript scaricati da Internet. Con l'impostazione Solo controllo verranno generati eventi di Windows anziché imporre il blocco. Con l'impostazione Non configurata verrà ripristinata l'impostazione predefinita di Windows, ovvero disattivato. Questa regola di ASR viene controllata tramite il GUID seguente: D3E037E1-3EB8-44C8-A917-57927947596D
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
-
-- **Tipo di contenuto per la creazione o l'avvio di eseguibile nelle app di Office**:  
-  Questa regola è rivolta ai tipici comportamenti usati da componenti aggiuntivi e script sospetti e dannosi (estensioni) che creano o avviano file eseguibili. Si tratta di una tipica tecnica malware. Le estensioni non possono essere usate dalle app di Office. Queste estensioni usano generalmente Windows Scripting Host (file con estensione WSH) per eseguire script che automatizzano determinate attività oppure aggiungono funzionalità create dall'utente.  
-  [Altre informazioni](https://go.microsoft.com/fwlink/?linkid=2067108)
-
-  **Impostazione predefinita**: Blocca
+::: zone pivot="mdm-may-2019,mdm-preview"
 
 ## <a name="ms-security-guide"></a>Guida alla sicurezza MS
 
@@ -1734,7 +1762,7 @@ Per altre informazioni, vedere [Policy CSP - MSSLegacy](https://docs.microsoft.c
 
   **Impostazione predefinita**: Protezione massima
 
-- **Eseguire l'override di OSPF generati con reindirizzamenti ICM di rete**:  
+- **Rete - Route generate da OSPF per l'override di reindirizzamenti ICMP**:  
   [Altre informazioni](https://go.microsoft.com/fwlink/?linkid=2067326)
 
   **Impostazione predefinita**: Disabilitato
@@ -1788,19 +1816,21 @@ Per altre informazioni, vedere [CSP criteri - RemoteAssistance](https://docs.mic
 
   **Impostazione predefinita**: Disabilita Assistenza remota
 
-  Quando si imposta *Abilita Assistenza remota*, configurare le impostazioni aggiuntive seguenti:
+<!-- These settings are not available: 
+  When set to *Enable Remote Assistance*, configure the following additional settings:
 
-  - **Autorizzazione richiesta da Assistenza remota**:  
-    **Impostazione predefinita**: Visualizza
+  - **Remote Assistance solicited permission**:  
+    **Default**: View
 
-  - **Durata massima ticket (valore)** :  
-    **Impostazione predefinita**: *Non configurato*
+  - **Maximum ticket time value**:  
+    **Default**: *Not configured*
 
-  - **Maximum ticket time period** (Durata massima ticket):  
-    **Impostazione predefinita**: Minuti
+  - **Maximum ticket time period**:  
+    **Default**: Minutes
 
-  - **Metodo di invito tramite posta elettronica**:  
-    **Impostazione predefinita**: Simple MAPI
+  - **E-Mail invitation method**:  
+    **Default**: Simple MAPI
+-->
 
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
@@ -1918,6 +1948,9 @@ Per altre informazioni, vedere [Policy CSP - Search](https://docs.microsoft.com/
 
 Per altre informazioni, vedere [Policy CSP - SmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen) (Provider di servizi di configurazione dei criteri - SmartScreen) nella documentazione di Windows.
 
+::: zone-end
+::: zone pivot="mdm-preview"
+
 - **Bloccare l'esecuzione di file non verificati**:  
   Impedisce all'utente di eseguire file non verificati.
 
@@ -1934,6 +1967,26 @@ Per altre informazioni, vedere [Policy CSP - SmartScreen](https://docs.microsoft
   [Altre informazioni](https://go.microsoft.com/fwlink/?linkid=2067168)
 
   **Impostazione predefinita**: Sì
+
+::: zone-end
+::: zone pivot="mdm-may-201"
+
+- **Attiva Windows SmartScreen**  
+  CSP: [SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)
+
+  Con l'impostazione Sì verrà imposto l'uso di SmartScreen per tutti gli utenti. Con l'impostazione Non configurata verrà ripristinata l'impostazione predefinita di Windows, che prevede l'abilitazione di SmartScreen, tuttavia gli utenti possono modificare questa impostazione. Per disabilitare SmartScreen, usare un URI personalizzato.
+
+  **Impostazione predefinita**: Sì
+
+- **Impedisci agli utenti di ignorare gli avvisi di SmartScreen**  
+  CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
+
+  Con l'impostazione Sì SmartScreen non mostrerà all'utente un'opzione per ignorare l'avviso ed eseguire l'app. L'avviso verrà visualizzato, ma l'utente potrà ignorarlo. Con l'impostazione Non configurata verrà ripristinata l'impostazione predefinita di Windows che consente all'utente di ignorare l'avviso. Questa impostazione richiede l'abilitazione dell'impostazione 'SmartScreen per app e file'.
+
+  **Impostazione predefinita**: Sì
+
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019"
 
 ## <a name="system"></a>Sistema
 
@@ -1992,52 +2045,40 @@ Per altre informazioni, vedere [Policy CSP - WindowsConnectionManager](https://d
 
 ## <a name="windows-hello-for-business"></a>Windows Hello for Business
 
-- **Consenti l'uso di anti-spoofing avanzato, se disponibile**
+- **Blocca Windows Hello for Business**  
+  Windows Hello for Business è un metodo alternativo per l'accesso a Windows che prevede la sostituzione di password, smart card e smart card virtuali. Se si disabilita o non si configura questa impostazione di criteri, il dispositivo esegue il provisioning di Windows Hello for Business. Se si abilita questa impostazione di criteri, il dispositivo non effettua il provisioning di Windows Hello for Business per alcun utente.
 
-  Con l'impostazione Sì i dispositivi useranno l'anti-spoofing avanzato, se disponibile. Con l'impostazione No l'anti-spoofing verrà bloccato. Con l'impostazione Non configurato verranno rispettate le configurazioni eseguite nel client.  
-  [Altre informazioni](https://go.microsoft.com/fwlink/?linkid=2067192)
+  **Impostazione predefinita**: Abilitato
+  
+  Con l'impostazione *Disabilitato* è possibile configurare le impostazioni seguenti:
 
-  **Impostazione predefinita**: Sì
+  - **Lunghezza minima del PIN**  
+    La lunghezza minima del PIN deve essere compresa tra 4 e 127.
 
-- **Configurare Windows Hello for Business**
+    **Impostazione predefinita**: *Non configurato*
 
-  Windows Hello for Business è un metodo alternativo per l'accesso a Windows che prevede la sostituzione di password, smart card e smart card virtuali.
+  - **Consenti l'uso di anti-spoofing avanzato, se disponibile**  
+    [Protezione anti-spoofing](https://go.microsoft.com/fwlink/?linkid=2067192)
 
-  > [!IMPORTANT]
-  > Le opzioni per questa impostazione sono invertite rispetto al significato implicito. Essendo invertito, il valore *Sì* non abilita Windows Hello e viene invece considerato come *Non configurato*. Con l'impostazione *Non configurato*, Windows Hello viene abilitato nei dispositivi che ricevono questa baseline.
-  >
-  > Le descrizioni seguenti sono state modificate per riflettere questo comportamento. L'inversione delle impostazioni verrà corretta in un aggiornamento futuro di questa baseline di sicurezza.
+    Se abilitata, i dispositivi useranno l'anti-spoofing avanzato, se disponibile. Se non viene configurata, verrà rispettata la configurazione del client per l'anti-spoofing.
 
-  - Con l'impostazione *Non configurato* Windows Hello viene abilitato e il dispositivo esegue il provisioning di Windows Hello for Business.
-  - Con l'impostazione *Sì* la baseline non influisce sull'impostazione di criteri del dispositivo. Ciò significa che se Windows Hello for Business è disabilitato in un dispositivo, rimane disabilitato. Se è abilitato, rimane abilitato.
-  <!-- expected behavior 
-  - When set to *Yes*, you  enable this policy and the device provisions Windows Hello for Business.  
-  - When set to *Not configured*, the baseline does not affect the policy setting of the device. This means that if Windows Hello for Business is disabled on a device, it remains disabled. If its enabled, it remains enabled. 
-  -->
+    **Impostazione predefinita**: Non configurato
 
-  Non è possibile disabilitare Windows Hello for Business tramite questa baseline. È possibile disabilitare Windows Hello for Business quando si configura la [registrazione di Windows](windows-hello.md) o come parte di un profilo di configurazione del dispositivo per la [protezione delle identità](identity-protection-configure.md).  
+  - **Lettere minuscole nel PIN**:  
+    se richiesto, il PIN dell'utente deve includere almeno una lettera minuscola.
 
-  **Impostazione predefinita**: Sì
+    **Impostazione predefinita**: Non consentito
 
-- **Richiedi lettere minuscole nel PIN**:  
-  se richiesto, il PIN dell'utente deve includere almeno una lettera minuscola.
+  - **Caratteri speciali nel PIN**:  
+    se richiesto, il PIN dell'utente deve includere almeno un carattere speciale.
 
-  **Impostazione predefinita**: Consentito
+    **Impostazione predefinita**: Non consentito
+ 
 
-- **Richiedi caratteri speciali nel PIN**:  
-  se richiesto, il PIN dell'utente deve includere almeno un carattere speciale.
+  - **Lettere maiuscole nel PIN**:  
+    se richiesto, il PIN dell'utente deve includere almeno una lettera maiuscola.
 
-  **Impostazione predefinita**: Consentito
-
-- **Lunghezza minima del PIN**:  
-  La lunghezza minima del PIN deve essere compresa tra 4 e 127.
-
-  **Impostazione predefinita**: 6
-
-- **Richiedi lettere maiuscole nel PIN**:  
-  se richiesto, il PIN dell'utente deve includere almeno una lettera maiuscola.
-
-  **Impostazione predefinita**: Consentito
+    **Impostazione predefinita**: Non consentito
 
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
@@ -2063,7 +2104,7 @@ Per altre informazioni, vedere [Policy CSP - WindowsInkWorkspace](https://docs.m
 
 Per altre informazioni, vedere [Policy CSP - WindowsPowerShell](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowspowershell) (Provider di servizi di configurazione dei criteri - WindowsPowerShell) nella documentazione di Windows.
 
-- **Registrazione blocco di script della shell di PowerShell**:  
+- **Registrazione dei blocchi di script di PowerShell**:  
   L'impostazione di questo criterio consente la registrazione di tutti gli input di script di PowerShell nel registro eventi Microsoft-Windows-PowerShell/Operational. Se si abilita l'impostazione di questo criterio, Windows PowerShell registrerà l'elaborazione dei comandi, i blocchi di script, le funzioni e gli script, sia se richiamati in modo interattivo che tramite automazione. Se si disabilita l'impostazione di questo criterio, la registrazione dell'input di script di PowerShell verrà disabilitata. Se si abilita la registrazione delle chiamate di blocchi di script, PowerShell registrerà eventi anche all'avvio o all'interruzione di una chiamata di un comando, un blocco di script, una funzione o uno script. L'abilitazione della registrazione delle chiamate genera un volume elevato di registri eventi. Nota: l'impostazione di questo criterio è presente sia in Configurazione computer che in Configurazione utente nell'Editor Criteri di gruppo. L'impostazione dei criteri in Configurazione computer ha la precedenza sull'impostazione dei criteri in Configurazione utente.  
   [Altre informazioni](https://go.microsoft.com/fwlink/?linkid=2067330)
 

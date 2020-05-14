@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3da418db81a315e4102b63c34ffc557646d36f70
-ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
+ms.openlocfilehash: fe91e36ab5cc66fe81c77401a2a0374f6577b202
+ms.sourcegitcommit: 5f9d5d22114ae5aeb0270c7fb59c5dced5f48826
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82126069"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82862378"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Creare e assegnare profili di certificato SCEP in Intune
 
@@ -301,7 +301,8 @@ Tenere presente quanto segue prima di continuare:
 - Se si usa la co-gestione per Intune e Configuration Manager, in Configuration Manager [impostare il dispositivo di scorrimento del carico di lavoro](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) per Criteri di accesso alle risorse su **Intune** o **Intune pilota**. Questa impostazione consente ai client Windows 10 di avviare il processo di richiesta del certificato.
 
 > [!NOTE]
-> Nei dispositivi iOS/iPadOS, quando un profilo certificato SCEP o un profilo certificato PKCS viene associato a un profilo aggiuntivo, ad esempio un profilo Wi-Fi o VPN, il dispositivo riceve un certificato per ognuno di questi profili aggiuntivi. Ne risulta che il dispositivo iOS/iPadOS riceve più certificati dalla richiesta di certificato SCEP o PKCS. 
+> - Nei dispositivi iOS/iPadOS, quando un profilo certificato SCEP o un profilo certificato PKCS viene associato a un profilo aggiuntivo, ad esempio un profilo Wi-Fi o VPN, il dispositivo riceve un certificato per ognuno di questi profili aggiuntivi. Ne risulta che il dispositivo iOS/iPadOS riceve più certificati dalla richiesta di certificato SCEP o PKCS. 
+> - In iOS 13 e macOS 10.15, è necessario tenere presenti alcuni [requisiti di sicurezza aggiuntivi documentati da Apple](https://support.apple.com/HT210176).  
 
 
 ## <a name="next-steps"></a>Passaggi successivi

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/30/2020
+ms.date: 05/04/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf490c71fdc94b974e53a9d0f388a777e986f13c
-ms.sourcegitcommit: 8a8378b685a674083bfb9fbc9c0662fb0c7dda97
+ms.openlocfilehash: 5b3c8287d9b5ca2d46094d04ee2179128bead4a8
+ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619577"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82991750"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Novità di Microsoft Intune
 
@@ -51,6 +51,14 @@ Per informazioni sulle novità di Microsoft Intune ogni settimana, vedere l'[int
 ### Device security
 ### Intune apps
 ### Monitor and troubleshoot
+
+<!-- ########################## -->
+## <a name="week-of-may-4-2020"></a>Settimana del 4 maggio 2020  
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->  
+
+### <a name="company-portal-for-android-guides-users-to-get-apps-after-work-profile-enrollment----6103999---"></a>Il Portale aziendale per Android consente agli utenti di ottenere le app dopo la registrazione del profilo di lavoro <!-- 6103999 -->
+Sono state migliorate le linee guida all'interno del Portale aziendale, in modo da facilitare la ricerca e l'installazione di app per gli utenti. Dopo aver eseguito la registrazione nella gestione del profilo di lavoro, gli utenti visualizzeranno un messaggio che spiega come trovare le app suggerite nella versione con badge di Google Play. L'ultimo passaggio in [Registrare il dispositivo con il profilo Android](../user-help/enroll-device-android-work-profile.md) è stato aggiornato in modo da visualizzare il nuovo messaggio. Gli utenti visualizzeranno anche un nuovo collegamento **Scarica app** nel menu di spostamento del Portale aziendale sul lato sinistro. Per dare più spazio a queste esperienze nuove e migliorate, la scheda **APP** è stata rimossa. Per visualizzare le schermate aggiornate, vedere [Aggiornamenti dell'interfaccia utente per le applicazioni degli utenti finali di Intune](./whats-new-app-ui.md). 
 
 <!-- ########################## -->
 ## <a name="week-of-april-20-2020"></a>Settimana del 20 aprile 2020

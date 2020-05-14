@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 569a80d21efd82b6008c7aa7a613c089a10c6ff3
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5b3052d8d213ce3190ed29b43f580a8de9c840b7
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357896"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943842"
 ---
 # <a name="intune-network-configuration-requirements-and-bandwidth"></a>Requisiti di configurazione di rete di Intune e larghezza di banda
 
@@ -46,7 +46,7 @@ In questa tabella sono elencate le dimensioni approssimative e la frequenza di c
 |Assistenza remota tramite l'agente Microsoft Easy Assist|6 MB|**Una volta**<br /><br />Ulteriori download sono possibili quando sono disponibili aggiornamenti per questo tipo di contenuto.|
 |Operazioni quotidiane di client|6 MB|**Ogni giorno**<br /><br />Il client di Intune comunica regolarmente con il servizio Intune per verificare la disponibilità di aggiornamenti e criteri nonché per segnalare lo stato del client al servizio.|
 |Aggiornamenti delle definizioni malware di Endpoint Protection|Varia<br /><br />In genere, da 40 KB a 2 MB|**Ogni giorno**<br /><br />Fino a tre volte al giorno.|
-|Aggiornamento del motore Endpoint Protection|5 MB|**Monthly** (Mensile)|
+|Aggiornamento del motore Endpoint Protection|5 MB|**Ogni mese**|
 |Aggiornamenti software|Varia<br /><br />Le dimensioni dipendono dagli aggiornamenti distribuiti.|**Monthly** (Mensile)<br /><br />In genere, gli aggiornamenti software vengono rilasciati il secondo martedì di ogni mese.<br /><br />Un computer appena registrato o distribuito potrebbe usare più larghezza di banda di rete durante il download della serie completa di aggiornamenti rilasciati in precedenza.|
 |Service Pack|Varia<br /><br />Le dimensioni variano per ogni Service Pack distribuito.|**Varia**<br /><br />Dipende da quando si distribuiscono i Service Pack.|
 |Distribuzione del software|Varia<br /><br />Le dimensioni dipendono dal software distribuito.|**Varia**<br /><br />Dipende da quando si distribuisce il software.|
@@ -64,7 +64,7 @@ Un server proxy di memorizzazione nella cache che riceve le richieste di contenu
 Di seguito vengono riportate alcune impostazioni tipiche da usare per un server proxy che memorizza contenuti nella cache per i client di Intune.
 
 
-|          Impostazione           |           Impostazione consigliata           |                                                                                                  Details                                                                                                  |
+|          Impostazione           |           Impostazione consigliata           |                                                                                                  Dettagli                                                                                                  |
 |----------------------------|---------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |         Dimensione della cache         |             da 5 a 30 GB             | Il valore varia in base al numero di computer client della rete e alle configurazioni usate. Per evitare che i file vengano eliminati troppo presto, regolare le dimensioni della cache per l'ambiente. |
 | Dimensione del file nella singola cache |                950 MB                 |                                                                     L'impostazione potrebbe non essere disponibile in tutti i server proxy per la memorizzazione nella cache.                                                                     |
@@ -74,14 +74,6 @@ Di seguito vengono riportate alcune impostazioni tipiche da usare per un server 
 
 Per informazioni sull'utilizzo di un server proxy per memorizzare contenuto nella cache, vedere la documentazione per la soluzione server proxy in uso.
 
-### <a name="use-background-intelligent-transfer-service-bits-on-computers"></a>Usare Servizio trasferimento intelligente in background (BITS) nei computer
-
-Durante gli orari configurati è possibile usare BITS in un computer Windows per ridurre la larghezza di banda della rete. È possibile configurare i criteri BITS nella pagina **Larghezza di banda di rete** del criterio Agente di Intune.
-
-> [!NOTE]
-> Per la gestione di dispositivi mobili in Windows, solo l'interfaccia di gestione del sistema operativo per il tipo di app MobileMSI usa BITS per il download. AppX e MsiX usano il proprio stack di download non BITS e le app Win32 tramite l'agente di Intune usano Ottimizzazione recapito invece di BITS.
-
-Per altre informazioni su BITS e sui computer Windows, vedere [Servizio trasferimento intelligente in background](https://technet.microsoft.com/library/bb968799.aspx) nella libreria TechNet.
 
 ### <a name="delivery-optimization"></a>Ottimizzazione recapito
 
@@ -91,13 +83,28 @@ Per visualizzare l'elenco completo delle versioni di Windows 10 e dei tipi di co
 
 [Ottimizzazione recapito può essere impostata](../configuration/delivery-optimization-settings.md) come parte dei profili di configurazione dei dispositivi.
 
-### <a name="use-branchcache-on-computers"></a>Usare BranchCache sui computer
+
+### <a name="background-intelligent-transfer-service-bits-and-branchcache"></a>Servizio trasferimento intelligente in background (BITS) e BranchCache 
+
+È possibile usare Microsoft Intune per gestire i PC Windows [come dispositivi mobili con la soluzione di gestione dei dispositivi mobili (MDM)](../enrollment/windows-enroll.md) o come computer con il software client di Intune. Si consiglia ai clienti di [usare la soluzione di gestione MDM](../enrollment/windows-enroll.md) laddove possibile. Con questo tipo di gestione, BranchCache e BITS non sono supportati. Per altre informazioni, vedere [Confrontare la gestione dei PC Windows come computer o come dispositivi mobili](pc-management-comparison.md).
+
+#### <a name="use-bits-on-computers-requires-intune-software-client"></a>Usare (BITS) nei computer (richiede il client software di Intune)
+
+Durante gli orari configurati è possibile usare BITS in un computer Windows per ridurre la larghezza di banda della rete. È possibile configurare i criteri BITS nella pagina **Larghezza di banda di rete** del criterio Agente di Intune.
+
+> [!NOTE]
+> Per la gestione di dispositivi mobili in Windows, solo l'interfaccia di gestione del sistema operativo per il tipo di app MobileMSI usa BITS per il download. AppX e MsiX usano il proprio stack di download non BITS e le app Win32 tramite l'agente di Intune usano Ottimizzazione recapito invece di BITS.
+
+Per altre informazioni su BITS e sui computer Windows, vedere [Servizio trasferimento intelligente in background](https://technet.microsoft.com/library/bb968799.aspx) nella libreria TechNet.
+
+
+#### <a name="use-branchcache-on-computers-requires-intune-software-client"></a>Usare BranchCache nei computer (richiede il client software di Intune)
 
 I client di Intune possono usare BranchCache per ridurre il traffico WAN. I sistemi operativi seguenti supportano BranchCache:
 
 - Windows 7
 - Windows 8.0
-- Windows 8,1
+- Windows 8.1
 - Windows 10
 
 Per usarlo nel computer client, BranchCache deve essere abilitato e configurato per la **modalità cache distribuita**.
@@ -106,8 +113,6 @@ Quando il client di Intune è installato nei computer, BranchCache e la modalit�
 
 Se si usa BranchCache, collaborare con gli altri amministratori dell'organizzazione per la gestione dei criteri di gruppo e dei criteri firewall di Intune. Assicurarsi che non distribuiscano criteri che disabilitano BranchCache o le eccezioni del firewall. Per altre informazioni su BranchCache, vedere [Panoramica di BranchCache](https://technet.microsoft.com/library/hh831696.aspx).
 
-> [!NOTE]
-> È possibile usare Microsoft Intune per gestire i PC Windows [come dispositivi mobili con la soluzione di gestione dei dispositivi mobili (MDM)](../enrollment/windows-enroll.md) o come computer con il software client di Intune. Si consiglia ai clienti di [usare la soluzione di gestione MDM](../enrollment/windows-enroll.md) laddove possibile. Con questo tipo di gestione BranchCache non è supportato. Per altre informazioni, vedere [Confrontare la gestione dei PC Windows come computer o come dispositivi mobili](pc-management-comparison.md).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

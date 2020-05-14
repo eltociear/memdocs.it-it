@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 05/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2640107a4a3b17e2c544041445c8c797ef40b01e
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.openlocfilehash: 49ecd2a1aaa5408a721b06264703720be601c73c
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166553"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269015"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Impostazioni dei dispositivi iOS e iPadOS per consentire o limitare l'uso delle funzionalità tramite Intune
 
@@ -95,6 +95,10 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
 - **Blocco attivazione**: **Consenti** abilita il blocco attivazione nei dispositivi iOS/iPadOS con supervisione. Blocco attivazione rende più difficile la riattivazione di un dispositivo perso o rubato. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
 - **Blocca la rimozione di app**: **Blocca** impedisce la rimozione delle app. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di rimuovere le app dai dispositivi.
 - **Consenti gli accessori USB durante il blocco del dispositivo**: **Consenti** permette agli accessori USB di scambiare dati con dispositivi che sono rimasti bloccati per più di un'ora. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non aggiornare la modalità con restrizioni USB nei dispositivi e impedire agli accessori USB di trasferire i dati dai dispositivi se questi rimangono bloccati per più di un'ora.
+
+  Questa funzionalità si applica a:  
+  - iOS/iPadOS 11.4.1 e versioni successive
+
 - **Imponi data e ora automatiche**: **Rendi obbligatorio** impone ai dispositivi con supervisione di impostare la data e l'ora automaticamente. Il fuso orario del dispositivo viene aggiornato quando il dispositivo dispone di connessioni alla rete cellulare o Wi-Fi con i servizi di posizione abilitati. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
 - **Richiedi agli studenti di chiedere l'autorizzazione per lasciare un corso Classroom**: **Rendi obbligatorio** impone agli studenti registrati in un corso non gestito che usa l'app Classroom di richiedere l'autorizzazione al docente per lasciare il corso. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non imporre agli studenti di richiedere l'autorizzazione.
 
@@ -292,7 +296,7 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
   A partire da iOS/iPadOS 13.0, questa impostazione richiede dispositivi con supervisione.
 
   - **Installazione di app dall'App Store**: **Blocca** non visualizza l'App Store nella schermata iniziale del dispositivo. Gli utenti possono continuare a usare iTunes o Apple Configurator per installare le app. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire App Store nella schermata iniziale.
-  - **Download automatici delle app**: **Blocca** impedisce il download automatico delle app acquistate in altri dispositivi. Non influisce sugli aggiornamenti delle app esistenti. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire il download nel dispositivo di app acquistate in altri dispositivi iOS/iPadOS.
+  - **Download automatici delle app**: **Blocca** impedisce il download automatico delle app acquistate in altri dispositivi e gli aggiornamenti automatici delle nuove app. Non influisce sugli aggiornamenti delle app esistenti. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire il download e l'aggiornamento nel dispositivo di app acquistate in altri dispositivi iOS/iPadOS.
 
 - **Musica di iTunes, podcast o notizie con contenuti espliciti**: **Blocca** impedisce la riproduzione di musica di iTunes, podcast o notizie con contenuti espliciti. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire al dispositivo di accedere ai contenuti classificati come per adulti dallo Store.
 
@@ -591,11 +595,16 @@ Per aggiungere le app, è possibile:
 
   A partire da iOS/iPadOS 13.0, questa impostazione richiede dispositivi con supervisione.
 
-## <a name="autonomous-single-app-mode"></a>Modalità applicazione singola autonoma
+## <a name="autonomous-single-app-mode-asam"></a>Modalità applicazione singola autonoma
 
 Usare queste impostazioni per configurare i dispositivi iOS/iPadOS in modo che eseguano specifiche app in modalità app singola autonoma. Quando questa modalità è configurata e gli utenti avviano una delle app configurate, il dispositivo viene bloccato per tale app. Il cambio di app/attività è disabilitato fino a quando gli utenti non escono dall'app autorizzata.
 
 Ad esempio, in un ambiente scolastico o universitario, aggiungere un'app che consenta agli utenti di eseguire un test nel dispositivo. In alternativa, bloccare il dispositivo nell'app Portale aziendale fino all'autenticazione dell'utente. Quando gli utenti completano le azioni dell'app o si rimuovono questi criteri, il dispositivo torna allo stato normale.
+
+> [!NOTE]
+> Non tutte le app supportano la modalità app singola autonoma. Per attivare la modalità app singola autonoma per un'app, in genere è necessario un ID di bundle o una coppia chiave-valore forniti da un criterio di configurazione dell'app. Per altre informazioni, vedere la [restrizione `autonomousSingleAppModePermittedAppIDs`](https://developer.apple.com/documentation/devicemanagement/restrictions) nella documentazione MDM di Apple. Per altre informazioni sulle impostazioni specifiche necessarie per l'app in corso di configurazione, vedere la documentazione del fornitore.
+
+Ad esempio, per configurare Zoom Rooms in modalità app singola autonoma, Zoom indica di usare l'ID di bundle `us.zoom.zpcontroller`. In questo caso viene anche apportata una modifica al portale Web di Zoom. Per altre informazioni, vedere il [centro di informazioni della Guida di Zoom](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Le impostazioni si applicano a: Registrazione automatica dei dispositivi (supervisione)
 
@@ -606,6 +615,8 @@ Ad esempio, in un ambiente scolastico o universitario, aggiungere un'app che con
 È anche possibile scegliere **Importa** per importare un file CSV con l'elenco dei nomi di app e i relativi ID bundle. Oppure **esportare** un elenco esistente che include le app.
 
 ## <a name="kiosk"></a>Modalità tutto schermo
+
+La [modalità app singola](https://support.apple.com/guide/mdm/mdm80a981/web) è definita modalità tutto schermo in Intune.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Le impostazioni si applicano a: Registrazione automatica dei dispositivi (supervisione)
 
@@ -671,7 +682,7 @@ Ad esempio, in un ambiente scolastico o universitario, aggiungere un'app che con
 
 La modalità con supervisione iOS/iPadOS può essere abilitata solo durante l'installazione iniziale del dispositivo usando Device Enrollment Program di Apple o Apple Configurator. Dopo aver abilitato la modalità di supervisione, Intune può configurare un dispositivo con le funzionalità seguenti:
 
-- Blocco dell'app (modalità app singola) 
+- Modalità tutto schermo (modalità app singola): definita "app lock" (blocco dell'app) nella [documentazione Apple Developer](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf).
 - Disabilitare Blocco attivazione 
 - Modalità applicazione singola autonoma 
 - Filtro contenuto Web 

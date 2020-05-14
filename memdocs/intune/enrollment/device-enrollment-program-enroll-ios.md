@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db9164d68783356faf01fe4fc4e8d74f2a4b0869
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: dd999f621375cfdbfa80bf076766be20053221dc
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023351"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269066"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Registrare automaticamente i dispositivi iOS/iPadOS con Registrazione automatica del dispositivo di Apple
 
@@ -148,8 +148,7 @@ Ora che è stato installato il token, è possibile creare un profilo di registra
 
     ![Screenshot di Crea profilo.](./media/device-enrollment-program-enroll-ios/image04.png)
 
-3. Nella pagina **Informazioni di base** immettere un **nome** e una **descrizione** per il profilo per scopi amministrativi. Questi dettagli non vengono visualizzati agli utenti. È possibile usare questo campo **Nome** per creare un gruppo dinamico in Azure Active Directory. Usare il nome del profilo per definire il parametro enrollmentProfileName per assegnare i dispositivi con questo profilo di registrazione. Per i dispositivi registrati con Registrazione automatica dei dispositivi con affinità utente, se si specificano come destinazione gruppi utenti di AAD in cui l'utente che esegue la registrazione è membro prima della configurazione del dispositivo, si assicura il recapito dei criteri più veloce ai dispositivi. Se si specificano come destinazione di applicazioni e criteri gruppi dinamici basati sui profili di registrazione, si determina un certo ritardo nell'applicazione ai dispositivi dopo il completamento del flusso di registrazione.
-Altre informazioni sui [gruppi dinamici di Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices).
+3. Nella pagina **Informazioni di base** immettere un **nome** e una **descrizione** per il profilo per scopi amministrativi. Questi dettagli non vengono visualizzati agli utenti. 
 
     ![Nome e descrizione del profilo.](./media/device-enrollment-program-enroll-ios/image05.png)
 
@@ -264,6 +263,17 @@ Altre informazioni sui [gruppi dinamici di Azure Active Directory](https://docs.
 16. Scegliere **Avanti** per passare alla pagina **Rivedi e crea**.
 
 17. Per salvare il profilo, scegliere **Crea**.
+
+### <a name="dynamic-groups-in-azure-active-directory"></a>Gruppi dinamici in Azure Active Directory
+
+È possibile usare il campo **Nome** della registrazione per creare un gruppo dinamico in Azure Active Directory. Per altre informazioni, vedere i [gruppi dinamici di Azure Active Directory](/azure/active-directory/users-groups-roles/groups-dynamic-membership).
+
+È possibile usare il nome del profilo per definire il [parametro enrollmentProfileName](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) e assegnare al gruppo i dispositivi con questo profilo di registrazione.
+
+Per la distribuzione più rapida dei criteri nei dispositivi ADE con affinità utente, assicurarsi che l'utente che esegue la registrazione sia membro (prima dell'installazione del dispositivo) di un gruppo di utenti AAD. 
+
+L'assegnazione di gruppi dinamici ai profili di registrazione può causare ritardi nella distribuzione di applicazioni e criteri ai dispositivi dopo la registrazione.
+
 
 ## <a name="sync-managed-devices"></a>Sincronizzare i dispositivi gestiti
 Adesso che Intune ha le autorizzazioni per gestire i dispositivi, è possibile sincronizzare Intune con Apple per visualizzare i dispositivi gestiti nel portale di Azure in Intune.

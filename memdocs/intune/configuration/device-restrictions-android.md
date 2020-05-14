@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4afc27680c464f67756340ebcb0958887ae6f795
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5fc11d7302c30dd53314eb2312d37842b081a6b3
+ms.sourcegitcommit: 5f9d5d22114ae5aeb0270c7fb59c5dced5f48826
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80407862"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82862361"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Elenchi delle impostazioni per le limitazioni dei dispositivi Android e Samsung Knox Standard in Intune
 
@@ -114,7 +114,7 @@ Usare queste impostazioni per consentire o bloccare app specifiche nei dispositi
 - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione.
 - **App non consentite**: elencare le app non gestite da Intune che gli utenti non sono autorizzati a installare ed eseguire. Se un utente installa un'app da questo elenco, si riceverà una notifica da Intune.
 - **App approvate**: Elencare le app che gli utenti sono autorizzati a installare. Per mantenere la conformità, gli utenti non devono installare altre app.  Le app gestite da Intune sono consentite automaticamente, inclusa l'app Portale aziendale.
-- **Elenco di app**: selezionare **Aggiungi** per l'aggiungere l'app.
+- **Elenco di app**: **Aggiungere** l'app:
   - **ID bundle dell'app**: immettere l'ID bundle dell'app.
   - **URL di App Store**: immettere l'URL di Google Play Store dell'app in questione. Ad esempio, per aggiungere l'app Desktop remoto Microsoft per Android, immettere `https://play.google.com/store/apps/details?id=com.microsoft.rdc.android`.
 

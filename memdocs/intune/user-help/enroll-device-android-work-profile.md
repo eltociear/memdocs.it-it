@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/07/2020
+ms.date: 05/08/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 839809de89d4220fa87012cd9a28e5f6b6c35dcf
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3007e9a40dd77e156f0c0a77214e819948fc01da
+ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79348588"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82991563"
 ---
 # <a name="enroll-device-with-android-work-profile"></a>Registrare un dispositivo con profilo di lavoro Android
 
@@ -74,6 +74,15 @@ Altri dettagli sono disponibili in [Cosa accade quando si crea un profilo di lav
 9. Al termine dell'installazione, toccare **FINE**.  
 
     ![Immagine di esempio di Portale aziendale, schermata Configurazione dell'accesso aziendale che visualizza la configurazione completata e il pulsante Fine evidenziato.](./media/work-profile-done-1911.png)  
+
+10. Quando viene richiesto di visualizzare le app suggerite dall'organizzazione in Google Play, selezionare **APRI**. 
+
+    ![Immagine di esempio della richiesta di apertura della versione con badge di Portale aziendale in Google Play.](./media/get-apps-banner-android-2005.png) 
+
+    Se non si è pronti per installare le app, è possibile accedere alle app in un secondo momento passando direttamente alla versione con badge dell'app in Google Play. È anche possibile selezionare **Scarica app** dal menu di Portale aziendale.  
+
+    ![Immagine di esempio del menu di Portale aziendale con il collegamento Scarica app evidenziato.](./media/updated-drawer-android-2005.png) 
+
 
 
 ## <a name="next-steps"></a>Passaggi successivi  

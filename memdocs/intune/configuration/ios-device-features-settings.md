@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/27/2020
+ms.date: 05/07/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af60c16c4a7c9d27409f82cfc53d5c345dfe1af0
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: fce26aab90989f31ee56a9abd58f617c780d9c4b
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210231"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943876"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>Impostazioni dei dispositivi iOS e iPadOS per usare le funzionalità iOS/iPadOS comuni in Intune
 
@@ -107,7 +107,7 @@ Usare le impostazioni di **Dock** per aggiungere fino a sei elementi o cartelle 
       È possibile aggiungere fino a **20** pagine per il dock del dispositivo.
 
 > [!NOTE]
-> Quando si aggiungono icone usando le impostazioni del Dock, le icone nella schermata iniziale e le pagine vengono bloccate e non possono essere spostate. Può essere previsto da iOS/iPadOS e dai criteri MDM di Apple.
+> Quando si usano le impostazioni Layout della schermata iniziale per aggiungere pagine o pagine e app al dock, le icone della schermata iniziale e le pagine sono bloccate. Non possono essere spostate o eliminate. Questo comportamento può essere previsto da iOS/iPadOS e dai criteri MDM di Apple.
 
 #### <a name="example"></a>Esempio
 

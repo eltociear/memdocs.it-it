@@ -10,12 +10,12 @@ ms.assetid: ae72df4b-5f5d-4e19-9052-bda28edfbace
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a72ff9947f6ca31ce2158c5c763602b34948a15c
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b012dd1e7da0d6a3efb4d1cc33b8a79ef319bc0a
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075660"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268998"
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-configuration-manager"></a>Informazioni su come i client trovano i servizi e le risorse del sito per Configuration Manager
 
@@ -62,7 +62,7 @@ Un client seleziona un punto di gestione con cui comunicare in base al relativo 
 
 È possibile usare i punti di gestione preferiti. I punti di gestione preferiti sono punti di gestione del sito assegnato di un client associati a un gruppo di limiti che il client usa per individuare i server del sistema del sito. L'associazione di un punto di gestione preferito a un gruppo di limiti come server del sistema del sito è simile al modo in cui i punti di distribuzione o i punti di migrazione stato sono associati a un gruppo di limiti. Se si abilitano i punti di gestione preferiti per la gerarchia, quando un client usa un punto di gestione dal sito assegnato, verrà effettuato un tentativo di usare un punto di gestione preferito prima di altri punti di gestione dal sito assegnato.  
 
-Per configurare l'affinità del punto di gestione, è possibile usare anche le informazioni nel blog dedicato all'[affinità del punto di gestione](https://blogs.technet.com/b/jchalfant/archive/2014/09/22/management-point-affinity-added-in-configmgr-2012-r2-cu3.aspx) su TechNet.com. L'affinità del punto di gestione esegue l'override del comportamento predefinito per i punti di gestione assegnati e consente al client di usare uno o più punti di gestione specifici.  
+Per configurare l'affinità del punto di gestione, è possibile usare anche le informazioni nel blog dedicato all'[affinità del punto di gestione](https://docs.microsoft.com/archive/blogs/jchalfant/management-point-affinity-added-in-configmgr-2012-r2-cu3). L'affinità del punto di gestione esegue l'override del comportamento predefinito per i punti di gestione assegnati e consente al client di usare uno o più punti di gestione specifici.  
 
 Ogni volta che un client deve contattare un punto di gestione, controlla l'elenco dei punti di gestione archiviato in locale in Windows Management Instrumentation (WMI). Il client crea un elenco di punti di gestione iniziale quando viene installato. Successivamente aggiorna periodicamente l'elenco con informazioni dettagliate su ogni punto di gestione nella gerarchia.  
 
@@ -131,12 +131,12 @@ Dopo aver stabilito la comunicazione con un punto di gestione, un client continu
 A quel punto il client seleziona casualmente un nuovo punto di gestione da usare.  
 
 ##  <a name="active-directory"></a><a name="bkmk_ad"></a> Active Directory  
-I client appartenenti a un dominio possono usare Servizi di dominio Active Directory per la posizione del servizio. Questa operazione richiede che i siti [pubblichino dati in Active Directory](https://technet.microsoft.com/library/hh696543.aspx).  
+I client appartenenti a un dominio possono usare Servizi di dominio Active Directory per la posizione del servizio. Questa operazione richiede che i siti [pubblichino dati in Active Directory](../../servers/deploy/configure/publish-site-data.md).  
 
 Un client può usare Active Directory Domain Services per la posizione del servizio quando si verificano tutte le condizioni seguenti:  
 
-- Lo [schema di Active Directory è stato esteso](https://technet.microsoft.com/library/mt345589.aspx) o è stato esteso per System Center 2012 Configuration Manager.  
-- La [foresta Active Directory è configurata per la pubblicazione](https://technet.microsoft.com/library/hh696542.aspx) e i siti di Configuration Manager sono configurati per la pubblicazione.  
+- Lo [schema di Active Directory è stato esteso](../network/extend-the-active-directory-schema.md) o è stato esteso per System Center 2012 Configuration Manager.  
+- La [foresta Active Directory è configurata per la pubblicazione](../../servers/deploy/configure/publish-site-data.md) e i siti di Configuration Manager sono configurati per la pubblicazione.  
 - Il computer client è membro di un dominio Active Directory ed è in grado di accedere a un server di catalogo globale.  
 
 Se un client non trova un punto di gestione da usare per la posizione del servizio in Active Directory Domain Services, tenta di usare DNS.  
@@ -148,7 +148,7 @@ I client sulla Intranet possono usare DNS per il percorso del servizio. In quest
 - Lo schema di Active Directory Domain Services non viene esteso per supportare Configuration Manager.
 - I client della Intranet si trovano in una foresta che non è abilitata per la pubblicazione in Configuration Manager.  
 - Sono presenti client nei computer del gruppo di lavoro che non sono configurati per la gestione client basata solo su Internet (un client del gruppo di lavoro configurato per Internet comunicherà solo con i punti di gestione per Internet e non userà DNS per la posizione del servizio).  
-- È possibile [configurare i client per individuare i punti di gestione da DNS](https://technet.microsoft.com/library/gg682055).  
+- È possibile [configurare i client per individuare i punti di gestione da DNS](../../clients/deploy/configure-client-computers-to-find-management-points-by-using-dns-publishing.md).  
 
 Quando un sito pubblica i record di individuazione del servizio per i punti di gestione in DNS:  
 

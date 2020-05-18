@@ -82,8 +82,12 @@
         - name: Log di StageNow e problemi comuni
           href: android-zebra-mx-logs-troubleshoot.md
     - name: OEMConfig su Android Enterprise
-      href: android-oem-configuration-overview.md
-      displayName: 'original equipment manufacturers, schema'
+      displayName: 'original equipment manufacturers, schema, zebra, order'
+      items:
+        - name: Operazioni preliminari
+          href: android-oem-configuration-overview.md
+        - name: Profili nei dispositivi Zebra
+          href: oemconfig-zebra-android-devices.md
     - name: Chioschi e dispositivi dedicati
       href: kiosk-settings.md
       displayName: 'single app, multi app'

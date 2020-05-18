@@ -20,6 +20,7 @@
 #### Registrare con credenziali derivate
 ##### [Registrare con Entrust Datacard](enroll-android-device-entrust-datacard.md)
 ##### [Registrare con Intercede](enroll-android-device-intercede.md)
+##### [Registrare con Disa Purebred](enroll-android-device-disa-purebred.md)
 ### [Passa alla configurazione della gestione dei nuovi dispositivi](move-to-new-device-management-setup.md)
 ### [Usare le app gestite nel dispositivo](use-managed-apps-on-your-device-android.md)
 ### [Crittografare il dispositivo](encrypt-your-device-android.md)

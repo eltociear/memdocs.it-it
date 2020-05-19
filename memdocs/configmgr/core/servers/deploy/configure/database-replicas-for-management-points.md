@@ -2,7 +2,7 @@
 title: Repliche di database dei punti di gestione
 titleSuffix: Configuration Manager
 description: Usare una replica di database per ridurre il carico della CPU dovuto ai punti di gestione nel server di database del sito.
-ms.date: 10/06/2016
+ms.date: 05/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b06f781b-ab25-4d9a-b128-02cbd7cbcffe
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: eef959182b2bada4b4e0c0395cf0e17ac255ba0d
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 3daf23f17719e111dacd45e6176c5f697a3d3224
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906550"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343117"
 ---
 # <a name="database-replicas-for-management-points-for-configuration-manager"></a>Repliche di database per i punti di gestione per Configuration Manager
 
@@ -82,6 +82,8 @@ I siti primari di Configuration Manager possono usare una replica di database pe
 -   **Aggiornamenti a Configuration Manager Current Branch**: prima di aggiornare un sito da System Center 2012 Configuration Manager a Configuration Manager Current Branch oppure prima di aggiornare Configuration Manager Current Branch all'ultima versione, è necessario disabilitare le repliche di database per i punti di gestione.  Dopo l'aggiornamento del sito, è possibile riconfigurare le repliche di database per i punti di gestione.  
 
 -   **Più repliche in un'unica istanza di SQL Server**:  se si configura un server di replica di database per ospitare più repliche di database per i punti di gestione (ogni replica deve trovarsi in un'istanza separata), è necessario usare uno script di configurazione modificato (dal passaggio 4 della sezione successiva) per evitare di sovrascrivere il certificato autofirmato usato dalle repliche di database configurate in precedenza in tale server.  
+
+- Le distribuzioni utente in Software Center non funzioneranno con un punto di gestione che usa una replica SQL. <!--sccmdocs-1011-->
 
 ##  <a name="configure-database-replicas"></a><a name="BKMK_DBReplica_Config"></a> Configurare le repliche di database  
 La configurazione di una replica di database prevede i passaggi seguenti:  

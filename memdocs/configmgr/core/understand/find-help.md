@@ -2,7 +2,7 @@
 title: Ottenere informazioni
 titleSuffix: Configuration Manager
 description: Trovare risorse per altre informazioni su Configuration Manager.
-ms.date: 04/01/2020
+ms.date: 05/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 86810629-cf2a-43e8-86a2-847444119fc1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6610e86c12b6f7704b65dc11c476fa09e8f2ae63
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7bae98a8df1d8b8ff843bd333083c4c6ad68848c
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707159"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343185"
 ---
 # <a name="find-help-for-using-configuration-manager"></a>Reperire informazioni sull'uso di Configuration Manager
 
@@ -127,6 +127,13 @@ Quando si usano **Invia smile** o **Invia faccia imbronciata**, vengono inviate 
         - `-s --silent`: nessuna registrazione nella console (non è combinabile con --verbose)
         - `-v, --verbose`: registrazione dettagliata dell'output nella console (non è combinabile con --silent)
         - `--help`: visualizza la schermata della Guida
+    
+    - A partire dalla versione 1910, l'utilità UploadOfflineFeedback supporta l'uso di un server proxy. È possibile specificare i parametri seguenti:
+        - `-x, --proxy` Consente di specificare un server proxy per la connessione a Internet.
+        - `-o, --port` Consente di specificare la porta del server proxy per la connessione a Internet.
+        - `-u, --user` Consente di specificare un nome utente per il server proxy per la connessione a Internet.
+        - `-w, --password` Consente di specificare la password per il server proxy per la connessione a Internet. Digitare un asterisco (&#42;) per generare la richiesta della password. La password non viene visualizzata quando la si digita al prompt della password. È consigliabile usare un asterisco (&#42;) per generare una richiesta di immissione della password perché il testo normale nella riga di comando è meno sicuro.
+        - `-i` Consente di ignorare il controllo della connessione: ignora il controllo della connessione di rete, limitandosi a caricare il feedback con le impostazioni specificate.
 
 ## <a name="confirmation-of-console-feedback"></a><a name="bkmk_feedbackid"></a> Conferma di commenti e suggerimenti della console
 

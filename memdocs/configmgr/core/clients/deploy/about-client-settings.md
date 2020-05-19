@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1435c1ab6be8c80178566ae9d354084fddebb22a
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 3374a912b8235f546ec551bd1a964f9fc957b96d
+ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771346"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82991700"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Informazioni sulle impostazioni client in Configuration Manager
 
@@ -325,9 +325,9 @@ Se i client devono installare gli aggiornamenti software obbligatori alla scaden
 
 ### <a name="grace-period-for-enforcement-after-deployment-deadline-hours"></a>Periodo di tolleranza per l'imposizione dopo la scadenza della distribuzione (ore)
 
-Se si vuole concedere agli utenti più tempo per l'installazione di distribuzioni di applicazioni o aggiornamenti software necessari, impostare questa opzione su **Sì**. Questo periodo di tolleranza tiene conto dei computer rimasti spenti per molto tempo, i cui utenti devono installare molte distribuzioni di applicazioni o aggiornamenti, come nel caso, ad esempio, di un utente che, tornato da una vacanza, deve attendere parecchio tempo mentre il client installa le distribuzioni di applicazioni scadute.
+Se si vuole concedere agli utenti più tempo per l'installazione delle distribuzioni delle applicazioni o degli aggiornamenti software necessari, impostare un valore per questa opzione. Questo periodo di tolleranza tiene conto dei computer rimasti spenti per molto tempo, i cui utenti devono installare molte distribuzioni di applicazioni o aggiornamenti, come nel caso, ad esempio, di un utente che, tornato da una vacanza, deve attendere parecchio tempo mentre il client installa le distribuzioni di applicazioni scadute.
 
-Impostare un periodo di tolleranza compreso tra 1 e 120 ore. Usare questa impostazione in combinazione con la proprietà di distribuzione **Ritardare l'imposizione di questa distribuzione in base alle preferenze dell'utente**. Per altre informazioni, vedere l'argomento relativo alla [distribuzione delle applicazioni](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period).
+Impostare un periodo di tolleranza compreso tra 0 e 120 ore. Usare questa impostazione in combinazione con la proprietà di distribuzione **Ritardare l'imposizione di questa distribuzione in base alle preferenze dell'utente**. Per altre informazioni, vedere l'argomento relativo alla [distribuzione delle applicazioni](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period).
 
 
 ## <a name="computer-restart"></a>Riavvio del computer

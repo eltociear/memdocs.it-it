@@ -2,20 +2,20 @@
 title: Account usati
 titleSuffix: Configuration Manager
 description: Identificare e gestire i gruppi di Windows, gli account e gli oggetti SQL usati in Configuration Manager.
-ms.date: 10/23/2019
+ms.date: 05/08/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.technology: Configuration Manager-core
 ms.topic: conceptual
 ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a6808fed9fa9aaf894e3975066eb7707880b7948
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 5bd1284b96e1739126b8d6ee19f20699d47e5880
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073416"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83267989"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Account usati in Configuration Manager
 
@@ -24,9 +24,9 @@ ms.locfileid: "82073416"
 Usare le informazioni seguenti per identificare i gruppi di Windows, gli account e gli oggetti SQL usati in Configuration Manager, le relative modalità d'uso e gli eventuali requisiti.  
 
 - [Gruppi Windows creati e usati da Configuration Manager](#bkmk_groups)  
-  - [ConfigMgr_CollectedFilesAccess](#configmgr_collectedfilesaccess)  
-  - [ConfigMgr_DViewAccess](#configmgr_dviewaccess)  
-  - [Utenti di Controllo remoto di ConfigMgr](#configmgr-remote-control-users)  
+  - [Configuration Manager_CollectedFilesAccess](#configmgr_collectedfilesaccess)  
+  - [Configuration Manager_DViewAccess](#configmgr_dviewaccess)  
+  - [Utenti di Controllo remoto di Configuration Manager](#configmgr_rcusers)  
   - [SMS Admins](#sms-admins)  
   - [SMS_SiteSystemToSiteServerConnection_MP_&lt;codicesito\>](#bkmk_remotemp)  
   - [SMS_SiteSystemToSiteServerConnection_SMSProv_&lt;codicesito\>](#bkmk_remoteprov)  
@@ -96,7 +96,7 @@ Configuration Manager crea automaticamente e, in molti casi, gestisce automatica
 > Quando Configuration Manager crea un gruppo in un computer appartenente a un dominio, il gruppo è un gruppo di sicurezza locale. Se il computer è un controller di dominio, il gruppo è un gruppo locale di dominio. Questo tipo di gruppo è comune a tutti i controller di dominio del dominio.  
 
 
-### <a name="configmgr_collectedfilesaccess"></a><a name="configmgr_collectedfilesaccess"></a> ConfigMgr_CollectedFilesAccess
+### <a name="configuration-manager_collectedfilesaccess"></a><a name="configmgr_collectedfilesaccess"></a> Configuration Manager_CollectedFilesAccess
 
 Configuration Manager usa questo gruppo per concedere l'accesso per la visualizzazione dei file raccolti dall'inventario software.  
 
@@ -114,14 +114,14 @@ Configuration Manager gestisce automaticamente l'appartenenza a gruppi. L'appart
 Per impostazione predefinita, questo gruppo dispone dell'autorizzazione di **Lettura** per la seguente cartella nel server del sito: `C:\Program Files\Microsoft Configuration Manager\sinv.box\FileCol`  
 
 
-### <a name="configmgr_dviewaccess"></a><a name="configmgr_dviewaccess"></a>ConfigMgr_DViewAccess  
+### <a name="configuration-manager_dviewaccess"></a><a name="configmgr_dviewaccess"></a>Configuration Manager_DViewAccess  
 
 Questo gruppo è un gruppo di sicurezza locale creato da Configuration Manager nel server di database del sito o nel server di replica del database di un sito primario figlio. Il sito lo crea quando si usano le viste distribuite per la replica di database tra siti all'interno di una gerarchia. Contiene il server del sito e gli account computer di SQL Server del sito di amministrazione centrale.
 
 Per altre informazioni, vedere [Trasferimenti di dati tra siti](data-transfers-between-sites.md).
 
 
-### <a name="configmgr-remote-control-users"></a>Utenti di Controllo remoto di ConfigMgr  
+### <a name="configuration-manager-remote-control-users"></a><a name="configmgr_rcusers"></a> Utenti di Controllo remoto di Configuration Manager  
 
 Gli strumenti remoti di Configuration Manager usano questo gruppo per l'archiviazione di account e gruppi configurati nell'elenco **Visualizzatori autorizzati**. Il sito assegna questo elenco a ogni client.  
 
@@ -245,6 +245,8 @@ Per impostazione predefinita, il gruppo dispone del **controllo completo** per l
 
 È possibile configurare gli account seguenti per Configuration Manager.  
 
+> [!TIP]
+> Nella password degli account specificati nella console di Configuration Manager non usare il carattere percentuale (`%`). L'account non verrà autenticato.<!-- SCCMDocs#1032 -->
 
 ### <a name="active-directory-group-discovery-account"></a>Account di individuazione gruppo Active Directory  
 
@@ -382,7 +384,7 @@ I computer client usano l'**account di accesso alla rete** quando non possono us
 
 Un client di Configuration Manager tenta, in prima battuta, di usare il proprio account computer per scaricare il contenuto. Poiché non riesce, ritenta automaticamente con l'account di accesso alla rete.  
 
-A partire dalla versione 1806, un gruppo di lavoro o un client associato ad Azure AD può accedere in modo sicuro al contenuto dai punti di distribuzione senza la necessità di un account di accesso alla rete. Questo comportamento comprende gli scenari di distribuzione del sistema operativo con una sequenza di attività eseguita da supporti di avvio, PXE o Software Center. Per altre informazioni, vedere [HTTP migliorato](enhanced-http.md).<!--1358228,1358278-->
+Se si configura il sito per HTTPS o [HTTP avanzato](enhanced-http.md), un gruppo di lavoro o un client aggiunto ad Azure AD può accedere in modo sicuro al contenuto dai punti di distribuzione senza la necessità di un account di accesso alla rete. Questo comportamento comprende gli scenari di distribuzione del sistema operativo con una sequenza di attività eseguita da supporti di avvio, PXE o Software Center.<!--1358228,1358278--> Per altre informazioni, vedere [Comunicazioni tra client e punti di gestione](communications-between-endpoints.md#bkmk_client2mp).<!-- SCCMDocs#1345 -->
 
 > [!Note]  
 > Se si abilita **HTTP avanzato** in modo che non richieda l'account di accesso alla rete, il punto di distribuzione deve eseguire Windows Server 2012 o versione successiva. <!--SCCMDocs-pr issue #2696-->
@@ -458,7 +460,7 @@ SQL Server Reporting Services usa l'**account punto di Reporting Services** per 
 > L'account specificato deve disporre delle autorizzazioni di **Accesso locale** nel computer che ospita il database SQL di Reporting Services.
 
 > [!NOTE]  
-> All'account vengono concessi automaticamente tutti i diritti necessari tramite l'aggiunta al ruolo smsschm_users del database SQL nel database ConfigMgr.
+> All'account vengono concessi automaticamente tutti i diritti necessari tramite l'aggiunta al ruolo smsschm_users del database SQL nel database di Configuration Manager.
 
 Per altre informazioni, vedere [Introduzione ai report](../../servers/manage/introduction-to-reporting.md).
 
@@ -643,41 +645,41 @@ Questo oggetto viene usato per le esecuzioni di report SQL.  La stored procedure
 
 ## <a name="database-roles-that-configuration-manager-uses-in-sql"></a><a name="bkmk_sqlroles"></a>Ruoli del database usati da Configuration Manager in SQL
 <!--SCCMDocs issue #1160-->
-Configuration Manager crea automaticamente e mantiene gli oggetti ruolo seguenti in SQL. Questi ruoli consentono di accedere a stored procedure, tabelle, viste e funzioni specifiche per eseguire le azioni richieste per ogni ruolo per recuperare o inserire dati da e nel database ConfigMgr. Questi oggetti si trovano all'interno del database di Configuration Manager in Sicurezza/Ruoli/Ruoli del database.
+Configuration Manager crea automaticamente e mantiene gli oggetti ruolo seguenti in SQL. Questi ruoli consentono di accedere a stored procedure, tabelle, viste e funzioni specifiche per eseguire le azioni necessarie di ogni ruolo per recuperare o inserire dati da e nel database di Configuration Manager. Questi oggetti si trovano all'interno del database di Configuration Manager in Sicurezza/Ruoli/Ruoli del database.
 
 > [!IMPORTANT]  
-> La modifica o la rimozione di questi oggetti può generare problemi seri in un ambiente di Configuration Manager.  È consigliabile non apportare modifiche a questi oggetti.
+> La modifica o la rimozione di questi oggetti può generare problemi seri in un ambiente di Configuration Manager. Non modificarli. L'elenco seguente è esclusivamente a scopo informativo.
 
 ### <a name="smsdbrole_aitool"></a>smsdbrole_AITool
 
-Importazione di contratti multilicenza per Asset Intelligence. ConfigMgr concede questa autorizzazione agli account utente in base all'accesso RBA per poter importare contratti multilicenza da usare con Asset Intelligence.  Questo account può essere aggiunto da un ruolo di amministratore completo o da un ruolo di Gestione asset.
+Importazione di contratti multilicenza per Asset Intelligence. Configuration Manager concede questa autorizzazione agli account utente in base all'accesso RBA per poter importare contratti multilicenza da usare con Asset Intelligence.  Questo account può essere aggiunto da un ruolo di amministratore completo o da un ruolo di Gestione asset.
 
 ### <a name="smsdbrole_aius"></a>smsdbrole_AIUS
 
-Sincronizzazione aggiornamenti di Asset Intelligence. ConfigMgr concede all'account computer che ospita l'account del punto di sincronizzazione di Asset Intelligence l'accesso per ottenere i dati del proxy di Asset Intelligence e visualizzare i dati di AI in sospeso per l'upload.
+Sincronizzazione aggiornamenti di Asset Intelligence. Configuration Manager concede all'account computer che ospita l'account del punto di sincronizzazione di Asset Intelligence l'accesso per ottenere i dati del proxy di Asset Intelligence e visualizzare i dati di IA in sospeso per l'upload.
 
 ### <a name="smsdbrole_amtsp"></a>smsdbrole_AMTSP
 
 Gestione fuori banda. Questo ruolo viene usato dal ruolo AMT di Configuration Manager per recuperare i dati nei dispositivi che supportano Intel AMT.
 
 > [!NOTE]  
-> Questo ruolo è deprecato nelle versioni più recenti di ConfigMgr.
+> Questo ruolo è deprecato nelle versioni più recenti di Configuration Manager.
 
 ### <a name="smsdbrole_crp"></a>smsdbrole_CRP
 
-Supporto per il punto di registrazione certificati per System Center Endpoint Protection (SCEP). ConfigMgr concede l'autorizzazione all'account computer del sistema del sito che supporta il punto di registrazione certificati per il supporto SCEP per la firma e il rinnovo del certificato.
+Punto di registrazione certificati per il supporto di Simple Certificate Enrollment Protocol (SCEP). Configuration Manager concede l'autorizzazione all'account computer del sistema del sito che supporta il punto di registrazione certificati per il supporto di SCEP per la firma e il rinnovo dei certificati.
 
 ### <a name="smsdbrole_crppfx"></a>smsdbrole_CRPPfx
 
-Supporto PFX per il punto di registrazione certificati. ConfigMgr concede l'autorizzazione all'account computer del sistema del sito che supporta il punto di registrazione certificati per il supporto PFX per la firma e il rinnovo.
+Supporto PFX per il punto di registrazione certificati. Configuration Manager concede l'autorizzazione all'account computer del sistema del sito che supporta il punto di registrazione certificati configurato per il supporto PFX per la firma e il rinnovo.
 
 ### <a name="smsdbrole_dmp"></a>smsdbrole_DMP
 
-Punto gestione periferiche. ConfigMgr concede questa autorizzazione all'account computer per un punto di gestione con l'opzione "Consenti ai dispositivi mobili e ai computer Mac l'utilizzo del punto di gestione", per offrire supporto per i dispositivi registrati in MDM.
+Punto gestione periferiche. Configuration Manager concede questa autorizzazione all'account computer per un punto di gestione con l'opzione "Consenti ai dispositivi mobili e ai computer Mac l'utilizzo del punto di gestione" al fine di offrire supporto per i dispositivi registrati in MDM.
 
 ### <a name="smsdbrole_dmpconnector"></a>smsdbrole_DmpConnector
 
-Punto di connessione del servizio. ConfigMgr concede questa autorizzazione all'account computer che ospita il punto di connessione del servizio per recuperare e fornire dati di telemetria, gestire i servizi cloud e recuperare gli aggiornamenti del servizio.
+Punto di connessione del servizio. Configuration Manager concede questa autorizzazione all'account computer che ospita il punto di connessione del servizio per recuperare e fornire dati di telemetria, gestire i servizi cloud e recuperare gli aggiornamenti del servizio.
 
 ### <a name="smsdbrole_dviewaccess"></a>smsdbrole_DViewAccess
 
@@ -685,11 +687,11 @@ Viste distribuite. Configuration Manager concede questa autorizzazione all'accou
 
 ### <a name="smsdbrole_dwss"></a>smsdbrole_DWSS
 
-Data warehouse. ConfigMgr concede questa autorizzazione all'account computer che ospita il ruolo Data warehouse.
+Data warehouse. Configuration Manager concede questa autorizzazione all'account computer che ospita il ruolo Data Warehouse.
 
 ### <a name="smsdbrole_enrollsvr"></a>smsdbrole_EnrollSvr
 
- Punto di registrazione. ConfigMgr concede questa autorizzazione all'account computer che ospita il punto di registrazione per consentire la registrazione del dispositivo tramite MDM.
+ Punto di registrazione. Configuration Manager concede questa autorizzazione all'account computer che ospita il punto di registrazione per consentire la registrazione dei dispositivi tramite MDM.
 
 ### <a name="smsdbrole_extract"></a>smsdbrole_extract
 
@@ -697,26 +699,26 @@ Consente di accedere a tutte le viste dello schema estese.
 
 ### <a name="smsdbrole_hmsuser"></a>smsdbrole_HMSUser
 
-Servizio di gestione della gerarchia. ConfigMgr concede queste autorizzazioni all'account per gestire i messaggi sullo stato di failover e le transazioni di SQL Server Broker tra i siti all'interno di una gerarchia.
+Servizio di gestione della gerarchia. Configuration Manager concede queste autorizzazioni all'account per gestire i messaggi sullo stato di failover e le transazioni SQL Server Broker tra i siti all'interno di una gerarchia.
 
 > [!NOTE]  
 > Per impostazione predefinita, il ruolo smdbrole_WebPortal è un membro di questo ruolo.
 
 ### <a name="smsdbrole_mcs"></a>smsdbrole_MCS
 
-Servizio multicast. ConfigMgr concede questa autorizzazione all'account computer del punto di distribuzione che supporta il multicast.
+Servizio multicast. Configuration Manager concede questa autorizzazione all'account computer del punto di distribuzione che supporta il multicast.
 
 ### <a name="smsdbrole_mp"></a>smsdbrole_MP
 
-Punto di gestione. ConfigMgr concede questa autorizzazione all'account computer che ospita il ruolo del punto di gestione per fornire supporto per i client ConfigMgr.
+Punto di gestione. Configuration Manager concede questa autorizzazione all'account computer che ospita il ruolo di punto di gestione per offrire supporto per i client Configuration Manager.
 
 ### <a name="smsdbrole_mpmbam"></a>smsdbrole_MPMBAM
 
-Punto di gestione per Microsoft BitLocker Administration And Monitoring. ConfigMgr concede questa autorizzazione all'account computer che ospita il punto di gestione che gestisce MBAM per un ambiente.
+Punto di gestione per Microsoft BitLocker Administration And Monitoring. Configuration Manager concede questa autorizzazione all'account computer che ospita il punto di gestione che gestisce MBAM per un ambiente.
 
 ### <a name="smsdbrole_mpusersvc"></a>smsdbrole_MPUserSvc
 
-Richiesta di applicazioni del punto di gestione. ConfigMgr concede questa autorizzazione all'account computer che ospita il punto di gestione per supportare le richieste di applicazioni in base all'utente.
+Richiesta di applicazioni del punto di gestione. Configuration Manager concede questa autorizzazione all'account computer che ospita il punto di gestione per supportare le richieste dell'applicazione basate sugli utenti.
 
 ### <a name="smsdbrole_siteprovider"></a>smsdbrole_siteprovider
 
@@ -724,16 +726,37 @@ Provider SMS. Configuration Manager concede questa autorizzazione all'account co
 
 ### <a name="smsdbrole_siteserver"></a>smsdbrole_siteserver
 
-Server del sito. ConfigMgr concede questa autorizzazione all'account computer che ospita il sito primario o CAS.
+Server del sito. Configuration Manager concede questa autorizzazione all'account computer che ospita il sito primario o CAS.
 
 ### <a name="smsdbrole_sup"></a>smsdbrole_SUP
 
-Punto di aggiornamento software. ConfigMgr concede questa autorizzazione all'account computer che ospita il punto di aggiornamento software per l'uso di aggiornamenti di terze parti.
+Punto di aggiornamento software. Configuration Manager concede questa autorizzazione all'account computer che ospita il punto di aggiornamento software per l'uso di aggiornamenti di terze parti.
 
 ### <a name="smsdbrole_webportal"></a>smsdbrole_WebPortal
 
-Punto per siti Web del Catalogo applicazioni. ConfigMgr concede questa autorizzazione all'account computer che ospita il punto per siti Web del Catalogo applicazioni per fornire la distribuzione di applicazioni in base all'utente.
+Punto per siti Web del Catalogo applicazioni. Configuration Manager concede questa autorizzazione all'account computer che ospita il punto per siti Web del Catalogo applicazioni per offrire la distribuzione di applicazioni in base all'utente.
 
 ### <a name="smsschm_users"></a>smsschm_users
 
-Accesso per la creazione di report utente. ConfigMgr concede l'accesso all'account usato per l'account del punto di Reporting Services per consentire l'accesso alle viste di reporting SMS per visualizzare i dati di reporting di Configuration Manager.  I dati sono ulteriormente limitati con l'uso di RBA.
+Accesso per la creazione di report utente. Configuration Manager concede l'accesso all'account usato per l'account del punto di Reporting Services per consentire l'accesso alle visualizzazioni Rapporti SMS per visualizzare i dati di reporting di Configuration Manager.  I dati sono ulteriormente limitati con l'uso di RBA.
+
+## <a name="elevated-permissions"></a>Autorizzazioni elevate
+
+<!-- SCCMDocs#405 -->
+
+Per le operazioni correnti, Configuration Manager richiede autorizzazioni elevate per alcuni account. Vedere, ad esempio, [Prerequisiti per l'installazione di un sito primario](../../servers/deploy/install/prerequisites-for-installing-sites.md#bkmk_PrereqPri). Nell'elenco seguente sono riepilogate queste autorizzazioni e i motivi per cui sono necessarie.
+
+- L'account computer del server del sito primario e del server del sito di amministrazione centrale richiede:
+
+  - Diritti di amministratore locale in tutti i server del sistema del sito. Questa autorizzazione consente di gestire, installare e rimuovere i servizi del sistema. Il server del sito aggiorna anche i gruppi locali nel sistema del sito quando si aggiungono o rimuovono ruoli.
+
+  - Accesso di amministratore di sistema all'istanza di SQL per il database del sito. Questa autorizzazione consente di configurare e gestire SQL per il sito. Configuration Manager si integra strettamente con SQL, non si tratta semplicemente di un database.
+
+- Gli account utente nel ruolo di amministratore completo richiedono:
+
+  - Diritti di amministratore locale in tutti i server del sito. Questa autorizzazione consente di visualizzare, modificare, rimuovere e installare servizi di sistema, chiavi e valori del Registro di sistema e oggetti WMI.
+
+  - Accesso di amministratore di sistema all'istanza di SQL per il database del sito. Questa autorizzazione consente di installare e aggiornare il database durante la configurazione o il ripristino. È necessaria anche per la manutenzione e le operazioni di SQL. Ad esempio, la reindicizzazione e l'aggiornamento delle statistiche.
+
+    > [!NOTE]
+    > Alcune organizzazioni possono scegliere di rimuovere l'accesso di amministratore di sistema e di concederlo solo quando è necessario. Questo comportamento viene talvolta definito "accesso JIT (Just-In-Time)". In questo caso, gli utenti con il ruolo di amministratore completo devono comunque avere accesso per leggere, aggiornare ed eseguire stored procedure nel database di Configuration Manager. Queste autorizzazioni consentono loro di risolvere la maggior parte dei problemi senza l'accesso di amministratore di sistema completo.

@@ -2,7 +2,7 @@
 title: Ottimizzare il recapito degli aggiornamenti di Windows 10
 titleSuffix: Configuration Manager
 description: Informazioni su come usare Configuration Manager per gestire il contenuto di aggiornamento per rimanere aggiornati con Windows 10.
-ms.date: 04/21/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b670cfaf-96a4-4fcb-9caa-0f2e8c2c6198
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f7edd05a7b1ce105e81fd4f594d95c9dfb45f472
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 835dcd0c86244c1731cb6c6e040d577160759614
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771362"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83267791"
 ---
 # <a name="optimize-windows-10-update-delivery-with-configuration-manager"></a>Ottimizzare il recapito degli aggiornamenti di Windows 10 con Configuration Manager
 
@@ -131,7 +131,7 @@ L'agente di Windows Update (WUA) richiede prima di tutto il contenuto dell'aggio
 
 3. CBS richiede quindi all'agente di Windows Update di scaricare gli intervalli necessari da uno o più file di installazione rapida con estensione psf.  
 
-4. Ottimizzazione recapito si coordina con Configuration Manager e scarica gli intervalli da un punto di distribuzione locale o dagli eventuali peer disponibili. Se Ottimizzazione recapito è disabilitata, viene usato il Servizio trasferimento intelligente in background (BITS) nello stesso modo con Configuration Manager per il coordinamento delle origini peer cache. Ottimizzazione recapito o BITS passa gli intervalli all'agente di Windows Update, che li rende disponibili per l'applicazione e l'installazione con CBS.  
+4. Se Ottimizzazione recapito è abilitata e vengono individuati peer con gli intervalli necessari, il client eseguirà il download da peer indipendentemente dal client ConfigMgr. Se Ottimizzazione recapito è disabilitata o nessun peer ha gli intervalli necessari, il client ConfigMgr scaricherà questi intervalli da un punto di distribuzione locale (o da un peer o da Microsoft Update). Gli intervalli vengono passati all'agente di Windows Update che li rende disponibili a CBS per l'applicazione.
 
 
 #### <a name="why-are-the-express-files-psf-so-large-when-stored-on-configuration-manager-peer-sources-in-the-ccmcache-folder"></a>Perché i file di installazione rapida (psf) sono grandi quando sono archiviati nelle origini peer di Configuration Manager nella cartella ccmcache?

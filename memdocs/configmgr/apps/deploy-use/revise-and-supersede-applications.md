@@ -2,7 +2,7 @@
 title: Rivedere e sostituire le applicazioni
 titleSuffix: Configuration Manager
 description: Informazioni su come usare le versioni delle applicazioni in Configuration Manager e sostituire le applicazioni.
-ms.date: 10/06/2016
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 30170d70-489f-47f7-bebf-9ed0115db26b
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 87804ee2a76dea918cebb964a3672ab61bf6de8d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6afed00b8207edb338b2a6dc62e083a5267fa47e
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689229"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343134"
 ---
 # <a name="revise-and-supersede-applications-in-configuration-manager"></a>Rivedere e sostituire le applicazioni in Configuration Manager
 
@@ -59,8 +59,8 @@ In questo argomento verrà illustrato come rivedere le versioni delle applicazio
 >  È possibile eliminare solo la revisione dell'applicazione corrente se l'applicazione è ritirata e non ha riferimenti.  
 
 ##  <a name="application-supersedence"></a>Sostituzione delle applicazioni  
- La gestione delle applicazioni in Configuration Manager consente di aggiornare o sostituire le applicazioni esistenti usando una relazione di sostituzione. Quando si sostituisce un'applicazione, è possibile specificare un nuovo tipo di distribuzione per sostituire il tipo di distribuzione dell'applicazione sostituita ed è anche possibile decidere se aggiornare o disinstallare l'applicazione sostituita prima di installare l'applicazione sostitutiva.  
-
+ La gestione delle applicazioni in Configuration Manager consente di aggiornare o sostituire le applicazioni esistenti usando una relazione di sostituzione. Quando si sostituisce un'applicazione, è possibile specificare un nuovo tipo di distribuzione per sostituire il tipo di distribuzione dell'applicazione sostituita ed è anche possibile decidere se aggiornare o disinstallare l'applicazione sostituita prima di installare l'applicazione sostitutiva. In generale, è consigliabile limitare le catene di sostituzione a cinque livelli al massimo.
+ 
 > [!IMPORTANT]  
 >  Quando si seleziona l'opzione per disinstallare il tipo di distribuzione sostituito, è impossibile sostituire un tipo di distribuzione con un tipo di distribuzione distribuito a un tipo di raccolta differente.  Ad esempio, è impossibile sostituire un tipo di distribuzione che era stato distribuito a una raccolta dispositivi con un tipo di distribuzione che era stato distribuito a una raccolta di utenti se si seleziona l'opzione per disinstallare il tipo di distribuzione sostituito.  
 

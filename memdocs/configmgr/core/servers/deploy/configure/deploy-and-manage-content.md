@@ -2,7 +2,7 @@
 title: Distribuire contenuto
 titleSuffix: Configuration Manager
 description: Ecco come è possibile iniziare a distribuire contenuto ai punti di distribuzione per Configuration Manager dopo averli installati.
-ms.date: 10/06/2016
+ms.date: 05/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: d50dcca0-4419-449d-a487-73abcadf328f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 00a44123bc074c671f9b3d73af66b8d79c3ff433
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: df26fe91f009a1a4f5d3c5a4f4adb5fe45bbd245
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906488"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343151"
 ---
 # <a name="deploy-and-manage-content-for-configuration-manager"></a>Distribuire e gestire contenuto per Configuration Manager
 
@@ -24,7 +24,7 @@ ms.locfileid: "82906488"
 È possibile iniziare a distribuire contenuto ai punti di distribuzione per Configuration Manager dopo averli installati. In genere, il contenuto viene trasferito ai punti di distribuzione in rete, ma esistono altre opzioni per inviare il contenuto ai punti di distribuzione. Dopo che il contenuto è stato trasferito in un punto di distribuzione, è possibile aggiornare, ridistribuire, rimuovere e convalidare il contenuto nei punti di distribuzione.  
 
 ##  <a name="distribute-content"></a><a name="bkmk_distribute"></a> Distribuire il contenuto  
-In genere, il contenuto viene distribuito ai punti di distribuzione in modo che sia disponibile per i computer client. Un'eccezione a questo comportamento si verifica quando si usa la distribuzione del contenuto su richiesta per una distribuzione specifica.  Quando si distribuisce il contenuto, Configuration Manager archivia i file di contenuto in un pacchetto e distribuisce il pacchetto al punto di distribuzione. È possibile distribuire diversi tipi di contenuto, tra cui:  
+In genere, il contenuto viene distribuito ai punti di distribuzione in modo che sia disponibile per i computer client. Un'eccezione a questo comportamento si verifica quando si usa la distribuzione del contenuto su richiesta per una distribuzione specifica. Quando si distribuisce il contenuto, Configuration Manager archivia i file di contenuto in un pacchetto e quindi distribuisce il pacchetto al punto di distribuzione. Il contenuto del pacchetto viene estratto dalla raccolta contenuto del server del sito. È possibile distribuire diversi tipi di contenuto, tra cui:  
 
 - Tipi di distribuzioni delle applicazioni  
 
@@ -311,7 +311,7 @@ Per gestire il contenuto sono disponibili le opzioni seguenti:
 
 ### <a name="update-content"></a>Aggiornare il contenuto
 Quando il percorso del file di origine per una distribuzione viene aggiornato aggiungendo nuovi file o sostituendo i file esistenti con una versione più recente, è possibile aggiornare i file di contenuto nei punti di distribuzione usando l'azione **Aggiorna punti di distribuzione** oppure **Aggiorna contenuto**:  
-- I file di contenuto vengono copiati dal percorso del file di origine alla raccolta contenuto nel sito proprietario dell'origine contenuto del pacchetto  
+- I file di contenuto vengono copiati dalla posizione di origine del pacchetto originale alla raccolta contenuto nel sito proprietario dell'origine contenuto del pacchetto
 - La versione del pacchetto viene incrementata  
 - Ogni istanza della raccolta contenuto nei server del sito e nei punti di distribuzione viene aggiornata solo con i file che sono stati modificati  
 

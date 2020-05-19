@@ -10,12 +10,12 @@ ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3a05c10d1f73fa0817febdd591190f6bc2ff0a0e
-ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
+ms.openlocfilehash: bdc98febbc96162b2abe6e666c9354c342e5e913
+ms.sourcegitcommit: ed2c18e210db177eb0d5e10d74207006561b7b5d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587264"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83383727"
 ---
 # <a name="token-based-authentication-for-cloud-management-gateway"></a>Autenticazione basata su token per Cloud Management Gateway
 
@@ -102,6 +102,28 @@ Il token non viene archiviato nel client o nel sito. Assicurarsi di copiare il t
 Usare con il parametro `/new` per specificare il periodo di validità del token. Specificare un valore intero in minuti. Il valore predefinito è 4.320 (tre giorni). Il valore massimo è 10.080 (sette giorni).
 
 Esempio: `BulkRegistrationTokenTool.exe /lifetime:4320`
+
+## <a name="bulk-registration-token-management"></a>Gestione di token di registrazione in blocco
+
+È possibile visualizzare i token di registrazione in blocco creati in precedenza e la loro durata nella console di Configuration Manager e bloccarne l'utilizzo, se necessario. Il database del sito, tuttavia, non archivia i token di registrazione in blocco.
+
+#### <a name="to-review-a-bulk-registration-token"></a>Per rivedere un token di registrazione in blocco
+
+1. Nella console di Configuration Manager fare clic su **Amministrazione**.
+
+2. Nell'area di lavoro Amministrazione espandere **Sicurezza** e fare clic su **Certificati**. La console elenca tutti i certificati correlati al sito e i token di registrazione in blocco nel riquadro dei dettagli.
+
+3. Selezionare il token di registrazione in blocco da rivedere.
+
+È possibile identificare token di registrazione in blocco specifici in base al GUID. I GUID per i token di registrazione in blocco vengono visualizzati al momento della creazione del token. Se necessario, è anche possibile applicare un filtro o eseguire l'ordinamento in base alla colonna **Tipo**.
+
+#### <a name="to-block-a-bulk-registration-token"></a>Per creare un token di registrazione in blocco
+
+1. Nella console di Configuration Manager fare clic su **Amministrazione**.
+
+2. Nell'area di lavoro Amministrazione espandere **Sicurezza**, fare clic su **Certificati** e selezionare il token di registrazione in blocco da bloccare.
+
+3. Nella scheda **Home** della barra multifunzione o nel menu di scelta rapida selezionare **Blocca**. Viceversa, è possibile sbloccare token di registrazione in blocco precedentemente bloccati selezionando **Sblocca** nella scheda **Home** della barra multifunzione o nel menu di scelta rapida.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -10,16 +10,16 @@ ms.assetid: 9875c443-19bf-43a0-9203-3a741f305096
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dd2a8b3bfb7c4b8af277616c7eaed329bc143bb7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 23cc7d0c642637a310f53280bafed6a2a28d2834
+ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691399"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83406680"
 ---
 # <a name="create-a-configuration-manager-lab-in-azure"></a>Creare un lab di Configuration Manager in Azure
 
-*Si applica a: Configuration Manager (Technical Preview Branch)*
+*Si applica a: Configuration Manager (Current Branch, Technical Preview Branch)*
 
 <!--3556017-->
 
@@ -35,12 +35,12 @@ Per altre informazioni, vedere [Configuration Manager in Azure](../understand/co
 ## <a name="prerequisites"></a>Prerequisiti
 
 Questo processo richiede una sottoscrizione di Azure in cui è possibile creare gli oggetti seguenti: 
-- Due macchine virtuali Standard_B2s per il controller di dominio e per i ruoli Punto di gestione e Punto di distribuzione.
+- Due macchine virtuali Standard_B2s per il controller di dominio, il punto di gestione e il punto di distribuzione.
 - Una macchina virtuale Standard_B2ms per il server del sito primario e il server di database SQL.
 - Account di archiviazione Standard_LRS
 
 > [!Tip]  
-> Vedere il [calcolatore dei prezzi di Azure](https://azure.microsoft.com/pricing/calculator/) per determinare i costi potenziali.  
+> Per determinare i costi potenziali, vedere il [calcolatore dei prezzi di Azure](https://azure.microsoft.com/pricing/calculator/).  
 
 
 
@@ -102,7 +102,7 @@ Il prefisso specificato nel modello di distribuzione è il prefisso del nome del
 ### `<prefix>DC01`
 
 - Controller di dominio Active Directory
-- Standard_B2s con due CPU e 4 GB di memoria
+- Standard_B2s con due processori e 4 GB di memoria
 - Windows Server 2019 Datacenter Edition
 
 #### <a name="windows-features-and-roles"></a>Ruoli e funzionalità di Windows
@@ -113,7 +113,7 @@ Il prefisso specificato nel modello di distribuzione è il prefisso del nome del
 
 ### `<prefix>PS01`
 
-- Standard_B2ms con due CPU e 8 GB di memoria
+- Standard_B2ms con due processori e 8 GB di memoria
 - Windows Server 2016 Datacenter Edition
 - SQL Server
 - Windows 10 ADK con Windows PE 
@@ -127,7 +127,7 @@ Il prefisso specificato nel modello di distribuzione è il prefisso del nome del
 
 ### `<prefix>DPMP01`
 
-- Standard_B2s con due CPU e 4 GB di memoria
+- Standard_B2s con due processori e 4 GB di memoria
 - Windows Server 2019 Datacenter Edition
 - Punto di distribuzione
 - Punto di gestione

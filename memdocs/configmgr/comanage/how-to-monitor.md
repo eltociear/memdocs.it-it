@@ -2,7 +2,7 @@
 title: Monitorare la co-gestione
 titleSuffix: Configuration Manager
 description: Usare il dashboard di co-gestione per esaminare le informazioni sui dispositivi con co-gestione.
-ms.date: 07/26/2019
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: e83a7b0d-b381-4b4a-8eca-850385abbebb
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 64d34cef57a3d5f141093d2b099c0b352604be42
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e4516ca9baa7398322c204908c25248921a69d25
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688699"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268063"
 ---
 # <a name="how-to-monitor-co-management-in-configuration-manager"></a>Come monitorare la co-gestione in Configuration Manager
 
@@ -173,7 +173,7 @@ Il criterio di produzione (CoMgmtSettingsProd) è destinato alla raccolta **Tutt
 
 ## <a name="wmi-device-data"></a>Dati del dispositivo WMI
 
-Eseguire una query della classe WMI **SMS_Client_ComanagementState**. È possibile creare raccolte personalizzate in Configuration Manager che consentono di determinare lo stato della distribuzione della co-gestione. Per altre informazioni sulla creazione delle raccolte personalizzate, vedere [Come creare raccolte in Configuration Manager](../core/clients/manage/collections/create-collections.md).
+Eseguire una query sulla classe WMI **SMS_Client_ComanagementState** nello spazio dei nomi **ROOT\SMS\site_&lt;SITECODE>** nel server del sito. È possibile creare raccolte personalizzate in Configuration Manager che consentono di determinare lo stato della distribuzione della co-gestione. Per altre informazioni sulla creazione delle raccolte personalizzate, vedere [Come creare raccolte in Configuration Manager](../core/clients/manage/collections/create-collections.md).
 
 Nella classe WMI sono disponibili i campi seguenti:  
 

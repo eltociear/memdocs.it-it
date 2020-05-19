@@ -2,7 +2,7 @@
 title: Novità di Desktop Analytics
 titleSuffix: Configuration Manager
 description: Riepilogo delle nuove funzionalità della versione mensile più recente del servizio cloud Desktop Analytics.
-ms.date: 03/12/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: fa300181-86cb-4afe-8fbf-895a7572378d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ce882f6bfc7a0d724688d5df59051dae17d54498
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.reviewer: acabello
+ms.openlocfilehash: 1d45d115f279603fa74e143c603c116146278ffe
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693151"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268165"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>Novità di Desktop Analytics
 
@@ -26,6 +27,16 @@ Informazioni sulle novità mensili di Desktop Analytics.
 
 Per ricevere una notifica quando questa pagina viene aggiornata, copiare e incollare l'URL seguente nel lettore di feed RSS: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
+
+## <a name="may-2020"></a>Maggio 2020
+
+### <a name="reduce-the-number-of-apps-for-review"></a>Ridurre il numero di app per la revisione
+
+<!-- 5542186 -->
+
+Per contribuire al consolidamento e alla riduzione del numero di app visualizzate nella pagina delle risorse del portale, questa combina tutte le versioni delle app che hanno lo stesso nome e lo stesso editore. Il numero di app nel riquadro **App degne di nota** riflette questa impostazione. Ad esempio, anziché un elenco di centinaia di istanze di Microsoft Edge, è presente una sola istanza per tutte le versioni. È possibile prendere decisioni una sola volta per tutte le versioni. Se è necessario prendere decisioni per versioni specifiche di un'app, questo comportamento è configurabile.
+
+Per altre informazioni, vedere [Informazioni sugli asset - App](about-assets.md#apps).
 
 ## <a name="march-2020"></a>Marzo 2020
 

@@ -10,12 +10,13 @@ ms.assetid: e0db3311-2303-4013-a906-76b408172d3c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 29f063da47dc26789493b2a83ad8e0cfa6885270
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.reviewer: acabello
+ms.openlocfilehash: fb217a1e1ddf114155e43e8edef0c1b34842db64
+ms.sourcegitcommit: 7b224e138c0618e978be59832b3486f3745abacc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693298"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83381520"
 ---
 # <a name="desktop-analytics-faq"></a>Domande frequenti su Desktop Analytics
 
@@ -50,6 +51,10 @@ Sì, usare il processo seguente:
 - Nell'area di lavoro **Amministrazione** della console di Configuration Manager espandere **Servizi cloud** e selezionare il nodo **Servizi di Azure**. Aprire le proprietà per la voce associata al servizio Desktop Analytics.
 
 - Nella scheda **Connessione di Desktop Analytics** modificare **Raccolta di destinazione** o gestire le raccolte aggiuntive.
+
+<!-- 7130169 -->
+> [!Note]
+> Non includere più di 20 raccolte nell'elenco di raccolte aggiuntive. Prestare attenzione al numero totale di dispositivi in ogni raccolta. Includere sempre le [raccolte da includere e escludere del progetto pilota globale](deploy-pilot.md#bkmk_GlobalPilot).  
 
 > [!IMPORTANT]  
 > Configuration Manager usa un criterio delle impostazioni per configurare i dispositivi presenti nella raccolta di destinazione. Questo criterio include le impostazioni relative ai dati di diagnostica per abilitare i dispositivi a inviare dati a Microsoft. La modifica della raccolta di destinazione non annulla il criterio delle impostazioni nei dispositivi che non fanno più parte della raccolta di destinazione. Se non si vuole che i dispositivi continuino a inviare dati di diagnostica, [riconfigurare i dispositivi](account-close.md#reconfigure-clients).

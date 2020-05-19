@@ -2,7 +2,7 @@
 title: Gestire la sincronizzazione degli aggiornamenti software
 titleSuffix: Configuration Manager
 description: Seguire questa procedura per pianificare, avviare manualmente e monitorare la sincronizzazione degli aggiornamenti software.
-ms.date: 12/20/2018
+ms.date: 05/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -10,12 +10,12 @@ ms.assetid: ea8698c4-9df5-4cf5-8b62-ab93115b4769
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: d1b47965fa5cc36b0c0eb6d47c2214d1dceb8ee8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d36c6a02868b8ccde9538a286135b2ad1ce08f43
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692939"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269049"
 ---
 #  <a name="synchronize-software-updates"></a><a name="BKMK_SUMSync"></a> sincronizzare gli aggiornamenti software
 
@@ -56,7 +56,7 @@ Seguire queste procedure nel sito di livello superiore per avviare manualmente l
 
 2. Nell'area di lavoro Raccolta software espandere **Aggiornamenti software** , quindi fare clic su **Tutti gli aggiornamenti software** o **Gruppo di aggiornamento software**.  
 
-3. Nella scheda **Home** nel gruppo **Crea** fare clic su **Sincronizza aggiornamenti software**. Fare clic su **Sì** nella finestra di dialogo per confermare che si desidera avviare il processo di sincronizzazione.  
+3. Nel gruppo **Tutti gli aggiornamenti software** della scheda **Home** fare clic su **Sincronizza aggiornamenti software**. Fare clic su **Sì** nella finestra di dialogo per confermare che si desidera avviare il processo di sincronizzazione.  
 
    Dopo aver avviato il processo di sincronizzazione nel punto di aggiornamento software, è possibile monitorarlo dalla console di Configuration Manager per tutti i punti di aggiornamento software della gerarchia. Utilizzare la procedura seguente per monitorare il processo di sincronizzazione degli aggiornamenti software.  
 

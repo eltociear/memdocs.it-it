@@ -2,7 +2,7 @@
 title: Informazioni dettagliate sulla gestione
 titleSuffix: Configuration Manager
 description: Informazioni sulla funzionalità Informazioni dettagliate sulla gestione disponibile nella console di Configuration Manager.
-ms.date: 04/01/2020
+ms.date: 05/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a79f83be-884c-48e6-94d6-ed0a68c22e2f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e9aae1da48deabd0cc339cd25055827caf07354b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 69b2533dd5c86124a6aff9feac7306ecf16c6e5a
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694449"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268964"
 ---
 # <a name="management-insights-in-configuration-manager"></a>Informazioni dettagliate sulla gestione in Configuration Manager
 
@@ -146,13 +146,13 @@ A partire dalla versione 1902, sono disponibili nuove regole con raccomandazioni
 
 - **Raccolte con la stessa ora di inizio di rivalutazione**: queste raccolte hanno la stessa ora di rivalutazione di altre raccolte. Modificare l'ora di rivalutazione in modo da evitare conflitti.  
 
-- **Raccolte con tempo di query di oltre due secondi**: rivedere le regole di query per queste raccolte. Prendere in considerazione di modificarle o eliminarle.
+- **Raccolte con tempo di query di oltre cinque minuti**: rivedere le regole di query per queste raccolte. Prendere in considerazione di modificarle o eliminarle.
 
 - Le regole seguenti includono alcune configurazioni che possono causare un carico non necessario del sito. Rivedere queste raccolte e quindi eliminarle oppure disabilitare la valutazione delle regole:  
 
   - **Raccolte senza regole di query e con gli aggiornamenti incrementali abilitati**  
 
-  - **Raccolte senza regole di query e abilitate per la valutazione pianificata o incrementale**  
+  - **Raccolte senza regole di query e abilitate per qualsiasi pianificazione**  
 
   - **Raccolte senza regole di query e con pianificazione della valutazione completa selezionata**  
 

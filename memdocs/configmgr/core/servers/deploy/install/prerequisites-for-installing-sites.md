@@ -10,12 +10,12 @@ ms.assetid: 92b339ef-2723-4322-bec6-077b3e8846b0
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8362dbf5cf7264c19f683ce5a224f1e0ec348b36
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a7f7853b006d4ac8b11a30217d1b05b1eedd69dc
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700669"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268981"
 ---
 # <a name="prerequisites-for-installing-configuration-manager-sites"></a>Prerequisiti per l'installazione di siti di Configuration Manager
 
@@ -49,6 +49,9 @@ Se si installa un sito di amministrazione centrale come parte di un'espansione d
 
         > [!IMPORTANT]  
         > Al termine dell'installazione di Configuration Manager, l'account computer server del sito deve mantenere i diritti di amministratore di sistema di SQL Server. Non rimuovere i diritti di amministratore di sistema di SQL da questo account.  
+
+    > [!NOTE]
+    > Per altre informazioni sulla necessità di queste autorizzazioni al completamento dell'installazione, vedere [Autorizzazioni con privilegi elevati](../../../plan-design/hierarchy/accounts.md#elevated-permissions).
 
 - Quando si installa un sito primario, sono necessari i diritti aggiuntivi seguenti:  
 
@@ -134,7 +137,7 @@ Dopo aver espanso il sito è necessario riconfigurare i servizi di Azure seguent
 - [Microsoft Store per le aziende](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)  
 - [Gateway di gestione cloud](../../../clients/manage/cmg/plan-cloud-management-gateway.md)
 
-Nella versione 1806 e successive rinnovare la chiave privata del tenant di Azure Active Directory. Per altre informazioni, vedere [Rinnovare la chiave privata](../configure/azure-services-wizard.md#bkmk_renew).
+Il metodo più semplice è rinnovare la chiave privata del tenant Azure Active Directory. Per altre informazioni, vedere [Rinnovare la chiave privata](../configure/azure-services-wizard.md#bkmk_renew).
 
 In alternativa, rimuovere e quindi ricreare la connessione al servizio:
 

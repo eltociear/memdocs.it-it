@@ -2,7 +2,7 @@
 title: Valutazione della compatibilità
 titleSuffix: Configuration Manager
 description: Informazioni sulla valutazione della compatibilità per le app e i driver di Windows in Desktop Analytics.
-ms.date: 04/21/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: ea78f726-b1b3-49b0-8141-d916be48c458
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eedd33999ce17417122b2403c777a0b560e5f197
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.reviewer: acabello
+ms.openlocfilehash: 7b2bff4f8365693c86540c9b0578307340f13a49
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82109999"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268896"
 ---
 # <a name="compatibility-assessment-in-desktop-analytics"></a>Valutazione della compatibilità in Desktop Analytics
 
@@ -29,7 +30,7 @@ Desktop Analytics usa le categorie di valutazione della compatibilità seguenti:
 
 - **Alta**: è quasi certo che l'applicazione non funzionerà durante o dopo l'aggiornamento. Potrebbe essere necessaria una correzione.
 
-- **Sconosciuto**: l'app non è stata valutata. Non sono disponibili altre informazioni dettagliate, ad esempio *Problemi noti di MS*.
+- **Sconosciuto**: l'app non è stata valutata. Non sono disponibili altre informazioni, ad esempio *Problemi noti di MS* o *Ready for Windows*.
 
 Nell'elenco di risorse app o driver in un piano di distribuzione questo valore viene visualizzato per ogni risorsa nella colonna **Rischio di compatibilità**.
 
@@ -40,9 +41,13 @@ Nell'elenco di risorse app o driver in un piano di distribuzione questo valore v
 Desktop Analytics usa diverse origini per generare la classificazione della valutazione per le applicazioni:
 
 - [Problemi noti di Microsoft](#microsoft-known-issues)
+- [Ready for Windows](#ready-for-windows)
 - [Dati analitici avanzati](#advanced-insights)
 
 È possibile trovare la valutazione per ogni origine nell'app in Desktop Analytics. Nell'elenco di risorse app in un piano di distribuzione selezionare una singola app per aprirne il riquadro a comparsa delle proprietà. Si vedrà un consiglio complessivo e un livello di valutazione. La sezione **Fattori di rischio di compatibilità** visualizza i dettagli di queste valutazioni.
+
+> [!TIP]
+> Se il riquadro dei dettagli dell'app non visualizza la valutazione della compatibilità, è possibile che l'impostazione **Dettagli delle versioni dell'app** sia disattivata. L'impostazione è disattivata per impostazione predefinita e consente la combinazione di tutte le versioni delle app con lo stesso nome ed editore. Il servizio esegue comunque una valutazione del rischio di compatibilità per ogni versione. Attivare **Dettagli delle versioni dell'app** per visualizzare la valutazione del rischio di compatibilità per una versione specifica dell'app. Per altre informazioni, vedere [Pianificare gli asset](about-deployment-plans.md#plan-assets).
 
 ## <a name="microsoft-known-issues"></a>Problemi noti di Microsoft
 
@@ -130,6 +135,28 @@ I dati di compatibilità di Windows classificano alcune app e driver con una *mi
 1. Confrontare l'elenco pubblicato corrente con l'elenco di risorse nell'ambiente in uso. Correggere eventuali app o driver con potenziali problemi aggiornandoli a una versione compatibile.
 
 [![Screenshot dell'app Safeguard in Desktop Analytics](media/5746559-safeguards.png)](media/5746559-safeguards.png#lightbox)
+
+## <a name="ready-for-windows"></a>Ready for Windows
+
+Lo Stato di adozione si basa sulle informazioni provenienti da dispositivi commerciali che condividono dati con Microsoft. Lo stato è integrato con le istruzioni di supporto dei fornitori di software.
+
+Desktop Analytics specifica lo stato di adozione per ogni versione di una risorsa presente nei dispositivi commerciali. Questo stato non include i dati di dispositivi consumer o dispositivi che non condividono dati. Lo stato potrebbe non essere rappresentativo della velocità di adozione in tutti i dispositivi Windows 10.
+
+Le categorie possibili sono:
+
+- **Ampiamente adottato**: almeno 100.000 dispositivi commerciali Windows 10 hanno installato l'app.
+
+- **Adottato**: almeno 10.000 dispositivi commerciali Windows 10 hanno installato l'app.
+
+- **Dati insufficienti**: il numero di dispositivi commerciali Windows 10 che stanno condividendo informazioni sull'app è troppo ridotto perché Microsoft possa classificarne l'adozione.
+
+- **Contattare lo sviluppatore**: è possibile che si verifichino problemi di compatibilità con questa versione dell'app. Microsoft consiglia di contattare il provider del software per ottenere altre informazioni.
+
+- **Sconosciuto**: non sono disponibili informazioni per questa versione dell'applicazione. Potrebbero essere disponibili informazioni per altre versioni dell'applicazione.
+
+### <a name="support-statement"></a>Informativa sul supporto
+
+Se il provider del software supporta una o più versioni di questa applicazione in Windows 10, questa informativa verrà visualizzata nel riquadro delle proprietà dell'app. Nella sezione Fattori di rischio di compatibilità vedere l'**Informativa sul supporto**.
 
 ## <a name="advanced-insights"></a>Dati analitici avanzati
 

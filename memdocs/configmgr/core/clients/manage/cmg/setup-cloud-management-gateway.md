@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 36d256e674a0fe973eca4bc692a244af034d5cc1
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 783323c3e9218b34b1f2b7f3c7d9bb13eea44e2e
+ms.sourcegitcommit: ed2c18e210db177eb0d5e10d74207006561b7b5d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076765"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83383728"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Configurare il gateway di gestione cloud per Configuration Manager
 
@@ -199,6 +199,43 @@ Questo comando visualizza tutti i punti di gestione basati su Internet rilevati 
 > [!Note]  
 > Per la risoluzione dei problemi relativi al traffico client del Cloud Management Gateway, usare **CMGHttpHandler.log**, **CMGService.log** e **SMS_Cloud_ProxyConnector.log**. Per altre informazioni, vedere [File di log](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
 
+### <a name="install-off-premises-clients-using-a-cmg"></a>Installare i client locali usando un Cloud Management Gateway
+
+Per installare l'agente client in sistemi attualmente non connessi all'intranet, deve essere vera una delle condizioni seguenti. In tutti i casi è necessario un account amministratore locale nei sistemi di destinazione.
+
+1. Il sito di Configuration Manager è configurato correttamente per l'uso dei certificati PKI per l'autenticazione client. Inoltre ogni sistema client ha un certificato di autenticazione client valido, univoco e attendibile, emesso in precedenza.
+
+2. I sistemi sono aggiunti a un dominio Azure AD o a un dominio Azure AD ibrido.
+
+3. Il sito esegue Configuration Manager versione 2002 o successiva.
+
+Per le opzioni 1 e 2 usare il parametro **/mp** per specificare l'URL di Configuration Manager nella chiamata di **ccmsetup.exe**. Per altre informazioni vedere [Proprietà e parametri di installazione client](../../deploy/about-client-installation-properties.md#mp).
+
+Per l'opzione 3, a partire da Cloud Management Gateway versione 2002 è possibile installare l'agente client nei sistemi non connessi all'intranet usando un token di registrazione in blocco. Per altre informazioni su questo metodo, vedere [Creare un token di registrazione in blocco](../../deploy/deploy-clients-cmg-token.md#create-a-bulk-registration-token).
+
+### <a name="configure-off-premises-clients-for-cmg"></a>Configurare i client non locali per Cloud Management Gateway
+
+È possibile connettere i sistemi a un Cloud Management Gateway configurato di recente in cui sono soddisfatte le condizioni seguenti:  
+
+- Nei sistemi è già installato l'agente client Configuration Manager.
+
+- I sistemi non sono connessi e non possono essere connessi all'intranet.
+
+- I sistemi soddisfano una delle condizioni seguenti:
+
+ - Ogni sistema ha un certificato di autenticazione client valido, univoco e attendibile emesso in precedenza.
+ 
+ - Aggiunto a un dominio Azure AD
+ 
+ - Aggiunto a un dominio Azure AD ibrido.
+
+- Non si vuole o non è possibile reinstallare completamente l'agente client esistente.
+
+- Si ha un metodo per modificare un valore del registro di sistema del computer e riavviare il servizio **Host agenti di SMS** usando un account amministratore locale.
+
+Per forzare la connessione su questi sistemi, creare il valore del registro di sistema **CMGFQDNs** (di tipo REG_SZ) in **HKLM\Software\Microsoft\CCM**. Impostare questo valore sull'URL del Cloud Management Gateway, ad esempio `https://contoso-cmg.contoso.com`. Dopo aver completato l'impostazione riavviare il servizio **Host agenti di SMS** nel sistema client.
+
+Se il client di Configuration Manager non ha un punto di gestione di Cloud Management Gateway o con accesso a Internet impostato nel registro di sistema, controlla automaticamente il valore **CMGFQDNs** del registro di sistema. Questo controllo viene eseguito ogni 25 ore, quando viene avviato il servizio **Host agenti di SMS** o quando viene rilevata una modifica alla rete. Quando il client si connette al sito e rileva un Cloud Management Gateway, aggiorna automaticamente questo valore.
 
 ## <a name="modify-a-cmg"></a>Modificare un Cloud Management Gateway
 

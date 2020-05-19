@@ -2,7 +2,7 @@
 title: Asset in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Informazioni su dispositivi, driver e app in Desktop Analytics.
-ms.date: 01/16/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: d07198cf-49bb-4712-8c63-063b4302cc11
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fe1338781cbb16a8485de050a294e34e487a2ecc
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: d5900fd4cb4fdebea23e626ffbe17c5289712b31
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706649"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268913"
 ---
 # <a name="assets-in-desktop-analytics"></a>Asset in Desktop Analytics
 
@@ -41,6 +42,10 @@ La scheda **App** mostra tutte le app installate che il servizio rileva nei disp
 
 Le app **importanti** sono installate in più del 2% dei dispositivi registrati.
 
+L'impostazione **Dettagli delle versioni dell'app** è disattivata per impostazione predefinita. Questa scheda, quindi, combina tutte le versioni delle app con lo stesso nome e lo stesso autore.<!-- 5542186 --> Il comportamento predefinito contribuisce a ridurre il numero totale di app visualizzate, consentendo di ridurre l'impegno richiesto per l'annotazione delle app. Il numero di app nel riquadro **App degne di nota** riflette anche questa impostazione. Ad esempio, anziché un elenco di centinaia di istanze di Microsoft Edge, è presente una sola istanza per tutte le versioni. È possibile prendere decisioni una volta per tutte le versioni. Se è necessario prendere decisioni per versioni specifiche di un'app, attivare questa impostazione. È possibile configurare questa impostazione anche quando si lavora con un piano di distribuzione. Per altre informazioni, vedere [Risorse del piano](about-deployment-plans.md#plan-assets).
+
+Selezionare l'app dall'elenco e selezionare **Modifica**. Questa azione visualizza i dettagli per l'app. Selezionare il menu a discesa **Importanza** e impostare un valore. È anche possibile assegnare un **Proprietario**. Se si apportano modifiche, selezionare **Salva**.
+
 Configurare l'**Importanza** delle app impostando una delle categorie seguenti:
 
 - Critico
@@ -49,7 +54,7 @@ Configurare l'**Importanza** delle app impostando una delle categorie seguenti:
 - Verifica non effettuata
 - Non importante<!-- 3587232 -->
 
-Selezionare l'app dall'elenco e selezionare **Modifica**. Questa azione visualizza i dettagli per l'app. Selezionare il menu a discesa **Importanza** e impostare un valore. È anche possibile assegnare un **Proprietario**. Se si apportano modifiche, selezionare **Salva**.
+Quando l'impostazione **Dettagli delle versioni dell'app** è disattivata, il riquadro dei dettagli dell'app visualizza il numero di versioni e lingue delle app combinate. Se si salvano eventuali modifiche apportate ai dettagli dell'app, queste vengono applicate a tutte le versioni. Impostare, ad esempio, **Importanza** o **Proprietario**. Alcuni valori visualizzano "Più valori", che significa che non è presente un solo valore coerente in tutte le versioni.
 
 ### <a name="automatic-upgrade-decision-of-system-and-store-apps"></a><a name="bkmk_plan-autoapp" /> Decisione di aggiornamento automatico delle app di sistema e dello Store
 
@@ -70,7 +75,7 @@ Identificare l'**Importanza** e la **Decisione di aggiornamento** è fondamental
 >    - Per le app dello Store, applicare il filtro **Moderno** a **Tipo**
 >    - Per le app di sistema, applicare il filtro **Processo in background** o **Componente di Windows** a **Categoria**
 
-In un piano di distribuzione è anche possibile impostare la **Decisione di aggiornamento**. Per altre informazioni, vedere [Pianificare gli asset](about-deployment-plans.md#plan-assets)
+In un piano di distribuzione è anche possibile impostare la **Decisione di aggiornamento**. Per altre informazioni, vedere [Risorse del piano](about-deployment-plans.md#plan-assets).
 
 ### <a name="usage"></a>Utilizzo
 

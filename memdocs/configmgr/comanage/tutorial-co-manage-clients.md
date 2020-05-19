@@ -10,12 +10,12 @@ ms.assetid: 140c522f-d09a-40b6-a4b0-e0d14742834a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 918df2cded3fad48352fff6a2617b1133540c0eb
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: bb770a559904421f6bf01616504331dbebb9b549
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692579"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268080"
 ---
 # <a name="tutorial-enable-co-management-for-existing-configuration-manager-clients"></a>Esercitazione: Abilitare la co-gestione per i client di Configuration Manager esistenti
 
@@ -64,9 +64,10 @@ Se le configurazioni non sono già presenti nell'ambiente, in questa esercitazio
 
 In questa esercitazione usare le autorizzazioni seguenti per completare le attività:
 
-- Un account che sia *amministratore globale* in Azure Active Directory (Azure AD) 
 - Un account che sia un *amministratore di dominio* nell'infrastruttura locale  
 - Un account che sia un *amministratore completo* per *tutti* gli ambiti in Configuration Manager
+- Un account che sia *amministratore globale* in Azure Active Directory (Azure AD)
+   - Assicurarsi di aver assegnato una licenza di Intune all'account usato per accedere al tenant. In caso contrario, l'accesso avrà esito negativo con il messaggio di errore "Utente non riconosciuto". <!--mem issue 169-->
 
 ## <a name="set-up-hybrid-azure-ad"></a>Configurare Azure AD ibrido
 

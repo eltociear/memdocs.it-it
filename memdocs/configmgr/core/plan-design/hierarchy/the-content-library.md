@@ -10,12 +10,12 @@ ms.assetid: 65c88e54-3574-48b0-a127-9cc914a89dca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 567c03d231c145718f4f960bda7073ba4b904de2
-ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
+ms.openlocfilehash: d7432b3522d5292e2c2afc1dac6b8db3382cca12
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82880993"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343168"
 ---
 # <a name="the-content-library-in-configuration-manager"></a>Raccolta contenuto in Configuration Manager
 
@@ -90,6 +90,8 @@ Una raccolta contenuto remota è un prerequisito per la [disponibilità elevata 
 - L'account computer del server del sito deve avere le autorizzazioni **Controllo completo** per il percorso di rete in cui deve essere spostata la raccolta contenuto. Questa autorizzazione è applicabile sia alla condivisione che al file system. Non sono installati componenti nel sistema remoto.
 
 - Il server del sito non può avere il ruolo di punto di distribuzione. Il punto di distribuzione usa anche la raccolta contenuto e questo ruolo non supporta una raccolta contenuto remota. Dopo aver spostato la raccolta contenuto, non è possibile aggiungere il ruolo di punto di distribuzione al server del sito.  
+
+- Il sistema remoto per la raccolta contenuto deve trovarsi in un dominio attendibile.
 
 > [!Important]  
 > Non riusare un percorso di rete condiviso tra più siti. Ad esempio, non usare lo stesso percorso sia per un sito di amministrazione centrale che per un sito primario figlio. Questa configurazione potrebbe danneggiare la raccolta contenuto che dovrà essere ricompilata.<!--SCCMDocs-pr issue 2764-->  

@@ -2,7 +2,7 @@
 title: Microsoft Defender Advanced Threat Protection
 titleSuffix: Configuration Manager
 description: Informazioni su come gestire e monitorare Microsoft Defender Advanced Threat Protection, un nuovo servizio che consente alle organizzazioni di rispondere agli attacchi avanzati.
-ms.date: 04/27/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a5fc033e-828e-4e45-9097-bbbd0697ebdf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a635ae36875984537c18c4850a3526d57ffceb31
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 801aee9665e567ce1a983fba294f1e58f58eee04
+ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210146"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83406671"
 ---
 # <a name="microsoft-defender-advanced-threat-protection"></a>Microsoft Defender Advanced Threat Protection
 
@@ -40,10 +40,10 @@ In base alla versione di Configuration Manager in esecuzione, è possibile esegu
 
 #### <a name="configuration-manager-version-2002-and-later"></a>Configuration Manager versione 2002 e successive
 <!--5229962-->
-- Windows 7 SP1
+A partire da Configuration Manager versione 2002, è possibile eseguire l'onboarding dei sistemi operativi seguenti:
+
 - Windows 8.1
 - Windows 10, versione 1607 o successiva
-- Windows Server 2008 R2 SP1
 - R2 per Windows Server 2012
 - Windows Server 2016
 - Windows Server 2016, versione 1803
@@ -57,8 +57,8 @@ In base alla versione di Configuration Manager in esecuzione, è possibile esegu
    - Se si sta eseguendo l'onboarding di Windows 10, Windows Server 1803 e Windows Server 2019:
       1. Selezionare **Configuration Manager (Current Branch) versione 1606** e selezionare **Scarica pacchetto**.
       1. Scaricare il file di archivio compresso (zip) ed estrarre il contenuto.
-   - Se si sta eseguendo l'onboarding di un altro sistema operativo Windows: 
-      1. Selezionare i sistemi operativi per l'onboarding dall'elenco. Ad esempio, scegliere **Windows 7 e 8.1** oppure **Windows Server 2008 R2 SP1, 2012 R2 e 2016**.
+   - Se si sta eseguendo l'onboarding di un altro sistema operativo Windows:
+      1. Selezionare i sistemi operativi di cui si vuole eseguire l'onboarding dall'elenco visualizzato nel servizio online di Microsoft Defender ATP.
       1. Al termine del processo, copiare i valori per **Chiave dell'area di lavoro** e **ID area di lavoro** dalla sezione **Configura connessione**.
 
 > [!IMPORTANT]
@@ -69,7 +69,7 @@ In base alla versione di Configuration Manager in esecuzione, è possibile esegu
 1. Nella console di Configuration Manager passare ad **Asset e conformità** > **Endpoint Protection** > **Criteri di Windows Defender ATP** e selezionare **Crea criterio di Windows Defender ATP**. Viene visualizzata la Creazione guidata criteri di Microsoft Defender ATP.  
 1. Digitare il **nome** e la **descrizione** per il criterio di Microsoft Defender ATP e selezionare **Onboarding** (Caricamento).
 1. Usare **Sfoglia** per cercare il file di configurazione fornito dal tenant del servizio cloud Microsoft Defender ATP dell'organizzazione.
-   - Per **Windows 7 e 8.1** o **Windows Server 2008 R2 SP1, 2012 R2 e 2016**, fornire la **Chiave dell'area di lavoro** e l'**ID dell'area di lavoro**.
+   - Per Windows 8.1 o Windows Server 2012 R2 e 2016, specificare la **chiave dell'area di lavoro** e l'**ID dell'area di lavoro**.
    - Per Configuration Manager versione 2002 saranno necessari i valori **Chiave area di lavoro** e **ID area di lavoro** anche se si esegue l'onboarding solo di dispositivi Windows Server 2019 e Windows Server 1803 o versioni successive. Per ottenere questi valori, selezionare **Impostazioni** > **Onboarding** > **Windows 7 e 8.1** dal [servizio online Microsoft Defender ATP](https://securitycenter.windows.com/). <!--7054188-->
 1. Specificare i file campione che vengono raccolti e condivisi dai dispositivi gestiti per l'analisi.  
 

@@ -93,7 +93,7 @@ Un grafico ad albero mostra i dati gerarchici come caselle all'interno di casell
 ![Visualizzazioni mappa ad albero di Power BI](./media/reports-proc-create-with-odata/reports-create-03-treemap.png)
 
 1. Nel riquadro **Visualizzazioni** trovare e selezionare **Mappa ad albero**. Il grafico **Mappa ad albero** verrà aggiunto al canvas del report.
-2. Individuare la **tabella nel riquadro**campi`devices`.
+2. Individuare la `devices` tabella nel riquadro **campi**.
 3. Espandere la tabella `devices` e selezionare il campo dati `manufacturer`.
 4. Trascinare il campo dati `manufacturer` nel canvas del report e rilasciarlo sul grafico **Mappa ad albero**.
 5. Trascinare il campo dati `deviceKey` dalla tabella `devices` al riquadro **Visualizzazioni** e rilasciarlo nella sezione **Valori** della casella **Aggiungere qui i campi dati**.  
@@ -107,7 +107,7 @@ Un grafico ad albero mostra i dati gerarchici come caselle all'interno di casell
 È possibile aggiungere un filtro alla mappa ad albero per poter rispondere a domande aggiuntive usando l'app.
 
 1. Per aggiungere un filtro, selezionare l'area di disegno report e quindi selezionare l'**icona Filtro dei dati** (![Mappa ad albero con dati e relazioni supportate](./media/reports-proc-create-with-odata/reports-create-slicer.png)) in **Visualizzazioni**. Nel canvas apparirà la visualizzazione **Filtro dei dati** vuota.
-2. Individuare la **tabella nel riquadro**campi`ownerTypes`.
+2. Individuare la `ownerTypes` tabella nel riquadro **campi**.
 3. Espandere la tabella `ownerTypes` e selezionare il campo dati `ownerTypeName`.
 4. Trascinare il campo dati `onwerTypeName` dalla tabella `ownerTypes` al riquadro **Filtri** e rilasciarlo nella sezione **Filtri in questa pagina** della casella **Aggiungere qui i campi dati**.  
 

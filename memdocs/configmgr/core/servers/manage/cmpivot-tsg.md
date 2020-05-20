@@ -73,7 +73,7 @@ In `CcmNotificationAgent.log` cercare le voci di log che hanno un aspetto simile
 Send Task response message &ltBgbResponseMessage TimeStamp="2019-09-13T17:29:09Z"><b>&ltPushID>5</b>&lt/PushID>&ltTaskID>4&lt/TaskID>&ltReturnCode>1&lt/ReturnCode>&lt/BgbResponseMessage> successfuly.
  </code></pre>
 
-Cercare `Scripts.log` in `TaskID`. Nell'esempio seguente è visualizzato `Task ID` `{9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0}`:
+Cercare `TaskID` in `Scripts.log`. Nell'esempio seguente è visualizzato `Task ID` `{9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0}`:
 
 <pre><code lang="Log">Sending script state message (fast): <b>{9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0}</b>
 Result are sent for ScriptGuid: 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14 and <b>TaskID: {9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0}</b>
@@ -161,7 +161,7 @@ In `CcmNotificationAgent.log` cercare log simili alla voce seguente:
 g2ZDVjYTIwNzRjNmViZmQ1NTg5MDZlMWI5NDRmYTEzNmFiMDE0ZGNjPC9TY3JpcHRIYXNoPjxTY3Jp (truncated log entry)
 </code></pre>
 
-Cercare `Scripts.log` in `TaskID`. Nell'esempio seguente è visualizzato `Task ID {F8C7C37F-B42B-4C0A-B050-2BB44DF1098A}`:
+Cercare `TaskID` in `Scripts.log`. Nell'esempio seguente è visualizzato `Task ID {F8C7C37F-B42B-4C0A-B050-2BB44DF1098A}`:
 
 <pre><code lang="Log">Sending script state message: 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14
 State message: Task Id <b>{F8C7C37F-B42B-4C0A-B050-2BB44DF1098A}</b>

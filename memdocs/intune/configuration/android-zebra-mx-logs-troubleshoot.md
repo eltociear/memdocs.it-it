@@ -61,7 +61,7 @@ Per ottenere i log dopo che il profilo è già stato distribuito con Intune, gli
 
 ## <a name="read-the-logs"></a>Leggere i log
 
-Quando si esaminano i log, è presente un errore ogni volta che compare il tag `<characteristic-error>`. I dettagli dell'errore vengono scritti nella proprietà `<parm-error>` del tag `desc`.
+Quando si esaminano i log, è presente un errore ogni volta che compare il tag `<characteristic-error>`. I dettagli dell'errore vengono scritti nella proprietà `desc` del tag `<parm-error>`.
 
 ## <a name="error-types"></a>Tipi di errore
 

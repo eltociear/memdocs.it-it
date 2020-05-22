@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 96594731ef64577d30267376d3bcb93268e59a9e
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: ebd847e44c1acd87c316514ec9919f8a6690a647
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075014"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428580"
 ---
 # <a name="deploy-bitlocker-management"></a>Distribuire la gestione di BitLocker
 
@@ -205,7 +205,7 @@ Quando si passa a un'altra autorità di gestione della crittografia, pianificare
 
 Per altre informazioni sulla gestione di BitLocker con Intune, vedere gli articoli seguenti:
 
-- [Usare la crittografia dei dispositivi con Intune](../../../../intune/protect/encrypt-devices.md#bitlocker-encryption-for-windows-10)
+- [Usare la crittografia dei dispositivi con Intune](../../../../intune/protect/encrypt-devices.md)
 - [Risolvere i problemi relativi ai criteri di BitLocker in Microsoft Intune](../../../../intune/protect/troubleshoot-bitlocker-policies.md)
 
 ## <a name="next-steps"></a>Passaggi successivi

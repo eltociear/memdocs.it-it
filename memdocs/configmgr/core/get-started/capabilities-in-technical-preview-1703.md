@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d06bda9d07a53e022de27afc68f40f9ce706867f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: fb13844dd05049b9186909884aa0c457a8cfacd9
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076153"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428416"
 ---
 # <a name="capabilities-in-technical-preview-1703-for-configuration-manager"></a>Funzionalità della versione Technical Preview 1703 per Configuration Manager
 
@@ -130,7 +130,7 @@ In Azure Active Directory registrare Configuration Manager come strumento di ges
 Nella console passare a **Amministrazione** > **Panoramica** > **Cloud Services Management (Gestione dei servizi cloud)**  > **Azure** > **Servizi di Azure** e quindi scegliere **Configure Azure Services (Configura servizi di Azure)** , selezionare un servizio cloud e quindi scegliere **Proprietà**.
 
 ## <a name="convert-from-bios-to-uefi-during-an-in-place-upgrade"></a>Conversione da BIOS a UEFI durante un aggiornamento sul posto
-Windows 10 Creators Update introduce un semplice strumento di conversione che automatizza il processo di ripartizione del disco rigido per l'hardware abilitato per UEFI e integra lo strumento di conversione nel processo di aggiornamento sul posto da Windows 7 a Windows 10. Quando si usa questo strumento in combinazione con la sequenza di attività di aggiornamento del sistema operativo e con lo strumento OEM che converte il firmware da BIOS a UEFI, è possibile convertire i computer da BIOS a UEFI durante un aggiornamento sul posto a Windows 10 Creators Update. Per informazioni dettagliate, vedere [Passaggi della sequenza di attività per la gestione della conversione da BIOS a UEFI](../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade).
+Windows 10 Creators Update introduce un semplice strumento di conversione che automatizza il processo di ripartizione del disco rigido per l'hardware abilitato per UEFI e integra lo strumento di conversione nel processo di aggiornamento sul posto da Windows 7 a Windows 10. Quando si usa questo strumento in combinazione con la sequenza di attività di aggiornamento del sistema operativo e con lo strumento OEM che converte il firmware da BIOS a UEFI, è possibile convertire i computer da BIOS a UEFI durante un aggiornamento sul posto a Windows 10 Creators Update. Per informazioni dettagliate, vedere [Passaggi della sequenza di attività per la gestione della conversione da BIOS a UEFI](../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu).
 
 ## <a name="collapsible-task-sequence-groups"></a>Gruppi di sequenze di attività comprimibili
 Questa versione introduce la possibilità di espandere e comprimere i gruppi di sequenze di attività. È possibile espandere o comprimere singoli gruppi oppure espandere o comprimere tutti i gruppi in una sola volta.

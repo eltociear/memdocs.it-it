@@ -10,12 +10,12 @@ ms.assetid: c21eec87-ad1c-4465-8e45-5feb60b92707
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d604095ec3097581289a05cd306b865dbd7da99a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8bfb45ba835851c33d6017f7f0a884bd2c1e9421
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703329"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429333"
 ---
 # <a name="upgrade-windows-to-the-latest-version-with-configuration-manager"></a>Aggiornare Windows all'ultima versione con Configuration Manager
 
@@ -85,7 +85,7 @@ Le attività seguenti non sono compatibili con l'aggiornamento sul posto e richi
 
   - Modifica delle partizioni del disco
   - Modifica dell'architettura del sistema da x86 a x64
-  - Implementazione di UEFI. Per altre informazioni su un'opzione possibile, vedere [Conversione da BIOS a UEFI durante un aggiornamento sul posto](task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade).
+  - Implementazione di UEFI. Per altre informazioni su un'opzione possibile, vedere [Conversione da BIOS a UEFI durante un aggiornamento sul posto](task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu).
   - Modifica della lingua di base del sistema operativo  
 
 - Presenza di requisiti personalizzati, ad esempio l'uso di un'immagine di base personalizzata o di un tipo di crittografia del disco di terze parti oppure l'esecuzione di operazioni WinPE offline.  

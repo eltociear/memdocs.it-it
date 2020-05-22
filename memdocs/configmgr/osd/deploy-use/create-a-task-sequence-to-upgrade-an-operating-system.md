@@ -10,12 +10,12 @@ ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b11e0a1747cb8303c14f5971b98d337ae7b2a834
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8d87b2cde9a9fadb7326939b7fe473ba2a757e91
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707299"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83430125"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>Creare una sequenza di attività per aggiornare un sistema operativo in Configuration Manager
 
@@ -261,7 +261,7 @@ Per altre informazioni, vedere [Aggiorna sistema operativo](../understand/task-s
 
 ### <a name="convert-from-bios-to-uefi"></a>Eseguire la conversione da BIOS a UEFI
 
-Se si vuole modificare il dispositivo da BIOS a UEFI durante questa sequenza di attività, vedere [Conversione da BIOS a UEFI durante un aggiornamento sul posto](task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade).  
+Se si vuole modificare il dispositivo da BIOS a UEFI durante questa sequenza di attività, vedere [Conversione da BIOS a UEFI durante un aggiornamento sul posto](task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu).  
 
 ### <a name="manage-bitlocker"></a>Gestire BitLocker
 

@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/01/2020
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97d3c4ee2e1ad173b8fff238f072b1b36c3ed1cb
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 24663f8338f03fab53369689b4a61b5bd1bec63f
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80536940"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83991225"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-for-iosipados-devices-in-intune"></a>Configurare una rete privata virtuale (VPN) per app per dispositivi iOS/iPadOS in Intune
 
@@ -75,7 +75,7 @@ Importare il certificato di radice del server VPN rilasciato dalla CA in un prof
 3. Immettere le proprietà seguenti:
 
     - **Piattaforma**: Selezionare **iOS/iPadOS**.
-    - **Tipo di profilo**: selezionare **Certificato attendibile**.
+    - **Profilo**: selezionare **Certificato attendibile**.
 
 4. Selezionare **Crea**.
 5. In **Informazioni di base** immettere le proprietà seguenti:
@@ -113,7 +113,7 @@ Il profilo VPN include il certificato SCEP o PKCS con le credenziali del client,
 3. Immettere le proprietà seguenti:
 
     - **Piattaforma**: Selezionare **iOS/iPadOS**.
-    - **Tipo di profilo**: selezionare **VPN**.
+    - **Profilo**: selezionare **VPN**.
 
 4. Selezionare **Crea**.
 5. In **Informazioni di base** immettere le proprietà seguenti:

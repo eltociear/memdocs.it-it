@@ -6,22 +6,23 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2020
-ms.topic: reference
+ms.date: 05/05/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9cb8cea30b53c5619580b289f73529668d71e909
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ebf65ecc6dbe5059adbd6fec70833bf2fcab9de7
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80551503"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988659"
 ---
 # <a name="add-a-property-list-file-to-macos-devices-using-microsoft-intune"></a>Aggiungere un file di elenco delle proprietà ai dispositivi macOS usando Microsoft Intune
 
@@ -44,9 +45,6 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
 - Solo alcune app utilizzano le preferenze gestite e potrebbero non consentire la gestione di tutte le impostazioni.
 - Assicurarsi di caricare i file di elenco delle proprietà che hanno come destinazione le impostazioni dei canali del dispositivo e non le impostazioni dei canali degli utenti. I file dell'elenco delle proprietà hanno come destinazione l'intero dispositivo.
 
-> [!NOTE]
-> L'interfaccia utente di Intune verrà aggiornata a un'esperienza a schermo intero. Questa operazione può richiedere alcune settimane. Fino a quando il tenant in uso non riceve l'aggiornamento, il flusso di lavoro per la creazione o la modifica delle impostazioni descritte in questo articolo sarà leggermente diverso.
-
 ## <a name="create-the-profile"></a>Creare il profilo
 
 1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
@@ -66,9 +64,13 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
 
 7. In **impostazioni di configurazione** configurare le impostazioni:
 
-    - **Preferenza per il nome di dominio**: i file di elenco delle proprietà in genere sono usati per Web browser (Microsoft Edge), [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) e app personalizzate. Quando si crea una preferenza per il dominio, viene creato anche un ID di aggregazione. Immettere l'ID di aggregazione, ad esempio `com.company.application`. Ad esempio, immettere `com.Contoso.applicationName`, `com.Microsoft.Edge` o `com.microsoft.wdav`.
+    - **Preferenza per il nome di dominio**: Immettere l'ID di aggregazione, ad esempio `com.company.application`. Ad esempio, immettere `com.Contoso.applicationName`, `com.Microsoft.Edge` o `com.microsoft.wdav`.
+
+      i file di elenco delle proprietà in genere sono usati per Web browser (Microsoft Edge), [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) e app personalizzate. Quando si crea una preferenza per il dominio, viene creato anche un ID di aggregazione.
+
     - **File di elenco proprietà**: selezionare il file di elenco delle proprietà associato all'app. Assicurarsi che sia un file `.plist` o `.xml`. Caricare, ad esempio, un file `YourApp-Manifest.plist` o `YourApp-Manifest.xml`.
-    - **Contenuti del file**: vengono visualizzate le informazioni sulla chiave nel file di elenco delle proprietà. Se è necessario modificare le informazioni sulla chiave, aprire il file di elenco in un altro editor e quindi caricare nuovamente il file in Intune.
+
+      vengono visualizzate le informazioni sulla chiave nel file di elenco delle proprietà. Se è necessario modificare le informazioni sulla chiave, aprire il file di elenco in un altro editor e quindi caricare nuovamente il file in Intune.
 
     Verificare che il file sia formattato correttamente. Il file deve contenere solo coppie chiave valore e non deve essere racchiuso tra i tag `<dict>`, `<plist>` o `<xml>`. Il file di elenco delle proprietà, ad esempio, sarà simile al seguente:
 
@@ -93,6 +95,6 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Il profilo è stato creato, ma non è ancora operativo. [Assegnare il profilo](device-profile-assign.md) e [monitorarne lo stato](device-profile-monitor.md).
+[Assegnare il profilo](device-profile-assign.md) e [monitorarne lo stato](device-profile-monitor.md).
 
 Per altre informazioni sui file delle preferenze per Microsoft Edge, vedere [Configurare le impostazioni dei criteri di Microsoft Edge per macOS](https://docs.microsoft.com/deployedge/configure-microsoft-edge-on-mac).

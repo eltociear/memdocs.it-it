@@ -6,8 +6,8 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
-ms.topic: conceptual
+ms.date: 05/21/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb5a04b8db382345cbf8f3e86feab8b3cea9efd9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 06e975e386b0d754b03e75ffeda456a432a6dc4b
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81615681"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83984992"
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>Creare criteri di conformità dei dispositivi Mobile Threat Defense (MTD) con Intune
 
@@ -59,11 +59,6 @@ Prerequisiti dei criteri di conformità dei dispositivi con MTD:
    - **Media**: il dispositivo è conforme se le minacce presenti nel dispositivo sono di livello basso o medio. Se viene rilevata la presenza di minacce di livello alto, il dispositivo viene determinato come non conforme.
 
    - **Alta**: questo livello è il meno sicuro. Questa impostazione consente tutti i livelli di minacce e usa Mobile Threat Defense solo a scopi di report. È necessario che nei dispositivi l'app MTD sia attivata con questa impostazione.
-
-   > [!IMPORTANT]
-   > Per il proprietario di un dispositivo Android Enterprise, dopo aver creato e salvato un criterio, non è possibile modificare il criterio in un secondo momento per modificare il livello di minaccia. Le modifiche per cambiare il livello di minaccia del dispositivo per l'impostazione Integrità dispositivi di **Richiedi che il dispositivo si trovi al massimo al livello di minaccia del dispositivo** non hanno effetto. Per modificare il valore del livello di minaccia è necessario eliminare il criterio corrente e creare un nuovo criterio per impostare il livello di minaccia desiderato.
-   >
-   > Si tratta di un problema noto che verrà risolto in un aggiornamento futuro a Intune.
 
 6. Selezionare **OK** due volte, quindi scegliere **Crea** per creare i criteri.
 

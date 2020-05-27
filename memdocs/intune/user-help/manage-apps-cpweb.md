@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 06/27/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: b2ed22f393ea58d50c10175ffbd647bc53f592e5
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: ddae77d921f1fd5063716602159ee42c079b12e4
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078822"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880842"
 ---
 # <a name="manage-apps-from-the-company-portal-website"></a>Gestire le app dal sito Web del portale aziendale 
 Visitare il [sito Web Portale aziendale](https://portal.manage.microsoft.com) per visualizzare e gestire le app dell'organizzazione. 

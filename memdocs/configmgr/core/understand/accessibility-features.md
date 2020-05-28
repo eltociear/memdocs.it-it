@@ -2,7 +2,7 @@
 title: Accessibilità
 titleSuffix: Configuration Manager
 description: Informazioni sulle funzionalità che rendono Configuration Manager accessibile a tutti.
-ms.date: 03/27/2019
+ms.date: 05/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: 1cb96666-98bf-49a9-85ca-dbb53f0655e9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f04b777f030f9e55e1d5b17ace9ec8b83d9f8679
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 1b25b0137e24212cbad2ba688735e45d9fe9aac0
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906123"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556031"
 ---
 # <a name="accessibility-features-in-configuration-manager"></a>Funzionalità di accessibilità in Configuration Manager
 
@@ -45,7 +46,7 @@ Per accedere a un'area di lavoro, utilizzare i seguenti tasti di scelta rapida:
 |CTRL+4|  Amministrazione|
 
 
-### <a name="other-keyboard-shortcuts"></a>Altri tasti di scelta rapida
+### <a name="other-console-shortcuts"></a>Altri collegamenti della console
 
 |Tasti di scelta rapida|  Scopo|
 |--------|--------|  
@@ -56,6 +57,14 @@ Per accedere a un'area di lavoro, utilizzare i seguenti tasti di scelta rapida:
 |Ctrl + D|Imposta lo stato attivo sul riquadro dei dettagli, se disponibile.|
 |ALT     |Sposta lo stato attivo all'interno e al di fuori della barra multifunzione.|
 
+### <a name="cmpivot-shortcuts"></a><a name="bkmk_cmpshortcuts"></a> Collegamenti CMPivot
+
+La maggior parte dei [tasti di scelta rapida del Web browser](https://support.microsoft.com/help/17456/windows-internet-explorer-ease-of-access-options) funziona in CMPivot.
+
+|Tasti di scelta rapida|Scopo|
+|--------|--------|  
+|CTRL+1|Impostare lo stato attivo sulla prima scheda.|
+|ALT + &lt;|Per tornare all'indirizzo|
 
 
 ## <a name="other-accessibility-features"></a>Altre funzionalità di accessibilità
@@ -85,7 +94,7 @@ Per accedere a un'area di lavoro, utilizzare i seguenti tasti di scelta rapida:
 ## <a name="see-also"></a>Vedere anche
 
 Per altre informazioni sui concetti fondamentali relativi allo spostamento nelle interfacce utente di Configuration Manager, vedere gli articoli seguenti:
-- [Uso della console di Configuration Manager](../servers/manage/admin-console.md)  
+- [Uso della console di Configuration Manager](../servers/manage/admin-console.md)
 - [Manuale dell'utente di Software Center](software-center.md)
 
 > [!NOTE]  

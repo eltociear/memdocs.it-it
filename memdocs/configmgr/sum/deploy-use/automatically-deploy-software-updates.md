@@ -5,17 +5,17 @@ description: Per distribuire automaticamente gli aggiornamenti software, si usan
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 05/11/2020
+ms.date: 05/20/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: d1b4329def3aee97e1684935c0c8f889c3e4e513
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: bf172c4cb34a17ac793ea5568b0505505baf97a0
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269032"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709435"
 ---
 #  <a name="automatically-deploy-software-updates"></a>Distribuire automaticamente gli aggiornamenti software  
 
@@ -49,7 +49,7 @@ Approvare e distribuire automaticamente gli aggiornamenti software usando una re
 
          - Il modello **Aggiornamenti del client Office 365** offre impostazioni comuni da usare quando si distribuiscono aggiornamenti per client Office 365 Pro Plus.
              > [!Note]
-             > A partire dal 21 aprile 2020 Office 365 ProPlus viene rinominato come **App di Microsoft 365 per grandi imprese**. Se le regole di distribuzione automatica si basano sulla proprietà "Titolo", a partire dal 9 giugno 2020 sarà necessario modificare questa proprietà. `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)` è un esempio del nuovo titolo. Per altre informazioni, vedere [Modifica del nome di Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change).
+             > A partire dal 21 aprile 2020 Office 365 ProPlus viene rinominato come **App di Microsoft 365 per grandi imprese**. Se le regole di distribuzione automatica si basano sulla proprietà "Titolo", a partire dal 9 giugno 2020 sarà necessario modificare questa proprietà. `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)` è un esempio del nuovo titolo. Per altre informazioni sulla modifica delle regole di distribuzione automatica per la modifica del titolo, vedere [Aggiornare i canali per le app Microsoft 365](manage-office-365-proplus-updates.md#bkmk_channel). Per altre informazioni sulla modifica dei nomi, vedere [Modifica dei nomi di Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change).
 
          - Il modello **Aggiornamenti di SCEP e di Windows Defender Antivirus** offre impostazioni comuni da usare quando si distribuiscono aggiornamenti delle definizioni di Endpoint Protection.  
 

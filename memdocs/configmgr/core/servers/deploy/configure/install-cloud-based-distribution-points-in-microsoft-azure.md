@@ -10,12 +10,12 @@ ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 30cd61240b09f821d8b18c37e6accc7450f35817
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 35379aed71544a25a98ec4dfa421be70c1bae851
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701669"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427691"
 ---
 # <a name="install-a-cloud-distribution-point-for-configuration-manager"></a>Installare un punto di distribuzione cloud per Configuration Manager
 
@@ -215,6 +215,8 @@ Con le impostazioni client predefinite i client vengono abilitati automaticament
 ## <a name="manage-and-monitor"></a><a name="bkmk_monitor"></a> Gestire e monitorare  
 
 Monitorare il contenuto distribuito in un punto di distribuzione cloud in modo analogo a qualsiasi altro punto di distribuzione locale. Per altre informazioni, vedere [Monitorare il contenuto distribuito](monitor-content-you-have-distributed.md).
+
+Quando l'elenco dei punti di distribuzione cloud è visualizzato nella console, è possibile aggiungervi altre colonne. La colonna **Dati in uscita**, ad esempio, visualizza la quantità di client dati scaricati dal servizio negli ultimi 30 giorni.<!-- SCCMDocs#755 -->
 
 ### <a name="alerts"></a><a name="bkmk_alerts"></a> Avvisi  
 

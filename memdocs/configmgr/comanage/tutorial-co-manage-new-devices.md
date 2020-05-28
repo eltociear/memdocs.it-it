@@ -5,17 +5,17 @@ description: Informazioni su come configurare la co-gestione per i nuovi disposi
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/12/2020
+ms.date: 05/14/2020
 ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 7fb02a5c-e286-46b1-a972-6335c858429a
-ms.openlocfilehash: 75016e8028dde29c83ae7e7f5a23a1f6dbb4417f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 67d86850dc0440481916984af8635d9e005044c6
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692989"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428612"
 ---
 # <a name="tutorial-enable-co-management-for-new-internet-based-devices"></a>Esercitazione: Abilitare la co-gestione per nuovi dispositivi basati su Internet
 
@@ -237,11 +237,11 @@ Completare la procedura seguente dal server del sito primario.
 
    1. Selezionare l'app Web creata.
 
-   2. Passare a **Impostazioni > Autorizzazioni necessarie**, selezionare **Concedi autorizzazioni** e quindi **Sì**.  
+   2. Passare ad **Autorizzazioni API** > selezionare **Concedi consenso amministratore per** <your tenant> e quindi selezionare **Sì**.  
 
    3. Selezionare l'app client nativa creata.
 
-   4. Passare a **Impostazioni > Autorizzazioni necessarie**, selezionare **Concedi autorizzazioni** e quindi **Sì**.  
+   4. Passare ad **Autorizzazioni API** > selezionare **Concedi consenso amministratore per** <your tenant> e quindi selezionare **Sì**.
 
 9. Nella console di Configuration Manager passare a **Amministrazione > Panoramica > Servizi cloud > Servizi di Azure** e quindi selezionare il servizio di Azure. Fare clic con il pulsante destro del mouse su **Individuazione di utenti di Azure Active Directory** e scegliere **Esegui individuazione completa**. Selezionare **Sì** per confermare l'azione.  
 
@@ -383,11 +383,11 @@ Quindi, quando un dispositivo Windows 10 precedentemente non gestito viene regis
 
 ### <a name="create-an-intune-app-to-install-the-configuration-manager-client"></a>Creare un'app di Intune per installare il client di Configuration Manager
 
-1. Dal server del sito primario accedere al [portale di Azure](https://portal.azure.com/) e passare a **Intune > App client > App > Aggiungi**.
+1. Dal server del sito primario accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://endpoint.microsoft.com) e passare ad **App** > **Tutte le app** > **Aggiungi**.
 
-2. Per **Tipo di app**: selezionare **App line-of-business**.
+2. Come tipo di app selezionare **App line-of-business** in **Altro**.
 
-3. Selezionare **File del pacchetto dell'app**, passare al percorso del file di Configuration Manager **ccmsetup.msi** e quindi selezionare **Apri > OK**.
+3. Per **File del pacchetto dell'app** passare al percorso del file di Configuration Manager **ccmsetup.msi** e quindi selezionare **Apri > OK**.
 Ad esempio, *C:\Programmi\Microsoft Configuration Manager\bin\i386\ccmsetup.msi*
 
 4. Selezionare **Informazioni sull'app** e quindi specificare i dettagli seguenti:
@@ -412,11 +412,11 @@ Ad esempio, *C:\Programmi\Microsoft Configuration Manager\bin\i386\ccmsetup.msi*
 
 La procedura seguente distribuisce l'app per l'installazione del client di Configuration Manager creato nella procedura precedente.
 
-1. Accedere al [portale di Azure](https://portal.azure.com/).  Selezionare **Tutti i servizi > Intune > App client > App** e quindi selezionare **ConfigMgr Client Setup Bootstrap**, l'app creata per distribuire il client di Configuration Manager.  
+1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://endpoint.microsoft.com). Selezionare **App** > **Tutte le app** e quindi selezionare **ConfigMgr Client Setup Bootstrap**, l'app creata per distribuire il client di Configuration Manager.  
 
-2. Selezionare **Assegnazioni > Aggiungi gruppo**.  Impostare **Tipo di assegnazione** su **Richiesto**e quindi usare **Gruppi inclusi** e **Gruppi esclusi** per impostare i gruppi di Azure Active Directory (AD) che includono gli utenti e i dispositivi che dovranno partecipare alla co-gestione.  
+2. Fare clic su **Proprietà** e quindi su **Modifica** per **Assegnazioni**. Selezionare **Aggiungi gruppo** nelle assegnazioni **richieste** per impostare i gruppi di Azure Active Directory (AD) che includono gli utenti e i dispositivi che dovranno partecipare alla co-gestione.  
 
-3. Selezionare **OK** e quindi **Salva** per salvare la configurazione.
+3. Selezionare **Verifica e salva** e quindi **Salva** per salvare la configurazione.
 L'app viene ora richiesta dagli utenti e dai dispositivi cui è stata assegnata. Dopo che l'app installa il client di Configuration Manager in un dispositivo, questo viene gestito tramite la co-gestione.
 
 ## <a name="summary"></a>Riepilogo

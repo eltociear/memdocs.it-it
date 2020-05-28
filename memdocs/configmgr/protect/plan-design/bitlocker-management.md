@@ -10,12 +10,12 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 460c9dd503861ba9f45e85f471bb1cb1274754a0
-ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
+ms.openlocfilehash: 2523d06034f4a7effe769235cb5a4ede4df7e167
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82782119"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764119"
 ---
 # <a name="plan-for-bitlocker-management"></a>Pianificare la gestione di BitLocker
 
@@ -74,7 +74,7 @@ Consentire agli utenti di ottenere in autonomia una chiave monouso per sbloccare
 
 - Per creare un criterio di gestione di BitLocker, è necessario il ruolo di **amministratore completo** in Configuration Manager.
 
-- Il servizio di ripristino di BitLocker richiede HTTPS per crittografare le chiavi di ripristino attraverso la rete dal client di Configuration Manager al punto di gestione. Sono disponibili due opzioni:
+- Il servizio di ripristino di BitLocker richiede HTTPS per la crittografia delle chiavi di ripristino attraverso la rete dal client di Configuration Manager al punto di gestione. Sono disponibili due opzioni:
 
   - Abilitare il sito Web IIS per HTTPS nel punto di gestione che ospita il servizio di ripristino. Questa opzione si applica solo a Configuration Manager versione 2002.<!-- 5925660 -->
 

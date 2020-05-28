@@ -10,12 +10,12 @@ ms.assetid: 6143fd47-48ec-4bca-b53b-5b9b9f067bc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7476f27c050a7870cd8f860f2e1b6bfa3d68a7e9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b3849f360b2f22f2f48bbe49159b610399158b29
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696289"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427774"
 ---
 # <a name="how-to-upgrade-clients-for-windows-computers-in-configuration-manager"></a>Come aggiornare i client per i computer Windows in Configuration Manager
 
@@ -97,7 +97,7 @@ Usare la procedura seguente per configurare l'aggiornamento client automatico ne
 I client ricevono queste impostazioni al successivo download dei criteri.
 
 > [!NOTE]
-> Per gli aggiornamenti client vengono rispettate tutte le finestre di manutenzione di Configuration Manager configurate.
+> Per gli aggiornamenti client vengono rispettate tutte le finestre di manutenzione di Configuration Manager configurate. Il thread execmgr esegue solo il programma di bootstrap dell'installazione client (ccmsetup.exe) durante una finestra di manutenzione. Se il dispositivo esegue un'edizione di Windows con un filtro di scrittura, ccmsetup tenta di eseguire download e installazione allo stesso tempo. In caso contrario, ccmsetup sceglie in modo casuale un orario per scaricare il contenuto. Dopo aver scaricato il contenuto e compilato i criteri locali, execmgr pianifica l'aggiornamento del client durante la finestra di manutenzione successiva.<!-- SCCMDocs#896 -->
 
 ## <a name="next-steps"></a>Passaggi successivi
 

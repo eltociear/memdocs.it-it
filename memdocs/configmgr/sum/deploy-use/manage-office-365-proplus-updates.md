@@ -5,24 +5,24 @@ description: Configuration Manager sincronizza gli aggiornamenti del client di O
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 05/20/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: 4967b8b289d54a6355cb0a1e6454d5fac469a733
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: 09d8f0a37e9ed4308c5c8ffcf005c788612be235
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110407"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709503"
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>Gestire Office 365 ProPlus con Configuration Manager
 
 *Si applica a: Configuration Manager (Current Branch)*
 
 > [!Note]
-> A partire dal 21 aprile 2020 Office 365 ProPlus viene rinominato come **App di Microsoft 365 per grandi imprese**. Per altre informazioni, vedere [Modifica del nome di Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). È comunque possibile che vengano ancora visualizzati riferimenti al nome precedente nella console di Configuration Manager e nella documentazione di supporto mentre la console viene aggiornata.
+> A partire dal 21 aprile 2020, Office 365 ProPlus viene rinominato come **App di Microsoft 365 per grandi imprese**. Per altre informazioni, vedere [Modifica del nome di Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). È comunque possibile che vengano ancora visualizzati riferimenti al nome precedente nella console di Configuration Manager e nella documentazione di supporto mentre la console viene aggiornata.
 
 Configuration Manager consente di gestire le app di Office 365 ProPlus nei modi seguenti:
 
@@ -224,7 +224,33 @@ Per assicurarsi che il canale di aggiornamento sia impostato in modo da consenti
     Esempio: `schtasks /run /tn "\Microsoft\Office\Office Automatic Updates 2.0"`
 5. Fare clic su **OK**. 
 
-## <a name="change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager"></a><a name="bkmk_channel"></a> Modificare il canale di aggiornamento dopo aver abilitato i client di Office 365 alla ricezione degli aggiornamenti da Configuration Manager
+## <a name="update-channels-for-microsoft-365-apps"></a><a name="bkmk_channel"></a> Aggiornare i canali per le app Microsoft 365
+<!--6298093-->
+Quando Office 365 ProPlus è stato rinominato **Microsoft 365 Apps for enterprise**, sono stati rinominati anche i canali di aggiornamento. Se si usa una regola di distribuzione automatica per distribuire gli aggiornamenti, sarà necessario apportarvi delle modifiche se si basa sulla proprietà **Title**. Questo perché il nome dei pacchetti di aggiornamento nel Microsoft Update Catalog sta cambiando.
+
+Attualmente, il titolo di un pacchetto di aggiornamento per Office 365 ProPlus inizia con "Office 365 Client Update", come illustrato nell'esempio seguente:
+
+&nbsp; &nbsp; Office 365 Client Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.20648)
+
+Per i pacchetti di aggiornamento rilasciati a partire dal 9 giugno incluso, il titolo inizierà con "Microsoft 365 Apps Update", come illustrato nell'esempio seguente:
+
+&nbsp; &nbsp; Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)
+</br>
+</br>
+
+|Nuovo nome canale|Nome canale precedente|
+|--|--|
+|Canale Enterprise semestrale|Canale semestrale|
+|Canale Enterprise semestrale (Anteprima)|Canale semestrale (mirato)|
+|Canale Enterprise mensile|N/D|
+|Canale corrente|Canale mensile|
+|Canale corrente (Anteprima)|Canale mensile (mirato)|
+|Canale beta|Insider|
+
+Per altre informazioni su come modificare le regole di distribuzione automatica, vedere [Distribuire automaticamente gli aggiornamenti software](automatically-deploy-software-updates.md). Per altre informazioni sulla modifica dei nomi, vedere [Modifica dei nomi di Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change).
+
+
+## <a name="change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager"></a>Modificare il canale di aggiornamento dopo aver abilitato i client di Office 365 alla ricezione degli aggiornamenti da Configuration Manager
 
 Dopo la distribuzione di Office 365 ProPlus, è possibile cambiare il canale di aggiornamento con Criteri di gruppo o lo Strumento di distribuzione di Office (ODT). Ad esempio, è possibile spostare un dispositivo da Canale semestrale a Canale semestrale (mirato). Quando si cambia il canale, Office viene aggiornato automaticamente senza dover reinstallare o scaricare la versione completa. Per altre informazioni, vedere [Cambiare il canale di aggiornamento per Office 365 ProPlus per i dispositivi nell'organizzazione](https://docs.microsoft.com//deployoffice/change-update-channels).
 

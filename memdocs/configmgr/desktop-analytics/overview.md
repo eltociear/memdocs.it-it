@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 23af311a78058240e6ebf8a2ca3c9e0fcdaf711f
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: e9031b09fa6749d619c8048e70331a6f7c67d472
+ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268556"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83633354"
 ---
 # <a name="what-is-desktop-analytics"></a>Che cos'è Desktop Analytics?
 
@@ -94,7 +94,7 @@ Per usare Desktop Analytics, verificare che l'ambiente soddisfi i prerequisiti s
     > Desktop Analytics supporta più gerarchie di Configuration Manager che dipendono da un singolo tenant di Azure AD.<!-- 4814075 --> Se nell'ambiente sono presenti più gerarchie, sono disponibili le opzioni seguenti:
     >
     > - Usare ID commerciali e tenant di Azure AD diversi.
-    > - Configurare entrambe le gerarchie in modo da usare lo stesso ID commerciale per condividere il tenant di Azure AD e l'istanza di Desktop Analytics.
+    > - Configurare entrambe le gerarchie in modo da usare lo stesso ID commerciale per condividere il tenant di Azure AD e l'istanza di Desktop Analytics. Usare [app diverse](connect-configmgr.md#bkmk_connect) per la connessione di ogni gerarchia. Possono essere necessari fino a 30 minuti dopo la disconnessione di un gerarchia perché il portale rifletta le modifiche. 
 
 - Dispositivi che eseguono Windows 7, Windows 8.1 o Windows 10  
 

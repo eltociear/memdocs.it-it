@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 6f481fa54a8018137a4b45bc62f6fde9c1f1165b
-ms.sourcegitcommit: 7b224e138c0618e978be59832b3486f3745abacc
+ms.openlocfilehash: c7a99931db27b6a55c9e0722cc12c1d7a9cc9e80
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83381580"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764238"
 ---
 # <a name="endpoint-analytics-preview"></a><a name="bkmk_uea"></a> Anteprima di Analisi degli endpoint
 
@@ -102,6 +102,8 @@ Un utente di sola lettura richiederà solo l'autorizzazione **Lettura** sia nell
 
 Per Correzioni proattive l'utente deve avere le autorizzazioni appropriate per il ruolo nella categoria **Configurazioni dispositivi**.  Le autorizzazioni nella categoria **Analisi degli endpoint** non sono necessarie se l'utente usa solo Correzioni proattive.
 
+Per confermare i requisiti di licenza prima di usare le correzioni proattive per la prima volta, è necessario un [amministratore del servizio Intune](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#intune-service-administrator-permissions).
+
 ## <a name="start-gathering-data"></a><a name="bkmk_uea_start"></a> Iniziare a raccogliere i dati
 - Se si stanno registrando solo i dispositivi gestiti di Intune, passare alla sezione [Eseguire l'onboarding nel portale di Analisi degli endpoint](#bkmk_uea_onboard).
 
@@ -112,7 +114,7 @@ Per Correzioni proattive l'utente deve avere le autorizzazioni appropriate per i
 
 ### <a name="enroll-devices-managed-by-configuration-manager"></a><a name="bkmk_uea_cm_enroll"></a> Registrare i dispositivi gestiti da Configuration Manager
 <!--6051638, 5924760-->
-Prima di registrare i dispositivi di Configuration Manager verificare i [prerequisiti](#bkmk_uea_prereq), inclusa l'abilitazione dell'[associazione del tenant Microsoft Endpoint Manager](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions). Se si stanno registrando solo i dispositivi gestiti di Intune, passare alla sezione [Eseguire l'onboarding nel portale di Analisi degli endpoint](#bkmk_uea_onboard).
+Prima di registrare i dispositivi di Configuration Manager verificare i [prerequisiti](#bkmk_uea_prereq), inclusa l'abilitazione dell'[associazione del tenant Microsoft Endpoint Manager](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions). 
 
 #### <a name="enable-endpoint-analytics-data-collection-in-configuration-manager"></a><a name="bkmk_uea_cm_enable"></a> Abilitare la raccolta dati di Analisi degli endpoint in Configuration Manager
 
@@ -238,7 +240,7 @@ Se si fa clic su un dispositivo specifico, è possibile visualizzarne la cronolo
 La pagina **Prestazioni di avvio** include schede per la creazione di report che forniscono supporto per le informazioni dettagliate, tra cui:
 1. **Prestazioni del modello**. Questa scheda consente di visualizzare le prestazioni di avvio e di accesso in base al modello di dispositivo, utili per identificare se i problemi di prestazioni riguardano solo modelli specifici.
 1. **Prestazioni del dispositivo**. Questa scheda fornisce le metriche di avvio e di accesso per tutti i dispositivi. È possibile ordinare i dati in base a una metrica specifica, come il tempo di accesso a un GP, per vedere quali dispositivi hanno i punteggi peggiori per la metrica e facilitare la risoluzione dei problemi. È anche possibile cercare un dispositivo in base al nome. Se si fa clic su un dispositivo, è possibile visualizzarne la cronologia di avvio e accesso, che consente di identificare se è presente una regressione recente
-1. **Processi di avvio**. In questa scheda (se visibile, perché è stata distribuita solo ad alcuni utenti dato che questa funzionalità è ancora in corso di sviluppo) saranno indicati i processi che incidono sulla fase di accesso "tempo per risposta del desktop" (ovvero mantenere l'utilizzo della CPU superiore al 50% dopo il rendering del desktop).
+1. **Processi di avvio**. I processi di avvio possono influire negativamente sull'esperienza utente aumentando il tempo di attesa per gli utenti prima che il desktop diventi reattivo. In questa scheda (se visibile, perché è stata distribuita solo ad alcuni utenti dato che questa funzionalità è ancora in corso di sviluppo) saranno indicati i processi che incidono sulla fase di accesso "tempo per risposta del desktop" (ovvero mantenere l'utilizzo della CPU superiore al 50% dopo il rendering del desktop). La tabella elenca solo i processi che interessano un minimo di 10 dispositivi nel tenant.  
 
 ## <a name="proactive-remediations"></a><a name="bkmk_uea_prs"></a> Correzioni proattive
 

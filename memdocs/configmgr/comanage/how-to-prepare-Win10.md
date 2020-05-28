@@ -5,17 +5,17 @@ description: Informazioni su come preparare i dispositivi Windows 10 basati su I
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/24/2020
+ms.date: 05/14/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: 59ca1006d8700e52b3f3fb703f8896ce9fa8b9b7
-ms.sourcegitcommit: 3ff33493c3f93bf06fdc942d30958a2a4ad03529
+ms.openlocfilehash: e6582599a02f4a8196ee739ca875df4d158a993e
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82137916"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427800"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>Come preparare i dispositivi basati su Internet per la co-gestione
 
@@ -104,9 +104,9 @@ Per altre informazioni, vedere [Informazioni sulle proprietà di installazione d
 
 ### <a name="create-the-app-in-intune"></a>Creare l'app in Intune
 
-1. Accedere al [portale di Azure](https://portal.azure.com) e quindi aprire la pagina di Intune.  
+1. Passare all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://endpoint.microsoft.com) e quindi espandere il riquadro di spostamento a sinistra.  
 
-2. Selezionare **App client** > **App** > **Aggiungi**.  
+2. Selezionare **App** > **Tutte le app** > **Aggiungi**.  
 
 3. In **Altro** selezionare **App line-of-business**.  
 

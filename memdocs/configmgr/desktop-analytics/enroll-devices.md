@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: acb8900a57408152133637ead3b8a0cf4732b4a7
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: c10e3c1cb2a0044003415d8f55a0a4ac85058656
+ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268726"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83633314"
 ---
 # <a name="how-to-enroll-devices-in-desktop-analytics"></a>Come registrare i dispositivi in Desktop Analytics
 
@@ -126,7 +126,7 @@ Per configurare questa opzione, è disponibile un'opzione nelle impostazioni di 
 
 In generale, usare le raccolte di Configuration Manager per le impostazioni e la registrazione di Desktop Analytics. Usare l'appartenenza diretta o le query per includere o escludere i dispositivi dalla raccolta. Per altre informazioni, vedere [Come creare le raccolte](../core/clients/manage/collections/create-collections.md).
 
-Configuration Manager configura le impostazioni di Windows solo se un valore non esiste già. Se è necessario configurare impostazioni diverse per un unico gruppo di dispositivi, è possibile usare i [criteri di gruppo](group-policy-settings.md). Le impostazioni di destinazione dei criteri di gruppo hanno la precedenza sulle impostazioni di Configuration Manager.
+Configuration Manager configura le impostazioni di Windows solo se un valore non esiste già. Se è necessario configurare impostazioni diverse per un unico gruppo di dispositivi, è possibile usare i [criteri di gruppo](group-policy-settings.md). Le impostazioni di destinazione dei criteri di gruppo hanno la precedenza sulle impostazioni di Configuration Manager. I dispositivi interessati da Criteri di gruppo potrebbero non riflettere con precisione lo stato nel dashboard [Integrità connessione](monitor-connection-health.md).
 
 Quando si configura il livello dei dati di diagnostica, è necessario impostare il limite superiore per il dispositivo. Per impostazione predefinita, in Windows 10 versione 1803 e successive gli utenti possono scegliere di impostare un livello inferiore. È possibile controllare questo comportamento usando l'impostazione dei criteri di gruppo, **Configurare l'interfaccia utente dell'impostazione del consenso esplicito per la telemetria**. Per altre informazioni, vedere [Impostazione di criteri di gruppo per Desktop Analytics](group-policy-settings.md).
 

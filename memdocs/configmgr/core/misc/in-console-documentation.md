@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 1bd4ff4b25fcd4cf77366c93fcc1259ea2b5749f
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 678f19d4ec69bea2bc5b3863e3e2a8332c10f3be
+ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268182"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83551605"
 ---
 <!-- 
 - Feature 1357546
@@ -107,11 +107,12 @@ Procedure dettagliate guidate che semplificano la risoluzione dei problemi relat
 
 ## <a name="new-and-updated-support-articles"></a>Articoli di supporto nuovi e aggiornati
 
-Articoli di supporto nuovi o aggiornati tra il 21 febbraio e il 19 marzo 2020.
+Articoli di supporto nuovi o aggiornati tra il 20 marzo e il 15 maggio 2020.
 
-- [KB 4552430 La sincronizzazione della categoria di aggiornamento di terze parti viene reimpostata sul valore predefinito in Configuration Manager](https://support.microsoft.com/help/4552430)
-- [KB 4551013 Gli aggiornamenti di terze parti modificati non vengono scaricati in Configuration Manager](https://support.microsoft.com/help/4551013)
-- [KB 4552181 Ritardi nella distribuzione del contenuto in Configuration Manager Current Branch versione 1910](https://support.microsoft.com/help/4552181)
-- [KB 4550023 Una sequenza di attività di aggiornamento sul posto di Configuration Manager non continua dopo un rollback dell'aggiornamento sul posto di Windows 10](https://support.microsoft.com/help/4550023)
+- [KB 4561494 La creazione di applicazioni Microsoft Edge non riesce in Configuration Manager](https://support.microsoft.com/help/4561494)
+- [KB 4551059 La console di gestione configurazione remota si blocca per 20 secondi ogni 10 minuti](https://support.microsoft.com/help/4551059)
+- [KB 4556203 Riepilogo delle modifiche apportate a Microsoft endpoint Configuration Manager Current Branch, versione 2002](https://support.microsoft.com/help/4556203)
+- [KB 4553501 Aggiornamento per Microsoft endpoint Configuration Manager versione 2002, anello di aggiornamento in anticipo](https://support.microsoft.com/help/4553501)
+- [KB 4561945 Errore "la connessione sottostante è stata chiusa" quando lo strumento di connessione del servizio Scarica il file ConfigMgr. AdminUIContent. cab](https://support.microsoft.com/help/4561945)
 
 Per sottoscrivere la notifica Atom o RSS dei nuovi articoli di supporto di Configuration Manager, vedere [Aggiornamenti dei contenuti del supporto](https://support.microsoft.com/help/4089498/) e selezionare **Microsoft Endpoint Configuration Manager**.  

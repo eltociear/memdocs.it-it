@@ -10,12 +10,12 @@ ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bdc98febbc96162b2abe6e666c9354c342e5e913
-ms.sourcegitcommit: ed2c18e210db177eb0d5e10d74207006561b7b5d
+ms.openlocfilehash: c6b33027d67329b883f401168795c1b466ded1a7
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83383727"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709392"
 ---
 # <a name="token-based-authentication-for-cloud-management-gateway"></a>Autenticazione basata su token per Cloud Management Gateway
 
@@ -25,7 +25,7 @@ ms.locfileid: "83383727"
 
 Cloud Management Gateway (CMG) supporta molti tipi di client, ma anche con [HTTP avanzato](../../plan-design/hierarchy/enhanced-http.md), questi client richiedono un [certificato di autenticazione client](../manage/cmg/certificates-for-cloud-management-gateway.md#for-internet-based-clients-communicating-with-the-cloud-management-gateway). Può essere complicato gestire il provisioning di questo requisito del certificato nei client basati su Internet che non si connettono spesso alla rete interna, non possono essere aggiunti ad Azure Active Directory (Azure AD) e non hanno un metodo per installare un certificato emesso da PKI.
 
-A partire dalla versione 2002, Configuration Manager estende il supporto dei dispositivi con i metodi seguenti:
+Per risolvere questi problemi, a partire dalla versione 2002 Configuration Manager estende il supporto dei dispositivi con i metodi seguenti:
 
 - Registrazione nella rete interna per un token univoco
 
@@ -101,7 +101,7 @@ Il token non viene archiviato nel client o nel sito. Assicurarsi di copiare il t
 
 Usare con il parametro `/new` per specificare il periodo di validità del token. Specificare un valore intero in minuti. Il valore predefinito è 4.320 (tre giorni). Il valore massimo è 10.080 (sette giorni).
 
-Esempio: `BulkRegistrationTokenTool.exe /lifetime:4320`
+Esempio: `BulkRegistrationTokenTool.exe /lifetime 4320`
 
 ## <a name="bulk-registration-token-management"></a>Gestione di token di registrazione in blocco
 

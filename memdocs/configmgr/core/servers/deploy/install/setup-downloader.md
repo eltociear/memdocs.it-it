@@ -1,8 +1,8 @@
 ---
-title: Downloader di installazione
+title: Strumento downloader di installazione
 titleSuffix: Configuration Manager
-description: Leggere le informazioni su questa applicazione autonoma progettata per assicurare che l'installazione del sito usi le versioni correnti dei file di installazione principali.
-ms.date: 01/22/2020
+description: Usare lo strumento autonomo per scaricare le versioni correnti dei file di installazione fondamentali per l'installazione.
+ms.date: 05/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,102 +10,113 @@ ms.assetid: bda87fc5-2e4c-4992-98a4-01770365038c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2fa1899f8e7dc14812f9f9ecf889350a153b2d25
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2da8aed5cfe4a478010165445094f1fce4627d9a
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700569"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428842"
 ---
 # <a name="setup-downloader-for-configuration-manager"></a>Downloader di installazione per Configuration Manager
 
 *Si applica a: Configuration Manager (Current Branch)*
 
-Prima di eseguire il programma di installazione per installare o aggiornare un sito di Configuration Manager, è possibile usare l'applicazione autonoma downloader di installazione dalla versione di Configuration Manager che si vuole installare per scaricare i file di installazione aggiornati.  
+Prima di eseguire il programma di installazione di Configuration Manager per installare o aggiornare un sito, è possibile usare lo strumento autonomo downloader di installazione per scaricare i file di installazione aggiornati. Eseguire lo strumento dalla versione di Configuration Manager che si vuole installare. Usare file di installazione aggiornati per assicurarsi che l'installazione del sito usi le versioni correnti dei file di installazione principali.
 
-L'uso di file di installazione aggiornati assicura che l'installazione del sito usi le versioni correnti dei file di installazione principali. Panoramica:   
--   Quando si usa il Downloader di installazione per scaricare i file prima di avviare il programma di installazione, specificare la cartella che contiene i file.  
--   L'account usato per eseguire l'installazione del downloader deve avere autorizzazioni di tipo **Controllo completo** per accedere alla cartella del download.  
--   Quando si esegue il programma di installazione per installare o aggiornare un sito, è possibile indirizzarlo per l'uso di questa copia locale dei file scaricati in precedenza. In questo modo, si evita che il programma di installazione debba connettersi a Microsoft quando si avvia l'installazione o l'aggiornamento del sito.  
--   È possibile usare la stessa copia locale dei file di installazione per gli aggiornamenti o le installazioni successive del sito.  
+Quando si usa il downloader di installazione, si specifica una cartella in cui inserire i file. L'account usato per eseguire lo strumento deve avere autorizzazioni di tipo **Controllo completo** per la cartella di download. Quando si esegue il programma di installazione per installare o aggiornare un sito, è possibile specificare questa copia locale dei file scaricati in precedenza. Questo comportamento evita che il programma di installazione si connetta a Microsoft quando si avvia l'installazione o l'aggiornamento del sito. È possibile usare la stessa copia locale dei file di installazione per altri aggiornamenti o installazioni della stessa versione.
 
-I tipi di file seguenti vengono scaricati dal Downloader di installazione:  
--   File ridistribuibili dei prerequisiti obbligatori  
--   Language Pack  
--   Aggiornamenti più recenti del programma di installazione  
+Lo strumento downloader di installazione scarica i tipi di file seguenti:
 
-Sono disponibili due opzioni per l'esecuzione del downloader di installazione:
+- File ridistribuibili dei prerequisiti obbligatori
+- Language Pack
+- Aggiornamenti più recenti dei prodotti per l'installazione
+
+Per eseguire il downloader di installazione sono disponibili due opzioni:
+
 - Eseguire l'applicazione con l'interfaccia utente
-- Per le opzioni della riga di comando, eseguire l'applicazione al prompt dei comandi
+- Eseguire l'applicazione al prompt dei comandi per opzioni della riga di comando aggiuntive
 
+Se l'organizzazione limita le comunicazioni della rete con Internet tramite un firewall o un dispositivo proxy, è necessario consentire allo strumento di accedere agli endpoint Internet. Il dispositivo in cui verrà eseguito lo strumento richiede l'accesso a Internet così come il punto di connessione del servizio. Per altre informazioni, vedere i [requisiti di accesso Internet](../../../plan-design/network/internet-endpoints.md#bkmk_scp).<!-- SCCMDocs#677 -->
 
-## <a name="run-setup-downloader-with-the-user-interface"></a><a name="bkmk_ui"></a> Eseguire il Downloader di installazione con l'interfaccia utente  
+## <a name="run-setup-downloader-with-the-user-interface"></a><a name="bkmk_ui"></a> Eseguire il downloader di installazione con l'interfaccia utente
 
-1.  In un computer con accesso a Internet, aprire Esplora risorse e passare a **&lt;ConfigMgrInstallationMedia\>\SMSSETUP\BIN\X64**.  
+1. In un computer dotato di accesso a Internet, passare al supporto di installazione per la versione di Configuration Manager che si vuole installare.
 
-2.  Per aprire il downloader di installazione, fare doppio clic su **Setupdl.exe**.   
+1. Nella sottocartella **SMSSETUP\BIN\X64** eseguire **Setupdl. exe**.
 
-3. Specificare il percorso della cartella che ospiterà i file di installazione aggiornati e quindi fare clic su **Download**. Il downloader di installazione verifica i file nella cartella di download. E scarica solo i file mancanti o più recenti rispetto ai file esistenti. Il downloader di installazione crea sottocartelle per le lingue scaricate e altre sottocartelle necessarie.  
+1. Specificare il percorso della cartella in cui archiviare i file di installazione aggiornati e quindi selezionare **Download**. Il downloader di installazione verifica i file presenti nella cartella di download. E scarica solo i file mancanti o più recenti rispetto ai file esistenti. Crea sottocartelle per le lingue scaricate e altri componenti necessari.
 
-4.  Per rivedere i risultati del download, aprire il file **ConfigMgrSetup.log** nella directory radice dell'unità C.  
+1. Per esaminare i risultati del download, vedere **C:\ConfigMgrSetup.log**.
 
-## <a name="run-setup-downloader-from-a-command-prompt"></a><a name="bkmk_cmd"></a> Eseguire il Downloader di installazione da un prompt dei comandi  
+## <a name="run-setup-downloader-from-a-command-prompt"></a><a name="bkmk_cmd"></a> Eseguire il downloader di installazione al prompt dei comandi
 
-1.  In una finestra del prompt dei comandi passare a **&lt;*Supporti di installazione di Configuration Manager*\>\SMSSETUP\BIN\X64**.   
+1. Aprire il prompt dei comandi e passare al supporto di installazione per la versione di Configuration Manager che si vuole installare.
 
-2.  Eseguire **Setupdl.exe** per aprire il downloader di installazione.
+1. Passare alla sottocartella **SMSSETUP\BIN\X64** ed eseguire **Setupdl. exe** con le opzioni necessarie.
 
-    Con **Setupdl.exe** è possibile usare le seguenti opzioni della riga di comando:   
+1. Per esaminare i risultati del download, vedere **C:\ConfigMgrSetup.log**.
 
-    -   **/VERIFY**: usare questa opzione per verificare i file nella cartella di download, inclusi i file di lingua. Rivedere il file ConfigMgrSetup.log nella directory radice dell'unità C per un elenco di file non aggiornati. Se si usa questa opzione, non verrà scaricato alcun file.  
+### <a name="command-line-options"></a>Opzioni della riga di comando
 
-    -   **/VERIFYLANG**: usare questa opzione per verificare i file di lingua nella cartella di download. Rivedere il file ConfigMgrSetup.log nella directory radice dell'unità C per un elenco di file di lingue non aggiornati.
+Con **Setupdl.exe** è possibile usare le seguenti opzioni della riga di comando:
 
-    -   **/LANG**: usare questa opzione per scaricare solo i file della lingua nella cartella di download.  
+- **/VERIFY**: verifica i file nella cartella di download, inclusi i file di lingua. Per l'elenco dei file obsoleti, vedere **C:\ConfigMgrSetup.log**. Quando si usa questa opzione, non viene scaricato alcun file.
 
-    -   **/NOUI**: usare questa opzione per avviare il Downloader di installazione senza visualizzare l'interfaccia utente. Quando si usa questa opzione, è necessario specificare il **percorso di download** come parte della riga di comando al prompt dei comandi.  
+- **/VERIFYLANG**: verifica solo i file di lingua nella cartella di download. Per l'elenco dei file di lingua obsoleti, vedere **C:\ConfigMgrSetup.log**.
 
-    -   **&lt;DownloadPath\>** : è possibile specificare il percorso della cartella di download per avviare automaticamente la verifica o il processo di download. Quando si usa l'opzione **/NOUI**, è necessario specificare il percorso di download. Se non si specifica un percorso di download, sarà necessario specificarlo all'apertura del downloader di installazione. Il downloader di installazione crea la cartella se non esiste già.  
+- **/LANG**: scarica solo i file di lingua nella cartella di download.
 
-    Comandi di esempio:
+- **/NOUI**: avvia il downloader di installazione senza l'interfaccia utente. Quando si usa questa opzione, è necessario indicare il **percorso di download**.
 
-    -   **setupdl &lt;PercorsoDownload\>**  
+- **Percorso di download**: per avviare automaticamente il processo di verifica o di download, specificare il percorso della cartella di download. Quando si usa l'opzione **/NOUI**, è necessario indicare il percorso di download. Se non si specifica un percorso di download, il downloader di installazione richiede di specificarlo. Se la cartella non esiste, il downloader di installazione la crea.
 
-        -   Il downloader di installazione viene avviato, verifica i file nella cartella di download specificata e scarica solo i file mancanti o più recenti rispetto a quelli esistenti.     
+### <a name="example-commands"></a>Comandi di esempio
 
-    -   **setupdl /VERIFY &lt;PercorsoDownload\>**  
+#### <a name="example-1"></a>Esempio 1
 
-        -   Il Downloader di installazione viene avviato e verifica i file nella cartella di download specificata.  
+Il downloader di installazione verifica i file nella cartella di download specificata e quindi scarica i file.
 
-    -   **setupdl /NOUI &lt;PercorsoDownload\>**  
+`setupdl.exe C:\Download`
 
-        -   Il downloader di installazione viene avviato, verifica i file nella cartella di download specificata e scarica solo i file mancanti o più recenti rispetto a quelli esistenti.  
+#### <a name="example-2"></a>Esempio 2
 
-    -   **setupdl /LANG  &lt;PercorsoDownload\>**  
+Il downloader di installazione verifica solo i file nella cartella di download specificata.
 
-        -   Il downloader di installazione viene avviato, verifica i file della lingua nella cartella di download specificata e scarica solo i file della lingua mancanti o i file più recenti rispetto a quelli esistenti.  
+`setupdl.exe /VERIFY C:\Download`
 
-    -   **setupdl /VERIFY**  
+#### <a name="example-3"></a>Esempio 3:
 
-        -   Il Downloader di installazione viene avviato e quindi è necessario specificare il percorso alla cartella di download. Dopo aver fatto clic su **Verifica**, il downloader di installazione verifica i file nella cartella di download.  
+Il downloader di installazione verifica i file nella cartella di download specificata e quindi scarica i file. Lo strumento non visualizza alcuna interfaccia utente.
 
-3.  Per rivedere i risultati del download, aprire il file **ConfigMgrSetup.log** nella directory radice dell'unità C.
+`setupdl.exe /NOUI C:\Download`
 
-## <a name="copy-setup-downloader-files-to-another-computer"></a><a name="bkmk_cp-files"></a> Copiare i file del Downloader di installazione in un altro computer
+#### <a name="example-4"></a>Esempio 4
+
+Il downloader di installazione verifica i file di lingua nella cartella di download specificata e quindi scarica solo i file di lingua.
+
+`setupdl.exe /LANG C:\Download`
+
+## <a name="copy-setup-downloader-files-to-another-computer"></a><a name="bkmk_cp-files"></a> Copiare i file del downloader di installazione in un altro computer
 
 1. In Esplora risorse passare a una delle posizioni seguenti:
 
     - **&lt;Supporto di installazione di Configuration Manager>\SMSSETUP\BIN\X64**
+
     - **&lt;Percorso di installazione di Configuration Manager>\BIN\X64**
-    
+
 1. Copiare i file seguenti nella cartella di destinazione in un altro computer:
-    
+
     - **setupdl.exe**
+
     - **.\\&lt;lingua>\\setupdlres.dll**
-      - Questo file si trova nella sottocartella per la lingua di installazione. Ad esempio, l'inglese si trova nella sottocartella `00000409`.
 
-    Ad esempio, le cartelle di destinazione nel dispositivo dovrebbero avere un aspetto simile al seguente:
-    - C:\ConfigManInstall\setupdl.exe
-    - C:\ConfigManInstall\00000409\setupdlres.dll
+        > [!NOTE]
+        > Questo file si trova nella sottocartella per la lingua di installazione. Ad esempio, l'inglese si trova nella sottocartella `00000409`.
 
-1. Avviare il Downloader di installazione dal computer usando l'[interfaccia utente](#bkmk_ui) o il [prompt dei comandi](#bkmk_cmd), descritto nelle sezioni precedenti.
+    Le cartelle di destinazione nel dispositivo dovrebbero avere un aspetto simile all'esempio seguente:
+
+    - `C:\ConfigManInstall\setupdl.exe`
+
+    - `C:\ConfigManInstall\00000409\setupdlres.dll`
+
+1. Eseguire il downloader di installazione dal computer di destinazione. Usare l'[interfaccia utente](#bkmk_ui) o il [prompt dei comandi](#bkmk_cmd).

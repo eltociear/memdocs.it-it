@@ -10,12 +10,12 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e99efed5d506ddf30e818243ad8b899e8f8b8aca
-ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
+ms.openlocfilehash: b3ddd1a4b59ba750e9fca5f8386762b4a5dddb13
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82782120"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429806"
 ---
 # <a name="task-sequence-variables"></a>Variabili della sequenza di attività
 
@@ -1832,6 +1832,10 @@ Specificare questa variabile per controllare il tipo di informazioni visualizzat
 - `1`: includere il passaggio corrente e i passaggi totali per il testo di stato. Ad esempio, **2 di 10**.
 - `2`: includere il passaggio corrente, i passaggi totali e la percentuale di completamento. Ad esempio, **2 di 10 (20% completato)** .
 - `3`: includere la percentuale di completamento. Ad esempio, **(20% completato)** .
+
+### <a name="tsuefidrive"></a><a name="TSUEFIDrive"></a> TSUEFIDrive
+
+Usare le proprietà di una partizione FAT32 nel campo **Variabile**. Quando la sequenza di attività rileva questa variabile, avvia la preparazione del disco per la transizione a UEFI prima di riavviare il computer. Per altre informazioni, vedere [Passaggi della sequenza di attività per la gestione della conversione da BIOS a UEFI](../deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md).
 
 ### <a name="workingdirectory"></a><a name="WorkingDirectory"></a> WorkingDirectory
 

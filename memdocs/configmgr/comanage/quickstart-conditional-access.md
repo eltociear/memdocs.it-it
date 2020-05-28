@@ -10,18 +10,18 @@ ms.assetid: 4cf640b3-610c-4c3c-b966-c62e9f5654ff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d35f36b6578359f62f21b4e2208a70ace22cf0d9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 94f002ecd12d08ffd5f3d4767e315e0d83714929
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691259"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764051"
 ---
 # <a name="conditional-access-with-co-management"></a>Accesso condizionale con la co-gestione
 
-L'accesso condizionale assicura che solo gli utenti attendibili possano accedere alle risorse dell'organizzazione in dispositivi attendibili usando app attendibili. Questo scenario viene realizzato da zero nel cloud. Sia che si voglia gestire i dispositivi con Intune o estendere la distribuzione di Configuration Manager con la co-gestione, il funzionamento è lo stesso.
+L'accesso condizionale assicura che solo gli utenti attendibili possano accedere alle risorse dell'organizzazione con dispositivi attendibili e app attendibili. Questo scenario viene realizzato da zero nel cloud. Sia che si voglia gestire i dispositivi con Intune o estendere la distribuzione di Configuration Manager con la co-gestione, il funzionamento è lo stesso.
 
-Nel video seguente il Senior Program Manager Joey Glocke e il Product Marketing Manager Locky Ainley trattano e illustrano l'accesso condizionale con la co-gestione:
+Nel video seguente il Senior Program Manager Joey Glocke e il Product Marketing Manager Locky Ainley parlano dell'accesso condizionale con la co-gestione e ne offrono una demo:
 
 > [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/The-Security-Benefits-of-Conditional-Access/player]
 
@@ -41,7 +41,7 @@ Il vicepresidente di Microsoft Brad Anderson illustra l'accesso condizionale in 
 
 > [!VIDEO https://www.youtube.com/embed/7tDbUhVCX_I?start=1071]
 
-L'accesso condizionale offre anche una posizione centralizzata per visualizzare l'integrità di tutti i dispositivi connessi alla rete. Si ottengono i vantaggi della scalabilità del cloud, particolarmente preziosi per i test delle istanze di produzione di Configuration Manager.
+L'accesso condizionale offre anche una posizione centralizzata per la visualizzazione dell'integrità di tutti i dispositivi connessi alla rete. Si ottengono i vantaggi della scalabilità del cloud, particolarmente preziosi per i test delle istanze di produzione di Configuration Manager.
 
 
 ## <a name="benefits"></a>Vantaggi
@@ -52,7 +52,7 @@ Per tutti i team IT la sicurezza della rete è di primaria importanza. È fondam
 - Se le impostazioni sono aggiornate  
 - Se il dispositivo è jailbroken o rooted  
 
-L'accesso condizionale combina il controllo granulare dei dati dell'organizzazione con un'esperienza utente in grado di ottimizzare la produttività su qualsiasi dispositivo da qualsiasi posizione.
+L'accesso condizionale combina il controllo granulare dei dati dell'organizzazione e un'esperienza utente in grado di ottimizzare la produttività con qualsiasi dispositivo da qualsiasi posizione.
 
 Il video seguente illustra come è possibile integrare [Advanced Thread Protection](https://www.microsoft.com/windowsforbusiness/windows-atp) (ATP) in scenari comuni:
 
@@ -96,9 +96,9 @@ Con l'accesso condizionale e l'integrazione di ATP si rafforza un componente fon
 
 In più del 63% di tutte le violazioni della sicurezza dei dati, gli utenti malintenzionati ottengono l'accesso alla rete dell'organizzazione tramite credenziali utente deboli, impostate come predefinite o rubate. Poiché l'accesso condizionale è incentrato sulla protezione dell'identità dell'utente, limita il furto di credenziali. L'accesso condizionale gestisce e protegge le identità con privilegi o senza privilegi. Non esiste un modo migliore per proteggere i dispositivi e i dati al loro interno.
 
-Dato che l'accesso condizionale è un componente essenziale di Enterprise Mobility + Security (EMS), non sono richieste configurazioni o un'architettura specifica in locale. Con Intune e Azure Active Directory (Azure AD) è possibile configurare rapidamente l'accesso condizionale nel cloud. Se attualmente si usa Configuration Manager, è possibile estendere facilmente l'ambiente al cloud con la co-gestione e iniziare subito a usarlo.
+Dato che l'accesso condizionale è un componente essenziale di Enterprise Mobility + Security (EMS), non è richiesta una configurazione o un'architettura specifica locale. Con Intune e Azure Active Directory (Azure AD) è possibile configurare rapidamente l'accesso condizionale nel cloud. Se attualmente si usa Configuration Manager, è possibile estendere facilmente l'ambiente al cloud con la co-gestione e iniziare subito a usarlo.
 
-Per altre informazioni sull'integrazione di ATP, vedere il post di blog [Microsoft Defender ATP device risk score exposes new cyberattack, drives Conditional access to protect networks](https://cloudblogs.microsoft.com/microsoftsecure/2018/11/28/windows-defender-atp-device-risk-score-exposes-new-cyberattack-drives-conditional-access-to-protect-networks/) (Il punteggio di rischio dei dispositivi Microsoft Defender ATP espone al rischio di nuovi attacchi cibernetici e promuove l'uso dell'accesso condizionale per proteggere le reti). In questo post viene descritto in dettaglio come un gruppo di hacker avanzati ha usato strumenti mai visti in precedenza. L'attacco è stato rilevato e bloccato dal cloud Microsoft perché gli utenti designati usavano l'accesso condizionale. L'intrusione ha attivato i criteri di accesso condizionale basati sul rischio del dispositivo. Anche se l'autore dell'attacco era già riuscito a penetrare la rete, ai computer interessati è stato automaticamente impedito l'accesso ai servizi e ai dati dell'organizzazione gestiti da Azure AD.
+Per altre informazioni sull'integrazione di ATP, vedere il post di blog [Microsoft Defender ATP device risk score exposes new cyberattack, drives Conditional access to protect networks](https://cloudblogs.microsoft.com/microsoftsecure/2018/11/28/windows-defender-atp-device-risk-score-exposes-new-cyberattack-drives-conditional-access-to-protect-networks/) (Il punteggio di rischio dei dispositivi Microsoft Defender ATP espone al rischio di nuovi attacchi cibernetici e promuove l'uso dell'accesso condizionale per proteggere le reti). In questo post viene descritto in dettaglio come un gruppo di hacker avanzati ha usato strumenti mai visti in precedenza. L'attacco è stato rilevato e bloccato dal cloud Microsoft perché gli utenti interessati usavano l'accesso condizionale. L'intrusione ha attivato i criteri di accesso condizionale basati sul rischio del dispositivo. Anche se l'autore dell'attacco era già riuscito a penetrare la rete, ai computer interessati è stato automaticamente impedito l'accesso ai servizi e ai dati dell'organizzazione gestiti da Azure AD.
 
 
 
@@ -108,7 +108,7 @@ L'accesso condizionale è facile da usare quando si [abilita la co-gestione](how
 
 Per altre informazioni sull'uso dell'accesso condizionale, vedere gli articoli seguenti: 
 
-- [Che cos'è l'accesso condizionale in Azure Active Directory?](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)  
+- [Accesso condizionale in Azure AD](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)  
 
 - [Criteri di conformità dei dispositivi in Intune](https://docs.microsoft.com/intune/device-compliance)  
 

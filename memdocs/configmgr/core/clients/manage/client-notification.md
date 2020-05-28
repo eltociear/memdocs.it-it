@@ -10,12 +10,12 @@ ms.assetid: deb8aac8-2bd9-4980-a25b-5f8d93051226
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8a00f77a5a902728a7c41905314511cffcfa81a5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7680c8f955773f169d56f36eb9bbe6507d2d7ce6
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694959"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427813"
 ---
 # <a name="client-notification-in-configuration-manager"></a>Notifica del client in Configuration Manager
 
@@ -153,6 +153,9 @@ A partire dalla versione 1910, sono disponibili nuove azioni del dispositivo per
 Per altre informazioni su queste impostazioni, vedere [Informazioni sui file di log](../../plan-design/hierarchy/about-log-files.md#bkmk_reg-client).
 
 Tenere traccia dello stato dell'attività in **diagnostics.log** nel client. Quando si raccolgono i log del client, vengono registrate informazioni aggiuntive nel file **MP_SinvCollFile. log** nel punto di gestione e nel file **sinvproc.log** nel server del sito.
+
+> [!Tip]
+> I log dei client raccolti vengono archiviati in base alle impostazioni di raccolta file di inventario software. I file raccolti vengono archiviati nel server del sito nella directory **Inboxes\sinv.box\FileCol**. Non è definito alcun limite per il numero di versioni. L'attività di manutenzione del sito [Elimina file raccolti obsoleti](../../servers/manage/reference-for-maintenance-tasks.md#delete-aged-collected-files) elimina i file in una pianificazione. Per impostazione predefinita, questo avviene ogni 90 giorni.
 
 ### <a name="prerequisites---client-diagnostics"></a>Prerequisiti - Diagnostica client
 

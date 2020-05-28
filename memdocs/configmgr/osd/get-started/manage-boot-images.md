@@ -10,12 +10,12 @@ ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1166d4c674207ed3590901465ca90a98ce3ae78f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 4403c8d0c57fba8fb63e3df729fb8a48ff123362
+ms.sourcegitcommit: d8dc05476ecd5db7ecb36dc649b566b349ba263d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075065"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83732874"
 ---
 # <a name="manage-boot-images-with-configuration-manager"></a>Gestire le immagini d'avvio con Configuration Manager
 
@@ -201,13 +201,8 @@ Nella scheda **Personalizzazione** selezionare una delle seguenti impostazioni:
 
 - **Imposta il layout di tastiera predefinito in WinPE**: <!--4910348-->A partire dalla versione 1910, configurare il layout predefinito della tastiera per un'immagine d'avvio. Se si seleziona una lingua diversa da en-US, Configuration Manager include ancora en-US nelle impostazioni locali di input disponibili. Nel dispositivo, il layout iniziale della tastiera corrisponde alle impostazioni locali selezionate, ma l'utente può passare a en-US se necessario.
 
-    > [!Tip]
-    > Il cmdlet di PowerShell [Set-CMBootImage](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) include ora il nuovo parametro `-InputLocale`. Ad esempio:
-    >
-    > ```PowerShell
-    > # Set boot image keyboard layout to Russian (Russia)
-    > Set-CMBootimage -Id "CM100004" -InputLocale "ru-ru"`
-    > ```
+> [!Tip]
+> Usare il cmdlet di PowerShell [Set-CMBootImage](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) per configurare queste impostazioni da uno script.
 
 #### <a name="optional-components"></a>Componenti facoltativi
 

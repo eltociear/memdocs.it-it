@@ -10,12 +10,12 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 849dd0bdb0f6583d525df8af3f6d46f8a4a9aecf
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: a52b70b0a753036c506e5d515cbac048d6771295
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904665"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879062"
 ---
 # <a name="whats-new-in-version-1910-of-configuration-manager-current-branch"></a>Novità della versione 1910 di Configuration Manager Current Branch
 
@@ -123,7 +123,7 @@ Quando si abilita Microsoft Connected Cache nei punti di distribuzione di Config
 Per altre informazioni, vedere [Microsoft Connected Cache in Configuration Manager](../hierarchy/microsoft-connected-cache.md#bkmk_intune).
 
 > [!NOTE]
-> Configuration Manager Current Branch versione 1906 includeva [Cache in rete di Ottimizzazione recapito](../hierarchy/microsoft-connected-cache.md) (DOINC), un'applicazione installata in Windows Server ancora in fase di sviluppo. A partire dalla versione Current Branch 1910, questa funzionalità è nota come Microsoft Connected Cache.
+> La versione Current Branch di Configuration Manager 1906 include la [cache in rete di Ottimizzazione recapito](../hierarchy/microsoft-connected-cache.md), un'applicazione installata in Windows Server ancora in fase di sviluppo. A partire dalla versione Current Branch 1910, questa funzionalità è nota come Microsoft Connected Cache.
 >
 > Quando si installa Connected Cache in un punto di distribuzione di Configuration Manager, il traffico del servizio Ottimizzazione recapito viene scaricato nelle origini locali. Connected Cache esegue questa operazione memorizzando il contenuto nella cache in modo efficiente a livello di intervallo di byte.
 

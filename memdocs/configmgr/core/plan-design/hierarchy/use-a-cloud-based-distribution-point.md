@@ -10,12 +10,12 @@ ms.assetid: 3cd9c725-6b42-427d-9191-86e67f84e48c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7a14b79a9e7fd91b6470836b4271a669725065bd
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 52c2b70d2b094d5a89d80aafa61f1db67a53816f
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771158"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83987722"
 ---
 # <a name="use-a-cloud-distribution-point-in-configuration-manager"></a>Usare un punto di distribuzione cloud in Configuration Manager
 
@@ -174,7 +174,9 @@ Quando si usa un punto di distribuzione cloud nella gerarchia, usare le informaz
 
 ### <a name="deployment-settings"></a>Impostazioni di distribuzione
 
-- Quando si distribuisce una sequenza di attività con l'opzione **Scaricare il contenuto localmente quando necessario eseguendo la sequenza attività**, il punto di gestione non include un punto di distribuzione cloud come percorso del contenuto. Se si desidera che i client usino un punto di distribuzione cloud, distribuire la sequenza di attività con l'opzione **Scaricare tutto il contenuto localmente prima di avviare la sequenza di attività**.  
+- **Scaricare il contenuto localmente quando necessario eseguendo la sequenza di attività**. A partire dalla versione 1910, il motore della sequenza di attività può scaricare pacchetti su richiesta da un servizio CMG abilitato per il contenuto o da un punto di distribuzione cloud. Questa modifica offre ulteriore flessibilità con le distribuzioni di aggiornamento sul posto di Windows 10 ai dispositivi basati su Internet.
+
+- **Scaricare tutto il contenuto in locale prima di avviare la sequenza di attività**. In Configuration Manager versione 1906 e precedenti, altre opzioni come **Scaricare il contenuto localmente quando necessario eseguendo la sequenza di attività** non sono applicabili a questo scenario. Il motore della sequenza di attività non può scaricare il contenuto da un'origine cloud. Il client Gestione configurazione deve scaricare il contenuto dall'origine cloud prima di avviare la sequenza di attività. È comunque possibile usare questa opzione nella versione 1910, se necessario, per soddisfare i requisiti.
 
 - Un punto di distribuzione cloud non supporta le distribuzioni di pacchetti con l'opzione **Esegui programma dal punto di distribuzione**. Usare l'opzione di distribuzione **Scarica il contenuto dal punto di distribuzione ed esegui in locale**.  
 

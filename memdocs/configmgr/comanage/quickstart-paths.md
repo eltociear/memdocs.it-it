@@ -10,12 +10,12 @@ ms.assetid: 5beb5564-2fdf-4f0a-8801-d0cec8214c43
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7a670660bcf7b3f5cb8209aaf6d0b59eb0f343e4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 27994107c32fac87a465240f07b68d57fddfc140
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691239"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83983817"
 ---
 # <a name="paths-to-co-management"></a>Percorsi per la co-gestione
 
@@ -45,7 +45,6 @@ Prerequisiti per la configurazione:
         - Per i domini federati
 - Impostazione dell'agente client per l'aggiunta ad Azure AD ibrido
 - Configurare la registrazione automatica dei dispositivi in Intune
-- Assegnare le licenze utente di Intune
 - Abilitare la co-gestione in Configuration Manager
 
 Per un'esercitazione dedicata a questo percorso, vedere [Esercitazione: Abilitare la co-gestione per i client di Configuration Manager esistenti](tutorial-co-manage-clients.md).

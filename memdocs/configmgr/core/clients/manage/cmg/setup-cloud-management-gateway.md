@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 783323c3e9218b34b1f2b7f3c7d9bb13eea44e2e
-ms.sourcegitcommit: ed2c18e210db177eb0d5e10d74207006561b7b5d
+ms.openlocfilehash: 8c585473ec80ad4c6dfe49d22e527e99175bfbb4
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83383728"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83877423"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Configurare il gateway di gestione cloud per Configuration Manager
 
@@ -223,11 +223,11 @@ Per l'opzione 3, a partire da Cloud Management Gateway versione 2002 è possibil
 
 - I sistemi soddisfano una delle condizioni seguenti:
 
- - Ogni sistema ha un certificato di autenticazione client valido, univoco e attendibile emesso in precedenza.
- 
- - Aggiunto a un dominio Azure AD
- 
- - Aggiunto a un dominio Azure AD ibrido.
+  - Ogni sistema ha un certificato di autenticazione client valido, univoco e attendibile emesso in precedenza.
+
+  - Aggiunto a un dominio Azure AD
+
+  - Aggiunto a un dominio Azure AD ibrido.
 
 - Non si vuole o non è possibile reinstallare completamente l'agente client esistente.
 

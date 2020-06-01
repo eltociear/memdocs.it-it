@@ -2,7 +2,7 @@
 title: Note sulla versione
 titleSuffix: Configuration Manager
 description: Informazioni su problemi urgenti non ancora risolti nel prodotto o trattati in un articolo della Knowledge Base del supporto tecnico Microsoft.
-ms.date: 04/08/2020
+ms.date: 05/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: da0b9fc5600a957680ad22e54edc176c892527a6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 131b6104d5724c8a4eeb0bb68c4afd9a5319abb7
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700649"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83823963"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Note sulla versione per Configuration Manager
 
@@ -33,6 +33,8 @@ Per informazioni sulle nuove funzionalità introdotte con le diverse versioni, v
 - [Novità della versione 1910](../../../plan-design/changes/whats-new-in-version-1910.md)
 - [Novità della versione 1906](../../../plan-design/changes/whats-new-in-version-1906.md)  
 - [Novità della versione 1902](../../../plan-design/changes/whats-new-in-version-1902.md)
+
+Per informazioni sulle nuove funzionalità di Desktop Analytics, vedere [Novità di Desktop Analytics](../../../../desktop-analytics/whats-new.md).
 
 > [!Tip]  
 > Per ricevere una notifica quando questa pagina viene aggiornata, copiare e incollare l'URL seguente nel lettore di feed RSS: `https://docs.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us`
@@ -165,6 +167,15 @@ Per risolvere il problema, creare un ruolo di sicurezza personalizzato. Copiare 
 Per altre informazioni, vedere [Creare ruoli di sicurezza personalizzati](../configure/configure-role-based-administration.md#BKMK_CreateSecRole).
 
 ## <a name="desktop-analytics"></a>Desktop Analytics
+
+### <a name="an-extended-security-update-for-windows-7-causes-them-to-show-as-unable-to-enroll"></a><a name="dawin7-diagtrack"></a> A causa di una patch di sicurezza estesa per Windows 7 viene indicato che **non è possibile registrare** i dispositivi
+
+<!-- 7283186 -->
+_Si applica a: Configuration Manager versioni 1902, 1906, 1910 e 2002_
+
+La patch di sicurezza estesa di aprile 2020 per Windows 7 ha modificato la versione minima richiesta di diagtrack.dll da 10586 a 10240. A causa di questa modifica, per i dispositivi Windows 7 viene indicato che **non è possibile eseguire la registrazione** nel dashboard **Integrità connessione** di Desktop Analytics. Quando si esegue il drill-down nella visualizzazione del dispositivo per questo stato, la proprietà **Configurazione del servizio DiagTrack** visualizza lo stato seguente: `Connected User Experience and Telemetry (diagtrack.dll) component is outdated. Check requirements.`
+
+Non è necessario trovare una soluzione alternativa per questo problema. Non disinstallare la patch di sicurezza di aprile. Se configurati correttamente, i dispositivi Windows 7 continuano a segnalare dati diagnostici al servizio Desktop Analytics e ad essere visualizzati nel portale.
 
 ### <a name="if-you-use-hardware-inventory-for-distributed-views-you-cant-onboard-to-desktop-analytics"></a>Se si usa l'inventario hardware per le viste distribuite, non è possibile eseguire l'onboarding in Desktop Analytics
 

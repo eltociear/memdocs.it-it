@@ -2,7 +2,7 @@
 title: Novità della versione 2002
 titleSuffix: Configuration Manager
 description: Informazioni dettagliate sulle modifiche e sulle nuove funzionalità introdotte nella versione 2002 di Configuration Manager Current Branch.
-ms.date: 05/11/2020
+ms.date: 05/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1aca9058b0f095b7f25b345c15eed1446dcf61d2
-ms.sourcegitcommit: 7b224e138c0618e978be59832b3486f3745abacc
+ms.openlocfilehash: afdcc608133d306042c9c6dc817396bb2fc3f387
+ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83381554"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84126482"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Novità della versione 2002 di Configuration Manager Current Branch
 
@@ -328,6 +328,15 @@ Per altre informazioni, vedere [Sincronizzare gli aggiornamenti di Office 365 da
 
 <!-- 5229962 -->
 Configuration Manager ha espanso il supporto per l'onboarding di dispositivi in Microsoft Defender ATP. Per altre informazioni, vedere [Microsoft Defender Advanced Threat Protection](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md#onboard-devices).
+
+## <a name="onboard-configuration-manager-clients-to-microsoft-defender-atp-via-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> Eseguire l'onboarding di client di Configuration Manager in Microsoft Defender ATP tramite l'interfaccia di amministrazione di Microsoft Endpoint Manager
+<!--5691658-->
+È ora possibile distribuire i criteri di onboarding di Microsoft Defender ATP Endpoint Detection and Response (EDR) nei client gestiti di Configuration Manager. Questi client non richiedono Azure AD o la registrazione MDM e il criterio è destinato alle raccolte di ConfigMgr anziché ai gruppi di Azure AD.
+
+Questa funzionalità consente ai clienti di gestire sia la soluzione MDM di Intune che l'onboarding EDR/ATP del client di Configuration Manager da una singola esperienza di gestione, l'interfaccia di amministrazione di Microsoft Endpoint Manager. Per altre informazioni, vedere i [criteri di rilevamento di endpoint e risposta per la sicurezza degli endpoint in Intune](../../../../intune/protect/endpoint-security-edr-policy.md).
+
+> [!Important]
+> Per questa funzionalità è necessario che il rollup di hotfix [KB4563473](https://support.microsoft.com/help/4563473) sia installato nell'ambiente in uso.
 
 ### <a name="improvements-to-bitlocker-management"></a>Miglioramenti alla gestione di BitLocker
 

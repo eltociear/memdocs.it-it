@@ -10,19 +10,19 @@ ms.assetid: 121e0341-4f51-4d54-a357-732c26caf7c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e5be6158a2ed7d79af2bee72c81a462e4d83b68e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0a8c975798c506339a981e8648003387dc1e9838
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700869"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83878107"
 ---
 # <a name="troubleshoot-microsoft-connected-cache-in-configuration-manager"></a>Risolvere i problemi relativi a Microsoft Connected Cache in Configuration Manager
 
 Questo articolo presenta i dettagli tecnici relativi a Microsoft Connected Cache in Configuration Manager. È utile per risolvere i problemi che possono verificarsi nel proprio ambiente. Per altre informazioni sul funzionamento e sull'uso di questa funzionalità, vedere [Microsoft Connected Cache in Configuration Manager](../../../plan-design/hierarchy/microsoft-connected-cache.md).
 
 > [!NOTE]
-> A partire dalla versione 1910, questa funzionalità è denominata **Microsoft Connected Cache**. In precedenza era nota come Cache in rete di Ottimizzazione recapito (DOINC).
+> A partire dalla versione 1910, questa funzionalità è denominata **Microsoft Connected Cache**. In precedenza era nota come Cache in rete di Ottimizzazione recapito.
 
 ## <a name="verify"></a>Verifica
 

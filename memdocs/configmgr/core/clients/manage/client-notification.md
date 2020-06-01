@@ -10,12 +10,12 @@ ms.assetid: deb8aac8-2bd9-4980-a25b-5f8d93051226
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7680c8f955773f169d56f36eb9bbe6507d2d7ce6
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: cb7cc71618ad0f86abce3ab76d6344e0d23bfc58
+ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83427813"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84153433"
 ---
 # <a name="client-notification-in-configuration-manager"></a>Notifica del client in Configuration Manager
 
@@ -140,7 +140,7 @@ A partire dalla versione 1910, sono disponibili nuove azioni del dispositivo per
 
 - **Abilita la registrazione dettagliata**: modificare il livello di registrazione per il componente CCM da globale a dettagliata e abilitare la registrazione debug.
 - **Disabilita la registrazione dettagliata**: modificare il livello di registrazione da globale a predefinita e disabilitare la registrazione debug.
-- **Raccogli i log del client** (a partire da 2002): Viene inviato un messaggio di notifica client ai client selezionati per raccogliere i log CCM. I log vengono restituiti tramite la raccolta di file di inventario software. <!--4226618-->
+- **Raccogli i log del client** (a partire da 2002): Il sito invia un messaggio di notifica client ai client selezionati per raccogliere i log CCM. Il client invia i log al punto di gestione usando lo stesso canale della raccolta file dell'inventario software. <!--4226618--> Non è necessario abilitare l'inventario software nelle impostazioni client.<!-- MEMDocs#305 -->
    - Il limite di dimensioni per i log del client compressi è 100 MB. <!--6366098-->
    - Usare [Esplora inventario risorse](inventory/use-resource-explorer-to-view-software-inventory.md#bkmk_diag) per gestire e visualizzare questi file.
 

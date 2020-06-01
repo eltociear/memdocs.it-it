@@ -10,12 +10,12 @@ ms.assetid: 55ae86a7-f0ab-4c09-b4da-89cd0e7fa0e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4ba67fee260867494302e49b7c9d3a97480e236b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1b7ada6f54a7642817a321937a4d7128994d5538
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708379"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83823980"
 ---
 # <a name="configure-reporting-in-configuration-manager"></a>Configurare la creazione di report in Configuration Manager
 
@@ -130,7 +130,7 @@ Per altre informazioni sulla configurazione dei sistemi del sito, vedere [Instal
 
     - **Account punto di Reporting Services**: selezionare **Imposta** e quindi selezionare un account da usare. SQL Server Reporting Services nel punto di Reporting Services usa questo account per connettersi al database del sito di Configuration Manager. Questa connessione consente di recuperare i dati per un report. Selezionare **Account esistente** per specificare un account utente di Windows precedentemente configurato come account di Configuration Manager. Selezionare **Nuovo account** per specificare un account utente di Windows non attualmente configurato per l'utilizzo. Configuration Manager concede automaticamente all'utente specificato l'accesso al database del sito.  
 
-        L'account che esegue Reporting Services deve appartenere al gruppo di sicurezza locale del dominio **Gruppo di accesso Windows Authorization**. Deve avere anche l'autorizzazione **Lettura tokenGroupsGlobalAndUniversal** impostata su **Consenti**. Per poter eseguire correttamente i report, gli utenti di un dominio diverso da quello dell'account al punto di Reporting Services devono avere un trust bidirezionale tra i domini.
+        L'account che esegue Reporting Services deve appartenere al gruppo di sicurezza locale del dominio **Gruppo di accesso Windows Authorization**. In questo modo vengono concesse all'account le autorizzazioni di **lettura** relative all'attributo **tokenGroupsGlobalAndUniversal** per tutti gli oggetti utente all'interno del dominio. Per poter eseguire correttamente i report, gli utenti di un dominio diverso da quello dell'account al punto di Reporting Services devono avere un trust bidirezionale tra i domini.
 
         La password e l'account utente Windows specificati vengono crittografati e archiviati nel database di Reporting Services. Reporting Services recupera i dati per i report dal database del sito utilizzando l'account e la password.  
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: c10e3c1cb2a0044003415d8f55a0a4ac85058656
-ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
+ms.openlocfilehash: 22b5461df3a560449316009471ea029967118f5d
+ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83633314"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83864899"
 ---
 # <a name="how-to-enroll-devices-in-desktop-analytics"></a>Come registrare i dispositivi in Desktop Analytics
 
@@ -37,10 +37,10 @@ La tabella seguente elenca gli aggiornamenti per ogni componente nelle versioni 
 | Versione sistema operativo | Strumento di valutazione | DiagTrack |
 | --------------| ----------------------- | -------------------|
 | Windows 10 1909 | Incluso <sup>[Nota 1](#bkmk_note1)</sup> | [Aggiornamento cumulativo più recente](https://support.microsoft.com/help/4529964) |
-| Windows 10 1903 | Incluso | [Aggiornamento cumulativo più recente](https://support.microsoft.com/help/4498140) |
-| Windows 10 1809 | Incluso | [Aggiornamento cumulativo più recente](https://support.microsoft.com/help/4464619) |
-| Windows 10 1803 | Incluso | [Aggiornamento cumulativo più recente](https://support.microsoft.com/help/4099479) |
-| Windows 10 1709 | Incluso | [Aggiornamento cumulativo più recente](https://support.microsoft.com/help/4043454) |
+| Windows 10 1903 | Incluso <sup>[Nota 1](#bkmk_note1)</sup> | [Aggiornamento cumulativo più recente](https://support.microsoft.com/help/4498140) |
+| Windows 10 1809 | Incluso <sup>[Nota 1](#bkmk_note1)</sup> | [Aggiornamento cumulativo più recente](https://support.microsoft.com/help/4464619) |
+| Windows 10 1803 | Incluso <sup>[Nota 1](#bkmk_note1)</sup> | [Aggiornamento cumulativo più recente](https://support.microsoft.com/help/4099479) |
+| Windows 10 1709 | Incluso <sup>[Nota 1](#bkmk_note1)</sup> | [Aggiornamento cumulativo più recente](https://support.microsoft.com/help/4043454) |
 | Windows 8.1 | [KB 2976978](https://support.microsoft.com/help/2976978) <sup>[Nota 2](#bkmk_note2)</sup> | [Rollup mensile più recente](https://support.microsoft.com/help/4009470) |
 | Windows 7 SP1 | [KB 2952664](https://support.microsoft.com/help/2952664) <sup>[Nota 3](#bkmk_note3)</sup> | [Rollup mensile più recente](https://support.microsoft.com/help/4009469) |
 
@@ -51,7 +51,7 @@ La tabella seguente elenca gli aggiornamenti per ogni componente nelle versioni 
 
 ### <a name="note-1-windows-10"></a><a name="bkmk_note1"></a> Nota 1: Windows 10
 
-Sebbene Windows 10 includa questi componenti per impostazione predefinita, i dispositivi Windows 10 richiedono l'aggiornamento cumulativo più recente per avere tutte le funzionalità di Desktop Analytics. Ad esempio, per valutare la compatibilità del dispositivo con la versione più recente del sistema operativo e per ottenere informazioni quasi in tempo reale per le distribuzioni e lo stato della registrazione.
+Sebbene Windows 10 includa questi componenti per impostazione predefinita, i dispositivi Windows 10 richiedono l'aggiornamento cumulativo più recente per avere tutte le funzionalità di Desktop Analytics, ad esempio la valutazione della compatibilità del dispositivo con la versione più recente del sistema operativo.
 
 ### <a name="note-2-windows-81"></a><a name="bkmk_note2"></a> Nota 2: Windows 8.1
 

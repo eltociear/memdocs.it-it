@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: ced1cc1347167451d4efb789b40746ff849710ee
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9178b595ba67723c623979b4c29290e42fe5f6ac
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689079"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83877742"
 ---
 # <a name="technical-reference-for-the-package-conversion-manager-plug-in-configuration-xml"></a>Informazioni tecniche sul codice XML di configurazione del plug-in Package Conversion Manager
 
@@ -44,7 +44,10 @@ La tabella seguente descrive gli elementi XML nel file di configurazione di Conf
 ## <a name="sample-configuration-xml"></a>File XML di configurazione di esempio
 
 Questa sezione fornisce un esempio degli elementi XML di configurazione di Package Conversion Manager nel file di configurazione di Configuration Manager, **Microsoft.ConfigurationManagement.exe.config**. Per impostazione predefinita, questo file si trova nel percorso seguente:  
-`C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+`C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+
+> [!IMPORTANT]
+> A partire dalla versione 1910, questo percorso è stato modificato in modo da usare la cartella `Microsoft Endpoint Manager`. Assicurarsi di non usare una versione precedente del file che potrebbe esistere in un'altra cartella. 
 
 Nell'esempio gli elementi correlati a Package Conversion Manager sono all'interno dell'elemento seguente: `Microsoft.ConfigurationManagement.UserCentric.Workflow.Properties.Settings`
 

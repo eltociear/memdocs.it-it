@@ -10,12 +10,12 @@ ms.assetid: 69550b35-bcdb-4b47-bbec-b3c8bc92bb7b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 96cce5d4aaa352177b1c24ff78cf15e90ea6e823
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4a9ae791582911f91e5f76b841248ad5085d8170
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694409"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879826"
 ---
 # <a name="monitor-database-replication"></a>Monitorare la replica di database
 
@@ -122,7 +122,10 @@ Eseguire Replication Link Analyzer nella console di Configuration Manager o al p
 
 - Per l'esecuzione nella console di Configuration Manager: passare all'area di lavoro **Monitoraggio** e selezionare il nodo **Replica di database**. Selezionare il collegamento di replica che si vuole analizzare e quindi nella barra multifunzione selezionare **Replication Link Analyzer**.  
 
-- Per l'esecuzione al prompt dei comandi, digitare il comando seguente: `%ProgramFiles(x86)%\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManager.ReplicationLinkAnalyzer.Wizard.exe <source site server FQDN> <destination site server FQDN>`  
+- Per l'esecuzione al prompt dei comandi, digitare il comando seguente: `%ProgramFiles(x86)%\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManager.ReplicationLinkAnalyzer.Wizard.exe <source site server FQDN> <destination site server FQDN>`  
+
+    > [!IMPORTANT]
+    > A partire dalla versione 1910, questo percorso è stato modificato in modo da usare la cartella `Microsoft Endpoint Manager`. Assicurarsi di non usare una versione precedente del file che potrebbe esistere in un'altra cartella.
 
 Quando si esegue Replication Link Analyzer, vengono rilevati eventuali problemi mediante una serie di controlli e regole diagnostiche. I problemi identificati dallo strumento vengono visualizzati. Quando sono presenti istruzioni per risolvere un problema, vengono visualizzate. Se RLA può risolvere automaticamente un problema, lo segnala all'utente.
 

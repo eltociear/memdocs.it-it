@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3374a912b8235f546ec551bd1a964f9fc957b96d
-ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
+ms.openlocfilehash: 127ed43fded6c66bc4395ae4d69a28ae8c9eddd5
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82991700"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83877510"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Informazioni sulle impostazioni client in Configuration Manager
 
@@ -363,7 +363,7 @@ I gruppi di limiti di Configuration Manager consentono di definire e regolamenta
 
 ### <a name="use-configuration-manager-boundary-groups-for-delivery-optimization-group-id"></a>Use Configuration Manager Boundary Groups for Delivery Optimization Group ID (Usare i gruppi di limiti di Configuration Manager per l'ID del gruppo di Ottimizzazione recapito)
 
-Scegliere **Sì** per applicare l'identificatore del gruppo di limiti come identificatore di gruppo di Ottimizzazione recapito sul client. Quando il client comunica con il servizio cloud Ottimizzazione recapito, usa questo identificatore per individuare i peer con il contenuto desiderato.
+Scegliere **Sì** per applicare l'identificatore del gruppo di limiti come identificatore di gruppo di Ottimizzazione recapito sul client. Quando il client comunica con il servizio cloud Ottimizzazione recapito, usa questo identificatore per individuare i peer con il contenuto desiderato. L'abilitazione di questa impostazione consente inoltre di impostare la modalità di download di Ottimizzazione recapito sull'opzione Gruppo (2) sui client di destinazione.
 
 > [!Note]
 > Microsoft consiglia di consentire al client di configurare questa impostazione tramite criteri locali anziché Criteri di gruppo. Ciò consente di impostare l'identificatore del gruppo di limiti come identificatore di gruppo di Ottimizzazione recapito nel client. Per altre informazioni, vedere [Ottimizzazione recapito](../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization).
@@ -509,13 +509,12 @@ Per questa impostazione scegliere una delle opzioni seguenti:
 
     - Distribuzioni richieste (quando viene raggiunta la scadenza per l'installazione)  
 
-    > [!IMPORTANT]  
-    > Il client consente sempre le installazioni software da Software Center, indipendentemente dalle impostazioni della connessione Internet a consumo.  
-
     Se il client raggiunge il limite di trasferimento dei dati per la connessione Internet a consumo, non prova più a comunicare con i siti di Configuration Manager.  
 
 - **Blocca**: il client di Configuration Manager non prova a comunicare con i siti di Configuration Manager in presenza di una connessione Internet a consumo. Questa opzione corrisponde all'impostazione predefinita.  
 
+> [!IMPORTANT]  
+> Il client consente sempre le installazioni software da Software Center, indipendentemente dalle impostazioni della connessione Internet a consumo. Se l'utente richiede un'installazione software quando il dispositivo è in una rete a consumo, Software Center rispetta la finalità dell'utente.<!-- MEMDocs#285 -->
 
 
 ## <a name="power-management"></a>Risparmio energia  

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 6eb0a99043eefcdb54c27a183fbc1e1eec8899bf
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: fdc15860f2d093a4c9c61b787ba0b780051d3f3d
+ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268641"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83864872"
 ---
 # <a name="monitor-connection-health"></a>Monitorare l'integrità della connessione
 
@@ -104,6 +104,9 @@ Il dispositivo ha gli attributi seguenti:
 Configuration Manager rileva uno o più problemi che causano un blocco e impediscono la registrazione del dispositivo. Per altre informazioni, vedere l'elenco delle proprietà del dispositivo [Proprietà dei dispositivi Desktop Analytics in Configuration Manager](#bkmk_config-issues).  
 
 La versione del client di Configuration Manager, ad esempio, non corrisponde almeno alla versione 1902 (5.0.8790). Aggiornare il client alla versione più recente. Prendere in considerazione la possibilità di abilitare l'aggiornamento automatico del client per il sito di Configuration Manager. Per altre informazioni, vedere [Aggiornare i client](../core/clients/manage/upgrade/upgrade-clients.md#automatic-client-upgrade).  
+
+> [!TIP]
+> Esiste un problema noto con la patch di sicurezza estesa di aprile 2020 per Windows 7 che impedisce ai dispositivi di segnalare correttamente questo errore. Per altre informazioni, vedere le [note sulla versione](../core/servers/deploy/install/release-notes.md#dawin7-diagtrack).<!-- 7283186 -->
 
 A partire dalla versione 2002, è possibile identificare più facilmente i problemi di configurazione del proxy client in due aree:
 
@@ -410,6 +413,9 @@ Se il controllo ha esito positivo, il componente DiagTrack è configurato corret
 In caso contrario, può essere visualizzato uno degli errori seguenti:
 
 - Il componente Esperienze utente connesse e telemetria (diagtrack.dll) è obsoleto. Controllare i requisiti  
+
+    > [!TIP]
+    > Esiste un problema noto con la patch di sicurezza estesa di aprile 2020 per Windows 7 che impedisce ai dispositivi di segnalare correttamente questo errore. Per altre informazioni, vedere le [note sulla versione](../core/servers/deploy/install/release-notes.md#dawin7-diagtrack).<!-- 7283186 -->
 
 - Non è possibile trovare il componente Esperienze utente connesse e telemetria (diagtrack.dll). Controllare i requisiti  
 

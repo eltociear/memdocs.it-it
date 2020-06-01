@@ -10,12 +10,12 @@ ms.assetid: 5db2926f-f03e-49c7-b44b-e89b1a5a6779
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ce77c43f49556b3a60e36f05127f82d4d135762a
-ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
+ms.openlocfilehash: c9567cc441636bbda31262e0857e2fc6484c2af7
+ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82643269"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84153411"
 ---
 # <a name="configure-boundary-groups-for-configuration-manager"></a>Configurare gruppi di limiti per Configuration Manager
 
@@ -154,8 +154,16 @@ Se si configura la distribuzione del contenuto su richiesta e il contenuto non �
 
 ### <a name="client-installation"></a><a name="bkmk_ccmsetup"></a> Installazione client
 
+Il programma di installazione del client Gestione configurazione, ccmsetup, può ottenere il contenuto di installazione da un'origine dati locale o attraverso un punto di gestione. Il comportamento iniziale dipende dai parametri della riga di comando usati per installare il client:<!-- MEMDocs#286 -->
+
+- Se non si usano i parametri **/mp** o **/source**, ccmsetup tenta di ottenere un elenco di punti di gestione da Active Directory o DNS.
+- Se si specifica solo **/source**, l'installazione viene forzata dal percorso specificato. Non vengono individuati i punti di gestione. Se non è possibile trovare ccmsetup.cab nel percorso specificato, ccmsetup ha esito negativo.
+- Se si specifica sia **/mp** che **/source**, vengono verificati i punti di gestione specificati e quelli eventualmente individuati. Se non è possibile individuare un punto di gestione valido, viene eseguito il fallback al percorso di origine specificato.
+
+Per altre informazioni sui questi parametri di ccmsetup, vedere [Informazioni sui parametri e le proprietà di installazione del client](../../../clients/deploy/about-client-installation-properties.md).
+
 <!--1358840-->
-Durante l'installazione del client Configuration Manager, il processo ccmsetup contatta il punto di gestione per individuare i contenuti necessari. Il punto di gestione restituisce i punti di distribuzione in base alla configurazione del gruppo di limiti. Se si definiscono le relazioni nel gruppo di limiti, il punto di gestione restituisce i punti di distribuzione nell'ordine seguente:
+Quando ccmsetup contatta il punto di gestione per individuare il contenuto necessario, il punto di gestione restituisce i punti di distribuzione in base alla configurazione del gruppo di limiti. Se si definiscono le relazioni nel gruppo di limiti, il punto di gestione restituisce i punti di distribuzione nell'ordine seguente:
 
 1. Gruppo di limiti corrente  
 2. Gruppi di limiti adiacenti  

@@ -6,3 +6,9 @@
       href: device-sync-actions.md
     - name: Risolvere i problemi delle azioni del dispositivo
       href: technical-reference.md
+- name: CMPivot per dispositivi collegati al tenant (anteprima)
+  items:
+    - name: Panoramica di CMPivot
+      href: cmpivot-overview-attached.md
+    - name: Script di esempio CMPivot
+      href: cmpivot-samples-attached.md

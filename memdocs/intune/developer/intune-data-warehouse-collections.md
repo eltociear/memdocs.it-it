@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 997a2db8917da1443531d8446176c21db3a5dbf6
-ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
+ms.openlocfilehash: 7b58a24340741621a4034ed4f77ad1298251a692
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83709452"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165873"
 ---
 # <a name="intune-data-warehouse-collections"></a>Raccolte del data warehouse di Intune
 
@@ -33,7 +33,7 @@ Le raccolte del data warehouse di Intune seguenti forniscono le proprietà, le d
 L'entità **appRevision** elenca tutte le versioni di un'app.
 
 |          Proprietà          |                                      Descrizione                                      |                Esempio               |
-|:--------------------------:|:-------------------------------------------------------------------------------------:|:------------------------------------:|
+|----------------------------|---------------------------------------------------------------------------------------|--------------------------------------|
 | AppKey                     | Identificatore univoco dell'app.                                                         | 123                                  |
 | ApplicationId              | Identificatore univoco dell'app, simile ad AppKey, ma è una chiave naturale.        | b66bc706-ffff-7437-0340-032819502773 |
 | Revisione                   | La versione indicata dall'amministratore durante il caricamento del file binario.                   | 2                                    |
@@ -54,7 +54,7 @@ L'entità **appRevision** elenca tutte le versioni di un'app.
 L'entità **appType** elenca l'origine dell'installazione di un'app.
 
 |   Proprietà  |        Descrizione        |
-|:-----------:|:-------------------------:|
+|-------------|---------------------------|
 | AppTypeID   | ID per il tipo           |
 | AppTypeKey  | Chiave surrogata per la chiave |
 | AppTypeName | Tipo di app                  |
@@ -62,7 +62,7 @@ L'entità **appType** elenca l'origine dell'installazione di un'app.
 ### <a name="example"></a>Esempio
 
 | AppTypeID |                Name               |                     Descrizione                     |
-|:---------:|:---------------------------------:|:---------------------------------------------------:|
+|-----------|-----------------------------------|-----------------------------------------------------|
 | 0         | App di Android Store               | Un'app di Android Store.                             |
 | 1         | App LOB Android                 | Un'app line-of-business Android.                  |
 | 2         | App di Android Store gestita (MAM) | Un'app di Android Store abilitata per la gestione. |
@@ -81,7 +81,7 @@ L'entità **appType** elenca l'origine dell'installazione di un'app.
 La tabella seguente contiene un riepilogo dello stato di assegnazione dei criteri di conformità ai dispositivi. La tabella elenca il numero di dispositivi trovati in ogni stato di conformità.
 
 |    Proprietà   |                                                                                      Descrizione                                                                                     |  Esempio |
-|:-------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------:|
+|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | DateKey       | Chiave della data in cui è stato creato il riepilogo per i criteri di conformità.                                                                                                                   | 20161204 |
 | Sconosciuto       | Numero di dispositivi che sono offline o che non sono riusciti a comunicare con Intune o Azure AD per altri motivi.                                                                           | 5        |
 | NotApplicable | Numero di dispositivi in cui i criteri di conformità dei dispositivi assegnati dall'amministratore non sono applicabili.                                                                                     | 201      |
@@ -94,7 +94,7 @@ La tabella seguente contiene un riepilogo dello stato di assegnazione dei criter
 La tabella seguente contiene un riepilogo dello stato di assegnazione dei criteri di conformità ai dispositivi in base a ciascun criterio e al tipo di criterio. La tabella elenca il numero di dispositivi trovati in ogni stato di conformità per ogni criterio di conformità assegnato.
 
 |      Proprietà     |                                                                                      Descrizione                                                                                     |  Esempio |
-|:-----------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------:|
+|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | DateKey           | Chiave della data in cui è stato creato il riepilogo per i criteri di conformità.                                                                                                                   | 20161219 |
 | PolicyKey         | Chiave per il criterio di conformità per cui è stato creato il riepilogo.                                                                                                                   | 10178    |
 | PolicyPlatformKey | Chiave per il tipo di piattaforma del criterio di conformità per cui è stato creato il riepilogo.                                                                                            | 5        |
@@ -107,7 +107,7 @@ La tabella seguente contiene un riepilogo dello stato di assegnazione dei criter
 ## <a name="compliancestates"></a>complianceStates
 
 |      Proprietà      |                       Descrizione                      |
-|:------------------:|:------------------------------------------------------:|
+|--------------------|--------------------------------------------------------|
 | complianceStatus   | Stato di conformità dei dispositivi con mdmStatusKey       |
 | complianceStateKey | Chiave di conformità corrispondente allo stato del dispositivo e della conformità |
 | complianceStateID  | ID corrispondente a questo stato di conformità                |
@@ -115,7 +115,7 @@ La tabella seguente contiene un riepilogo dello stato di assegnazione dei criter
 ### <a name="example"></a>Esempio
 
 |  complianceStatus  |                       Descrizione                      |
-|:------------------:|:------------------------------------------------------:|
+|--------------------|--------------------------------------------------------|
 |    Sconosciuto         |    Sconosciuto.                                                                        |
 |    Conforme       |    Conforme.                                                                      |
 |    Non conforme    |       Il dispositivo non è conforme e l'accesso alle risorse aziendali è bloccato.             |
@@ -128,7 +128,7 @@ La tabella seguente contiene un riepilogo dello stato di assegnazione dei criter
 L'entità **dates** rappresenta le date a cui si fa riferimento tra più entità del data warehouse.
 
 |     Proprietà    |                       Descrizione                      |    Esempio    |
-|:---------------:|:------------------------------------------------------:|:-------------:|
+|-----------------|--------------------------------------------------------|---------------|
 | DateKey         | Identificatore univoco della data nel data warehouse. | 20160703      |
 | FullDate        | Data nel formato di Data/ora completo.        | 7/3/2016 0:00 |
 | DayOfWeek       | Giorno della settimana                                            | 1             |
@@ -151,7 +151,7 @@ L'entità **dates** rappresenta le date a cui si fa riferimento tra più entità
 ## <a name="devicecategories"></a>deviceCategories
 
 |      Proprietà      |                                    Descrizione                                   |                Esempio               |
-|:------------------:|:--------------------------------------------------------------------------------:|:------------------------------------:|
+|--------------------|----------------------------------------------------------------------------------|--------------------------------------|
 | deviceCategoryID   | Identificatore univoco della categoria di dispositivi.                                       | fb415ba2-7c08-41f6-a5e5-685b50da2c4c |
 | deviceCategoryKey  | Identificatore univoco della categoria di dispositivi nel data warehouse - chiave surrogata | 1                                    |
 | deviceCategoryName | Nome visualizzato della categoria di dispositivi.                                            | Smartphones                          |
@@ -160,7 +160,7 @@ L'entità **dates** rappresenta le date a cui si fa riferimento tra più entità
 L'entità **DeviceConfigurationProfileDeviceActivity** elenca il numero di dispositivi nello stato completato, in sospeso, non riuscito o di errore al giorno. Il numero rispecchia i profili di configurazione dispositivo assegnati all'entità. Ad esempio, se un dispositivo è nello stato completato per tutti i relativi criteri assegnati, incrementa di uno il contatore di completamento per tale giorno. Se a un dispositivo sono assegnati due profili, uno nello stato completato e l'altro in uno stato di errore, l'entità incrementa il contatore di completamento e colloca il dispositivo in stato di errore. L'entità elenca quanti dispositivi sono in un determinato stato in un giorno specifico negli ultimi 30 giorni.
 
 |  Proprietà |                                          Descrizione                                          |  Esempio |
-|:---------:|:---------------------------------------------------------------------------------------------:|:--------:|
+|-----------|-----------------------------------------------------------------------------------------------|----------|
 | DateKey   | Chiave della data in cui l'archiviazione del profilo di configurazione dispositivo è stata registrata nel data warehouse. | 20160703 |
 | Pending   | Numero di dispositivi univoci in sospeso.                                                    | 123      |
 | Operazione riuscita | Numero di dispositivi univoci in stato completato.                                                    | 12       |
@@ -181,7 +181,7 @@ L'entità **DeviceConfigurationProfileUserActivity** elenca il numero di utenti 
 ## <a name="devicepropertyhistories"></a>devicePropertyHistories
 
 |          Proprietà          |                                                                                      Descrizione                                                                                     |
-|:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | DateKey                    | Riferimento alla tabella di data che indica il giorno.                                                                                                                                          |
 | DeviceKey                  | Identificatore univoco del dispositivo nel data warehouse - chiave surrogata. Si tratta di un riferimento alla tabella Device che contiene l'ID dispositivo Intune.                               |
 | DeviceName                 | Nome del dispositivo su piattaforme che consentono la denominazione di un dispositivo. Su altre piattaforme, Intune crea un nome da altre proprietà. Questo attributo non può essere disponibile per tutti i dispositivi. |
@@ -199,7 +199,7 @@ L'entità **DeviceConfigurationProfileUserActivity** elenca il numero di utenti 
 L'entità **DeviceRegistrationState** rappresenta il tipo di registrazione a cui fanno riferimento altre raccolte del data warehouse. 
 
 |           Proprietà          |                                     Descrizione                                     |
-|:---------------------------:|:-----------------------------------------------------------------------------------:|
+|-----------------------------|-------------------------------------------------------------------------------------|
 | deviceRegistrationStateID   | Identificatore univoco per lo stato di registrazione                                            |
 | deviceRegistrationStateKey  | Identificatore univoco dello stato di registrazione nel data warehouse - chiave surrogata |
 | deviceRegistrationStateName | Stato di registrazione                                                                  |
@@ -216,7 +216,7 @@ L'entità **DeviceRegistrationState** rappresenta il tipo di registrazione a cui
 L'entità **device** elenca tutti i dispositivi registrati in gestione e le proprietà corrispondenti.
 
 |          Proprietà          |                                                                                       Descrizione                                                                                      |
-|:--------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | DeviceKey                  | Identificatore univoco del dispositivo nel data warehouse - chiave surrogata.                                                                                                               |
 | DeviceId                   | Identificatore univoco del dispositivo.                                                                                                                                                     |
 | DeviceName                 | Nome del dispositivo su piattaforme che consentono la denominazione di un dispositivo. Nelle altre piattaforme Intune crea un nome in base ad altre proprietà. Questo attributo non può essere disponibile per tutti i dispositivi. |
@@ -257,7 +257,7 @@ L'entità **device** elenca tutti i dispositivi registrati in gestione e le prop
 L'entità **deviceType** rappresenta il tipo di dispositivo a cui fanno riferimento altre entità del data warehouse. Il tipo di dispositivo descrive in genere il modello o il produttore del dispositivo oppure una combinazione di entrambi.
 
 |    Proprietà    |                                  Descrizione                                 |
-|:--------------:|:----------------------------------------------------------------------------:|
+|----------------|------------------------------------------------------------------------------|
 | DeviceTypeID   | Identificatore univoco del tipo di dispositivo                                       |
 | DeviceTypeKey  | Identificatore univoco del tipo di dispositivo nel data warehouse - chiave surrogata |
 | DeviceTypeName | Tipo di dispositivo                                                                |
@@ -265,7 +265,7 @@ L'entità **deviceType** rappresenta il tipo di dispositivo a cui fanno riferime
 ### <a name="example"></a>Esempio
 
 | deviceTypeID |        Name       |                      Descrizione                      |
-|:------------:|:-----------------:|:-----------------------------------------------------:|
+|--------------|-------------------|-------------------------------------------------------|
 | -1           | Non disponibile   | Il tipo di dispositivo non è disponibile.                     |
 | 0            | Desktop           | Dispositivo Windows Desktop                              |
 | 1            | Windows           | Dispositivo Windows                                      |
@@ -294,7 +294,7 @@ L'entità **deviceType** rappresenta il tipo di dispositivo a cui fanno riferime
 L'entità **deviceEnrollmentType** indica in che modo è stato registrato un dispositivo. Il tipo di registrazione acquisisce il metodo di registrazione. Gli esempi elencano i diversi tipi di registrazione e il relativo significato.
 
 |         Proprietà         |                                    Descrizione                                    |
-|:------------------------:|:---------------------------------------------------------------------------------:|
+|--------------------------|-----------------------------------------------------------------------------------|
 | deviceEnrollmentTypeID   | Identificatore univoco del tipo di registrazione.                                       |
 | deviceEnrollmentTypeKey  | Identificatore univoco del tipo di registrazione nel data warehouse, chiave surrogata. |
 | deviceEnrollmentTypeName | Nome del tipo di registrazione.                                                           |
@@ -302,7 +302,7 @@ L'entità **deviceEnrollmentType** indica in che modo è stato registrato un dis
 ### <a name="example"></a>Esempio
 
 | enrollmentTypeID |                Name                |                                        Descrizione                                       |
-|:----------------:|:----------------------------------:|:----------------------------------------------------------------------------------------:|
+|------------------|------------------------------------|------------------------------------------------------------------------------------------|
 | 0                | Sconosciuto                            | Il tipo di registrazione non è stato raccolto                                                      |
 | 1                | UserEnrollment                     | Registrazione basata sull'utente tramite il canale BYOD.                                           |
 | 2                | DeviceEnrollmentManager            | Registrazione dell'utente con un account del manager di registrazione dispositivi.                              |
@@ -406,7 +406,7 @@ L'entità **EnrollmentFailureReason** indica un motivo più dettagliato per un e
 **intuneManagementExtension** elenca l'integrità di **intuneManagementExtension** su ogni dispositivo Windows 10 al giorno. I dati mantenuti sono quelli relativi agli ultimi 60 giorni.
 
 |       Proprietà      |                          Descrizione                          | Esempio |
-|:-------------------:|:-------------------------------------------------------------:|:-------:|
+|---------------------|---------------------------------------------------------------|---------|
 | DateKey             | Identificatore univoco della data.                                | 123     |
 | TenantKey           | Identificatore univoco del tenant.                              | 456     |
 | DeviceKey           | Identificatore univoco del dispositivo.                              | 789     |
@@ -417,7 +417,7 @@ L'entità **EnrollmentFailureReason** indica un motivo più dettagliato per un e
 **IntuneManagementExtensionHealthState** elenca tutti i possibili stati di integrità di **IntuneManagementExtension**.
 
 |      Proprietà     |                   Descrizione                  | Esempio |
-|:-----------------:|:----------------------------------------------:|:-------:|
+|-------------------|------------------------------------------------|---------|
 | ExtensionStateKey | Identificatore univoco dello stato di integrità.           | 2       |
 | ExtensionState    | Stato di integrità di IntuneManagementExtension. | Healthy |
 
@@ -425,7 +425,7 @@ L'entità **EnrollmentFailureReason** indica un motivo più dettagliato per un e
 L'entità **IntuneManagementExtensionVersion** elenca tutte le versioni usate da **IntuneManagementExtension**.
 
 |       Proprietà      |                          Descrizione                          | Esempio |
-|:-------------------:|:-------------------------------------------------------------:|:-------:|
+|---------------------|---------------------------------------------------------------|---------|
 | ExtensionVersionKey | Identificatore univoco della versione di IntuneManagementExtension. | 1       |
 | ExtensionVersion    | Numero della versione a 4 cifre.                                   | 1.0.2.0 |
 
@@ -512,7 +512,7 @@ L'entità **MamPlatform** elenca i nomi e i tipi di piattaforma in cui è stata 
 L'entità **managementAgentType** rappresenta gli agenti usati per gestire un dispositivo.
 
 |         Proprietà        |                                       Descrizione                                       |
-|:-----------------------:|:---------------------------------------------------------------------------------------:|
+|-------------------------|-----------------------------------------------------------------------------------------|
 | ManagementAgentTypeID   | Identificatore univoco del tipo di agente di gestione.                                         |
 | ManagementAgentTypeKey  | Identificatore univoco del tipo di agente di gestione nel data warehouse - chiave surrogata. |
 | ManagementAgentTypeName | Indica il tipo di agente che viene usato per gestire il dispositivo.                              |
@@ -520,7 +520,7 @@ L'entità **managementAgentType** rappresenta gli agenti usati per gestire un di
 ### <a name="example"></a>Esempio
 
 | ManagementAgentTypeID |                Name               |                                  Descrizione                                 |
-|:---------------------:|:---------------------------------:|:----------------------------------------------------------------------------:|
+|-----------------------|-----------------------------------|------------------------------------------------------------------------------|
 | 1                     | EAS                               | Il dispositivo è gestito tramite Exchange Active Sync                         |
 | 2                     | MDM                               | Il dispositivo è gestito tramite un agente MDM                                   |
 | 3                     | EasMdm                            | Il dispositivo è gestito da Exchange Active Sync e un agente MDM        |
@@ -537,7 +537,7 @@ L'entità **managementAgentType** rappresenta gli agenti usati per gestire un di
 L'entità **ManagementState** fornisce informazioni dettagliate sullo stato del dispositivo. I dettagli possono rivelarsi utili nei casi in cui vengono applicate azioni remote, il dispositivo è jailbroken o rooted.
 
 |       Proprietà      |                                     Descrizione                                    |
-|:-------------------:|:----------------------------------------------------------------------------------:|
+|---------------------|------------------------------------------------------------------------------------|
 | managementStateID   | Identificatore univoco dello stato di gestione.                                       |
 | managementStateKey  | Identificatore univoco dello stato di gestione nel data warehouse - chiave surrogata. |
 | managementStateName | Indica lo stato dell'azione remota applicata al dispositivo.                 |
@@ -545,7 +545,7 @@ L'entità **ManagementState** fornisce informazioni dettagliate sullo stato del 
 ### <a name="example"></a>Esempio
 
 | managementStateID |      Name      |                                                   Descrizione                                                   |
-|:-----------------:|:--------------:|:---------------------------------------------------------------------------------------------------------------:|
+|-------------------|----------------|-----------------------------------------------------------------------------------------------------------------|
 | 0                 | Gestiti        | Gestito senza azioni remote in sospeso.                                                                       |
 | 1                 | RetirePending  | C'è un comando di ritiro in sospeso per il dispositivo.                                                             |
 | 2                 | RetireFailed   | Il comando di ritiro del dispositivo non è riuscito.                                                                      |
@@ -563,7 +563,7 @@ L'entità **ManagementState** fornisce informazioni dettagliate sullo stato del 
 L'entità MobileAppInstallState rappresenta lo stato di installazione per un'applicazione per dispositivi mobili dopo l'assegnazione a un gruppo che contiene dispositivi, utenti o entrambi.
 
 |       Proprietà      |                        Descrizione                       |
-|:-------------------:|:--------------------------------------------------------:|
+|---------------------|----------------------------------------------------------|
 | AppInstallStateKey  | ID univoco dello stato di installazione dell'app per l'account. |
 | AppInstallState     | Valore di enumerazione dello stato di installazione dell'app.                     |
 | AppInstallStateName | Nome dello stato di installazione dell'app.                           |
@@ -572,7 +572,7 @@ L'entità MobileAppInstallState rappresenta lo stato di installazione per un'app
 Rappresenta uno stato di installazione di app per dispositivi mobili per un tipo di dispositivo di destinazione specificato mediante la gestione di applicazioni per dispositivi mobili tramite Microsoft Intune.
 
 |      Proprietà      |                                                          Descrizione                                                          |
-|:------------------:|:-----------------------------------------------------------------------------------------------------------------------------:|
+|--------------------|-------------------------------------------------------------------------------------------------------------------------------|
 | DateKey            | Chiave della data di registrazione dello stato di installazione dell'app.                                                                     |
 | AppKey             | Chiave dell'app per dispositivi mobili usata per identificare un'istanza di AppRevision.                                                          |
 | DeviceTypeKey      | Chiave del tipo di dispositivo associata all'applicazione per dispositivi mobili.                                                              |
@@ -584,7 +584,7 @@ Rappresenta uno stato di installazione di app per dispositivi mobili per un tipo
 L'entità **ownerType** indica se un dispositivo è aziendale, personale o sconosciuto.
 
 |    Proprietà   |                                                                                     Descrizione                                                                                    |           Esempio          |
-|:-------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------:|
+|---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------|
 | ownerTypeID   | Identificatore univoco del tipo di proprietario.                                                                                                                                               |                            |
 | ownerTypeKey  | Identificatore univoco del tipo di proprietario nel data warehouse - chiave surrogata.                                                                                                       |                            |
 | ownerTypeName | Rappresenta il tipo di proprietario dei dispositivi:  Corporate - il dispositivo è di proprietà dell'azienda.  Personal - il dispositivo è di proprietà personale (BYOD).   Unknown - nessuna informazione su questo dispositivo. | Corporate   Personal Unknown |
@@ -596,7 +596,7 @@ L'entità **ownerType** indica se un dispositivo è aziendale, personale o scono
 l'entità **Policy** elenca profili di configurazione del dispositivo, profili di configurazione dell'app e criteri di conformità. È possibile assegnare i criteri con Gestione dispositivi mobili (MDM) a un gruppo nell'organizzazione.
 
 |          Proprietà          |                                                                       Descrizione                                                                      |                Esempio               |
-|:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------:|
+|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
 | PolicyKey                  | Chiave univoca per rappresentare i criteri nel data warehouse.                                                                                              | 123                                  |
 | PolicyId                   | Identificatore univoco del criterio nel data warehouse.                                                                                                 | b66bc706-ffff-7437-0340-032819502773 |
 | PolicyName                 | Nome del criterio.                                                                                                                                    | "Windows 10 Baseline"                |
@@ -610,7 +610,7 @@ l'entità **Policy** elenca profili di configurazione del dispositivo, profili d
 La tabella seguente elenca il numero di dispositivi con stato completato, in sospeso, non riuscito o di errore ogni giorno. Il numero riflette i dati per ogni profilo del tipo di criteri. Ad esempio, se un dispositivo è nello stato completato per tutti i relativi criteri assegnati, incrementa di uno il contatore di completamento per tale giorno. Se a un dispositivo sono assegnati due profili, uno nello stato completato e l'altro in uno stato di errore, l'entità incrementa il contatore di completamento e colloca il dispositivo in stato di errore. L'entità **policyDeviceActivity** elenca il numero di dispositivi che sono in un determinato stato in un giorno specifico negli ultimi 30 giorni.
 
 |  Proprietà |                                           Descrizione                                           |        Esempio        |
-|:---------:|:-----------------------------------------------------------------------------------------------:|:---------------------:|
+|-----------|-------------------------------------------------------------------------------------------------|-----------------------|
 | DateKey   | Chiave della data in cui l'archiviazione del profilo di configurazione dispositivo è stata registrata nel data warehouse. | 20160703              |
 | Pending   | Numero di dispositivi univoci in stato sospeso.                                                    | 123                   |
 | Operazione riuscita | Numero di dispositivi univoci in stato completato.                                                    | 12                    |
@@ -621,7 +621,7 @@ La tabella seguente elenca il numero di dispositivi con stato completato, in sos
 ## <a name="policyplatformtypes"></a>policyPlatformTypes
 
 |        Proprietà        |                      Descrizione                      |     Esempio    |
-|:----------------------:|:-----------------------------------------------------:|:--------------:|
+|------------------------|-------------------------------------------------------|----------------|
 | PolicyPlatformTypeKey  | Chiave univoca per il tipo di piattaforma dei criteri.        | 20170519       |
 | PolicyPlatformTypeId   | Identificatore univoco per il tipo di piattaforma dei criteri. | 1              |
 | PolicyPlatformTypeName | Nome del tipo di piattaforma dei criteri.              | AndroidForWork |
@@ -630,7 +630,7 @@ La tabella seguente elenca il numero di dispositivi con stato completato, in sos
 L'entità **PolicyTypeActivity** elenca il numero cumulativo di dispositivi nello stato completato, in sospeso, non riuscito o di errore. Vengono elencati questi stati rispetto a un profilo di configurazione del dispositivo, un profilo di configurazione dell'app o ai criteri di conformità per ogni giorno.
 
 |    Proprietà   |                                          Descrizione                                          |           Esempio           |
-|:-------------:|:---------------------------------------------------------------------------------------------:|:---------------------------:|
+|---------------|-----------------------------------------------------------------------------------------------|-----------------------------|
 | DateKey       | Chiave della data in cui l'archiviazione del profilo di configurazione dispositivo è stata registrata nel data warehouse. | 20160703                    |
 | PolicyKey     | Chiave dei criteri, può essere unita a Policy per ottenere policyName.                                | Windows 10 baseline         |
 | PolicyTypeKey | Tipo di chiave dei criteri, può essere unita al tipo di criterio per ottenere il nome del tipo di criterio.             | Criteri di conformità di Windows 10 |
@@ -643,7 +643,7 @@ L'entità **PolicyTypeActivity** elenca il numero cumulativo di dispositivi nell
 L'entità **PolicyType** elenca i tipi di profilo di configurazione del dispositivo, profili di configurazione dell'app e criteri di conformità. È possibile assegnare i criteri con Gestione dispositivi mobili (MDM) a un gruppo nell'organizzazione.
 
 |    Proprietà    |                       Descrizione                      |            Esempio            |
-|:--------------:|:------------------------------------------------------:|:-----------------------------:|
+|----------------|--------------------------------------------------------|-------------------------------|
 | PolicyTypeId   | Identificatore univoco del criterio nel sistema di origine.  | 123                           |
 | PolicyTypeKey  | Identificatore univoco del criterio nel data warehouse. | 1                             |
 | PolicyTypeName | Nome del tipo di criterio.                               | Criteri di conformità di Windows 10. |
@@ -652,7 +652,7 @@ L'entità **PolicyType** elenca i tipi di profilo di configurazione del disposit
 La tabella seguente elenca il numero di utenti con stato completato, in sospeso, non riuscito o di errore ogni giorno. Il numero riflette i dati per ogni profilo del tipo di criteri. Ad esempio, se un utente è nello stato completato per tutti i relativi criteri assegnati, incrementa di uno il contatore di completamento per tale giorno. Se a un utente sono assegnati due profili, uno con stato completato e l'altro con stato di errore, viene considerato l'utente con lo stato di errore. L'entità **PolicyUserActivity** elenca il numero di utenti in ogni stato in un giorno specifico negli ultimi 30 giorni.
 
 |  Proprietà |                                          Descrizione                                          |       Esempio       |
-|:---------:|:---------------------------------------------------------------------------------------------:|:-------------------:|
+|-----------|-----------------------------------------------------------------------------------------------|---------------------|
 | DateKey   | Chiave della data in cui l'archiviazione del profilo di configurazione dispositivo è stata registrata nel data warehouse. | 20160703            |
 | Pending   | Numero di dispositivi univoci in sospeso.                                                    | 123                 |
 | Operazione riuscita | Numero di dispositivi univoci in stato completato.                                                    | 12                  |
@@ -680,7 +680,7 @@ L'entità **termsAndConditions** rappresenta i metadati e il contenuto di un cri
 L'entità **UserDeviceAssociation** contiene le associazioni utente-dispositivo presenti nell'organizzazione.
 
 |        Name        |                                             Descrizione                                            |     Esempio     |
-|:------------------:|:--------------------------------------------------------------------------------------------------:|:---------------:|
+|--------------------|----------------------------------------------------------------------------------------------------|-----------------|
 | UserKey            | Identificatore univoco dell'utente nel data warehouse   (chiave sostitutiva).                            | 123             |
 | DeviceKey          | Identificatore univoco del dispositivo nel data warehouse.                                             | 123             |
 | CreatedDateTimeUTC | Data e ora della creazione dell'associazione utente-dispositivo. Viene usato il formato UTC.                     | 23/11/2016 0:00 |
@@ -693,7 +693,7 @@ L'entità **user** elenca tutti gli utenti di Azure Active Directory (Azure AD) 
 La raccolta di entità **user** contiene i dati utente. In questi record sono inclusi gli stati utente registrati nel periodo di raccolta dei dati, anche se l'utente è stato rimosso. Nel corso dell'ultimo mese, ad esempio, è possibile che un utente sia stato aggiunto e rimosso da Intune. Se anche l'utente non è presente al momento del report, l'utente e lo stato sono comunque presenti nei dati del mese precedente. In questo caso, è possibile creare un report che mostri la durata della presenza storica dell'utente nei dati.
 
 |          Proprietà          |                                                                                                           Descrizione                                                                                                          |                Esempio               |
-|:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------:|
+|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
 | UserKey                    | Identificatore univoco dell'utente nel data warehouse - chiave surrogata.                                                                                                                                                         | 123                                  |
 | UserId                     | Identificatore univoco dell'utente, simile a UserKey, ma è una chiave naturale.                                                                                                                                                    | b66bc706-ffff-7437-0340-032819502773 |
 | UserEmail                  | Indirizzo di posta elettronica dell'utente.                                                                                                                                                                                                     | John@constoso.com                    |
@@ -718,7 +718,7 @@ Un'entità **userTermsAndConditionsAcceptance** rappresenta lo stato di accettaz
 L'entità **vppProgramType** elenca i tipi di programma VPP possibili per un'app.
 
 |      Proprietà      |          Descrizione         |
-|:------------------:|:----------------------------:|
+|--------------------|------------------------------|
 | VppProgramTypeID   | ID per il tipo.           |
 | VppProgramTypeKey  | Chiave surrogata per la chiave. |
 | VppProgramTypeName | Tipo di programma VPP.          |
@@ -726,7 +726,7 @@ L'entità **vppProgramType** elenca i tipi di programma VPP possibili per un'app
 ### <a name="example"></a>Esempio
 
 |             VppProgramID             |         Name        | Descrizione                |
-|:------------------------------------:|:-------------------:|----------------------------|
+|--------------------------------------|---------------------|----------------------------|
 | 3DDA2474-470B-4503-9830-2665C21C1945 | Microsoft           | Programma VPP Microsoft. |
 | 00000000-0000-0000-0000-000000000000 | Non ancora disponibile | Valore predefinito, nessun VPP.   |
 | B54814E0-68EA-4BA4-8088-B5AAB58E737B | Apple               | Programma VPP Apple.     |

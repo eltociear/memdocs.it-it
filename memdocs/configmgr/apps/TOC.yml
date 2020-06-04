@@ -77,10 +77,6 @@
           href: deploy-use/create-app-v-virtual-environments.md
         - name: Importare ed esportare le applicazioni
           href: deploy-use/import-export-applications.md
-    - name: Aggiornare e ritirare applicazioni
-      items:
-        - name: Aggiornare e ritirare applicazioni
-          href: deploy-use/update-and-retire-applications.md
         - name: Rivedere e sostituire le applicazioni
           href: deploy-use/revise-and-supersede-applications.md
         - name: Disinstallare applicazioni

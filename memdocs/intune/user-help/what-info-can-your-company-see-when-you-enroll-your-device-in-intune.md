@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 10/31/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -18,12 +18,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.collection: ''
-ms.openlocfilehash: ed3f9f6f01c8dc2df3a89daee991d9f8c61056b9
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 028a568b9a588697139f97f292c70c50347217f3
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210316"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83882087"
 ---
 # <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>Quali sono le informazioni visibili per l'organizzazione quando si registra il dispositivo?
 
@@ -51,7 +51,14 @@ L'organizzazione non può vedere le informazioni personali di un utente che regi
 - IMEI
 
  > [!NOTE]
- > Per i dispositivi Android Enterprise completamente gestiti e dedicati, non sarà possibile visualizzare l'inventario di tutte le app.    
+ > Per i dispositivi Android Enterprise completamente gestiti e dedicati, non sarà possibile visualizzare l'inventario di tutte le app.
+ 
+ > [!NOTE]
+ > Un'app è considerata **app gestita** quando viene installata in uno dei modi seguenti:
+ > 1. Un utente può installarla dall'app Portale aziendale dopo che è stata pubblicata come **disponibile** da un amministratore di Intune.
+ > 2. L'app viene pubblicata come **obbligatoria** da un amministratore di Intune ed è installata nel dispositivo. 
+ >
+ > Se si è un amministratore IT o un utente del supporto tecnico dell'organizzazione e si vogliono ottenere altre informazioni sulla gestione delle app in Intune, vedere [Informazioni sulle funzionalità delle app non gestite, delle app gestite e delle app MAM](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/understanding-the-capabilities-of-unmanaged-apps-managed-apps/ba-p/249164).
     
 **Informazioni che l'organizzazione potrebbe visualizzare:**
 

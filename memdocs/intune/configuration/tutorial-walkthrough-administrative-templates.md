@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 05/14/2020
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 41a2dce895761053e482fe029e4599819a099ac6
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 682934276a080323976e7045a14450dc382f4574
+ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254861"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83406613"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>Esercitazione: Usare il cloud per configurare Criteri di gruppo nei dispositivi Windows 10 con modelli ADMX e Microsoft Intune
 
@@ -114,7 +114,7 @@ Questa interfaccia di amministrazione è dedicata alla gestione dei dispositivi 
 
 1. Passare a [https://admin.microsoft.com](https://admin.microsoft.com).
 2. Accedere con l'account amministratore della sottoscrizione tenant di Microsoft 365.
-3. In **Interfacce di amministrazione** selezionare **Tutte le interfacce di amministrazione** > **Endpoint management** (Gestione endpoint). Verrà aperta l'interfaccia di amministrazione di Endpoint Manager.
+3. Selezionare **Mostra tutto** > **Interfacce di amministrazione** > **Endpoint management (Gestione endpoint)** . Verrà aperta l'interfaccia di amministrazione di Endpoint Manager.
 
     > [!div class="mx-imgBorder"]
     > ![Vedere tutte le interfacce di amministrazione nell'interfaccia di amministrazione di Microsoft 365](./media/tutorial-walkthrough-administrative-templates/microsoft365-admin-centers.png)
@@ -123,9 +123,15 @@ Questa interfaccia di amministrazione è dedicata alla gestione dei dispositivi 
 
 I criteri locali vengono applicati nell'ordine LSDOU: locale, sito, dominio e unità organizzativa (OU). In questa gerarchia, i criteri delle unità organizzative sovrascrivono i criteri locali, i criteri di dominio sovrascrivono i criteri del sito e così via.
 
-In Intune i criteri vengono applicati agli utenti e ai gruppi creati. Non esiste una gerarchia. Se due criteri aggiornano la stessa impostazione, l'impostazione viene visualizzata come conflitto. Se due criteri di conformità sono in conflitto, viene applicato il criterio più restrittivo. Se due profili di configurazione sono in conflitto, l'impostazione non viene applicata. Per altre informazioni, vedere [Domande frequenti, problemi e soluzioni con i criteri e i profili dei dispositivi](device-profile-troubleshoot.md#if-multiple-policies-are-assigned-to-the-same-user-or-device-how-do-i-know-which-settings-gets-applied).
+In Intune i criteri vengono applicati agli utenti e ai gruppi creati. Non esiste una gerarchia. Ad esempio:
 
-Nei passaggi successivi verranno creati gruppi di sicurezza e verranno aggiunti utenti a questi gruppi. È possibile aggiungere un utente a più gruppi. È ad esempio normale per un utente avere più dispositivi, ad esempio Surface Pro per il lavoro e un dispositivo mobile Android per uso personale. È anche normale che un utente acceda alle risorse aziendali da più dispositivi.
+- Se due criteri aggiornano la stessa impostazione, l'impostazione viene visualizzata come conflitto.
+- Se due criteri di conformità sono in conflitto, viene applicato il criterio più restrittivo.
+- Se due profili di configurazione sono in conflitto, l'impostazione non viene applicata.
+
+Per altre informazioni, vedere [Domande frequenti, problemi e soluzioni con i criteri e i profili dei dispositivi](device-profile-troubleshoot.md#if-multiple-policies-are-assigned-to-the-same-user-or-device-how-do-i-know-which-settings-gets-applied).
+
+Nei passaggi successivi vengono creati gruppi di sicurezza e aggiunti utenti a questi gruppi. È possibile aggiungere un utente a più gruppi. È ad esempio normale per un utente avere più dispositivi, ad esempio Surface Pro per il lavoro e un dispositivo mobile Android per uso personale. È anche normale che un utente acceda alle risorse aziendali da più dispositivi.
 
 1. Nell'interfaccia di amministrazione di Endpoint Manager selezionare **Gruppi** > **Nuovo gruppo**.
 
@@ -237,7 +243,7 @@ In questa sezione viene creato un modello amministrativo in Intune, vengono esam
     - **Descrizione**: Immettere una descrizione del profilo. Questa impostazione è facoltativa ma consigliata.
 
 5. Selezionare **Avanti**.
-6. In **Impostazioni di configurazione** sono disponibili impostazioni che si applicano ai dispositivi (**Configurazione computer**) e impostazioni che si applicano agli utenti **(Configurazione utente**):
+6. In **Impostazioni di configurazione** la sezione **Tutte le impostazioni** mostra un elenco di tutte le impostazioni in ordine alfabetico. È anche possibile filtrare le impostazioni che si applicano ai dispositivi (**Configurazione computer**) e impostazioni che si applicano agli utenti (**Configurazione utente**):
 
     > [!div class="mx-imgBorder"]
     > ![Applicare le impostazioni del modello ADMX a utenti e dispositivi in Microsoft Intune Endpoint Manager](./media/tutorial-walkthrough-administrative-templates/administrative-templates-choose-computer-user-configuration.png)
@@ -305,7 +311,7 @@ In questa sezione viene illustrato un criterio in Intune e il criterio corrispon
 > [!TIP]
 > Per visualizzare i criteri predefiniti di Windows, è anche possibile usare GPEdit (app **Modifica Criteri di gruppo**).
 
-#### <a name="compare-an-edge-policy"></a>Confrontare un criterio di Edge
+#### <a name="compare-a-microsoft-edge-policy"></a>Confrontare un criterio Microsoft Edge
 
 1. Nell'interfaccia di amministrazione di Endpoint Manager passare a **Modello amministrativo - Dispositivi Windows 10 per studenti**.
 2. Espandere **Configurazione computer** > **Microsoft Edge** > **Startup, homepage and new tab page** (Pagina iniziale, home page e pagina Nuova scheda). Notare le impostazioni disponibili.
@@ -368,7 +374,7 @@ In questo modello vengono configurate alcune impostazioni di Internet Explorer p
 
 3. Selezionare **Avanti**. In **Rivedi e crea** selezionare **Crea** per salvare le modifiche.
 
-Subito dopo il salvataggio, il profilo viene applicato ai dispositivi quando vengono sincronizzati con Intune. Se i dispositivi sono connessi a Internet, è possibile che ciò avvenga immediatamente. Per altre informazioni sui tempi di aggiornamento dei criteri, vedere [Quanto tempo è necessario ai dispositivi per ottenere criteri, un profilo o un'app dopo l'assegnazione?](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
+Subito dopo il salvataggio, il profilo viene applicato ai dispositivi quando vengono sincronizzati con Intune. Se i dispositivi sono connessi a Internet, è possibile che ciò avvenga immediatamente. Per altre informazioni sui tempi di aggiornamento dei criteri, vedere [Quanto tempo è necessario ai dispositivi per ottenere criteri, un profilo o un'app?](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned)
 
 Quando si assegnano criteri e profili rigorosi o restrittivi, fare attenzione a non rimanere bloccati. Valutare la possibilità di creare un gruppo escluso dai criteri e dai profili. Lo scopo è quello di mantenere l'accesso per eventuali attività di risoluzione dei problemi. Monitorare questo gruppo per verificare che venga usato come previsto.
 
@@ -394,9 +400,9 @@ In questa sezione viene creato un modello amministrativo di OneDrive in Intune p
     - **Descrizione**: Immettere una descrizione del profilo. Questa impostazione è facoltativa ma consigliata.
 
 5. Selezionare **Avanti**.
-6. In **Impostazioni di configurazione** configurare le impostazioni seguenti. Assicurarsi di selezionare **OK** per salvare le modifiche.
+6. In **Impostazioni di configurazione** configurare le impostazioni seguenti. Assicurarsi di selezionare **OK** per salvare le modifiche:
 
-    - **Configurazione computer** > **Tutte le impostazioni**:
+    - **Configurazione computer**:
       - **Consenti l'accesso automatico degli utenti al client di sincronizzazione di OneDrive con le proprie credenziali di Windows**
         - **Tipo**: Dispositivo
         - **Valore**: Abilitato
@@ -404,7 +410,7 @@ In questa sezione viene creato un modello amministrativo di OneDrive in Intune p
         - **Tipo**: Dispositivo
         - **Valore**: Abilitato
 
-    - **Configurazione utente** > **Tutte le impostazioni**:
+    - **Configurazione utente**:
       - **Impedisci agli utenti di sincronizzare gli account personali di OneDrive**
         - **Tipo**: Utente
         - **Valore**: Abilitato
@@ -545,7 +551,7 @@ Questa sezione usa le risorse seguenti. Queste risorse verranno installate in qu
 2. Selezionare il profilo **Configurazione di test** > **Impostazioni**.
 3. Nell'elenco a discesa selezionare **Tutti i prodotti**.
 
-Si vedrà l'impostazione **Consenti l'accesso automatico degli utenti al client di sincronizzazione di OneDrive con le proprie credenziali di Windows** configurata.
+Si vede l'impostazione **Consenti l'accesso automatico degli utenti al client di sincronizzazione di OneDrive con le proprie credenziali di Windows** configurata.
 
 ## <a name="policy-best-practices"></a>Procedure consigliate per i criteri
 

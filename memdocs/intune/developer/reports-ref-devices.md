@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31eef700f7aa38b70c5e9a2fa75fd3faee4c9713
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 2ad156e49444679bbf7b15c53e87f504b07897bd
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078057"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709367"
 ---
 # <a name="reference-for-devices-entities"></a>Informazioni di riferimento per le entità della categoria Devices
 
@@ -263,6 +263,11 @@ L'entità **devices** elenca tutti i dispositivi registrati per la gestione e le
 | cellularTechnology         | Tecnologia cellulare del dispositivo                                                                                                                                                    |
 | WiFiMacAddress             | MAC Wi-Fi                                                                                                                                                                              |
 | ICCD                       | Identificatore della carta del circuito integrato                                                                                                                                                     |
+| windowsOsEdition           | Edizione del sistema operativo Windows.                                                                                                                             |
+| ethernetMacAddress           | Identificatore di rete univoco del dispositivo.                                                                                                                                        |
+| model                      | Modello del dispositivo.                                                                                                                                                                      |
+| office365Version           | Versione di Office 365 installato nel dispositivo.                                                                                                                             |
+
 
 ## <a name="devicepropertyhistories"></a>devicePropertyHistories
 
@@ -281,4 +286,6 @@ L'entità **devicePropertyHistory** ha le stesse proprietà della tabella dei di
 | OSVersion                  | Versione del sistema operativo.                                                                                                                                                                          |
 | jailBroken                 | Indica se il dispositivo è jailbroken o rooted.                                                                                                                                         |
 | deviceCategoryKey          | Chiave dell'attributo di categoria di dispositivo per questo dispositivo. 
+| physicalMemoryInBytes      | Memoria fisica in byte.                                                                                                                                                          |
+| totalStorageSpaceInBytes   | Capacità di archiviazione totale in byte.                                                                                                                                                                |
 

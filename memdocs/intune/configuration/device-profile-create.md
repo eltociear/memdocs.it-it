@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2020
-ms.topic: conceptual
+ms.date: 05/14/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c2031ba23b49bda4890d2638272e3b808b4bf5a9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 74e365e50d73bb14f20376c92b43061b12d00003
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327446"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988458"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Creare un profilo di dispositivo in Microsoft Intune
 
@@ -85,10 +85,9 @@ Quindi, scegliere il tipo di profilo. Le impostazioni configurabili variano in b
 - [VPN](vpn-settings-configure.md)
 - [Wi-Fi](wi-fi-settings-configure.md)
 
-Se ad esempio si seleziona come piattaforma **iOS/iPadOS**, le opzioni del tipo di profilo sono simili a quelle del profilo seguente:
+Se ad esempio si seleziona come piattaforma **iOS/iPadOS**, le opzioni del profilo sono simili a quelle del profilo seguente:
 
-> [!div class="mx-imgBorder"]
-> ![Creare un profilo iOS/iPadOS in Intune](./media/device-profile-create/create-device-profile.png)
+:::image type="content" source="./media/device-profile-create/create-device-profile.png" alt-text="Creare un profilo iOS/iPados in Microsoft Intune.":::
 
 ## <a name="scope-tags"></a>Tag di ambito
 
@@ -129,10 +128,9 @@ Quando si assegna il profilo ai gruppi, le regole di applicabilità fanno da fil
 
 ### <a name="add-a-rule"></a>Aggiungere una regola
 
-1. Selezionare **Regole di applicabilità**. È possibile scegliere le impostazioni **Regola**, **Proprietà** e **Edizione del sistema operativo**:
+1. Selezionare **Regole di applicabilità**. È possibile scegliere la **Regola** e la **Proprietà**:
 
-    > [!div class="mx-imgBorder"]
-    > ![Aggiungere una regola di applicabilità a un profilo di configurazione del dispositivo in Microsoft Intune](./media/device-profile-create/applicability-rules.png)
+    :::image type="content" source="./media/device-profile-create/applicability-rules.png" alt-text="Aggiungere una regola di applicabilità al profilo di configurazione di un dispositivo Windows 10 in Microsoft Intune.":::
 
 2. In **Regola** scegliere se si vuole includere o escludere utenti o gruppi. Le opzioni disponibili sono:
 
@@ -174,12 +172,11 @@ Durante la creazione dei profili, tenere presenti le indicazioni seguenti:
 
 - Separare i criteri utente dai criteri del dispositivo.
 
-  Ad esempio [Modelli amministrativi in Intune](administrative-templates-windows.md) contiene centinaia di impostazioni ADMX. Questi modelli indicano se un'impostazione si applica a utenti o dispositivi. Quando si creano modelli amministrativi, assegnare le impostazioni degli utenti a un gruppo di utenti e assegnare le impostazioni dei dispositivi a un gruppo di dispositivi.
+  Ad esempio [Modelli amministrativi in Intune](administrative-templates-windows.md) contiene migliaia di impostazioni ADMX. Questi modelli indicano se un'impostazione si applica a utenti o dispositivi. Quando si creano modelli amministrativi, assegnare le impostazioni degli utenti a un gruppo di utenti e assegnare le impostazioni dei dispositivi a un gruppo di dispositivi.
 
   Nell'immagine seguente viene illustrato un esempio di impostazione che può essere applicata agli utenti e/o ai dispositivi:
 
-  > [!div class="mx-imgBorder"]
-  > ![Modello amministrativo di Intune applicato a utenti e dispositivi](./media/device-profile-create/setting-applies-to-user-and-device.png)
+  :::image type="content" source="./media/device-profile-create/setting-applies-to-user-and-device.png" alt-text="Modello amministrativo di Intune applicato a utenti e dispositivi.":::
 
 - Ogni volta che si creano criteri restrittivi, comunicare questa modifica agli utenti. Ad esempio, se si modifica il requisito per il passcode da 4 a 6 caratteri, informare gli utenti prima di assegnare i criteri.
 

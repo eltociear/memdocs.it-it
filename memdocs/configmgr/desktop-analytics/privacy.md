@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: dd970dc1517a6fcc197b2bf39a141871b4999a02
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 82c8495391dcc22aa2784657bc1461887e412577
+ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268420"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84223656"
 ---
 # <a name="desktop-analytics-data-privacy"></a>Privacy dei dati di Desktop Analytics
 
@@ -55,7 +55,7 @@ La figura seguente illustra il flusso dei dati di diagnostica da singoli disposi
 
     4. Gli aggiornamenti della compatibilità vengono distribuiti a tutti i dispositivi di destinazione.  
 
-3. I dispositivi inviano i dati di diagnostica al servizio di gestione dati di diagnostica di Microsoft per Windows. Questo servizio è ospitato negli Stati Uniti.  
+3. I dispositivi inviano i dati di diagnostica al servizio di gestione dati di diagnostica di Microsoft per Windows. Tutti i dati di diagnostica sono crittografati tramite HTTPS e usano l'associazione del certificato durante il trasferimento dal dispositivo a questo servizio. Il servizio Gestione dati Microsoft è ospitato negli Stati Uniti.
 
 4. Ogni giorno, Microsoft crea uno snapshot delle informazioni dettagliate incentrate sull'IT. Questo snapshot combina i dati di diagnostica di Windows con l'input per i dispositivi registrati. Questo processo avviene nell'archiviazione temporanea, che viene usata solo da Desktop Analytics. L'archiviazione temporanea è ospitata nei data center di Microsoft negli Stati Uniti. Tutti i dati vengono inviati tramite un canale crittografato SSL (HTTPS). Gli snapshot vengono separati in base all'ID commerciale.  
 

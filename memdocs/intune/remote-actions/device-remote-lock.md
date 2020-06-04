@@ -6,7 +6,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 29b30d46fc5998c69059c743c3f469e198cee1ef
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f6cafadbecbb0e0f0287b8a6ac4db5a1168e5e84
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80325131"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83983097"
 ---
 # <a name="remotely-lock-devices-with-intune"></a>Bloccare in remoto i dispositivi con Intune
 
@@ -45,7 +45,8 @@ La funzionalità **Blocco remoto** non è supportata in:
 - Windows 10 Desktop
 
 > [!NOTE]
-> Per i dispositivi macOS, impostare un PIN di ripristino di 6 cifre. Quando il dispositivo è bloccato, nella **Panoramica** del dispositivo viene visualizzato il PIN finché non viene inviata un'altra azione del dispositivo.
+> Per i dispositivi macOS, impostare un PIN di ripristino di 6 cifre. Quando il dispositivo è bloccato, nella **Panoramica** del dispositivo viene visualizzato il PIN finché non viene inviata un'altra azione del dispositivo. Assicurarsi di annotare il PIN poiché sarà disponibile solo per 7 giorni dopo l'invio del comando di blocco remoto. Dopo i 7 giorni, Intune non avrà più il PIN. Inoltre, non avviare di nuovo questo comando per lo stesso dispositivo fino a quando non viene usato il PIN originale per sbloccare correttamente il dispositivo. È necessario inviare questo comando, annotare il PIN e fino a quando non lo si usa per accedere correttamente al dispositivo macOS, non inviare di nuovo questo comando allo stesso dispositivo.  
+
 
 ## <a name="remote-lock-a-device"></a>Blocco remoto un dispositivo
 

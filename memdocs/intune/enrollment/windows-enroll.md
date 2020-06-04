@@ -6,8 +6,8 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/05/2019
-ms.topic: conceptual
+ms.date: 05/22/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fd7483319443b7a960f8e704442d2b43b6b00c66
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9104716c469168a5ab2c5c1b49caf14071150db1
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326918"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988897"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Configurare la registrazione dei dispositivi Windows
 
@@ -37,15 +37,15 @@ L'amministratore di Intune può semplificare la registrazione nei modi seguenti:
 - [Registrazione CNAME](#simplify-windows-enrollment-without-azure-ad-premium)
 - [Abilitare la registrazione in blocco](windows-bulk-enroll.md) (sono necessari Azure AD Premium e Progettazione configurazione di Windows)
 
-La semplificazione della registrazione dei dispositivi Windows dipende da due fattori:
+Due fattori determinano in che modo è possibile semplificare la registrazione dei dispositivi Windows:
 
 - **Si usa Azure Active Directory Premium?** <br>[Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) è incluso in Enterprise Mobility + Security e altri piani di licenze.
 - **Quali versioni dei client Windows richiedono la registrazione da parte degli utenti?** <br>I dispositivi Windows 10 possono essere registrati automaticamente mediante l'aggiunta di un account aziendale o dell'istituto di istruzione. Le versioni precedenti devono essere registrate con l'app del portale aziendale.
 
 ||**Azure AD Premium**|**Altro AD**|
 |----------|---------------|---------------|  
-|**Windows 10**|[Registrazione automatica](#enable-windows-10-automatic-enrollment) |Registrazione utente|
-|**Versioni precedenti di Windows**|Registrazione utente|Registrazione utente|
+|**Windows 10**|[Registrazione automatica](#enable-windows-10-automatic-enrollment) |Registrazione utenti|
+|**Versioni precedenti di Windows**|Registrazione utenti|Registrazione utenti|
 
 Le organizzazioni che possono usare la registrazione automatica possono anche configurare la [registrazione in blocco di dispositivi](windows-bulk-enroll.md) usando l'app Progettazione configurazione di Windows.
 
@@ -70,7 +70,7 @@ Per semplificare la registrazione, creare un alias DNS (Domain Name Server), un 
 **Passaggio 1: Creare CNAME** (facoltativo)<br>
 Creare record di risorse CNAME DNS per il dominio della società. Ad esempio, se il sito Web della società è contoso.com, si creerà un record CNAME in DNS che reindirizzi EnterpriseEnrollment.contoso.com a enterpriseenrollment-s.manage.microsoft.com.
 
-Sebbene la creazione di voci DNS CNAME sia facoltativa, i record CNAME semplificano la registrazione per gli utenti. Se non viene trovato alcun record CNAME, viene richiesto all'utente di immettere manualmente il nome del server MDM, enrollment.manage.microsoft.com.
+Sebbene la creazione di voci DNS CNAME sia facoltativa, i record CNAME semplificano la registrazione per gli utenti. Se non viene trovato alcun record di registrazione CNAME, agli utenti viene richiesto di immettere manualmente il nome del server MDM, enrollment.manage.microsoft.com.
 
 |Tipo|Nome dell'host|Punta a|TTL|
 |----------|---------------|---------------|---|
@@ -95,8 +95,8 @@ L'amministratore DNS di Contoso deve creare i CNAME seguenti:
 
 La propagazione delle modifiche ai record DNS potrebbe richiedere fino a 72 ore. È impossibile verificare la modifica DNS in Intune fino a quando il record DNS non è stato propagato.
 
-## <a name="additional-endpoints-are-supported-but-not-recommended"></a>Gli endpoint aggiuntivi sono supportati ma non consigliati
-EnterpriseEnrollment-s.manage.microsoft.com è il nome FQDN preferito per la registrazione, ma esistono altri due endpoint che sono stati usati dai clienti in passato e sono supportati. EnterpriseEnrollment.manage.microsoft.com (senza -s) e manage.microsoft.com entrambi funzionano entrambi come destinazione per il server con rilevamento automatico, ma l'utente dovrà toccare OK su un messaggio di conferma. Se si punta a EnterpriseEnrollment-s.manage.microsoft.com, l'utente non dovrà eseguire il passaggio di conferma aggiuntivo, quindi questa è la configurazione consigliata
+## <a name="additional-endpoints-are-used-but-no-longer-supported"></a>Gli endpoint aggiuntivi sono utilizzati ma non più supportati
+EnterpriseEnrollment-s.manage.microsoft.com è l'FQDN preferito per la registrazione. Esistono altri due endpoint che sono stati usati dai clienti in passato e sono ancora funzionanti, ma non sono più supportati. EnterpriseEnrollment.manage.microsoft.com (senza -s) e manage.microsoft.com entrambi funzionano entrambi come destinazione per il server con rilevamento automatico, ma l'utente dovrà toccare OK su un messaggio di conferma. Se si punta a EnterpriseEnrollment-s.manage.microsoft.com, l'utente non dovrà eseguire il passaggio di conferma aggiuntivo, quindi questa è la configurazione consigliata
 
 ## <a name="alternate-methods-of-redirection-are-not-supported"></a>I metodi alternativi di reindirizzamento non sono supportati
 L'uso di un metodo diverso dalla configurazione CNAME non è supportato. Ad esempio, l'uso di un server proxy per reindirizzare enterpriseenrollment.contoso.com/EnrollmentServer/Discovery.svc a enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc o manage.microsoft.com/EnrollmentServer/Discovery.svcnon è supportato.

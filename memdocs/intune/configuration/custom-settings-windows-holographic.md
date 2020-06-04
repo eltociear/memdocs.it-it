@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
-ms.article: article
+ms.date: 05/18/2020
+ms.article: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43199009740f259c6a6484e455b0205da76492ba
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f37550bcfd8105b9cf5ea51c1bfa0d9305721348
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084040"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990081"
 ---
 # <a name="use-custom-settings-for-windows-holographic-for-business-devices-in-intune"></a>Usare le impostazioni personalizzate per i dispositivi Windows Holographic for Business in Intune
 
@@ -35,38 +35,30 @@ Se si sta cercando una determinata impostazione, tenere presente che il [profilo
 
 Questo articolo descrive come creare un profilo personalizzato per i dispositivi Windows Holographic for Business. Contiene anche un elenco delle impostazioni OMA-URI consigliate.
 
-## <a name="create-the-profile"></a>Creare il profilo
+## <a name="before-you-begin"></a>Prima di iniziare
 
-1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selezionare **Dispositivi** > **Profili di configurazione** > **Crea profilo**.
-3. Immettere le impostazioni seguenti:
+[Creare un profilo personalizzato di Windows 10](custom-settings-configure.md#create-the-profile).
 
-    - **Nome**: immettere un nome descrittivo per il profilo. Assegnare ai profili nomi che possano essere identificati facilmente in un secondo momento. Un nome di profilo valido, ad esempio, è **Profilo personalizzato Hololens**.
-    - **Descrizione**: immettere una descrizione che offra una panoramica dell'impostazione e altri dettagli importanti.
-    - **Piattaforma**: selezionare **Windows 10 e versioni successive**.
-    - **Tipo di profilo**: Selezionare **Personalizzato**.
+## <a name="custom-oma-uri-settings"></a>Impostazioni OMA-URI personalizzate
 
-4. In **Impostazioni OMA-URI personalizzate** selezionare **Aggiungi**. Immettere le impostazioni seguenti:
+**Aggiungi**: Immettere le impostazioni seguenti:
 
-    - **Nome**: Immettere un nome univoco per l'impostazione OMA URI per identificarla nell'elenco delle impostazioni.
-    - **Descrizione**: immettere una descrizione che offra una panoramica dell'impostazione e altri dettagli importanti.
-    - **OMA-URI (maiuscole/minuscole)** : immettere l'OMA-URI da usare come impostazione.
-    - **Tipo di dati**: selezionare il tipo di dati da usare per questa impostazione OMA-URI. Le opzioni disponibili sono:
+- **Nome**: Immettere un nome univoco per l'impostazione OMA URI per identificarla nell'elenco delle impostazioni.
+- **Descrizione**: immettere una descrizione che offra una panoramica dell'impostazione e altri dettagli importanti.
+- **OMA-URI (maiuscole/minuscole)** : immettere l'OMA-URI da usare come impostazione.
+- **Tipo di dati**: selezionare il tipo di dati da usare per questa impostazione OMA-URI. Le opzioni disponibili sono:
 
-        - Stringa
-        - Stringa (file XML)
-        - Data e ora
-        - Intero
-        - A virgola mobile
-        - Boolean
-        - Base64 (file)
+  - Stringa
+  - Stringa (file XML)
+  - Data e ora
+  - Intero
+  - A virgola mobile
+  - Boolean
+  - Base64 (file)
 
-    - **Valore**: immettere il valore dati da associare all'impostazione OMA-URI immessa. Il valore varia a seconda del tipo di dati selezionato. Ad esempio, se si seleziona **Data e ora**, selezionare il valore dalla selezione data.
+- **Valore**: immettere il valore dati da associare all'impostazione OMA-URI immessa. Il valore varia a seconda del tipo di dati selezionato. Ad esempio, se si seleziona **Data e ora**, selezionare il valore dalla selezione data.
 
-    Dopo aver aggiunto alcune impostazioni, è possibile selezionare **Esporta**. **Esporta** crea un elenco di tutti i valori aggiunti in un file con valori delimitati da virgole (file con estensione csv).
-
-5. Selezionare **OK** per salvare le modifiche. Continuare ad aggiungere altre impostazioni in base alle esigenze.
-6. Al termine, selezionare **OK** > **Crea** per creare il profilo di Intune. Una volta completata l'operazione, il profilo viene visualizzato nell'elenco **Dispositivi - Profili di configurazione**.
+Dopo aver aggiunto alcune impostazioni, è possibile selezionare **Esporta**. **Esporta** crea un elenco di tutti i valori aggiunti in un file con valori delimitati da virgole (file con estensione csv).
 
 ## <a name="recommended-custom-settings"></a>Impostazioni personalizzate consigliate
 
@@ -149,7 +141,6 @@ Le impostazioni seguenti sono utili per i dispositivi che eseguono Windows Holog
 > |----|---|
 > |./Vendor/MSFT/AccountManagement/UserProfileManagement/ProfileInactivityThreshold|Intero<br/>Il valore predefinito è 30.|
 
-
 ### <a name="storagecapacitystartdeletion"></a>[StorageCapacityStartDeletion](https://docs.microsoft.com/windows/client-management/mdm/accountmanagement-csp)
 
 > [!div class="mx-tableFixed"]
@@ -172,6 +163,8 @@ Intune, inoltre, non supporta tutte le impostazioni elencate in [CSPs supported 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Il profilo è stato creato, ma non è ancora operativo. [Assegnare il profilo](device-profile-assign.md) e [monitorarne lo stato](device-profile-monitor.md).
+[Assegnare il profilo](device-profile-assign.md) e [monitorarne lo stato](device-profile-monitor.md).
 
 Creare un [profilo personalizzato nei dispositivi Windows 10](custom-settings-windows-10.md).
+
+Altre informazioni sui [profili personalizzati](custom-settings-configure.md) in Intune.

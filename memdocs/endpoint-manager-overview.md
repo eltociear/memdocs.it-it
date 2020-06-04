@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: ''
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1dee569d6f2ce4ed1a3bc278c9c9a886f9d23974
-ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
+ms.openlocfilehash: d9e3d03211907f31008b31d68c4ed5cd11ae1a6e
+ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82782258"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83791733"
 ---
 # <a name="microsoft-endpoint-manager-overview"></a>Panoramica di Microsoft Endpoint Manager
 
@@ -50,7 +50,7 @@ Endpoint Manager include i servizi seguenti:
 
   Per altre informazioni, vedere [Informazioni su Microsoft Intune](https://docs.microsoft.com/intune/fundamentals/what-is-intune).
 
-- **Configuration Manager**: Configuration Manager è una soluzione di gestione locale per gestire desktop, server e computer portatili collegati nella rete aziendale o in Internet. È possibile abilitare la soluzione per il cloud e integrarla con Intune, Azure AD, Microsoft Defender ATP e altri servizi cloud. Usare Configuration Manager per distribuire app, aggiornamenti software e sistemi operativi. È anche possibile monitorare la conformità, eseguire query, intervenire sui client in tempo reale e molto altro ancora.
+- **Configuration Manager**: Configuration Manager è una soluzione di gestione locale per gestire desktop, server e computer portatili collegati nella rete aziendale o in Internet. È possibile abilitare la soluzione per il cloud e integrarla con Intune, Azure Active Directory (AD), Microsoft Defender ATP e altri servizi cloud. Usare Configuration Manager per distribuire app, aggiornamenti software e sistemi operativi. È anche possibile monitorare la conformità, eseguire query, intervenire sui client in tempo reale e molto altro ancora.
 
   Nel contesto di Endpoint Manager è possibile continuare a usare Configuration Manager come di consueto. Se si è pronti a spostare alcune attività nel cloud, prendere in considerazione la [co-gestione](https://docs.microsoft.com/configmgr/comanage/).
 
@@ -74,7 +74,7 @@ Endpoint Manager include i servizi seguenti:
 
   Per altre informazioni, vedere [Panoramica di Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot) e [Registrare dispositivi Windows in Intune](/mem/intune/enrollment/enrollment-autopilot).
 
-- **Azure AD Premium**: Azure AD viene usato da Endpoint Manager per dispositivi, utenti, gruppi, gruppi dinamici, registrazione automatica, autenticazione a più fattori e accesso condizionale. Queste funzionalità sono fondamentali per la protezione di dispositivi, app e dati.
+- **Azure Active Directory (AD)** : Azure AD viene usato da Endpoint Manager per l'identità di dispositivi, utenti, gruppi e autenticazione a più fattori (MFA). **Azure AD Premium**, che può essere un costo aggiuntivo, ha [funzionalità aggiuntive](https://azure.microsoft.com/pricing/details/active-directory/) per proteggere i dispositivi, le app e i dati, inclusi i gruppi dinamici, la registrazione automatica e l'accesso condizionale.
 
   Per altre informazioni, vedere [Aggiungere utenti](/mem/intune/fundamentals/users-add), [Configurare la registrazione automatica](/mem/intune/enrollment/windows-enroll) e [Informazioni sull'accesso condizionale](/mem/intune/protect/conditional-access).
 

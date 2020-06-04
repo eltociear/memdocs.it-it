@@ -1,14 +1,15 @@
 ---
-title: Registrare un dispositivo Android con Portale aziendale Intune e Intercede
-description: Registrare un dispositivo Android e configurare l'autenticazione con credenziali derivate con Intercede.
+title: Registrare un dispositivo Android con l'app Microsoft Intune e DISA Purebred
+description: Informazioni su come registrare un dispositivo Android e configurare l'autenticazione tramite credenziali derivate con DISA Purebred.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/17/2020
+ms.date: 05/15/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ''
 searchScope:
@@ -18,16 +19,16 @@ ms.reviewer: jeyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e82d8f27b7ffbce663ee64030a6d933bf1684dc1
+ms.openlocfilehash: 584392891320f96eed16863225ffb323dc240594
 ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880596"
+ms.locfileid: "83880610"
 ---
-# <a name="set-up-android-device-with-company-portal-and-intercede"></a>Configurare un dispositivo Android con Portale aziendale e Intercede
+# <a name="set-up-android-device-with-the-microsoft-intune-app-and-disa-purebred"></a>Configurare un dispositivo Android con l'app Microsoft Intune e DISA Purebred
 
-Registrare il dispositivo nell'app Portale aziendale Intune per ottenere l'accesso protetto per dispositivi mobili alla posta elettronica, ai file e alle app dell'organizzazione. Dopo la registrazione, il dispositivo diventa *gestito*. L'organizzazione può assegnare criteri e app al dispositivo tramite un provider di gestione di dispositivi mobili (MDM), ad esempio Intune.
+Registrare il dispositivo con l'app Microsoft Intune per ottenere l'accesso protetto per dispositivi mobili alla posta elettronica, ai file e alle app dell'organizzazione. Dopo la registrazione, il dispositivo diventa *gestito*. L'organizzazione può assegnare criteri e app al dispositivo tramite un provider di gestione di dispositivi mobili (MDM), ad esempio Intune.  
 
 Durante la registrazione, si installeranno anche credenziali derivate nel dispositivo. L'organizzazione potrebbe richiedere di usare le credenziali derivate come metodo di autenticazione per l'accesso alle risorse o per la firma e la crittografia dei messaggi di posta elettronica.
 
@@ -38,8 +39,8 @@ Può essere necessario configurare credenziali derivate se si usa una smart card
 
 Contenuto dell'articolo:
 
-* Registrare un dispositivo mobile Android con Portale aziendale Intune.
-* Configurare la propria smart card installando credenziali derivate dal provider di credenziali derivate dell'organizzazione, [Intercede](https://www.intercede.com/).  
+* Registrare un dispositivo mobile Android con l'app Intune
+* Configurare la propria smart card installando credenziali derivate dal provider di credenziali derivate dell'organizzazione, [DISA Purebred](https://public.cyber.mil/pki-pke/purebred/)
 
 ## <a name="what-are-derived-credentials"></a>Che cosa sono le credenziali derivate?
 
@@ -54,12 +55,15 @@ Le credenziali derivate sono un'implementazione delle linee guida del National I
 
 ## <a name="prerequisites"></a>Prerequisiti
 
- Per completare la registrazione, sono necessari:
+Per completare la registrazione, sono necessari:
 
 * Smart card fornita dall'azienda o dall'istituto di istruzione
 * Accesso a un computer o a un chiosco multimediale che consente di accedere con la smart card
-* Un dispositivo nuovo o con impostazioni predefinite ripristinate che esegue Android 7.0 o versione successiva
+* Un dispositivo nuovo o con impostazioni predefinite ripristinate che esegue Android 7.0 o versione successiva 
 * L'app Microsoft Intune installata sul dispositivo
+* L'app Purebred installata sul dispositivo (l'app deve essere installata automaticamente subito dopo la configurazione del dispositivo. In caso contrario, contattare il responsabile del supporto IT.)
+
+Durante l'installazione sarà inoltre necessario contattare un agente o un rappresentante di Purebred.
 
 ## <a name="enroll-device"></a>Registrare il dispositivo  
 
@@ -84,7 +88,7 @@ Le credenziali derivate sono un'implementazione delle linee guida del National I
 
 5. Esaminare le condizioni d'uso di Chrome. Toccare quindi **ACCEPT & CONTINUE** (Accetta e continua).  
 
-   ![Immagine di esempio della schermata Termini di servizio di Chrome, con il pulsante Accept & Continue (Accetta e continua) evidenziato.](./media/fully-managed-intune-app-06.png)  
+   ![Immagine di esempio della schermata Termini di servizio di Chrome, con il pulsante Accept & Continue (Accetta e continua) evidenziato.](./media/fully-managed-intune-app-06.png)   
 
 6. Nella schermata di accesso toccare **Sign-in options** (Opzioni di accesso) e quindi **Sign in from another device** (Accesso da un altro dispositivo). 
 
@@ -97,9 +101,9 @@ Le credenziali derivate sono un'implementazione delle linee guida del National I
    > [!div class="mx-imgBorder"]
    > ![Screenshot della richiesta di immissione del codice nel sito Web Portale aziendale.](./media/enter-code-intercede.png)
 
-10. Inserire la smart card per accedere.  
+10. Inserire la smart card per accedere. 
 
-11. Nella schermata di accesso selezionare l'account aziendale o dell'istituto di istruzione. Tornare quindi al dispositivo mobile.
+11. Nella schermata di accesso selezionare l'account aziendale o dell'istituto di istruzione. Tornare quindi al dispositivo mobile. 
 
 12. A seconda dei requisiti dell'organizzazione, potrebbe essere richiesto di aggiornare le impostazioni, ad esempio per la schermata di blocco o la crittografia. Se vengono visualizzate queste richieste, toccare **SET** (Imposta) e seguire le istruzioni visualizzate.  
 
@@ -107,18 +111,17 @@ Le credenziali derivate sono un'implementazione delle linee guida del National I
 
 13. Per installare le app aziendali nel dispositivo, toccare **INSTALL** (Installa). Al termine dell'installazione, toccare **NEXT** (Avanti).  
 
-       ![Immagine di esempio della schermata Set up your work phone (Configura telefono aziendale), con il pulsante Install (Installa) evidenziato.](./media/fully-managed-intune-app-11.png)    
+       ![Immagine di esempio della schermata Set up your work phone (Configura telefono aziendale), con il pulsante Install (Installa) evidenziato.](./media/fully-managed-intune-app-11.png)   
 
 14. Toccare **START** (Avvia) per aprire l'app Microsoft Intune. 
 
     ![Immagine di esempio della schermata Set up your work phone (Configura telefono aziendale), con il pulsante Start (Avvia) evidenziato.](./media/fully-managed-intune-app-17.png)   
- 
 
 15. Tornare all'app Intune sul dispositivo mobile e seguire le istruzioni visualizzate per completare la registrazione del dispositivo. 
 
     ![Immagine di esempio della schermata di registrazione del dispositivo e configurazione dell'accesso, con il pulsante Done (Fine) evidenziato.](./media/fully-managed-intune-app-19.png)   
 
-16. Per completare la configurazione del dispositivo, passare alla sezione relativa alla [configurazione della smart card](enroll-android-device-intercede.md#set-up-smart-card) in questo articolo.  
+16. Per completare la configurazione del dispositivo, passare alla sezione relativa alla [configurazione della smart card](enroll-android-device-disa-purebred.md#set-up-smart-card) in questo articolo.  
 
 ### <a name="qr-code-enrollment"></a>Registrazione con codice a matrice  
 In questa sezione verrà eseguita la scansione del codice a matrice fornito dall'azienda.  Al termine, si verrà reindirizzati nuovamente alla procedura per la registrazione del dispositivo.     
@@ -151,46 +154,61 @@ In questa sezione si immetterà il token fornito dall'azienda. Al termine, si ve
 
 6. Tornare alla procedura [Registrare il dispositivo](#enroll-device), passaggio 4 per continuare l'installazione.
 
+
 ## <a name="set-up-smart-card"></a>Configurare una smart card  
+
+> [!NOTE]
+> Per completare questa procedura, l'app Purebred è necessaria e verrà installata automaticamente nel dispositivo dopo la registrazione. Se l'app non è ancora disponibile dopo un breve periodo di tempo, contattare il personale del supporto IT.  
 
 1. Al termine della registrazione, l'app Intune invierà una notifica per la configurazione della smart card. Toccare la notifica. Se non si riceve la notifica, controllare la posta elettronica.
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot di esempio della notifica push di Portale aziendale nella schermata iniziale del dispositivo.](./media/action-required-in-app-android.png)
+   > ![Screenshot della notifica push dell'app Intune nella schermata iniziale del dispositivo.](./media/action-required-in-app-android.png)
 
 2. Nella schermata di **configurazione della smart card**:
 
-   1. Toccare il collegamento alle istruzioni di configurazione dell'organizzazione. Se l'organizzazione non fornisce istruzioni aggiuntive, verrà visualizzato questo articolo.
+   1. Toccare il collegamento alle istruzioni di configurazione dell'organizzazione ed esaminarle. Se l'organizzazione non fornisce istruzioni aggiuntive, verrà visualizzato questo articolo.
 
-   2. Toccare **Inizia**.  
+   2. Toccare **Inizia**.   
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot di esempio della schermata di configurazione dell'accesso con smart card per dispositivi mobili di Portale aziendale.](./media/smart-card-open-entrust-android.png)
+   > ![Screenshot dell'app di Intune, schermata configurazione della smart card.](./media/smart-card-open-disa-purebred-android.png)
 
-3. Passare al dispositivo o al chiosco multimediale self-service abilitato per la smart card e aprire l'app MyID. Accedere con le proprie credenziali aziendali.
+3. Nella schermata **Ottieni certificati** toccare **AVVIA PUREBRED** per aprire l'app Purebred. (L'app deve essere stata installata automaticamente sul dispositivo. In caso contrario, contattare il supporto tecnico.)  
 
-4. Selezionare l'opzione per richiedere l'ID.
+   > [!div class="mx-imgBorder"]
+   > ![Screenshot della richiesta dell'app Intune di aprire l'app DISA Purebred.](./media/open-app-prompt-disa-purbred-android.png)  
 
-5. Quando viene richiesto quale profilo usare, selezionare l'opzione per l'attivazione con credenziali per dispositivi mobili. Verrà visualizzato un codice a matrice.  
+4. Per una corretta esecuzione, l'app Purebred potrebbe richiedere autorizzazioni aggiuntive. Toccare **Consenti** o **Consenti sempre** quando richiesto. Per ulteriori informazioni sui motivi per cui queste autorizzazioni sono necessarie, rivolgersi al personale di supporto o all'agente Purebred.  
 
-6. Tornare al dispositivo Android. Nella schermata Portale aziendale > **Ottieni il codice a matrice** toccare **Avanti**.
+5. Una volta nell'app Purebred, collaborare con l'agente Purebred dell'organizzazione per scaricare e installare i certificati necessari per accedere alle risorse aziendali o dell'istituto di istruzione.
 
-    > [!div class="mx-imgBorder"]
-    > ![Screenshot di esempio della schermata Ottieni il codice a matrice di Portale aziendale.](./media/get-qr-code-entrust-android.png)
+    > [!IMPORTANT]
+    > Durante questo processo, toccare **OK** o **Installa** quando richiesto. Non modificare i nomi delle autorità di certificazione (CA) o dei certificati richiesti per l'installazione.    
 
-7. Se viene richiesto di consentire all'app Intune di usare la fotocamera, toccare **Consenti**.
-
-8. Eseguire la scansione dell'immagine del codice a matrice sul dispositivo abilitato per la smart card.
-
-9. L'app Intune inizierà a scaricare e installare i certificati necessari per accedere alle risorse aziendali o dell'istituto di istruzione. A seconda della connessione Internet, questo processo potrebbe richiedere un certo tempo. Non chiudere l'app durante questo periodo di tempo.
+6. Al termine dell'installazione, si riceverà una notifica che indica che i certificati sono pronti. Toccare la notifica per tornare all'app Intune.
 
     > [!div class="mx-imgBorder"]
-    > ![Screenshot di esempio della schermata "Download e installazione dei certificati" di Portale aziendale](./media/install-certificates-entrust-android.png)
+    > ![Screenshot della schermata "Consenti accesso ai certificati"](./media/certificates-ready-prompt-disa-purbred-android.png)
 
-10. Elaborati tutti i certificati, attendere che l'app Intune completi la configurazione del dispositivo. Si noterà che la configurazione è stata completata quando viene visualizzato il messaggio **La configurazione è completata** .
+7. Dalla schermata **Consenti accesso ai certificati** si concede all'app di Intune l'autorizzazione per accedere alle credenziali derivate ottenute da DISA Purebred. Questo passaggio garantisce che l'organizzazione possa verificare l'identità dell'utente quando accede alle risorse aziendali o dell'istituto di istruzione protette.  
+
+    1. Toccare **AVANTI**.
+
+       > [!div class="mx-imgBorder"]
+       > ![Screenshot della conferma "I certificati sono pronti"](./media/certificates-access-disa-purbred-android.png)
+
+    2. Quando compare la richiesta **Scegli certificato**, non modificare la selezione. Il certificato corretto è già selezionato, quindi è sufficiente toccare **Seleziona** o **OK**.  
+
+       > [!div class="mx-imgBorder"]
+       > ![Screenshot della richiesta "Scegli certificato"](./media/choose-certificates-prompt-disa-purbred-android.png)
+
+    3. Poiché le credenziali derivate sono costituite da più certificati, è possibile che venga visualizzata la richiesta **Scegli certificato** più volte. Ripetere il passaggio precedente fino a quando non vengono visualizzate altre richieste.  
+
+8. Elaborati tutti i certificati, attendere che l'app Intune completi la configurazione del dispositivo. Si noterà che la configurazione è stata completata quando viene visualizzato il messaggio **La configurazione è completata** .  
 
     > [!div class="mx-imgBorder"]
-    > ![Screenshot di esempio del Portale aziendale, schermata "La configurazione è completata"](./media/all-set-android.png)
+    > ![Screenshot della schermata "La configurazione è completata"](./media/all-set-android.png)
 
 ## <a name="next-steps"></a>Passaggi successivi
 
@@ -198,5 +216,6 @@ Al termine della registrazione, sarà possibile accedere alle risorse aziendali,
 
 * [Usare le app gestite nel dispositivo](use-managed-apps-on-your-device-android.md)  
 * [Gestire le app dal sito Web del portale aziendale](manage-apps-cpweb.md)  
+
 
 Serve ancora assistenza? Contattare l'amministratore IT. Per informazioni sul contatto vedere il [sito Web del portale aziendale](https://go.microsoft.com/fwlink/?linkid=2010980).

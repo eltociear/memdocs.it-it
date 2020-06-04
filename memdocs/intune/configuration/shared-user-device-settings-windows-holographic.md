@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/09/2019
+ms.date: 05/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b7e77933134dae3523edaf45f8b345aca4fc162
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 49d1b8f407814fd368a7ff45bb94bc4c5ef7fd9d
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79343349"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556286"
 ---
 # <a name="windows-holographic-for-business-settings-to-manage-shared-devices-using-intune"></a>Impostazioni di Windows Holographic for Business per gestire i dispositivi condivisi con Intune
 
@@ -36,24 +36,33 @@ Per altre informazioni su questa funzionalità in Intune, vedere [Controllare l'
 
 ## <a name="before-your-begin"></a>Prima di iniziare
 
-[Creare il profilo](shared-user-device-settings.md).
+[Creare un profilo di configurazione dei dispositivi multiutente condivisi di Windows 10](shared-user-device-settings.md).
+
+Quando si crea un profilo di configurazione dei dispositivi utente condivisi di Windows 10, sono disponibili altre impostazioni rispetto a quelle elencate in questo articolo. I dispositivi Windows Holographic for Business supportano le impostazioni indicate in questo articolo.
 
 ## <a name="shared-multi-user-device-settings"></a>Impostazioni dei dispositivi multiutente condivisi
 
 > [!NOTE]
 > I dispositivi che eseguono Windows Holographic for Business, tra cui i dispositivi Microsoft HoloLens, supportano solo le impostazioni **Gestione account**. Se si configura una delle altre impostazioni visualizzate in Intune, inclusa l'impostazione **Modalità Computer condiviso**, tale configurazione non influirà su questi dispositivi.
 
-- **Gestione account**: impostare su **Abilita** per eliminare automaticamente gli account locali creati dagli utenti Guest e gli account in AD e in Azure AD. Quando un utente si disconnette dal dispositivo o quando viene eseguita la manutenzione del sistema, questi account vengono eliminati. Quando l'opzione è abilitata, impostare anche:
-  - **Eliminazione account**: scegliere quando eliminare gli account: **In corrispondenza della soglia di spazio di archiviazione**, **In corrispondenza della soglia di spazio di archiviazione e della soglia di inattività** o **Immediatamente dopo la disconnessione**. Specificare anche:
+- **Gestione account**: Specificare se gli account devono essere eliminati automaticamente. Le opzioni disponibili sono:
+  - **Non configurato** (impostazione predefinita): elimina automaticamente gli account locali creati dagli utenti guest e gli account in AD e in Azure AD. Quando un utente si disconnette dal dispositivo o quando viene eseguita la manutenzione del sistema, questi account vengono eliminati.
+
+    Specificare anche:
+
+    - **Eliminazione account**: scegliere quando eliminare gli account:
+      - **In corrispondenza della soglia di spazio di archiviazione**
+      - **In corrispondenza della soglia di spazio di archiviazione e della soglia di inattività**
+      - **Immediatamente dopo la disconnessione**
+
+    Specificare anche:
+
     - **Soglia di inizio dell'eliminazione (%)** : immettere una percentuale (0-100) di spazio su disco. Quando lo spazio totale di archiviazione o su disco scende sotto il valore specificato, vengono eliminati gli account memorizzati nella cache. Gli account vengono eliminati in modo continuo per recuperare spazio su disco. Gli account inattivi da più tempo vengono eliminati per primi.
     - **Soglia di interruzione dell'eliminazione (%)** : immettere una percentuale (0-100) di spazio su disco. Quando lo spazio totale di archiviazione o su disco corrisponde al valore specificato, l'eliminazione viene interrotta.
 
-  Impostare su **Disabilita** per mantenere gli account locali, AD e Azure AD creati dagli utenti guest.
-
-  > [!NOTE]
-  > I dispositivi Microsoft HoloLens supportano solo le impostazioni **Gestione account**.
+  - **Disabilita**: gli account locali, AD e Azure AD creati dagli utenti guest rimangono sul dispositivo e non vengono eliminati.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
 - [Assegnare il profilo](device-profile-assign.md) e [monitorarne lo stato](device-profile-monitor.md).
-- Vedere le impostazioni per [Windows 10 e versioni successive](shared-user-device-settings-windows.md).
+- Vedere le impostazioni dei dispositivi utente condivisi per [Windows 10 e versioni successive](shared-user-device-settings-windows.md).

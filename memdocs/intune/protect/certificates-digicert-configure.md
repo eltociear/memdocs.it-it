@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 04/21/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de7b96b5ad54a207b92221f7685f6c7f50942c46
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 99cad94d0d0f56aba94e8d00a091efea914f418e
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079876"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990343"
 ---
 # <a name="set-up-intune-certificate-connector-for-digicert-pki-platform"></a>Configurare il Connettore di certificati di Intune per la piattaforma DigiCert PKI
 
@@ -32,7 +32,7 @@ Usare il Connettore di certificati di Intune per rilasciare certificati PKCS dal
 > [!TIP]
 > DigiCert ha acquisito il settore della sicurezza dei siti Web di Symantec e le soluzioni PKI correlate. Per altre informazioni su questa modifica, vedere l'[articolo del supporto tecnico Symantec](https://support.symantec.com/en_US/article.INFO4722.html).
 
-Se si usa già il Connettore di certificati di Intune per rilasciare certificati da una CA Microsoft usando PKCS o System Center Endpoint Protection, è possibile usare lo stesso connettore per configurare e rilasciare certificati PKCS da una CA DigiCert. Dopo aver completato la configurazione per supportare la CA DigiCert, il Connettore di certificati di Intune può rilasciare i certificati seguenti:
+Se si usa già il Connettore di certificati di Intune per rilasciare certificati da una CA Microsoft usando PKCS o Simple Certificate Enrollment Protocol (SCEP), è possibile usare lo stesso connettore per configurare e rilasciare certificati PKCS da una CA DigiCert. Dopo aver completato la configurazione per supportare la CA DigiCert, il Connettore di certificati di Intune può rilasciare i certificati seguenti:
 
 * Certificati PKCS da una CA Microsoft
 * Certificati PKCS da una CA DigiCert

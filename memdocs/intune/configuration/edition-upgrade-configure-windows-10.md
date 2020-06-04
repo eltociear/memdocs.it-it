@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 068363167d5c6abb54dde26939b102db2f120d27
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b846aa1ead9bb2d1c1b15d783e646e59047c16ee
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79364383"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988405"
 ---
 # <a name="upgrade-windows-10-editions-or-switch-out-of-s-mode-on-devices-using-microsoft-intune"></a>Aggiornare le edizioni Windows 10 o disattivare la modalità S nei dispositivi con Microsoft Intune
-
-
 
 Come parte della soluzione di gestione di dispositivi mobili (MDM), può essere necessario aggiornare i dispositivi Windows 10. Ad esempio, aggiornare i dispositivi Windows 10 Professional a Windows 10 Enterprise. In alternativa, si vuole disattivare la modalità S del dispositivo.
 
@@ -100,21 +98,37 @@ La tabella seguente riporta i percorsi di aggiornamento supportati per il profil
 2. Selezionare **Dispositivi** > **Profili di configurazione** > **Crea profilo**.
 3. Immettere le proprietà seguenti:
 
+    - **Piattaforma**: selezionare **Windows 10 e versioni successive**.
+    - **Profilo**: selezionare **Aggiornamento edizione**.
+
+4. Selezionare **Crea**.
+5. In **Informazioni di base** immettere le proprietà seguenti:
+
     - **Nome**: immettere un nome descrittivo per il nuovo profilo. Ad esempio, immettere `Windows 10 edition upgrade profile` o `Windows 10 switch off S mode`.
     - **Descrizione**: Immettere una descrizione del profilo. Questa impostazione è facoltativa ma consigliata.
-    - **Piattaforma**: selezionare **Windows 10 e versioni successive**.
-    - **Tipo di profilo**: selezionare **Aggiornamento edizione**.
-    - **Settings** (Impostazioni): immettere le impostazioni da configurare. Per un elenco di tutte le impostazioni e delle operazioni corrispondenti, vedere:
 
-        - [Aggiornamento a Windows 10 e modalità S](edition-upgrade-windows-settings.md)
-        - [Windows Holographic for Business](holographic-upgrade.md)
+6. Selezionare **Avanti**.
+7. In **Impostazioni di configurazione** immettere le impostazioni da configurare. Per un elenco di tutte le impostazioni e delle operazioni corrispondenti, vedere:
 
-4. Selezionare **OK** > **Crea** per salvare le modifiche.
+    - [Aggiornamento a Windows 10 e modalità S](edition-upgrade-windows-settings.md)
+    - [Windows Holographic for Business](holographic-upgrade.md)
 
-Il profilo viene creato e visualizzato nell'elenco. Assicurarsi di [assegnare il profilo](device-profile-assign.md) e [monitorarne lo stato](device-profile-monitor.md).
+8. Selezionare **Avanti**.
+
+9. In **Tag ambito** (facoltativo) assegnare un tag per filtrare il profilo a gruppi IT specifici, ad esempio `US-NC IT Team` o `JohnGlenn_ITDepartment`. Per altre informazioni sui tag di ambito, vedere [Usare il controllo degli accessi in base al ruolo (RBAC) e i tag di ambito per l'infrastruttura IT distribuita](../fundamentals/scope-tags.md).
+
+    Selezionare **Avanti**.
+
+10. In **Assegnazioni** selezionare gli utenti o il gruppo utenti che riceveranno il profilo. Per altre informazioni sull'assegnazione di profili, vedere [Assegnare profili utente e dispositivo](device-profile-assign.md).
+
+    Selezionare **Avanti**.
+
+11. In **Rivedi e crea** rivedere le impostazioni. Quando si seleziona **Crea**, le modifiche vengono salvate e il profilo viene assegnato. Il criterio viene visualizzato anche nell'elenco dei profili.
+
+Alla successiva sincronizzazione di ogni dispositivo viene applicato il criterio.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Dopo averlo creato, il profilo è pronto per l'assegnazione. [Assegnare il profilo](device-profile-assign.md) e [monitorarne lo stato](device-profile-monitor.md).
+Dopo l'[assegnazione del profilo](device-profile-assign.md) [monitorarne lo stato](device-profile-monitor.md).
 
-Visualizzare le impostazioni di aggiornamento e della modalità S per i dispositivi [Windows 10](edition-upgrade-windows-settings.md) e [Windows Holographic for Business](holographic-upgrade.md).
+Vedere le impostazioni di aggiornamento e della modalità S per i dispositivi [Windows 10](edition-upgrade-windows-settings.md) e [Windows Holographic for Business](holographic-upgrade.md).

@@ -5,8 +5,8 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/01/2020
-ms.topic: conceptual
+ms.date: 05/21/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.reviewer: laarrizz
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35e48be90b80d0c776087c95444f5f77f5ff547c
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.openlocfilehash: d533acfa60672bed3d6919116f11f43d525b6551
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693409"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988320"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Usare le baseline di sicurezza per configurare i dispositivi Windows 10 in Intune
 
@@ -74,17 +74,21 @@ Quando si è pronti per passare a una versione più recente di una baseline in u
 
 Ogni istanza di una nuova versione di una baseline può aggiungere o rimuovere impostazioni o introdurre altre modifiche. Ad esempio, quando diventano disponibili nuove impostazioni di Windows 10 con le nuove versioni di Windows 10, la baseline di sicurezza MDM potrebbe ricevere una nuova istanza di versione che include le impostazioni più recenti.
 
-Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), in **Sicurezza degli endpoint** > **Baseline di sicurezza** verrà visualizzato un elenco delle baseline disponibili. L'elenco include il nome del modello di baseline, il numero di profili esistenti che usano tale tipo di baseline, il numero di istanze separate (versioni) del tipo di baseline disponibili e la data *Ultima pubblicazione* che indica quando è diventata disponibile l'ultima versione del modello di baseline.
+Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), in **Sicurezza degli endpoint** > **Baseline di sicurezza** verrà visualizzato un elenco delle baseline disponibili. L'elenco include:
+- il nome del modello di baseline
+- il numero di profili esistenti che usano tale tipo di baseline
+- il numero di istanze separate (versioni) del tipo di baseline disponibile
+- la data *Ultima pubblicazione* che indica quando è diventata disponibile la versione più recente del modello di baseline
 
-Per visualizzare altre informazioni sulle versioni delle baseline usate, selezionare un riquadro di baseline per aprire il relativo riquadro *Panoramica* e quindi selezionare **Versioni**. Intune visualizza i dettagli sulle versioni di tale baseline in uso nei profili, inclusa la versione della baseline più recente e aggiornata.  È possibile selezionare una singola versione per visualizzare ulteriori dettagli sui profili che usano tale versione.
+Per visualizzare altre informazioni sulle versioni delle baseline usate, selezionare una baseline per aprire il relativo riquadro *Panoramica* e quindi selezionare **Versioni**. Intune visualizza i dettagli sulle versioni di tale baseline in uso nei profili. I dettagli includono la versione della baseline più recente e corrente. È possibile selezionare una singola versione per visualizzare ulteriori dettagli sui profili che usano tale versione.
 
-È possibile scegliere di [modificare la versione](#change-the-baseline-version-for-a-profile) di una baseline in uso con un determinato profilo. Questo significa che quando viene pubblicata una nuova versione, non è necessario creare un nuovo profilo di baseline per sfruttarne i vantaggi. Al contrario, quando si è pronti, è possibile selezionare un profilo di baseline e quindi usare l'opzione predefinita per sostituire la versione dell'istanza per il profilo con una nuova.
+È possibile scegliere di [modificare la versione](#change-the-baseline-version-for-a-profile) di una baseline in uso con un determinato profilo. Quando si sostituisce la versione, non è necessario creare un nuovo profilo di baseline per sfruttarne le versioni aggiornate. Al contrario, è possibile selezionare un profilo di baseline e usare l'opzione predefinita per sostituire la versione dell'istanza per il profilo con una nuova.
 
 ### <a name="compare-baseline-versions"></a>Confrontare le versioni delle baseline
 
 Nel riquadro **Versioni** per una baseline di sicurezza è disponibile un elenco di tutte le versioni della baseline distribuite. Questo elenco include anche la versione più recente e attiva della baseline. Quando si crea un nuovo *profilo* di baseline di sicurezza, il profilo usa la versione più recente della baseline di sicurezza.  È possibile continuare a usare e modificare i profili creati in precedenza che usano una versione precedente della baseline, incluse le baseline create con una versione di anteprima.
 
-Per informazioni su cosa è cambiato da una versione a un'altra, selezionare le caselle di controllo per due versioni diverse e quindi selezionare **Compare baselines** (Confronta baseline) per scaricare un file CSV con informazioni dettagliate su tali differenze. 
+Per informazioni su cosa è cambiato da una versione a un'altra, selezionare le caselle di controllo per due versioni diverse e quindi selezionare **Compare baselines** (Confronta baseline). Viene quindi richiesto di scaricare un file CSV con informazioni dettagliate su tali differenze.
 
 Il download identifica ogni impostazione nelle due versioni della baseline e indica se l'impostazione è cambiata (*notEqual*) o è rimasta invariata (*equal*). I dettagli includono anche il valore predefinito per l'impostazione in base alla versione e indicano l'impostazione è stata *aggiunta* alla versione più recente oppure *rimossa* dalla versione più recente.
 
@@ -206,6 +210,36 @@ Al momento del salvataggio, dopo il completamento della conversione, la baseline
 Quando un'impostazione della baseline di sicurezza non è più applicabile a un dispositivo oppure le impostazioni in una baseline vengono impostate su *Non configurato*, per queste impostazioni in un dispositivo non viene ripristinata una configurazione gestita in precedenza. Le impostazioni precedentemente gestite nel dispositivo mantengono invece le ultime configurazioni ricevute dalla baseline fino a quando un altro processo non aggiorna tali impostazioni nel dispositivo.
 
 Altri processi che potrebbero modificare le impostazioni nel dispositivo in un secondo momento includono l'aggiunta o la modifica di una baseline della sicurezza, un profilo di configurazione del dispositivo, configurazioni di Criteri di gruppo o la modifica manuale dell'impostazione nel dispositivo.
+
+### <a name="duplicate-a-security-baseline"></a>Duplicare una baseline di sicurezza
+
+È possibile creare duplicati delle baseline di sicurezza. La duplicazione di una baseline è utile quando si vuole assegnare una baseline simile ma distinta a un subset di dispositivi. Creando un duplicato, non è necessario ricreare manualmente l'intera baseline. È invece possibile duplicare una qualsiasi delle baseline correnti e quindi introdurre solo le modifiche necessarie per la nuova istanza. È possibile modificare solo un'impostazione specifica e il gruppo a cui è assegnata la baseline.
+
+Quando si crea un duplicato, si assegna alla copia un nuovo nome. La copia viene creata con le stesse configurazioni di impostazione e tag di ambito dell'originale, ma non avrà assegnazioni. È necessario modificare la nuova baseline per aggiungere assegnazioni.
+
+Tutte le baseline di sicurezza supportano la creazione di un duplicato.
+
+Dopo aver duplicato una baseline, rivedere e modificare la nuova istanza per apportare modifiche alla relativa configurazione.
+
+#### <a name="to-duplicate-a-baseline"></a>Per duplicare una baseline
+
+1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Passare a **Endpoint security**(Sicurezza degli endpoint) > **Baseline di sicurezza**, selezionare il tipo di baseline da duplicare, quindi selezionare **Profili**.
+3. Fare clic con il pulsante destro del mouse sul profilo da duplicare e selezionare **Duplica** oppure selezionare i puntini di sospensione ( **...** ) a destra della baseline e selezionare **Duplica**.
+4. Specificare un **Nuovo nome** per la baseline e quindi selezionare **Salva**.
+
+Dopo un *aggiornamento*, il nuovo profilo della baseline viene visualizzato nell'interfaccia di amministrazione.
+
+#### <a name="to-edit-a-baseline"></a>Per modificare una baseline
+
+1. Selezionare la baseline, quindi selezionare **Proprietà**.
+2. Selezionare **Impostazioni** per espandere l'elenco delle categorie di impostazioni nella baseline. Non è possibile modificare le impostazioni da questa visualizzazione, ma è possibile esaminare il modo in cui sono state configurate.
+3. Per modificare le impostazioni, selezionare **Modifica** per ogni categoria in cui si vuole apportare una modifica:
+   - Informazioni di base
+   - Assignments
+   - Tag di ambito
+   - Impostazioni di configurazione
+4. Dopo aver apportato le modifiche, selezionare **Salva** per salvarle.  È necessario salvare le modifiche apportate a una categoria prima di poter introdurre modifiche a categorie aggiuntive.
 
 ### <a name="older-baseline-versions"></a>Versioni delle baseline precedenti
 

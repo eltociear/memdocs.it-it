@@ -1,12 +1,12 @@
 ---
 title: Usare i modelli per dispositivi Windows 10 in Microsoft Intune - Azure | Microsoft Docs
-description: Usare i modelli amministrativi di Microsoft Intune ed Endpoint Manager per creare gruppi di impostazioni per dispositivi Windows 10. Usare queste impostazioni in un profilo di configurazione del dispositivo per controllare le applicazioni di Office, Microsoft Edge, proteggere le funzionalità di Internet Explorer, controllare l'accesso a OneDrive, usare le funzionalità di desktop remoto, abilitare la riproduzione automatica, impostare le opzioni di risparmio energia, usare la stampa HTTP, usare opzioni di accesso utente diverse e controllare le dimensioni del log eventi.
+description: Usare i modelli amministrativi di Microsoft Intune ed Endpoint Manager per creare gruppi di impostazioni per dispositivi Windows 10. Usare queste impostazioni in un profilo di configurazione del dispositivo per controllare le applicazioni di Office, Microsoft Edge, proteggere Internet Explorer, accedere a OneDrive, usare Desktop remoto, abilitare la riproduzione automatica, impostare le opzioni di risparmio energia, usare la stampa HTTP, controllare l'accesso utente e modificare le dimensioni del log eventi.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/15/2020
-ms.topic: conceptual
+ms.date: 05/14/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,18 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f609ec62259deffb220c8ee935d0f10a98ae77b5
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 89635c9eb2849b4896ea3df85dd081d6e267627e
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254895"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990201"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Usare i modelli di Windows 10 per configurare le impostazioni di Criteri di gruppo in Microsoft Intune
 
 Per gestire i dispositivi di un'organizzazione, può essere utile creare un gruppo di impostazioni da applicare a gruppi di dispositivi diversi. Supponiamo ad esempio di avere vari gruppi di dispositivi. A GruppoA si vuole assegnare un set di impostazioni specifico. A GruppoB si vuole assegnare un set di impostazioni diverso. Si vuole anche disporre di una visualizzazione semplice delle impostazioni che è possibile configurare.
 
-Per completare questa attività, è possibile usare **Modelli amministrativi** in Microsoft Intune. I modelli amministrativi includono centinaia di impostazioni che controllano le funzionalità in Microsoft Edge versione 77 e successive, Internet Explorer, applicazioni Microsoft Office, Desktop remoto, OneDrive, password e PIN e altro ancora. Queste impostazioni consentono agli amministratori di gruppi di gestire i Criteri di gruppo tramite il cloud.
+Per completare questa attività, è possibile usare **Modelli amministrativi** in Microsoft Intune. I modelli amministrativi includono migliaia di impostazioni che controllano le funzionalità in Microsoft Edge versione 77 e successive, Internet Explorer, applicazioni Microsoft Office, Desktop remoto, OneDrive, password, PIN e altro ancora. Queste impostazioni consentono agli amministratori di gruppi di gestire i Criteri di gruppo tramite il cloud.
 
 Questa funzionalità si applica a:
 
@@ -62,27 +62,27 @@ Questo articolo illustra i passaggi da eseguire per creare un modello per dispos
 
 6. Selezionare **Avanti**.
 
-7. In **Impostazioni di configurazione** configurare le impostazioni che si applicano al dispositivo (**Configurazione computer**) e le impostazioni che si applicano agli utenti **(Configurazione utente**):
+7. In **Impostazioni di configurazione** selezionare **Tutte le impostazioni** per vedere un elenco di tutte le impostazioni in ordine alfabetico. In alternativa, configurare le impostazioni che si applicano ai dispositivi (**Configurazione computer**) e le impostazioni che si applicano agli utenti (**Configurazione utente**):
 
     > [!div class="mx-imgBorder"]
     > ![Applicare le impostazioni del modello ADMX a utenti e dispositivi in Microsoft Intune Endpoint Manager](./media/administrative-templates-windows/administrative-templates-choose-computer-user-configuration.png)
 
-8. Quando si seleziona **Configurazione computer**, vengono visualizzate le categorie di impostazioni. È possibile selezionare qualsiasi categoria per visualizzare le impostazioni disponibili.
+8. Quando si seleziona **Tutte le impostazioni** viene elencata ogni impostazione. Scorrere verso il basso e usare le frecce per andare avanti e indietro per visualizzare altre impostazioni:
+
+    > [!div class="mx-imgBorder"]
+    > ![Esempio di un elenco di impostazioni con le frecce avanti e indietro](./media/administrative-templates-windows/administrative-templates-sample-settings-list.png)
+
+9. Selezionare un'impostazione qualsiasi, Ad esempio, filtrare in base a **Office** e selezionare **Attivazione esplorazione con restrizioni**. Viene visualizzata una descrizione dettagliata dell'impostazione. Scegliere **Abilitata**, **Disabilitata** oppure lasciare l'opzione **Non configurata** (impostazione predefinita). La descrizione dettagliata spiega anche cosa accade quando si sceglie **Abilitata**, **Disabilitata** o **Non configurata**.
+
+    > [!TIP]
+    > Le impostazioni di Windows in Intune sono correlate al percorso dei Criteri di gruppo locali visualizzato in Editor Criteri di gruppo locali (`gpedit`)
+
+10. Quando si seleziona **Configurazione computer** o **Configurazione utente** vengono visualizzate le categorie di impostazioni. È possibile selezionare qualsiasi categoria per visualizzare le impostazioni disponibili.
 
     Selezionare ad esempio **Configurazione computer** > **Componenti di Windows** > **Internet Explorer** per visualizzare tutte le impostazioni del dispositivo che si applicano a Internet Explorer:
 
     > [!div class="mx-imgBorder"]
     > ![Vedere tutte le impostazioni del dispositivo che si applicano a Internet Explorer in Microsoft Intune Endpoint Manager](./media/administrative-templates-windows/administrative-templates-all-internet-explorer-settings-device.png)
-
-9. È anche possibile selezionare **Tutte le impostazioni** per visualizzare tutte le impostazioni del dispositivo. Scorrere verso il basso e usare le frecce per andare avanti e indietro per visualizzare altre impostazioni:
-
-    > [!div class="mx-imgBorder"]
-    > ![Esempio di un elenco di impostazioni con le frecce avanti e indietro](./media/administrative-templates-windows/administrative-templates-sample-settings-list.png)
-
-10. Selezionare un'impostazione qualsiasi, Ad esempio, filtrare in base a **Office** e selezionare **Attivazione esplorazione con restrizioni**. Viene visualizzata una descrizione dettagliata dell'impostazione. Scegliere **Abilitata**, **Disabilitata** oppure lasciare l'opzione **Non configurata** (impostazione predefinita). La descrizione dettagliata spiega anche cosa accade quando si sceglie **Abilitata**, **Disabilitata** o **Non configurata**.
-
-    > [!TIP]
-    > Le impostazioni di Windows in Intune sono correlate al percorso dei Criteri di gruppo locali visualizzato in Editor Criteri di gruppo locali (`gpedit`)
 
 11. Selezionare **OK** per salvare le modifiche.
 
@@ -104,7 +104,7 @@ Questo articolo illustra i passaggi da eseguire per creare un modello per dispos
 14. In **Assegnazioni** selezionare l'utente o i gruppi che riceveranno il profilo. Per altre informazioni sull'assegnazione di profili, vedere [Assegnare profili utente e dispositivo](device-profile-assign.md).
 
     Se il profilo è assegnato a gruppi di utenti, le impostazioni ADMX configurate si applicano a tutti i dispositivi che l'utente registra e a cui accede. Se il profilo è assegnato a gruppi di dispositivi, le impostazioni ADMX configurate si applicano a qualsiasi utente che accede al dispositivo. Questa assegnazione si verifica se l'impostazione ADMX è una configurazione computer (`HKEY_LOCAL_MACHINE`) o una configurazione utente (`HKEY_CURRENT_USER`). Con alcune impostazioni, un'impostazione del computer assegnata a un utente può anche influire sull'esperienza di altri utenti su tale dispositivo.
-    
+
     Per altre informazioni, vedere [Gruppi di utenti e gruppi di dispositivi](device-profile-assign.md#user-groups-vs-device-groups).
 
     Selezionare **Avanti**.
@@ -115,16 +115,22 @@ Alla successiva verifica degli aggiornamenti della configurazione da parte del d
 
 ## <a name="find-some-settings"></a>Trovare alcune impostazioni
 
-In questi modelli sono disponibili centinaia di impostazioni. Per trovare più facilmente determinate impostazioni, usare le funzionalità predefinite:
+In questi modelli sono disponibili migliaia di impostazioni. Per trovare più facilmente determinate impostazioni, usare le funzionalità predefinite:
 
-- Nel modello selezionare la colonna **Impostazioni**, **Stato**, **Tipo di impostazione** o **Percorso** per ordinare l'elenco. Ad esempio, selezionare la colonna **Percorso** e usare la freccia avanti per visualizzare le impostazioni nel percorso `Microsoft Excel`:
+- Nel modello selezionare la colonna **Impostazioni**, **Stato**, **Tipo di impostazione** o **Percorso** per ordinare l'elenco. Ad esempio, selezionare la colonna **Percorso** e usare la freccia avanti per vedere le impostazioni nel percorso `Microsoft Excel`.
 
-- Usare la **casella di ricerca** del modello per trovare impostazioni specifiche. È possibile eseguire la ricerca in base all'impostazione o al percorso. Ad esempio, cercare `copy`. Vengono visualizzate tutte le impostazioni che contengono `copy`:
+- Usare la **casella di ricerca** del modello per trovare impostazioni specifiche. È possibile eseguire la ricerca in base all'impostazione o al percorso. Ad esempio, selezionare **Tutte le impostazioni** e cercare `copy`. Vengono visualizzate tutte le impostazioni che contengono `copy`:
 
   > [!div class="mx-imgBorder"]
   > ![Ricerca di copy per visualizzare tutte le impostazioni del dispositivo nei modelli amministrativi in Intune](./media/administrative-templates-windows/search-copy-settings.png) 
 
   In un altro esempio cercare `microsoft word`. Vengono visualizzate le impostazioni che è possibile configurare per l'applicazione Microsoft Word. Cercare `explorer` per visualizzare le impostazioni di Internet Explorer che è possibile aggiungere al modello.
+
+- È anche possibile limitare la ricerca selezionando **Configurazione computer** o **Configurazione utente**.
+
+  Ad esempio, per vedere tutte le impostazioni utente di Internet Explorer disponibili selezionare **Configurazione utente**e cercare `Internet Explorer`. Vengono visualizzate solo le impostazioni di IE che si applicano agli utenti:
+
+  :::image type="content" source="./media/administrative-templates-windows/show-all-internet-explorer-settings-user-configuration.png" alt-text="Nel modello ADMX selezionare Configurazione utente e cercare o filtrare per Internet Explorer in Microsoft Intune.":::
 
 ## <a name="next-steps"></a>Passaggi successivi
 

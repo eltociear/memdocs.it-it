@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d2f671e88b1221961e978d1945e28c7cec474cb
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9fbe28a6585fe9fe5cf7772b559924675ac39a30
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086497"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429480"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Impostazioni dei dispositivi Windows 10 e Windows Holographic per l'aggiunta di connessioni VPN con Intune
 
@@ -66,7 +66,7 @@ A seconda delle impostazioni selezionate, è possibile che non tutti i valori si
   - **PPTP**
 
   Quando si sceglie un tipo di connessione VPN, potrebbe essere richieste anche le impostazioni seguenti:  
-  - **Sempre online**: scegliere **Abilita** per connettersi automaticamente alla connessione VPN quando si verificano gli eventi seguenti:
+  - **Sempre online**: **Abilita** connette automaticamente alla connessione VPN quando si verificano gli eventi seguenti:
     - Gli utenti accedono ai propri dispositivi
     - La rete del dispositivo cambia
     - Lo schermo del dispositivo si riattiva dopo essere stato disattivato
@@ -114,10 +114,11 @@ Per altre informazioni sulla creazione di XML EAP personalizzato, vedere [EAP co
 
   - **Associa WIP a questa connessione**: immettere un **dominio WIP per la connessione**
   - **Associa le app a questa connessione**: selezionare **Limita la connessione VPN a queste app** e quindi aggiungere le **app associate**. Le app immesse usano automaticamente la connessione VPN. Il tipo di app determina l'identificatore dell'app. Per un'app universale, immettere il nome della famiglia di pacchetti. Per un'app desktop, immettere il percorso del file dell'app.
-  >[!IMPORTANT]
-  >È consigliabile proteggere tutti gli elenchi di app creati per le reti VPN per singole app. Se un utente non autorizzato modifica l'elenco e l'elenco viene importato nell'elenco delle app della VPN per singole app, si autorizzano potenzialmente le app che non dovrebbero essere autorizzate ad accedere alla VPN. Un modo per proteggere gli elenchi delle app consiste nell'usare un elenco di controllo di accesso (ACL).
 
-- **Regole del traffico di rete per questa connessione VPN**: selezionare i protocolli, oltre alle porte e agli intervalli di indirizzi locali e remoti, abilitati per la connessione VPN. Se non si crea una regola di traffico di rete, vengono abilitati tutti i protocolli, le porte e gli intervalli di indirizzi. Dopo la creazione di una regola, la connessione VPN usa soltanto i protocolli, le porte e gli intervalli di indirizzi immessi nella regola.
+  > [!IMPORTANT]
+  > È consigliabile proteggere tutti gli elenchi di app creati per le reti VPN per singole app. Se un utente non autorizzato modifica l'elenco e l'elenco viene importato nell'elenco delle app della VPN per singole app, si autorizzano potenzialmente le app che non dovrebbero essere autorizzate ad accedere alla VPN. Un modo per proteggere gli elenchi delle app consiste nell'usare un elenco di controllo di accesso (ACL).
+
+- **Regole del traffico di rete per questa connessione VPN**: selezionare i protocolli, le porte e gli intervalli di indirizzi locali e remoti abilitati per la connessione VPN. Se non si crea una regola di traffico di rete, vengono abilitati tutti i protocolli, le porte e gli intervalli di indirizzi. Dopo la creazione di una regola, la connessione VPN usa soltanto i protocolli, le porte e gli intervalli di indirizzi immessi nella regola.
 
 ## <a name="conditional-access"></a>Accesso condizionale
 

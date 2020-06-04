@@ -5,8 +5,8 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
-ms.topic: conceptual
+ms.date: 05/26/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8b8bde6b7979cfe3b936a08630e23e19fc7e5a0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: fff21eac61f7b68e00989aefc1f9ea6dc3ad7c0a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81615063"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989321"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Configurare azioni per i dispositivi non conformi in Intune
 
@@ -55,11 +55,25 @@ Quando viene inviato il messaggio di posta elettronica, Intune include le inform
 
 - **Blocca in remoto il dispositivo non conforme**: Usare questa azione per emettere un blocco remoto di un dispositivo. All'utente viene quindi richiesto un PIN o una password per sbloccare il dispositivo. Sono disponibili altre informazioni sulla funzionalità [Blocco remoto](../remote-actions/device-remote-lock.md).
 
+  Questa azione è supportata dalle piattaforme seguenti:
+  - Android:
+    - Amministratore dispositivo Android
+    - Proprietario dispositivo Android Enterprise
+    - Profilo di lavoro di Android Enterprise
+    - Dispositivi in modalità tutto schermo di Android Enterprise
+  - iOS/iPadOS
+  - macOS
+  - Windows 10 Mobile
+  - Windows Phone 8.1 e versioni successive
+
 - **Retire the noncompliant device** (Ritira dispositivo non conforme): Questa azione rimuovere tutti i dati aziendali dal dispositivo e rimuovere il dispositivo dalla gestione di Intune. Per impedire la cancellazione accidentale di un dispositivo, questa azione supporta una pianificazione minima di **30** giorni.
 
   Questa azione è supportata dalle piattaforme seguenti:
-  - Android
-  - iOS
+  - Android:
+    - Amministratore dispositivo Android
+    - Proprietario dispositivo Android Enterprise
+    - Profilo di lavoro di Android Enterprise
+  - iOS/iPadOS
   - macOS
   - Windows 10 Mobile
   - Windows Phone 8.1 e versioni successive
@@ -161,7 +175,7 @@ Quando si crea un criterio di conformità del dispositivo, Intune crea automatic
 
    - **Blocca in remoto il dispositivo non conforme**: quando il dispositivo non è conforme, bloccare il dispositivo. Questa azione obbliga l'utente a immettere un PIN o un passcode per sbloccare il dispositivo.
 
-   - **Retire the noncompliant device** (Ritira dispositivo non conforme): quando il dispositivo non è conforme, rimuovere tutti i dati aziendali dal dispositivo e rimuovere il dispositivo dalla gestione di Intune. Per impedire la cancellazione accidentale di un dispositivo, questa azione supporta una pianificazione minima di **30** giorni.
+   - **Retire the noncompliant device** (Ritira dispositivo non conforme): quando il dispositivo non è conforme, rimuovere tutti i dati aziendali dal dispositivo e rimuovere il dispositivo dalla gestione di Intune.
 
    - **Invia una notifica push all'utente finale**: Configurare questa azione per inviare una notifica push relativa alla non conformità a un dispositivo tramite l'app Portale aziendale o Intune sul dispositivo.
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fa861a266f89b82fdd2d6e73d30fdc2e58da33b4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 0cd3505d0a0067adfe9082d7aa3882f3421a2183
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086925"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429594"
 ---
 # <a name="email-profile-settings-for-devices-running-windows-10-in-microsoft-intune"></a>Impostazioni del profilo di posta elettronica per i dispositivi che eseguono Windows 10 in Microsoft Intune
 
@@ -38,12 +38,12 @@ Usare le impostazioni del profilo di posta elettronica per configurare l'app di 
   - **Nome entità utente**: ottiene il nome, ad esempio `user1` o `user1@contoso.com`.
   - **Indirizzo SMTP primario**: ottiene il nome nel formato dell'indirizzo di posta elettronica, ad esempio `user1@contoso.com`.
   - **Nome account SAM**: richiede il dominio, ad esempio `domain\user1`. Specificare anche:  
-    - **Origine del nome di dominio utente**: scegliere **AAD** (Azure Active Directory) o **Personalizzato**.
+    - **Origine del nome di dominio utente**: selezionare **AAD** (Azure Active Directory) o **Personalizzato**.
 
-      Quando si sceglie di ottenere gli attributi da **AAD**, specificare:
+      Quando si recuperano gli attributi da **AAD** immettere anche:
       - **Attributo nome di dominio utente da AAD**: scegliere di ottenere l'attributo **Nome completo** o **Nome NetBIOS** dell'utente.
 
-      Quando si sceglie di usare attributi di tipo **Personalizzato**, specificare:
+      Quando si usano attributi **personalizzati** immettere anche:
       - **Nome di dominio personalizzato da usare**: immettere un valore usato da Intune per il nome di dominio, ad esempio `contoso.com` o `contoso`.
 
 - **Attributo indirizzo di posta elettronica da AAD**: Intune ottiene questo attributo da Azure Active Directory (AAD). scegliere la modalità di generazione dell'indirizzo di posta elettronica per l'utente. Le opzioni disponibili sono:
@@ -59,9 +59,11 @@ Usare le impostazioni del profilo di posta elettronica per configurare l'app di 
 - **Numero di messaggi di posta elettronica da sincronizzare**: selezionare il numero di giorni di posta elettronica da sincronizzare. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Selezionare **Senza limiti** per sincronizzare tutti i messaggi di posta elettronica disponibili.
 - **Pianificazione sincronizzazione**: selezionare la pianificazione in base alla quale i dispositivi devono sincronizzare i dati dal server Exchange. È anche possibile selezionare **Quando arrivano i messaggi** in modo che i dati vengano sincronizzati non appena arrivano. In alternativa, selezionare **Manuale** in modo che sia l'utente del dispositivo ad avviare la sincronizzazione.
 
+  Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
+
 ### <a name="content-sync"></a>Sincronizzazione contenuto
 
-- **Tipo di contenuto da sincronizzare**: Selezionare i tipi di contenuto da sincronizzare nei dispositivi:
+- **Tipo di contenuto da sincronizzare**: Selezionare i tipi di contenuto da sincronizzare nei dispositivi. Le opzioni disponibili sono:
   - **Contatti**: **Sì** sincronizza i contatti. **No** non sincronizza automaticamente i contatti. Gli utenti eseguono la sincronizzazione manualmente.
   - **Calendario**: **Sì** sincronizza il calendario. **No** non sincronizza automaticamente i contatti. Gli utenti eseguono la sincronizzazione manualmente.
   - **Attività**: **Sì** sincronizza le attività. **No** non sincronizza automaticamente le attività. Gli utenti eseguono la sincronizzazione manualmente.
@@ -70,4 +72,6 @@ Usare le impostazioni del profilo di posta elettronica per configurare l'app di 
 
 È anche possibile configurare le impostazioni di posta elettronica in [Android](email-settings-android.md), [Android Enterprise](email-settings-android-enterprise.md), e [iOS/iPadOS](email-settings-ios.md). 
 
-[Configurare le impostazioni di posta elettronica in Intune](email-settings-configure.md).
+[Altre informazioni sulle impostazioni di posta elettronica in Intune](email-settings-configure.md).
+
+[Assegnare il profilo](device-profile-assign.md) e [monitorarne lo stato](device-profile-monitor.md).

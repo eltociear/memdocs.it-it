@@ -5,8 +5,8 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
-ms.topic: conceptual
+ms.date: 5/15/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8d4b866ca2086ae11efa10f1967b08f12e55919
-ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
+ms.openlocfilehash: d1b13d29f42778d73d4df4a86127b070db5dc601
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82881027"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989812"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Usare le credenziali derivate in Microsoft Intune
 
@@ -63,7 +63,7 @@ Intune supporta le credenziali derivate nelle piattaforme seguenti:
 
 Intune supporta un singolo emittente di credenziali derivate per ogni tenant. È possibile configurare Intune in modo che funzioni con gli emittenti seguenti:
 
-- **DISA Purebred** (solo iOS): https:\//cyber.mil/pki-pke/purebred/
+- **DISA Purebred** (solo iOS): https://public.cyber.mil/pki-pke/purebred/
 - **Entrust Datacard**: https://www.entrustdatacard.com/
 - **Intercede**: https://www.intercede.com/
 
@@ -112,6 +112,7 @@ Di seguito sono riportate alcune considerazioni chiave per ogni partner supporta
 Esaminare il flusso di lavoro utente specifico della piattaforma per i dispositivi che si useranno con le credenziali derivate.
 
 - [iOS e iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-disa-purebred)
+- [Dispositivi Android Enterprise completamente gestiti](https://docs.microsoft.com/mem/intune/user-help/enroll-android-device-disa-purebred)
 
 **I requisiti principali includono**:
 
@@ -226,7 +227,10 @@ Oltre a distribuire l'app con Intune, configurare una rete VPN per app di Intune
   
 1. Scaricare l'applicazione DISA Purebred: https:\//cyber.mil/pki-pke/purebred/.
 
-2. Distribuire l'applicazione DISA Purebred in Intune. Vedere [Aggiungere un'app line-of-business per iOS a Microsoft Intune](../apps/lob-apps-ios.md).
+2. Distribuire l'applicazione DISA Purebred in Intune. 
+
+   - Vedere [Aggiungere un'app line-of-business per iOS a Microsoft Intune](../apps/lob-apps-ios.md).
+   - Vedere [Aggiungere un'app line-of-business per Android a Microsoft Intune](../apps/lob-apps-android.md)
 
 3. [Creare una VPN per app](../configuration/vpn-settings-configure.md) per l'applicazione DISA Purebred.
 

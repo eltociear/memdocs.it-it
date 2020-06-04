@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 01/30/2020
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 53f33b659e45720dc84b7c38ca54fec0e3768a60
-ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
+ms.openlocfilehash: b35011577b6c5882a2f136d9b6d321b182c2be6a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82126090"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83991084"
 ---
 # <a name="troubleshoot-device-to-ndes-server-communication-for-scep-certificate-profiles-in-microsoft-intune"></a>Risolvere i problemi di comunicazione tra dispositivo e server NDES per i profili di certificato SCEP in Microsoft Intune
 
@@ -161,7 +161,7 @@ Le connessioni simili all'esempio seguente, con codice di stato 500, indicano ch
 
 Usare la procedura seguente per testare l'URL specificato nel profilo di certificato SCEP.
 
-1. In Intune modificare il profilo di certificato SCEP e copiare l'URL del server. L'URL dovrebbe essere simile a *https://contoso.com/certsrv/mscep/mscep.dll* .
+1. In Intune modificare il profilo di certificato SCEP e copiare l'URL del server. L'URL dovrebbe essere simile a `https://contoso.com/certsrv/mscep/mscep.dll`.
 
 2. Aprire un Web browser e passare all'URL del server SCEP. Il risultato dovrebbe essere: **Errore HTTP 403.0 - Accesso negato**. Questo risultato indica che l'URL funziona correttamente.
 

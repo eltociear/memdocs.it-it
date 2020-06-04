@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/18/2019
+ms.date: 05/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 18de92792582d4c6753bc8657c56d73fa1509788
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3d54e02c7bb88354ec59a9a8ce780ff559377466
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80359136"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556099"
 ---
 # <a name="windows-holographic-for-business-device-settings-to-run-as-a-kiosk-in-intune"></a>Impostazioni dei dispositivi Windows Holographic for Business per l'esecuzione come dispositivo in modalità tutto schermo in Intune
 
@@ -34,50 +34,79 @@ Per altre informazioni sulla funzionalità Modalità tutto schermo di Windows in
 
 ## <a name="before-you-begin"></a>Prima di iniziare
 
-[Creare il profilo](kiosk-settings.md#create-the-profile).
+- [Creare un profilo di configurazione del dispositivo per chiosco multimediale di Windows 10](kiosk-settings.md#create-the-profile).
 
-## <a name="single-full-screen-app-kiosks"></a>App singola per chioschi multimediali a schermo intero
+  Quando si crea un profilo di configurazione del dispositivo per chiosco multimediale di Windows 10, sono disponibili altre impostazioni rispetto a quelle elencate in questo articolo. I dispositivi Windows Holographic for Business supportano le impostazioni indicate in questo articolo.
 
-Quando si sceglie la modalità App singola per chiosco multimediale a schermo intero, immettere le impostazioni seguenti:
+- Questo profilo per la modalità tutto schermo è direttamente correlato al profilo di restrizioni per i dispositivi creato usando le [impostazioni della modalità tutto schermo di Microsoft Edge](device-restrictions-windows-holographic.md#microsoft-edge-browser). Per concludere:
 
-- **Tipo di accesso utente**: selezionare **Account utente locale** per immettere l'account utente locale (per il dispositivo) oppure un account Microsoft associato all'app in modalità tutto schermo. I tipi di account utente con **accesso automatico** non sono supportati in Windows Holographic for Business.
+  1. Creare questo profilo per la modalità tutto schermo per l'esecuzione del dispositivo in modalità tutto schermo.
+  2. Creare il [profilo di restrizioni per i dispositivi](device-restrictions-windows-holographic.md#microsoft-edge-browser) e configurare le funzionalità e le impostazioni specifiche consentite in Microsoft Edge.
 
-- **Tipo di applicazione**: selezionare **App Store**.
+> [!IMPORTANT]
+> Assicurarsi di assegnare questo profilo per la modalità tutto schermo agli stessi dispositivi del [profilo di Microsoft Edge](device-restrictions-windows-holographic.md#microsoft-edge-browser).
 
-- **App da eseguire in modalità tutto schermo**: scegliere **Aggiungi un'app dello Store** e selezionare un'app nell'elenco.
+## <a name="single-app-full-screen-kiosk"></a>App singola per chiosco multimediale a schermo intero
+
+Eseguire una sola app nel dispositivo. Quando l'utente accede, viene avviata un'app specifica. Questa modalità impedisce anche all'utente di aprire nuove app o modificare l'app in esecuzione.
+
+- **Tipo di accesso utente**: selezionare il tipo di account che esegue l'app. Le opzioni disponibili sono:
+
+  - **Accesso automatico (Windows 10, versione 1803 e successive)** : non supportato in Windows Holographic for Business.
+  - **Account utente locale**: immettere l'account utente locale (per il dispositivo). In alternativa, immettere un account Microsoft (MSA) associato all'app chiosco multimediale. L'account immesso accede al chiosco multimediale.
+
+    Per i chioschi multimediali in ambienti pubblici, è consigliabile usare un tipo di utente con privilegi minimi.
+
+- **Tipo di applicazione**: selezionare **Aggiungi l'app dello Store**.
+
+  - **App da eseguire in modalità tutto schermo**: selezionare un'applicazione dall'elenco.
 
     Se l'elenco non include app, aggiungerne qualcuna seguendo la procedura in [App client](../apps/apps-add.md).
 
-    Selezionare **OK** per salvare le modifiche.
+## <a name="multi-app-kiosk"></a>Chiosco multimediale per più app
 
-## <a name="multi-app-kiosks"></a>Più app in modalità tutto schermo
+Le app in questa modalità sono disponibili nel menu Start. Sono le uniche app che l'utente può aprire. Se un'app presenta una dipendenza da un'altra app, entrambe devono essere incluse nell'elenco delle app consentite.
 
-Le app in questa modalità sono disponibili nel menu Start. Sono le uniche app che l'utente può aprire. Quando si sceglie la modalità tutto schermo per più app, immettere le impostazioni seguenti:
+- **Specifica Windows 10 come destinazione nei dispositivi in modalità S**: selezionare **No**. La modalità S non è supportata in Windows Holographic for Business.
 
-- **Specifica Windows 10 come destinazione nei dispositivi in modalità S**: scegliere **No**. La modalità S non è supportata in Windows Holographic for Business.
+- **Tipo di accesso utente**: aggiungere uno o più account utente che possano usare le app aggiunte. Le opzioni disponibili sono:
 
-- **Tipo di accesso utente**: aggiungere uno o più account utente che possano usare le app aggiunte. Le opzioni disponibili sono: 
-
-  - **Accesso automatico**: non supportato in Windows Holographic for Business.
-  - **Account utente locali**: scegliere **Aggiungi** per l'account utente locale (per il dispositivo). L'account specificato viene usato per accedere al chiosco multimediale.
+  - **Accesso automatico (Windows 10, versione 1803 e successive)** : non supportato in Windows Holographic for Business.
+  - **Account utente locali**: scegliere **Aggiungi** per l'account utente locale (per il dispositivo). L'account immesso accede al chiosco multimediale.
   - **Utente o gruppo di Azure AD (Windows 10, versione 1803+)** : richiede credenziali utente per l'accesso al dispositivo. Selezionare **Aggiungi** per scegliere utenti o gruppi di Azure AD nell'elenco. È possibile selezionare più utenti e gruppi. Scegliere **OK** per salvare le modifiche.
   - **Visitatore di HoloLens**: l'account del visitatore è un account Guest che non richiede credenziali utente o autenticazione, come descritto in [Concetti della modalità PC condiviso](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
 
-- **Applicazioni**: aggiungere le app da eseguire nel dispositivo in modalità tutto schermo. Ricordarsi che è possibile aggiungere più app.
+- **Browser e applicazioni**: aggiungere le app da eseguire nel dispositivo in modalità tutto schermo. Ricordarsi che è possibile aggiungere più app.
 
-  - **Aggiungi l'app dello Store**: selezionare un'app esistente aggiunta o distribuita in Intune come [app client](../apps/apps-add.md), incluse le app line-of-business. Se non è elencata alcuna app, Intune supporta molti [tipi di app](../apps/apps-add.md) da [aggiungere a Intune](../apps/store-apps-windows.md).
-  - **Aggiungi un'app di Win32**: non supportato in Windows Holographic for Business.
-  - **Aggiungi in base all'ID modello utente applicazione**: usare questa opzione per aggiungere app predefinite di Windows. Immettere le proprietà seguenti: 
+  - **Browser**
+    - **Aggiungi Microsoft Edge**: Microsoft Edge viene aggiunto alla griglia delle app e tutte le applicazioni possono essere eseguite in questo chiosco multimediale. Selezionare il tipo di modalità tutto schermo di Microsoft Edge:
 
-    - **Nome applicazione**: Obbligatorio. Immettere un nome per l'applicazione.
-    - **ID modello utente applicazione (AUMID)** : Obbligatorio. Immettere l'ID modello utente applicazione (AUMID) dell'app Windows. Per ottenere questo ID, vedere [Find the Application User Model ID of an installed app](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (Trovare l'ID modello utente dell'applicazione di un'app installata) per ottenere l'ID.
-    - **Dimensioni del riquadro**: Obbligatorio. Scegliere Piccolo, Medio o Grande per le dimensioni del riquadro.
+      - **Modalità normale (versione completa di Microsoft Edge)** : Esegue una versione completa di Microsoft Edge con tutte le funzionalità di esplorazione. I dati dell'utente e lo stato vengono salvati tra le sessioni.
+      - **Esplorazione pubblica (InPrivate)** : esegue una versione con più schede di Microsoft Edge InPrivate con un'esperienza personalizzata per i chioschi multimediali eseguiti in modalità schermo intero.
 
-- **Impostazioni del browser in modalità tutto schermo**: non supportato in Windows Holographic for Business.
+      Per altre informazioni su queste opzioni, vedere [Distribuire la modalità tutto schermo di Microsoft Edge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
-- **Usa un layout Start alternativo**: scegliere **Sì** per immettere un file XML che descrive come le app vengono visualizzate nel menu Start, incluso il relativo ordine. Usare questa opzione se è necessaria una maggiore personalizzazione nel menu Start. [Personalizzare ed esportare il layout della schermata Start](https://docs.microsoft.com/hololens/hololens-kiosk#start-layout-for-hololens) offre alcune indicazioni e include un file XML specifico per i dispositivi Windows Holographic for Business.
+      > [!NOTE]
+      > Questa impostazione abilita il browser Microsoft Edge nel dispositivo. Per configurare le impostazioni specifiche di Microsoft Edge, creare un profilo di restrizioni del dispositivo (**Dispositivi** > **Profili di configurazione** > **Crea profilo** > **Windows 10** per la piattaforma > **Restrizioni del dispositivo** > **Browser Microsoft Edge**). Nel [browser Microsoft Edge](device-restrictions-windows-holographic.md#microsoft-edge-browser) sono elencate e descritte le impostazioni Windows Holographic for Business disponibili.
+
+    - **Aggiungi un browser in modalità tutto schermo**: non supportato in Windows Holographic for Business.
+
+  - **Applicazioni**
+    - **Aggiungi l'app dello Store**: selezionare un'app esistente aggiunta o distribuita in Intune come [app client](../apps/apps-add.md), incluse le app line-of-business. Se non è elencata alcuna app, Intune supporta molti [tipi di app](../apps/apps-add.md) da [aggiungere a Intune](../apps/store-apps-windows.md).
+    - **Aggiungi un'app di Win32**: non supportato in Windows Holographic for Business.
+    - **Aggiungi in base all'ID modello utente applicazione**: usare questa opzione per aggiungere app predefinite di Windows come il Blocco note o la Calcolatrice. Immettere le proprietà seguenti:
+
+      - **Nome applicazione**: Obbligatorio. Immettere un nome per l'applicazione.
+      - **ID modello utente applicazione (AUMID)** : Obbligatorio. Immettere l'ID modello utente applicazione (AUMID) dell'app Windows. Per ottenere questo ID, vedere [Find the Application User Model ID of an installed app](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (Trovare l'ID modello utente dell'applicazione di un'app installata) per ottenere l'ID.
+
+    - **AutoLaunch**: Facoltativo. Dopo aver aggiunto le app e il browser, selezionare un'app o un browser per aprirlo automaticamente quando l'utente accede. È possibile configurare una sola app o browser per l'avvio automatico.
+    - **Dimensioni del riquadro**: Obbligatorio. Dopo aver aggiunto le app, selezionare una dimensione Piccola, Media, Larga o Grande del riquadro dell'app.
+
+- **Usa un layout Start alternativo**: selezionare **Sì** per immettere un file XML che descrive come le app vengono visualizzate nel menu Start, incluso il relativo ordine. Usare questa opzione se è necessaria una maggiore personalizzazione nel menu Start. [Personalizzare ed esportare il layout della schermata Start](https://docs.microsoft.com/hololens/hololens-kiosk#start-layout-for-hololens) offre alcune indicazioni e include un file XML specifico per i dispositivi Windows Holographic for Business.
 
 - **Barra delle applicazioni di Windows**: non supportato in Windows Holographic for Business.
+- **Consenti l'accesso alla cartella Download**: non supportato in Windows Holographic for Business.
+- **Specificare la finestra di manutenzione per i riavvii dell'app**: non supportato in Windows Holographic for Business.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

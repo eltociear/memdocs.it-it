@@ -6,7 +6,7 @@ keywords: Data warehouse di Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 05/14/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,18 +18,49 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36944b05a12b150c15e59f145efd9fef85598a2f
-ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
+ms.openlocfilehash: 8a4ddbb96c17e8e370fee73e6a6ec1d004df05f9
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82881044"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709333"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Registro modifiche per l'API data warehouse di Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Tenersi aggiornati con il data warehouse di Intune.
+
+## <a name="2004"></a>2004 
+_Data di rilascio: aprile 2020_
+
+### <a name="beta-changes"></a>Modifiche alla versione beta
+
+La tabella seguente elenca la proprietà aggiunta all'entità di **dispositivi** nel data warehouse di Intune.
+
+|    Raccolta                          |    Modifica     |    Informazioni sulla descrizione                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    windowsOsEdition     |    Aggiunta    |    Edizione del sistema operativo Windows.                                                                                                                                                                                                                                                                     |
+
+## <a name="2003"></a>2003 
+_Data di rilascio: marzo 2020_
+
+### <a name="beta-changes"></a>Modifiche alla versione beta
+
+La tabella seguente elenca le proprietà aggiunte all'entità di **dispositivi** nel data warehouse di Intune.
+
+|    Raccolta                          |    Modifica     |    Informazioni sulla descrizione                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    ethernetMacAddress    |    Aggiunta    |    Identificatore di rete univoco del dispositivo.                                                                                                                                                                                                                                                                     |
+|    model    |    Aggiunta    |    Modello del dispositivo.                                                                                                                                                                                                                                                                     |
+|    office365Version    |    Aggiunta    |    Versione di Office 365 installato nel dispositivo.                                                                                                                                                                                                                                                                     |
+
+La tabella seguente elenca le proprietà aggiunte all'entità **devicePropertyHistory** nel data warehouse di Intune.
+
+|    Raccolta                          |    Modifica     |    Informazioni sulla descrizione                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    physicalMemoryInBytes    |    Aggiunta    |    Memoria fisica in byte.                                                                                                                                                                                                                                                                     |
+|    totalStorageSpaceInBytes     |    Aggiunta    |    Spazio di archiviazione totale in byte.                                                                                                                                                                                                                                                                     |
 
 ## <a name="1903-part-2"></a>1903 (Parte 2)
 _Data di rilascio: aprile 2019_

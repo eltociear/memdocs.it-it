@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2020
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 60a4ac793500cd4d31df2188344e2b5f4e1094a4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a9be644a47a361cf29e7b7132b2c87a4921553ea
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80359159"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989440"
 ---
 # <a name="windows-10-and-windows-holographic-for-business-device-settings-to-run-as-a-dedicated-kiosk-using-intune"></a>Impostazioni dei dispositivi Windows 10 e Windows Holographic for Business per l'esecuzione come dispositivo in modalità tutto schermo dedicato tramite Intune
 
@@ -45,30 +45,46 @@ Questo articolo illustra come creare un profilo di configurazione del dispositiv
 2. Selezionare **Dispositivi** > **Profili di configurazione** > **Crea profilo**.
 3. Immettere le proprietà seguenti:
 
+   - **Piattaforma**: selezionare **Windows 10 e versioni successive**.
+   - **Profilo**: selezionare **Modalità tutto schermo**.
+
+4. Selezionare **Crea**.
+5. In **Informazioni di base** immettere le proprietà seguenti:
+
    - **Nome**: immettere un nome descrittivo per il nuovo profilo.
    - **Descrizione**: Immettere una descrizione del profilo. Questa impostazione è facoltativa ma consigliata.
-   - **Piattaforma**: selezionare **Windows 10 e versioni successive**
-   - **Tipo di profilo**: selezionare **Modalità tutto schermo**
 
-4. In **Impostazioni** selezionare una **modalità tutto schermo**. La **modalità tutto schermo** identifica il tipo di modalità tutto schermo supportata dal criterio. Le opzioni includono:
+6. Selezionare **Avanti**.
+7. In **Impostazioni di configurazione** > **selezionare una modalità tutto schermo**, scegliere il tipo di modalità tutto schermo supportata dai criteri. Le opzioni includono:
 
-    - **Non configurata** (impostazione predefinita): il criterio non abilita la modalità tutto schermo.
+    - **Non configurata** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione. il criterio non abilita la modalità tutto schermo.
     - **App singola per chiosco multimediale a schermo intero**: il dispositivo viene eseguito con un singolo account utente e bloccato su una singola app dello Store. Pertanto, quando l'utente accede, viene avviata un'app specifica. Questa modalità impedisce anche all'utente di aprire nuove app o modificare l'app in esecuzione.
     - **App multiple per chiosco multimediale**: il dispositivo esegue più app dello Store, app Win32 o app predefinite di Windows tramite ID modello utente applicazione (AUMID). Solo le app aggiunte sono disponibili nel dispositivo.
 
         Il vantaggio di avere più app in modalità tutto schermo, o un dispositivo predefinito per uno scopo, consiste nel garantire un'esperienza semplice, consentendo di accedere solo alle app necessarie e rimuovendo dalla visualizzazione le app non necessarie.
 
     Per un elenco di tutte le impostazioni e delle operazioni corrispondenti, vedere:
+
       - [Impostazioni della modalità tutto schermo per Windows 10](kiosk-settings-windows.md)
       - [Impostazioni della modalità tutto schermo per Windows Holographic for Business](kiosk-settings-holographic.md)
 
-5. Al termine, selezionare **OK** > **Crea** per salvare le modifiche.
+8. Selezionare **Avanti**.
 
-Il profilo verrà creato e visualizzato nell'elenco dei profili. È ora necessario [assegnare](device-profile-assign.md) il profilo.
+9. In **Tag ambito** (facoltativo) assegnare un tag per filtrare il profilo a gruppi IT specifici, ad esempio `US-NC IT Team` o `JohnGlenn_ITDepartment`. Per altre informazioni sui tag di ambito, vedere [Usare il controllo degli accessi in base al ruolo (RBAC) e i tag di ambito per l'infrastruttura IT distribuita](../fundamentals/scope-tags.md).
+
+    Selezionare **Avanti**.
+
+10. In **Assegnazioni** selezionare gli utenti o il gruppo utenti che riceveranno il profilo. Per altre informazioni sull'assegnazione di profili, vedere [Assegnare profili utente e dispositivo](device-profile-assign.md).
+
+    Selezionare **Avanti**.
+
+11. In **Rivedi e crea** rivedere le impostazioni. Quando si seleziona **Crea**, le modifiche vengono salvate e il profilo viene assegnato. Il criterio viene visualizzato anche nell'elenco dei profili.
+
+Alla successiva sincronizzazione di ogni dispositivo viene applicato il criterio.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Assegnare il profilo](device-profile-assign.md) e [monitorarne lo stato](device-profile-monitor.md).
+Dopo l'[assegnazione del profilo](device-profile-assign.md) [monitorarne lo stato](device-profile-monitor.md).
 
 È possibile creare profili in modalità tutto schermo per i dispositivi che eseguono le piattaforme seguenti:
 

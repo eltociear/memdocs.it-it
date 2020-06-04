@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 05/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e900252392f1e6f057561d8d07f6e764dc0aafc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e92315377a839a537dfc4c2da00d282d2cddf58f
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80359364"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429098"
 ---
 # <a name="use-custom-settings-for-macos-devices-in-microsoft-intune"></a>Usare le impostazioni personalizzate per i dispositivi macOS in Microsoft Intune
 
@@ -39,7 +39,7 @@ Questo articolo offre indicazioni sull'uso di Apple Configurator e Apple Profile
 
 ## <a name="before-you-begin"></a>Prima di iniziare
 
-[Creare il profilo](custom-settings-configure.md).
+[Creare un profilo personalizzato macOS](custom-settings-configure.md).
 
 ## <a name="what-you-need-to-know"></a>Informazioni importanti
 
@@ -57,8 +57,8 @@ Questo articolo offre indicazioni sull'uso di Apple Configurator e Apple Profile
 
 ## <a name="custom-configuration-profile-settings"></a>Impostazioni del profilo di configurazione personalizzato
 
-- **Nome del profilo di configurazione personalizzato**: immettere un nome per i criteri. Questo nome viene visualizzato nel dispositivo e nello stato di Intune.
-- **File del profilo di configurazione**: passare al profilo di configurazione creato usando Apple Configurator o Apple Profile Manager. Il file importato è visualizzato nell'area **Contenuti del file**.
+- **Nome del profilo di configurazione**: Immettere un nome per il criterio. Questo nome viene visualizzato nel dispositivo e nello stato di Intune.
+- **File del profilo di configurazione**: passare al file `.xml` o `.mobileconfig` creato usando Apple Configurator o Apple Profile Manager. Le dimensioni massime del file sono pari a 1 milione di byte (poco meno di 1 MB). Viene visualizzato il file importato. È anche possibile **rimuovere** un file dopo che è stato aggiunto.
 
   È anche possibile aggiungere token di dispositivo ai file `.mobileconfig`. I token del dispositivo vengono usati per aggiungere informazioni specifiche del dispositivo. Per visualizzare, ad esempio, il numero di serie, immettere `{{serialnumber}}`. Nel dispositivo il testo è simile a `123456789ABC`, che è univoco per ogni dispositivo. Quando si immettono le variabili, assicurarsi di usare le parentesi graffe `{{ }}`. I [token di configurazione delle app](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) includono un elenco delle variabili che è possibile usare. È anche possibile usare `deviceid` o qualsiasi altro valore specifico del dispositivo.
 
@@ -67,6 +67,6 @@ Questo articolo offre indicazioni sull'uso di Apple Configurator e Apple Profile
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Il profilo è stato creato, ma potrebbe non essere ancora operativo. [Assegnare il profilo](device-profile-assign.md) e [monitorarne lo stato](device-profile-monitor.md).
+[Assegnare il profilo](device-profile-assign.md) e [monitorarne lo stato](device-profile-monitor.md).
 
 Creare un [profilo personalizzato nei dispositivi iOS/iPadOS](custom-settings-ios.md).

@@ -6,7 +6,7 @@ keywords: Data warehouse di Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/03/2020
+ms.date: 05/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ad156e49444679bbf7b15c53e87f504b07897bd
-ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
+ms.openlocfilehash: bc01428430eb665dc609cff84ee322f28e3b7d79
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83709367"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165431"
 ---
 # <a name="reference-for-devices-entities"></a>Informazioni di riferimento per le entità della categoria Devices
 
@@ -226,7 +226,7 @@ L'entità **ManagementAgentType** rappresenta gli agenti usati per gestire un di
 L'entità **devices** elenca tutti i dispositivi registrati per la gestione e le proprietà corrispondenti.
 
 |          Proprietà          |                                                                                       Descrizione                                                                                      |
-|:--------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | deviceKey                  | Identificatore univoco del dispositivo nel data warehouse - chiave surrogata.                                                                                                               |
 | deviceId                   | Identificatore univoco del dispositivo.                                                                                                                                                     |
 | deviceName                 | Nome del dispositivo su piattaforme che consentono la denominazione di un dispositivo. Nelle altre piattaforme Intune crea un nome in base ad altre proprietà. Questo attributo non può essere disponibile per tutti i dispositivi. |
@@ -274,7 +274,7 @@ L'entità **devices** elenca tutti i dispositivi registrati per la gestione e le
 L'entità **devicePropertyHistory** ha le stesse proprietà della tabella dei dispositivi e snapshot quotidiani del record di ciascun dispositivo per ognuno degli ultimi 90 giorni. La colonna DateKey indica il giorno per ogni riga.
 
 |          Proprietà          |                                                                                      Descrizione                                                                                     |
-|:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | dateKey                    | Riferimento alla tabella di data che indica il giorno.                                                                                                                                          |
 | deviceKey                  | Identificatore univoco del dispositivo nel data warehouse - chiave surrogata. Si tratta di un riferimento alla tabella Device che contiene l'ID dispositivo Intune.                               |
 | deviceName                 | Nome del dispositivo su piattaforme che consentono la denominazione di un dispositivo. Su altre piattaforme, Intune crea un nome da altre proprietà. Questo attributo non può essere disponibile per tutti i dispositivi. |

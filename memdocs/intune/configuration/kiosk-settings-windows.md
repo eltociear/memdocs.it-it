@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/02/2019
+ms.date: 05/21/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 69432082c199152b18b2afa95fd8351917d9bba9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ae89a939e35f68f55d2e63e7495a9b743cc0fa34
+ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80359236"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83791758"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Impostazioni dei dispositivi Windows 10 e versioni successive per l'esecuzione in modalità tutto schermo in Intune
 
@@ -46,15 +46,15 @@ Per altre informazioni sulla funzionalità Modalità tutto schermo di Windows in
 > [!IMPORTANT]
 > Assicurarsi di assegnare questo profilo per la modalità tutto schermo agli stessi dispositivi del [profilo di Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser).
 
-## <a name="single-full-screen-app-kiosks"></a>App singola per chioschi multimediali a schermo intero
+## <a name="single-app-full-screen-kiosk"></a>App singola per chiosco multimediale a schermo intero
 
 Eseguire una sola app nel dispositivo.
 
-- **Selezionare una modalità tutto schermo**: scegliere **App singola per chiosco multimediale a schermo intero**.
+- **Selezionare una modalità tutto schermo**: scegliere **Single app, full-screen kiosk (App singola per chiosco multimediale a schermo intero)** .
 
-- **Tipo di accesso utente**: le app aggiunte vengono eseguite con l'account utente immesso. Le opzioni disponibili sono:
+- **Tipo di accesso utente**: selezionare il tipo di account che esegue l'app. Le opzioni disponibili sono:
 
-  - **Accesso automatico (Windows 10, versione 1803+)** : da usare per i dispositivi in modalità tutto schermo in ambienti pubblici che non richiedono all'utente di eseguire l'accesso, in modo simile a un account guest. Questa impostazione usa il [provider di servizi di configurazione AssignedAccess](https://docs.microsoft.com/windows/client-management/mdm/assignedaccess-csp).
+  - **Accesso automatico (Windows 10, versione 1803 e successive)** : da usare per i dispositivi in modalità tutto schermo in ambienti pubblici che non richiedono all'utente di eseguire l'accesso, in modo simile a un account guest. Questa impostazione usa il [provider di servizi di configurazione AssignedAccess](https://docs.microsoft.com/windows/client-management/mdm/assignedaccess-csp).
   - **Account utente locale**: immettere l'account utente locale (per il dispositivo). L'account immesso accede al chiosco multimediale.
 
 - **Tipo di applicazione**: selezionare il tipo di applicazione. Le opzioni disponibili sono:
@@ -67,7 +67,7 @@ Eseguire una sola app nel dispositivo.
     Per altre informazioni su queste opzioni, vedere [Distribuire la modalità tutto schermo di Microsoft Edge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
     > [!NOTE]
-    > Questa impostazione abilita il browser Microsoft Edge nel dispositivo. Per configurare le impostazioni specifiche di Microsoft Edge, creare un profilo di configurazione del dispositivo (**Configurazione del dispositivo** > **Profili** > **Crea profilo** > **Windows 10** per la piattaforma > **Restrizioni del dispositivo** >  **Browser Microsoft Edge**). In [Browser Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser) sono elencate e descritte le impostazioni disponibili.
+    > Questa impostazione abilita il browser Microsoft Edge nel dispositivo. Per configurare le impostazioni specifiche di Microsoft Edge, creare un profilo di restrizioni del dispositivo (**Dispositivi** > **Profili di configurazione** > **Crea profilo** > **Windows 10** per la piattaforma > **Restrizioni del dispositivo** > **Browser Microsoft Edge**). In [Browser Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser) sono elencate e descritte le impostazioni disponibili.
 
   - **Aggiungi un browser in modalità tutto schermo**: selezionare **Impostazioni del browser in modalità tutto schermo**. Queste impostazioni controllano un'app Web browser in modalità tutto schermo. Assicurarsi di ottenere l'[app browser in modalità tutto schermo](https://businessstore.microsoft.com/store/details/kiosk-browser/9NGB5S5XG2KP) dallo Store e aggiungerla a Intune come [app client](../apps/apps-add.md). Assegnare quindi l'app ai dispositivi in modalità tutto schermo.
 
@@ -81,11 +81,11 @@ Eseguire una sola app nel dispositivo.
 
     - **Pulsante Termina sessione**: scegliere **Mostra** o **Nascondi** per il pulsante Termina sessione. Quando visualizzato, l'utente seleziona il pulsante e l'app chiede conferma della chiusura della sessione. Se confermata, il browser cancella tutti i dati di esplorazione (cookie, cache e così via) e quindi apre l'URL predefinito. Per impostazione predefinita, il pulsante non viene visualizzato.
 
-    - **Aggiorna il browser dopo il tempo di inattività**: immettere la quantità di tempo di inattività (da 1 a 1440 minuti) trascorso il quale il browser in modalità tutto schermo viene riavviato. Il tempo di inattività è il numero di minuti dopo l'ultima interazione dell'utente. Per impostazione predefinita, il valore è vuoto, ovvero non è configurato alcun timeout di inattività.
+    - **Aggiorna il browser dopo il tempo di inattività**: immettere la quantità di tempo di inattività da 1 a 1440 minuti, trascorso il quale il browser in modalità tutto schermo viene riavviato. Il tempo di inattività è il numero di minuti dopo l'ultima interazione dell'utente. Per impostazione predefinita, il valore è vuoto, ovvero non è configurato alcun timeout di inattività.
 
     - **Siti Web consentiti**: usare questa impostazione per consentire l'apertura di siti Web specifici. In altre parole, usare questa funzionalità per limitare o bloccare siti Web nel dispositivo. Ad esempio, è possibile consentire l'apertura di tutti i siti Web in `http://contoso.com`. Per impostazione predefinita, sono consentiti tutti i siti Web.
 
-      Per consentire siti Web specifici, caricare un file che include un elenco dei siti Web consentiti in righe distinte. Se non si aggiunge un file, sono consentiti tutti i siti Web. Per impostazione predefinita, Intune supporta i caratteri jolly, quindi, quando si immette il dominio, ad esempio `sharepoint.com`, vengono automaticamente consentiti i sottodomini, ad esempio `contoso.sharepoint.com`, `my.sharepoint.com` e così via.
+      Per consentire siti Web specifici, caricare un file che include un elenco dei siti Web consentiti in righe distinte. Se non si aggiunge un file, sono consentiti tutti i siti Web. Per impostazione predefinita, Intune consente tutti i sottodomini del sito Web. Ad esempio, si immette il dominio `sharepoint.com`. Intune consente automaticamente a tutti i sottodomini, ad esempio `contoso.sharepoint.com`, `my.sharepoint.com`e così via. Non immettere caratteri jolly, ad esempio l'asterisco (`*`).
 
       Il file di esempio sarà simile all'elenco seguente:
 
@@ -101,29 +101,30 @@ Eseguire una sola app nel dispositivo.
   - **Aggiungi l'app dello Store**: scegliere **Aggiungi un'app dello Store** e scegliere un'app nell'elenco.
 
     Se l'elenco non include app, aggiungerne qualcuna seguendo la procedura in [App client](../apps/apps-add.md).
-    
- - **Specificare la finestra di manutenzione per i riavvii dell'app**: il valore predefinito è "Non configurato". Selezionare "Richiedi" per verificare la presenza di app che richiedono un riavvio per completare l'installazione.
- 
-     Se si usa il browser in modalità tutto schermo o un'altra app di Microsoft Store per le aziende, decidere con quale frequenza verificare la presenza di aggiornamenti dell'app che richiedono il riavvio per completare l'installazione dell'applicazione. Se non configurato, le app di Microsoft Store per le aziende verranno riavviate a un'ora non pianificata 3 giorni dopo l'installazione di un aggiornamento dell'app.
-     
-     - **Ora di inizio della finestra di manutenzione**: selezionare la data e l'ora del giorno in cui iniziare a cercare nei client eventuali aggiornamenti dell'app che richiedono il riavvio. L'ora di avvio predefinita è mezzanotte, ovvero zero minuti.
-     
-     - **Ricorrenza della finestra di manutenzione**: il valore predefinito è ogni giorno.
-         Impostare la frequenza con cui verranno applicate le finestre di manutenzione per gli aggiornamenti dell'app. Si consiglia una frequenza giornaliera per evitare riavvii dell'app non pianificati.
+
+- **Specificare la finestra di manutenzione per i riavvii dell'app**: È necessario riavviare alcune app per completare l'installazione degli aggiornamenti o dell'app. **Rendi obbligatorio** crea una finestra di manutenzione. Se l'app richiede un riavvio, viene riavviata durante questa finestra.
+
+  Specificare anche:
+
+  - **Ora di inizio della finestra di manutenzione**: selezionare la data e l'ora del giorno in cui iniziare a cercare nei client eventuali aggiornamenti dell'app che richiedono il riavvio. L'ora di avvio predefinita è mezzanotte, ovvero zero minuti. Se il campo è vuoto, le app vengono riavviate dopo 3 giorni non pianificati dopo l'installazione di un aggiornamento dell'app.
+
+  - **Ricorrenza della finestra di manutenzione**: il valore predefinito è ogni giorno. Selezionare la frequenza con cui vengono applicate le finestre di manutenzione per gli aggiornamenti dell'app. Per evitare riavvii dell'app non pianificati, è consigliabile **Giornaliera**.
+
+  Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
 
   [ApplicationManagement/ScheduleForceRestartForUpdateFailures CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures)
 
-## <a name="multi-app-kiosks"></a>Più app in modalità tutto schermo
+## <a name="multi-app-kiosk"></a>Più app in modalità tutto schermo
 
 Le app in questa modalità sono disponibili nel menu Start. Sono le uniche app che l'utente può aprire. Se un'app presenta una dipendenza da un'altra app, entrambe devono essere incluse nell'elenco delle app consentite. Ad esempio, Internet Explorer a 64 bit ha una dipendenza da Internet Explorer a 32 bit, quindi è necessario consentire sia "C:\Programmi\internet explorer\iexplore.exe" che "C:\Programmi (x86)\Internet Explorer\iexplore.exe". 
 
-- **Selezionare una modalità tutto schermo**: scegliere **App multiple per chiosco multimediale**.
+- **Selezionare una modalità tutto schermo**: selezionare **Più app in modalità tutto schermo**.
 
 - **Specifica Windows 10 come destinazione nei dispositivi in modalità S**:
-  - **Sì**: consente le app dello Store e le app AUMID (escluse le app Win32) nel profilo in modalità tutto schermo.
+  - **Sì**: consente le app dello Store e le app AUMID nel profilo in modalità tutto schermo. Esclude le app Win32.
   - **No**: consente le app dello Store, le app Win32 e le app AUMID nel profilo in modalità tutto schermo. Questo profilo per la modalità tutto schermo non viene distribuito nei dispositivi in modalità S.
 
-- **Tipo di accesso utente**: le app aggiunte vengono eseguite con l'account utente immesso. Le opzioni disponibili sono:
+- **Tipo di accesso utente**: selezionare il tipo di account che esegue le app. Le opzioni disponibili sono:
 
   - **Accesso automatico (Windows 10, versione 1803+)** : da usare per i dispositivi in modalità tutto schermo in ambienti pubblici che non richiedono all'utente di eseguire l'accesso, in modo simile a un account guest. Questa impostazione usa il [provider di servizi di configurazione AssignedAccess](https://docs.microsoft.com/windows/client-management/mdm/assignedaccess-csp).
   - **Account utente locale**: scegliere **Aggiungi** per l'account utente locale (per il dispositivo). L'account immesso accede al chiosco multimediale.
@@ -132,9 +133,11 @@ Le app in questa modalità sono disponibili nel menu Start. Sono le uniche app c
 
 - **Browser e applicazioni**: aggiungere le app da eseguire nel dispositivo in modalità tutto schermo. Ricordarsi che è possibile aggiungere più app.
 
+  :::image type="content" source="./media/kiosk-settings-windows/multi-app-kiosk-add-applications-browser.png" alt-text="Aggiungere browser o app a un profilo con più app in modalità tutto schermo in Microsoft Intune.":::  
+
   - **Browser**
 
-    - **Aggiungi Microsoft Edge**: Microsoft Edge viene aggiunto alla griglia delle app e tutte le applicazioni possono essere eseguite in questo chiosco multimediale. Scegliere il **Tipo di modalità tutto schermo di Microsoft Edge**:
+    - **Aggiungi Microsoft Edge**: Microsoft Edge viene aggiunto alla griglia delle app e tutte le applicazioni possono essere eseguite in questo chiosco multimediale. Selezionare il **Tipo di modalità tutto schermo di Microsoft Edge**:
 
       - **Modalità normale (versione completa di Microsoft Edge)** : Esegue una versione completa di Microsoft Edge con tutte le funzionalità di esplorazione. I dati dell'utente e lo stato vengono salvati tra le sessioni.
       - **Esplorazione pubblica (InPrivate)** : esegue una versione con più schede di Microsoft Edge InPrivate con un'esperienza personalizzata per i chioschi multimediali eseguiti in modalità schermo intero.
@@ -142,7 +145,7 @@ Le app in questa modalità sono disponibili nel menu Start. Sono le uniche app c
       Per altre informazioni su queste opzioni, vedere [Distribuire la modalità tutto schermo di Microsoft Edge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
       > [!NOTE]
-      > Questa impostazione abilita il browser Microsoft Edge nel dispositivo. Per configurare le impostazioni specifiche di Microsoft Edge, creare un profilo di configurazione del dispositivo (**Configurazione del dispositivo** > **Profili** > **Crea profilo** > **Windows 10** per la piattaforma > **Restrizioni del dispositivo** >  **Browser Microsoft Edge**). In [Browser Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser) sono elencate e descritte le impostazioni disponibili.
+      > Questa impostazione abilita il browser Microsoft Edge nel dispositivo. Per configurare le impostazioni specifiche di Microsoft Edge, creare un profilo di restrizioni del dispositivo (**Dispositivi** > **Profili di configurazione** > **Crea profilo** > > **Windows 10** per la piattaforma > **Restrizioni del dispositivo** >  **Browser Microsoft Edge**). In [Browser Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser) sono elencate e descritte le impostazioni disponibili.
 
     - **Aggiungi un browser in modalità tutto schermo**: Queste impostazioni controllano un'app Web browser in modalità tutto schermo. Assicurarsi di distribuire un'app Web browser ai dispositivi in modalità tutto schermo usando [App client](../apps/apps-add.md).
 
@@ -172,25 +175,39 @@ Le app in questa modalità sono disponibili nel menu Start. Sono le uniche app c
     - **Aggiungi un'app di Win32**: un'app Win32 è un'app desktop tradizionale, ad esempio Visual Studio Code o Google Chrome. Immettere le proprietà seguenti:
 
       - **Nome applicazione**: Obbligatorio. Immettere un nome per l'applicazione.
-      - **Percorso locale**: Obbligatorio. Immettere il percorso del file eseguibile, ad esempio `C:\Program Files (x86)\Microsoft VS Code\Code.exe` o `C:\Program Files (x86)\Google\Chrome\Application\chrome.exe`.
-      - **ID modello utente applicazione (AUMID)** : Immettere l'ID modello utente applicazione (AUMID) dell'app Win32. Questa impostazione determina il layout iniziale del riquadro sul desktop. Per ottenere questo ID, vedere [Get-StartApps](https://docs.microsoft.com/powershell/module/startlayout/get-startapps?view=win10-ps).
+      - **Percorso locale per il file eseguibile dell'app**: Obbligatorio. Immettere il percorso del file eseguibile, ad esempio `C:\Program Files (x86)\Microsoft VS Code\Code.exe` o `C:\Program Files (x86)\Google\Chrome\Application\chrome.exe`.
+      - **ID modello utente applicazione (AUMID)per l'app Win32**: Immettere l'ID modello utente applicazione (AUMID) dell'app Win32. Questa impostazione determina il layout iniziale del riquadro sul desktop. Per ottenere questo ID, vedere [Get-StartApps](https://docs.microsoft.com/powershell/module/startlayout/get-startapps?view=win10-ps).
 
     - **Aggiungi in base all'ID modello utente applicazione**: usare questa opzione per aggiungere app predefinite di Windows come il Blocco note o la Calcolatrice. Immettere le proprietà seguenti:
 
       - **Nome applicazione**: Obbligatorio. Immettere un nome per l'applicazione.
       - **ID modello utente applicazione (AUMID)** : Obbligatorio. Immettere l'ID modello utente applicazione (AUMID) dell'app Windows. Per ottenere questo ID, vedere [Find the Application User Model ID of an installed app](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (Trovare l'ID modello utente dell'applicazione di un'app installata) per ottenere l'ID.
 
-    - **AutoLaunch**: Facoltativo. Scegliere un'applicazione da avviare automaticamente quando l'utente esegue l'accesso. È possibile configurare una sola app per l'avvio automatico.
-    - **Dimensioni del riquadro**: Obbligatorio. Scegliere Piccolo, Medio o Grande per le dimensioni del riquadro.
+    - **AutoLaunch**: Facoltativo. Dopo aver aggiunto le app e il browser, selezionare un'app o un browser per aprirlo automaticamente quando l'utente accede. È possibile configurare una sola app o browser per l'avvio automatico.
+    - **Dimensioni del riquadro**: Obbligatorio. Dopo aver aggiunto le app, selezionare una dimensione Piccola, Media, Larga o Grande del riquadro dell'app.
+
+      :::image type="content" source="./media/kiosk-settings-windows/multi-app-kiosk-autolaunch-tiles.png" alt-text="Avviare automaticamente l'app o il browser e selezionare le dimensioni del riquadro in un profilo con più app in modalità tutto schermo in Microsoft Intune.":::
 
   > [!TIP]
   > Dopo aver aggiunto tutte le app, è possibile modificarne l'ordine di visualizzazione facendo clic e trascinando le app nell'elenco.  
 
-- **Usa un layout Start alternativo**: scegliere **Sì** per immettere un file XML che descrive come le app vengono visualizzate nel menu Start, incluso il relativo ordine. Usare questa opzione se è necessaria una maggiore personalizzazione nel menu Start. Leggere [Personalizzare ed esportare il layout della schermata Start](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout) per conoscere alcune linee guida e XML di esempio.
+- **Usa un layout Start alternativo**: selezionare **Sì** per immettere un file XML che descrive come le app vengono visualizzate nel menu Start, incluso il relativo ordine. Usare questa opzione se è necessaria una maggiore personalizzazione nel menu Start. Leggere [Personalizzare ed esportare il layout della schermata Start](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout) per conoscere alcune linee guida e XML di esempio.
 
 - **Barra delle applicazioni di Windows**: scegliere **Mostra** o **Nascondi** per la barra delle applicazioni. Per impostazione predefinita, la barra delle applicazioni non viene visualizzata. Vengono visualizzate delle icone, ad esempio l'icona del Wi-Fi, ma le impostazioni non possono essere modificate dagli utenti finali.
 
 - **Consenti l'accesso alla cartella Download**: scegliere **Sì** per consentire agli utenti di accedere alla cartella Download in Esplora risorse. Per impostazione predefinita, l'accesso alla cartella Download è disabilitato. Questa funzionalità viene usata comunemente per consentire agli utenti finali di accedere agli elementi scaricati da un browser.
+
+- **Specificare la finestra di manutenzione per i riavvii dell'app**: È necessario riavviare alcune app per completare l'installazione degli aggiornamenti o dell'app. **Rendi obbligatorio** crea una finestra di manutenzione. Se le app richiedono un riavvio, vengono riavviate durante questa finestra.
+
+  Specificare anche:
+
+  - **Ora di inizio della finestra di manutenzione**: selezionare la data e l'ora del giorno in cui iniziare a cercare nei client eventuali aggiornamenti dell'app che richiedono il riavvio. L'ora di avvio predefinita è mezzanotte, ovvero zero minuti. Se il campo è vuoto, le app vengono riavviate dopo 3 giorni non pianificati dopo l'installazione di un aggiornamento dell'app.
+
+  - **Ricorrenza della finestra di manutenzione**: il valore predefinito è ogni giorno. Selezionare la frequenza con cui vengono applicate le finestre di manutenzione per gli aggiornamenti dell'app. Per evitare riavvii dell'app non pianificati, è consigliabile **Giornaliera**.
+
+  Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
+
+  [ApplicationManagement/ScheduleForceRestartForUpdateFailures CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures)
 
 ## <a name="next-steps"></a>Passaggi successivi
 

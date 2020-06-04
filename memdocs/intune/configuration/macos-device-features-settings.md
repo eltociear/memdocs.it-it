@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/16/2020
+ms.date: 05/05/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 63ffda60d00c1a386eb65d851563c911957c0acd
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9d4bc2de9e16cfcf9322cf343badafe3c9a35c70
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81615718"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428910"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Impostazioni relative alle funzionalità dei dispositivi macOS in Intune
 
@@ -31,25 +31,29 @@ Usare queste funzionalità per controllare i dispositivi macOS nella soluzione d
 
 L'articolo elenca queste impostazioni e descrive la funzione di ogni impostazione. Vengono inoltre elencati i passaggi per ottenere l'indirizzo IP, il percorso e la porta delle stampanti AirPrint tramite l'app Terminale (emulatore). Per altre informazioni sulle funzionalità del dispositivo, vedere [Aggiungere impostazioni relative alle funzionalità dei dispositivi iOS/iPadOS e macOS](device-features-configure.md).
 
+> [!NOTE]
+> L'interfaccia utente potrebbe non corrispondere ai tipi di iscrizione indicati in questo articolo. Le informazioni contenute in questo articolo sono corrette. L'interfaccia utente verrà aggiornata in una versione futura.
+
 ## <a name="before-you-begin"></a>Prima di iniziare
 
-[Creare un profilo di configurazione dei dispositivi macOS](device-features-configure.md).
+[Creare un profilo delle funzionalità del dispositivo macOS](device-features-configure.md).
 
 > [!NOTE]
 > Queste impostazioni si applicano a diversi tipi di registrazione, con alcune impostazioni che si applicano a tutte le opzioni di registrazione. Per altre informazioni sui diversi tipi di registrazione, vedere [Registrazione di macOS](../enrollment/macos-enroll.md).
 
 ## <a name="airprint"></a>AirPrint
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Le impostazioni si applicano a: Registrazione dei dispositivi e registrazione automatica dei dispositivi
+### <a name="settings-apply-to-all-enrollment-types"></a>Le impostazioni si applicano a: Tutti i tipi di registrazione
 
-- **Indirizzo IP**: immettere l'indirizzo IPv4 o IPv6 della stampante. Se si usano i nomi host per identificare le stampanti, è possibile ottenere l'indirizzo IP effettuando il ping della stampante nell'app Terminale. Per informazioni più dettagliate, vedere [Ottenere l'indirizzo IP e il percorso](#get-the-ip-address-and-path) (in questo articolo).
-- **Percorso**: immettere il percorso della stampante. il percorso è in genere `ipp/print` per le stampanti di rete. Per informazioni più dettagliate, vedere [Ottenere l'indirizzo IP e il percorso](#get-the-ip-address-and-path) (in questo articolo).
-- **Porta** (iOS 11.0+, iPadOS 13.0+): immettere la porta di ascolto della destinazione AirPrint. Se si omette questa proprietà, AirPrint usa la porta predefinita.
-- **TLS** (iOS 11.0+, iPadOS 13.0+): selezionare **Abilita** per proteggere le connessioni AirPrint con Transport Layer Security (TLS).
+- **Destinazioni di AirPrint**: **Aggiungere** una o più stampanti AirPrint che gli utenti possono usare dai dispositivi. Specificare anche:
+  - **Porta** (iOS 11.0+, iPadOS 13.0+): immettere la porta di ascolto della destinazione AirPrint. Se si omette questa proprietà, AirPrint usa la porta predefinita.
+  - **Indirizzo IP**: immettere l'indirizzo IPv4 o IPv6 della stampante. Immettere ad esempio `10.0.0.1`. Se si usano i nomi host per identificare le stampanti, è possibile ottenere l'indirizzo IP effettuando il ping della stampante nell'app Terminale. Per informazioni più dettagliate, vedere [Ottenere l'indirizzo IP e il percorso](#get-the-ip-address-and-path) (in questo articolo).
+  - **Percorso**: immettere il percorso della stampante. il percorso è in genere `ipp/print` per le stampanti di rete. Per informazioni più dettagliate, vedere [Ottenere l'indirizzo IP e il percorso](#get-the-ip-address-and-path) (in questo articolo).
+  - **TLS** (iOS 11.0+, iPadOS 13.0+): Le opzioni disponibili sono:
+    - **No** (impostazione predefinita): Transport Layer Security (TLS) non viene applicato quando ci si connette alle stampanti AirPrint.
+    - **Sì**: protegge le connessioni AirPrint con Transport Layer Security (TLS).
 
-- **Aggiungere** il server AirPrint. È possibile aggiungere più server AirPrint.
-
-È anche possibile **importare** un file delimitato da virgole (CSV) che include un elenco delle stampanti AirPrint. Dopo aver aggiunto le stampanti AirPrint in Intune, è anche possibile **esportare** questo elenco.
+- **Importare** un file delimitato da virgole (CSV) che include un elenco delle stampanti AirPrint. Dopo aver aggiunto le stampanti AirPrint in Intune, è anche possibile **esportare** questo elenco.
 
 ### <a name="get-the-ip-address-and-path"></a>Ottenere l'indirizzo IP e il percorso
 
@@ -66,60 +70,88 @@ Per aggiungere i server AirPrinter, sono necessari l'indirizzo IP della stampant
 
 4. Usare i valori del percorso della risorsa e dell'indirizzo IP. In questo esempio l'indirizzo IP è `10.50.25.21` e il percorso della risorsa è `/ipp/port1`.
 
+## <a name="associated-domains"></a>Domini associati
+
+Con Intune, è possibile:
+
+- Aggiungere molte associazioni da app a dominio.
+- Associare molti domini alla stessa app.
+
+Questa funzionalità si applica a:
+
+- macOS 10.15 e versioni successive
+
+### <a name="settings-apply-to-user-approved-device-enrollment-and-automated-device-enrollment"></a>Le impostazioni si applicano a: Registrazione dei dispositivi approvata dall'utente e registrazione automatica dei dispositivi
+
+- **Domini associati**: **Aggiungere** un'associazione tra il dominio e un'app. Questa funzionalità condivide le credenziali di accesso tra un'app Contoso e un sito Web Contoso. Specificare anche:
+
+  - **ID app**: immettere l'identificatore dell'app da associare a un sito Web. L'identificatore dell'app include l'ID team e un ID bundle: `TeamID.BundleID`.
+
+    L'ID team è una stringa alfanumerica (lettere e numeri) di 10 caratteri generata da Apple per gli sviluppatori di app, ad esempio `ABCDE12345`. [Locate your Team ID](https://help.apple.com/developer-account/#/dev55c3c710c) (Individuare l'ID team) (apre il sito Web di Apple) include ulteriori informazioni.
+
+    L'ID bundle identifica in modo univoco l'app ed è in genere formattato in notazione del nome di dominio inverso. Ad esempio, l'ID bundle di Finder è `com.apple.finder`. Per trovare l'ID bundle, usare AppleScript nel terminale:
+
+    `osascript -e 'id of app "ExampleApp"'`
+
+  - **Dominio**: immettere il dominio del sito Web da associare a un'app. Il dominio include un tipo di servizio e un nome host completo, ad esempio `webcredentials:www.contoso.com`.
+
+    È possibile cercare tutti i sottodomini di un dominio associato immettendo `*.` (un carattere jolly asterisco e un punto) prima dell'inizio del dominio. Il punto è obbligatorio. I domini esatti hanno una priorità più alta rispetto ai domini con caratteri jolly. Di conseguenza, i modelli dei domini padre vengono individuati *se* non viene trovata una corrispondenza nel sottodominio completo.
+
+    Il tipo di servizio può essere:
+
+    - **authsrv**: Estensione dell'app Single Sign-On
+    - **applink**: collegamento universale
+    - **webcredentials**: riempimento automatico delle password
+
+> [!TIP]
+> Per risolvere i problemi, nel dispositivo macOS aprire **Preferenze di sistema** > **Profili**. Verificare che il profilo creato sia presente nell'elenco profili del dispositivo. Se il profilo è incluso, assicurarsi che la **configurazione dei domini associati** si trovi nel profilo e includa i domini e l'ID app corretti.
+
 ## <a name="login-items"></a>Elementi di accesso
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Le impostazioni si applicano a: Tutti i tipi di registrazione
 
-- **File, cartelle e app personalizzate**: **Aggiungere** il percorso di un file, una cartella, un'app personalizzata o un'app di sistema che si vuole aprire quando gli utenti accedono ai loro dispositivi. Le app di sistema o le app compilate o personalizzate per l'organizzazione si trovano in genere nella cartella `Applications`, con un percorso simile a `/Applications/AppName.app`. 
+- **Aggiungere le cartelle, le app e i file personalizzati che verranno aperti all'avvio**: **Aggiungere** il percorso di un file, una cartella, un'app personalizzata o un'app di sistema che si vuole aprire quando gli utenti accedono ai loro dispositivi. Specificare anche:
 
-  È possibile aggiungere molti file, cartelle e app. Ad esempio, immettere:  
-  
-  - `/Applications/Calculator.app`
-  - `/Applications`
-  - `/Applications/Microsoft Office/root/Office16/winword.exe`
-  - `/Users/UserName/music/itunes.app`
-  
-  Quando si aggiunge un'app, una cartella o un file, assicurarsi di immettere il percorso corretto. Non tutti gli elementi si trovano nella cartella `Applications`. Se gli utenti spostano un elemento da una posizione a un'altra, il percorso viene modificato. Questo elemento spostato non verrà aperto quando l'utente accede.
+  - **Percorso dell'elemento**: Immettere il percorso del file, della cartella o dell'app. Le app di sistema o le app compilate o personalizzate per l'organizzazione si trovano in genere nella cartella `Applications`, con un percorso simile a `/Applications/AppName.app`.
 
-- **Nasconde dalla configurazione utente**: **Nascondi** non visualizza l'app nell'elenco degli elementi di accesso Utenti e gruppi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo mostra l'elemento avviato all'accesso nell'elenco degli elementi di accesso Utenti e gruppi con l'opzione Nascondi deselezionata.
+    È possibile aggiungere molti file, cartelle e app. Ad esempio, immettere:  
+  
+    - `/Applications/Calculator.app`
+    - `/Applications`
+    - `/Applications/Microsoft Office/root/Office16/winword.exe`
+    - `/Users/UserName/music/itunes.app`
+  
+    Quando si aggiunge un'app, una cartella o un file, assicurarsi di immettere il percorso corretto. Non tutti gli elementi si trovano nella cartella `Applications`. Se gli utenti spostano un elemento da una posizione a un'altra, il percorso viene modificato. Questo elemento spostato non verrà aperto quando l'utente accede.
+
+  - **Nascondi**: scegliere di mostrare o nascondere l'app. Le opzioni disponibili sono:
+    - **Non configurata**: Questa è la modalità predefinita. Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo mostrerà gli elementi nell'elenco degli elementi di accesso Utenti e gruppi con l'opzione Nascondi deselezionata.
+    - **Sì**: nasconde l'app nell'elenco degli elementi di accesso Utenti e gruppi.
 
 ## <a name="login-window"></a>Finestra di accesso
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Le impostazioni si applicano a: Registrazione dei dispositivi e registrazione automatica dei dispositivi
+### <a name="settings-apply-to-all-enrollment-types"></a>Le impostazioni si applicano a: Tutti i tipi di registrazione
 
-#### <a name="window-layout"></a>Layout della finestra
-
-- **Mostra informazioni aggiuntive sulla barra dei menu**: quando viene selezionata l'area del tempo nella barra dei menu, **Consenti** mostra il nome host e la versione di macOS. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non visualizzare queste informazioni nella barra dei menu.
+- **Mostra informazioni aggiuntive sulla barra dei menu**: quando viene selezionata l'area del tempo nella barra dei menu, **Sì** mostra il nome host e la versione di macOS. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non visualizzare queste informazioni nella barra dei menu.
 - **Banner**: immettere un messaggio che viene visualizzato nella schermata di accesso dei dispositivi. Ad esempio, immettere le informazioni sull'organizzazione, un messaggio di benvenuto, le informazioni perse e trovate e così via.
-- **Scegliere il formato di accesso**: scegliere la modalità di accesso degli utenti ai dispositivi. Le opzioni disponibili sono:
-  - **Richiedi nome utente e password** (impostazione predefinita): richiede agli utenti di immettere un nome utente e una password.
-  - **Elenca tutti gli utenti e richiedi la password**: richiede agli utenti di selezionare il nome utente da un elenco di utenti e quindi di immettere la password. Configurare inoltre:
+- **Rendi obbligatori i campi di testo nome utente e password**: scegliere la modalità di accesso degli utenti ai dispositivi. **Sì** richiede agli utenti di immettere un nome utente e una password. Quando questa opzione è impostata su **Non configurato**, Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo può richiedere agli utenti di selezionare il proprio nome utente da un elenco e quindi digitare la password.
 
-    - **Utenti locali**: **Nascondi** non mostra gli account utente locali nell'elenco degli utenti, che può includere gli account standard e amministratore. Vengono visualizzati solo gli account utente di rete e del sistema. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe visualizzare gli account utente locali nell'elenco degli utenti.
-    - **Account per dispositivi mobili**: **Nascondi** non mostra gli account per dispositivi mobili nell'elenco degli utenti. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe visualizzare gli account di dispositivi mobili nell'elenco degli utenti. Alcuni account per dispositivi mobili possono essere visualizzati come utenti della rete.
-    - **Utenti di rete**: selezionare **Mostra** per elencare gli utenti di rete nell'elenco degli utenti. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non visualizzare gli account utente di rete nell'elenco degli utenti.
-    - **Utenti amministratori**: **Nascondi** non mostra gli account utente amministratori nell'elenco degli utenti. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe visualizzare gli account utente amministratori nell'elenco degli utenti.
-    - **Altri utenti**: selezionare **Mostra** per elencare **Altri...** utenti nell'elenco degli utenti. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non visualizzare gli altri account utente nell'elenco degli utenti.
+  Specificare anche:
 
-#### <a name="login-screen-power-settings"></a>Impostazioni di risparmio energia della schermata di accesso
+  - **Nascondi gli utenti locali**: **Sì** non mostra gli account utente locali nell'elenco degli utenti, che può includere gli account standard e amministratore. Vengono visualizzati solo gli account utente di rete e del sistema. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe visualizzare gli account utente locali nell'elenco degli utenti.
+  - **Nascondi gli account per dispositivi mobili**: **Sì** non mostra gli account per dispositivi mobili nell'elenco degli utenti. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe visualizzare gli account di dispositivi mobili nell'elenco degli utenti. Alcuni account per dispositivi mobili possono essere visualizzati come utenti della rete.
+  - **Mostra gli utenti di rete**: selezionare **Sì** per elencare gli utenti di rete nell'elenco degli utenti. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non visualizzare gli account utente di rete nell'elenco degli utenti.
+  - **Nascondi gli amministratori del computer**: **Sì** non mostra gli account utente amministratori nell'elenco degli utenti. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe visualizzare gli account utente amministratori nell'elenco degli utenti.
+  - **Mostra gli altri utenti**: selezionare **Sì** per elencare **Altri...** utenti nell'elenco degli utenti. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non visualizzare gli altri account utente nell'elenco degli utenti.
 
-- **Pulsante Arresta**: **Nascondi** non mostra il pulsante di arresto nella schermata di accesso. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe visualizzare il pulsante Arresta.
-- **Pulsante Riavvia**: **Nascondi** non mostra il pulsante di riavvio nella schermata di accesso. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe visualizzare il pulsante Riavvia.
-- **Pulsante Sospendi**: **Nascondi** non mostra il pulsante di sospensione nella schermata di accesso. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe visualizzare il pulsante Sospendi.
-
-#### <a name="other"></a>Altro
-
-- **Disabilita l'accesso utente dalla console**: **Disabilitare** nasconde la riga di comando macOS usata per accedere. Per gli utenti tipici **disabilitare** questa impostazione. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti esperti di accedere usando la riga di comando di macOS. Per passare alla modalità console, gli utenti immettono `>console` nel campo Nome utente e devono autenticarsi nella finestra della console.
-
-#### <a name="apple-menu"></a>Apple Menu
-
-Dopo che gli utenti hanno effettuato l'accesso ai dispositivi, le impostazioni seguenti influiscono cosa possono fare.
-
-- **Disabilita Arresta**: **Disabilita** impedisce agli utenti di selezionare l'opzione **Arresta** dopo aver effettuato l'accesso. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di selezionare la voce di menu **Arresta** nei dispositivi.
-- **Disabilita Riavvia**: **Disabilita** impedisce agli utenti di selezionare l'opzione **Riavvia** dopo aver effettuato l'accesso. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di selezionare la voce di menu **Riavvia** nei dispositivi.
-- **Disabilita Spegni**: **Disabilita** impedisce agli utenti di selezionare l'opzione **Spegni** dopo aver effettuato l'accesso. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di selezionare la voce di menu **Spegni** nei dispositivi.
-- **Disabilita Disconnetti** (macOS 10.13 e versioni successive): **Disabilita** impedisce agli utenti di selezionare l'opzione **Disconnetti** dopo aver effettuato l'accesso. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di selezionare la voce di menu **Disconnetti** nei dispositivi.
-- **Disabilita la schermata di blocco** (macOS 10.13 e versioni successive): **Disabilita** impedisce agli utenti di selezionare l'opzione **Schermata di blocco** dopo aver effettuato l'accesso. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di selezionare la voce di menu **Schermata di blocco** nei dispositivi.
+- **Nascondi il pulsante Arresta**: **Sì** non mostra il pulsante di arresto nella schermata di accesso. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe visualizzare il pulsante Arresta.
+- **Nascondi il pulsante Riavvia**: **Sì** non mostra il pulsante di riavvio nella schermata di accesso. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe visualizzare il pulsante Riavvia.
+- **Nascondi il pulsante Sospendi**: **Sì** non mostra il pulsante di sospensione nella schermata di accesso. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe visualizzare il pulsante Sospendi.
+- **Disabilita l'accesso utente dalla console**: **Sì** nasconde la riga di comando macOS usata per accedere. Per gli utenti tipici, impostare su **Sì**. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti esperti di accedere usando la riga di comando di macOS. Per passare alla modalità console, gli utenti immettono `>console` nel campo Nome utente e devono autenticarsi nella finestra della console.
+- **Disabilita Arresta quando è stato eseguito l'accesso**: **Sì** impedisce agli utenti di selezionare l'opzione **Arresta** dopo aver effettuato l'accesso. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di selezionare la voce di menu **Arresta** nei dispositivi.
+- **Disabilita Riavvia quando è stato eseguito l'accesso**: **Sì** impedisce agli utenti di selezionare l'opzione **Riavvia** dopo aver effettuato l'accesso. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di selezionare la voce di menu **Riavvia** nei dispositivi.
+- **Disabilita Spegni quando è stato eseguito l'accesso**: **Sì** impedisce agli utenti di selezionare l'opzione **Spegni** dopo aver effettuato l'accesso. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di selezionare la voce di menu **Spegni** nei dispositivi.
+- **Disabilita Disconnetti quando è stato eseguito l'accesso** (macOS 10.13 e versioni successive): **Sì** impedisce agli utenti di selezionare l'opzione **Disconnetti** dopo aver effettuato l'accesso. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di selezionare la voce di menu **Disconnetti** nei dispositivi.
+- **Disabilita Schermata di blocco quando è stato eseguito l'accesso** (macOS 10.13 e versioni successive): **Sì** impedisce agli utenti di selezionare l'opzione **Schermata di blocco** dopo aver effettuato l'accesso. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di selezionare la voce di menu **Schermata di blocco** nei dispositivi.
 
 ## <a name="single-sign-on-app-extension"></a>Estensione dell'app Single Sign-On
 
@@ -127,7 +159,7 @@ Questa funzionalità si applica a:
 
 - macOS 10.15 e versioni successive
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Le impostazioni si applicano a: Tutti i tipi di registrazione 
+### <a name="settings-apply-to-user-approved-device-enrollment-and-automated-device-enrollment"></a>Le impostazioni si applicano a: Registrazione dei dispositivi approvata dall'utente e registrazione automatica dei dispositivi
 
 - **Tipo di estensione dell'app per accesso Single Sign-On**: scegliere il tipo di estensione dell'app per l'accesso Single Sign-On per le credenziali. Le opzioni disponibili sono:
 
@@ -163,7 +195,7 @@ Questa funzionalità si applica a:
     - Stringa
     - Booleano: in **Valore di configurazione** immettere `True` o `False`.
     - Integer: in **Valore di configurazione** immettere un numero.
-    
+
   - **Valore**: immettere i dati.
   
   - **Aggiungi**: selezionare questa impostazione per aggiungere le chiavi di configurazione.
@@ -199,42 +231,6 @@ Questa funzionalità si applica a:
 - **ID aggregazione di app** (solo Kerberos): **aggiungere** gli identificatori delle aggregazioni di app che devono usare l'accesso Single Sign-On nei dispositivi. A queste app viene concesso l'accesso al ticket di concessione ticket Kerberos e al ticket di autenticazione. Anche le app autenticano gli utenti per i servizi a cui sono autorizzati ad accedere.
 - **Mapping dell'area di autenticazione dei domini** (solo Kerberos): **aggiungere** i suffissi DNS di dominio che devono essere mappati all'area di autenticazione. Usare questa impostazione quando i nomi DNS degli host non corrispondono al nome dell'area di autenticazione. Probabilmente non è necessario creare questo mapping da dominio ad area di autenticazione personalizzato.
 - **Certificato PKINIT** (solo Kerberos): **selezionare** il certificato PKINIT (Public Key Cryptography for Initial Authentication) che può essere usato per l'autenticazione Kerberos. È possibile scegliere tra i certificati [PKCS](../protect/certficates-pfx-configure.md) o [SCEP](../protect/certificates-scep-configure.md) aggiunti in Intune. Per altre informazioni sui certificati, vedere [Usare i certificati per l'autenticazione in Microsoft Intune](../protect/certificates-configure.md).
-
-## <a name="associated-domains"></a>Domini associati
-
-Con Intune, è possibile:
-
-- Aggiungere molte associazioni da app a dominio.
-- Associare molti domini alla stessa app.
-
-Questa funzionalità si applica a:
-
-- macOS 10.15 e versioni successive
-
-### <a name="settings-apply-to-all-enrollment-types"></a>Le impostazioni si applicano a: Tutti i tipi di registrazione
-
-- **ID app**: immettere l'identificatore dell'app da associare a un sito Web. L'identificatore dell'app include l'ID team e un ID bundle: `TeamID.BundleID`.
-
-  L'ID team è una stringa alfanumerica (lettere e numeri) di 10 caratteri generata da Apple per gli sviluppatori di app, ad esempio `ABCDE12345`. [Locate your Team ID](https://help.apple.com/developer-account/#/dev55c3c710c) (Individuare l'ID team) (apre il sito Web di Apple) include ulteriori informazioni.
-
-  L'ID bundle identifica in modo univoco l'app ed è in genere formattato in notazione del nome di dominio inverso. Ad esempio, l'ID bundle di Finder è `com.apple.finder`. Per trovare l'ID bundle, usare AppleScript nel terminale:
-
-  `osascript -e 'id of app "ExampleApp"'`
-
-- **Dominio**: immettere il dominio del sito Web da associare a un'app. Il dominio include un tipo di servizio e un nome host completo, ad esempio `webcredentials:www.contoso.com`.
-
-  È possibile cercare tutti i sottodomini di un dominio associato immettendo `*.` (un carattere jolly asterisco e un punto) prima dell'inizio del dominio. Il punto è obbligatorio. I domini esatti hanno una priorità più alta rispetto ai domini con caratteri jolly. Di conseguenza, i modelli dei domini padre vengono individuati *se* non viene trovata una corrispondenza nel sottodominio completo.
-
-  Il tipo di servizio può essere:
-
-  - **authsrv**: Estensione dell'app Single Sign-On
-  - **applink**: collegamento universale
-  - **webcredentials**: riempimento automatico delle password
-
-- **Aggiungi**: selezionare per aggiungere le app e i domini associati.
-
-> [!TIP]
-> Per risolvere i problemi, nel dispositivo macOS aprire **Preferenze di sistema** > **Profili**. Verificare che il profilo creato sia presente nell'elenco profili del dispositivo. Se il profilo è incluso, assicurarsi che la **configurazione dei domini associati** si trovi nel profilo e includa i domini e l'ID app corretti.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

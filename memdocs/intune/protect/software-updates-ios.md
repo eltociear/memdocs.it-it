@@ -5,20 +5,20 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/20/2020
-ms.topic: conceptual
+ms.date: 05/15/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4de042fdc443a43e8a34a2eb433ecad34152887a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2d1aefab1e222ddb20b1c033c787ba7d323f59e5
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79350720"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988296"
 ---
 # <a name="add-iosipados-software-update-policies-in-intune"></a>Aggiungere criteri di aggiornamento software per iOS/iPadOS in Intune
 
@@ -33,6 +33,10 @@ Questa funzionalità si applica a:
 - iPadOS 13.0 e versioni successive (con supervisione)
 
 Per impostazione predefinita, i dispositivi si collegano a Intune ogni 8 ore. Se è disponibile un aggiornamento tramite un criterio di aggiornamento, il dispositivo lo scarica. Il dispositivo installa quindi l'aggiornamento alla sincronizzazione successiva nell'ambito della configurazione della pianificazione. Anche se in genere il processo di aggiornamento non richiede alcuna interazione con l'utente, se il dispositivo ha un passcode l'utente deve immetterlo per poter avviare un aggiornamento software. I profili non impediscono agli utenti di aggiornare manualmente il sistema operativo. È possibile impedire agli utenti di aggiornare manualmente il sistema operativo con un criterio di configurazione del dispositivo per limitare la visibilità degli aggiornamenti software.
+
+> [!NOTE]
+> Se si usa la [Modalità applicazione singola autonoma](https://docs.microsoft.com/mem/intune/configuration/device-restrictions-ios#autonomous-single-app-mode-asam), l'impatto degli aggiornamenti del sistema operativo come conseguente comportamento potrebbe risultare indesiderato.
+È possibile eseguire un test per valutare l'impatto degli aggiornamenti del sistema operativo nell'app in esecuzione nella Modalità applicazione singola autonoma.
 
 ## <a name="configure-the-policy"></a>Configurare i criteri
 
@@ -70,7 +74,9 @@ Per impostazione predefinita, i dispositivi si collegano a Intune ogni 8 ore. Se
        Se non si configura l'ora di inizio o di fine, la configurazione non comporta alcuna restrizione e gli aggiornamenti possono essere installati in qualsiasi momento.  
 
        > [!NOTE]
-       > Per ritardare la visibilità degli aggiornamenti software per un periodo di tempo specifico nei dispositivi iOS/iPadOS con supervisione, configurare queste impostazioni in [Limitazioni del dispositivo](../configuration/device-restrictions-ios.md#general). I criteri di aggiornamento software sostituiscono tutte le restrizioni dei dispositivi. Quando si impostano criteri di aggiornamento software e limitazioni per ritardare la visibilità degli aggiornamenti software, il dispositivo forza un aggiornamento software in base ai criteri. La limitazione si applica in modo che gli utenti non vedano l'opzione per aggiornare il dispositivo autonomamente e viene eseguito il push dell'aggiornamento in base a quanto definito dai criteri di aggiornamento di iOS.
+       > È possibile configurare le impostazioni in [Limitazioni del dispositivo](../configuration/device-restrictions-ios.md#general) per nascondere un aggiornamento agli utenti del dispositivo per un periodo di tempo nei dispositivi iOS/iPadOS con supervisione. Un periodo di restrizione può concedere il tempo necessario per testare un aggiornamento prima che sia visibile agli utenti per l'installazione. Dopo la scadenza del periodo di restrizione del dispositivo, l'aggiornamento diventa visibile agli utenti. Gli utenti possono quindi scegliere di installarlo oppure è possibile installarlo subito dopo in modo automatico tramite i criteri di aggiornamento software.
+       >
+       > Quando si usa una restrizione del dispositivo per nascondere un aggiornamento, esaminare i criteri di aggiornamento software per assicurarsi che non venga pianificata l'installazione dell'aggiornamento prima della fine del periodo di restrizione. I criteri di aggiornamento software installano gli aggiornamenti in base a una propria pianificazione, indipendentemente dal fatto che l'aggiornamento sia nascosto o visibile all'utente del dispositivo.
 
    Dopo aver configurato *Aggiorna le impostazioni del criterio*, selezionare **Avanti**.
 

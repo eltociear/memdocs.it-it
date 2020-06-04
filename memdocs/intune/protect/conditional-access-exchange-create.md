@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 04/15/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36b39d20e666015ae040a1fa058dca1d167686e4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 530d6de8194a1ca74b72567c98c5d2afcb327170
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739897"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990323"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Configurare l'accesso locale a Exchange per Intune
 
@@ -66,7 +66,10 @@ Prima di configurare l'accesso condizionale, verificare che siano presenti le co
 - **App di posta elettronica nativa in iOS/iPadOS** - Per creare i criteri di accesso condizionale, vedere [Creare criteri di accesso condizionale](../protect/create-conditional-access-intune.md)
 - **Client di posta EAS, ad esempio Gmail in Android 4 o versione successiva** - Per creare i criteri di accesso condizionale, vedere [Creare criteri di accesso condizionale](../protect/create-conditional-access-intune.md)
 
+- **Client di posta EAS per l'amministratore di dispositivi Android** - Per creare i criteri di accesso condizionale, vedere [Creare criteri di accesso condizionale](../protect/create-conditional-access-intune.md)
+
 - **Client di posta EAS in dispositivi con profilo di lavoro Android** - Per i dispositivi con profilo di lavoro Android sono supportati solo *Gmail* e *Nine Work for Android Enterprise*. Perché l'accesso condizionale funzioni nei profili di lavoro Android, è necessario distribuire un profilo di posta elettronica per l'app *Gmail* o *Nine Work for Android Enterprise*. È anche necessario distribuire tali app come installazioni obbligatorie. Dopo aver distribuito l'app, è possibile configurare l'accesso condizionale basato sul dispositivo.
+
 
 #### <a name="to-set-up-conditional-access-for-android-work-profile-devices"></a>Per configurare l'accesso condizionale per i dispositivi con profilo di lavoro Android
 

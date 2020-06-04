@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 179314f363c8f086239b2c926c4bed8d09c68204
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4f85c30c9472849d26802c8cdccd7a95006a3e4a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79364162"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83984002"
 ---
 # <a name="control-access-accounts-and-power-features-on-shared-pc-or-multi-user-devices-using-intune"></a>Controllare l'accesso, gli account e le funzionalità di risparmio energia nei PC condivisi o nei dispositivi multiutente con Intune
 
@@ -46,18 +46,39 @@ Quando il profilo viene creato in Intune, l'amministratore lo distribuisce o lo 
 2. Selezionare **Dispositivi** > **Profili di configurazione** > **Crea profilo**.
 3. Immettere le proprietà seguenti:
 
+   - **Piattaforma**: selezionare **Windows 10 e versioni successive**.
+   - **Profilo**: Selezionare **Dispositivo multiutente condiviso**.
+
+4. Selezionare **Crea**.
+5. In **Informazioni di base** immettere le proprietà seguenti:
+
    - **Nome**: immettere un nome descrittivo per il nuovo profilo.
    - **Descrizione**: Immettere una descrizione del profilo. Questa impostazione è facoltativa ma consigliata.
-   - **Piattaforma**: selezionare **Windows 10 e versioni successive**.
-   - **Tipo di profilo**: Selezionare **Dispositivo multiutente condiviso**.
 
-4. Configurare le impostazioni per [Windows 10 e versioni successive](shared-user-device-settings-windows.md) o [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md).
+6. Selezionare **Avanti**.
+7. In **Impostazioni di configurazione** le impostazioni configurabili variano in base alla piattaforma scelta. Scegliere la piattaforma per le impostazioni dettagliate:
 
-5. Selezionare **OK** > **Crea** per salvare le modifiche.
+    - [Windows 10 e versioni successive](shared-user-device-settings-windows.md)
+    - [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md)
 
-Il profilo è stato creato ed è visualizzato nell'elenco, ma non è ancora operativo. Assicurarsi di [assegnare il profilo](device-profile-assign.md) ai gruppi di dispositivi dell'organizzazione.
+8. Selezionare **Avanti**.
+
+9. In **Tag ambito** (facoltativo) assegnare un tag per filtrare il profilo a gruppi IT specifici, ad esempio `US-NC IT Team` o `JohnGlenn_ITDepartment`. Per altre informazioni sui tag di ambito, vedere [Usare il controllo degli accessi in base al ruolo (RBAC) e i tag di ambito per l'infrastruttura IT distribuita](../fundamentals/scope-tags.md).
+
+    Selezionare **Avanti**.
+
+10. In **Assegnazioni** selezionare il gruppo di dispositivi che riceverà il profilo. Per altre informazioni sull'assegnazione di profili, vedere [Assegnare profili utente e dispositivo](device-profile-assign.md).
+
+    Selezionare **Avanti**.
+
+    > [!NOTE]
+    > Assicurarsi di assegnare il profilo ai gruppi di dispositivi dell'organizzazione.
+
+11. In **Rivedi e crea** rivedere le impostazioni. Quando si seleziona **Crea**, le modifiche vengono salvate e il profilo viene assegnato. Il criterio viene visualizzato anche nell'elenco dei profili.
+
+Alla successiva sincronizzazione di ogni dispositivo viene applicato il criterio.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
 - Visualizzare tutte le impostazioni per [Windows 10 e versioni successive](shared-user-device-settings-windows.md) e [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md).
-- [Assegnare il profilo](device-profile-assign.md) e [monitorarne lo stato](device-profile-monitor.md).
+- Dopo l'[assegnazione del profilo](device-profile-assign.md) [monitorarne lo stato](device-profile-monitor.md).

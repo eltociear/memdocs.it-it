@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 03/24/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 mr.reviewer: karthib
-ms.openlocfilehash: 6b5d0f88222c8d48da4f91ff3cf8d4628ccb179d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: cb51d5f73edbc28572ee01d49ba4bd5a62cf6393
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80551585"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989643"
 ---
 # <a name="add-endpoint-protection-settings-in-intune"></a>Aggiungere le impostazioni di Endpoint Protection in Intune
 
@@ -38,9 +38,6 @@ Prima di creare un profilo, rivedere gli articoli seguenti che illustrano in det
 
 - [Impostazioni macOS](endpoint-protection-macos.md)
 - [Impostazioni Windows 10](endpoint-protection-windows-10.md)
-
-> [!NOTE]
-> L'interfaccia utente di Intune verrà aggiornata a un'esperienza a schermo intero. Questa operazione può richiedere alcune settimane. Fino a quando il tenant in uso non riceve l'aggiornamento, il flusso di lavoro per la creazione o la modifica delle impostazioni descritte in questo articolo sarà leggermente diverso.
 
 ## <a name="create-a-device-profile-containing-endpoint-protection-settings"></a>Creare un profilo del dispositivo contenente le impostazioni di Endpoint Protection
 
@@ -60,8 +57,9 @@ Prima di creare un profilo, rivedere gli articoli seguenti che illustrano in det
 4. Selezionare **Crea**.
 5. In **Informazioni di base** immettere le proprietà seguenti:
 
-    - **Nome**: immettere un nome descrittivo per il criterio. Assegnare ai criteri nomi che possano essere identificati facilmente in un secondo momento. Ad esempio, un nome di criterio valido è **macOS: profilo di Endpoint Protection che configura il firewall per tutti i dispositivi macOS**.
-    - **Descrizione**: immettere una descrizione del criterio. Questa impostazione è facoltativa ma consigliata.
+   - **Nome**: immettere un nome descrittivo per il criterio. Assegnare ai criteri nomi che possano essere identificati facilmente in un secondo momento. Ad esempio, un nome di criterio valido potrebbe includere il tipo di profilo e la piattaforma.
+
+   - **Descrizione**: immettere una descrizione del criterio. Questa impostazione è facoltativa ma consigliata.
 
 6. Selezionare **Avanti**.
 

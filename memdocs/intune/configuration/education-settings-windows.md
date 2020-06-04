@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 551f0a442f81712cff29a9ff6f55c62aeaba547a
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 55e38ac8b5503e98df4878529ac892b55a52be47
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078193"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429615"
 ---
 # <a name="configure-the-take-a-test-app-on-windows-10-devices-using-intune"></a>Configurare l'app Test ed esami nei dispositivi Windows 10 tramite Intune
 
@@ -37,14 +37,12 @@ L'[app Test ed esami in Intune](education-settings-configure.md) offre altre inf
 [Creare un profilo di configurazione del dispositivo](education-settings-configure.md#create-a-device-profile).
 
 ## <a name="take-a-test-settings"></a>Impostazioni di Test ed esami
-Dopo aver creato un profilo di configurazione del dispositivo, passare a **Tipo di profilo** e selezionare **Valutazione sicura (Education)** . Verranno visualizzate le impostazioni dell'app Test ed esami seguenti. 
-
 
 - **Tipo di account**: scegliere la modalità di accesso degli utenti al test. Le opzioni disponibili sono:
   - Account di Azure AD
   - Account di dominio
   - Account locale
-  - Account Guest locale: disponibile solo nei dispositivi che eseguono Windows 10, versione 1903 e successive.    
+  - Account Guest locale: disponibile solo nei dispositivi che eseguono Windows 10, versione 1903 e successive.
 - **Nome utente dell'account**: immettere il nome utente dell'account usato con l'app Test ed esami. È possibile immettere gli account nel formato seguente:
   - `user@contoso.com`
   - `domain\username`
@@ -52,10 +50,12 @@ Dopo aver creato un profilo di configurazione del dispositivo, passare a **Tipo 
   - `computerName\username`
 - **Nome account**: per configurare un tipo di account Guest locale, immettere il nome dell'account usato con l'app Test ed esami. Il nome dell'account verrà visualizzato come riquadro nella schermata di accesso. Gli studenti fanno clic sul riquadro per avviare il test.  
 - **URL della valutazione**: immettere l'URL del test che dovrà essere eseguito dagli utenti. Per altre informazioni su come ottenere l'URL, vedere la [documentazione relativa a Test ed esami](https://docs.microsoft.com/education/windows/take-tests-in-windows-10).
-- **Connessione stampanti**: scegliere **Rendi obbligatorio** per consentire l'accesso all'app Test ed esami solo dai dispositivi connessi a una stampante. Questa impostazione rende anche disponibile il pulsante Stampa dell'app per gli utenti che eseguono i test. L'impostazione **Non configurata** consente agli studenti di accedere all'app da dispositivi non connessi a una stampante.  
-- **Monitoraggio dello schermo**: Scegliere **Consenti** per monitorare l'attività dello schermo mentre gli utenti eseguono il test. L'opzione **Non configurato** impedisce il monitoraggio dello schermo durante il test.
-- **Suggerimenti di testo**: scegliere **Consenti** per consentire a chi esegue il test di visualizzare i suggerimenti di testo. **Non configurato**: blocca i suggerimenti di testo mentre gli utenti eseguono il test.
+- **Connessione stampanti**: **Rendi obbligatorio** consente l'accesso all'app Test ed esami solo dai dispositivi connessi a una stampante. Questa impostazione rende anche disponibile il pulsante Stampa dell'app per gli utenti che eseguono i test. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita il sistema operativo potrebbe consentire agli studenti di accedere all'app da dispositivi non connessi a una stampante.  
+- **Monitoraggio dello schermo**: **Consenti** monitora l'attività dello schermo mentre gli utenti eseguono il test. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita il sistema operativo potrebbe impedire il monitoraggio dello schermo durante il test.
+- **Suggerimenti di testo**: scegliere **Consenti** per consentire a chi esegue il test di visualizzare i suggerimenti di testo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita il sistema operativo potrebbe bloccare i suggerimenti di testo mentre gli utenti eseguono un test.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Assicurarsi di [assegnare il profilo](device-profile-assign.md) e [monitorarne lo stato](device-profile-monitor.md).
+[Assegnare il profilo](device-profile-assign.md) e [monitorarne lo stato](device-profile-monitor.md).
+
+Altre informazioni sull'[applicazione Test ed esami](education-settings-configure.md).

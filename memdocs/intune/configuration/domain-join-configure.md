@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/20/2020
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 207b3983c214ad4e166ae58ea0ccd18ea23bf418
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 211722a02183d3b86525468f907d4093331d9de6
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79364396"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988421"
 ---
 # <a name="configuration-domain-join-settings-for-hybrid-azure-ad-joined-devices-in-microsoft-intune"></a>Configurazione delle impostazioni di aggiunta al dominio per dispositivi aggiunti ad Azure AD ibridi in Microsoft Intune
 
@@ -42,12 +42,17 @@ Questo articolo illustra come creare un profilo di aggiunta a un dominio per una
 2. Selezionare **Dispositivi** > **Profili di configurazione** > **Crea profilo**.
 3. Immettere le proprietà seguenti:
 
+    - **Piattaforma**: selezionare **Windows 10 e versioni successive**.
+    - **Profilo**: selezionare **Aggiunta a un dominio (anteprima)** .
+
+4. Selezionare **Crea**.
+5. In **Informazioni di base** immettere le proprietà seguenti:
+
     - **Nome**: immettere un nome descrittivo per il criterio. Assegnare ai criteri nomi che possano essere identificati facilmente in un secondo momento. Ad esempio, un nome di criterio valido è **Windows 10: Profilo di aggiunta al dominio che include informazioni sul dominio locale per registrare dispositivi aggiunti ad AD ibridi con Windows Autopilot**.
     - **Descrizione**: immettere una descrizione del criterio. Questa impostazione è facoltativa ma consigliata.
-    - **Piattaforma**: selezionare **Windows 10 e versioni successive**.
-    - **Tipo di profilo**: selezionare **Aggiunta a un dominio (anteprima)** .
 
-4. Selezionare **Impostazioni**. Immettere le proprietà seguenti:
+6. Selezionare **Avanti**.
+7. In **Impostazioni di configurazione** immettere le proprietà seguenti:
 
     - **Prefisso nome computer**: immettere un prefisso per il nome del dispositivo. I nomi dei computer hanno una lunghezza di 15 caratteri. Dopo il prefisso, i 15 caratteri rimanenti vengono generati in modo casuale.
     - **Nome di dominio**: immettere il nome di dominio completo (FQDN) a cui aggiungere i dispositivi. Immettere ad esempio `americas.corp.contoso.com.`
@@ -55,12 +60,22 @@ Questo articolo illustra come creare un profilo di aggiunta a un dominio per una
 
       Per ulteriori informazioni e consigli su questa impostazione, vedere [Distribuire dispositivi aggiunti ad Azure AD ibridi](../enrollment/windows-autopilot-hybrid.md).
 
-5. Al termine, selezionare **OK** > **Crea** per salvare le modifiche.
+8. Selezionare **Avanti**.
 
-Il profilo viene creato e visualizzato nell'elenco dei profili. Si è ora pronti per [distribuire dispositivi aggiunti ad Azure AD ibridi usando Intune e Windows Autopilot](../enrollment/windows-autopilot-hybrid.md).
+9. In **Tag ambito** (facoltativo) assegnare un tag per filtrare il profilo a gruppi IT specifici, ad esempio `US-NC IT Team` o `JohnGlenn_ITDepartment`. Per altre informazioni sui tag di ambito, vedere [Usare il controllo degli accessi in base al ruolo (RBAC) e i tag di ambito per l'infrastruttura IT distribuita](../fundamentals/scope-tags.md).
+
+    Selezionare **Avanti**.
+
+10. In **Assegnazioni** selezionare gli utenti o il gruppo utente che riceveranno il profilo. Per altre informazioni sull'assegnazione di profili, vedere [Assegnare profili utente e dispositivo](device-profile-assign.md).
+
+    Selezionare **Avanti**.
+
+11. In **Rivedi e crea** rivedere le impostazioni. Quando si seleziona **Crea**, le modifiche vengono salvate e il profilo viene assegnato. Il criterio viene visualizzato anche nell'elenco dei profili.
+
+Si è ora pronti per [distribuire dispositivi aggiunti ad Azure AD ibridi usando Intune e Windows Autopilot](../enrollment/windows-autopilot-hybrid.md).
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Dopo averlo creato, il profilo è pronto per l'assegnazione. [Assegnare il profilo](device-profile-assign.md) e [monitorarne lo stato](device-profile-monitor.md).
+Dopo l'[assegnazione](device-profile-assign.md) del profilo, [monitorarne lo stato](device-profile-monitor.md).
 
 [Distribuire dispositivi aggiunti ad Azure AD ibridi usando Intune e Windows Autopilot](../enrollment/windows-autopilot-hybrid.md).

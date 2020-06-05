@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b87b2528dce4d007f2a2031a11fd69ea774c2033
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: e3c83859d56b23974e95299c76b0d65512da0a0e
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165907"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455090"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Come usare Azure AD per accedere alle API di Intune in Microsoft Graph
 
@@ -352,7 +352,7 @@ In questo esempio viene illustrato come usare C# per recuperare un elenco di dis
 4. Aggiungere le istruzioni seguenti all'inizio di **Program.cs**:
 
     ``` csharp
-    using Microsoft.IdentityModel.Clients.ActiveDirectory;</p>
+    using Microsoft.IdentityModel.Clients.ActiveDirectory;
     using System.Net.Http;
     ```
 

@@ -1,5 +1,5 @@
 ---
-title: Gestire le versioni del sistema operativo con Microsoft Intune
+title: Gestire le versioni del sistema operativo con Intune
 titleSuffix: Microsoft Intune
 description: Informazioni su come gestire le versioni del sistema operativo su piattaforme con Microsoft Intune.
 keywords: ''
@@ -14,12 +14,12 @@ ms.localizationpriority: high
 ms.assetid: 361ef17b-1ee0-4879-b7b1-d678b0787f5a
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c25a40d288b643c289c05322e3e2d4677afb0b60
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e4135dc90ff2739cb27ac95afa095bdfaf375d82
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79362238"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330934"
 ---
 # <a name="manage-operating-system-versions-with-intune"></a>Gestire le versioni del sistema operativo con Intune
 Sulle piattaforme moderne di dispositivi mobili e desktop, i principali aggiornamenti, le patch e le nuove versioni vengono rilasciati con una certa rapidità. In Windows è possibile controllare la gestione completa degli aggiornamenti e delle patch, mentre altre piattaforme quali iOS/iPadOS e Android richiedono la partecipazione degli utenti finali al processo.  Le funzionalità di Microsoft Intune consentono di strutturare la gestione delle versioni del sistema operativo in piattaforme diverse.
@@ -79,12 +79,12 @@ Per informazioni dettagliate, vedere [Come creare e assegnare criteri di protezi
 ## <a name="managing-a-new-operating-system-version-rollout"></a>Gestione di una nuova implementazione di versione del sistema operativo
 È possibile usare le funzionalità di Intune descritte in questo articolo per far passare l'organizzazione a una nuova versione del sistema operativo nella sequenza temporale definita. I seguenti passaggi sono un modello di distribuzione di esempio per spostare gli utenti dalla versione 1 del sistema operativo alla versione 2 del sistema operativo in sette giorni.
 - **Passaggio 1**: Usare le restrizioni di registrazione per richiedere la versione 2 del sistema operativo come versione minima per registrare il dispositivo. Ciò garantisce che i nuovi dispositivi degli utenti finali siano compatibili in fase di registrazione.
-- **Passaggio 2a**: Usare i criteri di protezione delle app di Intune per avvisare gli utenti quando l'app viene aperta o quando la versione 2 del sistema operativa è obbligatoria.
+- **Passaggio 2a**: Usare i criteri di protezione delle app di Intune per avvisare gli utenti quando l'app viene aperta o se è necessaria la versione 2 del sistema operativo.
 - **Passaggio 2b**. Usare criteri di conformità dei dispositivi per richiedere la versione 2 del sistema operativo come versione minima per la conformità del dispositivo. Usare **Azioni** in caso di mancata conformità per consentire un periodo di tolleranza di sette giorni e inviare agli utenti finali una notifica di posta elettronica con i requisiti e la sequenza temporale.
   - Questi criteri informano gli utenti finali che i dispositivi esistenti devono essere aggiornati tramite posta elettronica, il portale aziendale di Intune e quando l'applicazione viene aperta per le app abilitate con un criterio di protezione delle app.
   - È possibile eseguire un report di conformità per identificare gli utenti non conformi. 
-- **Passaggio 3a**: Usare i criteri di protezione delle app di Intune per bloccare gli utenti quando un'applicazione viene aperta se nel dispositivo non è in corso l'esecuzione della versione 2 del sistema operativo.
-- **Passaggio 3b**: Usare i criteri di conformità dei dispositivi per richiedere la versione 2 del sistema operativo come versione minima per la conformità del dispositivo.
+- **Passaggio 3a**: Usare i criteri di protezione delle app di Intune per bloccare gli utenti quando un'applicazione viene aperta se il dispositivo non esegue la versione 2 del sistema operativo.
+- **Passaggio 3b**: Usare criteri di conformità dei dispositivi per richiedere la versione 2 del sistema operativo come versione minima per la conformità del dispositivo.
   - Questi criteri richiedono l'aggiornamento dei dispositivi per continuare ad accedere ai dati aziendali. I servizi protetti vengono bloccati quando vengono usati con l'accesso condizionale per i dispositivi. Le app abilitate con un criterio di protezione delle app vengono bloccate quando aperte o quando accedono ai dati aziendali.
 
 ## <a name="next-steps"></a>Passaggi successivi

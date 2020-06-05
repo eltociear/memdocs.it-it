@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cc180b4a554ceec19fb0815b028d875c32da37bf
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 739ebebe18628279e5242ab227cf0f43993eff08
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166026"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330866"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Preparare le app line-of-business per i criteri di protezione delle app
 
@@ -121,7 +121,6 @@ Questa tabella elenca le impostazioni abilitate se un'app usa App SDK o App Wrap
 |Configurare il contenuto delle notifiche dell'app per gli account dell'organizzazione|X|X|
 |Richiedere l'uso di tastiere approvate (solo Android)|X|X|
 |Richiedere i criteri di protezione dell'app (accesso condizionale)|X||
-|Richiedere l'approvazione dell'app client (accesso condizionale)|X||
 
 ## <a name="next-steps"></a>Passaggi successivi
 

@@ -2,7 +2,7 @@
 title: Aggiornare i client in Windows
 titleSuffix: Configuration Manager
 description: Aggiornare i client di Configuration Manager in computer Windows.
-ms.date: 08/27/2019
+ms.date: 06/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6143fd47-48ec-4bca-b53b-5b9b9f067bc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b3849f360b2f22f2f48bbe49159b610399158b29
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 8b0a69b07a3be633434203f93b0724cec4ea88a3
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83427774"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347143"
 ---
 # <a name="how-to-upgrade-clients-for-windows-computers-in-configuration-manager"></a>Come aggiornare i client per i computer Windows in Configuration Manager
 
@@ -59,9 +59,6 @@ Configurare il sito per l'aggiornamento automatico dei client alla versione di C
 > Per individuare le diverse versioni del client di Configuration Manager nella gerarchia, è possibile eseguire il report **Conteggio dei client di Configuration Manager per versioni client** nella cartella report **Sito - Informazioni client**.  
 
 Per impostazione predefinita Configuration Manager crea un pacchetto di aggiornamento. Invia automaticamente il pacchetto a tutti i punti di distribuzione nella gerarchia. Se si apportano modifiche al pacchetto client nel sito di amministrazione centrale, Configuration Manager aggiorna automaticamente il pacchetto e lo ridistribuisce. Una modifica di esempio è quando si aggiunge un Language Pack client. Se si abilita l'aggiornamento client automatico, il nuovo Language Pack client sarà installato automaticamente su tutti i client.
-
-> [!NOTE]  
-> Configuration Manager non invia automaticamente il pacchetto di aggiornamento client ai punti di distribuzione di Configuration Manager basati sul cloud.  
 
 Abilitare l'aggiornamento client automatico nell'intera gerarchia. Questa configurazione consente di mantenere i client aggiornati con il minimo sforzo.  
 

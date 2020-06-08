@@ -5,8 +5,8 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/04/2019
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 12d04869834691167c2f31be853029c9a939a338
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 52eae65e6735ad655c2e8db53e34383ccc5e3b30
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79364331"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988393"
 ---
 # <a name="use-the-take-a-test-app-on-windows-10-devices-in-microsoft-intune"></a>Usare l'app Test ed esami nei dispositivi Windows 10 in Microsoft Intune
-
-
 
 I profili di formazione in Intune hanno lo scopo di consentire agli studenti di eseguire un test o un esame da un dispositivo. Questa funzionalità include l'app **Test ed esami** e le impostazioni per aggiungere un URL di test, scegliere la modalità di accesso degli utenti finali al test e altro ancora. Questa funzionalità supporta la piattaforma seguente:
 
@@ -42,21 +40,36 @@ Questo articolo elenca i passaggi per creare un profilo di configurazione del di
 2. Selezionare **Dispositivi** > **Profili di configurazione** > **Crea profilo**.
 3. Immettere le proprietà seguenti:
 
+    - **Piattaforma**: selezionare **Windows 10 e versioni successive**.
+    - **Profilo**: Selezionare **Valutazione sicura (Education)** .
+
+4. Selezionare **Crea**.
+5. In **Informazioni di base** immettere le proprietà seguenti:
+
     - **Nome**: immettere un nome descrittivo per il nuovo profilo.
     - **Descrizione**: Immettere una descrizione del profilo. Questa impostazione è facoltativa ma consigliata.
-    - **Piattaforma**: scegliere **Windows 10 e versioni successive**.
-    - **Profilo**: scegliere **Profilo di formazione**.
 
-4. Immettere le impostazioni da configurare:
+6. Selezionare **Avanti**.
+7. In **Impostazioni di configurazione** immettere le impostazioni da configurare:
 
     - [Windows 10 e versioni successive](education-settings-windows.md)
 
-5. Selezionare **OK** > **Crea** per salvare le modifiche.
+8. Selezionare **Avanti**.
 
-Dopo aver immesso le impostazioni e creato il profilo, il profilo viene visualizzato nell'elenco dei profili. Ora [assegnare il profilo ad alcuni gruppi](device-profile-assign.md).
+9. In **Tag ambito** (facoltativo) assegnare un tag per filtrare il profilo a gruppi IT specifici, ad esempio `US-NC IT Team` o `JohnGlenn_ITDepartment`. Per altre informazioni sui tag di ambito, vedere [Usare il controllo degli accessi in base al ruolo (RBAC) e i tag di ambito per l'infrastruttura IT distribuita](../fundamentals/scope-tags.md).
+
+    Selezionare **Avanti**.
+
+10. In **Assegnazioni** selezionare gli utenti o il gruppo utenti che riceveranno il profilo. Per altre informazioni sull'assegnazione di profili, vedere [Assegnare profili utente e dispositivo](device-profile-assign.md).
+
+    Selezionare **Avanti**.
+
+11. In **Rivedi e crea** rivedere le impostazioni. Quando si seleziona **Crea**, le modifiche vengono salvate e il profilo viene assegnato. Il criterio viene visualizzato anche nell'elenco dei profili.
+
+Il criterio viene applicato alla sincronizzazione successiva di ogni dispositivo.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
 Visualizzare l'elenco delle [ impostazioni di formazione di Windows 10](education-settings-windows.md) e le relative descrizioni.
 
-[Assegnare il profilo](device-profile-assign.md) e [monitorarne lo stato](device-profile-monitor.md).
+Dopo l'[assegnazione del profilo](device-profile-assign.md), [monitorarne lo stato](device-profile-monitor.md).

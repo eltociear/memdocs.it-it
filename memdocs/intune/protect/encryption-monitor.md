@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 11/18/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 0b634dad49b11e39e9a046688f0b5fd9ddc53ab4
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 1199c6db96325a103394cfb53a4ca70092cd3767
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254997"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989656"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Monitorare la crittografia dei dispositivi con Intune
 
@@ -169,68 +169,20 @@ Durante la visualizzazione del riquadro Report sulla crittografia è possibile s
 
 Questo report può essere utile per identificare i problemi di gruppi di dispositivi. È ad esempio possibile usare il report per identificare un elenco di dispositivi macOS che segnalano *FileVault is already enabled by the user* (FileVault già abilitato dall'utente). Questo messaggio identifica i dispositivi che devono essere decrittografati manualmente perché Intune possa gestirne le impostazioni di FileVault.
 
-## <a name="filevault-recovery-keys"></a>Chiavi di ripristino di FileVault
+## <a name="manage-recovery-keys"></a>Gestione delle chiavi di ripristino
 
-Quando Intune esegue per la prima volta la crittografia di un dispositivo macOS con FileVault, viene creata una chiave di ripristino personale. Al momento della crittografia, il dispositivo visualizza la chiave personale una sola volta per l'utente finale.
+Per informazioni dettagliate sulla gestione delle chiavi di ripristino, vedere gli argomenti seguenti nella documentazione di Intune:
 
-Per i dispositivi gestiti, Intune può depositare una copia della chiave di ripristino personale. Il deposito delle chiavi consente agli amministratori di Intune di ruotare le chiavi per favorire la protezione dei dispositivi e agli utenti di recuperare una chiave di ripristino personale smarrita o ruotata.
+macOS FileVault:
+- [Recuperare una chiave di ripristino personale](../protect/encrypt-devices-filevault.md#retrieve-personal-recovery-key)
+- [Ruotare le chiavi di ripristino](../protect/encrypt-devices-filevault.md#rotate-recovery-keys)
+- [Ripristinare chiavi di ripristino](../protect/encrypt-devices-filevault.md#recover-recovery-keys)
 
-Intune supporta più opzioni per la rotazione e il ripristino delle chiavi di ripristino personali. È opportuno eseguire la rotazione delle chiavi se la chiave personale corrente viene smarrita o si ritiene che sia a rischio.
-
-> [!IMPORTANT]
-> I dispositivi crittografati dagli utenti e non da Intune non possono essere gestiti da Intune. Questo significa che Intune non può depositare la chiave di ripristino personale di questi dispositivi, né gestire la rotazione delle chiavi di ripristino. Perché Intune possa gestire FileVault e le chiavi di ripristino dei dispositivi, gli utenti devono decrittografare i dispositivi e quindi consentire a Intune di crittografarli.
-
-### <a name="rotate-recovery-keys"></a>Ruotare le chiavi di ripristino
-
-- **Rotazione automatica**: un amministratore può configurare l'impostazione di FileVault Rotazione della chiave di ripristino personale in modo da generare periodicamente nuove chiavi di ripristino in modo automatico. Quando viene generata una nuova chiave per un dispositivo, la chiave non viene visualizzata per l'utente. L'utente deve invece ottenere la chiave da un amministratore o tramite l'app Portale aziendale.
-
-- **Rotazione manuale**: un amministratore può visualizzare le informazioni relative ai dispositivi gestiti con Intune e crittografati con FileVault. Può quindi scegliere di ruotare manualmente le chiavi di ripristino per i dispositivi aziendali. Non è possibile ruotare le chiavi di ripristino per i dispositivi personali.
-
-  Per ruotare una chiave di ripristino:
-
-  1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-  
-  2. Selezionare **Dispositivi** > **Tutti i dispositivi**.
-  
-  3. Dall'elenco dei dispositivi selezionare il dispositivo crittografato di cui si vuole ruotare la chiave, quindi in Monitoraggio selezionare **Chiavi di ripristino**.
-  
-  4. Nel riquadro Chiavi di ripristino selezionare **Ruota la chiave di ripristino di FileVault**.
-
-     Alla successiva sincronizzazione del dispositivo con Intune la chiave personale verrà ruotata. Quando necessario, l'utente finale può ottenere la nuova chiave tramite il portale aziendale.
-
-### <a name="recover-recovery-keys"></a>Ripristinare chiavi di ripristino
-
-- **Amministratore**: gli amministratori non possono visualizzare le chiavi di ripristino personali per i dispositivi crittografati con FileVault.
-
-- **Utente finale**: gli utenti finali possono usare il sito Web Portale aziendale da qualsiasi dispositivo per visualizzare la chiave di ripristino personale corrente per tutti i propri dispositivi gestiti. Non è possibile visualizzare le chiavi di ripristino dall'app Portale aziendale.
-
-  Per visualizzare una chiave di ripristino:
-  
-  1. Da un qualsiasi dispositivo accedere al *Portale aziendale Intune*.
-
-  2. Nel portale passare a **Dispositivi** e selezionare il dispositivo macOS crittografato con FileVault.
-
-  3. Selezionare **Ottieni la chiave di ripristino**. Verrà visualizzata la chiave di ripristino corrente.
-
-## <a name="bitlocker-recovery-keys"></a>Chiavi di ripristino di BitLocker
-
-Intune offre l'accesso al pannello di Azure AD per BitLocker, per consentire di visualizzare gli ID delle chiavi di BitLocker e le chiavi di ripristino per i dispositivi Windows 10 dal portale di Intune. Per essere accessibile, il dispositivo deve avere le chiavi depositate in Azure AD.
-
-1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-
-2. Selezionare **Dispositivi** > **Tutti i dispositivi**.
-
-3. Selezionare un dispositivo nell'elenco e in *Monitoraggio* selezionare **Chiavi di ripristino**.
-  
-   Quando le chiavi sono presenti in Azure AD, sono disponibili le informazioni seguenti:
-   - ID chiave BitLocker
-   - Chiave di ripristino di BitLocker
-   - Tipo unità
-
-   Quando le chiavi non sono presenti in Azure AD, Intune visualizzerà il messaggio *Non sono state trovate chiavi BitLocker per questo dispositivo*.
-
-Le informazioni per BitLocker vengono ottenute tramite il [provider di servizi di configurazione BitLocker](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp). Il provider di servizi di configurazione (CSP) BitLocker è supportato in Windows 10 versione 1709 e successive e in Windows 10 Pro versione 1809 e successive.
+Windows 10 BitLocker:
+- [Ruotare le chiavi di ripristino di BitLocker](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys)
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Creare criteri di [conformità dei dispositivi](compliance-policy-create-windows.md).
+[Gestire i criteri BitLocker](../protect/encrypt-devices.md)
+
+[Gestire i criteri FileVault](encrypt-devices-filevault.md)

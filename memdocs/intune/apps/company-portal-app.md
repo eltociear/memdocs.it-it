@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/09/2020
-ms.topic: conceptual
+ms.date: 05/26/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e584019063c6af7f04f5666ba2c38d8199681c5
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 8f79ac0ef70eb9eccf47837517e3e69df3fdb3e8
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771420"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84165720"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Come personalizzare le app Portale aziendale Intune, il sito Web Portale aziendale e l'app Intune
 
@@ -42,7 +42,7 @@ La tabella seguente fornisce i dettagli di personalizzazione per l'esperienza ut
 | **Nome organizzazione** | Questo nome viene visualizzato nella messaggistica nell'esperienza utente finale. Può essere impostato anche per la visualizzazione nelle intestazioni usando l'impostazione **Mostra su intestazione**. La lunghezza massima è di 40 caratteri. |
 | **Colore** | Scegliere **Standard** per selezionare tra cinque colori standard. Scegliere **Personalizzato** per selezionare un colore specifico in base a un valore in formato esadecimale. |
 | **Colore del tema** | Impostare il colore del tema da visualizzare nell'esperienza utente finale. Il colore del testo verrà impostato automaticamente su nero o bianco in modo che sia visibile sul colore del tema selezionato. |
-| **Mostra su intestazione** | Specificare se l'intestazione nelle esperienze utente finale deve includere **il logo e il nome della società**, **solo il logo della società** o **solo il nome della società**. Le caselle di anteprima seguenti visualizzano solo i logo, non il nome.  |
+| **Mostra su intestazione** | Specificare se l'intestazione nelle esperienze utente finale deve includere **il logo e il nome dell'organizzazione**, **solo il logo dell'organizzazione** o **solo il nome dell'organizzazione**. Le caselle di anteprima seguenti visualizzano solo i logo, non il nome.  |
 | **Carica il logo per lo sfondo con colore del tema** | Caricare il logo che si desidera visualizzare sopra il colore del tema selezionato. Per assicurare un aspetto ottimale, caricare un logo con uno sfondo trasparente. È possibile visualizzare il risultato nella casella di anteprima sotto l'impostazione.<p>Dimensioni massime immagine: 400 x 400 px<br>Dimensioni massime del file:   750 kB<br>Tipo di file: PNG, JPG o JPEG |
 | **Carica il logo per lo sfondo bianco o chiaro** | Caricare il logo da visualizzare sopra gli sfondi di colore bianco o chiaro. Per assicurare un aspetto ottimale, caricare un logo con uno sfondo trasparente. È possibile visualizzare il risultato su uno sfondo bianco nella casella di anteprima sotto l'impostazione.<p>Dimensioni massime immagine: 400 x 400 px<br>Dimensioni massime del file: 750 kB<br>Tipo di file: PNG, JPG o JPEG |
 | **Carica l'immagine del marchio** | Caricare un'immagine del marchio dell'organizzazione.<p><ul><li>Larghezza immagine consigliata: Maggiore di 1125 px (deve essere almeno 650 px)</li><li>Dimensioni massime immagine: 1,3 MB</li><li>Tipo di file: PNG, JPG o JPEG</li><li>Viene visualizzato nelle posizioni seguenti:</li><ul><li>Portale aziendale iOS/iPadOS: Immagine di sfondo nella pagina del profilo dell'utente.</li><li>Sito Web del portale aziendale:   Immagine di sfondo nella pagina del profilo dell'utente.</li><li>App Intune Android: nel menu e come immagine di sfondo nella pagina del profilo dell'utente.</li></ul></ul> |
@@ -86,21 +86,25 @@ Immettere le informazioni sul supporto dell'organizzazione per consentire ai dip
 
 ## <a name="configuration"></a>Configurazione
 
-La tabella seguente offre ulteriori dettagli di configurazione:
+È possibile configurare l'esperienza del Portale aziendale specificatamente per la registrazione, la privacy, le notifiche, le origini app e le azioni self-service.
+
+### <a name="enrollment"></a>Registrazione
+
+La tabella seguente offre altri dettagli di configurazione:
 
 | Nome del campo | Lunghezza massima | Altre informazioni |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| URL dell'informativa sulla privacy | 79 | Impostare l'informativa sulla privacy dell'organizzazione in modo che venga visualizzata quando gli utenti fanno clic sui collegamenti per la privacy. Immettere un URL valido nel formato `https://www.contoso.com`. |
-| Messaggio sulla privacy nel Portale aziendale per iOS/iPadOS | 520 | Mantenere il valore predefinito o impostare un messaggio personalizzato per elencare gli elementi che l'organizzazione può o non può visualizzare nei dispositivi iOS/iPadOS gestiti. È possibile usare il markdown per aggiungere punti elenco, grassetto, corsivo e collegamenti. |
-| Registrazione del dispositivo | N/D | Specificare se e in che modo richiedere agli utenti di registrarsi nella gestione dei dispositivi mobili. I dettagli sono forniti di seguito. |
-| Notifica relativa alla proprietà del dispositivo | N/D | Inviare una notifica push agli utenti del portale aziendale sia Android che iOS quando il tipo di proprietà del dispositivo cambia da personale ad aziendale. Per impostazione predefinita, questa notifica push è disattivata. Quando la proprietà del dispositivo è impostata su aziendale, Intune ha un accesso più ampio al dispositivo, che include l'inventario completo delle app, la rotazione delle chiavi FileVault, il recupero dei numeri di telefono e alcune azioni remote selezionate. Per altre informazioni, vedere [Modificare la proprietà del dispositivo](../enrollment/corporate-identifiers-add.md#change-device-ownership).  |
+| Registrazione del dispositivo | N/D | Specificare se e in che modo è consigliabile richiedere agli utenti di registrarsi nella gestione dei dispositivi mobili. Per altre informazioni vedere le [opzioni delle impostazioni per la Registrazione dei dispositivi](../apps/company-portal-app.md#device-enrollment-setting-options). |
 
-### <a name="device-enrollment-setting-options"></a>Opzioni di impostazione della registrazione dei dispositivi
+#### <a name="device-enrollment-setting-options"></a>Opzioni di impostazione della registrazione dei dispositivi
 
 > [!NOTE]
 > Per il supporto per l'impostazione della registrazione dei dispositivi è necessario che gli utenti finali dispongano delle versioni del Portale aziendale seguenti:
 > - Portale aziendale in iOS/iPadOS: versione 4.4 o successiva
 > - Portale aziendale in Android: versione 5.0.4715.0 o successiva 
+
+> [!IMPORTANT]
+> Le impostazioni seguenti non si applicano ai dispositivi iOS/iPadOS configurati per la registrazione con la [Registrazione automatica dei dispositivi](../enrollment/device-enrollment-program-enroll-ios.md). Indipendentemente dal modo in cui queste impostazioni sono configurate, i dispositivi iOS/iPadOS configurati per la Registrazione automatica dei dispositivi verranno registrati durante il flusso predefinito e agli utenti verrà richiesto di eseguire l'accesso all'avvio del Portale aziendale.
 
 |    Opzioni di registrazione dei dispositivi    |    Descrizione    |    Richieste di elenco di controllo    |    Notifica    |    Stato dei dettagli del dispositivo    |    Stato dei dettagli dell'app (per app che richiedono la registrazione)    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
@@ -110,11 +114,51 @@ La tabella seguente offre ulteriori dettagli di configurazione:
 
 <sup>(1)</sup> **Problema noto:** Se si impostano le app per richiedere la registrazione per l'installazione e si imposta anche la registrazione dei dispositivi su "Non disponibile", l'app Portale aziendale in Android continuerà a offrire agli utenti istruzioni per la registrazione. Questo problema verrà risolto a breve.
 
-> [!NOTE]
-> Se si usa Azure per enti pubblici, l'utente finale riceve i log delle app per prendere decisioni in merito alla condivisione quando avvia il processo per visualizzare la Guida per un problema. Se tuttavia non si usa Azure per enti pubblici, il portale aziendale invierà i log delle app direttamente a Microsoft quando l'utente avvia il processo per visualizzare la Guida per un problema. Inviando i log delle app a Microsoft sarà più semplice risolvere i problemi.
+### <a name="privacy"></a>Privacy
+
+La tabella seguente offre dettagli di configurazione specifici per la privacy:
+
+| Nome del campo | Lunghezza massima | Altre informazioni |
+|------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| URL dell'informativa sulla privacy | 79 | Impostare l'informativa sulla privacy dell'organizzazione in modo che venga visualizzata quando gli utenti fanno clic sui collegamenti per la privacy. Immettere un URL valido nel formato `https://www.contoso.com`. |
+| Messaggio sulla privacy nel Portale aziendale per iOS/iPadOS | 520 | Mantenere il messaggio **predefinito** o definirne uno **personalizzato** per elencare gli elementi che l'organizzazione può o non è in grado di visualizzare nei dispositivi iOS/iPadOS gestiti. È possibile usare il markdown per aggiungere punti elenco, grassetto, corsivo e collegamenti. Gli utenti visualizzeranno anche un elenco di elementi che possono essere visualizzati ed eseguiti dall'organizzazione, ma tale elenco viene generato automaticamente da Intune e non è personalizzabile. |
+
+### <a name="device-ownership-notification"></a>Notifica relativa alla proprietà del dispositivo
+
+La tabella seguente offre dettagli di configurazione specifici per le notifiche:
+
+| Nome del campo | Lunghezza massima | Altre informazioni |
+|------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Inviare una notifica push agli utenti quando il tipo di proprietà del dispositivo cambia da personale ad aziendale (solo Android e iOS/iPadOS)​ | N/D | Inviare una notifica push agli utenti del portale aziendale sia Android che iOS quando il tipo di proprietà del dispositivo cambia da personale ad aziendale. Per impostazione predefinita, questa notifica push è disattivata. Quando la proprietà del dispositivo è impostata su aziendale, Intune ha un accesso più ampio al dispositivo, che include l'inventario completo delle app, la rotazione delle chiavi FileVault, il recupero dei numeri di telefono e alcune azioni remote selezionate. Per altre informazioni, vedere [Modificare la proprietà del dispositivo](../enrollment/corporate-identifiers-add.md#change-device-ownership).  |
+
+### <a name="app-sources"></a>Origini app
+
+È possibile scegliere le origini app aggiuntive che verranno visualizzate sul Portale aziendale. La tabella seguente offre dettagli di configurazione specifici per le origini app:
+
+| Nome del campo | Lunghezza massima | Altre informazioni |
+|------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Applicazioni aziendali Azure AD | N/D | Selezionare **Nascondi** oppure **Mostra** per visualizzare le **applicazioni aziendali Azure AD** nel Portale aziendale per ogni utente finale. Per altre informazioni vedere [Opzioni di impostazione dell'origine app](../apps/company-portal-app.md#app-source-setting-options). |
+| Applicazioni di Office Online | N/D | Selezionare **Nascondi** oppure **Mostra** per visualizzare le **applicazioni di Office Online** nel Portale aziendale per ogni utente finale. Per altre informazioni vedere [Opzioni di impostazione dell'origine app](../apps/company-portal-app.md#app-source-setting-options). |
+
+#### <a name="app-source-setting-options"></a>Opzioni di impostazione dell'origine app
 
 > [!NOTE]
-> In conformità con i criteri Microsoft e Apple, i dati raccolti dal servizio non vengono venduti per alcun motivo a terze parti.
+> Il sito Web del Portale aziendale supporterà inizialmente la visualizzazione delle app da altri servizi Microsoft.
+
+È possibile nascondere o mostrare le **applicazioni aziendali Azure AD** e le **applicazioni di Office Online** nel Portale aziendale per ogni utente finale. L'opzione **Mostra** farà in modo che il Portale aziendale visualizzi l'intero catalogo applicazioni dal servizio o dai servizi Microsoft selezionati e assegnati all'utente. Le **applicazioni aziendali Azure AD** vengono registrate e assegnate tramite il [portale di Azure](https://portal.azure.com). Le **applicazioni Office Online** vengono assegnate usando i controlli di licenza disponibili nell'[Interfaccia di amministrazione di M365](https://admin.microsoft.com). Per trovare questa impostazione di configurazione, nel [centro di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) selezionare **Amministrazione del tenant** > **Personalizzazione**. Per impostazione predefinita, ogni origine di app aggiuntiva verrà impostata su **Nascondi**. 
+
+### <a name="customizing-user-self-service-actions-for-the-company-portal"></a>Personalizzazione delle azioni self-service che l'utente può eseguire sul Portale aziendale
+
+È possibile personalizzare le azioni self-service del dispositivo disponibili che vengono visualizzate dagli utenti finali nell'app e nel sito Web Portale aziendale. Per contribuire a evitare le azioni non previste nel dispositivo, sarà possibile configurare le impostazioni per l'app Portale aziendale selezionando **Amministrazione del tenant** > **Personalizzazione**. 
+
+Sono disponibili le azioni seguenti:
+- Nascondi il pulsante **Rimuovi** nei dispositivi Windows aziendali.
+- Nascondi il pulsante **Ripristina** nei dispositivi Windows aziendali.
+- Nascondi il pulsante **Rimuovi** nei dispositivi iOS/iPadOS aziendali.
+- Nascondi il pulsante **Ripristina** nei dispositivi iOS/iPadOS aziendali.
+
+> [!NOTE]
+> Queste azioni possono essere usate per limitare le azioni del dispositivo nell'app e nel sito Web Portale aziendale e non implementano criteri di restrizione dei dispositivi. Per impedire agli utenti di eseguire il ripristino delle impostazioni di fabbrica o la rimozione di MDM dalle impostazioni, è necessario configurare i criteri di restrizione dei dispositivi. 
 
 ## <a name="company-portal-derived-credentials-for-iosipados-devices"></a>Credenziali derivate del portale aziendale per i dispositivi iOS/iPadOS
 
@@ -136,7 +180,7 @@ Gli utenti finali possono usare tasti di scelta rapida per eseguire azioni di sp
 I tasti di scelta rapida seguenti sono disponibili nell'app Portale aziendale di Windows.
 
 | Area | Descrizione | Tasti di scelta rapida |
-|:------------------:|:--------------:|:-----------------:|
+|--------------------|----------------|-------------------|
 | Menu di spostamento | Spostamento | ALT+M |
 |  | Home | ALT+H |
 |  | Tutte le app | ALT+A |
@@ -159,7 +203,9 @@ Gli utenti finali potranno anche visualizzare i tasti di scelta rapida disponibi
 
 ## <a name="user-self-service-device-actions-from-the-company-portal"></a>Azioni self-service che l'utente può eseguire nel dispositivo dal Portale aziendale
 
-Gli utenti possono eseguire azioni nei dispositivi locali o remoti tramite l'app Portale aziendale, il sito Web o l'app Intune in Android. Le azioni che un utente può eseguire variano in base alla configurazione e alla piattaforma del dispositivo. In tutti i casi, le azioni sui dispositivi remoti possono essere eseguite solo dall'utente primario del dispositivo.
+Gli utenti possono eseguire azioni nei dispositivi locali o remoti tramite l'app Portale aziendale, il sito Web dell'app Portale aziendale o l'app Intune in Android. Le azioni che un utente può eseguire variano in base alla configurazione e alla piattaforma del dispositivo. In tutti i casi, le azioni sui dispositivi remoti possono essere eseguite solo dall'utente primario del dispositivo.  
+
+Tra le azioni self-service disponibili per i dispositivi sono incluse le seguenti:
 
 - **Ritiro**: rimuove il dispositivo dalla Gestione di Intune. Nell'app Portale aziendale e nel sito Web questa azione viene visualizzata come **Rimuovi**.
 - **Cancellazione**: questa azione avvia la reimpostazione del dispositivo. Nel sito Web del Portale aziendale viene visualizzato come **Ripristina** o **Ripristino delle impostazioni predefinite** nell'app Portale aziendale per iOS/iPadOS.
@@ -169,14 +215,16 @@ Gli utenti possono eseguire azioni nei dispositivi locali o remoti tramite l'app
 - **Reimpostazione passcode**: questa azione reimposta il passcode del dispositivo. Nei dispositivi iOS/iPadOS il passcode verrà rimosso e l'utente finale dovrà immettere un nuovo codice nelle impostazioni. Nei dispositivi Android supportati Intune genera un nuovo passcode che viene temporaneamente visualizzato nel Portale aziendale.
 - **Recupero chiave**: questa azione recupera una chiave di ripristino personale per i dispositivi macOS crittografati dal sito Web del Portale aziendale. 
 
+Per personalizzare le azioni self-service disponibili per gli utenti vedere [Personalizzazione delle azioni self-service degli utenti per il Portale aziendale](../apps/company-portal-app.md#customizing-user-self-service-actions-for-the-company-portal).
+
 ### <a name="self-service-actions"></a>Azioni self-service
 
 Alcune piattaforme e configurazioni non consentono azioni self-service nel dispositivo. La tabella seguente contiene altri dettagli sulle azioni self-service:
 
 |  | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
-| Ritiro | Disponibile<sup>(1)</sup> | Disponibile | Disponibile | Disponibile<sup>(7)</sup> |
-| Cancellazione | Disponibile | Disponibile<sup>(5)</sup> | N/D | Disponibile<sup>(7)</sup> |
+| Ritiro | Disponibile<sup>(1)</sup> | Disponibile<sup>(9)</sup> | Disponibile | Disponibile<sup>(7)</sup> |
+| Cancellazione | Disponibile | Disponibile<sup>(5)</sup><sup>(9)</sup> | N/D | Disponibile<sup>(7)</sup> |
 | Ridenominazione<sup>(4)</sup> | Disponibile | Disponibile | Disponibile | Disponibile |
 | Sincronizza | Disponibile | Disponibile | Disponibile | Disponibile |
 | Blocco remoto | Solo per Windows Phone | Disponibile | Disponibile | Disponibile |
@@ -190,8 +238,17 @@ Alcune piattaforme e configurazioni non consentono azioni self-service nel dispo
 <sup>(5)</sup> La **cancellazione** non è disponibile nei dispositivi iOS/iPadOS registrati dall'utente.<br>
 <sup>(6)</sup> La **reimpostazione del passcode** non è supportata in alcune configurazioni di Android e Android Enterprise. Per altre informazioni, vedere [Reimpostare o rimuovere il passcode di un dispositivo in Intune](../remote-actions/device-passcode-reset.md).<br>
 <sup>(7)</sup> Il **ritiro** e la **cancellazione** non sono disponibili in scenari di proprietari di dispositivi Android Enterprise (COPE, COBO, COSU).<br>
-<sup>(8)</sup> La **reimpostazione del passcode** non è supportata nei dispositivi iOS/iPadOS registrati dall'utente.
+<sup>(8)</sup> La **reimpostazione del passcode** non è supportata nei dispositivi iOS/iPadOS registrati dall'utente.<br>
+<sup>(9)</sup>Tutti i dispositivi di Registrazione automatica dei dispositivi iOS/iPads (noti in precedenza come DEP) presentano le opzioni **ritiro** e **cancellazione** disabilitate.
+
+### <a name="app-logs"></a>Log dell'app
+
+Se si usa Azure per enti pubblici, l'utente finale riceve i log delle app per prendere decisioni in merito alla condivisione quando avvia il processo per visualizzare la Guida per un problema. Se tuttavia non si usa Azure per enti pubblici, il portale aziendale invierà i log delle app direttamente a Microsoft quando l'utente avvia il processo per visualizzare la Guida per un problema. Inviando i log delle app a Microsoft sarà più semplice risolvere i problemi.
+
+> [!NOTE]
+> In conformità con i criteri Microsoft e Apple, i dati raccolti dal servizio non vengono venduti per alcun motivo a terze parti.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
+- [Configurare il logo dell'organizzazione e il colore del marchio per le pagine Nuova scheda in Microsoft Edge per iOS e Android](manage-microsoft-edge.md#organization-logo-and-brand-color)
 - [Aggiungere app](apps-add.md)

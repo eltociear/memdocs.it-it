@@ -6,8 +6,8 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/23/2019
-ms.topic: conceptual
+ms.date: 05/15/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6512aa01a55a3a1ed949b634b97eb891e9459a9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 361f0ff36b78daddd08954953744f3f95191d4f3
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327117"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990603"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrare dispositivi Windows in Intune con Windows AutoPilot  
 Windows AutoPilot semplifica la registrazione dei dispositivi in Intune. La compilazione e la gestione di immagini del sistema operativo personalizzate sono processi che richiedono molto tempo. Richiede tempo anche l'applicazione di queste immagini personalizzate del sistema operativo ai nuovi dispositivi per prepararli per l'uso prima della consegna agli utenti finali. Con Microsoft Intune e AutoPilot è possibile assegnare i nuovi dispositivi agli utenti finali senza la necessità di compilare, gestire e applicare le immagini del sistema operativo personalizzate ai dispositivi. Quando si usa Intune per gestire i dispositivi AutoPilot, è possibile gestire criteri, profili, applicazioni e così via sui dispositivi che sono stati registrati. Per una panoramica di vantaggi, scenari e prerequisiti, vedere [Panoramica di Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -34,6 +34,8 @@ Esistono quattro tipi di distribuzione Autopilot:
 - ["White Glove"](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove) consente ai partner o al personale IT di effettuare il pre-provisioning di un PC Windows 10 in modo che sia completamente configurato e operativo
 - [Autopilot per dispositivi esistenti](https://docs.microsoft.com/windows/deployment/windows-autopilot/existing-devices) consente di distribuire facilmente la versione più recente di Windows 10 nei dispositivi esistenti
 - [Modalità Definita dall'utente](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) per utenti tradizionali.
+
+Questo articolo illustra come configurare Autopilot su PC Windows. Per altre informazioni sull'uso di Autopilot per Hololens, vedere [Windows Autopilot per HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot).
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -90,7 +92,7 @@ Per altre informazioni, vedere il cmdlet di PowerShell seguente.
 
 ## <a name="create-an-autopilot-deployment-profile"></a>Creare un profilo di distribuzione Autopilot
 I profili di distribuzione AutoPilot vengono usati per configurare i dispositivi AutoPilot. È possibile creare fino a 350 profili per ogni tenant.
-1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **Windows** > **Registrazione Windows** > **Profili di distribuzione** > **Crea profilo**.
+1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **Windows** > **Registrazione Windows** > **Profili di distribuzione** > **Crea profilo** > **PC Windows** o **HoloLens**. Questo articolo illustra come configurare Autopilot su PC Windows. Per altre informazioni sull'uso di Autopilot per Hololens, vedere [Windows Autopilot per HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot).
 2. Nella pagina **Informazioni di base** specificare un **Nome** e una **Descrizione** facoltativa.
 
     ![Screenshot della pagina Informazioni di base](./media/enrollment-autopilot/create-profile-basics.png)

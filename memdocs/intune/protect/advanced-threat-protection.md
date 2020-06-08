@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 04/24/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: beea54b7ca244190ec0821d4ce8364369797590a
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.openlocfilehash: 35871aba60d45719b9a6da50184a6113f72e6044
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166613"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989288"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Applicare la conformità per Microsoft Defender ATP con l'accesso condizionale in Intune
 
@@ -204,7 +204,7 @@ Per altre informazioni sui report, vedere [Report di Intune](../fundamentals/rep
 
 ## <a name="view-onboarding-status"></a>Visualizzare lo stato di onboarding
 
-Per visualizzare lo stato di onboarding di tutti i dispositivi Windows 10 gestiti da Intune, è possibile passare a **Amministrazione del tenant** > **Microsoft Defender ATP**. Da questa pagina è anche possibile avviare la creazione di un profilo di configurazione dispositivi per l'onboarding di altri dispositivi in Microsoft Defender ATP.
+È possibile visualizzare lo stato di onboarding di tutti i dispositivi Windows 10 gestiti da Intune accedendo a **Sicurezza degli endpoint**  > **Mi Defender ATP**. Da questa pagina è anche possibile avviare la creazione di un profilo di configurazione dispositivi per l'onboarding di altri dispositivi in Microsoft Defender ATP.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

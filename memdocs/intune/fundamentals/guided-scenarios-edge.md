@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5c2af6ce301b0a5de06cbbd4126b1661ca21fb0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 49f9b9076d20c1f5d4740a6f8b1b9883e12ce629
+ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79359066"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83853537"
 ---
 # <a name="guided-scenario---deploy-microsoft-edge-for-mobile"></a>Scenario guidato - Distribuisci Microsoft Edge per dispositivi mobili
 
@@ -90,6 +90,5 @@ Il passaggio finale consente di esaminare un riepilogo delle impostazioni config
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- Migliorare la sicurezza dell'uso di Microsoft Edge configurando l'integrazione dei criteri di protezione delle app di Intune. Per altre informazioni, vedere [Criteri di protezione delle applicazioni per Microsoft Edge ](../apps/manage-microsoft-edge.md#application-protection-policies-for-microsoft-edge).
-- Se è necessario includere siti Intranet esistenti, esplorare la protezione dell'accesso con l'integrazione di Azure Application Proxy. Per altre informazioni, vedere [Configurare le impostazioni di Application Proxy per Microsoft Edge](../apps/manage-microsoft-edge.md#configure-application-proxy-settings-for-microsoft-edge).
-
+- Migliorare la sicurezza dell'uso di Microsoft Edge configurando l'integrazione dei criteri di protezione delle app di Intune. Per altre informazioni, vedere [Creare e assegnare criteri di protezione delle app di Intune](../apps/manage-microsoft-edge.md#create-intune-app-protection-policies).
+- Se è necessario includere siti Intranet esistenti, esplorare la protezione dell'accesso con l'integrazione di Azure Application Proxy. Per altre informazioni, vedere [Gestire la configurazione del proxy](../apps/manage-microsoft-edge.md#manage-proxy-configuration).

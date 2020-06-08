@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/04/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd999f621375cfdbfa80bf076766be20053221dc
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 2db33dbe94ff5aef62563531149250fbd4268acc
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269066"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83986976"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Registrare automaticamente i dispositivi iOS/iPadOS con Registrazione automatica del dispositivo di Apple
 
@@ -44,9 +44,6 @@ Le registrazioni con Registrazione automatica del dispositivo non sono compatibi
 Per abilitare l'autenticazione moderna durante la registrazione, eseguire il push dell'app al dispositivo usando **Installa il Portale aziendale con VPP** (Volume Purchase Program) nel profilo di Registrazione automatica del dispositivo. Per altre informazioni, vedere [Registrare automaticamente i dispositivi iOS/iPadOS con Registrazione automatica del dispositivo di Apple](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
 
 Per consentire l'aggiornamento automatico del Portale aziendale e fornire l'app Portale aziendale nei dispositivi già registrati con Registrazione automatica del dispositivo, distribuire l'app Portale aziendale tramite Intune come app Volume Purchase Program (VPP) obbligatoria con un [criterio di configurazione dell'applicazione](../apps/app-configuration-policies-use-ios.md) applicato.
-
-> [!NOTE]
-> Durante la registrazione automatica dei dispositivi, mentre l'app Portale aziendale è in esecuzione in modalità app singola, se si fa clic sul collegamento **Altre informazioni**, viene visualizzato un messaggio di errore a causa della modalità app singola. Al termine della registrazione, è possibile visualizzare altre informazioni nel portale aziendale quando il dispositivo non è più in modalità app singola. 
 
 ## <a name="what-is-supervised-mode"></a>Che cos'è la modalità con supervisione?
 
@@ -212,7 +209,7 @@ Ora che è stato installato il token, è possibile creare un profilo di registra
 
      > [!NOTE]
      > Se **Sincronizza con computer** è impostata su **Rifiuta tutto**, la funzionalità della porta sarà limitata sui dispositivi iOS e iPadOS. La porta può essere usata solo per il caricamento. L'uso di iTunes o Apple Configurator 2 sulla porta non è consentito.
-     Se **Sincronizza con computer** è impostato su **Consenti Apple Configurator per certificato**, assicurarsi di salvare una copia locale del certificato a cui accedere in un secondo momento. Non sarà possibile apportare modifiche alla copia caricata. È importante conservare il certificato in modo che sia accessibile in futuro. 
+     Se **Sincronizza con computer** è impostato su **Consenti Apple Configurator per certificato**, assicurarsi di salvare una copia locale del certificato a cui poter accedere in un secondo momento. Non sarà possibile apportare modifiche alla copia caricata ed è importante conservare il certificato affinché sia accessibile in futuro. Per connettersi al dispositivo iOS/iPados da un dispositivo macOS o da un PC, è necessario che nel dispositivo sia installato lo stesso certificato che effettua la connessione al dispositivo iOS/iPados registrato con il profilo Registrazione automatica del dispositivo con la configurazione e il certificato.
 
 12. Se si sceglie **Consenti Apple Configurator per certificato** nel passaggio precedente, scegliere un certificato di Apple Configurator da importare.
 
@@ -235,29 +232,33 @@ Ora che è stato installato il token, è possibile creare un profilo di registra
 
     | Impostazioni delle schermate dell'Assistente configurazione | Se si sceglie **Mostra**, durante la configurazione il dispositivo... |
     |------------------------------------------|------------------------------------------|
-    | <strong>Passcode</strong> | Richiederà un passcode all'utente. Richiedere sempre un passcode per i dispositivi non protetti, a meno che l'accesso non venga controllato in un altro modo (ad esempio, la modalità tutto schermo che limita il dispositivo a una sola app). |
-    | <strong>Servizi di posizione</strong> | Richiederà la posizione all'utente. |
-    | <strong>Recupera</strong> | Visualizzerà la schermata App e dati. Questa schermata offre all'utente la possibilità di ripristinare o trasferire i dati da iCloud Backup durante la configurazione del dispositivo. |
-    | <strong>ID iCloud e Apple</strong> | Offrirà all'utente la possibilità di accedere con l'ID Apple e di usare iCloud.                         |
-    | <strong>Termini e condizioni</strong> | Richiederà all'utente di accettare i termini e le condizioni Apple. |
-    | <strong>Touch ID</strong> | Offrirà all'utente la possibilità di impostare l'identificazione con impronta digitale per il dispositivo. |
-    | <strong>Apple Pay</strong> | Offrirà all'utente la possibilità di configurare Apple Pay nel dispositivo. |
-    | <strong>Zoom</strong> | Offrirà all'utente la possibilità di ingrandire la visualizzazione durante la configurazione del dispositivo. |
-    | <strong>Siri</strong> | Offrirà all'utente la possibilità di configurare Siri. |
-    | <strong>Dati di diagnostica</strong> | Visualizzerà la schermata Diagnostica all'utente. Questa schermata offre all'utente la possibilità di inviare dati di diagnostica ad Apple. |
-    | <strong>Segnale schermo</strong> | Offrirà all'utente la possibilità di attivare il segnale schermo. |
-    | <strong>Privacy</strong> | Visualizzerà la schermata Privacy all'utente. |
-    | <strong>Migrazione Android</strong> | Offrirà all'utente la possibilità di eseguire la migrazione dei dati da un dispositivo Android. |
-    | <strong>iMessage e FaceTime</strong> | Offrirà all'utente la possibilità di configurare iMessage e FaceTime. |
-    | <strong>Onboarding</strong> | Visualizzerà le schermate con le informazioni di onboarding per la formazione dell'utente, ad esempio Copertina e Multitasking e centro di controllo. |
-    | <strong>Migrazione di Watch</strong> | Offrirà all'utente la possibilità di eseguire la migrazione dei dati da un dispositivo Watch. |
-    | <strong>Orario schermo</strong> | Visualizzerà la schermata Orario schermo. |
-    | <strong>Aggiornamento software</strong> | Visualizzerà la schermata degli aggiornamenti software obbligatori. |
-    | <strong>Configurazione SIM</strong> | Offrirà all'utente la possibilità di aggiungere un piano dati cellulare. |
-    | <strong>Aspetto</strong> | Visualizzerà la schermata Aspetto all'utente. |
+    | <strong>Passcode</strong> | Richiederà un passcode all'utente. Richiedere sempre un passcode per i dispositivi non protetti, a meno che l'accesso non venga controllato in un altro modo (ad esempio, la modalità tutto schermo che limita il dispositivo a una sola app). Per iOS/iPadOS 7.0 e versioni successive. |
+    | <strong>Servizi di posizione</strong> | Richiederà la posizione all'utente. Per macOS 10.11 e versioni successive e iOS/iPados 7.0 e versioni successive. |
+    | <strong>Recupera</strong> | Visualizzerà la schermata App e dati. Questa schermata offre all'utente la possibilità di ripristinare o trasferire i dati da iCloud Backup durante la configurazione del dispositivo. Per macOS 10.9 e versioni successive e iOS/iPados 7.0 e versioni successive. |
+    | <strong>ID iCloud e Apple</strong> | Offrirà all'utente la possibilità di accedere con l'ID Apple e di usare iCloud. Per macOS 10.9 e versioni successive e iOS/iPados 7.0 e versioni successive.   |
+    | <strong>Termini e condizioni</strong> | Richiederà all'utente di accettare i termini e le condizioni Apple. Per macOS 10.9 e versioni successive e iOS/iPados 7.0 e versioni successive. |
+    | <strong>Touch ID</strong> | Offrirà all'utente la possibilità di impostare l'identificazione con impronta digitale per il dispositivo. Per macOS 10.12.4 e versioni successive e iOS/iPados 8.1 e versioni successive. |
+    | <strong>Apple Pay</strong> | Offrirà all'utente la possibilità di configurare Apple Pay nel dispositivo. Per macOS 10.12.4 e versioni successive e iOS/iPados 7.0 e versioni successive. |
+    | <strong>Zoom</strong> | Offrirà all'utente la possibilità di ingrandire la visualizzazione durante la configurazione del dispositivo. Per iOS/iPadOS 8.3 e versioni successive. |
+    | <strong>Siri</strong> | Offrirà all'utente la possibilità di configurare Siri. Per macOS 10.12 e versioni successive e iOS/iPados 7.0 e versioni successive. |
+    | <strong>Dati di diagnostica</strong> | Visualizzerà la schermata Diagnostica all'utente. Questa schermata offre all'utente la possibilità di inviare dati di diagnostica ad Apple. Per macOS 10.9 e versioni successive e iOS/iPados 7.0 e versioni successive. |
+    | <strong>Segnale schermo</strong> | Offrirà all'utente la possibilità di attivare il segnale schermo. Per macOS 10.13.6 e versioni successive e iOS/iPados 9.3.2 e versioni successive. |
+    | <strong>Privacy</strong> | Visualizzerà la schermata Privacy all'utente. Per macOS 10.13.4 e versioni successive e iOS/iPados 11.3 e versioni successive. |
+    | <strong>Migrazione Android</strong> | Offrirà all'utente la possibilità di eseguire la migrazione dei dati da un dispositivo Android. Per iOS/iPadOS 9.0 e versioni successive.|
+    | <strong>iMessage e FaceTime</strong> | Offrirà all'utente la possibilità di configurare iMessage e FaceTime. Per iOS/iPadOS 9.0 e versioni successive. |
+    | <strong>Onboarding</strong> | Visualizzerà le schermate con le informazioni di onboarding per la formazione dell'utente, ad esempio Copertina e Multitasking e centro di controllo. Per iOS/iPadOS 11.0 e versioni successive. |
+    | <strong>Migrazione di Watch</strong> | Offrirà all'utente la possibilità di eseguire la migrazione dei dati da un dispositivo Watch. Per iOS/iPadOS 11.0 e versioni successive.|
+    | <strong>Orario schermo</strong> | Visualizzerà la schermata Orario schermo. Per macOS 10.15 e versioni successive e iOS/iPados 12.0 e versioni successive. |
+    | <strong>Aggiornamento software</strong> | Visualizzerà la schermata degli aggiornamenti software obbligatori. Per iOS/iPadOS 12.0 e versioni successive. |
+    | <strong>Configurazione SIM</strong> | Offrirà all'utente la possibilità di aggiungere un piano dati cellulare. Per iOS/iPadOS 12.0 e versioni successive. |
+    | <strong>Aspetto</strong> | Visualizzerà la schermata Aspetto all'utente. Per macOS 10.14 e versioni successive e iOS/iPados 13.0 e versioni successive. |
     | <strong>Express Language</strong> (Lingua rapida)| Visualizzerà la schermata Express Language (Lingua rapida) all'utente. |
     | <strong>Lingua preferita</strong> | Offrirà all'utente la possibilità di scegliere la **Lingua preferita**. |
-    | <strong>Device to Device Migration</strong> (Migrazione da dispositivo a dispositivo) | Offrirà all'utente la possibilità di eseguire la migrazione dei dati dal dispositivo precedente a questo dispositivo.|
+    | <strong>Device to Device Migration</strong> (Migrazione da dispositivo a dispositivo) | Offrirà all'utente la possibilità di eseguire la migrazione dei dati dal dispositivo precedente a questo dispositivo. Per iOS/iPadOS 13.0 e versioni successive. |
+    | <strong>Registrazione</strong> | Consente all'utente di visualizzare la schermata di registrazione. Per macOS 10.9 e versioni successive. |
+    | <strong>FileVault</strong> | Consente all’utente di visualizzare la schermata di crittografia FileVault 2. Per macOS 10.10 e versioni successive. |
+    | <strong>Diagnostica di iCloud</strong> | Consente all’utente di visualizzare la schermata di iCloud Analaytics. Per macOS 10.12.4 e versioni successive. |
+    | <strong>Risorse di archiviazione iCloud</strong> | Consente all’utente di visualizzare la schermata Documenti e Scrivania di iCloud. Per macOS 10.13.4 e versioni successive. |
     
 
 16. Scegliere **Avanti** per passare alla pagina **Rivedi e crea**.
@@ -282,7 +283,7 @@ Adesso che Intune ha le autorizzazioni per gestire i dispositivi, è possibile s
 
    Per rispettare le condizioni Apple per un traffico DEP accettabile, Intune impone le restrizioni seguenti:
    - Una sincronizzazione completa può essere eseguita solo una volta ogni sette giorni. Durante una sincronizzazione completa, Intune recupera l'elenco aggiornato completo dei numeri di serie assegnati al server MDM di Apple connesso a Intune. Se un dispositivo configurato con Registrazione automatica del dispositivo viene eliminato dal portale di Intune, è necessario rimuoverne l'assegnazione dal server MDM Apple nel portale di Registrazione automatica del dispositivo. Se non è assegnato, non verrà reimportato in Intune fino all'esecuzione della sincronizzazione completa.   
-   - La sincronizzazione viene eseguita automaticamente ogni 24 ore. È anche possibile eseguire la sincronizzazione facendo clic sul pulsante **Sincronizza** (non più di una volta ogni 15 minuti). Il tempo concesso per il completamento di una richiesta di sincronizzazione è pari a 15 minuti. Il pulsante **Sincronizza** rimane disabilitato finché non viene completata la sincronizzazione. La sincronizzazione aggiorna lo stato dei dispositivi esistenti e importa i nuovi dispositivi assegnati al server MDM di Apple.   
+   - La sincronizzazione viene eseguita automaticamente ogni 12 ore. È anche possibile eseguire la sincronizzazione facendo clic sul pulsante **Sincronizza** (non più di una volta ogni 15 minuti). Il tempo concesso per il completamento di una richiesta di sincronizzazione è pari a 15 minuti. Il pulsante **Sincronizza** rimane disabilitato finché non viene completata la sincronizzazione. La sincronizzazione aggiorna lo stato dei dispositivi esistenti e importa i nuovi dispositivi assegnati al server MDM di Apple.   
 
 
 ## <a name="assign-an-enrollment-profile-to-devices"></a>Assegnare un profilo DEP ai dispositivi

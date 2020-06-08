@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/22/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 86117193ce7aae01380923ce26f84dfb5ba97a4d
-ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
+ms.openlocfilehash: 91683280a2e48d82fd145bf19228c33b432b6b49
+ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82182294"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83853571"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>Framework di protezione dei dati con criteri di protezione delle app 
 
@@ -55,7 +55,7 @@ Come indicato nella tabella, è necessario eseguire tutte le modifiche apportate
 
 Durante il test delle modifiche ai criteri di protezione delle app, tenere presenti i [tempi di distribuzione](app-protection-policy-delivery.md). Lo stato della distribuzione dei criteri di protezione delle app per un determinato utente può essere monitorato. Per altre informazioni, vedere [Come monitorare i criteri di protezione delle app](app-protection-policies-monitor.md).
 
-Le singole impostazioni dei criteri di protezione per ogni app possono essere convalidate nei dispositivi tramite Edge e l'URL *about:Intunehelp*. Per altre informazioni, vedere [Esaminare i log di protezione delle app client](app-protection-policy-settings-log.md) e [Gestire l'accesso Web usando Microsoft Edge con Microsoft Intune](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs).
+Le singole impostazioni dei criteri di protezione per ogni app possono essere convalidate nei dispositivi tramite Edge e l'URL *about:Intunehelp*. Per altre informazioni vedere [Esaminare i log di protezione delle app client](app-protection-policy-settings-log.md) e [Usare Edge per iOS e Android per gestire i log delle app](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs).
 
 ## <a name="app-data-protection-framework-settings"></a>Impostazioni del framework di protezione dei dati con criteri di protezione delle app
 
@@ -140,7 +140,7 @@ I criteri di livello 1 applicano un livello di accesso ai dati ragionevole, ridu
 
 Il livello 2 è la configurazione di protezione dei dati consigliata come standard per i dispositivi da cui gli utenti accedono a informazioni più riservate. Questi dispositivi sono attualmente un bersaglio classico nelle aziende. I consigli offerti a questo livello non presuppongono la presenza di numerosi addetti alla sicurezza altamente qualificati e pertanto dovrebbero essere accessibili alla maggior parte delle organizzazioni aziendali. Questa configurazione estende la configurazione del livello 1 limitando gli scenari di trasferimento dei dati e richiedendo una versione minima del sistema operativo.
 
-Le impostazioni dei criteri applicate nel livello 2 includono tutte le impostazioni dei criteri consigliate per il livello 1 e aggiungono o aggiornano solo le impostazioni dei criteri riportate di seguito per implementare più controlli e una configurazione più sofisticata rispetto al livello 1. Anche se queste impostazioni possono avere un impatto leggermente maggiore sugli utenti o sulle applicazioni, applicano un livello di protezione dei dati più adeguato ai rischi per corrono gli utenti accedendo a informazioni riservate nei dispositivi mobili.
+Le impostazioni dei criteri applicate nel livello 2 includono tutte le impostazioni dei criteri consigliate per il livello 1 ma elencano solo le impostazioni riportate di seguito che sono state aggiunte o modificate per implementare più controlli e una configurazione più sofisticata rispetto al livello 1. Anche se queste impostazioni possono avere un impatto leggermente maggiore sugli utenti o sulle applicazioni, applicano un livello di protezione dei dati più adeguato ai rischi per corrono gli utenti accedendo a informazioni riservate nei dispositivi mobili.
 
 #### <a name="data-protection"></a>Protezione dati
 
@@ -167,7 +167,7 @@ Le impostazioni dei criteri applicate nel livello 2 includono tutte le impostazi
 
 Il livello 3 è la configurazione di protezione dei dati consigliata come standard per le organizzazioni con sistemi di sicurezza sofisticati di ampia portata oppure per utenti e gruppi specifici che possono essere facilmente bersaglio di attacchi. Tali organizzazioni sono in genere esposte agli attacchi di avversari ben finanziati e sofisticati e pertanto hanno bisogno dei vincoli e dei controlli aggiuntivi descritti di seguito. Questa configurazione estende la configurazione del livello 2 limitando altri scenari di trasferimento dei dati, aumentando la complessità della configurazione del PIN e introducendo il rilevamento delle minacce per dispositivi mobili.  
 
-Le impostazioni dei criteri applicate nel livello 3 includono tutte le impostazioni dei criteri consigliate per i livelli 2 e 1 e aggiungono o aggiornano solo le impostazioni dei criteri seguenti per implementare controlli e configurazione di protezione dei dati rigorosi. Queste impostazioni dei criteri possono avere un impatto potenzialmente significativo su utenti o applicazioni, applicando un livello di sicurezza adeguato ai rischi che devono affrontare le organizzazioni.  
+Le impostazioni dei criteri applicate al livello 3 includono tutte le impostazioni dei criteri consigliate per il livello 2 ma elencano solo le impostazioni riportate di seguito che sono state aggiunte o modificate per implementare più controlli e una configurazione più sofisticata rispetto al livello 2. Queste impostazioni dei criteri possono avere un impatto potenzialmente significativo su utenti o applicazioni, applicando un livello di sicurezza adeguato ai rischi che devono affrontare le organizzazioni.  
 
 #### <a name="data-protection"></a>Protezione dati
 

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/04/2020
+ms.date: 05/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b3c8287d9b5ca2d46094d04ee2179128bead4a8
-ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
+ms.openlocfilehash: ca3ec1605bd4d63c182511c32297da0bdb503d8b
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82991750"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83824167"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Novità di Microsoft Intune
 
@@ -53,9 +53,191 @@ Per informazioni sulle novità di Microsoft Intune ogni settimana, vedere l'[int
 ### Monitor and troubleshoot
 
 <!-- ########################## -->
-## <a name="week-of-may-4-2020"></a>Settimana del 4 maggio 2020  
 
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->  
+## <a name="week-of-may-18-2020"></a>Settimana del 18 maggio 2020
+
+### <a name="device-security"></a>Sicurezza del dispositivo
+
+#### <a name="use-endpoint-detection-and-response-policy-to-onboard-devices-to-defender-atp---7130165----"></a>Usare i criteri di rilevamento e risposta degli endpoint per eseguire l'onboarding dei dispositivi in Defender ATP<!-- 7130165  -->
+
+Usare i criteri di [sicurezza degli endpoint per il rilevamento e la risposta dell'endpoint](../protect/endpoint-security-edr-policy.md) (EDR) per eseguire l'onboarding e la configurazione dei dispositivi per la distribuzione di Microsoft Defender Advanced Threat Protection (Defender ATP). EDR supporta i criteri per i dispositivi Windows gestiti da Intune (MDM) e un criterio separato per i dispositivi Windows gestiti da Configuration Manager. 
+
+Per usare i criteri per i dispositivi di Configuration Manager, è necessario [configurare Configuration Manager per supportare i criteri EDR](../protect/endpoint-security-edr-policy.md#set-up-configuration-manager-to-support-edr-policy). La configurazione include:
+
+- La configurazione di Gestione configurazione per il *collegamento di tenant*.
+- L'installazione di un aggiornamento nella console per Configuration Manager per abilitare il supporto per i criteri di EDR. Questo aggiornamento si applica solo alle gerarchie che hanno abilitato il *collegamento di tenant*.
+- Sincronizzare le raccolte di dispositivi dalla gerarchia all'interfaccia di amministrazione di Microsoft Endpoint Manager.
+
+
+## <a name="week-of-may-11-2020-2005-service-release"></a>Settimana dell'11 maggio 2020 (versione del servizio 2005)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="app-management"></a>Gestione delle app
+
+#### <a name="customize-self-service-device-actions-in-the-company-portal--4393379---"></a>Personalizzare le azioni self-service nel Portale aziendale<!--4393379 -->
+È possibile personalizzare le azioni del dispositivo self-service disponibili che vengono visualizzate dagli utenti finali nell'app e nel sito Web Portale aziendale. Per contribuire a evitare le azioni non previste nel dispositivo, è possibile configurare queste impostazioni per l'app Portale aziendale selezionando **Amministrazione del tenant** > **Personalizzazione**. Sono disponibili le azioni seguenti:
+- Nascondi il pulsante **Rimuovi** nei dispositivi Windows aziendali.
+- Nascondi il pulsante **Ripristina** nei dispositivi Windows aziendali.
+- Nascondi il pulsante **Ripristina** nei dispositivi iOS aziendali.
+- Nascondi il pulsante **Rimuovi** nei dispositivi iOS aziendali.
+Per altre informazioni, vedere [Azioni self-service che l'utente può eseguire nel dispositivo dal Portale aziendale](../apps/company-portal-app.md#user-self-service-device-actions-from-the-company-portal).
+
+#### <a name="auto-update-vpp-available-apps---3640511----"></a>Aggiornamento automatico delle app disponibili per VPP<!-- 3640511  -->
+Le app che vengono pubblicate come disponibili per il Volume Purchase Program (VPP) di Apple verranno aggiornate automaticamente quando **Aggiornamenti automatici delle app** è abilitata per il token VPP. In precedenza, le app disponibili per VPP non erano aggiornate automaticamente. Gli utenti finali dovevano accedere al Portale aziendale e reinstallare l'app quando risultava disponibile una versione aggiornata. Le app obbligatorie continuano a supportare gli aggiornamenti automatici.
+
+
+#### <a name="unified-delivery-of-azure-ad-enterprise-and-office-online-applications-in-the-company-portal---4404429-----"></a>Distribuzione unificata di applicazioni Azure AD Enterprise e Office Online nel Portale aziendale<!-- 4404429   -->
+*Questa funzionalità è stata posticipata.*
+Nel riquadro **Personalizzazione** di Intune è possibile selezionare **Nascondi** o **Mostra** sia per le**applicazioni aziendali di Azure AD** che per le **applicazioni Office Online** nel Portale aziendale. Ogni utente visualizzerà l'intero catalogo applicazioni dal servizio Microsoft scelto. Per impostazione predefinita, ogni origine di app aggiuntiva verrà impostata su **Nascondi**. Questa funzionalità verrà applicata inizialmente nel sito Web Portale aziendale, e successivamente verrà supportata nei Portali aziendali Windows, iOS/iPadOS e macOS. Per trovare questa impostazione di configurazione, nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) selezionare **Amministrazione del tenant** > **Personalizzazione**. Per informazioni correlate, vedere [Come personalizzare le app Portale aziendale Intune, il sito Web Portale aziendale e l'app Intune](../apps/company-portal-app.md).
+
+#### <a name="android-company-portal-user-experience---5736084----"></a>Esperienza utente per il Portale aziendale Android<!-- 5736084  -->
+Nella versione 2005 del Portale aziendale Android gli utenti finali di dispositivi Android che ricevono un avviso, un blocco o una cancellazione da un criterio di protezione delle app visualizzeranno una nuova esperienza utente. Al posto dell'esperienza corrente con finestra di dialogo corrente, gli utenti finali visualizzeranno un messaggio a tutta pagina che include il motivo dell'avviso, blocco o cancellazione e i passaggi per risolvere il problema. Per altre informazioni, vedere [Esperienza di protezione delle app per dispositivi Android](../apps/app-protection-policy.md#app-protection-experience-for-android-devices) e [Impostazioni dei criteri di protezione delle app di Android in Microsoft Intune](../apps/app-protection-policy-settings-android.md).
+
+#### <a name="support-for-multiple-accounts-in-company-portal-for-macos---5779449----"></a>Supporto di più account nel Portale aziendale per macOS<!-- 5779449  -->
+Il Portale aziendale nei dispositivi macOS ora memorizza nella cache gli account utente, semplificando l'accesso. Non è più necessario che gli utenti eseguano l'accesso al Portale aziendale ogni volta che avviano l'applicazione. Se nella cache sono memorizzati più account, il Portale aziendale visualizzerà anche un selettore di account, in modo che gli utenti non debbano immettere il nome utente. 
+
+#### <a name="newly-available-protected-apps---7060934-----"></a>Nuove app protette disponibili<!-- 7060934   -->
+Sono ora disponibili le app protette seguenti:
+- Board Papers
+- Breezy per Intune
+- Hearsay Relate per Intune
+- ISEC7 Mobile Exchange Delegate per Intune
+- Lexmark per Intune
+- Meetio Enterprise
+- Microsoft Whiteboard
+- Now® Mobile - Intune
+- Qlik Sense Mobile 
+- ServiceNow® Agent - Intune
+- Onboarding® ServiceNow - Intune
+- Smartcrypt per Intune
+- Tact per Intune
+- Zero - Client di posta elettronica per avvocati
+
+Per altre informazioni, vedere [App protette di Microsoft Intune](../apps/apps-supported-intune-apps.md).
+
+#### <a name="search-the-intune-docs-from-the-company-portal---1736480-----"></a>Ricerca nella documentazione di Intune dal Portale aziendale<!-- 1736480   -->
+Ora è possibile eseguire ricerche nella documentazione di Intune direttamente dall'app Portale aziendale per macOS. Nella barra dei menu selezionare **Guida** > **Cerca** e immettere le parole chiave della ricerca per trovare rapidamente risposte alle domande.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-configuration"></a>Configurazione del dispositivo
+
+#### <a name="improvements-to-oemconfig-support-for-zebra-technologies-devices---4184154---"></a>Miglioramenti al supporto di OEMConfig per i dispositivi Zebra Technologies<!-- 4184154 -->
+Intune supporta tutte le funzionalità offerte da Zebra OEMConfig. I clienti che gestiscono dispositivi Zebra Technologies con Android Enterprise e OEMConfig possono distribuire più profili OEMConfig in un unico dispositivo. I clienti possono anche visualizzare report avanzati sullo stato dei profili Zebra OEMConfig.
+
+Per altre informazioni, vedere [Distribuire più profili OEMConfig nei dispositivi Zebra in Microsoft Intune](../configuration/oemconfig-zebra-android-devices.md).
+
+Non sono state apportate modifiche al comportamento di OEMConfig per altri OEM.
+
+Si applica a:
+- Android Enterprise
+- Dispositivi Zebra Technologies che supportano OEMConfig. Contattare Zebra per ricevere dettagli specifici sul supporto.
+
+#### <a name="configure-system-extensions-on-macos-devices---6255624---"></a>Configurare le estensioni del sistema nei dispositivi macOS<!-- 6255624 -->
+Nei dispositivi macOS è possibile creare un profilo di estensioni del kernel per configurare impostazioni a livello del kernel (**Dispositivi** > **Profili di configurazione** > **macOS** per la piattaforma > **Estensioni del kernel** per il profilo). Apple prevede di impostare come deprecate le estensioni del kernel e di sostituirle con estensioni del sistema in una versione futura.
+
+Le estensioni del sistema vengono eseguite nello spazio dell'utente e non hanno accesso al kernel. L'obiettivo è aumentare la protezione e garantire un maggior controllo a livello dell'utente finale, limitando nel contempo gli attacchi a livello del kernel. Sia le estensioni del kernel sia le estensioni del sistema consentono agli utenti di installare estensioni delle app che incrementano la capacità nativa del sistema operativo.
+
+In Intune è possibile configurare le estensioni del kernel e le estensioni del sistema (**Dispositivi** > **Profili di configurazione** > **macOS** per la piattaforma > **Estensioni del sistema** per il profilo). Le estensioni del kernel sono valide per la versione 10.13.2 e versioni successive. Le estensioni del sistema sono valide per la versione 10.15 e versioni successive. Da macOS 10.15 a macOS 10.15.4, le estensioni del kernel e le estensioni del sistema possono essere eseguite simultaneamente. 
+
+Per informazioni sulle estensioni nei dispositivi macOS, vedere [Aggiungere le estensioni macOS](../configuration/kernel-extensions-overview-macos.md).
+
+Si applica a:
+- macOS 10.15 e versioni successive
+
+#### <a name="configure-app-and-process-privacy-preferences-on-macos-devices---2934232-----"></a>Configurare le preferenze per la privacy di app e processi nei dispositivi macOS<!-- 2934232   --> 
+Nella versione di macOS Catalina 10.15 Apple ha aggiunto nuovi miglioramenti alla sicurezza e alla privacy. Per impostazione predefinita, le applicazioni e i processi non riescono ad accedere a dati specifici senza il consenso utente. Se gli utenti non danno il consenso, le applicazioni e i processi potrebbero non funzionare. In Intune verrà aggiunto il supporto per le impostazioni che permettono agli amministratori IT di accettare o rifiutare il consenso per l'accesso ai dati per conto degli utenti finali nei dispositivi che eseguono macOS 10.14 e versioni successive. Queste impostazioni garantiscono che le applicazioni e i processi continuino a funzionare correttamente e riducono il numero di richieste. 
+
+Per altre informazioni sulle impostazioni che è possibile gestire, vedere [Preferenze per la privacy di macOS](../configuration/device-restrictions-macos.md#privacy-preferences).
+
+Si applica a:
+- macOS 10.14 e versioni successive
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-enrollment"></a>Registrazione del dispositivo
+
+#### <a name="enrollment-restrictions-support-scope-tags--4209550----"></a>Le restrizioni di registrazione supporta i tag di ambito<!--4209550  -->
+È ora possibile assegnare tag di ambito alle restrizioni di registrazione. A tale scopo accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Dispositivi** > **Restrizioni registrazione** > **Crea restrizione**. Creare uno dei due tipi di restrizione. Verrà visualizzata la pagina **Tag di ambito**. Per altre informazioni, vedere [Impostare le restrizioni di registrazione](../enrollment/enrollment-restrictions-set.md).
+
+#### <a name="autopilot-support-for-hololens-2-devices--6305220----"></a>Supporto dei dispositivi Hololens 2 in Autopilot<!--6305220  -->
+Windows Autopilot ora supporta i dispositivi Hololens 2. Per altre informazioni sull'uso di Autopilot per Hololens, vedere [Windows Autopilot per HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-management"></a>Gestione dei dispositivi
+
+#### <a name="use-sync-remote-action-in-bulk-for-ios--6440956--idmiss--"></a>Usare l'azione remota di sincronizzazione in blocco per iOS<!--6440956  idmiss-->
+È ora possibile usare l'azione remota di sincronizzazione su un massimo di 100 dispositivi iOS alla volta. Per visualizzare la nuova caratteristica, passare a [Interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Dispositivi** > **Tutti i dispositivi** > **Azioni in blocco del dispositivo**. 
+
+#### <a name="automated-device-sync-interval-down-to-12-hours--3077535----"></a>Intervallo di sincronizzazione automatica dei dispositivi ridotto a 12 ore<!--3077535  -->
+Per la Registrazione automatica dei dispositivi di Apple, l'intervallo di sincronizzazione automatica dei dispositivi tra Intune e Apple Business Manager sarà ridotto da 24 a 12 ore. Per altre informazioni sulla sincronizzazione, vedere [Sincronizzare i dispositivi gestiti](../enrollment/device-enrollment-program-enroll-ios.md#sync-managed-devices).
+
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-security"></a>Sicurezza del dispositivo
+
+#### <a name="derived-credentials-support-for-disa-purebred-on-android-devices---6939073-------"></a>Supporto di credenziali derivate per DISA Purebred nei dispositivi Android<!-- 6939073     -->
+È ora possibile usare *DISA Purebred* come provider di [credenziali derivate](../protect/derived-credentials.md) nei dispositivi Android Enterprise completamente gestiti. Il supporto per il recupero di una credenziale derivata per DISA Purebred è incluso. Sarà possibile usare una credenziale derivata per l'autenticazione di app, Wi-Fi, VPN o la firma S/MIME e/o la crittografia, se supportata dalle app. 
+
+#### <a name="send-push-notifications-as-an-action-for-noncompliance----1733150-----"></a>Inviare notifiche push come azione per la mancata conformità <!-- 1733150   -->
+È ora possibile configurare un'[azione per mancata conformità](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance) che invia una notifica push a un utente quando il dispositivo dell'utente non soddisfa le condizioni dei criteri di conformità. La nuova azione corrisponde a **Inviare una notifica push all'utente finale**ed è supportata nei dispositivi Android e iOS.
+
+Quando gli utenti selezionano la notifica push nel dispositivo, viene visualizzata l'app Portale aziendale o Intune che mostra i dettagli del motivo della mancata conformità.
+
+#### <a name="endpoint-security-content-and-new-features---5720009-5892558-7130145-5653324-7140602----"></a>Contenuto della sicurezza degli endpoint e nuove caratteristiche<!-- 5720009 5892558, 7130145, 5653324, 7140602  -->
+
+La documentazione relativa a [Sicurezza degli endpoint](../protect/endpoint-security.md) di Intune è ora disponibile. Nel nodo Sicurezza degli endpoint dell'interfaccia di amministrazione di Microsoft Endpoint Manager è possibile:
+
+- Creare e distribuire criteri di sicurezza mirati per i dispositivi gestiti
+- Configurare l'integrazione con Microsoft Defender Advanced Threat Protection, inoltre gestire le attività di sicurezza consente a correggere i rischi per i dispositivi a rischio identificati dal team ATP
+- Gestire le baseline di sicurezza
+- Monitorare i criteri di conformità e di accesso condizionale del dispositivo
+- Visualizzare lo stato di conformità per tutti i dispositivi sia da Intune che da Configuration Manager quando Configuration Manager è configurato per la connessione client.
+
+Oltre alla disponibilità del contenuto, di seguito sono riportate le novità per la sicurezza degli endpoint di questo mese:
+
+- I [**criteri di sicurezza degli endpoint**](../protect/endpoint-security-policy.md) **non sono visibili in**  ***anteprima*** e sono ora pronti per l'uso in ambienti di produzione, come *disponibili a livello generale*, con due eccezioni:
+
+  - In una nuova *anteprima pubblica*, è possibile usare il profilo [**Regole di Microsoft Defender Firewall**](../protect/endpoint-security-firewall-policy.md#firewall-profiles) per i criteri del firewall di Windows 10. Con ogni istanza del profilo è possibile configurare fino a 150 regole del firewall per completare i profili di Microsoft Defender Firewall. 
+  - I criteri di sicurezza per la protezione account restano in anteprima. 
+
+- È ora possibile [**creare un duplicato dei criteri di sicurezza degli endpoint**](../protect/endpoint-security-policy.md#duplicate-a-policy). I duplicati mantengono la configurazione delle impostazioni dei criteri originali, ma ottengono un nuovo nome. Quindi, la nuova istanza dei criteri non include le assegnazioni ai gruppi fino a quando non si modifica la nuova istanza del criterio per aggiungerle. È possibile duplicare i criteri seguenti:
+  - Antivirus
+  - Crittografia del disco
+  - Firewall
+  - Rilevamento di endpoint e risposta
+  - Riduzione della superficie di attacco
+  - Protezione account
+
+- È ora possibile [**creare un duplicato della baseline di sicurezza**](../protect/security-baselines.md#duplicate-a-security-baseline). I duplicati mantengono la configurazione delle impostazioni dei criteri originali, ma ottengono un nuovo nome. Quindi, la nuova istanza della baseline non include le assegnazioni ai gruppi fino a quando non si modifica la nuova istanza del criterio per aggiungerle.
+
+- È disponibile un nuovo report per i criteri antivirus di degli endpoint di sicurezza: [**Endpoint non integri di Windows 10**](../protect/endpoint-security-antivirus-policy.md#windows-10-unhealthy-endpoints). Questo report è una nuova pagina che è possibile selezionare quando si visualizzano i criteri antivirus per la protezione degli endpoint. Il report visualizza lo stato antivirus dei dispositivi Windows 10 gestiti da MDM.  
+
+#### <a name="support-for-smime-signing-and-encryption-certificates-with-outlook-on-android---7207474----"></a>Supporto per la firma S/MIME e per i certificati di crittografia con Outlook in Android<!-- 7207474  -->
+È ora possibile usare i certificati per la firma S/MIME e la crittografia con Outlook in Android. Grazie a questo supporto è possibile effettuare il provisioning dei certificati usando i profili certificato SCEP, PKCS e PKCS importati. Sono supportate le piattaforme Android seguenti:
+
+- Profilo di lavoro di Android Enterprise
+- Amministratore di dispositivi Android
+
+Il supporto esteso per i dispositivi Android Enterprise completamente gestiti sarà presto disponibile.
+
+Per altre informazioni su questo supporto, vedere [Etichette di riservatezza e protezione in Outlook per iOS e Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/sensitive-labeling-and-protection-outlook-for-ios-android) nella documentazione di Exchange.
+
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="monitor-and-troubleshoot"></a>Monitorare e risolvere i problemi
+
+#### <a name="device-reports-ui-update---6269408---"></a>Aggiornamento dell'interfaccia utente dei report del dispositivo<!-- 6269408 -->
+Nel riquadro Panoramica sui report sono ora disponibili le schede **Riepilogo** e **Report**. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), selezionare **Report**, quindi selezionare la scheda **Report** per visualizzare i tipi di report disponibili. Per informazioni correlate, vedere [Report di Intune](../fundamentals/reports.md).
+
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="scripting"></a>Scripting
+
+#### <a name="macos-script-support---6376978----"></a>Supporto degli script per macOS<!-- 6376978  -->
+Il supporto degli script per macOS è ora disponibile a livello generale. Abbiamo aggiunto anche il supporto per gli script assegnati all'utente e per i dispositivi macOS registrati con Registrazione automatica del dispositivo di Apple (in precedenza Device Enrollment Program). Per altre informazioni, vedere [Usare gli script della shell nei dispositivi macOS in Intune](../apps/macos-shell-scripts.md).
+
+
+<!-- ########################## -->
+## <a name="week-of-may-4-2020"></a>Settimana del 4 maggio 2020  
 
 ### <a name="company-portal-for-android-guides-users-to-get-apps-after-work-profile-enrollment----6103999---"></a>Il Portale aziendale per Android consente agli utenti di ottenere le app dopo la registrazione del profilo di lavoro <!-- 6103999 -->
 Sono state migliorate le linee guida all'interno del Portale aziendale, in modo da facilitare la ricerca e l'installazione di app per gli utenti. Dopo aver eseguito la registrazione nella gestione del profilo di lavoro, gli utenti visualizzeranno un messaggio che spiega come trovare le app suggerite nella versione con badge di Google Play. L'ultimo passaggio in [Registrare il dispositivo con il profilo Android](../user-help/enroll-device-android-work-profile.md) è stato aggiornato in modo da visualizzare il nuovo messaggio. Gli utenti visualizzeranno anche un nuovo collegamento **Scarica app** nel menu di spostamento del Portale aziendale sul lato sinistro. Per dare più spazio a queste esperienze nuove e migliorate, la scheda **APP** è stata rimossa. Per visualizzare le schermate aggiornate, vedere [Aggiornamenti dell'interfaccia utente per le applicazioni degli utenti finali di Intune](./whats-new-app-ui.md). 
@@ -64,12 +246,12 @@ Sono state migliorate le linee guida all'interno del Portale aziendale, in modo 
 ## <a name="week-of-april-20-2020"></a>Settimana del 20 aprile 2020
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-
 ### <a name="device-management"></a>Gestione dei dispositivi
 
-#### <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions---6317104-cm3555758-idready---"></a>Connessione del tenant di Microsoft Endpoint Manager: sincronizzazione e azioni dei dispositivi<!-- 6317104, CM3555758 idready -->
+#### <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions---6317104-cm3555758----"></a>Connessione del tenant di Microsoft Endpoint Manager: sincronizzazione e azioni dei dispositivi<!-- 6317104, CM3555758  -->
 Microsoft Endpoint Manager ha riunito Configuration Manager e Intune in un'unica console. A partire da Configuration Manager versione 2002, è possibile caricare i dispositivi Configuration Manager nel servizio cloud ed eseguire le azioni necessarie dall'interfaccia di amministrazione. Per altre informazioni, vedere [Collegamento del tenant di Microsoft Endpoint Manager: sincronizzazione e azioni dei dispositivi](../../configmgr/tenant-attach/device-sync-actions.md). 
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="app-management"></a>Gestione delle app
 
 #### <a name="microsoft-office-365-proplus-rename---6368143---"></a>Nuovo nome per Microsoft Office 365 ProPlus<!-- 6368143 -->
@@ -194,8 +376,6 @@ Intune ora supporta con Android i provider di credenziali derivate seguenti:
 Un terzo provider, DISA Purebred, sarà disponibile per Android in una versione futura.
 
 #### <a name="microsoft-edge-security-baseline-is-now-generally-available--6586139---"></a>La baseline di sicurezza di Microsoft Edge è ora disponibile a livello generale<!--6586139 -->
-
-*Questa nuova baseline verrà implementata nei tenant nelle prossime settimane. Si prevede che la nuova baseline sarà disponibile per tutti i tenant all'inizio di maggio.*
 
 È ora disponibile una nuova versione della [baseline di sicurezza di Microsoft Edge](../protect/security-baselines.md#available-security-baselines), che è stata rilasciata come disponibile a livello generale (GA). La baseline di Edge precedente era in anteprima.  La nuova versione della baseline è di aprile 2020 (versione di Edge 80 e successive). 
 
@@ -388,7 +568,7 @@ Per altre informazioni sulla personalizzazione del Portale aziendale esistente, 
 #### <a name="new-android-report-on-android-devices-overview-page---5435435-----"></a>Nuovo report Android nella pagina di panoramica dei dispositivi Android<!-- 5435435   -->
 È stato aggiunto un report alla console di amministrazione di Microsoft Endpoint Manager nella pagina di panoramica dei dispositivi Android che visualizza il numero di dispositivi Android registrati in ogni soluzione di gestione dei dispositivi. Questo grafico (corrispondente al grafico già presente nella console di Azure) mostra il numero di dispositivi registrati con profilo di lavoro, completamente gestiti, dedicati e con registrazione di tipo amministratore di dispositivi. Per visualizzare il report, scegliere **Dispositivi** > **Android** > **Panoramica**.
 
-#### <a name="guide-users-from-android-device-administrator-management-to-work-profile-management--5857738---wnstaged--"></a>Guidare gli utenti dalla gestione degli amministratori dei dispositivi Android alla gestione del profilo di lavoro<!--5857738   wnstaged-->
+#### <a name="guide-users-from-android-device-administrator-management-to-work-profile-management--5857738-----"></a>Guidare gli utenti dalla gestione degli amministratori dei dispositivi Android alla gestione del profilo di lavoro<!--5857738   -->
 È in corso il rilascio di una nuova impostazione di conformità per la piattaforma degli amministratori dei dispositivi Android. Questa impostazione consente di rendere un dispositivo non conforme se gestito con l'amministratore del dispositivo.
 
 In questi dispositivi non conformi gli utenti visualizzeranno il messaggio **Passa alla configurazione della gestione dei nuovi dispositivi** nella pagina **Aggiorna impostazioni del dispositivo**. Toccando il pulsante **Risolvi**, verranno visualizzate indicazioni dettagliate su:
@@ -408,13 +588,17 @@ Per altre informazioni su questa impostazione, vedere [Aggiornare i dispositivi 
 Il data warehouse di Intune specifica l'indirizzo MAC come nuova proprietà (`EthernetMacAddress`) nell'entità `device` per consentire agli amministratori di eseguire la correlazione tra l'utente e l'indirizzo MAC dell'host. Questa proprietà consente di raggiungere utenti specifici e risolvere i problemi relativi agli eventi imprevisti che si verificano nella rete. Gli amministratori possono usare questa proprietà anche nei [report di Power BI](../developer/reports-proc-get-a-link-powerbi.md) per compilare report più completi. Per altre informazioni, vedere l'entità [dispositivo](../developer/intune-data-warehouse-collections.md#devices) del data warehouse di Intune.
 
 #### <a name="additional-data-warehouse-device-inventory-properties---6125732----"></a>Proprietà aggiuntive per l'inventario dei dispositivi tramite data warehouse<!-- 6125732  -->
-Si può accedere alle proprietà aggiuntive per l'inventario dei dispositivi dal data warehouse di Intune. Le proprietà seguenti vengono ora esposte attraverso la raccolta dei [dispositivi](../developer/intune-data-warehouse-collections.md#devices):
-- "Model": modello del dispositivo.
-- "Office365Version": versione di Office 365 installata nel dispositivo.
-- "PhysicalMemoryInBytes": memoria fisica in byte.
-- `TotalStorageSpaceInBytes`: capacità di archiviazione totale in byte.
+Si può accedere alle proprietà aggiuntive per l'inventario dei dispositivi dal data warehouse di Intune. Le proprietà seguenti sono ora esposte attraverso la raccolta dei [dispositivi](../developer/reports-ref-devices.md#devices):
+- `ethernetMacAddress`: identificatore di rete univoco del dispositivo.
+- `model`: modello del dispositivo.
+- `office365Version`: versione di Office 365 installata nel dispositivo.
+- `windowsOsEdition`: versione del sistema operativo.
 
-Per altre informazioni, vedere [API data warehouse di Microsoft Intune](../developer/reports-nav-intune-data-warehouse.md) e l'entità [dispositivo](../developer/intune-data-warehouse-collections.md#devices) del data warehouse di Intune.
+Le proprietà seguenti sono ora esposte attraverso la raccolta beta [devicePropertyHistory](../developer/reports-ref-devices.md#devicepropertyhistories):
+- `physicalMemoryInBytes`: memoria fisica in byte.
+- `totalStorageSpaceInBytes`: capacità di archiviazione totale in byte.
+
+Per altre informazioni, vedere [API Data Warehouse di Microsoft Intune](../developer/reports-nav-intune-data-warehouse.md).
 
 #### <a name="help-and-support-workflow-update-to-support-additional-services---5654170-----"></a>Guida e supporto per l'aggiornamento del flusso di lavoro per supportare servizi aggiuntivi<!-- 5654170   -->
 La pagina Guida e supporto dell'interfaccia di amministrazione di Microsoft Endpoint Manager è stata aggiornata e ora offre la possibilità di [scegliere il tipo di gestione da usare](../fundamentals/get-support.md#options-to-access-help-and-support). Con questa modifica sarà possibile scegliere tra i tipi di gestione seguenti:
@@ -764,7 +948,7 @@ Ora è possibile assegnare tag di ambito ai profili dei modelli amministrativi (
 ### <a name="app-management"></a>Gestione delle app
 
 #### <a name="retrieve-personal-recovery-key-from-mem-encrypted-macos-devices---4851745---"></a>Recuperare la chiave di ripristino personale dai dispositivi macOS crittografati MEM<!-- 4851745 -->
-Gli utenti finali possono recuperare la propria chiave di ripristino personale (chiave di FileVault) usando l'app Portale aziendale iOS. Il dispositivo con la chiave di ripristino personale deve essere registrato in Intune e crittografato con FileVault in Intune. Usando l'app Portale aziendale iOS, un utente finale può recuperare la chiave di ripristino personale nel dispositivo macOS crittografato facendo clic su **Ottieni la chiave di ripristino**. La chiave di ripristino può essere recuperata anche da Intune selezionando **Dispositivi** > *il dispositivo macOS crittografato e registrato* > **Ottieni la chiave di ripristino**. Per altre informazioni su FileVault, vedere [Crittografia FileVault per macOS](../protect/encrypt-devices.md#filevault-encryption-for-macos).
+Gli utenti finali possono recuperare la propria chiave di ripristino personale (chiave di FileVault) usando l'app Portale aziendale iOS. Il dispositivo con la chiave di ripristino personale deve essere registrato in Intune e crittografato con FileVault in Intune. Usando l'app Portale aziendale iOS, un utente finale può recuperare la chiave di ripristino personale nel dispositivo macOS crittografato facendo clic su **Ottieni la chiave di ripristino**. La chiave di ripristino può essere recuperata anche da Intune selezionando **Dispositivi** > *il dispositivo macOS crittografato e registrato* > **Ottieni la chiave di ripristino**. Per altre informazioni su FileVault, vedere [Crittografia FileVault per macOS](../protect/encrypt-devices-filevault.md).
 
 #### <a name="ios-and-ipados-user-licensed-vpp-apps---5619268---"></a>App VPP con licenza utente iOS e iPadOS<!-- 5619268 -->
 Per i dispositivi iOS e iPadOS registrati dall'utente, agli utenti finali non verranno più presentate le nuove applicazioni VPP con licenza dispositivo distribuite come disponibili. Gli utenti finali continueranno tuttavia a visualizzare tutte le app VPP con licenza utente all'interno del Portale aziendale. Per altre informazioni sulle app VPP, vedere [Procedura per la gestione delle app iOS e macOS acquistate tramite Volume Purchase Program di Apple con Microsoft Intune](../apps/vpp-apps-ios.md).

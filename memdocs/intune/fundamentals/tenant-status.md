@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/06/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,15 +16,19 @@ ms.reviewer: crisk
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d309b295281c88dff717c5f609905b3e541e3fed
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a4d747a38dd8e2f95cafb25ec5705f83199f4c54
+ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80696470"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83690684"
 ---
 # <a name="use-the-intune-tenant-status-page"></a>Usare la pagina Stato del tenant di Intune
-La pagina Stato del tenant di Microsoft Intune è un hub centralizzato in cui è possibile visualizzare dettagli aggiornati e importanti sul tenant. Queste informazioni includono la disponibilità e l'uso di licenze, lo stato del connettore e importanti comunicazioni sul servizio Intune.  
+
+La pagina Stato del tenant di Microsoft Intune è un hub centralizzato in cui è possibile visualizzare dettagli aggiornati e importanti sul tenant. Queste informazioni includono la disponibilità e l'uso di licenze, lo stato del connettore e importanti comunicazioni sul servizio Intune.
+
+> [!TIP]
+> Un tenant è un'istanza di Azure Active Directory (Azure AD). La sottoscrizione a Intune è ospitata da un tenant di Azure AD. Per altre informazioni, vedere [Configurare un tenant](https://docs.microsoft.com/azure/active-directory/develop/quickstart-create-new-tenant) nella documentazione di Azure AD.
 
 Per visualizzare il dashboard accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), passare ad **Amministrazione del tenant** e selezionare **Stato del tenant**.
 
@@ -64,20 +68,20 @@ Ad esempio, se si seleziona il connettore **Data di scadenza VPP**, viene aperta
 ## <a name="service-health-dashboard"></a>Dashboard di integrità dei servizi  
 Nella dashboard di integrità dei servizi è possibile visualizzare i dettagli relativi a *eventi imprevisti del servizio* che interessano il tenant e le *novità su Intune* con informazioni su aggiornamenti e modifiche pianificate.
 
-### <a name="intune-service-health"></a>Integrità del servizio Intune
+### <a name="intune-service-health-and-message-center"></a>Integrità del servizio e Centro messaggi di Intune
 Visualizza i dettagli relativi a eventi imprevisti e avvisi attivi ed evita di dover passare alla dashboard di integrità dei servizi o al Centro messaggi di Microsoft 365, entrambi disponibili nell'[interfaccia di amministrazione di Microsoft 365](https://admin.microsoft.com). Vengono visualizzati solo gli eventi imprevisti che interessano il tenant.  
 
 Quando si seleziona un evento imprevisto, i relativi dettagli vengono presentati direttamente nella pagina Stato del tenant. Per visualizzare gli avvisi e gli eventi imprevisti relativi al passato, selezionare **See past Incidents/Advisories** (Visualizza eventi imprevisti/avvisi precedenti). Viene aperta l'interfaccia di amministrazione di Microsoft 365 con gli avvisi e gli eventi imprevisti degli ultimi 30 giorni per il tenant.  
 
-Per visualizzare informazioni su *Integrità del servizio Intune*, l'account deve avere il ruolo **Amministratore globale** o **Amministratore del servizio** in Azure Active Directory o nell'interfaccia di amministrazione di Microsoft 365. Per assegnare queste autorizzazioni, accedere all'[interfaccia di amministrazione di Microsoft 365](https://admin.microsoft.com) con autorizzazioni di amministratore globale. Selezionare **Utenti > Utenti attivi** e quindi selezionare l'account che ha bisogno dell'accesso. Selezionare **Modifica** per Ruoli, selezionare *Amministratore del servizio* o *Amministratore globale* e quindi scegliere **Salva** per salvare le modifiche e assegnare le autorizzazioni.  
+Per visualizzare informazioni sull’*integrità dei servizi Intune*, l'account deve avere il ruolo di **amministratore globale** o di **amministratore del supporto del servizio** in Azure Active Directory o nell'interfaccia di amministrazione di Microsoft 365. Per assegnare queste autorizzazioni, accedere all'[interfaccia di amministrazione di Microsoft 365](https://admin.microsoft.com) con autorizzazioni di amministratore globale. Selezionare **Utenti > Utenti attivi** e quindi selezionare l'account che ha bisogno dell'accesso. Selezionare **Modifica** per Ruoli, selezionare *Amministratore del supporto del servizio* o *Amministratore globale* e quindi scegliere **Salva** per salvare le modifiche e assegnare le autorizzazioni.  
 
 Nell'interfaccia di amministrazione di Microsoft 365 è possibile solo configurare le preferenze di comunicazione per Integrità del servizio Intune.
 
-### <a name="intune-news"></a>Novità su Intune  
+### <a name="intune-message-center"></a>Centro messaggi di Intune  
 Questa area consente di visualizzare comunicazioni di carattere informativo del team del servizio Intune senza dover passare al Centro messaggi di Office. Le comunicazioni includono messaggi sulle modifiche apportate di recente al servizio Intune o che verranno presto implementate per il tenant.  
 
 Per impostazione predefinita, vengono visualizzati i 10 messaggi più recenti e attivi. Per visualizzare i messaggi meno recenti, selezionare **Visualizza i messaggi precedenti** per aprire il *Centro messaggi* nell'interfaccia di amministrazione di Microsoft 365.  
 
-Per visualizzare informazioni relative alle novità su Intune, l'account deve avere il ruolo **Amministratore globale** o **Amministratore del servizio** in Azure Active Directory o il **ruolo con autorizzazioni di lettura per il Centro messaggi** nell'interfaccia di amministrazione di Microsoft 365.  Per assegnare queste autorizzazioni, accedere all'[interfaccia di amministrazione di Microsoft 365](https://admin.microsoft.com) con autorizzazioni di amministratore. Selezionare **Utenti > Utenti attivi** e quindi selezionare l'account che ha bisogno dell'accesso. Selezionare **Modifica** per *Ruoli*, selezionare *Amministratore delle comunicazioni con Teams* e quindi scegliere **Salva** per salvare le modifiche e assegnare le autorizzazioni.  
+Per visualizzare informazioni relative alle notizie su Intune, l'account deve avere il ruolo di **amministratore globale** o **amministratore del supporto del servizio** in Azure Active Directory o il ruolo di **amministratore che legge il Centro messaggi** nell'interfaccia di amministrazione di Microsoft 365.  Per assegnare queste autorizzazioni, accedere all'[interfaccia di amministrazione di Microsoft 365](https://admin.microsoft.com) con autorizzazioni di amministratore. Selezionare **Utenti > Utenti attivi** e quindi selezionare l'account che ha bisogno dell'accesso. Selezionare **Modifica** per *Ruoli*, selezionare *Amministratore delle comunicazioni con Teams* e quindi scegliere **Salva** per salvare le modifiche e assegnare le autorizzazioni.  
 
-Nell'interfaccia di amministrazione di Microsoft 365 è possibile solo configurare le preferenze di comunicazione per Novità su Intune.
+È possibile configurare le preferenze di comunicazione per il Centro messaggi di Intune solo tramite l'interfaccia di amministrazione di Microsoft 365.

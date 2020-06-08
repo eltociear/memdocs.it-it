@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2020
-ms.topic: conceptual
+ms.date: 05/19/2020
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de679314bcd3b52ff879fbe9a6340a61d2b7e993
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 68e337f6315fc6d198e27c494b7689bb1cb9bc97
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078363"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989621"
 ---
 # <a name="app-protection-policies-overview"></a>Panoramica dei criteri di protezione app
 
@@ -84,6 +84,18 @@ Il supporto della piattaforma dei criteri di protezione delle app di Intune è a
 > [!IMPORTANT]
 > Il Portale aziendale Intune deve essere presente nel dispositivo per ricevere i criteri di protezione delle app in Android. Per altre informazioni, vedere [Aspettative dalla gestione dell'app per Android con criteri di protezione delle app](../fundamentals/end-user-mam-apps-android.md#access-apps).
 
+## <a name="app-protection-policy-data-protection-framework"></a>Framework di protezione dei dati con criteri di protezione delle app
+
+Le scelte disponibili sui criteri di protezione delle app (APP) consentono alle organizzazioni di adattare la protezione alle proprie esigenze specifiche. Per alcuni utenti potrebbe non essere semplice individuare le impostazioni dei criteri necessarie per implementare uno scenario completo. Per aiutare le organizzazioni a dare la priorità alla protezione avanzata degli endpoint di client mobili, Microsoft ha introdotto la tassonomia per il framework di protezione dei dati dell’APP per la gestione di app per dispositivi mobili iOS e Android.
+
+Il framework di protezione dei dati dell’APP è organizzato in tre livelli di configurazione distinti, ciascuno basato sul livello precedente:
+
+- **Protezione di base dei dati aziendali** (livello 1) garantisce che le app siano protette con un PIN e crittografate ed esegue operazioni di cancellazione selettiva. Per i dispositivi Android, questo livello convalida l'attestazione dei dispositivi Android. Si tratta di una configurazione a livello di voce che offre un controllo simile di protezione dei dati nei criteri della cassetta postale di Exchange Online e introduce l’IT e la popolazione di utente nell'APP.
+- **Protezione avanzata dei dati aziendali** (livello 2) introduce i meccanismi di protezione della perdita dei dati aziendali dell’APP e i requisiti minimi del sistema operativo. Questa configurazione è applicabile alla maggior parte degli utenti di dispositivi mobili che accedono ai dati aziendali o dell'istituto di istruzione.
+- **Protezione elevata dei dati aziendali** (livello 3) introduce meccanismi avanzati per la protezione dei dati, configurazione del PIN avanzata e Mobile Threat Defense dell’APP. Questa configurazione è utile per gli utenti che accedono a dati ad alto rischio.
+
+Per visualizzare le raccomandazioni specifiche per ciascun livello di configurazione e le app minime che devono essere protette, consultare il [Framework di protezione dei dati con criteri di protezione delle app](app-protection-framework.md).
+
 ## <a name="how-app-protection-policies-protect-app-data"></a>Come i criteri di protezione delle app proteggono i dati dell'app
 
 ### <a name="apps-without-app-protection-policies"></a>App senza criteri di protezione delle app
@@ -143,13 +155,13 @@ Il team di sviluppo di Intune SDK verifica e gestisce attivamente il supporto pe
 
 L'elenco seguente contiene i requisiti dell'utente finale per poter usare i criteri di protezione delle app in un'app gestita da Intune:
 
-- L'utente finale deve avere un account Azure Active Directory (AAD). Per imparare a creare gli utenti Intune in Azure Active Directory, vedere [Aggiungere utenti e concedere autorizzazioni amministrative a Intune](../fundamentals/users-add.md).
+- L'utente finale deve avere un account Azure Active Directory (Azure AD). Per imparare a creare gli utenti Intune in Azure Active Directory, vedere [Aggiungere utenti e concedere autorizzazioni amministrative a Intune](../fundamentals/users-add.md).
 
 - L'utente finale deve avere una licenza per Microsoft Intune assegnata all'account Azure Active Directory. Per informazioni su come assegnare le licenze di Intune agli utenti finali, vedere [Gestire le licenze di Intune](../fundamentals/licenses-assign.md).
 
 - L'utente finale deve appartenere a un gruppo di sicurezza che è la destinazione dei criteri di protezione dell'app. Gli stessi criteri di protezione devono avere come destinazione l'app specifica in uso. I criteri di protezione delle app possono essere creati e distribuiti nella console di Intune nel [portale di Azure](https://portal.azure.com). È possibile creare gruppi di sicurezza simultaneamente nell'[interfaccia di amministrazione di Microsoft 365](https://admin.microsoft.com).
 
-- L'utente finale deve accedere all'app usando il proprio account AAD.
+- L'utente finale deve accedere all'app usando il proprio account Azure AD.
 
 ## <a name="app-protection-policies-for-microsoft-office-apps"></a>Criteri di protezione delle app per app Microsoft Office
 
@@ -207,7 +219,7 @@ Per un esempio di contesto di lavoro o "aziendale", si consideri un utente che a
 Outlook offre una visualizzazione combinata sia dei messaggi di posta elettronica "personali" che di quelli "aziendali". In questa situazione l'app Outlook richiede il PIN di Intune all'avvio.
 
   >[!NOTE]
-  > Sebbene Edge si trovi nel contesto "aziendale", l'utente può spostare intenzionalmente i file di contesto "aziendali" OneDrive in una posizione di archiviazione cloud personale sconosciuta. Per evitare che questo succeda, vedere [Specificare l'elenco dei siti consentiti o bloccati per Microsoft Edge](../apps/manage-microsoft-edge.md#specify-allowed-or-blocked-sites-list-for-microsoft-edge) e configurare l'elenco dei siti consentiti o bloccati per Edge.
+  > Sebbene Edge si trovi nel contesto "aziendale", l'utente può spostare intenzionalmente i file di contesto "aziendali" OneDrive in una posizione di archiviazione cloud personale sconosciuta. Per evitare questo problema, consultare gli articoli [Gestire siti Web con restrizioni](manage-microsoft-edge.md#manage-restricted-web-sites) e configurare l'elenco dei siti consentiti/bloccati per Edge.
 
 Per altre informazioni sulle identità multiple in Intune, vedere [MAM e identità multiple](apps-supported-intune-apps.md).
 
@@ -310,7 +322,7 @@ I criteri di Protezione app di Intune consentono l'accesso alle app solo all'ute
 La finalità di questa procedura è di continuare a assicurare la protezione e la sicurezza a livello di app dei dati dell'organizzazione all'interno dell'app stessa. Questa funzionalità è disponibile solo per iOS/iPadOS e richiede la partecipazione delle applicazioni che integrano Intune SDK per iOS/iPadOS, versione 9.0.1 o versioni successive. L'integrazione dell'SDK è necessaria in modo il comportamento possa essere imposto nelle applicazioni di destinazione. Questa integrazione avviene sistematicamente e dipende dai team delle applicazioni specifiche. Alcune app partecipanti sono WXP, Outlook, Managed Browser e Yammer.
   
 ### <a name="ios-share-extension"></a>Estensione di condivisione iOS
-È possibile usare l'estensione di condivisione di iOS/iPadOS per aprire i dati aziendali o dell'istituto di istruzione nelle app non gestite, anche con i criteri di trasferimento dei dati impostati su **Solo app gestite** o **Nessuna app**. I criteri di protezione delle app di Intune non possono controllare l'estensione di condivisione di iOS/iPadOS senza la gestione del dispositivo. Pertanto, Intune _**crittografa i dati "aziendali" prima che vengano condivisi all'esterno dell'app**_ . È possibile convalidare il comportamento di crittografia provando ad aprire il file "aziendale" all'esterno dell'app gestita. Il file deve essere crittografato e non deve poter essere aperto all'esterno dell'app gestita.
+È possibile usare l'estensione di condivisione di iOS/iPadOS per aprire i dati aziendali o dell'istituto di istruzione nelle app non gestite, anche con i criteri di trasferimento dei dati impostati su **Solo app gestite** o **Nessuna app**. I criteri di protezione delle app di Intune non possono controllare l'estensione di condivisione di iOS/iPadOS senza la gestione del dispositivo. Pertanto, Intune _**crittografa i dati "aziendali" prima che vengano condivisi all'esterno dell'app**_. È possibile convalidare il comportamento di crittografia provando ad aprire il file "aziendale" all'esterno dell'app gestita. Il file deve essere crittografato e non deve poter essere aperto all'esterno dell'app gestita.
 
 ### <a name="multiple-intune-app-protection-access-settings-for-same-set-of-apps-and-users"></a>Più impostazioni di accesso della protezione delle app di Intune per lo stesso set di app e utenti
 I criteri di protezione delle app di Intune relativi all'accesso vengono applicati in un ordine specifico nei dispositivi degli utenti finali quando cercano di accedere a un'app di destinazione dall'account aziendale. In generale, una cancellazione ha la precedenza, seguita da un avviso che può essere ignorato. Ad esempio, se possibile per l'app o l'utente specifico, un'impostazione di versione minima del sistema operativo iOS/iPadOS che avvisa l'utente che può essere eseguito un aggiornamento della versione di iOS/iPadOS verrà applicata dopo l'impostazione di versione minima del sistema operativo iOS/iPadOS che impedisce all'utente di accedere. Quindi, nello scenario in cui l'amministratore IT configura la versione minima del sistema operativo iOS su 11.0.0.0 e la versione minima del sistema operativo iOS (solo avvisi) su 11.1.0.0, se il dispositivo che tenta di accedere all'app usa iOS 10, l'utente finale verrebbe bloccato in base all'impostazione più restrittiva per la versione minima del sistema operativo iOS che comporta il blocco dell'accesso.

@@ -5,8 +5,8 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/21/2020
-ms.topic: conceptual
+ms.date: 05/21/2020
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9fa14dd54a820ed20f8b3b504a836392c7f428f
-ms.sourcegitcommit: 4381afb515c06f078149bd52528d1f24b63a2df9
+ms.openlocfilehash: 559d9a704f0b33e3fda3adf628626b56ff263de3
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82538169"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989713"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Impostare regole sui dispositivi per consentire l'accesso alle risorse dell'organizzazione tramite Intune
 
@@ -64,11 +64,17 @@ Remember that you need to implement Conditional Access policies in addition to c
 
 ## <a name="device-compliance-policies-work-with-azure-ad"></a>Funzionamento dei criteri di conformità del dispositivo con Azure AD
 
-Intune usa l'[accesso condizionale](https://docs.microsoft.com/azure/active-directory/conditional-access/overview) di Azure Active Directory (AD) (apre un altro sito Web di documenti) per applicare la conformità. Al momento della registrazione di un dispositivo in Intune, viene avviato il processo di registrazione di Azure AD e le informazioni sul dispositivo vengono aggiornate in Azure AD. Un'informazione chiave è lo stato di conformità del dispositivo. Questo stato di conformità viene usato dai criteri di accesso condizionale per bloccare o consentire l'accesso alla posta elettronica e ad altre risorse dell'organizzazione.
+Intune usa l'[accesso condizionale](../protect/conditional-access.md) per consentire l'applicazione della conformità. L'accesso condizionale è una tecnologia di Azure Active Directory (Azure AD).
 
-- Per sapere perché e in che modo i dispositivi vengono registrati in Azure AD, vedere [Informazioni sulla gestione dei dispositivi in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-introduction).
+Al momento della registrazione di un dispositivo in Intune, viene avviato il processo di registrazione di Azure AD e le informazioni sul dispositivo vengono aggiornate in Azure AD. Un'informazione chiave è lo stato di conformità del dispositivo. Questo stato di conformità viene usato dai criteri di accesso condizionale per bloccare o consentire l'accesso alla posta elettronica e ad altre risorse dell'organizzazione.
 
-- Gli articoli [Che cos'è l'accesso condizionale?](conditional-access.md) e [Quali sono i modi comuni per usare l'accesso condizionale con Intune?](conditional-access-intune-common-ways-use.md) descrivono questa funzionalità in relazione a Intune.
+Informazioni sull'accesso condizionale e su Intune:
+
+- [Modi comuni per usare l'accesso condizionale con Intune](conditional-access-intune-common-ways-use.md)
+
+Per informazioni sull'accesso condizionale, vedere la documentazione di Azure AD:
+  - [Che cos'è l'accesso condizionale](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)
+  - [Che cos’è l'identità del dispositivo](https://docs.microsoft.com/azure/active-directory/device-management-introduction)
 
 ## <a name="ways-to-use-device-compliance-policies"></a>Modi per usare i criteri di conformità del dispositivo
 
@@ -86,22 +92,22 @@ Ai dispositivi conformi alle regole dei criteri è possibile consentire l'access
 
 Intune include anche un set di impostazioni dei criteri di conformità predefiniti. I criteri predefiniti seguenti vengono valutati in tutti i dispositivi registrati in Intune:
 
-- **Contrassegna i dispositivi senza criteri di conformità assegnati come**: questa proprietà ha due valori:
+- **Contrassegna i dispositivi senza criteri di conformità assegnati come**: Si tratta di un'azione predefinita per la mancata conformità. questa proprietà ha due valori:
 
   - **Conforme** (*impostazione predefinita*): la funzione di sicurezza è disattivata
   - **Non conforme**: la funzione di sicurezza è attiva
 
   Per impostazione predefinita, un dispositivo a cui non è stato assegnato un criterio di conformità è considerato conforme. Se si usa l'accesso condizionale con i criteri di conformità, è consigliabile cambiare l'impostazione in **Non conforme**. Se un utente finale non è conforme perché non è stato assegnato alcun criterio, nell'[app Portale aziendale](../apps/company-portal-app.md) viene visualizzato `No compliance policies have been assigned`.
 
-- **Rilevamento ottimizzato per jailbreak**: Quando è abilitata, con questa impostazione lo stato del dispositivo jailbroken compare più frequentemente nei dispositivi iOS/iPadOS. Questa impostazione interessa solo i dispositivi a cui sono assegnati criteri di conformità che bloccano i dispositivi jailbroken. L'abilitazione di questa proprietà usa i servizi di posizione del dispositivo e può influire sull'utilizzo della batteria. I dati relativi alla posizione utente non vengono archiviati da Intune e vengono usati solo per attivare il rilevamento del jailbreak più spesso in background. 
+- **Rilevamento ottimizzato per jailbreak** (*si applica a iOS/iPados*): Quando è abilitata, con questa impostazione lo stato del dispositivo jailbroken compare più frequentemente nei dispositivi iOS/iPadOS. Questa impostazione interessa solo i dispositivi a cui sono assegnati criteri di conformità che bloccano i dispositivi jailbroken. L'abilitazione di questa proprietà usa i servizi di posizione del dispositivo e può influire sull'utilizzo della batteria. I dati relativi alla posizione utente non vengono archiviati da Intune e vengono usati solo per attivare il rilevamento del jailbreak più spesso in background. 
 
   Per l'abilitazione di questa impostazione è necessario che:
   - Nei dispositivi siano abilitati i servizi di posizione a livello di sistema operativo.
   - I dispositivi consentano sempre al Portale aziendale di usare i servizi di posizione.
 
-  La valutazione viene attivata aprendo l'app Portale aziendale o spostando fisicamente il dispositivo a una distanza significativa di circa 500 metri o più. In iOS 13 e versioni successive, questa funzionalità richiederà agli utenti di selezionare sempre Consenti ogni volta che il dispositivo richiede di continuare a consentire al Portale aziendale di usare la posizione in background. Se gli utenti non consentono sempre l'accesso alla posizione e hanno un criterio configurato con questa impostazione, il dispositivo verrà contrassegnato come non conforme. Si noti che Intune non è in grado di garantire che ogni modifica significativa della posizione assicurerà un controllo di rilevamento del jailbreak, dal momento che dipende dalla connessione di rete di un dispositivo usata al momento.
+  Il rilevamento ottimizzato funziona tramite i servizi di posizione. La valutazione viene attivata aprendo l'app Portale aziendale o spostando fisicamente il dispositivo a una distanza significativa di circa 500 metri o più. In iOS 13 e versioni successive, questa funzionalità richiede agli utenti di selezionare sempre Consenti ogni volta che il dispositivo richiede di continuare a consentire al Portale aziendale di usare la posizione in background. Se gli utenti non consentono sempre l'accesso alla posizione e hanno un criterio configurato con questa impostazione, il dispositivo verrà contrassegnato come non conforme. Si noti che Intune non è in grado di garantire che ogni modifica significativa della posizione assicurerà un controllo di rilevamento del jailbreak, dal momento che dipende dalla connessione di rete di un dispositivo usata al momento.
 
-- **Periodo di validità dello stato di conformità (giorni)** : immettere il periodo di tempo in cui i dispositivi devono segnalare lo stato per tutti i criteri di conformità ricevuti. I dispositivi che non restituiscono lo stato entro il periodo indicato vengono considerati non conformi. Il valore predefinito è 30 giorni. Il valore minimo è 1 giorno.
+- **Periodo di validità dello stato di conformità (giorni)** : immettere il periodo di tempo in cui i dispositivi devono segnalare lo stato per tutti i criteri di conformità ricevuti. I dispositivi che non restituiscono lo stato entro il periodo indicato vengono considerati non conformi. Il valore predefinito è 30 giorni. Il valore massimo è di 120 giorni. Il valore minimo è 1 giorno.
 
   In questa impostazione viene visualizzato il criterio di conformità predefinito **È attivo** (**Dispositivi** > **Monitor** > **Conformità dell'impostazione**). L'attività in background per questo criterio viene eseguita una volta al giorno.
 

@@ -6,7 +6,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 04/30/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -17,17 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5839154ab0c884e933e8d11055e745d54503433
-ms.sourcegitcommit: 8a8378b685a674083bfb9fbc9c0662fb0c7dda97
+ms.openlocfilehash: 36b85fa6713af5679e59382efaeb354bb4949705
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619543"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990591"
 ---
-# <a name="use-shell-scripts-on-macos-devices-in-intune-public-preview"></a>Usare script della shell nei dispositivi macOS in Intune (anteprima pubblica)
-
-> [!NOTE]
-> Gli script della shell per dispositivi macOS sono attualmente in anteprima. Prima di usare questa funzionalità, esaminare l'elenco dei [problemi noti nell'anteprima](macos-shell-scripts.md#known-issues).
+# <a name="use-shell-scripts-on-macos-devices-in-intune"></a>Usare script della shell nei dispositivi macOS in Intune
 
 Usare gli script della shell per estendere le funzionalità di gestione dei dispositivi in Intune oltre a quanto supportato dal sistema operativo macOS. 
 
@@ -59,10 +56,11 @@ Quando si creano e si assegnano script della shell a dispositivi macOS, assicura
    - **Frequenza dello script:** Selezionare la frequenza di esecuzione dello script. Scegliere **Non configurata** (impostazione predefinita) per eseguire uno script una sola volta.
    - **Numero massimo di nuovi tentativi in caso di errore dello script:** Selezionare il numero di esecuzioni dello script necessarie nel caso in cui venga restituito un codice di uscita diverso da zero (zero indica l'esito positivo). Scegliere **Non configurato** (impostazione predefinita) per non effettuare altri tentativi se lo script ha esito negativo.
 5. In **Tag di ambito** aggiungere facoltativamente i tag di ambito per lo script e selezionare **Avanti**. È possibile usare i tag di ambito per determinare chi può visualizzare gli script in Intune. Per informazioni dettagliate complete sui tag di ambito, vedere [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md) (Usare il controllo degli accessi in base al ruolo e i tag di ambito per l'IT distribuito).
-6. Selezionare **Assegnazioni** > **Selezionare i gruppi da includere**. Viene visualizzato un elenco di gruppi di Azure AD esistenti. Selezionare uno o più gruppi di dispositivi che includono gli utenti i cui dispositivi macOS devono ricevere lo script. Scegliere **Seleziona**. I gruppi selezionati vengono visualizzati nell'elenco e ricevono il criterio di script.
+6. Selezionare **Assegnazioni** > **Selezionare i gruppi da includere**. Viene visualizzato un elenco di gruppi di Azure AD esistenti. Selezionare uno o più gruppi di utenti o dispositivi per la ricezione dello script. Scegliere **Seleziona**. I gruppi selezionati vengono visualizzati nell'elenco e ricevono il criterio di script.
    > [!NOTE]
-   > - Gli script della shell in Intune possono essere assegnati solo ai gruppi di sicurezza dei dispositivi di Azure AD. L'assegnazione a gruppi di utenti non è supportata nell'anteprima. 
-   > - Aggiornando le assegnazioni per gli script della shell vengono aggiornate anche le assegnazioni per l'[agente di gestione di Microsoft Intune per macOS](macos-shell-scripts.md#microsoft-intune-management-agent-for-macos).
+   > - Gli script della shell assegnati ai gruppi di utenti si applicano a qualsiasi utente che effettua l'accesso al Mac.  
+   > - Aggiornando le assegnazioni per gli script della shell vengono aggiornate anche le assegnazioni per l'[agente MDM di Microsoft Intune per macOS](macos-shell-scripts.md#microsoft-intune-management-agent-for-macos).
+
 7. In **Rivedi e aggiungi** viene visualizzato un riepilogo delle impostazioni configurate. Selezionare **Aggiungi** per salvare lo script. Quando si seleziona **Aggiungi** il criterio di script viene distribuito ai gruppi scelti.
 
 Lo script creato ora compare nell'elenco di script. 
@@ -123,7 +121,7 @@ La raccolta dei log può non riuscire a causa di uno dei motivi indicati nella t
 ## <a name="frequently-asked-questions"></a>Domande frequenti
 ### <a name="why-are-assigned-shell-scripts-not-running-on-the-device"></a>Perché gli script della shell assegnati non vengono eseguiti nel dispositivo?
 I motivi possono essere molteplici:
-* È possibile che l'agente debba eseguire la sincronizzazione per ricevere script nuovi o aggiornati. Questo processo di sincronizzazione viene eseguito ogni 8 ore ed è diverso dalla sincronizzazione di MDM. Verificare che il dispositivo sia attivo e connesso a una rete per la sincronizzazione corretta dell'agente e attendere che l'agente si sincronizzi.
+* È possibile che l'agente debba eseguire la sincronizzazione per ricevere script nuovi o aggiornati. Questo processo di sincronizzazione viene eseguito ogni 8 ore ed è diverso dalla sincronizzazione di MDM. Verificare che il dispositivo sia attivo e connesso a una rete per la sincronizzazione corretta dell'agente e attendere che l'agente si sincronizzi. È anche possibile richiedere all'utente finale di aprire il Portale aziendale nel Mac, selezionare il dispositivo e fare clic su **Controlla impostazioni**.
 * È possibile che l'agente non sia installato. Verificare che l'agente sia installato in `/Library/Intune/Microsoft Intune Agent.app` nel dispositivo macOS.
 * È possibile che l'agente non sia in uno stato integro. L'agente tenterà di eseguire il ripristino per 24 ore, rimuovere se stesso e reinstallarsi se sono ancora assegnati script della shell.
 
@@ -149,15 +147,12 @@ Il ruolo di Intune assegnato richiede autorizzazioni per le **configurazioni dei
  - L'agente controlla la presenza di script nuovi o aggiornati nei servizi di Intune in genere ogni 8 ore. Questo processo di sincronizzazione è indipendente dalla sincronizzazione di MDM. 
  
  ### <a name="how-can-i-manually-initiate-an-agent-check-in-from-a-mac"></a>Come si può avviare manualmente la sincronizzazione di un agente da un Mac?
-In un Mac gestito in cui è installato l'agente aprire **Terminale**, eseguire il comando `sudo killall IntuneMdmAgent` per terminare il processo `IntuneMdmAgent`. Il processo `IntuneMdmAgent` viene riavviato immediatamente, avviando una sincronizzazione con Intune.
+In un Mac gestito in cui è installato l'agente, aprire **Portale aziendale**, selezionare il dispositivo locale, fare clic su **Controlla impostazioni**. In questo modo si avvia una sincronizzazione MDM e una sincronizzazione di un agente.
 
-In alternativa, è possibile eseguire queste operazioni:
-1. Aprire **Monitoraggio attività** > **Visualizza** > *selezionare **Tutti i processi**.* 
-2. Cercare i processi denominati `IntuneMdmAgent`. 
-3. Uscire dal processo in esecuzione per l'utente **radice**. 
+In alternativa, aprire **Terminale**, eseguire il `sudo killall IntuneMdmAgent` comando per terminare il processo di `IntuneMdmAgent`. Il processo `IntuneMdmAgent` viene riavviato immediatamente, avviando una sincronizzazione con Intune.
 
 > [!NOTE]
-> L'azione **Verifica le impostazioni** nel Portale aziendale e l'azione **Sincronizza** per i dispositivi nella console di amministrazione di Microsoft Endpoint Manager consentono di avviare una sincronizzazione MDM e non forzano la sincronizzazione di un agente.
+> L'azione **Sincronizza** per i dispositivi nella console di amministrazione di Microsoft Endpoint Manager consentono di avviare una sincronizzazione MDM e non forzano la sincronizzazione di un agente.
 
  ### <a name="when-is-the-agent-removed"></a>Quando viene rimosso l'agente?
  Esistono svariate condizioni che possono causare la rimozione dell'agente dal dispositivo, ad esempio:
@@ -165,14 +160,14 @@ In alternativa, è possibile eseguire queste operazioni:
  - Il dispositivo macOS non è più gestito.
  - L'agente resta in uno stato di errore irreversibile per più di 24 ore (tempo di riattivazione del dispositivo).
 
+ ### <a name="why-are-scripts-running-even-though-the-mac-is-no-longer-managed"></a>Perché gli script vengono eseguiti anche se il Mac non è più gestito?
+ Quando un Mac con script assegnati non è più gestito, l'agente non viene rimosso immediatamente. L'agente rileva che il Mac non è gestito alla sincronizzazione successiva dell'agente (in genere ogni 8 ore) e annulla l'esecuzione degli script programmati. Tutti gli script archiviati localmente programmati per essere eseguiti con maggiore frequenza rispetto alla sincronizzazione successiva programmata dell'agente verranno quindi eseguiti. Quando l'agente non è in grado di eseguire la sincronizzare, riprova a eseguire la sincronizzare per un massimo di 24 ore (tempo di riattivazione del dispositivo) e quindi si rimuove dal Mac.
+ 
  ### <a name="how-to-turn-off-usage-data-sent-to-microsoft-for-shell-scripts"></a>Come si può disattivare l'invio a Microsoft di dati di utilizzo per gli script della shell?
  Per disattivare l'invio dei dati di utilizzo a Microsoft da parte dell'agente di gestione di Intune, aprire Portale aziendale, selezionare **Menu** > **Preferenze** >  *e deselezionare Consenti a Microsoft di raccogliere i dati di utilizzo*. L'invio dei dati di utilizzo verrà così disattivato sia per l'agente di gestione di Intune che per Portale aziendale.
 
 ## <a name="known-issues"></a>Problemi noti
-- **Assegnazione a gruppi di utenti:** gli script della shell assegnati a gruppi di utenti non sono applicabili ai dispositivi. L'assegnazione a gruppi di utenti non è attualmente supportata nell'anteprima. Usare l'assegnazione a gruppi di dispositivi per assegnare gli script.
-- **Raccogli i log:** l'azione "Raccogli log" è visibile. Tuttavia, quando si tenta di eseguire la raccolta dei log, viene visualizzato un messaggio che indica che si è verificato un errore e i log non vengono acquisiti. La raccolta di log non è attualmente supportata nell'anteprima.
 - **Nessun stato di esecuzione dello script:** nel caso improbabile in cui un dispositivo riceva uno script e vada offline prima che venga segnalato lo stato dell'esecuzione, il dispositivo non segnalerà lo stato di esecuzione dello script nella console di amministrazione.
-- **Report Stato dell'utente:** esiste un problema di report vuoto. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) selezionare **Monitoraggio**. Lo stato utente mostra un report vuoto.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

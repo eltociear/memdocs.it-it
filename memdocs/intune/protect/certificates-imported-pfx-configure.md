@@ -5,8 +5,8 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/22/2020
-ms.topic: conceptual
+ms.date: 05/20/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d9a3e2c2a2c50f2d0fde264eedc2096d34f815a9
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 13824c82b426e1efb00dce2db7c9f4a2dd5bb9ee
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023181"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990338"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Configurare e usare i certificati PKCS importati con Intune
 
@@ -126,7 +126,7 @@ Per usare i cmdlet PowerShell, compilare il progetto autonomamente con Visual St
 
 3. In alto modificare **Debug** in **Versione**.
 
-4. Passare a **Compila** e selezionare **Compila PFXImportPS**. Dopo alcuni istanti viene visualizzata la **conferma della compilazione riuscita** in basso a sinistra in Visual Studio.
+4. Passare a **Compila** e selezionare **Compila PFXImportPS**. Tra poco la conferma di **Visualizzazione completata** sarà visualizzata in basso a sinistra di Visual Studio.
 
    ![Opzione Compila di Visual Studio](./media/certificates-imported-pfx-configure/vs-build-release.png)
 
@@ -148,7 +148,7 @@ Il modulo di PowerShell offre i metodi che consentono di creare una chiave usand
 
 3. Per importare il modulo, eseguire `Import-Module .\IntunePfxImport.psd1`.
 
-4. Quindi, eseguire `Add-IntuneKspKey "Microsoft Software Key Storage Provider" "PFXEncryptionKey"`
+4. Quindi, eseguire `Add-IntuneKspKey -ProviderName "Microsoft Software Key Storage Provider" -KeyName "PFXEncryptionKey"`
 
    > [!TIP]
    > Il provider da usare deve essere selezionato di nuovo quando si importano i certificati PFX. È possibile usare il **provider di archiviazione chiavi per software Microsoft**, sebbene sia supportato l'uso di un provider diverso. Anche il nome della chiave è solo un esempio ed è possibile usare un nome di chiave diverso a scelta.
@@ -187,12 +187,12 @@ Selezionare il provider di archiviazione chiavi che corrisponde al provider usat
 
 3. Per importare il modulo, eseguire `Import-Module .\IntunePfxImport.psd1`
 
-4. Per eseguire l'autenticazione a Graph di Intune, eseguire `$authResult = Get-IntuneAuthenticationToken -AdminUserName "<Admin-UPN>"`
+4. Per eseguire l'autenticazione a Graph di Intune, eseguire `Set-IntuneAuthenticationToken  -AdminUserName "<Admin-UPN>"`
 
    > [!NOTE]
    > Quando viene eseguita l'autenticazione per Graph, è necessario specificare le autorizzazioni per l'ID app. Se è la prima volta che si usa questa utilità, è necessario un *amministratore globale*. I cmdlet PowerShell usano lo stesso ID app usato con gli [esempi di PowerShell per Intune](https://github.com/microsoftgraph/powershell-intune-samples).
 
-5. Convertire la password per ogni file PFX da importare in una stringa sicura eseguendo `$SecureFilePassword = ConvertTo-SecureString -String "<PFXPassword>" -AsPlainText -Force`.
+5. Convertire la password per ogni file PFX che si sta importando in una stringa sicura eseguendo `$SecureFilePassword = ConvertTo-SecureString -String "<PFXPassword>" -AsPlainText -Force`.
 
 6. Per creare un oggetto **UserPFXCertificate**, eseguire `$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "<FullPathPFXToCert>" $SecureFilePassword "<UserUPN>" "<ProviderName>" "<KeyName>" "<IntendedPurpose>"`
 
@@ -200,10 +200,15 @@ Selezionare il provider di archiviazione chiavi che corrisponde al provider usat
 
    > [!NOTE]
    > Quando si importa il certificato da un sistema diverso dal server in cui è installato il connettore, usare il comando seguente che include il percorso del file di chiave: `$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "<FullPathPFXToCert>" $SecureFilePassword "<UserUPN>" "<ProviderName>" "<KeyName>" "<IntendedPurpose>" "<PaddingScheme>" "<File path to public key file>"`
+   >
+   > Il *VPN* non è supportato come IntendedPurpose. 
 
-7. Importare l'oggetto **UserPFXCertificate** in Intune eseguendo `Import-IntuneUserPfxCertificate -AuthenticationResult $authResult -CertificateList $userPFXObject`
 
-8. Per verificare che il certificato è stato importato, eseguire `Get-IntuneUserPfxCertificate -AuthenticationResult $authResult -UserList "<UserUPN>"`
+7. Importare l'oggetto **UserPFXCertificate** in Intune eseguendo `Import-IntuneUserPfxCertificate -CertificateList $userPFXObject`
+
+8. Per verificare che il certificato è stato importato, eseguire `Get-IntuneUserPfxCertificate -UserList "<UserUPN>"`
+
+9.  Come procedura consigliata per pulire la cache dei token di AAD senza attendere che scada da sola, eseguire `Remove-IntuneAuthenticationToken`
 
 Per altre informazioni sugli altri comandi disponibili, vedere il file Leggimi in [PFXImport PowerShell Project su GitHub](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
 

@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2020
-ms.topic: conceptual
+ms.date: 05/19/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8707b938231e682fe1cd165c207cca8e575950d4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 24938f85cf85e9c5934a0e26029ec2ccfc5c33a7
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80324664"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989446"
 ---
 # <a name="add-microsoft-defender-atp-to-macos-devices-using-microsoft-intune"></a>Aggiungere Microsoft Defender ATP ai dispositivi macOS usando Microsoft Intune
 
@@ -76,7 +76,7 @@ L'app creata viene visualizzata nell'elenco di app, in cui è possibile assegnar
 > Attualmente Apple non consente a Intune di disinstallare Microsoft Defender ATP nei dispositivi macOS.
 
 ## <a name="next-steps"></a>Passaggi successivi
-- Per informazioni su come configurare Microsoft Defender ATP nei dispositivi macOS, vedere [Configurare Microsoft Defender ATP nei dispositivi macOS](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/mac-preferences).
+- Per informazioni su come applicare i criteri antivirus per la sicurezza degli endpoint di Intune vedere [Criteri antivirus per la sicurezza degli endpoint in Intune](../protect/endpoint-security-antivirus-policy.md) 
 - Per informazioni su come includere ed escludere le assegnazioni delle app nei gruppi di utenti, vedere [Includere ed escludere assegnazioni di app](apps-inc-exl-assignments.md).
-- [Assegnare app ai gruppi](apps-deploy.md)
+- Per informazioni su come assegnare le app ai gruppi in Intune, vedere [Assegnare app ai gruppi](apps-deploy.md).
 

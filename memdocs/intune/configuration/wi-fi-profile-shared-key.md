@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df5c33e1e8e589f430fe8265ee4762b4755f3618
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 28dfeecf841eb1b9c69f46b2002b350c83514e1d
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086457"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990577"
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key-in-intune"></a>Usare un profilo di dispositivo personalizzato per la creazione di un profilo Wi-Fi con una chiave precondivisa in Intune
 
@@ -52,12 +52,17 @@ Questa funzionalità supporta:
 2. Selezionare **Dispositivi** > **Profili di configurazione** > **Crea profilo**.
 3. Immettere le proprietà seguenti:
 
+    - **Piattaforma**: Scegliere la piattaforma.
+    - **Profilo**: Selezionare **Personalizzato**.
+
+4. Selezionare **Crea**.
+5. In **Informazioni di base** immettere le proprietà seguenti:
+
     - **Nome**: immettere un nome descrittivo per il criterio. Assegnare ai criteri nomi che possano essere identificati facilmente in un secondo momento. Un nome di criterio efficace, ad esempio, è **Impostazioni del profilo Wi-Fi OMA-URI personalizzato per dispositivi di amministratore dei dispositivi Android**.
     - **Descrizione**: Immettere una descrizione del profilo. Questa impostazione è facoltativa ma consigliata.
-    - **Piattaforma**: Scegliere la piattaforma.
-    - **Tipo di profilo**: Selezionare **Personalizzato**.
 
-4. In **Impostazioni** selezionare **Aggiungi**. Aggiungere una nuova impostazione OMA-URI con le proprietà seguenti:
+6. Selezionare **Avanti**.
+7. In **Impostazioni di configurazione** selezionare **Aggiungi**. Aggiungere una nuova impostazione OMA-URI con le proprietà seguenti:
 
     1. **Nome**: Immettere un nome per l'impostazione OMA-URI.
     2. **Descrizione**: Immettere una descrizione per l'impostazione OMA-URI. Questa impostazione è facoltativa ma consigliata.
@@ -74,10 +79,22 @@ Questa funzionalità supporta:
     4. **Tipo di dati**: Selezionare **String**.
 
     5. **Valore**: Incollare il codice XML. Vedere gli [esempi](#android-or-windows-wi-fi-profile-example) in questo articolo. Aggiornare ogni valore in modo corrispondente alle impostazioni di rete. La sezione relativa ai commenti del codice include alcuni puntatori.
+    6. Selezionare **Aggiungi** per salvare le modifiche.
 
-5. Al termine, selezionare **OK** > **Crea** per salvare le modifiche.
+8. Selezionare **Avanti**.
 
-Il profilo viene visualizzato nell'elenco profili. Ora [assegnare](device-profile-assign.md) il profilo ai gruppi di utenti. Questi criteri possono essere assegnati solo a gruppi di utenti.
+9. In **Tag ambito** (facoltativo) assegnare un tag per filtrare il profilo a gruppi IT specifici, ad esempio `US-NC IT Team` o `JohnGlenn_ITDepartment`. Per altre informazioni sui tag di ambito, vedere [Usare il controllo degli accessi in base al ruolo (RBAC) e i tag di ambito per l'infrastruttura IT distribuita](../fundamentals/scope-tags.md).
+
+    Selezionare **Avanti**.
+
+10. In **Assegnazioni** selezionare gli utenti o il gruppo utenti che riceveranno il profilo. Per altre informazioni sull'assegnazione di profili, vedere [Assegnare profili utente e dispositivo](device-profile-assign.md).
+
+    > [!NOTE]
+    > Questi criteri possono essere assegnati solo a gruppi di utenti.
+
+    Selezionare **Avanti**.
+
+11. In **Rivedi e crea** rivedere le impostazioni. Quando si seleziona **Crea**, le modifiche vengono salvate e il profilo viene assegnato. Il criterio viene visualizzato anche nell'elenco dei profili.
 
 Alla successiva verifica da parte del dispositivo, vengono applicati i criteri e viene creato un profilo Wi-Fi nel dispositivo. Il dispositivo può quindi connettersi automaticamente alla rete.
 

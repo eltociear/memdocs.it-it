@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 08/17/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4da13b77b52a8110072dcba208b70d1ce0407cbb
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: c1bbcfc953945f7e8525cb7dc7edf3b1dd8a2f5c
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077989"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989071"
 ---
 # <a name="set-enrollment-restrictions"></a>Impostare le restrizioni di registrazione
 
@@ -83,12 +83,14 @@ Per il tipo e il numero massimo di dispositivi vengono applicate automaticamente
 
 6. In **Di proprietà personale** scegliere **Consenti** per le piattaforme da consentire come dispositivi personali.
 7. In **Produttore dispositivo** immettere un elenco di produttori delimitato da virgole che si vuole bloccare.
-8. Scegliere **Avanti** per passare alla pagina **Assegnazioni**.
-9. Scegliere **Selezionare i gruppi da includere** e usare la casella di ricerca per trovare i gruppi da includere in questa restrizione. La restrizione si applica solo ai gruppi a cui è assegnata. La restrizione ha effetto solo se viene assegnata ad almeno un gruppo. Quindi scegliere **Seleziona**. 
+8. Scegliere **Avanti** per passare alla pagina **Tag di ambito**.
+9. Se si desidera, è possibile aggiungere i tag di ambito che si vogliono applicare a queste restrizioni sulla pagina **Tag di ambito**. Per altre informazioni sui tag di ambito, vedere [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md) (Usare il controllo degli accessi in base al ruolo e i tag di ambito per l'IT distribuito). Quando si usano i tag di ambito con restrizioni di registrazione, gli utenti possono riordinare solo i criteri per i quali hanno un ambito. Inoltre, possono riordinare solo le posizioni dei criteri per i quali hanno un ambito. Gli utenti visualizzano il vero numero di priorità dei criteri in ogni criterio. Un utente con ambito può indicare la priorità relativa dei criteri anche se non è in grado di visualizzare tutti gli altri criteri.
+10. Scegliere **Avanti** per passare alla pagina **Assegnazioni**.
+11. Scegliere **Selezionare i gruppi da includere** e usare la casella di ricerca per trovare i gruppi da includere in questa restrizione. La restrizione si applica solo ai gruppi a cui è assegnata. La restrizione ha effetto solo se viene assegnata ad almeno un gruppo. Quindi scegliere **Seleziona**. 
     ![Acquisizione schermo per la scelta delle impostazioni della piattaforma](./media/enrollment-restrictions-set/select-groups.png)
-10. Selezionare **Avanti** per passare alla pagina **Rivedi e crea**.
-11. Selezionare **Crea** per creare la restrizione.
-12. La nuova restrizione viene creata con una priorità di livello immediatamente superiore a quello dell'impostazione predefinita. È possibile [modificare la priorità](#change-enrollment-restriction-priority).
+12. Selezionare **Avanti** per passare alla pagina **Rivedi e crea**.
+13. Selezionare **Crea** per creare la restrizione.
+14. La nuova restrizione viene creata con una priorità di livello immediatamente superiore a quello dell'impostazione predefinita. È possibile [modificare la priorità](#change-enrollment-restriction-priority).
 
 
 ## <a name="create-a-device-limit-restriction"></a>Creare una restrizione sul limite di dispositivi
@@ -98,12 +100,14 @@ Per il tipo e il numero massimo di dispositivi vengono applicate automaticamente
 3. Scegliere **Avanti** per passare alla pagina **Limite di dispositivi**.
 4. Per **Limite di dispositivi** selezionare il numero massimo di dispositivi che un utente può registrare.
     ![Acquisizione schermo per la scelta del limite di dispositivi](./media/enrollment-restrictions-set/choose-device-limit.png)
-5. Scegliere **Avanti** per passare alla pagina **Assegnazioni**.
-6. Scegliere **Selezionare i gruppi da includere** e usare la casella di ricerca per trovare i gruppi da includere in questa restrizione. La restrizione si applica solo ai gruppi a cui è assegnata. La restrizione ha effetto solo se viene assegnata ad almeno un gruppo. Quindi scegliere **Seleziona**. 
+5. Scegliere **Avanti** per passare alla pagina **Tag di ambito**.
+6. Se si desidera, è possibile aggiungere i tag di ambito che si vogliono applicare a queste restrizioni sulla pagina **Tag di ambito**. Per altre informazioni sui tag di ambito, vedere [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md) (Usare il controllo degli accessi in base al ruolo e i tag di ambito per l'IT distribuito). Quando si usano i tag di ambito con restrizioni di registrazione, gli utenti possono riordinare solo i criteri per i quali hanno un ambito. Inoltre, possono riordinare solo le posizioni dei criteri per i quali hanno un ambito. Gli utenti visualizzano il vero numero di priorità dei criteri in ogni criterio. Un utente con ambito può indicare la priorità relativa dei criteri anche se non è in grado di visualizzare tutti gli altri criteri.
+7. Scegliere **Avanti** per passare alla pagina **Assegnazioni**.
+8. Scegliere **Selezionare i gruppi da includere** e usare la casella di ricerca per trovare i gruppi da includere in questa restrizione. La restrizione si applica solo ai gruppi a cui è assegnata. La restrizione ha effetto solo se viene assegnata ad almeno un gruppo. Quindi scegliere **Seleziona**. 
     ![Acquisizione schermo per la selezione dei gruppi](./media/enrollment-restrictions-set/select-groups-device-limit.png)
-7. Selezionare **Avanti** per passare alla pagina **Rivedi e crea**.
-8. Selezionare **Crea** per creare la restrizione.
-9. La nuova restrizione viene creata con una priorità di livello immediatamente superiore a quello dell'impostazione predefinita. È possibile [modificare la priorità](#change-enrollment-restriction-priority).
+9. Selezionare **Avanti** per passare alla pagina **Rivedi e crea**.
+10. Selezionare **Crea** per creare la restrizione.
+11. La nuova restrizione viene creata con una priorità di livello immediatamente superiore a quello dell'impostazione predefinita. È possibile [modificare la priorità](#change-enrollment-restriction-priority).
 
 Durante le registrazioni BYOD viene visualizzata una notifica che informa gli utenti quando raggiungono il limite di dispositivi registrati. Ad esempio, in iOS:
 

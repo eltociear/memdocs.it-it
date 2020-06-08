@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 08/16/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eee979ad22a501f8545b93c85790d37ca9648cf7
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 7244872fa888aaee164187e62a2355a94f793499
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077904"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83985190"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Impostare l'autorità di gestione dei dispositivi mobili
 
@@ -36,9 +36,9 @@ Le configurazioni possibili sono:
 
 - **Co-gestione di Intune**: integrazione della soluzione cloud di Intune con Configuration Manager per dispositivi Windows 10. Intune viene configurato tramite la console di Configuration Manager. [Configurare la registrazione automatica dei dispositivi in Intune](https://docs.microsoft.com/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune). 
 
-- **Gestione dei dispositivi mobili per Office 365**: integrazione di Office 365 con la soluzione cloud di Intune. Intune viene configurato dall'interfaccia di amministrazione di Microsoft 365. Include un sottoinsieme delle funzionalità disponibili con Intune autonomo. Impostare l'autorità MDM nell'interfaccia di amministrazione di Microsoft 365.
+- **Gestione dei dispositivi mobili per Office 365**: integrazione di Office 365 con la soluzione cloud di Intune. Intune viene configurato dall'interfaccia di amministrazione di Microsoft 365. Include un sottoinsieme delle funzionalità disponibili con Intune autonomo. Vedere [Configurare Gestione di dispositivi mobili (MDM) in Office 365](https://support.office.com/en-us/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd).
 
-- **Coesistenza di Office 365 MDM** È possibile attivare e usare sia MDM per Office 365 che Intune simultaneamente nel tenant e impostare l'autorità di gestione su Intune o MDM per Office 365 per ogni utente per determinare quale servizio verrà usato per gestire i dispositivi mobili. L'autorità di gestione dell'utente è definita in base alla licenza assegnata all'utente. Per altre informazioni, vedere [ Coesistenza di Microsoft Intune con MDM per Office 365](https://blogs.technet.microsoft.com/configmgrdogs/2016/01/04/microsoft-intune-co-existence-with-mdm-for-office-365)
+- **Coesistenza di Office 365 MDM** È possibile attivare e usare sia MDM per Office che Intune simultaneamente nel tenant e impostare l'autorità di gestione su Intune o MDM per Office per ogni utente per determinare quale servizio verrà usato per gestire i dispositivi registrati in MDM. L'autorità di gestione di ogni utente è definita in base alla licenza assegnata all’utente. Se l'utente ha solo una licenza per Microsoft 365 Basic o Standard, i dispositivi saranno gestiti da MDM per Office. Se, invece, dispone di una licenza che applica Intune, i dispositivi saranno gestiti da Intune. Se si aggiunge una licenza che applica Intune a un utente precedentemente gestito da MDM per Office, i dispositivi passeranno alla gestione di Intune. Assicurarsi di aver assegnato le configurazioni di Intune per la sostituzione di MDM per Office agli utenti prima di trasferirli su Intune. in caso contrario, i dispositivi perderanno la configurazione di MDM per Office e non riceveranno alcuna sostituzione da Intune.
 
 ## <a name="set-mdm-authority-to-intune"></a>Impostare l'autorità MDM su Intune
 
@@ -70,14 +70,6 @@ Dopo il passaggio alla nuova autorità MDM, è probabile che vi sia un tempo di 
 - I dispositivi devono connettersi con il servizio dopo la modifica, in modo che le impostazioni dalla nuova autorità MDM (versione autonoma di Intune) sostituiscano le impostazioni esistenti nel dispositivo.
 - Dopo aver cambiato l'autorità MDM, alcune impostazioni di base dell'autorità MDM precedente, come ad esempio i profili, rimarranno nel dispositivo per un massimo di sette giorni o fino a quando il dispositivo stesso non si connetterà al servizio per la prima volta. È consigliabile configurare le app e le impostazioni (criteri, profili, app e così via) nella nuova autorità MDM appena possibile e distribuire le impostazioni ai gruppi di utenti in cui sono presenti utenti che hanno già dispositivi registrati. Non appena un dispositivo si connette al servizio dopo che l'autorità MDM è stata cambiata, riceve le nuove impostazioni dall'autorità MDM impedendo che vi siano vuoti nella gestione e protezione.
 - Per i dispositivi senza utenti associati (generalmente con il Device Enrollment Program per dispositivi iOS/iPadOS o con scenari di registrazione in blocco) non viene eseguita la migrazione alla nuova autorità MDM. Per tali dispositivi è necessario chiamare il supporto tecnico per chiedere assistenza nel passaggio alla nuova autorità MDM.
-
-## <a name="change-mdm-authority-to-office-365"></a>Cambiare l'autorità MDM in Office 365
-
-Per attivare la gestione dei dispositivi mobili di Office 365 (o per abilitare la coesistenza di MDM nel servizio Intune Service esistente), passare a [https://protection.office.com](https://protection.office.com), scegliere **Prevenzione della perdita di dati** > **Criteri di sicurezza dei dispositivi** > **Visualizza l'elenco dei dispositivi gestiti** > **Inizia**.
-
-Per altre informazioni, vedere [Configurare Gestione di dispositivi mobili in Office 365](https://support.office.com/en-us/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd).
-
-Se si vuole che gli utenti finali siano gestiti solo con Office 365 MDM, rimuovere qualsiasi licenza di Intune e/o EMS assegnata dopo l'attivazione di Office 365 MDM.
 
 ## <a name="mobile-device-cleanup-after-mdm-certificate-expiration"></a>Pulizia dei dispositivi mobili dopo la scadenza del certificato MDM
 

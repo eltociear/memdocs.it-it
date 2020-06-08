@@ -1,12 +1,12 @@
 ---
 title: Creare profili di dispositivo iOS/iPadOS o macOS in Microsoft Intune - Azure | Microsoft Docs
-description: Aggiungere o creare un profilo di dispositivo iOS, iPadOS o macOS e quindi configurare le impostazioni per AirPrint, layout della schermata iniziale, notifiche delle app, dispositivi condivisi, Single Sign-On e filtro del contenuto Web in Microsoft Intune.
+description: Aggiungere o creare un profilo di dispositivo iOS, iPadOS o macOS. Configurare le impostazioni di AirPrint, layout della schermata iniziale, notifiche delle app, dispositivi condivisi, punto di accesso singolo e filtro del contenuto Web in Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/09/2020
-ms.topic: conceptual
+ms.date: 05/06/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e72fc48608ebf32f3e32d4a94ab7203ee418d8f
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: 349fdc7b0f13f0999b8c9993bcaba1d458ebac59
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943808"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989200"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Aggiungere impostazioni relative alle funzionalità dei dispositivi iOS, iPadOS e macOS in Intune
 
@@ -54,7 +54,7 @@ Si applica a:
 
 ## <a name="app-notifications"></a>Notifiche delle app
 
-Scegliere la modalità di ricezione delle notifiche delle app nei dispositivi iOS e iPadOS. Ad esempio, da Intune inviare le notifiche delle app in modo che vengano visualizzate nel centro notifiche, appaiano nella schermata di blocco o riproducano un suono.
+Scegliere la modalità di ricezione delle notifiche delle app nei dispositivi iOS e iPadOS. Ad esempio, inviare le notifiche delle app in modo che vengano visualizzate nel centro notifiche, appaiano nella schermata di blocco o riproducano un suono.
 
 Per un elenco delle impostazioni che è possibile configurare in Intune, vedere [Notifiche delle app in iOS/iPadOS](ios-device-features-settings.md#app-notifications).
 

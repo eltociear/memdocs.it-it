@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 03/20/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f16c39ff0af44918099863be5d23ec9fe564493
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 685f2a51c7a2bfacbc95fb2a7615f0e459b97245
+ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80624924"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84126516"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>Aggiornare i dispositivi Android da amministratore di dispositivi alla gestione del profilo di lavoro
 
@@ -59,19 +59,23 @@ Quando gli utenti notano che non sono conformi per questo motivo, possono toccar
     ![Bloccare dispositivi](./media/android-move-device-admin-work-profile/block-devices.png)
 
 5. Nella pagina **Percorsi**  è possibile aggiungere percorsi > **Avanti**.
-6. In **Azioni per la non conformità** è possibile impostare l'azione di **Invia un messaggio di posta elettronica all'utente finale**.
 
-    ![Inviare messaggio di posta elettronica](./media/android-move-device-admin-work-profile/send-email.png)
+6. Nella scheda **Azioni per la non conformità** è possibile configurare le [azioni disponibili per la mancata conformità](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance) per personalizzare l'esperienza dell'utente finale per questo flusso.
 
+    ![Azioni di non conformità](media/android-move-device-admin-work-profile/noncompliance-actions.png)
 
-    Nel messaggio di posta elettronica è possibile includere l'URL seguente nei messaggi agli utenti. L'URL avvierà il Portale aziendale Android nella pagina **Aggiorna impostazioni del dispositivo**. Questa pagina avvia il flusso per passare alla gestione del profilo di lavoro.
-    - `https://portal.manage.microsoft.com/UpdateSettings.aspx`.
-    - Per il governo degli Stati Uniti è invece possibile usare questo collegamento: `https://portal.manage.microsoft.us/UpdateSettings.aspx`.
+    Di seguito sono riportate alcune azioni da intraprendere:
+
+    - **Contrassegna il dispositivo come non conforme**: Per impostazione predefinita, questa azione è impostata su zero (0) giorni, contrassegnando immediatamente i dispositivi come non conformi. Il passaggio a un numero di giorni superiore offre agli utenti un periodo di tolleranza in cui è possibile visualizzare il flusso per passare alla gestione del profilo di lavoro senza che il dispositivo sia contrassegnato come non conforme. Se ad esempio si imposta l’azione su 14 giorni, gli utenti potranno passare da amministratore del dispositivo alla gestione del profilo di lavoro senza il rischio di perdere l'accesso alle risorse.
+    - **Invia una notifica push all'utente finale**: Configurare questa azione per inviare notifiche push ai dispositivi dell’amministratore del dispositivo. Quando un utente seleziona la notifica, avvierà il Portale aziendale Android nella pagina **Aggiornare le impostazioni del dispositivo** in cui è possibile avviare il flusso per passare alla gestione del profilo di lavoro.
+    - **Invia un messaggio di posta elettronica all'utente finale**: Configurare questa azione per inviare messaggi di posta elettronica agli utenti sul passaggio da amministratore del dispositivo alla gestione del profilo di lavoro. Nel messaggio di posta elettronica, è possibile includere il link seguente che, se selezionato, avvierà il Portale aziendale Android nella pagina Aggiornare le impostazioni del dispositivo in cui è possibile avviare il flusso per passare alla gestione del profilo di lavoro.
+      - `https://portal.manage.microsoft.com/UpdateSettings.aspx`.
+      - Per il governo degli Stati Uniti è invece possibile usare questo collegamento: `https://portal.manage.microsoft.us/UpdateSettings.aspx`.
   
-    > [!NOTE]
-    > - Naturalmente, è possibile usare collegamenti in hyper text intuitivo per le comunicazioni con gli utenti. Tuttavia, non usare URL abbreviati perché i collegamenti potrebbero non funzionare se modificati in questo modo.
-    > - Se il Portale aziendale Android è aperto e in background, quando un utente tocca il collegamento è possibile che venga visualizzata l'ultima pagina in cui si trovava.
-    > - Gli utenti devono toccare il collegamento in un dispositivo Android. Se invece lo incollano in un browser, non avvierà il Portale aziendale Android. 
+      > [!NOTE]
+      > - Naturalmente, è possibile usare collegamenti in hyper text intuitivo per le comunicazioni con gli utenti. Tuttavia, non usare URL abbreviati perché i collegamenti potrebbero non funzionare se modificati in questo modo.
+      > - Se il Portale aziendale Android è aperto e in background, quando un utente tocca il collegamento è possibile che venga visualizzata l'ultima pagina in cui si trovava.
+      > - Gli utenti devono toccare il collegamento in un dispositivo Android. Se invece lo incollano in un browser, non avvierà il Portale aziendale Android. 
 
     Scegliere **Avanti**.
 
@@ -79,9 +83,9 @@ Quando gli utenti notano che non sono conformi per questo motivo, possono toccar
 8. Nella pagina **Assegnazioni** assegnare i criteri a un gruppo che ha dispositivi registrati con la gestione dell'amministratore di dispositivi > **Avanti**.
 9. Nella pagina **Rivedi e crea** confermare tutte le impostazioni e selezionare **Crea**.
 
-## <a name="troubleshooting"></a>Troubleshooting
+## <a name="troubleshooting"></a>Risoluzione dei problemi
 
-Il [flusso per l'utente finale per passare alla nuova configurazione di gestione dei dispositivi](../user-help/move-to-new-device-management-setup.md) guida gli utenti nel processo di annullamento della registrazione nella gestione amministratore di dispositivi e di configurazione della gestione profilo di lavoro. Gli utenti devono avere [Dispositivi registrati con amministratore di dispositivi Android](android-enroll-device-administrator.md) con il Portale aziendale Android versione 5.0.4720.0 o successiva.
+Il [flusso per l'utente finale per passare alla nuova configurazione di gestione dei dispositivi](../user-help/move-to-new-device-management-setup.md) guida gli utenti nel processo di annullamento della registrazione nella gestione amministratore di dispositivi e di configurazione della gestione profilo di lavoro. Gli utenti devono avere [dispositivi registrati con amministratore di dispositivi Android](android-enroll-device-administrator.md) con il Portale aziendale Android versione 5.0.4720.0 o successiva.
 
 ### <a name="user-sees-an-error-after-tapping-resolve"></a>L'utente visualizza un errore quando tocca Risolvi
 Se gli utenti visualizzano un errore dopo aver toccato il pulsante **Risolvi**, è probabile che la causa sia uno dei motivi seguenti:

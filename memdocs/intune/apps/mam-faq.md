@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16c086295b93b72ef2f9cfbd2d6a15d6bb54f320
-ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
+ms.openlocfilehash: c544109b170d25f4d9a2999a11bc47d4b4a090c5
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82183011"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989972"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Domande frequenti sulla gestione di applicazioni mobili e sulla protezione delle app
 
@@ -78,7 +78,7 @@ Qualsiasi app integrata con [Intune App SDK](../developer/app-sdk.md) o di cui �
 
 Il team di sviluppo di Intune SDK verifica e gestisce attivamente il supporto per le app compilate con la piattaforme native Android, iOS/iPadOS (Obj-C, Swift), Xamarin e Xamarin.Forms. Anche se alcuni clienti sono riusciti a integrare Intune SDK con altre piattaforme, ad esempio React Native e NativeScript, Microsoft non offre linee guida o plug-in specifici per gli sviluppatori di app che usano piattaforme diverse da quelle supportate da Microsoft.
 
-**Intune APP SDK supporta Microsoft Authentication Library (MSAL) o gli account di social networking?**<br></br>
+**Intune APP SDK supporta Microsoft Authentication Library (MSAL)?**<br></br>
 Intune App SDK può usare Azure Active Directory Authentication Library o Microsoft Authentication Library per gli scenari di autenticazione e avvio condizionale. Si basa su ADAL/MSAL anche per registrare l'identità utente nel servizio MAM per la gestione senza scenari di registrazione del dispositivo.
 
 **Quali sono i requisiti aggiuntivi per usare l'[app Outlook per dispositivi mobili](https://products.office.com/outlook)?**
@@ -170,7 +170,7 @@ Intune può cancellare i dati delle app in tre modi diversi: cancellazione compl
 La protezione delle app di Intune dipende dalla coerenza dell'identità dell'utente tra l'applicazione e Intune App SDK. L'unico modo per garantire questo scenario è tramite l'autenticazione moderna. Esistono scenari in cui le app possono funzionare con una configurazione locale, ma non sono garantiti, né coerenti.
 
 **Esiste un modo sicuro per aprire i collegamenti Web da app gestite?**<br></br>
-Sì. L'amministratore IT può distribuire e impostare i criteri di protezione delle app per l'[app Intune Managed Browser](../apps/app-configuration-managed-browser.md), un Web browser sviluppato da Microsoft Intune che è possibile gestire facilmente con Intune. L'amministratore IT può richiedere che tutti i collegamenti Web nelle app gestite da Intune vengano aperti tramite l'app Managed Browser.
+Sì. L'amministratore IT può distribuire e impostare i criteri di protezione delle app per l'app Microsoft Edge. L'amministratore IT può richiedere che tutti i collegamenti Web nelle app gestite da Intune vengano aperti tramite l'app Microsoft Edge.
 
 ## <a name="app-experience-on-android"></a>Esperienza dell'app in Android
 
@@ -211,7 +211,7 @@ I criteri di Protezione app di Intune consentono l'accesso alle app solo all'ute
 La finalità di questa procedura è di continuare a garantire la protezione e la sicurezza a livello di app dei dati dell'organizzazione all'interno dell'app stessa. Questa funzionalità è disponibile solo per iOS/iPadOS e richiede la partecipazione delle applicazioni che integrano Intune App SDK per iOS/iPadOS, versione 9.0.1 o versioni successive. L'integrazione dell'SDK è necessaria in modo il comportamento possa essere imposto nelle applicazioni di destinazione. Questa integrazione avviene sistematicamente e dipende dai team delle applicazioni specifiche. Alcune app partecipanti sono WXP, Outlook, Managed Browser e Yammer.
   
 **È possibile usare l'estensione di condivisione per iOS per aprire i dati aziendali o dell'istituto di istruzione nelle app non gestite, anche se i criteri di trasferimento dei dati sono impostati su "solo app gestite" o "nessuna app". Questo scenario non comporta la perdita dei dati?**<br></br>
-I criteri di protezione delle app di Intune non possono controllare l'estensione di condivisione per iOS senza la gestione del dispositivo. Pertanto, Intune _**crittografa i dati "aziendali" prima che vengano condivisi all'esterno dell'app**_ . È possibile convalidare questo scenario provando ad aprire il file "aziendale" all'esterno dell'app gestita. Il file deve essere crittografato e non deve poter essere aperto all'esterno dell'app gestita.
+I criteri di protezione delle app di Intune non possono controllare l'estensione di condivisione per iOS senza la gestione del dispositivo. Pertanto, Intune _**crittografa i dati "aziendali" prima che vengano condivisi all'esterno dell'app**_. È possibile convalidare questo scenario provando ad aprire il file "aziendale" all'esterno dell'app gestita. Il file deve essere crittografato e non deve poter essere aperto all'esterno dell'app gestita.
 
 **Come funzionano in iOS più impostazioni di accesso della protezione app di Intune configurate per lo stesso set di app e utenti?**<br></br>
 I criteri di protezione delle app di Intune relativi all'accesso vengono applicati in un ordine specifico nei dispositivi degli utenti finali quando cercano di accedere a un'app di destinazione dal proprio account aziendale. In generale, una cancellazione ha la precedenza, seguita da un avviso che può essere ignorato. Ad esempio, se possibile per l'app o l'utente specifico, un'impostazione di versione minima del sistema operativo iOS/iPadOS che avvisa l'utente che può essere eseguito un aggiornamento della versione di iOS/iPadOS verrà applicata dopo l'impostazione di versione minima del sistema operativo iOS/iPadOS che impedisce all'utente di accedere. Quindi, nello scenario in cui l'amministratore IT configura la versione minima del sistema operativo iOS/iPadOS su 11.0.0.0 e la versione minima del sistema operativo iOS/iPadOS (solo avvisi) su 11.1.0.0, se il dispositivo che tenta di accedere all'app usa iOS/iPadOS 10, l'utente finale verrebbe bloccato in base all'impostazione più restrittiva per la versione minima del sistema operativo iOS/iPadOS che comporta il blocco dell'accesso.

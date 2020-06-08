@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/28/2020
+ms.date: 05/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4babd715df08a905a5ceed6ec881cbfe07f5de19
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 20c552ff879574edc0ed497b5c99b45b8092918a
+ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82209874"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83864896"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Impostazioni dei dispositivi Windows 10 (e versioni successive) per consentire o limitare l'uso delle funzionalità tramite Intune
 
@@ -33,13 +33,13 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
 
 ## <a name="before-you-begin"></a>Prima di iniziare
 
-[Creare un profilo di configurazione del dispositivo](device-restrictions-configure.md#create-the-profile).
+[Creare un profilo di restrizioni dei dispositivi Windows 10](device-restrictions-configure.md#create-the-profile).
 
 ## <a name="app-store"></a>App Store
 
 Queste impostazioni usano il [provider di servizi di configurazione dei criteri relativi ad ApplicationManagement](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement), che elenca anche le edizioni di Windows supportate.
 
-- **App Store** (solo dispositivi mobili): **Blocca** impedisce agli utenti finali di accedere all'App Store nei dispositivi mobili. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti finali di accedere all'App Store.
+- **App Store (solo dispositivi mobili)** : **Blocca** impedisce agli utenti di accedere all'App Store nei dispositivi mobili. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di accedere all'App Store.
 - **Aggiorna automaticamente le app dallo Store**: **Blocca** impedisce l'installazione automatica degli aggiornamenti da Microsoft Store. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'aggiornamento automatico delle app installate da Microsoft Store.
 
   [ApplicationManagement/AllowAppStoreAutoUpdate CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowappstoreautoupdate)
@@ -48,7 +48,8 @@ Queste impostazioni usano il [provider di servizi di configurazione dei criteri 
   - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione.
   - **Blocca**: impedisce il sideload. Non è possibile installare app non Microsoft Store.
   - **Consenti**: consente il sideload. È possibile installare app non Microsoft Store.
-- **Sblocco dallo sviluppatore**: consente all'utente finale di modificare le impostazioni per gli sviluppatori Windows, ad esempio consentire il sideload delle app. Le opzioni disponibili sono:
+
+- **Sblocco dallo sviluppatore**: consente agli utenti di modificare le impostazioni per gli sviluppatori Windows, ad esempio consentire il sideload delle app. Le opzioni disponibili sono:
   - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione.
   - **Blocca**: impedisce la modalità sviluppatore e il sideload delle app.
   - **Consenti**: consente la modalità sviluppatore e il sideload delle app.
@@ -77,7 +78,7 @@ Queste impostazioni usano il [provider di servizi di configurazione dei criteri 
 
   [ApplicationManagement/RestrictAppToSystemVolume CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-restrictapptosystemvolume)
 
-- **Game DVR** (solo desktop): **Blocca** disabilita la registrazione e la trasmissione di giochi di Windows. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire la registrazione e la trasmissione di giochi.
+- **Game DVR (solo desktop)** : **Blocca** disabilita la registrazione e la trasmissione di giochi di Windows. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire la registrazione e la trasmissione di giochi.
 
   [ApplicationManagement/AllowGameDVR CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowgamedvr)
 
@@ -85,7 +86,7 @@ Queste impostazioni usano il [provider di servizi di configurazione dei criteri 
 
   Le opzioni disponibili sono:
 
-  - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti finali di installare app da posizioni diverse da Microsoft Store, incluse le app definite in altre impostazioni di criteri.  
+  - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di installare app da posizioni diverse da Microsoft Store, incluse le app definite in altre impostazioni di criteri.  
   - **Ovunque**: disattiva i consigli per le app e consente agli utenti di installare le app da qualsiasi percorso.  
   - **Solo Store**: La finalità è impedire che i contenuti dannosi influiscano sui dispositivi degli utenti durante il download del contenuto eseguibile da Internet. Quando gli utenti tentano di installare app da Internet, l'installazione è bloccata. Gli utenti visualizzano un messaggio che consiglia di scaricare le app dal Microsoft Store.
   - **Consigli**: quando si installa un'app dal Web che è disponibile in Microsoft Store, gli utenti visualizzano un messaggio che consiglia il download dallo Store.  
@@ -97,7 +98,7 @@ Queste impostazioni usano il [provider di servizi di configurazione dei criteri 
 
   [ApplicationManagement/MSIAllowUserControlOverInstall CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-msiallowusercontroloverinstall)
 
-- **Installazione di app con privilegi elevati**: **Blocca** indica a Windows Installer di usare le autorizzazioni elevate per installare qualsiasi programma nel sistema. Questi privilegi vengono estesi a tutti i programmi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema potrebbe applicare le autorizzazioni dell'utente corrente quando installa programmi non offerti o distribuiti da un amministratore di sistema. 
+- **Installazione di app con privilegi elevati**: **Blocca** indica a Windows Installer di usare le autorizzazioni elevate per installare qualsiasi programma nel sistema. Questi privilegi vengono estesi a tutti i programmi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema potrebbe applicare le autorizzazioni dell'utente corrente quando installa programmi non offerti o distribuiti da un amministratore di sistema.
 
   [ApplicationManagement/MSIAlwaysInstallWithElevatedPrivileges CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-msialwaysinstallwithelevatedprivileges)
 
@@ -109,21 +110,19 @@ Queste impostazioni usano il [provider di servizi di configurazione dei criteri 
 
 Queste impostazioni usano i provider di servizi di configurazione per i [criteri di connettività](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity) e i [criteri Wi-Fi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-wifi), che elencano anche le edizioni di Windows supportate.
 
-- [Provider di servizi di configurazione per i criteri Wi-Fi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-wifi)
+- **Canale per rete dati**: scegliere se gli utenti possono usare i dati, ad esempio esplorare il Web, quando sono connessi a una rete cellulare. Le opzioni disponibili sono:
+  - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione. Gli utenti possono disattivarla.
+  - **Blocca**: non consente il canale per rete dati. Questa opzione non può essere attivata dagli utenti.
+  - **Consenti (non modificabile)** : consente il canale per rete dati. Questa opzione non può essere disattivata dagli utenti.
 
-- **Canale per rete dati**: scegliere se gli utenti finali possono usare i dati, ad esempio esplorare il Web, quando sono connessi a una rete cellulare. Le opzioni disponibili sono:
-  - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione. Gli utenti finali possono disattivarlo.
-  - **Blocca**: non consente il canale per rete dati. Gli utenti finali non possono attivarlo.
-  - **Consenti (non modificabile)** : consente il canale per rete dati. Gli utenti finali non possono disattivarlo.
-
-- **Dati in roaming**: **Blocca** impedisce il roaming della rete dati nel dispositivo. L'impostazione **Non configurata** (predefinita) consente il roaming tra reti quando si accede a dati.
-- **VPN nella rete cellulare**: **Blocca** impedisce al dispositivo di accedere a connessioni VPN quando è connesso a una rete cellulare. L'impostazione **Non configurata** (predefinita) consente alla rete VPN di usare qualsiasi connessione, inclusa la rete cellulare.
-- **Roaming VPN nella rete cellulare**: **Blocca** impedisce al dispositivo di accedere alle connessioni VPN durante il roaming in una rete cellulare. L'impostazione **Non configurata** (predefinita) consente le connessioni VPN durante il roaming.
-- **Servizio dispositivi connessi**: **Blocca** disabilita il componente CDP (Connected Devices Platform). Il componente CDP (Connected Devices Platform) consente l'individuazione e la connessione ad altri dispositivi (tramite Bluetooth/LAN o il cloud) per supportare l'avvio di app remote, la messaggistica remota, le sessioni di app remote e altre esperienze che coinvolgono più dispositivi. L'impostazione **Non configurata** (predefinita) consente il servizio dispositivi connessi, che abilita l'individuazione e la connessione ad altri dispositivi Bluetooth.
-- **NFC**: **Blocca** impedisce le funzionalità NFC (Near Field Communication). L'impostazione **Non configurata** (predefinita) consente agli utenti di abilitare e configurare le funzionalità NFC nel dispositivo.
-- **Wi-Fi**: **Blocca** impedisce agli utenti di abilitare, configurare e usare le connessioni Wi-Fi nel dispositivo. L'impostazione **Non configurata** (predefinita) consente le connessioni Wi-Fi.
-- **Connetti automaticamente a hotspot Wi-Fi**: **Blocca** impedisce ai dispositivi di connettersi automaticamente agli hotspot Wi-Fi. L'impostazione **Non configurata** (predefinita) consente ai dispositivi di connettersi automaticamente agli hotspot Wi-Fi gratuiti e accettare automaticamente termini e condizioni per la connessione.
-- **Configurazione Wi-Fi manuale**: **Blocca** impedisce ai dispositivi di connettersi a una rete Wi-Fi all'esterno delle reti installate in server MDM. L'impostazione **Non configurata** (predefinita) consente agli utenti finali di aggiungere e configurare SSID di rete per connessioni Wi-Fi personali.
+- **Dati in roaming**: **Blocca** impedisce il roaming della rete dati nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, quando si accede ai dati il roaming tra reti è consentito.
+- **VPN nella rete cellulare**: **Blocca** impedisce al dispositivo di accedere a connessioni VPN quando è connesso a una rete cellulare. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire alla rete VPN di usare qualsiasi connessione, inclusa la rete cellulare.
+- **Roaming VPN nella rete cellulare**: **Blocca** impedisce al dispositivo di accedere alle connessioni VPN durante il roaming in una rete cellulare. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire le connessioni VPN durante il roaming.
+- **Servizio dispositivi connessi**: **Blocca** disabilita il componente CDP (Connected Devices Platform). Il componente CDP (Connected Devices Platform) consente l'individuazione e la connessione ad altri dispositivi (tramite Bluetooth/LAN o il cloud) per supportare l'avvio di app remote, la messaggistica remota, le sessioni di app remote e altre esperienze che coinvolgono più dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire il servizio dei dispositivi connessi, che abilita l'individuazione e la connessione ad altri dispositivi Bluetooth.
+- **NFC**: **Blocca** impedisce le funzionalità NFC (Near Field Communication). Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di abilitare e configurare le funzionalità NFC nel dispositivo.
+- **Wi-Fi**: **Blocca** impedisce agli utenti di abilitare, configurare e usare le connessioni Wi-Fi nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire le connessioni Wi-Fi.
+- **Connetti automaticamente a hotspot Wi-Fi**: **Blocca** impedisce ai dispositivi di connettersi automaticamente agli hotspot Wi-Fi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire ai dispositivi di connettersi automaticamente agli hotspot Wi-Fi gratuiti e accettare automaticamente termini e condizioni per la connessione.
+- **Configurazione Wi-Fi manuale**: **Blocca** impedisce ai dispositivi di connettersi a una rete Wi-Fi all'esterno delle reti installate in server MDM. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di aggiungere e configurare SSID di rete per connessioni Wi-Fi personali.
 - **Intervallo di analisi Wi-Fi**: immettere la frequenza con cui i dispositivi ricercano le reti Wi-Fi. Immettere un valore compreso tra 1 (ricerca più frequente) e 500 (ricerca meno frequente). Il valore predefinito è `0` (zero).
 
 ### <a name="bluetooth"></a>Bluetooth
@@ -131,12 +130,23 @@ Queste impostazioni usano i provider di servizi di configurazione per i [criteri
 Queste impostazioni usano il [provider di servizi di configurazione per i criteri Bluetooth](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth), che elenca anche le edizioni di Windows supportate.
 
 - **Bluetooth**: **Blocca** impedisce agli utenti di abilitare Bluetooth. L'impostazione **Non configurata** (predefinita) consente Bluetooth nel dispositivo.
-- **Individuabilità di Bluetooth**: **Blocca** impedisce che il dispositivo sia individuabile da altri dispositivi Bluetooth. L'impostazione **Non configurata** (predefinita) consente ad altri dispositivi Bluetooth, ad esempio le cuffie, di individuare il dispositivo.
-- **Pre-associazione Bluetooth**: **Blocca** impedisce a dispositivi Bluetooth specifici l'associazione automatica a un dispositivo host. L'impostazione **Non configurata** (predefinita) consente l'associazione automatica al dispositivo host.
-- **Annunci con Bluetooth**: **Blocca** impedisce al dispositivo di inviare annunci Bluetooth. L'impostazione **Non configurata** (predefinita) consente al dispositivo di inviare annunci Bluetooth.
+- **Individuabilità di Bluetooth**: **Blocca** impedisce che il dispositivo sia individuabile da altri dispositivi Bluetooth. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire ad altri dispositivi Bluetooth, ad esempio le cuffie, di individuare il dispositivo.
+
+  [Bluetooth/AllowDiscoverableMode CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
+
+- **Pre-associazione Bluetooth**: **Blocca** impedisce a dispositivi Bluetooth specifici l'associazione automatica a un dispositivo host. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'associazione automatica al dispositivo host.
+
+  [Bluetooth/AllowPrepairing CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowprepairing)
+
+- **Annunci con Bluetooth**: **Blocca** impedisce al dispositivo di inviare annunci Bluetooth. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire al dispositivo di inviare annunci Bluetooth.
+
+  [Bluetooth/AllowAdvertising CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowadvertising)
+
 - **Servizi Bluetooth consentiti**: **Aggiungi** consente di aggiungere un elenco di servizi e profili Bluetooth consentiti in forma di stringhe esadecimali, ad esempio `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}`.
 
   In [ServicesAllowedList usage guide](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#servicesallowedlist-usage-guide) (Guida all'utilizzo di ServicesAllowedList) sono disponibili altre informazioni sull'elenco di servizi.
+
+  [Bluetooth/ServicesAllowedList CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-servicesallowedlist)
 
 ## <a name="cloud-and-storage"></a>Cloud e risorse di archiviazione
 
@@ -145,11 +155,14 @@ Queste impostazioni usano il [provider di servizi di configurazione per i criter
 > [!IMPORTANT]
 > Il blocco o la disabilitazione di queste impostazioni dell'account Microsoft può influire sugli scenari di registrazione che richiedono l'accesso ad Azure AD da parte degli utenti. Ad esempio, si usa la modalità [White Glove per Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove). In genere, gli utenti visualizzano una finestra di accesso di Azure AD. Quando queste impostazioni sono impostate su **Blocca** o **Disabilita**, è possibile che l'opzione di accesso ad Azure AD non venga visualizzata. Viene invece richiesto agli utenti di accettare il contratto di licenza e creare un account locale e questo potrebbe non essere il risultato sperato.
 
-- **Account Microsoft**: **Blocca** impedisce agli utenti finali di associare un account Microsoft al dispositivo. L'impostazione **Non configurata** (predefinita) consente l'aggiunta e l'uso di un account Microsoft.
+- **Account Microsoft**: **Blocca** impedisce agli utenti di associare un account Microsoft al dispositivo. **Blocca** potrebbe anche influire su alcuni scenari di registrazione che si basano sugli utenti per completare il processo di registrazione. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'aggiunta e l'uso di un account Microsoft.
+- **Account non Microsoft**: **Blocca** impedisce agli utenti di aggiungere account non Microsoft tramite l'interfaccia utente. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di aggiungere account di posta elettronica che non sono associati a un account Microsoft.
+- **Sincronizzazione delle impostazioni per l'account Microsoft**: **Blocca** impedisce che le impostazioni del dispositivo e delle app associate con un account Microsoft vengano sincronizzate fra i dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire questa sincronizzazione.
+- **Assistente per l'accesso all'account Microsoft**: Questo servizio del sistema operativo consente agli utenti di accedere al proprio account Microsoft. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di avviare e arrestare il servizio **Assistente per l'accesso all'account Microsoft** (wlidsvc).
+  - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di avviare e arrestare il servizio **Assistente per l'accesso all'account Microsoft** (wlidsvc).
+  - **Disabilitato**: imposta il servizio Assistente per l'accesso di Microsoft (wlidsvc) su Disabilitato e impedisce agli utenti finali di avviarlo manualmente.
 
-- **Account non Microsoft**: **Blocca** impedisce agli utenti finali di aggiungere account non Microsoft tramite l'interfaccia utente. L'impostazione **Non configurata** (predefinita) consente agli utenti di aggiungere account di posta elettronica che non sono associati a un account Microsoft.
-- **Sincronizzazione delle impostazioni per l'account Microsoft**: **Non configurato** (impostazione predefinita) consente la sincronizzazione fra i dispositivi delle impostazioni delle app e dei dispositivi associati a un account Microsoft. **Blocca** impedisce la sincronizzazione.
-- **Assistente per l'accesso all'account Microsoft**: con l'impostazione predefinita **Non configurato** gli utenti finali possono avviare e arrestare il servizio **Assistente per l'accesso all'account Microsoft** (wlidsvc). Questo servizio del sistema operativo consente agli utenti di accedere al proprio account Microsoft. **Disabilita** consente di configurare il servizio Assistente per l'accesso (wlidsvc) di Microsoft in modo che sia disabilitato e impedisce agli utenti finali di avviarlo manualmente.
+      **Disabilita** potrebbe anche influire su alcuni scenari di registrazione che si basano sugli utenti per completare la registrazione. Ad esempio, si usa la modalità [White Glove per Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove). In genere, gli utenti visualizzano una finestra di accesso di Azure AD. Quando è impostata su **Disabilita**, l'opzione di accesso Azure AD potrebbe non essere visualizzata. Viene invece richiesto agli utenti di accettare il contratto di licenza e creare un account locale e questo potrebbe non essere il risultato sperato.
 
 ## <a name="cloud-printer"></a>Stampante cloud
 
@@ -167,18 +180,18 @@ Queste impostazioni usano il [provider di servizi di configurazione per i criter
 
 ## <a name="control-panel-and-settings"></a>Pannello di controllo e impostazioni
 
-- **App Impostazioni**: **Blocca** impedisce agli utenti finali di accedere all'app Impostazioni di Windows. L'impostazione **Non configurata** (predefinita) consente agli utenti di aprire l'app Impostazioni nel dispositivo.
+- **App Impostazioni**: **Blocca** impedisce agli utenti di accedere all'app Impostazioni di Windows. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di aprire l'app Impostazioni nel dispositivo.
   - **Sistema**: **Blocca** impedisce l'accesso all'area Sistema dell'app Impostazioni. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
-    - **Modifica delle impostazioni di risparmio energia e sospensione** (solo desktop): **Blocca** impedisce agli utenti finali di modificare le impostazioni di risparmio energia e sospensione del dispositivo. L'impostazione **Non configurata** (predefinita) consente agli utenti di modificare le impostazioni di risparmio energia e sospensione.
+    - **Modifica delle impostazioni di risparmio energia e sospensione** (solo desktop): **Blocca** impedisce agli utenti di modificare le impostazioni di risparmio energia e sospensione del dispositivo. L'impostazione **Non configurata** (predefinita) consente agli utenti di modificare le impostazioni di risparmio energia e sospensione.
   - **Dispositivi**: **Blocca** impedisce l'accesso all'area Dispositivi dell'app Impostazioni nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
   - **Rete e Internet**: **Blocca** impedisce l'accesso all'area Rete e Internet dell'app Impostazioni nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
   - **Personalizzazione**: **Blocca** impedisce l'accesso all'area Personalizzazione dell'app Impostazioni nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
   - **App**: **Blocca** impedisce l'accesso all'area App dell'app Impostazioni nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
   - **Account**: **Blocca** impedisce l'accesso all'area Account dell'app Impostazioni nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
   - **Ora e lingua**: **Blocca** impedisce l'accesso all'area Data/ora e lingua dell'app Impostazioni nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
-    - **Modifica dell'ora di sistema**: **Blocca** impedisce agli utenti finali di modificare le impostazioni di data e ora nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Gli utenti possono modificare queste impostazioni.
-    - **Modifica delle impostazioni dell'area** (solo desktop): **Blocca** impedisce agli utenti finali di modificare le impostazioni dell'area del dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Gli utenti possono modificare queste impostazioni.
-    - **Modifiche alle impostazioni della lingua (solo desktop)** : **Blocca** impedisce agli utenti finali di modificare le impostazioni della lingua del dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Gli utenti possono modificare queste impostazioni.
+    - **Modifica dell'ora di sistema**: **Blocca** impedisce agli utenti di modificare le impostazioni di data e ora nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Gli utenti possono modificare queste impostazioni.
+    - **Modifica delle impostazioni dell'area** (solo desktop): **Blocca** impedisce agli utenti di modificare le impostazioni dell'area del dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Gli utenti possono modificare queste impostazioni.
+    - **Modifiche alle impostazioni della lingua (solo desktop)** : **Blocca** impedisce agli utenti di modificare le impostazioni della lingua del dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Gli utenti possono modificare queste impostazioni.
 
       [Provider di servizi di configurazione per i criteri relativi alle impostazioni](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-settings)
 
@@ -207,43 +220,58 @@ Il ridimensionamento DPI del programma GDI consente alle applicazioni non sensib
 
 Queste impostazioni usano il [provider di servizi di configurazione per i criteri relativi all'esperienza](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience), che elenca anche le edizioni di Windows supportate. 
 
-- **Acquisizione di schermata** (solo dispositivi mobili): **Blocca** impedisce agli utenti finali di ottenere screenshot nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
-- **Copia e incolla (solo dispositivi mobili)** : **Blocca** impedisce agli utenti finali di eseguire operazioni Copia e Incolla tra app nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
-- **Annullamento manuale della registrazione**: **Blocca** impedisce agli utenti finali di eliminare l'account aziendale usando il pannello di controllo dell'area di lavoro nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
+- **Acquisizione di schermata** (solo dispositivi mobili): **Blocca** impedisce agli utenti di ottenere screenshot nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
+- **Copia e incolla (solo dispositivi mobili)** : **Blocca** impedisce agli utenti di eseguire operazioni Copia e Incolla tra app nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
+- **Annullamento manuale della registrazione**: **Blocca** impedisce agli utenti di eliminare l'account aziendale usando il pannello di controllo dell'area di lavoro nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
 
   Questa impostazione dei criteri non è applicabile se il computer è stato aggiunto ad Azure AD e la registrazione automatica è abilitata.
 
-- **Installazione manuale del certificato radice** (solo per dispositivi mobili): **Blocca** impedisce agli utenti finali di installare manualmente i certificati radice e i certificati CAP intermedi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
-- **Fotocamera**: **Blocca** impedisce agli utenti finali di usare la fotocamera nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'accesso alla fotocamera del dispositivo.
+- **Installazione manuale del certificato radice** (solo per dispositivi mobili): **Blocca** impedisce agli utenti di installare manualmente i certificati radice e i certificati CAP intermedi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
+- **Fotocamera**: **Blocca** impedisce agli utenti di usare la fotocamera nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'accesso alla fotocamera del dispositivo.
 
   Intune gestisce solo l'accesso alla fotocamera del dispositivo. Non ha accesso alle immagini o ai video.
 
   [Provider di servizi di configurazione della fotocamera](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-camera)
 
-- **Sincronizzazione dei file di OneDrive**: **Blocca** impedisce agli utenti finali di sincronizzare file in OneDrive dal dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
-- **Archivi rimovibili**: **Blocca** impedisce agli utenti finali di usare dispositivi di archiviazione esterni, come schede SD, con il dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
-- **Georilevazione**: **Blocca** impedisce agli utenti finali di attivare servizi di georilevazione nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
+- **Sincronizzazione dei file di OneDrive**: **Blocca** impedisce agli utenti di sincronizzare file in OneDrive dal dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
+
+  [System/DisableOneDriveFileSync CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system#system-disableonedrivefilesync)
+
+- **Archivi rimovibili**: **Blocca** impedisce agli utenti di usare dispositivi di archiviazione esterni, come schede SD, con il dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
+- **Georilevazione**: **Blocca** impedisce agli utenti di attivare servizi di georilevazione nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
+
+  [System/AllowLocation CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system#system-allowlocation)
+
 - **Internet condiviso**: **Blocca** impedisce la condivisione della connessione Internet nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
-- **Ripristino delle impostazioni predefinite del telefono**: **Blocca** impedisce agli utenti finali di cancellare o ripristinare le impostazioni predefinite del dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
+- **Ripristino delle impostazioni predefinite del telefono**: **Blocca** impedisce agli utenti di cancellare o ripristinare le impostazioni predefinite del dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
 - **Connessione USB**: **Blocca** impedisce l'accesso ai dispositivi di archiviazione esterni tramite una connessione USB nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. I dispositivi di ricarica USB non sono interessati da questa impostazione.
-- **Modalità antifurto** (solo per dispositivi mobili): **Blocca** impedisce agli utenti finali di selezionare le preferenze della modalità antifurto nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
-- **Cortana**: **Blocca** disabilita l'assistente vocale Cortana nel dispositivo. Quando Cortana è disattivata, gli utenti possono comunque eseguire una ricerca per trovare elementi nel dispositivo. L'impostazione **Non configurata** (predefinita) consente Cortana.
-- **Registrazione vocale** (solo per dispositivi mobili): **Blocca** impedisce agli utenti finali di usare il registratore vocale nel dispositivo. L'impostazione **Non configurata** (predefinita) consente la registrazione vocale per le app.
-- **Modifica del nome dispositivo** (solo dispositivi mobili): **Blocca** impedisce agli utenti finali di modificare il nome del dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
+
+  [Connectivity/AllowUSBConnection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection)
+
+- **Modalità antifurto** (solo per dispositivi mobili): **Blocca** impedisce agli utenti di selezionare le preferenze della modalità antifurto nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
+- **Cortana**: **Blocca** disabilita l'assistente vocale Cortana nel dispositivo. Quando Cortana è disattivata, gli utenti possono comunque eseguire una ricerca per trovare elementi nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire Cortana.
+
+  [Experience/AllowCortana CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowcortana)
+
+- **Registrazione vocale** (solo per dispositivi mobili): **Blocca** impedisce agli utenti di usare il registratore vocale nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire la registrazione vocale per le app.
+- **Modifica del nome dispositivo** (solo dispositivi mobili): **Blocca** impedisce agli utenti di modificare il nome del dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
 - **Aggiungi pacchetti di provisioning**: **Blocca** impedisce all'agente di configurazione di runtime di installare pacchetti di provisioning nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
 - **Rimuovi i pacchetti di provisioning**: **Blocca** impedisce all'agente di configurazione di runtime di rimuovere pacchetti di provisioning dal dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
 - **Individuazione dei dispositivi**: **Blocca** impedisce l'individuazione di un dispositivo da parte di altri dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
+
+  [Experience/AllowDeviceDiscovery](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowdevicediscovery)
+
 - **Cambio modalità per l'attività** (solo dispositivi mobili): **Blocca** impedisce il cambio di modalità per l'attività nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
-- **Finestra di dialogo di errore per la scheda SIM** (solo dispositivi mobili): **Blocca** impedisce la visualizzazione di messaggi di errore nel dispositivo se non viene rilevata alcuna scheda SIM. **Non configurata** (impostazione predefinita) mostra i messaggi di errore.
+- **Finestra di dialogo di errore per la scheda SIM** (solo dispositivi mobili): **Blocca** impedisce la visualizzazione di messaggi di errore nel dispositivo se non viene rilevata alcuna scheda SIM. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe visualizzare messaggi di errore.
 - **Area Ink**: scegliere se e come l'utente accede all'area Ink. Le opzioni disponibili sono:
-  - **Non configurato** (impostazione predefinita): attiva l'area Ink e l'utente è autorizzato a usarla sopra la schermata di blocco.
-  - **Disabilitato nella schermata di blocco**: l'area Ink è abilitata e la funzionalità è attivata. Tuttavia, l'utente non può accedervi sopra la schermata di blocco.
+  - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe attivare l'area Ink, che gli utenti sono autorizzati a usare sopra la schermata di blocco.
+  - **Disabilitato nella schermata di blocco**: l'area Ink è abilitata e la funzionalità è attivata. Tuttavia, gli utenti non possono accedervi sopra la schermata di blocco.
   - **Disabilitato**: l'accesso all'area Ink è disabilitato. La funzionalità è disattivata.
 
   [Provider di servizi di configurazione dei criteri relativi a WindowsInkWorkspace](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsinkworkspace)
 
-- **Ridistribuzione automatica**: scegliere **Consenti** in modo che gli utenti con diritti amministrativi possano eliminare tutti i dati utente e tutte le impostazioni utente tramite **CTRL+tasto WINDOWS+R** nella schermata di blocco del dispositivo. Il dispositivo viene automaticamente riconfigurato e registrato di nuovo nella gestione. **Non configurato** (impostazione predefinita) impedisce l'uso di questa funzionalità.
-- **Richiedi agli utenti di connettersi alla rete durante la configurazione del dispositivo**: scegliere **Rendi obbligatorio** in modo che il dispositivo si connetta a una rete prima di passare oltre la pagina Rete durante la configurazione di Windows. L'impostazione **Non configurata** (predefinita) consente agli utenti di andare oltre la pagina Rete, anche se non sono connessi a una rete.
+- **Reimpostazione di Autopilot**: scegliere **Consenti** in modo che gli utenti con diritti amministrativi possano eliminare tutti i dati utente e tutte le impostazioni utente tramite **CTRL+tasto WINDOWS+R** nella schermata di blocco del dispositivo. Il dispositivo viene automaticamente riconfigurato e registrato di nuovo nella gestione. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe bloccare questa funzionalità.
+- **Richiedi agli utenti di connettersi alla rete durante la configurazione del dispositivo**: scegliere **Rendi obbligatorio** in modo che il dispositivo si connetta a una rete prima di passare oltre la pagina Rete durante la configurazione di Windows. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di andare oltre la pagina Rete anche se non sono connessi a una rete.
 
   L'impostazione diventa effettiva alla successiva cancellazione o reimpostazione del dispositivo. Come per qualsiasi altra configurazione di Intune, è necessario che il dispositivo sia registrato e gestito da Intune al fine di ricevere le impostazioni di configurazione. Ma dopo che è stato registrato e che riceve i criteri, la reimpostazione del dispositivo determina l'applicazione dell'impostazione durante l'installazione di Windows successiva.
 
@@ -253,11 +281,13 @@ Queste impostazioni usano il [provider di servizi di configurazione per i criter
 
   [CSP DataProtection/AllowDirectMemoryAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection#dataprotection-allowdirectmemoryaccess)
 
-- **End processes from Task Manager** (Termina processi da Gestione attività): questa impostazione determina se gli utenti non amministratori possono usare Gestione attività per terminare le attività. **Blocca** impedisce agli utenti standard (non amministratori) di usare Gestione attività per terminare un processo o un'attività nel dispositivo. **Non configurata** (impostazione predefinita) consente agli utenti standard di terminare un processo o un'attività usando Gestione attività.
+- **End processes from Task Manager** (Termina processi da Gestione attività): questa impostazione determina se gli utenti non amministratori possono usare Gestione attività per terminare le attività. **Blocca** impedisce agli utenti standard (non amministratori) di usare Gestione attività per terminare un processo o un'attività nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti standard di terminare un processo o un'attività usando Gestione attività.
+
+  [TaskManager/AllowEndTask CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-taskmanager#taskmanager-allowendtask)
 
 ## <a name="locked-screen-experience"></a>Esperienza della schermata bloccata
 
-- **Notifiche del centro notifiche (solo per dispositivi mobili)** : **Blocca** impedisce la visualizzazione delle notifiche del centro notifiche nella schermata di blocco del dispositivo. L'impostazione **Non configurata** (predefinita) consente agli utenti di scegliere quali app mostrano le notifiche nella schermata di blocco.
+- **Notifiche del centro notifiche (solo per dispositivi mobili)** : **Blocca** impedisce la visualizzazione delle notifiche del centro notifiche nella schermata di blocco del dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di scegliere quali app mostrano le notifiche nella schermata di blocco.
 
   [Provider di servizi di configurazione AboveLock/AllowActionCenterNotifications](https://msdn.microsoft.com/ie/dn904962(v=vs.94)#AboveLock_AllowActionCenterNotifications)
 
@@ -265,15 +295,15 @@ Queste impostazioni usano il [provider di servizi di configurazione per i criter
 
   [Provider di servizi di configurazione Personalization/LockScreenImageUrl](https://docs.microsoft.com/windows/client-management/mdm/personalization-csp)
 
-- **Timeout dello schermo configurabile dall'utente (solo dispositivi mobili)** : **Consenti** consente agli utenti di configurare il timeout dello schermo. L'impostazione **Non configurata** (predefinita) non offre agli utenti questa opzione.
+- **Timeout dello schermo configurabile dall'utente (solo dispositivi mobili)** : **Consenti** consente agli utenti di configurare il timeout dello schermo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non concedere agli utenti questa opzione.
 
   [Provider di servizi di configurazione DeviceLock/AllowScreenTimeoutWhileLockedUserConfig](https://msdn.microsoft.com/ie/dn904962(v=vs.94)#DeviceLock_AllowScreenTimeoutWhileLockedUserConfig)
 
-- **Cortana nella schermata di blocco** (solo desktop): **Blocca** impedisce agli utenti di interagire con Cortana quando il dispositivo si trova nella schermata di blocco. L'impostazione **Non configurata** (predefinita) consente l'interazione con Cortana.
+- **Cortana nella schermata di blocco** (solo desktop): **Blocca** impedisce agli utenti di interagire con Cortana quando il dispositivo si trova nella schermata di blocco. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'interazione con Cortana.
 
   [Provider di servizi di configurazione AboveLock/AllowCortanaAboveLock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-abovelock#abovelock-allowcortanaabovelock)
 
-- **Notifiche di tipo avviso popup nella schermata di blocco**: **Blocca** impedisce la visualizzazione delle notifiche di tipo avviso popup nella schermata di blocco del dispositivo. L'impostazione **Non configurata** (predefinita) consente queste notifiche.
+- **Notifiche di tipo avviso popup nella schermata di blocco**: **Blocca** impedisce la visualizzazione delle notifiche di tipo avviso popup nella schermata di blocco del dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire queste notifiche.
 
   [Provider di servizi di configurazione AboveLock/AllowToasts](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-abovelock#abovelock-allowtoasts)
 
@@ -285,9 +315,9 @@ Queste impostazioni usano il [provider di servizi di configurazione per i criter
 
 Queste impostazioni usano il [provider di servizi di configurazione per i criteri relativi alla messaggistica](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-messaging), che elenca anche le edizioni di Windows supportate.
 
-- **Sincronizzazione di messaggi (solo dispositivi mobili)** : **Blocca** disabilita il backup o il ripristino degli SMS e la sincronizzazione di messaggi tra i dispositivi Windows. La disabilitazione consente di evitare l'archiviazione delle informazioni in server fuori dal controllo dell'organizzazione. L'impostazione **Non configurata** (predefinita) consente agli utenti di modificare queste impostazioni e di sincronizzare i messaggi.
-- **MMS (solo dispositivi mobili)** : **Blocca** disabilita la funzionalità di invio e ricezione di MMS nel dispositivo. Le aziende possono usare questi criteri per disabilitare gli MMS nei dispositivi come parte dei requisiti di controllo o di gestione. L'impostazione **Non configurata** (predefinita) consente l'invio e la ricezione di MMS.
-- **RCS (solo dispositivi mobili)** : **Blocca** disabilita la funzionalità di invio e ricezione di RCS (Rich Communication Services) nel dispositivo. Le aziende possono usare questi criteri per disabilitare RCS nei dispositivi come parte dei requisiti di controllo o di gestione. L'impostazione **Non configurata** (predefinita) consente l'invio e la ricezione di RCS.
+- **Sincronizzazione di messaggi (solo dispositivi mobili)** : **Blocca** disabilita il backup o il ripristino degli SMS e la sincronizzazione di messaggi tra i dispositivi Windows. La disabilitazione consente di evitare l'archiviazione delle informazioni in server fuori dal controllo dell'organizzazione. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di modificare queste impostazioni e di sincronizzare i messaggi.
+- **MMS (solo dispositivi mobili)** : **Blocca** disabilita la funzionalità di invio e ricezione di MMS nel dispositivo. Le aziende possono usare questi criteri per disabilitare gli MMS nei dispositivi come parte dei requisiti di controllo o di gestione. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'invio e la ricezione di MMS.
+- **RCS (solo dispositivi mobili)** : **Blocca** disabilita la funzionalità di invio e ricezione di RCS (Rich Communication Services) nel dispositivo. Le aziende possono usare questi criteri per disabilitare RCS nei dispositivi come parte dei requisiti di controllo o di gestione. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'invio e la ricezione di RCS.
 
 ## <a name="microsoft-edge-browser"></a>Browser Microsoft Edge
 
@@ -361,13 +391,13 @@ Questo profilo di restrizioni per i dispositivi è direttamente correlato al pro
 ### <a name="favorites-and-search"></a>Preferiti e ricerca
 
 - **Mostra la barra Preferiti**: scegliere cosa accade alla barra Preferiti in qualsiasi pagina di Microsoft Edge. Le opzioni disponibili sono:
-  - **Nelle pagine iniziali e della nuova scheda**: mostra la barra Preferiti all'avvio di Microsoft Edge e in tutte le nuove schede. Gli utenti finali non possono modificare questa impostazione.
-  - **In tutte le pagine**: mostra la barra Preferiti in tutte le pagine. Gli utenti finali non possono modificare questa impostazione.
-  - **Nascosto**: nasconde la barra Preferiti in tutte le pagine. Gli utenti finali non possono modificare questa impostazione.
-- **Consenti modifiche ai preferiti**: con l'impostazione **Sì** (predefinita) viene usata l'impostazione predefinita del sistema operativo, che consente agli utenti di modificare l'elenco. **No** impedisce agli utenti finali di eseguire operazioni di aggiunta, importazione, ordinamento o modifica dell'elenco Preferiti.
+  - **Nelle pagine iniziali e della nuova scheda**: mostra la barra Preferiti all'avvio di Microsoft Edge e in tutte le nuove schede. Gli utenti possono modificare questa impostazione.
+  - **In tutte le pagine**: mostra la barra Preferiti in tutte le pagine. Gli utenti non possono modificare questa impostazione.
+  - **Nascosto**: nasconde la barra Preferiti in tutte le pagine. Gli utenti non possono modificare questa impostazione.
+- **Consenti modifiche ai preferiti**: con l'impostazione **Sì** (predefinita) viene usata l'impostazione predefinita del sistema operativo, che consente agli utenti di modificare l'elenco. **No** impedisce agli utenti di eseguire operazioni di aggiunta, importazione, ordinamento o modifica dell'elenco Preferiti.
   - **Elenco Preferiti**: consente di aggiungere un elenco di URL al file dei Preferiti. Ad esempio: aggiungere `http://contoso.com/favorites.html`.
 - **Sincronizza i Preferiti tra i browser Microsoft** (solo desktop): **Sì** impone la sincronizzazione dei Preferiti tra Internet Explorer e Microsoft Edge. Le aggiunte, le eliminazioni, le modifiche e le variazioni dell'ordine dei Preferiti vengono condivise tra i browser.  Con l'impostazione **No** (predefinita) viene usata l'impostazione predefinita del sistema operativo, che può consentire agli utenti di scegliere di sincronizzare i Preferiti tra i browser.
-- **Motore di ricerca predefinito**: scegliere il motore di ricerca predefinito nel dispositivo. Gli utenti finali possono modificare questo valore in qualsiasi momento. Le opzioni disponibili sono:
+- **Motore di ricerca predefinito**: scegliere il motore di ricerca predefinito nel dispositivo. Gli utenti possono modificare questo valore in qualsiasi momento. Le opzioni disponibili sono:
   - Motore di ricerca nelle impostazioni client di Microsoft Edge
   - Bing
   - Google
@@ -380,9 +410,9 @@ Questo profilo di restrizioni per i dispositivi è direttamente correlato al pro
 
 ### <a name="privacy-and-security"></a>Privacy e sicurezza
 
-- **Consenti InPrivate Browsing**: **Sì** (impostazione predefinita) consente InPrivate Browsing in Microsoft Edge. Dopo la chiusura di tutte le schede InPrivate, Microsoft Edge elimina i dati di esplorazione dal dispositivo. **No** impedisce agli utenti finali di aprire sessioni InPrivate Browsing.
+- **Consenti InPrivate Browsing**: **Sì** (impostazione predefinita) consente InPrivate Browsing in Microsoft Edge. Dopo la chiusura di tutte le schede InPrivate, Microsoft Edge elimina i dati di esplorazione dal dispositivo. **No** impedisce agli utenti di aprire sessioni InPrivate Browsing.
 - **Salva la cronologia esplorazioni**: **Sì** (impostazione predefinita) consente di salvare la cronologia esplorazioni in Microsoft Edge. **No** impedisce di salvare la cronologia esplorazioni.
-- **Cancella i dati di esplorazione all'uscita** (solo desktop): **Sì** cancella la cronologia e i dati di esplorazione quando l'utente esce da Microsoft Edge. **No** (impostazione predefinita) usa il valore predefinito del sistema operativo, che potrebbe memorizzare nella cache i dati di esplorazione.
+- **Cancella i dati di esplorazione all'uscita** (solo desktop): **Sì** cancella la cronologia e i dati di esplorazione quando gli utenti escono da Microsoft Edge. **No** (impostazione predefinita) usa il valore predefinito del sistema operativo, che potrebbe memorizzare nella cache i dati di esplorazione.
 - **Sincronizza le impostazioni del browser tra i dispositivi di un utente**: scegliere la modalità di sincronizzazione delle impostazioni del browser tra i dispositivi. Le opzioni disponibili sono:
   - **Consenti**: consente la sincronizzazione delle impostazioni del browser Microsoft Edge tra i dispositivi dell'utente.
   - **Blocca e consenti l'override dell'utente**: blocca la sincronizzazione delle impostazioni del browser Microsoft Edge tra i dispositivi dell'utente. Gli utenti possono modificare questa impostazione.
@@ -396,24 +426,24 @@ Quando l'opzione "Blocca e consenti l'override dell'utente" è selezionata, un u
   - **Blocca tutti i cookie**: i cookie non vengono archiviati nel dispositivo.
   - **Blocca solo i cookie di terze parti**: i cookie di partner o terze parti non vengono archiviati nel dispositivo.
 - **Consenti il riempimento automatico nei moduli**: **Sì** (impostazione predefinita) consente agli utenti di modificare le impostazioni di completamento automatico nel browser e riempire automaticamente i campi del modulo. **No** disabilita la funzionalità di riempimento automatico in Microsoft Edge.
-- **Invia intestazioni DNT (Do Not Track)** : **Sì** invia intestazioni DNT (Do Not Track) ai siti Web che richiedono informazioni di traccia (scelta consigliata). Con l'impostazione **No** (predefinita) non vengono inviate intestazioni che consentono ai siti Web di tenere traccia dell'utente. Configurabile dall'utente.
+- **Invia intestazioni DNT (Do Not Track)** : **Sì** invia intestazioni DNT (Do Not Track) ai siti Web che richiedono informazioni di traccia (scelta consigliata). **No** (impostazione predefinita) non invia intestazioni che consentono ai siti Web di tenere traccia dell'utente. Gli utenti possono configurare questa impostazione.
 - **Mostra l'indirizzo IP localhost WebRTC**: **Sì** (impostazione predefinita) consente la visualizzazione dell'indirizzo IP localhost degli utenti quando eseguono telefonate con questo protocollo. **No** impedisce la visualizzazione dell'indirizzo IP localhost degli utenti. 
 - **Consenti la raccolta di dati dei riquadri animati**: **Sì** (impostazione predefinita) consente a Microsoft Edge di raccogliere informazioni dai riquadri animati aggiunti al menu Start. **No** impedisce la raccolta di queste informazioni, che possono fornire agli utenti un'esperienza limitata.
 - **L'utente può eseguire l'override degli errori del certificato**: **Sì** (impostazione predefinita) consente agli utenti di accedere ai siti Web con errori SSL/TLS (Secure Socket Layer/Transport Layer Security). **No** (scelta consigliata per una maggiore sicurezza) impedisce agli utenti di accedere ai siti Web con errori SSL o TLS.
 
 ### <a name="additional"></a>Altro
 
-- **Consenti il browser Microsoft Edge** (solo dispositivi mobili): **Sì** (impostazione predefinita) consente l'uso del Web browser Microsoft Edge nel dispositivo mobile. **No** impedisce l'uso di Microsoft Edge nel dispositivo. Se si sceglie **No**, le altre singole impostazioni si applicano solo al desktop.
+- **Consenti il browser Microsoft Edge** (solo dispositivi mobili): **Sì** (impostazione predefinita) consente l'uso del Web browser Microsoft Edge nel dispositivo mobile. **No** impedisce l'uso di Microsoft Edge nei dispositivi. Se si sceglie **No**, le altre singole impostazioni si applicano solo al desktop.
 - **Consenti l'elenco a discesa per la barra degli indirizzi**: **Sì** (impostazione predefinita) consente a Microsoft Edge di visualizzare l'elenco a discesa per la barra degli indirizzi con un elenco di suggerimenti. **No** impedisce a Microsoft Edge di visualizzare un elenco di suggerimenti in un elenco a discesa durante la digitazione. L'impostazione **No** consente di:
   - Ridurre al minimo l'uso della larghezza di banda tra Microsoft Edge e i servizi Microsoft.
   - Disabilitare **Mostra suggerimenti per la ricerca e i siti durante la digitazione** in Microsoft Edge > Impostazioni.
 - **Consenti la modalità schermo intero**: **Sì** (impostazione predefinita) consente a Microsoft Edge di usare la modalità schermo intero, che mostra solo il contenuto Web e nasconde l'interfaccia utente di Microsoft Edge. **No** impedisce la modalità schermo intero in Microsoft Edge.
-- **Consenti la pagina dei flag Informazioni su**: **Sì** (predefinita) viene usata l'impostazione predefinita del sistema operativo, che potrebbe consentire l'accesso alla pagina `about:flags`. La pagina `about:flags` consente agli utenti di modificare le impostazioni per gli sviluppatori e abilitare le funzionalità sperimentali. **No** impedisce agli utenti finali di accedere alla pagina `about:flags` in Microsoft Edge.
-- **Consenti gli Strumenti di sviluppo**: **Sì** (impostazione predefinita) consente agli utenti di usare gli strumenti di sviluppo F12 per compilare ed eseguire il debug delle pagine Web per impostazione predefinita. **No** impedisce agli utenti finali di usare gli strumenti di sviluppo F12.
+- **Consenti la pagina dei flag Informazioni su**: **Sì** (predefinita) viene usata l'impostazione predefinita del sistema operativo, che potrebbe consentire l'accesso alla pagina `about:flags`. La pagina `about:flags` consente agli utenti di modificare le impostazioni per gli sviluppatori e abilitare le funzionalità sperimentali. **No** impedisce agli utenti di accedere alla pagina `about:flags` in Microsoft Edge.
+- **Consenti gli Strumenti di sviluppo**: **Sì** (impostazione predefinita) consente agli utenti di usare gli strumenti di sviluppo F12 per compilare ed eseguire il debug delle pagine Web per impostazione predefinita. **No** impedisce agli utenti di usare gli strumenti di sviluppo F12.
 - **Consenti JavaScript**: **Sì** (impostazione predefinita) consente di eseguire script, ad esempio JavaScript, nel browser Microsoft Edge. **No** impedisce l'esecuzione di script Java del browser.
-- **L'utente può installare estensioni**: **Sì** (impostazione predefinita) consente agli utenti finali di installare le estensioni di Microsoft Edge nel dispositivo. **No** impedisce l'installazione.
+- **L'utente può installare estensioni**: **Sì** (impostazione predefinita) consente agli utenti di installare le estensioni di Microsoft Edge nei dispositivi. **No** impedisce l'installazione.
 - **Consenti il sideload delle estensioni per sviluppatori**: con l'impostazione **Sì** (predefinita) viene usata l'impostazione predefinita del sistema operativo, che potrebbe consentire il sideload. Il sideload installa ed esegue estensioni non verificate. **No** impedisce il sideload in Microsoft Edge con la funzionalità **Carica estensioni**. Non impedisce il sideload delle estensioni in altri modi, ad esempio con PowerShell.
-- **Estensioni obbligatorie**: scegliere le estensioni che non possono essere disattivate dagli utenti finali in Microsoft Edge. Immettere i nomi delle famiglie di pacchetti e selezionare **Aggiungi**. In [Trovare un nome di famiglia di pacchetti (PFN) per una rete VPN per app](https://docs.microsoft.com/configmgr/protect/deploy-use/find-a-pfn-for-per-app-vpn) sono disponibili alcune linee guida.
+- **Estensioni obbligatorie**: scegliere le estensioni che non possono essere disattivate dagli utenti in Microsoft Edge. Immettere i nomi delle famiglie di pacchetti e selezionare **Aggiungi**. In [Trovare un nome di famiglia di pacchetti (PFN) per una rete VPN per app](https://docs.microsoft.com/configmgr/protect/deploy-use/find-a-pfn-for-per-app-vpn) sono disponibili alcune linee guida.
 
   È anche possibile **importare** un file CSV che include i nomi delle famiglie di pacchetti. In alternativa, **esportare** i nomi delle famiglie di pacchetti immessi.
 
@@ -421,60 +451,74 @@ Quando l'opzione "Blocca e consenti l'override dell'utente" è selezionata, un u
 
 Queste impostazioni usano il [provider di servizi di configurazione per i criteri relativi a NetworkProxy](https://docs.microsoft.com/windows/client-management/mdm/networkproxy-csp), che elenca anche le edizioni di Windows supportate.
 
-- **Rileva automaticamente impostazioni proxy**: **Blocca** impedisce al dispositivo di rilevare automaticamente uno script di configurazione automatica del proxy (PAC). L'impostazione **Non configurata** (predefinita) abilita questa funzionalità. se questa opzione è abilitata, il dispositivo tenta di trovare il percorso di uno script PAC.
-- **Usa lo script proxy**: scegliere **Consenti** per immettere un percorso per lo script PAC per configurare il server proxy. **Non configurato** (impostazione predefinita) non consente di immettere l'URL di uno script PAC.
+- **Rileva automaticamente impostazioni proxy**: **Blocca** impedisce ai dispositivi di rilevare automaticamente uno script di configurazione automatica del proxy (PAC). Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe abilitare questa funzionalità e i dispositivi potrebbero tentare di trovare il percorso di uno script PAC.
+- **Usa lo script proxy**: scegliere **Consenti** per immettere un percorso per lo script PAC per configurare il server proxy. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non consentire di immettere l'URL di uno script PAC.
   - **URL dell'indirizzo dello script di installazione**: immettere l'URL di uno script PAC che si vuole usare per configurare il server proxy.
-- **Usa il server proxy manuale**: scegliere **Consenti** per immettere manualmente il nome o l'indirizzo IP e il numero di porta TCP di un server proxy. L'impostazione **Non configurato** (predefinita) non consente di immettere manualmente i dettagli di un server proxy.
+- **Usa il server proxy manuale**: scegliere **Consenti** per immettere manualmente il nome o l'indirizzo IP e il numero di porta TCP di un server proxy. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non consentire di immettere manualmente i dettagli di un server proxy.
   - **Indirizzo**: immettere il nome o l'indirizzo IP del server proxy.
   - **Numero porta**: immettere il numero di porta del server proxy.
-  - **Eccezione del proxy**: immettere gli URL che non devono usare il server proxy. Per separare ogni elemento, usare un punto e virgola.
-  - **Ignora il server proxy per l'indirizzo locale**: **Non configurato** (impostazione predefinita) impedisce l'uso di un server proxy per gli indirizzi locali della rete Intranet. **Consenti** permette di usare un server proxy per gli indirizzi locali.
+  - **Eccezione del proxy**: immettere gli URL che non devono usare il server proxy. Per separare ogni elemento, usare un punto e virgola (`;`).
+  - **Ignora il server proxy per l'indirizzo locale**: **Consenti** non usa il server proxy per gli indirizzi Intranet locali. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe usare un server proxy per gli indirizzi locali della rete Intranet.
 
 ## <a name="password"></a>Password
 
 Queste impostazioni usano il [provider di servizi di configurazione per i criteri relativi a DeviceLock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock), che elenca anche le edizioni di Windows supportate.
 
-- **Password**: selezionare **Rendi obbligatorio** per richiedere all'utente finale di immettere una password per accedere al dispositivo. **Non configurato** (impostazione predefinita) consente l'accesso al dispositivo senza una password. Si applica solo agli account locali. Le password dell'account di dominio restano configurate da Active Directory (AD) e Azure AD.
+- **Password**: **Rendi obbligatorio** richiede agli utenti di immettere una password per accedere al dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'accesso ai dispositivi senza password. Si applica solo agli account locali. Le password dell'account di dominio restano configurate da Active Directory (AD) e Azure AD.
+
+  [DeviceLock/DevicePasswordEnabled CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-devicepasswordenabled)
 
   - **Tipo di password richiesto**: scegliere il tipo di password. Le opzioni disponibili sono:
-    - **Non configurata**: la password può includere lettere e numeri.
-    - **Numerica**: la password deve essere composta solo da numeri.
+    - **Non configurata**: Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire alla password di includere numeri e lettere.
     - **Alfanumerica**: la password deve essere composta da una combinazione di lettere e numeri.
-  - **Lunghezza minima password**: immettere il numero minimo di caratteri necessari, da 4 a 16. Ad esempio, immettere `6` per richiedere una lunghezza della password di minimo sei caratteri.
+    - **Numerica**: la password deve essere composta solo da numeri.
+
+    [CSP DeviceLock/AlphanumericDevicePasswordRequired](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-alphanumericdevicepasswordrequired)
+
+  - **Lunghezza minima password**: immettere il numero minimo di caratteri necessari, da 4 a 16. Ad esempio, immettere `6` per richiedere una lunghezza della password di minimo sei caratteri. Per impostazione predefinita, il sistema operativo potrebbe impostare il valore su `4`.
+  
+    [DeviceLock/MinDevicePasswordLength CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-mindevicepasswordlength)
   
     > [!IMPORTANT]
-    > La modifica dei requisiti per la password in un desktop di Windows interessa gli utenti al successivo accesso, ossia quando il dispositivo passa dallo stato inattivo allo stato attivo. Agli utenti con password che soddisfano i requisiti viene comunque chiesto di cambiare la password.
-    
-  - **Numero di errori di accesso prima della cancellazione dei dati del dispositivo**: immettere il numero di errori di autenticazione consentiti prima della cancellazione del dispositivo, fino a 11. Il numero valido immesso dipende dall'edizione. In [Provider di servizi di configurazione DeviceLock/MaxDevicePasswordFailedAttempts](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts) sono elencati i valori supportati. `0` (zero) potrebbe disabilitare la funzionalità di cancellazione del dispositivo.
+    > La modifica dei requisiti per la password in un desktop di Windows interessa gli utenti al successivo accesso, ossia quando i dispositivi passano dallo stato inattivo allo stato attivo. Agli utenti con password che soddisfano i requisiti viene comunque chiesto di cambiare la password.
+
+  - **Numero di errori di accesso prima della cancellazione dei dati del dispositivo**: immettere il numero di password non corrette consentite prima che il dispositivo venga cancellato, fino a 11. Il numero valido immesso dipende dall'edizione. In [Provider di servizi di configurazione DeviceLock/MaxDevicePasswordFailedAttempts](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts) sono elencati i valori supportati. `0` (zero) potrebbe disabilitare la funzionalità di cancellazione del dispositivo.
 
     Questa impostazione ha inoltre un impatto diverso a seconda dell'edizione. Per informazioni dettagliate su questa impostazione, vedere il [provider di servizi di configurazione DeviceLock/MaxDevicePasswordFailedAttempts](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts).
 
-  - **Numero massimo di minuti di inattività fino al blocco dello schermo**: immettere il periodo di tempo per cui un dispositivo deve rimanere inattivo prima che lo schermo venga bloccato.
-  - **Scadenza password (giorni)** : immettere il periodo di tempo in giorni dopo il quale è necessario modificare la password del dispositivo, da 1 a 365. Ad esempio, immettere `90` per impostare la scadenza della password dopo 90 giorni.
-  - **Impedisci riutilizzo delle password precedenti**: immettere il numero di password usate in precedenza che non è possibile usare, da 1 a 24. Ad esempio, immettere `5` in modo che gli utenti non possano definire una nuova password uguale alla password corrente o a una qualsiasi delle quattro precedenti.
-  - **Richiedi la password quando il dispositivo torna attivo dopo uno stato di inattività** (Mobile e Holographic): scegliere **Rendi obbligatorio** in modo che gli utenti debbano immettere una password per sbloccare il dispositivo dopo l'inattività. **Non configurato** (impostazione predefinita) non richiede un PIN o la password quando il dispositivo si riattiva dallo stato inattivo.
-  - **Password semplici**: impostare questa opzione su **Blocca** per impedire agli utenti di creare password semplici, ad esempio `1234` o `1111`. L'impostazione **Non configurato** (predefinita) consente agli utenti di creare password come `1234` o `1111`. Questa impostazione consente o blocca anche l'uso delle password grafiche di Windows.
-- **Crittografia automatica durante l'aggiunta ad AAD**: **Blocca** impedisce la crittografia automatica BitLocker del dispositivo quando quest'ultimo viene preparato per il primo uso, nei casi in cui è aggiunto ad Azure AD. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Altre informazioni sulla [crittografia BitLocker per dispositivi](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10#bitlocker-device-encryption).
+  - **Numero massimo di minuti di inattività fino al blocco dello schermo**: immettere il periodo di tempo per cui un dispositivo deve rimanere inattivo prima che lo schermo venga bloccato. Ad esempio, immettere `5` per bloccare i dispositivi dopo 5 minuti di inattività. Quando questa opzione è impostata su **Non configurato**, Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe impostare il valore su `0` (zero), cioè timeout nullo.
+
+    [DeviceLock/MaxInactivityTimeDeviceLock CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxinactivitytimedevicelock)
+
+  - **Scadenza password (giorni)** : immettere il periodo di tempo in giorni dopo il quale è necessario modificare la password del dispositivo, da 1 a 365. Ad esempio, immettere `90` per impostare la scadenza della password dopo 90 giorni. Quando il valore è vuoto, Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe impostare il valore su `0` (zero), cioè scadenza nulla.
+
+    [DeviceLock/DevicePasswordExpiration CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-devicepasswordexpiration)
+
+  - **Impedisci riutilizzo delle password precedenti**: immettere il numero di password usate in precedenza che non è possibile usare, da 1 a 24. Ad esempio, immettere `5` in modo che gli utenti non possano definire una nuova password uguale alla password corrente o a una qualsiasi delle quattro precedenti. Quando il valore è vuoto, Intune non modifica o aggiorna questa impostazione.
+
+    [DeviceLock/DevicePasswordHistory CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-devicepasswordhistory)
+
+  - **Richiedi la password quando il dispositivo torna attivo dopo uno stato di inattività** (Mobile e Holographic): **Rendi obbligatorio** richiede agli utenti di immettere una password per sbloccare il dispositivo dopo l'inattività. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non richiedere un PIN o una password dopo l'inattività.
+
+    [DeviceLock/AllowIdleReturnWithoutPassword CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-allowidlereturnwithoutpassword)
+
+  - **Password semplici**: **Blocca** impedisce agli utenti di creare password semplici, ad esempio `1234` o `1111`. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di creare password semplici. Questa impostazione impedisce anche l'uso di password grafiche.
+
+    [DeviceLock/AllowSimpleDevicePassword CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-allowsimpledevicepassword)
+
+- **Crittografia automatica durante l'aggiunta ad AAD**: **Blocca** impedisce la crittografia automatica BitLocker dei dispositivi quando i dispositivi vengono preparati per il primo uso e sono aggiunti ad Azure AD. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe abilitare la crittografia.
+
+  Altre informazioni sulla [crittografia BitLocker per dispositivi](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10#bitlocker-device-encryption).
 
   [CSP Security/PreventAutomaticDeviceEncryptionForAzureADJoinedDevices](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-security#security-preventautomaticdeviceencryptionforazureadjoineddevices)
 
-- **Criteri FIPS (Federal Information Processing Standard)** : con **Consenti** vengono usati i criteri FIPS (Federal Information Processing Standard), ovvero uno standard del governo degli Stati Uniti per crittografia, hash e firma. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. L'impostazione predefinita del sistema operativo potrebbe non usare i criteri FIPS.
+- **Criteri FIPS (Federal Information Processing Standard)** : con **Consenti** vengono usati i criteri FIPS (Federal Information Processing Standard), ovvero uno standard del governo degli Stati Uniti per crittografia, hash e firma. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non consentire FIPS.
 
   [CSP Cryptography/AllowFipsAlgorithmPolicy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-cryptography#cryptography-allowfipsalgorithmpolicy)
 
-- **Autenticazione del dispositivo Windows Hello**: **Consenti** permette agli utenti di usare un dispositivo complementare Windows Hello, ad esempio un telefono, un bracciale per il fitness o un dispositivo IoT per accedere a un computer Windows 10. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. L'impostazione predefinita del sistema operativo può impedire al dispositivo complementare Windows Hello di eseguire l'autenticazione in Windows.
+- **Autenticazione del dispositivo Windows Hello**: **Consenti** permette agli utenti di usare un dispositivo complementare Windows Hello, ad esempio un telefono, un bracciale per il fitness o un dispositivo IoT per accedere a un computer Windows 10. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe impedire ai dispositivi complementari Windows Hello di eseguire l'autenticazione.
 
   [CSP Authentication/AllowSecondaryAuthenticationDevice](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-allowsecondaryauthenticationdevice)
-
-- **Accesso Web** (impostazione deprecata): abilita il supporto di accesso Windows per i provider federati non ADFS (Active Directory Federation Services), ad esempio Security Assertion Markup Language (SAML). SAML usa token di sicurezza che consentono ai Web browser l'esperienza di accesso Single Sign-On (SSO). Le opzioni disponibili sono:
-
-  - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione.
-  - **Attivata**: il provider di credenziali Web è abilitato per l'accesso.
-  - **Disabilitato**: il provider di credenziali Web è disabilitato per l'accesso.
-
-  Questa impostazione verrà rimossa in una versione futura. Non usare questa impostazione.
-
-  [CSP Authentication/EnableWebSignIn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-enablewebsignin)
 
 - **Dominio preferito del tenant di Azure AD**: immettere un nome di dominio esistente nell'organizzazione Azure AD. Gli utenti di questo dominio non dovranno digitare il nome di dominio all'accesso. Immettere ad esempio `contoso.com`. Gli utenti inclusi nel dominio `contoso.com` possono accedere usando il proprio nome utente, ad esempio `abby` invece di `abby@contoso.com`.
 
@@ -482,7 +526,7 @@ Queste impostazioni usano il [provider di servizi di configurazione per i criter
 
 ## <a name="per-app-privacy-exceptions"></a>Eccezioni alla privacy per app
 
-È possibile aggiungere app che devono avere un comportamento di privacy diverso da quello definito in "Privacy predefinita".
+Consente di **aggiungere** app che devono avere un comportamento di privacy diverso da quello definito in "Privacy predefinita".
 
 - **Nome pacchetto**: nome della famiglia di pacchetti dell'app.
 - **Nome app**: nome dell'app.
@@ -514,19 +558,42 @@ Queste impostazioni usano il [provider di servizi di configurazione per i criter
 
 - **URL dell'immagine di sfondo del desktop (solo desktop)** : immettere l'URL per un'immagine in formato JPG, JPEG o PNG che si vuole usare come sfondo del desktop di Windows. Gli utenti non possono modificare l'immagine. Immettere ad esempio `https://contoso.com/logo.png`.
 
+  Quando il campo è vuoto, Intune non modifica o aggiorna questa impostazione.
+
 ## <a name="printer"></a>Stampante
 
-- **Stampanti**: elenco delle stampanti locali che sono state aggiunte.
-- **Stampante predefinita**: consente di impostare la stampante predefinita.
-- **User access to add new printers** (Accesso utente per l'aggiunta di nuove stampanti): consente o blocca l'uso delle stampanti locali.
+- **Stampanti**: aggiungere stampanti usando i rispettivi nomi host di rete (nome DNS). Il sistema operativo cerca e installa i driver della stampante corrispondenti per ogni stampante del dispositivo. Se non viene inserito un valore, Intune non modifica o aggiorna questa impostazione.
+
+  [Education/PrinterNames CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-education#education-printernames)
+
+- **Stampante predefinita**: immettere il nome host di rete (nome DNS) di una stampante installata da usare come stampante predefinita. Se non viene inserito un valore, Intune non modifica o aggiorna questa impostazione.
+
+  [Education/DefaultPrinterName CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-education#education-defaultprintername)
+
+- **Aggiungere nuove stampanti**: **Blocca** impedisce agli utenti di aggiungere nuove stampanti. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire di aggiungere nuove stampanti.
+
+  [Education/PreventAddingNewPrinters CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-education#education-preventaddingnewprinters)
 
 ## <a name="privacy"></a>Privacy
 
 Queste impostazioni usano il [provider di servizi di configurazione per i criteri relativi alla privacy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-privacy), che elenca anche le edizioni di Windows supportate.
 
-- **Personalizzazione dell'input**: **Blocca** impedisce l'uso della voce per la dettatura e per comunicare con Cortana e altre app che usano il riconoscimento vocale basato sul cloud Microsoft. La funzionalità è disabilitata e gli utenti non possono abilitare il riconoscimento vocale online usando le impostazioni. L'impostazione **Non configurato** (predefinita) consente agli utenti di scegliere. Se si consentono questi servizi, Microsoft potrebbe raccogliere dati vocali per migliorare il servizio.
-- **Accettazione automatica delle richieste di associazione e di consenso utente sulla privacy**: con **Consenti** Windows può accettare automaticamente messaggi di associazione e consenso sulla privacy durante l'esecuzione di app. **Non configurato** (impostazione predefinita) impedisce l'accettazione automatica della finestra di consenso dell'utente per l'associazione e la privacy all'apertura delle app.
-- **Pubblica le attività utente**: **Blocca** impedisce la condivisione delle esperienze e l'individuazione delle risorse usate di recente nel feed attività. **Non configurato** (impostazione predefinita) abilita questa funzionalità in modo che le app possano pubblicare le attività degli utenti finali.
+- **Esperienza relativa alla privacy**: **Blocca** impedisce l'apertura dell'esperienza relativa alla privacy quando gli utenti effettuano l'accesso e per utenti nuovi e aggiornati. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
+
+  [Privacy/DisablePrivacyExperience](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-privacy#privacy-disableprivacyexperience)
+
+- **Personalizzazione dell'input**: **Blocca** impedisce l'uso della voce per la dettatura e per comunicare con Cortana e altre app che usano il riconoscimento vocale basato sul cloud Microsoft. La funzionalità è disabilitata e gli utenti non possono abilitare il riconoscimento vocale online usando le impostazioni. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di scegliere. Se si consentono questi servizi, Microsoft potrebbe raccogliere dati vocali per migliorare il servizio.
+
+  [Privacy/AllowInputPersonalization CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-privacy#privacy-allowinputpersonalization)
+
+- **Accettazione automatica delle richieste di associazione e di consenso utente sulla privacy**: con **Consenti** Windows può accettare automaticamente messaggi di associazione e consenso sulla privacy durante l'esecuzione di app. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe impedire di accettare automaticamente.
+
+  [Privacy/AllowAutoAcceptPairingAndPrivacyConsentPrompts CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-privacy#privacy-allowautoacceptpairingandprivacyconsentprompts)
+
+- **Pubblica le attività utente**: **Blocca** impedisce alle app e al sistema operativo di pubblicare le attività utente. Inoltre, impedisce la condivisione delle esperienze e l'individuazione delle risorse usate di recente nel feed attività. Le attività utente rilevano lo stato delle attività di un utente in un'app o nel sistema operativo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe abilitare questa funzionalità in modo che le app possano pubblicare le attività utente.
+
+  [Privacy/PublishUserActivities CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-privacy#privacy-publishuseractivities)
+
 - **Solo attività locali**: **Blocca** consente di bloccare le esperienze condivise o l'individuazione di risorse usate di recente nello strumento per il cambio modalità per l'attività e così via solo in base all'attività locale. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
 
 È possibile configurare le informazioni accessibili per tutte le app nel dispositivo. Definire anche le eccezioni per le singole app tramite **Eccezioni alla privacy per app**.
@@ -556,30 +623,40 @@ Queste impostazioni usano il [provider di servizi di configurazione per i criter
 
 Queste impostazioni usano il [provider di servizi di configurazione per i criteri relativi a WirelessDisplay](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-wirelessdisplay), che elenca anche le edizioni di Windows supportate.
 
-- **Input degli utenti da ricevitori di schermo wireless**: **Blocca** impedisce l'input degli utenti da ricevitori di schermo wireless. **Non configurato** (impostazione predefinita) consente a uno schermo wireless di inviare l'input da tastiera, mouse, penna e tocco al dispositivo di origine.
-- **Proiezione per questo computer**: **Blocca** impedisce ad altri dispositivi di trovare il dispositivo per la proiezione. **Non configurato** (impostazione predefinita) consente al dispositivo di essere individuabili ed è consentita la proiezione nel dispositivo al di sopra della schermata di blocco.
-- **Richiedi il PIN per l'associazione**: scegliere **Rendi obbligatorio** per richiedere sempre un PIN per la connessione a un dispositivo di proiezione. **Non configurato** (impostazione predefinita) non richiede un PIN per l'associazione del dispositivo a un dispositivo di proiezione.
+- **Input degli utenti da ricevitori di schermo wireless**: **Blocca** impedisce l'input degli utenti da ricevitori di schermo wireless. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire a uno schermo wireless di inviare l'input da tastiera, mouse, penna e tocco al dispositivo di origine.
+
+  [WirelessDisplay/AllowUserInputFromWirelessDisplayReceiver CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-wirelessdisplay#wirelessdisplay-allowuserinputfromwirelessdisplayreceiver)
+
+- **Proiezione per questo computer**: **Blocca** impedisce ad altri dispositivi di trovare il dispositivo per la proiezione e impedisce la proiezione in altri dispositivi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire ai dispositivi di essere individuabili e può consentire la proiezione nel dispositivo al di sopra della schermata di blocco.
+
+  [WirelessDisplay/AllowProjectionFromPC CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-wirelessdisplay#wirelessdisplay-allowprojectionfrompc)
+
+- **Richiedi il PIN per l'associazione**: **Rendi obbligatorio** richiede sempre un PIN per la connessione a un dispositivo di proiezione. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non richiedere un PIN per associare il dispositivo.
+
+  [WirelessDisplay/RequirePinForPairing CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-wirelessdisplay#wirelessdisplay-requirepinforpairing)
 
 ## <a name="reporting-and-telemetry"></a>Reporting e telemetria
 
 - **Condividi i dati di utilizzo**: scegliere il livello di dati di diagnostica inviati. Le opzioni disponibili sono:
-  - **Non configurata**: nessun dato condiviso.
-  - **Sicurezza**: le informazioni necessarie per mantenere più sicuro Windows, inclusi i dati sulle impostazioni del componente Esperienze utente connesse e telemetria, Strumento di rimozione malware e Microsoft Defender.
-  - **Base**: informazioni di base sul dispositivo, inclusi dati relativi a qualità, compatibilità delle app, utilizzo delle app e i dati dal livello Sicurezza.
-  - **Avanzato**: informazioni dettagliate aggiuntive, tra cui: come vengono usati Windows, Windows Server, System Center e le app, le relative prestazioni, dati avanzati sull'affidabilità e i dati dei livelli Base e Sicurezza.
-  - **Completa**: tutti i dati necessari per identificare e contribuire alla risoluzione dei problemi, oltre ai dati dai livelli Sicurezza, Base e Avanzato.
+  - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione. nessuna impostazione viene imposta. Gli utenti scelgono il livello inviato. Per impostazione predefinita, il sistema operativo potrebbe non condividere i dati.
+  - **Sicurezza**: le informazioni necessarie per mantenere più sicuro Windows, inclusi i dati sulle impostazioni del componente Esperienze utente connesse e telemetria, Strumento di rimozione malware e Microsoft Defender
+  - **Base**: informazioni di base sul dispositivo, inclusi dati relativi a qualità, compatibilità delle app, utilizzo delle app e i dati dal livello Sicurezza
+  - **Avanzato**: informazioni dettagliate aggiuntive, ad esempio come vengono usati Windows, Windows Server, System Center e le app, le relative prestazioni, dati avanzati sull'affidabilità e i dati dei livelli Base e Sicurezza
+  - **Completa**: tutti i dati necessari per identificare e contribuire alla risoluzione dei problemi, oltre ai dati dal livello Sicurezza, Base e Avanzato.
 
   [Provider di servizi di configurazione System/AllowTelemetry](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system#system-allowtelemetry)
 
 - **Invia i dati di esplorazione di Microsoft Edge a Microsoft 365 Analytics**: per usare questa funzionalità, impostare l'opzione **Condividi i dati di utilizzo** su **Avanzato** o **Completo**. Questa funzionalità consente di controllare quali dati Microsoft Edge invia a Microsoft 365 Analytics per i dispositivi aziendali con un ID commerciale configurato. Le opzioni disponibili sono:
-  - **Non configurata**: Intune non modifica o aggiorna questa impostazione. L'impostazione predefinita del sistema operativo potrebbe non inviare dati della cronologia esplorazioni.
-  - **Invia solo dati Intranet**: consente all'amministratore di inviare la cronologia dei dati Intranet
-  - **Invia solo dati Internet**: consente all'amministratore di inviare la cronologia dei dati Internet
-  - **Invia dati Intranet e Internet**: consente all'amministratore di inviare la cronologia dei dati Intranet e Internet
+  - **Non configurata**: Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non raccogliere o inviare i dati della cronologia esplorazioni.
+  - **Invia solo dati Intranet**: consente all'amministratore di inviare la cronologia dei dati Intranet.
+  - **Invia solo dati Internet**: consente all'amministratore di inviare la cronologia dei dati Internet.
+  - **Invia dati Intranet e Internet**: consente all'amministratore di inviare la cronologia dei dati Intranet e Internet.
 
   [Provider di servizi di configurazione Browser/ConfigureTelemetryForMicrosoft365Analytics](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-configuretelemetryformicrosoft365analytics)
 
-- **Server proxy di telemetria**: immettere il nome di dominio completo (FQDN) o l'indirizzo IP di un server proxy per l'inoltro delle richieste del servizio Esperienze utente connesse e telemetria tramite una connessione Secure Sockets Layer (SSL). Il formato di questa impostazione è *server*:*porta*. In caso di errore del proxy denominato oppure se viene immesso alcun proxy al momento dell'abilitazione di questo criterio, i dati Esperienze utente connesse e telemetria non vengono inviati e rimangono nel dispositivo locale.
+- **Server proxy di telemetria**: immettere il nome di dominio completo (FQDN) o l'indirizzo IP di un server proxy per l'inoltro delle richieste del servizio Esperienze utente connesse e telemetria tramite una connessione Secure Sockets Layer (SSL). Il formato di questa impostazione è *server*:*porta*. In caso di errore del proxy denominato oppure se non viene immesso alcun proxy, i dati di Esperienze utente connesse e telemetria non vengono inviati. Essi rimangono sul dispositivo locale.
+
+  Se non viene inserito un valore, Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo può inviare i dati di Esperienze utente connesse e telemetria a Microsoft usando la configurazione proxy predefinita.
 
   Formati di esempio:
 
@@ -591,89 +668,193 @@ Queste impostazioni usano il [provider di servizi di configurazione per i criter
 
   [Provider di servizi di configurazione System/TelemetryProxy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system#system-telemetryproxy)
 
-Selezionare **OK** per salvare le modifiche.
-
 ## <a name="search"></a>Cerca
 
-Queste impostazioni usano il [provider di servizi di configurazione per i criteri relativi alla ricerca](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search), che elenca anche le edizioni di Windows supportate. 
+Queste impostazioni usano il [provider di servizi di configurazione per i criteri relativi alla ricerca](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search), che elenca anche le edizioni di Windows supportate.
 
 - **Ricerca sicura (solo dispositivi mobili)** : controlla come Cortana filtra il contenuto per adulti nei risultati della ricerca. Le opzioni disponibili sono:
-  - **Definito dall'utente**: consente agli utenti di scegliere le proprie impostazioni.
-  - **Restrittivo**: filtro massimo del contenuto per adulti.
+  - **Definita dall'utente**: Intune non modifica o aggiorna questa impostazione. nessuna impostazione viene imposta. Gli utenti scelgono le proprie impostazioni.
+  - **Restrittivo**: filtro massimo del contenuto per adulti
   - **Moderato**: filtro moderato del contenuto per adulti. I risultati di ricerca validi non vengono filtrati.
-- **Visualizza i risultati Web nella ricerca**: con l'impostazione **Blocca** gli utenti non possono eseguire ricerche e i risultati Web non vengono visualizzati nella ricerca. **Non configurato** (impostazione predefinita) consente agli utenti di eseguire ricerche nel Web e i risultati vengono visualizzati nel dispositivo.
+- **Visualizza i risultati Web nella ricerca**: **Blocca** impedisce agli utenti di usare Windows Search per eseguire ricerche in Internet e i risultati Web non vengono visualizzati in Search. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di eseguire ricerche nel Web e i risultati vengono visualizzati nel dispositivo.
+- **Segni diacritici**: **Blocca** impedisce che i segni diacritici vengano visualizzati in Windows Search. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe mostrare i segni diacritici.
+
+  [Search/AllowUsingDiacritics CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search#search-allowusingdiacritics)
+
+- **Rilevamento lingua automatico**: **Blocca** impedisce a Windows Search di rilevare automaticamente la lingua durante l'indicizzazione di contenuti o proprietà. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire questa funzionalità.
+
+  [Search/AlwaysUseAutoLangDetection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search#search-alwaysuseautolangdetection)
+
+- **Cerca percorso**: **Blocca** impedisce a Windows Search di usare il percorso. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire questa funzionalità.
+
+  [Search/AllowSearchToUseLocation CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search#search-allowsearchtouselocation)
+
+- **Backoff dell'indicizzatore**: **Blocca** disabilita la funzionalità di ricerca del backoff dell'indicizzatore. L'indicizzazione continua alla massima velocità, anche se l'attività del sistema è elevata. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe usare la logica backoff per limitare l'attività di indicizzazione quando l'attività del sistema è elevata.
+
+  [Search/DisableBackoff CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search#search-disablebackoff)
+
+- **Indicizzazione delle unità rimovibili**: **Blocca** impedisce di aggiungere le posizioni nelle unità rimovibili alle librerie e ne impedisce l'indicizzazione. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire questa funzionalità.
+
+  [Search/DisableRemovableDriveIndexing CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search#search-disableremovabledriveindexing)
+
+- **Indicizzazione con spazio su disco insufficiente**: **Abilita** consente l'indicizzazione automatica, anche quando lo spazio su disco è ridotto. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe disattivare l'indicizzazione automatica quando lo spazio su disco rigido è di 600 MB o inferiore. Se i dispositivi dell'organizzazione hanno spazio su disco rigido limitato, impostarlo su **Non configurato**.
+
+  [Search/PreventIndexingLowDiskSpaceMB CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search#search-preventindexinglowdiskspacemb)
+
+- **Query remote**: **Abilita** consente le query remote dell'indice del dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe impedire agli utenti di eseguire query remote dell'indice del dispositivo.
+
+  [Search/PreventRemoteQueries CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search#search-preventremotequeries)
 
 ## <a name="start"></a>Avvia
 
 Queste impostazioni usano il [provider di servizi di configurazione per i criteri relativi al menu Start](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start), che elenca anche le edizioni di Windows supportate.  
 
-- **Layout del menu Start**: consente di modificare il layout predefinito di Start e di personalizzare il menu Start nei dispositivi desktop. Caricare un file XML che include le personalizzazioni, tra cui l'ordine in cui sono elencate le app e altro ancora. Gli utenti non possono modificare il layout del menu Start immesso.
-- **Aggiungi i siti Web ai riquadri nel menu Start**: consente di importare immagini da Microsoft Edge che vengono visualizzate come collegamenti nel menu Start di Windows per i dispositivi desktop.
-- **Rimuovi le app dalla barra della applicazioni**: **Blocca** impedisce agli utenti di sbloccare app dalla barra delle applicazioni. **Non configurato** (impostazione predefinita) consente agli utenti di rimuovere app dalla barra delle applicazioni.
-- **Cambio rapido utente**: **Blocca** impedisce il cambio utente tra utenti connessi simultaneamente senza che eseguano la disconnessione. **Non configurato** (impostazione predefinita) mostra il comando **Cambia utente** nel riquadro utente.
-- **App più usate**: **Blocca** nasconde le app più usate nel menu Start. Questa opzione disabilita anche l'alternanza corrispondente nell'app Impostazioni. **Non configurato** (impostazione predefinita) mostra le app più usate.
-- **App aggiunte di recente**: **Blocca** nasconde le app aggiunte di recente nel menu Start. Questa opzione disabilita anche l'alternanza corrispondente nell'app Impostazioni. **Non configurato** (impostazione predefinita) mostra le app aggiunte di recente nel menu Start.
-- **Modalità della schermata Start**: scegliere la modalità di visualizzazione della schermata Start. Le opzioni disponibili sono:
-  - **Definita dall'utente**: non impone le dimensioni del menu Start. Gli utenti possono impostare le dimensioni.
+- **Layout del menu Start**: Caricare un file XML che include le personalizzazioni, tra cui l'ordine in cui sono elencate le app e altro ancora. Il file XML sostituisce il layout di avvio predefinito. Gli utenti non possono modificare il layout del menu Start immesso.
+
+  Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
+
+  [Start/StartLayout CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-startlayout)
+
+- **Aggiungi i siti Web ai riquadri nel menu Start**: consente di importare immagini da Microsoft Edge. Queste immagini vengono mostrate come collegamenti nel menu Start di Windows per i dispositivi desktop. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
+
+  [Start/ImportEdgeAssets CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-importedgeassets)
+
+- **Rimuovi le app dalla barra della applicazioni**: **Blocca** impedisce agli utenti di sbloccare app dalla barra delle applicazioni. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di rimuovere le app dalla barra delle applicazioni.
+
+  [Start/NoPinningToTaskbar CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-nopinningtotaskbar)
+
+- **Cambio rapido utente**: **Blocca** impedisce il cambio utente tra utenti connessi simultaneamente senza che eseguano la disconnessione. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe mostrare il comando **Cambia utente** nel riquadro utente.
+
+  [Start/HideSwitchAccount CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-hideswitchaccount)
+
+- **App più usate**: **Blocca** nasconde le app più usate nel menu Start. Questa opzione disabilita anche l'alternanza corrispondente nell'app Impostazioni. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe mostrare le app più usate.
+
+  [Start/HideFrequentlyUsedApps CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-hidefrequentlyusedapps)
+
+- **App aggiunte di recente**: **Blocca** nasconde le app aggiunte di recente al menu Start. Questa opzione disabilita anche l'alternanza corrispondente nell'app Impostazioni. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe mostrare le app aggiunte di recente al menu Start.
+
+  [Start/HideRecentlyAddedApps CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-hiderecentlyaddedapps)
+
+- **Modalità della schermata Start**: scegliere le dimensioni della schermata Start. Le opzioni disponibili sono:
+  - **Definita dall'utente**: Intune non modifica o aggiorna questa impostazione. nessuna impostazione viene imposta. Gli utenti possono impostare le dimensioni.
   - **Schermo intero**: impone le dimensioni a schermo intero per il menu Start.
   - **Non a schermo intero**: impone le dimensioni non a schermo intero per il menu Start.
-- **Elementi aperti di recente nelle jump list**: **Blocca** nasconde le jump list recenti nel menu Start e nella barra delle applicazioni. Questa opzione disabilita anche l'alternanza corrispondente nell'app Impostazioni. **Non configurato** (impostazione predefinita) mostra gli elementi aperti di recente nelle jump list.
-- **Elenco di app**: scegliere come visualizzare tutti gli elenchi di app. Le opzioni disponibili sono:
-  - **Definita dall'utente**: nessuna impostazione viene imposta. Gli utenti scelgono come viene visualizzato l'elenco delle app nel dispositivo.
-  - **Comprimi**: nasconde l'elenco di tutte le app.
-  - **Comprimi e disabilita l'app Impostazioni**: nasconde l'elenco di tutte le app e disabilita **Mostra l'elenco delle app nel menu Start** nell'app Impostazioni.
-  - **Rimuovi e disabilita l'app Impostazioni**: nasconde l'elenco di tutte le app, rimuove il pulsante per visualizzare tutte le app e disabilita l'opzione **Mostra l'elenco di app nel menu Start** nell'app Impostazioni.
-- **Pulsante di alimentazione**: **Blocca** nasconde il pulsante di alimentazione nel menu Start. **Non configurato** (impostazione predefinita) mostra il pulsante di alimentazione.
-- **Riquadro utente**: **Blocca** nasconde il riquadro utente nel menu Start. **Non configurato** (impostazione predefinita) mostra il riquadro utente e imposta anche le impostazioni seguenti:
-  - **Blocco**: **Blocca** nasconde l'opzione **Blocca** nel riquadro utente nel menu Start. Con l'impostazione **Non configurata** (predefinita) viene visualizzata l'opzione **Blocca**.
-  - **Disconnetti**: **Blocca** nasconde l'opzione **Disconnetti** nel riquadro utente nel menu Start. Con l'impostazione **Non configurata** (predefinita) viene visualizzata l'opzione **Disconnetti**.
-- **Arresta**: **Blocca** nasconde le opzioni **Aggiorna e arresta** e **Arresta** nel pulsante di alimentazione nel menu Start. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
-- **Sospendi**: **Blocca** nasconde l'opzione **Sospendi** nel pulsante di alimentazione nel menu Start. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
-- **Iberna**: **Blocca** nasconde l'opzione **Iberna** nel pulsante di alimentazione nel menu Start. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
-- **Cambia account**: **Blocca** nasconde l'opzione **Cambia account** nel riquadro utente nel menu Start. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
-- **Opzioni per il riavvio**:  **Blocca** nasconde le opzioni **Aggiorna e riavvia** e **Riavvia** nel pulsante di alimentazione nel menu Start. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
-- **Documenti nel menu Start**: nasconde o mostra la cartella Documenti nel menu Start di Windows. Le opzioni disponibili sono:
-  - **Non configurato** (impostazione predefinita): nessuna impostazione viene imposta. Gli utenti possono scegliere di mostrare o nascondere il collegamento.
-  - **Nascondi**: il collegamento viene nascosto e l'impostazione viene disabilitata nell'app Impostazioni.
-  - **Mostra**: il collegamento viene visualizzato e l'impostazione viene disabilitata nell'app Impostazioni.
-- **Download nel menu Start**: nasconde o mostra la cartella Download nel menu Start di Windows. Le opzioni disponibili sono:
-  - **Non configurato** (impostazione predefinita): nessuna impostazione viene imposta. Gli utenti possono scegliere di mostrare o nascondere il collegamento.
-  - **Nascondi**: il collegamento viene nascosto e l'impostazione viene disabilitata nell'app Impostazioni.
-  - **Mostra**: il collegamento viene visualizzato e l'impostazione viene disabilitata nell'app Impostazioni.
-- **Esplora file nel menu Start**: nasconde o mostra Esplora file nel menu Start di Windows. Le opzioni disponibili sono:
-  - **Non configurato** (impostazione predefinita): nessuna impostazione viene imposta. Gli utenti possono scegliere di mostrare o nascondere il collegamento.
-  - **Nascondi**: il collegamento viene nascosto e l'impostazione viene disabilitata nell'app Impostazioni.
-  - **Mostra**: il collegamento viene visualizzato e l'impostazione viene disabilitata nell'app Impostazioni.
-- **HomeGroup nel menu Start**: nasconde o mostra il collegamento Gruppo Home nel menu Start di Windows. Le opzioni disponibili sono:
-  - **Non configurato** (impostazione predefinita): nessuna impostazione viene imposta. Gli utenti possono scegliere di mostrare o nascondere il collegamento.
-  - **Nascondi**: il collegamento viene nascosto e l'impostazione viene disabilitata nell'app Impostazioni.
-  - **Mostra**: il collegamento viene visualizzato e l'impostazione viene disabilitata nell'app Impostazioni.
-- **Musica nel menu Start**: nasconde o mostra la cartella Musica nel menu Start di Windows. Le opzioni disponibili sono:
-  - **Non configurato** (impostazione predefinita): nessuna impostazione viene imposta. Gli utenti possono scegliere di mostrare o nascondere il collegamento.
-  - **Nascondi**: il collegamento viene nascosto e l'impostazione viene disabilitata nell'app Impostazioni.
-  - **Mostra**: il collegamento viene visualizzato e l'impostazione viene disabilitata nell'app Impostazioni.
-- **Rete nel menu Start**: nasconde o mostra Rete nel menu Start di Windows. Le opzioni disponibili sono:
-  - **Non configurato** (impostazione predefinita): nessuna impostazione viene imposta. Gli utenti possono scegliere di mostrare o nascondere il collegamento.
-  - **Nascondi**: il collegamento viene nascosto e l'impostazione viene disabilitata nell'app Impostazioni.
-  - **Mostra**: il collegamento viene visualizzato e l'impostazione viene disabilitata nell'app Impostazioni.
-- **Cartella Personale nel menu Start**: nasconde o mostra la cartella Personale nel menu Start di Windows. Le opzioni disponibili sono:
-  - **Non configurato** (impostazione predefinita): nessuna impostazione viene imposta. Gli utenti possono scegliere di mostrare o nascondere il collegamento.
-  - **Nascondi**: il collegamento viene nascosto e l'impostazione viene disabilitata nell'app Impostazioni.
-  - **Mostra**: il collegamento viene visualizzato e l'impostazione viene disabilitata nell'app Impostazioni.
-- **Immagini nel menu Start**: nasconde o mostra la cartella delle immagini nel menu Start di Windows. Le opzioni disponibili sono:
-  - **Non configurato** (impostazione predefinita): nessuna impostazione viene imposta. Gli utenti possono scegliere di mostrare o nascondere il collegamento.
-  - **Nascondi**: il collegamento viene nascosto e l'impostazione viene disabilitata nell'app Impostazioni.
-  - **Mostra**: il collegamento viene visualizzato e l'impostazione viene disabilitata nell'app Impostazioni.
-- **Impostazioni nel menu Start**: nasconde o mostra il collegamento Impostazioni nel menu Start di Windows. Le opzioni disponibili sono:
-  - **Non configurato** (impostazione predefinita): nessuna impostazione viene imposta. Gli utenti possono scegliere di mostrare o nascondere il collegamento.
-  - **Nascondi**: il collegamento viene nascosto e l'impostazione viene disabilitata nell'app Impostazioni.
-  - **Mostra**: il collegamento viene visualizzato e l'impostazione viene disabilitata nell'app Impostazioni.
-- **Video nel menu Start**: nasconde o mostra la cartella dei video nel menu Start di Windows. Le opzioni disponibili sono:
-  - **Non configurato** (impostazione predefinita): nessuna impostazione viene imposta. Gli utenti possono scegliere di mostrare o nascondere il collegamento.
-  - **Nascondi**: il collegamento viene nascosto e l'impostazione viene disabilitata nell'app Impostazioni.
-  - **Mostra**: il collegamento viene visualizzato e l'impostazione viene disabilitata nell'app Impostazioni.
 
-## <a name="microsoft-defender-smart-screen"></a>Microsoft Defender SmartScreen
+  [Start/ForceStartSize CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-forcestartsize)
+
+- **Elementi aperti di recente nelle jump list**: **Blocca** nasconde le jump list recenti nel menu Start e nella barra delle applicazioni. Questa opzione disabilita anche l'alternanza corrispondente nell'app Impostazioni. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe mostrare gli elementi aperti di recente nelle jump list.
+
+  [Start/HideRecentJumplists CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-hiderecentjumplists)
+
+- **Elenco di app**: scegliere come visualizzare tutti gli elenchi di app. Le opzioni disponibili sono:
+  - **Definita dall'utente**: Intune non modifica o aggiorna questa impostazione. nessuna impostazione viene imposta. Gli utenti scelgono come viene visualizzato l'elenco delle app.
+  - **Comprimi**: nasconde l'elenco con tutte le app.
+  - **Comprimi e disabilita l'app Impostazioni**: nasconde l'elenco con tutte le app e disabilita **Mostra l'elenco delle app nel menu Start** nell'app Impostazioni.
+  - **Rimuovi e disabilita l'app Impostazioni**: nasconde l'elenco con tutte le app, rimuove il pulsante per visualizzare tutte le app e disabilita l'opzione **Mostra l'elenco di app nel menu Start** nell'app Impostazioni.
+
+  [Start/HideAppList CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-hideapplist)
+
+- **Pulsante di alimentazione**: **Blocca** nasconde il pulsante di alimentazione nel menu Start. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe mostrare il pulsante di alimentazione.
+
+  [Start/HidePowerButton CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-hidepowerbutton)
+
+- **Riquadro utente**: **Blocca** nasconde il riquadro utente nel menu Start. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe mostrare il riquadro utente. Configurare le seguenti impostazioni:
+  - **Blocco**: **Blocca** nasconde l'opzione **Blocca** nel riquadro utente nel menu Start.  Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe mostrare l'opzione **Blocca**.
+  - **Disconnetti**: **Blocca** nasconde l'opzione **Disconnetti** nel riquadro utente nel menu Start. Con l'impostazione **Non configurata** (predefinita) viene visualizzata l'opzione **Disconnetti**.
+
+  [Start/HideUserTile CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-hideusertile)
+
+- **Arresta**: **Blocca** nasconde le opzioni **Aggiorna e arresta** e **Arresta** nel pulsante di alimentazione nel menu Start. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
+
+  [Start/HideShutDown CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-hideshutdown)
+
+- **Sospendi**: **Blocca** nasconde l'opzione **Sospendi** nel pulsante di alimentazione nel menu Start. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
+
+  [Start/HideSleep CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-hidesleep)
+
+- **Iberna**: **Blocca** nasconde l'opzione **Iberna** nel pulsante di alimentazione nel menu Start. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
+
+  [Start/HideHibernate CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-hidehibernate)
+
+- **Cambia account**: **Blocca** nasconde l'opzione **Cambia account** nel riquadro utente nel menu Start. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
+
+  [Start/HideSwitchAccount CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-hideswitchaccount)
+
+- **Opzioni per il riavvio**:  **Blocca** nasconde le opzioni **Aggiorna e riavvia** e **Riavvia** nel pulsante di alimentazione nel menu Start. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
+
+  [Start/HideRestart CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-hiderestart)
+
+- **Documenti nel menu Start**: nasconde o mostra la cartella Documenti nel menu Start di Windows. Le opzioni disponibili sono:
+  - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione. nessuna impostazione viene imposta. Gli utenti possono scegliere di mostrare o nascondere il collegamento.
+  - **Nascondi**: il collegamento viene nascosto e l'impostazione viene disabilitata nell'app Impostazioni.
+  - **Mostra**: il collegamento viene mostrato e l'impostazione viene disabilitata nell'app Impostazioni.
+
+  [Start/AllowPinnedFolderDocuments CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-allowpinnedfolderdocuments)
+
+- **Download nel menu Start**: nasconde o mostra la cartella Download nel menu Start di Windows. Le opzioni disponibili sono:
+  - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione. nessuna impostazione viene imposta. Gli utenti possono scegliere di mostrare o nascondere il collegamento.
+  - **Nascondi**: il collegamento viene nascosto e l'impostazione viene disabilitata nell'app Impostazioni.
+  - **Mostra**: il collegamento viene mostrato e l'impostazione viene disabilitata nell'app Impostazioni.
+
+  [Start/AllowPinnedFolderDownloads CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-allowpinnedfolderdownloads)
+
+- **Esplora file nel menu Start**: nasconde o mostra Esplora file nel menu Start di Windows. Le opzioni disponibili sono:
+  - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione. nessuna impostazione viene imposta. Gli utenti possono scegliere di mostrare o nascondere il collegamento.
+  - **Nascondi**: il collegamento viene nascosto e l'impostazione viene disabilitata nell'app Impostazioni.
+  - **Mostra**: il collegamento viene mostrato e l'impostazione viene disabilitata nell'app Impostazioni.
+
+  [Start/AllowPinnedFolderFileExplorer CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-allowpinnedfolderfileexplorer)
+
+- **HomeGroup nel menu Start**: nasconde o mostra il collegamento Gruppo Home nel menu Start di Windows. Le opzioni disponibili sono:
+  - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione. nessuna impostazione viene imposta. Gli utenti possono scegliere di mostrare o nascondere il collegamento.
+  - **Nascondi**: il collegamento viene nascosto e l'impostazione viene disabilitata nell'app Impostazioni.
+  - **Mostra**: il collegamento viene mostrato e l'impostazione viene disabilitata nell'app Impostazioni.
+
+  [Start/AllowPinnedFolderHomeGroup CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-allowpinnedfolderhomegroup)
+
+- **Musica nel menu Start**: nasconde o mostra la cartella Musica nel menu Start di Windows. Le opzioni disponibili sono:
+  - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione. nessuna impostazione viene imposta. Gli utenti possono scegliere di mostrare o nascondere il collegamento.
+  - **Nascondi**: il collegamento viene nascosto e l'impostazione viene disabilitata nell'app Impostazioni.
+  - **Mostra**: il collegamento viene mostrato e l'impostazione viene disabilitata nell'app Impostazioni.
+
+  [Start/AllowPinnedFolderMusic CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-allowpinnedfoldermusic)
+
+- **Rete nel menu Start**: nasconde o mostra Rete nel menu Start di Windows. Le opzioni disponibili sono:
+  - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione. nessuna impostazione viene imposta. Gli utenti possono scegliere di mostrare o nascondere il collegamento.
+  - **Nascondi**: il collegamento viene nascosto e l'impostazione viene disabilitata nell'app Impostazioni.
+  - **Mostra**: il collegamento viene mostrato e l'impostazione viene disabilitata nell'app Impostazioni.
+
+  [Start/AllowPinnedFolderNetwork CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-allowpinnedfoldernetwork)
+
+- **Cartella Personale nel menu Start**: nasconde o mostra la cartella Personale nel menu Start di Windows. Le opzioni disponibili sono:
+  - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione. nessuna impostazione viene imposta. Gli utenti possono scegliere di mostrare o nascondere il collegamento.
+  - **Nascondi**: il collegamento viene nascosto e l'impostazione viene disabilitata nell'app Impostazioni.
+  - **Mostra**: il collegamento viene mostrato e l'impostazione viene disabilitata nell'app Impostazioni.
+
+  [Start/AllowPinnedFolderPersonalFolder CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-allowpinnedfolderpersonalfolder)
+
+- **Immagini nel menu Start**: nasconde o mostra la cartella delle immagini nel menu Start di Windows. Le opzioni disponibili sono:
+  - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione. nessuna impostazione viene imposta. Gli utenti possono scegliere di mostrare o nascondere il collegamento.
+  - **Nascondi**: il collegamento viene nascosto e l'impostazione viene disabilitata nell'app Impostazioni.
+  - **Mostra**: il collegamento viene mostrato e l'impostazione viene disabilitata nell'app Impostazioni.
+
+  [Start/AllowPinnedFolderPictures CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-allowpinnedfolderpictures)
+
+- **Impostazioni nel menu Start**: nasconde o mostra il collegamento Impostazioni nel menu Start di Windows. Le opzioni disponibili sono:
+  - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione. nessuna impostazione viene imposta. Gli utenti possono scegliere di mostrare o nascondere il collegamento.
+  - **Nascondi**: il collegamento viene nascosto e l'impostazione viene disabilitata nell'app Impostazioni.
+  - **Mostra**: il collegamento viene mostrato e l'impostazione viene disabilitata nell'app Impostazioni.
+
+  [Start/AllowPinnedFolderSettings CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-allowpinnedfoldersettings)
+
+- **Video nel menu Start**: nasconde o mostra la cartella dei video nel menu Start di Windows. Le opzioni disponibili sono:
+  - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione. nessuna impostazione viene imposta. Gli utenti possono scegliere di mostrare o nascondere il collegamento.
+  - **Nascondi**: il collegamento viene nascosto e l'impostazione viene disabilitata nell'app Impostazioni.
+  - **Mostra**: il collegamento viene mostrato e l'impostazione viene disabilitata nell'app Impostazioni.
+
+  [Start/AllowPinnedFolderVideos CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-allowpinnedfoldervideos)
+
+## <a name="microsoft-defender-smartscreen"></a>Microsoft Defender SmartScreen
 
 - **SmartScreen per Microsoft Edge**: **Rendi obbligatorio** attiva Microsoft Defender SmartScreen e impedisce agli utenti di disattivarlo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo può attivare SmartScreen e consentire agli utenti di attivarlo e disattivarlo.
 
@@ -681,11 +862,11 @@ Queste impostazioni usano il [provider di servizi di configurazione per i criter
 
   [Provider di servizi di configurazione Browser/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
 
-- **Accesso a siti dannosi**: **Blocca** impedisce agli utenti di ignorare gli avvisi del filtro SmartScreen di Microsoft Defender e impedisce loro di passare al sito. **Non configurato** (impostazione predefinita) consente agli utenti di ignorare gli avvisi e di passare al sito.
+- **Accesso a siti dannosi**: **Blocca** impedisce agli utenti di ignorare gli avvisi del filtro SmartScreen di Microsoft Defender e impedisce loro di passare al sito. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di ignorare gli avvisi e di passare al sito.
 
   [Provider di servizi di configurazione Browser/PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
 
-- **Download di file non verificati**: **Blocca** impedisce agli utenti di ignorare gli avvisi del filtro SmartScreen di Microsoft Defender nonché di scaricare file non verificati. **Non configurato** (impostazione predefinita) consente agli utenti di ignorare gli avvisi e continuare a scaricare i file non verificati.
+- **Download di file non verificati**: **Blocca** impedisce agli utenti di ignorare gli avvisi del filtro SmartScreen di Microsoft Defender nonché di scaricare file non verificati. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di ignorare gli avvisi e continuare a scaricare i file non verificati.
 
   [Provider di servizi di configurazione Browser/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)
 
@@ -693,31 +874,55 @@ Queste impostazioni usano il [provider di servizi di configurazione per i criter
 
 Queste impostazioni usano il [provider di servizi di configurazione per i criteri relativi all'esperienza](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience), che elenca anche le edizioni di Windows supportate.
 
-- **Windows Spotlight**: **Blocca** disattiva Contenuti in evidenza di Windows nella schermata di blocco, Suggerimenti di Windows, le funzionalità per gli utenti consumer Microsoft e altre funzionalità correlate. Se l'obiettivo è ridurre al minimo il traffico di rete dai dispositivi, impostare **Blocca**. **Non configurato** (impostazione predefinita) consente le funzionalità di Windows Spotlight e può essere controllato dagli utenti finali. Quando questa impostazione è abilitata, è anche possibile consentire o bloccare le impostazioni seguenti:
+- **Windows Spotlight**: **Blocca** disattiva Contenuti in evidenza di Windows nella schermata di blocco, Suggerimenti di Windows, le funzionalità per gli utenti consumer Microsoft e altre funzionalità correlate. Se l'obiettivo è ridurre al minimo il traffico di rete dai dispositivi, selezionare **Sì**. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire le funzionalità di Windows Spotlight e potrebbe essere controllato dagli utenti.
 
-  - **Windows Spotlight nella schermata di blocco**: **Blocca** impedisce a Windows Spotlight di visualizzare informazioni nella schermata di blocco del dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
-  - **Suggerimenti di terze parti in Windows Spotlight**: **Blocca** impedisce a Windows Spotlight di suggerire contenuto non pubblicato da Microsoft. **Non configurata** (impostazione predefinita) consente i suggerimenti su app e contenuto di autori o distributori di software di terze parti nelle funzionalità di Windows Spotlight come Contenuti in evidenza di Windows nella schermata di blocco, le app suggerite nel menu Start e Suggerimenti di Windows.
+  [Experience/AllowWindowsSpotlight CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowwindowsspotlight)
+
+  Quando l'opzione è impostata su **Non configurato**, è anche possibile consentire o bloccare le impostazioni seguenti:
+
+  - **Windows Spotlight nella schermata di blocco**: **Blocca** impedisce a Windows Spotlight di visualizzare informazioni nella schermata di blocco del dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe mostrare le informazioni di Windows Spotlight nella schermata di blocco.
+
+    [Experience/ConfigureWindowsSpotlightOnLockScreen CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-configurewindowsspotlightonlockscreen)
+
+  - **Suggerimenti di terze parti in Windows Spotlight**: **Blocca** impedisce a Windows Spotlight di suggerire contenuto non pubblicato da Microsoft. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire i suggerimenti di app e contenuti dei partner e mostrare app consigliate nel menu Start e suggerimenti di Windows.
+
+    [Experience/AllowThirdPartySuggestionsInWindowsSpotlight CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowthirdpartysuggestionsinwindowsspotlight)
+
   - **Funzionalità consumer**: **Blocca** disattiva le esperienze solitamente riservate ai consumer, ad esempio i suggerimenti del menu Start, le notifiche sull'appartenenza, l'installazione di app post-OOBE e i riquadri di reindirizzamento. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
-  - **Suggerimenti di Windows**: **Blocca** disabilita i suggerimenti di Windows popup. L'impostazione **Non configurata** (predefinita) consente la visualizzazione dei Suggerimenti di Windows.
-  - **Centro notifiche di Windows Spotlight**: **Blocca** impedisce la visualizzazione di notifiche per Windows Spotlight nel centro notifiche. **Non configurato** (impostazione predefinita) può consentire la visualizzazione di notifiche nel centro notifiche che suggeriscono app o funzionalità che permettono agli utenti di migliorare la produttività in Windows.
-  - **Personalizzazione di Windows Spotlight**: **Blocca** impedisce a Windows di usare i dati di diagnostica per fornire esperienze personalizzate all'utente. **Non configurato** (impostazione predefinita) consente a Microsoft di usare dati di diagnostica per fornire consigli, suggerimenti e offerte personalizzati per adattare Windows alle esigenze dell'utente.
-  - **Esperienza di Configurazione e personalizzazione di Windows**: **Blocca** consente di disattivare la funzionalità dell'esperienza di Configurazione e personalizzazione di Windows per Windows Spotlight. L'esperienza di Configurazione e personalizzazione di Windows non verrà visualizzata in presenza di aggiornamenti e modifiche per Windows e le relative app. **Non configurato** (impostazione predefinita) consente l'esperienza di Configurazione e personalizzazione di Windows, che visualizza le informazioni dell'utente su funzionalità nuove o aggiornate.
+
+    [Experience/AllowWindowsConsumerFeatures CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowwindowsconsumerfeatures)
+
+  - **Suggerimenti di Windows**: **Blocca** disabilita i suggerimenti di Windows popup. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire la visualizzazione dei suggerimenti di Windows.
+
+    [Experience/AllowWindowsTips CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowwindowstips)
+
+  - **Centro notifiche di Windows Spotlight**: **Blocca** impedisce la visualizzazione di notifiche per Windows Spotlight nel centro notifiche. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe mostrare notifiche nel centro notifiche che suggeriscono app o funzionalità che permettono agli utenti di migliorare la produttività in Windows.
+
+    [Experience/AllowWindowsSpotlightOnActionCenter CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowwindowsspotlightonactioncenter)
+
+  - **Personalizzazione di Windows Spotlight**: **Blocca** impedisce a Windows di usare i dati di diagnostica per fornire esperienze personalizzate agli utenti. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire a Microsoft di usare dati di diagnostica per fornire consigli, suggerimenti e offerte personalizzati per adattare Windows alle esigenze dell'utente.
+
+    [Experience/AllowTailoredExperiencesWithDiagnosticData CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowtailoredexperienceswithdiagnosticdata)
+
+  - **Esperienza di Configurazione e personalizzazione di Windows**: **Blocca** consente di disattivare la funzionalità dell'esperienza di Configurazione e personalizzazione di Windows per Windows Spotlight. L'esperienza di Configurazione e personalizzazione di Windows non verrà visualizzata in presenza di aggiornamenti e modifiche per Windows e le relative app. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'esperienza di Configurazione e personalizzazione di Windows che mostra agli utenti informazioni su funzionalità nuove o aggiornate.
+
+    [Experience/AllowWindowsSpotlightWindowsWelcomeExperience CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowwindowsspotlightwindowswelcomeexperience)
 
 ## <a name="microsoft-defender-antivirus"></a>Microsoft Defender Antivirus
 
 Queste impostazioni usano il [provider di servizi di configurazione per i criteri relativi a Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender), che elenca anche le edizioni di Windows supportate.
 
-- **Monitoraggio in tempo reale**: **Abilita** attiva l'analisi in tempo reale di malware, spyware e altro software indesiderato. Questa opzione non può essere disattivata dagli utenti. 
+- **Monitoraggio in tempo reale**: **Abilita** attiva l'analisi in tempo reale di malware, spyware e altro software indesiderato. Questa opzione non può essere disattivata dagli utenti. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo attiva questa funzionalità e consente agli utenti di modificarla.
 
-  Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Se l'impostazione viene abilitata e quindi impostata nuovamente su **Non configurato**, Intune lascia l'impostazione nello stato configurato in precedenza. Per impostazione predefinita, il sistema operativo attiva questa funzionalità e consente agli utenti di modificarla.
+  Se questa impostazione viene abilitata e quindi impostata nuovamente su **Non configurato**, Intune lascia l'impostazione nello stato configurato in precedenza.
 
   Intune non disattiva questa funzionalità. Per disabilitarla, usare un URI personalizzato.
 
   [Provider di servizi di configurazione Defender/AllowRealtimeMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
-- **Monitoraggio del comportamento**: **Abilita** attiva il monitoraggio del comportamento e controlla la presenza di modelli noti di attività sospette nei dispositivi. Gli utenti non possono disattivare il monitoraggio del comportamento. 
+- **Monitoraggio del comportamento**: **Abilita** attiva il monitoraggio del comportamento e controlla la presenza di modelli noti di attività sospette nei dispositivi. Gli utenti non possono disattivare il monitoraggio del comportamento. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe attivare il monitoraggio del comportamento e consentire agli utenti di modificare l'impostazione.
 
-  Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Se l'impostazione viene abilitata e quindi impostata nuovamente su **Non configurato**, Intune lascia l'impostazione nello stato configurato in precedenza. Per impostazione predefinita, il sistema operativo attiva il monitoraggio del comportamento e consente agli utenti di modificare l'impostazione.
+  Se l'impostazione viene abilitata e quindi impostata nuovamente su **Non configurato**, Intune lascia l'impostazione nello stato configurato in precedenza.
 
   Intune non disattiva questa funzionalità. Per disabilitarla, usare un URI personalizzato.
 
@@ -725,37 +930,39 @@ Queste impostazioni usano il [provider di servizi di configurazione per i criter
 
 - **Network Inspection System (NIS)** : consente di proteggere i dispositivi da exploit basati sulla rete. Usa le firme delle vulnerabilità note da Microsoft Endpoint Protection Center per consentire di rilevare e bloccare il traffico dannoso.
 
-  **Abilita** attiva la protezione di rete e il blocco della rete. Questa opzione non può essere disattivata dagli utenti. Quando questa funzionalità è abilitata, agli utenti viene impedito di connettersi a vulnerabilità note.
+  - **Abilita**: attiva la protezione di rete e il blocco della rete. Questa opzione non può essere disattivata dagli utenti. Quando questa funzionalità è abilitata, agli utenti viene impedito di connettersi a vulnerabilità note.
 
-  Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Se l'impostazione viene abilitata e quindi impostata nuovamente su **Non configurato**, Intune lascia l'impostazione nello stato configurato in precedenza. Per impostazione predefinita, il sistema operativo attiva NIS e consente agli utenti di modificare l'impostazione.
+  - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo attiva NIS e consente agli utenti di modificare l'impostazione.
+
+  Se l'impostazione viene abilitata e quindi impostata nuovamente su **Non configurato**, Intune lascia l'impostazione nello stato configurato in precedenza.
 
   Intune non disattiva questa funzionalità. Per disabilitarla, usare un URI personalizzato.
 
   [Provider di servizi di configurazione Defender/EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
 
-- **Analizza tutti i download**: **Abilita** attiva questa impostazione e Defender analizza tutti i file scaricati da Internet. Gli utenti non possono disattivare questa impostazione. 
+- **Analizza tutti i download**: **Abilita** attiva questa impostazione e Defender analizza tutti i file scaricati da Internet. Gli utenti non possono disattivare questa impostazione. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe attivare questa impostazione e consentire agli utenti di modificarla.
 
-  Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Se l'impostazione viene abilitata e quindi impostata nuovamente su **Non configurato**, Intune lascia l'impostazione nello stato configurato in precedenza. Per impostazione predefinita, il sistema operativo attiva questa impostazione e consente agli utenti di modificarla.
+  Se l'impostazione viene abilitata e quindi impostata nuovamente su **Non configurato**, Intune lascia l'impostazione nello stato configurato in precedenza.
 
   Intune non disattiva questa funzionalità. Per disabilitarla, usare un URI personalizzato.
 
   [Provider di servizi di configurazione Defender/AllowIOAVProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowioavprotection)
 
-- **Analizza gli script caricati nei Web browser Microsoft**: **Abilita** consente a Defender di analizzare gli script usati in Internet Explorer. Gli utenti non possono disattivare questa impostazione. 
+- **Analizza gli script caricati nei Web browser Microsoft**: **Abilita** consente a Defender di analizzare gli script usati in Internet Explorer. Gli utenti non possono disattivare questa impostazione. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe attivare questa impostazione e consentire agli utenti di modificarla.
 
-  Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Se l'impostazione viene abilitata e quindi impostata nuovamente su **Non configurato**, Intune lascia l'impostazione nello stato configurato in precedenza. Per impostazione predefinita, il sistema operativo attiva questa impostazione e consente agli utenti di modificarla.
+  Se l'impostazione viene abilitata e quindi impostata nuovamente su **Non configurato**, Intune lascia l'impostazione nello stato configurato in precedenza.
 
   Intune non disattiva questa funzionalità. Per disabilitarla, usare un URI personalizzato.
 
   [Provider di servizi di configurazione Defender/AllowScriptScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscriptscanning)
 
-- **Accesso dell'utente finale a Defender**: **Blocca** nasconde l'interfaccia utente di Microsoft Defender agli utenti finali. Vengono anche eliminate tutte le notifiche di Microsoft Defender.
+- **Accesso dell'utente finale a Defender**: **Blocca** nasconde l'interfaccia utente di Microsoft Defender agli utenti. Vengono anche eliminate tutte le notifiche di Microsoft Defender. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe concedere l'accesso utente all'interfaccia utente di Microsoft Defender e consentire agli utenti di modificare l'impostazione.
 
-  Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Se l'impostazione viene bloccata e quindi impostata nuovamente su **Non configurato**, Intune lascia l'impostazione nello stato configurato in precedenza. Per impostazione predefinita, il sistema operativo concede l'accesso utente all'interfaccia utente di Microsoft Defender e consente agli utenti di modificare l'impostazione.
+  Se l'impostazione viene bloccata e quindi impostata nuovamente su **Non configurato**, Intune lascia l'impostazione nello stato configurato in precedenza.
 
   Intune non disattiva questa funzionalità. Per disabilitarla, usare un URI personalizzato.
 
-  Quando questa impostazione viene modificata, ha effetto dal successivo avvio del PC dell'utente finale.
+  Quando questa impostazione viene modificata, le modifiche diventano effettive a partire dal successivo riavvio del dispositivo.
 
   [Provider di servizi di configurazione Defender/AllowUserUIAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowuseruiaccess)
 
@@ -777,30 +984,34 @@ Queste impostazioni usano il [provider di servizi di configurazione per i criter
 
   [Provider di servizi di configurazione Defender/RealTimeScanDirection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-realtimescandirection)
 
-- **Giorni di attesa prima dell'eliminazione di malware in quarantena**: continua a monitorare il malware risolto per il numero di giorni immesso, in modo che sia possibile controllare manualmente i dispositivi colpiti in precedenza. Se si imposta il numero di giorni su `0`, il malware rimane nella cartella della quarantena e non viene rimosso automaticamente. Con l'impostazione `90` gli elementi in quarantena vengono archiviati per 90 giorni nel sistema e quindi rimossi.
+- **Giorni di attesa prima dell'eliminazione di malware in quarantena**: continua a monitorare il malware risolto per il numero di giorni immesso, in modo che sia possibile controllare manualmente i dispositivi colpiti in precedenza. 
+
+  Se questa impostazione non viene configurata o viene impostata su `0` giorni, il malware rimane nella cartella di quarantena e non viene rimosso automaticamente. Con l'impostazione `90` gli elementi in quarantena vengono archiviati per 90 giorni nel sistema e quindi rimossi.
 
   [Provider di servizi di configurazione Defender/DaysToRetainCleanedMalware](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-daystoretaincleanedmalware)
 
-- **Limite di utilizzo della CPU durante un'analisi**: consente di limitare la quantità di CPU che le analisi possono usare (da `0` a `100`).
-- **Analizza file di archivio**: **Abilita** attiva Defender in modo da analizzare i file di archivio, ad esempio file ZIP o CAB. Gli utenti non possono disattivare questa impostazione.
+- **Limite di utilizzo della CPU durante un'analisi**: consente di limitare la quantità di CPU che le analisi possono usare (da `0` a `100`%). Per impostazione predefinita, il sistema operativo potrebbe impostare il valore su 50%.
+- **Analizza file di archivio**: **Abilita** attiva Defender in modo da analizzare i file di archivio, ad esempio file ZIP o CAB. Gli utenti non possono disattivare questa impostazione. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe attivare questa analisi e consentire agli utenti di modificarla.
 
-  Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Se l'impostazione viene abilitata e quindi impostata nuovamente su **Non configurato**, Intune lascia l'impostazione nello stato configurato in precedenza. Per impostazione predefinita, il sistema operativo attiva questa analisi e consente agli utenti di modificare l'impostazione.
+  Se l'impostazione viene abilitata e quindi impostata nuovamente su **Non configurato**, Intune lascia l'impostazione nello stato configurato in precedenza.
 
   Intune non disattiva questa funzionalità. Per disabilitarla, usare un URI personalizzato.
 
   [Provider di servizi di configurazione Defender/AllowArchiveScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning)
 
-- **Analizza i messaggi di posta in arrivo**: **Abilita** consente a Defender di analizzare i messaggi di posta elettronica non appena arrivano nel dispositivo. Quando questa opzione è abilitata, il motore analizza la cassetta postale e i file di posta elettronica per esaminare il corpo dei messaggi e gli allegati. È possibile analizzare i formati pst (Outlook), dbx, mbx, MIME (Outlook Express) e BinHex (Mac).
+- **Analizza i messaggi di posta in arrivo**: **Abilita** consente a Defender di analizzare i messaggi di posta elettronica non appena arrivano nei dispositivi. Quando questa opzione è abilitata, il motore analizza la cassetta postale e i file di posta elettronica per esaminare il corpo dei messaggi e gli allegati. È possibile analizzare i formati .pst (Outlook), .dbx, .mbx, MIME (Outlook Express) e BinHex (Mac).
 
-  Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Se l'impostazione viene abilitata e quindi impostata nuovamente su **Non configurato**, Intune lascia l'impostazione nello stato configurato in precedenza. Per impostazione predefinita, il sistema operativo disattiva questa analisi e consente agli utenti di modificare l'impostazione.
+  Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo disattiva questa analisi e consente agli utenti di modificare l'impostazione.
+
+  Se l'impostazione viene abilitata e quindi impostata nuovamente su **Non configurato**, Intune lascia l'impostazione nello stato configurato in precedenza.
 
   Intune non disattiva questa funzionalità. Per disabilitarla, usare un URI personalizzato.
 
   [Provider di servizi di configurazione Defender/AllowEmailScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowemailscanning)
 
-- **Analizza le unità rimovibili durante un'analisi completa**: **Abilita** attiva le analisi delle unità rimovibili da parte di Defender durante un'analisi completa. Gli utenti non possono disattivare questa impostazione.
+- **Analizza le unità rimovibili durante un'analisi completa**: **Abilita** attiva le analisi delle unità rimovibili da parte di Defender durante un'analisi completa. Gli utenti non possono disattivare questa impostazione. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire a Defender di analizzare le unità rimovibili come le chiavette USB e consentire agli utenti di modificare questa impostazione.
 
-  Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Se l'impostazione viene abilitata e quindi impostata nuovamente su **Non configurato**, Intune lascia l'impostazione nello stato configurato in precedenza. Per impostazione predefinita, il sistema operativo consente a Defender di analizzare le unità rimovibili, come le chiavette USB, e consente agli utenti di modificare questa impostazione.
+  Se l'impostazione viene abilitata e quindi impostata nuovamente su **Non configurato**, Intune lascia l'impostazione nello stato configurato in precedenza.
 
   Durante un'analisi veloce, le unità rimovibili possono comunque essere analizzate.
 
@@ -810,7 +1021,9 @@ Queste impostazioni usano il [provider di servizi di configurazione per i criter
 
 - **Analizza le unità di rete mappate durante un'analisi completa**: con **Abilita** Defender analizza i file nelle unità di rete mappate. Se i file nell'unità sono di sola lettura, Defender non può rimuovere il malware rilevato in tali file. Gli utenti non possono disattivare questa impostazione.
 
-  Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Se l'impostazione viene abilitata e quindi impostata nuovamente su **Non configurato**, Intune lascia l'impostazione nello stato configurato in precedenza. Per impostazione predefinita, il sistema operativo attiva questa funzionalità e consente agli utenti di modificarla.
+  Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo attiva questa funzionalità e consente agli utenti di modificarla.
+
+  Se l'impostazione viene abilitata e quindi impostata nuovamente su **Non configurato**, Intune lascia l'impostazione nello stato configurato in precedenza. 
 
   Durante un'analisi veloce, le unità di rete mappate possono comunque essere analizzate.
 
@@ -820,7 +1033,9 @@ Queste impostazioni usano il [provider di servizi di configurazione per i criter
 
 - **Analizza file aperti da cartelle di rete**: **Abilita** consente a Defender di analizzare i file aperti da cartelle di rete o unità di rete condivise, ad esempio i file a cui si accede da un percorso UNC. Gli utenti non possono disattivare questa impostazione. Se i file nell'unità sono di sola lettura, Defender non può rimuovere il malware rilevato in tali file.
 
-  Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Se l'impostazione viene abilitata e quindi impostata nuovamente su **Non configurato**, Intune lascia l'impostazione nello stato configurato in precedenza. Per impostazione predefinita, il sistema operativo analizza i file aperti da cartelle di rete e consente agli utenti di modificare l'impostazione.
+  Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo analizza i file aperti da cartelle di rete e consente agli utenti di modificare l'impostazione.
+
+  Se l'impostazione viene abilitata e quindi impostata nuovamente su **Non configurato**, Intune lascia l'impostazione nello stato configurato in precedenza.
 
   Intune non disattiva questa funzionalità. Per disabilitarla, usare un URI personalizzato.
 
@@ -828,7 +1043,9 @@ Queste impostazioni usano il [provider di servizi di configurazione per i criter
 
 - **Consenti protezione cloud**: **Abilita** attiva Microsoft Active Protection Service per ricevere informazioni sull'attività del malware dai dispositivi gestiti. Gli utenti non possono modificare questa impostazione. 
 
-  Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Se l'impostazione viene abilitata e quindi impostata nuovamente su **Non configurato**, Intune lascia l'impostazione nello stato configurato in precedenza. Per impostazione predefinita, il sistema operativo consente a Microsoft Active Protection Service di ricevere informazioni e consente agli utenti di modificare questa impostazione.
+  Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo consente a Microsoft Active Protection Service di ricevere informazioni e consente agli utenti di modificare questa impostazione.
+
+  Se l'impostazione viene abilitata e quindi impostata nuovamente su **Non configurato**, Intune lascia l'impostazione nello stato configurato in precedenza.
 
   Intune non disattiva questa funzionalità. Per disabilitarla, usare un URI personalizzato.
 
@@ -844,13 +1061,15 @@ Queste impostazioni usano il [provider di servizi di configurazione per i criter
 
   [Provider di servizi di configurazione Defender/SubmitSamplesConsent](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent)
 
-- **Ora di esecuzione di un'analisi veloce giornaliera**: scegliere l'ora per eseguire un'analisi veloce giornaliera. Se **Non configurata**, l'analisi giornaliera non viene eseguita. Per un'ulteriore personalizzazione, configurare l'impostazione **Tipo di analisi di sistema da eseguire**.
+- **Ora di esecuzione di un'analisi veloce giornaliera**: scegliere l'ora per eseguire un'analisi veloce giornaliera. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe eseguire questa analisi alle 02:00.
+
+  Per una maggiore personalizzazione, configurare l'impostazione **Tipo di analisi di sistema da eseguire**.
 
   [CSP Defender/ScheduleQuickScanTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulequickscantime)
 
 - **Tipo di analisi di sistema da eseguire**: consente di pianificare un'analisi di sistema, inclusi il livello di analisi e il giorno e l'ora in cui eseguire l'analisi. Le opzioni disponibili sono:
-  - **Non configurata**: l'analisi di sistema non è pianificata nel dispositivo. Gli utenti finali possono eseguire manualmente le analisi nei dispositivi in base alle proprie esigenze.
-  - **Disabilita**: disabilita qualsiasi analisi di sistema nel dispositivo. Scegliere questa opzione se si usa una soluzione antivirus partner che analizza i dispositivi.
+  - **Non configurata**: Intune non modifica o aggiorna questa impostazione. nessuna impostazione viene imposta. Gli utenti possono eseguire manualmente le analisi nei dispositivi in base alle proprie esigenze.
+  - **Disabilita**: disabilita qualsiasi analisi di sistema nei dispositivi. Scegliere questa opzione se si usa una soluzione antivirus partner che analizza i dispositivi.
   - **Analisi veloce**: esamina i percorsi comuni in cui potrebbe essere presente malware registrato, ad esempio chiavi del Registro di sistema e cartelle di avvio di Windows note.
     - **Giorno pianificato**: scegliere il giorno in cui eseguire l'analisi.
     - **Ora pianificata**: scegliere l'ora in cui eseguire l'analisi.
@@ -873,10 +1092,11 @@ Queste impostazioni usano il [provider di servizi di configurazione per i criter
   [CSP Defender/ScheduleScanDay](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)  
   [CSP Defender/ScheduleScanTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescantime)
 
-- **Rileva applicazioni potenzialmente indesiderate**: scegliere il livello di protezione quando Windows rileva applicazioni potenzialmente indesiderate. Le opzioni disponibili sono:
-  - **Non configurato** (impostazione predefinita): la protezione di Microsoft Defender per le applicazioni potenzialmente indesiderate è disabilitata.
-  - **Blocca**: Microsoft Defender rileva applicazioni potenzialmente indesiderate e gli elementi rilevati vengono bloccati. Questi elementi compaiono nella cronologia insieme alle altre minacce.
-  - **Controllo**: Microsoft Defender rileva le applicazioni potenzialmente indesiderate, ma non esegue alcuna azione. È possibile esaminare le informazioni sulle applicazioni per le quali Microsoft Defender interverrebbe. Ad esempio, cercare gli eventi creati da Microsoft Defender nel Visualizzatore eventi.
+- **Rileva applicazioni potenzialmente indesiderate**: Questa funzionalità identifica e impedisce il download e l'installazione nella rete di applicazioni potenzialmente indesiderate (PUA). Queste applicazioni non sono considerate virus, malware o altri tipi di minacce. Tuttavia, possono eseguire azioni sugli endpoint e influire sulle prestazioni o sull'utilizzo. Scegliere il livello di protezione quando Windows rileva le PUA. Le opzioni disponibili sono:
+
+  - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, Microsoft Defender potrebbe disabilitare questa funzionalità.
+  - **Blocca**: Microsoft Defender rileva le PUA e gli elementi rilevati vengono bloccati. Questi elementi compaiono nella cronologia insieme alle altre minacce.
+  - **Controllo**: Microsoft Defender rileva le PUA ma non esegue alcuna azione. È possibile esaminare le informazioni sulle applicazioni per le quali Microsoft Defender interverrebbe. Ad esempio, cercare gli eventi creati da Microsoft Defender nel Visualizzatore eventi.
 
   Per altre informazioni sulle app potenzialmente indesiderate, vedere [Rilevare e bloccare le applicazioni potenzialmente indesiderate](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus).
 
@@ -884,15 +1104,17 @@ Queste impostazioni usano il [provider di servizi di configurazione per i criter
 
 - **Invia il consenso per i campioni**: attualmente questa impostazione non ha alcun effetto. Non usare questa impostazione. Potrebbe essere rimossa in una delle prossime versioni.
 
-- **Protezione sempre attiva**: **Blocca** impedisce l'analisi dei file aperti o scaricati. Questa opzione non può essere attivata dagli utenti.
+- **Protezione sempre attiva**: **Blocca** impedisce l'analisi dei file aperti o scaricati. Questa opzione non può essere attivata dagli utenti. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe abilitare questa funzionalità e consentire agli utenti di modificarla.
 
-  Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Se l'impostazione viene bloccata e quindi impostata nuovamente su **Non configurato**, Intune lascia l'impostazione nello stato configurato in precedenza del sistema operativo. Per impostazione predefinita, il sistema operativo abilita questa funzionalità e consente agli utenti di modificarla.
+  Se l'impostazione viene bloccata e quindi impostata nuovamente su **Non configurato**, Intune lascia l'impostazione nello stato configurato in precedenza del sistema operativo.
 
   Intune non attiva questa funzionalità. Per abilitarla, usare un URI personalizzato.
 
   [CSP Defender/AllowOnAccessProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowonaccessprotection)
 
-- **Azioni per le minacce malware rilevate**: scegliere il modo in cui si vogliono gestire le minacce malware. **Non configurato** (impostazione predefinita) consente a Microsoft Defender di scegliere l'opzione migliore. Quando è impostato su **Abilita**, scegliere le azioni che Defender deve eseguire a seconda del livello di minaccia rilevato (Basso, Moderato, Alto o Grave). Le opzioni disponibili sono:
+- **Azioni per le minacce malware rilevate**: selezionare **Abilita** per scegliere le azioni che Defender deve eseguire a seconda del livello di minaccia rilevato: basso, moderato, alto o grave. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire a Microsoft Defender di scegliere l'opzione migliore.
+
+  Quando l'opzione è impostata su **Abilita**, selezionare l'azione:
   
   - **Pulisci**
   - **Quarantena**
@@ -901,7 +1123,7 @@ Queste impostazioni usano il [provider di servizi di configurazione per i criter
   - **Definito dall'utente**
   - **Bloccato**
 
-  Se l'azione non è possibile, Microsoft Defender sceglie l'opzione migliore per assicurare che la minaccia venga corretta. 
+  Se l'azione non è possibile, Microsoft Defender sceglie l'opzione migliore per assicurare che la minaccia venga corretta.
 
   [Provider di servizi di configurazione Defender/ThreatSeverityDefaultAction](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-threatseveritydefaultaction)
 
@@ -918,15 +1140,19 @@ Queste impostazioni usano il [provider di servizi di configurazione per i criter
 
 ## <a name="power-settings"></a>Impostazioni di risparmio energia
 
+Queste impostazioni usano il [provider di servizi di configurazione per i criteri di risparmio di energia](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power), che elenca anche le edizioni di Windows supportate.
+
 ### <a name="battery"></a>Batteria
 
-- **Livello di batteria per l'attivazione del risparmio energia**: quando il dispositivo usa l'alimentazione a batteria, immettere il livello di carica della batteria per attivare il risparmio energia (da 0 a 100). Immettere un valore percentuale che indica il livello di carica della batteria. Il valore predefinito è 70%. Quando è impostato su 70%, il risparmio energia si attiva quando la batteria ha una carica disponibile uguale o inferiore al 70%.
+- **Livello di batteria per l'attivazione del risparmio energia**: quando il dispositivo usa l'alimentazione a batteria, immettere il livello di carica della batteria per attivare il risparmio energia (da 0 a 100). Immettere un valore percentuale che indica il livello di carica della batteria. Ad esempio, quando è impostato su `80`, il risparmio di energia si attiva quando la batteria ha una carica disponibile uguale o inferiore all'80%.
+
+  Se non viene inserito un valore, Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe impostare il valore su 70%.
 
   [Provider di servizi di configurazione Power/EnergySaverBatteryThresholdOnBattery](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-energysaverbatterythresholdonbattery)
 
 - **Chiusura coperchio (solo computer portatili)** : quando il dispositivo usa l'alimentazione a batteria, scegliere cosa accade quando si chiude il coperchio. Le opzioni disponibili sono:
 
-  - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione.
+  - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di controllare questa impostazione.
   - **Nessuna azione**: il dispositivo rimane acceso e continua a usare l'alimentazione a batteria.
   - **Sospendi**: il dispositivo passa alla modalità sospensione e usa una carica della batteria minima. Il computer è ancora acceso e le app e i file aperti vengono archiviati nella memoria ad accesso casuale (RAM).
   - **Iberna**: il dispositivo passa alla modalità ibernazione. Le app e i file aperti vengono archiviati nel disco rigido e il dispositivo si spegne.
@@ -936,7 +1162,7 @@ Queste impostazioni usano il [provider di servizi di configurazione per i criter
 
 - **Pulsante di alimentazione**: quando il dispositivo usa l'alimentazione a batteria, scegliere cosa accade quando si seleziona il pulsante di alimentazione. Le opzioni disponibili sono:
 
-  - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione.
+  - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di controllare questa impostazione.
   - **Nessuna azione**: il dispositivo rimane acceso e continua a usare l'alimentazione a batteria.
   - **Sospendi**: il dispositivo passa alla modalità sospensione e usa una carica della batteria minima. Il computer è ancora acceso e le app e i file aperti vengono archiviati nella memoria ad accesso casuale (RAM).
   - **Iberna**: il dispositivo passa alla modalità ibernazione. Le app e i file aperti vengono archiviati nel disco rigido e il dispositivo si spegne.
@@ -946,7 +1172,7 @@ Queste impostazioni usano il [provider di servizi di configurazione per i criter
 
 - **Pulsante Sospendi**: quando il dispositivo usa l'alimentazione a batteria, scegliere cosa accade quando si seleziona il pulsante Sospendi. Le opzioni disponibili sono:
 
-  - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione.
+  - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di controllare questa impostazione.
   - **Nessuna azione**: il dispositivo rimane acceso e continua a usare l'alimentazione a batteria.
   - **Sospendi**: il dispositivo passa alla modalità sospensione e usa una carica della batteria minima. Il computer è ancora acceso e le app e i file aperti vengono archiviati nella memoria ad accesso casuale (RAM).
   - **Iberna**: il dispositivo passa alla modalità ibernazione. Le app e i file aperti vengono archiviati nel disco rigido e il dispositivo si spegne.
@@ -954,13 +1180,19 @@ Queste impostazioni usano il [provider di servizi di configurazione per i criter
 
   [Provider di servizi di configurazione Power/SelectSleepButtonActionOnBattery](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectsleepbuttonactiononbattery)
 
-- **Sospensione ibrida**: quando il dispositivo usa l'alimentazione a batteria, **Disabilita** impedisce al dispositivo di passare alla modalità sospensione ibrida. In modalità sospensione ibrida le app e i file aperti vengono archiviati nella memoria ad accesso casuale (RAM) e sul disco rigido. Viene usata una carica della batteria minima. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
+- **Sospensione ibrida**: quando il dispositivo usa l'alimentazione a batteria, scegliere di abilitare o disabilitare la modalità di sospensione ibrida.
+
+  - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di controllare questa impostazione.
+  - **Abilita**: i dispositivi possono passare alla modalità sospensione ibrida. Le app e i file aperti vengono archiviati nella memoria ad accesso casuale (RAM) e sul disco rigido. Viene usata una carica della batteria minima.
+  - **Disabilita**: impedisce ai dispositivi di passare alla modalità di sospensione ibrida.
 
   [Provider di servizi di configurazione Power/TurnOffHybridSleepOnBattery](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-turnoffhybridsleeponbattery)
 
 ### <a name="pluggedin"></a>Alimentazione da rete elettrica
 
-- **Livello di batteria per l'attivazione del risparmio energia**: quando il dispositivo è alimentato da rete elettrica, immettere il livello di carica della batteria per attivare il risparmio energia (da 0 a 100). Immettere un valore percentuale che indica il livello di carica della batteria. Il valore predefinito è 70%. Quando è impostato su 70%, il risparmio energia si attiva quando la batteria ha una carica disponibile uguale o inferiore al 70%.
+- **Livello di batteria per l'attivazione del risparmio energia**: quando il dispositivo è alimentato da rete elettrica, immettere il livello di carica della batteria per attivare il risparmio energia (da 0 a 100). Immettere un valore percentuale che indica il livello di carica della batteria. Ad esempio, quando è impostato su `80`, il risparmio di energia si attiva quando la batteria ha una carica disponibile uguale o inferiore all'80%.
+
+  Se non viene inserito un valore, Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe impostare il valore su 70%.
 
   [Provider di servizi di configurazione Power/EnergySaverBatteryThresholdPluggedIn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-energysaverbatterythresholdpluggedin)
 
@@ -994,10 +1226,16 @@ Queste impostazioni usano il [provider di servizi di configurazione per i criter
 
   [Provider di servizi di configurazione Power/SelectSleepButtonActionPluggedIn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectsleepbuttonactionpluggedin)
 
-- **Sospensione ibrida**: quando il dispositivo è collegato alla rete elettrica, **Disabilita** impedisce al dispositivo di passare alla modalità sospensione ibrida. In modalità sospensione ibrida le app e i file aperti vengono archiviati nella memoria ad accesso casuale (RAM) e sul disco rigido. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
+- **Sospensione ibrida**: quando il dispositivo è collegato alla rete elettrica, scegliere di abilitare o disabilitare la modalità di sospensione ibrida.
+
+  - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di controllare questa impostazione.
+  - **Abilita**: i dispositivi possono passare alla modalità sospensione ibrida. Le app e i file aperti vengono archiviati nella memoria ad accesso casuale (RAM) e sul disco rigido.
+  - **Disabilita**: impedisce ai dispositivi di passare alla modalità di sospensione ibrida.
 
   [Provider di servizi di configurazione Power/TurnOffHybridSleepPluggedIn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-turnoffhybridsleeppluggedin)
 
 ## <a name="next-steps"></a>Passaggi successivi
 
 Per altri dettagli tecnici su ogni impostazione e sulle edizioni di Windows supportate, vedere [Windows 10 Policy CSP Reference](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider) (Informazioni di riferimento sul provider di servizi di configurazione Policy di Windows 10)
+
+[Assegnare il profilo](device-profile-assign.md) e [monitorarne lo stato](device-profile-monitor.md).

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c80bf57b195d7e97308ba423c9e5b53f7e29c74
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f0f242f336fadf9dd31641849462a5dd24c09e3f
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086461"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556354"
 ---
 # <a name="add-vpn-settings-on-windows-81-devices-in-microsoft-intune"></a>Aggiungere impostazioni VPN per i dispositivi Windows 8.1 in Microsoft Intune
 
@@ -30,21 +30,19 @@ A seconda delle impostazioni selezionate, non tutti i valori nell'elenco seguent
 
 ## <a name="before-you-begin"></a>Prima di iniziare
 
-[Creare un profilo di configurazione del dispositivo](vpn-settings-configure.md).
+[Creare un profilo di configurazione del dispositivo VPN di Windows 8.1](vpn-settings-configure.md).
 
 ## <a name="base-vpn-settings"></a>Impostazioni VPN di base
 
-- **Applica tutte le impostazioni solo a Windows 8.1**: configurare questa impostazione nel portale classico di Intune. Nell'interfaccia di amministrazione di Microsoft Endpoint Manager questa impostazione non può essere modificata. Con l'impostazione **Configurato**, tutte le impostazioni vengono applicate solo ai dispositivi Phone 8.1. Con l'impostazione **Non configurato**, queste impostazioni vengono applicate anche ai dispositivi Windows 10.
-- **Nome della connessione**: immettere un nome per la connessione. Questo nome viene visualizzato dagli utenti nel momento in cui esplorano l'elenco delle connessioni VPN disponibili nel dispositivo.
-- **Server**: aggiungere uno o più server VPN a cui si connettono i dispositivi.
-  - **Aggiungi**: apre la pagina **Aggiungi riga** in cui è possibile specificare le informazioni seguenti:
-    - **Descrizione**: specificare un nome descrittivo per il server come **Server VPN Contoso**.
-    - **Indirizzo IP o FQDN**: specificare l'indirizzo IP o il nome di dominio completo del server VPN a cui si connettono i dispositivi. Esempi: **192.168.1.1**, **vpn.contoso.com**.
-    - **Server predefinito**: abilita il server come server predefinito usato dai dispositivi per stabilire la connessione. Assicurarsi di impostare un solo server come predefinito.
-  - **Importa**: selezionare un file con valori delimitati da virgole con l'elenco di server nel formato: descrizione, indirizzo IP o FQDN, server predefinito. Scegliere **OK** per importare i server nell'elenco **Server**.
+- **Nome della connessione**: immettere un nome per la connessione. Questo nome viene visualizzato dagli utenti nel momento in cui esplorano l'elenco delle connessioni VPN disponibili nel dispositivo. Immettere ad esempio `Contoso VPN`.
+- **Server**: aggiungere uno o più server VPN a cui si connettono i dispositivi. Quando si aggiunge un server, si immettono le informazioni seguenti:
+  - **Descrizione**: immettere un nome descrittivo per il server, ad esempio **Server VPN Contoso**.
+  - **Indirizzo IP o FQDN**: Immettere l'indirizzo IP o il nome di dominio completo (FQDN) del server VPN a cui si connetteranno i dispositivi. Ad esempio, immettere `192.168.1.1` o `vpn.contoso.com`.
+  - **Server predefinito**: **True** imposta questo server come server predefinito usato dai dispositivi per stabilire la connessione. Impostare un solo server come server predefinito.
+  - **Importa**: Selezionare un file con valori delimitati da virgole con l'elenco di server nel formato: descrizione, indirizzo IP o FQDN, server predefinito. Scegliere **OK** per importare i server nell'elenco **Server**.
   - **Esporta**: esporta l'elenco dei server in un file con valori delimitati da virgole (CSV).
 
-- **Tipo di connessione**: Selezionare il tipo di connessione VPN dall'elenco di fornitori seguente:
+- **Tipo di connessione**: selezionare il tipo di connessione VPN. Le opzioni disponibili sono:
   - **Check Point Capsule VPN**
   - **SonicWall Mobile Connect**
   - **F5 Edge Client**
@@ -52,13 +50,13 @@ A seconda delle impostazioni selezionate, non tutti i valori nell'elenco seguent
 
 <!--- **Fingerprint** (Check Point Capsule VPN only): Specify a string (for example, "Contoso Fingerprint Code") that will be used to verify that the VPN server can be trusted. A fingerprint can be sent to the client so it knows to trust any server that presents the same fingerprint when connecting. If the device doesn't already have the fingerprint, it will prompt the user to trust the VPN server that they are connecting to while showing the fingerprint. (The user manually verifies the fingerprint and chooses **trust** to connect.) --->
 
-- **Gruppo o dominio di accesso** (solo SonicWall Mobile Connect): Specificare il nome del gruppo di accesso o di dominio a cui connettersi.
+- **Gruppo o dominio di accesso** (solo SonicWall Mobile Connect): Immettere il nome del gruppo di accesso o del dominio a cui connettersi.
 
-- **Ruolo** (solo Pulse Secure): Specificare il nome del ruolo utente che ha accesso a questa connessione. Un ruolo utente consente di definire le opzioni e le impostazioni personali, oltre ad abilitare o disabilitare alcune funzionalità di accesso.
+- **Ruolo** (solo Pulse Secure): Immettere il nome del ruolo utente che può accedere a questa connessione. Un ruolo utente consente di definire le opzioni e le impostazioni personali, oltre ad abilitare o disabilitare alcune funzionalità di accesso.
 
-- **Area di autenticazione** (solo Pulse Secure): Specificare il nome dell'area di autenticazione da usare. Un'area di autenticazione è un raggruppamento di risorse di autenticazione usate dal tipo di connessione Pulse Secure.
+- **Area di autenticazione** (solo Pulse Secure): Immettere il nome dell'area di autenticazione da usare. Un'area di autenticazione è un raggruppamento di risorse di autenticazione usate dal tipo di connessione Pulse Secure.
 
-- **XML personalizzato**: specificare i comandi XML personalizzati per la configurazione della connessione VPN.
+- **XML personalizzato**: immettere i comandi XML personalizzati per la configurazione della connessione VPN.
 
   **Esempio di Pulse Secure**:
 
@@ -90,15 +88,20 @@ A seconda delle impostazioni selezionate, non tutti i valori nell'elenco seguent
 
 ## <a name="proxy-settings"></a>Impostazioni proxy
 
-- **Rileva automaticamente impostazioni proxy**: Se il server VPN richiede un server proxy per la connessione, specificare se si desidera che i dispositivi rilevino automaticamente le impostazioni di connessione.
 - **Script di configurazione automatica**: consente di usare un file per configurare il server proxy. Immettere l'**URL server proxy** che contiene il file di configurazione. Immettere ad esempio `http://proxy.contoso.com`.
-- **Usa server proxy**: abilitare questa opzione se si vogliono immettere manualmente le impostazioni del server proxy.
-  - **Indirizzo**: immettere l'indirizzo del server proxy (ad esempio un indirizzo IP).
-  - **Numero porta**: immettere il numero di porta associato al server proxy.
-- **Ignora proxy per indirizzi locali**: selezionare questa opzione se il server VPN richiede un server proxy per la connessione e non si vuole usare il server proxy per gli indirizzi locali immessi.
+- **Indirizzo**: Immettere l'indirizzo del server proxy, ad esempio un indirizzo IP o `vpn.contoso.com`.
+- **Numero porta**: Immettere il numero della porta TCP usata dal server proxy.
+- **Rileva automaticamente impostazioni proxy**: Se il server VPN richiede un server proxy per la connessione, scegliere se si desidera che i dispositivi rilevino automaticamente le impostazioni di connessione. Le opzioni disponibili sono:
+  - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione.
+  - **Abilita**: Rilevare automaticamente le impostazioni di connessione.
+  - **Disabilita**: Non rilevare automaticamente le impostazioni di connessione.
+- **Ignora proxy per indirizzi locali**: Scegliere di usare il server proxy per gli indirizzi locali. Le opzioni disponibili sono:
+  - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione.
+  - **Abilita**: Non usare un server proxy per gli indirizzi locali.
+  - **Disabilita**: Usare un server proxy per gli indirizzi locali.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Il profilo è stato creato, ma non è ancora operativo. [Assegnare il profilo](device-profile-assign.md) e [monitorarne lo stato](device-profile-monitor.md).
+[Assegnare il profilo](device-profile-assign.md) e [monitorarne lo stato](device-profile-monitor.md).
 
 Configurare le impostazioni VPN nei dispositivi [Android](vpn-settings-android.md), [Android Enterprise](vpn-settings-android-enterprise.md), [macOS](vpn-settings-macos.md) e [Windows 10](vpn-settings-windows-10.md).

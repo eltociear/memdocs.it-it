@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/25/2020
-ms.topic: conceptual
+ms.date: 05/19/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 391fa20cf7ba53af649f9f614d9ca02c653c278b
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 5ed491fd379879369ead35ceb2c618def91d3e53
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079315"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83985932"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Distribuzione di app di Windows 10 con Microsoft Intune 
 
@@ -92,7 +92,9 @@ A seconda del tipo di app, è possibile installare app in un dispositivo Windows
 > [!NOTE]
 > Per le app Win32 compilate come app in Dual mode, l'amministratore deve scegliere se devono funzionare come app in modalità utente oppure in modalità computer per tutte le assegnazioni associate all'istanza attiva. Il contesto di distribuzione non può essere modificato per assegnazione.  
 
-Le app possono essere installate solo nel contesto di dispositivo se sono supportate dal dispositivo e dal tipo di app Intune. È possibile installare i tipi di app seguenti nel contesto di dispositivo e assegnare queste app a un gruppo di dispositivi:
+Le app possono essere installate solo nel contesto di dispositivo se sono supportate dal dispositivo e dal tipo di app Intune. Le installazioni nel contesto di dispositivo sono supportate su desktop Windows 10 e dispositivi Teams, ad esempio Surface Hub. Non sono supportate su dispositivi che eseguono Windows Holographic for Business, ad esempio Microsoft HoloLens.
+
+È possibile installare i tipi di app seguenti nel contesto di dispositivo e assegnare queste app a un gruppo di dispositivi:
 
 - App Win32
 - App Microsoft Store per le aziende con licenza online

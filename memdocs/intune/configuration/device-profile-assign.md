@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a05e36a2da42bf88e2d9d7e94a67e2d81b8f1271
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 08d53bd7ffedc2679fca675b88e021301d15fb62
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078278"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989030"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Assegnare profili utente e profili di dispositivo in Microsoft Intune
 
@@ -48,7 +48,7 @@ Assicurarsi di avere il ruolo appropriato per assegnare i profili. Per altre inf
 3. Selezionare il profilo che si vuole assegnare e quindi selezionare **Assegnazioni**.
 4. Scegliere **Includi** o **Escludi**, quindi selezionare i gruppi da includere o escludere. Quando si selezionano i gruppi, si sceglie un gruppo di Azure AD. Per selezionare più gruppi, tenere premuto **CTRL** e selezionare i gruppi.
 
-    ![Screenshot delle opzioni per includere o escludere i gruppi da un'assegnazione di profilo](./media/device-profile-assign/group-include-exclude.png)
+    :::image type="content" source="./media/device-profile-assign/group-include-exclude.png" alt-text="Screenshot delle opzioni per includere o escludere i gruppi da un'assegnazione di profilo in Microsoft Intune":::
 
 5. **Salvare** le modifiche.
 
@@ -109,7 +109,7 @@ Come procedura consigliata, creare e assegnare profili specifici per i gruppi di
 
 Quando si assegnano i profili, usare la tabella seguente per includere ed escludere i gruppi. Un segno di spunta indica che l'assegnazione è supportata.
 
-![Opzioni supportate per includere o escludere gruppi da un'assegnazione di profilo](./media/device-profile-assign/include-exclude-user-device-groups.png)
+:::image type="content" source="./media/device-profile-assign/include-exclude-user-device-groups.png" alt-text="Opzioni supportate per includere o escludere gruppi da un'assegnazione di profilo":::
 
 ### <a name="what-you-should-know"></a>Informazioni importanti
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 06/2/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e96199d9f525fa0dcbf7545d2c20b90a3a76b9cd
-ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
+ms.openlocfilehash: 8ee0603a96d7276e9e1ef0fb9bff60ac44a3ef84
+ms.sourcegitcommit: 64727a4b025a589e270842da39516c4c42563a34
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83401813"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84301385"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Risolvere problemi relativi a criteri e profili in Intune
 
@@ -37,7 +37,7 @@ Controllare lo [stato del tenant](../fundamentals/tenant-status.md) e verificare
 
 ## <a name="use-built-in-troubleshooting"></a>Usare la risoluzione dei problemi predefinita
 
-1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) selezionare **Risoluzione dei problemi e supporto**:
+1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) selezionare **Risoluzione dei problemi e supporto** > **Risoluzione dei problemi**:
 
     :::image type="content" source="./media/troubleshoot-policies-in-microsoft-intune/help-and-support-troubleshoot.png" alt-text="Nell'interfaccia di amministrazione di Gestione Endpoint e in Intune passare a Risoluzione dei problemi e supporto.":::
 
@@ -98,7 +98,7 @@ Controllare lo [stato del tenant](../fundamentals/tenant-status.md) e verificare
 
         **Collegamenti utili**: 
 
-        - [Modi per distribuire i criteri di conformità dei dispositivi](../protect/device-compliance-get-started.md#ways-to-deploy-device-compliance-policies)
+        - [Modi per distribuire i criteri di conformità dei dispositivi](../protect/device-compliance-get-started.md)
         - [Monitorare i criteri di conformità dei dispositivi](../protect/compliance-policy-monitor.md)
 
 ## <a name="youre-unsure-if-a-profile-is-correctly-applied"></a>Non si è sicuri che i criteri siano stati applicati correttamente
@@ -123,7 +123,7 @@ Controllare lo [stato del tenant](../fundamentals/tenant-status.md) e verificare
 
 - [Risoluzione dei problemi relativi ai criteri iOS/iPadOS o Android che non si applicano ai dispositivi](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-tip-Troubleshooting-iOS-or-Android-policies-not-applying/ba-p/280154) (apre un altro sito Microsoft)
 - [Risoluzione degli errori relativi ai criteri di Intune in Windows 10](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (apre un blog)
-- [Risolvere i problemi relativi alle impostazioni personalizzate CSP per Windows 10](https://support.microsoft.com/en-us/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (apre un altro sito Microsoft)
+- [Risolvere i problemi relativi alle impostazioni personalizzate CSP per Windows 10](https://support.microsoft.com/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (apre un altro sito Microsoft)
 - [Criteri di gruppo di Windows 10 e criteri MDM di Intune](https://blogs.technet.microsoft.com/cbernier/2018/04/02/windows-10-group-policy-vs-intune-mdm-policy-who-wins/) (apre un altro sito Microsoft)
 
 ## <a name="alert-saving-of-access-rules-to-exchange-has-failed"></a>Avviso: Il salvataggio delle regole di accesso in Exchange non è riuscito

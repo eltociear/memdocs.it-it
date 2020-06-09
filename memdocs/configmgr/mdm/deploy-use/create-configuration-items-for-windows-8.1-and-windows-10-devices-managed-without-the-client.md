@@ -10,12 +10,12 @@ ms.assetid: 23e1e4dc-623a-4521-ad04-ae9482927097
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8186b45a0b0c74840582052f9c585c0557180493
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: 1987ba504630ab1d4b23cdb54710f0cbaa3db28a
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724835"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506251"
 ---
 # <a name="create-configuration-items-for-windows-devices-with-on-premises-mdm-in-configuration-manager"></a>Creare elementi di configurazione per dispositivi Windows con MDM locale in Configuration Manager
 
@@ -89,7 +89,7 @@ Queste impostazioni sono solo per i dispositivi che eseguono Windows 10 e versio
 - **Numero di password memorizzate**: impedisce il riutilizzo delle password usate in precedenza.
 - **Numero di tentativi di accesso non riusciti prima**della cancellazione del dispositivo: se questo numero di tentativi di accesso ha esito negativo, MDM Cancella il dispositivo
 - **Tempo di inattività prima del blocco del dispositivo**: specificare la quantità di tempo per cui un dispositivo può rimanere inattivo prima che venga bloccato. Il dispositivo è inattivo quando non è presente alcun input da parte dell'utente.
-- **Complessità password**: scegliere se è possibile specificare un PIN numerico `1234`, ad esempio, o se è necessario fornire una password complessa.
+- **Complessità password**: scegliere se è possibile specificare un PIN numerico, ad esempio `1234` , o se è necessario fornire una password complessa.
   - **Numero di set di caratteri complessi richiesti nella password**: se la complessità della password è **elevata**, selezionare il numero di tipi di caratteri necessari per la password: lettere maiuscole, lettere minuscole, numeri o simboli. Per impostazione predefinita, questo valore è `2`.
 - **Invia PIN di ripristino password a Exchange Server**
 
@@ -136,7 +136,7 @@ Queste impostazioni sono solo per i dispositivi che eseguono Windows 10 e versio
 - **Acquisti in-app**: consentire o impedire agli utenti di effettuare acquisti in-app.
 - **Avvio dell'app originata dallo Store**: Disabilita tutte le app preinstallate nel dispositivo o installate dal Microsoft Store.
 - **Aggiorna automaticamente le app dallo Store**: consente o impedisce l'aggiornamento automatico delle app installate dal Microsoft Store.
-- **Installare le app nell'unità di sistema**: consentire o impedire al dispositivo di installare le app nell'unità di sistema, che `C:` in genere è l'unità.
+- **Installare le app nell'unità di sistema**: consentire o impedire al dispositivo di installare le app nell'unità di sistema, che in genere è l' `C:` unità.
 - **Installa i dati dell'app nel volume di sistema**: abilitare questa opzione per consentire alle app di archiviare i dati nell'unità di sistema.
 - **Usa solo lo store privato**: richiedere agli utenti di scaricare le app dallo Store privato.
 - **Gioco DVR**: Disabilita la registrazione e la trasmissione del gioco Windows
@@ -164,7 +164,7 @@ Queste impostazioni si riferiscono solo ai dispositivi che eseguono Windows 8.1 
 - **Livello di protezione per l'area siti attendibili**: impostare il livello di sicurezza per l'area siti attendibili: alta, medio-alta, media, medio-bassa o bassa.
 - **Livello di protezione per l'area siti con restrizioni**: impostare il livello di sicurezza per l'area siti con restrizioni: alto.
 - **Spazi dei nomi per l'area Intranet**: configurare i siti Web da aggiungere o rimuovere dall'area Intranet.
-- **Vai al sito Intranet per l'immissione di una singola parola**: Consenti o Impedisci a Internet Explorer di passare automaticamente a un sito Intranet se l'utente immette un nome di sito valido senza `https://`un protocollo precedente, ad esempio.
+- **Vai al sito Intranet per l'immissione di una singola parola**: Consenti o Impedisci a Internet Explorer di passare automaticamente a un sito Intranet se l'utente immette un nome di sito valido senza un protocollo precedente, ad esempio `https://` .
 - **Opzione di menu modalità Enterprise**: consente agli utenti di attivare e disattivare la modalità Enterprise dal menu **strumenti** di Internet Explorer.
   - **Percorso report di registrazione (URL)**: quando è attiva la modalità Enterprise, specificare un URL per registrare i siti Web visitati.
 - **Posizione elenco siti modalità Enterprise (URL)**: quando è attiva la modalità Enterprise, specificare l'elenco di siti Web che lo usano.
@@ -242,7 +242,7 @@ Queste impostazioni sono solo per i dispositivi che eseguono Windows 10 e versio
         - **WPA2**
         - **WPA2-PSK**
     - **Crittografia dei dati**: scegliere il metodo di crittografia usato dalla connessione. I valori disponibili cambiano in base al metodo di **autenticazione** selezionato:
-        - **Disattivata**
+        - **Disabilitato**
         - **WEP**
         - **TKIP**
         - **AES**
@@ -265,7 +265,7 @@ Selezionare **Importa**, quindi specificare i valori seguenti:
 - **Archivio di destinazione**: scegliere uno o più degli archivi certificati seguenti:
   - **Radice**
   - **CA**
-  - **Normale**
+  - **Normal**
   - **Con privilegi**
   - **SPC**
   - **Peer**
@@ -327,7 +327,7 @@ Queste impostazioni sono solo per i dispositivi che eseguono Windows 10 team.
 
 Per ulteriori informazioni su come configurare la protezione dei dati aziendali con Configuration Manager, vedere [proteggere i dati aziendali mediante Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
 
-### <a name="microsoft-edge"></a>Microsoft Edge
+### <a name="microsoft-edge-legacy"></a>Legacy Microsoft Edge
 
 Queste impostazioni sono solo per i dispositivi che eseguono Windows 10 e versioni successive.  
 
@@ -342,7 +342,7 @@ Queste impostazioni sono solo per i dispositivi che eseguono Windows 10 e versio
 - **Estensioni**: consentire o proibire estensioni di Edge.
 - **InPrivate Browsing**: consente o impedisce InPrivate Browsing, che non archivia cronologia o cookie.
 - **Indirizzo IP localhost WebRTC**: consente o impedisce la visualizzazione dell'indirizzo IP localhost del dispositivo quando l'utente effettua chiamate telefoniche tramite il protocollo Web RTC.
-- **Blocca l'accesso a about: Flags**: consente o impedisce all'utente di `about:flags` accedere alla pagina, che contiene le impostazioni sperimentali e di sviluppo.
+- **Blocca l'accesso a about: Flags**: consente o impedisce all'utente di accedere alla `about:flags` pagina, che contiene le impostazioni sperimentali e di sviluppo.
 - **Override del prompt SmartScreen per i file**: consente o impedisce all'utente di ignorare gli avvisi del filtro SmartScreen sul download di file potenzialmente dannosi.
 - **Override del prompt SmartScreen**: consente o impedisce all'utente di ignorare gli avvisi del filtro SmartScreen relativi a siti Web potenzialmente dannosi.
 - **Primo URL di esecuzione**: specificare un sito Web da visualizzare quando un utente apre la rete perimetrale per la prima volta.
@@ -376,7 +376,7 @@ Queste impostazioni sono solo per i dispositivi che eseguono Windows 10 e versio
 - **Rilevamento di applicazioni potenzialmente indesiderate**: protegge il dispositivo dal software in esecuzione Classificato da Defender come potenzialmente indesiderato. È possibile proteggersi da queste applicazioni in esecuzione o usare la modalità di controllo per segnalare quando un utente installa un'applicazione potenzialmente indesiderata.
 - **Esclusioni di file e cartelle**: aggiungere uno o più file e cartelle all'elenco esclusioni. Ad esempio, `C:\Path` o `%ProgramFiles%\Path\filename.exe`. Defender non include questi file e cartelle nelle analisi in tempo reale o pianificate.
 - **Esclusioni**di estensioni di file: aggiungere una o più estensioni di file all'elenco esclusioni. Ad esempio, `java` o `exe`. Defender non include alcun file con queste estensioni nelle analisi in tempo reale o pianificate.
-- **Esclusioni dei processi**: aggiungere processi specifici all'elenco esclusioni. Ad esempio: `C:\path\myproc.exe`. Questo tipo di esclusione supporta solo le estensioni seguenti `exe`: `com`, o `scr`. Defender non include questi processi nelle analisi in tempo reale o pianificate.
+- **Esclusioni dei processi**: aggiungere processi specifici all'elenco esclusioni. Ad esempio: `C:\path\myproc.exe`. Questo tipo di esclusione supporta solo le estensioni seguenti: `exe` , `com` o `scr` . Defender non include questi processi nelle analisi in tempo reale o pianificate.
 
 ### <a name="additional-settings"></a>Impostazioni aggiuntive
 

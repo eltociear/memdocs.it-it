@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 06/02/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91ca1e8a710e13e393af5bb3723ca1086e37887d
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: abd34733bd27ec150a92bf20cecbf7edc02c2bd6
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988596"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84331002"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Come creare e assegnare criteri di protezione delle app
 
@@ -35,13 +35,13 @@ Informazioni su come creare e assegnare criteri di protezione delle app di Micro
 
 I criteri di protezione delle app possono essere applicati in app eseguite su dispositivi gestiti o non gestiti da Intune. Per una descrizione più dettagliata del funzionamento dei criteri di protezione delle app e degli scenari supportati dai criteri di protezione delle app di Intune, vedere la [Panoramica dei criteri di protezione app](app-protection-policy.md).
 
-Le scelte disponibili sui criteri di protezione delle app (APP) consentono alle organizzazioni di adattare la protezione alle proprie esigenze specifiche. Per alcuni utenti potrebbe non essere semplice individuare le impostazioni dei criteri necessarie per implementare uno scenario completo. Per aiutare le organizzazioni a dare la priorità alla protezione avanzata degli endpoint di client mobili, Microsoft ha introdotto la tassonomia per il framework di protezione dei dati dell’APP per la gestione di app per dispositivi mobili iOS e Android.
+Le scelte disponibili sui criteri di protezione delle app (APP) consentono alle organizzazioni di adattare la protezione alle proprie esigenze specifiche. Per alcuni utenti potrebbe non essere semplice individuare le impostazioni dei criteri necessarie per implementare uno scenario completo. Per aiutare le organizzazioni a dare la priorità alla protezione avanzata degli endpoint di client mobili, Microsoft ha introdotto la tassonomia per il framework di protezione dei dati dell'APP per la gestione di dispositivi mobili iOS e Android.
 
-Il framework di protezione dei dati dell’APP è organizzato in tre livelli di configurazione distinti, ciascuno basato sul livello precedente:
+Il framework di protezione dei dati dell'APP è organizzato in tre livelli di configurazione distinti, ognuno dei quali si basa sul livello precedente:
 
-- **Protezione di base dei dati aziendali** (livello 1) garantisce che le app siano protette con un PIN e crittografate ed esegue operazioni di cancellazione selettiva. Per i dispositivi Android, questo livello convalida l'attestazione dei dispositivi Android. Si tratta di una configurazione a livello di voce che offre un controllo simile di protezione dei dati nei criteri della cassetta postale di Exchange Online e introduce l’IT e la popolazione degli utenti nell'APP.
-- **Protezione avanzata dei dati aziendali** (livello 2) introduce i meccanismi di protezione della perdita dei dati aziendali dell’APP e i requisiti minimi del sistema operativo. Questa configurazione è applicabile alla maggior parte degli utenti di dispositivi mobili che accedono ai dati aziendali o dell'istituto di istruzione.
-- **Protezione elevata dei dati aziendali** (livello 3) introduce meccanismi avanzati per la protezione dei dati, configurazione del PIN avanzata e Mobile Threat Defense dell’APP. Questa configurazione è utile per gli utenti che accedono a dati ad alto rischio.
+- **Protezione di base dei dati aziendali** (livello 1) garantisce che le app siano protette con un PIN e crittografate ed esegue operazioni di cancellazione selettiva. Per i dispositivi Android questo livello convalida l'attestazione dei dispositivi Android. Si tratta di una configurazione a livello di voce che offre un controllo simile di protezione dei dati nei criteri della cassetta postale di Exchange Online e introduce l'IT e la popolazione di utente nell'APP.
+- **Protezione avanzata dei dati aziendali** (livello 2) introduce i meccanismi di protezione della perdita dei dati aziendali dell'APP e i requisiti minimi del sistema operativo. Questa configurazione è applicabile alla maggior parte degli utenti di dispositivi mobili che accedono ai dati aziendali o dell'istituto di istruzione.
+- **Protezione elevata dei dati aziendali** (livello 3) introduce meccanismi avanzati per la protezione dei dati, configurazione del PIN avanzata e Mobile Threat Defense dell'APP. Questa configurazione è utile per gli utenti che accedono a dati ad alto rischio.
 
 Per visualizzare le raccomandazioni specifiche per ciascun livello di configurazione e le app minime che devono essere protette, consultare il [Framework di protezione dei dati con criteri di protezione delle app](app-protection-framework.md).
 
@@ -51,7 +51,7 @@ Per informazioni sull'aggiunta di app line-of-business (LOB) dell'organizzazione
 
 ## <a name="app-protection-policies-for-iosipados-and-android-apps"></a>Criteri di protezione delle app per app iOS/iPadOS e Android
 
-Quando si crea un criterio di protezione delle app per app iOS/iPadOS e Android, si segue un flusso di processo di Intune moderno che comporta la creazione di un nuovo criterio di protezione delle app.
+Quando si crea un criterio di protezione delle app per app iOS/iPadOS e Android, si segue un flusso di processo di Intune moderno che comporta la creazione di un nuovo criterio di protezione delle app. Per informazioni sulla creazione di criteri di protezione delle app per app Windows, vedere [Creare e distribuire i criteri di Windows Information Protection (WIP) con Intune](../apps/windows-information-protection-policy-create.md).
 
 ### <a name="create-an-iosipados-or-android-app-protection-policy"></a>Creare un criterio di protezione delle app iOS/iPadOS o Android
 

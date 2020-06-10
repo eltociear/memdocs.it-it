@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7244872fa888aaee164187e62a2355a94f793499
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4209c461877786000e01dd03e4e0dea9f76a6e84
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985190"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270957"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Impostare l'autorità di gestione dei dispositivi mobili
 
@@ -36,9 +36,9 @@ Le configurazioni possibili sono:
 
 - **Co-gestione di Intune**: integrazione della soluzione cloud di Intune con Configuration Manager per dispositivi Windows 10. Intune viene configurato tramite la console di Configuration Manager. [Configurare la registrazione automatica dei dispositivi in Intune](https://docs.microsoft.com/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune). 
 
-- **Gestione dei dispositivi mobili per Office 365**: integrazione di Office 365 con la soluzione cloud di Intune. Intune viene configurato dall'interfaccia di amministrazione di Microsoft 365. Include un sottoinsieme delle funzionalità disponibili con Intune autonomo. Vedere [Configurare Gestione di dispositivi mobili (MDM) in Office 365](https://support.office.com/en-us/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd).
+- **Gestione di dispositivi mobili (MDM) per Office 365** - Se il software MDM per Office 365 è attivato, verrà visualizzata l'autorità MDM impostata su "Office 365". Se si vuole iniziare a usare Intune, sarà necessario acquistare licenze di Intune.
 
-- **Coesistenza di Office 365 MDM** È possibile attivare e usare sia MDM per Office che Intune simultaneamente nel tenant e impostare l'autorità di gestione su Intune o MDM per Office per ogni utente per determinare quale servizio verrà usato per gestire i dispositivi registrati in MDM. L'autorità di gestione di ogni utente è definita in base alla licenza assegnata all’utente. Se l'utente ha solo una licenza per Microsoft 365 Basic o Standard, i dispositivi saranno gestiti da MDM per Office. Se, invece, dispone di una licenza che applica Intune, i dispositivi saranno gestiti da Intune. Se si aggiunge una licenza che applica Intune a un utente precedentemente gestito da MDM per Office, i dispositivi passeranno alla gestione di Intune. Assicurarsi di aver assegnato le configurazioni di Intune per la sostituzione di MDM per Office agli utenti prima di trasferirli su Intune. in caso contrario, i dispositivi perderanno la configurazione di MDM per Office e non riceveranno alcuna sostituzione da Intune.
+- **Coesistenza di Office 365 MDM** - È possibile aggiungere Intune al tenant se si usa già MDM per Office 365 e impostare l'autorità di gestione su Intune o MDM per Office 365 per ogni utente per determinare quale servizio verrà usato per gestire i dispositivi in MDM. L'autorità di gestione di ogni utente è definita in base alla licenza assegnata all’utente. Se l'utente ha solo una licenza per Microsoft 365 Basic o Standard, i dispositivi saranno gestiti da MDM per Office. Se, invece, dispone di una licenza che applica Intune, i dispositivi saranno gestiti da Intune. Se si aggiunge una licenza che applica Intune a un utente precedentemente gestito da MDM per Office, i dispositivi passeranno alla gestione di Intune. Assicurarsi di aver assegnato le configurazioni di Intune per la sostituzione di MDM per Office agli utenti prima di trasferirli su Intune. in caso contrario, i dispositivi perderanno la configurazione di MDM per Office e non riceveranno alcuna sostituzione da Intune.
 
 ## <a name="set-mdm-authority-to-intune"></a>Impostare l'autorità MDM su Intune
 

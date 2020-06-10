@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 06/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 20c552ff879574edc0ed497b5c99b45b8092918a
-ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
+ms.openlocfilehash: f469d9646fad3b247743b6017f0ecbc7917f2cdf
+ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83864896"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84311178"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Impostazioni dei dispositivi Windows 10 (e versioni successive) per consentire o limitare l'uso delle funzionalità tramite Intune
 
@@ -1095,7 +1095,8 @@ Queste impostazioni usano il [provider di servizi di configurazione per i criter
 - **Rileva applicazioni potenzialmente indesiderate**: Questa funzionalità identifica e impedisce il download e l'installazione nella rete di applicazioni potenzialmente indesiderate (PUA). Queste applicazioni non sono considerate virus, malware o altri tipi di minacce. Tuttavia, possono eseguire azioni sugli endpoint e influire sulle prestazioni o sull'utilizzo. Scegliere il livello di protezione quando Windows rileva le PUA. Le opzioni disponibili sono:
 
   - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, Microsoft Defender potrebbe disabilitare questa funzionalità.
-  - **Blocca**: Microsoft Defender rileva le PUA e gli elementi rilevati vengono bloccati. Questi elementi compaiono nella cronologia insieme alle altre minacce.
+  - **Off**: Protezione PUA disattivata.
+  - **Abilita**: Microsoft Defender rileva le PUA e gli elementi rilevati vengono bloccati. Questi elementi compaiono nella cronologia insieme alle altre minacce.
   - **Controllo**: Microsoft Defender rileva le PUA ma non esegue alcuna azione. È possibile esaminare le informazioni sulle applicazioni per le quali Microsoft Defender interverrebbe. Ad esempio, cercare gli eventi creati da Microsoft Defender nel Visualizzatore eventi.
 
   Per altre informazioni sulle app potenzialmente indesiderate, vedere [Rilevare e bloccare le applicazioni potenzialmente indesiderate](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus).

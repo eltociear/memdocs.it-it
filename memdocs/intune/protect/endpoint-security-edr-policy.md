@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/22/2020
+ms.date: 05/29/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: ac8f82396571a7ae39df43662000f9f3f17d0430
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: d0ba328f1976d0463c6be042dfd6f8a7570d6dac
+ms.sourcegitcommit: eb51bb38d484e8ef2ca3ae3c867561249fa413f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990872"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84206333"
 ---
 # <a name="endpoint-detection-and-response-policy-for-endpoint-security-in-intune"></a>Criteri per il rilevamento di endpoint e risposta per la sicurezza degli endpoint in Intune
 
@@ -39,13 +39,13 @@ I criteri EDR vengono distribuiti a gruppi di dispositivi in Azure Active Direct
 
 I criteri di sicurezza degli endpoint per EDR sono disponibili in *Gestione* nel nodo **Endpoint security** (Sicurezza degli endpoint) dell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-Visualizzare le [impostazioni per i profili di rilevamento di endpoint e risposta](../protect/endpoint-security-edr-profile-settings.md).
+Visualizzare le [impostazioni per i profili di rilevamento di endpoint e risposta](endpoint-security-edr-profile-settings.md).
 
 ## <a name="prerequisites-for-edr-policies"></a>Prerequisiti per i criteri EDR
 
 **Generale**:
 
-- **Tenant per Microsoft Defender Advanced Threat Protection**: è necessario integrare il tenant di Defender ATP con il tenant di Microsoft Endpoint Manager (sottoscrizione a Intune) prima di poter creare criteri EDR. Vedere [Usare Microsoft Defender ATP](../protect/advanced-threat-protection.md) nella documentazione di Intune.
+- **Tenant per Microsoft Defender Advanced Threat Protection**: è necessario integrare il tenant di Defender ATP con il tenant di Microsoft Endpoint Manager (sottoscrizione a Intune) prima di poter creare criteri EDR. Vedere [Usare Microsoft Defender ATP](advanced-threat-protection.md) nella documentazione di Intune.
 
 **Per supportare i dispositivi da Configuration Manager**:
 
@@ -68,7 +68,7 @@ Per supportare l'uso di criteri EDR con i dispositivi di Configuration Manager, 
 
 ## <a name="edr-profiles"></a>Profili EDR
 
-[Visualizzare le impostazioni](../protect/endpoint-security-edr-profile-settings.md) che è possibile configurare per le piattaforme e i profili seguenti.
+[Visualizzare le impostazioni](endpoint-security-edr-profile-settings.md) che è possibile configurare per le piattaforme e i profili seguenti.
 
 **Intune**: per i dispositivi gestiti con Intune sono supportati gli elementi seguenti:
 
@@ -139,7 +139,7 @@ Se si prevede di abilitare la co-gestione, prima di continuare è consigliabile 
 
       Quando questa opzione è selezionata, la procedura guidata visualizza altre pagine per completare la configurazione della co-gestione. Per altre informazioni, vedere [Abilitare la co-gestione](../../configmgr/comanage/how-to-enable.md) nella documentazione di Configuration Manager.
 
-     ![Configurare il collegamento del tenant](./media/endpoint-security-edr-policy/tenant-onboarding.png)
+     ![Configurare il collegamento del tenant](media/endpoint-security-edr-policy/tenant-onboarding.png)
 
 4. Fare clic su **Avanti** e quindi su **Sì** per accettare la notifica **Crea un'applicazione di AAD**. Questa azione esegue il provisioning di un'entità servizio e crea una registrazione dell'applicazione Azure AD per semplificare la sincronizzazione delle raccolte nell'interfaccia di amministrazione di Microsoft Endpoint Manager.
 
@@ -160,7 +160,7 @@ Se si prevede di abilitare la co-gestione, prima di continuare è consigliabile 
 3. Nella scheda **Configure upload** (Configura caricamento) selezionare **Carica nell'interfaccia di amministrazione di Microsoft Endpoint Manager**. Fare clic su **Apply**.
    - L'impostazione predefinita per il caricamento del dispositivo è **Tutti i dispositivi personali gestiti da Microsoft Endpoint Configuration Manager**. È anche possibile scegliere di limitare la configurazione a una o più raccolte di dispositivi.
 
-     ![Visualizzare la scheda proprietà di co-gestione](./media/endpoint-security-edr-policy/configure-upload.png)
+     ![Visualizzare la scheda proprietà di co-gestione](media/endpoint-security-edr-policy/configure-upload.png)
 
 4. Quando richiesto, accedere con l'account di *amministratore globale*.
 
@@ -196,7 +196,7 @@ Dopo aver configurato le raccolte per la sincronizzazione con l'interfaccia di a
 
    - Non è possibile selezionare questa opzione se la gerarchia di Configuration Manager non è collegata al tenant.
   
-   ![Configurare la sincronizzazione cloud](./media/endpoint-security-edr-policy/cloud-sync.png)
+   ![Configurare la sincronizzazione cloud](media/endpoint-security-edr-policy/cloud-sync.png)
 
 3. Selezionare **OK** per salvare la configurazione.
 
@@ -259,11 +259,17 @@ Prima di poter distribuire i criteri ai dispositivi gestiti da Configuration Man
 
 - Per i criteri destinati alla piattaforma **Windows 10 e versioni successive** (Intune), verrà visualizzata una panoramica della conformità al criterio. È anche possibile selezionare il grafico per visualizzare un elenco di dispositivi che hanno ricevuto il criterio ed eseguire il drill-in dei singoli dispositivi per altri dettagli.
 
+  Il grafico **Dispositivi con sensore di ATP** mostra solo i dispositivi che completano l'onboarding in Defender ATP tramite l'uso del profilo **Windows 10 e versioni successive**. Per assicurare che sia disponibile una rappresentazione completa dei dispositivi in questo grafico, distribuire il profilo di onboarding in tutti i dispositivi. I dispositivi che completano l'onboarding in Defender ATP tramite metodi esterni, ad esempio Criteri di gruppo o PowerShell, vengono conteggiati come **Dispositivi senza sensore di ATP**.
+
 - Per i criteri destinati alla piattaforma **Windows 10 e Windows Server** (Configuration Manager), verrà visualizzata una panoramica della conformità al criterio ma non sarà possibile eseguire il drill-in per visualizzare dettagli aggiuntivi. La visualizzazione è limitata perché l'interfaccia di amministrazione riceve dettagli di stato limitati da Configuration Manager, che consente di gestire la distribuzione del criterio ai dispositivi di Configuration Manager.
 
-[Visualizzare le impostazioni](../protect/endpoint-security-edr-profile-settings.md) che è possibile configurare sia per le piattaforme che per i profili.
+
+
+
+
+[Visualizzare le impostazioni](endpoint-security-edr-profile-settings.md) che è possibile configurare sia per le piattaforme che per i profili.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- [Configurare i criteri di sicurezza degli endpoint](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
+- [Configurare i criteri di sicurezza degli endpoint](endpoint-security-policy.md#create-an-endpoint-security-policy)
 - Altre informazioni su [Rilevamento di endpoint e risposta](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) sono disponibili nella documentazione di Microsoft Defender ATP.

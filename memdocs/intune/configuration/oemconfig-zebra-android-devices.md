@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/12/2020
+ms.date: 06/02/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2227face347e6d82cf7807bea241eda4856c1d67
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 2a38c445018200d9fe80db19142f123aba783b60
+ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988685"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84311165"
 ---
 # <a name="deploy-multiple-oemconfig-profiles-to-zebra-devices-in-microsoft-intune"></a>Distribuire più profili OEMConfig nei dispositivi Zebra in Microsoft Intune
 
@@ -44,7 +44,9 @@ Creare un [profilo di configurazione di OEMConfig](android-oem-configuration-ove
 
 ## <a name="use-multiple-profiles"></a>Usare più profili
 
-Nei dispositivi Zebra è possibile avere molti profili in ogni dispositivo contemporaneamente. Questa funzionalità consente di suddividere le impostazioni OEMConfig di Zebra in profili più piccoli Lo schema OEMConfig di Zebra usa anche le **azioni**. Le azioni sono operazioni eseguite sul dispositivo. Non configurano alcuna impostazione. Usare queste azioni per attivare un download di file, cancellare gli Appunti e altro ancora. Per l'elenco completo di azioni supportate, vedere la [Documentazione di Zebra](https://techdocs.zebra.com/oemconfig/10-0/about/) (viene aperto il sito Web di Zebra).
+Nei dispositivi Zebra è possibile avere molti profili in ogni dispositivo contemporaneamente. Questa funzionalità consente di suddividere le impostazioni OEMConfig di Zebra in profili più piccoli Creare ad esempio un profilo baseline che influisce su tutti i dispositivi. Creare quindi altri profili che configurano impostazioni specifiche per un dispositivo.
+
+Lo schema OEMConfig di Zebra usa anche le **azioni**. Le azioni sono operazioni eseguite sul dispositivo. Non configurano alcuna impostazione. Usare queste azioni per attivare un download di file, cancellare gli Appunti e altro ancora. Per l'elenco completo di azioni supportate, vedere la [Documentazione di Zebra](https://techdocs.zebra.com/oemconfig/10-0/about/) (viene aperto il sito Web di Zebra).
 
 Ad esempio, si crea un profilo OEMConfig di Zebra che applica alcune impostazioni al dispositivo. Un altro profilo OEMConfig di Zebra include un'azione che cancella gli Appunti. Il primo profilo viene assegnato a un gruppo di dispositivi Zebra. Successivamente, è necessario cancellare gli Appunti in questi dispositivi. Il secondo profilo viene assegnato allo stesso gruppo di dispositivi senza modificare il primo profilo. Gli Appunti del dispositivo vengono cancellati senza inviare di nuovo o influire sulle impostazioni di configurazione create nel primo profilo.
 
@@ -52,20 +54,26 @@ In un altro esempio, è stato assegnato un profilo OEMConfig che configura alcun
 
 ## <a name="ordering"></a>Ordinamento
 
-Con più profili in ogni dispositivo, l'ordine con cui vengono distribuiti i profili non è garantito. Questo comportamento è una limitazione di Google Play. Per eseguire le operazioni in sequenza, è possibile usare la [funzionalità Transazioni di Zebra](https://techdocs.zebra.com/oemconfig/9-1/mc/) (apre il sito Web di Zebra). Ecco un esempio.
+Con più profili in ogni dispositivo, l'ordine con cui vengono distribuiti i profili non è garantito. Questo comportamento è una limitazione di Google Play. Per eseguire le operazioni in sequenza, è possibile usare la [funzionalità del passaggio transazioni di Zebra](https://techdocs.zebra.com/oemconfig/10-0/mc/), che consente di aprire il sito Web di Zebra. 
 
-Sono disponibili due profili:
+Per riepilogare, se l'ordine è rilevante, usare la [funzionalità del passaggio transazioni di Zebra](https://techdocs.zebra.com/oemconfig/10-0/mc/), che consente di aprire il sito Web di Zebra. Se l'ordine non è rilevante, usare più profili di Intune. 
 
-- **Profilo 1**: attiva il Bluetooth. Questo profilo viene assegnato il lunedì al gruppo **Tutti i dispositivi**.
-- **Profilo 2**: configura qualsiasi altra impostazione. Questo profilo viene assegnato il martedì al gruppo **Tutti i dispositivi**.
+È possibile esaminare alcuni esempi:
 
-È necessario attivare il Bluetooth prima di configurare l'altra impostazione.
+- Si vuole attivare il Bluetooth per tutti i dispositivi Zebra appena registrati prima di configurare eventuali altre impostazioni in questi dispositivi. Per eseguire le operazioni in sequenza, usare la funzionalità **Steps** (Passaggi) nello schema di Zebra.
 
-Il mercoledì vengono registrati 10 nuovi dispositivi Zebra con Intune. Il Profilo 1 e il Profilo 2 vengono assegnati al gruppo **Tutti i dispositivi**. Dopo la sincronizzazione dei nuovi dispositivi con Intune, essi ricevono i profili. È possibile che questi dispositivi ottengano il Profilo 2 prima del Profilo 1.
+  Creare un profilo di Intune che include due passaggi di transazioni. Il primo passaggio include le impostazioni Bluetooth e il secondo passaggio configura l'altra impostazione. Quando l'app OEMCong di Zebra riceve il profilo, esegue i passaggi in ordine.
 
-Usare la funzionalità **Passaggi** nello schema di Zebra per verificare che le operazioni vengano eseguite in sequenza. In questo caso, è possibile creare un profilo con due Passaggi Transazione. Il primo passaggio include le impostazioni Bluetooth e il secondo passaggio configura l'altra impostazione. Quando l'app OEMCong di Zebra riceve il profilo, esegue i passaggi in ordine, e ciò è garantito da Zebra.
+  Per altre informazioni, vedere i [passaggi della transazione di Zebra](https://techdocs.zebra.com/oemconfig/10-0/mc/) (apre il sito Web di Zebra).
 
-Per altre informazioni, vedere i [passaggi della transazione di Zebra](https://techdocs.zebra.com/oemconfig/9-1/mc/) (apre il sito Web di Zebra).
+- Si vuole che tutti i dispositivi Zebra visualizzino l'ora nel formato 24 ore. Per alcuni di questi dispositivi si vuole disattivare la fotocamera. Le impostazioni relative a ora e fotocamera non dipendono l'una dall'altra.
+
+  Creare due profili di Intune:
+
+  - **Profilo 1**: visualizza l'ora nel formato 24 ore. Questo profilo viene assegnato il lunedì al gruppo **All Zebra AE devices** (Tutti i dispositivi Zebra AE).
+  - **Profilo 2**: disattiva la fotocamera. Questo profilo viene assegnato il martedì al gruppo **Zebra AE factory devices** (Dispositivi Zebra AE predefiniti).
+
+  Il mercoledì vengono registrati 10 nuovi dispositivi Zebra con Intune. Il Profilo 1 e il Profilo 2 vengono assegnati. Dopo la sincronizzazione dei nuovi dispositivi con Intune, essi ricevono i profili. È possibile che questi dispositivi ottengano il Profilo 2 prima del Profilo 1.
 
 ## <a name="enhanced-reporting"></a>Creazione di report avanzata
 

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/22/2020
+ms.date: 05/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ca3ec1605bd4d63c182511c32297da0bdb503d8b
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: 67a0ad9eeb7e5ced358a44b17fd8f1c0b05fa2b8
+ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83824167"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84223664"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Novità di Microsoft Intune
 
@@ -54,7 +54,22 @@ Per informazioni sulle novità di Microsoft Intune ogni settimana, vedere l'[int
 
 <!-- ########################## -->
 
+## <a name="week-of-may-25-2020"></a>Settimana del 25 maggio 2020
+
+### <a name="app-management"></a>Gestione delle app
+
+#### <a name="windows-32-bit-x86-apps-on-arm64-devices---5477661---"></a>App Windows a 32 bit (x86) in dispositivi ARM64<!-- 5477661 -->
+Le app Windows a 32 bit (x86) distribuite come disponibili nei dispositivi ARM64 verranno ora visualizzate nel Portale aziendale. Per altre informazioni sulle app Windows a 32 bit, vedere [Gestione di app Win32](../apps/apps-win32-app-management.md).
+
+#### <a name="windows-company-portal-app-icon---7114635---"></a>Icona dell'app Portale aziendale Windows<!-- 7114635 -->
+L'icona per l'app Portale aziendale Windows è stata aggiornata. Per altre informazioni sul Portale aziendale, vedere [Come personalizzare le app Portale aziendale Intune, il sito Web Portale aziendale e l'app Intune](../apps/company-portal-app.md).
+
 ## <a name="week-of-may-18-2020"></a>Settimana del 18 maggio 2020
+
+### <a name="app-management"></a>Gestione delle app  
+
+#### <a name="update-to-icons-in-company-portal-app-for-iosipados-and-macos--6057697---"></a>Aggiornamento delle icone nell'app Portale aziendale per iOS/iPadOS e macOS<!--6057697 -->
+Le icone di Portale aziendale sono state aggiornate per creare un aspetto più moderno, supportato sui dispositivi a schermo doppio e allineato al sistema di progettazione Microsoft Fluent. Per visualizzare le icone aggiornate, vedere [Aggiornamenti dell'interfaccia utente per le applicazioni degli utenti finali di Intune](./whats-new-app-ui.md). 
 
 ### <a name="device-security"></a>Sicurezza del dispositivo
 

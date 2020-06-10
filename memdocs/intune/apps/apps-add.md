@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da78e0f80df31f5cb0f6236c4f85f93c05f0320a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f01baaf8ca48229242b6f65d10ef28a294a632bc
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989476"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428636"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Aggiungere app in Microsoft Intune 
 
@@ -187,6 +187,25 @@ Intune reinstallerà, aggiornerà o rimuoverà automaticamente l'app necessaria 
 - Se l'installazione dell'app necessaria ha esito negativo o per qualsiasi altro motivo l'app non è presente nel dispositivo, Intune valuta la conformità e reinstalla l'app alla scadenza della pianificazione.  
 - Un amministratore definisce un'app come disponibile per un gruppo di utenti e un utente finale installa l'app dal portale aziendale nel dispositivo. Dopo di ché l'amministratore aggiorna l'app dalla versione 1 alla versione 2. Intune aggiornerà l'app alla scadenza della pianificazione, a condizione che nel dispositivo sia ancora presente una qualsiasi altra versione precedente.
 - Se l'amministratore distribuisce la finalità di distallazione, ma l'applicazione è presente nel dispositivo e non viene disinstallata, Intune valuta la conformità e disinstalla l'app alla scadenza della pianificazione.   
+
+## <a name="uninstall-an-app"></a>Disinstallare un'app
+
+Quando è necessario disinstallare un'app dai dispositivi dell'utente, seguire questa procedura.
+
+1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Selezionare **App** > **Tutte le app** > *le*  > **Assegnazioni app** > **Aggiungi gruppo**.
+3. Nel riquadro **Aggiungi gruppo** selezionare **Disinstalla**.
+4. Selezionare **Gruppi inclusi** per selezionare i gruppi di utenti che sono interessati da questa assegnazione di app.
+5. Selezionare i gruppi a cui si vuole applicare l'assegnazione di disinstallazione.
+6. Fare clic su **Seleziona** nel riquadro **Seleziona gruppi**.
+7. Fare clic su **OK** nel riquadro **Assegna** per impostare l'assegnazione.
+8. Per escludere gruppi di utenti da questa assegnazione di app, selezionare **Escludi gruppi**.
+9. Se si è scelto di escludere alcuni gruppi in **Selezione gruppi** selezionare **Seleziona**.
+10. Selezionare **OK** nel riquadro **Aggiungi gruppo**.
+11. Selezionare **Salva** nel riquadro **Assegnazioni** dell'app.
+
+> [!IMPORTANT]
+> Per disinstallare correttamente l'app, assicurarsi di rimuovere i membri o l'assegnazione di gruppo per l'installazione prima di assegnarli per la disinstallazione. Se un gruppo è assegnato sia all'installazione di un'app che alla disinstallazione, l'app rimarrà e non verrà rimossa.
 
 ## <a name="app-installation-errors"></a>Errori di installazione delle app
 

@@ -10,12 +10,12 @@ ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c6b33027d67329b883f401168795c1b466ded1a7
-ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
+ms.openlocfilehash: 5054d44371fd3114a9644f90d37dabf1e81d1997
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83709392"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455022"
 ---
 # <a name="token-based-authentication-for-cloud-management-gateway"></a>Autenticazione basata su token per Cloud Management Gateway
 
@@ -60,10 +60,16 @@ Se non è possibile installare e registrare i client nella rete interna, creare 
 
 1. Installare il client Configuration Manager in un dispositivo basato su Internet. Includere il parametro di installazione client: [ **/regtoken**](about-client-installation-properties.md#regtoken). La riga di comando di esempio seguente include le altre proprietà e i parametri di installazione necessari:
 
-    `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC SMSMP=https://mp1.contoso.com /regtoken:eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik9Tbzh2Tmd5VldRUjlDYVh5T2lacHFlMDlXNCJ9.eyJTQ0NNVG9rZW5DYXRlZ29yeSI6IlN7Q01QcmVBdXRoVG9rZW4iLCJBdXRob3JpdHkiOiJTQ0NNIiwiTGljZW5zZSI6IlNDQ00iLCJUeXBlIjoiQnVsa1JlZ2lzdHJhdGlvbiIsIlRlbmFudElkIjoiQ0RDQzVFOTEtMEFERi00QTI0LTgyRDAtMTk2NjY3RjFDMDgxIiwiVW5pcXVlSWQiOiJkYjU5MWUzMy1wNmZkLTRjNWItODJmMy1iZjY3M2U1YmQwYTIiLCJpc3MiOiJ1cm46c2NjbTpvYXV0aDI6Y2RjYzVlOTEtMGFkZi00YTI0LTgyZDAtMTk2NjY3ZjFjMDgxIiwiYXVkIjoidXJuOnNjY206c2VydmljZSIsImV4cCI6MTU4MDQxNbUwNSwibmJmIjoxNTgwMTU2MzA1fQ.ZUJkxCX6lxHUZhMH_WhYXFm_tbXenEdpgnbIqI1h8hYIJw7xDk3wv625SCfNfsqxhAwRwJByfkXdVGgIpAcFshzArXUVPPvmiUGaxlbB83etUTQjrLIk-gvQQZiE5NSgJ63LCp5KtqFCZe8vlZxnOloErFIrebjFikxqAgwOO4i5ukJdl3KQ07YPRhwpuXmwxRf1vsiawXBvTMhy40SOeZ3mAyCRypQpQNa7NM3adCBwUtYKwHqiX3r1jQU0y57LvU_brBfLUL6JUpk3ri-LSpwPFarRXzZPJUu4-mQFIgrMmKCYbFk3AaEvvrJienfWSvFYLpIYA7lg-6EVYRcCAA`
+    `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC /regtoken:eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik9Tbzh2Tmd5VldRUjlDYVh5T2lacHFlMDlXNCJ9.eyJTQ0NNVG9rZW5DYXRlZ29yeSI6IlN7Q01QcmVBdXRoVG9rZW4iLCJBdXRob3JpdHkiOiJTQ0NNIiwiTGljZW5zZSI6IlNDQ00iLCJUeXBlIjoiQnVsa1JlZ2lzdHJhdGlvbiIsIlRlbmFudElkIjoiQ0RDQzVFOTEtMEFERi00QTI0LTgyRDAtMTk2NjY3RjFDMDgxIiwiVW5pcXVlSWQiOiJkYjU5MWUzMy1wNmZkLTRjNWItODJmMy1iZjY3M2U1YmQwYTIiLCJpc3MiOiJ1cm46c2NjbTpvYXV0aDI6Y2RjYzVlOTEtMGFkZi00YTI0LTgyZDAtMTk2NjY3ZjFjMDgxIiwiYXVkIjoidXJuOnNjY206c2VydmljZSIsImV4cCI6MTU4MDQxNbUwNSwibmJmIjoxNTgwMTU2MzA1fQ.ZUJkxCX6lxHUZhMH_WhYXFm_tbXenEdpgnbIqI1h8hYIJw7xDk3wv625SCfNfsqxhAwRwJByfkXdVGgIpAcFshzArXUVPPvmiUGaxlbB83etUTQjrLIk-gvQQZiE5NSgJ63LCp5KtqFCZe8vlZxnOloErFIrebjFikxqAgwOO4i5ukJdl3KQ07YPRhwpuXmwxRf1vsiawXBvTMhy40SOeZ3mAyCRypQpQNa7NM3adCBwUtYKwHqiX3r1jQU0y57LvU_brBfLUL6JUpk3ri-LSpwPFarRXzZPJUu4-mQFIgrMmKCYbFk3AaEvvrJienfWSvFYLpIYA7lg-6EVYRcCAA`
 
     > [!TIP]
     > Per altre informazioni su questa riga di comando, vedere [Installare e registrare il client usando l'identità di Azure AD](deploy-clients-cmg-azure.md#install-and-register-the-client-using-azure-ad-identity). Questo processo è simile, ma non usa le proprietà di Azure AD.
+
+Per verificare, cercare nel file di log seguente una voce simile:<!-- bug 7357499 -->
+
+```ClientLocation.log
+Rotating internet management point, new management point [1] is: https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 (0) with capabilities: <Capabilities SchemaVersion ="1.0"><Property Name="SSL" Version="1" /></Capabilities>
+```
 
 ### <a name="known-issues"></a>Problemi noti
 
@@ -107,23 +113,23 @@ Esempio: `BulkRegistrationTokenTool.exe /lifetime 4320`
 
 È possibile visualizzare i token di registrazione in blocco creati in precedenza e la loro durata nella console di Configuration Manager e bloccarne l'utilizzo, se necessario. Il database del sito, tuttavia, non archivia i token di registrazione in blocco.
 
-#### <a name="to-review-a-bulk-registration-token"></a>Per rivedere un token di registrazione in blocco
+### <a name="review-a-bulk-registration-token"></a>Rivedere un token di registrazione in blocco
 
-1. Nella console di Configuration Manager fare clic su **Amministrazione**.
+1. Nella console di Configuration Manager passare all'area di lavoro **Amministrazione**.
 
-2. Nell'area di lavoro Amministrazione espandere **Sicurezza** e fare clic su **Certificati**. La console elenca tutti i certificati correlati al sito e i token di registrazione in blocco nel riquadro dei dettagli.
+2. Espandere **Sicurezza** e selezionare il nodo **Certificati**. La console elenca tutti i certificati correlati al sito e i token di registrazione in blocco nel riquadro dei dettagli.
 
 3. Selezionare il token di registrazione in blocco da rivedere.
 
-È possibile identificare token di registrazione in blocco specifici in base al GUID. I GUID per i token di registrazione in blocco vengono visualizzati al momento della creazione del token. Se necessario, è anche possibile applicare un filtro o eseguire l'ordinamento in base alla colonna **Tipo**.
+È possibile applicare un filtro o eseguire l'ordinamento in base alla colonna **Tipo**. Identificare token di registrazione in blocco specifici in base al GUID. Quando si crea un token di registrazione in blocco, lo strumento visualizza il GUID.
 
-#### <a name="to-block-a-bulk-registration-token"></a>Per creare un token di registrazione in blocco
+### <a name="block-a-bulk-registration-token"></a>Bloccare un token di registrazione in blocco
 
-1. Nella console di Configuration Manager fare clic su **Amministrazione**.
+1. Nella console di Configuration Manager passare all'area di lavoro **Amministrazione**.
 
-2. Nell'area di lavoro Amministrazione espandere **Sicurezza**, fare clic su **Certificati** e selezionare il token di registrazione in blocco da bloccare.
+2. Espandere **Sicurezza**, selezionare il nodo **Certificati** e selezionare il token di registrazione in blocco da bloccare.
 
-3. Nella scheda **Home** della barra multifunzione o nel menu di scelta rapida selezionare **Blocca**. Viceversa, è possibile sbloccare token di registrazione in blocco precedentemente bloccati selezionando **Sblocca** nella scheda **Home** della barra multifunzione o nel menu di scelta rapida.
+3. Nella scheda **Home** della barra multifunzione o nel menu di scelta rapida selezionare **Blocca**. Per sbloccare i token di registrazione in blocco precedentemente bloccati, selezionare l'azione **Sblocca**.
 
 ## <a name="see-also"></a>Vedere anche
 

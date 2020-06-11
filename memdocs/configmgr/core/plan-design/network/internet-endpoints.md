@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 58afaf564a8afaba4569755575fcc7c1757c5529
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: 8423af8d4c743965f627a94a07f587fd97d45bdf
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110135"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84454971"
 ---
 # <a name="internet-access-requirements"></a>Requisiti per l'accesso a Internet
 
@@ -38,7 +38,7 @@ Altre funzionalità di Configuration Manager possono richiedere endpoint aggiunt
 
 A partire dalla versione 2002, se il server del sito di Configuration Manager non riesce a connettersi agli endpoint necessari per un servizio cloud, genera un messaggio di stato critico con ID 11488. Quando non è in grado di connettersi al servizio, lo stato del componente SMS_SERVICE_CONNECTOR diventa critico. Visualizzare lo stato dettagliato nel nodo [Stato componente](../../servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus) della console di Configuration Manager.<!-- 5566763 -->
 
-### <a name="updates-and-servicing"></a><a name="bkmk_scp-updates"/> Aggiornamenti e manutenzione
+### <a name="updates-and-servicing"></a><a name="bkmk_scp-updates"></a> Aggiornamenti e manutenzione
 
 Per altre informazioni su questa funzione, vedere [Aggiornamenti e manutenzione per Configuration Manager](../../servers/manage/updates.md).
 
@@ -86,6 +86,18 @@ Se si registrano dispositivi di Windows 10 in Microsoft Intune per la co-gestion
 ## <a name="microsoft-store-for-business"></a>Microsoft Store per le aziende
 
 Se si integra Configuration Manager con [Microsoft Store per le aziende](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md), assicurarsi che il punto di connessione del servizio e i dispositivi di destinazione siano in grado di accedere al servizio cloud. Per altre informazioni, vedere [Configurazione del proxy per Microsoft Store per le aziende](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration).
+
+## <a name="delivery-optimization"></a>Ottimizzazione recapito
+
+Se si usa l'ottimizzazione recapito, i client devono comunicare con il servizio cloud: `*.do.dsp.mp.microsoft.com`
+
+Anche i punti di distribuzione che supportano Microsoft Connected Cache richiedono questi endpoint.
+
+Per altre informazioni, vedere gli articoli seguenti:
+
+- [Domande frequenti sull'ottimizzazione recapito](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)
+- [Concetti di base per la gestione dei contenuti in Configuration Manager](../hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization)
+- [Microsoft Connected Cache in Configuration Manager](../hierarchy/microsoft-connected-cache.md)
 
 ## <a name="cloud-services"></a><a name="bkmk_cloud"></a> Servizi cloud
 

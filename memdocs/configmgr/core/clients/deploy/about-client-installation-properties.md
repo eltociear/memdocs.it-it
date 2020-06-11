@@ -10,12 +10,12 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 12fee834e4f384cc180658a8e58cf3920a907831
-ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
+ms.openlocfilehash: fda1e877f8e0bc211b36e288af13de204305cc5a
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84153442"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455039"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Informazioni sui parametri e le proprietà di installazione del client in Configuration Manager
 
@@ -676,21 +676,19 @@ Per impostazione predefinita, il programma di installazione del client usa `PU`.
 
 Esempio: `CCMSetup.exe SMSCONFIGSOURCE=RP`
 
-<!--
-### SMSDIRECTORYLOOKUP
+### <a name="smsdirectorylookup"></a>SMSDIRECTORYLOOKUP
 
-Specifies whether the client can use Windows Internet Name Service (WINS) to find a management point that accepts HTTP connections. Clients use this method when they can't find a management point in Active Directory Domain Services or in DNS.  
+Specifica se il client può usare Windows Internet Name Service (WINS) per trovare un punto di gestione che accetti le connessioni HTTP. I client usano questo metodo quando non riescono a trovare un punto di gestione in Servizi di dominio Active Directory o in DNS.
 
- This property doesn't affect whether the client uses WINS for name resolution.  
+Questa proprietà non influisce sull'uso di WINS da parte del client per la risoluzione dei nomi.
 
- You can configure two different modes for this property:  
+È possibile configurare due diverse modalità per questa proprietà:
 
--   NOWINS: This value is the most secure setting for this property and prevents clients from finding a management point in WINS. When you use this setting, clients must have an alternative method to locate a management point on the intranet, such as Active Directory Domain Services or by using DNS publishing.  
+- **NOWINS**: questo valore è l'impostazione più sicura per questa proprietà. Impedisce ai client di trovare un punto di gestione in WINS. Quando si usa questa impostazione, i client devono usare un metodo alternativo per individuare un punto di gestione nella rete Intranet, ad esempio la pubblicazione in Active Directory Domain Services o DNS.
 
--   WINSSECURE (default): In this mode, a client that uses HTTP communication can use WINS to find a management point. However, the client must have a copy of the trusted root key before it can successfully connect to the management point. For more information, see [Planning for the trusted root key](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK).  
+- **WINSSECURE** (predefinita): in questa modalità, un client che usa la comunicazione HTTP può usare WINS per trovare un punto di gestione. Tuttavia, il client deve disporre di una copia della chiave radice attendibile prima di potersi connettere al punto di gestione. Per altre informazioni, vedere [Pianificare la chiave radice attendibile](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK).
 
-Example: `CCMSetup.exe SMSDIRECTORYLOOKUP=NOWINS`  
--->
+Esempio: `CCMSetup.exe SMSDIRECTORYLOOKUP=NOWINS`  
 
 ### <a name="smsmp"></a>SMSMP
 

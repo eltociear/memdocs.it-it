@@ -1,5 +1,5 @@
 ---
-title: Connettore Lookout MTD con Microsoft Intune
+title: Integrare Lookout Mobile Endpoint con Microsoft Intune
 titleSuffix: Microsoft Intune
 description: Informazioni sull'integrazione di Intune con Lookout Mobile Threat Defense (MTD) per controllare l'accesso dei dispositivi mobili alle risorse aziendali.
 keywords: ''
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c3ca25ce4bf4f6520e7ef5f7e3aaaff958060a2
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1083e195cee20c3df9572db94395d462f9531a39
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990813"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330951"
 ---
 # <a name="lookout-mobile-endpoint-security-connector-with-intune"></a>Connettore Lookout Mobile Endpoint Security con Intune
 
@@ -88,7 +88,7 @@ Se nei dispositivi vengono rilevate app dannose, come malware, è possibile impe
 > [!div class="mx-imgBorder"]
 > ![Immagine concettuale in cui l'accesso viene concesso ai dispositivi dopo la correzione](./media/lookout-mobile-threat-defense-connector/malicious-apps-unblocked.png)
 
-### <a name="control-access-based-on-threat-to-network"></a>Controllare l'accesso in base alle minacce alla rete
+### <a name="control-access-based-on-threat-to-network"></a>Controllare l'accesso in base alle minacce per la rete
 
 Rilevare le minacce per la rete, ad esempio attacchi man-in-the-middle e proteggere l'accesso a reti Wi-Fi in base al livello di rischio del dispositivo.
 
@@ -104,7 +104,7 @@ Rilevare le minacce per la rete, ad esempio attacchi man-in-the-middle e protegg
 
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Controllare l'accesso a SharePoint Online in base alle minacce alla rete
 
-Rilevare le minacce per la rete, ad esempio attacchi man-in-the-middle, e impedire la sincronizzazione dei file aziendali in base al livello di rischio del dispositivo.
+Rilevare le minacce alla rete, ad esempio attacchi di tipo man-in-the-middle, e impedire la sincronizzazione dei file aziendali in base al rischio per il dispositivo.
 
 *Bloccare SharePoint Online quando vengono rilevate minacce per la rete:*
 

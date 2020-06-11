@@ -15,12 +15,12 @@ ms.reviewer: pfetty
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5d0e809e834a82f192128263742bc2b9b0024a2
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 9a264b9a3b8f0ba15debe7e7323c106f09fa12c6
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079281"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455243"
 ---
 # <a name="technology-decisions-for-enabling-byod-with-microsoft-enterprise-mobility--security-ems"></a>Decisioni in merito alla tecnologia per l'abilitazione di BYOD con Microsoft Enterprise Mobility + Security (EMS)
 
@@ -72,14 +72,14 @@ Molte organizzazioni spesso sono ancora preoccupate per rischi specifici.  La ta
 |Account utente compromessi | Bloccare gli utenti ad alto rischio | Bloccare gli utenti ad alto rischio |
 |Account utente compromessi | PIN per i dispositivi | PIN per le app |
 | | | |
-| App o dispositivo compromesso | Richiedere un dispositivo conforme | Controllo jailbreak all'avvio dell'app |
+| App o dispositivo compromesso | Richiedere un dispositivo conforme | Controllo jailbreak/radice all'avvio dell'app |
 | App o dispositivo compromesso | Crittografare i dati del dispositivo | Crittografa dati app |
 | | | |
 |Dispositivo perso o rubato | Rimuovere tutti i dati del dispositivo | Rimuovere tutti i dati delle app|
 | | | |
-| Condivisione accidentale dei dati o salvataggio dei dati in posizioni non protette | Limitare i backup dei dati del dispositivo | Limitare le operazioni Taglia/Copia/Incolla|
+| Condivisione accidentale dei dati o salvataggio dei dati in posizioni non protette | Limitare i backup dei dati del dispositivo | Limitare i backup dei dati dell'organizzazione |
 | Condivisione accidentale dei dati o salvataggio dei dati in posizioni non protette | Limitare le operazioni Salva con nome | Limitare le operazioni Salva con nome |
-|Condivisione accidentale dei dati o salvataggio dei dati in posizioni non protette | Disabilita stampa | n/d|
+|Condivisione accidentale dei dati o salvataggio dei dati in posizioni non protette | Disabilita stampa | Disabilitare la stampa dei dati dell'organizzazione |
 
 ## <a name="next-steps"></a>Passaggi successivi
 A questo punto è necessario decidere se si intende abilitare BYOD nell'organizzazione con un'implementazione incentrata sulla gestione dei dispositivi, sulla gestione delle app o su una combinazione di questi due aspetti. La scelta del tipo di implementazione è libera, grazie alla possibilità di fare affidamento sulle funzionalità di identità e di sicurezza comunque disponibili in Azure AD.  

@@ -1,5 +1,5 @@
 ---
-title: Configurare l'integrazione di Lookout con Microsoft Intune
+title: Configurare Lookout Mobile Endpoint Security con Microsoft Intune
 titleSuffix: Microsoft Intune
 description: Informazioni sull'integrazione di Intune con Lookout Mobile Endpoint Security come soluzione Mobile Threat Defense per controllare l'accesso dei dispositivi mobili alle risorse aziendali.
 keywords: ''
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4951db457c6a49179dd38ca24463dda292b227e5
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 89d9e8d168175d841a4fb202836ce24df37b5615
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988131"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84331019"
 ---
 # <a name="set-up-lookout-mobile-endpoint-security-integration-with-intune"></a>Configurare l'integrazione di Lookout Mobile Endpoint Security con Intune
 Con un ambiente che soddisfi i [prerequisiti](lookout-mobile-threat-defense-connector.md#prerequisites), è possibile integrare Lookout Mobile Endpoint Security con Intune. Le informazioni contenute in questo articolo illustrano nel dettaglio come predisporre l'integrazione e configurare impostazioni importanti in Lookout per l'uso con Intune.  
@@ -144,7 +144,7 @@ Per informazioni sulle classificazioni dei livelli di minaccia e su come gestire
 >[!IMPORTANT]
 > I livelli di rischio rappresentano un aspetto importante di Mobile Endpoint Security perché l'integrazione con Intune calcola la conformità dei dispositivi in base a questi livelli di rischio in fase di esecuzione.  
 > 
-> In altre parole, l'amministratore di Intune imposta una regola nei criteri per identificare un dispositivo come non conforme se presenta una minaccia attiva con un livello minimo di rischio: **alto**, **medio** o **basso**. Il calcolo della conformità dei dispositivi in Intune dipende direttamente dai criteri di classificazione delle minacce in Lookout Mobile Endpoint Security.  
+> L'amministratore di Intune imposta una regola nei criteri per identificare un dispositivo come non conforme se presenta una minaccia attiva con un livello minimo **alto**, **medio** o **basso**. Il calcolo della conformità dei dispositivi in Intune dipende direttamente dai criteri di classificazione delle minacce in Lookout Mobile Endpoint Security.  
 
 ## <a name="monitor-enrollment"></a>Monitorare la registrazione
 Al termine della configurazione, Lookout Mobile Endpoint Security inizia a eseguire il polling di Azure AD per individuare i dispositivi corrispondenti ai gruppi di registrazione specificati.  È possibile trovare informazioni sui dispositivi registrati passando a **Devices** (Dispositivi) nella console di Lookout MES.  

@@ -10,12 +10,12 @@ ms.assetid: b2abcdb0-72e0-4c70-a4b8-7827480ba5b2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c2347275ffdc194e73cf792d6f83ffa75732f8c4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 13c16e89cc75bff1ccecd03a98cd12782c419a40
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691129"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455174"
 ---
 # <a name="deploy-a-task-sequence"></a>Distribuire una sequenza di attività
 
@@ -154,19 +154,7 @@ Usare la seguente procedura per distribuire una sequenza di attività ai compute
 
 9. Nella pagina **Punti di distribuzione** specificare le informazioni seguenti:  
 
-    - **Opzioni di distribuzione**: Specificare una delle opzioni seguenti:  
-
-        > [!NOTE]  
-        > Quando si usa il multicast per distribuire un sistema operativo, scaricare il contenuto nei computer quando necessario oppure prima dell'esecuzione della sequenza di attività.  
-
-        - **Scaricare il contenuto localmente quando necessario eseguendo la sequenza di attività**: specificare che i client scaricano contenuto dal punto di distribuzione nel computer di destinazione come richiesto dalla sequenza di attività. Il client avvia la sequenza di attività. Quando un passaggio della sequenza di attività richiede il contenuto, il download viene eseguito prima dell'esecuzione del passaggio.  
-
-        - **Scaricare tutto il contenuto localmente prima di avviare la sequenza di attività**: specificare che i client scaricano tutto il contenuto dal punto di distribuzione prima dell'esecuzione della sequenza di attività. Se si è resa la sequenza di attività disponibile nelle distribuzioni PXE e dei supporti di avvio nella pagina **Impostazioni distribuzione**, questa opzione non viene visualizzata.  
-
-        - **Accedere al contenuto direttamente da un punto di distribuzione quando necessario eseguendo la sequenza di attività**: Specificare che i client eseguono il contenuto dal punto di distribuzione. Questa opzione è disponibile solo quando si abilitano tutti i pacchetti associati con la sequenza di attività all'uso di una condivisione pacchetto nel punto di distribuzione. Per abilitare il contenuto all'utilizzo di una condivisione pacchetto, vedere la scheda **Accesso dati** nelle **Proprietà** di ciascun pacchetto.  
-
-            > [!IMPORTANT]  
-            > Per maggior sicurezza, selezionare le opzioni che consentono di **scaricare il contenuto localmente quando necessario eseguendo la sequenza di attività** o di **scaricare tutto il contenuto localmente prima di avviare la sequenza di attività**. Quando si seleziona una di queste opzioni, Configuration Manager genera un hash del pacchetto in modo da garantire l'integrità del pacchetto. Quando si seleziona l'opzione che consente di **accedere al contenuto direttamente da un punto di distribuzione quando necessario eseguendo la sequenza di attività**, Configuration Manager non verifica l'hash del pacchetto prima di eseguire il programma specificato. Poiché il sito non può garantire l'integrità del pacchetto, gli utenti con diritti amministrativi possono modificare o alterare i contenuti del pacchetto.  
+    - **Opzioni di distribuzione**: Per altre informazioni, vedere [Opzioni di distribuzione](#bkmk_deploy-options).
 
     - **Usare un punto di distribuzione remoto quando non sono disponibili punti di distribuzione locali**: specificare se i client possono usare punti di distribuzione remoti da un gruppo di limiti vicino per scaricare il contenuto necessario per la sequenza di attività.  
 
@@ -178,6 +166,63 @@ Usare la seguente procedura per distribuire una sequenza di attività ai compute
 10. Per salvare queste impostazioni per poterle riutilizzare, nella scheda **Riepilogo** selezionare **Salva come modello**. Assegnare un nome al modello e selezionare le impostazioni da salvare.  
 
 11. Completare la procedura guidata.  
+
+### <a name="deployment-options"></a><a name="bkmk_deploy-options"></a> Opzioni di distribuzione
+
+<!-- MEMDocs#328, SCCMDocs#2114 -->
+
+Queste opzioni si trovano nella scheda **Punti di distribuzione** della distribuzione della sequenza di attività. Sono dinamiche sulla base di altre selezioni nella distribuzione e degli attributi della sequenza di attività. Non sempre è possibile visualizzare tutte le opzioni.
+
+> [!NOTE]  
+> Quando si usa il multicast per distribuire un sistema operativo, scaricare il contenuto nei computer quando necessario oppure prima dell'esecuzione della sequenza di attività.  
+
+- **Scaricare il contenuto localmente quando necessario eseguendo la sequenza di attività**: specificare che i client scaricano contenuto dal punto di distribuzione nel computer di destinazione come richiesto dalla sequenza di attività. Il client avvia la sequenza di attività. Quando un passaggio della sequenza di attività richiede il contenuto, il download viene eseguito prima dell'esecuzione del passaggio.  
+
+- **Scaricare tutto il contenuto localmente prima di avviare la sequenza di attività**: specificare che i client scaricano tutto il contenuto dal punto di distribuzione prima dell'esecuzione della sequenza di attività. Se si è resa la sequenza di attività disponibile nelle distribuzioni PXE e dei supporti di avvio nella pagina **Impostazioni distribuzione**, questa opzione non viene visualizzata.  
+
+- **Accedere al contenuto direttamente da un punto di distribuzione quando necessario eseguendo la sequenza di attività**: Specificare che i client eseguono il contenuto dal punto di distribuzione. Questa opzione è disponibile solo quando si abilitano tutti i pacchetti associati con la sequenza di attività all'uso di una condivisione pacchetto nel punto di distribuzione. Per abilitare il contenuto all'utilizzo di una condivisione pacchetto, vedere la scheda **Accesso dati** nelle **Proprietà** di ciascun pacchetto.  
+
+> [!IMPORTANT]  
+> Per maggior sicurezza, selezionare le opzioni che consentono di **scaricare il contenuto localmente quando necessario eseguendo la sequenza di attività** o di **scaricare tutto il contenuto localmente prima di avviare la sequenza di attività**. Quando si seleziona una di queste opzioni, Configuration Manager genera un hash del pacchetto in modo da garantire l'integrità del pacchetto. Quando si seleziona l'opzione che consente di **accedere al contenuto direttamente da un punto di distribuzione quando necessario eseguendo la sequenza di attività**, Configuration Manager non verifica l'hash del pacchetto prima di eseguire il programma specificato. Poiché il sito non può garantire l'integrità del pacchetto, gli utenti con diritti amministrativi possono modificare o alterare i contenuti del pacchetto.  
+
+#### <a name="example-1-one-deployment-option"></a>Esempio 1: un'opzione di distribuzione
+
+Si distribuisce una sequenza di attività di distribuzione del sistema operativo che cancella il disco e applica un'immagine. Nella pagina **Impostazioni di distribuzione** è possibile renderla disponibile per un'opzione che include supporti e PXE:
+
+:::image type="content" source="media/deploy-setting-make-available.png" alt-text="Distribuisci sequenza di attività, Rendi disponibile per":::
+
+Nella pagina **Punti di distribuzione** è disponibile solo un'opzione di distribuzione:
+
+- **Scaricare il contenuto localmente quando necessario eseguendo la sequenza di attività**
+
+:::image type="content" source="media/deploy-option-1.png" alt-text="Distribuisci sequenza di attività, un'opzione di distribuzione":::
+
+L'opzione **Scaricare tutto il contenuto localmente prima di avviare la sequenza di attività** non è disponibile perché la distribuzione viene resa disponibile per supporti e PXE.
+
+L'opzione **Accedere al contenuto direttamente da un punto di distribuzione quando necessario eseguendo la sequenza di attività** non è disponibile. Non tutto il contenuto a cui si fa riferimento usa una condivisione pacchetto.
+
+#### <a name="example-2-two-deployment-options"></a>Esempio 2: due opzioni di distribuzione
+
+Si distribuisce una sequenza di attività di distribuzione del sistema operativo che cancella il disco e applica un'immagine. Nella pagina **Impostazioni di distribuzione** è possibile renderla disponibile per **Solo client di Configuration Manager**. Nella pagina **Punti di distribuzione** sono disponibili due opzioni di distribuzione:
+
+- **Scaricare il contenuto localmente quando necessario eseguendo la sequenza di attività**
+- **Scaricare tutto il contenuto in locale prima di avviare la sequenza di attività**
+
+:::image type="content" source="media/deploy-option-2.png" alt-text="Distribuisci sequenza di attività, due opzioni di distribuzione":::
+
+L'opzione **Accedere al contenuto direttamente da un punto di distribuzione quando necessario eseguendo la sequenza di attività** non è disponibile. Non tutto il contenuto a cui si fa riferimento usa una condivisione pacchetto.
+
+#### <a name="example-3-three-deployment-options"></a>Esempio 3: tre opzioni di distribuzione
+
+Sono disponibili diversi pacchetti con script amministrativi e contenuto associato. Nella scheda **Accesso dati** delle proprietà del pacchetto, è possibile configurarli tutti impostando **Copia il contenuto del pacchetto in una condivisione pacchetto nei punti di distribuzione**.
+
+Si crea una sequenza di attività che include solo diversi passaggi per **Installa pacchetto** per questi pacchetti di script e si procede alla distribuzione. Nella pagina **Impostazioni di distribuzione** l'unica opzione è renderla disponibile per **Solo client di Configuration Manager**. Si tratta dell'unica opzione disponibile. La sequenza di attività non è per la distribuzione del sistema operativo, perché non è associata a un'immagine di avvio. Nella pagina **Punti di distribuzione** sono disponibili tre opzioni di distribuzione:
+
+- **Scaricare il contenuto localmente quando necessario eseguendo la sequenza di attività**
+- **Scaricare tutto il contenuto in locale prima di avviare la sequenza di attività**
+- **Accedere al contenuto direttamente da un punto di distribuzione quando necessario eseguendo la sequenza di attività**
+
+:::image type="content" source="media/deploy-option-3.png" alt-text="Distribuisci sequenza di attività, tre opzioni di distribuzione":::
 
 ## <a name="deploy-windows-10-in-place-upgrade-via-cmg"></a>Distribuire l'aggiornamento sul posto di Windows 10 mediante Cloud Management Gateway
 

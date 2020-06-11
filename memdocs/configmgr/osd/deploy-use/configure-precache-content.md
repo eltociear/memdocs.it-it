@@ -10,12 +10,12 @@ ms.assetid: 9d1e8252-99e3-48aa-bfa5-0cf4cd6637b2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 184bdc58ac6dc0e311875cc1ddab8c605d8eec32
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ec465f3dee33ca311aec120e74a2994a81a90ec9
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704209"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455226"
 ---
 # <a name="configure-pre-cache-content-for-task-sequences"></a>Configurare la pre-cache del contenuto per sequenze di attività
 
@@ -101,7 +101,6 @@ Ad esempio, il passaggio di **aggiornamento del sistema operativo** seguente usa
 >
 > Per prima cosa, aggiungere la lingua selezionando la condizione **Lingua del sistema operativo**. Modificare quindi la query WMI in modo da includere la clausola Architecture.
 
-
 ### <a name="3-deploy-the-task-sequence"></a><a name="bkmk_deploy"></a> 3. Distribuire la sequenza di attività
 
 [Distribuire la sequenza di attività](deploy-a-task-sequence.md). Per la funzionalità di pre-cache configurare le impostazioni seguenti:  
@@ -115,8 +114,7 @@ Ad esempio, il passaggio di **aggiornamento del sistema operativo** seguente usa
 - Nella scheda **Punti di distribuzione** configurare le impostazioni **Opzioni di distribuzione**. Se non viene eseguita la funzione pre-cache prima che l'utente avvii l'installazione, il client usa queste impostazioni.  
 
     > [!Important]  
-    > Per una sequenza di attività che installa un'immagine del sistema operativo, non usare l'opzione di distribuzione per **Scaricare il contenuto localmente quando necessario eseguendo la sequenza di attività**. Se la sequenza di attività cancella il disco prima di applicare l'immagine del sistema operativo, la cache del client viene rimossa. Poiché il contenuto è andato perso, la sequenza di attività avrà esito negativo.<!-- SCCMDocs-PR #1338 -->
-
+    > Per una sequenza di attività che installa un'immagine del sistema operativo, non usare l'opzione di distribuzione per **Scaricare il contenuto localmente quando necessario eseguendo la sequenza di attività**. Se la sequenza di attività cancella il disco prima di applicare l'immagine del sistema operativo, la cache del client viene rimossa. Poiché il contenuto è andato perso, la sequenza di attività avrà esito negativo.<!-- SCCMDocs-PR #1338 --> Queste opzioni di distribuzione sono dinamiche sulla base di altre opzioni selezionate per la distribuzione. Per altre informazioni, vedere [Deploy a task sequence](deploy-a-task-sequence.md#bkmk_deploy-options).<!-- MEMDocs#328, SCCMDocs#2114 -->
 
 ## <a name="user-experience"></a>Esperienza utente
 
@@ -125,7 +123,6 @@ Ad esempio, il passaggio di **aggiornamento del sistema operativo** seguente usa
 - Quando il cliente rende disponibile la distribuzione agli utenti, una notifica informa gli utenti della nuova distribuzione e la sequenza di attività diventa visibile in Software Center. Per avviare l'installazione l'utente può passare a Software Center e fare clic su **Installa**.  
 
 - Se la funzionalità di pre-cache del contenuto non è stata completamente eseguita quando l'utente installa la sequenza di attività, il client usa le impostazioni specificate nella scheda **Opzione di distribuzione** della distribuzione.  
-
 
 ## <a name="see-also"></a>Vedere anche
 

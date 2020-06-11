@@ -1,5 +1,5 @@
 ---
-title: Connettore Symantec con Microsoft Intune
+title: Usare il connettore Symantec Endpoint Protection Mobile con Microsoft Intune
 titleSuffix: Microsoft Intune
 description: Informazioni sull'integrazione di Intune con Symantec Endpoint Protection Mobile per controllare l'accesso dei dispositivi mobili alle risorse aziendali.
 keywords: ''
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3dcca264716b35600addd917e0ee7f309f530b70
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: b078996ba5c7822ce9d8273be1df96a7aad0248b
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988338"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330968"
 ---
 # <a name="symantec-endpoint-protection-mobile-connector"></a>Connettore Symantec Endpoint Protection Mobile
 
@@ -94,7 +94,7 @@ Se nei dispositivi vengono rilevate app dannose, come malware, è possibile bloc
 
 ![Immagine dell'accesso concesso in caso di correzione dopo il rilevamento di app dannose](./media/skycure-mobile-threat-defense-connector/symantec-arch-2.png)
 
-### <a name="control-access-based-on-threat-to-network"></a>Controllare l'accesso in base alle minacce alla rete
+### <a name="control-access-based-on-threat-to-network"></a>Controllare l'accesso in base alle minacce per la rete
 
 Rilevare minacce nella rete, come attacchi di tipo **Man-in-the-middle**, e proteggere l'accesso alle reti Wi-Fi in base al livello di rischio del dispositivo.
 

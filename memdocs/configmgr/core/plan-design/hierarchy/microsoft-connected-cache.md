@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4dead573e1744a5c8b84ff954e85be43af644486
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 70d4930da712eccff8bdb1f1986a68aa5fe77644
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878499"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455277"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Microsoft Connected Cache in Configuration Manager
 
@@ -63,7 +63,7 @@ Quando si configurano i client per l'uso del server di Connected Cache, questi c
 
   - Non preinstallare la funzionalità [Application Request Routing](https://docs.microsoft.com/iis/extensions/planning-for-arr/application-request-routing-version-2-overview) (ARR) di IIS. Connected Cache installa ARR e ne configura le impostazioni. Microsoft non può garantire che la configurazione ARR di Connected Cache non crei conflitti con altre applicazioni presenti nel server che usano anch'esse questa funzionalità.
 
-  - Il punto di distribuzione richiede l'accesso internet a Microsoft cloud. Gli URL specifici possono variare a seconda del contenuto specifico abilitato per il cloud. Per altre informazioni, vedere i [requisiti di accesso Internet](../network/internet-endpoints.md).
+  - Il punto di distribuzione richiede l'accesso internet a Microsoft cloud. Gli URL specifici possono variare a seconda del contenuto specifico abilitato per il cloud. Assicurarsi di consentire anche gli endpoint per l'ottimizzazione recapito. Per altre informazioni, vedere i [requisiti di accesso Internet](../network/internet-endpoints.md).
 
   - A partire dalla versione 2002, l'applicazione Connected Cache può usare un server proxy non autenticato per l'accesso a Internet. Per altre informazioni, vedere [Configurare il proxy per un server del sistema del sito](../network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server).<!-- 5856396 -->
 

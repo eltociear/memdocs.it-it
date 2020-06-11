@@ -1,5 +1,5 @@
 ---
-title: Configurare Check Point SandBlast MTD
+title: Configurare il connettore Check Point SandBlast MTD con Intune
 titleSuffix: Microsoft Intune
 description: Informazioni sull'integrazione di Intune con Check Point SandBlast Mobile Threat Defense per controllare l'accesso dei dispositivi mobili alle risorse aziendali.
 keywords: ''
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e9c1450af064caa1f7572da0ab4753e9db68484c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: a0645c771b304bfb4930f5cd365b9291366499b1
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989267"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330917"
 ---
 # <a name="check-point-sandblast-mobile-threat-defense-connector-with-intune"></a>Connettore Check Point SandBlast Mobile Threat Defense con Intune
 
@@ -77,7 +77,7 @@ Se nei dispositivi vengono rilevate app dannose, come malware, è possibile bloc
 > [!div class="mx-imgBorder"]
 > ![Accesso a Check Point MTD concesso](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-3.PNG)
 
-### <a name="control-access-based-on-threat-to-network"></a>Controllare l'accesso in base alle minacce alla rete
+### <a name="control-access-based-on-threat-to-network"></a>Controllare l'accesso in base alle minacce per la rete
 
 Rilevare minacce nella rete, come attacchi di tipo **Man-in-the-middle**, e proteggere l'accesso alle reti Wi-Fi in base al livello di rischio del dispositivo.
 

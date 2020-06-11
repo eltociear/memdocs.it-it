@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 06/05/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,17 +18,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f39681bf954e84376e5d8e3862354a2a10b1003a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 10c715bcff63e6ec5a9ec9002926f6ee6608360e
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988102"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455073"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Come monitorare i criteri di protezione delle app
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-È possibile monitorare lo stato dei criteri di protezione delle app applicati agli utenti nel riquadro di protezione delle app di Intune nel [portale di Azure](https://portal.azure.com). Sono anche disponibili informazioni sugli utenti interessati dai criteri di protezione delle app, lo stato di conformità di questi criteri ed eventuali problemi che gli utenti potrebbero riscontrare.
+È possibile monitorare lo stato dei criteri di protezione delle app applicati agli utenti nel riquadro di protezione delle app di Intune in Intune. Sono anche disponibili informazioni sugli utenti interessati dai criteri di protezione delle app, lo stato di conformità di questi criteri ed eventuali problemi che gli utenti potrebbero riscontrare.
 
 I criteri di protezione delle app possono essere monitorati in tre posizioni diverse:
 - Visualizzazione di riepilogo
@@ -43,10 +43,9 @@ Il periodo di conservazione per i dati di protezione delle app è di 90 giorni. 
 ## <a name="summary-view"></a>Visualizzazione di riepilogo
 
 1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Selezionare **App** > **Monitoraggio** > **Stato protezione app**.
+2. Selezionare **App** > **Monitoraggio** > **Stato protezione app**.
 
-   ![Screenshot del riquadro di riepilogo del riquadro di gestione di applicazioni per dispositivi mobili di Intune](./media/app-protection-policies-monitor/app-protection-user-status-summary.png)
-
+Nell'elenco seguente vengono fornite informazioni dettagliate sullo stato di protezione delle app: 
 - **Utenti assegnati**: numero totale di utenti assegnati dell'azienda che usano un'app associata a un criterio in un contesto aziendale. Comprende sia gli utenti protetti e con licenza, sia gli utenti non protetti e senza licenza.
 - **Utenti contrassegnati**: Numero di utenti che riscontrano problemi con il proprio dispositivo. Gli utenti con dispositivi jailbroken (iOS/iPadOS) e rooted (Android) vengono indicati in **Utenti contrassegnati**. Vengono segnalati qui anche gli utenti con dispositivi contrassegnati dal controllo dell'attestazione del dispositivo SafetyNet di Google, se attivato dall'amministratore IT. 
 - **Utenti con app potenzialmente dannose**: numero di utenti che possono avere un'app dannosa nel dispositivo Android rilevato da Google Play Protect. 

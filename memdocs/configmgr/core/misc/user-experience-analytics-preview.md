@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 7ddcb1ade6f39d1fc2cb824470c33d39496bcbf1
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: da8c52dabf27ddf0992d9f405400b3ac984f2ecc
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428674"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455124"
 ---
 # <a name="endpoint-analytics-preview"></a><a name="bkmk_uea"></a> Anteprima di Analisi degli endpoint
 
@@ -56,7 +56,7 @@ Per iniziare a usare Analisi degli endpoint, verificare i prerequisiti e quindi 
 
 Per questa versione di anteprima è possibile registrare i dispositivi tramite Configuration Manager o Microsoft Intune. 
 
-Per la registrazione dei dispositivi tramite Intune, questa anteprima richiede:
+#### <a name="to-enroll-devices-via-intune-this-preview-requires"></a><a name="bkmk_uea__intune_prereq"></a> Per la registrazione dei dispositivi tramite Intune, questa anteprima richiede:
 - Dispositivi registrati in Intune che eseguono Windows 10
 - Le informazioni dettagliate sulle prestazioni di avvio sono disponibili solo per i dispositivi che eseguono la versione 1903 o successive di Windows 10 Enterprise (le edizioni Home e Pro non sono attualmente supportate) e i dispositivi devono essere aggiunti ad Azure AD o ad Azure AD ibrido. I computer aggiunti all'area di lavoro non sono attualmente supportati.
 - Connettività di rete dai dispositivi al cloud pubblico Microsoft. Per altre informazioni, vedere [Endpoint](#bkmk_uea_endpoints).
@@ -64,11 +64,12 @@ Per la registrazione dei dispositivi tramite Intune, questa anteprima richiede:
    - Facendo clic su **Avvia**, l'utente accetta e conferma che i dati dei clienti possono essere archiviati al di fuori del percorso selezionato durante il provisioning del tenant di Microsoft Intune.
    - Dopo aver fatto clic su **Avvia** per la raccolta dei dati, altri ruoli di sola lettura possono visualizzare i dati.
 
-Per la registrazione dei dispositivi tramite Configuration Manager, questa anteprima richiede:
+#### <a name="to-enroll-devices-via-configuration-manager-this-preview-requires"></a><a name="bkmk_uea__cm_prereq"></a> Per la registrazione dei dispositivi tramite Configuration Manager, questa anteprima richiede:
 - Configuration Manager versione 2002 o successiva
 - Client aggiornati alla versione 2002 o successiva
 - [Collegamento dei tenant di Microsoft Endpoint Manager](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) abilitato con una posizione del tenant di Azure in America del Nord o in Europa (a breve verrà eseguita l'espansione ad altre aree)
 
+#### <a name="proactive-remediation-scripting-requires"></a><a name="bkmk_uea__prs_prereq"></a> Gli script di correzione proattiva richiedono:
 Sia che si esegua la registrazione dei dispositivi tramite Intune o Configuration Manager, lo [**script di correzione proattiva**](#bkmk_uea_prs) ha i requisiti seguenti:
 - È necessario che i dispositivi siano aggiunti ad Azure AD o ad Azure AD ibrido e soddisfino una delle condizioni seguenti:
 - Un dispositivo Windows 10 Enterprise, Professional o Education gestito da Intune

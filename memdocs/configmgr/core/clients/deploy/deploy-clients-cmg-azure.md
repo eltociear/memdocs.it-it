@@ -10,12 +10,12 @@ ms.assetid: a44006eb-8650-49f6-94e1-18fa0ca959ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1b447e5c8d34a4b8758fa0fd6109113b0675a635
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: 39d6bf22cb24492a0f4e3f59313184ce522b5d09
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347016"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455005"
 ---
 # <a name="install-and-assign-configuration-manager-windows-10-clients-using-azure-ad-for-authentication"></a>Installare e assegnare client di Configuration Manager in dispositivi Windows 10 usando Azure AD per l'autenticazione
 
@@ -95,7 +95,7 @@ Il parametro **/mp** e la proprietà **CCMHOSTNAME** specificano uno degli eleme
 - Gateway di gestione cloud
 - Punto di gestione basato su Internet
 
-La proprietà **SMSMP** specifica il punto di gestione locale o basato su Internet.
+La proprietà **SMSMP** specifica il punto di gestione locale. Non è obbligatoria. È consigliabile per i dispositivi aggiunti ad Azure AD che eseguono il roaming nella Intranet, in modo che possano trovare un punto di gestione locale.
 
 In questo esempio viene usato un gateway di gestione cloud. Sostituisce i valori di esempio: `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver`
 

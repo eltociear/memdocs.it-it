@@ -2,7 +2,7 @@
 title: Gestire punti di distribuzione
 titleSuffix: Configuration Manager
 description: Usare i punti di distribuzione per ospitare il contenuto distribuito a utenti e dispositivi.
-ms.date: 12/03/2019
+ms.date: 06/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: aebafaf9-b3d5-4a0f-9ee5-685758c037a1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a1cc931bd0e02be66f608db11e0052fde571a427
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d1d93dd446a65fda0b259bb10e0c944780d41059
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701679"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347092"
 ---
 # <a name="install-and-configure-distribution-points-in-configuration-manager"></a>Installare e configurare punti di distribuzione per Configuration Manager
 
@@ -307,12 +307,16 @@ Le impostazioni seguenti si trovano nella pagina **Punto di distribuzione** dell
     - Configuration Manager versione 1806 con aggiornamento cumulativo (4462978) o versione successiva  
 
         - Windows Server versione 1709 o successiva
-        - Windows Server 2016 con aggiornamenti KB4132216 e KB4284833
+        - Windows Server 2016 con gli aggiornamenti seguenti:
+           - Aggiornamento cumulativo KB4132216, rilasciato il 21 giugno 2018 o un aggiornamento cumulativo successivo.
+           - Aggiornamento dello stack di manutenzione KB4284833, rilasciato il 18 maggio 2018 o un aggiornamento dello stack di manutenzione successivo.
 
     - Configuration Manager versione 1810 o successiva
 
         - Windows Server versione 1709 o successiva
-        - Windows Server 2016 con aggiornamenti KB4132216 e KB4284833
+        - Windows Server 2016 con gli aggiornamenti seguenti:
+           - Aggiornamento cumulativo KB4132216, rilasciato il 21 giugno 2018 o un aggiornamento cumulativo successivo.
+           - Aggiornamento dello stack di manutenzione KB4284833, rilasciato il 18 maggio 2018 o un aggiornamento dello stack di manutenzione successivo.
         - Windows Server 2019  
 
 - **Abilita questo punto di distribuzione per il contenuto pre-installato**: questa impostazione consente di aggiungere contenuto al server prima di distribuire il software. Poiché si trovano già nella raccolta, i file di contenuto non vengono trasferiti attraverso la rete quando si distribuisce il software. Per altre informazioni, vedere [Contenuto pre-installato](../../../plan-design/hierarchy/manage-network-bandwidth.md#BKMK_PrestagingContent).  

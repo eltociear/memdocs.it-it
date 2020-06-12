@@ -6,7 +6,7 @@ keywords: Data warehouse di Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/03/2020
+ms.date: 05/29/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d6dfba55c8e516e2e689513f063d56f5a43d52d9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c7ba3c7397298ea25eecc1147319760892434720
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79359885"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270991"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Connettersi al data warehouse con Power BI
 
@@ -47,7 +47,7 @@ La procedura seguente illustra come scaricare il file di Power BI e come usare i
 
 ## <a name="install-power-bi"></a>Installare Power BI
 
-Installare l'ultima versione di [Power BI Desktop](https://aka.ms/intune/datawarehouseapi/installpowerbi). Per altre informazioni, vedere [Power BI Desktop](https://powerbi.microsoft.com/desktop)
+Installare l'ultima versione di [Power BI Desktop](https://aka.ms/intune/datawarehouseapi/installpowerbi). Per altre informazioni, vedere [Power BI Desktop](https://powerbi.microsoft.com/desktop).
 
 ## <a name="load-the-data-and-reports-using-the-power-bi-intune-compliance-data-warehouse-app"></a>Caricare i dati e report tramite l'app Intune Compliance (Data Warehouse) di Power BI
 
@@ -64,10 +64,10 @@ L'app [Intune Compliance (Data Warehouse)](https://aka.ms/intune/datawarehouseap
 9. Per visualizzare tutti i report disponibili, fare clic sulla scheda **Report** e quindi sul report **Compliance V1.0** (Conformità versione 1.0). Scorrere le pagine del report facendo clic sulle schede nella parte inferiore.
 10. Per passare nuovamente a questi report con facilità in un secondo momento, fare clic sull'asterisco accanto al report **Compliance V1.0**. In questo modo il report verrà aggiunto ai preferiti di Power BI.
 
-In alternativa, è possibile installare l'app dal portale di Intune:
+In alternativa è possibile installare l'app dall'interfaccia di amministrazione di Microsoft Endpoint Manager:
 
-1. Accedere al portale di Azure e scegliere **Monitoraggio e gestione** > **Intune**. È anche possibile cercare risorse per Intune.
-2. Aprire il pannello **Configura il data warehouse di Intune**.
+1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Selezionare **Report** > **Data warehouse di Intune** > **Data warehouse**.
 3. Selezionare **Scarica l'app Power BI** per accedere a report di Power BI creati in precedenza per il tenant e condividerli nel browser.
 4. Seguire i passaggi 2-10 riportati in precedenza.
 
@@ -75,10 +75,10 @@ In alternativa, è possibile installare l'app dal portale di Intune:
 
 Con un client autenticato in Azure AD, l'URL di OData si connette all'endpoint RESTful dell'API data warehouse che espone il modello di dati al client di creazione di report. Seguire queste istruzioni per usare Power BI Desktop per connettersi e creare report personalizzati. Non si è limitati a Power BI Desktop, ma si può usare lo strumento analitico preferito con l'URL di OData, purché il client supporti l'autenticazione OAUTH2.0 e lo standard OData 4.0.
 
-1. Accedere a [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Fare clic su **Configura il data warehouse di Intune** nella sezione **Altre attività** sul lato destro del pannello Panoramica. Verrà visualizzato il pannello **Data warehouse di Intune**.
+1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Selezionare **Report** > **Data warehouse di Intune** > **Data warehouse**.
 3. Recuperare l'URL feed personalizzato nel pannello Report, ad esempio:<br>
-    `https://fef.{yourinfo}.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
+    `https://fef.{yourtenant}.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
 4. Aprire **Power BI Desktop**.
 5. Scegliere **File** > **Recupera dati**. Selezionare **Feed OData**.
 6. Scegliere **Basic**.
@@ -93,7 +93,7 @@ Con un client autenticato in Azure AD, l'URL di OData si connette all'endpoint R
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-È possibile trovare le risposte alle domande sull'ambiente, ad esempio il numero di dispositivi registrati per ogni giorno nell'ultima settimana. È possibile esaminare a fondo il tenant di Intune e il gruppo di client con i report di Power BI del data warehouse di Intune recuperati dal pannello in Azure. Tuttavia, Intune fornisce una serie di altri modi per estendere o riutilizzare i dati. Power BI e l'API data warehouse di Microsoft Intune offrono funzionalità aggiuntive, ad esempio:
+È possibile trovare le risposte alle domande sull'ambiente, ad esempio il numero di dispositivi registrati per ogni giorno nell'ultima settimana. È possibile ottenere informazioni dettagliati sul tenant di Intune e sul gruppo di client usando i report di Power BI del data warehouse di Intune recuperati dal pannello dell'interfaccia di amministrazione di Microsoft Endpoint Management. Tuttavia, Intune fornisce una serie di altri modi per estendere o riutilizzare i dati. Power BI e l'API data warehouse di Microsoft Intune offrono funzionalità aggiuntive, ad esempio:
 
 <!-- - You can use Power BI Desktop to create additional report types with your data. For example, you could create a custom chart representing the ratio of device manufactures in your enterprise. For more information about creating custom reports with Power BI and the Intune Data Warehouse, see `BLOG POST ON POWER BI`. -->
 - I dati del tenant sono organizzati in modo da contribuire all'estrazione di informazioni dettagliate dai dati. Per altre informazioni sull'organizzazione dei dati, vedere [Modello di dati del data warehouse](reports-ref-data-model.md).

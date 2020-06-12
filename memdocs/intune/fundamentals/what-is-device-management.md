@@ -4,7 +4,7 @@ description: Microsoft 365 Enterprise include Microsoft Intune. Capire le funzio
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 05/28/2020
 ms.topic: overview
 audience: microsoft-business
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 44f9446299bb20bd73890a67ec33c3d8e7a36e48
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 540faaca71d3694b95d32a24c947a977989a3223
+ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988138"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84223636"
 ---
 # <a name="device-management-overview"></a>Panoramica della gestione dei dispositivi
 
@@ -57,6 +57,16 @@ Intune consente di gestire più dispositivi per ogni persona e le diverse piatta
 
 Per altre informazioni su Intune, vedere [informazioni su Intune](what-is-intune.md).
 
+## <a name="co-management"></a>Co-gestione
+
+Molte organizzazioni usano Configuration Manager a livello locale per gestire dispositivi, inclusi i desktop e i server. È possibile associare tramite cloud l'istanza locale di Configuration Manager a Microsoft Intune. Quando si esegue l'associazione al cloud, si ottengono sia i vantaggi di Intune sia quelli del cloud, tra cui l'[accesso condizionale](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-conditional-access), l'[esecuzione di azioni remote](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-remote-actions), l'[uso di Windows Autopilot](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-autopilot), e altro ancora.
+
+[Microsoft Endpoint Manager](https://docs.microsoft.com/mem/endpoint-manager-overview) è una piattaforma di soluzioni che riunisce diverse tecnologie. Include [Microsoft Intune](what-is-intune.md) per la gestione dei dispositivi basati sul cloud e [Configuration Manager + Intune](https://docs.microsoft.com/mem/configmgr/comanage/overview) per la gestione dei dispositivi associati al cloud.
+
+Se si usa Configuration Manager e si è pronti a spostare alcune attività nel cloud, la co-gestione è la soluzione ottimale.
+
+Per altre informazioni sull'associazione al cloud di Configuration Manager, vedere [Informazioni sulla co-gestione](https://docs.microsoft.com/mem/configmgr/comanage/overview).
+
 ## <a name="integration-with-secure-and-protect-services"></a>Integrazione con servizi di sicurezza e protezione
 
 Fornire sicurezza e protezione è un compito fondamentale che deve svolgere qualsiasi soluzione di gestione dei dispositivi. Intune svolge questo compito in modo particolarmente efficace integrandosi con altri servizi. Ad esempio:
@@ -88,7 +98,7 @@ L'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.micr
 
 Nell'interfaccia di amministrazione di Gestione dei dispositivi è possibile eseguire le operazioni seguenti:
 
-- [Registra i dispositivi](../enrollment/device-enrollment.md)
+- [Registrare i dispositivi](../enrollment/device-enrollment.md)
 - [Impostare la conformità dei dispositivi](../protect/device-compliance-get-started.md)
 - [Gestire i dispositivi](../remote-actions/device-management.md)
 - [Gestire le app](../apps/app-management.md)  

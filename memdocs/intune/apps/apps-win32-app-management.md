@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/02/2020
+ms.date: 06/01/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 70cb3e2f8baf89be5e77867b385788cb04181ba1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 8814e1a2c6b1af48d71a0a82c02492e48b44dda9
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986030"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84271008"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Intune autonomo - Gestione di app Win32
 
@@ -66,7 +66,7 @@ Se si esegue `IntuneWinAppUtil.exe` dalla finestra di comando senza parametri, l
 ### <a name="available-command-line-parameters"></a>Parametri della riga di comando disponibili 
 
 |    **Parametro della riga di comando**    |    **Descrizione**    |
-|:------------------------------:|:----------------------------------------------------------:|
+|--------------------------------|------------------------------------------------------------|
 |    `-h`     |    Help    |
 |    `-c <setup_folder>`     |    Cartella per tutti i file di installazione. Tutti i file in questa cartella verranno compressi in un file con estensione *intunewin*.    |
 |    `-s <setup_file>`     |    File di installazione (ad esempio, *setup.exe* o *setup.msi*).    |
@@ -76,7 +76,7 @@ Se si esegue `IntuneWinAppUtil.exe` dalla finestra di comando senza parametri, l
 ### <a name="example-commands"></a>Comandi di esempio
 
 |    **Comando di esempio**    |    **Descrizione**    |
-|:-----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|-------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    `IntuneWinAppUtil -h`    |    Questo comando mostrerà le informazioni di utilizzo per lo strumento.    |
 |    `IntuneWinAppUtil -c c:\testapp\v1.0 -s c:\testapp\v1.0\setup.exe -o c:\testappoutput\v1.0 -q`    |    Questo comando genererà il file `.intunewin` dalla cartella di origine e dal file di installazione specificati. Per il file di installazione MSI, questo strumento recupererà le informazioni necessarie per Intune. Se è specificato `-q`, il comando verrà eseguito in modalità non interattiva e se il file di output esiste già, verrà sovrascritto. Inoltre, se la cartella di output non esiste, verrà creata automaticamente.    |
 
@@ -456,7 +456,7 @@ Nel comando di PowerShell precedente sostituire `<path to binary file>` con il p
 - Controllare la versione del sistema operativo: Windows 10 1607 e versioni successive.  
 - Controllare lo SKU di Windows 10: Windows 10 S o le versioni di Windows in esecuzione con la modalità S abilitata non supportano l'installazione MSI.
 
-Per altre informazioni sulla risoluzione dei problemi relativi alle app Win32, vedere [Risolvere i problemi di installazione delle app Win32](troubleshoot-app-install.md#win32-app-installation-troubleshooting).
+Per altre informazioni sulla risoluzione dei problemi relativi alle app Win32, vedere [Risolvere i problemi di installazione delle app Win32](troubleshoot-app-install.md#win32-app-installation-troubleshooting). Per informazioni sui tipi di app nei dispositivi ARM64, vedere [Tipi di app supportati nei dispositivi ARM64](../apps/troubleshoot-app-install.md#app-types-supported-on-arm64-devices).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

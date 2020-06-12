@@ -10,12 +10,12 @@ ms.assetid: 3986a992-c175-4b6f-922e-fc561e3d7cb7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2d7697f8b5a2017aa732c52512bf31598c070fbc
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7b9111e3be82424425561e0a664fee955d73ee63
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696079"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270821"
 ---
 # <a name="how-to-manage-clients-in-configuration-manager"></a>Come gestire i client in Configuration Manager
 
@@ -103,7 +103,7 @@ Per altre informazioni, vedere [Come configurare le impostazioni client](../depl
 
 ### <a name="approve"></a>Approva
 
-Quando il client comunica con i sistemi del sito mediante HTTP e un certificato autofirmato, è necessario approvare i client per identificarli come computer attendibili. Per impostazione predefinita, la configurazione del sito approva automaticamente i client della stessa foresta di Active Directory e delle foreste trusted. Questo comportamento predefinito significa che non è necessario approvare manualmente ogni client. Approvare manualmente i computer del gruppo di lavoro ritenuti attendibili e altri eventuali computer ritenuti attendibili, ma non approvati.
+Quando il client comunica con i sistemi del sito mediante HTTP e un certificato autofirmato, è necessario approvare i client per identificarli come computer attendibili. Per impostazione predefinita, la configurazione del sito approva automaticamente i client delle stesse foreste di Active Directory e trusted e degli stessi tenant di Azure Active Directory (Azure AD) connessi<!-- MEMDocs#318 -->. Questo comportamento predefinito significa che non è necessario approvare manualmente ogni client. Approvare manualmente i computer del gruppo di lavoro ritenuti attendibili e altri eventuali computer ritenuti attendibili, ma non approvati.
 
 > [!IMPORTANT]  
 > Sebbene alcune funzioni di gestione potrebbero funzionare per i client non approvati, si tratta di uno scenario non supportato per Configuration Manager.  

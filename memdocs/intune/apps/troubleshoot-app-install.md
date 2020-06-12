@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2020
+ms.date: 06/01/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c98de99eb8f72840080ca720465559c462bc77f
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 2cc40eb4a8b094cd933a6bb3f4f8c7fdae927f7b
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023368"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270892"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Risolvere i problemi di installazione delle app
 
@@ -107,6 +107,18 @@ Esistono regole specifiche da seguire per raccogliere i file di log:
 - La raccolta dei log di installazione dell'app Win32 è abilitata per le app che rispettano la finalità di assegnazione obbligatoria, disponibile e disinstallazione dell'app.
 - I log archiviati sono crittografati per proteggere le informazioni personali che contengono.
 - Quando si aprono dei ticket di supporto per gli errori che si verificano nelle app Win32, allegare i relativi log di errore usando la procedura riportata sopra.
+
+## <a name="app-types-supported-on-arm64-devices"></a>Tipi di app supportati nei dispositivi ARM64
+
+I tipi di app supportati nei dispositivi ARM64 sono i seguenti:
+- App Web che non richiedono un browser gestito per l'apertura. 
+- App di Microsoft Store per le aziende o app line-of-business universali di Windows (`.appx`) con una delle seguenti combinazioni di elementi `TargetDeviceFamily` e `ProcessorArchitectures`:
+  - `TargetDeviceFamily` include app desktop, app universali e app Windows8x. Le app Windows8x sono valide solo come app di Microsoft Store per le aziende.
+  - `ProcessorArchitecture` include app x86, app ARM, app ARM64 e app con architettura neutra.
+- App di Windows Store
+- App line-of-business MSI per Windows Mobile
+- App Win32 con la regola relativa al requisito a 32 bit.
+- App a portata di clic di Office per Windows se è selezionata l'architettura a 32 bit o x86.
 
 ## <a name="troubleshooting-apps-from-the-microsoft-store"></a>Risoluzione dei problemi delle app da Microsoft Store
 

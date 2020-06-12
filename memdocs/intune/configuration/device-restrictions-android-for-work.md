@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 06/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 38598e0245b0cfe15be4b9303620aea1724933d1
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.openlocfilehash: b81686f645d9fce610c39266feb2675fd35cc280
+ms.sourcegitcommit: 6f67c864cf71b4a6a316f4d04a6cc43cf28b4277
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166571"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84257036"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Impostazioni dei dispositivi Android Enterprise per consentire o limitare l'uso delle funzionalità tramite Intune
 
@@ -231,8 +231,16 @@ Utilizzare queste impostazioni per configurare un'esperienza di tipo chiosco mul
 
 ### <a name="applications"></a>Applicazioni
 
-- **Consenti l'installazione da origini sconosciute**: **Consenti** consente agli utenti di attivare **Origini sconosciute**. Questa impostazione consente di installare app da origini sconosciute, tra cui origini diverse da Google Play Store. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe impedire agli utenti di attivare **Origini sconosciute**.
-- **Consenti l'accesso a tutte le app in Google Play Store**: con l'impostazione **Consenti** gli utenti ottengono l'accesso a tutte le app in Google Play Store. Non possono accedere alle app bloccate dall'amministratore in [App client](../apps/apps-add-android-for-work.md). Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe imporre agli utenti di accedere solo alle app che l'amministratore rende disponibili in Google Play Store o alle app richieste in [App client](../apps/apps-add-android-for-work.md).
+- **Consenti l'installazione da origini sconosciute**: **Consenti** consente agli utenti di attivare **Origini sconosciute**. Questa impostazione consente di installare app da origini sconosciute, tra cui origini diverse da Google Play Store. Consente agli utenti di caricare le app sul dispositivo con metodi diversi da Google Play Store. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe impedire agli utenti di attivare **Origini sconosciute**.
+- **Consenti l'accesso a tutte le app in Google Play Store**: con l'impostazione **Consenti** gli utenti ottengono l'accesso a tutte le app in Google Play Store. Non possono accedere alle app bloccate dall'amministratore in [App client](../apps/apps-add-android-for-work.md).
+
+  Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe:
+  
+  - Imporre agli utenti di accedere solo alle app che l'amministratore rende disponibili in Google Play Store o alle app richieste in [App client](../apps/apps-add-android-for-work.md). 
+  - Disinstallare automaticamente tutte le app rilevate come installate da utenti al di fuori di Google Play Store.
+
+  Se si vuole abilitare il caricamento da altre origini, impostare le opzioni **Consenti l'installazione da origini sconosciute** e **Consenti l'accesso a tutte le app in Google Play Store** su **Consenti**.
+
 - **Aggiornamenti automatici delle app**: i dispositivi controllano ogni giorno la disponibilità di aggiornamenti per le app. scegliere se gli aggiornamenti automatici vengono installati. Le opzioni disponibili sono:
   - **Non configurata**: Intune non modifica o aggiorna questa impostazione.
   - **Scelta utente**: il sistema operativo potrebbe usare questa opzione per impostazione predefinita. Gli utenti possono impostare le proprie preferenze nell'app Google Play gestita.

@@ -2,7 +2,7 @@
 title: Ripristino del sito
 titleSuffix: Configuration Manager
 description: Informazioni su come ripristinare i siti in Configuration Manager.
-ms.date: 08/23/2019
+ms.date: 06/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: b17c8c9ed0c1f6f9a5aeb487e07ad3d3dc66cbae
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 37e4db2ad801c5923ba3db54554af0bb13968048
+ms.sourcegitcommit: 64727a4b025a589e270842da39516c4c42563a34
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82903953"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84301436"
 ---
 # <a name="recover-a-configuration-manager-site"></a>Ripristinare un sito di Configuration Manager
 
@@ -347,6 +347,10 @@ Ripetere questo processo per qualsiasi altro punto di distribuzione locale che s
     - **Esegui script PowerShell**: se si usa l'opzione **Esegui questo passaggio come account specificato**, selezionare **Imposta**. Immettere e confermare la password e quindi selezionare **Verifica**.
 
 Ripetere questo processo per tutte le sequenze di attività.
+
+### <a name="recreate-bootable-media-and-prestaged-media-in-non-pki-environments"></a>Ricreare supporti di avvio e supporti pre-installati in ambienti non PKI
+
+Negli ambienti non PKI, i certificati autofirmati in supporti di avvio e supporti pre-installati si basano sulle chiavi di computer del server in cui è stato creato il supporto. Per questo motivo, se l'hardware viene modificato o il sistema operativo viene reinstallato nell'ambito di un ripristino, è necessario creare nuovamente tutti i supporti di avvio e i supporti pre-installati creati in tale server. Per altre informazioni su come creare supporti di avvio e pre-installati, vedere [Creare supporti di avvio](../../../osd/deploy-use/create-bootable-media.md) e [Creare supporti pre-installati](../../../osd/deploy-use/create-prestaged-media.md).
 
 ### <a name="reenter-sideloading-keys"></a>Immettere nuovamente le chiavi di sideload
 

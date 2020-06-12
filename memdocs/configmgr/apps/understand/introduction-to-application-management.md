@@ -10,12 +10,12 @@ ms.assetid: 08f711ba-83bf-4b5f-9520-a0778c6ae7eb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d3cd21fe4b1d53ecbb0bc60818405cb795a4f289
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1b2fc0dfe37ad51ce1a549545c3eaa716395438d
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690219"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347110"
 ---
 # <a name="introduction-to-application-management-in-configuration-manager"></a>Introduzione alla gestione delle applicazioni in Configuration Manager
 
@@ -95,7 +95,7 @@ Quando si eseguono *revisioni* per un'applicazione o un tipo di distribuzione, C
 - Ripristinare una versione precedente di un'applicazione
 - Eliminare una versione precedente
 
-Per altre informazioni, vedere [Aggiornare e ritirare le applicazioni](../deploy-use/update-and-retire-applications.md).  
+Per altre informazioni, vedere [Rivedere le applicazioni](../deploy-use/revise-and-supersede-applications.md#application-revisions).  
 
 ### <a name="detection-method"></a>Metodo di rilevamento
 

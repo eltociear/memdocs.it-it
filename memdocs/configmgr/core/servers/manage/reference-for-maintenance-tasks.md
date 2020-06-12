@@ -2,7 +2,7 @@
 title: Informazioni di riferimento per le attività di manutenzione
 titleSuffix: Configuration Manager
 description: Dettagli per ogni attività di manutenzione del sito di Configuration Manager
-ms.date: 03/30/2020
+ms.date: 06/04/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 68dc6acd-5848-47a4-b4c1-ffa40e47890b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9964834bf3a6bfa8e5c0a0bb70039554134490ec
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e989de5acab778374c233862d0ab4d7077899d28
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708539"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428597"
 ---
 # <a name="reference-for-maintenance-tasks-in-configuration-manager"></a>Informazioni di riferimento per le attività di manutenzione | Configuration Manager
 
@@ -96,6 +96,7 @@ Usare questa attività per eliminare dal database del sito tutti i dati obsoleti
 
 - Notifiche client obsolete o scadute, ad esempio richieste di download per criteri computer o utente
 - Endpoint Protection, come le richieste da parte di un utente amministratore ai client di eseguire un'analisi o scaricare definizioni aggiornate
+- Risultati dello stato di esecuzione degli script
 
 |||
 |---------|---------|

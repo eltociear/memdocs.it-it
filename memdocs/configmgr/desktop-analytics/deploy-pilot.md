@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 0e90855949f5c8f249db6b2f4305c71b8ee4e768
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: 3aa722415248ad9275c6ad065f0120bfe78d3ce4
+ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83824019"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84311221"
 ---
 # <a name="how-to-deploy-to-pilot-with-desktop-analytics"></a>Come eseguire la distribuzione in un progetto pilota con Desktop Analytics
 
@@ -104,7 +104,7 @@ Per poter distribuire Windows, è prima necessario creare gli oggetti software i
 Configuration Manager usa i dati di Desktop Analytics per creare raccolte per le distribuzioni pilota e le distribuzioni in ambiente di produzione. Queste raccolte si trovano nella cartella **Piani di distribuzione** del nodo **Raccolte dispositivi** nell'area di lavoro **Asset e conformità**.
 
 > [!IMPORTANT]
-> Le raccolte sono gestite da Configuration Manager per i piani di distribuzione di Desktop Analytics. Le modifiche manuali non sono supportate.
+> Le raccolte sono gestite da Configuration Manager per i piani di distribuzione di Desktop Analytics. Le modifiche manuali non sono supportate. Se si elimina una di queste raccolte, Desktop Analytics non funziona ed è necessario [connettersi a Configuration Manager](connect-configmgr.md) nuovamente.<!--7208090-->
 
 Per assicurarsi che i dispositivi siano integri dopo ogni fase di distribuzione, usare la procedura seguente per creare una distribuzione in più fasi integrata di Desktop Analytics:
 

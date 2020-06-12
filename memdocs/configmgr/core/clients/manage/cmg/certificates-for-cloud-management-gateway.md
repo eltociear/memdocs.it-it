@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: 33e4ecbac965206ec4043f5adf91d2dbfb9602d8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7e9602ef5ea784dd3e97578d5ff585f2ca662c1e
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694939"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347203"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>Certificati per il gateway di gestione cloud
 
@@ -238,15 +238,16 @@ Configurare un punto di gestione locale con la modalità di connessione client i
 
 #### <a name="legend-of-terms"></a>Legenda dei termini
 
-- *Gruppo di lavoro*: il dispositivo non è stato aggiunto a un dominio o ad Azure AD, ma ha un [certificato di autenticazione client](#bkmk_clientauth)  
-- *Aggiunto a un dominio AD*: il dispositivo viene aggiunto a un dominio di Active Directory locale  
-- *Aggiunto ad Azure AD*: o aggiunto al dominio cloud: il dispositivo viene aggiunto a un tenant di Azure Active Directory  
-- *Aggiunto ad AD ibrido*: il dispositivo viene aggiunto sia a un dominio di Active Directory, sia a un tenant di Azure AD  
-- *HTTP*: nelle proprietà del punto di gestione le connessioni client sono impostate su **HTTP**  
-- *HTTPS*: nelle proprietà del punto di gestione le connessioni client sono impostate su **HTTPS**  
-- *E-HTTP*: nella scheda **Comunicazione computer client** delle proprietà del sito configurare le impostazioni di sistema del sito per **HTTPS o HTTP** e abilitare l'opzione **Usa i certificati generati da Configuration Manager per sistemi del sito HTTP**. Si configura il punto di gestione per il protocollo HTTP. Il punto di gestione HTTP è pronto per la comunicazione HTTP e HTTPS (scenari di autenticazione basata su token).  
+- *Gruppo di lavoro*: il dispositivo non è stato aggiunto a un dominio o ad Azure AD, ma ha un [certificato di autenticazione client](#bkmk_clientauth).
+- *Aggiunto a un dominio AD*: il dispositivo viene aggiunto a un dominio di Active Directory locale.
+- *Aggiunto ad Azure AD*: (o aggiunto al dominio cloud) il dispositivo viene aggiunto a un tenant di Azure Active Directory. Per altre informazioni, vedere [Dispositivi aggiunti ad Azure AD](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join).
+- *Aggiunto ad AD ibrido*: il dispositivo viene aggiunto ad Active Directory in locale e registrato con Azure Active Directory. Per altre informazioni, vedere [Dispositivi aggiunti ad Azure AD ibrido](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid).
+- *HTTP*: nelle proprietà del punto di gestione le connessioni client sono impostate su **HTTP**.
+- *HTTPS*: nelle proprietà del punto di gestione le connessioni client sono impostate su **HTTPS**.
+- *E-HTTP*: nella scheda **Comunicazione computer client** delle proprietà del sito configurare le impostazioni di sistema del sito per **HTTPS o HTTP** e abilitare l'opzione **Usa i certificati generati da Configuration Manager per sistemi del sito HTTP**. Si configura il punto di gestione per il protocollo HTTP. Il punto di gestione HTTP è pronto per la comunicazione HTTP e HTTPS (scenari di autenticazione basata su token).
+
     > [!Note]
-    > A partire dalla versione 1906, questa scheda è denominata **Communication Security** (Sicurezza comunicazione).<!-- SCCMDocs#1645 -->  
+    > A partire dalla versione 1906, questa scheda è denominata **Communication Security** (Sicurezza comunicazione).<!-- SCCMDocs#1645 -->
 
 ## <a name="azure-management-certificate"></a><a name="bkmk_azuremgmt"></a> Certificato di gestione di Azure
 

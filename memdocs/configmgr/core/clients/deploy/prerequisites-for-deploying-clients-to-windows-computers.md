@@ -2,7 +2,7 @@
 title: Prerequisiti per la distribuzione di client Windows
 titleSuffix: Configuration Manager
 description: Informazioni sui prerequisiti per la distribuzione di client Configuration Manager a computer Windows.
-ms.date: 11/29/2019
+ms.date: 06/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 1a2a9b48-a95b-4643-b00c-b3079584ae2e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1d4cd7ffe38f7191a5361ad2e89817ea80f9f093
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2aa375d0521e6088904ebe9a1f10af83f4bc261f
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694789"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428566"
 ---
 # <a name="prerequisites-for-deploying-clients-to-windows-computers-in-configuration-manager"></a>Prerequisiti per la distribuzione dei client nei computer Windows in Configuration Manager
 
@@ -28,24 +28,26 @@ Per altre informazioni sui requisiti minimi per l'hardware e il sistema operativ
 > [!NOTE]  
 > I numeri delle versioni software elencati in questo articolo si riferiscono solo ai numeri delle versioni minime richieste.  
 
-
 ## <a name="prerequisites-for-windows-clients"></a><a name="BKMK_prereqs_computers"></a> Prerequisiti per i client Windows  
 
 Usare le informazioni seguenti per determinare i prerequisiti quando si installa il client di Configuration Manager in dispositivi Windows.  
 
-### <a name="dependencies-external-to-configuration-manager"></a>Dipendenze esterne a Configuration Manager  
+### <a name="dependencies-external-to-configuration-manager"></a>Dipendenze esterne a Configuration Manager
 
-|Componente|Descrizione|  
-|---|---|  
-|Windows Installer versione 3.1.4000.2435|Necessario per supportare l'utilizzo di file di aggiornamento di Windows Installer (MSP) per pacchetti e aggiornamenti software.|  
-|Microsoft Background Intelligent Transfer Service (BITS) versione 2.5|Necessario per consentire i trasferimenti di dati limitati tra il computer client e i sistemi del sito di Configuration Manager. BITS non viene scaricato automaticamente durante l'installazione del client. Quando BITS viene installato nei computer, in genere è necessario un riavvio per completare l'installazione.<br /><br /> La maggior parte dei sistemi operativi include BITS. In caso contrario, installare BITS prima di installare il client di Configuration Manager.|  
-|Utilità di pianificazione di Microsoft|Per completare l'installazione del client, abilitare questo servizio nel client.|  
+Molti componenti sono servizi o funzionalità abilitati da Windows per impostazione predefinita. Non disabilitare questi componenti nei client di Configuration Manager.
+
+|Componente|Descrizione|
+|---|---|
+|Windows Installer|Necessario per supportare l'uso di file di Windows Installer per le applicazioni e gli aggiornamenti software.|
+|Servizio trasferimento intelligente in background Microsoft (BITS)|Necessario per consentire i trasferimenti di dati limitati tra il computer client e i sistemi del sito di Configuration Manager.|
+|Utilità di pianificazione di Microsoft|Necessario per le operazioni client, ad esempio la valutazione regolare dell'integrità del client di Configuration Manager.|
+|Compressione differenziale remota Microsoft (RDC)|Necessaria per ottimizzare la trasmissione dei dati attraverso la rete.|
 |Supporto per la firma del codice SHA-2|A partire dalla versione 1906, i client richiedono il supporto per l'algoritmo di firma del codice SHA-2. Per altre informazioni, vedere [Supporto per la firma del codice SHA-2](#bkmk_sha2).|
 
 #### <a name="sha-2-code-signing-support"></a><a name="bkmk_sha2"></a> Supporto per la firma del codice SHA-2
 
 <!--SCCMDocs-pr#3404-->
-A causa dei punti di debolezza dell'algoritmo SHA-1 e per allinearsi agli standard del settore, Microsoft ora firma solo i file binari di Configuration Manager usando l'algoritmo SHA-2 più sicuro. Per le versioni del sistema operativo Windows legacy è necessario un aggiornamento per il supporto della firma del codice SHA-2. Per altre informazioni, vedere [Requisito per il supporto di firma del codice SHA-2 2019 per Windows e Windows Server Update Services](https://support.microsoft.com/help/4472027/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus).
+A causa dei punti di debolezza dell'algoritmo SHA-1 e per allinearsi agli standard del settore, Microsoft ora firma i file binari di Configuration Manager solo usando l'algoritmo SHA-2, più sicuro. Per le versioni del sistema operativo Windows legacy è necessario un aggiornamento per il supporto della firma del codice SHA-2. Per altre informazioni, vedere [Requisito per il supporto di firma del codice SHA-2 2019 per Windows e Windows Server Update Services](https://support.microsoft.com/help/4472027/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus).
 
 Se non si aggiornano queste versioni del sistema operativo, non è possibile installare la versione client di Configuration Manager 1906. Questo comportamento si applica a una nuova installazione del client o all'aggiornamento da una versione precedente.
 
@@ -64,18 +66,15 @@ Se è necessario gestire un client in una versione di Windows che non è aggiorn
 
 Il client di Configuration Manager presenta dipendenze esterne. Queste dipendenze variano a seconda della versione del sistema operativo e del software installato nel computer client.  
 
-Se il client richiede queste dipendenze per completare l'installazione, le installa automaticamente.  
+Se il client richiede queste dipendenze per completare l'installazione, le installa automaticamente.
 
-|Componente|Descrizione|  
-|---|---|  
-|Agente di Windows Update versione 7.0.6000.363|Richiesto da Windows per supportare il rilevamento e la distribuzione degli aggiornamenti.|  
-|Microsoft Core XML Services (MSXML) versione 6.20.5002 o successiva|Necessario per supportare l'elaborazione di documenti XML in Windows.|  
-|Compressione differenziale remota Microsoft (RDC)|Necessaria per ottimizzare la trasmissione dei dati attraverso la rete.|  
-|Microsoft Visual C++ 2013 Redistributable versione 12.0.21005.1|Necessario per supportare le operazioni client. Quando questo aggiornamento viene installato nei computer client, potrebbe essere necessario un riavvio per completare l'installazione.|  
-|Microsoft Visual C++ 2005 Redistributable versione 8.0.50727.42|Per la versione 1606 e precedenti, necessario per supportare le operazioni di Microsoft SQL Server Compact.|  
-|API per Windows Imaging 6.0.6001.18000|Necessario per consentire a Configuration Manager di gestire i file di immagine Windows (wim).|  
-|Microsoft Policy Platform 1.2.3514.0|Necessario per consentire ai client di valutare le impostazioni di conformità.|  
-|Microsoft .NET Framework version 4.5.2|Necessario per supportare le operazioni client. Viene installato automaticamente nel computer client se Microsoft .NET Framework 4.5 o versione successiva non è installato in tale computer. Per altre informazioni, vedere [Informazioni aggiuntive su Microsoft .NET Framework versione 4.5.2](#dotNet).|  
+|Componente|Descrizione|
+|---|---|
+|Microsoft Core XML Services (MSXML) versione 6.20.5002 o successiva (`msxml6.msi`)|Necessario per supportare l'elaborazione di documenti XML in Windows.|
+|Microsoft Visual C++ 2013 Redistributable versione 12.0.40660.0 (`vcredist_x*.exe`)|Necessario per supportare le operazioni client. Quando questo aggiornamento viene installato nei computer client, potrebbe essere necessario un riavvio per completare l'installazione.|<!-- SCCMDocs#1526 -->
+|API per Windows Imaging 6.0.6001.18000 o versione (`wimgapi.msi`)|Necessario per consentire a Configuration Manager di gestire i file di immagine Windows (wim).|
+|Microsoft Policy Platform 1.2.3514.0 o versione successiva (`MicrosoftPolicyPlatformSetup.msi`)|Necessario per consentire ai client di valutare le impostazioni di conformità.|  
+|Microsoft .NET Framework versione 4.5.2 o successiva (`NDP452-KB2901907-x86-x64-AllOS-ENU.exe`)|Necessario per supportare le operazioni client. Viene installato automaticamente nel computer client se Microsoft .NET Framework 4.5 o versione successiva non è installato in tale computer. Per altre informazioni, vedere [Informazioni aggiuntive su Microsoft .NET Framework versione 4.5.2](#dotNet).|  
 |Componenti di Microsoft SQL Server Compact 4.0 SP1|Necessari per archiviare le informazioni relative alle operazioni client.|  
 
 > [!Important]

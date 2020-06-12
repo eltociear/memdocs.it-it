@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8d75208de7cc6697699d79e3a52df742f605fdb
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 529d7a7da1257b9ebce1e1ab3cec706e8f100403
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990724"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270940"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Usare gli script di PowerShell nei dispositivi Windows 10 in Intune
 
@@ -68,7 +68,7 @@ L'estensione di gestione di Intune ha i prerequisiti seguenti. Dopo che questi p
     
     - L'utente esegue l'accesso al dispositivo usando il proprio account Azure AD e quindi esegue la registrazione in Intune.
 
-  - Dispositivi con co-gestione che usano Configuration Manager e Intune. Assicurarsi che il carico di lavoro **App** sia impostato su **Pilot Intune** (Distribuzione pilota di Intune) o **Intune**. Per indicazioni, vedere gli articoli seguenti: 
+  - Dispositivi con co-gestione che usano Configuration Manager e Intune. Quando si installano app Win32, verificare che il carico di lavoro **App** sia impostato su **Intune pilota** o su **Intune**. Gli script di PowerShell verranno eseguiti anche se il carico di lavoro **App** è impostato su **Configuration Manager**. L'estensione di gestione di Intune verrà distribuita in un dispositivo quando si destina uno script di PowerShell a quel dispositivo. Tuttavia, come indicato in precedenza, il dispositivo deve essere un dispositivo di Azure AD o aggiunto ad Azure AD ibrido e deve eseguire Windows 10 versione 1607 o successiva. Per indicazioni, vedere gli articoli seguenti: 
   
     - [Informazioni sulla co-gestione](https://docs.microsoft.com/configmgr/comanage/overview) 
     - [Carico di lavoro App client](https://docs.microsoft.com/configmgr/comanage/workloads#client-apps)

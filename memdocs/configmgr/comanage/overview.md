@@ -10,12 +10,12 @@ ms.topic: overview
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: e06dc0d40eb6359d11ef31045989d7ed398b3687
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 86bd566e9582c7dd7c83f93c22430edcc8ea0d0d
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690999"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347186"
 ---
 # <a name="what-is-co-management"></a>Informazioni sulla co-gestione
 
@@ -100,9 +100,9 @@ Per abilitare la co-gestione, non è richiesto l'onboarding del sito in Azure AD
 
 ### <a name="azure-ad"></a>Azure AD
 
-- I dispositivi Windows 10 devono essere aggiunti ad Azure AD. Possono essere di uno dei due tipi seguenti:  
+- I dispositivi Windows 10 devono essere connessi ad Azure AD. Possono essere di uno dei due tipi seguenti:  
 
-  - [Aggiunto ad Azure AD ibrido](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan), in cui il dispositivo viene aggiunto ad Active Directory locale e ad Azure Active Directory.  
+  - [Aggiunto ad Azure AD ibrido](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid), il dispositivo è aggiunto ad Active Directory locale e registrato in Azure Active Directory.
 
   - [Aggiunto solo ad Azure AD](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan). Questo tipo è anche noto come "aggiunto a un dominio cloud".<!--SCCMDocs issue 605-->  
 

@@ -2,7 +2,7 @@
 title: Configurare l'individuazione
 titleSuffix: Configuration Manager
 description: Configurare i metodi di individuazione per trovare le risorse da gestire dalla rete, Active Directory e Azure Active Directory.
-ms.date: 04/01/2020
+ms.date: 06/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 49505eb1-d44d-4121-8712-e0f3d8b15bf5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3bd03cb15ae1633d8ddfc8c2f26a741d2679b083
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cfda27df7df537ededb1f103afdd6107354af786
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704749"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347288"
 ---
 # <a name="configure-discovery-methods-for-configuration-manager"></a>Configurare i metodi di individuazione per Configuration Manager
 
@@ -265,7 +265,7 @@ Durante la configurazione del servizio di Azure **Gestione cloud**:
 
 ### <a name="limitations"></a>Limitazioni
 
-L'individuazione differenziale per l'individuazione dei gruppi utenti di Azure AD è attualmente disabilitata.
+L'individuazione delta per l'individuazione dei gruppi di utenti di Azure AD è disabilitata nella versione 1906. È possibile abilitarla a partire da Configuration Manager versione 1910.
 
 ### <a name="log-files"></a>File di registro
 

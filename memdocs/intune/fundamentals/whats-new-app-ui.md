@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/08/2020
+ms.date: 05/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17213a29d5182176fe2fd8e5802e5ca03587d8f7
-ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
+ms.openlocfilehash: efa965bc3dff2436a98602e3cb9dda96a1fe580d
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82991805"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84166169"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aggiornamenti dell'interfaccia utente per le applicazioni degli utenti finali in Intune
 
@@ -34,6 +34,19 @@ Informazioni sugli aggiornamenti più recenti per le app Microsoft Intune. Il si
 
 Per gli studenti o i dipendenti, è consigliabile fare riferimento alle schermate e ai collegamenti alla documentazione della Guida per il portale aziendale. Per altre informazioni su come usare l'app Portale aziendale, vedere la [documentazione della Guida dell'utente per il portale aziendale](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done).  
 
+
+
+## <a name="week-of-may-18-2020"></a>Settimana del 18 maggio 2020  
+### <a name="update-to-icons-in-company-portal-app-for-iosipados-and-macos---6057697---"></a>Aggiornamento delle icone nell'app Portale aziendale per iOS/iPadOS e macOS <!--6057697 -->  
+Le icone di Portale aziendale sono state aggiornate per creare un aspetto più moderno, supportato sui dispositivi a schermo doppio e allineato al sistema di progettazione Microsoft Fluent.
+
+|Aggiornamento per iOS/iPadOS|Icone precedenti per iOS/iPadOS|   
+|---|---|   
+|![Immagine di Portale aziendale per iOS/iPadOS che evidenzia le icone aggiornate nel menu in basso.](./media/whats-new-app-ui/company-portal-ios-icons-after-2005.png)|![Immagine di Portale aziendale per iOS con le icone precedenti.](./media/whats-new-app-ui/company-portal-ios-icons-before-2005.png)| 
+
+|Aggiornamento per macOS|  
+|---|
+|![Immagine di Portale aziendale per macOS, scheda Dispositivi, con le icone aggiornate.](./media/whats-new-app-ui/company-portal-macos-icons-after-2005.png)|  
 
 
 ## <a name="week-of-may-4-2020"></a>Settimana del 4 maggio 2020  

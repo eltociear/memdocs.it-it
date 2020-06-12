@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b9e2e4e85d9fb6a1ab34af8760e0ac61d6e4fab4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 79e83a7ba111b1d7f96fb623914ffe8e11f22f3d
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700889"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270872"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Preparare l'uso di gruppi di disponibilità Always On di SQL Server con Configuration Manager
 
@@ -263,6 +263,8 @@ Al termine dell'installazione, le porte seguenti devono rimanere aperte per Conf
 - SQL su TCP: **TCP 1433**  
 
 È possibile usare porte personalizzate per queste configurazioni. Usare le stesse porte personalizzate usate dall'endpoint e in tutte le repliche nel gruppo di disponibilità.
+
+Per la replica SQL dei dati tra i siti, creare una regola di bilanciamento del carico per ogni porta nel servizio di bilanciamento del carico di Azure. Per altre informazioni, vedere [Configurare le porte a disponibilità elevata per un bilanciamento del carico interno](https://docs.microsoft.com/azure/load-balancer/load-balancer-configure-ha-ports).<!-- MEMDocs#252 -->
 
 #### <a name="listener"></a>Listener
 

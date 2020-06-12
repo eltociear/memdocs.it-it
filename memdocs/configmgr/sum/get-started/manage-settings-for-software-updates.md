@@ -2,7 +2,7 @@
 title: Gestire le impostazioni per gli aggiornamenti software
 titleSuffix: Configuration Manager
 description: Informazioni sulle impostazioni client appropriate per gli aggiornamenti software nel sito successivi all'installazione del punto di aggiornamento software.
-ms.date: 03/30/2020
+ms.date: 06/04/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -10,12 +10,12 @@ ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 0a2a45ff866ea02aacc83c42109c8cba4020ed4e
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 2b851c03424af0ba0f826716b401705879338855
+ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906790"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84436670"
 ---
 #  <a name="manage-settings-for-software-updates"></a><a name="BKMK_ManageSUSettings"></a> Gestire le impostazioni per gli aggiornamenti software  
 
@@ -113,13 +113,13 @@ Nella scheda **Informazioni di sostituzione** , è possibile visualizzare le seg
 Nella proprietà, è possibile configurare le impostazioni degli aggiornamenti software per uno o più aggiornamenti software. È possibile configurare la maggior parte delle impostazioni degli aggiornamenti software solo nel sito di amministrazione centrale o nel sito primario autonomo. Le sezioni seguenti consentono di configurare le impostazioni per gli aggiornamenti software.  
 
 ####  <a name="set-maximum-run-time"></a><a name="BKMK_SetMaxRunTime"></a> Impostare il tempo di esecuzione massimo  
-Nella scheda **Tempo di esecuzione massimo** , impostare la quantità massima di tempo assegnata per completare un aggiornamento software nei computer client. Se l'aggiornamento richiede più tempo del valore del tempo di esecuzione massimo, Configuration Manager crea un messaggio di stato e interrompe il monitoraggio della distribuzione per l'installazione degli aggiornamenti software. È possibile configurare questa impostazione solo nel sito di amministrazione centrale o in un sito primario autonomo.  
+Nella scheda **Tempo di esecuzione massimo** , impostare la quantità massima di tempo assegnata per completare un aggiornamento software nei computer client. Se l'aggiornamento richiede più tempo del valore del tempo di esecuzione massimo, Configuration Manager crea un messaggio di stato e interrompe l'installazione degli aggiornamenti software. È possibile configurare questa impostazione solo nel sito di amministrazione centrale o in un sito primario autonomo.  
 
 Configuration Manager usa inoltre questa impostazione per stabilire se avviare l'installazione dell'aggiornamento software all'interno di una finestra di manutenzione configurata. Se il valore del tempo di esecuzione massimo è maggiore del tempo rimanente disponibile nella finestra di manutenzione, l'installazione degli aggiornamenti software viene rimandata fino all'avvio della nuova finestra di manutenzione. Quando più aggiornamenti software devono essere installati su un computer client con una finestra di manutenzione configurata (intervallo di tempo), l'aggiornamento software con il tempo di esecuzione massimo più basso viene installato per primo, poi viene installato quello con il secondo tempo di esecuzione massimo più basso e così via. Prima dell'installazione di ogni aggiornamento software, il client verifica che la finestra di manutenzione disponibile fornirà un tempo sufficiente per installare l'aggiornamento software. Dopo l'avvio dell'installazione di un aggiornamento software, l'installazione continuerà anche se va oltre la fine della finestra di manutenzione. Per altre informazioni sulle finestre di manutenzione, vedere [Come usare le finestre di manutenzione](../../core/clients/manage/collections/use-maintenance-windows.md).  
 
 Nella scheda **Tempo di esecuzione massimo** , è possibile visualizzare e configurare le seguenti impostazioni:  
 
-- **Tempo di esecuzione massimo**: specifica il numero massimo di minuti assegnati per il completamento dell'installazione di un aggiornamento software prima che l'installazione stessa non venga più monitorata da Configuration Manager. Questa impostazione viene anche usata per stabilire se resta un tempo sufficiente a disposizione per installare l'aggiornamento prima della fine di una finestra di manutenzione. L'impostazione predefinita è 60 minuti per i Service Pack. Per altri tipi di aggiornamento software, il valore predefinito è 10 minuti se si è eseguito l'aggiornamento a Configuration Manager versione 1511 o successiva e 5 minuti se si è eseguito l'aggiornamento da una versione precedente. I valori possono variare da 5 a 9.999 minuti.  
+- **Tempo di esecuzione massimo**: specifica il numero massimo di minuti assegnati per il completamento dell'installazione di un aggiornamento software prima che l'installazione stessa venga interrotta da Configuration Manager. Questa impostazione viene anche usata per stabilire se resta un tempo sufficiente a disposizione per installare l'aggiornamento prima della fine di una finestra di manutenzione. L'impostazione predefinita è 60 minuti per i Service Pack. Per altri tipi di aggiornamento software, il valore predefinito è 10 minuti se si è eseguito l'aggiornamento a Configuration Manager versione 1511 o successiva e 5 minuti se si è eseguito l'aggiornamento da una versione precedente. I valori possono variare da 5 a 9.999 minuti.  
 
 > [!IMPORTANT]  
 >  Assicurarsi di impostare un valore per il tempo di esecuzione massimo inferiore all'intervallo di tempo della finestra di manutenzione configurata o di aumentare l'intervallo di tempo della finestra di manutenzione impostandolo su un valore superiore al tempo di esecuzione massimo. In caso contrario, l'installazione dell'aggiornamento software non verrà mai avviata.  

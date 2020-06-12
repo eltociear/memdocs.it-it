@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 127ed43fded6c66bc4395ae4d69a28ae8c9eddd5
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 21e837d5d97c42f095159a87e015f181c5e53419
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83877510"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347169"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Informazioni sulle impostazioni client in Configuration Manager
 
@@ -98,7 +98,7 @@ Abilita la [peer cache](../../plan-design/hierarchy/client-peer-cache.md) per i 
 A partire dalla versione 1906, specificare il tempo minimo di mantenimento del contenuto memorizzato nella cache da parte del client di Configuration Manager. Questa impostazione client definisce la quantità minima di tempo che l'agente di Configuration Manager deve attendere prima di poter rimuovere il contenuto dalla cache se è necessario più spazio.
 
 Per impostazione predefinita, questo valore è impostato su 1.440 minuti (24 ore).
-Il valore massimo per questa impostazione è 10.080 minuti (1 settimana).
+Il valore massimo per questa impostazione è 10.080 minuti (una settimana).
 
 Questa impostazione offre maggiore controllo sulla cache del client in diversi tipi di dispositivi. È possibile ridurre il valore in client che hanno dischi rigidi di piccole dimensioni e che non devono mantenere il contenuto esistente prima di eseguire un'altra distribuzione.
 
@@ -276,7 +276,7 @@ Configurare la modalità di installazione del software, degli aggiornamenti soft
 
 Se il computer richiede l'immissione PIN di BitLocker, questa opzione ignora tale richiesta quando il computer viene riavviato dopo l'installazione di software.  
 
-- **Sempre**: Configuration Manager sospende temporaneamente BitLocker dopo aver installato il software che richiede un riavvio e aver iniziato un riavvio del computer. Questa impostazione si applica solo se il riavvio del computer viene avviato da Configuration Manager. Questa impostazione non sospende la richiesta di immissione PIN di BitLocker quando l'utente riavvia il computer. La richiesta di immissione PIN di BitLocker viene ripristinata dopo l'avvio di Windows.
+- **Sempre**: Configuration Manager sospende temporaneamente BitLocker dopo l'installazione del software che richiede un riavvio e quindi riavvia il computer. Questa impostazione si applica solo quando Configuration Manager riavvia il computer. Questa impostazione non sospende la richiesta di immissione PIN di BitLocker quando l'utente riavvia il computer. La richiesta di immissione PIN di BitLocker viene ripristinata dopo l'avvio di Windows.
 
 - **Mai**: Configuration Manager non sospende BitLocker dopo l'installazione di software che richiede un riavvio. In questo scenario, l'installazione del software non può terminare fintanto che l'utente non immette il PIN per completare il processo di avvio e caricamento standard di Windows.
 
@@ -329,29 +329,11 @@ Se si vuole concedere agli utenti più tempo per l'installazione delle distribuz
 
 Impostare un periodo di tolleranza compreso tra 0 e 120 ore. Usare questa impostazione in combinazione con la proprietà di distribuzione **Ritardare l'imposizione di questa distribuzione in base alle preferenze dell'utente**. Per altre informazioni, vedere l'argomento relativo alla [distribuzione delle applicazioni](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period).
 
-
 ## <a name="computer-restart"></a>Riavvio del computer
 
-Le impostazioni seguenti devono avere una durata più breve della finestra di manutenzione più breve applicata al computer:
+Per altre informazioni su queste impostazioni, vedere [Notifiche di riavvio del dispositivo](device-restart-notifications.md).<!-- 7182335 -->
 
-- **Visualizzare una notifica temporanea in cui viene indicato l'intervallo di disconnessione dell'utente o di riavvio del computer (minuti)**
-- **Visualizzare una finestra di dialogo che l'utente non può chiudere in cui viene indicato l'intervallo per il conto alla rovescia prima della disconnessione dell'utente o del riavvio del computer (minuti)**
-
-
-Per altre informazioni sulle finestre di manutenzione, vedere [Come usare le finestre di manutenzione](../manage/collections/use-maintenance-windows.md).
-
-- **Specificare la durata del rinvio per le notifiche con conto alla rovescia per il riavvio del computer (minuti)** (a partire dalla versione 1906)<!--3976435-->
-  - Il valore predefinito è 240 minuti.
-  - Il valore di durata della sospensione deve essere minore del valore di notifica minimo meno il valore della notifica che l'utente non può ignorare.
-  - Per altre informazioni, vedere [Notifiche di riavvio dispositivo](device-restart-notifications.md).
-
-**Quando una distribuzione richiede un riavvio, mostra una finestra di dialogo all'utente invece di un avviso popup**<!--3555947-->: A partire dalla versione 1902, la configurazione di questa impostazione su **Sì** rede più invasiva l'esperienza utente. Questa impostazione si applica a tutte le distribuzioni di applicazioni, sequenze di attività e aggiornamenti software. Per altre informazioni, vedere [Pianificare Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_impact).
-
-> [!IMPORTANT]
-> In Configuration Manager 1902, in determinate circostanze, la finestra di dialogo non sostituisce le notifiche di tipo avviso popup. Per risolvere questo problema, installare l'[aggiornamento cumulativo per Configuration Manager versione 1902](https://support.microsoft.com/help/4500571/update-rollup-for-configuration-manager-current-branch-1902). <!--4404715-->
-
-
-## <a name="delivery-optimization"></a>Ottimizzazione recapito 
+## <a name="delivery-optimization"></a>Ottimizzazione recapito
 
 <!-- 1324696 -->
 I gruppi di limiti di Configuration Manager consentono di definire e regolamentare la distribuzione del contenuto nella rete aziendale e negli uffici remoti. [Ottimizzazione recapito di Windows](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) è una tecnologia peer-to-peer basata sul cloud per la condivisione di contenuti tra dispositivi Windows 10. Configurare Ottimizzazione recapito in modo che usi i gruppi di limiti per la condivisione di contenuti tra peer.
@@ -363,7 +345,7 @@ I gruppi di limiti di Configuration Manager consentono di definire e regolamenta
 
 ### <a name="use-configuration-manager-boundary-groups-for-delivery-optimization-group-id"></a>Use Configuration Manager Boundary Groups for Delivery Optimization Group ID (Usare i gruppi di limiti di Configuration Manager per l'ID del gruppo di Ottimizzazione recapito)
 
-Scegliere **Sì** per applicare l'identificatore del gruppo di limiti come identificatore di gruppo di Ottimizzazione recapito sul client. Quando il client comunica con il servizio cloud Ottimizzazione recapito, usa questo identificatore per individuare i peer con il contenuto desiderato. L'abilitazione di questa impostazione consente inoltre di impostare la modalità di download di Ottimizzazione recapito sull'opzione Gruppo (2) sui client di destinazione.
+Scegliere **Sì** per applicare l'identificatore del gruppo di limiti come identificatore di gruppo di Ottimizzazione recapito sul client. Quando comunica con il servizio cloud Ottimizzazione recapito, il client usa questo identificatore per individuare i peer con il contenuto. L'abilitazione di questa impostazione consente inoltre di impostare la modalità di download di Ottimizzazione recapito sull'opzione Gruppo (2) sui client di destinazione.
 
 > [!Note]
 > Microsoft consiglia di consentire al client di configurare questa impostazione tramite criteri locali anziché Criteri di gruppo. Ciò consente di impostare l'identificatore del gruppo di limiti come identificatore di gruppo di Ottimizzazione recapito nel client. Per altre informazioni, vedere [Ottimizzazione recapito](../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization).
@@ -411,7 +393,7 @@ Scegliere **Sì** per evitare un riavvio del computer dopo l'installazione del c
 
 ### <a name="allowed-period-of-time-users-can-postpone-a-required-restart-to-complete-the-endpoint-protection-installation-hours"></a>Periodo di tempo consentito agli utenti per rimandare un riavvio necessario per completare l'installazione di Endpoint Protection (ore)
 
-Se dopo l'installazione del client di Endpoint Protection è necessario il riavvio, questa impostazione specifica di quante ore gli utenti possono posticipare il riavvio. Questa impostazione richiede che l'opzione **Evitare il riavvio necessario del computer dopo l'installazione del client Endpoint Protection** sia impostata su **No**.  
+Se dopo l'installazione del client di Endpoint Protection è necessario il riavvio, questa impostazione specifica di quante ore gli utenti possono posticipare il riavvio. Per questa impostazione è necessario disabilitare l'impostazione seguente: **Evitare il riavvio necessario del computer dopo l'installazione del client Endpoint Protection**.
 
 ### <a name="disable-alternate-sources-such-as-microsoft-windows-update-microsoft-windows-server-update-services-or-unc-shares-for-the-initial-definition-update-on-client-computers"></a>Disabilitare le origini alternative, ad esempio Microsoft Windows Update, Microsoft Windows Server Update Services o condivisioni UNC, per l'aggiornamento iniziale delle definizioni nei computer client
 
@@ -423,7 +405,7 @@ Scegliere **Sì** se si vuole che Configuration Manager installi solo l'aggiorna
 
 ### <a name="polling-interval-for-mobile-device-legacy-clients"></a>Intervallo di polling per client precedenti del dispositivo mobile
 
-Selezionare **Imposta intervallo** per specificare per quanto tempo, in minuti o ore, i dispositivi mobili legacy possono eseguire il polling dei criteri. Questi dispositivi includono piattaforme quali Windows CE, Mac OS X e Unix o Linux.
+Selezionare **Imposta intervallo** per specificare per quanto tempo, in minuti o ore, i dispositivi mobili legacy possono eseguire il polling dei criteri. Questi dispositivi includono piattaforme quali Windows CE, macOS e Unix o Linux.
 
 ### <a name="polling-interval-for-modern-devices-minutes"></a>Intervallo di polling per i dispositivi moderni (minuti)
 
@@ -529,7 +511,7 @@ Scegliere **Sì** per consentire agli utenti di Software Center di escludere il 
 
 ### <a name="allow-network-wake-up"></a>Consenti l'attivazione della rete
 
-Opzione aggiunta nella versione 1810. Se impostata su **Attiva**, configura le impostazioni di risparmio energia nella scheda di rete per consentire alla scheda di rete di riattivare il dispositivo. Se impostata su **Disattiva**, configura le impostazioni di risparmio energia nella scheda di rete per non consentire alla scheda di rete di riattivare il dispositivo.
+Quando si abilita questa impostazione, il client configura le impostazioni di risparmio energia nel computer per consentire alla scheda di rete di riattivare il dispositivo. Se questa impostazione viene disabilitata, la scheda di rete del computer non sarà in grado di riattivare il dispositivo.
 
 ### <a name="enable-wake-up-proxy"></a>Abilitare il proxy di riattivazione
 
@@ -549,7 +531,7 @@ Configurare quindi le impostazioni aggiuntive seguenti in base alle esigenze:
     > [!IMPORTANT]  
     > Questo numero deve corrispondere al numero nelle **Proprietà**del sito. Se si modifica questo numero in una posizione, non viene aggiornato automaticamente nell'altra.  
 
-- **Eccezione di Windows Defender Firewall per il proxy di riattivazione**: Il client di Configuration Manager configura automaticamente il numero di porta del proxy di riattivazione nei dispositivi che eseguono Windows Defender Firewall. Selezionare **Configura** per specificare i profili firewall desiderati.  
+- **Eccezione di Windows Defender Firewall per il proxy di riattivazione**: Il client di Configuration Manager configura automaticamente il numero di porta del proxy di riattivazione nei dispositivi che eseguono Windows Defender Firewall. Selezionare **Configura** per specificare i profili del firewall.  
 
     Se i client eseguono un firewall diverso, è necessario configurarlo manualmente per consentire il **Numero di porta del proxy di riattivazione (UDP)** .  
 
@@ -671,7 +653,7 @@ Quando si abilita questa opzione, le applicazioni disponibili per l'utente che r
 
 ### <a name="hide-installed-applications-in-software-center"></a><a name="bkmk_HideInstalled"></a> Nascondi le applicazioni installate in Software Center
 
-Quando si abilita questa opzione, le applicazioni che sono già installate non compaiono più nella scheda Applicazioni. L'opzione abilitata è l'impostazione predefinita quando si installa o si esegue l'aggiornamento a Configuration Manager 1802. Le applicazioni installate sono ancora visualizzabili nella scheda Stato installazione. <!--1357592-->
+Quando si abilita questa opzione, le applicazioni che sono già installate non compaiono più nella scheda Applicazioni. L'opzione abilitata è l'impostazione predefinita quando si installa o si esegue l'aggiornamento a Configuration Manager. Le applicazioni installate sono ancora visualizzabili nella scheda Stato installazione. <!--1357592-->
 
 ### <a name="hide-application-catalog-link-in-software-center"></a><a name="bkmk_HideAppCat"></a> Nascondi il collegamento al Catalogo applicazioni in Software Center
 
@@ -694,9 +676,9 @@ Schede disponibili:
 - **Stato installazione**
 - **Conformità del dispositivo**
 - **Opzioni**
-- Aggiungere fino a 5 schede personalizzate facendo clic sul pulsante **Aggiungi la scheda**.
+- Aggiungere fino a cinque schede personalizzate facendo clic sul pulsante **Aggiungi scheda**.
   - Specificare il **Nome della scheda** e l'**URL del contenuto** per la scheda personalizzata.
-  - Fare clic su **Elimina la scheda** per rimuovere una scheda personalizzata.  
+  - Selezionare **Elimina la scheda** per rimuovere una scheda personalizzata.  
 
   >[!Important]  
   > - Alcune funzionalità del sito Web potrebbero non funzionare quando viene usato come scheda personalizzata in Software Center. Assicurarsi di testare i risultati prima di eseguire la distribuzione nei client. <!--519659-->
@@ -731,9 +713,9 @@ Se ad esempio l'organizzazione non usa criteri di conformità e si vuole nascond
 
   - Software Center usa sempre l'impostazione predefinita. Gli utenti possono modificare questo filtro, ma la preferenza non viene salvata da Software Center.  
 
-- Impostare **Visualizzazione predefinita dell'applicazione** su **Visualizzazione affiancata** o **Visualizzazione elenco**. 
+- Impostare **Visualizzazione predefinita dell'applicazione** su **Visualizzazione affiancata** o **Visualizzazione elenco**.
 
-  - Se un utente modifica questa configurazione, Software Center salva la preferenza dell'utente per il futuro. 
+  - Se un utente modifica questa configurazione, Software Center salva la preferenza dell'utente per il futuro.
 
 
 ## <a name="software-deployment"></a>Distribuzione software  
@@ -911,7 +893,7 @@ Impostare questa opzione su **Sì** per consentire la configurazione delle impos
 
 ### <a name="enable-installation-of-software-updates-in-all-deployments-maintenance-window-when-software-update-maintenance-window-is-available"></a><a name="bkmk_SUMMaint"></a> Consenti l'installazione degli aggiornamenti software nella finestra di manutenzione "Tutte le distribuzioni" quando la finestra di manutenzione "Aggiornamento software" è disponibile
 
-A partire dalla versione 1810, quando si imposta questa opzione su **Sì** e per il client è stata definita almeno una finestra di manutenzione "Aggiornamento software", gli aggiornamenti software verranno installati durante una finestra di manutenzione "Tutte le distribuzioni".
+Quando si imposta questa opzione su **Sì** e per il client è stata definita almeno una finestra di manutenzione "Aggiornamento software", gli aggiornamenti software verranno installati durante una finestra di manutenzione "Tutte le distribuzioni".
 
 Per impostazione predefinita, questa impostazione è impostata su **No**. Questo valore applica il comportamento precedente: se esistono entrambi i tipi, ignorerà la finestra. <!--2839307-->
 

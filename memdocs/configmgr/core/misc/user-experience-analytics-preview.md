@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: c7a99931db27b6a55c9e0722cc12c1d7a9cc9e80
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: 7ddcb1ade6f39d1fc2cb824470c33d39496bcbf1
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764238"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428674"
 ---
 # <a name="endpoint-analytics-preview"></a><a name="bkmk_uea"></a> Anteprima di Analisi degli endpoint
 
@@ -347,8 +347,11 @@ In secondo luogo, di seguito è riportato un elenco di controllo rapido da usare
 1. I dispositivi configurati correttamente per la raccolta dei dati devono essere riavviati dopo l'abilitazione della raccolta dei dati ed è poi necessario attendere fino a 24 ore prima che il dispositivo venga visualizzato nella scheda delle prestazioni dei dispositivi.
 1. Se il dispositivo è stato configurato correttamente per la raccolta dei dati, è stato poi riavviato e dopo 24 ore non viene ancora visualizzato, è possibile che il dispositivo non riesca a raggiungere gli endpoint di raccolta. Questo problema può verificarsi se l'azienda usa un server proxy e se gli endpoint non sono stati abilitati nel proxy. Per altre informazioni, vedere [Risoluzione dei problemi relativi agli endpoint](#bkmk_uea_endpoints).
 
+### <a name="data-collection-for-intune-managed-devices"></a>Raccolta dei dati per i dispositivi gestiti da Intune
 
-### <a name="endpoints"></a><a name="bkmk_uea_endpoints"></a> Endpoint
+Per raccogliere i dati dai dispositivi gestiti da Intune, l'analisi degli endpoint sfrutta le esperienze utente connesse a Windows 10 e Windows Server e i componenti di telemetria (DiagTrack). Assicurarsi che il servizio **Esperienze utente connesse e telemetria** nel dispositivo sia in esecuzione.
+
+#### <a name="endpoints"></a><a name="bkmk_uea_endpoints"></a> Endpoint
 
 Per registrare i dispositivi per Analisi degli endpoint, è necessario inviare i dati funzionali richiesti a Microsoft. Se l'ambiente usa un server proxy, usare queste informazioni per configurare il proxy.
 
@@ -364,15 +367,15 @@ Per abilitare la condivisione dei dati funzionali, configurare il server proxy i
 | `https://*.manage.microsoft.com` | Usato per sincronizzare la raccolta di dispositivi e i dispositivi con Analisi degli endpoint (solo per il ruolo del server di Configuration Manager). Per altre informazioni, vedere [Configurare il proxy per un server del sistema del sito](../plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
 
 
-### <a name="proxy-server-authentication"></a>Autenticazione del server proxy
+#### <a name="proxy-server-authentication"></a>Autenticazione del server proxy
 
 Se l'organizzazione usa l'autenticazione del server proxy per l'accesso a Internet, verificare che non blocchi i dati a causa dell'autenticazione. Se il proxy non consente ai dispositivi di inviare questi dati, non verranno visualizzati in Desktop Analytics.
 
-#### <a name="bypass-recommended"></a>Ignorare (scelta consigliata)
+##### <a name="bypass-recommended"></a>Ignorare (scelta consigliata)
 
 Configurare i server proxy in modo che non richiedano l'autenticazione proxy per il traffico verso gli endpoint di condivisione dei dati. Questa opzione è la soluzione più completa. Può essere usata per tutte le versioni di Windows 10.  
 
-#### <a name="user-proxy-authentication"></a>Autenticazione proxy dell'utente
+##### <a name="user-proxy-authentication"></a>Autenticazione proxy dell'utente
 
 Configurare i dispositivi per l'uso del contesto dell'utente connesso per l'autenticazione proxy. Questo metodo richiede le configurazioni seguenti:
 
@@ -385,7 +388,7 @@ Configurare i dispositivi per l'uso del contesto dell'utente connesso per l'aute
 > [!IMPORTANT]
 > L'approccio di autenticazione proxy dell'utente non è compatibile con l'uso di Microsoft Defender Advanced Threat Protection. Questo comportamento è dovuto al fatto che questa autenticazione si basa sulla chiave del Registro di sistema **DisableEnterpriseAuthProxy** impostata su `0`, mentre Microsoft Defender ATP richiede che sia impostata su `1`. Per altre informazioni, vedere [Configurare le impostazioni del proxy del computer e della connettività Internet in Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection).
 
-#### <a name="device-proxy-authentication"></a>Autenticazione proxy del dispositivo
+##### <a name="device-proxy-authentication"></a>Autenticazione proxy del dispositivo
 
 Questo approccio supporta gli scenari seguenti:
 

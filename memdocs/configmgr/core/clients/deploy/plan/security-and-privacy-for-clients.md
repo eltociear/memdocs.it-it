@@ -10,12 +10,12 @@ ms.assetid: c1d71899-308f-49d5-adfa-3a3ec0163ed8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e4922502b49ab2da9ce393fab809e4dc583fd962
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 84ef4e37ddf756f04101c9cdec0ec7a4ed91688d
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694839"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270838"
 ---
 # <a name="security-and-privacy-for-configuration-manager-clients"></a>Sicurezza e privacy per i client di Configuration Manager
 
@@ -48,7 +48,7 @@ L'approvazione identifica un computer considerato attendibile per la gestione da
 - Automatica per i computer nei domini attendibili
 - Automatica per tutti i computer  
 
-Il metodo più sicuro è quello che prevede l'approvazione automatica dei client membri di domini attendibili, con successivo controllo e approvazione manuale di tutti gli altri computer. Non è consigliabile approvare automaticamente tutti i client a meno che non ci si avvalga di altri controlli di accesso per impedire l'ingresso nella rete a computer non attendibili.  
+Il metodo più sicuro è quello che prevede l'approvazione automatica dei client membri di domini attendibili, Questa opzione include client aggiunti a un dominio cloud da tenant di Azure Active Directory (Azure AD) connessi.<!-- MEMDocs#318 --> con successivo controllo e approvazione manuale di tutti gli altri computer. Non è consigliabile approvare automaticamente tutti i client a meno che non ci si avvalga di altri controlli di accesso per impedire l'ingresso nella rete a computer non attendibili.  
 
 Per altre informazioni sull'approvazione manuale dei computer, vedere [Gestire i client dal nodo Dispositivi](../../manage/manage-clients.md#BKMK_ManagingClients_DevicesNode).  
 

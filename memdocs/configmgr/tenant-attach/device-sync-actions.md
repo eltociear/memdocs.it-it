@@ -1,5 +1,5 @@
 ---
-title: Connessione tenant di Microsoft Endpoint Manager
+title: Collegamento del tenant di Microsoft Endpoint Manager
 titleSuffix: Configuration Manager
 description: Caricare i dispositivi Configuration Manager nel servizio cloud e intraprendere le azioni dall'interfaccia di amministrazione.
 ms.date: 04/10/2020
@@ -10,18 +10,18 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: e2b8c07a64265d33ade0b1c2c08c2d9c4096b741
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.openlocfilehash: be1c938cfcf332edb37e24e4094567f88f363560
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693474"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795619"
 ---
 # <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a>Connessione tenant di Microsoft Endpoint Manager: azioni dispositivo e sincronizzazione dispositivo
 <!--3555758 live 3/4/2020-->
 *Si applica a: Configuration Manager (Current Branch)*
 
-Microsoft Endpoint Manager è una soluzione integrata per la gestione di tutti i dispositivi. Microsoft riunisce Configuration Manager e Intune in un'unica console denominata interfaccia di **amministrazione di Microsoft Endpoint Manager**.
+Microsoft Endpoint Manager è una soluzione integrata per la gestione di tutti i dispositivi. Microsoft ha riunito Configuration Manager e Intune in un'unica console denominata **Interfaccia di amministrazione di Microsoft Endpoint Manager**.
 
 A partire da Configuration Manager versione 2002, è possibile caricare i dispositivi Configuration Manager nel servizio cloud ed eseguire le azioni dal pannello **dispositivi** nell'interfaccia di amministrazione.
 
@@ -39,10 +39,7 @@ A partire da Configuration Manager versione 2002, è possibile caricare i dispos
 ## <a name="internet-endpoints"></a>Endpoint Internet
 
 - `https://aka.ms/configmgrgateway`
-- `https://gateway.configmgr.manage.microsoft.com`
-- `https://us.gateway.configmgr.manage.microsoft.com`
-- `https://eu.gateway.configmgr.manage.microsoft.com`
-
+- `https://*.manage.microsoft.com` <!--7424742-->
 
 ## <a name="enable-device-upload"></a>Abilita caricamento dispositivo
 
@@ -55,40 +52,40 @@ A partire da Configuration Manager versione 2002, è possibile caricare i dispos
 
 Se la co-gestione è attualmente abilitata, modificare le proprietà di co-gestione per abilitare il caricamento dei dispositivi attenendosi alle istruzioni seguenti:
 
-1. Nella console di amministrazione di Configuration Manager passare ad **Amministrazione** > **Panoramica** > **Servizi** > Cloud**co-gestione**.
+1. Nella console di amministrazione di Configuration Manager accedere a **Amministrazione** > **Panoramica** > **Servizi cloud** > **Co-gestione**.
 1. Fare clic con il pulsante destro del mouse sulle impostazioni di co-gestione e selezionare **Proprietà**.
-1. Nella scheda **Configura caricamento** selezionare Carica nell'interfaccia **di amministrazione di Microsoft Endpoint Manager**. Fare clic su **Applica**.
-   - L'impostazione predefinita per il caricamento del dispositivo è **tutti i dispositivi gestiti da Microsoft Endpoint Configuration Manager**. Se necessario, è possibile limitare il caricamento a una singola raccolta di dispositivi.
+1. Nella scheda **Configure upload** (Configura caricamento) selezionare **Carica nell'interfaccia di amministrazione di Microsoft Endpoint Manager**. Fare clic su **Apply**.
+   - L'impostazione predefinita per il caricamento del dispositivo è **Tutti i dispositivi personali gestiti da Microsoft Endpoint Configuration Manager**. Se necessario, è possibile limitare il caricamento a una singola raccolta di dispositivi.
 
    [![Configurazione guidata della co-gestione](./media/3555758-configure-upload.png)](./media/3555758-configure-upload.png#lightbox)
-1. Quando richiesto, accedere con l'account *amministratore globale* .
-1. Fare clic su **Sì** per accettare la notifica di **creazione dell'applicazione AAD** . Questa azione esegue il provisioning di un'entità servizio e crea un Azure AD registrazione dell'applicazione per semplificare la sincronizzazione.
-1. Fare clic su **OK** per uscire dalle proprietà di co-gestione dopo avere apportato le modifiche.
+1. Quando richiesto, accedere con l'account di *amministratore globale*.
+1. Fare clic su **Sì** per accettare la notifica **Crea un'applicazione di AAD**. Questa azione esegue il provisioning di un'entità servizio e crea una registrazione dell'applicazione Azure AD per semplificare la sincronizzazione.
+1. Fare clic su **OK** per uscire dalle proprietà di co-gestione dopo aver apportato le modifiche.
 
 
 ### <a name="use-the-configure-co-management-wizard-to-enable-device-upload"></a><a name="bkmk_config"></a>Usare la configurazione guidata della co-gestione per abilitare il caricamento del dispositivo
 Se la co-gestione non è abilitata, usare la **Configurazione guidata co-gestione** per abilitare il caricamento del dispositivo. È possibile caricare i dispositivi senza abilitare la registrazione automatica per la co-gestione o cambiare i carichi di lavoro in Intune. Abilitare il caricamento del dispositivo attenendosi alle istruzioni seguenti:
 
-1. Nella console di amministrazione di Configuration Manager passare ad **Amministrazione** > **Panoramica** > **Servizi** > Cloud**co-gestione**.
-1. Sulla barra multifunzione fare clic su **Configura co-gestione** per aprire la procedura guidata.
-1. Nella pagina **onboarding del tenant** selezionare **AzurePublicCloud** per l'ambiente. Il cloud di Azure per enti pubblici non è supportato.
-1. Fare clic su **Accedi**. Per accedere, usare l'account *amministratore globale* .
+1. Nella console di amministrazione di Configuration Manager accedere a **Amministrazione** > **Panoramica** > **Servizi cloud** > **Co-gestione**.
+1. Nella barra multifunzione fare clic su **Configura la co-gestione** per aprire la procedura guidata.
+1. Nella pagina **Onboarding del tenant** selezionare **AzurePublicCloud** per l'ambiente in uso. Il cloud di Azure per enti pubblici non è supportato.
+1. Fare clic su **Accedi**. Usare l'account di *amministratore globale* per accedere.
 1. Assicurarsi che l'opzione **carica nell'interfaccia di amministrazione di Microsoft Endpoint Manager** sia selezionata nella pagina **onboarding del tenant** .
    - Verificare che l'opzione **Abilita registrazione automatica client per la co-gestione** non sia selezionata se non si vuole abilitare la co-gestione adesso. Se si vuole abilitare la co-gestione, selezionare l'opzione.
    - Se si Abilita la co-gestione insieme al caricamento del dispositivo, verranno fornite ulteriori pagine della procedura guidata per il completamento. Per altre informazioni, vedere [Abilitare la co-gestione](../comanage/how-to-enable.md).
 
    [![Configurazione guidata della co-gestione](./media/3555758-comanagement-wizard.png)](./media/3555758-comanagement-wizard.png#lightbox)
-1. Fare clic su **Avanti** e quindi su **Sì** per accettare la notifica di **creazione dell'applicazione AAD** . Questa azione esegue il provisioning di un'entità servizio e crea un Azure AD registrazione dell'applicazione per semplificare la sincronizzazione.
+1. Fare clic su **Avanti** e quindi su **Sì** per accettare la notifica **Crea un'applicazione di AAD**. Questa azione esegue il provisioning di un'entità servizio e crea una registrazione dell'applicazione Azure AD per semplificare la sincronizzazione.
 1. Nella pagina **Configura caricamento** selezionare l'impostazione consigliata per il caricamento dei **dispositivi per tutti i dispositivi gestiti da Microsoft endpoint Configuration Manager**. Se necessario, è possibile limitare il caricamento a una singola raccolta di dispositivi.
-1. Fare clic su **Riepilogo** per verificare la selezione, quindi fare clic su **Avanti**.
+1. Fare clic su **Riepilogo** per verificare la selezione e quindi su **Avanti**.
 1. Al termine della procedura guidata, fare clic su **Chiudi**.  
 
 
 ## <a name="review-your-upload"></a><a name="bkmk_review"></a>Verifica il caricamento
 
-1. Aprire **CMGatewaySyncUploadWorker. log** dalla &lt;directory di installazione di ConfigMgr> \Logs.
-1. Il tempo di sincronizzazione successivo è indicato dalle voci di log `Next run time will be at approximately: 02/28/2020 16:35:31`simili a.
-1. Per i caricamenti dei dispositivi, cercare voci di log simili `Batching N records`a. **N** è il numero di dispositivi caricati nel cloud. 
+1. Aprire **CMGatewaySyncUploadWorker. log** dalla &lt; directory di installazione di ConfigMgr> \Logs.
+1. Il tempo di sincronizzazione successivo è indicato dalle voci di log simili a `Next run time will be at approximately: 02/28/2020 16:35:31` .
+1. Per i caricamenti dei dispositivi, cercare voci di log simili a `Batching N records` . **N** è il numero di dispositivi caricati nel cloud. 
 1. Il caricamento viene eseguito ogni 15 minuti per le modifiche. Una volta caricate le modifiche, potrebbero essere necessari altri 5-10 minuti affinché le modifiche apportate al client siano visualizzate nell'interfaccia di **amministrazione di Microsoft Endpoint Manager**.
 
 ## <a name="perform-device-actions"></a>Eseguire azioni del dispositivo
@@ -98,9 +95,9 @@ Se la co-gestione non è abilitata, usare la **Configurazione guidata co-gestion
    [![Tutti i dispositivi nell'interfaccia di amministrazione di Microsoft Endpoint Manager](./media/3555758-all-devices.png)](./media/3555758-all-devices.png#lightbox)
 1. Fare clic su un dispositivo per caricare la relativa pagina **Panoramica** .
 1. Fare clic su una delle azioni seguenti:
-   - **Criteri computer di sincronizzazione**
-   - **Criteri utente di sincronizzazione**
-   - **Ciclo di valutazione dell'app**
+   - **Sincronizzazione dei criteri del computer**
+   - **Sincronizzazione dei criteri utente**
+   - **Ciclo di valutazione app**
 
    [![Panoramica del dispositivo nell'interfaccia di amministrazione di Microsoft Endpoint Manager](./media/3555758-device-overview-actions.png)](./media/3555758-device-overview-actions.png#lightbox)
 

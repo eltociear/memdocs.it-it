@@ -17,7 +17,7 @@
         - name: Funzionalità in fase di sviluppo
           href: in-development.md
         - name: Avvisi importanti
-          href: 'whats-new.md#notices'
+          href: whats-new.md#notices
 - name: Guide introduttive
   items:
     - name: Provare Intune gratuitamente
@@ -163,6 +163,8 @@
               href: china.md
         - name: Accedere a Intune
           href: account-sign-up.md
+        - name: Amministratori senza licenza
+          href: unlicensed-admins.md
         - name: Configurare i domini
           href: custom-domain-name-configure.md
         - name: Aggiungere utenti

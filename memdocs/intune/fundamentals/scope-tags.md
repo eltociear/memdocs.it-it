@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c447c9187696a8e918886117847dde6421b4014
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 665b88932c88f523b19fec596bfd969bb93ecdd4
+ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990736"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84721908"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Usare il controllo degli accessi in base al ruolo e i tag di ambito per ambienti IT distribuiti
 
@@ -81,7 +81,6 @@ Quando si lavora con i tag di ambito, tenere presente questi dettagli:
 - È possibile assegnare tag di ambito a un tipo di oggetto di Intune se il tenant può avere più versioni di tale oggetto (ad esempio, assegnazioni di ruolo o app).
   Gli oggetti di Intune seguenti sono eccezioni a questa regola e attualmente non supportano i tag di ambito:
     - Profili ESP di Windows
-    - Categorie di dispositivi
     - Restrizioni di registrazione
     - Identificatori dei dispositivi aziendali
     - Dispositivi di Autopilot

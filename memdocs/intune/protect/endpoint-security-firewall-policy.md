@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 06/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,16 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: f98d7a30d219aee63e38a63a74d8f1713deb198a
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: aa518036aa99d5de003fbc56f99748267f3cc87b
+ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431618"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84776872"
 ---
 # <a name="firewall-policy-for-endpoint-security-in-intune"></a>Criteri firewall per la sicurezza degli endpoint in Intune
 
-Usare i criteri firewall per la sicurezza degli endpoint in Intune per configurare un firewall predefinito dei dispositivi per i dispositivi che eseguono macOS e Windows 10. I firewall predefiniti includono BitLocker per i dispositivi Windows e FileVault per macOS.
+Usare i criteri firewall per la sicurezza degli endpoint in Intune per configurare un firewall predefinito dei dispositivi per i dispositivi che eseguono macOS e Windows 10.
 
 Sebbene sia possibile configurare le stesse impostazioni del firewall usando i profili Endpoint Protection per la configurazione del dispositivo, i profili di configurazione del dispositivo includono categorie aggiuntive di impostazioni. Queste impostazioni aggiuntive non sono correlate ai firewall e possono complicare l'attività di configurare solo le impostazioni del firewall dell'ambiente in uso.
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 361f0ff36b78daddd08954953744f3f95191d4f3
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5c4b06e8c81e04e067156929dfe7637cf04fb9d1
+ms.sourcegitcommit: bc8c9d957dac46d95070c433d3a83408e5e48d82
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990603"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85289462"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrare dispositivi Windows in Intune con Windows AutoPilot  
 Windows AutoPilot semplifica la registrazione dei dispositivi in Intune. La compilazione e la gestione di immagini del sistema operativo personalizzate sono processi che richiedono molto tempo. Richiede tempo anche l'applicazione di queste immagini personalizzate del sistema operativo ai nuovi dispositivi per prepararli per l'uso prima della consegna agli utenti finali. Con Microsoft Intune e AutoPilot è possibile assegnare i nuovi dispositivi agli utenti finali senza la necessità di compilare, gestire e applicare le immagini del sistema operativo personalizzate ai dispositivi. Quando si usa Intune per gestire i dispositivi AutoPilot, è possibile gestire criteri, profili, applicazioni e così via sui dispositivi che sono stati registrati. Per una panoramica di vantaggi, scenari e prerequisiti, vedere [Panoramica di Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -83,7 +83,7 @@ Per altre informazioni, vedere il cmdlet di PowerShell seguente.
 3. Se nel passaggio precedente si è scelto **Assegnato** come **Tipo di appartenenza**, nella scheda **Gruppo** scegliere **Membri** e aggiungere i dispositivi AutoPilot al gruppo.
     I dispositivi Autopilot che non sono ancora registrati sono dispositivi il cui nome è uguale al numero di serie del dispositivo stesso.
 4. Se nel passaggio precedente si è scelto **Dispositivi dinamici** come **Tipo di appartenenza**, nella scheda **Gruppo** scegliere **Membri dispositivo dinamico** e digitare uno dei codici seguenti nella casella **Regola avanzata**. Queste regole eseguono la raccolta dei soli dispositivi Autopilot perché hanno come destinazione attributi in possesso solo dei dispositivi Autopilot. La creazione di un gruppo basato su attributi non Autopilot non garantirà che i dispositivi inclusi nel gruppo siano effettivamente registrati in Autopilot.
-    - Se si vuole creare un gruppo che includa tutti i dispositivi AutoPilot, digitare: `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`
+    - Se si vuole creare un gruppo che includa tutti i dispositivi AutoPilot, digitare: `(device.devicePhysicalIDs -any (_ -contains "[ZTDId]"))`
     - Il campo del tag del gruppo di Intune è associato all'attributo OrderID nei dispositivi Azure AD. Se si vuole creare un gruppo che includa tutti i dispositivi Autopilot con un tag di gruppo (l'ID ordine del dispositivo di Azure AD) specifico, è necessario digitare: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
     - Se si vuole creare un gruppo che includa tutti i dispositivi AutoPilot con un ID ordine d'acquisto specifico, digitare `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`
     
@@ -222,7 +222,7 @@ Se non si è interessati alla gestione di dispositivi mobili, è possibile usare
 
 ## <a name="windows-autopilot-for-existing-devices"></a>Windows Autopilot per dispositivi esistenti
 
-È possibile raggruppare dispositivi Windows in base all'ID correlatore quando vengono registrati usando [AutoPilot per i dispositivi esistenti](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) tramite Configuration Manager. L'ID correlatore è un parametro del file di configurazione di Autopilot. L'[attributo del dispositivo Azure AD enrollmentProfileName](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) viene impostato automaticamente su "OfflineAutopilotprofile-\<ID correlatore\>". In questo modo sarà possibile creare gruppi dinamici di Azure AD arbitrari in base all'ID correlatore tramite l'attributo enrollmentprofileName.
+È possibile raggruppare dispositivi Windows in base all'ID correlatore quando vengono registrati usando [AutoPilot per i dispositivi esistenti](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) tramite Configuration Manager. L'ID correlatore è un parametro del file di configurazione di Autopilot. L'[attributo del dispositivo Azure AD enrollmentProfileName](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) viene impostato automaticamente su "OfflineAutopilotprofile-\<correlator ID\>". In questo modo sarà possibile creare gruppi dinamici di Azure AD arbitrari in base all'ID correlatore tramite l'attributo enrollmentprofileName.
 
 >[!WARNING] 
 > Dato che l'ID correlatore non è già elencato in Intune, il dispositivo può riportare qualsiasi ID correlatore desiderato. Se l'utente crea un ID correlatore corrispondente a un nome di profilo di Autopilot o di Registrazione automatica del dispositivo Apple, il dispositivo verrà aggiunto a un gruppo di dispositivi di Azure AD dinamico in base all'attributo enrollmentProfileName. Per evitare questo conflitto:

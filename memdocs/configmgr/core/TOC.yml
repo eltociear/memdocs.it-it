@@ -584,6 +584,8 @@
               href: servers/manage/introduction-to-reporting.md
             - name: Integrare il server di report di Power BI
               href: servers/manage/powerbi-report-server.md
+            - name: Installare report di esempio di Power BI
+              href: servers/manage/powerbi-sample-reports.md
             - name: Pianificare la creazione di report
               items:
                 - name: Pianificare la creazione di report

@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 02/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: dagerrit
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec125e1ab58e733707adb3d9f4df304e21ffabcf
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: c43b74b6ca20fa3f140ad688be49daa928c54b5f
+ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764136"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85264040"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>Scenario guidato - Desktop moderno gestito da cloud
 
@@ -126,5 +127,5 @@ Dopo che l'utente ha aggiunto il dispositivo ad Azure Active Directory, al dispo
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- Se si usa Microsoft Defender Advanced Threat Detection, creare [criteri di conformità di Intune](../protect/advanced-threat-protection.md#create-and-assign-the-compliance-policy) per richiedere l'analisi delle minacce di Defender per ottenere la conformità.
+- Se si usa Microsoft Defender Advanced Threat Detection, creare [criteri di conformità di Intune](../protect/advanced-threat-protection.md#create-and-assign-compliance-policy-to-set-device-risk-level) per richiedere l'analisi delle minacce di Defender per ottenere la conformità.
 - Creare [criteri di accesso condizionale basato sul dispositivo](../protect/advanced-threat-protection.md#create-a-conditional-access-policy) per bloccare l'accesso se il dispositivo non risulta conforme a Intune.

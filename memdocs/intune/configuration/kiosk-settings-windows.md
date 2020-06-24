@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae89a939e35f68f55d2e63e7495a9b743cc0fa34
-ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
+ms.openlocfilehash: bc3ef945351529ce0db3e40108fef135414c4fab
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83791758"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093616"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Impostazioni dei dispositivi Windows 10 e versioni successive per l'esecuzione in modalità tutto schermo in Intune
 
@@ -213,6 +213,6 @@ Le app in questa modalità sono disponibili nel menu Start. Sono le uniche app c
 
 [Assegnare il profilo](device-profile-assign.md) e [monitorarne lo stato](device-profile-monitor.md).
 
-È anche possibile creare profili in modalità tutto schermo per dispositivi [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices) e [Windows Holographic for Business](kiosk-settings-holographic.md).
+È anche possibile creare profili in modalità tutto schermo per dispositivi [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#device-experience) e [Windows Holographic for Business](kiosk-settings-holographic.md).
 
 Vedere anche [Configurare un'app singola in modalità tutto schermo](https://docs.microsoft.com/windows/configuration/kiosk-single-app) o [Configurare più app in modalità tutto schermo](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) nella documentazione di Windows.

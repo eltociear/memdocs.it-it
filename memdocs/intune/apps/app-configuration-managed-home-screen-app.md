@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b2c804618081a21aaf9dfd70b92d65fc14a7cc7
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 3bcb9d86cf413407bc1e0812be4b0c9e17d0f88d
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988839"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093208"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>Configurare l'app Microsoft Managed Home Screen per Android Enterprise
 
@@ -34,7 +34,7 @@ Managed Home Screen è l'applicazione usata per i dispositivi Android Enterprise
 In generale, configurare le impostazioni tramite Configurazione dispositivo, se sono disponibili. In questo modo si risparmia tempo, si riducono gli errori e si ottiene un'esperienza di supporto di Intune più efficace. Tuttavia, alcune impostazioni di Managed Home Screen sono attualmente disponibili solo nel riquadro **Criteri di configurazione dell'app** nella console di Intune. Leggere questo documento per informazioni su come configurare le diverse impostazioni usando Progettazione configurazione o uno script JSON. 
 
 > [!NOTE]
-> È attualmente possibile (e consigliabile) impostare le applicazioni incluse nell'elenco elementi consentiti e i collegamenti Web aggiunti con **App** e **Configurazione del dispositivo**. Per l'elenco completo di impostazioni disponibili in **Configurazione dispositivo** che influiscono su Managed Home Screen, vedere [Impostazioni di un dispositivo dedicato](../configuration/device-restrictions-android-for-work.md#dedicated-devices).  
+> È attualmente possibile (e consigliabile) impostare le applicazioni incluse nell'elenco elementi consentiti e i collegamenti Web aggiunti con **App** e **Configurazione del dispositivo**. Per l'elenco completo di impostazioni disponibili in **Configurazione dispositivo** che influiscono su Managed Home Screen, vedere [Impostazioni di un dispositivo dedicato](../configuration/device-restrictions-android-for-work.md#device-experience).  
 
 Per prima cosa, passare all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) e selezionare **App** > **Criteri di configurazione dell'app**. Aggiungere un criterio di configurazione per i **Dispositivi gestiti** che eseguono **Android** e scegliere **Managed Home Screen** come app associata. Fare clic su **Impostazioni di configurazione** per configurare le varie impostazioni di Managed Home Screen disponibili. 
 
@@ -382,7 +382,7 @@ Di seguito è riportato un esempio di script JSON con tutte le chiavi di configu
 L'app di schermata iniziale gestita ora consente l'accesso a Google Apps Device Policy per Android. L'app di schermata iniziale gestita è un'utilità di avvio personalizzata usata per i dispositivi registrati in Intune come dispositivi dedicati Android Enterprise (AE) che usano la modalità tutto schermo per più app. È possibile accedere all'app Android Device Policy o guidare gli utenti all'app Android Device Policy per fini di supporto e debug. Questa funzionalità di avvio è disponibile nel momento in cui il dispositivo viene registrato e bloccato nella schermata iniziale gestita. Per usare questa funzionalità non è necessaria alcuna installazione aggiuntiva.
 
 ## <a name="managed-home-screen-debug-screen"></a>Schermata di debug della schermata iniziale gestita
-È possibile accedere alla schermata di debug della schermata iniziale gestita facendo clic sul pulsante **Indietro** fino a quando non viene visualizzata la schermata di debug (fare clic sul pulsante **Indietro** 15 volte o più). Da questa schermata di debug è possibile avviare l'applicazione Android Device Policy, visualizzare e caricare i log o sospendere temporaneamente la modalità tutto schermo per aggiornare il dispositivo. Per altre informazioni su come sospendere la modalità tutto schermo, vedere l'elemento **Esci dalla modalità tutto schermo** nelle [impostazioni dei dispositivi dedicati](../configuration/device-restrictions-android-for-work.md#dedicated-devices) Android Enterprise. Se si vuole accedere alla schermata di debug di Managed Home Screen in modo più semplice, è possibile impostare **Enable easy access debug menu** (Abilita il menu di debug dell'accesso facilitato) su `True` usando i criteri di configurazione dell'applicazione. 
+È possibile accedere alla schermata di debug della schermata iniziale gestita facendo clic sul pulsante **Indietro** fino a quando non viene visualizzata la schermata di debug (fare clic sul pulsante **Indietro** 15 volte o più). Da questa schermata di debug è possibile avviare l'applicazione Android Device Policy, visualizzare e caricare i log o sospendere temporaneamente la modalità tutto schermo per aggiornare il dispositivo. Per altre informazioni su come sospendere la modalità tutto schermo, vedere l'elemento **Esci dalla modalità tutto schermo** nelle [impostazioni dei dispositivi dedicati](../configuration/device-restrictions-android-for-work.md#device-experience) Android Enterprise. Se si vuole accedere alla schermata di debug di Managed Home Screen in modo più semplice, è possibile impostare **Enable easy access debug menu** (Abilita il menu di debug dell'accesso facilitato) su `True` usando i criteri di configurazione dell'applicazione. 
 
 ## <a name="next-steps"></a>Passaggi successivi
 

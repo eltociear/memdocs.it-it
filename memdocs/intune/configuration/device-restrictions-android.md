@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5fc11d7302c30dd53314eb2312d37842b081a6b3
-ms.sourcegitcommit: 5f9d5d22114ae5aeb0270c7fb59c5dced5f48826
+ms.openlocfilehash: 02e07ec75b7c0d07a81a9c6f555cf119310a9a9f
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82862361"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093682"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Elenchi delle impostazioni per le limitazioni dei dispositivi Android e Samsung Knox Standard in Intune
 
@@ -193,4 +193,4 @@ Le impostazioni della modalità tutto schermo si applicano solo ai dispositivi S
 
 [Assegnare il profilo](device-profile-assign.md) e [monitorarne lo stato](device-profile-monitor.md).
 
-È anche possibile creare profili in modalità tutto schermo per dispositivi [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices) e [Windows 10](kiosk-settings.md).
+È anche possibile creare profili in modalità tutto schermo per dispositivi [Android Enterprise](device-restrictions-android-for-work.md#device-experience) e [Windows 10](kiosk-settings.md).

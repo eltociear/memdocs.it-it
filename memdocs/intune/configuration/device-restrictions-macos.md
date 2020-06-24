@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e48ba131d97e68570f1d6cb85b285ddc3198971c
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: a4f4ef6bab42f2f1b97c32a422d92247a3e564f7
+ms.sourcegitcommit: a198e4efa52b16f87049853b9d8c9854fd9fa057
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429759"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84680405"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>Impostazioni dei dispositivi macOS per consentire o limitare l'uso delle funzionalità tramite Intune
 
@@ -190,7 +190,7 @@ Questa funzionalità si applica a:
 
   - **Requisito del codice**: immettere la firma del codice per l'applicazione o il processo.
 
-    Quando un'app o un file binario vengono firmati da un certificato di sviluppo viene creata una firma del codice. Per trovare la designazione eseguire manualmente il comando `codesign` nell'app Terminal: `codesign --display -r -/path/to/app/binary`. La firma del codice è l'unica cosa che viene visualizzata dopo `=>`.
+    Quando un'app o un file binario vengono firmati da un certificato di sviluppo viene creata una firma del codice. Per trovare la designazione eseguire manualmente il comando `codesign` nell'app Terminal: `codesign --display -r - /path/to/app/binary`. La firma del codice è l'unica cosa che viene visualizzata dopo `=>`.
 
   - **Abilita la convalida del codice statico**: scegliere **Sì** per l'app o il processo per convalidare in modo statico il requisito del codice. Quando questa opzione è impostata su **Non configurato**, Intune non modifica o aggiorna questa impostazione.
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/17/2020
+ms.date: 06/08/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74e889419dcaaa75c2a31fe16931dddd84d1a967
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2e4bf8a9327f43efc613c7210370e29c46551182
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086543"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506197"
 ---
 # <a name="add-vpn-settings-on-ios-and-ipados-devices-in-microsoft-intune"></a>Aggiungere impostazioni VPN in dispositivi iOS e iPadOS in Microsoft Intune
 
@@ -49,7 +49,7 @@ Selezionare il tipo di connessione VPN dall'elenco di fornitori seguente:
 - **Cisco (IPSec)**
 - **VPN Citrix**
 - **Citrix SSO**
-- **Zscaler**: per usare l'accesso condizionale oppure consentire agli utenti di ignorare la schermata di accesso di Zscaler, è necessario integrare Zscaler Private Access (ZPA) con il proprio account Azure AD. Per informazioni dettagliate, vedere la [documentazione di Zscaler](https://help.zscaler.com/zpa/configuration-example-microsoft-azure-ad). 
+- **Zscaler**: per usare l'accesso condizionale oppure consentire agli utenti di ignorare la schermata di accesso di Zscaler, è necessario integrare Zscaler Private Access (ZPA) con il proprio account Azure AD. Per informazioni dettagliate, vedere la [documentazione di Zscaler](https://help.zscaler.com/zpa/configuration-guide-microsoft-azure-ad).
 - **IKEv2**: le proprietà sono descritte in [Impostazioni IKEv2](#ikev2-settings) (in questo articolo).
 - **VPN personalizzata**
 

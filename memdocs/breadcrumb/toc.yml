@@ -75,3 +75,6 @@
                 - name: Collegamento di tenant
                   tocHref: /mem/configmgr/tenant-attach/
                   topicHref: /mem/configmgr/tenant-attach/
+            - name: Analisi degli endpoint
+              tocHref: /mem/analytics/
+              topicHref: /mem/analytics/

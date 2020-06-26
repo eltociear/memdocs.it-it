@@ -10,12 +10,12 @@ ms.assetid: b3d755bd-0870-4f1f-a56d-bfd3c7b492b9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d694f9985e6d1e5118f2620e5cbd556de249788a
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 31f9b1cb083400abd36858a177e87804a916362c
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771323"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746515"
 ---
 # <a name="how-to-use-the-configuration-manager-docs"></a>Uso della documentazione di Configuration Manager
 
@@ -36,7 +36,7 @@ Per trovare le informazioni necessarie, usare i seguenti suggerimenti per la ric
 
 - Quando si usa il motore di ricerca preferito per individuare il contenuto per Configuration Manager, includere `ConfigMgr` con le parole chiave della ricerca.
 
-  - Cercare i risultati in `docs.microsoft.com/configmgr` per il branch corrente di Configuration Manager. I risultati di `docs.microsoft.com/previous-versions` sono per le versioni precedenti del prodotto.
+  - Cercare i risultati in `docs.microsoft.com/mem/configmgr` per il branch corrente di Configuration Manager. I risultati di `docs.microsoft.com/previous-versions` sono per le versioni precedenti del prodotto.
 
   - Per concentrare ulteriormente i risultati della ricerca sulla raccolta di contenuto corrente, includere `site:docs.microsoft.com` per definire l'ambito del motore di ricerca.
 

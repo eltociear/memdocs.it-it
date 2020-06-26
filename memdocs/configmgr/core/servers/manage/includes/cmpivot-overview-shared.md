@@ -3,13 +3,13 @@ author: mestew
 ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
-ms.date: 05/26/2020
-ms.openlocfilehash: ad725a2aeb01984d8bce71f66307792e8d1691ee
-ms.sourcegitcommit: 0d2f6132428b5fa994e5b770ab1d2bf7d78ac179
+ms.date: 06/05/2020
+ms.openlocfilehash: 3672127798b66d857b4a1dbd5014c02dfed8a7ee
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226433"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84466816"
 ---
 <!--This file is shared by the CMPivot overview articles for both Microsoft Endpoint Manager tenant attach and Configuration Manager-->
 
@@ -128,7 +128,6 @@ Le entità sono oggetti su cui è possibile eseguire query dal client. Attualmen
 |ProtectedVolumeInformation|Informazioni sul volume protette|
 |Protocollo|Protocollo|
 |QuickFixEngineering|Quick Fix Engineering|
-|Registry()|Tutti i valori per una chiave del Registro di sistema specifica|
 |SCSIController|Controller SCSI|
 |SerialPortConfiguration|Configurazione della porta seriale|
 |SerialPorts|Porte seriali|
@@ -270,4 +269,5 @@ Le funzioni scalari possono essere usate nelle espressioni. Sono attualmente sup
 |Entità|FileContent()|Contenuto di un file specifico|
 |Entità|NAPClient|Client NAP|
 |Entità|NAPSystemHealthAgent|Agente integrità sistema NAP|
+|Entità|Registry()|Tutti i valori per una chiave del Registro di sistema specifica<!--7371183-->|
 |Operatore di tabella|render|Esegue il rendering dei risultati come output grafico|

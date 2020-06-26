@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: fdc15860f2d093a4c9c61b787ba0b780051d3f3d
-ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
+ms.openlocfilehash: db70eab54f319197f267173fe857d0fb147a7eba
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83864872"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746562"
 ---
 # <a name="monitor-connection-health"></a>Monitorare l'integrità della connessione
 
@@ -217,7 +217,7 @@ In caso contrario, può essere visualizzato uno degli errori seguenti:
 
 - Non è possibile configurare la raccolta di dati di compatibilità dell'app per il dispositivo (SetRequestAllAppraiserVersions). Controllare i log per ottenere i dettagli dell'eccezione  
 
-- Non è possibile scrivere RequestAllAppraiserVersions nella chiave del Registro di sistema `HKLM:\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\AppCompatFlags\Appraiser`. Verificare le autorizzazioni  
+- Non è possibile scrivere RequestAllAppraiserVersions nella chiave del Registro di sistema `HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Appraiser`. Verificare le autorizzazioni  
 
 Verificare le autorizzazioni per questa chiave del Registro di sistema. Assicurarsi che l'account di sistema locale possa accedere a questa chiave per il client di Configuration Manager da impostare.  
 
@@ -343,7 +343,7 @@ L'impostazione DisableEnterpriseAuthProxy è abilitata per impostazione predefin
 
 Questa proprietà può visualizzare gli errori seguenti:
 
-- Il proxy di autenticazione è abilitato. Impostare DisableEnterpriseAuthProxy su 0 in `HKLM\Software\Policies\Microsoft\Windows\DataCollection`
+- Il proxy di autenticazione è abilitato. Impostare DisableEnterpriseAuthProxy su 0 in `HKLM:\Software\Policies\Microsoft\Windows\DataCollection`
 
 - Non è possibile verificare lo stato del proxy di autenticazione. Controllare i log per ottenere i dettagli dell'eccezione
 

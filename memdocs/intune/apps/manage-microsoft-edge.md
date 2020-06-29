@@ -1,12 +1,12 @@
 ---
 title: Gestire Edge per iOS e Android con Intune
 titleSuffix: ''
-description: Usare i criteri di protezione delle app di Intune con Microsoft Edge per iOS e Android per garantire che l'accesso ai siti Web aziendali venga sempre eseguito con misure di sicurezza applicate.
+description: Usare i criteri di protezione e di configurazione delle app di Intune con Edge per iOS e Android per garantire che l'accesso ai siti Web aziendali venga sempre eseguito con misure di sicurezza applicate.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 06/09/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad0a886aba8e1966e47e9ea11c99cb97c35c4f5a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4d32c496fc094879943fc15102bbb5061d830092
+ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988383"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84973061"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>Gestire l'accesso Web usando Microsoft Edge per iOS e Android con Microsoft Intune
 
@@ -63,7 +63,7 @@ Per visualizzare le raccomandazioni specifiche per ogni livello di configurazion
 
 Indipendentemente dal fatto che il dispositivo sia registrato in una soluzione di gestione unificata degli endpoint (UEM), è necessario creare un criterio di protezione delle app di Intune per le app iOS e Android, seguendo la procedura descritta in [Come creare e assegnare criteri di protezione delle app](app-protection-policies.md). Questi criteri, come minimo, devono soddisfare le condizioni seguenti:
 
-1. Sono incluse tutte le app Microsoft per dispositivi mobili, ad esempio Outlook, OneDrive, Office o Teams, in modo da garantire che gli utenti possano accedere e modificare i dati aziendali o dell'Istituto di istruzione in qualsiasi app Microsoft in modo sicuro.
+1. Sono incluse tutte le app Microsoft 365 per dispositivi mobili, ad esempio Edge, Outlook, OneDrive, Office o Teams, in modo da garantire che gli utenti possano accedere e modificare i dati aziendali o dell'istituto di istruzione in qualsiasi app Microsoft in modo sicuro.
 
 2. Sono assegnati a tutti gli utenti. Ciò garantisce che tutti gli utenti siano protetti, indipendentemente dal fatto che usino Edge per iOS o Android.
 
@@ -443,3 +443,4 @@ Per informazioni su come visualizzare i log nei dispositivi Android, vedere [Inv
 ## <a name="next-steps"></a>Passaggi successivi
 
 - [Che cosa sono i criteri di protezione delle app?](app-protection-policy.md) 
+- [Criteri di configurazione delle app per Microsoft Intune](app-configuration-policies-overview.md)

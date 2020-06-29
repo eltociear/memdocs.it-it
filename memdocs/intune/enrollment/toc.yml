@@ -88,6 +88,20 @@
         - name: Registrazione per dispositivi mobili Samsung KNOX
           href: android-samsung-knox-mobile-enroll.md
           displayName: kda; kme
+        - name: Framework di configurazione della sicurezza di Android Enterprise
+          items:
+            - name: Framework di configurazione della sicurezza di Android Enterprise
+              href: android-configuration-framework.md
+            - name: Metodologia di distribuzione del framework
+              href: framework-deployment-methodology.md
+            - name: Restrizioni di registrazione dei dispositivi
+              href: device-enrollment-restrictions.md
+            - name: Impostare i criteri di configurazione delle app
+              href: android-app-configuration-policies.md
+            - name: Impostazioni di sicurezza del profilo di lavoro Android
+              href: android-work-profile-security-settings.md
+            - name: Impostazioni di sicurezza di Android completamente gestito
+              href: android-fully-managed-security-settings.md
     - name: Configurare la registrazione di dispositivi iOS/iPadOS
       href: ios-enroll.md
       items:

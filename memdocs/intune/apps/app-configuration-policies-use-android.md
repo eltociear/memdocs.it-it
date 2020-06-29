@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb376e9574dcbbbefca3c089dc4180356b1d5a89
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 0edb497b2dd9e4853f3fbc378992158c0757e1f6
+ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988751"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84973095"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Aggiungere criteri di configurazione delle app per i dispositivi Android gestiti
 
@@ -103,7 +103,7 @@ Se si sceglie una variabile come tipo di valore, è possibile scegliere le opzio
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Consentire solo gli account dell'organizzazione configurati nelle app con identità multiple 
 
-L'amministratore di Microsoft Intune può controllare gli account utente che vengono aggiunti alle app Microsoft nei dispositivi gestiti. Può limitare l'accesso agli account utente consentiti dell'organizzazione e bloccare gli account personali nei dispositivi registrati. Per i dispositivi Android, usare le coppie chiave/valore seguenti:
+L'amministratore di Microsoft Intune può controllare gli account aziendali o dell'istituto di istruzione che vengono aggiunti alle app Microsoft nei dispositivi gestiti. Può limitare l'accesso agli account utente consentiti dell'organizzazione e bloccare gli account personali nei dispositivi registrati. Per i dispositivi Android, usare le coppie chiave/valore seguenti nei criteri di configurazione delle app per i dispositivi gestiti:
 
 | **Key** | com.microsoft.intune.mam.AllowedAccountUPNs |
 |---|---|

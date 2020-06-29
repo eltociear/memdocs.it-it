@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d98f3f8205490848d9f5137e97e7796eee67a67
-ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
+ms.openlocfilehash: 73a222ee8f847071174ea7dee1c438b69a1bd0ae
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84436772"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093768"
 ---
 # <a name="set-up-iosipados-and-ipados-user-enrollment-preview"></a>Configurare la registrazione utente iOS/iPadOS e iPadOS (anteprima)
 
@@ -42,7 +42,7 @@ Per altre informazioni sulle opzioni disponibili con la registrazione utente, ve
 
 Un profilo di registrazione definisce le impostazioni applicate a un gruppo di dispositivi durante la registrazione. 
 
-1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS** > **Registrazione di iOS** > **Tipi di registrazione (anteprima)**  > **Crea profilo** > **iOS/iPadOS**. Questo profilo è la posizione in cui verrà indicata l'esperienza di registrazione degli utenti finali di iOS/iPadOS e iPadOS nei dispositivi non registrati usando un metodo Apple aziendale. Se si vogliono apportare modifiche, è possibile modificare questo profilo dopo averlo creato.
+1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS/iPadOS** > **Registrazione di iOS** > **Tipi di registrazione (anteprima)**  > **Crea profilo** > **iOS/iPadOS**. Questo profilo è la posizione in cui verrà indicata l'esperienza di registrazione degli utenti finali di iOS/iPadOS e iPadOS nei dispositivi non registrati usando un metodo Apple aziendale. Se si vogliono apportare modifiche, è possibile modificare questo profilo dopo averlo creato.
 
     ![Creare un profilo di registrazione Apple](./media/ios-user-enrollment/create-profile.png)
 
@@ -77,7 +77,7 @@ Un profilo di registrazione definisce le impostazioni applicate a un gruppo di d
 
 Dopo aver creato più profili del tipo di registrazione, è possibile modificare l'ordine di priorità in cui vengono applicati.
 
-1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS** > **Registrazione di iOS** > **Tipi di registrazione (anteprima)** .
+1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS/iPadOS** > **Registrazione di iOS** > **Tipi di registrazione (anteprima)** .
 2. Trascinare e rilasciare i profili nell'elenco nell'ordine in cui si vuole applicarli.
 
 In caso di conflitti tra i profili di un utente, viene applicato all'utente il profilo con priorità più elevata.

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9983eb211b816ae05a1f9d180a7dbb68e3fac505
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: be9a4257fec357c3dc124318fda98807df6c26b7
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428655"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093487"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Distribuire dispositivi aggiunti ad Azure AD ibrido usando Intune e Windows Autopilot
 È possibile usare Intune e Windows Autopilot per configurare i dispositivi aggiunti ad Azure Active Directory ibrido. A tale scopo, eseguire i passaggi descritti in questo articolo.
@@ -111,20 +111,18 @@ Il connettore di Intune per Active Directory deve essere installato in un comput
 
 Intune Connector richiede gli [stessi endpoint di Intune](../fundamentals/intune-endpoints.md).
 
-1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) selezionare **Dispositivi** > **Windows** > **Registrazione Windows** > **Connettore di Intune per Active Directory** > **Aggiungi**. 
-2. Seguire le istruzioni per scaricare il connettore.
-3. Aprire il file di installazione del connettore scaricato *ODJConnectorBootstrapper.exe* per installare il connettore.
-4. Al termine dell'installazione selezionare **Configura**.
-5. Selezionare **Accedi**.
-6. Immettere le credenziali utente del ruolo Amministratore globale o Amministratore di Intune.  
+1. Disattivare la Configurazione sicurezza avanzata IE. Per impostazione predefinita, in Windows Server la Configurazione sicurezza avanzata di Internet Explorer è attivata. Se non è possibile accedere al connettore di Intune per Active Directory, disattivare la Configurazione sicurezza avanzata IE per l'amministratore. [Come disattivare la Configurazione sicurezza avanzata di Internet Explorer](https://blogs.technet.microsoft.com/chenley/2011/03/10/how-to-turn-off-internet-explorer-enhanced-security-configuration). 
+2. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) selezionare **Dispositivi** > **Windows** > **Registrazione Windows** > **Connettore di Intune per Active Directory** > **Aggiungi**. 
+3. Seguire le istruzioni per scaricare il connettore.
+4. Aprire il file di installazione del connettore scaricato *ODJConnectorBootstrapper.exe* per installare il connettore.
+5. Al termine dell'installazione selezionare **Configura**.
+6. Selezionare **Accedi**.
+7. Immettere le credenziali utente del ruolo Amministratore globale o Amministratore di Intune.  
    All'account utente deve essere assegnata una licenza di Intune.
-7. Passare a **Dispositivi** > **Windows** > **Registrazione Windows** > **Connettore di Intune per Active Directory** e verificare che lo stato della connessione sia **Attivo**.
+8. Passare a **Dispositivi** > **Windows** > **Registrazione Windows** > **Connettore di Intune per Active Directory** e verificare che lo stato della connessione sia **Attivo**.
 
 > [!NOTE]
 > Dopo l'accesso, la visualizzazione del connettore nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) può richiedere qualche minuto. Il connettore viene visualizzato solo se può comunicare correttamente con il servizio Intune.
-
-### <a name="turn-off-ie-enhanced-security-configuration"></a>Disattivare la Configurazione sicurezza avanzata IE
-Per impostazione predefinita, in Windows Server la Configurazione sicurezza avanzata di Internet Explorer è attivata. Se non è possibile accedere al connettore di Intune per Active Directory, disattivare la Configurazione sicurezza avanzata IE per l'amministratore. [Come disattivare la Configurazione sicurezza avanzata di Internet Explorer](https://blogs.technet.microsoft.com/chenley/2011/03/10/how-to-turn-off-internet-explorer-enhanced-security-configuration)
 
 ### <a name="configure-web-proxy-settings"></a>Configurare le impostazioni del proxy Web
 
@@ -193,12 +191,13 @@ I profili di distribuzione AutoPilot vengono usati per configurare i dispositivi
 4. Selezionare **Avanti**.
 5. Nella pagina **Configurazione guidata** per **Modalità di distribuzione** selezionare **Definita dall'utente**.
 6. Nella casella **Aggiungi ad Azure AD come** selezionare **Aggiunto ad Azure AD ibrido**.
-7. Se necessario, configurare le opzioni rimanenti nella pagina **Configurazione guidata**.
-8. Selezionare **Avanti**.
-9. Nella pagina **Tag di ambito** selezionare [tag di ambito](../fundamentals/scope-tags.md) per questo profilo.
-10. Selezionare **Avanti**.
-11. Nella pagina **Assegnazioni** selezionare **Selezionare i gruppi da includere** > cercare e selezionare il gruppo di dispositivi > **Seleziona**.
-12. Selezionare **Avanti** > **Crea**.
+7. Se si distribuiscono dispositivi fuori dalla rete dell'organizzazione sfruttando il supporto VPN, impostare l'opzione **Ignora il controllo della connettività al dominio** su **Sì**.  Per altre informazioni, vedere [Modalità definita dall'utente per l'aggiunta ad Azure Active Directory ibrido tramite VPN](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven#user-driven-mode-for-hybrid-azure-active-directory-join-with-VPN-support).
+8. Se necessario, configurare le opzioni rimanenti nella pagina **Configurazione guidata**.
+9. Selezionare **Avanti**.
+10. Nella pagina **Tag di ambito** selezionare [tag di ambito](../fundamentals/scope-tags.md) per questo profilo.
+11. Selezionare **Avanti**.
+12. Nella pagina **Assegnazioni** selezionare **Selezionare i gruppi da includere** > cercare e selezionare il gruppo di dispositivi > **Seleziona**.
+13. Selezionare **Avanti** > **Crea**.
 
 Il passaggio dello stato del profilo del dispositivo da *Non assegnato* ad *Assegnazione* e infine ad *Assegnato* richiede circa 15 minuti.
 

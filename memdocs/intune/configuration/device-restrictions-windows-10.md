@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/02/2020
+ms.date: 06/22/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f469d9646fad3b247743b6017f0ecbc7917f2cdf
-ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
+ms.openlocfilehash: 96b547c50cda0ef623370bae20d347d4ccf1976b
+ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84311178"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216485"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Impostazioni dei dispositivi Windows 10 (e versioni successive) per consentire o limitare l'uso delle funzionalità tramite Intune
 
@@ -141,6 +141,10 @@ Queste impostazioni usano il [provider di servizi di configurazione per i criter
 - **Annunci con Bluetooth**: **Blocca** impedisce al dispositivo di inviare annunci Bluetooth. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire al dispositivo di inviare annunci Bluetooth.
 
   [Bluetooth/AllowAdvertising CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowadvertising)
+
+- **Connessioni di prossimità Bluetooth**: **Blocca** impedisce a un utente del dispositivo di usare Associazione rapida e altri scenari basati sulla prossimità. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire al dispositivo di inviare annunci Bluetooth.
+
+  [CSP Bluetooth/AllowPromptedProximalConnections](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections)
 
 - **Servizi Bluetooth consentiti**: **Aggiungi** consente di aggiungere un elenco di servizi e profili Bluetooth consentiti in forma di stringhe esadecimali, ad esempio `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}`.
 
@@ -322,6 +326,9 @@ Queste impostazioni usano il [provider di servizi di configurazione per i criter
 ## <a name="microsoft-edge-browser"></a>Browser Microsoft Edge
 
 Queste impostazioni usano il [provider di servizi di configurazione per i criteri relativi al browser](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser), che elenca anche le edizioni di Windows supportate.
+
+> [!NOTE]
+> L'uso dei criteri del provider di servizi di configurazione per i criteri relativi al browser si applica a Microsoft Edge versione 45 e versioni precedenti. Per Microsoft Edge Enterprise versione 77 e successive, vedere [Configurare le impostazioni dei criteri di Microsoft Edge con Microsoft Intune](/DeployEdge/configure-edge-with-intune).
 
 ### <a name="use-microsoft-edge-kiosk-mode"></a>Usa la modalità tutto schermo di Microsoft Edge
 

@@ -16,18 +16,18 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 2f3a378cdb3b5e24371edb2fd6dc240962f80342
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: bfefdee7e949faf9e484ea20e7fc203ee72a9784
+ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431904"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879651"
 ---
 # <a name="antivirus-policy-for-endpoint-security-in-intune"></a>Criteri antivirus per la sicurezza degli endpoint in Intune
 
-I criteri antivirus per la sicurezza degli endpoint in Intune possono aiutare gli amministratori della sicurezza a concentrarsi sulla gestione del gruppo specifico di impostazioni antivirus per i dispositivi gestiti. Per usare i criteri antivirus, integrare Intune con Microsoft Defender Advanced Threat Protection (Defender ATP) come soluzione Mobile Threat Defense.
+I criteri antivirus per la sicurezza degli endpoint in Intune possono aiutare gli amministratori della sicurezza a concentrarsi sulla gestione del gruppo specifico di impostazioni antivirus per i dispositivi gestiti. Per usare i criteri antivirus, integrare Intune con Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) come soluzione Mobile Threat Defense.
 
-I criteri antivirus includono diversi profili. Ogni profilo contiene solo le impostazioni rilevanti per l'antivirus Defender ATP per macOS, Windows 10 o per l'esperienza utente dell'app Sicurezza di Windows nei dispositivi Windows 10.
+I criteri antivirus includono diversi profili. Ogni profilo contiene solo le impostazioni rilevanti per l'antivirus Microsoft Defender ATP per macOS, Windows 10 o per l'esperienza utente dell'app Sicurezza di Windows nei dispositivi Windows 10.
 
 I criteri antivirus sono disponibili in **Gestione** nel nodo Sicurezza degli endpoint dell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -37,10 +37,10 @@ I criteri antivirus includono le stesse impostazioni disponibili nei profili *En
 
 - **macOS**
   - Qualsiasi versione supportata di macOS
-  - Perché Intune gestisca le impostazioni antivirus di Intune in un dispositivo, è necessario che nel dispositivo sia installato Defender ATP. Vedere [Defender ATP per macOS](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (nella documentazione di Defender ATP)
+  - Perché Intune gestisca le impostazioni antivirus di Intune in un dispositivo, è necessario che nel dispositivo sia installato Microsoft Defender ATP. Vedere [Microsoft Defender ATP per macOS](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (nella documentazione di Microsoft Defender ATP)
 
 - **Windows 10 e versioni successive**
-  - Perché Intune gestisca le impostazioni antivirus di Intune in un dispositivo, è necessario che nel dispositivo sia installato Defender ATP. Vedere [Microsoft Defender ATP per Windows](../protect/advanced-threat-protection.md) nella documentazione di Intune.
+  - Perché Intune gestisca le impostazioni antivirus di Intune in un dispositivo, è necessario che nel dispositivo sia installato Microsoft Defender ATP. Vedere [Microsoft Defender ATP per Windows](../protect/advanced-threat-protection.md) nella documentazione di Intune.
   - L'app Sicurezza di Windows è installata in tutti i dispositivi che eseguono Windows 10 e non sono richiesti altri prerequisiti.
 
 ## <a name="antivirus-profiles"></a>Profili antivirus

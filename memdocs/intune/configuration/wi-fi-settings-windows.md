@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 06/10/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ea4b196a6b2fade8ca926d13c3436207cb4b764e
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: ee6ccebc9610f74f9f34c08bc8204e652e0a01db
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429779"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85092872"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Aggiungere le impostazioni Wi-Fi per dispositivi Windows 10 e versioni successive in Intune
 
@@ -34,6 +34,8 @@ Questo articolo descrive queste impostazioni.
 [Creare un profilo di dispositivo](wi-fi-settings-configure.md).
 
 ## <a name="basic-profile"></a>Profilo di base
+
+I profili di base o personali usano WPA/WPA2 per proteggere la connessione Wi-Fi nei dispositivi. In genere, WPA/WPA2 viene usato nelle reti domestiche o personali. È anche possibile aggiungere una chiave precondivisa per autenticare la connessione.
 
 - **Tipo Wi-Fi**: Scegliere **Basic**. 
 
@@ -70,6 +72,8 @@ Questo articolo descrive queste impostazioni.
   - **Configura automaticamente**: immettere l'URL che punta a uno script di configurazione automatica del proxy. Immettere ad esempio `http://proxy.contoso.com/proxy.pac`.
 
 ## <a name="enterprise-profile"></a>Profilo enterprise
+
+I profili aziendali usano il protocollo EAP (Extensible Authentication Protocol) per autenticare le connessioni Wi-Fi. EAP viene spesso usato dalle aziende, perché è possibile usare i certificati per autenticare e proteggere le connessioni e configurare più opzioni di sicurezza.
 
 - **Tipo Wi-Fi**: scegliere **Enterprise**.
 
@@ -116,7 +120,7 @@ Questo articolo descrive queste impostazioni.
     **Impostazioni EAP-TLS, EAP-TTLS e PEAP aggiuntive**:
 
     > [!NOTE]
-    > Quando si usa un tipo EAP, attualmente sono supportati solo i profili di certificato SCEP. I profili di certificato PKCS non sono supportati. Quando si chiede a un utente di immettere un certificato, assicurarsi di scegliere un certificato SCEP.
+    > Quando si usa un tipo EAP, sono supportati solo i profili di certificato SCEP e PKCS.
 
     - **Server Trust**  
 

@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac29e27c85ad43ccc078c54dd9d5b8b659206f57
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e8f400c946f26de272b782194df3f1b1930ab0b4
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81397765"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093510"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Risolvere i problemi di registrazione dei dispositivi in Microsoft Intune
 
@@ -339,7 +339,7 @@ Questo problema può verificarsi se:
 4. Chiedere all'utente di riavviare il processo di registrazione.
 
 #### <a name="determine-if-theres-something-wrong-with-the-vpp-token"></a>Determinare se è presente un problema con il token VPP
-1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS** > **Registrazione di iOS** > **Token del programma di registrazione** > nome del token > **Profili** > nome del profilo > **Gestisci** > **Proprietà**.
+1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS/iPadOS** > **Registrazione di iOS** > **Token del programma di registrazione** > nome del token > **Profili** > nome del profilo > **Gestisci** > **Proprietà**.
 2. Esaminare le proprietà per controllare se vengono visualizzati errori simili al seguente:
     - Il token è scaduto.
     - Il token non rientra tra le licenze di Portale aziendale.
@@ -349,7 +349,7 @@ Questo problema può verificarsi se:
 3. Risolvere i problemi del token.
 
 #### <a name="identify-which-devices-are-blocked-by-the-vpp-token"></a>Identificare i dispositivi bloccati dal token VPP
-1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivo** > **iOS** > **Registrazione di iOS** > **Token del programma di registrazione** > nome del token > **Dispositivi**.
+1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivo** > **iOS/iPadOS** > **Registrazione di iOS** > **Token del programma di registrazione** > nome del token > **Dispositivi**.
 2. Filtrare la colonna dello **stato del profilo** in base a **Bloccato**.
 3. Prendere nota dei numeri di serie dei dispositivi con stato **Bloccato**.
 

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 06/16/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 07612080f170c5f2bef448aa616a4422508218d1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2b0c65e12349f8b4c887b5a633a1cd94c272ca5a
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326927"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093353"
 ---
 # <a name="troubleshoot-iosipados-device-enrollment-problems-in-microsoft-intune"></a>Risoluzione dei problemi di registrazione dei dispositivi iOS/iPadOS in Microsoft Intune
 
@@ -66,25 +66,6 @@ Raccogliere le informazioni seguenti sul problema:
 4. In **Restrizioni dei tipi di dispositivo** selezionare la restrizione che si vuole impostare > **Proprietà** > **Seleziona le piattaforme**> selezionare **Consenti** per**iOS**, quindi fare clic su **OK**.
 5. Selezionare **Configura le piattaforme**, selezionare **Consenti** per i dispositivi iOS/iPadOS di proprietà personale, quindi fare clic su **OK**.
 6. Registrare nuovamente il dispositivo.
-
-**Causa:** i record CNAME necessari in DNS non esistono.
-
-#### <a name="resolution"></a>Soluzione
-Creare record di risorse CNAME DNS per il dominio della società. Ad esempio, se il dominio della società è contoso.com, creare un record CNAME in DNS che reindirizzi EnterpriseEnrollment.contoso.com a EnterpriseEnrollment-s.manage.microsoft.com.
-
-Sebbene la creazione di voci DNS CNAME sia facoltativa, i record CNAME semplificano la registrazione per gli utenti. Se non viene trovato alcun record di registrazione CNAME, agli utenti viene richiesto di immettere manualmente il nome del server MDM, enrollment.manage.microsoft.com.
-
-Se è presente più di un dominio verificato, creare un record CNAME per ogni dominio. Il record di risorse CNAME deve contenere le informazioni seguenti:
-
-|TYPE|Nome host|Punta a|TTL|
-|------|------|------|------|
-|CNAME|EnterpriseEnrollment.company_domain.com|EnterpriseEnrollment-s.manage.microsoft.com|1 Hr|
-|CNAME|EnterpriseRegistration.company_domain.com|EnterpriseRegistration.windows.net|1 Hr|
-
-Se la società usa più domini per le credenziali dell'utente, creare record CNAME per ciascun dominio.
-
-> [!NOTE]
-> La propagazione delle modifiche ai record DNS potrebbe richiedere fino a 72 ore. È impossibile verificare la modifica DNS in Intune fino a quando il record DNS non è stato propagato.
 
 **Causa:** si registra un dispositivo registrato precedentemente con un account utente diverso e l'utente precedente non è stato rimosso in modo appropriato da Intune.
 
@@ -239,6 +220,16 @@ Quando si accende un dispositivo gestito da Registrazione automatica del disposi
 #### <a name="resolution"></a>Soluzione
 Disabilitare l'autenticazione a più fattori, quindi eseguire di nuovo la registrazione del dispositivo.
 
+### <a name="authentication-doesnt-redirect-to-the-government-cloud"></a>L'autenticazione non viene reindirizzata al cloud per enti pubblici 
+
+Gli utenti di enti pubblici che accedono da un altro dispositivo vengono reindirizzati al cloud pubblico per l'autenticazione anziché al cloud per enti pubblici. 
+
+**Causa:** Azure AD non supporta ancora il reindirizzamento al cloud per enti pubblici quando si accede da un altro dispositivo. 
+
+#### <a name="resolution"></a>Soluzione 
+Usare l'impostazione **Cloud** del Portale aziendale iOS nell'app **Impostazioni** per reindirizzare l'autenticazione degli utenti di enti pubblici verso il cloud per enti pubblici. Per impostazione predefinita, l'impostazione **Cloud** è impostata su **Automatico** e Portale aziendale indirizza l'autenticazione verso il cloud rilevato automaticamente dal dispositivo, ad esempio pubblico o per enti pubblici. Gli utenti di enti pubblici che accedono da un altro dispositivo dovranno selezionare manualmente il cloud per enti pubblici per l'autenticazione. 
+
+Aprire l'app **Impostazioni** e selezionare Portale aziendale. Nelle impostazioni di Portale aziendale selezionare **Cloud**. Impostare **Cloud** su Enti pubblici.  
 
 ## <a name="next-steps"></a>Passaggi successivi
 

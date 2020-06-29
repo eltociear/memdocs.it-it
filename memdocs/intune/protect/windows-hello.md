@@ -1,12 +1,12 @@
 ---
 title: Integrare Windows Hello for Business in Microsoft Intune
 titleSuffix: Microsoft Intune
-description: Informazioni su come creare un criterio per controllare l'uso di Windows Hello for Business nei dispositivi gestiti."
+description: Informazioni su come creare criteri per controllare l'uso di Windows Hello for Business nei dispositivi gestiti durante la registrazione del dispositivo."
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/25/2019
+ms.date: 06/08/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,27 +17,25 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: 00f617d91541c1a580f6dec0b6b844abfc8d0d97
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 64a76911725e5d596a80ecc67e42f088666017de
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990931"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531894"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Integrare Windows Hello for Business in Microsoft Intune  
 
-È possibile integrare Windows Hello for Business (in precedenza Microsoft Passport for Work) in Microsoft Intune.
+È possibile integrare Windows Hello for Business (in precedenza Microsoft Passport for Work) in Microsoft Intune, durante la registrazione del dispositivo.
 
- Hello for Business è un metodo di accesso alternativo che usa Active Directory o un account Azure Active Directory per sostituire una password, una smart card o una smart card virtuale. Consente di eseguire l'accesso usando un *movimento dell'utente* invece di una password. Il movimento dell'utente può essere un PIN, un'autenticazione biometrica come Windows Hello o un dispositivo esterno come un lettore di impronte digitali.
+Hello for Business è un metodo di accesso alternativo che usa Active Directory o un account Azure Active Directory per sostituire una password, una smart card o una smart card virtuale. Consente di eseguire l'accesso usando un *movimento dell'utente* invece di una password. Il movimento dell'utente può essere un PIN, un'autenticazione biometrica come Windows Hello o un dispositivo esterno come un lettore di impronte digitali.
 
 Intune si integra con Hello for Business in due modi:
 
-- È possibile creare criteri Intune in **Registrazione del dispositivo**. Questi criteri hanno come destinazione tutta l'organizzazione, ovvero agiscono a livello di tenant. Supportano la Configurazione guidata di Windows AutoPilot e vengono applicati quando un dispositivo viene registrato. 
-- È possibile creare un profilo di Identity Protection in **Configurazione del dispositivo**. Il profilo ha come destinazione gli utenti e i dispositivi assegnati e viene applicato durante la registrazione. 
+- **A livello di tenant**: È possibile creare criteri Intune in *Registrazione del dispositivo*. Questi criteri hanno come destinazione tutta l'organizzazione, ovvero agiscono a livello di tenant. Supportano la Configurazione guidata di Windows AutoPilot e vengono applicati quando un dispositivo viene registrato.
+- **Gruppi discreti**: è possibile distribuire i criteri che gestiscono Windows Hello for Business nei dispositivi registrati in Intune. I tipi di criteri che possono gestire Windows Hello includono i profili di *protezione delle identità* creati in *Configurazione del dispositivo*, varie *baseline di sicurezza* e i profili di *protezione degli account* di sicurezza degli endpoint. Questi tipi di profilo sono destinati a utenti o dispositivi assegnati e vengono applicati durante la sincronizzazione.
 
 Usare questo articolo per creare criteri di Windows Hello for Business predefiniti che abbiano come destinazione tutta l'organizzazione. Per creare un profilo di Identity Protection che viene applicato per selezionare gruppi di utenti e di dispositivi, vedere [Configure an identity protection profile](identity-protection-configure.md) (Configurare un profilo di Identity Protection).  
-
-<!--- - You can store authentication certificates in the Windows Hello for Business key storage provider (KSP). For more information, see [Secure resource access with certificate profiles in Microsoft Intune](secure-resource-access-with-certificate-profiles.md). --->
 
 > [!IMPORTANT]
 > Nelle versioni di Windows 10 Desktop e Mobile precedenti all'aggiornamento dell'anniversario era possibile impostare due diversi PIN da usare per l'autenticazione alle risorse:
@@ -59,8 +57,10 @@ Usare questo articolo per creare criteri di Windows Hello for Business predefini
 
 3. Selezionare una delle opzioni seguenti per **Configurare Windows Hello for Business**:
 
-    - **Disabilitato**. Selezionare questa impostazione se non si vuole usare Windows Hello for Business. Se l'opzione è disabilitata, gli utenti non possono eseguire il provisioning di Windows Hello for Business tranne che nei telefoni cellulari aggiunti ad Azure Active Directory in cui potrebbe essere obbligatorio eseguirlo.
-    - **Attivata**. Selezionare questa impostazione se si vuole configurare le impostazioni di Windows Hello for Business.  Quando si seleziona *Abilitato* vengono visualizzate le impostazioni aggiuntive per Windows Hello.
+     - **Attivata**. Selezionare questa impostazione se si vuole configurare le impostazioni di Windows Hello for Business.  Quando si seleziona *Abilitato* vengono visualizzate le impostazioni aggiuntive per Windows Hello e possono essere configurate per i dispositivi.
+
+    - **Disabilitato**. Se non si vuole abilitare Windows Hello for Business durante la registrazione del dispositivo, selezionare questa opzione. Quando l'opzione è disabilitata, gli utenti non possono eseguire il provisioning di Windows Hello for Business tranne che nei telefoni cellulari aggiunti ad Azure Active Directory in cui potrebbe essere obbligatorio eseguirlo. Con l'impostazione *Disabilitato* è comunque possibile configurare le impostazioni successive per Windows Hello for Business, anche se questo criterio non abiliterà Windows Hello for Business.
+
     - **Non configurato**. Selezionare questa impostazione se non si vuole usare Intune per controllare le impostazioni di Windows Hello for Business. Eventuali impostazioni di Windows Hello for Business presenti nei dispositivi Windows 10 non verranno modificate. Tutte le altre impostazioni nel riquadro non sono disponibili.
 
 4. Se si seleziona **Abilitato** nel passaggio precedente, configurare le impostazioni obbligatorie che verranno applicate a tutti i dispositivi Windows 10 e Windows 10 Mobile registrati. Dopo aver configurato queste impostazioni selezionare **Salva**.

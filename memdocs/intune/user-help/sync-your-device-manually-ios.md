@@ -1,11 +1,11 @@
 ---
-title: Sincronizzare il dispositivo iOS manualmente | Microsoft Docs
-description: ''
+title: Sincronizzazione manuale del dispositivo iOS con il Portale aziendale di Intune
+description: Avviare una sincronizzazione manuale da Portale aziendale per risolvere situazioni di stallo o ritardi, ad esempio installazioni di app lente o bloccate.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/02/2018
+ms.date: 06/18/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,32 +15,42 @@ ms.assetid: 2780101b-f703-4b78-9d33-f68490b9382d
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: esmich
+ms.reviewer: kakyker
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 27bf115e6382b429d6555a19f655f0d5ba554ce7
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: f9b4424bc7eed109846b497684e6859c5f407011
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881805"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85094146"
 ---
 # <a name="sync-your-ios-device-manually"></a>Sincronizzare il dispositivo manualmente
 
-A volte il download di un'app dal portale aziendale può richiedere troppo tempo. In questo caso, provare a sincronizzare manualmente il dispositivo. Il processo tenterà di ottenere le informazioni che il dispositivo non è riuscito a scaricare.
+Avviare una sincronizzazione manuale da Portale aziendale per risolvere situazioni di stallo o ritardi, ad esempio installazioni di app lente o bloccate. Durante una sincronizzazione, Portale aziendale controlla il dispositivo per verificare che soddisfi i requisiti dell'organizzazione. Il dispositivo viene sincronizzato con criteri o aggiornamenti che potrebbero non essere ancora disponibili e la sincronizzazione può risolvere download o altri processi in corso. 
+
+Portale aziendale esegue regolarmente la sincronizzazione del dispositivo, ma è possibile usare la procedura seguente per avviare una sincronizzazione in qualsiasi momento dall'app. 
 
 1. Aprire l'app Portale aziendale.
 
-2. Toccare **Dispositivi**. Se si hanno più dispositivi, viene visualizzato l'elenco dei dispositivi. Scegliere il dispositivo attualmente in uso. Se si ha un solo dispositivo si accede direttamente alla schermata dei dettagli del dispositivo.
+2. Toccare **Dispositivi**. 
+3. Se si ha un solo dispositivo si accederà direttamente alla schermata dei dettagli del dispositivo ed è possibile continuare con il passaggio 4. Se si hanno più dispositivi, tutti verranno visualizzati in un elenco. Toccare il dispositivo attualmente in uso. 
 
-    ![Schermata Dispositivi con due dispositivi. Il testo del dispositivo in alto specifica "This is the iPhone 6 Plus that you're currently using." (Questo è l'iPhone 6 Plus attualmente in uso).](./media/ios_sync_1_CP_after_1804.png)
+    ![Screenshot della schermata Dispositivi, che mostra tre dispositivi ed evidenzia quello che l'utente sta attualmente usando. Il testo del dispositivo in alto specifica "This is the iPhone that you're currently using." (Questo è l'iPhone attualmente in uso).](./media/ios-sync-1-company-portal-2006.png)
 
-3. Toccare **Verifica le impostazioni** per sincronizzare il dispositivo. Nella schermata viene visualizzata una barra di caricamento fino al termine della sincronizzazione.
+4. Toccare **Verifica lo stato** per sincronizzare il dispositivo. 
 
-    ![Schermata dei dettagli del dispositivo che visualizza l'orario dell'ultimo check-in e il collegamento Verifica le impostazioni.](./media/ios_sync_2_CP_after_1804.png)  
+    ![Screenshot dei dettagli del dispositivo con evidenziato il collegamento Verifica lo stato.](./media/ios-sync-2-company-portal-2006.png)  
 
-   ![Schermata dei dettagli dispositivo che visualizza la barra di caricamento dopo che l'utente ha fatto clic su Verifica le impostazioni.](./media/ios_sync_3_CP-after_1804.png)
+ 5. Attendere mentre Portale aziendale verifica lo stato del dispositivo. Lo stato viene aggiornato sullo schermo per indicare se i requisiti di sicurezza dell'organizzazione sono soddisfatti o meno. 
 
-Serve ancora assistenza? Contattare l'amministratore IT. Per informazioni sul contatto vedere il [sito Web del portale aziendale](https://go.microsoft.com/fwlink/?linkid=2010980).
+       ![Screenshot dei dettagli del dispositivo con evidenziata la barra di caricamento.](./media/ios-sync-3-company-portal-2006.png)
+
+
+## <a name="next-steps"></a>Passaggi successivi  
+Dopo aver completato questa procedura, verificare se il problema iniziale è stato risolto. In caso contrario, potrebbe essere utile riavviare l'installazione o l'attività bloccata. Serve ancora assistenza? Contattare il responsabile del supporto IT. Per informazioni sul contatto vedere il [sito Web del portale aziendale](https://go.microsoft.com/fwlink/?linkid=2010980).  
+
+
+
 

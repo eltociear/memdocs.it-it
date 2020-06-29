@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 06/19/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5562199d3490085aca26517170745802a0aef489
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 6fef418394a37f0074ddb17cc170a61603b1d7f8
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989492"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093096"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Come ottenere supporto per Microsoft Intune
 
@@ -41,9 +41,6 @@ L'amministratore di Intune può usare l'opzione **Guida e supporto tecnico** per
 L'esperienza di Guida e supporto tecnico per Intune è disponibile nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) e in tutti i pannelli (o pagine) di Intune nel portale di Azure.
 
 L'esperienza *Guida e supporto tecnico* è simile a quella offerta dall'[interfaccia di amministrazione di Microsoft 365](https://admin.microsoft.com/) e sostituisce l'opzione *Guida e supporto* precedente che rimane disponibile per altri servizi in Azure.
-
-> [!TIP]
-> A partire dal 18 novembre 2019, viene implementata nei tenant un'esperienza nella console aggiornata e semplificata per accedere a Guida e supporto tecnico. Se questo tipo di esperienza non è ancora disponibile per il proprio tenant, lo sarà presto.
 
 ### <a name="options-to-access-help-and-support"></a>Opzioni per accedere a Guida e supporto tecnico
 
@@ -66,16 +63,21 @@ Questo problema si verifica quando l'account del nuovo tenant non è stato auten
 
 - **Dall'interfaccia di amministrazione di Microsoft Endpoint Manager**
 
-  - Da qualsiasi nodo dell'interfaccia di amministrazione di Microsoft Endpoint Manager selezionare l'icona **?** nell'angolo superiore destro del portale e quindi usare l'elenco a discesa per selezionare il tipo di gestione per il quale si vuole ottenere assistenza. L'interfaccia di amministrazione di Microsoft Endpoint Manager supporta i tipi di gestione seguenti ed è necessario selezionare quello per il quale si vuole ottenere assistenza, come ad esempio Intune:
+  - Da qualsiasi nodo dell'interfaccia di amministrazione di Microsoft Endpoint Manager selezionare l'icona **?** nell'angolo in alto a destra del portale per aprire il riquadro **Guida**. Selezionare **Guida e supporto tecnico** per aprire la pagina **Selezionare un tipo di gestione**.
 
-    - Configuration Manager (include Desktop Analytics)
+    > [!div class="mx-imgBorder"]
+    > ![Aprire la pagina di selezione del tipo di gestione](./media/get-support/management-types.png)
+
+    Usare l'elenco a discesa per selezionare il tipo di gestione per cui si vuole ottenere assistenza, in modo da aprire la pagina di Guida e supporto tecnico applicabile. L'interfaccia di amministrazione di Microsoft Endpoint Manager supporta i tipi di gestione seguenti ed è necessario selezionare quello per il quale si vuole ottenere assistenza, come ad esempio Intune:
+
+    - Configuration Manager
     - Intune
-    - Co-gestione  
+    - Co-gestione
 
     > [!div class="mx-imgBorder"]
     > ![Selezionare il tipo di gestione](./media/get-support/select-management-type.png)
 
-    Dopo aver selezionato un tipo di gestione, si apre la pagina *Guida e supporto tecnico* in cui è possibile specificare i dettagli per [trovare le soluzioni](#find-solutions) per un problema specifico. I dettagli vengono filtrati in base al tipo di gestione selezionato.
+    Dopo aver selezionato un tipo di gestione, si apre la pagina *Guida e supporto tecnico* applicabile in cui è possibile specificare i dettagli per [trovare le soluzioni](#find-solutions) per un problema specifico. I dettagli vengono filtrati in base al tipo di gestione selezionato.
 
      Se non è stato selezionato il tipo di gestione corretto **(1)** , fare clic su *Selezionare un tipo di gestione* **(2)** per tornare all'elenco a discesa di selezione del tipo di gestione:
 

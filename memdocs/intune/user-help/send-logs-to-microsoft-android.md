@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/12/2018
+ms.date: 06/16/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 7a842e97e0c276926c07f615a7f9089a64132b50
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: f83b5ae8cc621a6fab813267216900638ff27269
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881051"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85094111"
 ---
 # <a name="send-logs-to-the-company-portal-developers-for-android-devices"></a>Inviare i log agli sviluppatori dell'app Portale aziendale per i dispositivi Android
 
@@ -43,6 +43,9 @@ Per inviare i log a Microsoft:
     > **Menu** può essere un pulsante software o hardware, a seconda del dispositivo Android in uso.
 
 3. Toccare **Carica solo log**.
+
+    > [!NOTE]
+    > Se si usa un ambiente cloud sovrano, la funzionalità di invio dei log nel Portale aziendale non sarà disponibile. È necessario inviare i log tramite posta elettronica. 
 
 4. Quando il caricamento è completo, l'utente riceverà un ID evento imprevisto. Salvare l'ID per riferimento.
 

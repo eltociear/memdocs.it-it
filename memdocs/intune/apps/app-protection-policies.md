@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/02/2020
+ms.date: 06/22/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: abd34733bd27ec150a92bf20cecbf7edc02c2bd6
-ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
+ms.openlocfilehash: d4beb6c5a91f9f379006df482ff10066831389b6
+ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84331002"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216400"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Come creare e assegnare criteri di protezione delle app
 
@@ -183,14 +183,14 @@ Per creare questi criteri, passare ad **App** > **Criteri di protezione delle ap
 
 ### <a name="device-types"></a>Tipi di dispositivi
 
-- **Non gestito**: i dispositivi non gestiti sono dispositivi in cui non è stata rilevata la gestione MDM di Intune. Sono inclusi i dispositivi gestiti da fornitori di software MDM di terze parti.
+- **Non gestito**: Per i dispositivi iOS/iPadOS, i dispositivi non gestiti sono tutti i dispositivi in cui la gestione MDM di Intune o una soluzione MDM/EMM di terze parti non passa la chiave `IntuneMAMUPN`. Per i dispositivi Android, i dispositivi non gestiti sono dispositivi in cui non è stata rilevata la gestione MDM di Intune. Sono inclusi i dispositivi gestiti da fornitori di software MDM di terze parti.
 - **Dispositivi gestiti da Intune**: i dispositivi gestiti sono gestiti dalla gestione di dispositivi mobili di Intune.
 - **Amministratore di dispositivi Android**: dispositivi gestiti da Intune che usano l'API di amministrazione dei dispositivi Android.
 - **Android Enterprise**: dispositivi gestiti da Intune che usano i profili di lavoro Android Enterprise o la gestione dei dispositivi completa di Android Enterprise.
 
 In Android i dispositivi Android richiederanno di installare l'app Portale aziendale Intune indipendentemente dal tipo di dispositivo scelto. Ad esempio, se si seleziona "Android Enterprise", la richiesta verrà visualizzata anche agli utenti con dispositivi Android non gestiti.
 
-Per iOS/iPadOS, per applicare la selezione "Tipo di dispositivo" ai "dispositivi non gestiti", sono necessarie altre impostazioni di configurazione dell'app. Queste configurazioni comunicheranno al servizio APP gestito che una determinata app è gestita e che non verranno applicate le impostazioni dell'APP:
+Per iOS/iPadOS, per applicare la selezione 'Tipo di dispositivo' ai dispositivi gestiti da Intune, sono necessarie altre impostazioni di configurazione dell'app. Queste configurazioni comunicheranno al servizio APP gestito che una determinata app è gestita e che non verranno applicate le impostazioni dell'APP:
 
 - È necessario configurare **IntuneMAMUPN** per tutte le applicazioni gestite da MDM. Per altre informazioni, vedere [Come gestire il trasferimento di dati tra app iOS/iPadOS in Microsoft Intune](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
 - È necessario configurare **IntuneMAMDeviceID** per tutte le applicazioni gestite di terze parti e line-of-business. È necessario impostare **IntuneMAMDeviceID** sul token dell'ID del dispositivo. Ad esempio, `key=IntuneMAMDeviceID, value={{deviceID}}` Per altre informazioni, vedere [Aggiungere criteri di configurazione delle app per i dispositivi iOS/iPadOS gestiti](app-configuration-policies-use-ios.md).

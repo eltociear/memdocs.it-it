@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 06/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3c8b8599c7b207900d6e4a14b7580a324a238dfe
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 27d31e64e99e8dc796b0436052f7220260ab1029
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989916"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795670"
 ---
 # <a name="see-device-details-in-intune"></a>Visualizzare i dettagli del dispositivo in Intune
 
@@ -37,18 +37,18 @@ Questo articolo illustra come visualizzare tutti i dispositivi e le relative pro
 3. Selezionare **Dispositivi** > **Tutti i dispositivi** > selezionare uno dei dispositivi elencati per aprirne i dettagli:
 
    - **Panoramica** visualizza il nome del dispositivo ed elenca alcune proprietà chiave del dispositivo, ad esempio se è un dispositivo personale o aziendale, il numero di serie, l'utente primario e altro ancora. È possibile eseguire le seguenti attività sul dispositivo:
-      - [Ritirare](devices-wipe.md#retire)
+      - [Ritira](devices-wipe.md#retire)
       - [Cancellazione](devices-wipe.md#wipe)
-      - [Elimina](devices-wipe.md#delete-devices-from-the-intune-portal)
+      - [Eliminazione](devices-wipe.md#delete-devices-from-the-intune-portal)
       - [Blocco remoto](device-remote-lock.md)
-      - [Sincronizza](device-sync.md)
+      - [Sincronizzazione](device-sync.md)
       - [Reimposta passcode](device-passcode-reset.md)
       - [Riavvia](device-restart.md) (solo Windows)
       - [Fresh Start](device-fresh-start.md) (solo Windows)
       - [Reimpostazione di Autopilot](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset) (solo Windows)
       - [Analisi veloce](../configuration/device-restrictions-windows-10.md) (solo Windows 10)
       - [Analisi completa](../configuration/device-restrictions-windows-10.md) (solo Windows 10)
-      - Aggiornare l'intelligence sulla sicurezza di Windows Defender
+      - [Aggiornare l'intelligence sulla sicurezza di Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/manage-protection-updates-microsoft-defender-antivirus)
       - [Rotazione delle chiavi BitLocker](https://docs.microsoft.com/mem/intune/protect/encrypt-devices#to-rotate-the-bitlocker-recovery-key)
       - [Rinominare il dispositivo](device-rename.md)
       - [Nuova sessione di assistenza remota](https://docs.microsoft.com/mem/intune/remote-actions/teamviewer-support)
@@ -70,7 +70,7 @@ A seconda del gestore telefonico usato dai dispositivi, è possibile che non ven
 
 |Dettagli|Descrizione|Piattaforma| 
 |--------------|----------------------|----|  
-|Nome|Nome del dispositivo.|Windows, iOS|
+|Name|Nome del dispositivo.|Windows, iOS|
 |Nome di gestione|Nome del dispositivo usato solo nella console. Se si modifica questo nome, il nome del dispositivo non viene modificato.|Windows, iOS|
 |UDID|Identificatore univoco del dispositivo.|Windows, iOS|
 |ID dispositivo di Intune|GUID che identifica in modo univoco il dispositivo.|Windows, iOS|

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 06/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 77f0df858f94f3d0b8d6c3a4ee2b251e6b917da6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 43107ce98ee1c9d002b07470c224b2291819069b
+ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79364604"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85264108"
 ---
 # <a name="use-custom-settings-for-android-devices-in-microsoft-intune"></a>Usare le impostazioni personalizzate per i dispositivi Android in Microsoft Intune
 
@@ -35,6 +35,7 @@ L'uso di un profilo personalizzato consente di configurare e assegnare le impost
 - [Creare un profilo Wi-Fi con una chiave precondivisa](/intune/wi-fi-profile-shared-key)
 - [Creare un profilo VPN per ogni app](/intune/android-pulse-secure-per-app-vpn)
 - [Consentire e bloccare app per dispositivi Samsung Know Standard](/intune/samsung-knox-apps-allow-block)
+- [Configurare la protezione Web in Microsoft Defender Advanced Threat Protection per Android](../protect/advanced-threat-protection.md#configure-web-protection-on-devices-that-run-android)
 
 >[!IMPORTANT]
 > Solo le impostazioni elencate possono essere configurate in un profilo personalizzato. I dispositivi Android non espongono un elenco completo di impostazioni URI OMA configurabili. Se si vogliono visualizzare altre impostazioni, chiedere più impostazioni nel [sito Uservoice di Intune](https://microsoftintune.uservoice.com/forums/291681-ideas).

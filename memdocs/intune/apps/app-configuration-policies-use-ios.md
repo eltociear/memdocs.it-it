@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65ecc658b0a63b943a1008c879ae63cfc2c4e8a1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 15c1e1e943d9fd03476c0605c4d41cd417354fce
+ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988738"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84973027"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>Aggiungere criteri di configurazione delle app per i dispositivi iOS/iPadOS gestiti
 
@@ -106,11 +106,11 @@ I caratteri \{\{ e \}\} vengono usati solo dai tipi di token e non devono essere
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Consentire solo gli account dell'organizzazione configurati nelle app con identità multiple 
 
-L'amministratore di Microsoft Intune può controllare gli account utente che vengono aggiunti alle app Microsoft nei dispositivi gestiti. Può limitare l'accesso agli account utente consentiti dell'organizzazione e bloccare gli account personali nei dispositivi registrati. Per i dispositivi iOS/iPadOS, usare le coppie chiave/valore seguenti:
+L'amministratore di Microsoft Intune può controllare gli account aziendali o dell'istituto di istruzione che vengono aggiunti alle app Microsoft nei dispositivi gestiti. Può limitare l'accesso agli account utente consentiti dell'organizzazione e bloccare gli account personali nei dispositivi registrati. Per i dispositivi iOS/iPadOS, usare le coppie chiave/valore seguenti nei criteri di configurazione delle app per i dispositivi gestiti:
 
 | **Key** | **Valori** |
 |----|----|
-| IntuneMAMAllowedAccountsOnly | <ul><li>**Enabled**: l'unico account consentito è l'account utente gestito definito dalla chiave [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).</li><li>**Disabled** (o qualsiasi valore che non corrisponda a **Enabled** senza distinzione di maiuscole/minuscole): è consentito qualsiasi account.</li></ul> |
+| IntuneMAMAllowedAccountsOnly | <ul><li>**Attivata**: l'unico account consentito è l'account utente gestito definito dalla chiave [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).</li><li>**Disabled** (o qualsiasi valore che non corrisponda a **Enabled** senza distinzione di maiuscole/minuscole): è consentito qualsiasi account.</li></ul> |
 | IntuneMAMUPN | <ul><li>UPN dell'account a cui è consentito l'accesso all'app.</li><li> Per i dispositivi registrati in Intune, è possibile usare il token <code>{{userprincipalname}}</code> per rappresentare l'account utente registrato.</li></ul>  |
 
    > [!NOTE]
@@ -173,7 +173,7 @@ Intune supporta i tipi di dati seguenti in un elenco di proprietà:
 
 ### <a name="tokens-used-in-the-property-list"></a>Token usati nell'elenco di proprietà
 
-Intune supporta anche i tipi di token seguenti nell'elenco di proprietà:
+Inoltre, Intune supporta i tipi di token seguenti nell'elenco di proprietà:
 - \{\{userprincipalname\}\}, ad esempio **John\@contoso.com**
 - \{\{mail\}\}, ad esempio **John\@contoso.com**
 - \{\{partialupn\}\}, ad esempio **John**

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 06/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74e365e50d73bb14f20376c92b43061b12d00003
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 886f572212a1af3e38fd5ea10afa21ce24c23411
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988458"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093305"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Creare un profilo di dispositivo in Microsoft Intune
 
-I profili di dispositivo consentono di aggiungere e configurare impostazioni e quindi di eseguire il push di queste impostazioni nei dispositivi dell'organizzazione. Per informazioni più dettagliate e procedure, vedere [Applicare le impostazioni delle funzionalità nei dispositivi usando i profili dei dispositivi in Microsoft Intune](device-profiles.md).
+I profili di dispositivo consentono di aggiungere e configurare impostazioni e quindi di eseguire il push di queste impostazioni nei dispositivi dell'organizzazione. Per altre informazioni, incluse le operazioni supportate, vedere [Applicare le impostazioni delle funzionalità nei dispositivi usando i profili dei dispositivi in Microsoft Intune](device-profiles.md).
 
 Questo articolo:
 
@@ -84,6 +84,7 @@ Quindi, scegliere il tipo di profilo. Le impostazioni configurabili variano in b
 - [Certificato attendibile](../protect/certificates-configure.md)
 - [VPN](vpn-settings-configure.md)
 - [Wi-Fi](wi-fi-settings-configure.md)
+- [Reti cablate (macOS)](wired-network-settings-macos.md)
 
 Se ad esempio si seleziona come piattaforma **iOS/iPadOS**, le opzioni del profilo sono simili a quelle del profilo seguente:
 
@@ -178,7 +179,7 @@ Durante la creazione dei profili, tenere presenti le indicazioni seguenti:
 
   :::image type="content" source="./media/device-profile-create/setting-applies-to-user-and-device.png" alt-text="Modello amministrativo di Intune applicato a utenti e dispositivi.":::
 
-- Ogni volta che si creano criteri restrittivi, comunicare questa modifica agli utenti. Ad esempio, se si modifica il requisito per il passcode da 4 a 6 caratteri, informare gli utenti prima di assegnare i criteri.
+- Ogni volta che si creano criteri restrittivi, comunicare questa modifica agli utenti. Ad esempio, se si modifica il requisito per il passcode da quattro (4) a sei (6) caratteri, informare gli utenti prima di assegnare i criteri.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

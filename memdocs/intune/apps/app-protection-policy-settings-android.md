@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 06/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ce5424dee1b968684a792f594abde18f5223679
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 60fa6177bc127fc36ceb66e7b3a59572f8cfee90
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990020"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85092903"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Impostazioni dei criteri di protezione delle app di Android in Microsoft Intune
 Questo articolo descrive le impostazioni dei criteri di protezione delle app per dispositivi Android. Le impostazioni dei criteri descritte possono essere [configurate](app-protection-policies.md) per i criteri di protezione delle app nel riquadro **Impostazioni** del portale di Azure.
@@ -42,7 +42,10 @@ Esistono tre categorie di impostazioni dei criteri: impostazioni di protezione d
 | **Invia i dati dell'organizzazione ad altre app** | Specificare le app da cui questa app può ricevere dati: <ul><li> **App gestite da criteri**: consente il trasferimento solo ad altre app gestite da criteri.</li> <li>**Tutte le app**: consente il trasferimento a qualsiasi app. </li> <li>**Nessuna**: non consente il trasferimento dei dati alle app, incluse le altre app gestite da criteri.</li></ul> <p>Esistono alcuni servizi e app esenti ai quali Intune può consentire il trasferimento dei dati per impostazione predefinita. È anche possibile creare le proprie esenzioni se è necessario consentire il trasferimento dei dati a un'app che non supporta i criteri di protezione delle app di Intune. Per altre informazioni, vedere [Esenzioni per il trasferimento dei dati](app-protection-policy-settings-android.md#data-transfer-exemptions).<p>Questo criterio può essere applicato anche ai collegamenti delle app Android.  I collegamenti Web generali sono gestiti dall'impostazione del criterio che consente di **aprire i collegamenti delle app in Intune Managed Browser**.<p><div class="NOTE"><p>Nota</p><p>Intune attualmente non supporta la funzionalità Android Instant Apps. Intune blocca qualsiasi connessione dati da o verso l'app. Per altre informazioni, vedere [Android Instant Apps](https://developer.android.com/topic/instant-apps/index.html) nella documentazione per sviluppatori di Android.</p><p>Se **Invia i dati dell'organizzazione ad altre app** è impostato su **Tutte le app**, i dati di testo possono ancora essere trasferiti tramite la condivisione negli Appunti del sistema operativo.</p></div> | **Tutte le app** | 
 |<ul><ui>**Selezionare le app da esentare** | Questa opzione è disponibile quando si seleziona *App gestite da criteri* per l'opzione precedente. | |
 |<ul><ui>**Salva copie dei dati dell'organizzazione** | Scegliere **Blocca** per disabilitare l'uso dell'opzione Salva con nome in questa app. Scegliere **Consenti** per consentire l'uso di Salva con nome. **Nota:** *Questa impostazione è supportata per Microsoft Excel, OneNote, PowerPoint e Word. Può essere supportata anche da app di terze parti e da applicazioni line-of-business.*| **Consentito** |  
-|<ul><ui>**Consenti all'utente di salvare copie nei servizi selezionati** |Gli utenti possono salvare nei servizi selezionati (OneDrive for Business, SharePoint e archiviazione locale). Tutti gli altri servizi verranno bloccati.  | **0 selezionato** |
+|<ul><ui><ul><ui>**Consenti all'utente di salvare copie nei servizi selezionati** |Gli utenti possono salvare nei servizi selezionati (OneDrive for Business, SharePoint e archiviazione locale). Tutti gli altri servizi verranno bloccati.  | **0 selezionato** |
+|<ul><ui>**Trasferisci i dati delle telecomunicazioni a** | In genere, quando un utente seleziona un numero di telefono con collegamento ipertestuale in un'app, viene aperta un'app dialer con il numero di telefono precompilato e pronto per la chiamata. Per questa impostazione, scegliere come gestire questo tipo di trasferimento del contenuto quando viene avviato da un'app gestita da criteri:<ul><li>**Nessuno, non trasferire i dati tra le app**: non trasferire i dati di comunicazione quando viene rilevato un numero di telefono.</li><li>**App dialer specifica**: consente a un'app dialer specifica di avviare il contatto quando viene rilevato un numero di telefono.</li><li>**Qualsiasi app dialer gestita da criteri**: consente a qualsiasi app dialer gestita da criteri di avviare il contatto quando viene rilevato un numero di telefono.</li><li>**Qualsiasi app dialer**: consente di usare qualsiasi app dialer per avviare il contatto quando viene rilevato un numero di telefono.</li></ul>| **Qualsiasi app dialer** |  
+|<ul><ui><ul><ui>**ID pacchetto dell'app dialer** | quando è stata selezionata un'app dialer specifica, è necessario specificare l'[ID del pacchetto dell'app](../apps/app-configuration-vpn-ae.md#get-the-app-package-id). | **Vuoto** |
+|<ul><ui><ul><ui>**Nome dell'app dialer** | Quando è stata selezionata un'app dialer specifica, è necessario specificare il nome dell'app dialer. | **Vuoto** |
 | **Ricevi dati da altre app** | Specificare le app che possono trasferire dati a questa app: <ul><li>**App gestite da criteri**: consente il trasferimento solo da altre app gestite da criteri.</li><li>**Tutte le app**: consente il trasferimento dei dati da qualsiasi app.</li><li>**Nessuno**: non consente il trasferimento dei dati dalle app, incluse le altre app gestite da criteri. </li></ul> <p>Esistono alcuni servizi e app esenti, dai quali Intune può consentire il trasferimento dei dati. Vedere [Esenzioni per il trasferimento dei dati](app-protection-policy-settings-android.md#data-transfer-exemptions) per un elenco completo di app e servizi. | **Tutte le app** |
 | **Limita le operazioni taglia, copia e incolla tra altre app** | Specificare quando è possibile usare le azioni taglia, copia e incolla con questa app. Scegliere tra: <ul><li>**Bloccato**:  non consente le azioni Taglia, Copia e Incolla tra questa app e altre app.</li><li>**App gestite da criteri**: consente le azioni Taglia, Copia e Incolla tra questa app e altre app gestite da criteri.</li><li>**App gestite da criteri con Incolla in**: consente le azioni Taglia o Copia tra questa app e altre app gestite da criteri. I dati da qualsiasi app possono essere incollati in questa app.</li><li>**Qualsiasi app**: nessuna restrizione per le azioni Taglia, Copia e Incolla in e da questa app. | **Qualsiasi app** |
 | <ul><ui>**Limite di caratteri per copia e incolla per qualsiasi app** | Specificare il numero di caratteri che è possibile tagliare o copiare da account e dati dell'organizzazione.  Ciò consente la condivisione del numero specificato di caratteri quando questo verrebbe altrimenti bloccato dall'impostazione "Limita le operazioni taglia, copia e incolla con le altre app".<p>Valore predefinito = 0<p>**Nota**: è richiesta la versione 5.0.4364.0 o successiva del Portale aziendale Intune.  | **0** |

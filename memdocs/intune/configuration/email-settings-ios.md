@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 06/08/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ac4050e6113eba2a34099a627bf6141049d8454
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 099643f1e55c6f3e58c0cd685c2339abf00dd7dc
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79364188"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506214"
 ---
 # <a name="add-e-mail-settings-for-ios-and-ipados-devices-in-microsoft-intune"></a>Aggiungere le impostazioni di posta elettronica per i dispositivi iOS e iPadOS in Microsoft Intune
 
@@ -64,7 +64,7 @@ Questo articolo elenca e descrive tutte le impostazioni di posta elettronica dis
 - **SSL**: selezionare **Abilita** per usare la comunicazione Secure Sockets Layer (SSL) durante l'invio e la ricezione di messaggi di posta elettronica e durante la comunicazione con il server Exchange.
 - **OAuth**: selezionare **Abilita** per usare la comunicazione Open Authorization (OAuth) durante l'invio e la ricezione di messaggi di posta elettronica e durante la comunicazione con Exchange. Se il server OAuth usa l'autenticazione del certificato, scegliere **Certificato** come **Metodo di autenticazione** e includere il certificato con il profilo. In caso contrario scegliere **Nome utente e password** come **Metodo di autenticazione**. Quando si usa OAuth, verificare quanto segue.
 
-  - Verificare che la soluzione di posta elettronica supporti OAuth prima di destinare questo profilo agli utenti. Office 365 Exchange Online supporta OAuth. Exchange locale e altre soluzioni partner o di terze parti potrebbero non supportare OAuth. Exchange locale può essere configurato per l'autenticazione moderna (vedere il post di blog [Announcing Hybrid Modern Authentication for Exchange On-Premises](https://blogs.technet.microsoft.com/exchange/2017/12/06/announcing-hybrid-modern-authentication-for-exchange-on-premises/) (Presentazione dell'autenticazione moderna ibrida per Exchange locale)).
+  - Verificare che la soluzione di posta elettronica supporti OAuth prima di destinare questo profilo agli utenti. Office 365 Exchange Online supporta OAuth. Exchange locale e altre soluzioni partner o di terze parti potrebbero non supportare OAuth. Exchange locale può essere configurato per l'autenticazione moderna. Per altre informazioni, vedere [Panoramica dell'autenticazione moderna ibrida e prerequisiti per l'utilizzo con i server Skype for Business ed Exchange locali](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview).
 
     Se il profilo di posta elettronica usa Oauth e il servizio di posta elettronica non la supporta, l'opzione **Reimmettere la password** non funziona. Ad esempio, non accade nulla quando l'utente sceglie **Reimmettere la password** nelle impostazioni del dispositivo Apple.
 

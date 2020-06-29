@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 06/15/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 9c2e6f742610eb8f2f526c6fc7a5afabfbadcbbf
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 071cab69b652193b835282603e187e4f3d0c7b0d
+ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990857"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879721"
 ---
 # <a name="manage-device-security-with-endpoint-security-policies-in-microsoft-intune"></a>Gestire la sicurezza dei dispositivi con i criteri di sicurezza degli endpoint in Microsoft Intune
 
@@ -35,13 +35,13 @@ Questi criteri sono disponibili in *Gestione* nel nodo **Endpoint security** (Si
 
 Di seguito sono riportate brevi descrizioni di ogni tipo di criterio di sicurezza degli endpoint. Per altre informazioni sui tipi di criteri e sui profili disponibili per ognuno di essi, seguire i collegamenti al contenuto dedicato a ogni tipo di criterio:
 
-- [Antivirus](../protect/endpoint-security-antivirus-policy.md): i criteri antivirus consentono agli amministratori della sicurezza di concentrarsi sulla gestione del gruppo specifico di impostazioni antivirus per i dispositivi gestiti. Per usare i criteri antivirus, integrare Intune con Microsoft Defender Advanced Threat Protection (Defender ATP) come soluzione Mobile Threat Defense.
+- [Antivirus](../protect/endpoint-security-antivirus-policy.md): i criteri antivirus consentono agli amministratori della sicurezza di concentrarsi sulla gestione del gruppo specifico di impostazioni antivirus per i dispositivi gestiti. Per usare i criteri antivirus, integrare Intune con Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) come soluzione Mobile Threat Defense.
 
 - [Crittografia del disco](../protect/endpoint-security-disk-encryption-policy.md): i profili di crittografia del disco per la sicurezza degli endpoint si concentrano solo sulle impostazioni rilevanti per un metodo di crittografia predefinito dei dispositivi, ad esempio FileVault o BitLocker. Questo focus consente agli amministratori della sicurezza di gestire in modo semplice le impostazioni di crittografia del disco senza dover passare in un host di impostazioni non correlate.
 
-- [Firewall](../protect/endpoint-security-firewall-policy.md): usare i criteri firewall per la sicurezza degli endpoint in Intune per configurare un firewall predefinito dei dispositivi per i dispositivi che eseguono macOS e Windows 10. I firewall predefiniti includono BitLocker per i dispositivi Windows e FileVault per macOS.
+- [Firewall](../protect/endpoint-security-firewall-policy.md): usare i criteri firewall per la sicurezza degli endpoint in Intune per configurare un firewall predefinito dei dispositivi per i dispositivi che eseguono macOS e Windows 10. 
 
-- [Rilevamento di endpoint e risposta](../protect/endpoint-security-edr-policy.md): quando si integra Defender ATP con Intune, è possibile usare i criteri di sicurezza degli endpoint per il rilevamento di endpoint e risposta (EDR) per gestire le impostazioni EDR ed eseguire l'onboarding di dispositivi in Defender ATP.
+- [Rilevamento di endpoint e risposta](../protect/endpoint-security-edr-policy.md): quando si integra Microsoft Defender ATP con Intune, è possibile usare i criteri di sicurezza degli endpoint per il rilevamento di endpoint e risposta (EDR) per gestire le impostazioni EDR ed eseguire l'onboarding di dispositivi in Microsoft Defender ATP.
 
 - [Riduzione della superficie di attacco](../protect/endpoint-security-asr-policy.md): quando l'antivirus Defender viene usato nei dispositivi Windows 10, è possibile usare i criteri di sicurezza degli endpoint per la riduzione della superficie di attacco di Intune per gestire le impostazioni per i dispositivi.
 

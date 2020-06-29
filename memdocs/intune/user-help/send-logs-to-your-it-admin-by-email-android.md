@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/19/2019
+ms.date: 06/16/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 8094f9739f05a7e7c0ffc10e9b4835c67c5539b3
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 83a00368c7f47568497669c940e3c2904a479372
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882003"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85094035"
 ---
 # <a name="upload-and-email-logs"></a>Caricare e inviare i log tramite posta elettronica  
 
@@ -34,6 +34,8 @@ I dettagli relativi all'errore effettivo vengono memorizzati nel dispositivo in 
 
 > [!Note]
 > Perché il supporto tecnico dell'azienda possa individuare più facilmente la causa del problema, attivare la _registrazione dettagliata_ nel portale aziendale. Se si usa l'app Microsoft Intune, impostare **Livello di dettaglio del log** su **Dettagliato**. Nella registrazione dettagliata vengono registrati tutti i dettagli sull'errore. Tali dettagli vengono inclusi nel report. Per informazioni su come attivare la registrazione dettagliata, vedere [qui](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md).  
+>
+> Se si usa un ambiente cloud sovrano, la funzionalità di invio dei log nel Portale aziendale non sarà disponibile. È necessario inviare i log tramite posta elettronica. 
 
 ## <a name="upload-and-email-logs-from-company-portal"></a>Caricare e inviare i log tramite posta elettronica da Portale aziendale  
 

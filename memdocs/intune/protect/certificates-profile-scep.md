@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 06/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dfa830f1e7bfd87c20c1aed78b933f81e96b8dca
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 35cf4b3afb766d8729d3438d2d8c61e1d79f4791
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988657"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531741"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Creare e assegnare profili di certificato SCEP in Intune
 
@@ -226,7 +226,17 @@ Dopo aver [configurato l'infrastruttura](certificates-scep-configure.md) per sup
 
    - **URL server SCEP**:
 
-     specificare uno o più URL per i server del servizio Registrazione dispositivi di rete che emettono certificati tramite SCEP. Ad esempio, `https://ndes.contoso.com/certsrv/mscep/mscep.dll`. È possibile aggiungere altri URL di SCEP per il bilanciamento del carico, se necessario, perché viene eseguito il push degli URL in modo casuale nel dispositivo con il profilo. Se uno dei server SCEP non è disponibile, la richiesta SCEP avrà esito negativo ed è possibile che durante sincronizzazioni successive del dispositivo la richiesta del certificato venga effettuata sullo stesso server non attivo.
+     specificare uno o più URL per i server del servizio Registrazione dispositivi di rete che emettono certificati tramite SCEP. Ad esempio, `https://ndes.contoso.com/certsrv/mscep/mscep.dll`.
+
+     Se necessario, è possibile aggiungere altri URL SCEP per il bilanciamento del carico. I dispositivi effettuano tre chiamate separate al server NDES: per ottenere le funzionalità dei server, per ottenere una chiave pubblica e quindi per inviare una richiesta di firma. Quando si usano più URL, è possibile che a causa del bilanciamento del carico venga usato un URL diverso per le chiamate successive a un server NDES. Se un server diverso viene contattato per una chiamata successiva durante la stessa richiesta, la richiesta avrà esito negativo.
+
+     Il comportamento per la gestione dell'URL del server NDES è specifico per ogni piattaforma del dispositivo:
+
+     - **Android**: il dispositivo usa in modo casuale l'elenco degli URL ricevuti nel criterio SCEP, quindi elabora l'elenco fino a quando non viene trovato un server NDES accessibile. Il dispositivo continua quindi a usare lo stesso URL e il medesimo server nell'intero processo. Se il dispositivo non è in grado di accedere ad alcun server NDES, il processo ha esito negativo.
+     - **iOS/iPadOS**: Intune genera in modo casuale gli URL e fornisce un singolo URL a un dispositivo. Se il dispositivo non riesce ad accedere al server NDES, la richiesta SCEP ha esito negativo.
+     - **Windows**: l'elenco di URL NDES viene creato in modo causale e quindi passato al dispositivo Windows, che quindi tenta gli URL nell'ordine ricevuto, fino a quando non ne viene individuato uno disponibile. Se il dispositivo non è in grado di accedere ad alcun server NDES, il processo ha esito negativo.
+
+     Se un dispositivo non riesce a raggiungere lo stesso server NDES correttamente durante una delle tre chiamate al server NDES, la richiesta SCEP ha esito negativo. Questo potrebbe verificarsi, ad esempio, quando una soluzione di bilanciamento del carico fornisce un URL diverso per la seconda o terza chiamata al server NDES o fornisce un server NDES effettivo diverso in base a un URL virtualizzato per NDES. Dopo una richiesta non riuscita, un dispositivo prova a eseguire di nuovo il processo al successivo ciclo del criterio, a partire dall'elenco casuale di URL NDES (o un URL singolo per iOS/iPadOS).  
 
 8. Selezionare **Avanti**.
 

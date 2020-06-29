@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 99ac1e069386c69011543ac40878dd62a0d50527
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e3ab2e31aa8a35ef04c150972cd7bb7650e46040
+ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990818"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879700"
 ---
 # <a name="manage-endpoint-security-in-microsoft-intune"></a>Gestire la sicurezza degli endpoint in Microsoft Intune
 
@@ -31,15 +31,15 @@ Il nodo Sicurezza degli endpoint raggruppa gli strumenti disponibili tramite Int
 
 - **Controllare lo stato di tutti i dispositivi gestiti**. Usare la vista [Tutti i dispositivi](#manage-devices) in cui è possibile visualizzare la conformità dei dispositivi da un livello elevato e quindi analizzare i dispositivi specifici per comprendere quali criteri di conformità non sono soddisfatti, in modo da poterli risolvere.
 
-- **Distribuire le baseline di sicurezza che stabiliscono le configurazioni di sicurezza delle procedure consigliate per i dispositivi**. Intune include [baseline di sicurezza](#manage-security-baselines) per i dispositivi Windows e un elenco in continua crescita di applicazioni, ad esempio Microsoft Defender Advanced Threat Protection (Defender ATP) e Microsoft Edge. Le baseline di sicurezza sono gruppi preconfigurati di impostazioni di Windows che consentono di applicare un gruppo di impostazioni e valori predefiniti noti, consigliati dai team di sicurezza pertinenti.
+- **Distribuire le baseline di sicurezza che stabiliscono le configurazioni di sicurezza delle procedure consigliate per i dispositivi**. Intune include [baseline di sicurezza](#manage-security-baselines) per i dispositivi Windows e un elenco in continua crescita di applicazioni, ad esempio Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) e Microsoft Edge. Le baseline di sicurezza sono gruppi preconfigurati di impostazioni di Windows che consentono di applicare un gruppo di impostazioni e valori predefiniti noti, consigliati dai team di sicurezza pertinenti.
 
-- **Gestire le configurazioni di sicurezza nei dispositivi mediante criteri strettamente mirati**.  Ogni [criterio di sicurezza degli endpoint](#use-policies-to-manage-device-security) si concentra sugli aspetti della sicurezza dei dispositivi, ad esempio antivirus, crittografia del disco, firewall e diverse aree rese disponibili tramite l'integrazione con Defender ATP.
+- **Gestire le configurazioni di sicurezza nei dispositivi mediante criteri strettamente mirati**.  Ogni [criterio di sicurezza degli endpoint](#use-policies-to-manage-device-security) si concentra sugli aspetti della sicurezza dei dispositivi, ad esempio antivirus, crittografia del disco, firewall e diverse aree rese disponibili tramite l'integrazione con Microsoft Defender ATP.
 
 - **Definire i requisiti per i dispositivi e gli utenti tramite i criteri di conformità**. Con i [criteri di conformità](../protect/device-compliance-get-started.md), è possibile impostare le regole che i dispositivi e gli utenti devono soddisfare per essere considerati conformi. Le regole possono includere le versioni del sistema operativo, i requisiti per le password, i livelli di minaccia del dispositivo e altro ancora.
 
   Quando si integrano con Azure Active Directory (Azure AD) i [criteri di accesso condizionale](#configure-conditional-access) per applicare i criteri di conformità, è possibile controllare l'accesso alle risorse aziendali per i dispositivi gestiti e i dispositivi che non sono ancora gestiti.
 
-- **Integrare Intune con il team di Microsoft Defender ATP**. Grazie all'[integrazione con Defender ATP](#set-up-integration-with-defender-atp) si ottiene l'accesso alle [attività di sicurezza](#review-security-tasks-from-defender-atp). Le attività di sicurezza sono strettamente associate a Defender ATP e Intune per consentire al team di sicurezza di identificare i dispositivi a rischio e le procedure di correzione dettagliate per gli amministratori di Intune che possono intervenire.
+- **Integrare Intune con il team di Microsoft Defender ATP**. Grazie all'[integrazione con Microsoft Defender ATP](#set-up-integration-with-microsoft-defender-atp) si ottiene l'accesso alle [attività di sicurezza](#review-security-tasks-from-microsoft-defender-atp). Le attività di sicurezza sono strettamente associate a Microsoft Defender ATP e Intune per consentire al team di sicurezza di identificare i dispositivi a rischio e le procedure di correzione dettagliate per gli amministratori di Intune che possono intervenire.
 
 Le sezioni seguenti di questo articolo illustrano le diverse attività che è possibile eseguire dal nodo Sicurezza degli endpoint dell'interfaccia di amministrazione e le autorizzazioni di controllo degli accessi in base al ruolo (RBAC) necessarie per usarle.
 
@@ -61,13 +61,13 @@ Per altre informazioni, vedere [Usare le baseline di sicurezza per configurare i
 
 Le baseline di sicurezza sono uno dei diversi metodi di Intune per configurare le impostazioni nei dispositivi. Quando si gestiscono le impostazioni, è importante comprendere quali altri metodi sono in uso nell'ambiente per configurare i dispositivi in modo che sia possibile evitare conflitti. Vedere [Evitare conflitti di criteri](#avoid-policy-conflicts) più avanti in questo articolo.
 
-## <a name="review-security-tasks-from-defender-atp"></a>Esaminare le attività di sicurezza da Defender ATP
+## <a name="review-security-tasks-from-microsoft-defender-atp"></a>Esaminare le attività di sicurezza da Microsoft Defender ATP
 
-Quando si integra Intune con Microsoft Defender Advanced Threat Protection (Defender ATP), è possibile esaminare le *attività di sicurezza* in Intune che identificano i dispositivi a rischio e specificano i passaggi per attenuare il rischio. È quindi possibile usare le attività per segnalare a Defender ATP quando questi rischi vengono attenuati correttamente.
+Quando si integra Intune con Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP), è possibile esaminare le *attività di sicurezza* in Intune che identificano i dispositivi a rischio e specificano i passaggi per attenuare il rischio. È quindi possibile usare le attività per segnalare a Microsoft Defender ATP quando questi rischi vengono attenuati correttamente.
 
-- Il team di Defender ATP determina i dispositivi a rischio e passa tali informazioni al team di Intune come attività di sicurezza. Con pochi clic, viene creata un'attività di sicurezza per Intune che identifica i dispositivi a rischio, la vulnerabilità e fornisce indicazioni su come attenuare il rischio.
+- Il team di Microsoft Defender ATP determina i dispositivi a rischio e passa tali informazioni al team di Intune come attività di sicurezza. Con pochi clic, viene creata un'attività di sicurezza per Intune che identifica i dispositivi a rischio, la vulnerabilità e fornisce indicazioni su come attenuare il rischio.
 
-- Gli amministratori di Intune ricontrollano le attività di sicurezza e quindi agiscono in Intune per correggere tali attività. Una volta attenuato, l'attività viene impostata su completa, comunicando tale stato al team Defender ATP.
+- Gli amministratori di Intune ricontrollano le attività di sicurezza e quindi agiscono in Intune per correggere tali attività. Una volta attenuati, l'attività viene impostata su completa, comunicando tale stato al team di Microsoft Defender ATP.
 
 Attraverso le attività di sicurezza entrambi i team rimangono sincronizzati su quali dispositivi sono a rischio e su come e quando tali rischi vengono corretti.
 
@@ -93,7 +93,7 @@ Le [impostazioni di conformità disponibili](../protect/device-compliance-get-st
 
 - Richiedere che i dispositivi eseguano una versione del sistema operativo minima o specifica
 - Impostare i requisiti per le password
-- Specificare un livello di minaccia massimo consentito per il dispositivo, determinato da Defender ATP o da un altro partner di Mobile Threat Defense
+- Specificare un livello di minaccia massimo consentito per il dispositivo, determinato da Microsoft Defender ATP o da un altro partner di Mobile Threat Defense
 
 Oltre alle regole dei criteri, i criteri di conformità supportano:
 
@@ -119,18 +119,18 @@ Di seguito sono riportati due metodi comuni per l'uso dell'accesso condizionale 
 
 Per altre informazioni sull'uso dell'accesso condizionale con Intune, vedere [Informazioni sull'accesso condizionale e su Intune](../protect/conditional-access.md).
 
-## <a name="set-up-integration-with-defender-atp"></a>Configurare l'integrazione con Defender ATP
+## <a name="set-up-integration-with-microsoft-defender-atp"></a>Configurare l'integrazione con Microsoft Defender ATP
 
-Quando si integra Microsoft Defender Advanced Threat Protection (Defender ATP) con Intune, si migliora la capacità di identificare e rispondere ai rischi.
+Quando si integra Microsoft Defender ATP con Intune, si migliora la capacità di identificare e rispondere ai rischi.
 
-Sebbene Intune possa integrarsi con diversi [partner di Mobile Threat Defense](../protect/mobile-threat-defense.md), quando si usa Defender ATP si ottiene una stretta integrazione tra Defender ATP e Intune con accesso a opzioni approfondite di protezione dei dispositivi, tra cui:
+Sebbene Intune possa integrarsi con diversi [partner di Mobile Threat Defense](../protect/mobile-threat-defense.md), quando si usa Microsoft Defender ATP si ottiene una stretta integrazione tra Microsoft Defender ATP e Intune con accesso a opzioni approfondite di protezione dei dispositivi, tra cui:
 
 - Attività di sicurezza: comunicazione senza discontinuità tra gli amministratori di ATP e Intune sui dispositivi a rischio, come risolvere i problemi e conferma quando questi rischi vengono attenuati.
-- Onboarding semplificato per Defender ATP sui client.
+- Onboarding semplificato per Microsoft Defender ATP nei client.
 - Uso dei segnali di rischio del dispositivo ATP nei criteri di conformità di Intune.
 - Accesso alle funzionalità di *Protezione antimanomissione*.
 
- Per altre informazioni sull'uso di Defender ATP con Intune, vedere [Applicare la conformità per Microsoft Defender ATP con l'accesso condizionale in Intune](../protect/advanced-threat-protection.md).
+ Per altre informazioni sull'uso di Microsoft Defender ATP con Intune, vedere [Applicare la conformità per Microsoft Defender ATP con l'accesso condizionale in Intune](../protect/advanced-threat-protection.md).
 
 ## <a name="role-based-access-control-requirements"></a>Requisiti per il controllo degli accessi in base al ruolo
 
@@ -230,4 +230,4 @@ Configurare:
 - [Baseline di sicurezza](../protect/security-baselines.md)
 - [Criteri di conformità](../protect/device-compliance-get-started.md)
 - [Criteri di accesso condizionale](#configure-conditional-access)
-- [Integrazione con Defender ATP](../protect/advanced-threat-protection.md)
+- [Integrazione con Microsoft Defender ATP](../protect/advanced-threat-protection.md)

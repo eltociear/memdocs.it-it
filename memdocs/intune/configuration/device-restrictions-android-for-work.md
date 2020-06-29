@@ -5,23 +5,23 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/01/2020
+ms.date: 06/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
-ms.reviewer: chmaguir, chrisbal
+ms.reviewer: chmaguir, chrisbal, priyar
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b81686f645d9fce610c39266feb2675fd35cc280
-ms.sourcegitcommit: 6f67c864cf71b4a6a316f4d04a6cc43cf28b4277
+ms.openlocfilehash: 88843cfa1c4f98d87e5eaaefdc0dcd87daf8cb68
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84257036"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093711"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Impostazioni dei dispositivi Android Enterprise per consentire o limitare l'uso delle funzionalità tramite Intune
 
@@ -87,93 +87,124 @@ Queste impostazioni si applicano ai tipi di registrazione Android Enterprise in 
 
 - **Analisi delle minacce nelle app**: **Rendi obbligatorio** (impostazione predefinita) consente a Google Play Protect di analizzare le app prima e dopo la loro installazione. Se rileva una minaccia, può avvisare gli utenti di rimuovere l'app dal dispositivo. Quando questa opzione è impostata su **Non configurato**, Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non abilitare o eseguire Google Play Protect per analizzare le app.
 
-### <a name="dedicated-devices"></a>Dispositivi dedicati
+### <a name="device-experience"></a>Esperienza del dispositivo
 
-Utilizzare queste impostazioni per configurare un'esperienza di tipo chiosco multimediale nei dispositivi dedicati. È possibile configurare i dispositivi per eseguire una sola app o per eseguire molte app. Quando un dispositivo è impostato in modalità tutto schermo, sono disponibili solo le app aggiunte. Queste impostazioni si applicano ai dispositivi dedicati Android Enterprise. Non si applicano ai dispositivi Android Enterprise completamente gestiti.
+Usare queste impostazioni per configurare un'esperienza di tipo chiosco multimediale nei dispositivi dedicati o in quelli completamente gestiti. È possibile configurare i dispositivi per eseguire una sola app o per eseguire molte app. Quando un dispositivo è impostato in modalità tutto schermo, sono disponibili solo le app aggiunte.
 
-**Modalità tutto schermo**: scegliere se il dispositivo eseguirà una sola app o più app.
+**Tipo di profilo di registrazione**: selezionare un tipo di profilo di registrazione per avviare la configurazione di Microsoft Launcher o della schermata iniziale gestita da Microsoft nei dispositivi. Le opzioni disponibili sono:
 
-- **Non configurata**: Intune non modifica o aggiorna questa impostazione.
-- **App singola**: gli utenti possono accedere a un'app singola nel dispositivo. All'avvio del dispositivo viene avviata solo l'app specifica. Gli utenti non possono aprire nuove app o modificare l'app in esecuzione.
+- **Non configurata**: Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, gli utenti potrebbero visualizzare l'esperienza con la schermata iniziale predefinita del dispositivo.
+- **Dispositivo dedicato**: configurare un'esperienza di tipo chiosco multimediale nei dispositivi dedicati. Prima di configurare queste impostazioni, assicurarsi di [aggiungere](../apps/apps-add-android-for-work.md) e [assegnare](../apps/apps-deploy.md) le app desiderate nei dispositivi.
 
-  - **Selezionare un'app gestita**: selezionare l'app Google Play gestita nell'elenco.
+  - **Modalità tutto schermo**: scegliere se il dispositivo eseguirà una sola app o più app. Le opzioni disponibili sono:
 
-    Se l'elenco non include alcuna app, [aggiungere alcune app Android](../apps/apps-add-android-for-work.md) al dispositivo. Assicurarsi di [assegnare l'app al gruppo di dispositivi creato per i dispositivi dedicati](../apps/apps-deploy.md).
+    - **Non configurata**: Intune non modifica o aggiorna questa impostazione.
+    - **App singola**: gli utenti possono accedere a un'app singola nel dispositivo. All'avvio del dispositivo viene avviata solo l'app specifica. Gli utenti non possono aprire nuove app o modificare l'app in esecuzione.
 
-  > [!IMPORTANT]
-  > Quando si usa la modalità tutto schermo ad app singola, le app dialer o telefoniche potrebbero non funzionare correttamente.
+      - **Selezionare un'app da usare per la modalità tutto schermo**: selezionare l'app Google Play gestita nell'elenco.
+
+      > [!IMPORTANT]
+      > quando si usa la modalità tutto schermo ad app singola, le app dialer o telefoniche potrebbero non funzionare correttamente.
   
-- **Più app**: gli utenti possono accedere a un set di app limitato nel dispositivo. All'avvio del dispositivo vengono avviate solio le app aggiunte. È anche possibile aggiungere alcuni collegamenti Web che gli utenti possono aprire. Quando viene applicato il criterio, gli utenti visualizzano le icone delle app consentite nella schermata iniziale.
+    - **Più app**: gli utenti possono accedere a un set di app limitato nel dispositivo. All'avvio del dispositivo vengono avviate solio le app aggiunte. È anche possibile aggiungere alcuni collegamenti Web che gli utenti possono aprire. Quando viene applicato il criterio, gli utenti visualizzano le icone delle app consentite nella schermata iniziale.
 
-  > [!IMPORTANT]
-  > Per i dispositivi dedicati con più app, l'[app di schermata iniziale gestita](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) da Google Play **deve essere**:
-  >   - [Aggiunta come app client](../apps/apps-add-android-for-work.md) in Intune
-  >   - [Assegnata al gruppo di dispositivi](../apps/apps-deploy.md) creato per i dispositivi dedicati
-  >
-  > Non è richiesto che l'app di **schermata iniziale gestita** sia inclusa nel profilo di configurazione, ma è necessario che venga aggiunta come app client. Quando l'app di **schermata iniziale gestita** viene aggiunta come app client, qualsiasi altra app aggiunta nel profilo di configurazione viene visualizzata come icona nell'app di **schermata iniziale gestita**.
-  >
-  > Quando si usa la modalità tutto schermo con più app, le app dialer o telefoniche potrebbero non funzionare correttamente. 
+      > [!IMPORTANT]
+      > Per i dispositivi dedicati con più app, l'[app di schermata iniziale gestita](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) da Google Play **deve essere**:
+      >   - [Aggiunta in Intune](../apps/apps-add-android-for-work.md)
+      >   - [Assegnata al gruppo di dispositivi](../apps/apps-deploy.md) creato per i dispositivi dedicati
+      >
+      > Non è richiesto che l'app di **schermata iniziale gestita** sia inclusa nel profilo di configurazione, ma è necessario che venga aggiunta come app. Quando l'app di **schermata iniziale gestita** viene aggiunta, qualsiasi altra app aggiunta nel profilo di configurazione viene visualizzata come icona nell'app di **schermata iniziale gestita**.
+      >
+      > Quando si usa la modalità tutto schermo con più app, le app dialer o telefoniche potrebbero non funzionare correttamente. 
 
-  - **Aggiungi**: selezionare le app nell'elenco.
+      - **Aggiungi**: selezionare le app nell'elenco.
 
-    Se l'app di **schermata iniziale gestita** non è inclusa nell'elenco, [aggiungerla da Google Play](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise). Assicurarsi di [assegnare l'app](../apps/apps-deploy.md) al gruppo di dispositivi creato per i dispositivi dedicati.
+        Se l'app di **schermata iniziale gestita** non è inclusa nell'elenco, [aggiungerla da Google Play](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise). Assicurarsi di [assegnare l'app](../apps/apps-deploy.md) al gruppo di dispositivi creato per i dispositivi dedicati.
 
-    È anche possibile aggiungere al dispositivo altre [app Android](../apps/apps-add-android-for-work.md) e [app Web](../apps/web-app.md) create dall'organizzazione. Assicurarsi di [assegnare l'app al gruppo di dispositivi creato per i dispositivi dedicati](../apps/apps-deploy.md).
+        È anche possibile aggiungere al dispositivo altre [app Android](../apps/apps-add-android-for-work.md) e [app Web](../apps/web-app.md) create dall'organizzazione. Assicurarsi di [assegnare l'app al gruppo di dispositivi creato per i dispositivi dedicati](../apps/apps-deploy.md).
 
-  - **Pulsante Pagina iniziale virtuale**: tasto softkey che riporta gli utenti alla schermata iniziale gestita in modo da potersi spostare tra le app. Le opzioni disponibili sono:
+      - **Pulsante Pagina iniziale virtuale**: tasto softkey che riporta gli utenti alla schermata iniziale gestita in modo da potersi spostare tra le app. Le opzioni disponibili sono:
+        - **Non configurato** (impostazione predefinita): non viene visualizzato un pulsante Pagina iniziale. Gli utenti devono usare il pulsante Indietro per spostarsi tra le app.
+        - **Scorrimento rapido verso l'alto**: viene visualizzato un pulsante Pagina iniziale quando un utente scorre verso l'alto nel dispositivo.
+        - **Mobile**: mostra un pulsante Pagina iniziale permanente e mobile nel dispositivo.
 
-    - **Non configurato** (impostazione predefinita): non viene visualizzato un pulsante Pagina iniziale. Gli utenti devono usare il pulsante Indietro per spostarsi tra le app.
-    - **Scorrimento rapido verso l'alto**: viene visualizzato un pulsante Pagina iniziale quando un utente scorre verso l'alto nel dispositivo.
-    - **Mobile**: mostra un pulsante Pagina iniziale permanente e mobile nel dispositivo.
-
-  - **Esci dalla modalità tutto schermo**: **Abilita** consente agli amministratori di sospendere temporaneamente la modalità tutto schermo per aggiornare il dispositivo. Per utilizzare questa funzionalità, l'amministratore esegue le operazioni seguenti:
+      - **Esci dalla modalità tutto schermo**: **Abilita** consente agli amministratori di sospendere temporaneamente la modalità tutto schermo per aggiornare il dispositivo. Per utilizzare questa funzionalità, l'amministratore esegue le operazioni seguenti:
   
-    1. Continua a selezionare il pulsante Indietro fino a quando non viene visualizzato il pulsante **Exit kiosk** (Esci da modalità tutto schermo). 
-    2. Seleziona il pulsante **Exit kiosk** (Esci da modalità tutto schermo) e immette il PIN per **Codice di uscita dalla modalità tutto schermo**.
-    3. Al termine, selezionare l'**app di schermata iniziale gestita**. Questo passaggio blocca di nuovo il dispositivo in modalità tutto schermo con più app.
+        1. Continua a selezionare il pulsante Indietro fino a quando non viene visualizzato il pulsante **Exit kiosk** (Esci da modalità tutto schermo). 
+        2. Seleziona il pulsante **Exit kiosk** (Esci da modalità tutto schermo) e immette il PIN per **Codice di uscita dalla modalità tutto schermo**.
+        3. Al termine, selezionare l'**app di schermata iniziale gestita**. Questo passaggio blocca di nuovo il dispositivo in modalità tutto schermo con più app.
 
-      Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe impedire agli amministratori di sospendere la modalità tutto schermo. Se l'amministratore continua a selezionare il pulsante Indietro e seleziona il pulsante **Exit kiosk** (Esci da modalità tutto schermo), un messaggio segnala che è richiesto un passcode.
+        Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe impedire agli amministratori di sospendere la modalità tutto schermo. Se l'amministratore continua a selezionare il pulsante Indietro e seleziona il pulsante **Exit kiosk** (Esci da modalità tutto schermo), un messaggio segnala che è richiesto un passcode.
 
-    - **Codice di uscita dalla modalità tutto schermo**: immettere un PIN numerico da 4 a 6 cifre. L'amministratore usa questo PIN per sospendere temporaneamente la modalità tutto schermo.
+      - **Codice di uscita dalla modalità tutto schermo**: immettere un PIN numerico da 4 a 6 cifre. L'amministratore usa questo PIN per sospendere temporaneamente la modalità tutto schermo.
 
-  - **Imposta uno sfondo personalizzato per l'URL**: immettere un URL per personalizzare la schermata di sfondo nel dispositivo dedicato. Immettere ad esempio `http://contoso.com/backgroundimage.jpg`.
+      - **Imposta uno sfondo personalizzato per l'URL**: immettere un URL per personalizzare la schermata di sfondo nel dispositivo dedicato. Immettere ad esempio `http://contoso.com/backgroundimage.jpg`.
 
-    > [!NOTE]
-    > Nella maggior parte dei casi, è consigliabile iniziare almeno con immagini delle dimensioni seguenti:
-    >
-    > - Telefono: 1080x1920 px
-    > - Tablet: 1920x1080 px
-    >
-    > Per ottenere la migliore esperienza e nitidezza dei dettagli, è consigliabile procedere alla creazione di asset per ogni immagine del dispositivo in base alle specifiche di visualizzazione.
-    >
-    > Gli schermi moderni hanno maggiori densità di pixel e consentono di visualizzare immagini con definizione equivalente a 2K/4K.
+        > [!NOTE]
+        > Nella maggior parte dei casi, è consigliabile iniziare almeno con immagini delle dimensioni seguenti:
+        >
+        > - Telefono: 1080x1920 px
+        > - Tablet: 1920x1080 px
+        >
+        > Per ottenere la migliore esperienza e nitidezza dei dettagli, è consigliabile procedere alla creazione di asset per ogni immagine del dispositivo in base alle specifiche di visualizzazione.
+        >
+        > Gli schermi moderni hanno maggiori densità di pixel e consentono di visualizzare immagini con definizione equivalente a 2K/4K.
 
-  - **Configurazione Wi-Fi**: **Abilita** mostra il controllo Wi-Fi nella schermata iniziale gestita e consente agli utenti di connettere il dispositivo a diverse reti Wi-Fi. L’abilitazione di questa funzionalità attiva anche la posizione del dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non visualizzare il controllo Wi-Fi nella schermata iniziale gestita. Impedisce agli utenti di connettersi alle reti Wi-Fi usando la schermata iniziale gestita.
+      - **Configurazione Wi-Fi**: **Abilita** mostra il controllo Wi-Fi nella schermata iniziale gestita e consente agli utenti di connettere il dispositivo a diverse reti Wi-Fi. L’abilitazione di questa funzionalità attiva anche la posizione del dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non visualizzare il controllo Wi-Fi nella schermata iniziale gestita. Impedisce agli utenti di connettersi alle reti Wi-Fi usando la schermata iniziale gestita.
 
-  - **Configurazione Bluetooth**: **Abilita** mostra il controllo Bluetooth nella schermata iniziale gestita e consente agli utenti di associare i dispositivi tramite Bluetooth. L’abilitazione di questa funzionalità attiva anche la posizione del dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non visualizzare il controllo Bluetooth nella schermata iniziale gestita. Impedisce agli utenti di configurare il Bluetooth e associare i dispositivi quando si trovano nella modalità schermata iniziale gestita.
+      - **Configurazione Bluetooth**: **Abilita** mostra il controllo Bluetooth nella schermata iniziale gestita e consente agli utenti di associare i dispositivi tramite Bluetooth. L’abilitazione di questa funzionalità attiva anche la posizione del dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non visualizzare il controllo Bluetooth nella schermata iniziale gestita. Impedisce agli utenti di configurare il Bluetooth e associare i dispositivi quando si trovano nella modalità schermata iniziale gestita.
 
-  - **Accesso alla torcia**: **Abilita** mostra il controllo torcia nella schermata iniziale gestita e consente agli utenti di attivare o disattivare la torcia. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non visualizzare il controllo torcia nella schermata iniziale gestita. Impedisce agli utenti di usare la torcia durante l'uso della schermata iniziale gestita.
+      - **Accesso alla torcia**: **Abilita** mostra il controllo torcia nella schermata iniziale gestita e consente agli utenti di attivare o disattivare la torcia. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non visualizzare il controllo torcia nella schermata iniziale gestita. Impedisce agli utenti di usare la torcia durante l'uso della schermata iniziale gestita.
 
-  - **Controllo volume dei file multimediali**: **Abilita** mostra il controllo volume dei file multimediali nella schermata iniziale gestita e consente agli utenti di regolare il volume per i file multimediali del dispositivo usando un dispositivo di scorrimento. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non visualizzare il controllo volume dei file multimediali nella schermata iniziale gestita. Impedisce agli utenti di regolare il volume dei file multimediali del dispositivo durante l'uso della schermata iniziale gestita, a meno che l'operazione non sia supportata tramite i pulsanti hardware.
+      - **Controllo volume dei file multimediali**: **Abilita** mostra il controllo volume dei file multimediali nella schermata iniziale gestita e consente agli utenti di regolare il volume per i file multimediali del dispositivo usando un dispositivo di scorrimento. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non visualizzare il controllo volume dei file multimediali nella schermata iniziale gestita. Impedisce agli utenti di regolare il volume dei file multimediali del dispositivo durante l'uso della schermata iniziale gestita, a meno che l'operazione non sia supportata tramite i pulsanti hardware.
 
-  - **Modalità screen saver**: **Abilita** mostra uno screen saver nella schermata iniziale gestita quando il dispositivo è bloccato o si verifica un timeout. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non visualizzare uno screen saver nella schermata iniziale gestita.
+      - **Modalità screen saver**: **Abilita** mostra uno screen saver nella schermata iniziale gestita quando il dispositivo è bloccato o si verifica un timeout. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non visualizzare uno screen saver nella schermata iniziale gestita.
 
-    Se abilitata, configurare anche:
+        Se abilitata, configurare anche:
 
-    - **Imposta l'immagine personalizzata per lo screen saver**: immettere l'URL di un file PNG, JPG, JPEG, GIF, BMP, WebP o ICOimage personalizzato. Immettere ad esempio:
+        - **Imposta l'immagine personalizzata per lo screen saver**: immettere l'URL di un file PNG, JPG, JPEG, GIF, BMP, WebP o ICOimage personalizzato. Se non si immette un URL, viene usata l'immagine predefinita del dispositivo, se è presente un'immagine predefinita. 
+        
+          Immettere ad esempio:
 
-      - `http://www.contoso.com/image.jpg`
-      - `www.contoso.com/image.bmp`
-      - `https://www.contoso.com/image.webp`
+          - `http://www.contoso.com/image.jpg`
+          - `www.contoso.com/image.bmp`
+          - `https://www.contoso.com/image.webp`          
 
-      Se non si immette un URL, viene usata l'immagine predefinita del dispositivo, se è presente un'immagine predefinita.
+          > [!TIP]
+          > È supportato qualsiasi URL di risorsa file che possa essere trasformato in una bitmap.
 
-      > [!TIP]
-      > È supportato qualsiasi URL di risorsa file che possa essere trasformato in una bitmap.
+        - **Numero di secondi per cui viene visualizzato lo screen saver nel dispositivo prima dello spegnimento dello schermo**: scegliere per quanto tempo il dispositivo visualizza lo screensaver. Immettere un valore compreso tra 0 e 9999999 secondi. Il valore predefinito è `0` secondi. Se l'opzione viene lasciata vuota o viene impostata su zero (`0`), lo screen saver rimane attivo fino all'interazione di un utente con il dispositivo.
+        - **Numero di secondi di inattività del dispositivo prima della visualizzazione dello screen saver**: scegliere per quanto tempo il dispositivo deve rimanere inattivo prima di visualizzare lo screensaver. Immettere un valore compreso tra 1 e 9999999 secondi. Il valore predefinito è `30` secondi. È necessario immettere un numero maggiore di zero (`0`).
+        - **Rileva file multimediali prima di avviare lo screen saver**: l'impostazione predefinita **Abilita** non mostra lo screen saver se sono in riproduzione elementi audio o video nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe visualizzare le screen saver, anche se sono in riproduzione elementi audio o video.
 
-    - **Numero di secondi per cui viene visualizzato lo screen saver nel dispositivo prima dello spegnimento dello schermo**: scegliere per quanto tempo il dispositivo visualizza lo screensaver. Immettere un valore compreso tra 0 e 9999999 secondi. Il valore predefinito è `0` secondi. Se l'opzione viene lasciata vuota o viene impostata su zero (`0`), lo screen saver rimane attivo fino all'interazione di un utente con il dispositivo.
-    - **Numero di secondi di inattività del dispositivo prima della visualizzazione dello screen saver**: scegliere per quanto tempo il dispositivo deve rimanere inattivo prima di visualizzare lo screensaver. Immettere un valore compreso tra 1 e 9999999 secondi. Il valore predefinito è `30` secondi. È necessario immettere un numero maggiore di zero (`0`).
-    - **Rileva file multimediali prima di avviare lo screen saver**: l'impostazione predefinita **Abilita** non mostra lo screen saver se sono in riproduzione elementi audio o video nel dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe visualizzare le screen saver, anche se sono in riproduzione elementi audio o video.
+- **Completamente gestito**: configura l'app Microsoft Launcher nei dispositivi completamente gestiti.
+
+  - **Imposta Microsoft Launcher come utilità di avvio predefinita**: l'opzione **Abilita** imposta Microsoft Launcher come utilità di avvio predefinita nella schermata iniziale. Se si imposta l'utilità di avvio come predefinita, gli utenti non possono usare un'altra utilità di avvio. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, Microsoft Launcher non viene impostato forzatamene come utilità di avvio predefinita.
+
+<!-- The following settings are in a future release. Per PM, we can leave them in GitHub, not live. Remove comment tags when they release.
+
+  - **Configure custom wallpaper**: **Enable** lets you apply your own image as the home screen wallpaper, and choose if users can change the image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the device keeps its current wallpaper.
+    - **Enter URL of wallpaper image**: Enter the URL of your wallpaper image. This image shows on the device home screen. For example, enter `http://www.contoso.com/image.jpg`. 
+    - **Allow user to modify wallpaper**: **Enable** allows users to change the wallpaper image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the wallpaper.
+  - **Enable launcher feed**: **Enable** turns on the launcher feed, which shows calendars, documents, and recent activities. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, this feed isn't shown.
+    - **Allow user to enable/disable feed**: **Enable** lets users enable or disable the launcher feed. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the launcher feed settings.
+  - **Dock presence**: The dock gives users quick access to their apps and tools. Your options:
+    - **Not configured** (default): Intune doesn't change or update this setting.
+    - **Show**: The dock is shown on devices.
+    - **Hide**: The dock is hidden. Users must swipe up to access the dock.
+    - **Disabled**: The dock isn't shown on devices, and users are prevented from showing it.
+
+  - **Allow user to change dock presence**: **Enable** allows users to show or hide the dock. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users aren't allowed to change the device dock configuration.
+
+  - **Search bar replacement**: Choose where to put the search bar. Your options:
+    - **Not configured** (default): Intune doesn't change or update this setting.
+    - **Top**: Search bar is shown at the top of devices.
+    - **Bottom**: Search bar is shown at the bottom of devices.
+    - **Hide**: Search bar is hidden.
+
+  - **Allow user to change search bar placement**: **Enable** allows users to change the location of the search bar. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the location.
+
+End of comment -->
 
 ### <a name="password"></a>Password
 
@@ -231,7 +262,7 @@ Utilizzare queste impostazioni per configurare un'esperienza di tipo chiosco mul
 
 ### <a name="applications"></a>Applicazioni
 
-- **Consenti l'installazione da origini sconosciute**: **Consenti** consente agli utenti di attivare **Origini sconosciute**. Questa impostazione consente di installare app da origini sconosciute, tra cui origini diverse da Google Play Store. Consente agli utenti di caricare le app sul dispositivo con metodi diversi da Google Play Store. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe impedire agli utenti di attivare **Origini sconosciute**.
+- **Consenti l'installazione da origini sconosciute**: **Consenti** consente agli utenti di attivare **Origini sconosciute**. Questa impostazione consente di installare app da origini sconosciute, tra cui origini diverse da Google Play Store. Consente agli utenti di caricare le app nel dispositivo con metodi diversi da Google Play Store. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe impedire agli utenti di attivare **Origini sconosciute**.
 - **Consenti l'accesso a tutte le app in Google Play Store**: con l'impostazione **Consenti** gli utenti ottengono l'accesso a tutte le app in Google Play Store. Non possono accedere alle app bloccate dall'amministratore in [App client](../apps/apps-add-android-for-work.md).
 
   Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe:
@@ -298,8 +329,9 @@ Queste impostazioni si applicano ai tipi di registrazione Android Enterprise in 
 
 - **Copia e incolla tra il profilo di lavoro e il profilo personale**: **Blocca** impedisce le attività di tipo copia e incolla tra le app di lavoro e quelle personali. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di condividere i dati tramite copia e incolla con le app nel profilo personale.
 - **Condivisione dei dati tra i profili di lavoro e personali**: scegliere se le app del profilo di lavoro possono condividere i dati con le app del profilo personale. Ad esempio, è possibile controllare le azioni di condivisione all'interno delle applicazioni, come l'opzione **Condividi** nell'app browser Chrome. Questa impostazione non si applica al comportamento di copia/incolla degli Appunti. Le opzioni disponibili sono:
-  - **Impostazione predefinita dispositivo**: comportamento di condivisione predefinito del dispositivo che varia in base alla versione di Android. Per impostazione predefinita, la condivisione dal profilo personale al profilo di lavoro è consentita. Per impostazione predefinita, la condivisione dal profilo di lavoro al profilo personale è bloccata. Questa impostazione impedisce la condivisione di dati dal profilo di lavoro al profilo personale. Nei dispositivi che eseguono la versione 6.0 e successive Google non blocca la condivisione dal profilo personale al profilo di lavoro.
-  - **Impedisci qualsiasi condivisione tra i limiti**: impedisce la condivisione tra i profili di lavoro e personali.
+  - **Impostazione predefinita dispositivo**: il comportamento di condivisione predefinito del dispositivo varia in base alla versione di Android:
+    - nei dispositivi che eseguono Android 6.0 e versioni successive, la condivisione dal profilo di lavoro al profilo personale è bloccata. La condivisione dal profilo personale al profilo di lavoro è consentita.
+    - Nei dispositivi che eseguono Android 5.0 e versioni precedenti, la condivisione tra il profilo di lavoro e il profilo personale è bloccata in entrambe le direzioni.
   - **Le app nel profilo di lavoro possono gestire una richiesta di condivisione dal profilo personale**: abilita la funzionalità di Android predefinita che consente la condivisione dal profilo personale a quello di lavoro. Quando questa opzione è abilitata, una richiesta di condivisione da un'app nel profilo personale supporta la condivisione con app nel profilo di lavoro. Questa impostazione rappresenta il comportamento predefinito per i dispositivi Android che eseguono versioni precedenti alla 6.0.
   - **Nessuna restrizione sulla condivisione**: abilita la condivisione tra i limiti del profilo di lavoro in entrambe le direzioni. Quando si seleziona questa impostazione, le app nel profilo di lavoro possono condividere dati con app senza badge nel profilo personale. Questa impostazione consente la condivisione tra le app gestite nel profilo di lavoro e le app nella parte non gestita del dispositivo. Usare quindi questa impostazione con cautela.
 

@@ -6,22 +6,23 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/06/2020
+ms.date: 06/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ms.reviewer: kakyker
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 49ecd2a1aaa5408a721b06264703720be601c73c
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: aa3cf14b6afd8504a0918b5d61d2a7cae0c308b9
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269015"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093671"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Impostazioni dei dispositivi iOS e iPadOS per consentire o limitare l'uso delle funzionalità tramite Intune
 
@@ -198,7 +199,7 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
   - **10**: lo schermo si blocca dopo 10 minuti di inattività.
   - **15**: lo schermo si blocca dopo 15 minuti di inattività.
 
-  Se un valore non è applicabile a iOS e iPadOS, Apple userà il valore *minimo* più prossimo. Se ad esempio si immette `4` minuti, i dispositivi iPadOS useranno il valore `2` minuti. Se si immette `10` minuti, i dispositivi iOS useranno il valore `5` minuti. Questa è una limitazione Apple.
+  Se un valore non è applicabile a iOS e iPadOS, Apple userà il valore *minimo* più prossimo. Se ad esempio si immette `4` minuti, i dispositivi iPadOS useranno il valore `2` minuti. Se si immette `10` minuti, i dispositivi iOS useranno il valore `5` minuti. Questo comportamento è una limitazione Apple.
   
   > [!NOTE]
   > L'interfaccia utente di Intune per questa impostazione non separa i valori supportati da iOS e iPadOS. L'interfaccia utente potrebbe essere aggiornata in una delle prossime versioni.
@@ -429,6 +430,25 @@ Per aggiungere app a questi elenchi, è possibile:
 > [!IMPORTANT]
 > I profili dispositivo che usano le impostazioni per app con restrizioni devono essere assegnati ai gruppi di utenti.
 
+## <a name="shared-ipad"></a>iPad condiviso
+
+Questa funzionalità si applica a:
+
+- iPadOS 13.4 e versioni successive
+- iPad condiviso
+
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Le impostazioni si applicano a: Registrazione automatica dei dispositivi (supervisione)
+
+- **Blocca le sessioni temporanee di iPad condiviso**: le sessioni temporanee consentono agli utenti di accedere come guest e non è necessario che gli utenti immettano un ID Apple o una password gestiti.
+
+  Con l'impostazione **Sì**:
+
+  - gli utenti di iPad condiviso non possono usare sessioni temporanee,
+  - ma devono accedere al dispositivo con l'ID Apple e la password gestiti.
+  - L'opzione per l'account guest non viene visualizzata nella schermata di blocco dei dispositivi.
+
+  Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo consente a un utente di iPad condiviso di accedere al dispositivo con l'account guest. Quando l'utente si disconnette, nessuno dei dati dell'utente viene salvato o sincronizzato in iCloud.
+
 ## <a name="show-or-hide-apps"></a>Mostrare o nascondere app
 
 Questa funzionalità si applica a:
@@ -599,12 +619,17 @@ Per aggiungere le app, è possibile:
 
 Usare queste impostazioni per configurare i dispositivi iOS/iPadOS in modo che eseguano specifiche app in modalità app singola autonoma. Quando questa modalità è configurata e gli utenti avviano una delle app configurate, il dispositivo viene bloccato per tale app. Il cambio di app/attività è disabilitato fino a quando gli utenti non escono dall'app autorizzata.
 
-Ad esempio, in un ambiente scolastico o universitario, aggiungere un'app che consenta agli utenti di eseguire un test nel dispositivo. In alternativa, bloccare il dispositivo nell'app Portale aziendale fino all'autenticazione dell'utente. Quando gli utenti completano le azioni dell'app o si rimuovono questi criteri, il dispositivo torna allo stato normale.
+- Ad esempio, in un ambiente scolastico o universitario, aggiungere un'app che consenta agli utenti di eseguire un test nel dispositivo. In alternativa, bloccare il dispositivo nell'app Portale aziendale fino all'autenticazione dell'utente. Quando gli utenti completano le azioni dell'app o si rimuovono questi criteri, il dispositivo torna allo stato normale.
 
-> [!NOTE]
-> Non tutte le app supportano la modalità app singola autonoma. Per attivare la modalità app singola autonoma per un'app, in genere è necessario un ID di bundle o una coppia chiave-valore forniti da un criterio di configurazione dell'app. Per altre informazioni, vedere la [restrizione `autonomousSingleAppModePermittedAppIDs`](https://developer.apple.com/documentation/devicemanagement/restrictions) nella documentazione MDM di Apple. Per altre informazioni sulle impostazioni specifiche necessarie per l'app in corso di configurazione, vedere la documentazione del fornitore.
+- Non tutte le app supportano la modalità app singola autonoma. Per attivare la modalità app singola autonoma per un'app, in genere è necessario un ID di bundle o una coppia chiave-valore forniti da un criterio di configurazione dell'app. Per altre informazioni, vedere la [restrizione `autonomousSingleAppModePermittedAppIDs`](https://developer.apple.com/documentation/devicemanagement/restrictions) nella documentazione MDM di Apple. Per altre informazioni sulle impostazioni specifiche necessarie per l'app in corso di configurazione, vedere la documentazione del fornitore.
 
-Ad esempio, per configurare Zoom Rooms in modalità app singola autonoma, Zoom indica di usare l'ID di bundle `us.zoom.zpcontroller`. In questo caso viene anche apportata una modifica al portale Web di Zoom. Per altre informazioni, vedere il [centro di informazioni della Guida di Zoom](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
+  Ad esempio, per configurare Zoom Rooms in modalità app singola autonoma, Zoom indica di usare l'ID di bundle `us.zoom.zpcontroller`. In questo caso viene anche apportata una modifica al portale Web di Zoom. Per altre informazioni, vedere il [centro di informazioni della Guida di Zoom](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
+
+- Nei dispositivi iOS/iPadOS l'app Portale aziendale supporta la modalità applicazione singola autonoma. Quando l'app Portale aziendale si trova nella modalità applicazione singola autonoma, il dispositivo viene bloccato nell'app Portale aziendale fino a quando l'utente non esegue l'autenticazione. Quando gli utenti accedono all'app Portale aziendale, possono usare altre app e il pulsante della schermata Home del dispositivo. Quando si disconnettono dall'app Portale aziendale, il dispositivo torna alla modalità app singola e blocca l'app Portale aziendale.
+
+  Per trasformare l'app Portale aziendale in un'app con accesso/disconnessione (abilitare la modalità applicazione singola autonoma), immettere il nome dell'app Portale aziendale, ad esempio `Microsoft Intune Company Portal`, e l'ID bundle (`com.microsoft.CompanyPortal`) in queste impostazioni. Dopo aver assegnato questo profilo, è necessario aprire l'app Portale aziendale per bloccare l'app in modo che gli utenti possano accedervi e disconnettersi.
+  
+  Quando il profilo di configurazione del dispositivo viene rimosso e l'utente si disconnette, il dispositivo non viene bloccato nell'app Portale aziendale.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Le impostazioni si applicano a: Registrazione automatica dei dispositivi (supervisione)
 

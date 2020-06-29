@@ -1,7 +1,7 @@
 ---
-title: Registrare i dispositivi iOS/iPadOS - Device Enrollment Program
+title: Registrare i dispositivi iOS/iPadOS - Registrazione automatica dei dispositivi
 titleSuffix: Microsoft Intune
-description: Informazioni su come registrare i dispositivi iOS/iPadOS di proprietà dell'azienda usando Device Enrollment Program.
+description: Informazioni su come registrare i dispositivi iOS/iPadOS di proprietà dell'azienda usando Registrazione automatica dei dispositivi.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -18,19 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2db33dbe94ff5aef62563531149250fbd4268acc
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5cb6b4df9e3834ce447b176b5dfab158deb0d543
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986976"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85094079"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Registrare automaticamente i dispositivi iOS/iPadOS con Registrazione automatica del dispositivo di Apple
 
 > [!IMPORTANT]
 > Apple è recentemente passata dall'uso del programma Apple Device Enrollment Program (DEP) alla funzionalità Registrazione automatica del dispositivo. Intune sta aggiornando l'interfaccia utente di Intune in modo da rispecchiare questo cambiamento. Fino al completamento di queste modifiche, si continuerà a vedere *Device Enrollment Program* nel portale di Intune. Ogni volta che compare, viene però ora usata la funzionalità Registrazione automatica del dispositivo.
 
-È possibile configurare Intune in modo da registrare i dispositivi iOS/iPadOS acquistati tramite [Registrazione automatica del dispositivo](https://deploy.apple.com) di Apple (in precedenza Device Enrollment Program). La funzionalità Registrazione automatica del dispositivo consente di registrare un numero elevato di dispositivi senza interventi diretti. Dispositivi come iPhone, iPad e MacBook possono essere spediti direttamente agli utenti. Quando l'utente accende il dispositivo, Assistente configurazione, che include la tipica esperienza di configurazione guidata per i prodotti Apple, viene eseguito con impostazioni preconfigurate e il dispositivo viene registrato nella gestione.
+È possibile configurare Intune per la registrazione dei dispositivi iOS/iPadOS acquistati con il programma [Registrazione automatica dei dispositivi](https://deploy.apple.com) di Apple. La funzionalità Registrazione automatica del dispositivo consente di registrare un numero elevato di dispositivi senza interventi diretti. Dispositivi come iPhone, iPad e MacBook possono essere spediti direttamente agli utenti. Quando l'utente accende il dispositivo, Assistente configurazione, che include la tipica esperienza di configurazione guidata per i prodotti Apple, viene eseguito con impostazioni preconfigurate e il dispositivo viene registrato nella gestione.
 
 Per abilitare Registrazione automatica del dispositivo, si usano sia il portale di Intune che i portali [Apple Business Manager (ABM)](https://business.apple.com/) o [Apple School Manager (ASM)](https://school.apple.com/). È necessario un elenco di numeri di serie o un numero di ordine di acquisto per poter assegnare i dispositivi a Intune per la gestione in uno dei portali Apple. Si creano profili di registrazione per Registrazione automatica del dispositivo in Intune contenenti le impostazioni da applicare ai dispositivi durante la registrazione. Non è possibile usare Registrazione automatica del dispositivo con un account [Manager di registrazione dispositivi](device-enrollment-manager-enroll.md).
 
@@ -82,23 +82,25 @@ Per creare un token, è possibile usare il portale [Apple Business Manager (ABM)
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>Passaggio 1. Scaricare il certificato di chiave pubblica di Intune necessario per creare il token.
 
-1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS** > **Registrazione di iOS** > **Token del programma di registrazione** > **Aggiungi**.
+1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS/iPadOS** > **Registrazione di iOS/iPadOS**.
 
-    ![Ottenere un token del programma di registrazione.](./media/device-enrollment-program-enroll-ios/image01.png)
+    ![Ottenere un token del programma di registrazione.](./media/device-enrollment-program-enroll-ios/ios-enroll.png)
 
-2. Concedere a Microsoft l'autorizzazione per l'invio di informazioni su utenti e dispositivi ad Apple selezionando **Accetto**.
+2. Scegliere **Token del programma di registrazione** > **Aggiungi**.
+
+3. Concedere a Microsoft l'autorizzazione per l'invio di informazioni su utenti e dispositivi ad Apple selezionando **Accetto**.
 
    > [!NOTE]
    > Una volta superato il passaggio 2 per il download del certificato di chiave pubblica di Intune, non chiudere la procedura guidata né uscire da questa pagina. Così facendo si invaliderebbe il certificato scaricato e sarebbe necessario ripetere il processo. Se si verifica questa situazione, si noterà che il pulsante **Crea** nella scheda **Rivedi e crea** è disattivato e non è possibile completare il processo.
 
    ![Schermata del pannello Token DEP nell'area di lavoro dei certificati Apple per scaricare la chiave pubblica.](./media/device-enrollment-program-enroll-ios/add-enrollment-program-token-pane.png)
 
-3. Scegliere **Download your public key** (Scarica la chiave pubblica) per scaricare e salvare il file della chiave di crittografia (con estensione pem) in locale. Il file PEM viene usato per richiedere un certificato di relazione di trust dal portale Apple.
+4. Scegliere **Download your public key** (Scarica la chiave pubblica) per scaricare e salvare il file della chiave di crittografia (con estensione pem) in locale. Il file PEM viene usato per richiedere un certificato di relazione di trust dal portale Apple.
 
 
 ### <a name="step-2-use-your-key-to-download-a-token-from-apple"></a>Passaggio 2: Usare la chiave per scaricare un token da Apple.
 
-1. Scegliere **Creare un token tramite Apple Device Enrollment Program** per aprire il portale Business di Apple e accedere con l'ID Apple aziendale. Lo stesso ID Apple può essere usato per rinnovare il token di Registrazione automatica del dispositivo.
+1. Scegliere **Crea un token tramite Apple Business Manager** per aprire il portale aziendale di Apple e accedere con l'ID Apple aziendale. Lo stesso ID Apple può essere usato per rinnovare il token di Registrazione automatica del dispositivo.
 2. Nel [portale Business](https://business.apple.com) di Apple scegliere **Inizia** per **Device Enrollment Program**.
 
 3. Nella pagina **Gestisci server** scegliere **Aggiungi server MDM**.
@@ -140,8 +142,8 @@ Ora che è stato installato il token, è possibile creare un profilo di registra
 > I dispositivi verranno bloccati se non sono disponibili licenze del portale aziendale sufficienti per un token VPP o se il token è scaduto. Intune visualizza un avviso quando un token sta per scadere o le licenze sono quasi esaurite.
  
 
-1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS** > **Registrazione di iOS** > **Token del programma di registrazione**.
-2. Selezionare un token, scegliere **Profili** > **Crea profilo** > **iOS**.
+1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS/iPadOS** > **Registrazione di iOS/iPadOS** > **Token del programma di registrazione**.
+2. Selezionare un token, scegliere **Profili** > **Crea profilo** > **iOS/iPadOS**.
 
     ![Screenshot di Crea profilo.](./media/device-enrollment-program-enroll-ios/image04.png)
 
@@ -154,9 +156,9 @@ Ora che è stato installato il token, è possibile creare un profilo di registra
 5. In **Affinità utente** scegliere se i dispositivi con questo profilo devono essere registrati con o senza un utente assegnato.
     - **Registra con affinità utente**: scegliere questa opzione per i dispositivi che appartengono a utenti che vogliono usare il portale aziendale per servizi come l'installazione di app. Se si usa ADFS e per l'autenticazione si usa Assistente configurazione, è richiesto un [endpoint misto/nome utente WS-Trust 1.3 ](https://technet.microsoft.com/library/adfs2-help-endpoints) [Altre informazioni](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 
-    - **Registra senza affinità utente**: scegliere questa opzione per un dispositivo non associato a un singolo utente. Usare questa opzione per i dispositivi che non accedono ai dati utente locali. Le app come l'app Portale aziendale non funzionano.
+    - **Registra senza affinità utente**: scegliere questa opzione per i dispositivi non associati a un singolo utente. Usare questa opzione per i dispositivi che non accedono ai dati utente locali e ai dispositivi iPad condiviso Apple per le aziende. Le app come l'app Portale aziendale non funzionano.
 
-5. Se si sceglie **Registra con affinità utente**, è possibile consentire agli utenti di eseguire l'autenticazione con il portale aziendale invece di Assistente configurazione Apple.
+6. Se si sceglie **Registra con affinità utente**, è possibile consentire agli utenti di eseguire l'autenticazione con il portale aziendale invece di Assistente configurazione Apple.
 
     ![Autenticazione con il portale aziendale.](./media/device-enrollment-program-enroll-ios/authenticatewithcompanyportal.png)
 
@@ -168,16 +170,16 @@ Ora che è stato installato il token, è possibile creare un profilo di registra
     >
     > Non sono supportate durante l'autenticazione con l'Assistente configurazione di Apple.
 
-6. Se si sceglie **Portale aziendale** per **Selezione della posizione per l'autenticazione degli utenti**, è possibile usare un token VPP per installare automaticamente il portale aziendale nel dispositivo. In questo caso, l'utente non deve specificare un ID Apple. Per installare il portale aziendale con un token VPP, scegliere un token in **Install Company Portal with VPP** (Installa il portale aziendale con VPP). Richiede che il portale aziendale sia già stato aggiunto al token VPP. Per assicurarsi che l'app Portale aziendale continui a essere aggiornata dopo la registrazione, assicurarsi di aver configurato una distribuzione delle app in Intune (Intune>App client). Per fare in modo che l'interazione dell'utente non sia obbligatoria, è opportuno che l'app Portale aziendale sia un'app VPP iOS/iPadOS, impostata come app obbligatoria, e che vengano usate le licenze del dispositivo per l'assegnazione. Assicurarsi che il token non abbia una scadenza e di avere un numero sufficiente di licenze dei dispositivi per l'app Portale aziendale. Se il token ha una scadenza o se il numero di licenze è insufficiente, Intune installa invece l'app Portale aziendale dall'App Store e richiede un ID Apple. 
+7. Se si sceglie **Portale aziendale** per **Selezione della posizione per l'autenticazione degli utenti**, è possibile usare un token VPP per installare automaticamente il portale aziendale nel dispositivo. In questo caso, l'utente non deve specificare un ID Apple. Per installare il portale aziendale con un token VPP, scegliere un token in **Install Company Portal with VPP** (Installa il portale aziendale con VPP). Richiede che il portale aziendale sia già stato aggiunto al token VPP. Per assicurarsi che l'app Portale aziendale continui a essere aggiornata dopo la registrazione, assicurarsi di aver configurato una distribuzione delle app in Intune (Intune>App client). Per fare in modo che l'interazione dell'utente non sia obbligatoria, è opportuno che l'app Portale aziendale sia un'app VPP iOS/iPadOS, impostata come app obbligatoria, e che vengano usate le licenze del dispositivo per l'assegnazione. Assicurarsi che il token non abbia una scadenza e di avere un numero sufficiente di licenze dei dispositivi per l'app Portale aziendale. Se il token ha una scadenza o se il numero di licenze è insufficiente, Intune installa invece l'app Portale aziendale dall'App Store e richiede un ID Apple. 
 
     > [!NOTE]
     > Quando l'opzione **Selezione della posizione per l'autenticazione degli utenti** è impostata su **Portale aziendale**, assicurarsi che il processo di registrazione del dispositivo venga eseguito nelle prime 24 ore dal download dell'app Portale aziendale nel dispositivo configurato con Registrazione automatica del dispositivo. In caso contrario, la registrazione potrebbe non riuscire e sarà necessario il ripristino delle impostazioni predefinite per registrare il dispositivo.
     
     ![Screenshot dell'installazione del portale aziendale con VPP.](./media/device-enrollment-program-enroll-ios/install-cp-with-vpp.png)
 
-7. Se si sceglie **Assistente configurazione** per **Selezione della posizione per l'autenticazione degli utenti**, ma si vuole anche usare l'accesso condizionale o distribuire le app aziendali nei dispositivi, è necessario installare il portale aziendale nel dispositivi. A tale scopo, scegliere **Sì** per **Installa il Portale aziendale**.  Se si vuole che gli utenti ricevano l'app Portale aziendale senza dover eseguire l'autenticazione in App Store, scegliere **Installa il Portale aziendale con VPP** e selezionare un token VPP. Per la corretta distribuzione, assicurarsi che il token non abbia una scadenza e di avere un numero sufficiente di licenze dei dispositivi per l'app Portale aziendale.
+8. Se si sceglie **Assistente configurazione** per **Selezione della posizione per l'autenticazione degli utenti**, ma si vuole anche usare l'accesso condizionale o distribuire le app aziendali nei dispositivi, è necessario installare il portale aziendale nel dispositivi. A tale scopo, scegliere **Sì** per **Installa il Portale aziendale**.  Se si vuole che gli utenti ricevano l'app Portale aziendale senza dover eseguire l'autenticazione in App Store, scegliere **Installa il Portale aziendale con VPP** e selezionare un token VPP. Per la corretta distribuzione, assicurarsi che il token non abbia una scadenza e di avere un numero sufficiente di licenze dei dispositivi per l'app Portale aziendale.
 
-8. Se si era scelto un token per **Installa il Portale aziendale con VPP**, è possibile bloccare il dispositivo in modalità applicazione singola (in particolare, l'app Portale aziendale), subito dopo il completamento dell'Assistente configurazione. Scegliere **Sì** per **Run Company Portal in Single App Mode until authentication** (Esegui il portale aziendale in modalità app singola fino all'autenticazione) per impostare l'opzione. Per poter usare il dispositivo, l'utente deve prima autenticarsi effettuando l'accesso tramite il portale aziendale.
+9. Se si era scelto un token per **Installa il Portale aziendale con VPP**, è possibile bloccare il dispositivo in modalità applicazione singola (in particolare, l'app Portale aziendale), subito dopo il completamento dell'Assistente configurazione. Scegliere **Sì** per **Run Company Portal in Single App Mode until authentication** (Esegui il portale aziendale in modalità app singola fino all'autenticazione) per impostare l'opzione. Per poter usare il dispositivo, l'utente deve prima autenticarsi effettuando l'accesso tramite il portale aziendale.
 
     L'autenticazione a più fattori non è supportata per un singolo dispositivo bloccato in modalità app singola. Questa limitazione esiste perché il dispositivo non può passare a un'altra app per completare il secondo fattore di autenticazione. Pertanto, se si vuole usare l'autenticazione a più fattori in un singolo dispositivo in modalità app singola, il secondo fattore deve trovarsi in un dispositivo diverso.
 
@@ -185,11 +187,11 @@ Ora che è stato installato il token, è possibile creare un profilo di registra
 
    ![Screenshot della modalità applicazione singola.](./media/device-enrollment-program-enroll-ios/single-app-mode.png)
 
-9. Se si vuole che i dispositivi che usano questo profilo siano inclusi nella supervisione, scegliere **Sì** per **Supervisione eseguita**.
+10. Se si vuole che i dispositivi che usano questo profilo siano inclusi nella supervisione, scegliere **Sì** per **Supervisione eseguita**.
 
     ![Screenshot di Impostazioni di gestione dei dispositivi.](./media/device-enrollment-program-enroll-ios/supervisedmode.png)
 
-    I dispositivi **con supervisione** offrono più opzioni di gestione e il blocco attivazione viene disabilitato per impostazione predefinita. È consigliabile usare Registrazione automatica del dispositivo come meccanismo per l'abilitazione della modalità con supervisione, soprattutto per la distribuzione di un numero elevato di dispositivi iOS/iPadOS.
+    I dispositivi **con supervisione** offrono più opzioni di gestione e il blocco attivazione viene disabilitato per impostazione predefinita. È consigliabile usare Registrazione automatica del dispositivo come meccanismo per l'abilitazione della modalità con supervisione, soprattutto per la distribuzione di un numero elevato di dispositivi iOS/iPadOS. È necessario supervisionare i dispositivi iPad condiviso Apple per le aziende.
 
     Gli utenti vengono informati che i dispositivi sono inclusi nella supervisione in due modi:
 
@@ -199,25 +201,36 @@ Ora che è stato installato il token, è possibile creare un profilo di registra
      > [!NOTE]
      > Per reimpostare un dispositivo registrato senza supervisione in modo da includerlo nella supervisione, è possibile usare solo Apple Configurator. Per reimpostare il dispositivo in questo modo, è necessario connettere un dispositivo iOS/iPadOS a un computer Mac con un cavo USB. Per altre informazioni vedere la [documentazione di Apple Configurator](http://help.apple.com/configurator/mac/2.3).
 
-10. Scegliere se usare la registrazione bloccata per i dispositivi con questo profilo. La **registrazione bloccata** disabilita le impostazioni di iOS/iPadOS che consentono la rimozione del profilo di gestione dal menu **Impostazioni**. Dopo la registrazione del dispositivo, non è possibile modificare questa impostazione senza cancellare il dispositivo. Per tali dispositivi, la modalità di gestione **Supervisione eseguita** deve essere impostata su *Sì*. 
+11. Scegliere se usare la registrazione bloccata per i dispositivi con questo profilo. La **registrazione bloccata** disabilita le impostazioni di iOS/iPadOS che consentono la rimozione del profilo di gestione dal menu **Impostazioni**. Dopo la registrazione del dispositivo, non è possibile modificare questa impostazione senza cancellare il dispositivo. Per tali dispositivi, la modalità di gestione **Supervisione eseguita** deve essere impostata su *Sì*. 
 
     > [!NOTE]
     > Dopo la registrazione del dispositivo con **Registrazione bloccata** gli utenti non saranno in grado di usare **Rimuovi dispositivo** o **Ripristino impostazioni predefinite** nell'app Portale aziendale. Le opzioni non saranno disponibili per l'utente. L'utente inoltre non sarà in grado di rimuovere il dispositivo nel sito Web Portale aziendale (https://portal.manage.microsoft.com).
     > Inoltre, se un dispositivo BYOD viene convertito in un dispositivo Apple con registrazione automatica dei dispositivi e registrato con un profilo abilitato per la **Registrazione bloccata**, l'utente sarà autorizzato a usare **Rimuovi dispositivo** e **Ripristino impostazioni predefinite** per 30 giorni, quindi le opzioni saranno disabilitate o rese non disponibili. Riferimento: https://help.apple.com/configurator/mac/2.8/#/cad99bc2a859.
 
-11. Scegliere se si vuole che i dispositivi con questo profilo possano **eseguire la sincronizzazione con i computer**. Se si sceglie **Consenti Apple Configurator per certificato**, è necessario selezionare un certificato in **Certificati di Apple Configurator**.
+12. Se sono state scelte le opzioni **Registra senza affinità utente** e **Supervisione** in precedenza, è necessario decidere se configurare i dispositivi come [dispositivi iPad condiviso Apple per le aziende](https://support.apple.com/guide/mdm/shared-ipad-overview-cad7e2e0cf56/web). Scegliendo **Sì** per **iPad condiviso**, più utenti saranno in grado di accedere allo stesso dispositivo. Gli utenti eseguiranno l'autenticazione con l'ID Apple gestito e gli account di autenticazione federati oppure tramite una sessione temporanea, ad esempio un account Guest. Questa opzione richiede iOS/iPadOS 13.4 o versione successiva.
+
+    Se si sceglie di configurare i dispositivi in modo che siano dispositivi iPad condiviso Apple per le aziende, è necessario impostare **Numero massimo di utenti memorizzati nella cache**. Impostare questo valore sul numero di utenti che si prevede useranno l'iPad condiviso. È possibile memorizzare nella cache fino a 24 utenti in un dispositivo da 32 GB o 64 GB. Se si sceglie un numero molto basso, potrebbe essere necessario un po' di tempo prima che i dati dell'utente arrivino al dispositivo dopo l'accesso. Se si sceglie un numero molto elevato, è possibile che gli utenti non dispongano di spazio su disco sufficiente.  
+
+    > [!NOTE]
+    > Per configurare iPad condiviso Apple per le aziende, usare le impostazioni seguenti: 
+    > - **Affinità utente** = **Registra senza affinità utente**. 
+    > - **Supervisione eseguita** = **Sì**. 
+    > - **iPad condiviso** = **Sì **.
+    > Le sessioni temporanee sono abilitate per impostazione predefinita e consentono agli utenti di accedere a un iPad condiviso senza un account ID Apple gestito. È possibile disabilitare le sessioni temporanee nell'iPad condiviso configurando le [impostazioni relative alle restrizioni del dispositivo](../configuration/device-restrictions-ios.md) iPad condiviso iOS/iPadOS.  
+
+13. Scegliere se si vuole che i dispositivi con questo profilo possano **eseguire la sincronizzazione con i computer**. Se si sceglie **Consenti Apple Configurator per certificato**, è necessario selezionare un certificato in **Certificati di Apple Configurator**.
 
      > [!NOTE]
      > Se **Sincronizza con computer** è impostata su **Rifiuta tutto**, la funzionalità della porta sarà limitata sui dispositivi iOS e iPadOS. La porta può essere usata solo per il caricamento. L'uso di iTunes o Apple Configurator 2 sulla porta non è consentito.
      Se **Sincronizza con computer** è impostato su **Consenti Apple Configurator per certificato**, assicurarsi di salvare una copia locale del certificato a cui poter accedere in un secondo momento. Non sarà possibile apportare modifiche alla copia caricata ed è importante conservare il certificato affinché sia accessibile in futuro. Per connettersi al dispositivo iOS/iPados da un dispositivo macOS o da un PC, è necessario che nel dispositivo sia installato lo stesso certificato che effettua la connessione al dispositivo iOS/iPados registrato con il profilo Registrazione automatica del dispositivo con la configurazione e il certificato.
 
-12. Se si sceglie **Consenti Apple Configurator per certificato** nel passaggio precedente, scegliere un certificato di Apple Configurator da importare.
+14. Se si sceglie **Consenti Apple Configurator per certificato** nel passaggio precedente, scegliere un certificato di Apple Configurator da importare.
 
-13. È possibile specificare un formato di denominazione per i dispositivi che viene applicato automaticamente alla registrazione e per ogni archiviazione successiva. Per creare un modello di denominazione, selezionare **Sì** in **Applica il modello di nome di dispositivo**. Nella casella **Modello del nome del dispositivo** immettere quindi il modello da usare per i nomi che usano questo profilo. È possibile specificare un formato modello che include il tipo di dispositivo e il numero di serie. 
+15. È possibile specificare un formato di denominazione per i dispositivi che viene applicato automaticamente alla registrazione e per ogni archiviazione successiva. Per creare un modello di denominazione, selezionare **Sì** in **Applica il modello di nome di dispositivo**. Nella casella **Modello del nome del dispositivo** immettere quindi il modello da usare per i nomi che usano questo profilo. È possibile specificare un formato modello che include il tipo di dispositivo e il numero di serie. 
 
-14. Scegliere **Avanti: Personalizzazione dell'Assistente configurazione**.
+16. Scegliere **Avanti: Personalizzazione dell'Assistente configurazione**.
 
-15. Nella pagina **Personalizzazione dell'Assistente configurazione** configurare le impostazioni di profilo seguenti: ![Personalizzazione dell'Assistente configurazione.](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
+17. Nella pagina **Personalizzazione dell'Assistente configurazione** configurare le impostazioni di profilo seguenti: ![Personalizzazione dell'Assistente configurazione.](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
 
 
     | Impostazioni di reparto | Descrizione |
@@ -257,13 +270,13 @@ Ora che è stato installato il token, è possibile creare un profilo di registra
     | <strong>Device to Device Migration</strong> (Migrazione da dispositivo a dispositivo) | Offrirà all'utente la possibilità di eseguire la migrazione dei dati dal dispositivo precedente a questo dispositivo. Per iOS/iPadOS 13.0 e versioni successive. |
     | <strong>Registrazione</strong> | Consente all'utente di visualizzare la schermata di registrazione. Per macOS 10.9 e versioni successive. |
     | <strong>FileVault</strong> | Consente all’utente di visualizzare la schermata di crittografia FileVault 2. Per macOS 10.10 e versioni successive. |
-    | <strong>Diagnostica di iCloud</strong> | Consente all’utente di visualizzare la schermata di iCloud Analaytics. Per macOS 10.12.4 e versioni successive. |
+    | <strong>Diagnostica di iCloud</strong> | Consente all'utente di visualizzare la schermata di iCloud Analytics. Per macOS 10.12.4 e versioni successive. |
     | <strong>Risorse di archiviazione iCloud</strong> | Consente all’utente di visualizzare la schermata Documenti e Scrivania di iCloud. Per macOS 10.13.4 e versioni successive. |
     
 
-16. Scegliere **Avanti** per passare alla pagina **Rivedi e crea**.
+18. Scegliere **Avanti** per passare alla pagina **Rivedi e crea**.
 
-17. Per salvare il profilo, scegliere **Crea**.
+19. Per salvare il profilo, scegliere **Crea**.
 
 ### <a name="dynamic-groups-in-azure-active-directory"></a>Gruppi dinamici in Azure Active Directory
 
@@ -279,7 +292,9 @@ L'assegnazione di gruppi dinamici ai profili di registrazione può causare ritar
 ## <a name="sync-managed-devices"></a>Sincronizzare i dispositivi gestiti
 Adesso che Intune ha le autorizzazioni per gestire i dispositivi, è possibile sincronizzare Intune con Apple per visualizzare i dispositivi gestiti nel portale di Azure in Intune.
 
-1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS** > **Registrazione di iOS** > **Token del programma di registrazione** > scegliere un token dall'elenco > **Dispositivi** > **Sincronizza**. ![Screenshot del nodo Dispositivi DEP e del collegamento Sincronizza.](./media/device-enrollment-program-enroll-ios/image06.png)
+1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS/iPadOS** > **Registrazione di iOS/iPadOS** > **Token del programma di registrazione**.
+
+2. Scegliere un token nell'elenco > **Dispositivi** > **Sincronizza**. ![Screenshot del nodo Dispositivi DEP e del collegamento Sincronizza.](./media/device-enrollment-program-enroll-ios/image06.png)
 
    Per rispettare le condizioni Apple per un traffico DEP accettabile, Intune impone le restrizioni seguenti:
    - Una sincronizzazione completa può essere eseguita solo una volta ogni sette giorni. Durante una sincronizzazione completa, Intune recupera l'elenco aggiornato completo dei numeri di serie assegnati al server MDM di Apple connesso a Intune. Se un dispositivo configurato con Registrazione automatica del dispositivo viene eliminato dal portale di Intune, è necessario rimuoverne l'assegnazione dal server MDM Apple nel portale di Registrazione automatica del dispositivo. Se non è assegnato, non verrà reimportato in Intune fino all'esecuzione della sincronizzazione completa.   
@@ -292,7 +307,7 @@ Prima della registrazione è necessario assegnare ai dispositivi un profilo DEP.
 >[!NOTE]
 >È anche possibile assegnare i numeri di serie ai profili nel pannello **Numeri di serie Apple**.
 
-1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS** > **Registrazione di iOS** > **Token del programma di registrazione** > scegliere un token nell'elenco.
+1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS/iPadOS** > **Registrazione di iOS/iPadOS** > **Token del programma di registrazione** > scegliere un token nell'elenco.
 2. Scegliere **Dispositivi** > scegliere i dispositivi nell'elenco > **Assegna profilo**.
 3. In **Assegna profilo** scegliere un profilo per i dispositivi > **Assegna**.
 
@@ -300,7 +315,7 @@ Prima della registrazione è necessario assegnare ai dispositivi un profilo DEP.
 
 È possibile selezionare un profilo predefinito da applicare a tutti i dispositivi da registrare con un token specifico.
 
-1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS** > **Registrazione di iOS** > **Token del programma di registrazione** > scegliere un token nell'elenco.
+1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS/iPadOS** > **Registrazione di iOS/iPadOS** > **Token del programma di registrazione** > scegliere un token nell'elenco.
 2. Scegliere **Imposta profilo predefinito**, scegliere un profilo nell'elenco a discesa e quindi scegliere **Salva**. Questo profilo verrà applicato a tutti i dispositivi registrati con il token.
 
 ## <a name="distribute-devices"></a>Distribuire i dispositivi
@@ -320,13 +335,15 @@ Vedere [Registrare il dispositivo iOS/iPadOS in Intune con Device Enrollment Pro
     ![Screenshot della generazione di un nuovo token.](./media/device-enrollment-program-enroll-ios/generatenewtoken.png)
 
 4. Scegliere **Token del server**.  
-5. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivo** > **iOS** > **Registrazione di iOS** > **Token del programma di registrazione** > scegliere il token.
+5. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS/iPadOS** > **Registrazione di iOS/iPadOS** > **Token del programma di registrazione** > scegliere il token.
     ![Screenshot dei token del programma di registrazione.](./media/device-enrollment-program-enroll-ios/enrollmentprogramtokens.png)
 
 6. Scegliere **Rinnova il token** e immettere l'ID Apple usato per creare il token originale.  
     ![Screenshot della generazione di un nuovo token.](./media/device-enrollment-program-enroll-ios/renewtoken.png)
 
-8. Caricare il token appena scaricato.  
+7. Selezionare **Avanti** per passare alla pagina **Tag di ambito** e assegnare i tag di ambito, se necessario.
+
+8. Selezionare **Avanti** e caricare il token appena scaricato.  
 9. Scegliere **Rinnova il token**. Viene visualizzata la conferma che il token è stato rinnovato.   
     ![Screenshot della conferma.](./media/device-enrollment-program-enroll-ios/confirmation.png)
 

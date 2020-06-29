@@ -1,5 +1,5 @@
 ---
-title: Configurare una pagina relativa allo stato della registrazione
+title: Configurare la pagina relativa allo stato della registrazione
 titleSuffix: Microsoft Intune
 description: Configurare una pagina introduttiva per gli utenti che registrano i dispositivi Windows 10.
 keywords: ''
@@ -18,34 +18,37 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 33c57e5641934200120839ad48a9a4c8b8d0a8fa
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4f8991b772f5562538403492735f1f4c2fdc87e8
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988892"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093448"
 ---
-# <a name="set-up-an-enrollment-status-page"></a>Configurare una pagina relativa allo stato della registrazione
+# <a name="set-up-the-enrollment-status-page"></a>Configurare la pagina relativa allo stato della registrazione
  
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
  
-La pagina relativa allo stato della registrazione visualizza le informazioni di installazione relative ai dispositivi Windows 10 (versione 1803 e successive) durante la registrazione iniziale del dispositivo. Ad esempio:
-- quando si usa [Windows AutoPilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/) 
-- o ogni volta che un dispositivo gestito viene avviato per la prima volta dopo l'applicazione di un criterio della pagina relativa allo stato della registrazione. 
+La pagina relativa allo stato della registrazione (ESP) visualizza lo stato di avanzamento del provisioning dopo la registrazione di un nuovo dispositivo, nonché quando i nuovi utenti eseguono l'accesso al dispositivo.  Ciò consente agli amministratori IT di impedire (bloccare) facoltativamente l'accesso al dispositivo fino a quando non ne viene eseguito il provisioning completo, fornendo allo stesso tempo agli utenti informazioni sulle attività rimanenti durante il processo di provisioning.
 
-La pagina relativa allo stato della registrazione consente agli utenti di conoscere lo stato del dispositivo durante l'installazione. È possibile creare più profili della pagina relativa allo stato della registrazione e applicarli a gruppi diversi che contengono utenti. I profili possono essere impostati su:
-- Visualizzazione dello stato di installazione.
-- Blocco dell'utilizzo fino al completamento dell'installazione.
-- Specificare le azioni che possono essere eseguite dall'utente se l'installazione non viene eseguita.
+La pagina relativa allo stato della registrazione può essere usata come parte di qualsiasi scenario di provisioning di [Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/) e può anche essere usata separatamente da Windows Autopilot come parte dell'esperienza predefinita per Azure AD Join, nonché per tutti i nuovi utenti che accedono al dispositivo per la prima volta.
 
-È anche possibile impostare l'ordine di priorità di ogni profilo per tenere conto delle assegnazioni dei profili in conflitto per lo stesso utente.
+È possibile creare più profili della pagina relativa allo stato della registrazione con configurazioni diverse che specificano:
 
-> [!NOTE]
-> La pagina relativa allo stato della registrazione può essere destinata solo a un utente che appartiene a un gruppo assegnato e i criteri vengono impostati nel dispositivo al momento della registrazione per tutti gli utenti che usano il dispositivo.  La destinazione del dispositivo per i profili della pagina relativa allo stato della registrazione non è attualmente supportata.
+- Visualizzazione dello stato dell'installazione
+- Blocco dell'accesso fino al completamento del processo di provisioning
+- Limiti di tempo
+- Operazioni di risoluzione dei problemi consentite
+
+Questi profili sono specificati in ordine di priorità. Verrà usato quello con la priorità più alta applicabile.  Ogni profilo ESP può essere destinato a gruppi che contengono dispositivi o utenti.  Quando si determina il profilo da usare, verranno seguiti i criteri seguenti:
+
+- Verrà usato per primo il profilo con la priorità più alta destinato al dispositivo.
+- In assenza di profili assegnati al dispositivo, verrà usato il profilo con priorità più alta assegnato all'utente corrente.  Questo vale solo negli scenari in cui è presente un utente. Negli scenari con trattamento esclusivo e di distribuzione automatica è possibile usare solo i dispositivi come destinazione.
+- Se non sono presenti profili destinati a gruppi specifici, verrà usato il profilo ESP predefinito.
 
 ## <a name="available-settings"></a>Impostazioni disponibili
 
- È possibile configurare le impostazioni seguenti per personalizzare il comportamento della pagina relativa allo stato della registrazione:
+È possibile configurare le impostazioni seguenti per personalizzare il comportamento della pagina relativa allo stato della registrazione:
 
 <table>
 <th align="left">Impostazione<th align="left">Sì<th align="left">No
@@ -80,7 +83,7 @@ Per attivare la pagina relativa allo stato della registrazione, eseguire i passa
 
 ## <a name="set-the-enrollment-status-page-priority"></a>Impostare la priorità della pagina dello stato della registrazione
 
-Un utente può appartenere a molti gruppi e avere molti profili della pagina relativa allo stato della registrazione. Per gestire questi conflitti, è possibile impostare le priorità per ogni profilo. Durante la registrazione, se un utente ha più di un profilo della pagina relativa allo stato della registrazione, verrà applicato solo il profilo con la priorità più alta.
+Un dispositivo o un utente può essere incluso in più gruppi e avere più profili della pagina relativa allo stato della registrazione. Per controllare quali profili vengono considerati per primi, è possibile impostare le priorità per ogni profilo. Quelli con priorità più alta vengono considerati per primi.
 
 1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **Windows** > **Registrazione Windows** > **Pagina relativa allo stato della registrazione**.
 2. Passare il mouse sul profilo nell'elenco.
@@ -88,7 +91,7 @@ Un utente può appartenere a molti gruppi e avere molti profili della pagina rel
 
 ## <a name="block-access-to-a-device-until-a-specific-application-is-installed"></a>Impedire l'accesso a un dispositivo fino a quando non viene installata un'applicazione specifica
 
-È possibile specificare le app da installare prima che l'utente possa accedere al desktop.
+È possibile specificare quali app devono essere installate prima del completamento della pagina relativa allo stato della registrazione (ESP).
 
 1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **Windows** > **Registrazione Windows** > **Pagina relativa allo stato della registrazione**.
 2. Scegliere un profilo > **Impostazioni**.
@@ -99,7 +102,7 @@ Un utente può appartenere a molti gruppi e avere molti profili della pagina rel
 
 Le app incluse in questo elenco vengono usate da Intune per filtrare l'elenco da considerare per il blocco.  Non specifica quali app devono essere installate.  Se, ad esempio, si configura questo elenco in modo da includere "App 1", "App 2" e "App 3" e "App 3" e "App 4" sono assegnate al dispositivo o all'utente, nella pagina relativa allo stato della registrazione verrà rilevata solo "App 3".  "App 4" verrà comunque installata, ma la pagina relativa allo stato della registrazione non attende il completamento.
 
-È possibile specificare al massimo 25 app.
+È possibile specificare al massimo 100 app.
 
 ## <a name="enrollment-status-page-tracking-information"></a>Informazioni incluse nella pagina relativa allo stato della registrazione
 
@@ -108,14 +111,16 @@ La pagina relativa allo stato della registrazione consente di tenere traccia del
 ### <a name="device-preparation"></a>Preparazione del dispositivo
 
 Per la preparazione del dispositivo, la pagina relativa allo stato della registrazione tiene traccia di quanto segue:
-- attestazioni delle chiavi TPM (Trusted Platform Module) (se applicabile)
-- stato di avanzamento dell'aggiunta ad Azure Active Directory
-- registrazione in Intune
-- installazione delle estensioni di gestione di Intune
+
+- Attestazione delle chiavi TPM (Trusted Platform Module) (se applicabile)
+- Processo di aggiunta ad Azure Active Directory
+- Registrazione in Intune (MDM)
+- Installazione delle estensioni di gestione di Intune (usate per installare le app Win32)
 
 ### <a name="device-setup"></a>Configurazione del dispositivo
 
-La pagina relativa allo stato della registrazione tiene traccia dei seguenti elementi di installazione del dispositivo (se sono assegnati a tutti i dispositivi o a un gruppo di dispositivi di cui il dispositivo registrato è membro):
+La pagina relativa allo stato della registrazione tiene traccia degli elementi seguenti di configurazione del dispositivo:
+
 - Criteri di sicurezza
   - Un provider di servizi di configurazione per tutte le registrazioni.
   - I provider di servizi di configurazione configurati da Intune non vengono tracciati qui.
@@ -129,7 +134,9 @@ La pagina relativa allo stato della registrazione tiene traccia dei seguenti ele
 - I profili di certificato sono assegnati a **tutti i dispositivi** o un gruppo di dispositivi di cui il dispositivo di registrazione è membro, ma solo per i dispositivi di Autopilot
 
 ### <a name="account-setup"></a>Configurazione dell'account
+
 Per la configurazione dell'account, la pagina relativa allo stato della registrazione tiene traccia degli elementi seguenti, se vengono assegnati all'utente attualmente connesso:
+
 - Criteri di sicurezza
   - Un provider di servizi di configurazione per tutte le registrazioni.
   - I provider di servizi di configurazione configurati da Intune non vengono tracciati qui.
@@ -147,7 +154,8 @@ Per la configurazione dell'account, la pagina relativa allo stato della registra
   - I profili di certificato assegnati a tutti gli utenti o a un gruppo di utenti di cui l'utente che registra il dispositivo è membro.
 
 ### <a name="troubleshooting"></a>Risoluzione dei problemi
-Domande principali per la risoluzione dei problemi.
+
+Di seguito sono riportate alcune domande comuni per la risoluzione dei problemi correlati alla pagina relativa allo stato della registrazione.
 
 - Perché le applicazioni non sono state installate e tracciate tramite la pagina Stato registrazione?
   - Per assicurarsi che le applicazioni vengano installate e tracciate tramite la pagina Stato registrazione, verificare che:
@@ -193,14 +201,16 @@ Domande principali per la risoluzione dei problemi.
       ```
 
 ### <a name="known-issues"></a>Problemi noti
-Di seguito sono riportati i problemi noti. 
+
+Di seguito sono riportati i problemi noti correlati alla pagina relativa allo stato della registrazione.
+
 - La disabilitazione del profilo ESP non comporta la rimozione dei criteri ESP dai dispositivi e gli utenti ottengono comunque ESP quando accedono al dispositivo per la prima volta. I criteri non vengono rimossi quando il profilo ESP è disabilitato. Per disabilitare ESP, è necessario distribuire URI OMA. Vedere sopra per le istruzioni su come disabilitare ESP usando URI OMA. 
 - Un riavvio durante la configurazione del dispositivo obbliga l'utente a immettere le proprie credenziali prima di passare alla fase di configurazione dell'account. Le credenziali utente non vengono mantenute durante il riavvio. Chiedere all'utente di immettere le credenziali, quindi la pagina relativa allo stato della registrazione può continuare. 
 - La pagina relativa allo stato della registrazione raggiunge sempre il timeout durante l'aggiunta di un account aziendale e dell'istituto di istruzione nelle versioni di Windows 10 precedenti alla 1903. La pagina relativa allo stato della registrazione attende il completamento della registrazione di Azure AD. Il problema è risolto in Windows 10 versione 1903 e successive.  
 - In Azure AD ibrido la distribuzione di Autopilot con ESP richiede più tempo rispetto alla durata del timeout definita nel profilo ESP. Nelle distribuzioni di Autopilot di Azure AD ibrido ESP richiede 40 minuti in più rispetto al valore impostato nel profilo ESP. Questo ritardo concede tempo al connettore AD locale per creare il nuovo record del dispositivo per Azure AD. 
 - La pagina di accesso di Windows non viene preventivamente popolata con il nome utente nella modalità definita dall'utente di Autopilot. Se avviene un riavvio durante la fase di configurazione del dispositivo di ESP:
-    - le credenziali utente non vengono mantenute
-    - l'utente deve immettere di nuovo le credenziali prima di procedere dalla fase di configurazione del dispositivo alla fase di configurazione dell'account
+  - le credenziali utente non vengono mantenute
+  - l'utente deve immettere di nuovo le credenziali prima di procedere dalla fase di configurazione del dispositivo alla fase di configurazione dell'account
 - ESP è bloccato per molto tempo o non completa mai la fase di identificazione. Intune calcola i criteri di ESP durante la fase di identificazione. Un dispositivo non può mai completare l'elaborazione dei criteri ESP se all'utente corrente non è assegnata una licenza di Intune.  
 - La configurazione del controllo di applicazioni di Microsoft Defender comporta una richiesta di riavvio durante la fase di Autopilot. Per la configurazione dell'applicazione Microsoft Defender (provider del servizio di crittografia AppLocker) è necessario un riavvio. Quando questo criterio è configurato, può causare il riavvio di un dispositivo durante la fase di Autopilot. Attualmente non è possibile impedire o posticipare il riavvio.
 - Quando il criterio DeviceLock (https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock) è abilitato come parte di un profilo ESP, il file OOBE o l'accesso automatico al desktop utente potrebbe non riuscire in modo inaspettato per due motivi.
@@ -208,4 +218,5 @@ Di seguito sono riportati i problemi noti.
   - L'accesso automatico avrà esito negativo se il dispositivo è stato riavviato dopo che l'utente ha immesso le proprie credenziali di Azure AD ma prima di uscire dalla fase di configurazione del dispositivo di ESP. Questo errore si verifica perché la fase di configurazione del dispositivo di ESP non è mai stata completata. La soluzione alternativa consiste nel reimpostare il dispositivo.
 
 ## <a name="next-steps"></a>Passaggi successivi
+
 Dopo aver configurato le pagine di registrazione di Windows, è necessario imparare a gestire i dispositivi Windows. Per altre informazioni, vedere [Informazioni sulla gestione dei dispositivi in Microsoft Intune](../remote-actions/device-management.md).

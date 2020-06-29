@@ -1,11 +1,11 @@
 ---
 title: Messaggio e azioni per i dispositivi non conformi con Microsoft Intune - Azure | Microsoft Docs
-description: Creare un messaggio di posta elettronica di notifica da inviare ai dispositivi non conformi. Se un dispositivo viene contrassegnato come non conforme, è possibile aggiungere azioni, ad esempio un periodo di tolleranza al termine del quale il dispositivo deve essere conforme, o creare una pianificazione per bloccare l'accesso finché il dispositivo non è conforme. Queste operazioni possono essere eseguite con Microsoft Intune in Azure.
+description: Creare un messaggio di posta elettronica di notifica da inviare ai dispositivi non conformi. Aggiungere azioni da applicare ai dispositivi che non soddisfano i criteri di conformità. Le azioni possono includere un periodo di tolleranza per ottenere la conformità, bloccare l'accesso alle risorse di rete o ritirare il dispositivo non conforme.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 06/19/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fff21eac61f7b68e00989aefc1f9ea6dc3ad7c0a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 330dd566599d6bdb1fa667d8797878ea8c92f098
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989321"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093726"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Configurare azioni per i dispositivi non conformi in Intune
 
@@ -29,11 +29,11 @@ Per i dispositivi che non soddisfano le regole o i criteri di conformità, è po
 
 ## <a name="overview"></a>Panoramica
 
-Per impostazione predefinita, ogni criterio di conformità include l'azione per la non conformità di **Contrassegna il dispositivo come non conforme** con una pianificazione di zero giorni (**0**). Il risultato di questa impostazione predefinita si ha quando Intune rileva un dispositivo che non è conforme e lo contrassegna immediatamente come non conforme. Quindi, l'[accesso condizionale](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) di Azure Active Directory (AD) può bloccare il dispositivo.
+Per impostazione predefinita, ogni criterio di conformità include l'azione per la non conformità di **Contrassegna il dispositivo come non conforme** con una pianificazione di zero giorni (**0**). Il risultato di questa impostazione predefinita si ha quando Intune rileva un dispositivo che non è conforme e lo contrassegna immediatamente come non conforme. Dopo che un dispositivo è stato contrassegnato come non conforme, l'[accesso condizionale](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) di Azure Active Directory (AD) può bloccare il dispositivo.
 
 Configurando **Azioni per la non conformità** si ottiene la flessibilità necessaria per decidere quali operazioni eseguire sui dispositivi non conformi e quando eseguire questa operazione. Si potrebbe, ad esempio, scegliere di non bloccare immediatamente il dispositivo e di concedere all'utente un periodo di tolleranza per adeguarsi ai criteri di conformità.
 
-Per ogni azione che è possibile impostare, è possibile configurare una pianificazione che determini quando tale azione diviene effettiva in base al numero di giorni trascorsi i quali il dispositivo viene contrassegnato come non conforme. È anche possibile configurare più istanze di un'azione. Quando si impostano più istanze di un'azione in un criterio, l'azione viene eseguita nuovamente in corrispondenza dell'ora pianificata successiva se il dispositivo rimane non conforme.
+Per ogni azione impostata, è possibile configurare una pianificazione che determini quando l'azione avrà effetto. La pianificazione è un numero di giorni trascorsi i quali il dispositivo viene contrassegnato come non conforme. È anche possibile configurare più istanze di un'azione. Quando si impostano più istanze di un'azione in un criterio, l'azione viene eseguita nuovamente in corrispondenza dell'ora pianificata successiva se il dispositivo rimane non conforme.
 
 Non tutte le azioni sono disponibili per tutte le piattaforme.
 
@@ -48,7 +48,7 @@ Di seguito sono riportate le azioni disponibili per la non conformità. Se non d
 - **Invia un messaggio di posta elettronica all'utente finale**: Questa azione Invia una notifica di posta elettronica all'utente.
 Quando si abilita questa azione:
 
-  - Selezionare un *modello del messaggio di notifica*  inviato da questa azione. È necessario [creare un modello di messaggio di notifica](#create-a-notification-message-template) prima di poterne assegnare uno a questa azione. Quando si crea la notifica personalizzata, è possibile personalizzare l'oggetto, il corpo del messaggio e includere il logo della società, il nome della società e altre informazioni di contatto.
+  - Selezionare un *modello del messaggio di notifica*  inviato da questa azione. [Creare un modello di messaggio di notifica](#create-a-notification-message-template) prima di poterne assegnare uno a questa azione. Quando si crea la notifica personalizzata, è possibile personalizzare l'oggetto, il corpo del messaggio e includere il logo della società, il nome della società e altre informazioni di contatto.
   - Scegliere di inviare il messaggio a destinatari aggiuntivi selezionando uno o più gruppi di Azure AD.
 
 Quando viene inviato il messaggio di posta elettronica, Intune include le informazioni sul dispositivo non conforme nella notifica di posta elettronica.
@@ -100,12 +100,12 @@ Quando viene inviato il messaggio di posta elettronica, Intune include le inform
   
   Ad esempio, è possibile pianificare la prima azione per zero giorni, quindi aggiungere una seconda istanza dell'azione impostata su tre giorni. Questo ritardo prima della seconda notifica offre all'utente alcuni giorni per risolvere il problema ed evitare la seconda notifica.
 
-  Per evitare di inviare agli utenti troppi messaggi duplicati, rivedere e semplificare i criteri di conformità che includono una notifica push per la non conformità ed esaminare le pianificazioni per evitare che vengano inviate troppo spesso notifiche ripetute per lo stesso problema.
+  Per evitare di inviare agli utenti troppi messaggi duplicati, rivedere e semplificare i criteri di conformità che includono una notifica push per la non conformità ed esaminare le pianificazioni per evitare troppe ripetizioni delle notifiche per lo stesso problema.
 
   Tenere in considerazione:
   - Per un singolo criterio che include più istanze di un set di notifiche push per lo stesso giorno, viene inviata solo una notifica singola per quel giorno.
 
-  - Quando più criteri di conformità includono le stesse condizioni di conformità e includono l'azione di notifica push con la stessa pianificazione, vengono inviate più notifiche allo stesso dispositivo nello stesso giorno.
+  - Quando più criteri di conformità includono le stesse condizioni di conformità e includono l'azione di notifica push con la stessa pianificazione, Intune invia più notifiche allo stesso dispositivo nello stesso giorno.
 
 ## <a name="before-you-begin"></a>Prima di iniziare
 
@@ -126,22 +126,22 @@ Per creare criteri di conformità dei dispositivi, vedere le linee guida seguent
 Per inviare il messaggio di posta elettronica agli utenti, creare un modello di messaggio di notifica. Quando un dispositivo risulta non conforme, i dettagli immessi nel modello vengono visualizzati nel messaggio di posta elettronica inviato agli utenti.
 
 1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Selezionare **Dispositivi** > **Criteri di conformità** > **Notifiche** > **Crea notifica**.
+2. Selezionare **Sicurezza degli endpoint** > **Conformità del dispositivo** > **Notifiche** > **Crea la notifica**.
 3. In *Informazioni di base* specificare le informazioni seguenti:
 
    - **Nome**
    - **Oggetto**
    - **Message**
 
-4. In *Informazioni di base* configurare anche le opzioni seguenti per la notifica, che hanno tutte l'impostazione predefinita *Attivato*:
+4. In *Informazioni di base* configurare anche le opzioni seguenti per la notifica:
 
-   - **Intestazione del messaggio di posta elettronica: includere il logo dell'azienda**
-   - **Piè di pagina del messaggio di posta elettronica: includere il nome dell'azienda**
-   - **Piè di pagina del messaggio di posta elettronica: includere le informazioni sul contatto**
+   - **Intestazione del messaggio di posta elettronica - Includere il logo dell'azienda** (impostazione predefinita = *Abilita*) - Il logo che si carica nell'ambito della personalizzazione del Portale aziendale viene usato per i modelli di posta elettronica. Per altre informazioni sulla personalizzazione del Portale aziendale, vedere [Personalizzazione dell'identità aziendale](../apps/company-portal-app.md#customizing-the-user-experience).
+   - **Piè di pagina del messaggio di posta elettronica: includere il nome dell'azienda** (impostazione predefinita = *Abilita*)
+   - **Piè di pagina del messaggio di posta elettronica: includere le informazioni sul contatto** (impostazione predefinita = *Abilita*)
+   - **Portale aziendale collegamento sito Web** (impostazione predefinita = *Disabilita*) - Con l'impostazione *Abilita*, il messaggio di posta elettronica include un collegamento al sito Web del Portale aziendale.
 
-   Il logo che si carica nell'ambito della personalizzazione del Portale aziendale viene usato per i modelli di posta elettronica. Per altre informazioni sulla personalizzazione del Portale aziendale, vedere [Personalizzazione dell'identità aziendale](../apps/company-portal-app.md#customizing-the-user-experience).
-
-   ![Esempio di messaggio di notifica di Intune relativo alla conformità](./media/actions-for-noncompliance/actionsfornoncompliance-1.PNG)
+   > [!div class="mx-imgBorder"]
+   > ![Esempio di messaggio di notifica di Intune relativo alla conformità](./media/actions-for-noncompliance/actionsfornoncompliance-1.PNG)
 
    Selezionare **Avanti** per continuare.
 
@@ -185,7 +185,7 @@ Quando si crea un criterio di conformità del dispositivo, Intune crea automatic
 
    Nei criteri di conformità si vuole, ad esempio, anche inviare una notifica all'utente. A questo scopo, è possibile aggiungere l'azione **Invia un messaggio di posta elettronica all'utente finale**. In questa azione **Invia messaggio** si imposta **Pianifica** su due giorni. Se il dispositivo o l'utente finale viene ancora valutato come non conforme il giorno due, il messaggio di posta elettronica viene inviato il giorno due. Se si vuole inviare nuovamente il messaggio di posta elettronica all'utente il giorno cinque della mancata conformità, aggiungere un'altra azione e impostare **Pianifica** su cinque giorni.
 
-  Per altre informazioni sulla conformità e sulle azioni predefinite, vedere la [panoramica della conformità](device-compliance-get-started.md).
+   Per altre informazioni sulla conformità e sulle azioni predefinite, vedere la [panoramica della conformità](device-compliance-get-started.md).
 
 6. Al termine, selezionare **Aggiungi** > **OK** per salvare le modifiche.
 

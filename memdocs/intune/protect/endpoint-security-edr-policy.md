@@ -16,21 +16,20 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: d0ba328f1976d0463c6be042dfd6f8a7570d6dac
-ms.sourcegitcommit: eb51bb38d484e8ef2ca3ae3c867561249fa413f3
+ms.openlocfilehash: ae95fb48296f778fb98affa2270ba763d79fb766
+ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206333"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879679"
 ---
 # <a name="endpoint-detection-and-response-policy-for-endpoint-security-in-intune"></a>Criteri per il rilevamento di endpoint e risposta per la sicurezza degli endpoint in Intune
 
-Quando si integra Microsoft Defender Advanced Threat Protection
- (Defender ATP) con Intune, è possibile usare i criteri di sicurezza degli endpoint per il rilevamento di endpoint e risposta (EDR) per gestire le impostazioni EDR ed eseguire l'onboarding di dispositivi in Defender ATP.
+Quando si integra Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) con Intune, è possibile usare i criteri di sicurezza degli endpoint per il rilevamento di endpoint e risposta (EDR) per gestire le impostazioni EDR ed eseguire l'onboarding di dispositivi in Microsoft Defender ATP.
 
-Le funzionalità di Rilevamento di endpoint e riposta di Defender ATP offrono rilevamenti avanzati degli attacchi quasi in tempo reale e di utilità pratica. Gli analisti della sicurezza possono impostare la priorità degli avvisi in modo efficace, ottenere la visibilità dell'ambito completo di una violazione e intraprendere azioni di risposta per correggere le minacce.
+Le funzionalità di rilevamento di endpoint e riposta di Microsoft Defender ATP offrono rilevamenti avanzati degli attacchi quasi in tempo reale e con la possibilità di intervenire. Gli analisti della sicurezza possono impostare la priorità degli avvisi in modo efficace, ottenere la visibilità dell'ambito completo di una violazione e intraprendere azioni di risposta per correggere le minacce.
 
-I criteri EDR includono profili specifici della piattaforma per gestire le impostazioni per EDR. I profili includono automaticamente un *pacchetto di onboarding* per Defender ATP. I pacchetti di onboarding rappresentano il modo in cui i dispositivi sono configurati per funzionare con Defender ATP. Dopo l'onboarding di un dispositivo, è possibile iniziare a usare i dati sulle minacce da quel dispositivo.
+I criteri EDR includono profili specifici della piattaforma per gestire le impostazioni per EDR. I profili includono automaticamente un *pacchetto di onboarding* per Microsoft Defender ATP. I pacchetti di onboarding rappresentano il modo in cui i dispositivi sono configurati per funzionare con Microsoft Defender ATP. Dopo l'onboarding di un dispositivo, è possibile iniziare a usare i dati sulle minacce da quel dispositivo.
 
 I criteri EDR vengono distribuiti a gruppi di dispositivi in Azure Active Directory (Azure AD) gestiti con Intune e a raccolte di dispositivi locali gestiti con Configuration Manager, inclusi i server Windows. I criteri EDR per percorsi di gestione diversi richiedono pacchetti di onboarding diversi. È quindi possibile creare criteri EDR separati per i diversi tipi di dispositivi gestiti.
 
@@ -45,7 +44,7 @@ Visualizzare le [impostazioni per i profili di rilevamento di endpoint e rispost
 
 **Generale**:
 
-- **Tenant per Microsoft Defender Advanced Threat Protection**: è necessario integrare il tenant di Defender ATP con il tenant di Microsoft Endpoint Manager (sottoscrizione a Intune) prima di poter creare criteri EDR. Vedere [Usare Microsoft Defender ATP](advanced-threat-protection.md) nella documentazione di Intune.
+- **Tenant per Microsoft Defender Advanced Threat Protection** - È necessario integrare il tenant di Microsoft Defender ATP con il tenant di Microsoft Endpoint Manager (sottoscrizione a Intune) prima di poter creare criteri EDR. Vedere [Usare Microsoft Defender ATP](advanced-threat-protection.md) nella documentazione di Intune.
 
 **Per supportare i dispositivi da Configuration Manager**:
 
@@ -259,12 +258,9 @@ Prima di poter distribuire i criteri ai dispositivi gestiti da Configuration Man
 
 - Per i criteri destinati alla piattaforma **Windows 10 e versioni successive** (Intune), verrà visualizzata una panoramica della conformità al criterio. È anche possibile selezionare il grafico per visualizzare un elenco di dispositivi che hanno ricevuto il criterio ed eseguire il drill-in dei singoli dispositivi per altri dettagli.
 
-  Il grafico **Dispositivi con sensore di ATP** mostra solo i dispositivi che completano l'onboarding in Defender ATP tramite l'uso del profilo **Windows 10 e versioni successive**. Per assicurare che sia disponibile una rappresentazione completa dei dispositivi in questo grafico, distribuire il profilo di onboarding in tutti i dispositivi. I dispositivi che completano l'onboarding in Defender ATP tramite metodi esterni, ad esempio Criteri di gruppo o PowerShell, vengono conteggiati come **Dispositivi senza sensore di ATP**.
+  Il grafico **Dispositivi con sensore di ATP** mostra solo i dispositivi che completano l'onboarding in Microsoft Defender ATP tramite l'uso del profilo **Windows 10 e versioni successive**. Per assicurare che sia disponibile una rappresentazione completa dei dispositivi in questo grafico, distribuire il profilo di onboarding in tutti i dispositivi. I dispositivi che completano l'onboarding in Microsoft Defender ATP tramite metodi esterni, ad esempio Criteri di gruppo o PowerShell, vengono conteggiati come **Dispositivi senza sensore di ATP**.
 
 - Per i criteri destinati alla piattaforma **Windows 10 e Windows Server** (Configuration Manager), verrà visualizzata una panoramica della conformità al criterio ma non sarà possibile eseguire il drill-in per visualizzare dettagli aggiuntivi. La visualizzazione è limitata perché l'interfaccia di amministrazione riceve dettagli di stato limitati da Configuration Manager, che consente di gestire la distribuzione del criterio ai dispositivi di Configuration Manager.
-
-
-
 
 
 [Visualizzare le impostazioni](endpoint-security-edr-profile-settings.md) che è possibile configurare sia per le piattaforme che per i profili.

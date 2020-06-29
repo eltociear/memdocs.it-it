@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 Customer intent: As an Intune admin, I want to set up the Apple's corporate device enrollment features so that corporate devices can automatically enroll in Intune.
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a3a949738056c9acf33ef09e28f7664690dfd77f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 47f249d105fbc2481dd1d66956032c91d5006834
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078907"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093512"
 ---
 # <a name="tutorial-use-apples-corporate-device-enrollment-features-in-apple-business-manager-abm-to-enroll-iosipados-devices-in-intune"></a>Esercitazione: Usare le funzionalità Corporate Device Enrollment di Apple in Apple Business Manager (ABM) per registrare i dispositivi iOS/iPadOS in Intune
 Le funzionalità Device Enrollment di Apple Business Manager semplificano la registrazione di dispositivi. Intune supporta anche il portale Device Enrollment Program precedente di Apple, ma è consigliabile iniziare da zero con Apple Business Manager. Con Microsoft Intune e Apple Corporate Device Enrollment, i dispositivi vengono registrati automaticamente in modo sicuro la prima volta che vengono accesi. È pertanto possibile spedire i dispositivi a più utenti senza dover configurare ogni singolo dispositivo. 
@@ -44,7 +44,7 @@ Prima di registrare i dispositivi iOS/iPadOS con le funzionalità di registrazio
 
 Per creare un token di Device Enrollment, usare il portale Apple. Usare questi portali anche per assegnare i dispositivi a Intune per la gestione.
 
-1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS** > **Registrazione di iOS** > **Token del programma di registrazione** > **Aggiungi**.
+1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS/iPadOS** > **Registrazione di iOS/iPadOS** > **Token del programma di registrazione** > **Aggiungi**.
 
 2. Concedere a Microsoft l'autorizzazione per l'invio di informazioni su utenti e dispositivi ad Apple selezionando **Accetto**.
 
@@ -80,9 +80,9 @@ Per creare un token di Device Enrollment, usare il portale Apple. Usare questi p
 ## <a name="create-an-apple-enrollment-profile"></a>Creare un profilo di registrazione di Apple
 Ora che è stato installato il token, è possibile creare un profilo di registrazione per i dispositivi iOS/iPadOS di proprietà dell'azienda. Un profilo di registrazione dispositivi consente di definire le impostazioni applicate a un gruppo di dispositivi durante la registrazione.
 
-1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS** > **Registrazione di iOS** > **Token del programma di registrazione**.
+1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS/iPadOS** > **Registrazione di iOS** > **Token del programma di registrazione**.
 
-2. Selezionare il token installato, scegliere **Profili** > **Crea profilo** > **iOS**.
+2. Selezionare il token installato, scegliere **Profili** > **Crea profilo** > **iOS/iPadOS**.
 
 3. Nella pagina **Informazioni di base** immettere *TestProfile* per **Nome** e *Test Registrazione automatica del dispositivo per dispositivi iOS/iPadOS* per **Descrizione**. Questi dettagli non vengono visualizzati agli utenti.
 
@@ -120,13 +120,13 @@ Ora che è stato installato il token, è possibile creare un profilo di registra
 
 Dopo aver configurato un token del programma di registrazione con il portale ABM, ASM o di Registrazione automatica del dispositivo e aver assegnato i dispositivi al server MDM, è possibile aspettare che questi dispositivi vengano sincronizzati con il servizio Intune oppure eseguire il push manuale di una sincronizzazione. Senza sincronizzazione manuale, possono essere necessarie fino a 24 ore prima che i dispositivi vengano visualizzati nel portale di Azure.
 
-1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS** > **Registrazione di iOS** > **Token del programma di registrazione** > scegliere un token dall'elenco > **Dispositivi** > **Sincronizza**.
+1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS/iPadOS** > **Registrazione di iOS** > **Token del programma di registrazione** > scegliere un token dall'elenco > **Dispositivi** > **Sincronizza**.
 
 ## <a name="assign-an-enrollment-profile-to-iosipados-devices"></a>Assegnare un profilo di registrazione ai dispositivi iOS/iPadOS
 
 Prima della registrazione è necessario assegnare ai dispositivi un profilo DEP. Questi dispositivi sono sincronizzati con Intune da Apple e devono essere assegnati al token del server MDM appropriato nel portale ABM, ASM o di Registrazione automatica del dispositivo.
 
-1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS** > **Registrazione di iOS** > **Token del programma di registrazione** > scegliere un token dall'elenco.
+1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS/iPadOS** > **Registrazione di iOS** > **Token del programma di registrazione** > scegliere un token dall'elenco.
 2. Scegliere **Dispositivi** > scegliere i dispositivi nell'elenco > **Assegna profilo**.
 3. In **Assegna profilo** scegliere un profilo per i dispositivi > **Assegna**.
 

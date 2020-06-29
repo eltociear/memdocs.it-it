@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2020
+ms.date: 06/11/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3437a1b9fe3c663844d366bbfda6c0bcb463c3ab
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5bf114edf17fa1f8959b5f26b83c771b711b83f5
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983797"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093184"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Applicare funzionalità e impostazioni nei dispositivi usando i profili dei dispositivi in Microsoft Intune
 
@@ -41,7 +41,7 @@ Questo articolo offre una panoramica dei diversi tipi di profili che è possibil
 
 ## <a name="administrative-templates"></a>Modelli amministrativi
 
-La funzionalità [Modelli amministrativi](administrative-templates-windows.md) include centinaia di impostazioni che è possibile configurare per Internet Explorer, OneDrive, Desktop remoto, Word, Excel e altre applicazioni di Office.
+La funzionalità [Modelli amministrativi](administrative-templates-windows.md) include centinaia di impostazioni che è possibile configurare per Internet Explorer, Microsoft Edge, OneDrive, Desktop remoto, Word, Excel e altre applicazioni di Office.
 
 Questi modelli offrono agli amministratori una visualizzazione semplificata delle impostazioni, simile a quella dei criteri di gruppo ma completamente basata sul cloud.
 
@@ -132,7 +132,7 @@ Questa funzionalità supporta:
 
 - Windows 10 e versioni successive
 
-## <a name="edition-upgrade"></a>Aggiornamento dell'edizione
+## <a name="edition-upgrade-and-mode-switch"></a>Aggiornamento dell'edizione e cambio di modalità
 
 [Aggiornamento edizione di Windows 10](edition-upgrade-configure-windows-10.md) consente di aggiornare automaticamente i dispositivi che eseguono determinate versioni di Windows 10 a un'edizione più recente.
 
@@ -202,7 +202,15 @@ Questa funzionalità supporta:
 
 - Windows 10 e versioni successive
 
-Impostazioni per la modalità tutto schermo disponibili anche come restrizioni del dispositivo per [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-devices) e [iOS/iPadOS](device-restrictions-ios.md#kiosk).
+Impostazioni per la modalità tutto schermo disponibili anche come restrizioni del dispositivo per [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#device-experience) e [iOS/iPadOS](device-restrictions-ios.md#kiosk).
+
+## <a name="mx-profile-zebra"></a>Profilo MX (Zebra)
+
+[Mobility Extensions (MX)](android-zebra-mx-overview.md) estende le impostazioni di Intune predefinite per personalizzare o aggiungere altre impostazioni specifiche per i dispositivi Zebra. I dispositivi Zebra sono comunemente usati in impianti industriali e ambienti di vendita al dettaglio. Se si dispone di centinaia o migliaia di dispositivi Zebra, è possibile usare Intune per configurare e gestire tali dispositivi.
+
+Questa funzionalità supporta:
+
+- Amministratore dispositivo Android
 
 ## <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
 
@@ -214,7 +222,7 @@ Questa funzionalità supporta:
 
 ## <a name="oemconfig"></a>OEMConfig
 
-[OEMConfig](android-oem-configuration-overview.md) è uno standard che consente a OEM (Original Equipment Manufacturer) e EMM (Enterprise Mobility Management) di creare e supportare funzionalità specifiche degli OEM in modo standardizzato nei dispositivi Android Enterprise. Con OEMConfig un OEM crea uno schema che definisce le funzionalità di gestione specifiche dell'OEM e lo incorpora in un'app caricata in Google Play. Intune legge lo schema dall'app e consente agli amministratori di Intune di configurare le impostazioni nello schema.
+Nei dispositivi Android Enterprise [OEMConfig](android-oem-configuration-overview.md) è uno standard che consente a OEM (Original Equipment Manufacturer) e EMM (Enterprise Mobility Management) di creare e supportare funzionalità specifiche degli OEM in modo standardizzato. Con OEMConfig un OEM crea uno schema che definisce le funzionalità di gestione specifiche dell'OEM e lo incorpora in un'app caricata in Google Play. Intune legge lo schema dall'app e consente agli amministratori di Intune di configurare le impostazioni nello schema.
 
 Questa funzionalità supporta:
 
@@ -222,7 +230,7 @@ Questa funzionalità supporta:
 
 ## <a name="powershell-scripts"></a>Script PowerShell
 
-Gli [script PowerShell nei dispositivi Windows 10](../apps/intune-management-extension.md) usano Intune Management Extension per caricare gli script PowerShell in Intune, quindi eseguono tali script nei dispositivi. L'argomento descrive anche cosa è necessario per usare le estensioni, come aggiungerle a Intune e altre informazioni importanti.
+Gli [script di PowerShell](../apps/intune-management-extension.md) usano Intune Management Extension per caricare gli script di PowerShell in Intune, quindi eseguono tali script nei dispositivi. L'argomento descrive anche cosa è necessario per usare le estensioni, come aggiungerle a Intune e altre informazioni importanti.
 
 Questa funzionalità supporta:
 
@@ -278,7 +286,7 @@ Questa funzionalità supporta:
 
 [Impostazioni Wi-Fi](wi-fi-settings-configure.md) assegna le impostazioni di rete wireless a utenti e dispositivi. Quando si assegna un profilo Wi-Fi, gli utenti dispongono dell'accesso alla rete Wi-Fi aziendale senza doverlo configurare. 
 
-Questa funzionalità supporta: 
+Questa funzionalità supporta:
 
 - Amministratore dispositivo Android
 - Android Enterprise
@@ -286,6 +294,16 @@ Questa funzionalità supporta:
 - macOS
 - Windows 8.1 (solo importazione)
 - Windows 10 e versioni successive
+
+## <a name="wired-networks"></a>Reti cablate
+
+Le [reti cablate](wired-networks-configure.md) consentono di creare e gestire connessioni cablate 802.1x per computer desktop macOS. Nel profilo si sceglie l'interfaccia di rete, si selezionano i tipi EAP accettati e si immettono le impostazioni di attendibilità del server, inclusi i certificati PKCS e SCEP.
+
+Quando si assegna il profilo, gli utenti desktop macOS ottengono l'accesso alla rete cablata aziendale senza doverla configurare autonomamente.
+
+Questa funzionalità supporta:
+
+- macOS
 
 ## <a name="zebra-mobility-extensions-mx"></a>Estensioni di mobilità nei dispositivi Zebra
 

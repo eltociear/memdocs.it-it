@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b94146cc429f2a7f7b196f15527e8687368e6d78
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 3031e909b5bd330f9ec84f05f2c83c504022d50e
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988234"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746596"
 ---
 # <a name="use-teamviewer-to-remotely-administer-intune-devices"></a>Usare TeamViewer per l'amministrazione remota dei dispositivi di Intune
 
@@ -69,6 +69,6 @@ Quando si avvia una sessione remota, gli utenti vedono un flag di notifica sull'
 > [!NOTE]
 > Nei dispositivi Windows registrati con metodi "senza utente", ad esempio Manager di registrazione dispositivi e Progettazione configurazione di Windows, la notifica di TeamViewer non viene visualizzata nell'app Portale aziendale. In questi scenari, è consigliabile generare la sessione usando il portale di TeamViewer.
 
-In TeamViewer è possibile completare una serie di azioni sul dispositivo, inclusa l'acquisizione del controllo del dispositivo. Per informazioni complete sulle operazioni possibili, vedere il [materiale sussidiario per TeamViewer](https://www.teamviewer.com/support/documents/).
+In TeamViewer è possibile completare una serie di azioni sul dispositivo, inclusa l'acquisizione del controllo del dispositivo. Per informazioni complete sulle operazioni possibili, vedere la [pagina della community di TeamViewer](https://community.teamviewer.com/).
 
 Al termine chiudere la finestra di TeamViewer.

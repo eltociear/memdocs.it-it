@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b836d3d2f319ca5ec9833e5902e6fcbb94b8dd65
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 7101ad9bffcd80bd608690f22db37abbbc7a7895
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83987113"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093788"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-configurator"></a>Configurare la registrazione di dispositivi iOS/iPadOS con Apple Configurator
 
@@ -48,15 +48,17 @@ I metodi di registrazione con Apple Configurator non possono essere usati con il
 
 Un profilo di registrazione dispositivi consente di definire le impostazioni applicate durante la registrazione. Queste impostazioni vengono applicate una sola volta. Seguire questi passaggi per creare un profilo di registrazione per registrare i dispositivi iOS/iPadOS con Apple Configurator.
 
-1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS** > **Registrazione di iOS** > **Apple Configurator** > **Profili** > **Crea**.
+1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS/iPadOS** > **Registrazione di iOS/iPadOS** > **Apple Configurator**.
 
-    ![Creare un profilo per Apple Configurator](./media/apple-configurator-enroll-ios/apple-config-create-profile.png)
+    ![Creare un profilo per Apple Configurator](./media/apple-configurator-enroll-ios/apple-configurator.png)
 
-2. In **Crea un profilo di registrazione** digitare un **nome** e una **descrizione** per il profilo per scopi amministrativi. Questi dettagli non vengono visualizzati agli utenti. È possibile usare questo campo Nome per creare un gruppo dinamico in Azure Active Directory. Usare il nome del profilo per definire il parametro enrollmentProfileName per assegnare i dispositivi con questo profilo di registrazione. Altre informazioni sui gruppi dinamici di Azure Active Directory.
+2. Scegliere **Profili** > **Crea**.
+
+3. In **Crea un profilo di registrazione** digitare un **nome** e una **descrizione** per il profilo per scopi amministrativi. Questi dettagli non vengono visualizzati agli utenti. È possibile usare questo campo Nome per creare un gruppo dinamico in Azure Active Directory. Usare il nome del profilo per definire il parametro enrollmentProfileName per assegnare i dispositivi con questo profilo di registrazione. Altre informazioni sui gruppi dinamici di Azure Active Directory.
 
     ![Screenshot della schermata di creazione del profilo con l'opzione Registra con affinità utente selezionata](./media/apple-configurator-enroll-ios/apple-configurator-profile-create.png)
 
-3. In **Affinità utente** scegliere se i dispositivi con questo profilo devono essere registrati con o senza un utente assegnato.
+4. In **Affinità utente** scegliere se i dispositivi con questo profilo devono essere registrati con o senza un utente assegnato.
 
     - **Registra con affinità utente**: scegliere questa opzione per i dispositivi che appartengono a utenti e che vogliono usare il portale aziendale per servizi come l'installazione di app. Il dispositivo deve essere associato a un utente con Assistente configurazione e può quindi accedere ai dati aziendali e alla posta elettronica. È supportata solo per la registrazione con Assistente configurazione. Per l'affinità utente è richiesto [endpoint misto/nome utente WS-Trust 1.3](https://technet.microsoft.com/library/adfs2-help-endpoints). [Altre informazioni](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 
@@ -65,7 +67,7 @@ Un profilo di registrazione dispositivi consente di definire le impostazioni app
      > [!NOTE]
      > Quando si seleziona **Registra con affinità utente** , assicurarsi che il dispositivo venga associato a un utente con Assistente configurazione entro le prime 24 ore di registrazione del dispositivo. In caso contrario, la registrazione potrebbe non riuscire e sarà necessario il ripristino delle impostazioni predefinite per registrare il dispositivo.
 
-4. Se si sceglie **Registra con affinità utente**, è possibile consentire agli utenti di eseguire l'autenticazione con il portale aziendale invece di Assistente configurazione Apple.
+5. Se si sceglie **Registra con affinità utente**, è possibile consentire agli utenti di eseguire l'autenticazione con il portale aziendale invece di Assistente configurazione Apple.
 
     > [!NOTE]
     > Se si vuole eseguire una delle operazioni seguenti, impostare **Authenticate with Company Portal instead of Setup Assistant** (Autenticazione con il portale aziendale invece di Assistente configurazione) su **Sì**.
@@ -88,7 +90,7 @@ Un profilo di registrazione dispositivi consente di definire le impostazioni app
     DLXQPCWVGHMJ, dettagli del dispositivo
 
    Informazioni su [come trovare il numero di serie di un dispositivo iOS/iPadOS](https://support.apple.com/HT204073).
-2. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS** > **Registrazione di iOS** > **Apple Configurator** > **Dispositivi** > **Aggiungi**.
+2. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS/iPadOS** > **Registrazione di iOS/iPadOS** > **Apple Configurator** > **Dispositivi** > **Aggiungi**.
 
 5. Selezionare un **Profilo di registrazione** da applicare ai numeri di serie che si stanno importando. Se si vuole che i dettagli del nuovo numero di serie sovrascrivano i dettagli esistenti, scegliere **Sovrascrivere i dettagli per gli identificatori esistenti**.
 6. In **Importa dispositivi** individuare il file con estensione CSV dei numeri di serie e selezionare **Aggiungi**.
@@ -100,18 +102,18 @@ Un profilo di registrazione dispositivi consente di definire le impostazioni app
 - **Profili AC**
 
 #### <a name="assign-from-apple-configurator-devices"></a>Eseguire l'assegnazione da dispositivi di Apple Configurator
-1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS** > **Registrazione di iOS** > **Apple Configurator** > **Dispositivi** > scegliere i numeri di serie > **Assegna profilo**.
+1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS/iPadOS** > **Registrazione di iOS/iPadOS** > **Apple Configurator** > **Dispositivi** > scegliere i numeri di serie > **Assegna profilo**.
 2. In **Assegna profilo** scegliere il **Nuovo profilo** da assegnare e quindi scegliere **Assegna**.
 
 #### <a name="assign-from-profiles"></a>Eseguire l'assegnazione dai profili
-1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS** > **Registrazione di iOS** > **Apple Configurator** > **Profili** > scegliere un profilo.
+1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS/iPadOS** > **Registrazione di iOS/iPadOS** > **Apple Configurator** > **Profili** > scegliere un profilo.
 2. Nel profilo scegliere **Dispositivi assegnati** e quindi scegliere **Assegna**.
 3. Applicare un filtro per trovare i numeri di serie dei dispositivi da assegnare al profilo, selezionare i dispositivi e quindi scegliere **Assegna**.
 
 ### <a name="export-the-profile"></a>Esportare il profilo
 Dopo aver creato il profilo e assegnato i numeri di serie, è necessario esportare il profilo da Intune come URL. Il profilo dovrà poi essere importato in Apple Configurator in un Mac per la distribuzione ai dispositivi.
 
-1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS** > **Registrazione di iOS** > **Apple Configurator** > **Profili** > scegliere un profilo da esportare.
+1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS/iPadOS** > **Registrazione di iOS/iPadOS** > **Apple Configurator** > **Profili** > scegliere un profilo da esportare.
 2. Nel profilo selezionare **Esporta il profilo**.
 3. Copiare l'**URL del profilo**. È quindi possibile aggiungerlo in Apple Configurator per definire il profilo di Intune usato dai dispositivi iOS/iPadOS.
 
@@ -147,7 +149,7 @@ Le app che richiedono l'associazione utente, inclusa l'app Portale aziendale usa
 
 ### <a name="export-the-profile-as-mobileconfig-to-iosipados-devices"></a>Esportare il profilo come file MOBILECONFIG per i dispositivi iOS/iPadOS
 
-1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS** > **Registrazione di iOS** > **Apple Configurator** > **Profili** > scegliere un profilo da esportare > **Esporta il profilo**.
+1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS/iPadOS** > **Registrazione di iOS/iPadOS** > **Apple Configurator** > **Profili** > scegliere un profilo da esportare > **Esporta il profilo**.
 2. In **Registrazione diretta** scegliere **Scarica profilo** e salvare il file. Un file del profilo di registrazione è valido solo per due settimane, dopodiché è necessario crearlo di nuovo.
 3. Trasferire il file in un computer Mac che esegue [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) per effettuare il push direttamente come profilo di gestione per i dispositivi iOS/iPadOS.
 4. Preparare il dispositivo con Apple Configurator usando la procedura seguente:

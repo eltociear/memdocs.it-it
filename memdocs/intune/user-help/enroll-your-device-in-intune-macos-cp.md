@@ -5,7 +5,7 @@ keywords: Mac OS X, macOS, OS X
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/16/2019
+ms.date: 06/18/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,27 +19,27 @@ ms.reviewer: kakyker
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2f3fe39285542199cf214c4b5bf505a176663657
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: fe405b66892ec7777d8d1572b2fb6ab6ce1aaa91
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882426"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85094219"
 ---
 # <a name="enroll-your-macos-device-using-the-company-portal-app"></a>Registrare il dispositivo macOS con l'app Portale aziendale  
 
 Registrare un dispositivo macOS nell'app Portale aziendale Intune per ottenere accesso protetto alla posta elettronica aziendale o dell'istituto di istruzione, ai file e alle app.
 
-Le organizzazioni in genere richiedono la registrazione del dispositivo prima di concedere l'accesso ai dati proprietari. Dopo la registrazione, il dispositivo diventa *gestito*. L'organizzazione può assegnare criteri e app al dispositivo tramite un provider di gestione di dispositivi mobili (MDM), ad esempio Intune. Per ottenere accesso continuato alle informazioni aziendali o dell'istituto di istruzione tramite il dispositivo, è necessario configurare nel dispositivo le impostazioni dei criteri dell'organizzazione corrispondenti.  
+Le organizzazioni in genere richiedono la registrazione del dispositivo prima di concedere l'accesso ai dati proprietari. Dopo la registrazione, il dispositivo diventa *gestito*. L'organizzazione può assegnare criteri e app al dispositivo tramite un provider di gestione di dispositivi mobili (MDM), ad esempio Intune. Per ottenere accesso continuato alle informazioni aziendali o dell'istituto di istruzione tramite il dispositivo, è necessario configurare il dispositivo in modo corrispondente alle impostazioni dei criteri dell'organizzazione.  
 
-Questo articolo descrive come usare l'app Portale aziendale Intune per macOS per registrare, configurare e gestire il dispositivo in modo da soddisfare i requisiti dell'organizzazione.  
+Questo articolo descrive come usare l'app Portale aziendale per macOS per configurare e gestire il dispositivo in modo da soddisfare i requisiti dell'organizzazione.  
 
 
 ## <a name="what-to-expect-from-the-company-portal-app"></a>Aspettative relative all'app Portale aziendale
 
 Durante la configurazione iniziale, l'app Portale aziendale richiede di eseguire l'accesso e l'autenticazione nell'organizzazione. Portale aziendale segnala quindi le eventuali impostazioni del dispositivo che è necessario configurare per soddisfare i requisiti dell'organizzazione. Ad esempio, le organizzazioni spesso definiscono il numero di caratteri minimo o massimo che la password deve soddisfare.    
 
-Dopo la registrazione del dispositivo, Portale aziendale assicurerà sempre che il dispositivo sia protetto in base ai requisiti dell'organizzazione. Se ad esempio si installa un'app da un'origine non attendibile, Portale aziendale segnalerà il problema e potrebbe limitare l'accesso alle risorse dell'organizzazione. I criteri di protezione delle app come questo sono comuni. Per ottenere nuovamente l'accesso, sarà probabilmente necessario disinstallare l'app non attendibile. 
+Dopo la registrazione del dispositivo, Portale aziendale assicurerà sempre che il dispositivo sia protetto in base ai requisiti dell'organizzazione. Ad esempio se si installa un'app da un'origine non attendibile, Portale aziendale segnalerà il problema e potrebbe limitare l'accesso alle risorse dell'organizzazione. I criteri di protezione delle app come questo sono comuni. Per ottenere nuovamente l'accesso, sarà probabilmente necessario disinstallare l'app. 
 
 Se dopo la registrazione l'organizzazione applica un nuovo requisito di sicurezza, ad esempio l'autenticazione a più fattori, l'app Portale aziendale invierà una notifica. L'utente potrà quindi modificare le impostazioni per continuare a lavorare dal proprio dispositivo.  
 
@@ -67,19 +67,20 @@ Usare la procedura seguente per registrare il dispositivo macOS nell'organizzazi
 
 1. Accedere al Portale aziendale con l'account aziendale o dell'istituto di istruzione.  
 2. All'apertura dell'app, selezionare **Inizia**.  
-3. Esaminare le informazioni che l'organizzazione può visualizzare o meno nel dispositivo registrato. Selezionare quindi **Continua**.
-4.  Se richiesto, immettere la password del dispositivo nella schermata **Installare il profilo di gestione**.
+3. Esaminare le [informazioni che l'organizzazione può visualizzare o meno](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) nel dispositivo registrato. Selezionare quindi **Continua**.
+4. Nella schermata **Installa il profilo di gestione** selezionare **Scarica il profilo**.  
 
-    ![Screenshot di esempio della schermata Installare il profilo di gestione di Portale aziendale, con la richiesta della password evidenziata.](./media/install-management-profile-macos-1912.PNG)   
-5. Nella schermata **Conferma la gestione dei dispositivi** selezionare **Apri Preferenze di Sistema**.  
+    ![Screenshot di esempio della schermata Installare il profilo di gestione di Portale aziendale, con la richiesta della password evidenziata.](./media/install-management-profile-macos-2006.png)   
 
-    ![Screenshot di esempio della schermata Conferma la gestione dei dispositivi, con il pulsante "Apri Preferenze di Sistema" evidenziato.](./media/confirm-device-management-macos-1912.PNG)  
-6. Verranno aperte le preferenze di sistema del dispositivo. Selezionare **Profilo di gestione** dall'elenco dei profili di dispositivo, quindi selezionare **Approva** > **Approva**.  
-    ![Screenshot di esempio della schermata Profilo di gestione in Preferenze di Sistema, con il pulsante "Approva" evidenziato.](./media/management-profile-approve-macos-1912.PNG)   
-1. Tornare a Portale aziendale e selezionare **Continua**.    
-2. L'organizzazione potrebbe richiedere all'utente di aggiornare le impostazioni del dispositivo. Al termine dell'aggiornamento delle impostazioni, selezionare **Verifica le impostazioni**.  
+5. Verranno aperte le preferenze di sistema del dispositivo.  
+    a. Selezionare **Installa** e quindi selezionare di nuovo **Installa**.  
+    b. Se viene richiesto, immettere la password del dispositivo.   
+6. Una volta installato, il profilo verrà visualizzato nell'elenco dei profili in **Profilo di gestione**.
+    ![Screenshot di esempio della schermata Profilo di gestione in Preferenze di Sistema, con il pulsante "Approva" evidenziato.](./media/management-profile-approve-macos-2006.png)   
+7. Tornare a Portale aziendale.    
+8. L'organizzazione potrebbe richiedere all'utente di aggiornare le impostazioni del dispositivo. Al termine dell'aggiornamento delle impostazioni, selezionare **Riprova**.  
 
-    ![Screenshot di esempio della schermata Aggiorna impostazioni del dispositivo di Portale aziendale, con il pulsante "Verifica le impostazioni" evidenziato.](./media/update-settings-mac-1911.PNG)  
+    ![Screenshot di esempio della schermata Aggiorna impostazioni del dispositivo di Portale aziendale, con il pulsante Riprova evidenziato.](./media/update-settings-mac-2006.png)  
 9. Al termine dell'installazione, selezionare **Fine**.  
 
 

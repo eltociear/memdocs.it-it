@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ebd847e44c1acd87c316514ec9919f8a6690a647
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 4a050ab523730adbfdd2ecf541557fabbf95081b
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428580"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715697"
 ---
 # <a name="deploy-bitlocker-management"></a>Distribuire la gestione di BitLocker
 
@@ -126,7 +126,7 @@ Quando si crea più di un criterio, è possibile configurarne la priorità relat
 
 1. Se si vuole che il dispositivo sia in grado di crittografare o decrittografare le proprie unità in qualsiasi momento, selezionare l'opzione **Consenti monitoraggio e aggiornamento fuori dalla finestra di manutenzione**. Se la raccolta ha una finestra di manutenzione, risolve comunque questo criterio di BitLocker.
 
-1. Configurare una pianificazione **Semplice** o **Personalizzata**. Per impostazione predefinita, il client valuta la conformità a questo criterio ogni 12 ore.
+1. Configurare una pianificazione **Semplice** o **Personalizzata**. Il client valuta la conformità in base alle impostazioni specificate nella pianificazione.
 
 1. Selezionare **OK** per distribuire il criterio.
 
@@ -191,7 +191,7 @@ Se attualmente si usa Microsoft BitLocker Administration and Monitoring (MBAM), 
 
 Configuration Manager non crittografa nuovamente le unità che sono già protette con Crittografia unità BitLocker. Se si distribuisce un criterio di gestione di BitLocker che non corrisponde alla protezione corrente dell'unità, verrà segnalato come non conforme. L'unità è comunque protetta.
 
-Ad esempio, è stato usato MBAM per crittografare l'unità senza la protezione PIN, ma i criteri di Configuration Manager richiedono un PIN. L'unità non è conforme ai criteri, anche se l'unità è crittografata.
+Ad esempio, è stato usato MBAM per crittografare l'unità con l'algoritmo di crittografia AES-XTS 128, ma i criteri di Configuration Manager richiedono AES-XTS 256. L'unità non è conforme ai criteri, anche se l'unità è crittografata.
 
 Per risolvere questo problema, disabilitare prima di tutto BitLocker nel dispositivo. Quindi, distribuire un nuovo criterio con le nuove impostazioni.
 
@@ -201,7 +201,7 @@ Per risolvere questo problema, disabilitare prima di tutto BitLocker nel disposi
 
 Il gestore del client Gestione configurazione per BitLocker è dotato di riconoscimento della co-gestione. Se il dispositivo è co-gestito e si passa il [carico di lavoro Endpoint Protection](../../../comanage/workloads.md#endpoint-protection) a Intune, il client Configuration Manager ignora i criteri di BitLocker. Il dispositivo ottiene i criteri di crittografia di Windows da Intune.
 
-Quando si passa a un'altra autorità di gestione della crittografia, pianificare la [nuova crittografia](#re-encryption).
+Quando si cambiano le autorità di gestione della crittografia e viene modificato anche l'algoritmo di crittografia prescelto, è necessario pianificare una [nuova esecuzione della crittografia](#re-encryption).
 
 Per altre informazioni sulla gestione di BitLocker con Intune, vedere gli articoli seguenti:
 

@@ -2,7 +2,7 @@
 title: Autenticazione basata su token per CMG
 titleSuffix: Configuration Manager
 description: Registrare un client nella rete interna per un token univoco o creare un token di registrazione in blocco per i dispositivi basati su Internet.
-ms.date: 04/29/2020
+ms.date: 06/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5054d44371fd3114a9644f90d37dabf1e81d1997
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: 8146c9c2605f8693ad7375b974a5dd13c089d946
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455022"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715663"
 ---
 # <a name="token-based-authentication-for-cloud-management-gateway"></a>Autenticazione basata su token per Cloud Management Gateway
 
@@ -70,6 +70,16 @@ Per verificare, cercare nel file di log seguente una voce simile:<!-- bug 735749
 ```ClientLocation.log
 Rotating internet management point, new management point [1] is: https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 (0) with capabilities: <Capabilities SchemaVersion ="1.0"><Property Name="SSL" Version="1" /></Capabilities>
 ```
+
+Per risolvere i problemi di installazione, esaminare `%WinDir%\ccmsetup\logs\ccmsetup.log` nel client. Dopo l'installazione, esaminare `%WinDir%\ccm\logs\ClientIDManagerStartup.log`.
+
+Esaminare i log seguenti nel server:
+
+- [Log CMG](../../plan-design/hierarchy/log-files.md#cloud-management-gateway)
+- Punto di gestione
+  - CCM_STS.log
+  - MP_RegistrationManager.log
+  - ClientAuth.log
 
 ### <a name="known-issues"></a>Problemi noti
 

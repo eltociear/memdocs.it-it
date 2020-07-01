@@ -2,7 +2,7 @@
 title: Versioni di Technical Preview
 titleSuffix: Configuration Manager
 description: Informazioni sulla versione Technical Preview che consente di testare nuove funzionalità e capacità in Configuration Manager.
-ms.date: 05/29/2020
+ms.date: 06/25/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e4c0842a3e23eb8503c945073a4be35db5173086
-ms.sourcegitcommit: 0d2f6132428b5fa994e5b770ab1d2bf7d78ac179
+ms.openlocfilehash: 5dfa3b33a46166cfa4e1233eb71125696f5aa39d
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226247"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383139"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Technical Preview per Configuration Manager
 
@@ -116,9 +116,41 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](2020/technical-preview-2005.md) <!--ID-->
+<!-- - [title](2020/technical-preview-2006.md) <!--ID-->
 
 Le funzionalità seguenti sono disponibili con la versione Technical Preview di Configuration Manager più recente:
+
+### <a name="technical-preview-version-2006"></a>Technical Preview versione 2006
+
+- [Usare l'app Portale aziendale in dispositivi con co-gestione](2020/technical-preview-2006.md#bkmk_portal) <!--3601237-->
+- [Miglioramenti alle app disponibili tramite CMG](2020/technical-preview-2006.md#bkmk_availapp) <!--7033501-->
+- [I client Intranet possono usare un punto di aggiornamento software CMG](2020/technical-preview-2006.md#bkmk_cmg-sup) <!--7102873-->
+- [Miglioramenti alle sequenze di attività tramite CMG](2020/technical-preview-2006.md#bkmk_osdcmg) <!--6983320-->
+- [Informazioni dettagliate sulla gestione per l'ottimizzazione dei ruoli di lavoro remoti](2020/technical-preview-2006.md#bkmk_wfhmi) <!--6982226-->
+- [Miglioramenti al tipo di limite VPN](2020/technical-preview-2006.md#bkmk_vpn) <!--7020519-->
+- [Collegamento di tenant: miglioramenti alle azioni di Configuration Manager nell'interfaccia di amministrazione di Microsoft Endpoint Manager](2020/technical-preview-2006.md#bkmk_apps) <!--7518897-->
+- [Supporto di CMG per i criteri di protezione endpoint](2020/technical-preview-2006.md#bkmk_epcmg) <!--4773948-->
+- [Importare un'applicazione di Azure AD creata in precedenza durante l'onboarding del collegamento al tenant](2020/technical-preview-2006.md#bkmk_aad-app) <!--6479246-->
+- [Miglioramenti dell'aggiornamento client in una connessione a consumo](2020/technical-preview-2006.md#bkmk_meter) <!--6976145-->
+- [Miglioramenti alla gestione dei riavvii dei dispositivi](2020/technical-preview-2006.md#bkmk_restart) <!--3601213-->
+- [Miglioramenti al supporto per Desktop virtuale Windows](2020/technical-preview-2006.md#bkmk_wvd) <!--6527576-->
+- [Collegamenti diretti agli elementi dell'hub della community di Configuration Manager](2020/technical-preview-2006.md#bkmk_deeplink) <!--4224406-->
+
+> [!NOTE]
+> Le funzionalità disponibili in una versione precedente della Technical Preview rimangono disponibili nelle versioni successive. Analogamente, le funzionalità aggiunte alla versione Current Branch di Configuration Manager rimangono disponibili nel ramo Technical Preview.
+
+## <a name="features-in-recent-technical-previews"></a>Funzionalità nelle anteprime tecniche recenti
+
+<!-- (explanatory comment)
+This is the full list of new features in the past TP releases since the last CB release.
+Each month, add features from the list above to a new H3 section at the top of this section.
+When there's a new CB, add any features not in that CB to the table in H2 "Features in previous technical previews"
+-->
+
+Le funzionalità seguenti sono state rilasciate in versioni precedenti della Technical Preview Branch di Configuration Manager dopo la versione Current Branch 2002:
+
+> [!TIP]
+> Quando è disponibile una nuova versione Current Branch, le funzionalità presenti in tale versione sono elencate nella versione più recente dell'articolo *Novità*. Per altre informazioni, vedere [Novità delle versioni incrementali](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
 
 ### <a name="technical-preview-version-2005"></a>Technical Preview versione 2005
 
@@ -138,22 +170,6 @@ Le funzionalità seguenti sono disponibili con la versione Technical Preview di 
 - [Miglioramenti dei passaggi della sequenza di attività di BitLocker](2020/technical-preview-2005.md#bkmk_tsbitlocker) <!--6995601-->
 - [Miglioramenti dello strumento di pulizia della raccolta contenuto](2020/technical-preview-2005.md#bkmk_content) <!--6887878-->
 - [Rimuovere il prompt dei comandi durante l'aggiornamento sul posto di Windows 10](2020/technical-preview-2005.md#bkmk_ipucmd) <!--2837795-->
-
-> [!NOTE]
-> Le funzionalità disponibili in una versione precedente della Technical Preview rimangono disponibili nelle versioni successive. Analogamente, le funzionalità aggiunte alla versione Current Branch di Configuration Manager rimangono disponibili nel ramo Technical Preview.
-
-## <a name="features-in-recent-technical-previews"></a>Funzionalità nelle anteprime tecniche recenti
-
-<!-- (explanatory comment)
-This is the full list of new features in the past TP releases since the last CB release.
-Each month, add features from the list above to a new H3 section at the top of this section.
-When there's a new CB, add any features not in that CB to the table in H2 "Features in previous technical previews"
--->
-
-Le funzionalità seguenti sono state rilasciate in versioni precedenti della Technical Preview Branch di Configuration Manager dopo la versione Current Branch 2002:
-
-> [!TIP]
-> Quando è disponibile una nuova versione Current Branch, le funzionalità presenti in tale versione sono elencate nella versione più recente dell'articolo *Novità*. Per altre informazioni, vedere [Novità delle versioni incrementali](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
 
 ### <a name="technical-preview-version-2004"></a>Technical Preview versione 2004
 

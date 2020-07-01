@@ -2,7 +2,7 @@
 title: Proprietà e parametri di installazione client
 titleSuffix: Configuration Manager
 description: Informazioni sui parametri e le proprietà della riga di comando ccmsetup per l'installazione del client di Configuration Manager.
-ms.date: 04/01/2020
+ms.date: 06/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fda1e877f8e0bc211b36e288af13de204305cc5a
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: 02a281b800c1156cf8492e8a897a5cf1b412006e
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455039"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383037"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Informazioni sui parametri e le proprietà di installazione del client in Configuration Manager
 
@@ -256,6 +256,28 @@ Esempio: `CCMSetup.exe /ExcludeFeatures:ClientUI` non installa Software Center n
 
 > [!NOTE]  
 > `ClientUI` è l'unico valore supportato dal parametro **/ExcludeFeatures**.
+
+### <a name="alwaysexcludeupgrade"></a>/AlwaysExcludeUpgrade
+
+Questo parametro specifica se un client verrà aggiornato automaticamente quando si abilita [**Aggiornamento client automatico**](../manage/upgrade/upgrade-clients-for-windows-computers.md#bkmk_autoupdate).
+
+Valori supportati:
+
+- `TRUE`: Il client non verrà aggiornato automaticamente
+- `FALSE`: Il client viene aggiornato automaticamente (impostazione predefinita)
+
+Ad esempio:  
+
+`CCMSetup.exe /AlwaysExcludeUpgrade:TRUE`
+
+Per altre informazioni, vedere [Client di interoperabilità estesa](../../understand/interoperability-client.md).
+
+> [!NOTE]  
+> Quando si usa il parametro **/AlwaysExcludeUpgrade**, l'aggiornamento automatico è comunque in esecuzione. Tuttavia, quando CCMSetup tenta di eseguire l'aggiornamento, verifica che è stato impostato il parametro **/AlwaysExcludeUpgrade** e registra la riga seguente in **ccmsetup.log**:
+>
+> `Client is stamped with /alwaysexcludeupgrade. Stop proceeding.`
+>
+> CCMSetup si chiude immediatamente e non viene eseguito alcun aggiornamento.
 
 ## <a name="ccmsetupexe-return-codes"></a><a name="ccmsetupReturnCodes"></a> Codici restituiti di CCMSetup.exe
 

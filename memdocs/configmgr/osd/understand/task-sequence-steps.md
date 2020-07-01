@@ -10,12 +10,12 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 385a7222b33275951de294554a870d8e490a5ddc
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 114a0a18b3eb5d416b45379ccb3ac68128e529c5
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702019"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353599"
 ---
 # <a name="task-sequence-steps"></a>Passaggi della sequenza di attività
 
@@ -1869,6 +1869,12 @@ Abilitare questa opzione per generare informazioni di file di log più dettaglia
 
 Usare questo passaggio per eseguire la riga di comando specificata.  
 
+Il comando in esecuzione deve soddisfare i criteri seguenti:  
+
+- Non deve interagire con il desktop. Il comando deve essere eseguito in modalità invisibile all'utente o automatica.  
+
+- Non deve dare inizio autonomamente a un riavvio. Il comando deve richiedere un riavvio usando il codice di riavvio standard, ovvero 3010. Questo comportamento garantisce che la sequenza di attività gestisca adeguatamente il riavvio. Se il comando restituisce un codice di uscita 3010, il motore della sequenza di attività riavvia il computer. Dopo il riavvio, la sequenza di attività continua automaticamente.
+
 Questo passaggio può essere eseguito nel sistema operativo completo o in Windows PE.
 
 Per aggiungere questo passaggio nell'editor della sequenza di attività, selezionare **Aggiungi**, selezionare **Generale** e quindi selezionare **Esegui riga di comando**.
@@ -1976,6 +1982,12 @@ Includere altri codici di uscita dallo script che devono essere valutati come es
 ## <a name="run-powershell-script"></a><a name="BKMK_RunPowerShellScript"></a> Esegui script PowerShell
 
 Usare questo passaggio per eseguire lo script di Windows PowerShell specificato.  
+
+Lo script deve soddisfare i criteri seguenti:  
+
+- Non deve interagire con il desktop. Lo script deve essere eseguito in modalità invisibile all'utente o automatica.  
+
+- Non deve dare inizio autonomamente a un riavvio. Lo script deve richiedere un riavvio usando il codice di riavvio standard, ovvero 3010. Questo comportamento garantisce che la sequenza di attività gestisca adeguatamente il riavvio. Se lo script restituisce un codice di uscita 3010, il motore della sequenza di attività riavvia il computer. Dopo il riavvio, la sequenza di attività continua automaticamente.
 
 Questo passaggio può essere eseguito nel sistema operativo completo o in Windows PE. Per eseguire questo passaggio in Windows PE, abilitare PowerShell nell'immagine di avvio. Abilitare il componente WinPE-PowerShell dalla scheda **Componenti facoltativi** nelle proprietà per l'immagine di avvio. Per altre informazioni su come modificare un'immagine d'avvio, vedere [Manage boot images](../get-started/manage-boot-images.md) (Gestire le immagini d'avvio).  
 

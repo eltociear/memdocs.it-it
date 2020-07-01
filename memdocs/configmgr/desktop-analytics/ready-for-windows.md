@@ -12,16 +12,34 @@ ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
 ROBOTS: NOINDEX
-ms.openlocfilehash: 75dd74e3c1019c9819b44a0ffa8936eeb9eee366
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 18e703691696a2cfc02a5b9715fb6062360229e2
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268352"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353463"
 ---
 # <a name="ready-for-modern-desktop-retirement-faq"></a>Domande frequenti sul ritiro di Ready for modern desktop
 
 <!-- placeholder -->
+
+## <a name="ready-for-windows-adoption-status"></a>Stato di adozione Ready for Windows
+
+Lo Stato di adozione si basa sulle informazioni provenienti da dispositivi commerciali che condividono dati con Microsoft. Lo stato è integrato con le istruzioni di supporto dei fornitori di software.
+
+Desktop Analytics specifica lo stato di adozione per ogni versione di una risorsa presente nei dispositivi commerciali. Questo stato non include i dati di dispositivi consumer o dispositivi che non condividono dati. Lo stato potrebbe non essere rappresentativo della velocità di adozione in tutti i dispositivi Windows 10.
+
+Le categorie possibili sono:
+
+- **Ampiamente adottato**: almeno 100.000 dispositivi commerciali Windows 10 hanno installato l'app.
+
+- **Adottato**: almeno 10.000 dispositivi commerciali Windows 10 hanno installato l'app.
+
+- **Dati insufficienti**: il numero di dispositivi commerciali Windows 10 che stanno condividendo informazioni sull'app è troppo ridotto perché Microsoft possa classificarne l'adozione.
+
+- **Contattare lo sviluppatore**: è possibile che si verifichino problemi di compatibilità con questa versione dell'app. Microsoft consiglia di contattare il provider del software per ottenere altre informazioni.
+
+- **Sconosciuto**: non sono disponibili informazioni per questa versione dell'applicazione. Potrebbero essere disponibili informazioni per altre versioni dell'applicazione.
 
 ## <a name="general"></a>Generale
 

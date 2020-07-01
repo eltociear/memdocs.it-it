@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 0811c695acba4859bf32de535a28ea55cf8eee07
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 7403dc26f5fe1789fcda6b3eddf30136a4cd6e68
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268743"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795652"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>Abilitare la condivisione dei dati per Desktop Analytics
 
@@ -35,8 +35,8 @@ La funzionalità di base di Desktop Analytics funziona al [livello dei dati di d
 
 - Uso dell'app
 - [Informazioni dettagliate aggiuntive sull'app](compat-assessment.md#additional-insights)
-- Dati dello stato della distribuzione
-- Dati di monitoraggio dell'integrità
+- [Dati sullo stato della distribuzione](deploy-prod.md#address-deployment-alerts)
+- [Dati di monitoraggio dell'integrità](health-status-monitoring.md)
 
 Microsoft consiglia di abilitare il livello dei dati di diagnostica **Avanzata (con limitazioni)** con Desktop Analytics per ottimizzare i vantaggi offerti.
 

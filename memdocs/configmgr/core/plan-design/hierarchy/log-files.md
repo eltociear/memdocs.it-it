@@ -2,7 +2,7 @@
 title: Riferimento ai file di log
 titleSuffix: Configuration Manager
 description: Riferimento di tutti i file di log per i componenti client, server e dipendenti di Configuration Manager.
-ms.date: 04/24/2020
+ms.date: 06/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 36ab89f1e9988adc167bf69ff7d9f53b02bbe10f
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.openlocfilehash: 63f8ad6827a1aa72c3aaa51e21fecbf639fbb405
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166538"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715578"
 ---
 # <a name="log-file-reference"></a>Riferimento ai file di log
 
@@ -384,7 +384,9 @@ Nella tabella seguente sono elencati i file di log contenenti informazioni corre
 
 |Nome registro|Descrizione|Computer con file di log|  
 |--------------|-----------------|----------------------------|  
-|CcmIsapi.log|Registra l'attività di messaggistica client sull'endpoint.|Server del sistema del sito|  
+|CcmIsapi.log|Registra l'attività di messaggistica client sull'endpoint.|Server del sistema del sito|
+|CCM_STS.log|Registra le attività per i token di autenticazione, dai token di Azure Active Directory o dai token client emessi dal sito.|Server del sistema del sito|
+|ClientAuth.log|Registra l'attività di firma e autenticazione.|Server del sistema del sito|
 |MP_CliReg.log|Registra l'attività di registrazione del client elaborata dal punto di gestione.|Server del sistema del sito|  
 |MP_Ddr.log|Registra la conversione di record XML.ddr dai client e quindi li copia nel server del sito.|Server del sistema del sito|  
 |MP_Framework.log|Registra le attività del punto di gestione principale e dei componenti del framework client.|Server del sistema del sito|  
@@ -394,6 +396,7 @@ Nella tabella seguente sono elencati i file di log contenenti informazioni corre
 |MP_Location.log|Registra le attività di richiesta per il percorso e di risposta dai client.|Server del sistema del sito|  
 |MP_OOBMgr.log|Registra le attività del punto di gestione correlate alla ricezione di un OTP da un client.|Server del sistema del sito|  
 |MP_Policy.log|Registra la comunicazione dei criteri.|Server del sistema del sito|  
+|MP_RegistrationManager.log|Registra le attività correlate alla registrazione del client, ad esempio la convalida di certificati, CRL e token.|Server del sistema del sito|
 |MP_Relay.log|Registra il trasferimento di file che vengono raccolti dal client.|Server del sistema del sito|  
 |MP_Retry.log|Registra i processi di nuovi tentativi di inventario hardware.|Server del sistema del sito|  
 |MP_Sinv.log|Registra informazioni dettagliate sulla conversione di record di inventario software XML dai client e sulla copia di tali file nel server del sito.|Server del sistema del sito|  
@@ -459,7 +462,7 @@ Nella tabella seguente sono elencati i file di log contenenti informazioni corre
 |Nome registro|Descrizione|Computer con file di log|  
 |--------------|-----------------|----------------------------|  
 |AppIntentEval.log|Registra informazioni dettagliate sullo stato corrente e previsto delle applicazioni, sulla relativa applicabilità, sulla soddisfazione dei requisiti, sui tipi di distribuzione e sulle dipendenze.|Client|  
-|AppDiscovery.log|Registra informazioni dettagliate sull'individuazione o sul rilevamento di applicazioni nei computer client. |Client|  
+|AppDiscovery.log|Registra informazioni dettagliate sull'individuazione o sul rilevamento di applicazioni nei computer client.|Client|  
 |AppEnforce.log|Registra informazioni dettagliate sulle azioni di imposizione (installazione e disinstallazione) eseguite per applicazioni sul client.|Client|  
 |AppGroupHandler.log|A partire dalla versione 1906, informazioni relative al rilevamento e all'imposizione per i gruppi di applicazioni|Client|
 |awebsctl.log|Registra le attività di monitoraggio per il ruolo del sistema del sito punto per servizi Web del Catalogo applicazioni.|Server del sistema del sito|  
@@ -481,6 +484,7 @@ Nella tabella seguente sono elencati i file di log contenenti informazioni corre
 |SMSdpmon.log|Registra informazioni dettagliate sulle attività pianificate di monitoraggio dell'integrità del punto di distribuzione configurate su un punto di distribuzione.|Server del sito|  
 |SoftwareCatalogUpdateEndpoint.log|Registra le attività per la gestione di URL per il Catalogo di applicazioni indicato in Software Center.|Client|  
 |SoftwareCenterSystemTasks.log|Registra le attività correlate alla convalida dei componenti dei prerequisiti di Software Center.|Client|  
+|TSDTHandler.log|Per il tipo di distribuzione della sequenza di attività. Registra il processo dall'imposizione dell'app (installazione o disinstallazione) all'avvio della sequenza di attività. Usare con AppEnforce.log e smsts.log.|Client|<!-- MEMDocs#336 -->
 
 #### <a name="packages-and-programs"></a>Pacchetti e programmi
 

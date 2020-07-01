@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: f455615db6600a39460b0180d46039535d331f86
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e47d9ac210d4af25070c6a9cd4b710c383370f54
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81695229"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506299"
 ---
 # <a name="diagnostic-and-usage-data-for-1806"></a>Dati di utilizzo e di diagnostica per la versione 1806
 
@@ -291,7 +291,7 @@ Per Configuration Manager versione 1806, questo livello include i dati seguenti:
 
 - Criteri di Windows Hello for Business (creati, distribuiti)  
 
-- ***[Nuovo]*** Numero di criteri del browser Microsoft Edge distribuiti  
+- ***[Nuovo]*** Numero di criteri del browser distribuiti della versione legacy di Microsoft Edge  
 
 
 ### <a name="content"></a>Content  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 623a8dab52e13c4674b961e825033430d34a8f88
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: fe50aad3cb35ab5908f604560f4dcd22800919a5
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906555"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353446"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>Riferimento tecnico per i controlli crittografici
 
@@ -70,7 +70,7 @@ Non tutti i dispositivi sono in grado di supportare l'hash contenuto. Le eccezio
  Per ogni pacchetto di distribuzione di sistemi operativi, è possibile abilitare la crittografia quando il pacchetto viene trasferito nei computer usando multicast. La crittografia usa Advanced Encryption Standard (AES). Se si abilita la crittografia, non è necessaria alcuna configurazione aggiuntiva del certificato. Il punto di distribuzione abilitato per multicast genera automaticamente chiavi simmetriche per crittografare il pacchetto. Ogni pacchetto ha una chiave di crittografia diversa. La chiave viene memorizzata nel punto di distribuzione abilitato per multicast usando le API Windows standard. Quando il client si collega alla sessione multicast, lo scambio di chiave avviene su un canale crittografato con il certificato di autenticazione client emesso da PKI (quando il client usa HTTPS) oppure il certificato autofirmato (quando il client usa HTTP). Il client memorizza la chiave solo per la durata della sessione multicast.  
 
 ### <a name="encryption-for-media-to-deploy-operating-systems"></a>Crittografia per i supporti per la distribuzione di sistemi operativi  
- Quando si usano supporti per distribuire sistemi operativi e si specifica una password per proteggere i supporti, le variabili di ambiente sono crittografate usando Advanced Encryption Standard (AES). Gli altri dati presenti sul supporto, inclusi i pacchetti e il contenuto per le applicazioni, non vengono crittografati.  
+ Quando si usano supporti per distribuire sistemi operativi e si specifica una password per proteggere i supporti, le variabili di ambiente sono crittografate usando Advanced Encryption Standard (AES) con dimensioni chiave di 128 bit. Gli altri dati presenti sul supporto, inclusi i pacchetti e il contenuto per le applicazioni, non vengono crittografati.  
 
 ### <a name="encryption-for-content-that-is-hosted-on-cloud-based-distribution-points"></a>Crittografia per il contenuto ospitato nei punti di distribuzione basati su cloud  
  A partire da System Center 2012 Configuration Manager SP1, quando si usano punti di distribuzione basati su cloud, il contenuto caricato su questi punti di distribuzione viene crittografato usando Advanced Encryption Standard (AES) con una chiave di dimensioni 256 bit. Quando si aggiorna, il contenuto viene nuovamente crittografato. Quando i client scaricano il contenuto, esso viene crittografato e protetto tramite la connessione HTTPS.  

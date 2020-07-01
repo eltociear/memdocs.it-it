@@ -10,12 +10,12 @@ ms.assetid: a2742d52-851e-4abc-b623-d12d91684c0b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9143c224082f00b882d3cb557b47b737012393fa
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: f0a26d02770ff8460787ee9897bdc8f1218a2c12
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906331"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506163"
 ---
 # <a name="get-started-with-compliance-settings-in-configuration-manager"></a>Introduzione alle impostazioni di conformità in Configuration Manager
 
@@ -103,11 +103,8 @@ I criteri di aggiornamento edizione aggiornano automaticamente i dispositivi che
 
 Per altre informazioni, vedere [Upgrade Windows devices with the edition upgrade policy](../deploy-use/upgrade-windows-version.md) (Aggiornare i dispositivi Windows con i criteri di aggiornamento edizione)
 
-
-
-## <a name="microsoft-edge-browser-profiles"></a>Profili del browser Microsoft Edge
+## <a name="microsoft-edge-legacy-browser-profiles"></a>Profili del browser della versione legacy di Microsoft Edge
 <!-- 1357310 -->
-A partire dalla versione 1802 i clienti che usano il Web browser [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge) nei client Windows 10 possono creare un criterio delle impostazioni di conformità per definire diverse impostazioni di Microsoft Edge. 
+I clienti che usano la [versione legacy del Web browser Microsoft Edge](https://docs.microsoft.com/microsoft-edge/deploy/) in client Windows 10 possono creare criteri di conformità di Configuration Manager per configurare le impostazioni del browser.
 
-Per altre informazioni, vedere [Profili del browser Microsoft Edge](../deploy-use/browser-profiles.md).
-
+Per altre informazioni, vedere [Profili del browser della versione legacy di Microsoft Edge](../deploy-use/browser-profiles.md).

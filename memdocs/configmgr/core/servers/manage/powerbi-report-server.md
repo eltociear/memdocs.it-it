@@ -10,12 +10,12 @@ ms.assetid: 315e2613-dc71-46b1-80cb-26161d08103a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0c596ba410adc979b92a000c28d815e89695a9b0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f4089f52d912491b3b1396906fe391c5c334e061
+ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694349"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84814895"
 ---
 # <a name="integrate-with-power-bi-report-server"></a>Integrare il server di report di Power BI
 
@@ -43,6 +43,8 @@ Salvare i file di report di Power BI Desktop (con estensione PBIX) e distribuirl
     > - Usare solo una versione di [Power BI Desktop dichiarata come **ottimizzata per Server di report di Power BI**](https://docs.microsoft.com/power-bi/report-server/install-powerbi-desktop).
 
 - L’integrazione di Power BI usa la stessa amministrazione basata su ruoli per la creazione di report.
+    > [!NOTE]
+    > Il server di report di Power BI non supporta i report abilitati per il controllo degli accessi in base al ruolo, pertanto tutti gli utenti dei report visualizzeranno gli stessi risultati indipendentemente dall'ambito assegnato.
 
 ## <a name="configure-the-reporting-services-point"></a>Configurare il punto di Reporting Services
 

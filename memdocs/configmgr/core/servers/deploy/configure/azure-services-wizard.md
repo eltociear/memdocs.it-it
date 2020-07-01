@@ -2,7 +2,7 @@
 title: Configurare i servizi di Azure
 titleSuffix: Configuration Manager
 description: Connettere l'ambiente di Configuration Manager con i servizi di Azure per la gestione del cloud, Microsoft Store per le aziende e Log Analytics.
-ms.date: 07/31/2019
+ms.date: 06/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f36da59c6924f6d2f71d882f601c6dd563840d73
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 6ca5307de5c7df54c3cf7924bc91b0175b1bfa39
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82022535"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715323"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>Configurare i servizi di Azure da usare con Configuration Manager
 
@@ -23,22 +23,21 @@ ms.locfileid: "82022535"
 
 Usare la **Procedura guidata per i servizi di Azure** per semplificare il processo di configurazione dei servizi di Azure usati con Configuration Manager. Questa procedura guidata offre un'esperienza di configurazione comune usando le registrazioni di app Web di Azure Active Directory (Azure AD). Queste app specificano dettagli di sottoscrizione e configurazione e autenticano le comunicazioni con Azure AD. L'app evita di dover immettere le stesse informazioni ogni volta che si configura un nuovo componente o servizio di Configuration Manager con Azure.
 
-
 ## <a name="available-services"></a>Servizi disponibili
 
 Configurare i seguenti servizi di Azure tramite questa procedura guidata:  
 
 - **Gestione cloud**: questo servizio consente al sito e ai client di eseguire l'autenticazione usando Azure AD. Questa autenticazione abilita altri scenari, ad esempio:  
 
-    - [Installare e assegnare client di Configuration Manager in dispositivi Windows 10 usando Azure AD per l'autenticazione](../../../clients/deploy/deploy-clients-cmg-azure.md)  
+  - [Installare e assegnare client di Configuration Manager in dispositivi Windows 10 usando Azure AD per l'autenticazione](../../../clients/deploy/deploy-clients-cmg-azure.md)  
 
-    - [Configurare l'individuazione utente di Azure AD](configure-discovery-methods.md#azureaadisc)  
+  - [Configurare l'individuazione utente di Azure AD](configure-discovery-methods.md#azureaadisc)  
 
-    - [Configurare l'individuazione dei gruppi utenti di Azure AD](configure-discovery-methods.md#bkmk_azuregroupdisco)
+  - [Configurare l'individuazione dei gruppi utenti di Azure AD](configure-discovery-methods.md#bkmk_azuregroupdisco)
 
-    - Supporto di alcuni [scenari di Cloud Management Gateway](../../../clients/manage/cmg/plan-cloud-management-gateway.md#scenarios)  
+  - Supporto di alcuni [scenari di Cloud Management Gateway](../../../clients/manage/cmg/plan-cloud-management-gateway.md#scenarios)  
 
-    - [Notifiche tramite posta elettronica di approvazione delle app](../../../../apps/deploy-use/app-approval.md#bkmk_email-approve)
+  - [Notifiche tramite posta elettronica di approvazione delle app](../../../../apps/deploy-use/app-approval.md#bkmk_email-approve)
 
 - **Connettore Log Analytics**: [Connettersi ad Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm). Sincronizza i dati della raccolta a Log Analytics.  
 
@@ -51,7 +50,7 @@ Configurare i seguenti servizi di Azure tramite questa procedura guidata:
 
 La tabella seguente elenca informazioni dettagliate sui singoli servizi.  
 
-- **Tenant**: numero di istanze del servizio che è possibile configurare. Ogni istanza deve essere un tenant di Azure distinto.  
+- **Tenant**: numero di istanze del servizio che è possibile configurare. Ogni istanza deve essere un tenant di Azure AD distinto.  
 
 - **Cloud**: tutti i servizi supportano il cloud globale di Azure, ma non tutti i servizi supportano i cloud privati, ad esempio il cloud Azure Governo degli Stati Uniti.  
 
@@ -84,7 +83,6 @@ Per altre informazioni sulle app di Azure, vedere gli articoli seguenti:
 - [Basics of Registering an Application in Azure AD](/azure/active-directory/develop/authentication-scenarios) (Nozioni di base per la registrazione di un'applicazione in Azure AD)  
 - [Registrare l'applicazione nel tenant di Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-app-registration)
 
-
 ## <a name="before-you-begin"></a>Prima di iniziare
 
 Dopo aver scelto il servizio al quale connettersi, fare riferimento alla tabella in [Dettagli servizio](#service-details). Questa tabella specifica informazioni necessarie per completare la procedura guidata del servizio di Azure. In primo luogo valutare le alternative con l'amministratore di Azure AD. Decidere quali delle azioni seguenti eseguire:
@@ -96,7 +94,6 @@ Dopo aver scelto il servizio al quale connettersi, fare riferimento alla tabella
 Alcuni servizi richiedono che le app di Azure AD dispongano di autorizzazioni specifiche. Esaminare le informazioni per ogni servizio per determinare le autorizzazioni necessarie. Ad esempio, prima di poter importare un'app Web è necessario che un amministratore di Azure crei l'app nel [portale di Azure](https://portal.azure.com).
 
 Quando si configura il connettore Log Analytics, concedere alla nuova app Web registrata l'autorizzazione *Collaboratore* per il gruppo di risorse che contiene l'area di lavoro appropriata. Questa autorizzazione consente a Configuration Manager di accedere all'area di lavoro. Durante l'assegnazione dell'autorizzazione cercare il nome della registrazione dell'app nell'area **Aggiungi utenti** del portale di Azure. Questo processo è analogo a quello che [aggiunge a Configuration Manager le autorizzazioni per Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#grant-configuration-manager-with-permissions-to-log-analytics). Queste autorizzazioni devono essere assegnate da un amministratore prima dell'importazione dell'app in Configuration Manager.
-
 
 ## <a name="start-the-azure-services-wizard"></a>Avviare la procedura guidata per i servizi di Azure
 
@@ -113,7 +110,6 @@ Quando si configura il connettore Log Analytics, concedere alla nuova app Web re
     3. Selezionare il servizio di Azure che si vuole connettere con Configuration Manager.  
 
 4. Selezionare **Avanti** per passare alla pagina [Proprietà dell'app](#azure-app-properties) della procedura guidata per i servizi di Azure.  
-
 
 ## <a name="azure-app-properties"></a>Proprietà dell'app di Azure
 
@@ -151,15 +147,18 @@ Dopo aver selezionato, importato o creato un'app Web, selezionare **OK** per chi
 
 Quando si seleziona **Importa** nella finestra di dialogo App server o nella pagina App della procedura guidata per i servizi di Azure, viene visualizzata la finestra di dialogo Importa le app. Questa pagina consente di immettere informazioni su un'app Web di Azure AD che è già stata creata nel portale di Azure. Consente anche di importare i metadati relativi a questa app Web in Configuration Manager. Specificare le informazioni seguenti:
 
-- **Nome del tenant di Azure AD**
-- **ID tenant di Azure AD**
-- **Nome applicazione**: nome descrittivo per l'app.
-- **ID client**
-- **Chiave privata**
+- **Nome del tenant di Azure AD**: nome del tenant di Azure AD.
+- **ID tenant di Azure AD**: GUID del tenant di Azure AD.
+- **Nome applicazione**: nome descrittivo per l'app, il nome visualizzato nella registrazione app.
+- **Client ID** (ID client): il valore **ID applicazione (client)** della registrazione app. Il formato è un GUID standard.
+- **Chiave privata**: copiare la chiave privata quando si registra l'app in Azure AD.
 - **Scadenza della chiave privata**: selezionare una data futura nel calendario.
-- **URI ID app**: questo valore deve essere univoco nel tenant di Azure AD. È incluso nel token di accesso usato dal client Configuration Manager per richiedere l'accesso al servizio. Per impostazione predefinita, questo valore è impostato su `https://ConfigMgrService`.  
+- **URI ID app**: questo valore deve essere univoco nel tenant di Azure AD. È incluso nel token di accesso usato dal client Configuration Manager per richiedere l'accesso al servizio. Il valore è l'**URI ID applicazione** della voce di registrazione app nel portale di Azure AD. Il formato è simile a `https://ConfigMgrService`.
 
 Dopo aver immesso le informazioni, selezionare **Verifica**. Quindi selezionare **OK** per chiudere la finestra di dialogo Importa le app. Questa azione torna a visualizzare la [pagina App](#azure-app-properties) della procedura guidata per i servizi di Azure o la [finestra di dialogo App server](#server-app-dialog).
+
+> [!TIP]
+> Quando si registra l'app in Azure AD, potrebbe essere necessario specificare manualmente l'**URI di reindirizzamento** seguente: `ms-appx-web://Microsoft.AAD.BrokerPlugin/<ClientID>`. Specificare il GUID dell'ID client dell'app, ad esempio `ms-appx-web://Microsoft.AAD.BrokerPlugin/a26a653e-17aa-43eb-ab36-0e36c7d29f49`.<!-- SCCMDocs#1135 -->
 
 #### <a name="create-server-application-dialog"></a>Finestra di dialogo Crea un'applicazione server
 
@@ -202,7 +201,7 @@ Dopo aver selezionato, importato o creato un'app nativa, scegliere **OK** per ch
 Quando si seleziona **Importa** nella finestra di dialogo App client viene visualizzata la finestra di dialogo Importa le app. Questa pagina consente di immettere informazioni su un'app nativa di Azure AD che è già stata creata nel portale di Azure. Consente anche di importare i metadati relativi all'app nativa in Configuration Manager. Specificare le informazioni seguenti:
 
 - **Nome applicazione**: nome descrittivo per l'app.
-- **ID client**
+- **Client ID** (ID client): il valore **ID applicazione (client)** della registrazione app. Il formato è un GUID standard.
 
 Dopo aver immesso le informazioni, selezionare **Verifica**. Quindi selezionare **OK** per chiudere la finestra di dialogo Importa le app. Questa azione torna a visualizzare la [finestra di dialogo App client](#client-app-dialog).
 
@@ -229,11 +228,7 @@ Dopo aver specificato l'app Web e l'app nativa nella pagina App, la procedura gu
 
 Infine completare la procedura guidata per i servizi di Azure con le pagine Riepilogo, Stato e Completamento. La configurazione di un servizio di Azure in Configuration Manager è completata. Ripetere questo processo per configurare altri servizi di Azure.
 
-
 ## <a name="renew-secret-key"></a><a name="bkmk_renew"></a> Rinnovare la chiave privata
-
-> [!Note]
-> Per rinnovare la chiave privata di un'app Azure nella versione 1802 e precedenti è necessario ricreare l'app.
 
 ### <a name="renew-key-for-created-app"></a>Rinnovare la chiave per un'app creata
 
@@ -247,16 +242,14 @@ Infine completare la procedura guidata per i servizi di Azure con le pagine Riep
 
 Se l'app Azure è stata importata in Configuration Manager, usare il portale di Azure per il rinnovo. Prendere nota della nuova chiave privata e della data di scadenza. Aggiungere queste informazioni nella procedura guidata **Rinnova la chiave privata**.  
 
-> [!Note]  
+> [!NOTE]
 > Salvare la chiave privata prima di chiudere la pagina **Chiave** delle proprietà dell'applicazione di Azure. Queste informazioni vengono rimosse quando si chiude la pagina.
-
 
 ## <a name="view-the-configuration-of-an-azure-service"></a>Visualizzare la configurazione di un servizio di Azure
 
 È possibile visualizzare le proprietà di un servizio di Azure configurato per l'uso. Nell'area di lavoro **Amministrazione** della console di Configuration Manager espandere **Servizi cloud** e selezionare **Servizi di Azure**. Selezionare il servizio che si vuole visualizzare o modificare e selezionare **Proprietà**.
 
 Se si seleziona un servizio e quindi si sceglie **Elimina** nella barra multifunzione, viene eliminata la connessione in Configuration Manager. L'app in Azure AD non viene eliminata. Chiedere all'amministratore di Azure di eliminare l'app quando non è più necessaria. In alternativa eseguire la procedura guidata per i servizi di Azure per importare l'app.<!--483440-->
-
 
 ## <a name="cloud-management-data-flow"></a>Flusso di dati per la gestione cloud
 

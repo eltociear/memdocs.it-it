@@ -10,12 +10,12 @@ ms.assetid: 1cd8ac9f-b7ba-4cf4-8cd2-d548b0d6b1df
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cbd7c516515718cca96bff9b1715233964cb2aa5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 53fc4f694579fb8c53a4aea1054cf49dff21e1d2
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81699629"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715680"
 ---
 # <a name="set-up-bitlocker-portals"></a>Configurare i portali di BitLocker
 
@@ -28,7 +28,7 @@ Per usare i componenti di gestione di BitLocker seguenti in Configuration Manage
 - Portale self-service degli utenti
 - Account del sito Web di amministrazione e monitoraggio (portale supporto tecnico)
 
-È possibile installare i portali in un server del sito esistente con IIS oppure usare un server Web autonomo per ospitarli.
+È possibile installare i portali in un server del sito o in un server di sistema del sito esistenti con ISS installato oppure usare un server Web autonomo per ospitarli.
 
 > [!NOTE]
 > Installare solo il portale self-service e il sito Web di amministrazione e monitoraggio con un database del sito primario. In una gerarchia installare questi siti Web per ogni sito primario.

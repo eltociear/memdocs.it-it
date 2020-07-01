@@ -10,12 +10,12 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2523d06034f4a7effe769235cb5a4ede4df7e167
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: 2c03d5d06dc6b49ceff6af8ce862eb19cb4a517a
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764119"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531469"
 ---
 # <a name="plan-for-bitlocker-management"></a>Pianificare la gestione di BitLocker
 
@@ -23,7 +23,7 @@ ms.locfileid: "83764119"
 
 <!-- 3601034 -->
 
-A partire dalla versione 1910, usare Configuration Manager per gestire Crittografia unità BitLocker (BDE) per i client Windows locali. Configuration Manager offre una gestione completa del ciclo di vita di BitLocker che può sostituire l'uso di Microsoft BitLocker Administration and Monitoring (MBAM).
+A partire dalla versione 1910, usare Configuration Manager per gestire Crittografia unità BitLocker per i client Windows locali aggiunti ad Active Directory. I client aggiunti ad Azure Active Directory o del gruppo di lavoro non sono supportati. Configuration Manager offre una gestione completa del ciclo di vita di BitLocker che può sostituire l'uso di Microsoft BitLocker Administration and Monitoring (MBAM).
 
 > [!Note]  
 > Configuration Manager non abilita questa funzionalità facoltativa per impostazione predefinita. Pertanto sarà necessario abilitarla prima di poterla usare. Per altre informazioni, vedere [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options) (Abilitare le funzioni facoltative dagli aggiornamenti).  
@@ -92,7 +92,7 @@ Consentire agli utenti di ottenere in autonomia una chiave monouso per sbloccare
     > [!NOTE]
     > Installare solo il portale self-service e il sito Web di amministrazione e monitoraggio con un database del sito primario. In una gerarchia installare questi siti Web per ogni sito primario.
 
-- Nel server Web che ospiterà il portale self-service, installare [Microsoft ASP.NET MVC 4.0](https://docs.microsoft.com/aspnet/mvc/mvc4).
+- Nel server Web che ospiterà il portale self-service, installare [Microsoft ASP.NET MVC 4.0](https://docs.microsoft.com/aspnet/mvc/mvc4) e la funzionalità .NET Framework 3.5 prima di avviare il processo di installazione. Gli altri ruoli e funzionalità necessari del server Windows verranno installati automaticamente durante il processo di installazione del portale.
 
 - Per l'account utente che esegue lo script del programma di installazione del portale sono necessari i diritti di **sysadmin** di SQL per il server di database del sito. Durante il processo di installazione, lo script imposta i diritti di accesso, utente e ruolo SQL per l'account del computer del server Web. È possibile rimuovere questo account utente dal ruolo sysadmin dopo aver completato l'installazione del portale self-service e del sito Web di amministrazione e monitoraggio.
 

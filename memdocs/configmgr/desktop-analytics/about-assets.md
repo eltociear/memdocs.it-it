@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: d5900fd4cb4fdebea23e626ffbe17c5289712b31
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: f87c4cc1bcbe8039acb5876dc8e26ac597f12e59
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268913"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107303"
 ---
 # <a name="assets-in-desktop-analytics"></a>Asset in Desktop Analytics
 
@@ -56,7 +56,7 @@ Configurare l'**Importanza** delle app impostando una delle categorie seguenti:
 
 Quando l'impostazione **Dettagli delle versioni dell'app** è disattivata, il riquadro dei dettagli dell'app visualizza il numero di versioni e lingue delle app combinate. Se si salvano eventuali modifiche apportate ai dettagli dell'app, queste vengono applicate a tutte le versioni. Impostare, ad esempio, **Importanza** o **Proprietario**. Alcuni valori visualizzano "Più valori", che significa che non è presente un solo valore coerente in tutte le versioni.
 
-### <a name="automatic-upgrade-decision-of-system-and-store-apps"></a><a name="bkmk_plan-autoapp" /> Decisione di aggiornamento automatico delle app di sistema e dello Store
+### <a name="automatic-upgrade-decision-of-system-and-store-apps"></a><a name="bkmk_plan-autoapp"> </a> Decisione di aggiornamento automatico delle app di sistema e dello Store
 
 <!-- 3587232 -->
 Identificare l'**Importanza** e la **Decisione di aggiornamento** è fondamentale per tutte le app importanti nel flusso di lavoro di Desktop Analytics. Per facilitare l'annotazione di queste app, alcuni tipi di app vengono contrassegnati automaticamente come *Non importante*. La decisione di aggiornamento del piano di distribuzione per queste app è contrassegnata anche con *Pronto*. Le app seguenti sono compatibili e continueranno a funzionare dopo l'aggiornamento di Windows:

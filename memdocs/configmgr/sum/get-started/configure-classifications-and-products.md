@@ -5,17 +5,17 @@ description: Seguire questi passaggi per configurare i prodotti e le classificaz
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
-ms.openlocfilehash: 7e2cc1c2dc52a0bb6eb8d0dd143cbb2d005dc6e9
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 4f13ff305ba5fc2b5c5080bafb6fed2412ff8366
+ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078465"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84614076"
 ---
 # <a name="configure-classifications-and-products-to-synchronize"></a>configurare le classificazioni e i prodotti per la sincronizzazione  
 
@@ -47,9 +47,9 @@ I metadati degli aggiornamenti software vengono recuperati durante il processo d
      - **Aggiornamenti cumulativi**: specifica un insieme cumulativo e testato di aggiornamenti rapidi, aggiornamenti della sicurezza, aggiornamenti critici e aggiornamenti riuniti in un unico pacchetto per semplificarne la distribuzione. Un aggiornamento cumulativo interessa in genere un'area specifica, ad esempio la sicurezza o un componente del prodotto.  
      - **Aggiornamenti**: specifica un aggiornamento rilasciato pubblicamente per un problema specifico. Un aggiornamento risolve un bug non critico, non correlato alla sicurezza.  
      - **Aggiornamento**: specifica un aggiornamento per le caratteristiche e le funzionalità di Windows 10. Per ottenere la classificazione di [aggiornamento](https://support.microsoft.com/kb/3095113), i punti di aggiornamento software e i siti devono eseguire WSUS 6.2 con l'**hotfix 3095113**. Per ulteriori informazioni sull'installazione di questo aggiornamento e altri **aggiornamenti** per gli aggiornamenti, vedere [prerequisiti per gli aggiornamenti software](../plan-design/prerequisites-for-software-updates.md#BKMK_wsus2012).
-
+    
     > [!NOTE]
-    > Per sincronizzare i driver di Microsoft Surface, è possibile selezionare la casella di controllo **Includi i driver di Microsoft Surface e gli aggiornamenti del firmware**.<!--1098490--> Per altre informazioni, vedere la sezione [Includere i driver di Microsoft Surface e gli aggiornamenti del firmware](#bkmk_Surface).
+    > Per sincronizzare i driver di Microsoft Surface, è possibile selezionare la casella di controllo **Includi i driver di Microsoft Surface e gli aggiornamenti del firmware**.<!--1098490--> Tutti i punti di aggiornamento software devono eseguire Windows Server 2016 o versione successiva per sincronizzare correttamente i driver di Surface. Se si abilita un punto di aggiornamento software in un computer che esegue Windows Server 2012 dopo aver abilitato i driver per Surface, i risultati dell'analisi per gli aggiornamenti dei driver non saranno accurati. Questo comportamento causa la visualizzazione di dati di conformità non corretti nella console di Configuration Manager e nei report di Configuration Manager. Per altre informazioni, vedere [Gestire i driver di Surface con Configuration Manager](../deploy-use/surface-drivers.md).
 
 5. Nella scheda **Prodotti** specificare i prodotti per cui si desidera sincronizzare gli aggiornamenti software e quindi fare clic su **Chiudi**.  
 
@@ -67,13 +67,6 @@ I metadati degli aggiornamenti software vengono recuperati durante il processo d
     > - Le [regole di distribuzione automatica](../deploy-use/automatically-deploy-software-updates.md#bkmk_adr-process) contenenti il prodotto **Windows 10** verranno aggiornate in modo da includere **Windows 10 versione 1903 e successive**.
     > - I [piani di manutenzione](../../osd/deploy-use/manage-windows-as-a-service.md#servicing-plan-workflow) vengono aggiornati in modo che includano il prodotto **Windows 10 versione 1903 e successive**.
 
-## <a name="include-microsoft-surface-drivers-and-firmware-updates"></a><a name="bkmk_Surface"></a> Includere i driver di Microsoft Surface e gli aggiornamenti del firmware
-
-Per sincronizzare i driver di Microsoft Surface, è possibile selezionare la casella di controllo **Includi i driver di Microsoft Surface e gli aggiornamenti del firmware**.<!--1098490--> Tutti i punti di aggiornamento software devono eseguire Windows Server 2016 con installato l'aggiornamento cumulativo [KB4025339](https://support.microsoft.com/help/4025339) o versione successiva per sincronizzare correttamente i driver di Surface. Se si abilita un punto di aggiornamento software in un computer che esegue Windows Server 2012 dopo aver abilitato i driver per Surface, i risultati dell'analisi per gli aggiornamenti dei driver non saranno accurati. Questo comportamento causa la visualizzazione di dati di conformità non corretti nella console di Configuration Manager e nei report di Configuration Manager.  
-
-- Questa funzionalità è stata introdotta per la prima volta nella versione 1706 come [funzionalità di una versione non definitiva](../../core/servers/manage/pre-release-features.md). A partire dalla versione 1710, questa funzionalità non è più in versione non definitiva.  
-- Configuration Manager non abilita questa funzionalità facoltativa per impostazione predefinita. Pertanto sarà necessario abilitarla prima di poterla usare. Per altre informazioni, vedere [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options) (Abilitare le funzioni facoltative dagli aggiornamenti).<!--505213-->  
-- I driver per i dispositivi ARM non sono supportati per la sincronizzazione.
 
 ## <a name="configuring-products-for-versions-of-windows-10"></a>Configurazione dei prodotti per le versioni di Windows 10
 

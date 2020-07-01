@@ -5,17 +5,17 @@ description: Informazioni sui diversi certificati digitali da usare con il gatew
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 04/15/2020
+ms.date: 06/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: 7e9602ef5ea784dd3e97578d5ff585f2ca662c1e
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: b5a9a4a7f23942ac06dc16a0b54b657c7fd617a9
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347203"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715612"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>Certificati per il gateway di gestione cloud
 
@@ -28,7 +28,8 @@ In base allo scenario in cui si gestiscono i client su Internet con il gateway d
   - [Certificato di autenticazione server rilasciato da un provider pubblico](#bkmk_serverauthpublic)  
   - [Certificato di autenticazione server rilasciato da un'infrastruttura a chiave pubblica di tipo Enterprise](#bkmk_serverauthpki)  
 
-- [Certificato di autenticazione client](#bkmk_clientauth)  
+- [Certificato di autenticazione client](#bkmk_clientauth)
+  - [Punto di connessione di CMG](#bkmk_cmgcp)
   - [Certificato radice trusted del client per il gateway di gestione cloud](#bkmk_clientroot)  
 
 - [Abilitare i punti di gestione per HTTPS](#bkmk_mphttps)  
@@ -73,7 +74,7 @@ Questo certificato richiede un nome univoco globale per identificare il servizio
     > [!Important]  
     > Non creare il servizio nel portale, ma usare questo processo solo per verificare la disponibilità del nome.
 
-Se si vuole anche abilitare Cloud Management Gateway per il contenuto, verificare che il nome del servizio CMG sia anche un nome di account di archiviazione di Azure univoco. Se il nome del servizio cloud CMG è univoco ma il nome dell'account di archiviazione non lo è, Configuration Manager non riesce a effettuare il provisioning del servizio in Azure. Ripetere questa procedura nel portale di Azure con le modifiche seguenti:
+Se si abilita anche Cloud Management Gateway per il contenuto, verificare che il nome del servizio CMG sia anche un nome di account di archiviazione di Azure univoco. Se il nome del servizio cloud CMG è univoco ma il nome dell'account di archiviazione non lo è, Configuration Manager non riesce a effettuare il provisioning del servizio in Azure. Ripetere questa procedura nel portale di Azure con le modifiche seguenti:
 
 - Cercare **Account di archiviazione**
 - Testare il nome nel campo **Nome account di archiviazione**
@@ -90,7 +91,7 @@ I client devono considerare attendibile il certificato di autenticazione server 
 
   - È inoltre possibile usare i profili dei certificati di Configuration Manager per eseguire il provisioning dei certificati nei client. Per altre informazioni, vedere l'[introduzione alle raccolte](../../../../protect/deploy-use/introduction-to-certificate-profiles.md).
 
-  - Se si intende [installare il client di Configuration Manager da Intune](../../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client), è anche possibile usare i profili certificato di Intune per eseguire il provisioning dei certificati nei client. Per altre informazioni, vedere [Configurare un profilo di certificato](https://docs.microsoft.com/intune/certificates-configure).
+  - Se si intende [installare il client di Configuration Manager da Intune](../../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client), è anche possibile usare i profili certificato di Intune per eseguire il provisioning dei certificati nei client. Per altre informazioni, vedere [Configurare un profilo di certificato](../../../../../intune/protect/certificates-configure.md).
 
 ### <a name="server-authentication-certificate-issued-by-public-provider"></a><a name="bkmk_serverauthpublic"></a> Certificato di autenticazione server rilasciato da un provider pubblico
 
@@ -129,18 +130,35 @@ Creare un certificato SSL personalizzato per il gateway di gestione cloud identi
 
 ## <a name="client-authentication-certificate"></a><a name="bkmk_clientauth"></a> Certificato di autenticazione client
 
-*Questo certificato è necessario per i client basati su Internet che eseguono Windows 8.1 e i dispositivi Windows 10 che non fanno parte di Azure Active Directory (Azure AD). È necessario anche per il punto di connessione del gateway di gestione cloud. Non è richiesto per i client Windows 10 aggiunti ad Azure AD.*
+Requisiti per il certificato di autenticazione client:
+
+- Questo certificato è necessario per i client basati su Internet che eseguono Windows 8.1 e i dispositivi Windows 10 non aggiunti ad Azure Active Directory (Azure AD).
+- Potrebbe essere necessario per il punto di connessione di CMG. Per altre informazioni, vedere [Punto di connessione di CMG](#bkmk_cmgcp).
+- Non è necessario per i client Windows 10 aggiunti ad Azure AD.
+- Se la versione del sito è 2002 o successiva, i dispositivi possono usare un token rilasciato dal sito. Per altre informazioni, vedere [Autenticazione basata su token per CMG](../../deploy/deploy-clients-cmg-token.md).
 
 I client usano questo certificato per l'autenticazione con il gateway di gestione cloud. I dispositivi Windows 10 ibridi o aggiunti a un dominio cloud non richiedono questo certificato perché usano Azure AD per l'autenticazione.
 
 Eseguire il provisioning del certificato all'esterno del contesto di Configuration Manager. Ad esempio, usare Servizi certificati Active Directory e i criteri di gruppo per rilasciare i certificati di autenticazione client. Per altre informazioni, vedere [Distribuzione del certificato client per computer Windows](../../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_client2008_cm2012).
 
-Per inoltrare le richieste client in modo sicuro, il punto di connessione del gateway di gestione cloud richiede un certificato di autenticazione client che corrisponda al certificato di autenticazione server nel punto di gestione HTTPS. Se i client usano l'autenticazione Azure AD o si configura il punto di gestione per HTTP migliorato, questo certificato non è obbligatorio. Per altre informazioni, vedere [Abilitare i punti di gestione per HTTPS](#bkmk_mphttps).
-
 > [!NOTE]
 > Microsoft consiglia di aggiungere i dispositivi ad Azure AD. I dispositivi basati su Internet possono usare Azure AD per l'autenticazione con Configuration Manager. Sono inoltre supportati scenari di dispositivi e utenti in cui il dispositivo è connesso a Internet o è connesso alla rete interna. Per altre informazioni, vedere [Installare e registrare il client usando l'identità di Azure AD](../../deploy/deploy-clients-cmg-azure.md#install-and-register-the-client-using-azure-ad-identity).
 >
-> A partire dalla versione 2002,<!--5686290--> Configuration Manager estende il supporto per i dispositivi basati su Internet che non si connettono spesso alla rete interna, non possono essere aggiunti ad Azure Active Directory (Azure AD) e non hanno un metodo per installare un certificato emesso da PKI. Per altre informazioni, vedere [Autenticazione basata su token per CMG](../../deploy/deploy-clients-cmg-token.md).
+> A partire dalla versione 2002,<!--5686290--> Configuration Manager estende il supporto per i dispositivi basati su Internet che non si connettono spesso alla rete interna, non possono essere aggiunti ad Azure AD e non hanno un metodo per installare un certificato rilasciato dall'infrastruttura a chiave pubblica. Per altre informazioni, vedere [Autenticazione basata su token per CMG](../../deploy/deploy-clients-cmg-token.md).
+
+### <a name="cmg-connection-point"></a><a name="bkmk_cmgcp"></a> Punto di connessione di CMG
+
+Per inoltrare in modo sicuro le richieste client, il punto di connessione di CMG richiede una connessione sicura con il punto di gestione. A seconda della modalità di configurazione dei dispositivi e dei punti di gestione, si determina la configurazione del punto di connessione di CMG.
+
+- Il punto di gestione è HTTPS
+
+  - I client hanno un certificato di autenticazione client: Il punto di connessione di CMG richiede un certificato di autenticazione client che corrisponda al certificato di autenticazione server nel punto di gestione HTTPS.
+
+  - I client usano l'autenticazione di Azure AD o un token di Configuration Manager: Questo certificato non è necessario.
+
+- Se si configura il punto di gestione per HTTP avanzato: Questo certificato non è necessario.
+
+Per altre informazioni, vedere [Abilitare i punti di gestione per HTTPS](#bkmk_mphttps).
 
 ### <a name="client-trusted-root-certificate-to-cmg"></a><a name="bkmk_clientroot"></a> Certificato radice trusted del client per il gateway di gestione cloud
 
@@ -150,8 +168,8 @@ Usare questo certificato quando si crea il gateway di gestione cloud nella conso
 
 Il gateway di gestione client deve considerare attendibile il certificato di autenticazione del client. Per confermare l'attendibilità, specificare la catena di certificati radice trusted. Assicurarsi di aggiungere tutti i certificati nella catena di certificati. Ad esempio, se il certificato di autenticazione client viene emesso da una CA intermedia, aggiungere sia il certificato della CA intermedia che il certificato della CA radice.
 
-> [!Note]  
-> Quando si crea un CMG, non è più necessario specificare un certificato radice trusted nella pagina Impostazioni. Questo certificato non è obbligatorio se si usa Azure Active Directory (Azure AD) per l'autenticazione client, ma veniva richiesto nella procedura guidata. Se si usano certificati di autenticazione client PKI, è comunque necessario aggiungere un certificato radice trusted al CMG.<!--SCCMDocs-pr issue #2872 SCCMDocs issue #1319-->
+> [!NOTE]  
+> Quando si crea un CMG, non è più necessario specificare un certificato radice trusted nella pagina Impostazioni. Questo certificato non è necessario se si usa Azure AD per l'autenticazione client. Era richiesto nella procedura guidata. Se si usano certificati di autenticazione client PKI, è comunque necessario aggiungere un certificato radice trusted al CMG.<!--SCCMDocs-pr issue #2872 SCCMDocs issue #1319-->
 >
 > Nella versione 1902 e nelle versioni precedenti è possibile aggiungere solo due autorità di certificazione radice attendibili e quattro autorità intermedie (subordinate).
 
@@ -193,7 +211,7 @@ Eseguire il provisioning del certificato all'esterno del contesto di Configurati
 
 Quando si usa l'opzione del sito **Usa i certificati generati da Configuration Manager per sistemi del sito HTTP**, il punto di gestione può essere HTTP. Per altre informazioni, vedere [HTTP migliorato](../../../plan-design/hierarchy/enhanced-http.md).
 
-> [!Tip]  
+> [!TIP]
 > Se non si usa il protocollo HTTP migliorato e l'ambiente include più punti di gestione, non è necessario abilitare HTTPS per tutti i punti per il gateway di gestione cloud. Configurare i punti di gestione abilitati per il gateway di gestione cloud come **Solo Internet**. I client locali non tenteranno di usarli.<!-- SCCMDocs#1676 -->
 
 ### <a name="enhanced-http-certificate-for-management-points"></a>Certificato HTTP migliorato per i punti di gestione
@@ -240,14 +258,14 @@ Configurare un punto di gestione locale con la modalità di connessione client i
 
 - *Gruppo di lavoro*: il dispositivo non è stato aggiunto a un dominio o ad Azure AD, ma ha un [certificato di autenticazione client](#bkmk_clientauth).
 - *Aggiunto a un dominio AD*: il dispositivo viene aggiunto a un dominio di Active Directory locale.
-- *Aggiunto ad Azure AD*: (o aggiunto al dominio cloud) il dispositivo viene aggiunto a un tenant di Azure Active Directory. Per altre informazioni, vedere [Dispositivi aggiunti ad Azure AD](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join).
-- *Aggiunto ad AD ibrido*: il dispositivo viene aggiunto ad Active Directory in locale e registrato con Azure Active Directory. Per altre informazioni, vedere [Dispositivi aggiunti ad Azure AD ibrido](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid).
+- *Aggiunto ad Azure AD*: (o aggiunto al dominio cloud) il dispositivo viene aggiunto a un tenant di Azure AD. Per altre informazioni, vedere [Dispositivi aggiunti ad Azure AD](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join).
+- *Aggiunto ad AD ibrido*: il dispositivo viene aggiunto ad Active Directory locale e registrato con Azure AD. Per altre informazioni, vedere [Dispositivi aggiunti ad Azure AD ibrido](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid).
 - *HTTP*: nelle proprietà del punto di gestione le connessioni client sono impostate su **HTTP**.
 - *HTTPS*: nelle proprietà del punto di gestione le connessioni client sono impostate su **HTTPS**.
-- *E-HTTP*: nella scheda **Comunicazione computer client** delle proprietà del sito configurare le impostazioni di sistema del sito per **HTTPS o HTTP** e abilitare l'opzione **Usa i certificati generati da Configuration Manager per sistemi del sito HTTP**. Si configura il punto di gestione per il protocollo HTTP. Il punto di gestione HTTP è pronto per la comunicazione HTTP e HTTPS (scenari di autenticazione basata su token).
+- *E-HTTP*: nella scheda **Sicurezza delle comunicazioni** delle proprietà del sito configurare le impostazioni di sistema del sito per **HTTPS o HTTP** e abilitare l'opzione **Usa i certificati generati da Configuration Manager per sistemi del sito HTTP**. Si configura il punto di gestione per il protocollo HTTP. Il punto di gestione HTTP è pronto per la comunicazione HTTP e HTTPS (scenari di autenticazione basata su token).
 
     > [!Note]
-    > A partire dalla versione 1906, questa scheda è denominata **Communication Security** (Sicurezza comunicazione).<!-- SCCMDocs#1645 -->
+    > Nella versione 1902 e in quelle precedenti questa scheda è denominata **Comunicazione computer client**.<!-- SCCMDocs#1645 -->
 
 ## <a name="azure-management-certificate"></a><a name="bkmk_azuremgmt"></a> Certificato di gestione di Azure
 

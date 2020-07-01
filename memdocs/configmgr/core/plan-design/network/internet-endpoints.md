@@ -2,7 +2,7 @@
 title: Requisiti per l'accesso a Internet
 titleSuffix: Configuration Manager
 description: Informazioni sugli endpoint Internet a cui consentire l'accesso per usufruire delle funzionalità complete di Configuration Manager.
-ms.date: 04/21/2020
+ms.date: 06/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8423af8d4c743965f627a94a07f587fd97d45bdf
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: fb965ec6547ff1c06586464780b6db224b943000
+ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84454971"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84740770"
 ---
 # <a name="internet-access-requirements"></a>Requisiti per l'accesso a Internet
 
@@ -77,7 +77,8 @@ Per altre informazioni su questa funzione, vedere [Gestire Windows come servizio
 
 Per altre informazioni su questa funzione, vedere [Configurare i servizi di Azure da usare con Configuration Manager](../../servers/deploy/configure/azure-services-wizard.md).
 
-- `management.azure.com`  
+- `management.azure.com` (cloud pubblico di Azure)
+- `management.usgovcloudapi.net` (cloud Azure US Government)
 
 ## <a name="co-management"></a>Co-gestione
 
@@ -110,31 +111,66 @@ Questa sezione illustra le funzionalità seguenti:
 - Integrazione di Azure Active Directory (Azure AD)
 - Individuazione basata su Azure AD
 
-Per la distribuzione dei servizi Cloud Management Gateway/punto di distribuzione cloud, il **punto di connessione del servizio** deve avere accesso a:
+Per altre informazioni su Cloud Management Gateway, vedere [Pianificare il gateway di gestione cloud in Configuration Manager](../../clients/manage/cmg/plan-cloud-management-gateway.md).
 
-- Gli endpoint di Azure specifici sono diversi per ogni ambiente a seconda della configurazione. Configuration Manager archivia gli endpoint nel database del sito. Eseguire una query nella tabella **AzureEnvironments** in SQL Server per un elenco degli endpoint di Azure.  
+Le sezioni seguenti elencano gli endpoint in base al ruolo. Alcuni endpoint fanno riferimento a un servizio tramite `<name>`, ovvero il nome del servizio cloud di CMG o CDP. Ad esempio, se CMG è `GraniteFalls.CloudApp.Net`, l'endpoint di archiviazione effettivo è `GraniteFalls.blob.core.windows.net`.<!-- SCCMDocs#2288 -->
 
-Il **punto di connessione di Cloud Management Gateway** deve avere accesso agli endpoint di servizio seguenti:
+### <a name="service-connection-point"></a>punto di connessione del servizio
+
+Per la distribuzione dei servizi CMG/CDP, il punto di connessione del servizio deve avere accesso a:
+
+- Gli endpoint di Azure specifici sono diversi per ogni ambiente a seconda della configurazione. Configuration Manager archivia gli endpoint nel database del sito. Eseguire una query nella tabella **AzureEnvironments** in SQL Server per un elenco degli endpoint di Azure.
+
+- [Servizi di Azure](#azure-services)
+
+- Per l'individuazione utente Azure AD:
+
+  - Versione 1902 e successive: Endpoint di Microsoft Graph `https://graph.microsoft.com/`
+
+  - Versione 1810 e precedenti: Endpoint di Azure AD Graph `https://graph.windows.net/`  
+
+### <a name="cmg-connection-point"></a>Punto di connessione del gateway di gestione cloud
+
+Il punto di connessione CMG deve avere accesso agli endpoint di servizio seguenti:
+
+- Nome del servizio cloud (per CMG o CDP):
+  - `<name>.cloudapp.net` (cloud pubblico di Azure)
+  - `<name>.usgovcloudapp.net` (cloud Azure US Government)
 
 - Endpoint di gestione dei servizi: `https://management.core.windows.net/`  
 
-- Endpoint di archiviazione: `<name>.blob.core.windows.net` e `<name>.table.core.windows.net`
+- Endpoint di archiviazione (per CMG o CDP abilitato per il contenuto):
+  - `<name>.blob.core.windows.net` (cloud pubblico di Azure)
+  - `<name>.blob.core.usgovcloudapi.net` (cloud Azure US Government)
+<!--  and `<name>.table.core.windows.net` per DC, only used internally -->
 
-    Dove `<name>` è il nome del servizio cloud di CMG o CDP. Ad esempio, se il CMG è `GraniteFalls.CloudApp.Net`, il primo endpoint di archiviazione da consentire è `GraniteFalls.blob.core.windows.net`.<!-- SCCMDocs#2288 -->
+Il sistema del sito del punto di connessione del gateway di gestione cloud supporta l'uso di un proxy Web. Per altre informazioni sulla configurazione di questo ruolo per un proxy, vedere le [informazioni di supporto per server proxy](proxy-server-support.md#configure-the-proxy-for-a-site-system-server). Il punto di connessione di Cloud Management Gateway deve connettersi solo agli endpoint del servizio Cloud Management Gateway. Non ha bisogno dell'accesso ad altri endpoint di Azure.
 
-Per il recupero dei token di Azure AD da parte della **console di Configuration Manager** e del **client**:
+### <a name="configuration-manager-client"></a>Client di Configuration Manager
 
-- ActiveDirectoryEndpoint `https://login.microsoftonline.com/`  
+- Nome del servizio cloud (per CMG o CDP):
+  - `<name>.cloudapp.net` (cloud pubblico di Azure)
+  - `<name>.usgovcloudapp.net` (cloud Azure US Government)
 
-Per l'individuazione utenti di Azure AD, il **punto di connessione del servizio** deve avere accesso a:
+- Endpoint di archiviazione (per CMG o CDP abilitato per il contenuto):
+  - `<name>.blob.core.windows.net` (cloud pubblico di Azure)
+  - `<name>.blob.core.usgovcloudapi.net` (cloud Azure US Government)
 
-- Versione 1810 e precedenti: Endpoint di Azure AD Graph `https://graph.windows.net/`  
+- Per il recupero dei token di Azure AD, l'endpoint di Azure AD:
+  - `login.microsoftonline.com` (cloud pubblico di Azure)
+  - `login.microsoftonline.us` (cloud Azure US Government)
 
-- Versione 1902 e successive: Endpoint di Microsoft Graph `https://graph.microsoft.com/`
+### <a name="configuration-manager-console"></a>Console di Configuration Manager
 
-Il sistema del sito del punto di connessione di Cloud Management Gateway supporta l'uso di un proxy Web. Per altre informazioni sulla configurazione di questo ruolo per un proxy, vedere le [informazioni di supporto per server proxy](proxy-server-support.md#configure-the-proxy-for-a-site-system-server). Il punto di connessione di Cloud Management Gateway deve connettersi solo agli endpoint del servizio Cloud Management Gateway. Non ha bisogno dell'accesso ad altri endpoint di Azure.
+- Per il recupero dei token di Azure AD, l'endpoint di Azure AD:
 
-Per altre informazioni su Cloud Management Gateway, vedere [Pianificare il gateway di gestione cloud in Configuration Manager](../../clients/manage/cmg/plan-cloud-management-gateway.md).
+  - Cloud pubblico di Azure
+    - `login.microsoftonline.com`
+    - `aadcdn.msauth.net`<!-- MEMDocs#351 -->
+    - `aadcdn.msftauth.net`
+
+  - Cloud Azure US Government
+    - `login.microsoftonline.us`
 
 ## <a name="software-updates"></a><a name="bkmk_sum"></a> Aggiornamenti software
 
@@ -204,18 +240,23 @@ I computer con la console di Configuration Manager richiedono l'accesso agli end
 
 Per altre informazioni su questa funzionalità, vedere [Commenti e suggerimenti sul prodotto](../../understand/find-help.md#product-feedback).
 
-### <a name="community-workspace-documentation-node"></a>Area di lavoro Community, nodo Documentazione
+### <a name="community-workspace"></a>Area di lavoro della community
+
+#### <a name="documentation-node"></a>Nodo di documentazione
+
+Per altre informazioni su questo nodo della console, vedere [Uso della console di Configuration Manager](../../servers/manage/admin-console.md).
 
 - `https://aka.ms`
 
 - `https://raw.githubusercontent.com`
 
-Per altre informazioni su questo nodo della console, vedere [Uso della console di Configuration Manager](../../servers/manage/admin-console.md).
+#### <a name="community-hub"></a>Hub della community
 
-<!-- 
-Community Hub
-when in current branch, get details from SCCMDocs-pr #3403 
- -->
+Per altre informazioni su questa funzionalità, vedere l'[hub della community](../../servers/manage/community-hub.md).
+
+- `https://github.com`
+
+- `https://communityhub.microsoft.com`
 
 ### <a name="monitoring-workspace-site-hierarchy-node"></a>Area di lavoro Monitoraggio, nodo Gerarchia siti
 

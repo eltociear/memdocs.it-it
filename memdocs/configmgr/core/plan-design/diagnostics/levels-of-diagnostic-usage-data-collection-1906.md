@@ -10,12 +10,12 @@ ms.assetid: 370fc61f-2d8a-45b4-adc7-7b5d5ede2bf4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ae606018baf159fe753645a380593506773c7a39
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 35432fe7805c2a301eb8b101c194dad738f8ab6d
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703859"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84505908"
 ---
 # <a name="diagnostic-and-usage-data-for-version-1906"></a>Dati di diagnostica e utilizzo per la versione 1906
 
@@ -316,7 +316,7 @@ Per Configuration Manager versione 1906, questo livello include i dati seguenti:
 
 - Criteri di Windows Hello for Business (creati, distribuiti)  
 
-- Numero di criteri del browser Microsoft Edge distribuiti  
+- Numero di criteri del browser distribuiti della versione legacy di Microsoft Edge  
 
 - Numero di criteri OneDrive (creati, distribuiti)
 

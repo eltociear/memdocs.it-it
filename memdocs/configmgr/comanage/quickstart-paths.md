@@ -10,12 +10,12 @@ ms.assetid: 5beb5564-2fdf-4f0a-8801-d0cec8214c43
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 27994107c32fac87a465240f07b68d57fddfc140
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: d481976a6c86da67670871690ba16985a67c80d8
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983817"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746460"
 ---
 # <a name="paths-to-co-management"></a>Percorsi per la co-gestione
 
@@ -60,6 +60,5 @@ Prerequisiti per la configurazione:
 3. [Configurare il punto di gestione e i client per usare Cloud Management Gateway](../core/clients/manage/cmg/setup-cloud-management-gateway.md)  
 4. [Usare Intune per distribuire il client di Configuration Manager](how-to-prepare-Win10.md)  
 
-> [!Note]  
-> Un'esercitazione per questo percorso sarà presto disponibile.
+Per un'esercitazione dedicata a questo percorso, vedere [Esercitazione: Abilitare la co-gestione per nuovi dispositivi basati su Internet](tutorial-co-manage-new-devices.md).
 

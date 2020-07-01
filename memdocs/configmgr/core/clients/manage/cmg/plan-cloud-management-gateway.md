@@ -2,7 +2,7 @@
 title: Pianificare il gateway di gestione cloud
 titleSuffix: Configuration Manager
 description: Pianificare e progettare il gateway di gestione di cloud (CMG) per semplificare la gestione dei client basati su Internet.
-ms.date: 04/21/2020
+ms.date: 06/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 67b6fc51493dce4ee1718586cbf454da91883409
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 136e11f97849e5fd8a27d9f83ea1bd44791c492e
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254623"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715646"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Pianificare il gateway di gestione cloud in Configuration Manager
 
@@ -85,9 +85,12 @@ La distribuzione e l'utilizzo del gateway di gestione cloud includono i componen
 
 - Il ruolo del sistema del sito del [**punto di connessione del servizio**](../../../servers/deploy/configure/about-the-service-connection-point.md) esegue il componente di gestione del servizio cloud che gestisce tutte le attività di distribuzione del gateway di gestione cloud. Esegue inoltre il monitoraggio e l'invio di informazioni sull'integrità del servizio e di registrazione da Azure AD. Verificare che il punto di connessione del servizio sia in [modalità online](../../../servers/deploy/configure/about-the-service-connection-point.md#bkmk_modes).  
 
-- Il ruolo del sistema del sito del **punto di gestione** risponde alle richieste del client normalmente.  
+- Il ruolo del sistema del sito del **punto di gestione** risponde alle richieste del client normalmente.
 
-- Il ruolo del sistema del sito del **punto di aggiornamento software** risponde alle richieste del client normalmente.  
+- Il ruolo del sistema del sito del **punto di aggiornamento software** risponde alle richieste del client normalmente.
+
+    > [!NOTE]
+    > Le linee guida per il ridimensionamento dei punti di gestione e dei punti di aggiornamento software sono le stesse per i punti che gestiscono sia richieste client basate su Intenet che locali. Per altre informazioni, vedere [Numeri di ridimensionamento e scalabilità](../../../plan-design/configs/size-and-scale-numbers.md#management-point).
 
 - I **client basati su Internet** si connettono al gateway di gestione cloud per accedere ai componenti di Configuration Manager locali.
 
@@ -151,15 +154,33 @@ Quando effettuano il roaming in Internet, i client comunicano con CMG nell'area 
 > [!TIP]
 > Non è necessario distribuire più gateway di gestione cloud ai fini della georilevazione. Il client Configuration Manager non è in genere influenzato dalla latenza minima che può verificarsi con il servizio cloud, anche se geograficamente distante.
 
+### <a name="test-environments"></a>Ambienti di test
+<!-- SCCMDocs#1225 -->
+Molte organizzazioni hanno ambienti separati per la produzione, il test, lo sviluppo o il controllo di qualità. Durante la pianificazione della distribuzione di CMG, considerare le domande seguenti:
+
+- Quanti tenant di Azure AD ha l'organizzazione?
+  - Esiste un tenant separato per il test?
+  - Le identità di utenti e dispositivi si trovano nello stesso tenant?
+
+- Quante sottoscrizioni sono presenti in ogni tenant?
+  - Sono presenti sottoscrizioni specifiche per il test?
+
+Il servizio Azure di Configuration Manager per **Cloud Management**  supporta più tenant. Più siti di Configuration Manager possono connettersi allo stesso tenant. Un singolo sito può distribuire più servizi CMG in sottoscrizioni diverse. Più siti possono distribuire i servizi CMG nella stessa sottoscrizione. Configuration Manager offre flessibilità a seconda dell'ambiente e dei requisiti aziendali.
+
+Per altre informazioni, vedere le seguenti domande frequenti: [Gli account utente devono trovarsi nello stesso tenant di Azure AD in cui si trova il tenant associato alla sottoscrizione che ospita il servizio cloud CMG?](cloud-management-gateway-faq.md#bkmk_tenant)
+
 ## <a name="requirements"></a>Requisiti
 
 - Una **sottoscrizione di Azure** per l'hosting del gateway di gestione cloud.
+
+    > [!IMPORTANT]
+    > Cloud Management Gateway non supporta le sottoscrizioni con un provider di servizi cloud di Azure.<!-- MEMDocs#320 -->
 
 - L'account utente deve essere un **amministratore completo** o un **amministratore dell'infrastruttura** in Configuration Manager.<!-- SCCMDocs#2146 -->
 
 - Un **amministratore di Azure** deve partecipare alla creazione iniziale di alcuni componenti, a seconda della progettazione. Questo utente tipo può corrispondere all'amministratore di Configuration Manager o essere separato. Se separato, non necessita di autorizzazioni in Configuration Manager.
 
-  - Per distribuire Cloud Management Gateway è necessario un **amministratore della sottoscrizione**
+  - Per distribuire Cloud Management Gateway è necessario un **proprietario della sottoscrizione**
   - Per integrare il sito con Azure AD per distribuire Cloud Management Gateway tramite Azure Resource Manager è necessario un **amministratore globale**
 
 - Almeno un server Windows locale per l'hosting del **punto di connessione del gateway di gestione cloud**. È possibile condividere il percorso di questo ruolo con altri ruoli del sistema del sito di Configuration Manager.  
@@ -193,7 +214,7 @@ Quando effettuano il roaming in Internet, i client comunicano con CMG nell'area 
 
 - I punti di aggiornamento software che usano un bilanciamento del carico di rete non funzionano con il gateway di gestione cloud. <!--505311-->  
 
-- Le distribuzioni del gateway di gestione cloud che usano il modello Azure Resource Manager non abilitano il supporto dei provider di servizi cloud di Azure. La distribuzione del gateway di gestione cloud con Azure Resource Manager continua infatti a usare il servizio cloud classico, non supportato dal provider di servizi cloud. Per altre informazioni, vedere [Available Azure services in Azure CSP](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services) (Servizi di Azure disponibili in Azure CSP).  
+- Le distribuzioni del gateway di gestione cloud che usano il modello Azure Resource Manager non abilitano il supporto dei provider di servizi cloud di Azure. La distribuzione del gateway di gestione cloud con Azure Resource Manager continua infatti a usare il servizio cloud classico, non supportato dal provider di servizi cloud. Per altre informazioni, vedere [Servizi di Azure disponibili nel programma Azure Cloud Solution Provider](https://docs.microsoft.com/partner-center/azure-plan-available).
 
 ### <a name="support-for-configuration-manager-features"></a>Supporto delle funzionalità di Configuration Manager
 
@@ -333,6 +354,9 @@ Il diagramma seguente rappresenta un flusso di dati concettuale di base per il g
 
 3. Il client si connette al gateway di gestione cloud sulla porta HTTPS 443. Esegue l'autenticazione usando Azure AD o il certificato di autenticazione del client.  
 
+    > [!NOTE]
+    > Se si abilita il servizio CMG per gestire il contenuto o usare un punto di distribuzione cloud, il client si connette direttamente all'archivio BLOB di Azure tramite la porta HTTPS 443. Per altre informazioni, vedere [Usare un punto di distribuzione basato sul cloud](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md#bkmk_dataflow).<!-- SCCMDocs#2332 -->
+
 4. Il gateway di gestione cloud inoltra la comunicazione client tramite la connessione esistente al punto di connessione del gateway di gestione cloud locale. Non è necessario aprire alcuna porta del firewall in entrata.  
 
 5. Il punto di connessione del gateway di gestione cloud inoltra la comunicazione client al punto di gestione locale e al punto di aggiornamento software.  
@@ -350,6 +374,7 @@ La tabella seguente elenca le porte e i protocolli di rete richiesti. Il *client
 | Punto di connessione del gateway di gestione cloud | HTTPS | 443 | Servizio Cloud Management Gateway | Protocollo di fallback per la creazione del canale CMG in una sola istanza di macchina virtuale <sup>[Nota 2](#bkmk_port-note2)</sup> |
 | Punto di connessione del gateway di gestione cloud | HTTPS | 10124-10139 | Servizio Cloud Management Gateway | Protocollo di fallback per la creazione del canale CMG in due o più istanze di macchina virtuale <sup>[Nota 3](#bkmk_port-note3)</sup> |
 | Client | HTTPS | 443 | Gateway di gestione cloud | Comunicazione client generale |
+| Client | HTTPS | 443 | Archiviazione BLOB | Download del contenuto basato sul cloud |
 | Punto di connessione del gateway di gestione cloud | HTTPS o HTTP | 443 o 80 | Punto di gestione | Traffico locale, la porta dipende dalla configurazione del punto di gestione |
 | Punto di connessione del gateway di gestione cloud | HTTPS o HTTP | 443 o 80 | Punto di aggiornamento software | Traffico locale, la porta dipende dalla configurazione del punto di aggiornamento software |
 

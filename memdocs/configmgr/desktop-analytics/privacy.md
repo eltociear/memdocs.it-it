@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 82c8495391dcc22aa2784657bc1461887e412577
-ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
+ms.openlocfilehash: 34005a63b372198bbc2e3079f8ab560ef6b2b791
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84223656"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795636"
 ---
 # <a name="desktop-analytics-data-privacy"></a>Privacy dei dati di Desktop Analytics
 
@@ -57,6 +57,8 @@ La figura seguente illustra il flusso dei dati di diagnostica da singoli disposi
 
 3. I dispositivi inviano i dati di diagnostica al servizio di gestione dati di diagnostica di Microsoft per Windows. Tutti i dati di diagnostica sono crittografati tramite HTTPS e usano l'associazione del certificato durante il trasferimento dal dispositivo a questo servizio. Il servizio Gestione dati Microsoft è ospitato negli Stati Uniti.
 
+      - Gli errori dell'applicazione, gli errori del kernel, le applicazioni che non rispondono e altri problemi specifici dell'applicazione usano l'API Segnalazione errori Windows per inviare segnalazioni di problemi specifici dell'applicazione a Microsoft. Vedere [Uso di WER](https://docs.microsoft.com/windows/win32/wer/using-wer) per dettagli specifici su questo flusso di dati.
+      
 4. Ogni giorno, Microsoft crea uno snapshot delle informazioni dettagliate incentrate sull'IT. Questo snapshot combina i dati di diagnostica di Windows con l'input per i dispositivi registrati. Questo processo avviene nell'archiviazione temporanea, che viene usata solo da Desktop Analytics. L'archiviazione temporanea è ospitata nei data center di Microsoft negli Stati Uniti. Tutti i dati vengono inviati tramite un canale crittografato SSL (HTTPS). Gli snapshot vengono separati in base all'ID commerciale.  
 
 5. Vengono quindi copiati nell'area di lavoro di Azure Log Analytics. Questo trasferimento dei dati avviene tramite HTTPS tramite il protocollo di inserimento del webhook, che è una funzionalità di Log Analytics. Desktop Analytics non ha autorizzazioni di lettura o scrittura per lo spazio di archiviazione di Log Analytics. Desktop Analytics chiama l'API webhook con un URI di firma di accesso condiviso (SAS). Log Analytics ottiene quindi i dati dalle tabelle di archiviazione tramite HTTPS.
@@ -78,6 +80,8 @@ Per altre informazioni sugli aspetti correlati alla privacy, vedere gli articoli
 - [Campi ed eventi di diagnostica Windows livello base per Windows 10, versione 1809](https://docs.microsoft.com/windows/privacy/basic-level-windows-diagnostic-events-and-fields-1809)  
 
 - [Campi ed eventi di dati di diagnostica avanzati di Windows 10, versione 1709 usati da Desktop Analytics](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)  
+
+- [Segnalazione errori di installazione Windows](https://docs.microsoft.com/windows/deployment/upgrade/windows-error-reporting)
 
 - [Panoramica del visualizzatore dati di diagnostica](https://docs.microsoft.com/windows/privacy/diagnostic-data-viewer-overview)  
 

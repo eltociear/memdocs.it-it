@@ -10,12 +10,12 @@ ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8d87b2cde9a9fadb7326939b7fe473ba2a757e91
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 6ad36978f3f3dc5207068a65d76bf8f5c7c3078c
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430125"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383241"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>Creare una sequenza di attività per aggiornare un sistema operativo in Configuration Manager
 
@@ -222,8 +222,10 @@ Uno di questi strumenti è [SetupDiag](https://docs.microsoft.com/windows/deploy
 - In Configuration Manager [creare un pacchetto](../../apps/deploy-use/packages-and-programs.md#create-a-package-and-program) per lo strumento.  
 
 - Aggiungere un passaggio [Esegui riga di comando](../understand/task-sequence-steps.md#BKMK_RunCommandLine) a questo gruppo della sequenza di attività. Usare l'opzione **Pacchetto** per fare riferimento allo strumento. La stringa seguente è un esempio di **Riga di comando**:  
-    `SetupDiag.exe /Output:"%_SMSTSLogPath%\SetupDiagResults.log" /Mode:Online`  
+    `SetupDiag.exe /Output:"%_SMSTSLogPath%\SetupDiagResults.log"`  
 
+> [!TIP]
+> Usare sempre la versione più recente di SetupDiag per avere a disposizione le funzionalità più recenti e le correzioni ai problemi noti. Per altre informazioni, vedere [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag).
 
 ## <a name="additional-recommendations"></a>Suggerimenti aggiuntivi
 

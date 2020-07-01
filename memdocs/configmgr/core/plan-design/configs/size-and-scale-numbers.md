@@ -10,12 +10,12 @@ ms.assetid: c5a42100-2f60-4952-b495-918025ea6559
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 0861bb73769beb6c7595b896afc8d0e156eef94d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 5109ababd00011784618f9c989e1d2b756a322d9
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688619"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715629"
 ---
 # <a name="size-and-scale-numbers-for-configuration-manager"></a>Numeri di ridimensionamento e scalabilità per Configuration Manager
 
@@ -136,6 +136,9 @@ Per altre informazioni, vedere [Prestazioni e scalabilità](../../clients/manage
 
 Per informazioni sul numero di client e dispositivi che un punto di gestione può supportare, vedere la sezione [Punti di gestione](#bkmk_mp).  
 
+> [!NOTE]
+> Se si abilita il punto di gestione per il supporto di un [gateway di gestione cloud](../../clients/manage/cmg/plan-cloud-management-gateway.md), il punto di gestione esegue normalmente le richieste client basate su Internet. Le linee guida per il ridimensionamento di un punto di gestione sono le stesse per i punti che gestiscono sia richieste client basate su Intenet che locali.
+
 ### <a name="software-update-point"></a>Punto di aggiornamento software  
 
 Usare come baseline i seguenti elementi consigliati. Questa baseline consente di determinare le informazioni relative alla pianificazione della capacità degli aggiornamenti software appropriate per la propria organizzazione. I requisiti di capacità effettivi potrebbero differire dagli elementi consigliati in questo articolo in base ai seguenti criteri:
@@ -144,6 +147,9 @@ Usare come baseline i seguenti elementi consigliati. Questa baseline consente di
 - L'hardware usato per ospitare il sistema del sito del punto di aggiornamento software
 - Il numero di client gestiti
 - Gli altri ruoli del sistema del sito installati nel server  
+
+> [!NOTE]
+> Se si abilita il punto di aggiornamento software per il supporto di un [gateway di gestione cloud](../../clients/manage/cmg/plan-cloud-management-gateway.md), il punto di gestione esegue normalmente le richieste client basate su Internet. Le linee guida per il ridimensionamento di un punto di aggiornamento software sono le stesse per i punti che gestiscono sia richieste client basate su Intenet che locali.
 
 #### <a name="capacity-planning-for-the-software-update-point"></a><a name="BKMK_SUMCapacity"></a> Pianificazione della capacità per il punto di aggiornamento software  
 

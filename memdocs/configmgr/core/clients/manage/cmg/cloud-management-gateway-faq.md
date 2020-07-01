@@ -5,17 +5,17 @@ description: Questo articolo contiene le risposte alle domande frequenti sul gat
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 07/05/2019
+ms.date: 06/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 4c1a128d-22fb-49f1-8e0b-36513a8dc117
-ms.openlocfilehash: 2bd3824df18ecdf426720a99db8720ef4b678733
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: bd846b0155a0baddad76d6027ffbd239d7dbf26f
+ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694929"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84721891"
 ---
 # <a name="frequently-asked-questions-about-the-cloud-management-gateway"></a>Domande frequenti sul gateway di gestione cloud
 
@@ -23,13 +23,11 @@ ms.locfileid: "81694929"
 
 Questo articolo contiene le risposte alle domande frequenti sul gateway di gestione cloud. Per altre informazioni, vedere [Pianificare il gateway di gestione cloud](plan-cloud-management-gateway.md).
 
-
 ## <a name="frequently-asked-questions"></a>Domande frequenti
 
 ### <a name="what-certificates-do-i-need"></a>Quali certificati sono necessari?
 
 Per informazioni più dettagliate, vedere [Pianificare il gateway di gestione cloud](certificates-for-cloud-management-gateway.md).
-
 
 ### <a name="do-i-need-azure-expressroute"></a>È necessario Microsoft Azure ExpressRoute?
 
@@ -41,30 +39,42 @@ No. [Microsoft Azure ExpressRoute](/azure/expressroute/expressroute-introduction
 
 Non è necessaria alcuna manutenzione. La progettazione del gateway di gestione cloud usa una piattaforma come servizio (PaaS) di Azure. Tramite la sottoscrizione offerta dall'utente, Configuration Manager crea le macchine virtuali (VM), le risorse di archiviazione e la rete necessari. Azure protegge e aggiorna la macchina virtuale. Queste macchine virtuali non fanno parte dell'ambiente locale, come accade con l'infrastruttura come servizio (IaaS). Il gateway di gestione cloud è un PaaS che estende l'ambiente di Configuration Manager nel cloud. Per altre informazioni, vedere [Protezione delle distribuzioni PaaS](/azure/security/security-paas-deployments).
 
-
 ### <a name="how-can-i-ensure-service-continuity-during-service-updates"></a>Come è possibile garantire la continuità del servizio durante gli aggiornamenti del servizio?
 
 Grazie alla scalabilità di Cloud Management Gateway che permette di includere due o più istanze, è possibile usare automaticamente i domini di aggiornamento in Azure. Vedere [Come aggiornare un servizio cloud](/azure/cloud-services/cloud-services-update-azure-service).
-
 
 ### <a name="im-already-using-ibcm-if-i-add-cmg-how-do-clients-behave"></a>Sto già usando IBCM. Se aggiungo Cloud Management Gateway, come si comportano i client?
 
 Se è già stata distribuita la [gestione client basata su Internet](../plan-internet-based-client-management.md) (IBCM), è possibile anche distribuire il gateway di gestione cloud. I client ricevono criteri per entrambi i servizi. Quando effettuano il roaming su Internet, essi selezionano in modo casuale e usano uno di questi servizi basati su Internet.
 
-
-### <a name="do-the-user-accounts-have-to-be-in-the-same-azure-ad-tenant-as-the-tenant-associated-with-the-subscription-that-hosts-the-cmg-cloud-service"></a>Gli account utente devono trovarsi nello stesso tenant di Azure AD in cui si trova il tenant associato alla sottoscrizione che ospita il servizio cloud CMG?
+### <a name="do-the-user-accounts-have-to-be-in-the-same-azure-ad-tenant-as-the-tenant-associated-with-the-subscription-that-hosts-the-cmg-cloud-service"></a><a name="bkmk_tenant"></a> Gli account utente devono trovarsi nello stesso tenant di Azure AD in cui si trova il tenant associato alla sottoscrizione che ospita il servizio cloud di Cloud Management Gateway?
 <!--SCCMDocs-pr issue #2873-->
-Se l'ambiente ha più di una sottoscrizione, è possibile distribuire CMG in qualsiasi sottoscrizione in grado di ospitare i servizi cloud di Azure. 
+No, è possibile distribuire Cloud Management Gateway in qualsiasi sottoscrizione che può ospitare i servizi cloud di Azure.
+
+Spiegazione dei termini:
+
+- Il _tenant_ è la directory degli account utente e delle registrazioni app. Un tenant può disporre di più sottoscrizioni.
+- Una _sottoscrizione_ distingue fatturazione, risorse e servizi. È associata un singolo tenant.
 
 Questa domanda è comune negli scenari seguenti:  
 
-- Quando si usano ambienti di test e produzione distinti per Active Directory e Azure AD, ma un'unica sottoscrizione di hosting centralizzata di Azure  
+- Quando si usano ambienti di test e produzione distinti per Active Directory e Azure AD, ma un'unica sottoscrizione di hosting centralizzata di Azure.
 
-- L'uso di Azure è cresciuto organicamente in team diversi  
+- L'uso di Azure è cresciuto organicamente in team diversi
 
 Quando si usa una distribuzione di Resource Manager, eseguire l'onboarding del tenant di Azure AD associato alla sottoscrizione. Questa connessione consente a Configuration Manager di eseguire l'autenticazione ad Azure per creare, distribuire e gestire il CMG.  
 
 Se si usa l'autenticazione di Azure AD per gli utenti e i dispositivi gestiti con il CMG, eseguire l'onboarding del tenant di Azure AD. Per altre informazioni sui servizi di Azure per la gestione cloud, vedere [Configurare i servizi di Azure](../../../servers/deploy/configure/azure-services-wizard.md). Quando si carica ogni tenant di Azure AD, un singolo CMG può specificare l'autenticazione di Azure AD per più tenant, indipendentemente dalla posizione di hosting.
+
+#### <a name="example-1-one-tenant-with-multiple-subscriptions"></a>Esempio 1: Un tenant con più sottoscrizioni
+
+Le identità utente, le registrazioni dispositivo e le registrazioni app si trovano tutte nello stesso tenant. È possibile scegliere la sottoscrizione usata da CMG. È possibile distribuire più servizi CMG da un sito in sottoscrizioni separate. Il sito ha una relazione uno-a-uno con il tenant. Decidere quali sottoscrizioni usare per motivi diversi, ad esempio fatturazione o separazione logica.
+
+#### <a name="example-2-multiple-tenants"></a>Esempio 2: Più tenant
+
+In altre parole, l'ambiente ha più di un'istanza di Azure AD. Per supportare le identità di utenti e dispositivi in entrambi i tenant, è necessario collegare il sito a ogni tenant. Questo processo richiede un account amministrativo in ogni tenant per creare le registrazioni app in tale tenant. Un sito può quindi ospitare i servizi CMG in più tenant. È possibile creare un'istanza di Cloud Management Gateway in qualsiasi sottoscrizione disponibile in uno dei tenant. I dispositivi aggiunti ad Azure AD o ad Azure AD ibrido possono usare Cloud Management Gateway.
+
+Se le identità di utenti e dispositivi si trovano in un tenant, ma la sottoscrizione di Cloud Management Gateway è in un altro tenant, collegare il sito a entrambi i tenant. Tecnicamente, l'app client non è necessaria per il secondo tenant che ospita solo il servizio CMG. L'app client offre solo l'autenticazione di utenti e dispositivi per i client che usano il servizio CMG.<!-- SCCMDocs#1902 -->
 
 ### <a name="how-does-cmg-affect-my-clients-connected-via-vpn"></a>Come influisce CMG sui client connessi tramite VPN?
 

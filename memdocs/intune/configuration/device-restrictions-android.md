@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02e07ec75b7c0d07a81a9c6f555cf119310a9a9f
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 62348a4e551112a93f960388d6e21b398c447dfc
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093682"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502375"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Elenchi delle impostazioni per le limitazioni dei dispositivi Android e Samsung Knox Standard in Intune
 
@@ -178,7 +178,7 @@ Per ogni impostazione, aggiungere le app:
 
 Le impostazioni della modalità tutto schermo si applicano solo ai dispositivi Samsung Knox Standard e solo alle app gestite con Intune.
 
-- Aggiungere le app che si vuole eseguire quando il dispositivo è in modalità tutto schermo. In modalità tutto schermo possono essere eseguite solo le app aggiunte. Le app non aggiunte non vengono eseguite. I browser preinstallati non vengono eseguiti come app quando il dispositivo è in modalità tutto schermo. Se è richiesto un browser, è consigliabile usare [Managed Browser](../apps/app-configuration-managed-browser.md).
+- Aggiungere le app che si vuole eseguire quando il dispositivo è in modalità tutto schermo. In modalità tutto schermo possono essere eseguite solo le app aggiunte. Le app non aggiunte non vengono eseguite. I browser preinstallati non vengono eseguiti come app quando il dispositivo è in modalità tutto schermo. Se è richiesto un browser, è consigliabile usare [Managed Browser](../apps/manage-microsoft-edge.md).
 
   Opzioni per le app:
 

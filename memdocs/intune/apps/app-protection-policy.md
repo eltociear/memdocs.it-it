@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 68e337f6315fc6d198e27c494b7689bb1cb9bc97
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 28401c314d70f1d810fe12e815d8558afc8aab89
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989621"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502596"
 ---
 # <a name="app-protection-policies-overview"></a>Panoramica dei criteri di protezione app
 
@@ -312,7 +312,7 @@ Se l'utente sta usando l'app quando viene avviata la cancellazione selettiva, [I
 La protezione delle app di Intune dipende dalla coerenza dell'identità dell'utente tra l'applicazione e [Intune SDK](../developer/app-sdk.md). L'unico modo per garantire questo scenario è tramite l'autenticazione moderna. Esistono scenari in cui le app possono funzionare con una configurazione locale, ma non sono garantiti, né coerenti.
 
 **Modo sicuro per aprire i collegamenti Web da app gestite**<br>
-L'amministratore IT può distribuire e impostare i criteri di protezione delle app per [Microsoft Edge](app-configuration-managed-browser.md), un Web browser che può essere facilmente gestito con Intune. L'amministratore IT può richiedere che tutti i collegamenti Web nelle app gestite da Intune vengano aperti tramite l'app Managed Browser.
+L'amministratore IT può distribuire e impostare i criteri di protezione delle app per [Microsoft Edge](manage-microsoft-edge.md), un Web browser che può essere facilmente gestito con Intune. L'amministratore IT può richiedere che tutti i collegamenti Web nelle app gestite da Intune vengano aperti tramite l'app Managed Browser.
 
 ## <a name="app-protection-experience-for-ios-devices"></a>Esperienza di protezione delle app per dispositivi iOS
 

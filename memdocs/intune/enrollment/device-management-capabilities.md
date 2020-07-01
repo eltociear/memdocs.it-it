@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de83a021343b733816330bc9be94c57a57afd9f1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 43d412fda772fd36710895496087e97d782b8dba
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989833"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502630"
 ---
 # <a name="enrolled-device-management-capabilities-of-microsoft-intune"></a>Funzionalità di gestione dei dispositivi registrati di Microsoft Intune
 
@@ -55,7 +55,7 @@ Gli utenti ottengono l'accesso al portale aziendale da cui possono installare le
 |Gestione per applicazioni mobili|Configura limitazioni per le applicazioni mediante la gestione di applicazioni mobili sia per i dispositivi gestiti con Intune sia per quelli non gestiti con Intune. È possibile aumentare la sicurezza dei dati aziendali grazie alla limitazione delle operazioni di copia/incolla, backup esterno dei dati e trasferimento dei dati tra le app.|[Configurare e distribuire criteri di gestione delle applicazioni mobili nella console di Microsoft Intune](../developer/app-wrapper-prepare-android.md)|
 |Configurazione delle app mobili iOS|Usa i criteri di configurazione delle app per dispositivi mobili per specificare impostazioni per app iOS/iPadOS che possono essere necessarie quando l'utente esegue l'app. Ad esempio, un'app può richiedere all'utente di specificare un numero di porta o informazioni di accesso. È possibile semplificare la configurazione dell'app e ridurre il numero di chiamate all'help desk.|[Configurare le app iOS/iPadOS con i criteri di configurazione delle app per dispositivi mobili in Microsoft Intune](../apps/app-configuration-policies-use-ios.md)|
 |Profili di provisioning delle app per dispositivi mobili iOS/iPadOS|Consente di distribuire profili di provisioning ad app iOS/iPadOS prossime alla scadenza. |[Usare i criteri del profilo di provisioning per dispositivi mobili iOS/iPadOS per evitare che le app scadano](../apps/app-provisioning-profile-ios.md)|
-|Managed Browser|Configura i criteri di Managed Browser per controllare i siti Web che gli utenti possono visitare. Inoltre, è possibile applicare i criteri di gestione delle applicazioni mobili a Managed Browser.|[Gestire l'accesso a Internet usando criteri di Managed Browser con Microsoft Intune](../apps/app-configuration-managed-browser.md)|
+|Managed Browser|Configura i criteri di Managed Browser per controllare i siti Web che gli utenti possono visitare. Inoltre, è possibile applicare i criteri di gestione delle applicazioni mobili a Managed Browser.|[Gestire l'accesso a Internet usando criteri di Managed Browser con Microsoft Intune](../apps/manage-microsoft-edge.md)|
 |Windows Hello for Business|Consente di eseguire l'integrazione con Windows Hello for Business, un metodo di accesso alternativo per Windows 10 che usa un'istanza locale di Active Directory o Azure Active Directory per sostituire password, smart card o smart card virtuali.|[Controllare le impostazioni di Windows Hello for Business nei dispositivi con Microsoft Intune](../protect/windows-hello.md)|
 |App acquistate con Volume Purchase Program|Semplifica la gestione delle app acquistate con Volume Purchase Program importando le informazioni di licenza dall'App Store, verificando il numero di licenze usate e impedendo l'installazione di più copie dell'app rispetto a quelle possedute.|[Gestire le app acquistate con Volume Purchase Program con Microsoft Intune](../apps/vpp-apps.md)|
 

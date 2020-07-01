@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: b988e4ddeb306c7da290c87e8a32fa0571627257
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: a8eeb8263e337fa7427818c05f183fdea3c9dbea
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431670"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353633"
 ---
 # <a name="disk-encryption-policy-for-endpoint-security-in-intune"></a>Criteri di crittografia del disco per la sicurezza degli endpoint in Intune
 
@@ -64,5 +64,5 @@ Dopo aver distribuito i criteri per crittografare un disco del dispositivo, vede
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- [Per creare un profilo FileVault](../protect/encrypt-devices-filevault.md#create-an-endpoint-security-policy-for-filevault)
+- [Per creare un profilo FileVault](../protect/encrypt-devices-filevault.md#create-endpoint-security-policy-for-filevault)
 - [Per creare un profilo BitLocker](../protect/encrypt-devices.md#create-an-endpoint-security-policy-for-bitlocker)

@@ -9,12 +9,12 @@ ms.assetid: 7610bbd3-a67f-4a09-8115-e35d40d43b42
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 720b5060c913ff3157624c4b6060802af396d221
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2c733ef03482ddfc1f3e6502d7f5fe8ae0d20b76
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706129"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590508"
 ---
 # <a name="planning-for-endpoint-protection-in-configuration-manager"></a>Pianificazione per Endpoint Protection in Configuration Manager
 
@@ -81,7 +81,7 @@ Endpoint Protection in Configuration Manager consente di creare criteri antimalw
 
 ## <a name="microsoft-defender-advanced-threat-protection"></a>Microsoft Defender Advanced Threat Protection
 
-A partire dalla versione 1606 di Configuration Manager (Current Branch), Endpoint Protection consente di gestire e monitorare Microsoft Defender Advanced Threat Protection (ATP), noto in precedenza come Windows Defender ATP. Microsoft Defender ATP è un servizio che consente alle aziende di rilevare, analizzare e rispondere agli attacchi avanzati sulle reti. Vedere [Microsoft Defender Advanced Threat Protection](../deploy-use/windows-defender-advanced-threat-protection.md).
+A partire dalla versione 1606 di Configuration Manager (Current Branch), Endpoint Protection consente di gestire e monitorare Microsoft Defender Advanced Threat Protection (ATP), noto in precedenza come Windows Defender ATP. Microsoft Defender ATP è un servizio che consente alle aziende di rilevare, analizzare e rispondere agli attacchi avanzati sulle reti. Vedere [Microsoft Defender Advanced Threat Protection](../deploy-use/defender-advanced-threat-protection.md).
 
 ## <a name="endpoint-protection-workflow"></a>Flusso di lavoro di Endpoint Protection  
  Vedere il diagramma seguente per capire il flusso di lavoro per l'implementazione di Endpoint Protection nella gerarchia di Configuration Manager.  

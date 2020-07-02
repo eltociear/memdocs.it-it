@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 4298a6a66d60d79d05f8b5cdc9ff8caa0e7f4426
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 070c616ed8411bcd90b2d3edb12b04edd57241e1
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074028"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590474"
 ---
 # <a name="what39s-new-in-version-1606-of-configuration-manager"></a>Novità della versione 1606 di Configuration Manager
 
@@ -198,7 +198,7 @@ Configuration Manager consente di gestire il blocco attivazione in due modi:
 
 Endpoint Protection facilita la gestione e il monitoraggio di Microsoft Defender Advanced Threat Protection (ATP). Microsoft Defender ATP è un nuovo servizio che consente alle aziende di rilevare, analizzare e rispondere agli attacchi avanzati sulle reti. I criteri di Configuration Manager possono essere utili per l'onboarding e il monitoraggio dei computer gestiti che eseguono Windows 10, versione 1607 (build 14328) o versione successiva.
 
-Per informazioni dettagliate, vedere [Microsoft Defender Advanced Threat Protection](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md).
+Per informazioni dettagliate, vedere [Microsoft Defender Advanced Threat Protection](../../../protect/deploy-use/defender-advanced-threat-protection.md).
 
 ### <a name="device-categories"></a>Categorie di dispositivi
 È possibile creare categorie di dispositivi da usare per inserire automaticamente i dispositivi nelle raccolte di dispositivi quando si usa Configuration Manager con Microsoft Intune. Agli utenti verrà quindi richiesto di scegliere una categoria di dispositivi quando eseguono la registrazione di un dispositivo in Intune. È anche possibile modificare la categoria di un dispositivo dalla console di Configuration Manager.

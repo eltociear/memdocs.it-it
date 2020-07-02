@@ -10,12 +10,12 @@ ms.assetid: 600086d5-bd9e-4ac1-8ace-c7a62de80dc2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 61296321251be45cfa0449a3e4f21ba79a024753
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 78e89307e66107b259d818a84fa4dbca878a843c
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706979"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590899"
 ---
 # <a name="use-the-configuration-manager-client-software-for-extended-interoperability-with-future-versions-of-a-current-branch-site"></a>Usare il software client del supporto di Configuration Manager per l'interoperabilità estesa con le versioni future di un sito Current Branch
 
@@ -48,8 +48,10 @@ Pianificare l'aggiornamento del client di interoperabilità estesa nei dispositi
 
 1. Ottenere una versione supportata del client di interoperabilità estesa dalla cartella `\SMSSETUP\Client` del supporto di installazione dell'aggiornamento di Configuration Manager. Assicurarsi di copiare l'intero contenuto della cartella.  
 
-    > [!TIP]  
-    > Per trovare i supporti di Configuration Manager nel [Centro servizi per contratti multilicenza](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx), passare alla scheda **Downloads and Keys** (Download e codici), cercare `System Center Config` e quindi selezionare **System Center Config Mgr (Current Branch)** .
+<!--
+    > [!TIP]
+    > To find Configuration Manager media in the [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC), go to the **Downloads and Keys** tab, and search for **Microsoft Endpoint Configmgr (current branch)**.
+-->
 
 1. Installare manualmente il client di interoperabilità estesa in tali dispositivi. Per altre informazioni, vedere [Installare manualmente il client](../clients/deploy/deploy-clients-to-windows-computers.md#BKMK_Manual).  
 

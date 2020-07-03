@@ -5,17 +5,17 @@ description: Informazioni su come gestire dispositivi Windows 10 contemporaneame
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 01/24/2020
+ms.date: 07/01/2020
 ms.topic: overview
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: 86bd566e9582c7dd7c83f93c22430edcc8ea0d0d
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: a7f38f48946244deb6026d040c44159d0384f7b1
+ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347186"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85854440"
 ---
 # <a name="what-is-co-management"></a>Informazioni sulla co-gestione
 
@@ -88,7 +88,7 @@ La co-gestione presenta questi prerequisiti nelle aree seguenti:
     > [!Tip]
     > Assicurarsi di assegnare una licenza di Intune all'account usato per accedere al tenant. In caso contrario, l'accesso avrà esito negativo con il messaggio di errore "Utente non riconosciuto".
     >
-    > Non è più necessario acquistare e assegnare singole licenze di Intune o EMS ai propri utenti. Per altre informazioni, vedere [Domande frequenti su prodotto e licenze](../core/understand/product-and-licensing-faq.md#bkmk_mem).
+    > Potrebbe non essere più necessario acquistare e assegnare singole licenze di Intune o EMS ai propri utenti. Per altre informazioni, vedere [Domande frequenti su prodotto e licenze](../core/understand/product-and-licensing-faq.md#bkmk_mem).
 
 ### <a name="configuration-manager"></a>Configuration Manager
 

@@ -2,7 +2,7 @@
 title: Distribuire e aggiornare Microsoft Edge versione 77 e successive
 titleSuffix: Configuration Manager
 description: Come distribuire e aggiornare Microsoft Edge versione 77 e successive con Configuration Manager
-ms.date: 04/01/2020
+ms.date: 07/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 73b420be-5d6a-483a-be66-c4d274437508
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 141a60a72038156fff2579419e92e558dab5a9b8
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: 2061a6701bf40233593e2e5d683e36f2814d3978
+ms.sourcegitcommit: f999131e513d50967f88795e400d5b089ebc5878
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776940"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85914567"
 ---
 # <a name="microsoft-edge-management"></a>Gestione di Microsoft Edge
 
@@ -33,6 +33,8 @@ Per i client in cui verrà distribuito Microsoft Edge:
 
 - I [criteri di esecuzione](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies) di PowerShell non possono essere impostati su Con restrizioni.
   - PowerShell viene eseguito per eseguire l'installazione.
+
+- Il programma di installazione di Microsoft Edge e [CMPivot](../../core/servers/manage/cmpivot.md) sono firmati con il certificato di **firma del codice Microsoft**. Se il certificato non è elencato nell'archivio **Autori attendibili**, sarà necessario aggiungerlo. In caso contrario, il programma di installazione di Microsoft Edge e CMPivot non verranno eseguiti quando i criteri di esecuzione di PowerShell sono impostati su **AllSigned**. <!--7585106-->
 
 Il dispositivo che esegue la console di Configuration Manager richiede l'accesso agli endpoint seguenti:
 
@@ -135,6 +137,22 @@ Abilitare le proprietà seguenti nelle classi di [inventario hardware](../../cor
 Dall'area di lavoro **Raccolta software** fare clic su **Gestione di Microsoft Edge** per visualizzare il dashboard. Modificare la raccolta per i dati del grafo facendo clic **Sfoglia** e scegliendo un'altra raccolta. Per impostazione predefinita, l'elenco a discesa include le cinque raccolte più grandi. Quando si seleziona una raccolta che non è presente nell'elenco, la raccolta appena selezionata occupa la posizione più in basso nell'elenco a discesa.
 
 [![Dashboard Gestione di Microsoft Edge](./media/3871913-microsoft-edge-dashboard.png)](./media/3871913-microsoft-edge-dashboard.png#lightbox)
+
+## <a name="known-issues"></a>Problemi noti
+
+### <a name="hardware-inventory-may-fail-to-process"></a>L'elaborazione dell'inventario hardware potrebbe non riuscire
+<!--7535675-->
+L'elaborazione dell'inventario hardware per i dispositivi potrebbe non riuscire. Nel file Dataldr.log potrebbero comparire errori simili ai seguenti:
+
+```text
+Begin transaction: Machine=<machine>
+*** [23000][2627][Microsoft][SQL Server Native Client 11.0][SQL Server]Violation of PRIMARY KEY constraint 'BROWSER_USAGE_HIST_PK'. Cannot insert duplicate key in object 'dbo.BROWSER_USAGE_HIST'. The duplicate key value is (XXXX, Y). : dbo.dBROWSER_USAGE_DATA
+ERROR - SQL Error in
+ERROR - is NOT retyrable.
+Rollback transaction: XXXX
+```
+
+**Prevenzione:** Per risolvere questo problema, disabilitare la raccolta della classe di inventario hardware Utilizzo browser (SMS_BrowerUsage). Questa classe non è attualmente sfruttata.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

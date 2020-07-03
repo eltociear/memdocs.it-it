@@ -2,7 +2,7 @@
 title: CMPivot per i dati in tempo reale
 titleSuffix: Configuration Manager
 description: Informazioni su come usare CMPivot in Configuration Manager per eseguire query sui client in tempo reale.
-ms.date: 04/08/2020
+ms.date: 07/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: dcd441c7f35748f42adc8824c68ec703291a13e0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7bf9d6018acb74ccd1a33b6101d5cceb119ca982
+ms.sourcegitcommit: f999131e513d50967f88795e400d5b089ebc5878
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702089"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85914639"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>CMPivot per i dati in tempo reale in Configuration Manager
 
@@ -46,6 +46,7 @@ Per usare CMPivot sono necessari i componenti seguenti:
   - IPConfig
   - SMBConfig
 
+- CMPivot e il programma di installazione di [Microsoft Edge](../../../apps/deploy-use/deploy-edge.md) sono firmati con il certificato di **firma del codice Microsoft**. Se il certificato non è elencato nell'archivio **Autori attendibili**, sarà necessario aggiungerlo. In caso contrario, CMPivot e il programma di installazione di Microsoft Edge non verranno eseguiti quando i criteri di esecuzione di PowerShell sono impostati su **AllSigned**. <!--7585106-->
 
 - Autorizzazioni per CMPivot:
   - **Lettura** per l'oggetto **Script SMS**
@@ -56,6 +57,8 @@ Per usare CMPivot sono necessari i componenti seguenti:
 
 >[!NOTE]
 > **Esegui script** è un super set dell'autorizzazione **Esegui CMPivot**.
+
+CMPivot e il programma di installazione di Edge sono firmati con il certificato di **firma del codice Microsoft**. Se il certificato non è elencato nell'archivio **Autori attendibili**, sarà necessario aggiungerlo. In caso contrario, CMPivot e il programma di installazione di Edge non verranno eseguiti quando i criteri di esecuzione di PowerShell sono impostati su **AllSigned**.
  
 ## <a name="limitations"></a>Limitazioni
 
@@ -617,7 +620,7 @@ Le ottimizzazioni di CMPivot riducono drasticamente il carico della CPU del serv
    | project Device, MalwareFound = iif( isnull(FileName), 'No', 'Yes')
    ```
 
-### <a name="wineventlognametimespan"></a><a name="bkmk_WinEvent"></a> WinEvent (\<nomeregistro>, [\<intervalloditempo>])
+### <a name="wineventlognametimespan"></a><a name="bkmk_WinEvent"></a> WinEvent(\<logname>,[\<timespan>])
 
 Questa entità viene usata per ottenere gli eventi dai registri eventi e dai file di log di Event Tracing. L'entità ottiene i dati dai registri eventi generati dalla tecnologia del Registro eventi di Windows. L'entità ottiene anche gli eventi nei file di log generati da Event Tracing for Windows (ETW). WinEvent esamina gli eventi che si sono verificati nelle ultime 24 ore per impostazione predefinita. L'impostazione predefinita di 24 ore può tuttavia essere ignorata includendo un intervallo di tempo.
 
@@ -627,7 +630,7 @@ WinEvent('Microsoft-Windows-HelloForBusiness/Operational', 1d)
 | summarize count() by Device
 ```
 
-### <a name="filecontentfilename"></a><a name="bkmk_File"></a> FileContent (\<nomefile>)
+### <a name="filecontentfilename"></a><a name="bkmk_File"></a> FileContent(\<filename>)
 
 FileContent viene usato per ottenere il contenuto di un file di testo.
 
@@ -637,7 +640,7 @@ FileContent('c:\\windows\\SMSCFG.ini')
 | project Device, SMSId= substring(Content,22)
 ```
 
-### <a name="processmoduleprocessname"></a><a name="bkmk_ProcessModule"></a> ProcessModule(\<nomeprocesso>)  
+### <a name="processmoduleprocessname"></a><a name="bkmk_ProcessModule"></a> ProcessModule(\<processname>)  
 
 Questa entità viene usata per enumerare i moduli (dll) caricati da un determinato processo. ProcessModule è utile per la ricerca del malware nascosto in processi legittimi.  
 

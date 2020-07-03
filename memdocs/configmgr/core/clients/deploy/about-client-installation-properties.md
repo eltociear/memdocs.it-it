@@ -10,12 +10,12 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 02a281b800c1156cf8492e8a897a5cf1b412006e
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 388a051f899369aa6a7754f94b0a7727f943f0ec
+ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383037"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85854406"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Informazioni sui parametri e le proprietà di installazione del client in Configuration Manager
 
@@ -601,7 +601,11 @@ Per altre informazioni, vedere [Come configurare lo stato del client](configure-
 
 A partire dalla versione 2002, usare questa proprietà per avviare una sequenza di attività in un client dopo la corretta registrazione nel sito.
 
+> [!NOTE]
+> Se la sequenza di attività installa aggiornamenti software o applicazioni, i client devono disporre di un certificato di autenticazione client valido. L'autenticazione del token da sola non funziona. Per altre informazioni, vedere [Note sulla versione - Distribuzione del sistema operativo](../../servers/deploy/install/release-notes.md#os-deployment).<!--7527072-->
+      
 Ad esempio, è possibile effettuare il provisioning di un nuovo dispositivo Windows 10 con Windows Autopilot, registrarlo automaticamente in Microsoft Intune e quindi installare il client di Configuration Manager per la co-gestione. Se si specifica questa nuova opzione, il client appena sottoposto a provisioning esegue una sequenza di attività. Questo processo offre una maggiore flessibilità per l'installazione di applicazioni e aggiornamenti software o per la configurazione delle impostazioni.
+
 
 Usare il processo seguente:
 
@@ -617,6 +621,8 @@ Usare il processo seguente:
       > Questo metodo può avere prerequisiti aggiuntivi. Ad esempio, la registrazione del sito in Azure Active Directory o la creazione di un gateway di gestione cloud abilitato per il contenuto.
 
 Dopo l'installazione e la registrazione corretta del client nel sito, viene avviata la sequenza di attività a cui si fa riferimento. Se la registrazione del client non riesce, la sequenza di attività non viene avviata.
+
+
 
 ### <a name="resetkeyinformation"></a>RESETKEYINFORMATION
 

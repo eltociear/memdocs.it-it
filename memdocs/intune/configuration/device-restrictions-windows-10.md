@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/22/2020
+ms.date: 06/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96b547c50cda0ef623370bae20d347d4ccf1976b
-ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
+ms.openlocfilehash: 6f4fd580a2e36a1cf7a29766c7a5e325e17fc528
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216485"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85591069"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Impostazioni dei dispositivi Windows 10 (e versioni successive) per consentire o limitare l'uso delle funzionalità tramite Intune
 
@@ -30,6 +30,8 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
 
 > [!Note]
 > Non tutte le opzioni sono disponibili in tutte le edizioni di Windows. Per informazioni sulle edizioni supportate, vedere [Policy CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider) (Provider di servizi di configurazione dei criteri) (viene aperto un altro sito Web Microsoft).
+>  
+> La maggior parte delle impostazioni configurabili in un profilo di restrizioni dei dispositivi Windows 10 viene distribuita a livello di dispositivo. I criteri distribuiti a gruppi di utenti sono effettivi sia per l'utente di destinazione sia per gli altri utenti che accedono successivamente al dispositivo e hanno una licenza di Intune.
 
 ## <a name="before-you-begin"></a>Prima di iniziare
 

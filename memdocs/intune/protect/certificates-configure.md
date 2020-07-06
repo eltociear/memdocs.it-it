@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4441fdaf8c3fb8bfb6613805df9eca27cc3ebf0c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e5de1268b8b04c98ac7a9cfa96d42349fc0f8890
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990389"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383207"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Usare i certificati per l'autenticazione in Microsoft Intune
 
@@ -104,6 +104,11 @@ Creare e distribuire un profilo di certificato attendibile prima di creare un pr
 I profili di certificato SCEP fanno riferimento direttamente a un profilo di certificato attendibile. I profili di certificato PKCS non fanno riferimento direttamente al profilo di certificato attendibile, ma fanno riferimento direttamente al server che ospita la CA. I profili di certificato PKCS importati non fanno riferimento direttamente al profilo di certificato attendibile, ma possono usarlo nel dispositivo. La distribuzione di un profilo di certificato attendibile nei dispositivi garantisce che venga stabilita questa relazione di trust. Quando un dispositivo non considera attendibile la CA radice, i criteri del profilo di certificato SCEP o PKCS avranno esito negativo.
 
 Creare un profilo di certificato attendibile separato per ogni piattaforma del dispositivo che si vuole supportare, così come si farà per i profili di certificato SCEP, PKCS e PKCS importati.
+
+> [!IMPORTANT]
+> I profili radice attendibili creati per la piattaforma *Windows 10 e versioni successive*, vengono visualizzati nell'interfaccia di amministrazione di Microsoft Endpoint Manager come profili per la piattaforma *Windows 8.1 e versioni successive*. 
+>
+> Si tratta di un problema noto della presentazione della piattaforma per i profili certificato attendibili. Il profilo visualizza la piattaforma Windows 8.1 e versioni successive, mentre funziona con Windows 10 e versioni successive.
 
 ### <a name="to-create-a-trusted-certificate-profile"></a>Per creare un profilo certificato attendibile
 

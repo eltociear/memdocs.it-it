@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5cb6b4df9e3834ce447b176b5dfab158deb0d543
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 8fe0b1748a40858bca55cc66b250c96725bfd9f1
+ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85094079"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332863"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Registrare automaticamente i dispositivi iOS/iPadOS con Registrazione automatica del dispositivo di Apple
 
@@ -69,7 +69,7 @@ Il supporto per i dispositivi registrati con Registrazione automatica del dispos
 - Numero massimo di profili di registrazione per token: 1,000  
 - Numero massimo di dispositivi con Registrazione automatica dispositivi per profilo: nessun limite (entro il numero massimo di dispositivi per token)
 - Numero massimo di token di Registrazione automatica dispositivi per account Intune: 2,000
-- Numero massimo di dispositivi con Registrazione automatica dispositivi per token: 75.000
+- Numero massimo di dispositivi con Registrazione automatica dispositivi per token: Il limite della prima sincronizzazione è 75.000-80.000 dispositivi. Intune continuerà a eseguire la sincronizzazione con ABM o ASM con una sincronizzazione ogni 12 ore per aggiungere ogni volta altri 80.000 dispositivi. Anche una sincronizzazione manuale consente di aggiungere 80.000 dispositivi. Le sincronizzazioni continueranno a verificarsi e i dispositivi continueranno a essere sincronizzati con Intune da ABM/ASM in batch di 75.000-80.000 dispositivi. 
 
 ## <a name="get-an-apple-ade-token"></a>Ottenere un token di Registrazione automatica del dispositivo Apple
 

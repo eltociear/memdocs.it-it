@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 41b85299057f172fec224873607509aaaec60024
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: 5d23eaeee839122bad46cd9619a790b9ca6332a6
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84977268"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383258"
 ---
 # <a name="manage-collaboration-experiences-using-office-for-ios-and-android-with-microsoft-intune"></a>Gestire le esperienze di collaborazione con Office per iOS e Android con Microsoft Intune
 
@@ -108,7 +108,13 @@ Queste impostazioni possono essere implementate nell'app indipendentemente dallo
 
 ### <a name="manage-file-transfers"></a>Gestire i trasferimenti di file
 
-Per impostazione predefinita, Office consente agli utenti di condividere file con utenti nelle vicinanze e trasferire file ai sistemi desktop.
+Per impostazione predefinita, Office per iOS e Android consente agli utenti di condividere contenuto usando un'ampia gamma di meccanismi:
+
+- Se il file è ospitato in OneDrive o SharePoint, gli utenti possono avviare una richiesta di condivisione direttamente all'interno del file.
+- Gli utenti possono trasferire file ai sistemi desktop usando l'azione **Trasferisci file**.
+- Gli utenti possono condividere file con dispositivi mobili adiacenti usando l'azione **Condividi nelle vicinanze**.
+
+Le azioni **Trasferisci file** e **Condividi nelle vicinanze** funzionano solo con i file multimediali, i file locali e i file non protetti da criteri di protezione dell'app. 
 
 |    Chiave    |    Valore    |
 |-------------------------------------------------------------------|-------------|

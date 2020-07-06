@@ -1,11 +1,11 @@
 ---
-title: Installare l'app Portale aziendale Intune nella Cina continentale | Microsoft Docs
+title: Installare l'app Portale aziendale Intune in Cina | Microsoft Docs
 description: ''
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 06/23/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,22 +19,32 @@ ms.reviewer: jeyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: ec600051020d5d4fdd3c81556332e3ea6c21187b
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 39aa0108d160aea74e1ac47b19877763a9ffefa5
+ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882141"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332776"
 ---
-# <a name="install-company-portal-app-in-mainland-china"></a>Installare l'app Portale aziendale nella Cina continentale   
+# <a name="install-company-portal-app-in-mainland-china"></a>Installare l'app Portale aziendale in Cina   
 
-Installare l'app Portale aziendale Intune per accedere alle risorse aziendali o dell'istituto di istruzione dal proprio dispositivo Android. L'app è disponibile nella Cina continentale e può essere installata dagli App Store seguenti: 
+Installare l'app Portale aziendale Intune per accedere alle risorse aziendali o dell'istituto di istruzione dal proprio dispositivo Android. L'app è disponibile in Cina e può essere installata dagli App Store seguenti: 
 
-* [Baidu](https://go.microsoft.com/fwlink/?linkid=836946)
-* [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
+
 * [Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947) 
+* OPPO
 * [Lenovo](https://go.microsoft.com/fwlink/?linkid=2125082)
+* [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
 
-Dopo aver installato l'app nel dispositivo, seguire le istruzioni dell'organizzazione per configurare il dispositivo per l'istituto scolastico o l'azienda. Per informazioni sulla registrazione, vedere [Registrare un dispositivo Android in Portale aziendale Intune](enroll-device-android-company-portal.md).  
+Il Portale aziendale è disponibile anche da [Baidu App Store](https://go.microsoft.com/fwlink/?linkid=2133565). Per trovarlo:  
+ 
+   1. Passare a [Baidu App Store](https://go.microsoft.com/fwlink/?linkid=2133565).  
+   2. Cercare l'app Portale aziendale immettendo **公司门户** nella barra di ricerca.  
+   3. Selezionare l'elenco con il Portale aziendale ![Icona del Portale aziendale](./media/company-portal-logo-small-2006.png) .  
+
+
+## <a name="next-steps"></a>Passaggi successivi  
+Dopo aver installato l'app nel dispositivo, seguire le istruzioni dell'organizzazione per configurare il dispositivo per l'istituto scolastico o l'azienda. Per informazioni sulla registrazione, vedere [Registrare un dispositivo Android in Portale aziendale Intune](enroll-device-android-company-portal.md). 
+
 
 Serve ancora assistenza? Contattare l'amministratore IT. Per informazioni sul contatto vedere il [sito Web del portale aziendale](https://go.microsoft.com/fwlink/?linkid=2010980).

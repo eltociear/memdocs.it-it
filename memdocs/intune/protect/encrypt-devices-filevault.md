@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
+ms.date: 06/24/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 99facc87d068239962ab0d40874aa081f5e19189
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1f2a6955a430427fe3f4e2791da6bbaecdd90523
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989682"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353573"
 ---
 # <a name="use-filevault-disk-encryption-for--macos-with-intune"></a>Usare la crittografia del disco FileVault di macOS con Intune
 
@@ -30,18 +30,18 @@ Intune supporta la crittografia del disco FileVault di macOS. FileVault è un pr
 
 Usare uno dei tipi di criteri seguenti per configurare FileVault nei dispositivi gestiti:
 
-- **[Criteri di sicurezza degli endpoint per FileVault di macOS](#create-an-endpoint-security-policy-for-filevault)** . Il profilo FileVault in *Endpoint security* (Sicurezza degli endpoint) è un gruppo in evidenza di impostazioni dedicato alla configurazione di FileVault.
+- **[Criteri di sicurezza degli endpoint per FileVault di macOS](#create-endpoint-security-policy-for-filevault)** . Il profilo FileVault in *Endpoint security* (Sicurezza degli endpoint) è un gruppo in evidenza di impostazioni dedicato alla configurazione di FileVault.
 
   Visualizzare le [impostazioni di FileVault disponibili nei profili per i criteri di crittografia del disco](../protect/endpoint-security-disk-encryption-profile-settings.md).
 
-- **[Profilo di configurazione del dispositivo per Endpoint Protection per FileVault di macOS](#create-an-endpoint-security-policy-for-filevault)** . Le impostazioni di FileVault sono una delle categorie di impostazioni disponibili per Endpoint Protection di macOS. Per altre informazioni sull'uso di un profilo di configurazione del dispositivo, vedere [Creare un profilo di dispositivo in Intune](../configuration/device-profile-create.md).
+- **[Profilo di configurazione del dispositivo per Endpoint Protection per FileVault di macOS](#create-endpoint-security-policy-for-filevault)** . Le impostazioni di FileVault sono una delle categorie di impostazioni disponibili per Endpoint Protection di macOS. Per altre informazioni sull'uso di un profilo di configurazione del dispositivo, vedere [Creare un profilo di dispositivo in Intune](../configuration/device-profile-create.md).
 
   Visualizzare le [impostazioni di FileVault disponibili nei profili di Endpoint Protection dai criteri di configurazione del dispositivo](../protect/endpoint-protection-macos.md#filevault).
 
 Per gestire BitLocker per Windows 10, vedere [Gestire i criteri BitLocker](../protect/encrypt-devices.md).
 
 > [!TIP]
-> [Report crittografia](encryption-monitor.md) offre dettagli sullo stato della crittografia in tutti i dispositivi gestiti.
+> Intune offre un [report di crittografia](encryption-monitor.md) predefinito con i dettagli sullo stato della crittografia in tutti i dispositivi gestiti.
 
 È quindi necessario creare criteri di crittografia dei dispositivi con FileVault. Tali criteri vengono applicati ai dispositivi in due fasi. Prima il dispositivo viene preparato in modo da consentire a Intune di recuperare la chiave di ripristino ed eseguirne il backup. Questa azione è detta deposito. Dopo il deposito della chiave, è possibile avviare la crittografia del disco.
 
@@ -60,17 +60,15 @@ Di seguito sono riportati le autorizzazioni di FileVault, che fanno parte della 
 - **Rotate FileVault key**
   - Help Desk Operator
 
-## <a name="create-and-deploy-policy"></a>Creare e distribuire criteri
-
-### <a name="create-an-endpoint-security-policy-for-filevault"></a>Creare un criterio di sicurezza degli endpoint per FileVault
+## <a name="create-endpoint-security-policy-for-filevault"></a>Creare criteri di sicurezza degli endpoint per FileVault
 
 1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Selezionare **Endpoint Security** (Sicurezza degli endpoint)  > **Crittografia del disco** > **Crea criterio**.
 
 3. Nella pagina **Dati principali** immettere le proprietà seguenti e quindi scegliere **Avanti**.
-   1. **Piattaforma**: macOS
-   2. **Profilo**: FileVault
+   - **Piattaforma**: macOS
+   - **Profilo**: FileVault
 
    ![Selezionare il profilo FileVault](./media/encrypt-devices-filevault/select-macos-filevault-es.png)
 
@@ -94,33 +92,49 @@ Selezionare **Avanti**.
 
 8. Al termine, nella pagina **Rivedi e crea** scegliere **Crea**. Il nuovo profilo viene visualizzato nell'elenco quando si seleziona il tipo di criterio per il profilo creato.
 
-### <a name="create-a-device-configuration-policy-for-filevault"></a>Creare un criterio di configurazione del dispositivo per FileVault
+## <a name="create-device-configuration-policy-for-filevault"></a>Creare criteri di configurazione del dispositivo per FileVault
 
 1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Selezionare **Dispositivi** > **Profili di configurazione** > **Crea profilo**.
 
-3. Impostare le opzioni seguenti:
-   1. **Piattaforma**: macOS
-   2. **Profilo**: Protezione degli endpoint
+3. Nella pagina **Crea un profilo** impostare le opzioni seguenti e quindi fare clic su **Crea**:
+   - **Piattaforma**: macOS
+   - **Profilo**: Protezione degli endpoint
 
    ![Selezionare il profilo FileVault](./media/encrypt-devices-filevault/select-macos-filevault-dc.png)
 
-4. Selezionare **Impostazioni** > **FileVault**.
+4. Nella pagina **Informazioni di base** immettere le proprietà seguenti:
 
-   ![Impostazioni di FileVault](./media/encrypt-devices-filevault/filevault-settings.png)
+   - **Nome**: immettere un nome descrittivo per il criterio. Assegnare ai criteri nomi che possano essere identificati facilmente in un secondo momento. Ad esempio, un nome di criterio valido potrebbe includere il tipo di profilo e la piattaforma.
 
-5. Per *FileVault*selezionare **Abilita**.
+   - **Descrizione**: immettere una descrizione del criterio. Questa impostazione è facoltativa ma consigliata.
 
-6. Per *Tipo di chiave di ripristino* è supportata solo l'opzione **Chiave personale**.
+5. Nella pagina **Impostazioni di configurazione** selezionare **FileVault** per espandere le impostazioni disponibili:
 
-   Considerare la possibilità di aggiungere un messaggio per facilitare agli utenti il recupero della chiave di ripristino del dispositivo. Queste informazioni possono essere utili per gli utenti se si usa l'impostazione Rotazione della chiave di ripristino personale, che periodicamente può generare in modo automatico una nuova chiave di ripristino per un dispositivo.
+   > [!div class="mx-imgBorder"]
+   > ![Impostazioni di FileVault](./media/encrypt-devices-filevault/filevault-settings.png)
 
-   Ad esempio: per recuperare una chiave di ripristino smarrita o ruotata di recente, accedere al sito Web Portale aziendale di Intune da qualsiasi dispositivo. Nel portale passare a *Dispositivi*, selezionare il dispositivo con FileVault abilitato e quindi selezionare *Ottieni la chiave di ripristino*. Verrà visualizzata la chiave di ripristino corrente.
+6. Configurare le seguenti impostazioni:
+  
+   - Per *Abilita FileVault* selezionare **Sì**.
 
-7. Configurare le [impostazioni di FileVault](endpoint-protection-macos.md#filevault) rimanenti in base alle esigenze aziendali e quindi selezionare **OK**.
+   - Per *Tipo di chiave di ripristino* selezionare **Chiave personale**.
 
-8. Completare la configurazione delle impostazioni aggiuntive e quindi salvare il profilo.
+   - Per *Descrizione della posizione del deposito della chiave di ripristino personale* aggiungere un messaggio per aiutare gli utenti a recuperare la chiave di ripristino per il proprio dispositivo. Queste informazioni possono essere utili per gli utenti se si usa l'impostazione Rotazione della chiave di ripristino personale, che periodicamente può generare in modo automatico una nuova chiave di ripristino per un dispositivo.
+
+     Ad esempio: per recuperare una chiave di ripristino smarrita o ruotata di recente, accedere al sito Web Portale aziendale di Intune da qualsiasi dispositivo. Nel portale passare a *Dispositivi*, selezionare il dispositivo con FileVault abilitato e quindi selezionare *Ottieni la chiave di ripristino*. Verrà visualizzata la chiave di ripristino corrente.
+
+   Configurare le [impostazioni di FileVault](endpoint-protection-macos.md#filevault) rimanenti in base alle esigenze aziendali e quindi selezionare **Avanti**.
+
+7. Nella pagina **Ambito (tag)** scegliere **Selezionare i tag di ambito** per aprire il riquadro Seleziona tag per assegnare tag di ambito al profilo.
+
+   Selezionare **Avanti** per continuare.
+
+8. Nella pagina **Assegnazioni** selezionare i gruppi che riceveranno questo profilo. Per altre informazioni sull'assegnazione di profili, vedere Assegnare profili utente e dispositivo.
+Selezionare **Avanti**.
+
+9. Al termine, nella pagina **Rivedi e crea** scegliere **Crea**. Il nuovo profilo viene visualizzato nell'elenco quando si seleziona il tipo di criterio per il profilo creato.
 
 ## <a name="manage-filevault"></a>Gestire FileVault
 

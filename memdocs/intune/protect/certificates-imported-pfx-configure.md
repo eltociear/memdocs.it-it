@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/20/2020
+ms.date: 06/29/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 13824c82b426e1efb00dce2db7c9f4a2dd5bb9ee
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 9bf55564cabce9a060c15100ad974c59bf858b15
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990338"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85591120"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Configurare e usare i certificati PKCS importati con Intune
 
@@ -271,6 +271,12 @@ I partner seguenti forniscono metodi o strumenti supportati che è possibile usa
 Se si usa il servizio DigiCert PKI Platform, è possibile usare lo **strumento di importazione dei certificati S/MIME di Intune** di DigiCert per importare i certificati PFX in Intune. Se si usa questo strumento, non è più necessario seguire le istruzioni descritte in dettaglio nella sezione [Per importare certificati PFX in Intune](#import-pfx-certificates-to-intune) più indietro in questo articolo.
 
 Per altre informazioni sullo strumento di importazione di DigiCert, inclusa la procedura per ottenere lo strumento, vedere https://knowledge.digicert.com/tutorials/microsoft-intune.html nella Knowledge Base di DigiCert.
+
+### <a name="keytalk"></a>KeyTalk
+
+Se si usa il servizio KeyTalk, è possibile configurare il servizio per importare certificati PFX in Intune. Dopo aver completato l'integrazione, non è più necessario seguire le istruzioni descritte in dettaglio nella sezione [Importare certificati PFX in Intune](#import-pfx-certificates-to-intune) più indietro in questo articolo.
+
+Per altre informazioni sull'integrazione di KeyTalk con Intune, vedere https://keytalk.com/support nella Knowledge Base di KeyTalk.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

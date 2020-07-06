@@ -4,7 +4,7 @@ description: Microsoft 365 Enterprise include Microsoft Intune. Capire le funzio
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/28/2020
+ms.date: 06/24/2020
 ms.topic: overview
 audience: microsoft-business
 ms.service: microsoft-intune
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 540faaca71d3694b95d32a24c947a977989a3223
-ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
+ms.openlocfilehash: 0dedb4746c40ff1cc2f5a2f166b1e0277997cb88
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84223636"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353616"
 ---
 # <a name="device-management-overview"></a>Panoramica della gestione dei dispositivi
 
-Un'attività chiave che spetta a qualsiasi amministratore è la protezione e messa in sicurezza delle risorse e dei dati di un'organizzazione. Questa attività è la *gestione dei dispositivi*. Gli utenti dispongono di molti dispositivi che usano per aprire e condividere file personali, visitare siti Web e installare app e giochi. Questi utenti sono anche dipendenti e studenti pertanto desiderano poter usare i propri dispositivi per accedere alle risorse professionali o scolastiche, ad esempio la posta elettronica o OneNote.
+Attività chiave che spettano a qualsiasi amministratore sono la protezione e la messa in sicurezza delle risorse e dei dati dell'organizzazione nei dispositivi degli utenti. Questa attività è la **gestione dei dispositivi**. Gli utenti ricevono e inviano messaggi di posta elettronica da account personali, esplorano siti Web da casa e da luoghi pubblici e installano app e giochi. Questi utenti sono anche dipendenti e studenti e quindi vogliono accedere con la massima rapidità dai propri dispositivi alle risorse di lavoro o di studio, ad esempio la posta elettronica o OneNote. L'obiettivo dell'amministratore è, allo stesso tempo, proteggere queste risorse e consentire agli utenti un accesso facile con tutti i dispositivi disponibili per loro.
 
 La gestione dei dispositivi consente alle organizzazioni di proteggere e mettere in sicurezza le risorse e i dati di dispositivi diversi.
 

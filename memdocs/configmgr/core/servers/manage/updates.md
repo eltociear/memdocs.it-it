@@ -2,7 +2,7 @@
 title: Aggiornamenti e manutenzione
 titleSuffix: Configuration Manager
 description: Informazioni sul metodo di manutenzione nella console denominato Aggiornamenti e manutenzione che semplifica l'individuazione e l'installazione degli aggiornamenti consigliati.
-ms.date: 04/15/2020
+ms.date: 06/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,11 @@ ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ffee9d851f00bcac5ed7ba562bdc9db8e0fa2767
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
-ms.translationtype: HT
+ms.openlocfilehash: 4f92d95b4e1cc814db72b45cfb92cb989b7767c8
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82903947"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85591018"
 ---
 # <a name="updates-and-servicing-for-configuration-manager"></a>Aggiornamenti e manutenzione per Configuration Manager
 
@@ -73,11 +72,11 @@ Le versioni supportate seguenti di Configuration Manager sono attualmente dispon
 > [!Note]  
 > <sup>**Nota 1:** </sup> Il supporto di base è disponibile come parte delle versioni seguenti in [Volume License Service Center](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC):
 >
-> - System Center Config Mgr (Current Branch)
-> - System Center 2016 Datacenter
-> - System Center 2016 Standard  
+> - Microsoft Endpoint Configmgr (Current Branch)
+> - System Center Datacenter
+> - System Center Standard  
 >
-> Ad esempio, cercare `System Center Config Mgr (current branch)` in VLSC. Individuare il supporto di base nell'elenco dei file e scaricarlo per la versione specifica.  
+> Ad esempio, cercare `Microsoft Endpoint Configmgr (current branch)` in VLSC. Individuare il supporto di base nell'elenco dei file e scaricarlo per la versione specifica.  
 
 #### <a name="historical-versions"></a>Versioni cronologiche
 

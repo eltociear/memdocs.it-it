@@ -2,7 +2,7 @@
 title: Requisiti per l'accesso a Internet
 titleSuffix: Configuration Manager
 description: Informazioni sugli endpoint Internet a cui consentire l'accesso per usufruire delle funzionalità complete di Configuration Manager.
-ms.date: 06/12/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,11 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fb965ec6547ff1c06586464780b6db224b943000
-ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
-ms.translationtype: HT
+ms.openlocfilehash: 986b8d83c705be84b04a89c99d9559471c6345c4
+ms.sourcegitcommit: 2c5fd7c8603b88b753765f3cc298d0a0bacaf521
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84740770"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85819951"
 ---
 # <a name="internet-access-requirements"></a>Requisiti per l'accesso a Internet
 
@@ -230,6 +229,8 @@ Se si usa Configuration Manager per distribuire e aggiornare App di Microsoft 36
 
 - `config.office.com` per creare configurazioni personalizzate per le distribuzioni di App di Microsoft 365 per grandi imprese
 
+- `contentstorage.osi.office.net` per supportare la valutazione dell'idoneità dei componenti aggiuntivi per Office<!-- MEMDocs#410 -->
+
 ## <a name="configuration-manager-console"></a>Console di Configuration Manager
 
 I computer con la console di Configuration Manager richiedono l'accesso agli endpoint Internet seguenti per funzionalità specifiche:
@@ -267,6 +268,14 @@ Se si usa la **vista geografica**, consentire l'accesso all'endpoint seguente:
 ## <a name="desktop-analytics"></a>Desktop Analytics
 
 Per altre informazioni sugli endpoint necessari per il servizio cloud Desktop Analytics, vedere [Abilitare la condivisione dei dati](../../../desktop-analytics/enable-data-sharing.md#endpoints).
+
+## <a name="tenant-attach"></a>Collegamento di tenant
+
+Per altre informazioni sugli endpoint necessari per le funzionalità di collegamento del tenant, vedere [Abilitare il collegamento del tenant](../../../tenant-attach/device-sync-actions.md#internet-endpoints).
+
+## <a name="endpoint-analytics"></a>Analisi degli endpoint
+
+Per altre informazioni sugli endpoint necessari per l'analisi degli endpoint, vedere [Configurazione del proxy di analisi degli endpoint](../../../../analytics/troubleshoot.md#bkmk_endpoints).
 
 ## <a name="microsoft-public-ip-addresses"></a>Indirizzi IP pubblici Microsoft
 

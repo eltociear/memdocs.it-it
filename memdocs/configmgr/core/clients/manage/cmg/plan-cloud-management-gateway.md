@@ -10,12 +10,11 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 136e11f97849e5fd8a27d9f83ea1bd44791c492e
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
-ms.translationtype: HT
+ms.openlocfilehash: 2d6165678331811f4b04e8b1f540f3dcbb7f015d
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715646"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502256"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Pianificare il gateway di gestione cloud in Configuration Manager
 
@@ -227,15 +226,16 @@ La tabella seguente elenca il supporto di Cloud Management Gateway (CMG) per le 
 | Inventario hardware e software     | ![Supportato](media/green_check.png) |
 | Stato del client e notifiche     | ![Supportato](media/green_check.png) |
 | Esecuzione di script     | ![Supportato](media/green_check.png) |
+| CMPivot     | ![Supportato](media/green_check.png) |
 | Impostazioni di conformità     | ![Supportato](media/green_check.png) |
-| Installazione client<br>(con integrazione di Azure AD)     | ![Supportato](media/green_check.png) |
+| Installazione client<br>(con [integrazione di Azure AD](../../deploy/deploy-clients-cmg-azure.md)) | ![Supportato](media/green_check.png) |
+| Installazione client<br>(con [autenticazione del token](../../deploy/deploy-clients-cmg-token.md)) | ![Supportato](media/green_check.png) (2002) |
 | Distribuzione del software (indirizzata a dispositivi)     | ![Supportato](media/green_check.png) |
 | Distribuzione del software (indirizzata a utenti, obbligatoria)<br>(con integrazione di Azure AD)     | ![Supportato](media/green_check.png) |
 | Distribuzione del software (indirizzata a utenti, disponibile)<br>([tutti i requisiti](../../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices)) | ![Supportato](media/green_check.png) |
-| Sequenza di attività di aggiornamento sul posto di Windows 10      | ![Supportato](media/green_check.png) |
-| Sequenze di attività che non usano le immagini d'avvio e vengono distribuite con un'opzione: **Scaricare tutto il contenuto in locale prima di avviare la sequenza di attività**      | ![Supportato](media/green_check.png) |
-| Sequenze di attività che non usano immagini d'avvio  | ![Supportato](media/green_check.png) (1910)|
-| CMPivot     | ![Supportato](media/green_check.png) |
+| [Sequenza di attività di aggiornamento sul posto](../../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md) di Windows 10 | ![Supportato](media/green_check.png) |
+| Sequenze di attività che non usano le immagini d'avvio e vengono distribuite con un'opzione: **Scaricare tutto il contenuto in locale prima di avviare la sequenza di attività** | ![Supportato](media/green_check.png) |
+| Sequenze di attività che non usano immagini d'avvio con [un'opzione di download](../../../../osd/deploy-use/deploy-a-task-sequence.md#deploy-windows-10-in-place-upgrade-via-cmg) | ![Supportato](media/green_check.png) (1910)|
 | Qualsiasi altro scenario di sequenza di attività     | ![Non supportato](media/Red_X.png) |
 | Push client     | ![Non supportato](media/Red_X.png) |
 | Assegnazione automatica al sito     | ![Non supportato](media/Red_X.png) |

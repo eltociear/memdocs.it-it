@@ -20,7 +20,6 @@ ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 89703c8aec11517417f9459391c431b9db75456c
 ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
-ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/27/2020
 ms.locfileid: "85502290"
@@ -638,7 +637,7 @@ Un terzo provider, DISA Purebred, sarà disponibile per Android in una versione 
 
 #### <a name="microsoft-edge-security-baseline-is-now-generally-available--6586139---"></a>La baseline di sicurezza di Microsoft Edge è ora disponibile a livello generale<!--6586139 -->
 
-È ora disponibile una nuova versione della [baseline di sicurezza di Microsoft Edge](../protect/security-baselines.md#available-security-baselines), che è stata rilasciata come disponibile a livello generale (GA). La baseline di Edge precedente era in anteprima.  La nuova versione della baseline è di aprile 2020 (versione di Edge 80 e successive). 
+È ora disponibile una nuova versione della [baseline di sicurezza di Microsoft Edge](../protect/security-baselines.md#available-security-baselines), che è stata rilasciata come disponibile a livello generale (GA). La baseline precedente di Microsoft Edge era in anteprima.  La nuova versione della baseline è di aprile 2020 (versione di Microsoft Edge 80 e successive). 
 
 Con il rilascio di questa nuova baseline, non sarà più possibile creare profili basati sulle versioni della baseline precedenti, ma sarà possibile continuare a usare i profili creati con tali versioni. È anche possibile scegliere di [aggiornare i profili esistenti per l'uso della versione più recente della baseline](../protect/security-baselines.md#change-the-baseline-version-for-a-profile). 
 

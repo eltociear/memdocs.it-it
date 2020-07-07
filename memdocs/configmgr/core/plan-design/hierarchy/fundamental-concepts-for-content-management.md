@@ -10,12 +10,11 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cb91e62c4ffce37068b2de5e125865e28ff8c53b
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
-ms.translationtype: HT
+ms.openlocfilehash: ffd6487297bb682ef9bda7c5bf5ee9cb3beede15
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878945"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590457"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Concetti di base per la gestione dei contenuti in Configuration Manager
 

@@ -2,7 +2,7 @@
 title: Risolvere i problemi di Desktop Analytics
 titleSuffix: Configuration Manager
 description: Dettagli tecnici che consentono di risolvere i problemi relativi a Desktop Analytics.
-ms.date: 04/01/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,11 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: cfd329b7edb695c1e7316323555bfc18a2fd479e
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
-ms.translationtype: HT
+ms.openlocfilehash: 68506ba11e356a1e9f14d58880a80bdf3cfcb5f4
+ms.sourcegitcommit: fb03634b8494903fc6855ad7f86c8694ffada8df
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428575"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85828976"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>Risolvere i problemi di Desktop Analytics
 
@@ -205,7 +204,7 @@ Nel portale di Desktop Analytics sono disponibili due tipi di dati: **dati dell'
 
 - I **dati di diagnostica** fanno riferimento ai metadati di sistema caricati da dispositivi client in Microsoft. Questi dati vengono inviati a Desktop Analytics. Sono inclusi attributi come l'inventario dei dispositivi e lo stato di sicurezza e aggiornamento delle funzionalità.
 
-Per impostazione predefinita, tutti i dati nel portale di Desktop Analytics vengono aggiornati automaticamente ogni giorno. Questo aggiornamento include le modifiche ai dati di diagnostica e le eventuali modifiche apportate alla configurazione (dati dell'amministratore). Dovrebbe essere visibile nel portale di Desktop Analytics entro le 08:00 UTC ogni giorno.
+Per impostazione predefinita, tutti i dati nel portale di Desktop Analytics vengono aggiornati automaticamente ogni giorno. Questo aggiornamento include le modifiche ai dati di diagnostica per i due giorni precedenti e le eventuali modifiche apportate alla configurazione (dati dell'amministratore). Dovrebbe essere visibile nel portale di Desktop Analytics entro le 08:00 UTC ogni giorno.
 
 Quando si apportano modifiche ai dati dell'amministratore, è possibile attivare un aggiornamento su richiesta dei dati dell'amministratore nell'area di lavoro. Da qualsiasi pagina nel portale di Desktop Analytics, aprire il riquadro a comparsa sull'attualità dei dati:
 
@@ -221,3 +220,39 @@ Se non vengono visualizzate modifiche aggiornate entro gli intervalli di tempo i
 
 > [!IMPORTANT]
 > L'opzione di Desktop Analytics **Visualizza dati recenti** è deprecata. Questa azione verrà rimossa in una versione futura del servizio Desktop Analytics. Per altre informazioni, vedere [Funzionalità deprecate](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!--7080949-->  
+
+## <a name="service-notifications"></a>Notifiche del servizio
+
+<!-- 4982509 -->
+
+Il portale di Desktop Analytics può visualizzare banner di notifica agli amministratori. Queste notifiche consentono a Microsoft di comunicare con l'utente in merito a eventi e problemi importanti. Le sezioni seguenti illustrano in dettaglio le notifiche che è possibile visualizzare.
+
+### <a name="see-whats-new-this-month-in-desktop-analytics"></a>Le novità di questo mese sono disponibili in Desktop Analytics
+
+Questa notifica informativa segnala modifiche apportate al servizio. Per altre informazioni, vedere [Novità di Desktop Analytics](whats-new.md) (`https://aka.ms/danews`).
+
+### <a name="there-are-new-prerequisites-to-continue-using-desktop-analytics-review-the-new-requirements"></a>Sono presenti nuovi prerequisiti. Per continuare a usare Desktop Analytics, esaminare i nuovi requisiti.
+
+Questa notifica informativa segnala modifiche apportate ai prerequisiti. Ad esempio, un nuovo endpoint Internet o un aggiornamento software. Per altre informazioni, vedere [Prerequisiti](overview.md#prerequisites) (`https://aka.ms/daprereqs`).
+
+### <a name="were-investigating-an-issue-that-impacts-desktop-analytics"></a>È in corso la ricerca della causa di un problema relativo a Desktop Analytics
+
+Questa notifica di avviso indica che Microsoft è a conoscenza di un problema con impatto sul servizio Desktop Analytics. Il problema si verifica di solito con la generazione di snapshot. Quando viene visualizzata questa notifica, significa che Microsoft sta esaminando il problema per determinare l'ambito e l'origine dell'effetto. Non è necessario contattare il supporto tecnico Microsoft. Per altre informazioni, vedere [Flusso di dati](privacy.md#data-flow).
+
+### <a name="were-investigating-an-issue-with-data-latency-if-you-enrolled-new-devices-or-changed-any-assets-in-the-last-24-hours-they-may-not-appear-right-away"></a>È in corso la ricerca della causa di un problema relativo alla latenza dei dati. Se sono stati registrati nuovi dispositivi o sono stati modificati asset nelle ultime 24 ore, è possibile che non vengano visualizzati immediatamente.
+
+Questa notifica di avviso indica che Microsoft è a conoscenza di un problema con impatto sul servizio Desktop Analytics. Microsoft monitora costantemente il servizio per verificare che tutti i componenti aggiornino gli snapshot nei tempi corretti. Durante questo monitoraggio, uno di questi componenti non è stato completato come previsto. Quando viene visualizzata questa notifica, significa che Microsoft sta indagando sul problema. Non è necessario contattare il supporto tecnico Microsoft. Per altre informazioni, vedere [Flusso di dati](privacy.md#data-flow).
+
+Se di recente [sono stati registrati dispositivi](enroll-devices.md) o sono stati modificati [asset](about-assets.md), attendere che Microsoft risolva il problema. Non è necessario ripetere alcuna azione.
+
+### <a name="weve-resolved-a-temporary-issue-with-data-latency-daily-refresh-of-portal-data-is-delayed"></a>È stato risolto un problema temporaneo relativo alla latenza dei dati. L'aggiornamento giornaliero dei dati del portale è ritardato.
+
+Questa notifica informa che si è verificato un problema con la latenza dei dati. Il servizio sta ancora elaborando lo snapshot e l'aggiornamento dei dati è ritardato. Per altre informazioni, vedere [Latenza dei dati](#data-latency).
+
+### <a name="weve-resolved-an-issue-with-data-latency-if-you-enrolled-new-devices-or-changed-any-assets-in-the-last-24-hours-they-may-not-appear-right-away"></a>È stato risolto un problema relativo alla latenza dei dati. Se sono stati registrati nuovi dispositivi o sono stati modificati asset nelle ultime 24 ore, è possibile che non vengano visualizzati immediatamente.
+
+Questa notifica informa che Microsoft ha risolto un problema segnalato in precedenza relativo alla latenza dei dati. È possibile che vengano visualizzati dati non aggiornati per lo snapshot del giorno successivo. Se [sono stati registrati dispositivi](enroll-devices.md) o sono state apportate modifiche alla configurazione del dispositivo nelle ultime 24 ore, questi cambiamenti non verranno visualizzati immediatamente nel portale. È possibile continuare a usare Desktop Analytics per categorizzare gli [asset](about-assets.md) e preparare [piani di distribuzione](about-deployment-plans.md). Queste azioni possono usare i dati dello snapshot precedente.
+
+### <a name="weve-resolved-an-issue-with-desktop-analytics-daily-refresh-of-the-portal-data-is-on-track"></a>È stato risolto un problema relativo a Desktop Analytics. L'aggiornamento giornaliero dei dati del portale è puntuale.
+
+Questa notifica informa che Microsoft ha identificato un componente dello snapshot che ha smesso di funzionare durante l'elaborazione. Microsoft ha riavviato il componente, operazione che richiede tempo per l'elaborazione dello snapshot. Microsoft monitora costantemente il servizio per verificare che tutti i componenti aggiornino gli snapshot nei tempi corretti.

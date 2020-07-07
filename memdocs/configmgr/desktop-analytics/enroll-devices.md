@@ -2,7 +2,7 @@
 title: Registrare i dispositivi in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Informazioni su come registrare i dispositivi in Desktop Analytics.
-ms.date: 04/15/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,11 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 22b5461df3a560449316009471ea029967118f5d
-ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
-ms.translationtype: HT
+ms.openlocfilehash: 8f3a2cfd2cb18d6247c35ae46efab2ab9f89b254
+ms.sourcegitcommit: 2c5fd7c8603b88b753765f3cc298d0a0bacaf521
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83864899"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85820002"
 ---
 # <a name="how-to-enroll-devices-in-desktop-analytics"></a>Come registrare i dispositivi in Desktop Analytics
 
@@ -36,6 +35,7 @@ La tabella seguente elenca gli aggiornamenti per ogni componente nelle versioni 
 
 | Versione sistema operativo | Strumento di valutazione | DiagTrack |
 | --------------| ----------------------- | -------------------|
+| Windows 10 2004 | Incluso <sup>[Nota 1](#bkmk_note1)</sup> | [Aggiornamento cumulativo più recente](https://support.microsoft.com/help/4555932) |
 | Windows 10 1909 | Incluso <sup>[Nota 1](#bkmk_note1)</sup> | [Aggiornamento cumulativo più recente](https://support.microsoft.com/help/4529964) |
 | Windows 10 1903 | Incluso <sup>[Nota 1](#bkmk_note1)</sup> | [Aggiornamento cumulativo più recente](https://support.microsoft.com/help/4498140) |
 | Windows 10 1809 | Incluso <sup>[Nota 1](#bkmk_note1)</sup> | [Aggiornamento cumulativo più recente](https://support.microsoft.com/help/4464619) |

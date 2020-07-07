@@ -2,7 +2,7 @@
 title: Novità di Desktop Analytics
 titleSuffix: Configuration Manager
 description: Riepilogo delle nuove funzionalità della versione mensile più recente del servizio cloud Desktop Analytics.
-ms.date: 06/04/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,11 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 5265ee88cbe6dc119d6d14dadd3fadad6a52b253
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
-ms.translationtype: HT
+ms.openlocfilehash: ec554d755b92d1c710def580a34fdbbddc7b4d45
+ms.sourcegitcommit: 2c5fd7c8603b88b753765f3cc298d0a0bacaf521
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84454954"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85819976"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>Novità di Desktop Analytics
 
@@ -27,6 +26,28 @@ Informazioni sulle novità mensili di Desktop Analytics.
 
 Per ricevere una notifica quando questa pagina viene aggiornata, copiare e incollare l'URL seguente nel lettore di feed RSS: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
+
+## <a name="july-2020"></a>Luglio 2020
+
+### <a name="windows-10-version-2004-now-available-in-desktop-analytics"></a>Windows 10, versione 2004, ora disponibile in Desktop Analytics
+
+<!-- 7370207 -->
+
+Nel portale di Desktop Analytics, quando si esegue il monitoraggio degli aggiornamenti della sicurezza e delle funzionalità, viene ora visualizzato Windows 10 versione 2004. Quando si crea un piano di distribuzione, è possibile selezionare Windows 10 versione 2004 come versione di destinazione.
+
+### <a name="improved-support-for-viewing-the-portal-from-any-device"></a>Supporto migliorato per la visualizzazione del portale da qualsiasi dispositivo
+
+<!-- 6270240 -->
+
+È ora possibile visualizzare il portale di Desktop Analytics nell'interfaccia di amministrazione di Microsoft Endpoint Manager da diversi tipi di dispositivi. Ora soddisfa le linee guida per l'accessibilità del contenuto Web (WCAG) 2.1 per una risoluzione dello schermo di 320 x 256 pixel. Ad esempio, l'immagine seguente rappresenta il portale da un Apple iPhone 8:
+
+:::image type="content" source="media/dashboard-iphone8.png" alt-text="Portale di Desktop Analytics in un iPhone 8":::
+
+### <a name="notifications-for-service-impacting-events"></a>Notifiche per gli eventi con conseguenze sul servizio
+
+<!-- 4982509 -->
+
+Il portale di Desktop Analytics può ora visualizzare banner di notifica. Queste notifiche consentono a Microsoft di comunicare con l'utente in merito a eventi e problemi importanti. Ad esempio, problemi noti relativi al servizio o alla latenza dei dati o informazioni sui nuovi prerequisiti. Per altre informazioni, vedere [Notifiche del servizio](troubleshooting.md#service-notifications).
 
 ## <a name="june-2020"></a>Giugno 2020
 

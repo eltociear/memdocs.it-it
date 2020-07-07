@@ -11,17 +11,20 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 1c79db413f8e37424b84d98d51fb584d168e3819
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
-ms.translationtype: HT
+ms.openlocfilehash: 96a014f4919480854b57bae82e982ce783f5f59b
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268930"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590967"
 ---
 # <a name="updates-in-desktop-analytics"></a>Aggiornamenti in Desktop Analytics
 
 Nel portale di Desktop Analytics visualizzare lo stato degli aggiornamenti della sicurezza e delle funzionalità. Selezionare questi nodi nel gruppo Monitoraggio del menu principale di Desktop Analytics. Questi nodi offrono informazioni dettagliate sullo stato di questi aggiornamenti nell'ambiente in uso.
 
+<!--7362999-->
+
+> [!IMPORTANT]
+> Desktop Analytics visualizza lo stato di aggiornamento della sicurezza e delle funzionalità per i dispositivi con l'ID commerciale associato all'area di lavoro di Desktop Analytics. Questo comportamento è indipendente dal fatto che i dispositivi siano stati registrati in Configuration Manager. Il numero di dispositivi totali in questi riquadri potrebbe non corrispondere al numero di dispositivi registrati in [**Servizi connessi**](monitor-connection-health.md#commercial-id-configuration).
 
 ## <a name="security-updates"></a>Aggiornamenti della sicurezza
 

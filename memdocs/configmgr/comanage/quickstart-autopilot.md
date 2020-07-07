@@ -10,12 +10,11 @@ ms.assetid: e3e3c97f-5945-49ab-a622-9f6fe6b9737e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b97f9bb6be00129e0b88dc3943af1de166a801d4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
-ms.translationtype: HT
+ms.openlocfilehash: 91b938b5ab64616a35773406cd18b54de80b40e7
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690949"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590410"
 ---
 # <a name="windows-autopilot-with-co-management"></a>Windows Autopilot con la co-gestione
 
@@ -77,9 +76,9 @@ Con Autopilot è ora possibile usare la modalità di distribuzione automatica de
 
 ## <a name="case-study"></a>Case study
 
-L'impresa di logistica e trasporto merci su rotaia tedesca DB Shenker usa Autopilot per aumentare la produttività dei dipendenti e liberare i team IT dalle attività quotidiane di supporto. Shenker ha sostituito l'uso tradizionale delle immagini con il provisioning tramite il cloud. Ora usano l'aggiunta ad Azure AD e Intune per configurare e rendere operativi rapidamente i nuovi dispositivi. 
+L'impresa di logistica e trasporto merci su rotaia tedesca DB Schenker usa Autopilot per aumentare la produttività dei dipendenti e liberare i team IT dalle attività quotidiane di supporto. DB Schenker ha sostituito l'uso tradizionale delle immagini con il provisioning tramite il cloud. Ora usano l'aggiunta ad Azure AD e Intune per configurare e rendere operativi rapidamente i nuovi dispositivi. 
 
-Da quando Shenker usa Windows Autopilot, i collaboratori remoti non devono più perdere tempo per raggiungere un sede in grado di offrire i servizi IT. L'hardware viene consegnato direttamente ai collaboratori dal produttore agli uffici sul campo locali. Il collaboratore connette il nuovo dispositivo a Internet e accede con le proprie credenziali di Azure AD. Il dispositivo si connette quindi alle applicazioni e ai servizi assegnati dal reparto IT di Schenker al singolo profilo dell'utente.
+Da quando DB Schenker usa Windows Autopilot, i collaboratori remoti non devono più perdere tempo per raggiungere una sede in grado di offrire i servizi IT. L'hardware viene consegnato direttamente ai collaboratori dal produttore agli uffici sul campo locali. Il collaboratore connette il nuovo dispositivo a Internet e accede con le proprie credenziali di Azure AD. Il dispositivo si connette quindi alle applicazioni e ai servizi assegnati dal reparto IT di DB Schenker al singolo profilo dell'utente.
 
 Per altre informazioni, vedere [Global logistics firm centralizes IT, unites employees with modern digital workplace](https://customers.microsoft.com/story/db-schenker-travel-transportation-windows-10) (Un'impresa di logistica globale centralizza i servizi IT e offre ai dipendenti un'area di lavoro unificata digitale moderna).
 
@@ -91,7 +90,7 @@ Generare soddisfazione all'interno dell'organizzazione tramite la creazione di u
 
 
 
-## <a name="configure"></a>Configurazione
+## <a name="configure"></a>Configura
 
 Per altre informazioni, vedere gli articoli seguenti:
 

@@ -52,6 +52,8 @@
       items:
         - name: Panoramica conformità
           href: device-compliance-get-started.md
+        - name: Partner per la conformità dei dispositivi
+          href: device-compliance-partners.md
         - name: Creare un criterio
           href: create-compliance-policy.md
         - name: Conformità basata sulla posizione

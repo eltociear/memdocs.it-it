@@ -2,20 +2,20 @@
 title: Collegamento del tenant di Microsoft Endpoint Manager
 titleSuffix: Configuration Manager
 description: Caricare i dispositivi Configuration Manager nel servizio cloud e intraprendere le azioni dall'interfaccia di amministrazione.
-ms.date: 04/10/2020
+ms.date: 07/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
-ms.technology: configmgr-sum
+ms.technology: configmgr-core
 ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: be1c938cfcf332edb37e24e4094567f88f363560
-ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
+ms.openlocfilehash: a9e97c74e4825dc49ce628b3ae176c55f4288966
+ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84795619"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86210301"
 ---
 # <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a>Connessione tenant di Microsoft Endpoint Manager: azioni dispositivo e sincronizzazione dispositivo
 <!--3555758 live 3/4/2020-->
@@ -56,8 +56,9 @@ Se la co-gestione è attualmente abilitata, modificare le proprietà di co-gesti
 1. Fare clic con il pulsante destro del mouse sulle impostazioni di co-gestione e selezionare **Proprietà**.
 1. Nella scheda **Configure upload** (Configura caricamento) selezionare **Carica nell'interfaccia di amministrazione di Microsoft Endpoint Manager**. Fare clic su **Apply**.
    - L'impostazione predefinita per il caricamento del dispositivo è **Tutti i dispositivi personali gestiti da Microsoft Endpoint Configuration Manager**. Se necessario, è possibile limitare il caricamento a una singola raccolta di dispositivi.
+1. Selezionare l'opzione per **abilitare l'analisi degli endpoint per i dispositivi caricati in Microsoft Endpoint Manager** se si vuole ottenere informazioni dettagliate per ottimizzare l'esperienza dell'utente finale in [endpoint Analytics](../../analytics/overview.md).
 
-   [![Configurazione guidata della co-gestione](./media/3555758-configure-upload.png)](./media/3555758-configure-upload.png#lightbox)
+   [![Caricare i dispositivi nell'interfaccia di amministrazione di Microsoft Endpoint Manager](../../analytics/media/6051638-configure-upload-configmgr.png)](../../analytics/media/6051638-configure-upload-configmgr.png#lightbox)
 1. Quando richiesto, accedere con l'account di *amministratore globale*.
 1. Fare clic su **Sì** per accettare la notifica **Crea un'applicazione di AAD**. Questa azione esegue il provisioning di un'entità servizio e crea una registrazione dell'applicazione Azure AD per semplificare la sincronizzazione.
 1. Fare clic su **OK** per uscire dalle proprietà di co-gestione dopo aver apportato le modifiche.
@@ -77,6 +78,7 @@ Se la co-gestione non è abilitata, usare la **Configurazione guidata co-gestion
    [![Configurazione guidata della co-gestione](./media/3555758-comanagement-wizard.png)](./media/3555758-comanagement-wizard.png#lightbox)
 1. Fare clic su **Avanti** e quindi su **Sì** per accettare la notifica **Crea un'applicazione di AAD**. Questa azione esegue il provisioning di un'entità servizio e crea una registrazione dell'applicazione Azure AD per semplificare la sincronizzazione.
 1. Nella pagina **Configura caricamento** selezionare l'impostazione consigliata per il caricamento dei **dispositivi per tutti i dispositivi gestiti da Microsoft endpoint Configuration Manager**. Se necessario, è possibile limitare il caricamento a una singola raccolta di dispositivi.
+1. Selezionare l'opzione per **abilitare l'analisi degli endpoint per i dispositivi caricati in Microsoft Endpoint Manager** se si vuole ottenere informazioni dettagliate per ottimizzare l'esperienza dell'utente finale in [endpoint Analytics](../../analytics/overview.md)
 1. Fare clic su **Riepilogo** per verificare la selezione e quindi su **Avanti**.
 1. Al termine della procedura guidata, fare clic su **Chiudi**.  
 
@@ -112,7 +114,7 @@ Se la co-gestione non è abilitata, usare la **Configurazione guidata co-gestion
 
 **Comportamento:** Quando si esegue la connessione tenant durante la fase di caricamento, viene eseguita la prima volta una sincronizzazione completa. I cicli di sincronizzazione successivi sono sincronizzazioni Delta. Qualsiasi aggiornamento ai dispositivi interessati provocherà la rimozione del dispositivo dalla sincronizzazione.
 
-## <a name="log-files"></a>File di registro
+## <a name="log-files"></a>File di log
 Usare i log seguenti che si trovano nel punto di connessione del servizio:
 
 - **CMGatewaySyncUploadWorker. log**
@@ -120,4 +122,4 @@ Usare i log seguenti che si trovano nel punto di connessione del servizio:
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per ulteriori informazioni sui file di log di allocazione tenant, vedere [risolvere i problemi di connessione tenant](technical-reference.md).
+Per ulteriori informazioni sui file di log di allocazione tenant, vedere [risolvere i problemi di connessione tenant](troubleshoot.md).

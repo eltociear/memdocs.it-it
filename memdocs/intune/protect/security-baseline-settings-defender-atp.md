@@ -5,7 +5,7 @@ description: Impostazioni della baseline di sicurezza supportate da Intune per l
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/01/2020
+ms.date: 07/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 zone_pivot_groups: atp-baseline-versions
-ms.openlocfilehash: 330a4387ef1a079b2a0f691bfb0b887117dd9e4b
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 8046318c55e2a9791f01fca4a5a54de3f1487782
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429347"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022187"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="atp-april-2020"
@@ -859,9 +859,9 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
 - **Impedisci agli utenti di ignorare gli avvisi di SmartScreen**  
   CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
-   Questa impostazione richiede l'abilitazione dell'impostazione 'SmartScreen per app e file'.
-  - **Sì** (*impostazione predefinita*) - SmartScreen non mostrerà all'utente un'opzione per ignorare l'avviso ed eseguire l'app. L'avviso verrà visualizzato, ma l'utente potrà ignorarlo.
-  - **Non configurato** - Viene ripristinata l'impostazione predefinita di Windows, che consente all'utente di ignorare gli avvisi.
+   Questa impostazione richiede che l'opzione "Attiva Windows SmartScreen" sia impostata su Sì.
+  - **Sì** (*impostazione predefinita*) - SmartScreen è abilitato e gli utenti non possono ignorare gli avvisi per i file o le app dannose.
+  - **Non configurato**  - Gli utenti possono ignorare gli avvisi di SmartScreen per i file e le app dannose.
 
 - **Richiedi app solo dallo Store**  
 

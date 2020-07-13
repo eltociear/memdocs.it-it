@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: ''
-ms.openlocfilehash: a6b45cef3cc13357638753efd5b8179c5ce41f6c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f1d4e483f02cf73b2c7afe949e4145692adccc9d
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80085700"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088344"
 ---
 # <a name="intune-enrollment-methods-for-windows-devices"></a>Metodi di registrazione di Intune per dispositivi Windows
 
@@ -36,7 +36,7 @@ Esistono due metodi per registrare i dispositivi in Intune:
 
 Gli utenti possono registrare personalmente il proprio dispositivo Windows usando uno di questi metodi:
 
-- [Bring Your Own Device (BYOD)](https://docs.microsoft.com/mem/intune/user-help/enroll-windows-10-device): gli utenti registrano i propri dispositivi personali scegliendo di connettere un account **aziendale e dell'istituto di istruzione** da **Impostazioni** del dispositivo. Questo processo:
+- [Bring Your Own Device (BYOD)](https://docs.microsoft.com/mem/intune/user-help/enroll-windows-10-device): Gli utenti registrano i propri dispositivi personali scaricando e installando l'**app Portale aziendale**. Questo processo:
   - Registra il dispositivo con Azure Active Directory per poter accedere a risorse aziendali come la posta elettronica.
   - Registra il dispositivo in Intune come dispositivo personale (BYOD).
 Se un amministratore ha configurato la registrazione automatica (disponibile con sottoscrizioni di Azure AD premium), l'utente deve immettere le credenziali solo una volta. In caso contrario, l'utente dovrà eseguire la registrazione separatamente tramite la registrazione solo MDM e immettere di nuovo le credenziali.  

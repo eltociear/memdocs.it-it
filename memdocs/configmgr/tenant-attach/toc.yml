@@ -4,11 +4,17 @@
   items:
     - name: Abilitare il collegamento di tenant
       href: device-sync-actions.md
-    - name: Risolvere i problemi delle azioni del dispositivo
-      href: technical-reference.md
+    - name: Dettagli del client (anteprima)
+      href: client-details.md
 - name: CMPivot per dispositivi collegati al tenant (anteprima)
   items:
     - name: Panoramica di CMPivot
       href: cmpivot-overview-attached.md
     - name: Script di esempio CMPivot
       href: cmpivot-samples-attached.md
+- name: Risoluzione dei problemi
+  items:
+    - name: Azioni del dispositivo e collegamento di tenant
+      href: troubleshoot.md
+    - name: Dettagli del client (anteprima)
+      href: troubleshoot-client-details.md

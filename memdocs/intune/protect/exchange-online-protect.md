@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8746a6dee0b35dec7886a596d0448874dfb04f16
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f9669625225f8ad3960ece39e2a6b04849421ce6
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79352020"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022186"
 ---
 # <a name="protect-office-365-exchange-online-without-requiring-device-management"></a>Proteggere Office 365 Exchange Online senza richiedere la gestione dei dispositivi
 
@@ -36,7 +36,7 @@ Se si decide di configurare un sistema di gestione dei dispositivi, è possibile
 1. [Ottenere informazioni sull'accesso condizionale](conditional-access.md). 
 2. [Ottenere informazioni sull'accesso condizionale basato su app](app-based-conditional-access-intune.md).
 3. [Configurare criteri di accesso condizionale basato su app per Exchange Online](app-based-conditional-access-intune-create.md).
-4. [Bloccare le app che non possono essere gestite](app-modern-authentication-block.md), in particolare le app che non usano Azure Active Directory Authentication Library (ADAL).
+4. [Bloccare le app che non possono essere gestite](app-modern-authentication-block.md), in particolare le app che non usano Azure Active Directory Authentication Library (ADAL) o Microsoft Authentication Library (MSAL).
 5. (Facoltativo) [Configurare criteri di accesso condizionale basato su app per SharePoint Online](app-based-conditional-access-intune-create.md). Questi criteri impediscono l'accesso ai dati aziendali da app che non possono essere gestite e protette. I criteri limitano anche l'accesso tramite SharePoint Mobile. 
 
 ## <a name="what-to-tell-employees-and-students"></a>Informazioni da comunicare a dipendenti e studenti

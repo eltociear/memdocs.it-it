@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 07/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 7f200e5cb5bb4aa0f29cbd3adc0f177bb14e5476
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: ac5b4685249ffa46be63e9ad55ca6067edec1b03
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431696"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022399"
 ---
 # <a name="attack-surface-reduction-policy-settings-for-endpoint-security-in-intune"></a>Impostazioni dei criteri di riduzione della superficie di attacco nella sicurezza degli endpoint di Intune
 
@@ -92,7 +92,7 @@ Piattaforme e profili supportati:
 - **Application Guard - Stampa su stampanti locali consentita**  
 
   - **Non configurato** (*impostazione predefinita*)
-  - **Sì** - Consente la stampa sulle stampanti locali.
+  - **Sì** - Stampa su stampanti locali consentita.
 
 - **Application Guard - Stampa su stampanti di rete consentita**  
 
@@ -114,7 +114,7 @@ Piattaforme e profili supportati:
   - **Non configurato** (*impostazione predefinita*)
   - **Sì** - Consente di configurare il criterio di isolamento della rete Windows.  
   
-  Se impostata su *Configura*, è possibile configurare le impostazioni seguenti.
+  Se impostata su *Sì*, è possibile configurare le impostazioni seguenti.
 
   - **Intervalli IP**  
     Espandere l'elenco a discesa, selezionare **Aggiungi** e specificare un *Indirizzo inferiore* e un *Indirizzo superiore*.
@@ -186,9 +186,9 @@ Piattaforme e profili supportati:
 - **Impedisci agli utenti di ignorare gli avvisi di SmartScreen**  
   [PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
-  Questa impostazione richiede l'abilitazione dell'impostazione 'SmartScreen per app e file'.
-  - **Non configurato** (*impostazione predefinita*) - Viene ripristinata l'impostazione predefinita di Windows, che consente all'utente di ignorare gli avvisi.
-  - **Sì** - SmartScreen non mostrerà all'utente un'opzione per ignorare l'avviso ed eseguire l'app. L'avviso viene visualizzato, ma l'utente non potrà ignorarlo.
+  - **Non configurato**  (*impostazione predefinita*) - Gli utenti possono ignorare gli avvisi di SmartScreen per i file e le app dannose.
+  - **Sì** - SmartScreen è abilitato e gli utenti non possono ignorare gli avvisi per i file o le app dannose.
+
 
 - **Attiva Windows SmartScreen**  
   CSP: [SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)

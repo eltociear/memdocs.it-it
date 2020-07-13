@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/28/2020
+ms.date: 07/15/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 227a44436f4490c9b3e2188609a9714a0e842149
-ms.sourcegitcommit: eb51bb38d484e8ef2ca3ae3c867561249fa413f3
+ms.openlocfilehash: 832ddbde9e3cf4782c7d3867ad6a09cc250960c7
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206316"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088327"
 ---
 # <a name="use-compliance-policies-to-set-rules-for-devices-you-manage-with-intune"></a>Usare i criteri di conformità per configurare regole per i dispositivi gestiti con Intune
 
@@ -31,7 +31,9 @@ Criteri di conformità in Intune:
 
 - Consentono di definire le regole e le impostazioni che gli utenti e i dispositivi devono soddisfare per adeguarsi ai criteri stessi.
 - Includono azioni applicabili ai dispositivi non conformi. Le azioni per la non conformità possono inviare agli utenti avvisi relativi alle condizioni di non conformità e proteggere i dati nei dispositivi non conformi.
-- Possono essere [combinati con l'accesso condizionale](#integrate-with-conditional-access), che può quindi bloccare utenti e dispositivi che non rispettano le regole.
+- È possibile [combinare questi criteri con l'accesso condizionale](#integrate-with-conditional-access) per bloccare gli utenti e i dispositivi che non rispettano le regole e sono stati contrassegnati come non conformi.
+
+  L'accesso condizionale può anche funzionare con i dati sullo stato di conformità dei dispositivi gestiti con partner di gestione di dispositivi mobili di terze parti. Per abilitare questa funzionalità, si aggiunge il supporto per il partner sia ad Azure AD che a Intune. Per altre informazioni, vedere Aggiungere il supporto per i partner per la conformità dei dispositivi. 
 
 I criteri di conformità in Intune sono costituiti da due parti:
 

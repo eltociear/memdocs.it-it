@@ -5,7 +5,7 @@ description: Esaminare le impostazioni predefinite e le impostazioni disponibili
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/04/2020
+ms.date: 07/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67bb805df6406226c67084ed832f5cc590b1664a
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: 9cc2cf4531c2e2d7a2847ccdbce87c8b938a46d6
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943910"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022229"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Impostazioni della baseline di sicurezza MDM in Windows per Intune
 
@@ -1852,7 +1852,7 @@ Per altre informazioni, vedere [Policy CSP - RemoteDesktopServices](https://docs
   **Impostazione predefinita**: Abilitato
 
 - **Bloccare il reindirizzamento delle unità**:  
-  L'impostazione di questo criterio specifica se impedire il mapping delle unità dei client in una sessione di Servizi Desktop remoto (reindirizzamento delle unità). Per impostazione predefinita, un server host sessione Desktop remoto esegue automaticamente il mapping di unità di client al momento della connessione. Le unità mappate vengono visualizzate nell'albero delle cartelle della sessione in Esplora file o in Computer nel formato *\<letteraunità>* in *\<nomecomputer>* . È possibile usare l'impostazione di questo criterio per eseguire l'override di questo comportamento. Se si abilita l'impostazione di questo criterio, il reindirizzamento delle unità dei client non è consentito nelle sessioni di Servizi Desktop remoto e il reindirizzamento della copia dei file degli Appunti non è consentito nei computer che eseguono Windows Server 2003, Windows 8 e Windows XP. Se si disabilita l'impostazione di questo criterio, il reindirizzamento delle unità dei client è sempre consentito. Inoltre, se è consentito il reindirizzamento degli Appunti, il reindirizzamento della copia dei file degli Appunti è sempre consentito. Se non si configura l'impostazione di questo criterio, il reindirizzamento delle unità dei client e il reindirizzamento della copia dei file degli Appunti non sono specificate a livello di Criteri di gruppo.  
+  L'impostazione di questo criterio specifica se impedire il mapping delle unità dei client in una sessione di Servizi Desktop remoto (reindirizzamento delle unità). Per impostazione predefinita, un server host sessione Desktop remoto esegue automaticamente il mapping di unità di client al momento della connessione. Le unità mappate vengono visualizzate nell'albero delle cartelle della sessione in Esplora file o in Computer nel formato *\<driveletter>* in *\<computername>* . È possibile usare l'impostazione di questo criterio per eseguire l'override di questo comportamento. Se si abilita l'impostazione di questo criterio, il reindirizzamento delle unità dei client non è consentito nelle sessioni di Servizi Desktop remoto e il reindirizzamento della copia dei file degli Appunti non è consentito nei computer che eseguono Windows Server 2003, Windows 8 e Windows XP. Se si disabilita l'impostazione di questo criterio, il reindirizzamento delle unità dei client è sempre consentito. Inoltre, se è consentito il reindirizzamento degli Appunti, il reindirizzamento della copia dei file degli Appunti è sempre consentito. Se non si configura l'impostazione di questo criterio, il reindirizzamento delle unità dei client e il reindirizzamento della copia dei file degli Appunti non sono specificate a livello di Criteri di gruppo.  
   [Altre informazioni](https://go.microsoft.com/fwlink/?linkid=2067197)
 
   **Impostazione predefinita**: Abilitato
@@ -1969,7 +1969,7 @@ Per altre informazioni, vedere [Policy CSP - SmartScreen](https://docs.microsoft
   **Impostazione predefinita**: Sì
 
 ::: zone-end
-::: zone pivot="mdm-may-201"
+::: zone pivot="mdm-may-2019"
 
 - **Attiva Windows SmartScreen**  
   CSP: [SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)
@@ -1981,7 +1981,9 @@ Per altre informazioni, vedere [Policy CSP - SmartScreen](https://docs.microsoft
 - **Impedisci agli utenti di ignorare gli avvisi di SmartScreen**  
   CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
-  Con l'impostazione Sì SmartScreen non mostrerà all'utente un'opzione per ignorare l'avviso ed eseguire l'app. L'avviso verrà visualizzato, ma l'utente potrà ignorarlo. Con l'impostazione Non configurata verrà ripristinata l'impostazione predefinita di Windows che consente all'utente di ignorare l'avviso. Questa impostazione richiede l'abilitazione dell'impostazione 'SmartScreen per app e file'.
+  Se impostato su Sì, SmartScreen è abilitato e gli utenti non possono ignorare gli avvisi per i file o le app dannose. Se impostato su Non configurato, gli utenti possono ignorare gli avvisi di SmartScreen per i file e le app dannose.  
+
+  Questa impostazione richiede che l'opzione "Attiva Windows SmartScreen" sia impostata su Sì.
 
   **Impostazione predefinita**: Sì
 

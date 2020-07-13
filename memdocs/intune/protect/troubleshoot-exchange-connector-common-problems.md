@@ -5,7 +5,7 @@ description: Risolvere i problemi e correggere gli errori comuni relativi a Micr
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 07/06/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 55f51f94cf26aa2486ef390d5fbb668eaf013e10
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 57f8b8193fd2f4e871f744743b768ec6248ae0b9
+ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79350629"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85972131"
 ---
 # <a name="resolve-common-problems-with-the-intune-exchange-connector"></a>Risolvere i problemi comuni di Intune Exchange Connector
  
@@ -74,7 +74,7 @@ Esaminare le sezioni seguenti per risolvere i problemi relativi alle notifiche d
    È anche possibile testare il servizio di individuazione automatica da Internet all'indirizzo https://testconnectivity.microsoft.com. In alternativa, è possibile testarlo da un dominio locale usando Microsoft Connectivity Analizer Tool. Per altre informazioni, vedere [Microsoft Connectivity Analyzer Tool](https://docs.microsoft.com/previous-versions/office/exchange-remote-connectivity/jj851141(v=exchg.80)).
 
 
-### <a name="check-autodiscovery"></a>Controllare l'individuazione automatica
+### <a name="check-autodiscover"></a>Controllare l'individuazione automatica
 
 Se l'individuazione automatica ha esito negativo, provare a eseguire la procedura seguente:
 

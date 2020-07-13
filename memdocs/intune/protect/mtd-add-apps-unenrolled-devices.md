@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/24/2020
+ms.date: 06/26/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6eea60eec6f36a5ab8a97b5e4402d75b4a8eb54b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f667b6ad9ba9f7c353d89b4d3fc4ff749499bfaf
+ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83991148"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85972037"
 ---
 # <a name="add-mobile-threat-defense-apps-to-unenrolled-devices"></a>Aggiungere app Mobile Threat Defense a dispositivi non registrati
 
@@ -37,9 +37,10 @@ Facoltativamente, è anche possibile usare Intune per aggiungere e distribuire l
 > Questo articolo si applica a tutti i partner Mobile Threat Defense che supportano i criteri di protezione delle app:
 >
 > - Better Mobile (Android,iOS/iPadOS)
-> - Zimperium (Android,iOS/iPadOS)
 > - Lookout for Work (Android,iOS/iPadOS)
->
+> - Wandera (Android, iOS/iPadOS)
+> - Zimperium (Android,iOS/iPadOS)
+
 > Per i dispositivi non registrati, **non sono necessari criteri di configurazione delle app iOS** per configurare l'app Mobile Threat Defense per iOS usata con Intune. Si tratta di una differenza fondamentale rispetto ai dispositivi registrati in Intune.
 
 ## <a name="configure-microsoft-authenticator-for-ios-via-intune-optional"></a>Configurare Microsoft Authenticator per iOS tramite Intune (facoltativo)
@@ -57,8 +58,8 @@ Quando si usano i criteri di protezione delle app di Intune con Mobile Threat De
 
 Tuttavia, se si vuole rendere disponibile l'app agli utenti finali tramite il Portale aziendale Intune, è possibile seguire i passaggi seguenti nel [portale di Azure ](https://portal.azure.com/). Assicurarsi di avere familiarità con le procedure seguenti:
 
-- [Aggiunta di un'app in Intune](../apps/apps-add.md).
-- [Assegnazione di un'app con Intune](../apps/apps-deploy.md).
+- [Aggiunta di un'app in Intune](../apps/apps-add.md)
+- [Assegnazione di un'app con Intune](../apps/apps-deploy.md)
 
 ### <a name="making-lookout-for-work-available-to-end-users"></a>Rendere Lookout for Work disponibile per gli utenti finali
 
@@ -101,22 +102,22 @@ Tuttavia, se si vuole rendere disponibile l'app agli utenti finali tramite il Po
 - **Android**
   - Vedere le istruzioni per [aggiungere app di Android Store a Microsoft Intune](../apps/store-apps-android.md). Usare questo [URL di Play Store per l'app Active Shield](https://play.google.com/store/apps/details?id=com.better.active.shield.enterprise) durante il completamento della sezione **Configurare le informazioni sull'app**.
 
-<!-- - **iOS**
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [ActiveShield - App Store URL](https://itunes.apple.com/us/app/activeshield/id980234260?mt=8&uo=4) when completing the **Configure app information** section. -->
+- **iOS**
+  - Vedere le istruzioni per [aggiungere app dello Store iOS a Microsoft Intune](../apps/store-apps-ios.md). Usare questo [URL di App Store per l'app ActiveShield](https://itunes.apple.com/us/app/activeshield/id980234260?mt=8&uo=4) durante il completamento della sezione **Configurare le informazioni sull'app**.
 
 <!-- ### Making Sophos available to end users
 - **Android**
   - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Sophos - Play Store URL](https://play.google.com/store/apps/details?id=com.sophos.smsec) when completing the **Configure app information** section.
 
 - **iOS**
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [ActiveShield - App Store URL](https://itunes.apple.com/us/app/sophos-mobile-security/id1086924662?mt=8) when completing the **Configure app information** section.
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [ActiveShield - App Store URL](https://itunes.apple.com/us/app/sophos-mobile-security/id1086924662?mt=8) when completing the **Configure app information** section.  -->
 
-### Making Wandera available to end users
+### <a name="making-wandera-available-to-end-users"></a>Rendere Wandera disponibile per gli utenti finali
 - **Android**
-  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Wandera Mobile - Play Store URL](https://play.google.com/store/apps/details?id=com.wandera.android) when completing the **Configure app information** section. For **Minimum operating system**, select **Android 5.0**.
+  - Vedere le istruzioni per [aggiungere app di Android Store a Microsoft Intune](../apps/store-apps-android.md). Usare questo [URL di Play Store per l'app Wandera Mobile](https://play.google.com/store/apps/details?id=com.wandera.android) durante il completamento della sezione **Configurare le informazioni sull'app**.
 
 - **iOS**
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Wandera Mobile - - App Store URL](https://itunes.apple.com/app/wandera/id605469330) when completing the **Configure app information** section. -->
+  - Vedere le istruzioni per [aggiungere app dello Store iOS a Microsoft Intune](../apps/store-apps-ios.md). Usare questo [URL di App Store per l'app Wandera Mobile](https://itunes.apple.com/app/wandera/id605469330) durante il completamento della sezione **Configurare le informazioni sull'app**.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

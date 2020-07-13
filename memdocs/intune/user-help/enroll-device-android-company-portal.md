@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 82272fd4239b50657b887bf6c310b280eeecae7a
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2ef0cf3909442cec818fd775bef4f848d6be5a83
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880072"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022314"
 ---
 # <a name="enroll-your-device-with-company-portal"></a>Registrare il dispositivo in Portale aziendale  
 Registrare il dispositivo Android personale o aziendale per ottenere accesso sicuro alla posta elettronica, alle app e ai dati aziendali. Il portale aziendale supporta i dispositivi Android, incluso Samsung Knox, che eseguono Android 4.4 e versioni successive.  
@@ -35,7 +35,7 @@ Registrare il dispositivo Android personale o aziendale per ottenere accesso sic
 > Samsung Knox è un tipo di sicurezza che alcuni dispositivi Samsung usano per fornire protezione aggiuntiva oltre all'offerta prevista per i dispositivi Android nativi. Per determinare se il dispositivo è di tipo Samsung Knox, passare a **Impostazioni** > **Informazioni sul dispositivo**. Se non viene visualizzata l'indicazione **Versione Knox**, significa che il dispositivo è un dispositivo Android nativo.
 
 ## <a name="enroll-device"></a>Registrare il dispositivo  
-Assicurarsi di [installare l'app Portale aziendale Intune da Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal). Per l'elenco degli store in Cina in cui è disponibile l'app, vedere [Installare l'app Portale aziendale in Cina](install-company-portal-android-china.md).    
+Assicurarsi di [installare l'app Portale aziendale Intune da Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal). Per l'elenco degli store nella Repubblica popolare cinese in cui è disponibile l'app, vedere [Installare l'app Portale aziendale nella Repubblica popolare cinese](install-company-portal-android-china.md).
 
 Durante la registrazione potrebbe essere richiesto di scegliere la categoria che descrive meglio come viene usato il dispositivo. Il team di supporto tecnico aziendale usa questa risposta per controllare le app a cui è possibile accedere.  
 

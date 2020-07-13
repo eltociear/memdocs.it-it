@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: a8eeb8263e337fa7427818c05f183fdea3c9dbea
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: 3e01e54eb6e74c8139c266d677a6406554119273
+ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353633"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85972072"
 ---
 # <a name="disk-encryption-policy-for-endpoint-security-in-intune"></a>Criteri di crittografia del disco per la sicurezza degli endpoint in Intune
 
@@ -29,7 +29,7 @@ I profili di crittografia del disco per la sicurezza degli endpoint si concentra
 
 Sebbene sia possibile configurare le stesse impostazioni del dispositivo usando i profili *Endpoint Protection* per la configurazione del dispositivo, i profili di configurazione del dispositivo includono categorie aggiuntive di impostazioni. Queste impostazioni aggiuntive non sono correlate alla crittografia del disco e possono complicare l'attività di configurare solo la crittografia del disco.
 
-I criteri di sicurezza degli endpoint per i criteri di crittografia del disco sono disponibili in *Gestione* nel nodo **Sicurezza degli endpoint** dell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+I criteri di sicurezza degli endpoint per la crittografia del disco sono disponibili in *Gestione* nel nodo **Sicurezza degli endpoint** dell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 ## <a name="prerequisites-for-disk-encryption-policy"></a>Prerequisiti per i criteri di crittografia del disco
 

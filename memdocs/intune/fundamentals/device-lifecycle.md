@@ -15,16 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c65235caa7e53dbe8dee4605803a6e58d6ab31a0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b9580a5cb99192f81fc83f8d61119f5368f0a5ee
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79344116"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088395"
 ---
 # <a name="overview-of-the-microsoft-intune-mobile-device-management-mdm-lifecycle"></a>Panoramica del ciclo di vita di gestione di dispositivi mobili (MDM) di Microsoft Intune
 
-Tutti i dispositivi gestiti hanno un *ciclo di vita*. Intune può aiutare a gestire il ciclo di vita del dispositivo, dalla registrazione alla configurazione e alla protezione fino al ritiro del dispositivo stesso quando non è più necessario.
+Tutti i dispositivi gestiti hanno un *ciclo di vita*. Intune può aiutare a gestire il ciclo di vita del dispositivo, dalla registrazione alla configurazione e alla protezione fino al ritiro del dispositivo stesso quando non è più necessario. Ecco un esempio: un iPad acquistato dall'azienda deve prima essere registrato con l'account Microsoft Intune per consentire all'azienda di gestirlo, quindi deve essere configurato in base alle esigenze dell'azienda e i dati archiviati su di esso da un utente devono essere protetti, infine quando l'iPad non è più necessario, è indispensabile [ritirarlo o cancellarne](https://docs.microsoft.com/mem/intune/remote-actions/devices-wipe) tutti i dati sensibili.
 
 ![Ciclo di vita del dispositivo](./media/device-lifecycle/device-lifecycle.png "Ciclo di vita del dispositivo Intune")
 
@@ -32,7 +32,7 @@ Tutti i dispositivi gestiti hanno un *ciclo di vita*. Intune può aiutare a gest
 
 Le moderne strategie di gestione di dispositivi mobili (MDM) riguardano una vasta gamma di telefoni, tablet e PC (iOS/iPadOS, Android, Windows e Mac OS X). Se si deve poter gestire il dispositivo, come nel caso dei dispositivi aziendali, il primo passaggio consiste nella [registrazione del dispositivo](../enrollment/device-enrollment.md). È anche possibile gestire i PC Windows registrandoli con Intune (MDM) oppure [installando il software client di Intune](manage-windows-pcs-with-microsoft-intune.md).
 
-## <a name="configure"></a>Configurazione
+## <a name="configure"></a>Configura
 
 La registrazione dei dispositivi costituisce il primo passaggio. Per poter usufruire di tutte le offerte di Intune e verificare che i dispositivi siano protetti e conformi agli standard aziendali, è possibile scegliere tra una vasta gamma di criteri che consentono di configurare quasi ogni aspetto correlato al funzionamento dei dispositivi gestiti. Ad esempio, gli utenti devono usare una password per i dispositivi che contengono dati aziendali? È possibile impostare questo requisito. È disponibile una rete Wi-Fi aziendale? È possibile configurarla automaticamente. Di seguito sono descritti i tipi di opzioni di configurazione disponibili:
 

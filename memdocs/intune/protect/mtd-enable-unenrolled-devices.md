@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/20/2020
+ms.date: 06/26/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6c762aafbc1d82e7e51746806f8ba15cc5ad83c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 933810cb079ac405d15a18a26efd07fb69a6e3f1
+ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83984934"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85972038"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune-for-unenrolled-devices"></a>Abilitare il connettore Mobile Threat Defense in Intune per i dispositivi non registrati
 
@@ -33,8 +33,9 @@ Durante l'installazione di Mobile Threat Defense (MTD), sono stati configurati c
 > Questo articolo si applica a tutti i partner Mobile Threat Defense che supportano i criteri di protezione delle app:
 >
 > - Better Mobile (Android,iOS/iPadOS)
-> - Zimperium (Android,iOS/iPadOS)
 > - Lookout for Work (Android,iOS/iPadOS)
+> - Wandera (Android, iOS/iPadOS)
+> - Zimperium (Android,iOS/iPadOS)
 
 ## <a name="classic-conditional-access-policies-for-mtd-apps"></a>Criteri di accesso condizionale classici per app MTD
 
@@ -74,9 +75,9 @@ Per visualizzare i criteri di accesso condizionale classici, in [Azure](https://
 
 **Impostazioni dei criteri di protezione delle app**
 
-- **Connetti i dispositivi Android con versione 4.4 e successiva a *\<nome partner MTD>* per la valutazione dei criteri di protezione dell'app**: Quando si abilita questa opzione, i criteri di protezione delle app che usano la regola Livello di minaccia del dispositivo valuteranno i dispositivi che includono dati da questo connettore.
+- **Connetti i dispositivi Android con versione 4.4 e successiva a *\<MTD partner name>* per la valutazione dei criteri di protezione dell'app**: Quando si abilita questa opzione, i criteri di protezione delle app che usano la regola Livello di minaccia del dispositivo valuteranno i dispositivi che includono dati da questo connettore.
 
-- **Connetti i dispositivi iOS con versione 11 e successiva a *\<nome partner MTD>* per la valutazione dei criteri di protezione dell'app**: Quando si abilita questa opzione, i criteri di protezione delle app che usano la regola Livello di minaccia del dispositivo valuteranno i dispositivi che includono dati da questo connettore.
+- **Connetti i dispositivi iOS con versione 11 e successiva a *\<MTD partner name>* per la valutazione dei criteri di protezione dell'app**: Quando si abilita questa opzione, i criteri di protezione delle app che usano la regola Livello di minaccia del dispositivo valuteranno i dispositivi che includono dati da questo connettore.
 
 **Impostazioni condivise comuni**
 

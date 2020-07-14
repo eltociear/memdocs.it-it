@@ -2,7 +2,7 @@
 title: Strumento di connessione del servizio
 titleSuffix: Configuration Manager
 description: Lo strumento consente di connettersi al servizio cloud di Configuration Manager per caricare manualmente le informazioni sull'utilizzo.
-ms.date: 09/06/2017
+ms.date: 07/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,180 +10,250 @@ ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e535653e0f31e186a6bdbde8da77750f2afdfdb0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 48aa08f3318aaa4629691bfb30b60580cd3e25f0
+ms.sourcegitcommit: 03d2331876ad61d0a6bb1efca3aa655b88f73119
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690299"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85946845"
 ---
 # <a name="use-the-service-connection-tool-for-configuration-manager"></a>Usare lo strumento di connessione del servizio per Configuration Manager
 
 *Si applica a: Configuration Manager (Current Branch)*
 
-Usare lo **strumento di connessione del servizio** quando il punto di connessione del servizio è in modalità offline oppure quando i server del sistema del sito di Configuration Manager non sono connessi a Internet. Lo strumento consente di mantenere il sito aggiornato con gli aggiornamenti più recenti di Configuration Manager.  
+Usare lo **strumento di connessione del servizio** quando il punto di connessione del servizio è in modalità offline. È possibile usarlo anche quando i server del sistema del sito Configuration Manager non sono connessi a Internet. Lo strumento consente di mantenere il sito aggiornato con gli aggiornamenti più recenti di Configuration Manager.
 
-Quando viene eseguito, lo strumento si connette manualmente al servizio cloud di Configuration Manager per caricare le informazioni di utilizzo per la gerarchia e per scaricare gli aggiornamenti. Il caricamento dei dati di utilizzo è necessario per abilitare il servizio cloud in modo che fornisca gli aggiornamenti corretti per la distribuzione.  
+Quando viene eseguito, lo strumento si connette al servizio cloud Configuration Manager, carica le informazioni di utilizzo per la gerarchia e scarica gli aggiornamenti. Il caricamento dei dati di utilizzo è necessario per abilitare il servizio cloud, in modo che offra gli aggiornamenti corretti per l'ambiente in uso.
 
-## <a name="prerequisites-for-using-the-service-connection-tool"></a>Prerequisiti per l'uso dello strumento di connessione del servizio
-Di seguito sono elencati i prerequisiti e i problemi noti.
+## <a name="prerequisites"></a>Prerequisiti
 
-**Prerequisiti:**
+- Il sito ha un punto di connessione del servizio e viene configurato con l'impostazione **Offline, connessione su richiesta**.
 
-- È installato un punto di connessione del servizio, impostato su **Offline, connessione su richiesta**.  
+- Eseguire lo strumento al prompt dei comandi come amministratore. Non è disponibile un'interfaccia utente.
 
-- Lo strumento deve essere eseguito da un prompt dei comandi.  
+- Lo strumento deve essere eseguito dal punto di connessione del servizio e da un computer in grado di connettersi a Internet. Ognuno di questi computer deve avere un sistema operativo x64 e i componenti seguenti:
 
-- Ogni computer in cui viene eseguito lo strumento, ossia il computer del punto di connessione del servizio e il computer connesso a Internet, deve avere un sistema a 64 bit (x64) e avere installato quanto segue:  
+  - File x86 e x64 di **Visual C++ Redistributable** . Per impostazione predefinita, Configuration Manager installa la versione x64 nel computer che ospita il punto di connessione del servizio. Per scaricare questo componente, vedere [Visual C++ Redistributable Package per Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784).
 
-  - File x86 e x64 di **Visual C++ Redistributable** .   Per impostazione predefinita, Configuration Manager installa la versione x64 nel computer che ospita il punto di connessione del servizio.  
+  - **.NET Framework 4.5.2** o versioni successive
 
-    Per scaricare una copia dei file di Visual C++, visitare [Visual C++ Redistributable Packages per Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784) nell'Area download Microsoft.  
+- L'account usato per eseguire lo strumento deve avere le autorizzazioni seguenti:
 
-  - .NET Framework 4.5.2 o versioni successive.  
+  - **Amministratore locale** nel computer che ospita il punto di connessione del servizio
 
-- L'account usato per eseguire lo strumento deve avere:
-  - Le autorizzazioni di**amministratore locale** nel computer che ospita il punto di connessione del servizio (dove viene eseguito lo strumento).
-  - Le autorizzazioni di**lettura** per il database del sito.  
+  - Autorizzazioni di **lettura** per il database del sito
 
+- È necessario un metodo per trasferire i file tra il computer con accesso a Internet e il punto di connessione del servizio. Ad esempio, un'unità USB con spazio libero sufficiente per l'archiviazione dei file e degli aggiornamenti.
 
+## <a name="overview"></a>Panoramica
 
-- È necessaria un'unità USB con spazio libero sufficiente per l'archiviazione dei file e degli aggiornamenti oppure un altro metodo di trasferimento dei file tra il computer del punto di connessione del servizio e il computer con accesso a Internet. Questo scenario presuppone che i computer del sito e i computer gestiti non abbiano una connessione diretta a Internet.  
+1. **Preparazione**: eseguire lo strumento nel punto di connessione del servizio. Lo strumento inserisce i dati di utilizzo in un file con estensione cab nel percorso specificato. Copiare il file di dati nel computer con connessione a Internet.
 
+2. **Connessione**: eseguire lo strumento nel computer con connessione a Internet. Lo strumento carica i dati di utilizzo e quindi scarica gli aggiornamenti di Configuration Manager. Copiare gli aggiornamenti scaricati nel punto di connessione del servizio.
 
+    È possibile caricare più file di dati contemporaneamente, ognuno da una gerarchia diversa. È anche possibile specificare un server proxy e un utente per il server proxy.
 
-## <a name="use-the-service-connection-tool"></a>Usare lo strumento di connessione del servizio  
+3. **Importazione**: eseguire lo strumento nel punto di connessione del servizio. Lo strumento importa gli aggiornamenti e li aggiunge al sito. È quindi possibile visualizzare e [installare gli aggiornamenti](install-in-console-updates.md) nella console di Configuration Manager.
 
- Lo strumento di connessione del servizio (**serviceconnectiontool.exe**) è disponibile nel supporto di installazione di Configuration Manager nella cartella **%path%\smssetup\tools\ServiceConnectionTool**. Usare sempre lo strumento di connessione del servizio che corrisponde alla versione di Configuration Manager in uso.
+### <a name="upload-multiple-data-files"></a>Caricare più file di dati
 
+- Inserire tutti i file di dati esportati da gerarchie separate nella stessa cartella. Assegnare un nome univoco a ogni file. Se necessario, è possibile rinominare manualmente i file.
 
- In questa procedura gli esempi della riga di comando usano i nomi file e i percorsi di cartelle seguenti (non è necessario usare questi percorsi e nomi file, si possono usare anche alternative più adatte al proprio ambiente e alle proprie preferenze):  
+- Quando si esegue lo strumento per caricare i dati in Microsoft, specificare la cartella che contiene i file di dati.
 
-- Percorso a una chiave USB dove vengono archiviati i dati per il trasferimento tra server:  **D:\USB\\**  
+- Quando si esegue lo strumento per importare i dati, vengono importati solo i dati per la gerarchia corrente.
 
-- Nome del file CAB che contiene i dati esportati dal sito: **UsageData.cab**  
+### <a name="specify-a-proxy-server"></a>Specificare un server proxy
 
-- Nome della cartella vuota in cui verranno archiviati gli aggiornamenti scaricati per Configuration Manager per il trasferimento tra server: **UpdatePacks**  
+Se il computer con connessione a Internet richiede un server proxy, lo strumento supporta una configurazione proxy di base. Usare i parametri facoltativi **-proxyserveruri** e **-proxyusername**. Per altre informazioni, vedere [Parametri della riga di comando](#bkmk_cmd).
 
-Nel computer che ospita il punto di connessione del servizio:  
+### <a name="specify-the-type-of-updates-to-download"></a>Specificare il tipo di aggiornamenti da scaricare
 
-- Aprire un prompt dei comandi con privilegi amministrativi, quindi passare alla directory nel percorso che contiene **serviceconnectiontool.exe**.  
+Lo strumento supporta opzioni per controllare quali file vengono scaricati. Per impostazione predefinita, lo strumento consente di scaricare solo l'aggiornamento più recente disponibile adeguato alla versione del sito. Non scarica gli hotfix.
 
-  Per impostazione predefinita, questo strumento è disponibile nel supporto di installazione di Configuration Manager nella cartella **%path%\smssetup\tools\ServiceConnectionTool**. Per il funzionamento dello strumento di connessione del servizio, tutti i file devono essere nella stessa cartella.  
+Per modificare questo comportamento, usare uno dei parametri seguenti per impostare i file scaricati.
 
-Quando si esegue il comando seguente, lo strumento prepara un file CAB che contiene informazioni sull'utilizzo e lo copia in una posizione specificata. I dati nel file CAB si basano sul livello dei dati di diagnostica e di utilizzo che il sito è configurato per raccogliere. Vedere [Dati di diagnostica e utilizzo per Configuration Manager](../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md).  Eseguire questo comando per creare il file CAB:  
+- **-downloadall**: scaricare tutti gli aggiornamenti, inclusi gli aggiornamenti e gli hotfix, indipendentemente dalla versione del sito.
+- **-downloadhotfix**: scaricare tutti gli hotfix, indipendentemente dalla versione del sito.
+- **-downloadsiteversion**: scaricare gli aggiornamenti e gli hotfix con versione successiva a quella del sito.
 
-- **serviceconnectiontool.exe -prepare -usagedatadest D:\USB\UsageData.cab**  
+    > [!IMPORTANT]
+    > A causa di un problema noto in Configuration Manager versione 2002, il comportamento predefinito non funziona come previsto. Usare il parametro **-downloadsiteversion** per scaricare gli aggiornamenti necessari per la versione 2002.<!-- 7594517 -->
 
-È anche necessario copiare la cartella ServiceConnectionTool con tutto il contenuto nell'unità USB o renderla comunque disponibile nel computer da usare per i passaggi 3 e 4.  
+Per altre informazioni, vedere [Parametri della riga di comando](#bkmk_cmd).
 
-### <a name="overview"></a>Panoramica
-#### <a name="there-are-three-primary-steps-to-using-the-service-connection-tool"></a>I passaggi principali per l'uso dello strumento di connessione del servizio sono tre  
+> [!TIP]
+> Lo strumento determina la versione del sito dal file di dati. Per verificare la versione, cercare nel file con estensione cab il file di testo con il nome corrispondente alla versione del sito.
 
-1.  **Preparazione**:  questo passaggio viene eseguito nel computer che ospita il punto di connessione del servizio. Quando si esegue lo strumento, i dati di utilizzo vengono inseriti in un file CAB e archiviati in un'unità USB o in una posizione di trasferimento alternativa specificata.  
+## <a name="use-the-tool"></a>Usare lo strumento  
 
-2.  **Connessione**: per questo passaggio lo strumento viene eseguito in un computer remoto che si connette a Internet in modo da poter caricare i dati di utilizzo e poi scaricare gli aggiornamenti.  
+Lo strumento di connessione del servizio si trova nel supporto di installazione di Configuration Manager, nel percorso seguente: `SMSSETUP\TOOLS\ServiceConnectionTool\ServiceConnectionTool.exe`. Usare sempre lo strumento di connessione del servizio che corrisponde alla versione di Configuration Manager in uso. Per il funzionamento dello strumento di connessione del servizio, tutti questi file devono trovarsi nella stessa cartella.
 
-3.  **Importazione**: questo passaggio viene eseguito nel computer che ospita il punto di connessione del servizio. Quando si esegue lo strumento, gli aggiornamenti scaricati vengono importati e aggiunti al sito in modo da poter visualizzare e quindi installare gli aggiornamenti dalla console di Configuration Manager.  
+Copiare la cartella **ServiceConnectionTool** e tutto il suo contenuto nel computer con connessione a Internet.
 
-A partire dalla versione 1606, mentre si è connessi a Microsoft è possibile caricare più file con estensione cab contemporaneamente, ognuno da una gerarchia diversa, e specificare un server proxy e un utente per il server proxy.   
+In questa procedura gli esempi della riga di comando usano i nomi file e i percorsi delle cartelle seguenti. Non è necessario usare questi percorsi e nomi file. È possibile usare alternative adatte all'ambiente e alle preferenze in uso.
 
-#### <a name="to-upload-multiple-cab-files"></a>Per caricare più file con estensione cab
-- Inserire i singoli file con estensione cab da esportare da gerarchie diverse nella stessa cartella. Il nome di ogni file deve essere univoco ed è possibile rinominarli manualmente se necessario.
-- Quando si esegue il comando per caricare i dati in Microsoft, specificare la cartella che contiene i file con estensione cab. (Prima dell'aggiornamento 1606, era possibile caricare i dati da una sola gerarchia alla volta e lo strumento richiedeva di specificare il nome del file con estensione cab nella cartella).
-- Quando in seguito si esegue l'attività di importazione nel punto di connessione del servizio di una gerarchia, lo strumento importerà automaticamente solo i dati della gerarchia specifica.  
+- Percorso dei file di origine del supporto di installazione di Configuration Manager nel punto di connessione del servizio: `C:\Source`
 
-#### <a name="to-specify-a-proxy-server"></a>Per specificare un server proxy
-È possibile usare i parametri facoltativi seguenti per specificare un server proxy (ulteriori informazioni sull'uso di questi parametri sono disponibili nella sezione Opzioni della riga di comando in questo argomento):
-- **-proxyserveruri [FQDN_of_proxy_server]**  Usare questo parametro per specificare il server proxy da usare per la connessione.
-- **-proxyusername [username]**  Usare questo parametro quando è necessario specificare un utente per il server proxy.
+- Percorso di un'unità USB in cui archiviare i dati da trasferire tra i computer: `D:\USB\`
 
-#### <a name="specify-the-type-of-updates-to-download"></a>Specificare il tipo di aggiornamenti da scaricare
-A partire dalla versione 1706, è stato modificato il comportamento di download di strumenti predefinito e lo strumento supporta le opzioni per controllare i file da scaricare.
-- Per impostazione predefinita, lo strumento consente di scaricare solo l'aggiornamento più recente disponibile adeguato alla versione del sito. Non scarica gli aggiornamenti rapidi.
+- Nome del file di dati esportato dal sito: `UsageData.cab`
 
-Per modificare questo comportamento, utilizzare uno dei parametri seguenti per impostare i file che vengono scaricati. 
+- Nome della cartella vuota in cui lo strumento archivia gli aggiornamenti scaricati per Configuration Manager: `UpdatePacks`
 
-> [!NOTE]
-> La versione del sito è determinata dai dati nel file CAB che viene caricata quando viene eseguito lo strumento.
->
-> È possibile verificare la versione cercando il file *SiteVersion*.txt all'interno del file CAB.
+### <a name="prepare"></a>Preparazione
 
-- **-downloadall** Questa opzione consente di scaricare tutti gli elementi, inclusi aggiornamenti e aggiornamenti rapidi, indipendentemente dalla versione del sito.
-- **-downloadhotfix** Questa opzione consente di scaricare tutti gli aggiornamenti rapidi indipendentemente dalla versione del sito.
-- **-downloadsiteversion** Questa opzione consente di scaricare aggiornamenti e aggiornamenti rapidi con una versione più recente rispetto alla versione del sito.
+1. Nel computer che ospita il punto di connessione del servizio aprire un prompt dei comandi come amministratore e passare alla directory in cui si trova lo strumento. Ad esempio:
 
-Riga di comando di esempio che utilizza *- downloadsiteversion*:
-- **serviceconnectiontool.exe -connect  *-downloadsiteversion* -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks**
+    `cd C:\Source\SMSSETUP\TOOLS\ServiceConnectionTool\`
 
+1. Eseguire il comando seguente per preparare il file di dati:
 
+    `ServiceConnectionTool.exe -prepare -usagedatadest D:\USB\UsageData.cab`
 
+    > [!NOTE]
+    > Se si prevede di caricare file di dati da più gerarchie nello stesso momento, assegnare un nome univoco a ogni file di dati. Se necessario, è possibile rinominare i file in un secondo momento.
 
-### <a name="to-use-the-service-connection-tool"></a>Per usare lo strumento di connessione del servizio  
+    I dati nel file si basano sul livello dei dati di diagnostica e di utilizzo configurato per il sito. Per altre informazioni, vedere [Panoramica dei dati di diagnostica e di utilizzo](../../plan-design/diagnostics/diagnostics-and-usage-data.md). È possibile usare lo strumento per esportare i dati in un file con estensione csv per visualizzarne il contenuto. Per altre informazioni, vedere [-export](#-export).
 
-1. Nel computer che ospita il punto di connessione del servizio:  
+1. Quando lo strumento completa l'esportazione dei dati di utilizzo, copiare il file di dati in un computer che dispone di accesso a Internet.
 
-   - Aprire un prompt dei comandi con privilegi amministrativi, quindi passare alla directory nel percorso che contiene **serviceconnectiontool.exe**.   
+### <a name="connect"></a>Connessione
 
-2. Eseguire il comando seguente per fare in modo che lo strumento prepari un file con estensione cab contenente informazioni sull'utilizzo e lo copi nel percorso specificato:  
+1. Nel computer con accesso a Internet aprire un prompt dei comandi come amministratore e passare alla directory in cui si trova lo strumento. Questo percorso è una copia dell'intera cartella **ServiceConnectionTool**. Ad esempio:
 
-   - **serviceconnectiontool.exe -prepare -usagedatadest D:\USB\UsageData.cab**  
+    `cd D:\USB\ServiceConnectionTool\`
 
-   Se si caricano file con estensione cab da più gerarchie contemporaneamente, è necessario che ogni file nella cartella abbia un nome univoco. È possibile rinominare manualmente i file aggiunti nella cartella.
+1. Eseguire il comando seguente per caricare il file di dati e scaricare gli aggiornamenti di Configuration Manager:
 
-   Per visualizzare le informazioni sull'utilizzo raccolte per essere caricate nel servizio cloud di Configuration Manager, eseguire il comando seguente per esportare gli stessi dati come file con estensione csv che può essere visualizzato usando un'applicazione come Excel:  
+    `ServiceConnectionTool.exe -connect -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks`
 
-   - **serviceconnectiontool.exe -export -dest D:\USB\UsageData.csv**  
+    Per altri esempi, vedere [Parametri della riga di comando](#bkmk_cmd).
 
-3. Una volta completata la procedura di preparazione, spostare l'unità USB (o trasferire i dati esportati con un altro metodo) in un computer con l'accesso a Internet.  
+    > [!NOTE]  
+    > Quando si esegue questa riga di comando è possibile che venga visualizzato l'errore seguente:
+    >
+    > **Eccezione non gestita: System.UnauthorizedAccessException: Accesso al percorso 'C:\ Users\br\AppData\Local\Temp\extractmanifestcab\95F8A562.sql' negato.**
+    >
+    > È possibile ignorare questo errore. Chiudere la finestra dell'errore per continuare.
 
-4. Nel computer con l'accesso a Internet aprire un prompt dei comandi con privilegi amministrativi, quindi passare alla directory nel percorso che contiene una copia dello strumento  **serviceconnectiontool.exe** e gli altri file provenienti dalla cartella specificata.  
+1. Quando lo strumento completa il download degli aggiornamenti, copiare gli aggiornamenti nel punto di connessione del servizio.
 
-5. Eseguire questo comando per avviare il caricamento delle informazioni di utilizzo e il download degli aggiornamenti per Configuration Manager:  
+### <a name="import"></a>Importazione
 
-   - **serviceconnectiontool.exe -connect -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks**
+1. Nel computer che ospita il punto di connessione del servizio aprire un prompt dei comandi come amministratore e passare alla directory in cui si trova lo strumento. Ad esempio:
 
-   Per altri esempi di questa riga di comando, vedere la sezione [Opzioni della riga di comando](../../../core/servers/manage/use-the-service-connection-tool.md#bkmk_cmd) più avanti in questo argomento.
+    `cd C:\Source\SMSSETUP\TOOLS\ServiceConnectionTool\`
 
-   > [!NOTE]  
-   >  Quando si esegue la riga di comando per connettersi al servizio cloud di Configuration Manager, potrebbe verificarsi un errore simile al seguente:  
-   >   
-   > - Eccezione non gestita: System.UnauthorizedAccessException:  
-   >   
-   >      L'accesso al percorso 'C:\  
-   >     Users\br\AppData\Local\Temp\extractmanifestcab\95F8A562.sql' è negato.  
-   >   
-   > Questo errore può essere ignorato senza conseguenze ed è possibile chiudere la finestra di errore e continuare.  
+1. Immettere il seguente comando per importare gli aggiornamenti:
 
-6. Dopo aver scaricato gli aggiornamenti per Configuration Manager, spostare l'unità USB (o trasferire i dati esportati con un altro metodo) nel computer che ospita il punto di connessione del servizio.  
+    `ServiceConnectionTool.exe -import -updatepacksrc D:\USB\UpdatePacks`
 
-7. Nel computer che ospita il punto di connessione del servizio aprire un prompt dei comandi con privilegi amministrativi, passare alla directory nel percorso che contiene **serviceconnectiontool.exe**, quindi eseguire il comando seguente:  
+1. Al termine dell'importazione, chiudere il prompt dei comandi. Vengono importati solo gli aggiornamenti per la gerarchia applicabile.
 
-   - **serviceconnectiontool.exe -import -updatepacksrc D:\USB\UpdatePacks**  
+1. Nella console di Configuration Manager passare all'area di lavoro **Amministrazione** e selezionare il nodo **Aggiornamenti e manutenzione**. Gli aggiornamenti importati sono ora disponibili per l'installazione. Per altre informazioni, vedere [Installare gli aggiornamenti nella console](install-in-console-updates.md).
 
-8. Al termine dell'importazione, è possibile chiudere il prompt dei comandi. Vengono importati solo gli aggiornamenti per la gerarchia applicabile.  
+## <a name="log-files"></a>File di registro
 
-9. Aprire la console di Configuration Manager e passare ad **Amministrazione** > **Aggiornamenti e manutenzione**. Gli aggiornamenti importati sono ora pronti per l'installazione. Nelle versioni precedenti la 1702, Aggiornamenti e manutenzione si trova in **Amministrazione** > **Servizi cloud**.
+- **ServiceConnectionTool.log**: ogni volta che viene eseguito, lo strumento di connessione del servizio scrive in questo file di log. Il percorso del file di log è sempre lo stesso dello strumento. Questo file di log include semplici dettagli sull'uso dello strumento in base ai parametri usati. Ogni volta che si esegue lo strumento, qualsiasi file di log esistente viene sostituito.
 
-   Per informazioni sull'installazione degli aggiornamenti, vedere [Installare gli aggiornamenti nella console per Configuration Manager](../../../core/servers/manage/install-in-console-updates.md).  
+- **ConfigMgrSetup.log**: durante la fase [Connessione](#connect) lo strumento scrive in questo file di log nella radice dell'unità di sistema. Questo file di log include informazioni più dettagliate. Ad esempio indica quali file vengono scaricati dallo strumento e se i controlli hash hanno esito positivo.
 
-## <a name="log-files"></a><a name="bkmk_cmd"></a> File di log
+## <a name="command-line-parameters"></a><a name="bkmk_cmd"></a> Parametri della riga di comando
 
-**ServiceConnectionTool.log**
+Questa sezione elenca in ordine alfabetico tutti i parametri disponibili per lo strumento di connessione del servizio.
 
-Ogni volta che si esegue lo strumento di connessione del servizio, verrà generato un file di log denominato **ServiceConnectionTool.log** nello stesso percorso dello strumento.  Questo file di log fornirà semplici dettagli sull'esecuzione dello strumento in base ai comandi usati.  Un file di log esistente verrà sostituito ogni volta che si esegue lo strumento.
+### <a name="-connect"></a>-connect
 
-**ConfigMgrSetup.log**
+Usare durante la fase [Connessione](#connect) sul computer con accesso a Internet. Si connette al servizio cloud Configuration Manager per caricare il file di dati e scaricare gli aggiornamenti.
 
-Quando si usa lo strumento per la connessione e il download degli aggiornamenti, verrà generato un file di log nella radice dell'unità di sistema denominato **ConfigMgrSetup.log**.  Questo file di log fornirà informazioni più dettagliate, ad esempio quali file vengono scaricati, estratti e se i controlli dell'hash hanno esito positivo.
+Richiede i seguenti parametri:
 
-## <a name="command-line-options"></a><a name="bkmk_cmd"></a> Opzioni della riga di comando  
-Per visualizzare le informazioni della Guida per lo strumento del punto di connessione del servizio, aprire il prompt dei comandi nella cartella che contiene lo strumento ed eseguire il comando:  **serviceconnectiontool.exe**.  
+- **-usagedatasrc**: percorso del file di dati da caricare
+- **-updatepackdest**: percorso degli aggiornamenti scaricati
 
+È anche possibile usare i seguenti parametri facoltativi:
 
-|Opzioni della riga di comando|Dettagli|  
-|---------------------------|-------------|  
-|**-prepare -usagedatadest [unità:][percorso][nomefile.cab]**|Questo comando archivia i dati di utilizzo correnti in un file CAB.<br /><br /> Eseguire questo comando come **amministratore locale** nel server che ospita il punto di connessione del servizio.<br /><br /> Esempio:   **-prepare -usagedatadest D:\USB\Usagedata.cab**|    
-|**-connect -usagedatasrc [unità:][percorso] -updatepackdest [unità:][percorso] -proxyserveruri [nome FQDN del server proxy] -proxyusername [nome utente]** <br /> <br /> Se si usa una versione di Configuration Manager precedente alla 1606, è necessario specificare il nome del file con estensione cab e non è possibile usare le opzioni per un server proxy.  I parametri di comando supportati sono: <br /> **-connect -usagedatasrc [unità:][percorso][nome file] -updatepackdest [unità:][percorso]** |Questo comando si connette al servizio cloud di Configuration Manager per caricare i file con estensione cab dei dati di utilizzo dal percorso specificato e per scaricare i pacchetti di aggiornamento disponibili e il contenuto della console. Le opzioni per i server proxy sono facoltative.<br /><br /> Eseguire questo comando come **amministratore locale** in un computer con connessione a Internet.<br /><br /> Esempio per la connessione senza server proxy: **-connect -usagedatasrc D:\USB\ -updatepackdest D:\USB\UpdatePacks** <br /><br /> Esempio per la connessione con server proxy: **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks -proxyserveruri itgproxy.redmond.corp.microsoft.com -proxyusername Meg** <br /><br /> Se si usa una versione precedente alla 1606, è necessario specificare un nome per il file con estensione cab e non è possibile specificare un server proxy. Usare la riga di comando di esempio seguente: **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks**|      
-|**-import -updatepacksrc [unità:][percorso]**|Questo comando importa i pacchetti di aggiornamento e il contenuto della console scaricati in precedenza nella console di Configuration Manager.<br /><br /> Eseguire questo comando come **amministratore locale** nel server che ospita il punto di connessione del servizio.<br /><br /> Esempio:  **-import -updatepacksrc D:\USB\UpdatePacks**|  
-|**-export -dest [unità:][percorso][nomefile.csv]**|Questo comando esporta i dati di utilizzo in un file CSV che può essere visualizzato successivamente.<br /><br /> Eseguire questo comando come **amministratore locale** nel server che ospita il punto di connessione del servizio.<br /><br /> Esempio: **-export -dest D:\USB\usagedata.csv**|  
+- **-proxyserveruri**: nome di dominio completo (FQDN) del server proxy
+- **-proxyusername**: nome utente per il server proxy
+- **-downloadall**: scaricare tutti gli elementi, inclusi aggiornamenti e hotfix, indipendentemente dalla versione del sito.
+- **-downloadhotfix**: vengono scaricati tutti gli hotfix, indipendentemente dalla versione del sito.
+- **-downloadsiteversion**: vengono scaricati gli aggiornamenti e gli hotfix con versione successiva a quella del sito.
+
+#### <a name="example-of-connect-without-a-proxy-server"></a>Esempio di connessione senza un server proxy
+
+`ServiceConnectionTool.exe -connect -usagedatasrc D:\USB\ -updatepackdest D:\USB\UpdatePacks`
+
+#### <a name="example-of-connect-with-a-proxy-server"></a>Esempio di connessione con un server proxy
+
+`ServiceConnectionTool.exe -connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks -proxyserveruri itproxy.contoso.com -proxyusername jqpublic`
+
+#### <a name="example-of-connect-to-download-only-site-version-applicable-updates"></a>Esempio di connessione per scaricare solo gli aggiornamenti della versione del sito applicabili
+
+`ServiceConnectionTool.exe -connect -downloadsiteversion -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks`
+
+### <a name="-dest"></a>-dest
+
+Parametro obbligatorio con il parametro **-export** per specificare il percorso e il nome del file con estensione csv da esportare. Per altre informazioni, vedere [-export](#-export).
+
+### <a name="-downloadall"></a>-downloadall
+
+Parametro facoltativo con il parametro **-connect** che consente di scaricare tutti gli elementi, inclusi gli aggiornamenti e gli hotfix, indipendentemente dalla versione del sito. Per altre informazioni, vedere [-connect](#connect).
+
+### <a name="-downloadhotfix"></a>-downloadhotfix
+
+Parametro facoltativo con il parametro **-connect** che consente di scaricare solo tutti gli hotfix, indipendentemente dalla versione del sito. Per altre informazioni, vedere [-connect](#-connect).
+
+### <a name="-downloadsiteversion"></a>-downloadsiteversion
+
+Parametro facoltativo con il parametro **-connect** che consente scaricare solo gli aggiornamenti e gli hotfix con versione successiva a quella del sito. Per altre informazioni, vedere [-connect](#-connect).
+
+### <a name="-export"></a>-export
+
+Usare durante la fase [Preparazione](#prepare) per esportare i dati di utilizzo in un file con estensione csv. Eseguire come amministratore nel punto di connessione del servizio. Questa azione consente di esaminare il contenuto dei dati di utilizzo prima di caricarli in Microsoft. Richiede il parametro **-dest** per specificare il percorso del file con estensione csv.
+
+#### <a name="example-of-export"></a>Esempio di export
+
+`-export -dest D:\USB\usagedata.csv`
+
+### <a name="-import"></a>-import
+
+Usare durante la fase [Importazione](#import) nel punto di connessione del servizio per importare gli aggiornamenti al sito. Per specificare il percorso degli aggiornamenti scaricati è necessario il parametro **-updatepacksrc**.
+
+#### <a name="example-of-import"></a>Esempio di import
+
+`ServiceConnectionTool.exe -import -updatepacksrc D:\USB\UpdatePacks`
+
+### <a name="-prepare"></a>-prepare
+
+Usare durante la fase [Preparazione](#prepare) nel punto di connessione del servizio per esportare i dati di utilizzo dal sito. Per specificare il percorso del file di dati esportato è necessario il parametro **-usagedatadest**.
+
+#### <a name="example-of-prepare"></a>Esempio di prepare
+
+`ServiceConnectionTool.exe -prepare -usagedatadest D:\USB\UsageData.cab`
+
+### <a name="-proxyserveruri"></a>-proxyserveruri
+
+Parametro facoltativo con il parametro **-connect** che specifica il nome di dominio completo del server proxy. Per altre informazioni, vedere [-connect](#-connect).
+
+### <a name="-proxyusername"></a>-proxyusername
+
+Parametro facoltativo con il parametro **-connect** che specifica il nome utente da autenticare con il server proxy. Per altre informazioni, vedere [-connect](#-connect).
+
+### <a name="-updatepackdest"></a>-updatepackdest
+
+Parametro obbligatorio con il parametro **-connect** che specifica il percorso per gli aggiornamenti scaricati. Per altre informazioni, vedere [-connect](#-connect).
+
+### <a name="-updatepacksrc"></a>-updatepacksrc
+
+Parametro obbligatorio con il parametro **-import** che specifica il percorso per gli aggiornamenti scaricati. Per altre informazioni, vedere [-import](#-import).
+
+### <a name="-usagedatadest"></a>-usagedatadest
+
+Parametro obbligatorio con il parametro **-prepare** che specifica il percorso e il nome del file di dati esportato. Per altre informazioni, vedere [-prepare](#-prepare).
+
+## <a name="next-steps"></a>Passaggi successivi
+
+[Installare gli aggiornamenti nella console](install-in-console-updates.md)
+
+[Come visualizzare i dati di diagnostica e di utilizzo](../../plan-design/diagnostics/view-diagnostics-and-usage-data.md)

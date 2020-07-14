@@ -2,7 +2,7 @@
 title: Riferimento ai file di log
 titleSuffix: Configuration Manager
 description: Riferimento di tutti i file di log per i componenti client, server e dipendenti di Configuration Manager.
-ms.date: 06/10/2020
+ms.date: 07/09/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 63f8ad6827a1aa72c3aaa51e21fecbf639fbb405
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 296ac8448292b46318921cb952b5b8545a34f1fa
+ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715578"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86210333"
 ---
 # <a name="log-file-reference"></a>Riferimento ai file di log
 
@@ -77,6 +77,8 @@ Nelle sezioni seguenti vengono fornite informazioni dettagliate sui diversi file
 
   - [Individuazione](#BKMK_DiscoveryLog)  
 
+  - [Analisi degli endpoint](#bkmk_analytics)
+  
   - [Endpoint Protection](#BKMK_EPLog)  
 
   - [Estensioni](#BKMK_Extensions)  
@@ -171,7 +173,10 @@ Nella tabella seguente sono elencati i file di log individuati nel client di Con
 |SCClient_&lt;*dominio*\>@&lt;*nomeutente*\>_2.log|Registra l'attività cronologica in Software Center per l'utente specificato nel computer client.|  
 |Scheduler.log|Registra le attività delle attività pianificate per tutte le operazioni client.|  
 |SCNotify_&lt;*dominio*\>@&lt;*nomeutente*\>_1.log|Registra l'attività per la notifica degli utenti riguardo al software per l'utente specificato.|  
-|SCNotify_&lt;*dominio*\>@&lt;*nomeutente*\>_1-&lt;*data_ora*>.log|Registra le informazioni cronologiche per la notifica degli utenti riguardo al software per l'utente specificato.|  
+|SCNotify_&lt;*dominio*\>@&lt;*nomeutente*\>_1-&lt;*data_ora*>.log|Registra le informazioni cronologiche per la notifica degli utenti riguardo al software per l'utente specificato.|
+|SensorWmiProvider.log|Registra l'attività del provider WMI per il sensore di analisi degli endpoint.|
+|SensorEndpoint.log|Registra l'esecuzione dei criteri di analisi degli endpoint e il caricamento dei dati client nel server del sito.|
+|SensorManagedProvider.log|Registra la raccolta e l'elaborazione di eventi e informazioni per l'analisi degli endpoint.|
 |setuppolicyevaluator.log|Registra la configurazione e la creazione dei criteri dell'inventario in WMI.|  
 |SleepAgent_&lt;*dominio*\>@SYSTEM_0.log|File di log principale per il proxy di riattivazione.|  
 |smscliui.log|Registra l'uso del client di Configuration Manager nel Pannello di controllo.|  
@@ -344,7 +349,8 @@ Nella tabella seguente sono elencati i file di log disponibili nel server del si
 |srsrpsetup.log|Registra i risultati del processo di installazione del punto di reporting.|Server del sistema del sito|  
 |statesys.log|Registra l'elaborazione dei messaggi di sistema di stato.|Server del sito|  
 |statmgr.log|Registra la scrittura di tutti i messaggi di stato nel database.|Server del sito|  
-|swmproc.log|Registra l'elaborazione di file e impostazioni di controllo.|Server del sito|  
+|swmproc.log|Registra l'elaborazione di file e impostazioni di controllo.|Server del sito|
+|UXAnalyticsUploadWorker.log|Registra il caricamento dei dati nel servizio per l'analisi degli endpoint.|Server del sito|   
 
 ### <a name="site-server-installation"></a><a name="BKMK_SiteInstallLog"></a> Installazione del server del sito
 
@@ -427,6 +433,7 @@ La tabella seguente elenca i file di log contenenti informazioni correlate al pu
 |objreplmgr.log|Registra l'elaborazione di criteri e assegnazione.|Server del sito primario|  
 |PolicyPV.log|Registra la generazione di tutti i criteri.|Server del sito|  
 |outgoingcontentmanager.log|Registra il contenuto caricato in Microsoft Intune.|Computer con il punto di connessione del servizio|  
+|ServiceConnectionTool.log|Registra informazioni dettagliate sull'uso dello [strumento di connessione del servizio](../../servers/manage/use-the-service-connection-tool.md) in base al parametro usato. Ogni volta che si esegue lo strumento, qualsiasi file di log esistente viene sostituito.|Stesso percorso dello strumento|
 |Sitecomp.log|Registra informazioni dettagliate sull'installazione del punto di connessione del servizio.|Server del sito|  
 |SmsAdminUI.log|Registra l'attività della console di Configuration Manager.|Computer che esegue la console di Configuration Manager|  
 |SMS_CLOUDCONNECTION.log|Registra informazioni sui servizi cloud.|Computer con il punto di connessione del servizio|
@@ -643,6 +650,15 @@ Nella tabella seguente sono elencati i file di log contenenti informazioni relat
 |ddm.log|Registra le attività di Gestione individuazione dati.|Server del sito|  
 |InventoryAgent.log|Registra le attività di inventario hardware, inventario software e individuazione heartbeat sul client.|Client|  
 |netdisc.log|Registra le azioni di individuazione della rete.|Server del sito|  
+
+### <a name="endpoint-analytics"></a><a name="bkmk_analytics"></a> Analisi degli endpoint
+
+|Nome registro|Descrizione|Computer con file di log|  
+|--------------|-----------------|----------------------------|  
+|UXAnalyticsUploadWorker.log|Registra il caricamento dei dati nel servizio per l'analisi degli endpoint.|Server del sito|  
+|SensorWmiProvider.log|Registra l'attività del provider WMI per il sensore di analisi degli endpoint.|Client|  
+|SensorEndpoint.log|Registra l'esecuzione dei criteri di analisi degli endpoint e il caricamento dei dati client nel server del sito.|Client|
+|SensorManagedProvider.log|Registra la raccolta e l'elaborazione di eventi e informazioni per l'analisi degli endpoint.|Client|
 
 ### <a name="endpoint-protection"></a><a name="BKMK_EPLog"></a> Endpoint Protection
 

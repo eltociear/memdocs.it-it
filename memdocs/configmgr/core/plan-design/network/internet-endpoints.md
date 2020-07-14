@@ -2,7 +2,7 @@
 title: Requisiti per l'accesso a Internet
 titleSuffix: Configuration Manager
 description: Informazioni sugli endpoint Internet a cui consentire l'accesso per usufruire delle funzionalità complete di Configuration Manager.
-ms.date: 07/01/2020
+ms.date: 07/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,17 +10,25 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 986b8d83c705be84b04a89c99d9559471c6345c4
-ms.sourcegitcommit: 2c5fd7c8603b88b753765f3cc298d0a0bacaf521
+ms.openlocfilehash: 71f2a75d59af6f8d5c77e96d780e6d02352e5045
+ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85819951"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86137347"
 ---
 # <a name="internet-access-requirements"></a>Requisiti per l'accesso a Internet
 
 Alcune caratteristiche di Configuration Manager hanno bisogno della connettività Internet per funzionare completamente. Se l'organizzazione limita le comunicazioni della rete con Internet tramite un firewall o un dispositivo proxy, assicurarsi di consentire l'accesso a questi endpoint.
 
 <!-- SCCMDocs-pr #3403 -->
+
+Configuration Manager usa i seguenti servizi di inoltro URL Microsoft nell'intero prodotto:
+
+- `https://aka.ms`
+- `https://go.microsoft.com`
+
+Anche se non sono esplicitamente elencati nelle sezioni seguenti, è necessario consentire sempre l'accesso a questi endpoint.
 
 ## <a name="service-connection-point"></a><a name="bkmk_scp"></a> Punto di connessione del servizio
 
@@ -276,6 +284,14 @@ Per altre informazioni sugli endpoint necessari per le funzionalità di collegam
 ## <a name="endpoint-analytics"></a>Analisi degli endpoint
 
 Per altre informazioni sugli endpoint necessari per l'analisi degli endpoint, vedere [Configurazione del proxy di analisi degli endpoint](../../../../analytics/troubleshoot.md#bkmk_endpoints).
+
+## <a name="asset-intelligence"></a>Asset intelligence
+
+<!-- memdocs#470 -->
+Se si usa [Asset Intelligence](../../clients/manage/asset-intelligence/introduction-to-asset-intelligence.md), consentire l'accesso agli endpoint seguenti per permettere la sincronizzazione del servizio:
+
+- `https://sc.microsoft.com`
+- `https://ssu2.manage.microsoft.com`
 
 ## <a name="microsoft-public-ip-addresses"></a>Indirizzi IP pubblici Microsoft
 

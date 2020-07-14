@@ -2,7 +2,7 @@
 title: Domande frequenti su prodotto e licenze
 titleSuffix: Configuration Manager
 description: Risposte alle domande frequenti sul prodotto e le licenze per Configuration Manager.
-ms.date: 07/01/2020
+ms.date: 07/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7b2c785fb41fa78ea0bd5d480560d45a3a7a7eda
-ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
+ms.openlocfilehash: 1ce9024fa610c6af19eb40ccf0da662a3e99234f
+ms.sourcegitcommit: 01c1ca337e82c5e8e92153079ed89f79e20bde9e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85854423"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86157825"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Domande frequenti relative ai rami e alle licenze di Configuration Manager
 
@@ -78,11 +78,11 @@ La licenza di co-gestione consente ai clienti di Configuration Manager con Softw
 
 - Se si registra un dispositivo Windows 10 in Intune con altri mezzi, è comunque necessaria una licenza completa di Intune. Ad esempio, si usa Autopilot per effettuare il provisioning di un dispositivo o un utente esegue manualmente la registrazione self-service.
 
-- Per la registrazione di dispositivi gestiti da Configuration Manager esistenti in Intune per la co-gestione su larga scala senza interazione con l'utente, la co-gestione usa una funzionalità di Azure Active Directory (Azure AD) denominata registrazione automatica di Windows 10. Per la registrazione automatica è necessaria una licenza di Azure AD Premium (AADP1), separata da Microsoft Endpoint Manager. Per consentire il funzionamento della co-gestione in questo scenario, era necessario assegnare una licenza di AADP1 e una licenza di Intune a ogni singolo utente. Le licenze di co-gestione sono cambiate a partire dal 1° dicembre 2019. Ora non è più necessario assegnare singole licenze di Intune per questo scenario, ma sono comunque necessarie in altri scenari di registrazione. Il requisito della licenza di AADP1 rimane invariato per il funzionamento della registrazione automatica e della co-gestione.
+- Per la registrazione di dispositivi gestiti da Configuration Manager esistenti in Intune per la co-gestione su larga scala senza interazione con l'utente, la co-gestione usa una funzionalità di Azure Active Directory (Azure AD) denominata registrazione automatica di Windows 10. La registrazione automatica con la co-gestione richiede licenze sia per Azure AD Premium (AADP1) che per Intune. A partire dal 1 dicembre 2019 non è più necessario assegnare singole licenze di Intune per questo scenario. Microsoft Endpoint Manager ora include le licenze di Intune per la co-gestione. Il requisito di licenza AADP1 separato resta invariato per il funzionamento di questo scenario. È comunque necessario assegnare licenze di Intune per altri scenari di registrazione.
 
 - Se si vuole usare Intune per la gestione di dispositivi iOS, Android o macOS, è necessario ottenere una sottoscrizione di Intune appropriata tramite una licenza autonoma di Intune, Enterprise Mobility + Security (EMS) o Microsoft 365.
 
-- Se non è disponibile alcun piano di sottoscrizione correlato a Intune, per supportare la co-gestione è necessario acquistare almeno una licenza di Intune. Questa licenza consente a un amministratore di accedere all'interfaccia di amministrazione di Microsoft Endpoint Manager.
+- Se non è disponibile alcun piano di sottoscrizione correlato a Intune, per supportare la co-gestione è necessario acquistare almeno una licenza di Intune. Questa licenza prevede che un amministratore attivi il piano di sottoscrizione e ottenga l'accesso all'interfaccia di amministrazione di Microsoft Endpoint Manager.
 
 - Se si usa la funzionalità di [mobilità e sicurezza di base](https://support.microsoft.com/office/capabilities-of-built-in-mobile-device-management-for-microsoft-365-a1da44e5-7475-4992-be91-9ccec25905b0) predefinita di Microsoft 365, non è possibile usare la nuova licenza di co-gestione per un utente che dispone anche di dispositivi gestiti dalla funzionalità di mobilità e sicurezza di base. Per usare la licenza di co-gestione per il dispositivo gestito da Configuration Manager dell'utente, eseguire una delle operazioni seguenti:
 

@@ -2,7 +2,7 @@
 title: Gruppi di orchestrazione
 titleSuffix: Configuration Manager
 description: Creare gruppi di orchestrazione e distribuire gli aggiornamenti.
-ms.date: 04/28/2020
+ms.date: 07/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: cddbebea-b418-4839-b0a8-7809486c8a4c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e9a307df23900abb985535b2ab59a5ff172cafb7
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 5b42a0260b347fb12444e8611e7ec02be38cc387
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254912"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088412"
 ---
 # <a name="orchestration-groups-in-configuration-manager"></a>Gruppi di orchestrazione in Configuration Manager
 <!--3098816-->
@@ -89,7 +89,7 @@ La funzionalità **Gruppi di orchestrazione** è l'evoluzione della funzionalit�
 
 1. Nella pagina **Pre-script** immettere uno script di PowerShell da eseguire in ogni dispositivo *prima* che venga eseguita la distribuzione. Lo script restituirà un valore pari a `0` in caso di esito positivo o pari a `3010` in caso di esito positivo con riavvio.
 
-1. Nella pagina **Post-script** immettere uno script di PowerShell da eseguire in ogni dispositivo *dopo* che viene eseguita la distribuzione. Il comportamento è uguale a quello di Pre-script.
+1. Nella pagina **Post-script** immettere uno script di PowerShell da eseguire in ogni dispositivo *dopo* l'esecuzione della distribuzione e, se necessario, di un riavvio. Il comportamento è uguale a quello di Pre-script.
 
 1. Completare la procedura guidata.
 
@@ -123,7 +123,8 @@ Per eliminare il gruppo di orchestrazione, selezionarlo e quindi fare clic su **
        - Immettere uno script di PowerShell che viene eseguito in ogni dispositivo *prima* che venga eseguita la distribuzione. Lo script restituirà un valore pari a `0` in caso di esito positivo o pari a `3010` in caso di esito positivo con riavvio.
        
    - **Post-script**:
-      - Immettere uno script di PowerShell da eseguire in ogni dispositivo *dopo* che viene eseguita la distribuzione. Lo script restituirà un valore pari a `0` in caso di esito positivo o pari a `3010` in caso di esito positivo con riavvio.
+      - immettere uno script di PowerShell da eseguire in ogni dispositivo *dopo* l'esecuzione della distribuzione e, se necessario, di un riavvio. Lo script restituirà un valore pari a `0` in caso di esito positivo o pari a `3010` in caso di esito positivo con riavvio.
+  
    > [!WARNING]
    > Verificare che gli script pre e post vengano testati prima di usarli per i gruppi di orchestrazione. Gli script pre e post non raggiungono il timeout e verranno eseguiti fino a quando non viene raggiunto il timeout del membro del gruppo di orchestrazione.
 

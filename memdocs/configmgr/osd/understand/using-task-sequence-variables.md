@@ -10,12 +10,12 @@ ms.assetid: bc7de742-9e5c-4a70-945c-df4153a61cc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c043cfabc411dbd5ae4984110fc2904d37669300
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1cf428b479e9311c92f6d14d9c376817ee5e3ab5
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700209"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022263"
 ---
 # <a name="how-to-use-task-sequence-variables-in-configuration-manager"></a>Come usare le variabili della sequenza di attività in Configuration Manager
 
@@ -157,7 +157,7 @@ Per altre informazioni su questo passaggio, vedere [Eseguire script di PowerShel
 
 #### <a name="example-scenario-with-run-powershell-script-step"></a>Scenario di esempio con il passaggio Esegui script PowerShell
 
-L'ambiente include utenti in più paesi, quindi si vuole eseguire una query sulla lingua del sistema operativo per impostarla come condizione per più passaggi **Applica sistema operativo** specifici della lingua.
+L'ambiente include utenti in più paesi/aree, pertanto si vuole eseguire una query sulla lingua del sistema operativo per impostarla come condizione per più passaggi **Applica sistema operativo** specifici della lingua.
 
 1. Aggiungere un'istanza del passaggio **Esegui script PowerShell** alla sequenza di attività prima dei passaggi **Applica sistema operativo**.
 

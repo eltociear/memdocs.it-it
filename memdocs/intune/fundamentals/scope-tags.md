@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 665b88932c88f523b19fec596bfd969bb93ecdd4
-ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
+ms.openlocfilehash: a229b9159c4c3613edc2d718db1fd0931f94cf9f
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721908"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240744"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Usare il controllo degli accessi in base al ruolo e i tag di ambito per ambienti IT distribuiti
 
@@ -81,13 +81,11 @@ Quando si lavora con i tag di ambito, tenere presente questi dettagli:
 - È possibile assegnare tag di ambito a un tipo di oggetto di Intune se il tenant può avere più versioni di tale oggetto (ad esempio, assegnazioni di ruolo o app).
   Gli oggetti di Intune seguenti sono eccezioni a questa regola e attualmente non supportano i tag di ambito:
     - Profili ESP di Windows
-    - Restrizioni di registrazione
     - Identificatori dei dispositivi aziendali
     - Dispositivi di Autopilot
     - Posizioni di conformità dei dispositivi
     - Dispositivi Jamf
 - Le app VPP e gli eBook associati al token VPP ereditano i tag di ambito assegnati al token VPP associato.
-- I dispositivi DEP (Device Enrollment Program) e i profili DEP associati al token DEP ereditano i tag di ambito assegnati al token DEP associato.
 - Quando un amministratore crea un oggetto in Intune, tutti i tag di ambito assegnati a tale amministratore verranno assegnati automaticamente al nuovo oggetto.
 - Il controllo degli accessi in base al ruolo di Intune non si applica ai ruoli di Azure Active Directory. I ruoli di amministratore del servizio e amministratore globale di Intune hanno quindi accesso amministrativo completo a Intune, indipendentemente dai tag di ambito assegnati.
 - Se un'assegnazione di ruolo non ha tag di ambito, l'amministratore IT può visualizzare tutti gli oggetti in base alle autorizzazioni degli amministratori IT. Gli amministratori senza tag di ambito hanno essenzialmente tutti i tag di ambito.

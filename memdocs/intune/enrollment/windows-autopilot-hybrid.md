@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: be9a4257fec357c3dc124318fda98807df6c26b7
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: c26af63691fc4b198d308f39a7c1cc0d719933cb
+ms.sourcegitcommit: 6e9375afc0ba21893f51a40cce16d03a8ed21038
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093487"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86285301"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Distribuire dispositivi aggiunti ad Azure AD ibrido usando Intune e Windows Autopilot
 È possibile usare Intune e Windows Autopilot per configurare i dispositivi aggiunti ad Azure Active Directory ibrido. A tale scopo, eseguire i passaggi descritti in questo articolo.
@@ -35,7 +35,7 @@ Configurare correttamente i [dispositivi aggiunti ad Azure AD ibrido](https://do
 I dispositivi da registrare devono anche:
 - Eseguire Windows 10 versione 1809 o successiva.
 - Avere accesso a Internet [conformemente ai requisiti di rete di Windows Autopilot documentati](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements#networking-requirements).
-- Avere accesso a un controller di dominio Active Directory, in modo da poter essere connessi alla rete dell'organizzazione (in cui è possibile risolvere i record DNS per il dominio di Active Directory e il controller di dominio Active Directory e comunicare con il controller di dominio per autenticare l'utente. La connessione VPN non è supportata al momento).
+- Avere accesso a un controller di dominio Active Directory, in modo da poter essere connessi alla rete dell'organizzazione (in cui è possibile risolvere i record DNS per il dominio di Active Directory e il controller di dominio Active Directory e comunicare con il controller di dominio per autenticare l'utente.
 - Essere in grado di effettuare il ping del controller di dominio del dominio cui si sta tentando di aggiungere il dispositivo.
 - Se si usa un proxy, è necessario abilitare e configurare l'opzione delle impostazioni proxy WPAD.
 - Eseguire la Configurazione guidata.

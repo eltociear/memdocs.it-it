@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 07/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8f79ac0ef70eb9eccf47837517e3e69df3fdb3e8
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 89e3111ef902b0ea0f7f66e6be6aa0c227fdb3c4
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165720"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86239947"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Come personalizzare le app Portale aziendale Intune, il sito Web Portale aziendale e l'app Intune
 
@@ -110,9 +110,7 @@ La tabella seguente offre altri dettagli di configurazione:
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
 |    Disponibile, con richieste di conferma    |    Esperienza predefinita con richieste di registrazione in tutte le posizioni possibili.    |    Sì    |    Sì    |    Sì    |    Sì    |
 |    Disponibile, senza richieste di conferma    |    L'utente può eseguire la registrazione tramite lo stato nei dettagli del dispositivo per il dispositivo corrente o dalle app che richiedono la registrazione.    |    No    |    No    |    Sì    |    Sì    |
-|    Non disponibile    |    Gli utenti non possono eseguire la registrazione.    |    No    |    No    |    No    |    No<sup>(1)</sup>    |
-
-<sup>(1)</sup> **Problema noto:** Se si impostano le app per richiedere la registrazione per l'installazione e si imposta anche la registrazione dei dispositivi su "Non disponibile", l'app Portale aziendale in Android continuerà a offrire agli utenti istruzioni per la registrazione. Questo problema verrà risolto a breve.
+|    Non disponibile    |    Gli utenti non possono eseguire la registrazione.    |    No    |    No    |    No    |    No    |
 
 ### <a name="privacy"></a>Privacy
 
@@ -221,7 +219,7 @@ Per personalizzare le azioni self-service disponibili per gli utenti vedere [Per
 
 Alcune piattaforme e configurazioni non consentono azioni self-service nel dispositivo. La tabella seguente contiene altri dettagli sulle azioni self-service:
 
-|  | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
+| Action | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
 | Ritiro | Disponibile<sup>(1)</sup> | Disponibile<sup>(9)</sup> | Disponibile | Disponibile<sup>(7)</sup> |
 | Cancellazione | Disponibile | Disponibile<sup>(5)</sup><sup>(9)</sup> | N/D | Disponibile<sup>(7)</sup> |

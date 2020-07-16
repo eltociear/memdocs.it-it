@@ -17,7 +17,7 @@ groups:
   - id: mdm-preview
     title: Anteprima - Ottobre 2018
 - id: edge-baseline-versions
-  title: Versioni di base di Edge
+  title: Versioni di base di Microsoft Edge
   prompt: Scegliere una versione
   pivots:
   - id: edge-october-2019

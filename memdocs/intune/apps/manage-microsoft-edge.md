@@ -1,7 +1,7 @@
 ---
 title: Gestire Edge per iOS e Android con Intune
 titleSuffix: ''
-description: Usare i criteri di protezione e di configurazione delle app di Intune con Edge per iOS e Android per garantire che l'accesso ai siti Web aziendali venga sempre eseguito con misure di sicurezza applicate.
+description: Usare i criteri di protezione e di configurazione delle app di Intune con Microsoft Edge per iOS e Android per garantire che l'accesso ai siti Web aziendali venga sempre eseguito con misure di sicurezza applicate.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -63,7 +63,7 @@ Per visualizzare le raccomandazioni specifiche per ogni livello di configurazion
 
 Indipendentemente dal fatto che il dispositivo sia registrato in una soluzione di gestione unificata degli endpoint (UEM), è necessario creare un criterio di protezione delle app di Intune per le app iOS e Android, seguendo la procedura descritta in [Come creare e assegnare criteri di protezione delle app](app-protection-policies.md). Questi criteri, come minimo, devono soddisfare le condizioni seguenti:
 
-1. Sono incluse tutte le app Microsoft 365 per dispositivi mobili, ad esempio Edge, Outlook, OneDrive, Office o Teams, in modo da garantire che gli utenti possano accedere e modificare i dati aziendali o dell'istituto di istruzione in qualsiasi app Microsoft in modo sicuro.
+1. Sono incluse tutte le app Microsoft 365 per dispositivi mobili, ad esempio Microsoft Edge, Outlook, OneDrive, Office o Teams, in modo da garantire che gli utenti possano accedere e modificare i dati aziendali o dell'istituto di istruzione in qualsiasi app Microsoft in modo sicuro.
 
 2. Sono assegnati a tutti gli utenti. Ciò garantisce che tutti gli utenti siano protetti, indipendentemente dal fatto che usino Edge per iOS o Android.
 
@@ -166,7 +166,7 @@ Analogamente alla configurazione di un collegamento alla home page, è possibile
 
 #### <a name="industry-news"></a>Notizie del settore
 
-È possibile configurare la nuova esperienza d'uso della Pagina Nuova scheda in Edge per iOS e Android per visualizzare le notizie sul settore rilevanti per l'organizzazione. Quando si abilita questa funzionalità, Edge per iOS e Android usa il nome di dominio dell'organizzazione per aggregare notizie dal Web in merito all'organizzazione, al settore dell'organizzazione e ai concorrenti, in modo che gli utenti possano trovare le notizie esterne pertinenti dalle pagine Nuova scheda centralizzate in Edge per iOS e Android. La funzione Notizie del settore è disattivata per impostazione predefinita. 
+È possibile configurare la nuova esperienza d'uso della Pagina Nuova scheda in Microsoft Edge per iOS e Android per visualizzare le notizie sul settore rilevanti per l'organizzazione. Quando si abilita questa funzionalità, Microsoft Edge per iOS e Android usa il nome di dominio dell'organizzazione per aggregare notizie dal Web in merito all'organizzazione, al settore dell'organizzazione e ai concorrenti, in modo che gli utenti possano trovare le notizie esterne pertinenti dalle pagine Nuova scheda centralizzate in Microsoft Edge per iOS e Android. La funzione Notizie del settore è disattivata per impostazione predefinita. 
 
 |    Chiave    |    Valore    |
 |------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
@@ -174,11 +174,11 @@ Analogamente alla configurazione di un collegamento alla home page, è possibile
 
 ### <a name="bookmark-experiences"></a>Esperienze d'uso dei Segnalibri
 
-Edge per iOS e Android offre alle organizzazioni diverse opzioni per gestire i segnalibri.
+Microsoft Edge per iOS e Android offre alle organizzazioni diverse opzioni per gestire i segnalibri.
 
 #### <a name="managed-bookmarks"></a>Segnalibri gestiti
 
-Per semplificare l'accesso, è possibile configurare segnalibri da mettere a disposizione degli utenti quando usano Edge per iOS e Android.
+Per semplificare l'accesso, è possibile configurare segnalibri da mettere a disposizione degli utenti quando usano Microsoft Edge per iOS e Android.
 
 - I segnalibri vengono visualizzati solo nell'account aziendale o dell'Istituto di istruzione e non sono esposti agli account personali.
 - I segnalibri non possono essere eliminati o modificati dagli utenti.
@@ -193,19 +193,19 @@ Per semplificare l'accesso, è possibile configurare segnalibri da mettere a dis
 
 #### <a name="my-apps-bookmark"></a>Segnalibro in App personali
 
-Per impostazione predefinita, il segnalibro è configurato in App personali all'interno della cartella dell'organizzazione in Edge per iOS e Android.
+Per impostazione predefinita, il segnalibro è configurato in App personali all'interno della cartella dell'organizzazione in Microsoft Edge per iOS e Android.
 
 |    Chiave    |    Valore    |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    com.microsoft.intune.mam.managedbrowser.MyApps    |    **true** (impostazione predefinita) mostra App personali nei segnalibri di Edge per iOS e Android<br>**false** nasconde le App personali in Edge per iOS e Android    |
+|    com.microsoft.intune.mam.managedbrowser.MyApps    |    **true** (impostazione predefinita) mostra App personali nei segnalibri di Microsoft Edge per iOS e Android<br>**false** nasconde le App personali in Microsoft Edge per iOS e Android    |
 
 ### <a name="app-behavior-experiences"></a>Esperienze di Comportamento app
 
-Edge per iOS e Android offre alle organizzazioni diverse opzioni per gestire il comportamento dell'app.
+Microsoft Edge per iOS e Android offre alle organizzazioni diverse opzioni per gestire il comportamento dell'app.
 
 #### <a name="default-protocol-handler"></a>Gestore di protocollo predefinito
 
-Per impostazione predefinita, Edge per iOS e Android usa il gestore di protocollo HTTPS se l'utente non specifica il protocollo nell'URL. In genera questa è considerata una procedura consigliata, ma può essere disattivata.
+Per impostazione predefinita, Microsoft Edge per iOS e Android usa il gestore di protocollo HTTPS se l'utente non specifica il protocollo nell'URL. In genera questa è considerata una procedura consigliata, ma può essere disattivata.
 
 |    Chiave    |    Valore    |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -213,7 +213,7 @@ Per impostazione predefinita, Edge per iOS e Android usa il gestore di protocoll
 
 #### <a name="disable-data-sharing-for-personalization"></a>Disabilitare la condivisione dei dati per la personalizzazione
 
-Per impostazione predefinita, Edge per iOS e Android richiede agli utenti la raccolta dei dati di utilizzo e la condivisione della cronologia di navigazione per personalizzare l'esperienza di navigazione. Le organizzazioni possono disabilitare la condivisione dei dati evitando che questa richiesta venga visualizzata dagli utenti finali.
+Per impostazione predefinita, Microsoft Edge per iOS e Android richiede agli utenti la raccolta dei dati di utilizzo e la condivisione della cronologia di navigazione per personalizzare l'esperienza di navigazione. Le organizzazioni possono disabilitare la condivisione dei dati evitando che questa richiesta venga visualizzata dagli utenti finali.
 
 |    Chiave    |    Valore    |
 |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -222,18 +222,18 @@ Per impostazione predefinita, Edge per iOS e Android richiede agli utenti la rac
 
 #### <a name="disable-specific-features"></a>Disabilitare funzionalità specifiche
 
-Edge per iOS e Android consente alle organizzazioni di disabilitare funzionalità abilitate per impostazione predefinita. Per disabilitare queste funzionalità, configurare le impostazioni seguenti:
+Microsoft Edge per iOS e Android consente alle organizzazioni di disabilitare funzionalità abilitate per impostazione predefinita. Per disabilitare queste funzionalità, configurare le impostazioni seguenti:
 
 |    Chiave    |    Valore    |
 |-----------------------|-----------------------|
 |    com.microsoft.intune.mam.managedbrowser.disabledFeatures    |    **password** disabilita le richieste che consentono di salvare le password per l'utente finale<br>**inprivate** disabilita InPrivate Browsing<p>Per disabilitare più funzionalità, separare i valori con `|`. Ad esempio, `inprivate|password`disabilita InPrivate e l'archiviazione password.     |
 
 > [!NOTE]
-> Edge per Android non supporta la disabilitazione del gestore password.
+> Microsoft Edge per Android non supporta la disabilitazione del gestore password.
 
 #### <a name="disable-extensions"></a>Disabilita le estensioni
 
-È possibile disabilitare il framework delle estensioni in Edge per Android per impedire agli utenti di installare qualsiasi estensione app. Per eseguire questa operazione, configurare l'impostazione seguente:
+È possibile disabilitare il framework delle estensioni in Microsoft Edge per Android per impedire agli utenti di installare qualsiasi estensione app. Per eseguire questa operazione, configurare l'impostazione seguente:
 
 |    Chiave    |    Valore    |
 |-----------|-------------|
@@ -241,17 +241,17 @@ Edge per iOS e Android consente alle organizzazioni di disabilitare funzionalit�
 
 ### <a name="kiosk-mode-experiences-on-android-devices"></a>Esperienza in modalità tutto schermo su dispositivi Android
 
-Edge per Android può essere abilitato come app in modalità tutto schermo con le impostazioni seguenti:
+Microsoft Edge per Android può essere abilitato come app in modalità tutto schermo con le impostazioni seguenti:
 
 |    Chiave    |    Valore    |
 |-----------|-------------|
-|    com.microsoft.intune.mam.managedbrowser.enableKioskMode    |    **true** abilita la modalità tutto schermo per Edge per Android<br>**false** (impostazione predefinita) disabilita la modalità tutto schermo    |
+|    com.microsoft.intune.mam.managedbrowser.enableKioskMode    |    **true** abilita la modalità tutto schermo per Microsoft Edge per Android<br>**false** (impostazione predefinita) disabilita la modalità tutto schermo    |
 |    com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode    |    **true** visualizza la barra degli indirizzi in modalità tutto schermo<br> **false** (impostazione predefinita) nasconde la barra degli indirizzi in modalità tutto schermo    |
 |    com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode    |    **true** visualizza la barra delle azioni inferiore in modalità tutto schermo<br> **false** (impostazione predefinita) nasconde la barra inferiore in modalità tutto schermo    |
 
 ## <a name="data-protection-app-configuration-scenarios"></a>Scenari di configurazione dell'app per la protezione dei dati
 
-Edge per iOS e Android supporta i criteri di configurazione delle app per le seguenti impostazioni di protezione dati quando l'app viene gestita da Microsoft Endpoint Manager con criteri di protezione delle app di Intune applicati all'account aziendale o dell'Istituto di istruzione che ha eseguito l'accesso all'app:
+Microsoft Edge per iOS e Android supporta i criteri di configurazione delle app per le seguenti impostazioni di protezione dati quando l'app viene gestita da Microsoft Endpoint Manager con criteri di protezione delle app di Intune applicati all'account aziendale o dell'istituto di istruzione che ha eseguito l'accesso all'app:
 
 - Gestire la sincronizzazione degli account
 - Gestire siti Web con restrizioni
@@ -270,29 +270,29 @@ Per impostazione predefinita, la sincronizzazione di Microsoft Edge consente agl
 
 La funzionalità di sincronizzazione è abilitata tramite il consenso dell'utente e gli utenti possono attivare o disattivare la sincronizzazione per ogni tipo di dati elencato sopra. Per altre informazioni, vedere l'articolo [Sincronizzazione di Microsoft Edge](https://docs.microsoft.com/DeployEdge/microsoft-edge-enterprise-sync).
 
-Le organizzazioni possono disabilitare la sincronizzazione di Edge per iOS e Android. 
+Le organizzazioni possono disabilitare la sincronizzazione di Microsoft Edge per iOS e Android. 
 
 |Chiave  |Valore  |
 |---------|---------|
-|com.microsoft.intune.mam.managedbrowser.account.syncDisabled     |**true** (impostazione predefinita) consente la sincronizzazione di Edge<br>**false** disabilita la sincronizzazione di Edge          |
+|com.microsoft.intune.mam.managedbrowser.account.syncDisabled     |**true** (impostazione predefinita) consente la sincronizzazione di Microsoft Edge<br>**false** disabilita la sincronizzazione di Microsoft Edge          |
 
 ### <a name="manage-restricted-web-sites"></a>Gestire siti Web con restrizioni
 
-Le organizzazioni possono definire i siti a cui gli utenti possono accedere con un account aziendale o dell'Istituto di istruzione in Edge per iOS e Android. Se si usa un elenco di siti consentiti, gli utenti possono accedere solo ai siti inseriti in modo esplicito nell'elenco. Se si usa un elenco di siti bloccati, gli utenti possono accedere a tutti i siti esclusi quelli esplicitamente bloccati. Imporre solo un elenco di siti consentiti o uno di siti bloccati e non entrambi. Se vengono applicati entrambi, viene rispettato solo l'elenco dei siti consentiti.
+Le organizzazioni possono definire i siti a cui gli utenti possono accedere con un account aziendale o dell'Istituto di istruzione in Microsoft Edge per iOS e Android. Se si usa un elenco di siti consentiti, gli utenti possono accedere solo ai siti inseriti in modo esplicito nell'elenco. Se si usa un elenco di siti bloccati, gli utenti possono accedere a tutti i siti esclusi quelli esplicitamente bloccati. Imporre solo un elenco di siti consentiti o uno di siti bloccati e non entrambi. Se vengono applicati entrambi, viene rispettato solo l'elenco dei siti consentiti.
 
 L'organizzazione definisce inoltre cosa accade quando un utente tenta di passare a un sito Web con restrizioni. Per impostazione predefinita, le transizioni sono consentite. Se l'organizzazione lo consente, i siti Web con restrizioni possono essere aperti sull'account personale, in modalità InPrivate dell'account Azure AD o se il sito è completamente bloccato. Per altre informazioni sui vari scenari supportati, vedere l'articolo [Transizioni di siti Web con restrizioni in Microsoft Edge per dispositivi mobili](https://techcommunity.microsoft.com/t5/intune-customer-success/restricted-website-transitions-in-microsoft-edge-mobile/ba-p/1381333). Consentendo l'esperienza di transizione, gli utenti dell'organizzazione rimangono protetti, mantenendo al contempo le risorse aziendali al sicuro.
 
 > [!NOTE]
-> Edge per iOS e Android può bloccare l'accesso ai siti solo quando vi si accede direttamente. Non blocca l'accesso quando gli utenti usano servizi intermedi (ad esempio, un servizio di traduzione) per accedere al sito.
+> Microsoft Edge per iOS e Android può bloccare l'accesso ai siti solo quando vi si accede direttamente. Non blocca l'accesso quando gli utenti usano servizi intermedi (ad esempio, un servizio di traduzione) per accedere al sito.
 
-Usare le coppie chiave/valore seguenti per configurare un elenco di siti consentiti o bloccati per Edge per iOS e Android. 
+Usare le coppie chiave/valore seguenti per configurare un elenco di siti consentiti o bloccati per Microsoft Edge per iOS e Android. 
 
 |Chiave  |Valore  |
 |---------|---------|
 |com.microsoft.intune.mam.managedbrowser.AllowListURLs     |Il valore corrispondente per la chiave è un elenco di URL. Immettere tutti gli URL da consentire come singolo valore, separandoli tramite un carattere di barra verticale`|`.<p>**Esempi:**<br>`URL1|URL2|URL3`<br>`http://.contoso.com/|https://.bing.com/|https://expenses.contoso.com`         |
 |com.microsoft.intune.mam.managedbrowser.BlockListURLs     |Il valore corrispondente per la chiave è un elenco di URL. Immettere tutti gli URL da bloccare come singolo valore, separandoli tramite un carattere di barra verticale`|`.<br>**Esempi:**<br>`URL1|URL2|URL3`<br>`http://.contoso.com/|https://.bing.com/|https://expenses.contoso.com`         |
-|com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock     |**true** (impostazione predefinita) consente a Edge per iOS e Android di eseguire la transizione dei siti con restrizioni. Quando gli account personali non sono disabilitati, agli utenti viene richiesto di passare al contesto personale per aprire il sito con restrizioni o aggiungere un account personale. Se com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked è impostato su true, gli utenti possono aprire il sito con restrizioni con InPrivate.<p>**false** impedisce la transizione degli utenti di Edge per iOS e Android. Per gli utenti viene semplicemente visualizzato un messaggio che informa che il sito a cui stanno tentando di accedere è bloccato.         |
-|com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked     |**true** consente l'apertura di siti con restrizioni in modalità InPrivate dell'account Azure AD. Se l'account Azure AD è l'unico account configurato in Edge per iOS e Android, il sito con restrizioni viene aperto automaticamente in modalità InPrivate. Se l'utente ha configurato un account personale, gli viene richiesto di scegliere tra aprire InPrivate o passare all'account personale.<p> **false** (impostazione predefinita) richiede che il sito con restrizioni venga aperto nell'account personale dell'utente. Se gli account personali sono disabilitati, il sito viene bloccato.<p>Per rendere effettiva questa impostazione, è necessario che com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock sia impostato su true.          |
+|com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock     |**true** (impostazione predefinita) consente a Microsoft Edge per iOS e Android di eseguire la transizione dei siti con restrizioni. Quando gli account personali non sono disabilitati, agli utenti viene richiesto di passare al contesto personale per aprire il sito con restrizioni o aggiungere un account personale. Se com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked è impostato su true, gli utenti possono aprire il sito con restrizioni con InPrivate.<p>**false** impedisce la transizione degli utenti di Microsoft Edge per iOS e Android. Per gli utenti viene semplicemente visualizzato un messaggio che informa che il sito a cui stanno tentando di accedere è bloccato.         |
+|com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked     |**true** consente l'apertura di siti con restrizioni in modalità InPrivate dell'account Azure AD. Se l'account Azure AD è l'unico account configurato in Microsoft Edge per iOS e Android, il sito con restrizioni viene aperto automaticamente in modalità InPrivate. Se l'utente ha configurato un account personale, gli viene richiesto di scegliere tra aprire InPrivate o passare all'account personale.<p> **false** (impostazione predefinita) richiede che il sito con restrizioni venga aperto nell'account personale dell'utente. Se gli account personali sono disabilitati, il sito viene bloccato.<p>Per rendere effettiva questa impostazione, è necessario che com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock sia impostato su true.          |
 |com.microsoft.intune.mam.managedbrowser.durationOfOpenInPrivateSnackBar     | Immettere il numero di secondi per cui gli utenti visualizzeranno il collegamento "notifica snackbar" aperta con la modalità InPrivate. L'organizzazione richiede l'uso della modalità InPrivate per questo contenuto". Per impostazione predefinita, la notifica snackbar viene visualizzata per 7 secondi.
 
 I siti seguenti sono sempre consentiti indipendentemente dalle impostazioni dell'elenco di consentiti o bloccati:
@@ -343,9 +343,9 @@ I siti seguenti sono sempre consentiti indipendentemente dalle impostazioni dell
 
 ### <a name="manage-proxy-configuration"></a>Gestire configurazioni proxy
 
-È possibile usare Edge per iOS e Android e [Azure AD Application Proxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) in combinazione per consentire agli utenti l'accesso ai siti Intranet con i dispositivi mobili. Ad esempio: 
+È possibile usare Microsoft Edge per iOS e Android e [Azure AD Application Proxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) in combinazione per consentire agli utenti l'accesso ai siti Intranet con i dispositivi mobili. Ad esempio: 
 
-- Un utente sta usando l'app per dispositivi mobili Outlook, protetta da Intune. L'utente fa clic su un collegamento a un sito Intranet in un messaggio di posta elettronica e Edge per iOS e Android riconosce che tale sito Intranet è stato esposto all'utente tramite Application Proxy. L'utente viene automaticamente indirizzato tramite Application Proxy, per autenticarsi con l'autenticazione a più fattori applicabile e con l'accesso condizionale prima di accedere al sito Intranet. L'utente può così accedere ai siti interni anche da dispositivi mobili e il collegamento in Outlook funziona come previsto.
+- Un utente sta usando l'app per dispositivi mobili Outlook, protetta da Intune. L'utente fa clic su un collegamento a un sito Intranet in un messaggio di posta elettronica e Microsoft Edge per iOS e Android riconosce che tale sito Intranet è stato esposto all'utente tramite Application Proxy. L'utente viene automaticamente indirizzato tramite Application Proxy, per autenticarsi con l'autenticazione a più fattori applicabile e con l'accesso condizionale prima di accedere al sito Intranet. L'utente può così accedere ai siti interni anche da dispositivi mobili e il collegamento in Outlook funziona come previsto.
 - Un utente apre Edge per iOS e Android sul dispositivo iOS o Android. Se Edge per iOS e Android è protetto con Intune e Application Proxy è abilitato, l'utente può passare a un sito Intranet usando l'URL interno che è abituato a usare. Edge per iOS e Android riconosce che tale sito Intranet è stato esposto all'utente tramite Application Proxy. L'utente viene automaticamente indirizzato tramite Application Proxy, per eseguire l'autenticazione prima di raggiungere il sito Intranet. 
 
 Prima di iniziare:

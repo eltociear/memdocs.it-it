@@ -58,7 +58,7 @@ Per usare CMPivot sono necessari i componenti seguenti:
 >[!NOTE]
 > **Esegui script** è un super set dell'autorizzazione **Esegui CMPivot**.
 
-CMPivot e il programma di installazione di Edge sono firmati con il certificato di **firma del codice Microsoft**. Se il certificato non è elencato nell'archivio **Autori attendibili**, sarà necessario aggiungerlo. In caso contrario, CMPivot e il programma di installazione di Edge non verranno eseguiti quando i criteri di esecuzione di PowerShell sono impostati su **AllSigned**.
+CMPivot e il programma di installazione di Microsoft Edge sono firmati con il certificato di **firma del codice Microsoft**. Se il certificato non è elencato nell'archivio **Autori attendibili**, sarà necessario aggiungerlo. In caso contrario, CMPivot e il programma di installazione di Microsoft Edge non verranno eseguiti quando i criteri di esecuzione di PowerShell sono impostati su **AllSigned**.
  
 ## <a name="limitations"></a>Limitazioni
 

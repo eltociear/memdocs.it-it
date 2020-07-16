@@ -232,8 +232,6 @@
           href: plan-design/security/plan-for-security.md
         - name: Procedure consigliate per la sicurezza e informazioni sulla privacy
           href: plan-design/security/security-best-practices-and-privacy-information.md
-        - name: Informativa sulla privacy - Libreria di cmdlet di Configuration Manager
-          href: plan-design/security/privacy-statement-cmdlet-library.md
         - name: Informazioni aggiuntive sulla privacy
           href: plan-design/security/additional-privacy.md
         - name: Configurare la sicurezza

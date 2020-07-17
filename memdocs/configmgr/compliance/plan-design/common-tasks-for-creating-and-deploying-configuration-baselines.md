@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 4bb6afeb-d267-4f9b-ade2-26e5400c223b
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 52e83639029db9eeb4ef64657e70e3dc11aab8f2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 40f0fe1adc723587316dcc5f03d710ae4b31b78b
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692259"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240695"
 ---
 # <a name="common-tasks-for-creating-and-deploying-configuration-baselines-with-configuration-manager"></a>Attività comuni per la creazione e la distribuzione di linee base di configurazione con Configuration Manager
 

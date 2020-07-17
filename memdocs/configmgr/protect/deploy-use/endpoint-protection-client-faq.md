@@ -2,7 +2,7 @@
 title: Domande frequenti relative al client Endpoint Protection
 titleSuffix: Configuration Manager
 description: Risposte alle domande frequenti su Windows Defender e su Endpoint Protection.
-ms.date: 12/09/2017
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3b206c1556c2e9550ade5c2322acd65ad2b19412
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 0eafa09275220cdf07f837388aa6cb848fbd5e5a
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906839"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240287"
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Domande frequenti relative al client Endpoint Protection
 
@@ -34,7 +34,6 @@ Queste domande frequenti sono destinate a utenti di computer il cui amministrato
 -   [Da dove provengono virus, spyware e altro software potenzialmente indesiderato?](#where-do-viruses-spyware-and-other-potentially-unwanted-software-come-from)  
 -   [È possibile ricevere software dannoso senza esserne a conoscenza?](#can-i-get-malicious-software-without-knowing-it)  
 -   [Perché è importante leggere i contratti di licenza prima di installare software?](#why-is-it-important-to-review-license-agreements-before-installing-software)  
--   [Qual è la differenza tra Endpoint Protection e Windows Defender?](#whats-the-difference-between-endpoint-protection-and-windows-defender)  
 -   [Perché Windows Defender non rileva i cookie?](#why-doesnt-windows-defender-detect-cookies)  
 -   [Come è possibile evitare il malware?](#how-can-i-prevent-malware)  
 -   [Cosa sono le definizioni di virus e spyware?](#what-are-virus-and-spyware-definitions)  
@@ -132,9 +131,6 @@ Per rimuovere facilmente e velocemente tutti gli elementi indesiderati o potenzi
 ##  <a name="why-is-it-important-to-review-license-agreements-before-installing-software"></a>Perché è importante leggere i contratti di licenza prima di installare software?  
  Quando si visitano siti Web, non accettare automaticamente di scaricare qualsiasi cosa offerta dal sito. Se si scarica software gratuito, come programmi per la condivisione di file o screen saver, leggere attentamente il contratto di licenza. Controllare se sono presenti clausole che indicano che è obbligatorio accettare annunci pubblicitari e popup dell'azienda o che il software invierà determinate informazioni all'autore del software.  
 
-##  <a name="whats-the-difference-between-endpoint-protection-and-windows-defender"></a>Qual è la differenza tra Endpoint Protection e Windows Defender?  
- Endpoint Protection è un software antimalware, ovvero è progettato per rilevare e proteggere il computer da un'ampia gamma di software dannoso, tra cui virus, spyware e altro software potenzialmente indesiderato. Windows Defender, installato automaticamente con il sistema operativo Windows, è un software progettato per il rilevamento e la rimozione di spyware.  
-
 ##  <a name="why-doesnt-windows-defender-detect-cookies"></a>Perché Windows Defender non rileva i cookie?  
  I cookie sono piccoli file di testo inseriti dai siti Web nel computer per archiviare informazioni relative all'utente e alle sue preferenze. I siti Web usano i cookie per offrire un'esperienza personalizzata e raccogliere informazioni sull'uso del sito Web. Windows Defender non rileva i cookie perché non li considera un rischio per la privacy degli utenti o per la sicurezza del computer. La maggior parte dei browser Internet consente di bloccare i cookie.  
 
@@ -200,9 +196,8 @@ Per rimuovere facilmente e velocemente tutti gli elementi indesiderati o potenzi
 
   È possibile scegliere il software e le impostazioni che si vuole monitorare con Windows Defender, ma è consigliabile attivare la protezione in tempo reale e abilitare tutte le opzioni di protezione in tempo reale. La tabella seguente illustra le opzioni disponibili.  
 
-|||  
-|-|-|  
 |**Opzione di protezione in tempo reale**|**Scopo**|  
+|-|-|  
 |Analizza tutti i download|Questa opzione consente di monitorare i file e i programmi scaricati, inclusi i file scaricati automaticamente tramite Windows Internet Explorer e Microsoft Outlook® Express, ad esempio i controlli ActiveX® e i programmi di installazione software. Questi file possono essere scaricati, installati o eseguiti dal browser stesso. Software dannoso, tra cui virus, spyware e altro software potenzialmente indesiderato, può essere incluso in questi file e installato all'insaputa dell'utente.<br /><br /> Con l'opzione di protezione in tempo reale, Windows Defender mantiene costantemente monitorato il computer e controlla l'eventuale presenza di file o programmi dannosi che potrebbero essere stati scaricati. Questa funzionalità di monitoraggio significa che Windows Defender non deve rallentare l'esperienza di esplorazione o per la posta elettronica richiedendo un controllo di tutti i file o programmi da scaricare.|  
 |Monitoraggio dell'attività di file e programmi nel computer|Questa opzione consente di monitorare i file e programmi in esecuzione nel computer e quindi genera avvisi per le eventuali azioni eseguite da tali file e programmi e le azioni eseguite su di essi. Si tratta di un aspetto importante, perché il software dannoso può sfruttare le vulnerabilità nei programmi installati per eseguire software dannoso o indesiderato all'insaputa dell'utente. Ad esempio, un programma spyware può attivarsi automaticamente in background all'avvio di un programma usato di frequente. Windows Defender mantiene monitorati i programmi e genera avvisi se rileva attività sospette.|  
 |Abilita monitoraggio del comportamento|Questa opzione consente di monitorare raccolte di comportamenti per individuare modelli sospetti che potrebbero non essere rilevati dai metodi di rilevamento antivirus tradizionali.|  

@@ -2,7 +2,7 @@
 title: HTTP avanzato
 titleSuffix: Configuration Manager
 description: Usare l'autenticazione moderna per proteggere le comunicazioni client senza dover usare certificati PKI.
-ms.date: 03/28/2020
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4deac022-e397-4f1f-bc0a-cea6c6c6368d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bb14830e99600da1b71c516a44d51a0090cdc673
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1a6ec98bd350eb0ac8643254f64a9480f156bb13
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703569"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86239760"
 ---
 # <a name="enhanced-http"></a>HTTP avanzato
 
@@ -93,8 +93,6 @@ Le seguenti funzionalità di Configuration Manager supportano o richiedono HTTP 
 - Un punto di distribuzione configurato per connessioni client HTTP. Impostare questa opzione nella scheda **Comunicazioni** delle proprietà del ruolo del punto di distribuzione. Non abilitare l'opzione **Consenti connessione anonima dei client**.  
 
 - Eseguire l'onboarding del sito in Azure AD per la gestione del cloud.  
-
-    - Se questo prerequisito per il sito è già soddisfatto, è necessario aggiornare l'applicazione Azure AD. Nell'area di lavoro **Amministrazione** della console di Configuration Manager espandere **Servizi cloud** e selezionare **Tenant di Azure Active Directory**. Selezionare il tenant di Azure AD, selezionare l'applicazione Web nel riquadro **Applicazioni** e quindi selezionare **Aggiornare le impostazioni dell'applicazione** nella barra multifunzione.  
 
 - *Solo per lo [scenario 3](#bkmk_scenario3)* : un client che esegue Windows 10 versione 1803 o successiva e aggiunto ad Azure AD. Il client richiede questa configurazione per l'autenticazione del dispositivo Azure AD.<!-- SCCMDocs issue 1126 -->
 

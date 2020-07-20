@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/30/2020
+ms.date: 07/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f4fd580a2e36a1cf7a29766c7a5e325e17fc528
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: e6304c35d93d717be13a564b5bf5dd2bdc0f84d5
+ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85591069"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303454"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Impostazioni dei dispositivi Windows 10 (e versioni successive) per consentire o limitare l'uso delle funzionalità tramite Intune
 
@@ -31,7 +31,7 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
 > [!Note]
 > Non tutte le opzioni sono disponibili in tutte le edizioni di Windows. Per informazioni sulle edizioni supportate, vedere [Policy CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider) (Provider di servizi di configurazione dei criteri) (viene aperto un altro sito Web Microsoft).
 >  
-> La maggior parte delle impostazioni configurabili in un profilo di restrizioni dei dispositivi Windows 10 viene distribuita a livello di dispositivo. I criteri distribuiti a gruppi di utenti sono effettivi sia per l'utente di destinazione sia per gli altri utenti che accedono successivamente al dispositivo e hanno una licenza di Intune.
+> In un profilo di restrizioni dei dispositivi Windows 10, la maggior parte delle impostazioni configurabili viene distribuita a livello di dispositivo mediante gruppi di dispositivi. I criteri distribuiti ai gruppi di utenti si applicano agli utenti di destinazione e agli utenti che dispongono di una licenza di Intune ed eseguono l'accesso a tale dispositivo.
 
 ## <a name="before-you-begin"></a>Prima di iniziare
 
@@ -1108,7 +1108,7 @@ Queste impostazioni usano il [provider di servizi di configurazione per i criter
   - **Abilita**: Microsoft Defender rileva le PUA e gli elementi rilevati vengono bloccati. Questi elementi compaiono nella cronologia insieme alle altre minacce.
   - **Controllo**: Microsoft Defender rileva le PUA ma non esegue alcuna azione. È possibile esaminare le informazioni sulle applicazioni per le quali Microsoft Defender interverrebbe. Ad esempio, cercare gli eventi creati da Microsoft Defender nel Visualizzatore eventi.
 
-  Per altre informazioni sulle app potenzialmente indesiderate, vedere [Rilevare e bloccare le applicazioni potenzialmente indesiderate](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus).
+  Per altre informazioni sulle app potenzialmente indesiderate, vedere [Rilevare e bloccare le applicazioni potenzialmente indesiderate](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus).
 
   [Provider di servizi di configurazione Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
 

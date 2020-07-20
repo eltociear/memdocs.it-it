@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/27/2020
+ms.date: 07/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f82664cbc9f6970d494945cfdf6fc72e8d95ae8b
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 1c4e567c7812f53a7497f368ded47d72640443f6
+ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022348"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86137382"
 ---
 # <a name="intune-operated-by-21vianet-in-china"></a>Intune gestito da 21Vianet in Cina  
 
@@ -39,6 +39,7 @@ Poiché i servizi in Cina sono gestiti da un partner che si trova in Cina, in In
 - Intune gestito da 21Vianet supporta solo distribuzioni autonome. Il supporto per la co-gestione con System Center Configuration Manager è attualmente in fase di sviluppo.
 - Le migrazioni da cloud pubblici a cloud sovrani non sono supportate. I clienti interessati a passare a Intune gestito da 21Vianet devono eseguire la migrazione manualmente.
 - La funzionalità di collegamento del tenant (la sincronizzazione dei dispositivi in Intune senza registrazione per supportare scenari di console cloud) non è attualmente supportata.
+- Le credenziali derivate non sono supportate con Intune gestito da 21Vianet.
 - Intune gestito da 21Vianet non supporta l'agente di Intune, pertanto non supporta la gestione di computer legacy.
 - La gestione di Windows 10 è supportata tramite l'uso del canale MDM moderno.
 - Intune gestito da 21Vianet non supporta Exchange Connector locale.

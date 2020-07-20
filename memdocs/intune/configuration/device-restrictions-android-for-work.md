@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/16/2020
+ms.date: 07/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 88843cfa1c4f98d87e5eaaefdc0dcd87daf8cb68
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 7aee865b2a16ce3a9114433f9e10e185b26997f7
+ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093711"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303471"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Impostazioni dei dispositivi Android Enterprise per consentire o limitare l'uso delle funzionalità tramite Intune
 
@@ -89,7 +89,7 @@ Queste impostazioni si applicano ai tipi di registrazione Android Enterprise in 
 
 ### <a name="device-experience"></a>Esperienza del dispositivo
 
-Usare queste impostazioni per configurare un'esperienza di tipo chiosco multimediale nei dispositivi dedicati o in quelli completamente gestiti. È possibile configurare i dispositivi per eseguire una sola app o per eseguire molte app. Quando un dispositivo è impostato in modalità tutto schermo, sono disponibili solo le app aggiunte.
+Usare queste impostazioni per configurare un'esperienza di tipo chiosco multimediale nei dispositivi dedicati o per personalizzare le esperienze della schermata iniziale in quelli completamente gestiti. È possibile configurare i dispositivi per eseguire una sola app o per eseguire molte app. Quando un dispositivo è impostato in modalità tutto schermo, sono disponibili solo le app aggiunte.
 
 **Tipo di profilo di registrazione**: selezionare un tipo di profilo di registrazione per avviare la configurazione di Microsoft Launcher o della schermata iniziale gestita da Microsoft nei dispositivi. Le opzioni disponibili sono:
 

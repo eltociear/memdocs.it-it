@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9b0fab472f9bef682666d743c8a53b1308f32b40
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 974636ae787be0d454cc3a4fea98832aa4400c7c
+ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022433"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303488"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Impostare l'autorità di gestione dei dispositivi mobili
 
@@ -42,7 +42,9 @@ Le configurazioni possibili sono:
 
 ## <a name="set-mdm-authority-to-intune"></a>Impostare l'autorità MDM su Intune
 
-Se l'autorità MDM non è stata ancora impostata, seguire questa procedura.
+Per i tenant che usano la versione del servizio 1911 e versioni successive, l'autorità MDM viene impostata automaticamente su Intune.
+
+Per i tenant con versione del servizio precedente a 1911, se l'autorità MDM non è stata ancora impostata, seguire questa procedura.
 
 1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) selezionare l'intestazione arancione per aprire l’impostazione **Autorità di gestione dei dispositivi mobili**. L'intestazione arancione viene visualizzata solo se l'autorità MDM non è stata ancora impostata.
 2. In **Autorità di gestione dei dispositivi mobili** scegliere una delle opzioni seguenti per l'autorità MDM:

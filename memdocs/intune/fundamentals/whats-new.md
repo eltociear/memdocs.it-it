@@ -6,8 +6,8 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/25/2020
-ms.topic: conceptual
+ms.date: 07/10/2020
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -18,11 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89703c8aec11517417f9459391c431b9db75456c
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: c9e65171c0eb723f338e87cdf1f7a99601c0833f
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502290"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240733"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Novità di Microsoft Intune
 
@@ -55,8 +56,26 @@ Per informazioni sulle novità di Microsoft Intune ogni settimana, vedere l'[int
 
 <!-- ########################## -->
 
-## <a name="week-of-june-22-2020"></a>Settimana del 22 giugno 2020
 
+## <a name="week-of-july-06-2020"></a>Settimana del 06 luglio 2020
+
+### <a name="device-enrollment"></a>Registrazione del dispositivo
+
+#### <a name="ios-company-portal-will-support-apples-automated-device-enrollment-without-user-affinity---7282707---"></a>Il Portale aziendale per iOS supporterà la registrazione automatica dei dispositivi di Apple senza affinità utente<!-- 7282707 --> 
+Il Portale aziendale per iOS è supportato nei dispositivi registrati con la registrazione automatica dei dispositivi di Apple senza richiedere un utente assegnato. L'utente finale può accedere al Portale aziendale per iOS per specificarsi come utente primario in un dispositivo iOS/iPadOS registrato senza affinità dispositivo. Per altre informazioni sulla registrazione automatica dei dispositivi, vedere [Registrare automaticamente i dispositivi iOS/iPadOS con Registrazione automatica del dispositivo di Apple](../enrollment/device-enrollment-program-enroll-ios.md).
+
+### <a name="app-management"></a>Gestione delle app
+
+#### <a name="update-to-device-icons-in-company-portal-and-intune-apps-on-android---6057023---"></a>Aggiornamento alle icone del dispositivo nel Portale aziendale e nelle app di Intune in Android<!-- 6057023 -->
+È stato eseguito un aggiornamento delle icone del dispositivo nel Portale aziendale e nelle app di Intune nei dispositivi Android per creare un aspetto più moderno e in linea con Microsoft Fluent Design System. Per informazioni correlate, vedere [Aggiornamento delle icone nell'app Portale aziendale per iOS/iPadOS e macOS](../fundamentals/whats-new-app-ui.md#update-to-icons-in-company-portal-app-for-iosipados-and-macos-). 
+
+### <a name="device-management"></a>Gestione dei dispositivi
+
+#### <a name="tenant-attach-configmgr-client-details-in-the-admin-center-preview---7552762---"></a>Collegamento di tenant: dettagli dei client di ConfigMgr nell'interfaccia di amministrazione (anteprima)<!-- 7552762 -->
+
+È ora possibile visualizzare i dettagli dei client ConfigMgr, tra cui raccolte, appartenenza a gruppi di limiti e informazioni sul client in tempo reale per un dispositivo specifico nell'interfaccia di amministrazione di Microsoft Endpoint Manager. Per altre informazioni, vedere [Collegamento di tenant: dettagli dei client di ConfigMgr nell'interfaccia di amministrazione (anteprima)](../../configmgr/tenant-attach/client-details.md).
+
+## <a name="week-of-june-22-2020"></a>Settimana del 22 giugno 2020
 ### <a name="app-management"></a>Gestione delle app
 
 #### <a name="newly-available-protected-apps-for-intune---7248952---"></a>Nuove app protette disponibili per Intune<!-- 7248952 -->

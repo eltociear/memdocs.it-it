@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/09/2020
+ms.date: 07/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa3cf14b6afd8504a0918b5d61d2a7cae0c308b9
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: d2c3e663b7bc5dfb263d8caad0a7c21d89ed2a93
+ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093671"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303437"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Impostazioni dei dispositivi iOS e iPadOS per consentire o limitare l'uso delle funzionalità tramite Intune
 
@@ -161,6 +161,10 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
   - **Impostazione predefinita dispositivo**
   - **Numerica**: la password deve essere composta solo da numeri, ad esempio 123456789.
   - **Alfanumerica**: include lettere maiuscole, lettere minuscole e caratteri numerici.
+
+  > [!NOTE]
+  > La selezione di caratteri alfanumerici può influire su un Apple Watch associato. Per altre informazioni, vedere [Impostazione delle restrizioni per il codice di un Apple Watch](https://support.apple.com/HT204953) (si apre il sito Web di Apple).
+
 - **Numero di caratteri non alfanumerici nella password**: immettere il numero di simboli, ad esempio `#` o `@`, che è necessario includere nella password, da 1 a 4. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
 
 - **Lunghezza minima password**: immettere la lunghezza minima per la password, da 4 a 16 caratteri. Nei dispositivi registrati dall'utente immettere una lunghezza compresa tra 4 e 6 caratteri.
@@ -414,7 +418,7 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
 - **Elenco di tipi di app con restrizioni**: consente di creare un elenco di app che gli utenti non sono autorizzati a installare o usare. Le opzioni disponibili sono:
 
   - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire l'accesso alle app assegnate e alle app predefinite.
-  - **App non consentite**: elencare le app non gestite da Intune che gli utenti non sono autorizzati a installare ed eseguire. Agli utenti non viene impedito di installare un'app vietata. Se un utente installa un'app da questo elenco, verrà segnalato in Intune.
+  - **App non consentite**: elencare le app non gestite da Intune che gli utenti non sono autorizzati a installare ed eseguire. Agli utenti non viene impedito di installare un'app vietata. Se un utente installa un'app da questo elenco, il dispositivo viene segnalato nel report **Dispositivi con app con restrizioni** ([centro di amministrazione di Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Dispositivi** > **Monitoraggio** > **Dispositivi con app con restrizioni**). 
   - **App approvate**: Elencare le app che gli utenti sono autorizzati a installare. Per mantenere la conformità, gli utenti non devono installare altre app. Le app gestite da Intune sono consentite automaticamente, inclusa l'app Portale aziendale. Agli utenti non viene impedito di installare un'app non inclusa nell'elenco approvato. Tuttavia, se lo fanno, verrà segnalato in Intune.
 
 Per aggiungere app a questi elenchi, è possibile:
@@ -619,15 +623,17 @@ Per aggiungere le app, è possibile:
 
 Usare queste impostazioni per configurare i dispositivi iOS/iPadOS in modo che eseguano specifiche app in modalità app singola autonoma. Quando questa modalità è configurata e gli utenti avviano una delle app configurate, il dispositivo viene bloccato per tale app. Il cambio di app/attività è disabilitato fino a quando gli utenti non escono dall'app autorizzata.
 
+Per applicare la configurazione della modalità app singola autonoma, gli utenti devono aprire manualmente l'app specifica. Questa attività si applica anche all'app Portale aziendale.
+
 - Ad esempio, in un ambiente scolastico o universitario, aggiungere un'app che consenta agli utenti di eseguire un test nel dispositivo. In alternativa, bloccare il dispositivo nell'app Portale aziendale fino all'autenticazione dell'utente. Quando gli utenti completano le azioni dell'app o si rimuovono questi criteri, il dispositivo torna allo stato normale.
 
 - Non tutte le app supportano la modalità app singola autonoma. Per attivare la modalità app singola autonoma per un'app, in genere è necessario un ID di bundle o una coppia chiave-valore forniti da un criterio di configurazione dell'app. Per altre informazioni, vedere la [restrizione `autonomousSingleAppModePermittedAppIDs`](https://developer.apple.com/documentation/devicemanagement/restrictions) nella documentazione MDM di Apple. Per altre informazioni sulle impostazioni specifiche necessarie per l'app in corso di configurazione, vedere la documentazione del fornitore.
 
   Ad esempio, per configurare Zoom Rooms in modalità app singola autonoma, Zoom indica di usare l'ID di bundle `us.zoom.zpcontroller`. In questo caso viene anche apportata una modifica al portale Web di Zoom. Per altre informazioni, vedere il [centro di informazioni della Guida di Zoom](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
 
-- Nei dispositivi iOS/iPadOS l'app Portale aziendale supporta la modalità applicazione singola autonoma. Quando l'app Portale aziendale si trova nella modalità applicazione singola autonoma, il dispositivo viene bloccato nell'app Portale aziendale fino a quando l'utente non esegue l'autenticazione. Quando gli utenti accedono all'app Portale aziendale, possono usare altre app e il pulsante della schermata Home del dispositivo. Quando si disconnettono dall'app Portale aziendale, il dispositivo torna alla modalità app singola e blocca l'app Portale aziendale.
+- Nei dispositivi iOS/iPadOS l'app Portale aziendale supporta la modalità applicazione singola autonoma. Quando l'app Portale aziendale è in modalità applicazione singola autonoma, gli utenti devono aprire manualmente l'app Portale aziendale. Quindi, il dispositivo viene bloccato nell'app Portale aziendale fino all'autenticazione dell'utente. Quando gli utenti accedono all'app Portale aziendale, possono usare altre app e il pulsante della schermata Home del dispositivo. Quando si disconnettono dall'app Portale aziendale, il dispositivo torna alla modalità app singola e blocca l'app Portale aziendale.
 
-  Per trasformare l'app Portale aziendale in un'app con accesso/disconnessione (abilitare la modalità applicazione singola autonoma), immettere il nome dell'app Portale aziendale, ad esempio `Microsoft Intune Company Portal`, e l'ID bundle (`com.microsoft.CompanyPortal`) in queste impostazioni. Dopo aver assegnato questo profilo, è necessario aprire l'app Portale aziendale per bloccare l'app in modo che gli utenti possano accedervi e disconnettersi.
+  Per trasformare l'app Portale aziendale in un'app con accesso/disconnessione (abilitare la modalità applicazione singola autonoma), immettere il nome dell'app Portale aziendale, ad esempio `Microsoft Intune Company Portal`, e l'ID bundle (`com.microsoft.CompanyPortal`) in queste impostazioni. Dopo aver assegnato questo profilo, è necessario aprire l'app Portale aziendale per bloccare l'app in modo che gli utenti possano accedervi e disconnettersi. Per applicare la configurazione della modalità app singola autonoma, gli utenti devono aprire manualmente l'app Portale aziendale.
   
   Quando il profilo di configurazione del dispositivo viene rimosso e l'utente si disconnette, il dispositivo non viene bloccato nell'app Portale aziendale.
 

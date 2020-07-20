@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/04/2020
+ms.date: 07/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 299b09c57f0cff44c465102d85628c8f2605adea
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: 9a7943fb33cf670eedd600db083b77e981da9029
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088497"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240780"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Registrare automaticamente i dispositivi iOS/iPadOS con Registrazione automatica del dispositivo di Apple
 
@@ -156,7 +156,7 @@ Ora che è stato installato il token, è possibile creare un profilo di registra
 5. In **Affinità utente** scegliere se i dispositivi con questo profilo devono essere registrati con o senza un utente assegnato.
     - **Registra con affinità utente**: scegliere questa opzione per i dispositivi che appartengono a utenti che vogliono usare il portale aziendale per servizi come l'installazione di app. Se si usa ADFS e per l'autenticazione si usa Assistente configurazione, è richiesto un [endpoint misto/nome utente WS-Trust 1.3 ](https://technet.microsoft.com/library/adfs2-help-endpoints) [Altre informazioni](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 
-    - **Registra senza affinità utente**: scegliere questa opzione per i dispositivi non associati a un singolo utente. Usare questa opzione per i dispositivi che non accedono ai dati utente locali e ai dispositivi iPad condiviso Apple per le aziende. Le app come l'app Portale aziendale non funzionano.
+    - **Registra senza affinità utente**: scegliere questa opzione per un dispositivo non associato a un singolo utente. Usare questa opzione per i dispositivi che non accedono ai dati utente locali. Per consentire a un utente finale di accedere al Portale aziendale iOS e stabilirsi come utente primario del dispositivo, inviare la chiave `IntuneUDAUserlessDevice` al Portale aziendale iOS in un criterio di configurazione delle app per i dispositivi gestiti. Si noti che solo il primo utente che accede viene stabilito come utente primario. Se il primo utente si disconnette e un secondo utente accede, il primo utente rimane l'utente primario del dispositivo. Per altre informazioni, vedere [Configurare l'app Portale aziendale per supportare i dispositivi DEP iOS e iPadOS](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-dep-devices). 
 
 6. Se si sceglie **Registra con affinità utente**, è possibile consentire agli utenti di eseguire l'autenticazione con il portale aziendale invece di Assistente configurazione Apple.
 

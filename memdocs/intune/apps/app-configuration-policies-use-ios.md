@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/11/2020
+ms.date: 07/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 15c1e1e943d9fd03476c0605c4d41cd417354fce
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: 730a8974753575b2726d821106f7b3c937b30207
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84973027"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86239981"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>Aggiungere criteri di configurazione delle app per i dispositivi iOS/iPadOS gestiti
 
@@ -193,20 +193,33 @@ Le registrazioni DEP (Device Enrollment Program, il programma di registrazione d
 2. Passare ad **App** > **Criteri di configurazione dell'app** per creare criteri di configurazione per l'app Portale aziendale.
 3. Creare criteri di configurazione dell'app con il codice XML che segue. Per altre informazioni sulla creazione di criteri di configurazione delle app e sull'immissione di dati XML, vedere [Aggiungere criteri di configurazione delle app per i dispositivi iOS/iPadOS gestiti](app-configuration-policies-use-ios.md).
 
-    ``` xml
-    <dict>
-        <key>IntuneCompanyPortalEnrollmentAfterUDA</key>
-        <dict>
-            <key>IntuneDeviceId</key>
-            <string>{{deviceid}}</string>
-            <key>UserId</key>
-            <string>{{userid}}</string>
-        </dict>
-    </dict>
-    ```
+    - **Usare il Portale aziendale in un dispositivo DEP registrato con affinità utente**:
 
-3. Distribuire l'app Portale aziendale a dispositivi con criteri di configurazione mirati per i gruppi desiderati. Assicurarsi di distribuire i criteri solo a gruppi di dispositivi già registrati nel programma DEP.
-4. Indicare agli utenti finali di accedere all'app Portale aziendale quando viene installata automaticamente.
+        ``` xml
+        <dict>
+            <key>IntuneCompanyPortalEnrollmentAfterUDA</key>
+            <dict>
+                <key>IntuneDeviceId</key>
+                <string>{{deviceid}}</string>
+                <key>UserId</key>
+                <string>{{userid}}</string>
+            </dict>
+        </dict>
+        ```
+    - **Usare il Portale aziendale in un dispositivo DEP registrato senza affinità utente**:
+
+        > [!NOTE]
+        > L'utente che accede al Portale aziendale viene impostato come utente primario del dispositivo.
+
+        ``` xml
+        <dict>
+            <key>IntuneUDAUserlessDevice</key>
+            <string>{{SIGNEDDEVICEID}}</string>
+        </dict>
+        ```     
+
+4. Distribuire l'app Portale aziendale a dispositivi con criteri di configurazione mirati per i gruppi desiderati. Assicurarsi di distribuire i criteri solo a gruppi di dispositivi già registrati nel programma DEP.
+5. Indicare agli utenti finali di accedere all'app Portale aziendale quando viene installata automaticamente.
 
 ## <a name="monitor-iosipados--app-configuration-status-per-device"></a>Monitorare lo stato di configurazione delle app iOS/iPadOS per ogni dispositivo 
 Dopo che è stato assegnato un criterio di configurazione, è possibile monitorare lo stato di configurazione delle app iOS/iPadOS per ogni dispositivo gestito. Da **Microsoft Intune** nel portale di Azure selezionare **Dispositivi** > **Tutti i dispositivi**. Dall'elenco dei dispositivi gestiti selezionare un dispositivo specifico per visualizzare il relativo riquadro. Nel riquadro del dispositivo selezionare **Configurazione dell'app**.  

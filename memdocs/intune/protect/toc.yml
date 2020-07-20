@@ -52,8 +52,6 @@
       items:
         - name: Panoramica conformità
           href: device-compliance-get-started.md
-        - name: Partner per la conformità dei dispositivi
-          href: device-compliance-partners.md
         - name: Creare un criterio
           href: create-compliance-policy.md
         - name: Conformità basata sulla posizione
@@ -93,6 +91,8 @@
               href: endpoint-security-account-protection-policy.md
         - name: Microsoft Defender ATP
           href: advanced-threat-protection.md
+        - name: Migrazione della regola del firewall
+          href: endpoint-security-firewall-rule-tool.md
         - name: Crittografare i dischi
           items:
             - name: Gestire i criteri BitLocker

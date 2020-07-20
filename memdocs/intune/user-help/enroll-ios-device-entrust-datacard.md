@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 07/08/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: e24a03f3706256c1d18efb2eaebf520a4312edb1
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: e849936e7e0686af3377fd4d10182d3a4eb84458
+ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881535"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86137440"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-entrust-datacard"></a>Configurare un dispositivo iOS o iPadOS con Portale aziendale ed Entrust Datacard
 
@@ -62,7 +62,7 @@ Le credenziali derivate sono un'implementazione delle linee guida del National I
 
 
 ## <a name="enroll-device"></a>Registrare il dispositivo  
-1. Aprire l'app Portale aziendale per iOS/iPadOS sul dispositivo mobile e accedere con l'account aziendale.  
+1. Aprire l'app Portale aziendale per iOS/iPadOS sul dispositivo mobile e selezionare l'opzione per accedere da un altro dispositivo.  
 
 2. Annotare il codice visualizzato.  
 

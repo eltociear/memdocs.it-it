@@ -2,7 +2,7 @@
 title: SQL Server Always On
 titleSuffix: Configuration Manager
 description: Pianificare l'uso di un gruppo di disponibilità Always On di SQL Server con Configuration Manager
-ms.date: 07/26/2019
+ms.date: 07/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 576f909be15a35f4c29e803236c220cdde33c0ac
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 9ce8c10d9d59d97caa53ece12dd43d90c78546bb
+ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383156"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86384843"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Preparare l'uso di gruppi di disponibilità Always On di SQL Server con Configuration Manager
 
@@ -247,6 +247,9 @@ Ogni membro di replica deve avere la configurazione seguente:
 #### <a name="replica-member-location"></a>Percorso dei membri della replica
 
 Tutte le repliche in un gruppo di disponibilità devono essere ospitate in locale o in Microsoft Azure. Non sono supportati gruppi che includono un membro locale e un membro in Azure.
+
+> [!NOTE]
+> Se per SQL Server si usa una macchina virtuale di Azure, abilitare **Floating IP**. Per altre informazioni, vedere [Configurare un servizio di bilanciamento del carico per un gruppo di disponibilità SQL Server Always On in macchine virtuali di Azure](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/availability-group-load-balancer-portal-configure).<!-- SCCMDocs#1928 -->
 
 Il programma di installazione di Configuration Manager deve connettersi a ogni replica. Quando si imposta un gruppo di disponibilità in Azure e il gruppo si trova dietro un bilanciamento del carico interno o esterno, aprire le seguenti porte predefinite:
 

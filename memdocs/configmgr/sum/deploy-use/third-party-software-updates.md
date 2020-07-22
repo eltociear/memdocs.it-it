@@ -10,12 +10,12 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f5461f888bfa2b749061eef4000f0d7c5f756b84
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 2f5aa622ca5d98f2cb5eb0b0c3154625df11a42e
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906753"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240763"
 ---
 # <a name="enable-third-party-updates"></a>Abilitare gli aggiornamenti di terze parti 
 
@@ -35,6 +35,7 @@ A partire dalla versione 1806, il nodo **Cataloghi di aggiornamenti software di 
     - Per l'elenco di cataloghi partner, è necessario l'accesso a download.microsoft.com sulla porta HTTPS 443. 
     -  Accesso a Internet per tutti i cataloghi di terze parti e i file di contenuto degli aggiornamenti. Potrebbero essere necessarie altre porte diverse dalla 443.
     - Gli aggiornamenti di terze parti usano le stesse impostazioni proxy del punto di aggiornamento software.
+- Nelle versioni di Configuration Manager precedenti alla 1910, il ruolo di sicurezza **Gestione degli aggiornamenti software** non può sincronizzare cataloghi di terze parti. Per la sincronizzazione dei cataloghi è necessario il ruolo di sicurezza **Amministratore completo**.
 
 
 ## <a name="additional-requirements-when-the-sup-is-remote-from-the-top-level-site-server"></a>Requisiti aggiuntivi quando il punto di aggiornamento software è remoto rispetto al server del sito principale 

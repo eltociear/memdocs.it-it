@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: b991c2ddd0ea121251eb19afbdb032844be8738d
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 15cf7f3621f25a82f0e16d5275369ec93225bbf7
+ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268199"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86422838"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>Esercitazione: Distribuire Windows 10 a un gruppo pilota
 
@@ -236,11 +236,11 @@ Usare questa procedura per creare un piano di distribuzione in Desktop Analytics
 
     - **Nome**: Nome univoco per il piano di distribuzione, ad esempio `Windows 10 pilot`  
 
-    - **Prodotti e versioni**: Selezionare il prodotto **Windows** e la versione consigliata disponibile più recente. Ad esempio, **Windows 10 versione 1809 (scelta consigliata)** .  
+    - **Prodotti e versioni**: scegliere la versione di Windows 10 da distribuire. Microsoft consiglia di creare piani di distribuzione che usano la versione più recente.
 
     - **Gruppi di dispositivi**: Selezionare uno o più gruppi dalla scheda Configuration Manager e quindi selezionare **Imposta come gruppi di destinazione**. Questi gruppi sono raccolte sincronizzate da Configuration Manager.  
 
-    - **Regole di idoneità**: Queste regole consentono di individuare i dispositivi idonei per l'aggiornamento. Selezionare **Sistema operativo Windows** e configurare le impostazioni seguenti:  
+    - **Regole di idoneità**: queste regole consentono di individuare i dispositivi idonei per l'aggiornamento. Selezionare **Sistema operativo Windows** e configurare le impostazioni seguenti:  
 
         - **Il mio computer scarica automaticamente i driver da Windows Update**: L'impostazione predefinita è **No**, consigliata quando si esegue la distribuzione con Configuration Manager.  
 

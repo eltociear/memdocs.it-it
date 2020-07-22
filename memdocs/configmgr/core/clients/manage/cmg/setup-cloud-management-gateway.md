@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 0960637f534bfe1361b55b2d63be87abc7894d7b
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: d1e7b2c359e21ac4a12219d27655603954702fa8
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715238"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410870"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Configurare il gateway di gestione cloud per Configuration Manager
 
@@ -246,6 +246,9 @@ Dopo la creazione di un Cloud Management Gateway è possibile modificarne alcune
 #### <a name="settings"></a>Impostazioni
 
 - **File certificato**: cambiare il certificato di autenticazione server per il Cloud Management Gateway. Questa opzione è utile quando si aggiorna il certificato prima della scadenza.  
+
+  > [!NOTE]
+  > Quando si rinnova il certificato di autenticazione server per il Cloud Management Gateway, il nome di dominio completo specificato per il nome comune del certificato fa distinzione tra maiuscole e minuscole.  Se, ad esempio, il nome comune del certificato attualmente in uso è `https://contoso-cmg.contoso.com`, creare il nuovo certificato con lo stesso nome comune in lettere minuscole. La procedura guidata, infatti, non accetterebbe un certificato con il nome comune `https://CONTOSO-CMG.CONTOSO.COM`.
 
 - **Istanza della macchina virtuale**: modificare il numero di macchine virtuali che il servizio usa in Azure. Questa impostazione consente di aumentare o ridurre dinamicamente le dimensioni del servizio in base a considerazioni sui costi o sull'utilizzo.  
 

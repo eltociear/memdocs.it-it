@@ -2,20 +2,20 @@
 title: Aggiornare i dispositivi Windows a una versione diversa
 titleSuffix: Configuration Manager
 description: Usare Configuration Manager per aggiornare automaticamente i dispositivi Windows 10 a una diversa edizione di Windows.
-ms.date: 09/03/2019
+ms.date: 07/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: b0c9db74-841e-46eb-8924-957cde968bf7
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 77ef255a820104ef2042a370b5056677fddb9d12
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7a82a635eafcc0ecb5251457db9d4fbb301fce33
+ms.sourcegitcommit: 1edcfb3ce4350ba1a6f36a6150e86301d35c631b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692299"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86390841"
 ---
 # <a name="upgrade-windows-devices-to-a-new-edition-with-configuration-manager"></a>Aggiornare i dispositivi Windows a una nuova edizione con Configuration Manager
 
@@ -37,7 +37,7 @@ Prima di iniziare l'aggiornamento dei dispositivi alla versione più recente, es
 
 - Per le edizioni Desktop di Windows 10: un codice Product Key valido per la nuova versione di Windows in tutti i dispositivi a cui sono destinati i criteri. Questo codice Product Key può essere un codice ad attivazione multipla (MAK) o un codice generico di contratti multilicenza (GVLK). Un codice GVLK è anche definito codice di configurazione client del servizio di gestione delle chiavi (KMS). Per altre informazioni, vedere [Pianificare l'attivazione dei contratti multilicenza](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client). Per un elenco di codici di configurazione client KMS, vedere l'[Appendice A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) della Guida di attivazione di Windows Server. <!--496871-->  
 
-- Per Windows 10 Mobile: un file di licenza XML del Centro servizi per contratti multilicenza (VLSC). Questo file contiene le informazioni sulle licenze per la nuova versione di Windows in tutti i dispositivi a cui sono destinati i criteri.
+- Per Windows 10 Mobile: un file di licenza XML del Centro servizi per contratti multilicenza (VLSC). Questo file contiene le informazioni sulle licenze per la nuova versione di Windows in tutti i dispositivi a cui sono destinati i criteri. Scaricare il file ISO per **Windows 10 Mobile Enterprise**, che include il codice di licenza XML.<!-- SCCMDocs#2033 -->
 
 - Per gestire questo tipo di criteri, è necessario essere nel ruolo di sicurezza **Amministratore completo** di Configuration Manager.
 

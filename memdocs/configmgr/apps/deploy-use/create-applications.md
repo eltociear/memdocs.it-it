@@ -2,7 +2,7 @@
 title: Creare applicazioni
 titleSuffix: Configuration Manager
 description: Creare applicazioni con tipi di distribuzione, metodi di rilevamento e requisiti per installare software.
-ms.date: 04/01/2020
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 33a95ae78fdc80c6c08b59cfe5ec5b2e88485a8f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 60ca31b73e31ea59b7a854f87262be7fdc4ab5c5
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074657"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240338"
 ---
 # <a name="create-applications-in-configuration-manager"></a>Creare applicazioni in Configuration Manager
 
@@ -311,7 +311,7 @@ Questa procedura configura un metodo di rilevamento che indica la presenza del t
 
         - **Nome file o cartella** (obbligatorio): specificare il nome del file o della cartella da rilevare nel percorso indicato in precedenza. Se il client rileva questo file o questa cartella nel dispositivo, considererà l'applicazione come installata nel dispositivo.  
 
-        - **Il file o la cartella sono associati a un'applicazione a 32 bit su sistemi a 64 bit**: Questa opzione è selezionata per impostazione predefinita. Il client cerca prima di tutto la cartella o il file specificato nei percorsi di file a 32 bit. Se la cartella o il file non viene trovato, il client esegue quindi una ricerca nei percorsi a 64 bit.  
+        - **Il file o la cartella sono associati a un'applicazione a 32 bit su sistemi a 64 bit**: Il client cerca prima di tutto la cartella o il file specificato nei percorsi di file a 32 bit. Se la cartella o il file non viene trovato, il client esegue quindi una ricerca nei percorsi a 64 bit.  
 
     - **Registro di sistema**: consente di rilevare se una chiave o un valore del Registro di sistema è presente in un dispositivo client. In caso affermativo, l'applicazione è installata. Specificare i dettagli aggiuntivi seguenti:  
 
@@ -540,7 +540,7 @@ Configuration Manager verifica i requisiti nei dispositivi prima di installare i
 
 3. Nell'elenco a discesa **Condizione** selezionare la condizione per valutare se l'utente o il dispositivo soddisfano i requisiti di installazione. Il contenuto di questo elenco varia a seconda della categoria selezionata.  
 
-4. Nell' elenco a discesa **Operatore** selezionare l'operatore da usare. Questo operatore confronta la condizione selezionata con il valore specificato, valutando se l'utente o il dispositivo soddisfa il requisito di installazione. Gli operatori disponibili variano a seconda della condizione selezionata.  
+4. Nell' elenco a discesa **Operatore** selezionare l'operatore da usare. Questo operatore confronta la condizione selezionata con il valore specificato, valutando se l'utente o il dispositivo soddisfa il requisito di installazione. Gli operatori disponibili variano a seconda della condizione selezionata. Quando si usa l'operatore `One Of`, il campo Valori contiene il codice di convalida che è necessario immettere per ogni riga.
 
     > [!Note]  
     > I requisiti disponibili variano a seconda del tipo di dispositivo usato dal tipo di distribuzione.  

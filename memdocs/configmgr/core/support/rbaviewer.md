@@ -2,7 +2,7 @@
 title: Strumento di amministrazione basata su ruoli
 titleSuffix: Configuration Manager
 description: Usare Role-based Administration and Auditing Tool per modellare e controllare i ruoli di sicurezza e gli ambiti di protezione in Configuration Manager.
-ms.date: 07/30/2018
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6372ff17-7f56-4d7b-a21b-87fb8bdd6d3a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ff940db21711aabb5d57a45b05d90d04415639bb
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4cf9d4d3f9d1b2f439d2e87d41cc280e7af0805a
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707559"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86239709"
 ---
 # <a name="role-based-administration-and-auditing-tool"></a>Role-based Administration and Auditing Tool
 
@@ -31,7 +31,7 @@ Role-based Administration and Auditing Tool è uno degli [strumenti di Configura
 
 ## <a name="requirements"></a>Requisiti
 
-- Eseguirlo nello stesso computer della console di Configuration Manager  
+- Eseguirlo nello stesso computer del server del sito di Configuration Manager 
 
 - Avere il ruolo **Amministratore completo**, **Analista di sola lettura** o **Amministratore della protezione**  
 

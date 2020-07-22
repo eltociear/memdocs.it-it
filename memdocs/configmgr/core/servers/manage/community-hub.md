@@ -2,7 +2,7 @@
 title: Hub della community e GitHub
 titleSuffix: Configuration Manager
 description: Abilitare e usare l'hub della community di Configuration Manager
-ms.date: 06/12/2020
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 88cead9a-64fe-471e-b57c-81707cefe46c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e0ef065cce691ce6f0b251d70ea8c4bd08904071
-ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
+ms.openlocfilehash: 8aadc391c5c0b259ab1a1736f3654f25b98dbae0
+ms.sourcegitcommit: aa876a9b5aa9437ae59a68e1cc6355d7070f89f4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84740793"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86236410"
 ---
 # <a name="community-hub-and-github"></a>Hub della community e GitHub
 <!--3555935, 3555936-->
@@ -28,11 +28,13 @@ La community di amministratori IT ha sviluppato un patrimonio di conoscenze nel 
 ## <a name="about-community-hub"></a>Informazioni sull'hub della community
 
 L'hub della community supporta gli oggetti seguenti:
+
+- Query CMPivot
+- Applicazioni
+- Sequenze attività
+- Elementi di configurazione
 - Script di PowerShell
 - Report
-- Sequenze attività
-- Applicazioni
-- Elementi di configurazione  
 
 ## <a name="prerequisites"></a>Prerequisiti
 

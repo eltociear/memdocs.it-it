@@ -2,7 +2,7 @@
 title: Concetti di base della gestione dei contenuti
 titleSuffix: Configuration Manager
 description: È possibile usare gli strumenti e le opzioni di Configuration Manager per gestire il contenuto da distribuire.
-ms.date: 12/17/2019
+ms.date: 07/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ffd6487297bb682ef9bda7c5bf5ee9cb3beede15
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: d8f29ed1e3201da139daeaa1fadca739ff44dc8e
+ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85590457"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86384945"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Concetti di base per la gestione dei contenuti in Configuration Manager
 
@@ -84,7 +85,7 @@ Gli elenchi seguenti riepilogano le differenze tra la *replica differenziale bin
 - Differenze a livello di *blocco*
 - Sempre abilitata per le app
 - Facoltativa nei pacchetti legacy
-- Se un file è già presente nel punto di distribuzione e viene apportata una modifica, il sito usa la replica differenziale binaria per replicare la modifica a livello di blocco anziché l'intero file.
+- Se un file è già presente nel punto di distribuzione e viene apportata una modifica, il sito usa la replica differenziale binaria per replicare la modifica a livello di blocco anziché l'intero file. Questo comportamento si verifica solo quando si abilita l'oggetto per l'utilizzo della replica differenziale binaria.<!-- SCCMDocs#2026 -->
 
 #### <a name="summary-of-delta-replication"></a>Riepilogo della replica differenziale
 
@@ -219,7 +220,9 @@ Di seguito sono elencate le posizioni da cui i client accedono al contenuto:
 
 ## <a name="content-source-priority"></a>Priorità dell'origine del contenuto
 
-Quando un client ha bisogno di contenuto, invia una richiesta di percorso del contenuto al punto di gestione. Il punto di gestione restituisce un elenco di percorsi del contenuto validi per il contenuto richiesto. Questo elenco varia a seconda dello scenario specifico, delle tecnologie in uso, della struttura del sito, dei gruppi di limiti e delle impostazioni di distribuzione. L'elenco seguente contiene tutti i possibili percorsi di origine del contenuto utilizzabili da un client, in ordine di priorità:  
+Quando un client ha bisogno di contenuto, invia una richiesta di percorso del contenuto al punto di gestione. Il punto di gestione restituisce un elenco di percorsi del contenuto validi per il contenuto richiesto. Questo elenco varia a seconda dello scenario specifico, delle tecnologie in uso, della struttura del sito, dei gruppi di limiti e delle impostazioni di distribuzione. Quando viene eseguita una sequenza di attività, ad esempio, il client completo di Configuration Manager non è sempre in esecuzione e il comportamento può quindi variare.<!-- SCCMDocs#1960 -->
+
+L'elenco seguente contiene tutti i possibili percorsi di origine del contenuto utilizzabili da un client Configuration Manager, in ordine di priorità:  
 
 1. Il punto di distribuzione presente nello stesso computer del client
 2. Un'origine peer nella stessa subnet di rete

@@ -5,17 +5,17 @@ description: Per distribuire automaticamente gli aggiornamenti software, si usan
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 05/20/2020
+ms.date: 07/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: bf172c4cb34a17ac793ea5568b0505505baf97a0
-ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
+ms.openlocfilehash: ae1f52b0744f79f79e00e5dfe2d6a76c903cf4a4
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83709435"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240032"
 ---
 #  <a name="automatically-deploy-software-updates"></a>Distribuire automaticamente gli aggiornamenti software  
 
@@ -197,7 +197,7 @@ Approvare e distribuire automaticamente gli aggiornamenti software usando una re
 
         -  **Priorità di invio**: specificare la priorità di invio per il pacchetto di distribuzione. Configuration Manager usa tale priorità quando invia il pacchetto di distribuzione ai punti di distribuzione. I pacchetti di distribuzione vengono inviati in ordine di priorità, ovvero Alta, Media o Bassa. I pacchetti con priorità identiche vengono inviati nell'ordine in cui sono stati creati. Se non esiste alcun backlog, il pacchetto esegue immediatamente l'elaborazione, indipendentemente dalla priorità configurata.  
 
-        - **Abilita replica differenziale binaria**: selezionare questa impostazione per ridurre al minimo il traffico di rete tra siti. La replica differenziale binaria aggiorna soltanto il contenuto del pacchetto che è stato modificato e non l'intero contenuto. Per altre informazioni, vedere [Replica differenziale binaria](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#binary-differential-replication).  
+        - **Abilita replica differenziale binaria**: Abilitare questa impostazione per usare la replica differenziale binaria per il pacchetto di distribuzione. Per altre informazioni, vedere [Replica differenziale binaria](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#binary-differential-replication).  
 
     - **Nessun pacchetto di distribuzione**: a partire dalla versione 1806, è possibile distribuire gli aggiornamenti software nei dispositivi senza prima scaricare e distribuire il contenuto nei punti di distribuzione. Questa impostazione è utile quando il contenuto degli aggiornamenti è particolarmente esteso. Usarla anche quando si vuole che i client ottengano sempre i contenuti dal servizio cloud Microsoft Update. I client in questo scenario possono anche scaricare il contenuto da peer in cui è già presente il contenuto necessario. Il client Gestione configurazione continua a gestire il download del contenuto, quindi è in grado di usare la funzionalità peer cache di Configuration Manager o altre tecnologie, ad esempio Ottimizzazione recapito. Questa funzionalità supporta qualsiasi tipo di aggiornamento supportato dalla gestione degli aggiornamenti software di Configuration Manager, tra cui gli aggiornamenti di Windows e Office.<!--1357933-->  
 

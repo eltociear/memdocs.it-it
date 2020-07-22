@@ -2,7 +2,7 @@
 title: Creare una sequenza di attività per l'aggiornamento del sistema operativo
 titleSuffix: Configuration Manager
 description: Usare una sequenza di attività per eseguire automaticamente l'aggiornamento da Windows 7 o versioni successive a Windows 10
-ms.date: 07/26/2019
+ms.date: 07/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6ad36978f3f3dc5207068a65d76bf8f5c7c3078c
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 84e6ea21f2bb9627ae6b40c62f8f856fb426bdaf
+ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383241"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86384893"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>Creare una sequenza di attività per aggiornare un sistema operativo in Configuration Manager
 
@@ -253,13 +253,17 @@ Usare la **variabile della sequenza di attività** [SMSTSDownloadRetryCount](../
 
     `cmd /c exit %_SMSTSOSUpgradeActionReturnCode%`
 
+    Questo comando determina la chiusura del prompt dei comandi con il codice di uscita diverso da zero specificato, che la sequenza di attività considera un errore.
+
 1. Nella scheda **Opzioni** aggiungere la condizione seguente:
 
     `Task Sequence Variable _SMSTSOSUpgradeActionReturnCode not equals 3247440400`
 
-Questo codice restituito è l'equivalente in formato decimale di MOSETUP_E_COMPAT_SCANONLY (0xC1900210), che indica una valutazione della compatibilità riuscita senza problemi. Se il passaggio *Valutazione aggiornamento* riesce e restituisce questo codice, la sequenza di attività ignora questo passaggio. Se invece il passaggio di valutazione restituisce qualsiasi altro codice, questo passaggio esegue con errori la sequenza di attività con il codice restituito dall'analisi di compatibilità di Installazione di Windows. Per altre informazioni su **_SMSTSOSUpgradeActionReturnCode**, vedere [Variabili della sequenza di attività](../understand/task-sequence-variables.md#SMSTSOSUpgradeActionReturnCode).
+    Questa condizione indica che la sequenza di attività esegue il passaggio **Esegui riga di comando** solo se il codice restituito non è un codice di riuscita.
 
-Per altre informazioni, vedere [Aggiorna sistema operativo](../understand/task-sequence-steps.md#BKMK_UpgradeOS).  
+Il codice restituito `3247440400` è l'equivalente in formato decimale di MOSETUP_E_COMPAT_SCANONLY (0xC1900210), che indica una valutazione della compatibilità riuscita senza problemi. Se il passaggio *Valutazione aggiornamento* ha esito positivo e restituisce `3247440400`, la sequenza di attività ignora il passaggio **Esegui riga di comando** e prosegue. Se il passaggio di valutazione restituisce un altro codice, viene eseguito il passaggio **Esegui riga di comando**. Poiché il comando determina la restituzione di un codice diverso da zero, anche la sequenza di attività ha esito negativo. Nel log della sequenza di attività e nei messaggi di stato è riportato il codice restituito dall'analisi di compatibilità di Installazione di Windows. Per altre informazioni su **_SMSTSOSUpgradeActionReturnCode**, vedere [Variabili della sequenza di attività](../understand/task-sequence-variables.md#SMSTSOSUpgradeActionReturnCode).
+
+Per altre informazioni, vedere il passaggio della sequenza di attività [Aggiorna sistema operativo](../understand/task-sequence-steps.md#BKMK_UpgradeOS).
 
 ### <a name="convert-from-bios-to-uefi"></a>Eseguire la conversione da BIOS a UEFI
 

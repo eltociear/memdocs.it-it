@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 0ef2d09423e7bb51e94cb626bf513aa7e98992c9
-ms.sourcegitcommit: d647eefa23c8849f49584442df568284d51d7525
+ms.openlocfilehash: 09f829bd1695426211ff94381a63b8f23d1b4fe8
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86195651"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86411015"
 ---
 # <a name="what-is-desktop-analytics"></a>Che cos'è Desktop Analytics?
 
@@ -103,7 +103,7 @@ Per usare Desktop Analytics, verificare che l'ambiente soddisfi i prerequisiti s
     - I dispositivi devono anche avere il client di Configuration Manager versione 1902 con aggiornamento cumulativo (4500571) o versione successiva. Per altre informazioni, vedere [Aggiornare Configuration Manager](connect-configmgr.md#bkmk_hotfix).  
 
     > [!Note]  
-    > Desktop Analytics non supporta gli aggiornamenti a Windows 10 Long-Term Servicing Channel (LTSC). Per altre informazioni, vedere [Panoramica di Windows as a Service](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel).
+    > Desktop Analytics non supporta gli aggiornamenti a o da Windows 10 Long-Term Servicing Channel (LTSC). Per altre informazioni, vedere [Panoramica di Windows as a Service](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel).
     >
     > Desktop Analytics è progettato per supportare al meglio lo scenario di aggiornamento sul posto. Se è necessario apportare modifiche principali, ad esempio passare da un'architettura a 32 bit a un'architettura a 64 bit, usare uno scenario di creazione dell'immagine. Le informazioni dettagliate di Desktop Analytics risultano comunque utili in questi classici scenari di distribuzione del sistema operativo, ma è possibile ignorare le indicazioni specifiche dell'aggiornamento sul posto. Per altre informazioni, vedere [Scenari per distribuire sistemi operativi aziendali con Configuration Manager](../osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems.md).
 

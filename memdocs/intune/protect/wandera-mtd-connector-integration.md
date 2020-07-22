@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/26/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fc44bb114d6ff9089a01da2d0b7db7aa7527f4b5
-ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
+ms.openlocfilehash: b227148a6e16f7c9f8d62cb58eeb628afbd84123
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85972148"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86872019"
 ---
 # <a name="integrate-wandera-mobile-threat-protection-with-intune"></a>Integrare Wandera Mobile Threat Protection con Intune  
 
@@ -70,12 +70,10 @@ La configurazione dell'integrazione tra Wandera e Intune non richiede supporto d
 
    ![Accettare le autorizzazioni](./media/wandera-mtd-connector-integration/permissions.png)
 
-10. Si tornerà automaticamente alla console di amministrazione RADAR.  Se l'autorizzazione ha avuto esito positivo, verrà visualizzato un segno di spunta verde accanto al pulsante Grant (Concedi).
-11. Ripetere il processo di consenso per le rimanenti integrazioni elencate facendo clic sui pulsanti Grant (Concedi) corrispondenti finché non compare un segno di spunta verde accanto a ognuna.
+9. Si tornerà automaticamente alla console di amministrazione RADAR.  Se l'autorizzazione ha avuto esito positivo, verrà visualizzato un segno di spunta verde accanto al pulsante Grant (Concedi).
+10. Ripetere il processo di consenso per le rimanenti integrazioni elencate facendo clic sui pulsanti Grant (Concedi) corrispondenti finché non compare un segno di spunta verde accanto a ognuna.
 
-    ![Gruppo di sincronizzazione](./media/wandera-mtd-connector-integration/sync-group-name.png)
-
-12. Tornare alla console di Intune e riprendere a modificare il connettore MTD Wandera. Attivare tutti gli interruttori disponibili e quindi salvare la configurazione.
+11. Tornare alla console di Intune e riprendere a modificare il connettore MTD Wandera. Attivare tutti gli interruttori disponibili e quindi salvare la configurazione.
 
     ![Abilitare Wandera](./media/wandera-mtd-connector-integration/enable-wandera.png)
 

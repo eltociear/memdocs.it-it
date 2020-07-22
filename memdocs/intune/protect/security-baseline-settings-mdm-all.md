@@ -5,7 +5,7 @@ description: Esaminare le impostazioni predefinite e le impostazioni disponibili
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/06/2020
+ms.date: 07/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9cc2cf4531c2e2d7a2847ccdbce87c8b938a46d6
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 0bfbb73772124ded12d520c6c5742d1576f50f82
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022229"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491304"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Impostazioni della baseline di sicurezza MDM in Windows per Intune
 
@@ -323,7 +323,7 @@ Per altre informazioni, vedere [Policy CSP - DeviceInstallation](https://docs.mi
 
 - **Installazione di dispositivi hardware per identificatori di dispositivo**:  
   L'impostazione di questo criterio consente di specificare un elenco di ID hardware Plug and Play e ID compatibili per i dispositivi la cui installazione non è consentita in Windows. L'impostazione di questo criterio ha la precedenza su qualsiasi altra impostazione di criteri che consente a Windows di installare un dispositivo. Se si abilita l'impostazione di questo criterio, Windows non potrà installare i dispositivi il cui ID hardware o ID compatibile sia presente nell'elenco creato. Se si abilita l'impostazione di questo criterio in un server desktop remoto, l'impostazione del criterio influirà sul reindirizzamento dei dispositivi specificati da un client desktop remoto al server desktop remoto. Se si disabilita o non si configura l'impostazione di questo criterio, è possibile installare e aggiornare i dispositivi in base a quanto consentito o impedito da altre impostazioni di criteri.  
-  [Altre informazioni](https://go.microsoft.com/fwlink/?linkid=2066794)
+  [Altre informazioni](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-preventinstallationofmatchingdeviceids)
 
   **Impostazione predefinita**: Bloccare l'installazione del dispositivo hardware
 
@@ -341,7 +341,7 @@ Per altre informazioni, vedere [Policy CSP - DeviceInstallation](https://docs.mi
 
 - **Installazione dispositivi hardware per classi di installazione**:  
   L'impostazione di questo criterio consente di specificare un elenco di identificatori univoci globali (GUID) della classe di installazione del dispositivo per i driver di dispositivo la cui installazione non è consentita in Windows. L'impostazione di questo criterio ha la precedenza su qualsiasi altra impostazione di criteri che consente a Windows di installare un dispositivo. Se si abilita l'impostazione di questo criterio, Windows non potrà installare o aggiornare i driver di dispositivo i cui GUID della classe di installazione del dispositivo sono inclusi nell'elenco creato. Se si abilita l'impostazione di questo criterio in un server desktop remoto, l'impostazione del criterio influirà sul reindirizzamento dei dispositivi specificati da un client desktop remoto al server desktop remoto. Se si disabilita o non si configura l'impostazione di questo criterio, Windows potrà installare e aggiornare i dispositivi in base a quanto consentito o impedito da altre impostazioni di criteri.  
-  [Altre informazioni](https://go.microsoft.com/fwlink/?linkid=2067048)
+  [Altre informazioni](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-preventinstallationofmatchingdevicesetupclasses)
 
   **Impostazione predefinita**: Bloccare l'installazione del dispositivo hardware
 

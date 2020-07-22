@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/16/2020
+ms.date: 07/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b58a24340741621a4034ed4f77ad1298251a692
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: f2718c73cb34e01c84ef07d5085c698028ca285c
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165873"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461998"
 ---
 # <a name="intune-data-warehouse-collections"></a>Raccolte del data warehouse di Intune
 
@@ -193,6 +193,8 @@ L'entità **DeviceConfigurationProfileUserActivity** elenca il numero di utenti 
 | OSVersion                  | Versione del sistema operativo.                                                                                                                                                                          |
 | JailBroken                 | Indica se il dispositivo è jailbroken o rooted.                                                                                                                                         |
 | DeviceCategoryKey          | Chiave dell'attributo di categoria di dispositivo per questo dispositivo.                                                                                                                                    |
+| physicalMemoryInBytes      | Memoria fisica in byte.                                                                                                                                    |
+| totalStorageSpaceInBytes      | Capacità di archiviazione totale in byte.                                                                                                                                    |
 
 
 ## <a name="deviceregistrationstates"></a>deviceRegistrationStates
@@ -224,6 +226,7 @@ L'entità **device** elenca tutti i dispositivi registrati in gestione e le prop
 | DeviceRegistrationState    | Chiave dell'attributo stato di registrazione client per il dispositivo.                                                                                                                      |
 | OwnerTypeKey               | Chiave dell'attributo tipo di proprietario per questo dispositivo: aziendale, personale o sconosciuto.                                                                                                    |
 | EnrolledDateTime           | Data e ora in cui è stato registrato questo dispositivo.                                                                                                                                         |
+| ethernetMacAddress           | Identificatore di rete univoco del dispositivo.                                                                                                                                         |
 | LastSyncDateTime           | Ultima archiviazione nota con Intune.                                                                                                                                              |
 | ManagementAgentKey         | Chiave dell'agente di gestione associato al dispositivo.                                                                                                                             |
 | ManagementStateKey         | Chiave dello stato di gestione associato al dispositivo, che indica lo stato più recente di un'azione remota o se è jailbroken/rooted.                                                |
@@ -232,6 +235,7 @@ L'entità **device** elenca tutti i dispositivi registrati in gestione e le prop
 | DeviceCategoryKey          | Chiave della categoria associata al dispositivo.                                                                                                                                     |
 | DeviceEnrollmentType       | Chiave del tipo di registrazione associata al dispositivo, che indica il metodo di registrazione.                                                                                             |
 | ComplianceStateKey         | Chiave dello stato di conformità associato a questo dispositivo.                                                                                                                             |
+| office365Version           | Versione di Office 365 installato nel dispositivo.                                                                                                                             |
 | OSVersion                  | Versione del sistema operativo del dispositivo.                                                                                                                                                |
 | EasDeviceId                | ID Exchange ActiveSync del dispositivo.                                                                                                                                                  |
 | SerialNumber               | SerialNumber                                                                                                                                                                           |
@@ -301,7 +305,7 @@ L'entità **deviceEnrollmentType** indica in che modo è stato registrato un dis
 
 ### <a name="example"></a>Esempio
 
-| enrollmentTypeID |                Name                |                                        Descrizione                                       |
+| enrollmentTypeID |                Name                |                                        Description                                       |
 |------------------|------------------------------------|------------------------------------------------------------------------------------------|
 | 0                | Sconosciuto                            | Il tipo di registrazione non è stato raccolto                                                      |
 | 1                | UserEnrollment                     | Registrazione basata sull'utente tramite il canale BYOD.                                           |

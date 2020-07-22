@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99b17cc165fc8d24fdf1b0f48525f3b23d8cc9b7
-ms.sourcegitcommit: d647eefa23c8849f49584442df568284d51d7525
+ms.openlocfilehash: 01c8c0ffba349966c99e1cbd90dbdfc10a5c9782
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86195634"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461165"
 ---
 # <a name="android-enterprise-fully-managed-security-configurations"></a>Configurazioni di sicurezza di dispositivi Android Enterprise completamente gestiti
 
-Come parte del [framework di configurazione della sicurezza di Android Enterprise](android-configuration-framework.md), applicare le impostazioni seguenti per gli utenti di dispositivi mobili Android Enterprise completamente gestiti. Per altre informazioni sull'impostazione di ogni criterio, vedere [Impostazioni del proprietario del dispositivo Android Enterprise per contrassegnare i dispositivi come conformi o non conformi tramite Intune](../protect/compliance-policy-create-android-for-work.md#device-owner) e [Impostazioni dei dispositivi Android Enterprise per consentire o limitare l'uso delle funzionalità tramite Intune](../configuration/device-restrictions-android-for-work.md#device-owner-only).
+Come parte del [framework di configurazione della sicurezza di Android Enterprise](android-configuration-framework.md), applicare le impostazioni seguenti per gli utenti di dispositivi mobili Android Enterprise completamente gestiti. Per altre informazioni sull'impostazione di ogni criterio, vedere [Impostazioni del proprietario del dispositivo Android Enterprise per contrassegnare i dispositivi come conformi o non conformi tramite Intune](../protect/compliance-policy-create-android-for-work.md#fully-managed-dedicated-and-corporate-owned-work-profile) e [Impostazioni dei dispositivi Android Enterprise per consentire o limitare l'uso delle funzionalità tramite Intune](../configuration/device-restrictions-android-for-work.md#fully-managed-dedicated-and-corporate-owned-work-profile).
 
 Quando si scelgono le impostazioni, assicurarsi di esaminare e classificare gli scenari di utilizzo. Quindi configurare gli utenti seguendo le istruzioni per il livello di sicurezza scelto. È possibile modificare le impostazioni suggerite in base alle esigenze dell'organizzazione. Assicurarsi che il team di sicurezza valuti l'ambiente di minaccia, la propensione al rischio e l'impatto sull'usabilità.
 

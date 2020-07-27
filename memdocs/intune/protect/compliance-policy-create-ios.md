@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/01/2020
+ms.date: 07/20/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 536ad36120a8fb5dc4ad0d16b8f265e56260d461
-ms.sourcegitcommit: 56bb5419c41c2e150ffed0564350123135ea4592
+ms.openlocfilehash: e57cd425ca89fa875b89c73a9eba30cecb7516d7
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82729266"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871917"
 ---
 # <a name="iosipados-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Impostazioni di iOS/iPadOS per contrassegnare un dispositivo come conforme o non conforme in Intune
 
@@ -149,7 +149,7 @@ Per informazioni dettagliate sui profili di posta elettronica, vedere [Configura
   È possibile creare restrizioni per le app aggiungendo i relativi ID bundle ai criteri. Se in un dispositivo è installata l'app, il dispositivo verrà contrassegnato come non conforme.
 
   - **Nome app**: immettere un nome descrittivo per facilitare l'identificazione dell'ID bundle.
-  - **ID bundle dell'app**: immettere l'identificatore univoco del bundle assegnato dal provider dell'app. Per trovare l'ID bundle, vedere [Come trovare l'ID bundle per app iOS/iPadOS](https://support.microsoft.com/help/4294074/how-to-find-the-bundle-id-for-an-ios-app). Si aprirà un altro sito Web Microsoft.  
+  - **ID bundle dell'app**: immettere l'identificatore univoco del bundle assegnato dal provider dell'app. Per trovare l'ID bundle, vedere [Bundle IDs for native iOS and iPadOS apps](https://support.apple.com/guide/mdm/native-ios-and-ipados-app-bundle-ids-mdm90f60c1ce/web) (ID bundle per le app native iOS e iPadOS) nel sito Support.apple.com o contattare il fornitore del software dell'app.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

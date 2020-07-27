@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/01/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 038dfccd49b25546b5edddc785c7ee4c86bf83a3
-ms.sourcegitcommit: fb03634b8494903fc6855ad7f86c8694ffada8df
+ms.openlocfilehash: 25d3813d79ec20cc396c3127be6be5371c20247f
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85828993"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461183"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Usare le credenziali derivate in Microsoft Intune
 
-*Questo articolo si applica ai dispositivi iOS/iPadOS e Android Enterprise completamente gestiti che eseguono la versione 7.0 e successive*
+*Questo articolo si applica ai dispositivi iOS/iPadOS e Android Enterprise completamente gestiti che eseguono la versione 7.0 e successive e ai dispositivi che eseguono Windows*
 
 In un ambiente in cui sono richieste smart card per l'autenticazione o la crittografia e la firma, è ora possibile usare Intune per effettuare il provisioning dei dispositivi mobili con un certificato derivato dalla smart card di un utente. Il certificato viene chiamato *credenziali derivate*. Intune [supporta vari emittenti di credenziali derivate](#supported-issuers), anche se è possibile usare un solo emittente per ogni tenant alla volta.
 
@@ -37,16 +37,19 @@ Le credenziali derivate sono un'implementazione delle linee guida del National I
 - L'amministratore di Intune configura il tenant in modo che funzioni con un emittente di credenziali derivate supportato. Non è necessario configurare impostazioni specifiche di Intune nel sistema dell'emittente delle credenziali derivate.
 - L'amministratore di Intune specifica le **credenziali derivate** come *metodo di autenticazione* per gli oggetti seguenti:
   
+  **Per i dispositivi Android Enterprise completamente gestiti**:
+  - Tipi di profili comuni come Wi-Fi e VPN
+  - Autenticazione delle app
+
   **Per iOS/iPadOS**:
   - Tipi di profili comuni come Wi-Fi, VPN e posta elettronica, inclusa l'app di posta elettronica nativa iOS/iPadOS
   - Autenticazione delle app
   - Firma e crittografia S/MIME
 
-  **Per i dispositivi Android Enterprise completamente gestiti**:
+  **Per Windows**:
   - Tipi di profili comuni come Wi-Fi e VPN
-  - Autenticazione delle app
   
-- Gli utenti ottengono le credenziali derivate usando la smart card in un computer per l'autenticazione con l'emittente delle credenziali derivate. L'emittente rilascia quindi al dispositivo mobile un certificato derivato dalla smart card.
+- Per Android e iOS/iPadOS, gli utenti ottengono le credenziali derivate usando la smart card in un computer per l'autenticazione con l'emittente delle credenziali derivate. L'emittente rilascia quindi al dispositivo mobile un certificato derivato dalla smart card. Per Windows, gli utenti installano l'app dal provider di credenziali derivato, che installa il certificato nel dispositivo per un uso successivo.
 - Dopo che il dispositivo ha ricevuto le credenziali derivate, queste vengono usate per l'autenticazione e per la firma e la crittografia S/MIME quando le app o i profili di accesso alle risorse richiedono le credenziali derivate.
 
 ## <a name="prerequisites"></a>Prerequisiti
@@ -59,6 +62,8 @@ Intune supporta le credenziali derivate nelle piattaforme seguenti:
 
 - iOS/iPadOS
 - Android Enterprise - dispositivi completamente gestiti (versione 7.0 e successive)
+- Android Enterprise - Proprietà aziendale con profilo di lavoro
+- Windows 10 e versioni successive
 
 ### <a name="supported-issuers"></a>Emittenti supportati
 
@@ -84,7 +89,9 @@ Pianificare la distribuzione dell'app Portale aziendale Intune nei dispositivi c
 
 ## <a name="plan-for-derived-credentials"></a>Pianificare l'uso delle credenziali derivate
 
-Prima di configurare un'autorità emittente di credenziali derivate, è necessario comprendere le considerazioni seguenti.
+Prima di configurare un'autorità emittente di credenziali derivate per Android e iOS/iPadOS, è necessario comprendere le considerazioni seguenti.
+
+Per i dispositivi Windows, vedere [Credenziali derivate per Windows](#derived-credentials-for-windows) più avanti in questo articolo.
 
 ### <a name="1-review-the-documentation-for-your-chosen-derived-credential-issuer"></a>1) Esaminare la documentazione relativa all'emittente delle credenziali derivate prescelto
 
@@ -274,7 +281,7 @@ Usare le credenziali derivate per l'autenticazione basata su certificati per sit
    - **Nome**: immettere un nome descrittivo per il profilo. Assegnare ai profili nomi che possano essere identificati facilmente in un secondo momento. Ad esempio, un nome di profilo valido è **Credenziali derivate per profilo dispositivi Android Enterprise**.
    - **Descrizione**: immettere una descrizione che offra una panoramica dell'impostazione e altri dettagli importanti.
    - **Piattaforma**: selezionare **Android Enterprise**.
-   - **Tipo di profilo**: In *Solo proprietario dispositivo* selezionare **Credenziale derivata**.
+   - **Tipo di profilo**: In *Profilo di lavoro completamente gestito, dedicato e di proprietà aziendale* selezionare **Credenziali derivate**.
 
 4. Selezionare **OK** per salvare le modifiche.
 5. Al termine, selezionare **OK** > **Crea** per creare il profilo di Intune. Una volta completata l'operazione, il profilo viene visualizzato nell'elenco **Dispositivi - Profili di configurazione**.
@@ -282,9 +289,29 @@ Usare le credenziali derivate per l'autenticazione basata su certificati per sit
 
 Gli utenti ricevono l'app o la notifica tramite posta elettronica in base alle impostazioni specificate durante la configurazione dell'emittente delle credenziali derivate. La notifica informa l'utente di avviare il Portale aziendale in modo che sia possibile elaborare i criteri delle credenziali derivate.
 
+## <a name="derived-credentials-for-windows"></a>Credenziali derivate per Windows
+
+È possibile usare i certificati derivati come metodo di autenticazione per i profili Wi-Fi e VPN nei dispositivi Windows. Gli stessi provider supportati dai dispositivi Android e iOS/iPadOS sono supportati come provider per Windows:
+
+- **DISA Purebred**
+- **Entrust Datacard**
+- **Intercede**
+
+Per Windows, gli utenti non possono utilizzare un processo di registrazione con smart card per ottenere un certificato da usare come credenziale derivata. L'utente deve invece installare l'app per Windows, ottenuta dal provider di credenziali derivato. Per usare le credenziali derivate con Windows, completare le configurazioni seguenti:
+
+1. **Installare l'app dai provider di credenziali derivate nel dispositivo Windows**.
+
+   Quando si installa l'app di Windows da un provider di credenziali derivate in un dispositivo Windows, il certificato derivato viene aggiunto all'archivio certificati di Windows di tale dispositivo. Dopo l'aggiunta al dispositivo, il certificato diventa disponibile per l'uso di un metodo di autenticazione delle credenziali derivate.
+
+   Dopo averla ottenuta dal provider scelto, l'app può essere distribuita agli utenti o installata direttamente dall'utente del dispositivo.
+
+2. **Configurare i profili Wi-Fi e VPN per usare le credenziali derivate come metodo di autenticazione**.
+
+   Quando si configura un profilo di Windows per Wi-Fi o VPN, selezionare **Credenziali derivate** per *Metodo di autenticazione*. Con questa configurazione, il profilo usa il certificato installato nel dispositivo durante l'installazione dell'app del provider.
+
 ## <a name="renew-a-derived-credential"></a>Rinnovare le credenziali derivate
 
-Le credenziali derivate non possono essere estese o rinnovate. Gli utenti devono invece usare il flusso di lavoro delle richieste di credenziali per richiedere nuove credenziali derivate per il dispositivo.
+Le credenziali derivate per i dispositivi Android o iOS/iPadOS non possono essere estese o rinnovate. Gli utenti devono invece usare il flusso di lavoro delle richieste di credenziali per richiedere nuove credenziali derivate per il dispositivo. Per i dispositivi Windows, consultare la documentazione relativa all'app dal provider delle credenziali derivate.
 
 Se si configurano uno o più metodi per **Tipo di notifica**, Intune invia automaticamente una notifica agli utenti quando le credenziali derivate correnti raggiungono l'80% della durata. La notifica dà indicazione agli utenti di eseguire il processo di richiesta delle credenziali per ottenere nuove credenziali derivate.
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5de1268b8b04c98ac7a9cfa96d42349fc0f8890
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 0242e7725afa23ed94400c79eae27118b7dbb8c5
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383207"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491185"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Usare i certificati per l'autenticazione in Microsoft Intune
 
@@ -109,6 +109,9 @@ Creare un profilo di certificato attendibile separato per ogni piattaforma del d
 > I profili radice attendibili creati per la piattaforma *Windows 10 e versioni successive*, vengono visualizzati nell'interfaccia di amministrazione di Microsoft Endpoint Manager come profili per la piattaforma *Windows 8.1 e versioni successive*. 
 >
 > Si tratta di un problema noto della presentazione della piattaforma per i profili certificato attendibili. Il profilo visualizza la piattaforma Windows 8.1 e versioni successive, mentre funziona con Windows 10 e versioni successive.
+
+> [!NOTE]
+> Il profilo del *certificato attendibile* in Intune può essere usato solo per fornire certificati radice o intermedi. Lo scopo della distribuzione di tali certificati è stabilire una catena di trust. L'uso del profilo certificato attendibile per il recapito di certificati diversi dai certificati radice o intermedi non è supportato da Microsoft. Quando si seleziona il profilo certificato attendibile nel portale di Intune, è possibile che non sia consentita l'importazione di certificati che non sono considerati certificati radice o intermedi. Anche se si riesce a importare e distribuire un certificato che non è un certificato radice o intermedio che usa questo tipo di profilo, è probabile che si verifichino risultati imprevisti tra piattaforme diverse, ad esempio iOS e Android.
 
 ### <a name="to-create-a-trusted-certificate-profile"></a>Per creare un profilo certificato attendibile
 

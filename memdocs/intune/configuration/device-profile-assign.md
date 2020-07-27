@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 08d53bd7ffedc2679fca675b88e021301d15fb62
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5259fe84b11ce5d1ec4a3110dcbc188afb2e6d3e
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989030"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565683"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Assegnare profili utente e profili di dispositivo in Microsoft Intune
 
@@ -85,11 +85,13 @@ Ad esempio:
 
 - In alcuni dispositivi Windows specifici è sempre necessario controllare alcune impostazioni Microsoft Edge, indipendentemente dall'utente che usa il dispositivo. Si vuole ad esempio bloccare tutti i download, limitare tutti i cookie alla sessione di esplorazione corrente ed eliminare la cronologia esplorazioni. Per questo scenario, inserire questi dispositivi Windows specifici in un gruppo di dispositivi. Creare quindi un [modello amministrativo in Intune](administrative-templates-windows.md), aggiungere queste impostazioni dispositivo e assegnare questo profilo al gruppo di dispositivi.
 
-Per riepilogare, usare i gruppi di dispositivi quando non è importante chi esegue l'accesso o se qualcuno ha eseguito l'accesso al dispositivo. Si vuole che le impostazioni accompagnino sempre il dispositivo.
+Per riepilogare, usare i gruppi di dispositivi quando non è importante chi ha eseguito l'accesso o se qualcuno accede al dispositivo. Si vuole che le impostazioni accompagnino sempre il dispositivo.
 
 ### <a name="user-groups"></a>Gruppi di utenti
 
 Le impostazioni del profilo applicate ai gruppi di utenti si abbinano all'utente e lo accompagnano quando esegue l'accesso ai diversi dispositivi. È normale che gli utenti abbiano molti dispositivi, ad esempio un dispositivo Surface Pro per il lavoro e un dispositivo iOS/iPadOS per uso personale. È normale che un utente acceda alla posta elettronica e ad altre risorse dell'organizzazione da questi dispositivi.
+
+Seguire questa regola generale: se una funzionalità appartiene a un utente, ad esempio la posta elettronica o i certificati utente, assegnare a gruppi di utenti.
 
 Ad esempio:
 

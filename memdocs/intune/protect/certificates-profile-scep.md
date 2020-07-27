@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/03/2020
+ms.date: 07/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35cf4b3afb766d8729d3438d2d8c61e1d79f4791
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: ebf6a71a4d462e1025b6c44557a9513887488673
+ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531741"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86891531"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Creare e assegnare profili di certificato SCEP in Intune
 
@@ -40,15 +40,15 @@ Dopo aver [configurato l'infrastruttura](certificates-scep-configure.md) per sup
    - **Piattaforma**: scegliere la piattaforma dei dispositivi.
    - **Profilo**: Selezionare **Certificato SCEP**
 
-     Per la piattaforma **Android Enterprise**, *Tipo di profilo* è suddiviso in due categorie: *Solo proprietario del dispositivo* e *Solo profilo di lavoro*. Assicurarsi di selezionare il profilo di certificato SCEP corretto per i dispositivi gestiti.  
+     Per la piattaforma **Android Enterprise**, *Tipo di profilo* è diviso in due categorie: *Profilo di lavoro completamente gestito, dedicato e di proprietà aziendale* e *Solo profilo di lavoro*. Assicurarsi di selezionare il profilo di certificato SCEP corretto per i dispositivi gestiti.  
 
-     I profili di certificato SCEP per il profilo *Solo proprietario del dispositivo* presentano le limitazioni seguenti:
+     I profili certificato SCEP per il profilo *Profilo di lavoro completamente gestito, dedicato e di proprietà aziendale* presentano le limitazioni seguenti:
 
       1. In Monitoraggio la generazione di report per i certificati non è disponibile per i profili di certificato SCEP del proprietario del dispositivo.
 
       2. Non è possibile usare Intune per revocare i certificati di cui è stato effettuato il provisioning tramite profili certificato SCEP per i proprietari del dispositivo. È possibile gestire la revoca tramite un processo esterno o direttamente con l'autorità di certificazione.
 
-      3. Per i dispositivi Android Enterprise dedicati, i profili certificato SCEP sono supportati solo per la configurazione e l'autenticazione della rete Wi-Fi.  I profili certificato SCEP per i dispositivi Android Enterprise dedicati non sono supportati per l'autenticazione di app o reti VPN.
+      3. Per i dispositivi Android Enterprise dedicati, i profili certificato SCEP sono supportati solo per la configurazione di reti Wi-Fi, per reti VPN e per l'autenticazione. I profili certificato SCEP per i dispositivi Android Enterprise dedicati non sono supportati per l'autenticazione di app.
 
 4. Selezionare **Crea**.
 
@@ -71,6 +71,9 @@ Dopo aver [configurato l'infrastruttura](certificates-scep-configure.md) per sup
 
        Usare il tipo **Dispositivo** per scenari quali i dispositivi senza utente, ad esempio i chioschi multimediali, o per i dispositivi Windows. Nei dispositivi Windows il certificato viene inserito nell'archivio certificati Computer locale.
 
+     > [!NOTE]
+     > In macOS i certificati di cui si effettua il provisioning con SCEP vengono sempre inseriti nel keychain di sistema (archivio di sistema) del dispositivo.
+ 
    - **Formato nome soggetto**:
 
      selezionare come Intune crea automaticamente il nome del soggetto nella richiesta di certificato. Le opzioni per il formato del nome soggetto dipendono dal tipo di certificato selezionato, ovvero **Utente** o **Dispositivo**.
@@ -112,7 +115,7 @@ Dopo aver [configurato l'infrastruttura](certificates-scep-configure.md) per sup
 
          Questo esempio include un formato di nome soggetto che usa le variabili CN ed E, oltre a stringhe per i valori di unità organizzativa (OU), organizzazione (O), località (L), stato (S) e paese (C). L'argomento [Funzione CertStrToName](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) visualizza questa funzione e le relative stringhe supportate.
          
-         \* Per i profili Solo proprietario del dispositivo Android, l'impostazione **CN={{UserPrincipalName}}** non funziona. I profili Solo proprietario del dispositivo Android possono essere usati per i dispositivi senza utenti, quindi questo profilo non può ottenere il nome dell'entità utente dell'utente. Se questa opzione è realmente necessaria per i dispositivi con utenti, è possibile usare una soluzione alternativa come la seguente: **CN={{UserName}}\@contoso.com** specifica il nome utente e il dominio aggiunti manualmente, ad esempio janedoe@contoso.com
+         \* Per i profili Android di tipo Profilo di lavoro completamente gestito, dedicato e di proprietà aziendale, l'impostazione **CN={{UserPrincipalName}}** non funzionerà. I profili Android di tipo Profilo di lavoro completamente gestito, dedicato e di proprietà aziendale possono essere usati per i dispositivi senza utente, quindi questo profilo non potrà ottenere il nome dell'entità utente dell'utente. Se questa opzione è realmente necessaria per i dispositivi con utenti, è possibile usare una soluzione alternativa come la seguente: **CN={{UserName}}\@contoso.com** specifica il nome utente e il dominio aggiunti manualmente, ad esempio janedoe@contoso.com
 
       - **Tipo di certificato dispositivo**
 

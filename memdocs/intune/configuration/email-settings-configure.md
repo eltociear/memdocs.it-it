@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/20/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 205c892c885682d10877aae4c92429cf59adb0ac
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5bb01770909192b17f0e72b852e4094ff7ad3a04
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989166"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565649"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>Aggiungere impostazioni di posta elettronica ai dispositivi con Intune
 
@@ -75,15 +75,35 @@ Questo articolo illustra come creare un profilo di posta elettronica in Microsof
 
     Selezionare **Avanti**.
 
-10. In **Assegnazioni** selezionare gli utenti o i gruppi che riceveranno il profilo. Per altre informazioni sull'assegnazione di profili, vedere [Assegnare profili utente e dispositivo](device-profile-assign.md).
+10. In **Assegnazioni** selezionare i gruppi di utenti o di dispositivi che riceveranno il profilo. Per altre informazioni sull'assegnazione di profili, vedere [Cosa è necessario sapere](#what-you-need-to-know) (in questo articolo). Anche in [Assegnare profili utente e profili di dispositivo](device-profile-assign.md) sono disponibili alcune linee guida.
 
     Selezionare **Avanti**.
 
 11. In **Rivedi e crea** rivedere le impostazioni. Quando si seleziona **Crea**, le modifiche vengono salvate e il profilo viene assegnato. Il criterio viene visualizzato anche nell'elenco dei profili.
 
+## <a name="what-you-need-to-know"></a>Informazioni importanti
+
+- I profili di posta elettronica vengono distribuiti per l'utente che ha registrato il dispositivo. Per configurare il profilo di posta elettronica, Intune usa le proprietà di Azure Active Directory (AD) nel profilo di posta elettronica dell'utente durante la registrazione.
+
+- Microsoft Outlook per i dispositivi iOS/iPadOS e Android non supportano i profili di posta elettronica. Distribuire invece i criteri di configurazione delle app. Per altre informazioni, vedere [Impostazioni di configurazione di Outlook](../apps/app-configuration-policies-outlook.md).
+
+  Nei dispositivi Android Enterprise, distribuire Gmail o Nine for Work usando Google Play Store gestito. In [Aggiungere app Google Play gestite](../apps/apps-add-android-for-work.md) sono illustrati i passaggi.
+
+- La posta elettronica si basa sulle impostazioni di identità e utente. I profili di posta elettronica vengono in genere assegnati a gruppi di utenti, non a gruppi di dispositivi. Alcune considerazioni:
+
+  - Se il profilo di posta elettronica include certificati utente, assegnare il profilo di posta elettronica a gruppi di utenti. È possibile che siano presenti più profili certificato utente assegnati. Questi profili creano una catena di distribuzioni di profili. Distribuire questa catena di profili a gruppi di utenti.
+
+    Se un profilo della catena viene distribuito in un gruppo di dispositivi, è possibile che venga richiesto continuamente agli utenti di immettere la password.
+
+  - I gruppi di dispositivi vengono in genere usati quando non è presente un utente primario o se non si conosce l'utente. I profili di posta elettronica destinati ai gruppi di dispositivi (non ai gruppi di utenti) non possono essere ricevuti dal dispositivo.
+
+    Ad esempio, se il profilo di posta elettronica è destinato a un gruppo che include tutti i dispositivi iOS/iPadOS, assicurarsi che tutti i dispositivi abbiano un utente. Se un dispositivo non ha un utente, il profilo di posta elettronica potrebbe non essere distribuito. Il profilo risulta quindi limitato e potrebbe non essere distribuito in alcuni dispositivi. Se il dispositivo ha un utente primario, la distribuzione nei gruppi di dispositivi dovrebbe funzionare.
+
+    Per altre informazioni sui possibili problemi relativi all'uso di gruppi di dispositivi, vedere [Problemi comuni relativi ai profili di posta elettronica](troubleshoot-email-profiles-in-microsoft-intune.md).
+
 ## <a name="remove-an-email-profile"></a>Rimuovere un profilo di posta elettronica
 
-I profili di posta elettronica vengono assegnati ai gruppi di dispositivi, non ai gruppi di utenti. Esistono diversi modi di rimuovere un profilo di posta elettronica da un dispositivo, anche quando è disponibile un solo profilo di posta elettronica nel dispositivo:
+Esistono diversi modi di rimuovere un profilo di posta elettronica da un dispositivo, anche quando è disponibile un solo profilo di posta elettronica nel dispositivo:
 
 - **Opzione 1**: Aprire il profilo di posta elettronica (**Dispositivi** > **Profili di configurazione** > selezionare il profilo) e scegliere **Assegnazioni**. Nella scheda **Includi** sono visualizzati i gruppi assegnati al profilo. Fare clic con il pulsante destro del mouse sul gruppo > **Rimuovi**. Assicurarsi di **salvare** le modifiche.
 
@@ -95,7 +115,7 @@ I profili di posta elettronica vengono assegnati ai gruppi di dispositivi, non a
 
 - **Certificati**: quando si crea il profilo di posta elettronica, si sceglie un profilo di certificato creato in precedenza in Intune. Questo certificato è noto come certificato di identità. Esegue l'autenticazione in base a un profilo certificato attendibile o a un certificato radice per verificare che il dispositivo di un utente sia autorizzato a connettersi. Il certificato attendibile viene assegnato al computer che autentica la connessione alla posta elettronica. Questo computer è in genere il server di posta nativo.
 
-  Se si usa l'autenticazione basata su certificati per il profilo di posta elettronica, distribuire il profilo di posta elettronica, il profilo certificato e il profilo radice attendibile agli stessi gruppi per assicurarsi che ogni dispositivo sia in grado di riconoscere la legittimità dell'autorità di certificazione.
+  Se si usa l'autenticazione basata su certificati per il profilo di posta elettronica, è necessario distribuire il profilo di posta elettronica, il profilo certificato e il profilo radice attendibile agli stessi gruppi. Questa distribuzione assicura che ogni dispositivo possa riconoscere la legittimità dell'autorità di certificazione.
 
   Per altre informazioni su come creare e usare i profili di certificato in Intune, vedere [Come configurare i certificati con Intune](../protect/certificates-configure.md).
 
@@ -111,7 +131,7 @@ Se l'utente ha già configurato un account di posta elettronica, il profilo di p
 
 - **Android Samsung Knox Standard**: Un profilo di posta elettronica duplicato esistente viene individuato in base all'indirizzo di posta elettronica e viene sovrascritto con il profilo di Intune. Android non usa il nome host per identificare il profilo. Non creare più profili di posta elettronica usando lo stesso indirizzo di posta elettronica in host diversi. I profili si sovrascrivono a vicenda.
 
-- **Profili di lavoro Android**: Intune offre due profili di posta elettronica di lavoro Android, uno per l'app Gmail e uno per l'app Nine Work. Queste app sono disponibili in Google Play Store e vengono installate nel profilo di lavoro del dispositivo. Queste app non creano profili duplicati. Entrambe le app supportano le connessioni a Exchange. Per usare la connettività di posta elettronica, distribuire una di queste app di posta elettronica nei dispositivi degli utenti, quindi creare e distribuire il profilo di posta elettronica appropriato. È possibile usare i profili di configurazione di posta elettronica Gmail e Nine che funzioneranno per entrambi i tipi di registrazione Profilo di lavoro e Proprietario del dispositivo, incluso l'uso di profili certificato per entrambi i tipi di configurazione di posta elettronica. Eventuali criteri per Gmail o Nine creati nell'ambito della configurazione del dispositivo per i profili di lavoro continueranno a essere applicati al dispositivo e non è necessario spostarli nei criteri di configurazione delle app. Le app di posta elettronica, ad esempio Nine Work, potrebbero non essere gratuite. Rivedere i dettagli relativi alla licenza dell'app o contattare l'azienda produttrice per richiedere informazioni. 
+- **Profili di lavoro Android**: Intune offre due profili di posta elettronica di lavoro Android, uno per l'app Gmail e uno per l'app Nine Work. Queste app sono disponibili in Google Play Store e vengono installate nel profilo di lavoro del dispositivo. Queste app non creano profili duplicati. Entrambe le app supportano le connessioni a Exchange. Per usare la connettività di posta elettronica, distribuire una di queste app di posta elettronica nei dispositivi degli utenti, quindi creare e distribuire il profilo di posta elettronica. È possibile usare i profili di configurazione di posta elettronica Gmail e Nine che funzionano per i tipi di registrazione Profilo di lavoro e Profilo di lavoro completamente gestito, dedicato e di proprietà aziendale, incluso l'uso di profili certificato per entrambi i tipi di configurazione di posta elettronica. Tutti i criteri Gmail o Nine creati nella configurazione del dispositivo per i profili di lavoro continueranno a essere applicato al dispositivo. Non è necessario spostarli nei criteri di configurazione delle app. Le app di posta elettronica, ad esempio Nine Work, potrebbero non essere gratuite. Rivedere i dettagli relativi alla licenza dell'app o contattare l'azienda produttrice per richiedere informazioni.
 
 ## <a name="changes-to-assigned-email-profiles"></a>Modifiche ai profili di posta elettronica assegnati
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de23dc438ac176383cf5f5fbfac4da22f91bd4b2
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e541eb04f8de689ee76a68556bb1b2eb90914b96
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988820"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461437"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Creare criteri di conformità in Microsoft Intune
 
@@ -75,7 +75,7 @@ Per usare criteri di conformità del dispositivo, attenersi a quanto segue:
    - *Windows 10 e versioni successive*
 
     Per *Android Enterprise* è anche possibile selezionare un **Tipo di criterio**:
-     - *Criteri di conformità del proprietario del dispositivo Android*
+     - *Criteri del profilo di lavoro Android completamente gestito, dedicato e di proprietà aziendale*
      - *Criteri di conformità del profilo di lavoro Android*
 
     Selezionare quindi **Crea** per aprire la finestra di configurazione **Crea criterio**.

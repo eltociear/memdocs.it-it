@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 38c3c4adb7029303eaad34b1d5a9fdef774c0f00
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 65b5c7c0b9cb8a587213d237854e69705b5a7f63
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086439"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461692"
 ---
 # <a name="add-wi-fi-settings-for-android-enterprise-dedicated-and-fully-managed-devices-in-microsoft-intune"></a>Aggiungere le impostazioni Wi-Fi per i dispositivi Android Enterprise dedicati e completamente gestiti in Microsoft Intune
 
@@ -33,14 +33,14 @@ Questo articolo descrive queste impostazioni. [Usare le impostazioni Wi-Fi nei d
 
 [Creare un profilo di dispositivo](wi-fi-settings-configure.md).
 
-## <a name="device-owner-only"></a>Solo proprietario del dispositivo
+## <a name="fully-managed-dedicated-and-corporate-owned-work-profile"></a>Profilo di lavoro completamente gestito, dedicato e di proprietà aziendale
 
 Selezionare questa opzione se si esegue la distribuzione in un dispositivo Android Enterprise dedicato o completamente gestito.  I dispositivi Android Enterprise dedicati e completamente gestiti supportano attualmente la distribuzione dei certificati SCEP, ma non dei certificati PKCS.
 
 ### <a name="basic"></a>Basic
 
 - **Tipo Wi-Fi**: scegliere **Base**.
-- **Nome rete**: immettere un nome per questa connessione Wi-Fi. Questo nome viene visualizzato dagli utenti finali nel momento in cui esplorano le connessioni Wi-FI disponibili nel dispositivo. Ad esempio, immettere **Contoso WiFi**.
+- **Nome rete**: immettere un nome per questa connessione Wi-Fi. Questo nome viene visualizzato dagli utenti finali nel momento in cui esplorano le connessioni Wi-Fi disponibili nel dispositivo. Ad esempio, immettere **Contoso WiFi**.
 - **SSID**: immettere l'**identificatore del set di servizi**, ovvero il nome reale della rete wireless a cui si connettono i dispositivi. Quando scelgono la connessione, gli utenti, tuttavia, visualizzano solo il **nome di rete** configurato in precedenza.
 - **Rete nascosta**: scegliere **Abilita** per nascondere questa rete dall'elenco delle reti disponibili nel dispositivo. L'identificatore SSID non viene trasmesso. Scegliere **Disabilita** per visualizzare questa rete nell'elenco delle reti disponibili nel dispositivo.
 - **Tipo Wi-Fi**: selezionare il protocollo di sicurezza per l'autenticazione nella rete Wi-Fi. Le opzioni disponibili sono:

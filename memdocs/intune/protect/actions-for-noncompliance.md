@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 330dd566599d6bdb1fa667d8797878ea8c92f098
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 9e5786289e54071d54c11fbb08790e95e54a9377
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093726"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461862"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Configurare azioni per i dispositivi non conformi in Intune
 
@@ -58,7 +58,7 @@ Quando viene inviato il messaggio di posta elettronica, Intune include le inform
   Questa azione è supportata dalle piattaforme seguenti:
   - Android:
     - Amministratore dispositivo Android
-    - Proprietario dispositivo Android Enterprise
+    - Profilo di lavoro Android completamente gestito, dedicato e di proprietà aziendale
     - Profilo di lavoro di Android Enterprise
     - Dispositivi in modalità tutto schermo di Android Enterprise
   - iOS/iPadOS

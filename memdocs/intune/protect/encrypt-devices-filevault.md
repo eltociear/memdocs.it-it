@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/24/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 1f2a6955a430427fe3f4e2791da6bbaecdd90523
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: cdfec1d82d68e97544172c56cecc416846b4a0f6
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353573"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86460485"
 ---
 # <a name="use-filevault-disk-encryption-for--macos-with-intune"></a>Usare la crittografia del disco FileVault di macOS con Intune
 
@@ -45,6 +45,8 @@ Per gestire BitLocker per Windows 10, vedere [Gestire i criteri BitLocker](../pr
 
 È quindi necessario creare criteri di crittografia dei dispositivi con FileVault. Tali criteri vengono applicati ai dispositivi in due fasi. Prima il dispositivo viene preparato in modo da consentire a Intune di recuperare la chiave di ripristino ed eseguirne il backup. Questa azione è detta deposito. Dopo il deposito della chiave, è possibile avviare la crittografia del disco.
 
+Oltre a usare i criteri di Intune per crittografare un dispositivo con FileVault, è possibile distribuire i criteri a un dispositivo gestito per consentire a Intune di [presupporre la gestione di FileVault quando il dispositivo è stato crittografato dall'utente](#assume-management-of-filevault-on-previously-encrypted-devices). Questo scenario richiede che il dispositivo riceva i criteri FileVault da Intune e che in seguito l'utente carichi la chiave di ripristino personale in Intune.
+
 La registrazione del dispositivo approvata dall'utente è necessaria per il funzionamento di FileVault in un dispositivo. L'utente deve approvare manualmente il profilo di gestione dalle preferenze di sistema perché la registrazione sia considerata approvata dall'utente.
 
 ## <a name="permissions-to-manage-filevault"></a>Autorizzazioni per la gestione di FileVault
@@ -59,38 +61,6 @@ Di seguito sono riportati le autorizzazioni di FileVault, che fanno parte della 
 
 - **Rotate FileVault key**
   - Help Desk Operator
-
-## <a name="create-endpoint-security-policy-for-filevault"></a>Creare criteri di sicurezza degli endpoint per FileVault
-
-1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-
-2. Selezionare **Endpoint Security** (Sicurezza degli endpoint)  > **Crittografia del disco** > **Crea criterio**.
-
-3. Nella pagina **Dati principali** immettere le proprietà seguenti e quindi scegliere **Avanti**.
-   - **Piattaforma**: macOS
-   - **Profilo**: FileVault
-
-   ![Selezionare il profilo FileVault](./media/encrypt-devices-filevault/select-macos-filevault-es.png)
-
-4. Nella pagina **Impostazioni di configurazione**:
-   1. Impostare *Abilita FileVault* su **Sì**.
-   2. Per *Tipo di chiave di ripristino* è supportata solo l'opzione **Chiave di ripristino personale**.
-   3. Configurare impostazioni aggiuntive in base alle esigenze.
-
-   Considerare la possibilità di aggiungere un messaggio per facilitare agli utenti il recupero della chiave di ripristino del dispositivo. Queste informazioni possono essere utili per gli utenti se si usa l'impostazione Rotazione della chiave di ripristino personale, che periodicamente può generare in modo automatico una nuova chiave di ripristino per un dispositivo.
-
-   Ad esempio: per recuperare una chiave di ripristino smarrita o ruotata di recente, accedere al sito Web Portale aziendale di Intune da qualsiasi dispositivo. Nel portale passare a Dispositivi, selezionare il dispositivo con FileVault abilitato e quindi selezionare *Ottieni la chiave di ripristino*. Verrà visualizzata la chiave di ripristino corrente.
-
-5. Al termine della configurazione delle impostazioni, selezionare **Avanti**.
-
-6. Nella pagina **Ambito (tag)** scegliere **Selezionare i tag di ambito** per aprire il riquadro Seleziona tag per assegnare tag di ambito al profilo.
-
-   Selezionare **Avanti** per continuare.
-
-7. Nella pagina **Assegnazioni** selezionare i gruppi che riceveranno questo profilo. Per altre informazioni sull'assegnazione di profili, vedere Assegnare profili utente e dispositivo.
-Selezionare **Avanti**.
-
-8. Al termine, nella pagina **Rivedi e crea** scegliere **Crea**. Il nuovo profilo viene visualizzato nell'elenco quando si seleziona il tipo di criterio per il profilo creato.
 
 ## <a name="create-device-configuration-policy-for-filevault"></a>Creare criteri di configurazione del dispositivo per FileVault
 
@@ -121,7 +91,7 @@ Selezionare **Avanti**.
 
    - Per *Tipo di chiave di ripristino* selezionare **Chiave personale**.
 
-   - Per *Descrizione della posizione del deposito della chiave di ripristino personale* aggiungere un messaggio per aiutare gli utenti a recuperare la chiave di ripristino per il proprio dispositivo. Queste informazioni possono essere utili per gli utenti se si usa l'impostazione Rotazione della chiave di ripristino personale, che periodicamente può generare in modo automatico una nuova chiave di ripristino per un dispositivo.
+   - Per *Descrizione della posizione del deposito della chiave di ripristino personale* aggiungere un messaggio per aiutare gli utenti a [recuperare la chiave di ripristino per il proprio dispositivo](#retrieve-a-personal-recovery-key). Queste informazioni possono essere utili per gli utenti se si usa l'impostazione Rotazione della chiave di ripristino personale, che periodicamente può generare in modo automatico una nuova chiave di ripristino per un dispositivo.
 
      Ad esempio: per recuperare una chiave di ripristino smarrita o ruotata di recente, accedere al sito Web Portale aziendale di Intune da qualsiasi dispositivo. Nel portale passare a *Dispositivi*, selezionare il dispositivo con FileVault abilitato e quindi selezionare *Ottieni la chiave di ripristino*. Verrà visualizzata la chiave di ripristino corrente.
 
@@ -136,6 +106,38 @@ Selezionare **Avanti**.
 
 9. Al termine, nella pagina **Rivedi e crea** scegliere **Crea**. Il nuovo profilo viene visualizzato nell'elenco quando si seleziona il tipo di criterio per il profilo creato.
 
+## <a name="create-endpoint-security-policy-for-filevault"></a>Creare criteri di sicurezza degli endpoint per FileVault
+
+1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Selezionare **Endpoint Security** (Sicurezza degli endpoint)  > **Crittografia del disco** > **Crea criterio**.
+
+3. Nella pagina **Dati principali** immettere le proprietà seguenti e quindi scegliere **Avanti**.
+   - **Piattaforma**: macOS
+   - **Profilo**: FileVault
+
+   ![Selezionare il profilo FileVault](./media/encrypt-devices-filevault/select-macos-filevault-es.png)
+
+4. Nella pagina **Impostazioni di configurazione**:
+   1. Impostare *Abilita FileVault* su **Sì**.
+   2. Per *Tipo di chiave di ripristino* è supportata solo l'opzione **Chiave di ripristino personale**.
+   3. Configurare impostazioni aggiuntive in base alle esigenze.
+
+   Considerare la possibilità di aggiungere un messaggio per [facilitare agli utenti il recupero della chiave di ripristino](#retrieve-a-personal-recovery-key) del dispositivo. Queste informazioni possono essere utili per gli utenti se si usa l'impostazione Rotazione della chiave di ripristino personale, che periodicamente può generare in modo automatico una nuova chiave di ripristino per un dispositivo.
+
+   Ad esempio: per recuperare una chiave di ripristino smarrita o ruotata di recente, accedere al sito Web Portale aziendale di Intune da qualsiasi dispositivo. Nel portale passare a Dispositivi, selezionare il dispositivo con FileVault abilitato e quindi selezionare *Ottieni la chiave di ripristino*. Verrà visualizzata la chiave di ripristino corrente.
+
+5. Al termine della configurazione delle impostazioni, selezionare **Avanti**.
+
+6. Nella pagina **Ambito (tag)** scegliere **Selezionare i tag di ambito** per aprire il riquadro Seleziona tag per assegnare tag di ambito al profilo.
+
+   Selezionare **Avanti** per continuare.
+
+7. Nella pagina **Assegnazioni** selezionare i gruppi che riceveranno questo profilo. Per altre informazioni sull'assegnazione di profili, vedere Assegnare profili utente e dispositivo.
+Selezionare **Avanti**.
+
+8. Al termine, nella pagina **Rivedi e crea** scegliere **Crea**. Il nuovo profilo viene visualizzato nell'elenco quando si seleziona il tipo di criterio per il profilo creato.
+
 ## <a name="manage-filevault"></a>Gestire FileVault
 
 Per visualizzare le informazioni sui dispositivi che ricevono i criteri FileVault, vedere [Monitorare la crittografia del disco](../protect/encryption-monitor.md).
@@ -144,17 +146,60 @@ Quando Intune esegue per la prima volta la crittografia di un dispositivo macOS 
 
 Per i dispositivi gestiti, Intune può depositare una copia della chiave di ripristino personale. Il deposito delle chiavi consente agli amministratori di Intune di ruotare le chiavi per favorire la protezione dei dispositivi e agli utenti di recuperare una chiave di ripristino personale smarrita o ruotata.
 
-Dopo che Intune ha crittografato un dispositivo macOS con FileVault:
+Intune deposita una chiave di ripristino quando i criteri di Intune crittografano un dispositivo o dopo che un utente carica la chiave di ripristino personale per il dispositivo che ha crittografato manualmente.
 
-- Gli amministratori possono visualizzare e gestire le chiavi di ripristino di FileVault con il report di crittografia di Intune.
-- Gli utenti possono visualizzare la chiave di ripristino personale di un dispositivo dal Portale aziendale Web sul dispositivo. All'interno del Portale aziendale Web scegliere il dispositivo macOS crittografato e quindi scegliere "Ottieni la chiave di ripristino" come azione del dispositivo remoto.
+Quando Intune deposita la chiave di ripristino personale:
+
+- Gli amministratori possono gestire e ruotare le chiavi di ripristino di FileVault per qualsiasi dispositivo macOS gestito, usando il report di crittografia di Intune.
+- Gli amministratori possono visualizzare la chiave di ripristino personale solo per i dispositivi macOS gestiti contrassegnati come *aziendali*. Non possono visualizzare la chiave di ripristino per i dispositivi personali.
+- Gli utenti possono visualizzare e [recuperare la propria chiave di ripristino personale da una posizione supportata](#retrieve-a-personal-recovery-key). Dal sito Web di Portale aziendale, ad esempio, l'utente può scegliere l'azione remota del dispositivo *Ottieni la chiave di ripristino*.
+
+### <a name="assume-management-of-filevault-on-previously-encrypted-devices"></a>Assumere la gestione di FileVault nei dispositivi precedentemente crittografati
+
+Intune può gestire la crittografia del disco FileVault nei dispositivi macOS crittografati tramite l'uso dei criteri di Intune. Intune può anche assumere la gestione di FileVault nei dispositivi crittografati dagli utenti del dispositivo e non tramite i criteri di Intune.
+
+#### <a name="prerequisites-to-assume-management-of-filevault"></a>Prerequisiti per assumere la gestione di FileVault
+
+Per assumere la gestione di un dispositivo precedentemente crittografato, è necessario che siano soddisfatte le condizioni seguenti:
+
+1. **Distribuire un criterio FileVault nel dispositivo**. Il dispositivo crittografato in precedenza deve ricevere un criterio da Intune che attiva la crittografia del disco FileVault.
+
+   In questo scenario, il criterio non decrittografa o crittografa di nuovo il dispositivo. Al contrario, il criterio consente a Intune di assumere la gestione della crittografia FileVault già abilitata nel dispositivo.  Per crittografare i dispositivi con FileVault, è possibile usare i criteri di crittografia dei dischi di protezione degli endpoint o un criterio di protezione degli endpoint per la configurazione del dispositivo.
+
+   Vedere [Creare e distribuire criteri](#create-device-configuration-policy-for-filevault).
+
+2. **Gli utenti caricano la chiave di ripristino personale in Intune**.  Dopo che il dispositivo ha ricevuto il criterio FileVault, dare istruzioni all'utente del dispositivo che ha crittografato il dispositivo di caricare la chiave di ripristino personale in Intune. Se la chiave viene immessa correttamente, Intune assume la gestione della crittografia FileVault e viene creata una nuova chiave di ripristino personale per il dispositivo e l'utente.
+
+   > [!IMPORTANT]
+   > Intune non avvisa gli utenti che devono caricare la chiave di ripristino personale per completare la crittografia. Usare invece i normali canali di comunicazione IT per avvisare gli utenti che hanno precedentemente crittografato il proprio dispositivo macOS con FileVault che devono caricare la chiave di ripristino personale in Intune.  
+   >
+   > In base ai criteri di conformità, è possibile che ai dispositivi venga impedito l'accesso alle risorse aziendali fino a quando Intune non assume correttamente la gestione della crittografia FileVault nel dispositivo.
+
+#### <a name="upload-a-personal-recovery-key"></a>Caricare una chiave di ripristino personale
+
+Per consentire a Intune di gestire FileVault in un dispositivo precedentemente crittografato, l'utente del dispositivo deve usare il sito Web Portale aziendale per caricare la chiave di ripristino personale corrente per il dispositivo in Intune.  Al momento del caricamento, Intune ruota la chiave per creare una nuova chiave di ripristino personale, che viene quindi archiviata da Intune per ripristini futuri, se necessario.
+
+Nel sito Web Portale aziendale l'utente individua il dispositivo macOS crittografato e seleziona l'opzione **Store recovery key** (Archivia chiave di ripristino). Non appena viene immessa la chiave di ripristino personale, Intune tenta di ruotare la chiave per generare una nuova chiave. La rotazione viene eseguita per verificare che la chiave immessa sia accurata per il dispositivo. Questa nuova chiave viene quindi archiviata e gestita da Intune per usi futuri, qualora l'utente debba ripristinare il dispositivo.
+
+Se la rotazione della chiave ha esito negativo, il dispositivo non ha elaborato il criterio FileVault oppure la chiave immessa non è corretta per il dispositivo.
+
+Una volta completata la rotazione, un utente può [recuperare la nuova chiave di ripristino personale da una posizione supportata](#retrieve-a-personal-recovery-key).
+
+ Visualizzare il [contenuto dell'utente finale per il caricamento della chiave di ripristino personale](../user-help/store-recovery-key.md).
 
 > [!IMPORTANT]
-> I dispositivi crittografati dagli utenti e non da Intune non possono essere gestiti da Intune. Questo significa che Intune non può depositare la chiave di ripristino personale di questi dispositivi, né gestire la rotazione delle chiavi di ripristino. Perché Intune possa gestire FileVault e le chiavi di ripristino dei dispositivi, gli utenti devono decrittografare i dispositivi e quindi consentire a Intune di crittografarli.
+> Per un dispositivo crittografato da un utente e non da Intune, Intune non è in grado di gestire i dispositivi con crittografia FileVault fino a quando il dispositivo non riceve un criterio FileVault e l'utente del dispositivo carica correttamente la chiave di ripristino personale.
 
-### <a name="retrieve-personal-recovery-key"></a>Recuperare una chiave di ripristino personale
+### <a name="retrieve-a-personal-recovery-key"></a>Recuperare una chiave di ripristino personale
 
-Per un dispositivo macOS crittografato da Intune, gli utenti finali possono recuperare la chiave di ripristino personale (chiave di FileVault) usando l'app Portale aziendale iOS, l'app Portale aziendale Android o l'app Intune Android.
+Per un dispositivo macOS con la crittografia FileVault gestita da Intune, gli utenti finali possono recuperare la chiave di ripristino personale (chiave FileVault) dalle posizioni seguenti, usando qualsiasi dispositivo:
+
+- sito Web del portale aziendale
+- App Portale aziendale iOS/iPadOS
+- App Portale aziendale Android
+- App Intune
+
+Gli amministratori possono visualizzare le chiavi di ripristino personali per i dispositivi macOS crittografati contrassegnati come dispositivo *aziendale*. Non possono visualizzare la chiave di ripristino per un dispositivo personale.
 
 Il dispositivo con la chiave di ripristino personale deve essere registrato in Intune e crittografato con FileVault in Intune. Usando l'app Portale aziendale iOS, l'app Portale aziendale Android, l'app Intune Android o il sito Web Portale aziendale, l'utente può visualizzare la chiave di ripristino di **FileVault** necessaria per accedere ai dispositivi Mac.
 

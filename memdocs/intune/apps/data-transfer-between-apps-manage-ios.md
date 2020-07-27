@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/09/2020
+ms.date: 07/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 771741ed0e07a6373c63dd2e81745fe53adc4242
-ms.sourcegitcommit: aa876a9b5aa9437ae59a68e1cc6355d7070f89f4
+ms.openlocfilehash: cdb8ca0ca24d196bb21f9d7e484374555d6fefd2
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86236393"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410845"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Come gestire il trasferimento di dati tra app iOS in Microsoft Intune
 
 Per facilitare la protezione dei dati aziendali, limitare i trasferimenti di file alle sole app gestite personalmente. È possibile gestire le app iOS nei modi seguenti:
 
-- Proteggere i dati dell'organizzazione per gli account aziendali o dell'istituto di istruzione configurando un criterio di protezione delle app per le app che vengono denominate *app gestite da criteri*  Vedere [tutte le app gestite da Intune che è possibile gestire con i criteri di protezione delle app](https://www.microsoft.com/cloud-platform/microsoft-intune-apps)
+- Proteggere i dati dell'organizzazione per gli account aziendali o dell'istituto di istruzione configurando un criterio di protezione delle app per le app che vengono denominate *app gestite da criteri*  Vedere [App protette di Microsoft Intune](apps-supported-intune-apps.md).
 
 - Distribuire e gestire le app tramite la gestione dei dispositivi iOS, per la quale è necessario che i dispositivi siano registrati in una soluzione di gestione dei dispositivi mobili. Le app distribuite possono essere *app gestite da criteri* o altre app iOS gestite.
 
@@ -40,10 +40,10 @@ Usare i criteri di protezione delle app con la funzionalità di **gestione Apri 
 
 - **Dispositivi non gestiti da soluzioni MDM:** è possibile impostare i criteri di protezione delle app per controllare la condivisione di dati con altre applicazioni tramite *Apri in* o *Condividi estensioni*.  A tale scopo, configurare l'impostazione **Invia i dati dell'organizzazione ad altre app** sul valore **App gestite da criteri con filtro basato su Apri in/Condividi**.  Il comportamento di *Apri in/Condividi* nell'*app gestita da criteri* propone come opzioni per la condivisione solo altre*app gestite da criteri*. 
 
-- **Dispositivi gestiti da soluzioni MDM**: per i dispositivi registrati in Intune o soluzioni MDM di terze parti, la condivisione dei dati tra app con criteri di protezione delle app e altre app iOS gestite distribuite tramite MDM è controllata dai criteri di protezione delle app di Intune e dalla funzionalità iOS di **gestione Open In**. Per assicurarsi che le app distribuite tramite una soluzione MDM siano anche associate ai criteri di protezione delle app di Intune, configurare l'impostazione UPN dell'utente come descritto nella sezione seguente, [Configurare l'impostazione UPN dell'utente](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). Per specificare come consentire il trasferimento di dati ad altre app, abilitare **Invia i dati dell'organizzazione ad altre app** e quindi scegliere il livello di condivisione preferito. Per specificare come consentire a un'app di ricevere dati da altre app, abilitare **Ricevi dati da altre app** e quindi scegliere il livello di ricezione dei dati preferito. Per altre informazioni su ricezione e condivisione dei dati delle app, vedere [Impostazioni di rilocazione dei dati](app-protection-policy-settings-ios.md#data-protection).
+- **Dispositivi gestiti da soluzioni MDM**: per i dispositivi registrati in Intune o soluzioni MDM di terze parti, la condivisione dei dati tra app con criteri di protezione delle app e altre app iOS gestite distribuite tramite MDM è controllata dai criteri di protezione delle app di Intune e dalla funzionalità iOS di **gestione Open In**. Per assicurarsi che le app distribuite tramite una soluzione MDM siano anche associate ai criteri di protezione delle app di Intune, configurare l'impostazione UPN dell'utente come descritto nella sezione seguente, [Configurare l'impostazione UPN dell'utente](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). Per specificare il modo in cui si vuole consentire il trasferimento dei dati ad altre *app gestite da criteri* e app gestite iOS, configurare l'opzione **App gestita da criteri con condivisione del sistema operativo** per l'impostazione **Invia i dati dell'organizzazione ad altre app**. Per specificare come consentire a un'app di ricevere dati da altre app, abilitare **Ricevi dati da altre app** e quindi scegliere il livello di ricezione dei dati preferito. Per altre informazioni su ricezione e condivisione dei dati delle app, vedere [Impostazioni di rilocazione dei dati](app-protection-policy-settings-ios.md#data-protection).
 
 ## <a name="configure-user-upn-setting-for-microsoft-intune-or-third-party-emm"></a>Configurare l'impostazione UPN dell'utente per Microsoft Intune o soluzioni EMM di terze parti
-La configurazione dell'impostazione UPN dell'utente è **obbligatoria** per i dispositivi gestiti da Intune o da una soluzione EMM di terze parti per identificare un account utente registrato. La configurazione UPN funziona con i criteri di protezione delle app distribuiti da Intune. La procedura seguente illustra il flusso generale per la configurazione dell'impostazione UPN, nonché l'esperienza utente risultante:
+La configurazione dell'impostazione UPN dell'utente è **obbligatoria** per i dispositivi gestiti da Intune o da una soluzione EMM di terze parti per identificare un account utente registrato per l'invio dell'*app gestita da criteri* quando si trasferiscono dati a un'app gestita iOS. La configurazione UPN funziona con i criteri di protezione delle app distribuiti da Intune. La procedura seguente illustra il flusso generale per la configurazione dell'impostazione UPN, nonché l'esperienza utente risultante:
 
 1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), [creare e assegnare un criterio di protezione delle app](app-protection-policies.md) per iOS/iPadOS. Configurare le impostazioni dei criteri secondo i requisiti aziendali e selezionare le app iOS che devono rispettare questi criteri.
 
@@ -70,7 +70,7 @@ La configurazione dell'impostazione UPN dell'utente è **obbligatoria** per i di
 
 1. Passare alla console di amministrazione di Intune o del provider MDM di terze parti. Passare alla sezione della console in cui si distribuiscono le impostazioni di configurazione dell'applicazione ai dispositivi iOS registrati.
 
-2. Immettere l'impostazione seguente nella sezione Configurazione dell'applicazione:
+2. Nella sezione Configurazione dell'applicazione immettere le impostazioni seguenti per ogni *app gestita da criteri* che trasferirà i dati alle app gestite da iOS:
 
    **key** = IntuneMAMUPN, **value** = <username@company.com>
 

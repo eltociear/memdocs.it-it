@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: db23ee1742934e8545c03c529d6a05c13cc59f1a
-ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
+ms.openlocfilehash: 3760aa9820495db6c2460bf2e6d2e9a08d705a10
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83633275"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462032"
 ---
 # <a name="disk-encryption-policy-settings-for-endpoint-security-in-intune"></a>Impostazioni dei criteri di crittografia del disco per la sicurezza degli endpoint di Intune
 
@@ -66,6 +66,11 @@ Piattaforme e profili supportati:
     Consente di impedire che all'utente venga richiesta l'abilitazione di FileVault al momento della disconnessione. Se questo parametro è impostato su Disabilita, la richiesta non viene visualizzata al momento della disconnessione ma in fase di accesso.
     - **Non configurato** (*impostazione predefinita*)
     - **Sì**: disabilita la richiesta di abilitazione di FileVault visualizzata al momento della disconnessione.
+
+  - **Nascondi la chiave di ripristino**  
+     Nascondere la chiave di ripristino personale dall'utente del dispositivo macOS durante la crittografia. Dopo la crittografia del disco, un utente può usare qualsiasi dispositivo per visualizzare la chiave di ripristino personale tramite il sito Web Portale aziendale Intune o l'app Portale aziendale in una piattaforma supportata.
+    - **Non configurato** (*impostazione predefinita*)
+    - **Sì** - Consente di nascondere la chiave di ripristino personale durante la crittografia del dispositivo.
 
 ## <a name="bitlocker"></a>BitLocker
 

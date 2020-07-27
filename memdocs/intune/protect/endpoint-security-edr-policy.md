@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/29/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: ae95fb48296f778fb98affa2270ba763d79fb766
-ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
+ms.openlocfilehash: b1711dad8163409d05c5299e8d3b54ad619b48ec
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84879679"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462066"
 ---
 # <a name="endpoint-detection-and-response-policy-for-endpoint-security-in-intune"></a>Criteri per il rilevamento di endpoint e risposta per la sicurezza degli endpoint in Intune
 
@@ -32,9 +32,6 @@ Le funzionalità di rilevamento di endpoint e riposta di Microsoft Defender ATP 
 I criteri EDR includono profili specifici della piattaforma per gestire le impostazioni per EDR. I profili includono automaticamente un *pacchetto di onboarding* per Microsoft Defender ATP. I pacchetti di onboarding rappresentano il modo in cui i dispositivi sono configurati per funzionare con Microsoft Defender ATP. Dopo l'onboarding di un dispositivo, è possibile iniziare a usare i dati sulle minacce da quel dispositivo.
 
 I criteri EDR vengono distribuiti a gruppi di dispositivi in Azure Active Directory (Azure AD) gestiti con Intune e a raccolte di dispositivi locali gestiti con Configuration Manager, inclusi i server Windows. I criteri EDR per percorsi di gestione diversi richiedono pacchetti di onboarding diversi. È quindi possibile creare criteri EDR separati per i diversi tipi di dispositivi gestiti.
-
-> [!TIP]
-> Il supporto per i dispositivi gestiti con Configuration Manager è disponibile in *anteprima pubblica*.
 
 I criteri di sicurezza degli endpoint per EDR sono disponibili in *Gestione* nel nodo **Endpoint security** (Sicurezza degli endpoint) dell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -74,10 +71,10 @@ Per supportare l'uso di criteri EDR con i dispositivi di Configuration Manager, 
 - Piattaforma: **Windows 10 e versioni successive**: Intune distribuisce i criteri ai dispositivi nei gruppi di Azure AD.
 - Profilo: **Rilevamento di endpoint e risposta (MDM)**
 
-**Configuration Manager** *(in anteprima)* : per i dispositivi gestiti con Configuration Manager sono supportati gli elementi seguenti:
+**Configuration Manager** - Per i dispositivi gestiti con Configuration Manager sono supportati gli elementi seguenti:
 
 - Piattaforma: **Windows 10 e Windows Server**: Configuration Manager distribuisce i criteri ai dispositivi nelle raccolte di Configuration Manager.
-- Profilo: **Rilevamento di endpoint e risposta (ConfigMgr) (anteprima)**
+- Profilo: **Rilevamento di endpoint e risposta (ConfigMgr)**
 
 ## <a name="set-up-configuration-manager-to-support-edr-policy"></a>Configurare Configuration Manager per il supporto dei criteri EDR
 
@@ -223,7 +220,7 @@ Prima di poter distribuire i criteri ai dispositivi gestiti da Configuration Man
 
    - Configuration Manager: distribuisce i criteri ai dispositivi nelle raccolte di Configuration Manager. Quando si crea il criterio, selezionare:
      - Piattaforma: **Windows 10 e Windows Server**
-     - Profilo: **Rilevamento di endpoint e risposta (ConfigMgr) (anteprima)**
+     - Profilo: **Rilevamento di endpoint e risposta (ConfigMgr)**
 
 4. Selezionare **Crea**.
 

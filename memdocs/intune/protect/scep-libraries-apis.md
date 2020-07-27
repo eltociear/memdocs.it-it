@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a915ffc908c985b38533a362f2a17ec561ddf6f
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 16b212bde0f46861b8acb1470588b784c6f2a7fb
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79351240"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565666"
 ---
 # <a name="use-apis-to-add-third-party-cas-for-scep-to-intune"></a>Usare le API per aggiungere a Intune autorità di certificazione di terze parti per SCEP
 
@@ -78,17 +78,17 @@ L'integrazione della libreria nei prodotti prevede i passaggi seguenti. Questi p
 5. Includere la libreria del progetto che compila il server SCEP
 6. Completare le attività seguenti nel server SCEP:
 
-    - Consentire all'amministratore di configurare [l'identificatore applicazione Azure, la chiave applicazione Azure e l'ID tenant](#onboard-scep-server-in-azure) (in questo articolo) usati dalla libreria per l'autenticazione. Gli amministratori devono essere autorizzati ad aggiornare la chiave dell'applicazione Azure.
-    - Identificare le richieste SCEP che includono una password SCEP generata da Intune
-    - Usare la libreria di **API di richiesta di convalida** per convalidare le password SCEP generate da Intune
-    - Usare le API di notifica della libreria per notificare a Intune i certificati emessi per le richieste SCEP che usano password SCEP generate da Intune. Notificare anche a Intune eventuali errori che possono verificarsi durante l'elaborazione di tali richieste SCEP.
-    - Verificare che il server registri informazioni sufficienti per consentire agli amministratori di risolvere i problemi
+   - Consentire all'amministratore di configurare [l'identificatore applicazione Azure, la chiave applicazione Azure e l'ID tenant](#onboard-scep-server-in-azure) (in questo articolo) usati dalla libreria per l'autenticazione. Gli amministratori devono essere autorizzati ad aggiornare la chiave dell'applicazione Azure.
+   - Identificare le richieste SCEP che includono una password SCEP generata da Intune
+   - Usare la libreria di **API di richiesta di convalida** per convalidare le password SCEP generate da Intune
+   - Usare le API di notifica della libreria per notificare a Intune i certificati emessi per le richieste SCEP che usano password SCEP generate da Intune. Notificare anche a Intune eventuali errori che possono verificarsi durante l'elaborazione di tali richieste SCEP.
+   - Verificare che il server registri informazioni sufficienti per consentire agli amministratori di risolvere i problemi
 
 7. Completare i [test di integrazione](#integration-testing) (in questo articolo) e risolvere eventuali problemi
 8. Offrire ai clienti materiale sussidiario che spieghi:
 
-    - In che modo deve essere eseguito l'onboarding del server SCEP nel portale di Azure
-    - In che modo si ottengono l'identificatore applicazione Azure e la chiave applicazione Azure necessari per configurare la libreria
+   - In che modo deve essere eseguito l'onboarding del server SCEP nel portale di Azure
+   - In che modo si ottengono l'identificatore applicazione Azure e la chiave applicazione Azure necessari per configurare la libreria
 
 ### <a name="onboard-scep-server-in-azure"></a>Eseguire l'onboarding del server SCEP in Azure
 
@@ -108,38 +108,38 @@ La classe `IntuneScepServiceClient` include i metodi usati dal servizio di SCEP 
 
 ##### <a name="intunescepserviceclient-constructor"></a>Costruttore IntuneScepServiceClient
 
-Firma:
+**Firma**:
 
 ```java
 IntuneScepServiceClient(
     Properties configProperties)
 ```
 
-Descrizione:
+**Descrizione**:
 
 Crea e configura un oggetto `IntuneScepServiceClient`.
 
-Parametri:
+**Parametri**:
 
-    - configProperties    Properties object containing client configuration information
+- **configProperties** - Oggetto proprietà contenente informazioni sulla configurazione client
 
 La configurazione deve includere le proprietà seguenti:
 
-    - AAD_APP_ID="The Azure Application Id obtained during the onboarding process"
-    - AAD_APP_KEY="The Azure Application Key obtained during the onboarding process"
-    - TENANT="The Tenant Id obtained during the onboarding process"
-    - PROVIDER_NAME_AND_VERSION="Information used to identify your product and its version"
-    
+- AAD_APP_ID="The Azure Application Id obtained during the onboarding process"
+- AAD_APP_KEY="The Azure Application Key obtained during the onboarding process"
+- TENANT="The Tenant Id obtained during the onboarding process"
+- PROVIDER_NAME_AND_VERSION="Information used to identify your product and its version"
+
 Se la soluzione richiede un proxy con autenticazione o senza autenticazione, è possibile aggiungere le proprietà seguenti:
 
-    - PROXY_HOST="L'host che ospita il proxy."
-    - PROXY_PORT="La porta su cui il proxy è in ascolto."
-    - PROXY_USER="Il nome utente da utilizzare se il proxy usa l'autenticazione di base."
-    - PROXY_PASS="La password da utilizzare se il proxy usa l'autenticazione di base."
+- PROXY_HOST="L'host che ospita il proxy."
+- PROXY_PORT="La porta su cui il proxy è in ascolto."
+- PROXY_USER="Il nome utente da utilizzare se il proxy usa l'autenticazione di base."
+- PROXY_PASS="La password da utilizzare se il proxy usa l'autenticazione di base."
 
-Genera:
+**Genera**:
 
-    - IllegalArgumentException    Thrown if the constructor is executed without a proper property object.
+- **IllegalArgumentException** - Generata se il costruttore viene eseguito senza un oggetto proprietà appropriato.
 
 > [!IMPORTANT]
 > È opportuno creare un'istanza di questa classe e usarla per elaborare più richieste SCEP. In questo modo si riduce il sovraccarico, poiché i token di autenticazione e le informazioni sulla posizione del servizio vengono memorizzati nella cache.
@@ -149,7 +149,7 @@ Il responsabile dell'implementazione del server SCEP deve proteggere da manomiss
 
 ##### <a name="validaterequest-method"></a>Metodo ValidateRequest
 
-Firma:
+**Firma**:
 
 ```java
 void ValidateRequest(
@@ -157,32 +157,32 @@ void ValidateRequest(
     String certificateRequest)
 ```
 
-Descrizione:
+**Descrizione**:
 
 Convalida una richiesta di certificato SCEP.
 
-Parametri:
+**Parametri**:
 
-    - transactionId         The SCEP Transaction Id
-    - certificateRequest    DER-encoded PKCS #10 Certificate Request Base64 encoded as a string
+- **transactionId** - ID di transazione SCEP
+- **certificateRequest** - Richiesta di certificato PKCS #10 con codifica DER e codifica Base64 come stringa
 
-Genera:
+**Genera**:
 
-    - IllegalArgumentException      Thrown if called with a parameter that is not valid
-    - IntuneScepServiceException    Thrown if it is found that the certificate request is not valid
-    - Exception                     Thrown if an un-expected error is encountered
+- **IllegalArgumentException** - Generata per chiamate con un parametro non valido
+- **IntuneScepServiceException** - Generata se viene rilevata una richiesta di certificato non valida
+- **Exception** - Generata se viene rilevato un errore imprevisto
 
 > [!IMPORTANT]
 > Le eccezioni generate da questo metodo devono essere registrate dal server. Si noti che le proprietà `IntuneScepServiceException` contengono informazioni dettagliate sulle cause della mancata convalida della richiesta di certificato.
 
-**Note sulla sicurezza**  
+**Note sulla sicurezza**:
 
 - Se questo metodo genera un'eccezione, il server SCEP **non deve** emettere un certificato per il client.
 - Gli errori di convalida della richiesta del certificato SCEP possono indicare un problema nell'infrastruttura di Intune. Oppure, indicare che un utente malintenzionato sta cercando di ottenere un certificato.
 
 ##### <a name="sendsuccessnotification-method"></a>Metodo SendSuccessNotification
 
-Firma:
+**Firma**:
 
 ```java
 void SendSuccessNotification(
@@ -194,36 +194,36 @@ void SendSuccessNotification(
     String certIssuingAuthority)
 ```
 
-Descrizione:
+**Descrizione**:
 
 Indica a Intune che un certificato viene creato come parte dell'elaborazione di una richiesta SCEP.
 
-Parametri:
+**Parametri**:
 
-    - transactionId           The SCEP Transaction Id
-    - certificateRequest      DER-encoded PKCS #10 Certificate Request Base64 encoded as a string
-    - certThumprint           SHA1 hash of the thumbprint of the provisioned certificate
-    - certSerialNumber        Serial number of the provisioned certificate
-    - certExpirationDate      Expiration date of the provisioned certificate. The date time string should be formatted as web UTC time (YYYY-MM-DDThh:mm:ss.sssTZD) ISO 8601.
-    - certIssuingAuthority    Name of the authority that issued the certificate
+- **transactionId** - ID di transazione SCEP
+- **certificateRequest** - Richiesta di certificato PKCS #10 con codifica DER e codifica Base64 come stringa
+- **certThumprint** - Hash SHA1 dell'identificazione personale del certificato di cui è stato effettuato il provisioning
+- **certSerialNumber** - Numero di serie del certificato di cui è stato effettuato il provisioning
+- **certExpirationDate** - Data di scadenza del certificato di cui è stato effettuato il provisioning The date time string should be formatted as web UTC time (YYYY-MM-DDThh:mm:ss.sssTZD) ISO 8601.
+- **certIssuingAuthority** - Nome dell'autorità che ha rilasciato il certificato
 
-Genera:
+**Genera**:
 
-    - IllegalArgumentException      Thrown if called with a parameter that is not valid
-    - IntuneScepServiceException    Thrown if it is found that the certificate request is not valid
-    - Exception                     Thrown if an un-expected error is encountered
+- **IllegalArgumentException** - Generata per chiamate con un parametro non valido
+- **IntuneScepServiceException** - Generata se viene rilevata una richiesta di certificato non valida
+- **Exception** - Generata se viene rilevato un errore imprevisto
 
 > [!IMPORTANT]
 > Le eccezioni generate da questo metodo devono essere registrate dal server. Si noti che le proprietà `IntuneScepServiceException` contengono informazioni dettagliate sulle cause della mancata convalida della richiesta di certificato.
 
-**Note sulla sicurezza**
+**Note sulla sicurezza**:
 
 - Se questo metodo genera un'eccezione, il server SCEP **non deve** emettere un certificato per il client.
 - Gli errori di convalida della richiesta del certificato SCEP possono indicare un problema nell'infrastruttura di Intune. Oppure, indicare che un utente malintenzionato sta cercando di ottenere un certificato.
 
 ##### <a name="sendfailurenotification-method"></a>Metodo SendFailureNotification
 
-Firma:
+**Firma**:
 
 ```java
 void SendFailureNotification(
@@ -233,51 +233,51 @@ void SendFailureNotification(
     String errorDescription)
 ```
 
-Descrizione:
+**Descrizione**:
 
 Notifica a Intune che si è verificato un errore durante l'elaborazione di una richiesta SCEP. Questo metodo non deve essere richiamato per le eccezioni generate dai metodi di questa classe.
 
-Parametri:
+**Parametri**:
 
-    - transactionId         The SCEP Transaction Id
-    - certificateRequest    DER-encoded PKCS #10 Certificate Request Base64 encoded as a string
-    - hResult               Win32 error code that best describes the error that was encountered. See [Win32 Error Codes](https://msdn.microsoft.com/library/cc231199.aspx)
-    - errorDescription      Description of the error encountered
+- **transactionId** - ID di transazione SCEP
+- **certificateRequest** - Richiesta di certificato PKCS #10 con codifica DER e codifica Base64 come stringa
+- **hResult** - Codice di errore Win32 che descrive al meglio l'errore riscontrato. See [Win32 Error Codes](https://msdn.microsoft.com/library/cc231199.aspx)
+- **errorDescription** - Descrizione dell'errore riscontrato
 
-Genera:
+**Genera**:
 
-    - IllegalArgumentException      Thrown if called with a parameter that is not valid
-    - IntuneScepServiceException    Thrown if it is found that the certificate request is not valid
-    - Exception                     Thrown if an un-expected error is encountered
+- **IllegalArgumentException** - Generata per chiamate con un parametro non valido
+- **IntuneScepServiceException** - Generata se viene rilevata una richiesta di certificato non valida
+- **Exception** - Generata se viene rilevato un errore imprevisto
 
 > [!IMPORTANT]
 > Le eccezioni generate da questo metodo devono essere registrate dal server. Si noti che le proprietà `IntuneScepServiceException` contengono informazioni dettagliate sulle cause della mancata convalida della richiesta di certificato.
 
-**Note sulla sicurezza**
+**Note sulla sicurezza**:
 
 - Se questo metodo genera un'eccezione, il server SCEP **non deve** emettere un certificato per il client.
 - Gli errori di convalida della richiesta del certificato SCEP possono indicare un problema nell'infrastruttura di Intune. Oppure, indicare che un utente malintenzionato sta cercando di ottenere un certificato.
 
 ##### <a name="setsslsocketfactory-method"></a>Metodo SetSslSocketFactory
 
-Firma:
+**Firma**:
 
 ```java
 void SetSslSocketFactory(
     SSLSocketFactory factory)
 ```
 
-Descrizione:
+**Descrizione**:
 
 Usare questo metodo per indicare al client che deve usare l'istanza di SSL Socket Factory specificata (anziché il valore predefinito) quando comunica con Intune.
 
-Parametri:
+**Parametri**:
 
-    - factory    The SSL socket factory that the client should use for HTTPS requests
+- **factory** - Factory del socket SSL che deve essere usata dal client per le richieste HTTPS
 
-Genera:
+**Genera**:
 
-    - IllegalArgumentException    Thrown if called with a parameter that is not valid
+- **IllegalArgumentException** - Generata per chiamate con un parametro non valido
 
 > [!NOTE]
 > L'istanza di SSL Socket Factory deve essere impostata prima di eseguire gli altri metodi di questa classe.

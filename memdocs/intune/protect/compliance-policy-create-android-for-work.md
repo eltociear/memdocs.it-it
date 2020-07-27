@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d419eb341d3d15a8307396d1bcf13235201606f4
-ms.sourcegitcommit: 56bb5419c41c2e150ffed0564350123135ea4592
+ms.openlocfilehash: 9897f824bb1bd13c1d12ff0c705b42cea275b9d4
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82729250"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462083"
 ---
 # <a name="android-enterprise-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Impostazioni di Android Enterprise per contrassegnare un dispositivo come conforme o non conforme in Intune
 
@@ -42,7 +42,7 @@ Come amministratore di Intune, usare queste impostazioni di conformità per prot
 [Creare i criteri di conformità](create-compliance-policy.md#create-the-policy). Per **Piattaforma** selezionare **Android Enterprise**.
 
 
-## <a name="device-owner"></a>Proprietario del dispositivo
+## <a name="fully-managed-dedicated-and-corporate-owned-work-profile"></a>Profilo di lavoro completamente gestito, dedicato e di proprietà aziendale
 
 ### <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
 
@@ -67,7 +67,7 @@ Come amministratore di Intune, usare queste impostazioni di conformità per prot
   - **Alto**: questa opzione è la meno sicura poiché consente tutti i livelli di minaccia. Potrebbe essere utile usare questa soluzione solo per la creazione di report.
   
 > [!NOTE]
-> Tutti i provider di Mobile Threat Defense (MTD) sono supportati nelle distribuzioni di tipo Proprietario del dispositivo Android Enterprise con la configurazione dell'app. Rivolgersi al provider MTD per ottenere la configurazione esatta necessaria per supportare le piattaforme Proprietario del dispositivo Android Enterprise in Intune.
+> Tutti i provider di Mobile Threat Defense (MTD) sono supportati nelle distribuzioni di tipo Profilo di lavoro completamente gestito, dedicato e di proprietà aziendale Android Enterprise con la configurazione dell'app. Rivolgersi al provider MTD per ottenere la configurazione esatta necessaria per supportare le piattaforme Profilo di lavoro completamente gestito, dedicato e di proprietà aziendale Android Enterprise in Intune.
 
 #### <a name="google-play-protect"></a>Protezione di Google Play
 

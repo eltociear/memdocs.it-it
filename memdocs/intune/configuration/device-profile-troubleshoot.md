@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 07/20/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,32 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7893e845d2f4c73d4fc6fdecd8691b288c33bb48
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b6004526d8c9340e70e5149f2261eea07a916ed7
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078244"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871984"
 ---
-# <a name="common-questions-issues-and-resolutions-with-device-policies-and-profiles-in-microsoft-intune"></a>Domande e problemi comuni e soluzioni per i criteri e i profili dei dispositivi in Microsoft Intune
+# <a name="common-questions-and-answers-with-device-policies-and-profiles-in-microsoft-intune"></a>Domande e risposte comuni per i criteri e i profili dei dispositivi in Microsoft Intune
 
 Risposte a domande comuni quando si gestiscono i criteri e i profili dei dispositivi in Intune. Questo articolo elenca anche gli intervalli di tempo del controllo, fornisce altre informazioni sui conflitti e altro ancora.
-
-## <a name="why-doesnt-a-user-get-a-new-profile-when-changing-a-password-or-passphrase-on-an-existing-wi-fi-profile"></a>Perché un utente non ottiene un nuovo profilo quando modifica una password o una passphrase in un profilo Wi-Fi esistente?
-
-Si crea un profilo Wi-Fi aziendale, si distribuisce il profilo a un gruppo, si modifica la password e si salva il profilo. Quando il profilo viene modificato, è possibile che alcuni utenti non ricevano il nuovo profilo.
-
-Per evitare questo problema impostare l'accesso Wi-Fi guest. In caso di errori con il Wi-Fi aziendale, gli utenti possono connettersi al sistema Wi-Fi guest. Verificare di abilitare le impostazioni di connessione automatica. Distribuire il profilo Wi-Fi guest a tutti gli utenti.
-
-Suggerimenti aggiuntivi:  
-
-- Se la rete Wi-Fi alla quale ci si connette richiede una password o passphrase, verificare che sia possibile connettersi direttamente al router Wi-Fi. È possibile eseguire il test con un dispositivo iOS/iPadOS.
-- Dopo aver stabilito correttamente la connessione all'endpoint Wi-Fi (router Wi-Fi), prendere nota dell'identificatore SSID e delle credenziali usate, che sono la password o passphrase.
-- Immettere l'identificatore SSID e le credenziali (password o passphrase) nel campo Chiave precondivisa. 
-- Eseguire la distribuzione a un gruppo di test con un numero di utenti limitato, preferibilmente solo al team IT. 
-- Sincronizzare il proprio dispositivo iOS/iPadOS con Intune. Se non lo si è ancora fatto, procedere alla registrazione. 
-- Provare a connettersi nuovamente allo stesso endpoint Wi-Fi (come indicato nel primo passaggio).
-- Eseguire la distribuzione a gruppi di dimensioni maggiori e infine a tutti gli utenti previsti nell'organizzazione. 
 
 ## <a name="how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned"></a>Quanto tempo è necessario ai dispositivi per ottenere criteri, un profilo o un'app dopo l'assegnazione?
 

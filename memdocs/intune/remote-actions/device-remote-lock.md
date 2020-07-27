@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ac6a5d848a0d02b72a4f7275a6b6df47b2cd834
-ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
+ms.openlocfilehash: 220a2ac92d46c1279d4498c8673e2ceef28c470f
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85107331"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462049"
 ---
 # <a name="remotely-lock-devices-with-intune"></a>Bloccare in remoto i dispositivi con Intune
 
@@ -35,7 +35,9 @@ Il **Blocco remoto** è supportato nelle piattaforme seguenti:
 
 - Android
 - Dispositivi in modalità tutto schermo di Android Enterprise
-- Dispositivi del profilo di lavoro Android Enterprise
+- Dispositivi con profilo di lavoro Android Enterprise
+- Dispositivi completamente gestiti Android Enterprise
+- Dispositivi Android Enterprise di proprietà aziendale con profilo di lavoro
 - iOS
 - macOS
 - Windows 10 Mobile
@@ -45,7 +47,7 @@ La funzionalità **Blocco remoto** non è supportata in:
 - Windows 10 Desktop
 
 > [!NOTE]
-> Per i dispositivi macOS, impostare un PIN di ripristino di 6 cifre. Quando il dispositivo è bloccato, nella **Panoramica** del dispositivo viene visualizzato il PIN finché non viene inviata un'altra azione del dispositivo. Assicurarsi di prendere nota del PIN poiché sarà disponibile solo per 30 giorni dopo l'invio del comando di blocco remoto. Dopo i 30 giorni, il PIN non sarà più disponibile per Intune. Inoltre, non avviare di nuovo questo comando per lo stesso dispositivo fino a quando non viene usato il PIN originale per sbloccare correttamente il dispositivo. È necessario inviare questo comando, annotare il PIN e fino a quando non lo si usa per accedere correttamente al dispositivo macOS, non inviare di nuovo questo comando allo stesso dispositivo.  
+> Per i dispositivi macOS, impostare un PIN di ripristino di 6 cifre. Quando il dispositivo è bloccato, nella **Panoramica** del dispositivo viene visualizzato il PIN finché non viene inviata un'altra azione del dispositivo. Assicurarsi di prendere nota del PIN poiché sarà disponibile solo per 30 giorni dopo l'invio del comando di blocco remoto. Dopo i 30 giorni, il PIN non sarà più disponibile per Intune. Verrà inoltre visualizzato uno stato di errore nei report se si avvia nuovamente questo comando per lo stesso dispositivo, mentre il PIN originale non è stato usato per sbloccare correttamente il dispositivo. È necessario inviare questo comando una sola volta, annotare il PIN e fino a quando non lo si usa per accedere correttamente al dispositivo macOS, non tentare di inviare di nuovo questo comando allo stesso dispositivo.
 
 
 ## <a name="remote-lock-a-device"></a>Blocco remoto un dispositivo

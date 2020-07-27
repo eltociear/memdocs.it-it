@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 1199c6db96325a103394cfb53a4ca70092cd3767
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: c20d2ef806df46036d3a785bb5f8603d485d3880
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989656"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86460468"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Monitorare la crittografia dei dispositivi con Intune
 
@@ -118,7 +118,7 @@ Quando si seleziona un dispositivo dal report di crittografia, Intune visualizza
 
   - Il dispositivo è già crittografato. Per continuare, l'utente del dispositivo deve decrittografare il dispositivo.
 
-    *Tenere in considerazione: Intune non è in grado di configurare FileVault in un dispositivo già crittografato. L'utente deve invece decrittografare manualmente il dispositivo prima di poterlo gestire con criteri di configurazione del dispositivo e Intune*.
+    *Tenere in considerazione: Intune non è in grado di configurare FileVault in un dispositivo già crittografato. Tuttavia, dopo che un dispositivo ha ricevuto i criteri per abilitare FileVault, un utente può [caricare la chiave di ripristino personale per consentire a Intune di gestire la crittografia nel dispositivo](../protect/encrypt-devices-filevault.md#assume-management-of-filevault-on-previously-encrypted-devices). Un'alternativa non consigliabile perché può lasciare un dispositivo non crittografato per un periodo di tempo, prevede che l'utente possa decrittografare manualmente il dispositivo prima di poterlo quindi crittografare con i criteri di Intune.*
 
   - In macOS Catalina e versioni successive, FileVault richiede che l'utente approvi il profilo di gestione.
 
@@ -174,7 +174,7 @@ Questo report può essere utile per identificare i problemi di gruppi di disposi
 Per informazioni dettagliate sulla gestione delle chiavi di ripristino, vedere gli argomenti seguenti nella documentazione di Intune:
 
 macOS FileVault:
-- [Recuperare una chiave di ripristino personale](../protect/encrypt-devices-filevault.md#retrieve-personal-recovery-key)
+- [Recuperare una chiave di ripristino personale](../protect/encrypt-devices-filevault.md#retrieve-a-personal-recovery-key)
 - [Ruotare le chiavi di ripristino](../protect/encrypt-devices-filevault.md#rotate-recovery-keys)
 - [Ripristinare chiavi di ripristino](../protect/encrypt-devices-filevault.md#recover-recovery-keys)
 

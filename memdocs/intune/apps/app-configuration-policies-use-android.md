@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/15/2020
+ms.date: 07/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0edb497b2dd9e4853f3fbc378992158c0757e1f6
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: 5fca2bfab84807311f7a23dd5b4cf42090246353
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84973095"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461624"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Aggiungere criteri di configurazione delle app per i dispositivi Android gestiti
 
@@ -115,6 +115,7 @@ L'amministratore di Microsoft Intune può controllare gli account aziendali o de
    > - Office, Word, Excel, PowerPoint per Android (16.0.9327.1000 e versioni successive)
    > - OneDrive per Android (5.28 e versioni successive)
    > - Outlook per Android (2.2.222 e versioni successive)
+   > - Teams per Android (1416/1.0.0.2020061103 e versioni successive)
 
 ## <a name="enter-json-data"></a>Immettere dati JSON
 
@@ -153,7 +154,7 @@ Ad esempio, per un'app che usa il microfono del dispositivo, all'utente viene ri
 
 ## <a name="additional-information"></a>Informazioni aggiuntive
 
-- [Assegnazione di un'app Google Play gestita a dispositivi Android Enterprise](apps-add-android-for-work.md#assigning-a-managed-google-play-app-to-android-enterprise-work-profile-devices)
+- [Assegnazione di un'app Google Play gestita a dispositivi Android Enterprise](apps-add-android-for-work.md#assigning-a-managed-google-play-app-to-android-enterprise-work-profile-and-corporate-owned-work-profile-devices)
 - [Distribuzione delle impostazioni di configurazione delle app di Outlook per iOS/iPadOS e Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
 
 ## <a name="next-steps"></a>Passaggi successivi

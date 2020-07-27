@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c910b840d51a1db94702bc8e095255e557246bea
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: eccb45ee4a0aade230ba8c18f68c4f0bc992e011
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988199"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491321"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Rimuovere i dispositivi con la cancellazione, la disattivazione o l'annullamento manuale della registrazione
 
@@ -161,7 +161,7 @@ Per rimuovere i dispositivi dal portale di Intune, è possibile eliminarli dal r
 2. Scegliere **Dispositivi** > **Tutti i dispositivi** > scegliere i dispositivi che si vuole eliminare > **Elimina**.
 
 ### <a name="automatically-delete-devices-with-cleanup-rules"></a>Eliminare automaticamente i dispositivi con le regole di pulizia
-È possibile configurare Intune per eliminare automaticamente i dispositivi che sembrano essere inattivi, non aggiornati o non rispondere. Queste regole di pulizia monitorano continuamente l'inventario dei dispositivi in modo che i record di dispositivo rimangano aggiornati. I dispositivi eliminati in questo modo vengono rimossi dalla gestione di Intune.
+È possibile configurare Intune per eliminare automaticamente i dispositivi che sembrano essere inattivi, non aggiornati o non rispondere. Queste regole di pulizia monitorano continuamente l'inventario dei dispositivi in modo che i record di dispositivo rimangano aggiornati. I dispositivi eliminati in questo modo vengono rimossi dalla gestione di Intune. Questa impostazione ha effetto su tutti i dispositivi gestiti da Intune, non solo su quelli specifici.
 1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Scegliere **Dispositivi** > **Regole di pulizia del dispositivo** > **Sì**.
 3. Nella casella **Elimina i dispositivi non archiviati per il numero di giorni specificato** immettere un numero compreso tra 30 e 270.

@@ -17,14 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d3ca95db3297a6ca251f91a79fda705aebb6d18d
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: e5d673c5688c4ab4f3219256412a098855af63ec
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088463"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461879"
 ---
-# <a name="what-is-device-enrollment"></a>Che cos'è la registrazione dei dispositivi?
+# <a name="what-is-device-enrollment-in-intune"></a>Che cos'è la registrazione dei dispositivi in Intune?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Intune consente di gestire i dispositivi e le app del personale, nonché la modalità di accesso ai dati dell'organizzazione da parte del personale stesso. Per usare la gestione dei dispositivi mobili (MDM, Mobile Device Management), i dispositivi devono prima essere registrati nel servizio Intune. Quando un dispositivo viene registrato, viene rilasciato un certificato MDM, che viene usato per la comunicazione con il servizio Intune.
@@ -72,6 +72,8 @@ Per impostazione predefinita, i dispositivi di tutte le piattaforme sono autoriz
 |**Profilo aziendale di Android Enterprise**|**Avviato dall'utente tramite portale aziendale**| No | sì | No | [Altre informazioni](android-work-profile-enroll.md)|
 
 
+&nbsp;
+
 | **Aziendale** | **Metodi di registrazione** | **Ripristino necessario** | **Affinità utente** | **Bloccato** | **Informazioni dettagliate**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |**Android Device Admin**|**[DEM](#device-enrollment-manager) avviato tramite portale aziendale**| No | No | No |[Altre informazioni](device-enrollment-manager-enroll.md)|
@@ -79,7 +81,7 @@ Per impostazione predefinita, i dispositivi di tutte le piattaforme sono autoriz
 |**Android Device Admin con Zebra Mobility Extensions**|**Avviato dall'utente o da [DEM](#device-enrollment-manager) tramite portale aziendale**| No | Sì, se avviato dall'utente, No se avviato da [DEM](#device-enrollment-manager) | No | [Altre informazioni](../configuration/android-zebra-mx-overview.md)|
 |**Android Enterprise dedicato**|**NFC, token, codice a matrice, Zero Touch**| sì | No | Configurabile tramite criteri | [Altre informazioni](android-kiosk-enroll.md)|
 |**Android Enterprise completamente gestito**|**NFC, token, codice a matrice, Zero Touch**| sì | Sì | Configurabile tramite criteri | [Altre informazioni](android-dedicated-devices-fully-managed-enroll.md)|
-
+|**Android Enterprise di proprietà aziendale con profilo di lavoro** | **NFC, token, codice a matrice, Zero Touch** | Sì | Sì | Configurabile tramite criteri | [Altre informazioni](android-corporate-owned-work-profile-enroll.md)|
 
 ## <a name="bring-your-own-device"></a>Bring Your Own Device (BYOD)
 Il metodo Bring Your Own Device (BYOD) è applicabile a telefoni, tablet e PC di proprietà personale. Per registrare i dispositivi BYOD, gli utenti installano ed eseguono l'app Portale aziendale. Questo programma consente agli utenti di accedere a risorse aziendali come la posta elettronica.

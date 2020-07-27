@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6e99922c920966f4f0bb1037b5fc74799cfca7c5
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: eeab1155a7a0035c5e0db15c3a5402d3636edaca
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988793"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461658"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Criteri di configurazione delle app per Microsoft Intune
 
@@ -75,15 +75,15 @@ Selezionando **App gestite** come **Tipo di registrazione del dispositivo** si f
 
 ## <a name="android-app-configuration-policies"></a>Criteri di configurazione delle app Android
 
-Per i criteri di configurazione delle app Android, è possibile selezionare il tipo di registrazione del dispositivo prima di creare un profilo di configurazione dell'app. È possibile tenere conto dei profili certificato basati sul tipo di registrazione (Profilo di lavoro o Proprietario del dispositivo). Questo aggiornamento contiene le informazioni seguenti:
+Per i criteri di configurazione delle app Android, è possibile selezionare il tipo di registrazione del dispositivo prima di creare un profilo di configurazione dell'app. È possibile tenere conto dei profili certificato basati sul tipo di registrazione (profilo di lavoro, completamente gestito, dedicato o di proprietà aziendale con profilo di lavoro). Questo aggiornamento contiene le informazioni seguenti:
 
-1. Se si crea un nuovo profilo e si seleziona il tipo di registrazione del dispositivo Profilo di lavoro e il profilo di Proprietario del dispositivo, non sarà possibile associare un profilo del certificato ai criteri di configurazione dell'app.
+1. Se si crea un nuovo profilo e si seleziona **Tutti i tipi di profilo** per il tipo di registrazione del dispositivo, non sarà possibile associare un profilo certificato ai criteri di configurazione dell'app.
 2. Se viene creato un nuovo profilo ed è selezionato il tipo Solo profilo di lavoro, è possibile usare i criteri di certificato del profilo di lavoro creati con la configurazione del dispositivo.
-3. Se viene creato un nuovo profilo e si seleziona il tipo Solo proprietario del dispositivo, è possibile usare i criteri di certificato del proprietario del dispositivo creati con la configurazione del dispositivo. 
+3. Se viene creato un nuovo profilo e si seleziona **Solo profilo di lavoro completamente gestito, dedicato e di proprietà aziendale** è possibile usare i criteri di certificato **Profilo di lavoro completamente gestito, dedicato e di proprietà aziendale** creati in Configurazione del dispositivo. 
 4. Se si distribuisce un profilo di configurazione Gmail o Nine in un dispositivo Android Enterprise dedicato che non implica un utente, l'operazione avrà esito negativo poiché Intune non riesce a risolvere l'utente.
 
 > [!IMPORTANT]
-> Per impostazione predefinita, i criteri esistenti creati prima del rilascio di questa funzionalità (versione di aprile 2020 - 2004) che non hanno profili certificato associati useranno il tipo di registrazione del dispositivo Profilo di lavoro e profilo di Proprietario del dispositivo. Per impostazione predefinita, poi, i criteri esistenti creati prima del rilascio di questa funzionalità con profili certificato associati useranno il tipo Solo profilo di lavoro.
+> Per impostazione predefinita, i criteri esistenti creati prima del rilascio di questa funzionalità (versione di aprile 2020 - 2004) che non hanno profili certificato associati useranno il tipo di registrazione del dispositivo **Tutti i tipi di profilo** per impostazione predefinita. Per impostazione predefinita, poi, i criteri esistenti creati prima del rilascio di questa funzionalità con profili certificato associati useranno il tipo Solo profilo di lavoro.
 > 
 > I criteri esistenti non consentiranno di correggere o emettere nuovi certificati.
 

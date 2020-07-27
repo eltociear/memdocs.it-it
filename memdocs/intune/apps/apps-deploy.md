@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b80527921172201dc86c5f3241e9978525afa083
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 665e06e6aca0a4ba4f71147325eb587b1b8b4d40
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83984832"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461539"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Assegnare app ai gruppi con Microsoft Intune
 
@@ -36,7 +36,7 @@ Dopo avere [aggiunto un'app](apps-add.md) a Microsoft Intune, è possibile asseg
 
 La tabella seguente elenca le varie opzioni per l'assegnazione di applicazioni a utenti e dispositivi:
 
-|   | Dispositivi registrati con Intune | Dispositivi non registrati con Intune |
+| Opzione  | Dispositivi registrati con Intune | Dispositivi non registrati con Intune |
 |-------------------------------------------------------------------------------------------|------------------------------|----------------------------------|
 | Assegnazione a utenti | Sì | Sì |
 | Assegnazione a dispositivi | Sì | No |
@@ -122,7 +122,7 @@ Per i dispositivi Android in uno scenario di distribuzione APP-WE (App Protectio
 
 Passaggi per assegnare un'app di Google Play gestito a dispositivi non gestiti:
 
-1. Connettere il tenant di Intune a Google Play gestito. Se questa operazione è già stata eseguita per consentire la gestione di dispositivi del profilo di lavoro Android Enterprise, dedicati o completamente gestiti, non occorre ripeterla.
+1. Connettere il tenant di Intune a Google Play gestito. Se questa operazione è già stata eseguita per consentire la gestione di dispositivi del profilo di lavoro Android Enterprise, dedicati, completamente gestiti o di proprietà aziendale con profilo di lavoro, non occorre ripeterla.
 2. Aggiungere app da Google Play gestito alla console di Intune.
 3. Assegnare le app di Google Play gestito come **disponibili con o senza registrazione** al gruppo utenti desiderato. Le impostazioni **Obbligatoria** e **Disinstalla** per le app non sono supportate per i dispositivi non registrati.
 4. Assegnare criteri di protezione delle app al gruppo utenti.

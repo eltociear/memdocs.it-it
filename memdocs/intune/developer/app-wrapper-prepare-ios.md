@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 69940fc8e3f495a1738f2b7b4c6769e431821f30
-ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
+ms.openlocfilehash: c10738d20b793de2ba1adbca548290a517ca5d9e
+ms.sourcegitcommit: 764142960005ea0cb5afa00757f2b403ce5032c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84436806"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405920"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Preparare le app iOS per i criteri di protezione delle app con lo strumento di wrapping delle app di Intune
 
@@ -225,7 +225,7 @@ Nella cartella IntuneMAMPackager/Contents/MacOS aprire `Parameters.plist`, un mo
 | ADAL Client ID |Stringa|empty| Uguale a -ac|
 | ADAL Reply URI |Stringa|empty| Uguale a -ar|
 | Verbose Enabled |Boolean|false| Uguale a -v|
-| Remove Missing Entitlements |Boolean|false| Uguale a -c|
+| Remove Missing Entitlements |Boolean|false| Uguale a -e|
 | Prevent Default Build Update |Boolean|false| Equivalente all'uso di -b senza argomenti|
 | Build String Override |Stringa|empty| Versione personalizzata di CFBundleVersion dell'app di output con wrapper|
 | Include Citrix XenMobile App SDK (network-only variant)|Boolean|false| Uguale a -citrix|

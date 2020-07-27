@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 07/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91683280a2e48d82fd145bf19228c33b432b6b49
-ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
+ms.openlocfilehash: 444fb116150cf3d7a3ab4dcfe4eb450b20119df0
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83853571"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410930"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>Framework di protezione dei dati con criteri di protezione delle app 
 
@@ -148,8 +148,10 @@ Le impostazioni dei criteri applicate nel livello 2 includono tutte le impostazi
 |---------------|----------------------------------------------------------|-----------------------------------------------|---------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Trasferimento dati |       Esegui il backup dei dati dell'organizzazione in…  |          Blocca  |          iOS/iPadOS, Android  |                  |
 | Trasferimento dati |       Invia i dati dell'organizzazione ad altre app  |          App gestite da criteri  |          iOS/iPadOS, Android  |          <p>Con iOS/iPadOS, gli amministratori possono configurare questo valore come "App gestite da criteri", "App gestite da criteri con condivisione del sistema operativo" o "App gestite da criteri con filtro basato su Apri in/Condividi". </p><p>App gestite da criteri con condivisione del sistema operativo è disponibile quando il dispositivo viene registrato anche con Intune. Questa impostazione consente il trasferimento dei dati ad altre app gestite da criteri e i trasferimenti di file ad altre app gestite da Intune. </p><p>App gestite da criteri con filtro basato su Apri in/Condividi consente di applicare un filtro alle finestre di dialogo Apri in/Condividi del sistema operativo per visualizzare solo le app gestite da criteri. </p><p> Per altre informazioni, vedere [Impostazioni dei criteri di protezione delle app per iOS](app-protection-policy-settings-ios.md).</p> |
+| Trasferimento dati |       Selezionare le app da esentare  |          Impostazione predefinita / skype;app-settings;calshow;itms;itmss;itms-apps;itms-appss;itms-services;  |          iOS/iPadOS  |                  |
 | Trasferimento dati |       Salva copie dei dati dell'organizzazione  |          Blocca  |          iOS/iPadOS, Android  |                  |
 | Trasferimento dati |       Consenti all'utente di salvare copie nei servizi selezionati  |          OneDrive for Business, SharePoint Online |          iOS/iPadOS, Android  |                  |
+| Trasferimento dati |       Trasferisci i dati delle telecomunicazioni a  |          Tutte le app |          iOS/iPadOS, Android  |                  |
 | Trasferimento dati |       Limita le operazioni taglia, copia e incolla tra altre app  |          App gestite da criteri con Incolla in  |          iOS/iPadOS, Android  |                  |
 | Trasferimento dati |       Acquisizione di schermata e Assistente Google  |          Blocca  |          Android  |                  |
 | Funzionalità |       Limita il trasferimento di contenuto Web con altre app  |          Microsoft Edge  |          iOS/iPadOS, Android  |                  |
@@ -173,9 +175,12 @@ Le impostazioni dei criteri applicate al livello 3 includono tutte le impostazio
 
 | Impostazione | Descrizione dell'impostazione |             Valore  |             Piattaforma        | Note |
 |---------------|---------------------------------------|----------------------------------------|--------------------------------------|---------------------------------------------------------------------------------------------------------|
+| Trasferimento dati |       Trasferisci i dati delle telecomunicazioni a  |          Qualsiasi app dialer gestita da criteri |          Android  | Gli amministratori possono anche configurare questa impostazione per usare un'app dialer che non supporta i criteri di protezione delle app selezionando **App dialer specifica** e specificando i valori **ID pacchetto dell'app dialer** e **Nome dell'app dialer**.   |
+| Trasferimento dati |       Trasferisci i dati delle telecomunicazioni a  |          App dialer specifica |          iOS/iPadOS  |  |
+| Trasferimento dati |       Schema dell'URL dell'app dialer  |          *replace_with_dialer_app_url_scheme* |          iOS/iPadOS  | In iOS/iPadOS questo valore deve essere sostituito con lo schema URL per l'app dialer personalizzata usata. Se lo schema dell'URL non è noto, contattare lo sviluppatore dell'app per altre informazioni. Per altre informazioni sugli schemi URL, vedere [Definizione di uno schema URL personalizzato per l'app](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app).|
 | Trasferimento di dati |       Ricevi dati da altre app  |          App gestite da criteri  |          iOS/iPadOS, Android         |  |
-| Trasferimento di dati |       Tastiere di terze parti  |          Blocca  |          iOS/iPadOS        | In iOS questa operazione impedisce il funzionamento di tutte le tastiere di terze parti all'interno dell'app.  |
-| Trasferimento di dati |       Tastiere approvate  |          Richiedi  |          Android        | Con Android, le tastiere devono essere selezionate per poter essere usate in base ai dispositivi Android distribuiti.  |
+| Trasferimento di dati |       Tastiere di terze parti  |          Blocca  |          iOS/iPadOS        | In iOS/iPadOS questa operazione impedisce il funzionamento di tutte le tastiere di terze parti all'interno dell'app.  |
+| Trasferimento di dati |       Tastiere approvate  |          Richiedi  |          Android        |  |
 | Trasferimento di dati |       Selezionare le tastiere da approvare  |          *Aggiungi/Rimuovi tastiere*  |          Android        | Con Android, le tastiere devono essere selezionate per poter essere usate in base ai dispositivi Android distribuiti.  |
 | Funzionalità |       Stampa dei dati dell'organizzazione  |          Blocca  |          iOS/iPadOS, Android         |  |
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17f1d045d89df3ad5bb37d85957e872ec6692b7e
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: d8506661c49fa4f9c8481a3caa96883c91e6d8bb
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353497"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461760"
 ---
 # <a name="enroll-android-devices"></a>Registrare dispositivi Android
 
@@ -33,7 +33,8 @@ L'amministratore di Intune può registrare i dispositivi Android nei modi seguen
 - Android Enterprise (offre un set di opzioni di registrazione che offrono agli utenti le funzionalità più aggiornate e sicure):
     - [**Profilo di lavoro di Android Enterprise**](android-work-profile-enroll.md): Per i dispositivi personali con autorizzazione ad accedere ai dati aziendali. Gli amministratori possono gestire gli account aziendali, le app e i dati. I dati personali nel dispositivo vengono tenuti separati dai dati di lavoro e gli amministratori non controllano le impostazioni o i dati personali. 
     - [**Android Enterprise dedicato**](android-kiosk-enroll.md): Per i dispositivi a uso singolo di proprietà dell'azienda, ad esempio per insegna digitale, stampa di biglietti o gestione dell'inventario. Gli amministratori bloccano l'utilizzo di un dispositivo per un set limitato di app e collegamenti Web. Viene anche impedito agli utenti di aggiungere altre app o eseguire altre azioni sul dispositivo.
-    - [**Android Enterprise completamente gestito**](android-fully-managed-enroll.md): Per i dispositivi con utente singolo di proprietà dell'azienda, usati esclusivamente per lavoro e non per uso personale. Gli amministratori possono gestire interamente tali dispositivi e applicare controlli di criteri non disponibili nei profili di lavoro. 
+    - [**Android Enterprise completamente gestito**](android-fully-managed-enroll.md): Per i dispositivi con utente singolo di proprietà dell'azienda, usati esclusivamente per lavoro e non per uso personale. Gli amministratori possono gestire interamente tali dispositivi e applicare controlli di criteri non disponibili nei profili di lavoro.
+    - [**Android Enterprise di proprietà aziendale con profilo di lavoro**](android-corporate-owned-work-profile-enroll.md): Per i dispositivi a utente singolo di proprietà aziendale destinati all'uso personale e aziendale.
 - [**Amministratore di dispositivo Android**](android-enroll-device-administrator.md), inclusi i dispositivi Samsung Knox Standard e [Zebra](../configuration/android-zebra-mx-overview.md). 
 
 ## <a name="prerequisites"></a>Prerequisiti

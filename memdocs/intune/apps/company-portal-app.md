@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/10/2020
+ms.date: 07/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89e3111ef902b0ea0f7f66e6be6aa0c227fdb3c4
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 0ad862ff1f04558bd699db2ef0c09d4da4654e23
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86239947"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461964"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Come personalizzare le app Portale aziendale Intune, il sito Web Portale aziendale e l'app Intune
 
@@ -158,6 +158,17 @@ Sono disponibili le azioni seguenti:
 > [!NOTE]
 > Queste azioni possono essere usate per limitare le azioni del dispositivo nell'app e nel sito Web Portale aziendale e non implementano criteri di restrizione dei dispositivi. Per impedire agli utenti di eseguire il ripristino delle impostazioni di fabbrica o la rimozione di MDM dalle impostazioni, è necessario configurare i criteri di restrizione dei dispositivi. 
 
+## <a name="opening-web-company-portal-applications"></a>Apertura di applicazioni Portale aziendale Web
+Per le applicazioni Web Portale aziendale, se l'utente finale ha installato l'applicazione Portale aziendale, per gli utenti finali verrà visualizzata una finestra di dialogo in cui viene chiesto come vogliono aprire l'applicazione all'esterno del browser. Se l'app non si trova nel percorso di Portale aziendale, per il sito Web Portale aziendale verrà aperta la home page. Se l'app si trova nel percorso, il Portale aziendale aprirà l'app specifica. 
+
+Quando si seleziona il Portale aziendale, l'utente viene indirizzato alla pagina corrispondente nell'applicazione quando il percorso URI è uno dei seguenti:
+
+- `/apps` -Il Portale aziendale Web apre la pagina App in cui sono elencate tutte le app.
+- `/apps/[appID]` -Il Portale aziendale Web apre la pagina Dettagli dell'app corrispondente.
+- *Il percorso URI è diverso o imprevisto* - Verrà visualizzata la home page di Portale aziendale Web.
+
+Se l'utente non ha l'app Portale aziendale, l'utente verrà indirizzato al Portale aziendale Web.
+
 ## <a name="company-portal-derived-credentials-for-iosipados-devices"></a>Credenziali derivate del portale aziendale per i dispositivi iOS/iPadOS
 
 Intune supporta la verifica dell'identità personale (PIV, Personal Identity Verification) e le credenziali derivate CAC (Common Access Card) in collaborazione con i provider di credenziali DISA Purebred, Entrust Datacard e Intercede. Gli utenti finali eseguiranno ulteriori passaggi dopo la registrazione del dispositivo iOS/iPadOS per verificarne l'identità nell'applicazione Portale aziendale. Le credenziali derivate verranno abilitate per gli utenti impostando prima di tutto un provider di credenziali per il tenant, quindi specificando come destinazione un profilo che usa credenziali derivate per utenti o dispositivi.
@@ -227,7 +238,7 @@ Alcune piattaforme e configurazioni non consentono azioni self-service nel dispo
 | Sincronizza | Disponibile | Disponibile | Disponibile | Disponibile |
 | Blocco remoto | Solo per Windows Phone | Disponibile | Disponibile | Disponibile |
 | Reimpostazione passcode | Solo per Windows Phone | Disponibile<sup>(8)</sup> | N/D | Disponibile<sup>(6)</sup> |
-| Recupero chiavi | N/D | N/D | Disponibile<sup>(2)</sup> | N/D |
+| Recupero chiavi | ND | ND | Disponibile<sup>(2)</sup> | N/D |
 
 <sup>(1)</sup> Il **ritiro** è sempre bloccato nei dispositivi Windows aggiunti ad Azure AD.<br>
 <sup>(2)</sup> Il **recupero chiavi** per MacOS è disponibile solo tramite il portale Web.<br>

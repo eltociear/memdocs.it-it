@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1bcfab31d6efc2ff43451b3193848060c6f178a8
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 599a5f6e6e355a37e909182fc14a07d489f45558
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79344974"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86872036"
 ---
 # <a name="quickstart-set-up-automatic-enrollment-for-windows-10-devices"></a>Guida introduttiva: configurare la registrazione automatica per i dispositivi Windows 10
 
@@ -35,7 +35,7 @@ Se non si dispone di una sottoscrizione Intune, è possibile [iscriversi per ott
 
 ## <a name="sign-in-to-intune-in-the-microsoft-endpoint-manager"></a>Accedere a Intune in Microsoft Endpoint Manager
 
-Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) come Amministratore globale o come Amministratore del servizio Intune. Se è stata creata una sottoscrizione della versione di valutazione di Intune, l'account creato con tale sottoscrizione sarà un amministratore globale.
+Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) come amministratore globale o come amministratore di Intune. Se è stata creata una sottoscrizione della versione di valutazione di Intune, l'account creato con tale sottoscrizione sarà un amministratore globale.
 
 ## <a name="set-up-windows-10-automatic-enrollment"></a>Configurare la registrazione automatica di Windows 10
 

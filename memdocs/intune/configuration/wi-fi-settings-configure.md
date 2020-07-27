@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ca2a5ddd3d2b4c0aa93c7c955d0d688944ee8f95
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 25b07dcbb76f6d4a8aae964d0123a880d179784e
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985509"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871934"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>Aggiungere e usare le impostazioni Wi-Fi nei dispositivi in Microsoft Intune
 
@@ -68,7 +68,7 @@ I profili Wi-Fi supportano le piattaforme per dispositivi seguenti:
 
       > [!TIP]
       >
-      > - Per i dispositivi **Android Enterprise** eseguiti come dispositivi dedicati (modalità a tutto schermo) scegliere **Solo proprietario del dispositivo** > **Wi-Fi**.
+      > - Per i dispositivi **Android Enterprise** in esecuzione come dispositivo dedicato (a tutto schermo), scegliere **Profilo di lavoro completamente gestito, dedicato e di proprietà aziendale** > **Wi-Fi**.
       > - Per **Windows 8.1 e versioni successive** è possibile scegliere **Wi-Fi per importazione**. Questa opzione consente di importare le impostazioni Wi-Fi come un file XML precedentemente esportato da un altro dispositivo.
 
 4. Selezionare **Crea**.
@@ -101,9 +101,8 @@ I profili Wi-Fi supportano le piattaforme per dispositivi seguenti:
 > [!TIP]
 > Se si usa l'autenticazione basata su certificati per il profilo Wi-Fi, distribuire il profilo Wi-Fi, il profilo certificato e il profilo radice attendibile agli stessi gruppi per assicurarsi che ogni dispositivo sia in grado di riconoscere la legittimità dell'autorità di certificazione.  Per altre informazioni, vedere [Come configurare i certificati con Microsoft Intune](../protect/certificates-configure.md).
 
-
 ## <a name="next-steps"></a>Passaggi successivi
 
-Il profilo viene creato, ma non è ancora operativo. [Assegnare il profilo](device-profile-assign.md) e [monitorarne lo stato](device-profile-monitor.md).
+Il profilo è stato creato, ma potrebbe non essere operativo. [Assegnare il profilo](device-profile-assign.md) e [monitorarne lo stato](device-profile-monitor.md).
 
 [Problemi dei profili Wi-Fi in Intune](troubleshoot-wi-fi-profiles.md).

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c92220fabf8d1cb2a34ac702dd4157ef848762b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1916004d8e61239d7de92a77769ee970cc7a3118
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990269"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565608"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Creare profili VPN per la connessione ai server VPN in Intune
 
@@ -49,6 +49,7 @@ Si supponga, ad esempio, di voler configurare i dispositivi iOS/iPadOS con le im
 - Check Point Capsule VPN
   - Amministratore dispositivo Android
   - Profili di lavoro Android Enterprise
+  - Profilo di lavoro completamente gestito e di proprietà aziendale Android Enterprise: Usare i [criteri di configurazione delle app](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
   - macOS
   - Windows 10
@@ -58,7 +59,7 @@ Si supponga, ad esempio, di voler configurare i dispositivi iOS/iPadOS con le im
 - Cisco AnyConnect
   - Amministratore dispositivo Android
   - Profili di lavoro Android Enterprise
-  - Proprietario del dispositivo Android Enterprise (completamente gestito)
+  - Profilo di lavoro completamente gestito e di proprietà aziendale Android Enterprise
   - iOS/iPadOS
   - macOS
 
@@ -67,8 +68,8 @@ Si supponga, ad esempio, di voler configurare i dispositivi iOS/iPadOS con le im
 
 - Citrix SSO
   - Amministratore dispositivo Android
-  - Profili di lavoro Android Enterprise: Usare i [criteri di configurazione delle app](../apps/app-configuration-policies-use-android.md)
-  - Proprietario del dispositivo Android Enterprise (completamente gestito): Usare i [criteri di configurazione delle app](../apps/app-configuration-policies-use-android.md)
+  - Profili di lavoro Android Enterprise: Usare i [criteri di configurazione delle app](../apps/app-configuration-vpn-ae.md)
+  - Profili di lavoro completamente gestiti e di proprietà aziendale Android Enterprise: Usare i [criteri di configurazione delle app](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
   - Windows 10
 
@@ -81,7 +82,7 @@ Si supponga, ad esempio, di voler configurare i dispositivi iOS/iPadOS con le im
 - F5 Access
   - Amministratore dispositivo Android
   - Profili di lavoro Android Enterprise
-  - Proprietario del dispositivo Android Enterprise (completamente gestito)
+  - Profilo di lavoro completamente gestito e di proprietà aziendale Android Enterprise
   - iOS/iPadOS
   - macOS
   - Windows 10
@@ -96,7 +97,8 @@ Si supponga, ad esempio, di voler configurare i dispositivi iOS/iPadOS con le im
   - Windows 10
 
 - Palo Alto Networks GlobalProtect
-  - Profili di lavoro Android Enterprise: Usare i [criteri di configurazione delle app](../apps/app-configuration-policies-use-android.md)
+  - Profili di lavoro Android Enterprise: Usare i [criteri di configurazione delle app](../apps/app-configuration-vpn-ae.md)
+  - Profilo di lavoro completamente gestito e di proprietà aziendale Android Enterprise: Usare i [criteri di configurazione delle app](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
   - Windows 10
 
@@ -106,7 +108,7 @@ Si supponga, ad esempio, di voler configurare i dispositivi iOS/iPadOS con le im
 - Pulse Secure
   - Amministratore dispositivo Android
   - Profili di lavoro Android Enterprise
-  - Proprietario del dispositivo Android Enterprise (completamente gestito)
+  - Profilo di lavoro completamente gestito e di proprietà aziendale Android Enterprise
   - iOS/iPadOS
   - Windows 10
   - Windows 8.1
@@ -115,6 +117,7 @@ Si supponga, ad esempio, di voler configurare i dispositivi iOS/iPadOS con le im
 - SonicWall Mobile Connect
   - Amministratore dispositivo Android
   - Profili di lavoro Android Enterprise
+  - Profilo di lavoro completamente gestito e di proprietà aziendale Android Enterprise
   - iOS/iPadOS
   - macOS
   - Windows 10
@@ -122,7 +125,8 @@ Si supponga, ad esempio, di voler configurare i dispositivi iOS/iPadOS con le im
   - Windows Phone 8.1
 
 - Zscaler
-  - Profili di lavoro Android Enterprise: Usare i [criteri di configurazione delle app](../apps/app-configuration-policies-use-android.md)
+  - Profili di lavoro Android Enterprise: Usare i [criteri di configurazione delle app](../apps/app-configuration-vpn-ae.md)
+  - Profilo di lavoro completamente gestito e di proprietà aziendale Android Enterprise: Usare i [criteri di configurazione delle app](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
 
 > [!IMPORTANT]
@@ -136,8 +140,8 @@ Si supponga, ad esempio, di voler configurare i dispositivi iOS/iPadOS con le im
 
     - **Piattaforma**: scegliere la piattaforma dei dispositivi. Le opzioni disponibili sono:
       - **Amministratore di dispositivi Android**
-      - **Android Enterprise** > **Solo proprietario del dispositivo**
-      - **Android Enterprise** > **Solo profilo di lavoro**
+      - **Android Enterprise** > **Profilo di lavoro completamente gestito, dedicato e di proprietà aziendale**
+      - **Android Enterprise** > **Profilo di lavoro**
       - **iOS/iPadOS**
       - **macOS**
       - **Windows 10 e versioni successive**

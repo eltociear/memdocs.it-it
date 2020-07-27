@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/13/2020
+ms.date: 07/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7aee865b2a16ce3a9114433f9e10e185b26997f7
-ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
+ms.openlocfilehash: 7f49ba4fffd84ffae3e5b47ad74088b65d599533
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86303471"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491253"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Impostazioni dei dispositivi Android Enterprise per consentire o limitare l'uso delle funzionalità tramite Intune
 
@@ -31,9 +31,18 @@ Questo articolo descrive le diverse impostazioni che è possibile controllare ne
 
 [Creare un profilo di configurazione del dispositivo](device-restrictions-configure.md).
 
-## <a name="device-owner-only"></a>Solo proprietario del dispositivo
+## <a name="fully-managed-dedicated-and-corporate-owned-work-profile"></a>Profilo di lavoro completamente gestito, dedicato e di proprietà aziendale
 
-Queste impostazioni si applicano ai tipi di registrazione Android Enterprise in cui Intune controlla l'intero dispositivo, ad esempio dispositivi Android Enterprise completamente gestiti o dedicati.
+Queste impostazioni si applicano ai tipi di registrazione Android Enterprise in cui Intune controlla l'intero dispositivo, ad esempio i dispositivi Android Enterprise completamente gestiti, dedicati e di proprietà aziendale con profilo di lavoro.
+
+Alcune impostazioni non sono supportate da tutti i tipi di registrazione. Per vedere quali impostazioni sono supportate per ogni tipo di registrazione, vedere l'interfaccia utente. Ogni impostazione è riportata sotto un'intestazione che indica i tipi di registrazione in cui può essere usata.
+
+![Intestazioni delle impostazioni.](./media/device-restrictions-android-for-work/setting-headers.png)
+
+Alcune impostazioni si applicano solo a livello di profilo di lavoro per i dispositivi di proprietà aziendale con un profilo di lavoro. Queste impostazioni si applicano sempre all'intero dispositivo per i dispositivi completamente gestiti e dedicati. Queste impostazioni sono contrassegnate dal descrittore *(livello di profilo di lavoro)* nell'interfaccia utente.
+
+![Intestazioni delle impostazioni.](./media/device-restrictions-android-for-work/work-profile-level.png)
+
 
 ### <a name="general"></a>Generale
 
@@ -115,7 +124,9 @@ Usare queste impostazioni per configurare un'esperienza di tipo chiosco multimed
       >
       > Non è richiesto che l'app di **schermata iniziale gestita** sia inclusa nel profilo di configurazione, ma è necessario che venga aggiunta come app. Quando l'app di **schermata iniziale gestita** viene aggiunta, qualsiasi altra app aggiunta nel profilo di configurazione viene visualizzata come icona nell'app di **schermata iniziale gestita**.
       >
-      > Quando si usa la modalità tutto schermo con più app, le app dialer o telefoniche potrebbero non funzionare correttamente. 
+      > Quando si usa la modalità tutto schermo con più app, le app dialer o telefoniche potrebbero non funzionare correttamente.
+      >
+      > Per altre informazioni sulla schermata iniziale gestita, vedere [Setup Microsoft Managed Home Screen on Dedicated devices in multi-app kiosk mode](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-managed-home-screen-on-dedicated-devices/ba-p/1388060) (Configurare la schermata iniziale gestita di Microsoft in dispositivi dedicati in modalità tutto schermo per più app).
 
       - **Aggiungi**: selezionare le app nell'elenco.
 
@@ -123,6 +134,28 @@ Usare queste impostazioni per configurare un'esperienza di tipo chiosco multimed
 
         È anche possibile aggiungere al dispositivo altre [app Android](../apps/apps-add-android-for-work.md) e [app Web](../apps/web-app.md) create dall'organizzazione. Assicurarsi di [assegnare l'app al gruppo di dispositivi creato per i dispositivi dedicati](../apps/apps-deploy.md).
 
+      - **Icona cartella**: selezionare il colore e la forma dell'icona della cartella visualizzata nella schermata iniziale gestita. Le opzioni disponibili sono:
+        - Non configurato 
+        - Tema scuro - Rettangolo
+        - Tema scuro - Cerchio
+        - Tema chiaro - Rettangolo
+        - Tema chiaro - Cerchio
+      - **Dimensioni dell'icona per app e cartella**: selezionare le dimensioni dell'icona della cartella visualizzata nella schermata iniziale gestita. Le opzioni disponibili sono:
+        - Non configurato 
+        - Molto piccola
+        - Piccola
+        - Media
+        - Grande
+        - Molto grande
+
+          A seconda delle dimensioni dello schermo, le dimensioni effettive dell'icona potrebbero essere diverse.
+
+      - **Orientamento dello schermo**: selezionare la direzione in cui viene visualizzata la schermata iniziale gestita nei dispositivi. Le opzioni disponibili sono:
+        - Non configurato
+        - Verticale
+        - Orizzontale
+        - Rotazione automatica
+      - **Badge per notifiche dell'app**: **Abilita** mostra il numero di notifiche nuove e non lette nelle icone dell'app. Quando questa opzione è impostata su **Non configurato**, Intune non modifica o aggiorna questa impostazione.
       - **Pulsante Pagina iniziale virtuale**: tasto softkey che riporta gli utenti alla schermata iniziale gestita in modo da potersi spostare tra le app. Le opzioni disponibili sono:
         - **Non configurato** (impostazione predefinita): non viene visualizzato un pulsante Pagina iniziale. Gli utenti devono usare il pulsante Indietro per spostarsi tra le app.
         - **Scorrimento rapido verso l'alto**: viene visualizzato un pulsante Pagina iniziale quando un utente scorre verso l'alto nel dispositivo.
@@ -150,7 +183,31 @@ Usare queste impostazioni per configurare un'esperienza di tipo chiosco multimed
         >
         > Gli schermi moderni hanno maggiori densità di pixel e consentono di visualizzare immagini con definizione equivalente a 2K/4K.
 
+      - **Collegamento al menu Impostazioni**: **Disabilita** nasconde il collegamento Impostazioni gestite nella schermata iniziale gestita. Gli utenti possono comunque scorrere rapidamente verso il basso per accedere alle impostazioni. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il collegamento Impostazioni gestite viene visualizzato nei dispositivi. Gli utenti possono anche scorrere rapidamente verso il basso per accedere a queste impostazioni.
+
+      - **Quick access to debug menu** (Accesso rapido al menu di debug): questa impostazione controlla il modo in cui gli utenti accedono al menu di debug. Le opzioni disponibili sono:
+
+        - **Abilita**: gli utenti possono accedere al menu di debug più facilmente. In particolare, è possibile scorrere rapidamente verso il basso o usare il collegamento Impostazioni gestite. Come sempre, è possibile continuare a selezionare il pulsante Indietro 15 volte.
+        - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, l'accesso facile al menu di debug è disattivato. Per aprire il menu di debug, gli utenti devono selezionare il pulsante Indietro 15 volte.
+
+        Tramite il menu di debug gli utenti possono:
+
+        - Vedere e caricare i log della schermata iniziale gestita
+        - Aprire l'app Android Device Policy Manager di Google
+        - Aprire l'app [Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune)
+        - Uscire dalla modalità tutto schermo
+
       - **Configurazione Wi-Fi**: **Abilita** mostra il controllo Wi-Fi nella schermata iniziale gestita e consente agli utenti di connettere il dispositivo a diverse reti Wi-Fi. L’abilitazione di questa funzionalità attiva anche la posizione del dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non visualizzare il controllo Wi-Fi nella schermata iniziale gestita. Impedisce agli utenti di connettersi alle reti Wi-Fi usando la schermata iniziale gestita.
+
+        - **Elenco di reti consentite per Wi-Fi**: creare un elenco di nomi di rete wireless validi, noto anche come identificatore del set di servizi (SSID). Gli utenti della schermata iniziale gestita possono connettersi solo ai SSID immessi.
+
+          Quando il campo è vuoto, Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, sono consentite tutte le reti Wi-Fi disponibili.
+
+          Scegliere **Importa** per importare un file CSV che include un elenco di SSID validi.
+
+          Scegliere **Esporta** per esportare l'elenco corrente in un file CSV.
+
+        - **SSID**: è anche possibile immettere i nomi della rete Wi-Fi (SSID) a cui gli utenti della schermata iniziale gestita possono connettersi. Assicurarsi di immettere SSID validi.
 
       - **Configurazione Bluetooth**: **Abilita** mostra il controllo Bluetooth nella schermata iniziale gestita e consente agli utenti di associare i dispositivi tramite Bluetooth. L’abilitazione di questa funzionalità attiva anche la posizione del dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non visualizzare il controllo Bluetooth nella schermata iniziale gestita. Impedisce agli utenti di configurare il Bluetooth e associare i dispositivi quando si trovano nella modalità schermata iniziale gestita.
 
@@ -158,17 +215,19 @@ Usare queste impostazioni per configurare un'esperienza di tipo chiosco multimed
 
       - **Controllo volume dei file multimediali**: **Abilita** mostra il controllo volume dei file multimediali nella schermata iniziale gestita e consente agli utenti di regolare il volume per i file multimediali del dispositivo usando un dispositivo di scorrimento. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non visualizzare il controllo volume dei file multimediali nella schermata iniziale gestita. Impedisce agli utenti di regolare il volume dei file multimediali del dispositivo durante l'uso della schermata iniziale gestita, a meno che l'operazione non sia supportata tramite i pulsanti hardware.
 
+      - **Quick access to device information** (Accesso rapido alle informazioni sul dispositivo): **Abilita** consente agli utenti di scorrere rapidamente verso il basso per visualizzare le informazioni sul dispositivo nella schermata iniziale gestita, ad esempio il numero di serie, la marca e il numero di modello e il livello SDK. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, le informazioni sul dispositivo potrebbero non essere visualizzate.
+
       - **Modalità screen saver**: **Abilita** mostra uno screen saver nella schermata iniziale gestita quando il dispositivo è bloccato o si verifica un timeout. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non visualizzare uno screen saver nella schermata iniziale gestita.
 
         Se abilitata, configurare anche:
 
-        - **Imposta l'immagine personalizzata per lo screen saver**: immettere l'URL di un file PNG, JPG, JPEG, GIF, BMP, WebP o ICOimage personalizzato. Se non si immette un URL, viene usata l'immagine predefinita del dispositivo, se è presente un'immagine predefinita. 
-        
+        - **Imposta l'immagine personalizzata per lo screen saver**: immettere l'URL di un file PNG, JPG, JPEG, GIF, BMP, WebP o ICOimage personalizzato. Se non si immette un URL, viene usata l'immagine predefinita del dispositivo, se è presente un'immagine predefinita.
+
           Immettere ad esempio:
 
           - `http://www.contoso.com/image.jpg`
           - `www.contoso.com/image.bmp`
-          - `https://www.contoso.com/image.webp`          
+          - `https://www.contoso.com/image.webp`
 
           > [!TIP]
           > È supportato qualsiasi URL di risorsa file che possa essere trasformato in una bitmap.
@@ -180,30 +239,27 @@ Usare queste impostazioni per configurare un'esperienza di tipo chiosco multimed
 - **Completamente gestito**: configura l'app Microsoft Launcher nei dispositivi completamente gestiti.
 
   - **Imposta Microsoft Launcher come utilità di avvio predefinita**: l'opzione **Abilita** imposta Microsoft Launcher come utilità di avvio predefinita nella schermata iniziale. Se si imposta l'utilità di avvio come predefinita, gli utenti non possono usare un'altra utilità di avvio. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, Microsoft Launcher non viene impostato forzatamene come utilità di avvio predefinita.
+  - **Configura uno sfondo personalizzato**: **Abilita** consente di applicare una propria immagine come sfondo della schermata iniziale e di scegliere se gli utenti possono cambiare l'immagine. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il dispositivo mantiene lo sfondo corrente.
+    - **Immettere l'URL dell'immagine di sfondo**: immettere l'URL dell'immagine di sfondo. Questa immagine viene visualizzata nella schermata iniziale del dispositivo. Immettere ad esempio `http://www.contoso.com/image.jpg`. 
+    - **Consenti all'utente di modificare lo sfondo**: **Abilita** consente agli utenti di modificare l'immagine dello sfondo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, agli utenti viene impedito di modificare lo sfondo.
+  - **Abilita il feed del launcher**: **Abilita** attiva il feed del launcher, che mostra i calendari, i documenti e le attività recenti. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, questo feed non viene visualizzato.
+    - **Consenti all'utente di abilitare/disabilitare il feed**: **Abilita** consente agli utenti di abilitare o disabilitare il feed del launcher. **Abilita** forza questa impostazione solo alla prima assegnazione del profilo. Le eventuali assegnazioni di profilo future non forzano questa impostazione. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, agli utenti viene impedito di modificare le impostazioni del feed del launcher.
+  - **Presenza della bacheca**: la bacheca consente agli utenti di accedere rapidamente alle app e agli strumenti. Le opzioni disponibili sono:
+    - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione.
+    - **Mostra**: la bacheca viene visualizzata nei dispositivi.
+    - **Nascondi**: la bacheca viene nascosta. Gli utenti devono scorrere rapidamente verso l'alto per accedere alla bacheca.
+    - **Disabilitato**: la bacheca non viene visualizzata nei dispositivi e agli utenti viene impedito di visualizzarla.
 
-<!-- The following settings are in a future release. Per PM, we can leave them in GitHub, not live. Remove comment tags when they release.
+  - **Consenti all'utente di modificare la presenza della bacheca**: **Abilita** consente agli utenti di visualizzare o nascondere la bacheca. **Abilita** forza questa impostazione solo alla prima assegnazione del profilo. Le eventuali assegnazioni di profilo future non forzano questa impostazione. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, agli utenti non è consentito modificare la configurazione della bacheca del dispositivo.
 
-  - **Configure custom wallpaper**: **Enable** lets you apply your own image as the home screen wallpaper, and choose if users can change the image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the device keeps its current wallpaper.
-    - **Enter URL of wallpaper image**: Enter the URL of your wallpaper image. This image shows on the device home screen. For example, enter `http://www.contoso.com/image.jpg`. 
-    - **Allow user to modify wallpaper**: **Enable** allows users to change the wallpaper image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the wallpaper.
-  - **Enable launcher feed**: **Enable** turns on the launcher feed, which shows calendars, documents, and recent activities. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, this feed isn't shown.
-    - **Allow user to enable/disable feed**: **Enable** lets users enable or disable the launcher feed. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the launcher feed settings.
-  - **Dock presence**: The dock gives users quick access to their apps and tools. Your options:
-    - **Not configured** (default): Intune doesn't change or update this setting.
-    - **Show**: The dock is shown on devices.
-    - **Hide**: The dock is hidden. Users must swipe up to access the dock.
-    - **Disabled**: The dock isn't shown on devices, and users are prevented from showing it.
+  - **Posizionamento della barra di ricerca**: scegliere dove posizionare la barra di ricerca. Le opzioni disponibili sono:
+    - **Non configurato** (impostazione predefinita): Intune non modifica o aggiorna questa impostazione.
+    - **In alto**: la barra di ricerca viene visualizzata nella parte superiore dei dispositivi.
+    - **In basso**: la barra di ricerca viene visualizzata nella parte inferiore dei dispositivi.
+    - **Nascondi**: la barra di ricerca è nascosta.
 
-  - **Allow user to change dock presence**: **Enable** allows users to show or hide the dock. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users aren't allowed to change the device dock configuration.
-
-  - **Search bar replacement**: Choose where to put the search bar. Your options:
-    - **Not configured** (default): Intune doesn't change or update this setting.
-    - **Top**: Search bar is shown at the top of devices.
-    - **Bottom**: Search bar is shown at the bottom of devices.
-    - **Hide**: Search bar is hidden.
-
+<!-- MandiA (7.16.2020) The following settings may be in a future release. Per PM, we can leave it in GitHub, not live. Remove comment tags if/when it releases.
   - **Allow user to change search bar placement**: **Enable** allows users to change the location of the search bar. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the location.
-
 End of comment -->
 
 ### <a name="password"></a>Password
@@ -240,7 +296,7 @@ End of comment -->
 - **Numero di errori di accesso prima della cancellazione dei dati del dispositivo**: immettere il numero di password non corrette consentite prima che il dispositivo venga cancellato, da 4 a 11. `0` (zero) potrebbe disabilitare la funzionalità di cancellazione dei dispositivi. Quando il valore è vuoto, Intune non modifica o aggiorna questa impostazione.
 
   > [!NOTE]
-  > Ai dispositivi con proprietario del dispositivo non verrà richiesto di impostare una password. Le impostazioni verranno applicate e sarà necessario impostare manualmente la password. Il criterio che impone questo segnalerà l'esito negativo fino a quando non si imposta la password che soddisfa i requisiti.
+  > Ai dispositivi con profili di lavoro completamente gestiti, dedicati e di proprietà aziendale non verrà richiesto di impostare una password. Le impostazioni verranno applicate e sarà necessario impostare manualmente la password. Il criterio che impone questo segnalerà l'esito negativo fino a quando non si imposta la password che soddisfa i requisiti.
 
 ### <a name="power-settings"></a>Impostazioni di risparmio energia
 
@@ -255,7 +311,7 @@ End of comment -->
 - **Modifiche dell'account** (solo per dispositivi dedicati): **Blocca** impedisce agli utenti di modificare gli account. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di aggiornare gli account utente nel dispositivo.
 
   > [!NOTE]
-  > Questa impostazione non è rispettata nei dispositivi proprietari del dispositivo (completamente gestiti). Se si configura questa impostazione, l'impostazione viene ignorata e non ha alcun effetto.
+  > Questa impostazione non viene rispettata nei dispositivi con profilo di lavoro completamente gestiti, dedicati e di proprietà aziendale. Se si configura questa impostazione, l'impostazione viene ignorata e non ha alcun effetto.
 
 - **L'utente può configurare le credenziali**: **Blocca** impedisce agli utenti di configurare i certificati assegnati ai dispositivi, anche per i dispositivi non associati a un account utente. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di configurare o modificare le proprie credenziali quando accedono all'archivio chiavi.
 - **Account Google personale**: **Blocca** impedisce agli utenti di aggiungere il proprio account Google personale al dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di aggiungere il proprio account Google personale.

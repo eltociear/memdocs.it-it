@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/15/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,18 +18,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 530d6de8194a1ca74b72567c98c5d2afcb327170
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 6b0a22d24a67364df3d3aa064489db67e2c97e98
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990323"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462236"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Configurare l'accesso locale a Exchange per Intune
 
 Questo articolo illustra come configurare l'accesso condizionale per Exchange locale in base alla conformità del dispositivo.
 
 Se si dispone di un ambiente Exchange Online dedicato ed è necessario definire se si trova nell'ambiente di configurazione nuovo o legacy, contattare l'account manager. Per controllare l'accesso alla posta elettronica per Exchange locale o per l'ambiente legacy Exchange Online dedicato, configurare l'accesso condizionale per Exchange locale in Intune.
+
+> [!IMPORTANT]
+> Le informazioni contenute in questo articolo si applicano ai clienti per cui è supportato l'uso di Exchange Connector.
+>
+> A partire da luglio 2020, il supporto per Exchange Connector è deprecato e sostituito dall'[autenticazione moderna ibrida](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (HMA) di Exchange.  Se nel proprio ambiente è installato Exchange Connector, il tenant di Intune rimane supportato per l'uso e si continuerà ad avere accesso all'interfaccia utente che ne supporta la configurazione. È possibile continuare a usare il connettore o configurare HMA e quindi disinstallare il connettore.
+>
+> L'uso di HMA non richiede la configurazione e l'uso di Exchange Connector in Intune. Con questa modifica, l'interfaccia utente per la configurazione e la gestione di Exchange Connector per Intune è stata rimossa dall'interfaccia di amministrazione di Microsoft Endpoint Manager, a meno che non si usi già Exchange Connector con la sottoscrizione.
 
 ## <a name="before-you-begin"></a>Prima di iniziare
 

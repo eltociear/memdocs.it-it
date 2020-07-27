@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/23/2019
+ms.date: 07/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,17 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c8c78106125b45f52b45cb5fc6494b8e13b7a15
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9c1d4dacf29aa0c87a8356306d10bf05acbf3afb
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084941"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462168"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Quali sono le modalità d'uso comuni dell'accesso condizionale con Intune?
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
 
 Esistono due tipi di accesso condizionale con Intune: l'accesso condizionale basato su dispositivo e l'accesso condizionale basato su app. È necessario configurare i criteri di conformità correlati per promuovere la conformità dell'accesso condizionale nell'organizzazione. L'accesso condizionale viene in genere usato per operazioni come consentire o bloccare l'accesso a Exchange e controllare l'accesso alla rete o come integrazione per una soluzione Mobile Threat Defense.
  
@@ -113,34 +110,44 @@ Quando si applicano i criteri di accesso condizionale e di conformità dei dispo
 
 Se i dispositivi non soddisfano le condizioni previste, l'utente viene guidato nel processo di registrazione del dispositivo per la risoluzione del problema che rende il dispositivo non conforme.
 
-#### <a name="how-conditional-access-for-exchange-on-premises-works"></a>Funzionamento dell'accesso condizionale per Exchange locale
+> [!NOTE]
+> A partire da luglio 2020, il supporto per Exchange Connector è deprecato e sostituito dall'[autenticazione moderna ibrida](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (HMA) di Exchange. L'uso di HMA non richiede la configurazione e l'uso di Exchange Connector in Intune. Con questa modifica, l'interfaccia utente per la configurazione e la gestione di Exchange Connector per Intune è stata rimossa dall'interfaccia di amministrazione di Microsoft Endpoint Manager, a meno che non si usi già Exchange Connector con la sottoscrizione.
+>
+> Se nel proprio ambiente è installato Exchange Connector, il tenant di Intune rimane supportato per l'uso e si continuerà ad avere accesso all'interfaccia utente che ne supporta la configurazione. Per altre informazioni, vedere [Installare il connettore locale per Exchange](../protect/exchange-connector-install.md). È possibile continuare a usare il connettore o configurare HMA e quindi disinstallare il connettore.
+>
+> L'autenticazione ibrida moderna fornisce funzionalità precedentemente fornite da Exchange Connector per Intune: Mapping dell'identità di un dispositivo al record di Exchange.  Questo mapping avviene ora al di fuori di una configurazione effettuata in Intune o del requisito del connettore Intune per il bridge di Intune ed Exchange. Con HMA è stato rimosso il requisito di usare la configurazione specifica di 'Intune' (connettore).
 
-L'accesso condizionale per Exchange locale funziona in modo diverso rispetto ai criteri di Azure basati sull'accesso condizionale. È possibile installare Intune On-Premises Exchange Connector per interagire direttamente con il server Exchange. Intune Exchange Connector effettua il pull di tutti i record di Exchange Active Sync (EAS) presenti nel server Exchange, per consentire a Intune di acquisire questi record EAS e associarli ai record dei dispositivi di Intune. Tali record sono i dispositivi registrati e riconosciuti da Intune. Questo processo consente o blocca l'accesso alla posta elettronica.
 
-Se il record EAS è nuovo e Intune non lo riconosce, invia un cmdlet (si pronuncia "command-let") che richiede al server Exchange di bloccare l'accesso alla posta elettronica. Di seguito sono elencati altri dettagli sul funzionamento di questo processo:
+<!-- Deprecated with change from the connector to Exchange hybrid modern authentication)
 
-![Diagramma di flusso di Exchange locale con autorità di certificazione](./media/conditional-access-intune-common-ways-use/ca-intune-common-ways-1.png)
+#### How conditional access for Exchange on-premises works
 
-1. L'utente tenta di accedere alla posta elettronica aziendale, ospitata in Exchange locale 2010 SP1 o versione successiva.
+Conditional access for Exchange on-premises works differently than Azure Conditional Access based policies. You install the Intune Exchange on-premises connector to directly interact with Exchange server. The Intune Exchange connector pulls in all the Exchange Active Sync (EAS) records that exist at the Exchange server so Intune can take these EAS records and map them to Intune device records. These records are devices enrolled and recognized by Intune. This process allows or blocks e-mail access.
 
-2. Se il dispositivo non è gestito da Intune, l'accesso alla posta elettronica viene bloccato. Intune invia una notifica di blocco al client EAS.
+If the EAS record is new and Intune isn't aware of it, Intune issues a cmdlet (pronounced "command-let") that directs the Exchange server to block access to e-mail. Following are more details on how this process works:
 
-3. EAS riceve la notifica di blocco, mette il dispositivo in quarantena e invia il messaggio di posta elettronica di quarantena con i passaggi correttivi che contengono collegamenti per consentire agli utenti di registrare i dispositivi.
+![Exchange on-premises with CA flow-chart](./media/conditional-access-intune-common-ways-use/ca-intune-common-ways-1.png)
 
-4. Viene eseguito il processo di aggiunta alla rete aziendale, ovvero il primo passaggio per la gestione del dispositivo tramite Intune.
+1. User tries to access corporate email, which is hosted on Exchange on-premises 2010 SP1 or later.
 
-5. Il dispositivo viene registrato in Intune.
+2. If the device is not managed by Intune, access to email will be blocked. Intune sends a block notification to the EAS client.
 
-6. Intune associa il record EAS a un record di dispositivo e salva lo stato di conformità del dispositivo.
+3. EAS receives the block notification, moves the device to quarantine, and sends the quarantine email with remediation steps that contain links so the users can enroll their devices.
 
-7. L'ID del client EAS viene registrato tramite il processo di registrazione del dispositivo di Azure AD, che crea una relazione tra il record del dispositivo di Intune e l'ID del client EAS.
+4. The Workplace join process happens, which is the first step to have the device managed by Intune.
 
-8. La registrazione del dispositivo di Azure AD consente di salvare le informazioni sullo stato del dispositivo.
+5. The device gets enrolled into Intune.
 
-9. Se l'utente soddisfa i criteri di accesso condizionale, Intune invia un cmdlet tramite Intune Exchange Connector che consente la sincronizzazione della cassetta postale.
+6. Intune maps the EAS record to a device record, and saves the device compliance state.
 
-10. Il server Exchange invia la notifica al client EAS, in modo che l'utente possa accedere alla posta elettronica.
+7. The EAS client ID gets registered by the Azure AD Device Registration process, which creates a relationship between the Intune device record, and the EAS client ID.
 
+8. The Azure AD Device Registration saves the device state information.
+
+9. If the user meets the conditional access policies, Intune issues a cmdlet through the Intune Exchange connector that allows the mailbox to sync.
+
+10. Exchange server sends the notification to EAS client so the user can access e-mail.
+-->
 
 #### <a name="whats-the-intune-role"></a>Qual è il ruolo di Intune?
 
@@ -158,7 +165,5 @@ Il server Exchange fornisce l'API e l'infrastruttura per mettere i dispositivi i
 [Come configurare l'accesso condizionale in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
 
 [Configurare criteri di accesso condizionale basato su app](app-based-conditional-access-intune-create.md)
-
-[How to install on-premises Exchange connector with Intune](exchange-connector-install.md) (Come installare On-premises Exchange Connector con Intune).
 
 [Come creare criteri di accesso condizionale per Exchange locale](conditional-access-exchange-create.md)

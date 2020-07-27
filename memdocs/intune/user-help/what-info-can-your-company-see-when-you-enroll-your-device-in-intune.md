@@ -18,12 +18,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.collection: ''
-ms.openlocfilehash: 740d9b68a0101e04e6bf690d09ecce7eaff4509e
-ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
+ms.openlocfilehash: bc3ff7b10d3b0ae5779db26fae711bc335c8ec62
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85107310"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461675"
 ---
 # <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>Quali sono le informazioni visibili per l'organizzazione quando si registra il dispositivo?
 
@@ -38,13 +38,14 @@ L'organizzazione non può vedere le informazioni personali di un utente che regi
 - Password
 - Immagini, incluse quelle nell'app Foto o nel rullino della fotocamera
 - File
+- Per i dispositivi di proprietà aziendale con un profilo di lavoro, le applicazioni e i dati nel profilo personale. 
 
 **Informazioni che l'organizzazione può sempre visualizzare:**
 
 - Modello del dispositivo, ad esempio Google Pixel
 - Produttore del dispositivo, ad esempio Microsoft
 - Sistema operativo e versione, ad esempio iOS 12.0.1
-- Inventario delle app e nomi delle app, ad esempio Microsoft Word. nei dispositivi personali l'organizzazione può visualizzare solo l'inventario delle app gestite. Nei dispositivi di proprietà dell'azienda l'organizzazione può visualizzare l'inventario di tutte le app.
+- Inventario delle app e nomi delle app, ad esempio Microsoft Word. nei dispositivi personali l'organizzazione può visualizzare solo l'inventario delle app gestite. Nei dispositivi completamente gestiti e dedicati di proprietà aziendale l'organizzazione può visualizzare l'inventario di tutte le app. Per i dispositivi di proprietà aziendale con un profilo di lavoro, l'organizzazione può visualizzare solo l'inventario delle app nel profilo di lavoro.
 - Proprietario del dispositivo
 - Nome del dispositivo
 - Numero di serie del dispositivo

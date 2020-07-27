@@ -2,7 +2,7 @@
 title: Aggiornamenti e manutenzione
 titleSuffix: Configuration Manager
 description: Informazioni sul metodo di manutenzione nella console denominato Aggiornamenti e manutenzione che semplifica l'individuazione e l'installazione degli aggiornamenti consigliati.
-ms.date: 06/30/2020
+ms.date: 07/17/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5eb1a5ef844a8dbf94cbde9d2c99986ce0634260
-ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
+ms.openlocfilehash: a177c51aad6bfd85adc0da8019646453eb969517
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86422804"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871969"
 ---
 # <a name="updates-and-servicing-for-configuration-manager"></a>Aggiornamenti e manutenzione per Configuration Manager
 
@@ -40,7 +40,7 @@ Dopo avere installato una versione di base, altre versioni di Configuration Mana
 
 - Installare gli aggiornamenti nella console per aggiornare la versione del sito principale.  
 
-- Nei siti primari figlio vengono installati automaticamente gli stessi aggiornamenti installati nel sito di amministrazione centrale. Controllare questa tempistica usando una finestra di manutenzione nel sito primario.  
+- Nei siti primari figlio vengono installati automaticamente gli stessi aggiornamenti installati nel sito di amministrazione centrale. Controllare questa tempistica usando un intervallo di servizio nel sito primario. Per altre informazioni, vedere [Intervalli di servizio](service-windows.md).  
 
 - Aggiornare manualmente i siti secondari a una nuova versione di aggiornamento dalla console.  
 

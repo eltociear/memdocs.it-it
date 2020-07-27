@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 55cecac47accf6dfa2efdc3b0905497260a652e5
-ms.sourcegitcommit: 1edcfb3ce4350ba1a6f36a6150e86301d35c631b
+ms.openlocfilehash: e7d80d2f528365e7759ce7ceb50639b0d474e329
+ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86390875"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86891463"
 ---
 <!-- 
 - Feature 1357546
@@ -108,8 +108,11 @@ Procedure dettagliate guidate che semplificano la risoluzione dei problemi relat
 
 ## <a name="new-and-updated-support-articles"></a>Articoli di supporto nuovi e aggiornati
 
-Articoli di supporto nuovi o aggiornati tra il 16 maggio e il 22 giugno 2020.
+Articoli di supporto nuovi o aggiornati tra il 16 maggio e il 17 luglio 2020.
 
+- [KB 4560496 Aggiornamento cumulativo per Microsoft Endpoint Configuration Manager, versione 2002](https://support.microsoft.com/help/4560496)
+- [KB 4569513 errore "Non trovato" quando si tenta di modificare Aggiorna tabelle del Catalogo applicazioni](https://support.microsoft.com/help/4569513)
+- [Errore di timeout KB 4574419 nell'interfaccia di amministrazione di Microsoft Endpoint Configuration Manager](https://support.microsoft.com/help/4574416)
 - [KB 4564442 Le distribuzioni di Windows 10 non riescono con Microsoft Deployment Toolkit nei computer con firmware di tipo BIOS](https://support.microsoft.com/help/4564442)
 - [KB 4563473 Aggiornamento cumulativo per i problemi di connessione del tenant di Configuration Manager versione 2002](https://support.microsoft.com/help/4563473)
 - [KB 4567007 Errori di avvio PXE o ritardo della sequenza delle attività dopo l'aggiornamento a Configuration Manager Current Branch, versione 2002](https://support.microsoft.com/help/4567007)

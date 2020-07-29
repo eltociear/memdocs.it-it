@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72fb278070e2d5b8581fb1b2e263aa06c90b5df9
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: a1d410da2cbedb9bcd2418fac1ddb783529ee8c6
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989751"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262592"
 ---
 # <a name="use-intune-to-remediate-vulnerabilities-identified-by-microsoft-defender-atp"></a>Usare Intune per risolvere le vulnerabilità identificate da Microsoft Defender ATP
 
@@ -75,7 +75,7 @@ Ecco un flusso di lavoro di esempio:
 - Configurare una connessione da servizio a servizio con Microsoft Defender ATP.
 - Distribuire un criterio di configurazione del dispositivo con un tipo di profilo **Microsoft Defender ATP (Windows 10 Desktop)** in dispositivi per cui ATP ha valutato la presenza di un rischio.
 
-  Per informazioni su come configurare Intune per usare ATP, vedere [Applicare la conformità per Microsoft Defender ATP con l'accesso condizionale in Intune](advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune).
+  Per informazioni su come configurare Intune per usare ATP, vedere [Applicare la conformità per Microsoft Defender ATP con l'accesso condizionale in Intune](advanced-threat-protection-configure.md#enable-microsoft-defender-atp-in-intune).
 
 ## <a name="work-with-security-tasks"></a>Gestire le attività di sicurezza
 
@@ -103,6 +103,7 @@ Ecco un flusso di lavoro di esempio:
 Dopo che la correzione ha esito positivo, il punteggio di esposizione al rischio in ATP può calare, in base alle nuove informazioni provenienti dai dispositivi sottoposti a correzione.
 
 ## <a name="next-steps"></a>Passaggi successivi
+
 Altre informazioni su Intune e [Microsoft Defender ATP](advanced-threat-protection.md).
 
 Rivedere [Mobile Threat Defense](mobile-threat-defense.md) di Intune.

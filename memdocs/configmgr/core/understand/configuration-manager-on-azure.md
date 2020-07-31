@@ -10,12 +10,12 @@ ms.assetid: d24257d8-8136-47f4-8e0d-34021356dc37
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c12372325573c6795396ff0832ca60cba68b8c29
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: c9d398d7fddab61014547fc0f8f64cd180e58ab6
+ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078499"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87438569"
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Configuration Manager in Azure: domande frequenti
 
@@ -84,7 +84,7 @@ Anche se Configuration Manager non è stato testato con i servizi di bilanciamen
 
 ## <a name="performance"></a>Prestazioni
 ### <a name="what-factors-affect-performance-in-this-scenario"></a>Quali fattori influiscono sulle prestazioni in questo scenario?
-[Tipo e dimensioni della VM di Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs), i dischi della VM di Azure (è consigliabile l'archiviazione Premium, in particolare per SQL Server), la latenza e le velocità di rete sono le aree più importanti.
+[Tipo e dimensioni della VM di Azure](/azure/virtual-machines/sizes), i dischi della VM di Azure (è consigliabile l'archiviazione Premium, in particolare per SQL Server), la latenza e le velocità di rete sono le aree più importanti.
 
 ### <a name="so-tell-me-more-about-azure-virtual-machines-what-size-vms-should-i-use"></a>Sono disponibili altre informazioni sulle macchine virtuali di Azure, in particolare quali dimensioni di VM è consigliabile usare?
 In generale, la potenza di calcolo (CPU e memoria) deve soddisfare l'[hardware consigliato per Configuration Manager](../plan-design/configs/recommended-hardware.md). Esistono tuttavia alcune differenze tra l'hardware del computer standard e le VM di Azure, soprattutto in relazione ai dischi usati da queste VM.  Le dimensioni di VM usate dipendono dalle dimensioni dell'ambiente. Ecco alcuni consigli:
@@ -157,7 +157,7 @@ Sì, è completamente diversa. [Peer cache](../plan-design/hierarchy/client-peer
 **Nozioni fondamentali:** https://azure.microsoft.com/documentation/articles/fundamentals-introduction-to-azure/
 
 **Tipi di VM di Azure:**
-- Dimensioni delle macchine virtuali di Azure: https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs/  
+- Dimensioni delle macchine virtuali di Azure: https://docs.microsoft.com/azure/virtual-machines/sizes  
 - Prezzi delle macchine virtuali: https://azure.microsoft.com/pricing/details/virtual-machines/  
 - Prezzi per l'archiviazione: https://azure.microsoft.com/pricing/details/storage/
 
@@ -169,7 +169,7 @@ Sì, è completamente diversa. [Peer cache](../plan-design/hierarchy/client-peer
 
 **Disponibilità:**
 - Contratti di servizio tempo di attività di Azure IaaS: https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_0/  
-- Set di disponibilità: https://azure.microsoft.com/documentation/articles/virtual-machines-manage-availability/
+- Set di disponibilità: https://docs.microsoft.com/azure/virtual-machines/windows/manage-availability
 
 **Connettività:**
 - ExpressRoute e VPN di Azure: https://azure.microsoft.com/blog/2014/06/10/expressroute-or-virtual-network-vpn-whats-right-for-me/

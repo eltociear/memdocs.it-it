@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: e9f9f4e6-5b4f-4b8f-94d6-db9b2b239113
-ms.openlocfilehash: 04793a053e85be051ce9ffafd2f15d274cf166f0
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: f276db618a2e67832ffa5575622e00eea02c7422
+ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84973078"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87438627"
 ---
 # <a name="manage-surface-drivers-with-configuration-manager"></a>Gestire i driver di Surface con Configuration Manager
 
@@ -162,4 +162,4 @@ Per altre informazioni sui driver di Surface, vedere i seguenti articoli:
 
 - [Considerazioni su Surface e System Center Configuration Manager](https://docs.microsoft.com/surface/considerations-for-surface-and-system-center-configuration-manager#deploy-surface-app-with-configuration-manager)
 - [Cronologia degli aggiornamenti di Surface](https://support.microsoft.com/help/4036283/surface-surface-update-history)
-- [Scaricare il firmware e i driver più recenti per i dispositivi Surface](https://docs.microsoft.com/surface/deploy-the-latest-firmware-and-drivers-for-surface-devices)
+- [Scaricare il firmware e i driver più recenti per i dispositivi Surface](/surface/manage-surface-driver-and-firmware-updates)

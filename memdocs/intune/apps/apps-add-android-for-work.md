@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/13/2020
+ms.date: 07/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8404c475bc5a84177abeba3a96fb613f04b9aa2b
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: bc8fb5b50475c523741128d64582be29d4bf5ffe
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461947"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262660"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Aggiungere app Google Play gestite a dispositivi Android Enterprise con Intune
 
@@ -122,6 +122,8 @@ Le app line-of-business possono essere aggiunte a Google Play gestito in due mod
 5. Selezionare **App private** accanto all'icona a forma di *lucchetto* nella finestra di Google Play. 
 6. Fare clic sul pulsante **"+"** in basso a destra per aggiungere una nuova app.
 7. Aggiungere **Titolo** dell'app e fare clic su **Upload APK** (Carica APK) per aggiungere il pacchetto dell'app APK.
+   > [!NOTE]
+   > Il nome del pacchetto dell'app deve essere univoco a livello globale in Google Play, non solo all'interno dell'organizzazione o dell'account per sviluppatore di Google Play. In caso contrario, verrà visualizzato l'errore **Upload a new APK file with a different package name** (Caricare un nuovo file APK con un nome pacchetto diverso).
 8. Scegliere **Crea**.
 9. Chiudere il riquadro Google Play gestito dopo aver aggiunto le app.
 10. Fare clic su **Sincronizza** nel riquadro **Aggiungi app** per eseguire la sincronizzazione con il servizio Google Play gestito. 

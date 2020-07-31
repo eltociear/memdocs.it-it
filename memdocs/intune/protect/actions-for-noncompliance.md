@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/19/2020
+ms.date: 07/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9e5786289e54071d54c11fbb08790e95e54a9377
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 2e881dc386fa0fe0b98b5e3d4480e1957c251808
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461862"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262677"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Configurare azioni per i dispositivi non conformi in Intune
 
@@ -147,8 +147,12 @@ Per inviare il messaggio di posta elettronica agli utenti, creare un modello di 
 
 5. In **Rivedi e crea** esaminare le configurazioni per assicurarsi che il modello di messaggio di notifica sia pronto per l'uso. Selezionare **Crea** per completare la creazione della notifica.
 
-> [!NOTE]
-> È anche possibile selezionare un modello di notifica esistente creato in precedenza e usare **Modifica** per modificare le informazioni e aggiornare il modello.
+### <a name="view-and-edit-notifications"></a>Visualizzare e modificare le notifiche
+
+Le notifiche create sono disponibili nella pagina *Criteri di conformità* > *Notifiche*. In questa pagina è possibile selezionare una notifica per visualizzarne la configurazione, oltre a eseguire le operazioni seguenti:
+
+- Selezionare **Invia il messaggio di posta elettronica di anteprima** per inviare un'anteprima del messaggio di posta elettronica di notifica all'account usato per accedere a Intune. 
+- Selezionare **Modifica** per *Informazioni di base* o *Tag di ambito* per apportare una modifica.
 
 ## <a name="add-actions-for-noncompliance"></a>Aggiungere azioni per la mancata conformità
 

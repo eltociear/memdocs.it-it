@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/11/2020
+ms.date: 07/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 41b11a29cdfd61382e68130479a1ab465bf354c6
-ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
+ms.openlocfilehash: 1da738611dd5fe114054645170d2b49ef12f0523
+ms.sourcegitcommit: e8076576f5c0ea7e72358d233782f8c38c184c8f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85107428"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87334607"
 ---
 # <a name="add-wired-network-settings-for-macos-devices-in-microsoft-intune"></a>Aggiungere le impostazioni della rete cablata per dispositivi macOS in Microsoft Intune
 
-È possibile creare un profilo con impostazioni della rete cablata specifiche, quindi distribuire questo profilo ai dispositivi macOS. Microsoft Intune offre numerose funzionalità, tra cui l'autenticazione in rete, l'aggiunta di un certificato PKCS o SCEP e altro ancora.
+È possibile creare un profilo con impostazioni della rete cablata specifiche, quindi distribuire questo profilo ai dispositivi macOS. Microsoft Intune offre numerose funzionalità, tra cui l'autenticazione in rete, l'aggiunta di un certificato SCEP e altro ancora.
 
 Questo articolo descrive le impostazioni che è possibile configurare.
 
@@ -63,8 +63,8 @@ Questo articolo descrive le impostazioni che è possibile configurare.
 
     - **Server trust** - **Nomi server di certificazione**: **aggiungere** uno o più nomi comuni usati nei certificati emessi dall'autorità di certificazione (CA) attendibile. Quando si immettono queste informazioni, è possibile ignorare la finestra relativa al trust dinamico visualizzata nei dispositivi degli utenti quando si connettono a questa rete.
     - **Certificato radice per la convalida server**: selezionare un profilo del certificato radice attendibile esistente. Questo certificato viene presentato al server quando il client si connette alla rete. Viene usato per autenticare la connessione.
-    - **Autenticazione client** - **Certificati**: selezionare il profilo di certificato client SCEP o PKCS che viene distribuito nel dispositivo. Questo certificato corrisponde all'identità presentata dal dispositivo al server per autenticare la connessione.
-    - **Privacy dell'identità (identità esterna)** : immettere il testo inviato in risposta a una richiesta di identità EAP. Questo testo può essere costituito da qualsiasi valore, ad esempio `anonymous`. Durante l'autenticazione, viene inviata inizialmente questa identità anonima, seguita da quella effettiva inviata tramite un tunnel sicuro.
+    - **Autenticazione client** - **Certificati**: selezionare il profilo di certificato client SCEP che viene distribuito anche nel dispositivo. Questo certificato corrisponde all'identità presentata dal dispositivo al server per autenticare la connessione. I certificati PKCS non sono supportati.
+    - **Privacy dell'identità (identità esterna)** : immettere il testo inviato nella risposta a una richiesta di identità EAP. Questo testo può essere costituito da qualsiasi valore, ad esempio `anonymous`. Durante l'autenticazione, viene inviata inizialmente questa identità anonima, seguita da quella effettiva inviata tramite un tunnel sicuro.
 
   - **EAP-TTLS**: Specificare anche:
 
@@ -77,8 +77,8 @@ Questo articolo descrive le impostazioni che è possibile configurare.
           - **Challenge Heshake Authentication Protocol (CHAP)**
           - **Microsoft CHAP (MS-CHAP)**
           - **Microsoft CHAP versione 2 (MS-CHAP v2)**
-      - **Certificati**: selezionare il profilo di certificato client SCEP o PKCS che viene distribuito nel dispositivo. Questo certificato corrisponde all'identità presentata dal dispositivo al server per autenticare la connessione.
-      - **Privacy dell'identità (identità esterna)** : immettere il testo inviato in risposta a una richiesta di identità EAP. Questo testo può essere costituito da qualsiasi valore, ad esempio `anonymous`. Durante l'autenticazione, viene inviata inizialmente questa identità anonima, seguita da quella effettiva inviata tramite un tunnel sicuro.
+      - **Certificati**: selezionare il profilo di certificato client SCEP che viene distribuito anche nel dispositivo. Questo certificato corrisponde all'identità presentata dal dispositivo al server per autenticare la connessione. I certificati PKCS non sono supportati.
+      - **Privacy dell'identità (identità esterna)** : immettere il testo inviato nella risposta a una richiesta di identità EAP. Questo testo può essere costituito da qualsiasi valore, ad esempio `anonymous`. Durante l'autenticazione, viene inviata inizialmente questa identità anonima, seguita da quella effettiva inviata tramite un tunnel sicuro.
 
   - **LEAP**
 
@@ -88,8 +88,8 @@ Questo articolo descrive le impostazioni che è possibile configurare.
     - **Certificato radice per la convalida server**: selezionare un profilo del certificato radice attendibile esistente. Questo certificato viene presentato al server quando il client si connette alla rete. Viene usato per autenticare la connessione.
     - **Autenticazione client**: selezionare un **metodo di autenticazione**. Le opzioni disponibili sono:
       - **Nome utente e password**: richiede all'utente di specificare nome utente e password per autenticare la connessione.
-      - **Certificati**: selezionare il profilo di certificato client SCEP o PKCS che viene distribuito nel dispositivo. Questo certificato corrisponde all'identità presentata dal dispositivo al server per autenticare la connessione.
-      - **Privacy dell'identità (identità esterna)** : immettere il testo inviato in risposta a una richiesta di identità EAP. Questo testo può essere costituito da qualsiasi valore, ad esempio `anonymous`. Durante l'autenticazione, viene inviata inizialmente questa identità anonima, seguita da quella effettiva inviata tramite un tunnel sicuro.
+      - **Certificati**: selezionare il profilo di certificato client SCEP che viene distribuito anche nel dispositivo. Questo certificato corrisponde all'identità presentata dal dispositivo al server per autenticare la connessione. I certificati PKCS non sono supportati.
+      - **Privacy dell'identità (identità esterna)** : immettere il testo inviato nella risposta a una richiesta di identità EAP. Questo testo può essere costituito da qualsiasi valore, ad esempio `anonymous`. Durante l'autenticazione, viene inviata inizialmente questa identità anonima, seguita da quella effettiva inviata tramite un tunnel sicuro.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

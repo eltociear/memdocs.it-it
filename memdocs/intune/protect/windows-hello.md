@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/08/2020
+ms.date: 07/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: 64a76911725e5d596a80ecc67e42f088666017de
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: d120ee0f55651ab1661e426e5889aaf8a4c7e670
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531894"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262864"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Integrare Windows Hello for Business in Microsoft Intune  
 
@@ -32,13 +32,21 @@ Hello for Business è un metodo di accesso alternativo che usa Active Directory 
 
 Intune si integra con Hello for Business in due modi:
 
-- **A livello di tenant**: È possibile creare criteri Intune in *Registrazione del dispositivo*. Questi criteri hanno come destinazione tutta l'organizzazione, ovvero agiscono a livello di tenant. Supportano la Configurazione guidata di Windows AutoPilot e vengono applicati quando un dispositivo viene registrato.
-- **Gruppi discreti**: è possibile distribuire i criteri che gestiscono Windows Hello for Business nei dispositivi registrati in Intune. I tipi di criteri che possono gestire Windows Hello includono i profili di *protezione delle identità* creati in *Configurazione del dispositivo*, varie *baseline di sicurezza* e i profili di *protezione degli account* di sicurezza degli endpoint. Questi tipi di profilo sono destinati a utenti o dispositivi assegnati e vengono applicati durante la sincronizzazione.
+- **A livello di tenant** (*questo articolo)* : È possibile creare criteri Intune in *Registrazione del dispositivo*. Questi criteri hanno come destinazione tutta l'organizzazione, ovvero agiscono a livello di tenant. Supportano la Configurazione guidata di Windows AutoPilot e vengono applicati quando un dispositivo viene registrato.
+- **Gruppi discreti**: per i dispositivi registrati in precedenza con Intune, usare un profilo [**Protezione delle identità**](../protect/identity-protection-configure.md) della configurazione di dispositivi per configurare i dispositivi per Windows Hello for Business. I profili di protezione delle identità possono essere destinati a utenti o dispositivi assegnati e vengono applicati durante la sincronizzazione.
 
-Usare questo articolo per creare criteri di Windows Hello for Business predefiniti che abbiano come destinazione tutta l'organizzazione. Per creare un profilo di Identity Protection che viene applicato per selezionare gruppi di utenti e di dispositivi, vedere [Configure an identity protection profile](identity-protection-configure.md) (Configurare un profilo di Identity Protection).  
+Intune supporta anche i tipi di criteri seguenti per gestire alcune impostazioni per Windows Hello for Business:
+
+- [**Baseline di sicurezza**](../protect/security-baselines.md). Le baseline seguenti includono le impostazioni per Windows Hello for Business:
+  - [Impostazioni baseline di Microsoft Defender Advanced Threat Protection](../protect/security-baseline-settings-defender-atp.md#windows-hello-for-business)
+  - [Impostazioni baseline di sicurezza di Windows MDM](../protect/security-baseline-settings-mdm-all.md#windows-hello-for-business)
+- Criteri di [**protezione account**](../protect/endpoint-security-account-protection-policy.md) per la sicurezza degli endpoint. Vedere le [impostazioni di protezione account](../protect/endpoint-security-account-protection-profile-settings.md#account-protection).
+
+Questo articolo illustra come creare criteri predefiniti di Windows Hello for Business che abbiano come destinazione l'intera organizzazione.
 
 > [!IMPORTANT]
 > Nelle versioni di Windows 10 Desktop e Mobile precedenti all'aggiornamento dell'anniversario era possibile impostare due diversi PIN da usare per l'autenticazione alle risorse:
+>
 > - Il **PIN dispositivo** che poteva essere usato per sbloccare il dispositivo e connetterlo alle risorse cloud.
 > - Il **PIN di lavoro** che veniva usato per accedere alle risorse di Azure AD nei dispositivi personali dell'utente (BYOD).
 > 

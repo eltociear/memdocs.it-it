@@ -1,11 +1,11 @@
 ---
-title: Personalizzare il profilo VPN per app per Android in Microsoft Intune - Azure | Microsoft Docs
-description: Informazioni su come creare un profilo VPN per app specifiche per i dispositivi amministratore di dispositivi Android gestiti da Microsoft Intune.
+title: Personalizzare il profilo VPN per singole app per l'amministratore di dispositivi Android in Microsoft Intune - Azure | Microsoft Docs
+description: Usare un profilo personalizzato per i profili VPN per singole app per l'amministratore di dispositivi Android con i tipi di connessione Pulse Secure o Citrix VPN in Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 07/22/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,25 +17,28 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a351255fa0574e9b92d096b3895f9469ed9ced2a
-ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
+ms.openlocfilehash: 3c8e09b6010f7fc846fd81281053eaaa722e5ef4
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86137374"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262796"
 ---
 # <a name="use-a-microsoft-intune-custom-profile-to-create-a-per-app-vpn-profile-for-android-devices"></a>Usare un profilo personalizzato di Microsoft Intune per creare un profilo VPN per ogni app per dispositivi Android
 
 È possibile creare un profilo VPN per app specifiche per i dispositivi Android 5.0 e versione successiva gestiti da Intune. Creare prima un profilo VPN che usa il tipo di connessione Pulse Secure o Citrix. Definire quindi criteri di configurazione personalizzati che associano il profilo ad app specifiche.
 
-> [!NOTE]
-> Per usare la VPN per app nei dispositivi Android Enterprise, è anche possibile seguire questi passaggi. È tuttavia consigliabile usare i [criteri di configurazione dell'app](../apps/app-configuration-vpn-ae.md) per l'app client VPN.
+Questa funzionalità si applica a:
+
+- Amministratore dispositivo Android
+
+Per usare la VPN per singole app nei dispositivi Android Enterprise, usare i [criteri di configurazione dell'app](../apps/app-configuration-vpn-ae.md). I criteri di configurazione dell'app supportano più app client VPN. Nei dispositivi Android Enterprise è possibile seguire la procedura descritta in questo articolo. Tuttavia, non è consigliabile e può essere usata solo con le connessioni Pulse Secure e Citrix VPN.
 
 Dopo aver assegnato i criteri ai gruppi di utenti o ai dispositivi Android, gli utenti devono avviare la VPN Pulse Secure o Citrix. Il client VPN consente quindi il traffico solo dalle app specificate per usare la connessione VPN aperta.
 
 > [!NOTE]
 >
-> Per questo profilo sono supportati solo i tipi di connessione Pulse Secure e Citrix.
+> Per l'amministratore di dispositivi Android sono supportati solo i tipi di connessione Pulse Secure e Citrix. Nei dispositivi Android Enterprise usare i [criteri di configurazione dell'app](../apps/app-configuration-vpn-ae.md).
 
 ## <a name="step-1-create-a-vpn-profile"></a>Passaggio 1: Creare un profilo VPN
 
@@ -80,10 +83,9 @@ Dopo aver assegnato i criteri ai gruppi di utenti o ai dispositivi Android, gli 
     - **Tipo di dati**: Immettere **String**.
     - **Valore**: Immettere un elenco separato da punti e virgola dei pacchetti da associare al profilo. Se ad esempio si vuole che Excel e il browser Google Chrome usino la connessione VPN, immettere `com.microsoft.office.excel;com.android.chrome`.
 
-    > [!div class="mx-imgBorder"]
-    >![Esempio di criterio personalizzato della VPN per app di amministratore di dispositivi Android](./media/android-pulse-secure-per-app-vpn/android_per_app_vpn_oma_uri.png)
+    :::image type="content" source="./media/android-pulse-secure-per-app-vpn/android_per_app_vpn_oma_uri.png" alt-text="Criteri personalizzati della VPN per singole app per un amministratore di dispositivi Android":::
 
-### <a name="set-your-app-list-to-blacklist-or-whitelist-optional"></a>Impostare l'elenco di app come blacklist o whitelist (facoltativo)
+### <a name="set-your-blocked-and-allowed-app-list-optional"></a>Impostare l'elenco di app bloccate e consentite (facoltativo)
 
 Usare il valore *BLACKLIST* per specificare un elenco di app che **non possono** usare la connessione VPN. Tutte le altre app si connettono mediante la VPN. Oppure usare il valore **WHITELIST** per specificare un elenco di app che *possono* usare la connessione VPN. Le app non incluse nell'elenco non si connettono tramite la VPN.
 

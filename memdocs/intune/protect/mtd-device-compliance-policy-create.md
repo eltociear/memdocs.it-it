@@ -1,12 +1,12 @@
 ---
-title: Creare criteri di conformità dei dispositivi MTD con Microsoft Intune
+title: Creare criteri di conformità dei dispositivi Mobile Threat Defense (MTD) con Microsoft Intune
 titleSuffix: Microsoft Intune
 description: Creare criteri di conformità dei dispositivi di Intune che usano i livelli di minaccia del partner MTD per determinare se un dispositivo mobile può accedere alle risorse aziendali.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/21/2020
+ms.date: 07/28/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 06e975e386b0d754b03e75ffeda456a432a6dc4b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 88f8a2ff04f536370f613341170e7fae0a808ff6
+ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83984992"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87365526"
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>Creare criteri di conformità dei dispositivi Mobile Threat Defense (MTD) con Intune
 
@@ -34,7 +34,7 @@ Intune con MTD consente di rilevare le minacce e valutare il rischio nei disposi
 
 ## <a name="before-you-begin"></a>Prima di iniziare
 
-Nell'ambito della configurazione di MTD, nella console partner di MTD sono stati creati criteri per la classificazione delle varie minacce come ad alto, medio o basso rischio. È ora necessario impostare il livello di Mobile Threat Defense nei criteri di conformità dei dispositivi Intune.
+Nell'ambito della configurazione di MTD, nella console partner di MTD sono stati creati criteri per la classificazione delle varie minacce come ad alto, medio o basso rischio. Impostare quindi il livello di Mobile Threat Defense nei criteri di conformità dei dispositivi Intune.
 
 Prerequisiti dei criteri di conformità dei dispositivi con MTD:
 
@@ -44,13 +44,14 @@ Prerequisiti dei criteri di conformità dei dispositivi con MTD:
 
 1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selezionare **Dispositivo** > **Criteri di conformità** > **Crea criterio**.
+2. Selezionare **Sicurezza degli endpoint** > **Conformità del dispositivo** > **Crea un criterio**.
 
-3. Specificare **Nome**, **Descrizione** per il criterio di conformità del dispositivo, selezionare la **Piattaforma**, quindi scegliere **Configura** nella sezione **Impostazioni**.
+3. Selezionare **Piattaforma**, quindi **Crea**.
 
-4. Nel riquadro **Criteri di conformità** scegliere **Integrità del dispositivo**.
+4. In **Informazioni di base** specificare i criteri di conformità del dispositivo **Nome** e **Descrizione** (facoltativo). Selezionare **Avanti** per continuare.
 
-5. Nel riquadro **Integrità del dispositivo** scegliere il livello di minaccia per dispositivi mobili nell'elenco a discesa in **Richiedi che il dispositivo si trovi al massimo al livello di minaccia del dispositivo**.
+
+5. In **Impostazioni di conformità** espandere e configurare **Integrità del dispositivo**. Scegliere il livello di minaccia per dispositivi mobili nell'elenco a discesa in **Richiedi che il dispositivo si trovi al massimo al livello di minaccia del dispositivo**.
 
    - **Protetti**: questo livello è il più sicuro. Nel dispositivo non possono essere presenti minacce per poter accedere alle risorse aziendali. Se viene rilevata qualsiasi minaccia, il dispositivo viene valutato come non conforme.
 
@@ -58,24 +59,30 @@ Prerequisiti dei criteri di conformità dei dispositivi con MTD:
 
    - **Media**: il dispositivo è conforme se le minacce presenti nel dispositivo sono di livello basso o medio. Se viene rilevata la presenza di minacce di livello alto, il dispositivo viene determinato come non conforme.
 
-   - **Alta**: questo livello è il meno sicuro. Questa impostazione consente tutti i livelli di minacce e usa Mobile Threat Defense solo a scopi di report. È necessario che nei dispositivi l'app MTD sia attivata con questa impostazione.
+   - **Alta**: Questo livello di minaccia è il meno sicuro e consente tutti i livelli di minaccia, usando Mobile Threat Defense solo a scopo di report. È necessario che nei dispositivi l'app MTD sia attivata con questa impostazione.
 
-6. Selezionare **OK** due volte, quindi scegliere **Crea** per creare i criteri.
+6. Selezionare **Avanti** per passare ad **Assegnazioni**. Selezionare i gruppi che riceveranno questo profilo. Per altre informazioni sull'assegnazione di profili, vedere [Assegnare profili utente e dispositivo](../configuration/device-profile-assign.md).
+
+   Selezionare **Avanti**.
+
+7. Al termine, nella pagina **Rivedi e crea** scegliere **Crea**. Il nuovo profilo viene visualizzato nell'elenco quando si seleziona il tipo di criterio per il profilo creato.
 
 > [!IMPORTANT]
 > Se si creano criteri di accesso condizionale per Office 365 o altri servizi, viene eseguita la valutazione della conformità dei dispositivi e per i dispositivi non conformi viene bloccato l'accesso alle risorse aziendali fino alla risoluzione della condizione di minaccia nei dispositivi interessati.
 
 ## <a name="to-assign-an-mtd-device-compliance-policy"></a>Per assegnare criteri di conformità per dispositivi MTD
 
-Per assegnare criteri di conformità dei dispositivi agli utenti:
+Per assegnare o modificare l'assegnazione dei criteri di conformità dei dispositivi agli utenti:
 
 1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Selezionare **Dispositivo** > **Criteri di conformità**.
+2. Selezionare **Sicurezza degli endpoint** > **Conformità del dispositivo**.
 
-3. Selezionare il criterio da assegnare agli utenti, quindi selezionare **Assegnazioni**. Usare le opzioni disponibili per *includere* ed *escludere* i gruppi che riceveranno questo criterio.  
+3. Selezionare i criteri da assegnare agli utenti, quindi selezionare **Proprietà**.
 
-4. Selezionare Salva per completare l'assegnazione. Quando si salva l'assegnazione, i criteri vengono distribuiti agli utenti selezionati e i relativi dispositivi vengono valutati per la conformità.
+4. Selezionare **Modifica** per Assegnazioni, quindi usare le opzioni disponibili per *includere* ed *escludere* i gruppi che riceveranno questo criterio.  
+
+5. Selezionare **Verifica e salva** per completare l'assegnazione. Quando si salva l'assegnazione, i criteri vengono distribuiti agli utenti selezionati e i relativi dispositivi vengono valutati per la conformità.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/20/2020
+ms.date: 07/28/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,18 +16,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1916004d8e61239d7de92a77769ee970cc7a3118
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: 72d0345c91f525fb6dc28adeabe8522801c51a9f
+ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565608"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87365424"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Creare profili VPN per la connessione ai server VPN in Intune
 
 Le reti private virtuali (VPN) offrono agli utenti accesso remoto sicuro alla rete dell'organizzazione. I dispositivi usano un profilo di connessione VPN per avviare una connessione con il server VPN. I **profili VPN** in Microsoft Intune assegnano le impostazioni VPN agli utenti e ai dispositivi dell'organizzazione. Usare queste impostazioni in modo che gli utenti possano connettersi in modo semplice e sicuro alla rete aziendale.
 
 Si supponga, ad esempio, di voler configurare i dispositivi iOS/iPadOS con le impostazioni necessarie per connettersi a una condivisione file nella rete dell'organizzazione. Si crea un profilo VPN che include queste impostazioni e si assegna questo profilo a tutti gli utenti che hanno un dispositivo iOS/iPadOS. Gli utenti visualizzeranno la connessione VPN nell'elenco delle reti disponibili e potranno connettersi con la massima facilità.
+
+> [!NOTE]
+> La registrazione utenti per iOS/iPadOS e macOS supporta solo [VPN per singole app](vpn-setting-configure-per-app.md).
 
 > [!NOTE]
 > È possibile usare [i criteri di configurazione personalizzati di Intune](custom-settings-configure.md) per creare profili VPN per le piattaforme seguenti:

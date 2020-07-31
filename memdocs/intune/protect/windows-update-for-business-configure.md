@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d246ea2811e0fb561bc623ae29d3fb5ef0de66f9
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 70f8033f694dfafefc92696df0b0e6ea652e2feb
+ms.sourcegitcommit: 24fcf19054dcd62429f6181cdc568d894e01b99a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989386"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86946661"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Gestire gli aggiornamenti software di Windows 10 in Intune
 
@@ -221,6 +221,8 @@ Per l'uso degli aggiornamenti delle funzionalità di Windows 10 in Intune, devon
   - Gli aggiornamenti delle funzionalità per l'anello di aggiornamento devono essere *in esecuzione*. Non devono essere sospesi.
 
 - I criteri di aggiornamento delle funzionalità di Windows 10 non possono essere applicati durante la configurazione guidata di Autopilot e verranno applicati solo alla prima analisi di Windows Update dopo il completamento del provisioning di un dispositivo, che richiede in genere un giorno.
+
+- Sebbene gli aggiornamenti delle funzionalità di Windows 10 rimangano in anteprima pubblica, quando i dispositivi vengono gestiti sia con Configuration Manager sia con Intune, esiste una limitazione per cui è possibile che i criteri di aggiornamento delle funzionalità non siano immediatamente effettivi, causando un aggiornamento delle funzionalità nei dispositivi successivo rispetto a quello configurato in Intune. Questa limitazione verrà rimossa con un aggiornamento futuro per Configuration Manager.
 
 ### <a name="create-and-assign-windows-10-feature-updates"></a>Creare e assegnare gli aggiornamenti delle funzionalità di Windows 10
 

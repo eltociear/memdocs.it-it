@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/14/2020
+ms.date: 07/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ad862ff1f04558bd699db2ef0c09d4da4654e23
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: d979001f159b427314f8bc53788ccce0acd13d11
+ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461964"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87365543"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Come personalizzare le app Portale aziendale Intune, il sito Web Portale aziendale e l'app Intune
 
@@ -178,9 +178,9 @@ Intune supporta la verifica dell'identità personale (PIV, Personal Identity Ver
 
 Per altre informazioni sulle credenziali derivate per i dispositivi iOS/iPadOS, vedere [Usare le credenziali derivate in Microsoft Intune](../protect/derived-credentials.md).
 
-## <a name="dark-mode-for-iosipados-company-portal"></a>Modalità scura per il portale aziendale iOS/iPadOS
+## <a name="dark-mode-for-the-company-portal"></a>Modalità scura per il Portale aziendale
 
-La modalità scura è disponibile per il portale aziendale iOS/iPadOS. Gli utenti possono scaricare le app, gestire i propri dispositivi e ottenere supporto tecnico nella combinazione di colori scelta in base alle impostazioni del dispositivo. Il portale aziendale iOS/iPadOS adatterà automaticamente le impostazioni del dispositivo dell'utente finale per la modalità scura o chiara.
+La modalità scura è disponibile per il Portale aziendale iOS/iPadOS, macOS e Windows. Gli utenti possono scaricare le app, gestire i propri dispositivi e ottenere supporto tecnico nella combinazione di colori scelta in base alle impostazioni del dispositivo. Il Portale aziendale iOS/iPadOS, macOS e Windows adatterà automaticamente le impostazioni del dispositivo dell'utente finale per la modalità scura o chiara.
 
 ## <a name="windows-company-portal-keyboard-shortcuts"></a>Tasti di scelta rapida per il portale aziendale di Windows
 

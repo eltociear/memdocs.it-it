@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/18/2020
+ms.date: 07/28/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 16a2558a0f4b002528e749f4a66d3341e83c8576
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: a9fad599342cf358409c7be09ebb8b4eb1c0c4a5
+ms.sourcegitcommit: e8076576f5c0ea7e72358d233782f8c38c184c8f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989677"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87334624"
 ---
 # <a name="manage-bitlocker-policy-for-windows-10-in-intune"></a>Gestire i criteri BitLocker per Windows 10 in Intune
 
@@ -168,11 +168,11 @@ Per supportare la rotazione della chiave di ripristino di BitLocker, è necessar
 
 - I dispositivi devono eseguire Windows 10 versione 1909 o successiva
 
-- Per i dispositivi aggiunti ad Azure AD e ad AD ibrido, il supporto per la rotazione delle chiavi deve essere abilitato:
+- Per i dispositivi aggiunti ad Azure AD e ad AD ibrido, il supporto per la rotazione delle chiavi deve essere abilitato tramite la configurazione dei criteri di BitLocker:
 
-  - **Rotazione delle password di ripristino basata su client**
-
-  Questa impostazione si trova in *Crittografia di Windows* come parte di un criterio di configurazione del dispositivo per Windows 10 Endpoint Protection.
+  - **Rotazione password di ripristino basata sul client** per *abilitare la rotazione nei dispositivi aggiunti ad Azure AD* o *abilitare la rotazione nei dispositivi aggiunti ad Azure AD e AD ibrido*
+  - **Salva le informazioni di ripristino di BitLocker in Azure Active Directory** su *Abilitata*
+  - **Archivia le informazioni di ripristino in Azure Active Directory prima di abilitare BitLocker** su *Obbligatorio*
 
 #### <a name="to-rotate-the-bitlocker-recovery-key"></a>Per ruotare la chiave di ripristino di BitLocker
 

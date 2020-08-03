@@ -2,7 +2,7 @@
 title: Novità della versione 2002
 titleSuffix: Configuration Manager
 description: Informazioni dettagliate sulle modifiche e sulle nuove funzionalità introdotte nella versione 2002 di Configuration Manager Current Branch.
-ms.date: 07/15/2020
+ms.date: 07/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3c5107ffe26c72852cbc1dbaa15eb19a990c7939
-ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
+ms.openlocfilehash: 5b2fcaeb9cb5bd4ce3e41aed8e1bafcc7f76bbb4
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86422855"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262116"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Novità della versione 2002 di Configuration Manager Current Branch
 
@@ -434,16 +434,17 @@ A parte le nuove funzionalità, questa versione include anche ulteriori modifich
 
 L'aggiornamento cumulativo seguente (4560496) è disponibile nella console a partire dal 15 luglio 2020: [Aggiornamento cumulativo per Microsoft Endpoint Configuration Manager, versione 2002](https://support.microsoft.com/help/4560496).
 
-<!--
-### Hotfixes
+### <a name="hotfixes"></a>Hotfix
 
-The following additional hotfixes are available to address specific issues:
+Gli hotfix aggiuntivi seguenti sono disponibili per la risoluzione di problemi specifici:
 
-| ID | Title | Date | In-console |
+| ID | Titolo | Date | Nella console |
 |---------|---------|---------|---------|
-| [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune connector certificate does not renew in Configuration Manager | 18 January 2019 | Yes |
+| [4575339](https://support.microsoft.com/help/4575339) | I dispositivi vengono visualizzati due volte nell'interfaccia di amministrazione di Microsoft Endpoint Configuration Manager | 23 luglio 2020 | No |
+| [4575774](https://support.microsoft.com/help/4575774) | Il cmdlet New-CMTSStepPrestartCheck ha esito negativo in Configuration Manager versione 2002 | 24 luglio 2020 | No |
 
-> [!NOTE]  
+<!--
+> [!NOTE]
 > Starting in version 1902, in-console hotfixes now have supersedence relationships. For more information, see [Supersedence for in-console hotfixes](../../servers/manage/updates.md#bkmk_supersede).
 -->
 

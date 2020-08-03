@@ -2,7 +2,7 @@
 title: Piani di distribuzione in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Informazioni sui piani di distribuzione in Desktop Analytics.
-ms.date: 05/11/2020
+ms.date: 07/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: ccc325ac4b8e02142a1442862ad661a77b0561f2
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: acaa7c8a906edd78f0c54c5735c97c55434d848b
+ms.sourcegitcommit: 7ee69b207261ffc282e535f793a536540d160557
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268488"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87400716"
 ---
 # <a name="about-deployment-plans-in-desktop-analytics"></a>Informazioni sui pani di distribuzione in Desktop Analytics
 
@@ -47,6 +47,8 @@ Nel piano di distribuzione sono previste le azioni seguenti:
 Per impostazione predefinita, Desktop Analytics aggiorna quotidianamente i dati del piano di distribuzione. Tutte le modifiche apportate in un piano di distribuzione, ad esempio l'assegnazione dell'importanza a un'app o la scelta di un dispositivo da includere in un progetto pilota, vengono elaborate nelle 24 ore. Per velocizzare questo processo, richiedere un aggiornamento dati su richiesta. Per altre informazioni, vedere [Domande frequenti su Desktop Analytics](faq.md#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal).  
 
 Dopo aver connesso Desktop Analytics a Configuration Manager, selezionare le raccolte nei piani di distribuzione. Questa integrazione consente di distribuire Windows in una raccolta che si basa sui dati di Desktop Analytics.
+
+I piani di distribuzione supportano le tre versioni più recenti di Windows 10 come destinazione. Desktop Analytics aggiungerà il supporto per una nuova versione di Windows 10 entro 45 giorni dopo la disponibilità. In quel momento, anche il servizio eliminerà la versione meno recente. Non sarà possibile usare i piani di distribuzione destinati alla versione meno recente. Se sono disponibili piani di distribuzione in corso destinati alla versione meno recente supportata in Desktop Analytics, completare la distribuzione entro 45 giorni dalla disponibilità di una nuova versione di Windows 10.
 
 ## <a name="readiness-rules"></a>Regole di idoneità
 

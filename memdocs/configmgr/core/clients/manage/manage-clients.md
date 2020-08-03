@@ -10,12 +10,12 @@ ms.assetid: 3986a992-c175-4b6f-922e-fc561e3d7cb7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7b9111e3be82424425561e0a664fee955d73ee63
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: b6d1ee82e116a6d4375e37ccca84c8b35707f8e1
+ms.sourcegitcommit: e8076576f5c0ea7e72358d233782f8c38c184c8f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270821"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87334590"
 ---
 # <a name="how-to-manage-clients-in-configuration-manager"></a>Come gestire i client in Configuration Manager
 
@@ -249,22 +249,24 @@ Il percorso predefinito per la cache del client di Configuration Manager è `%wi
 
 ### <a name="about-the-client-cache"></a>Informazioni sulla cache del client  
 
-Il client di Configuration Manager scarica il contenuto per il software richiesto non appena riceve la distribuzione ma non effettua l'esecuzione fino all'ora di distribuzione pianificata. All'ora pianificata, il client di Configuration Manager controlla se il contenuto è disponibile nella cache. Se il contenuto è disponibile nella cache e la versione è corretta, il client usa il contenuto nella cache. Quando la versione richiesta del contenuto viene modificata o se il contenuto viene eliminato dal client per liberare spazio per un altro pacchetto, il client scarica nuovamente il contenuto nella cache.  
+Il client di Configuration Manager scarica il contenuto per il software richiesto non appena diventa disponibile la distribuzione, ma non effettua l'esecuzione fino all'ora pianificata della distribuzione. All'ora pianificata, il client di Configuration Manager controlla se il contenuto è disponibile nella cache. Se il contenuto è disponibile nella cache e la versione è corretta, il client usa il contenuto nella cache. Quando la versione richiesta del contenuto viene modificata o se il contenuto viene eliminato dal client per liberare spazio per un altro pacchetto, il client scarica nuovamente il contenuto nella cache.  
 
 Se il client tenta di scaricare il contenuto per un programma o un'applicazione di dimensioni superiori rispetto a quelle della cache, la distribuzione ha esito negativo perché le dimensioni della cache non sono sufficienti. Il client genera il messaggio di stato 10050 per dimensioni della cache non sufficienti. Se le dimensioni della cache vengono aumentate in un secondo momento, il risultato è il seguente:  
 
 - Per un programma richiesto: il client non tenterà automaticamente di nuovo di scaricare il contenuto. Ridistribuire il programma e il pacchetto al client.  
 - Per un'applicazione richiesta: il client proverà automaticamente a scaricare il contenuto al momento del download dei criteri client.  
 
-Se il client tenta di scaricare un pacchetto di dimensioni inferiori rispetto a quelle della cache, ma la cache è piena, tutte le distribuzioni *richieste* eseguiranno altri tentativi fino a quando:
+Se il client tenta di scaricare contenuto di dimensioni inferiori rispetto a quelle della cache, ma la cache è piena, tutte le distribuzioni *richieste* eseguiranno altri tentativi fino a quando:
 
 - Non sarà disponibile spazio nella cache
 - Non si verificherà un timeout del download
 - Non verrà raggiunto il numero massimo di tentativi
 
-Se in seguito la dimensione della cache viene aumentata, il client tenterà di scaricare nuovamente il pacchetto al successivo intervallo tra tentativi. Il client tenterà di scaricare il contenuto ogni quattro ore per un massimo di 18 tentativi.  
+Se in seguito la dimensione della cache viene aumentata, il client tenterà di scaricare nuovamente il contenuto al successivo intervallo tra tentativi. Il client tenterà di scaricare il contenuto ogni quattro ore per un massimo di 18 tentativi.  
 
-Il contenuto memorizzato nella cache non viene eliminato automaticamente. Rimane nella cache per almeno un giorno dopo l'uso da parte del client. Se si configurano le proprietà del pacchetto con l'opzione per mantenere il contenuto nella cache del client, il client non lo elimina automaticamente. Se lo spazio nella cache viene usato da pacchetti scaricati nelle ultime 24 ore e il client deve scaricare nuovi pacchetti, aumentare le dimensioni della cache oppure scegliere l'opzione per eliminare il contenuto della cache persistente.  
+Il contenuto memorizzato nella cache non viene eliminato automaticamente. Rimane nella cache per almeno un giorno dopo l'uso da parte del client. Se si configura il contenuto con l'opzione per mantenere il contenuto nella cache del client, il client non lo elimina automaticamente. Se lo spazio nella cache viene usato dal contenuto scaricato nelle ultime 24 ore e il client deve scaricare nuovo contenuto, è possibile aumentare le dimensioni della cache oppure scegliere l'opzione per eliminare il contenuto della cache persistente.
+
+Solo per le applicazioni, se il contenuto per una distribuzione correlata esiste attualmente nella cache, il client scaricherà solo i file nuovi o modificati. Le distribuzioni correlate includono quelle per le revisioni precedenti dello stesso tipo di distribuzione e delle applicazioni sostituite.
 
 Usare le seguenti procedure per configurare la cache client durante l'installazione client manuale oppure dopo l'installazione client.  
 

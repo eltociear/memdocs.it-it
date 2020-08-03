@@ -2,7 +2,7 @@
 title: Hub della community e GitHub
 titleSuffix: Configuration Manager
 description: Abilitare e usare l'hub della community di Configuration Manager
-ms.date: 07/10/2020
+ms.date: 07/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 88cead9a-64fe-471e-b57c-81707cefe46c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8aadc391c5c0b259ab1a1736f3654f25b98dbae0
-ms.sourcegitcommit: aa876a9b5aa9437ae59a68e1cc6355d7070f89f4
+ms.openlocfilehash: c0b812fa3b373d6bd5bd2bebed8b1540ceb7bdd6
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86236410"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262082"
 ---
 # <a name="community-hub-and-github"></a>Hub della community e GitHub
 <!--3555935, 3555936-->
@@ -44,10 +44,7 @@ L'hub della community supporta gli oggetti seguenti:
       - Windows Server non è supportato, pertanto è necessario installare la console di Configuration Manager in un dispositivo Windows 10 separato dal server del sito.
    - L'account utente connesso non può essere l'account amministratore predefinito
 
-- Per scaricare i report, è necessario attivare l'opzione **Usa i certificati generati da Configuration Manager per sistemi del sito HTTP** nel sito in cui viene eseguita l'importazione. Per altre informazioni, vedere [HTTP migliorato](/sccm/core/plan-design/hierarchy/enhanced-http).
-   1. Passare ad **Amministrazione** > **Configurazione del sito** > **Siti**.
-   1. Selezionare il sito e scegliere **Proprietà** nella barra multifunzione.
-   1. Nella scheda **Sicurezza delle comunicazioni** selezionare l'opzione **Usa i certificati generati da Configuration Manager per sistemi del sito HTTP**.
+- Il [servizio di amministrazione](../../../develop/adminservice/set-up.md) in Configuration Manager deve essere configurato e funzionante.
 
 - Se l'organizzazione limita le comunicazioni della rete con Internet tramite un firewall o un dispositivo proxy, è necessario consentire alla console di Configuration Manager di accedere agli endpoint Internet. Per altre informazioni, vedere i [requisiti di accesso Internet](../../plan-design/network/internet-endpoints.md#community-hub).
 

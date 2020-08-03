@@ -10,12 +10,12 @@ ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: def7a40091f6c9a45e67f5e4de7d7dca94b3cba2
-ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
+ms.openlocfilehash: 7eccc3bf6b7ded9db93f5af78d55f090e9704cbc
+ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86422819"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87438600"
 ---
 # <a name="how-to-create-collections-in-configuration-manager"></a>Come creare raccolte in Configuration Manager
 
@@ -234,6 +234,7 @@ La sincronizzazione con Azure AD viene eseguita ogni cinque minuti. Si tratta di
 - Integrazione con Azure AD per la [Gestione cloud](../../../servers/deploy/configure/azure-services-wizard.md)
 - [Individuazione utente Azure Active Directory](../../../servers/deploy/configure/about-discovery-methods.md#azureaddisc)
 - Un punto di gestione abilitato per HTTPS o [HTTP avanzato](../../../plan-design/hierarchy/enhanced-http.md)
+- Accesso alla raccolta **Tutti i sistemi**
 
 ### <a name="create-a-group-and-set-the-owner-in-azure-ad"></a>Creare un gruppo e impostare il proprietario in Azure AD
 
@@ -255,7 +256,7 @@ La sincronizzazione con Azure AD viene eseguita ogni cinque minuti. Si tratta di
 
 1. Nella console di Configuration Manager passare a **Asset e conformità** > **Panoramica** > **Raccolte dispositivi**.
 1. Fare clic con il pulsante destro del mouse sulla raccolta da sincronizzare, quindi fare clic su **Proprietà**. 
-1. Nella scheda **Sincronizzazione dei gruppi di AAD** fare clic su **Aggiungi**.
+1. Nella scheda **Sincronizzazione cloud** fare clic su **Aggiungi**.
 1. Dal menu a discesa selezionare il **Tenant** in cui è stato creato il gruppo di Azure AD.
 1. Digitare i criteri di ricerca nel campo **Il nome inizia con**, quindi fare clic su **Cerca**.
   - Se viene richiesto di eseguire l'accesso, usare l'identità specificata come proprietario per il gruppo di Azure AD.

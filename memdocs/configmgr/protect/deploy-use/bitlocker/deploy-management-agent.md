@@ -2,7 +2,7 @@
 title: Distribuire la gestione di BitLocker
 titleSuffix: Configuration Manager
 description: Distribuire l'agente di gestione di BitLocker per i client di Configuration Manager e il servizio di ripristino ai punti di gestione
-ms.date: 04/01/2020
+ms.date: 07/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4a050ab523730adbfdd2ecf541557fabbf95081b
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 786a7a528c027ab46237dac92378224705b0e026
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715697"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262830"
 ---
 # <a name="deploy-bitlocker-management"></a>Distribuire la gestione di BitLocker
 
@@ -179,7 +179,13 @@ Se attualmente si usa Microsoft BitLocker Administration and Monitoring (MBAM), 
 
 - Le impostazioni di gestione di BitLocker sono completamente compatibili con le impostazioni di Criteri di gruppo di MBAM. Se i dispositivi ricevono sia le impostazioni di Criteri di gruppo che i criteri di Configuration Manager, configurarli in modo che corrispondano.
 
+  > [!NOTE]
+  > Se per MBAM autonomo esiste un'impostazione di Criteri di gruppo, l'impostazione equivalente tentata da Configuration Manager verrà sostituita. MBAM autonomo usa Criteri di gruppo del dominio, mentre Configuration Manager imposta criteri locali per la gestione di BitLocker. I criteri di dominio sostituiranno i criteri di gestione di BitLocker Configuration Manager locali. Se i Criteri di gruppo di dominio per MBAM autonomo non corrispondono ai criteri di Configuration Manager, la gestione di BitLocker in Configuration Manager avrà esito negativo. Ad esempio, se esistono Criteri di gruppo di dominio che impostano il server MBAM autonomo per i servizi di ripristino chiavi, la gestione di BitLocker in Configuration Manager non può configurare la stessa impostazione per il punto di gestione. A causa di questo comportamento, i client non segnalano le chiavi di ripristino al servizio di recupero chiavi per la gestione di BitLocker in Configuration Manager nel punto di gestione.
+
 - Configuration Manager non implementa tutte le impostazioni di Criteri di gruppo di MBAM. Se si configurano impostazioni aggiuntive in Criteri di gruppo, l'agente di gestione di BitLocker nei client di Configuration Manager rispetta queste impostazioni.
+
+  > [!IMPORTANT]
+  > Non impostare Criteri di gruppo per un'impostazione già specificata dalla gestione di BitLocker in Configuration Manager. Impostare Criteri di gruppo solo per le impostazioni attualmente non esistenti nella gestione di BitLocker in Configuration Manager. Configuration Manager versione 2002 offre parità delle funzionalità con MBAM autonomo. Con Configuration Manager versione 2002 e successive, nella maggior parte dei casi non dovrebbe essere necessario impostare Criteri di gruppo di dominio per configurare i criteri di BitLocker. Per evitare conflitti e problemi, evitare l'uso di Criteri di gruppo per BitLocker. Configurare tutte le impostazioni tramite i criteri di gestione di BitLocker in Configuration Manager.
 
 ### <a name="tpm-password-hash"></a>Hash della password TPM
 

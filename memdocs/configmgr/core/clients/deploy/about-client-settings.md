@@ -2,7 +2,7 @@
 title: Impostazioni client
 titleSuffix: Configuration Manager
 description: Informazioni sulle impostazioni predefinite e personalizzate per il controllo dei comportamenti client
-ms.date: 04/21/2020
+ms.date: 07/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 21e837d5d97c42f095159a87e015f181c5e53419
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: 9f6bb29930a6e2d4faf4ffdd141d3c9cd1831305
+ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347169"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87365509"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Informazioni sulle impostazioni client in Configuration Manager
 
@@ -328,6 +328,11 @@ Se i client devono installare gli aggiornamenti software obbligatori alla scaden
 Se si vuole concedere agli utenti più tempo per l'installazione delle distribuzioni delle applicazioni o degli aggiornamenti software necessari, impostare un valore per questa opzione. Questo periodo di tolleranza tiene conto dei computer rimasti spenti per molto tempo, i cui utenti devono installare molte distribuzioni di applicazioni o aggiornamenti, come nel caso, ad esempio, di un utente che, tornato da una vacanza, deve attendere parecchio tempo mentre il client installa le distribuzioni di applicazioni scadute.
 
 Impostare un periodo di tolleranza compreso tra 0 e 120 ore. Usare questa impostazione in combinazione con la proprietà di distribuzione **Ritardare l'imposizione di questa distribuzione in base alle preferenze dell'utente**. Per altre informazioni, vedere l'argomento relativo alla [distribuzione delle applicazioni](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period).
+
+
+### <a name="enable-endpoint-analytics-data-collection"></a>Abilita la raccolta dati di Analisi degli endpoint
+
+Abilita la raccolta dati locale sul client per il caricamento in Analisi degli endpoint. Impostare su **Sì** per configurare i dispositivi per la raccolta dati locale. Impostare su **No** per disabilitare la raccolta dati locale. Per altre informazioni, vedere [Registrare i dispositivi di Configuration Manager in Analisi degli endpoint](../../../../analytics/enroll-configmgr.md).
 
 ## <a name="computer-restart"></a>Riavvio del computer
 

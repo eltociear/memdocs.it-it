@@ -17,7 +17,7 @@
         - name: Aggiornare Windows alla versione più recente
           href: deploy-use/upgrade-windows-to-the-latest-version.md
         - name: Windows Autopilot per dispositivi esistenti
-          href: deploy-use/windows-autopilot-for-existing-devices.md
+          href: ../../autopilot/existing-devices.md
         - name: Aggiornare un computer esistente con una nuova versione di Windows
           href: deploy-use/refresh-an-existing-computer-with-a-new-version-of-windows.md
         - name: Installare una nuova versione di Windows in un nuovo computer (bare metal)

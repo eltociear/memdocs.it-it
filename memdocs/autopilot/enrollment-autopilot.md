@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0db9c917bef2a28451ef3b74310f826f97f0dba9
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: ce002acf118fb39712f8195247f556b01faa830f
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87756667"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865521"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-windows-autopilot"></a>Registrare i dispositivi Windows in Intune usando Windows Autopilot
 
@@ -84,9 +84,9 @@ Per ulteriori informazioni, vedere il cmdlet di PowerShell informazioni.
 3. Se nel passaggio precedente si è scelto **Assegnato** come **Tipo di appartenenza**, nella scheda **Gruppo** scegliere **Membri** e aggiungere i dispositivi AutoPilot al gruppo.
     I dispositivi Autopilot che non sono ancora registrati sono dispositivi il cui nome è uguale al numero di serie del dispositivo stesso.
 4. Se nel passaggio precedente si è scelto **Dispositivi dinamici** come **Tipo di appartenenza**, nella scheda **Gruppo** scegliere **Membri dispositivo dinamico** e digitare uno dei codici seguenti nella casella **Regola avanzata**. Queste regole eseguono la raccolta dei soli dispositivi Autopilot perché hanno come destinazione attributi in possesso solo dei dispositivi Autopilot. La creazione di un gruppo basato su attributi non Autopilot non garantirà che i dispositivi inclusi nel gruppo siano effettivamente registrati in Autopilot.
-    - Se si vuole creare un gruppo che includa tutti i dispositivi AutoPilot, digitare: `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`
-    - Il campo del tag del gruppo di Intune è associato all'attributo OrderID nei dispositivi Azure AD. Se si vuole creare un gruppo che includa tutti i dispositivi Autopilot con un tag di gruppo (l'ID ordine del dispositivo di Azure AD) specifico, è necessario digitare: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
-    - Se si vuole creare un gruppo che includa tutti i dispositivi AutoPilot con un ID ordine d'acquisto specifico, digitare `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`
+    - Se si vuole creare un gruppo che includa tutti i dispositivi AutoPilot, digitare: `(device.devicePhysicalIDs -any (_ -contains "[ZTDId]"))`
+    - Il campo del tag del gruppo di Intune è associato all'attributo OrderID nei dispositivi Azure AD. Se si vuole creare un gruppo che includa tutti i dispositivi Autopilot con un tag di gruppo (l'ID ordine del dispositivo di Azure AD) specifico, è necessario digitare: `(device.devicePhysicalIds -any (_ -eq "[OrderID]:179887111881"))`
+    - Se si vuole creare un gruppo che includa tutti i dispositivi AutoPilot con un ID ordine d'acquisto specifico, digitare `(device.devicePhysicalIds -any (_ -eq "[PurchaseOrderId]:76222342342"))`
     
     Dopo aver aggiunto il codice **Regola avanzata** scegliere **Salva**.
 5. Scegliere **Crea**.  

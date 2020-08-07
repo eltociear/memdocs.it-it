@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/13/2020
+ms.date: 08/07/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf8754adfb16e6d166a3ad1ad1b5fdde11e207ab
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: ed3a554ee374df1513a07fa2365e147f34d787f0
+ms.sourcegitcommit: 5291e1946eddbb97670f8e02beb5beef82b22f38
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87756529"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87953527"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Distribuire dispositivi aggiunti ad Azure AD ibrido usando Intune e Windows Autopilot
 È possibile usare Intune e Windows Autopilot per configurare i dispositivi aggiunti ad Azure Active Directory ibrido. A tale scopo, eseguire i passaggi descritti in questo articolo.
@@ -40,7 +40,6 @@ I dispositivi da registrare devono anche:
 - Se si usa un proxy, è necessario abilitare e configurare l'opzione delle impostazioni proxy WPAD.
 - Eseguire la Configurazione guidata.
 - Usare un tipo di autorizzazione supportato da Azure Active Directory nella Configurazione guidata.
-
 
 ## <a name="set-up-windows-10-automatic-enrollment"></a>Configurare la registrazione automatica di Windows 10
 
@@ -98,6 +97,9 @@ L'unità organizzativa a cui vengono assegnate le autorizzazioni per la creazion
 ## <a name="install-the-intune-connector"></a>Installare Intune Connector
 
 Il connettore di Intune per Active Directory deve essere installato in un computer che esegue Windows Server 2016 o versioni successive. Il computer deve anche avere accesso a Internet e al servizio Active Directory. Per aumentare la scalabilità e la disponibilità, è possibile installare più connettori nell'ambiente in uso. È consigliabile installare il connettore in un server che non esegue altri connettori di Intune.  Si noti che ogni connettore deve essere in grado di creare oggetti computer in qualsiasi dominio che si vuole supportare.
+
+> [!NOTE]
+> Se l'organizzazione ha più domini e si installano più connettori Intune, è necessario usare un account del servizio che sia in grado di creare oggetti computer in tutti i domini, anche se si prevede di implementare il join Azure AD ibrido solo per un dominio specifico. Se si tratta di domini non trusted, è necessario disinstallare i connettori da domini in cui non si vuole usare Windows Autopilot. In caso contrario, con più connettori tra più domini, tutti i connettori devono essere in grado di creare oggetti computer in tutti i domini.
 
 Intune Connector richiede gli [stessi endpoint di Intune](../intune/fundamentals/intune-endpoints.md).
 

@@ -56,8 +56,10 @@
               href: deploy-use/endpoint-antimalware-policies.md
             - name: Configurare il client
               href: deploy-use/endpoint-protection-configure-client.md
-            - name: Come configurare Endpoint Protection in un client autonomo
+            - name: Configurare Endpoint Protection in un client autonomo
               href: deploy-use/endpoint-protection-configure-standalone-client.md
+            - name: Gestire Endpoint Protection tramite Criteri di gruppo
+              href: deploy-use/endpoint-protection-group-policies.md
         - name: Criteri di Windows Firewall
           href: deploy-use/create-windows-firewall-policies.md
         - name: Microsoft Defender Advanced Threat Protection

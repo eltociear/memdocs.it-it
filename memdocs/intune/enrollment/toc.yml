@@ -121,6 +121,8 @@
       items:
         - name: Registrazione automatica dei dispositivi
           href: device-enrollment-program-enroll-macos.md
+        - name: Registrazione diretta per i dispositivi macOS
+          href: device-enrollment-direct-enroll-macos.md
     - name: Report di registrazione incompleto
       href: enrollment-report-company-portal-abandon.md
     - name: Risolvere i problemi di registrazione

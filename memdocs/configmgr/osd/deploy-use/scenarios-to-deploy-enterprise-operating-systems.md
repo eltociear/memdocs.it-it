@@ -2,7 +2,7 @@
 title: Scenari di distribuzione di sistemi operativi aziendali
 titleSuffix: Configuration Manager
 description: Informazioni su vari scenari per distribuire i sistemi operativi aziendali con Configuration Manager.
-ms.date: 02/22/2019
+ms.date: 07/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: f74fdb86-c7c2-447f-91f6-b42df6370d7f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 07e8623928cbfe0bcd562d3d6efdf3a9ceee85ae
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8304ba7384eba2fc7bfa41d4caf5a256380931c5
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708389"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546638"
 ---
 # <a name="scenarios-to-deploy-enterprise-operating-systems-with-configuration-manager"></a>Scenari per distribuire sistemi operativi aziendali con Configuration Manager
 
@@ -28,13 +28,11 @@ Questo scenario aggiorna il sistema operativo nei computer che attualmente esegu
 
 Per altre informazioni, vedere [Aggiornare Windows alla versione più recente](upgrade-windows-to-the-latest-version.md).
 
-
 #### <a name="windows-autopilot-for-existing-devices"></a>Windows Autopilot per dispositivi esistenti
 <!--3607717, fka 1358333-->
 A partire dalla versione 1810, Windows Autopilot per i dispositivi esistenti è disponibile con Windows 10 versione 1809 o successiva. Questa funzionalità consente di ricreare l'immagine ed eseguire il provisioning di un dispositivo Windows 7 per la modalità definita dall'utente di Windows Autopilot usando una singola sequenza di attività di Configuration Manager.
 
-Per altre informazioni, vedere [Windows Autopilot per dispositivi esistenti](windows-autopilot-for-existing-devices.md).
-
+Per altre informazioni, vedere [Windows Autopilot per dispositivi esistenti](../../../autopilot/existing-devices.md).
 
 #### <a name="refresh-an-existing-computer-with-a-new-version-of-windows"></a>Aggiornare un computer esistente con una nuova versione di Windows
 Questo scenario esegue il partizionamento e la formattazione (cancellazione) di un computer esistente e installa un nuovo sistema operativo nel computer. Dopo aver installato il sistema operativo, è possibile eseguire la migrazione delle impostazioni e dei dati dell'utente.  

@@ -10,12 +10,12 @@ ms.assetid: 68dc6acd-5848-47a4-b4c1-ffa40e47890b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e989de5acab778374c233862d0ab4d7077899d28
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: f686547e4698f1941a64f5b0346ba2d723248c31
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428597"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912512"
 ---
 # <a name="reference-for-maintenance-tasks-in-configuration-manager"></a>Informazioni di riferimento per le attività di manutenzione | Configuration Manager
 
@@ -31,8 +31,8 @@ Per altre informazioni, vedere [Impostare le attività di manutenzione](maintena
 
 Usare questa attività per creare un backup delle informazioni critiche per ripristinare un sito e il database di Configuration Manager. Per altre informazioni, vedere [Eseguire il backup di un sito di Configuration Manager](backup-and-recovery.md).  
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |**Sito di amministrazione centrale**|Abilitato|
 |**Sito primario**|Non abilitato|
 |Sito secondario|Non disponibile|
@@ -41,8 +41,8 @@ Usare questa attività per creare un backup delle informazioni critiche per ripr
 
 Usare questa attività per mantenere la coerenza dei titoli software tra l'inventario software e il catalogo Asset Intelligence. Per altre informazioni, vedere [Introduzione ad Asset Intelligence](../../clients/manage/asset-intelligence/introduction-to-asset-intelligence.md).  
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |**Sito di amministrazione centrale**|Abilitato|
 |Sito primario|Non disponibile|
 |Sito secondario|Non disponibile|
@@ -54,8 +54,8 @@ Usare questa attività per mantenere la coerenza dei titoli software tra l'inven
 
 usare questa attività per rimuovere il flag installato per i client che non inviano un record dell'individuazione heartbeat durante il **Periodo nuova individuazione client**. Il flag installato impedisce l'installazione push client automatica a un computer che potrebbe avere un client attivo di Configuration Manager.  
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |Sito di amministrazione centrale|Non disponibile|
 |**Sito primario**|Non abilitato|
 |Sito secondario|Non disponibile|
@@ -64,8 +64,8 @@ usare questa attività per rimuovere il flag installato per i client che non inv
 
 Usare questa attività per eliminare dal database le richieste di applicazioni obsolete. Per altre informazioni, vedere [Create and deploy an application](../../../apps/get-started/create-and-deploy-an-application.md) (Creare e distribuire un'applicazione).  
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |Sito di amministrazione centrale|Non disponibile|
 |**Sito primario**|Abilitato|
 |Sito secondario|Non disponibile|
@@ -74,8 +74,8 @@ Usare questa attività per eliminare dal database le richieste di applicazioni o
 
 Usare questa attività per eliminare le revisioni applicazione a cui non viene più fatto riferimento. Per altre informazioni, vedere [Come rivedere e sostituire le applicazioni](../../../apps/deploy-use/revise-and-supersede-applications.md).
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |**Sito di amministrazione centrale**|Abilitato|
 |**Sito primario**|Abilitato|
 |Sito secondario|Non disponibile|
@@ -84,8 +84,8 @@ Usare questa attività per eliminare le revisioni applicazione a cui non viene p
 
 usare questa attività per eliminare i dati della cronologia relativi all'origine dei download usata dai client. Questo sito usa le informazioni sull'origine dei download per popolare il [dashboard Origini dati del client](../deploy/configure/monitor-content-you-have-distributed.md#client-data-sources-dashboard).
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |Sito di amministrazione centrale|Non disponibile|
 |**Sito primario**|Abilitato|
 |Sito secondario|Non disponibile|
@@ -98,8 +98,8 @@ Usare questa attività per eliminare dal database del sito tutti i dati obsoleti
 - Endpoint Protection, come le richieste da parte di un utente amministratore ai client di eseguire un'analisi o scaricare definizioni aggiornate
 - Risultati dello stato di esecuzione degli script
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |**Sito di amministrazione centrale**|Abilitato|
 |**Sito primario**|Abilitato|
 |Sito secondario|Non disponibile|
@@ -108,8 +108,8 @@ Usare questa attività per eliminare dal database del sito tutti i dati obsoleti
 <!-- not listed in dogfood for either primary or CAS, was it renamed? -->
 Usare questa attività per eliminare le informazioni sulla cronologia relative allo stato online dei client, registrato tramite notifica client. Elimina le informazioni per i client con stato precedente all'ora specificata. Per altre informazioni, vedere [Come monitorare i client](../../clients/manage/monitor-clients.md).
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |**Sito di amministrazione centrale**|Abilitato|
 |**Sito primario**|Abilitato|
 |Sito secondario|Non disponibile|
@@ -124,8 +124,8 @@ Usare questa attività per eliminare dal database del sito tutti i dati obsoleti
 - Numero di richieste non riuscite
 - Numero massimo di richieste simultanee
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |**Sito di amministrazione centrale**|Abilitato|
 |**Sito primario**|Abilitato|
 |Sito secondario|Non disponibile|
@@ -134,8 +134,8 @@ Usare questa attività per eliminare dal database del sito tutti i dati obsoleti
 
 Usare questa attività per eliminare dal database del sito le informazioni obsolete dai client nelle query CMPivot. Per altre informazioni, vedere [CMPivot per i dati in tempo reale in Configuration Manager](cmpivot.md).
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |Sito di amministrazione centrale|Non disponibile|
 |**Sito primario**|Abilitato|
 |Sito secondario|Non disponibile|
@@ -144,8 +144,8 @@ Usare questa attività per eliminare dal database del sito le informazioni obsol
 
 Usare questa attività per eliminare dal database le informazioni obsolete sui file raccolti. Questa attività elimina anche i file raccolti dalla struttura delle cartelle del server del sito nel sito selezionato. Per impostazione predefinita, le cinque copie più recenti dei file raccolti sono archiviate sul server del sito nella directory **Inboxes\sinv.box\FileCol**. Per altre informazioni, vedere [Introduzione all'inventario software](../../clients/manage/inventory/introduction-to-software-inventory.md).  
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |Sito di amministrazione centrale|Non disponibile|
 |**Sito primario**|Abilitato|
 |Sito secondario|Non disponibile|
@@ -154,8 +154,8 @@ Usare questa attività per eliminare dal database le informazioni obsolete sui f
 
 Usare questa attività per eliminare dal database i dati obsoleti di associazione computer della distribuzione del sistema operativo. Queste informazioni vengono usate per il ripristino dello stato utente durante una sequenza di attività. Per altre informazioni, vedere [Gestire lo stato utente](../../../osd/get-started/manage-user-state.md).  
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |Sito di amministrazione centrale|Non disponibile|
 |**Sito primario**|Abilitato|
 |Sito secondario|Non disponibile|
@@ -164,8 +164,8 @@ Usare questa attività per eliminare dal database i dati obsoleti di associazion
 
 Questa attività elimina i dati dal database del sito sulle connessioni della console al sito.<!-- SCCMDocs#528 -->
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |**Sito di amministrazione centrale**|Abilitato|
 |**Sito primario**|Abilitato|
 |Sito secondario|Non disponibile|
@@ -174,8 +174,8 @@ Questa attività elimina i dati dal database del sito sulle connessioni della co
 
 Usare questa attività per eliminare dal database i dati obsoleti creati dalle visualizzazioni di estrazione. Elimina le informazioni sulle modifiche ai dati obsolete usate dai sistemi esterni estraendo i dati dal database.<!--SCCMDocs#1590--><!--By default, Extraction Views are disabled. You only enable them by using the Configuration Manager SDK. Unless Extraction Views are enabled, there is no data for this task to delete.-->
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |**Sito di amministrazione centrale**|Abilitato|
 |**Sito primario**|Abilitato|
 |Sito secondario|Non disponibile|
@@ -184,8 +184,8 @@ Usare questa attività per eliminare dal database i dati obsoleti creati dalle v
 
 Usare questa attività per eliminare dal database i dati obsoleti sulle azioni di cancellazione dei dati dei dispositivi mobili. Per altre informazioni, vedere [Proteggere i dati con cancellazione remota, blocco remoto o reimpostazione passcode](../../../mdm/deploy-use/wipe-lock-reset-devices.md).  
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |Sito di amministrazione centrale|Non disponibile|
 |**Sito primario**|Abilitato|
 |Sito secondario|Non disponibile|
@@ -200,8 +200,8 @@ Usare questa attività per eliminare dal database i dati di individuazione obsol
 
 Questa attività rimuove anche i dispositivi obsoleti contrassegnati come non autorizzati. Quando questa attività viene eseguita in un sito, i dati associati a tale sito vengono eliminati e le modifiche vengono replicate in altri siti. Per altre informazioni, vedere [Eseguire l'individuazione](../deploy/configure/run-discovery.md).
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |Sito di amministrazione centrale|Non disponibile|
 |**Sito primario**|Abilitato|
 |Sito secondario|Non disponibile|
@@ -210,8 +210,8 @@ Questa attività rimuove anche i dispositivi obsoleti contrassegnati come non au
 
 Usare questa attività per eliminare dal database i dati obsoleti per i punti di distribuzione che sono archiviati da più tempo rispetto a un intervallo specificato.  
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |**Sito di amministrazione centrale**|Abilitato|
 |**Sito primario**|Abilitato|
 |Sito secondario|Non disponibile|
@@ -222,8 +222,8 @@ Usare questa attività per eliminare dal database del sito i dati obsoleti relat
 
 Questa attività si applica ai dispositivi registrati in una [soluzione MDM locale](../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md) di Configuration Manager. Per altre informazioni su questi dispositivi, vedere [Sistemi operativi supportati per client e dispositivi](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#bkmk_OnpremOS).
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |Sito di amministrazione centrale|Non disponibile|
 |**Sito primario**|Non abilitato|
 |Sito secondario|Non disponibile|
@@ -232,8 +232,8 @@ Questa attività si applica ai dispositivi registrati in una [soluzione MDM loca
 
 Usare questa attività per eliminare dal database le informazioni di stato obsolete per Endpoint Protection. Per altre informazioni, vedere [Come monitorare Endpoint Protection](../../../protect/deploy-use/monitor-endpoint-protection.md).
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |Sito di amministrazione centrale|Non disponibile|
 |**Sito primario**|Abilitato|
 |Sito secondario|Non disponibile|
@@ -245,8 +245,8 @@ Usare questa attività per eliminare dal database le informazioni di stato obsol
 
 Usare questa attività per eliminare i dati obsoleti sui dispositivi mobili gestiti dal connettore Exchange Server. Il sito elimina questi dati in base all'impostazione **Ignora dispositivi mobili inattivi da più di (giorni)** nella scheda **Individuazione** delle proprietà del connettore Exchange Server. Per altre informazioni, vedere [Gestire i dispositivi mobili con Configuration Manager ed Exchange](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |Sito di amministrazione centrale|Non disponibile|
 |**Sito primario**|Abilitato|
 |Sito secondario|Non disponibile|
@@ -255,8 +255,8 @@ Usare questa attività per eliminare i dati obsoleti sui dispositivi mobili gest
 
 Usare questa attività per eliminare dal database i dati di inventario che sono archiviati da più tempo rispetto a un intervallo specificato. Per altre informazioni, vedere [Come usare Esplora inventario risorse per visualizzare l'inventario hardware](../../clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md).
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |Sito di amministrazione centrale|Non disponibile|
 |**Sito primario**|Abilitato|
 |Sito secondario|Non disponibile|
@@ -268,8 +268,8 @@ Usare questa attività per eliminare dal database i dati dei log obsoleti usati 
 > [!IMPORTANT]  
 > Per impostazione predefinita, questa attività viene eseguita ogni giorno in ogni sito. In un sito di amministrazione centrale e nei siti primari, l'attività elimina i dati che hanno più di 30 giorni. Quando si usa SQL Server Express in un sito secondario, assicurarsi che questa attività venga eseguita ogni giorno e che elimini i dati non attivi da sette giorni.  
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |**Sito di amministrazione centrale**|Abilitato|
 |**Sito primario**|Abilitato|
 |**Sito secondario**|Abilitato|
@@ -278,8 +278,8 @@ Usare questa attività per eliminare dal database i dati dei log obsoleti usati 
 
 Usare questa attività per eliminare dal database i dati obsoleti per il controllo software che sono archiviati da più tempo rispetto a un intervallo specificato. Per altre informazioni, vedere [Controllo del software](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |Sito di amministrazione centrale|Non disponibile|
 |**Sito primario**|Abilitato|
 |Sito secondario|Non disponibile|
@@ -288,8 +288,8 @@ Usare questa attività per eliminare dal database i dati obsoleti per il control
 
 Usare questa attività per eliminare dal database i dati obsoleti di riepilogo per il controllo software che sono archiviati da più tempo rispetto a un intervallo specificato. Per altre informazioni, vedere [Controllo del software](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |Sito di amministrazione centrale|Non disponibile|
 |**Sito primario**|Abilitato|
 |Sito secondario|Non disponibile|
@@ -298,8 +298,8 @@ Usare questa attività per eliminare dal database i dati obsoleti di riepilogo p
 
 Questa attività elimina la cronologia delle presenze client obsolete.
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |**Sito di amministrazione centrale**|Abilitato|
 |**Sito primario**|Abilitato|
 |Sito secondario|Non disponibile|
@@ -308,8 +308,8 @@ Questa attività elimina la cronologia delle presenze client obsolete.
 
 Usare questa attività per eliminare dal database del sito le informazioni sulle attività di notifica client. Questa attività si applica ai dati che non sono stati aggiornati per un determinato periodo di tempo. Per altre informazioni, vedere [Client notifications](../../clients/manage/client-notification.md) (Notifiche client).
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |Sito di amministrazione centrale|Non disponibile|
 |**Sito primario**|Abilitato|
 |Sito secondario|Non disponibile|
@@ -318,8 +318,8 @@ Usare questa attività per eliminare dal database del sito le informazioni sulle
 
 Usare questa attività nel sito principale della gerarchia per eliminare i dati obsoleti di reimpostazione dei passcode per i dispositivi Windows Phone. I dati di reimpostazione dei passcode sono crittografati ma non includono il PIN per i dispositivi. Per impostazione predefinita, questa attività è abilitata ed elimina i dati che hanno più di un giorno.  
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |**Sito di amministrazione centrale**|Abilitato|
 |**Sito primario**|Abilitato|
 |Sito secondario|Non disponibile|
@@ -328,8 +328,8 @@ Usare questa attività nel sito principale della gerarchia per eliminare i dati 
 
 Usare questa attività per eliminare dal database i dati obsoleti relativi alla replica di database tra siti di Configuration Manager. Quando si modifica la configurazione di questa attività di manutenzione, le modifiche si applicano ad ogni sito applicabile della gerarchia. Per altre informazioni, vedere [Monitorare la replica di database](monitor-replication.md).  
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |**Sito di amministrazione centrale**|Abilitato|
 |**Sito primario**|Abilitato|
 |**Sito secondario**|Abilitato|
@@ -338,8 +338,8 @@ Usare questa attività per eliminare dal database i dati obsoleti relativi alla 
 
 Usare questa attività per eliminare i dati di riepilogo replica obsoleti dal database del sito quando tale database non è stato aggiornato per un determinato periodo. Per altre informazioni, vedere [Monitorare la replica di database](monitor-replication.md).  
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |**Sito di amministrazione centrale**|Abilitato|
 |**Sito primario**|Abilitato|
 |**Sito secondario**|Abilitato|
@@ -348,8 +348,8 @@ Usare questa attività per eliminare i dati di riepilogo replica obsoleti dal da
 
 Usare questa attività per eliminare dal database i dati dei messaggi di stato obsoleti configurati nelle regole di filtro dello stato. Per altre informazioni, vedere [Monitorare il sistema di stato di Configuration Manager](use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus).
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |**Sito di amministrazione centrale**|Abilitato|
 |**Sito primario**|Abilitato|
 |Sito secondario|Non disponibile|
@@ -358,8 +358,8 @@ Usare questa attività per eliminare dal database i dati dei messaggi di stato o
 
 Usare questa attività per eliminare dal database i dati sulle minacce obsoleti di Endpoint Protection che sono archiviati da più tempo rispetto a un intervallo specificato. Per altre informazioni, vedere [Endpoint Protection](../../../protect/deploy-use/endpoint-protection.md).
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |Sito di amministrazione centrale|Non disponibile|
 |**Sito primario**|Abilitato|
 |Sito secondario|Non disponibile|
@@ -368,8 +368,8 @@ Usare questa attività per eliminare dal database i dati sulle minacce obsoleti 
 
 usare questa attività per eliminare le informazioni relative ai computer sconosciuti dal database del sito quando tale database non è stato aggiornato per un determinato periodo. Per altre informazioni, vedere [Operazioni preliminari alle distribuzioni in computer sconosciuti](../../../osd/get-started/prepare-for-unknown-computer-deployments.md).
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |Sito di amministrazione centrale|Non disponibile|
 |**Sito primario**|Abilitato|
 |Sito secondario|Non disponibile|
@@ -378,8 +378,8 @@ usare questa attività per eliminare le informazioni relative ai computer sconos
 
 Usare questa attività per eliminare dal database i dati di affinità utente dispositivo obsoleti. Per altre informazioni, vedere [Collegare utenti e dispositivi mediante l'affinità utente dispositivo](../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |Sito di amministrazione centrale|Non disponibile|
 |**Sito primario**|Abilitato|
 |Sito secondario|Non disponibile|
@@ -388,8 +388,8 @@ Usare questa attività per eliminare dal database i dati di affinità utente dis
 
 Usare questa attività per eliminare dal database del sito tutti i record duplicati generati dall'individuazione di sistema.<!-- SCCMDocs#1339 -->
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |**Sito di amministrazione centrale**|Abilitato|
 |Sito primario|Non disponibile|
 |Sito secondario|Non disponibile|
@@ -398,8 +398,8 @@ Usare questa attività per eliminare dal database del sito tutti i record duplic
 
 usare questa attività per eliminare i certificati di registrazione in blocco precedenti e i profili corrispondenti dopo la scadenza del certificato di registrazione. Per altre informazioni, vedere [Creare i profili certificato](../../../protect/deploy-use/create-certificate-profiles.md).
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |**Sito di amministrazione centrale**|Abilitato|
 |**Sito primario**|Abilitato|
 |Sito secondario|Non disponibile|
@@ -413,8 +413,8 @@ Questa attività funziona solo nelle risorse che sono client di Configuration Ma
 > [!IMPORTANT]  
 > Quando abilitata, configurare questa attività in modo che venga eseguita con un intervallo maggiore rispetto a **Individuazione heartbeat**. Questa configurazione abilita i client attivi all'invio di un record di Individuazione heartbeat per contrassegnare il record client come attivo e impedirne così l'eliminazione da parte dell'attività.  
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |Sito di amministrazione centrale|Non disponibile|
 |**Sito primario**|Non abilitato|
 |Sito secondario|Non disponibile|
@@ -423,8 +423,8 @@ Questa attività funziona solo nelle risorse che sono client di Configuration Ma
 
 Usare questa attività per eliminare dal database gli avvisi scaduti che sono archiviati da più tempo rispetto a un intervallo specificato. Per altre informazioni, vedere [Usare gli avvisi e il sistema di stato](use-alerts-and-the-status-system.md).
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |**Sito di amministrazione centrale**|Abilitato|
 |**Sito primario**|Abilitato|
 |Sito secondario|Non disponibile|
@@ -436,8 +436,8 @@ Usare questa attività per eliminare dal database i record dei client obsoleti. 
 > [!IMPORTANT]  
 > Quando abilitata, configurare questa attività in modo che venga eseguita con un intervallo maggiore rispetto a Individuazione heartbeat. Questa configurazione abilita il client per l'invio di un record Individuazione heartbeat che imposta correttamente lo stato obsoleto.  
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |Sito di amministrazione centrale|Non disponibile|
 |**Sito primario**|Non abilitato|
 |Sito secondario|Non disponibile|
@@ -446,8 +446,8 @@ Usare questa attività per eliminare dal database i record dei client obsoleti. 
 
 Usare questa attività per eliminare i dati relativi a siti, subnet e domini di Active Directory. Rimuove i dati che il sito non ha individuato dal metodo di individuazione della foresta Active Directory negli ultimi 30 giorni. Questa attività rimuove i dati di individuazione, ma non influisce sui limiti creati da tali dati. Per altre informazioni, vedere [Eseguire l'individuazione](../deploy/configure/run-discovery.md).
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |**Sito di amministrazione centrale**|Abilitato|
 |**Sito primario**|Abilitato|
 |Sito secondario|Non disponibile|
@@ -456,8 +456,8 @@ Usare questa attività per eliminare i dati relativi a siti, subnet e domini di 
 
 usare questa attività per ripulire periodicamente la tabella contenente le informazioni sullo stato di distribuzione dei client. Questa attività elimina i record associati a dispositivi obsoleti o non autorizzati.  
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |Sito di amministrazione centrale|Non disponibile|
 |**Sito primario**|Abilitato|
 |Sito secondario|Non disponibile|
@@ -466,8 +466,8 @@ usare questa attività per ripulire periodicamente la tabella contenente le info
 
 Configurare la valutazione appartenenza alla raccolta come componente del sito. Per altre informazioni, vedere [Componenti del sito](../deploy/configure/site-components.md).
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |Sito di amministrazione centrale|Non disponibile|
 |**Sito primario**|Abilitato|
 |Sito secondario|Non disponibile|
@@ -476,8 +476,8 @@ Configurare la valutazione appartenenza alla raccolta come componente del sito. 
 
 usare questa attività per monitorare l'integrità delle chiavi primarie del database di Configuration Manager. Una chiave primaria è una colonna o una combinazione di colonne che identifica in modo univoco una riga. La chiave distingue la riga da qualsiasi altra riga in una tabella di database di Microsoft SQL Server.
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |**Sito di amministrazione centrale**|Abilitato|
 |**Sito primario**|Abilitato|
 |Sito secondario|Non disponibile|
@@ -492,8 +492,8 @@ Per migliorare le prestazioni, gli indici del database di Configuration Manager 
 - Elimina gli indici per colonne che sono univoche meno del 50%
 - Ricompila tutti gli indici esistenti che soddisfano i criteri di univocità dei dati
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |**Sito di amministrazione centrale**|Non abilitato|
 |**Sito primario**|Non abilitato|
 |**Sito secondario**|Non abilitato|
@@ -504,8 +504,8 @@ Usare questa attività per riepilogare in un unico record generale i dati di pi�
 
 Per riepilogare i dati di controllo software contenendo lo spazio occupato nel database, usare questa attività insieme all'attività **Riepiloga dati utilizzo mensile di controllo software**. Per altre informazioni, vedere [Controllo del software](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |Sito di amministrazione centrale|Non disponibile|
 |**Sito primario**|Abilitato|
 |Sito secondario|Non disponibile|
@@ -514,8 +514,8 @@ Per riepilogare i dati di controllo software contenendo lo spazio occupato nel d
 
 Usare questa attività per riepilogare le informazioni sul software di asset intelligence raccolte tramite l'inventario hardware per unire più record in un unico record generale. L'attività di riepilogo dei dati può ridurre la quantità di dati archiviati nel database di Configuration Manager. Per altre informazioni, vedere [Configurare le attività di manutenzione di Asset Intelligence](../../clients/manage/asset-intelligence/configuring-asset-intelligence.md#BKMK_ConfigureMaintenanceTasks).
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |Sito di amministrazione centrale|Non disponibile|
 |**Sito primario**|Abilitato|
 |Sito secondario|Non disponibile|
@@ -526,8 +526,8 @@ Usare questa attività per riepilogare in un unico record generale i dati di pi�
 
 Per riepilogare i dati di controllo software contenendo lo spazio occupato nel database, usare questa attività insieme all'attività **Riepiloga dati utilizzo file di controllo software**. Per altre informazioni, vedere [Controllo del software](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |Sito di amministrazione centrale|Non disponibile|
 |**Sito primario**|Abilitato|
 |Sito secondario|Non disponibile|
@@ -538,8 +538,8 @@ usare questa attività per fare in modo che Configuration Manager ricalcoli il m
 
 Questi mapping sono memorizzati in una tabella di riferimento rapido. Quando cambia l'appartenenza alle raccolte, il sito aggiorna questi mapping archiviati per riflettere tali modifiche. È comunque possibile che questi mapping perdano la sincronizzazione. Ad esempio, se il sito non riesce a elaborare correttamente un file di notifica, la modifica potrebbe non essere rispecchiata nei mapping. Questa attività aggiorna il mapping in base all'appartenenza alla raccolta corrente.  
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |Sito di amministrazione centrale|Non disponibile|
 |**Sito primario**|Abilitato|
 |Sito secondario|Non disponibile|
@@ -548,8 +548,8 @@ Questi mapping sono memorizzati in una tabella di riferimento rapido. Quando cam
 
 Usare questa attività per sincronizzare la cache del database del sito Web del Catalogo applicazioni con le ultime informazioni sulle applicazioni. Quando si modifica la configurazione di questa attività di manutenzione, le modifiche si applicano a tutti i siti primari della gerarchia.  
 
-|||
-|---------|---------|
+| Tipo di sito | Stato |
+| --------- | ------ |
 |Sito di amministrazione centrale|Non disponibile|
 |**Sito primario**|Abilitato|
 |Sito secondario|Non disponibile|

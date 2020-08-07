@@ -2,7 +2,7 @@
 title: Passaggi della sequenza di attività
 titleSuffix: Configuration Manager
 description: Informazioni sui passaggi che è possibile aggiungere a una sequenza di attività di Configuration Manager.
-ms.date: 04/01/2020
+ms.date: 07/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 114a0a18b3eb5d416b45379ccb3ac68128e529c5
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: 61070d98c5b7d453f493cf7ea2995705ee43f325
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353599"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546621"
 ---
 # <a name="task-sequence-steps"></a>Passaggi della sequenza di attività
 
@@ -1599,7 +1599,7 @@ Selezionare questa opzione per impedire a Sysprep di reimpostare il flag di atti
 <!--SCCMDocs-pr issue 2695-->
 Questa opzione indica a Sysprep di arrestare il computer in sostituzione del comportamento di riavvio predefinito.
 
-La sequenza di attività [Windows Autopilot per dispositivi esistenti](../deploy-use/windows-autopilot-for-existing-devices.md) usa questo passaggio con questa opzione.
+La sequenza di attività [Windows Autopilot per dispositivi esistenti](../../../autopilot/existing-devices.md) usa questo passaggio con questa opzione.
 
 - Se si vuole che la sequenza di attività aggiorni il dispositivo e quindi avvii immediatamente la Configurazione guidata per Autopilot, lasciare deselezionata questa opzione.  
 

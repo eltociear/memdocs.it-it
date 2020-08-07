@@ -5,17 +5,17 @@ description: Informazioni su come preparare i dispositivi Windows 10 basati su I
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 07/06/2020
 ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: d58faa57fa1459bbc8d821d117d20b3f404dc8e0
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: 076a4b6d1bf5773287d4a0b32109023039a3b399
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776889"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546417"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>Come preparare i dispositivi basati su Internet per la co-gestione
 
@@ -25,7 +25,7 @@ Questo articolo è incentrato sul secondo percorso relativo alla co-gestione, pe
 
 Per i nuovi dispositivi Windows 10 è possibile usare il servizio Autopilot per definire la Configurazione guidata. Questo processo include l'aggiunta del dispositivo ad Azure AD e la registrazione del dispositivo in Intune.  
 
-Per altre informazioni, vedere [Panoramica di Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot).
+Per altre informazioni, vedere [Panoramica di Windows Autopilot](../../autopilot/windows-autopilot.md).
 
 Per configurare i dispositivi per la registrazione automatica in Intune quando vengono aggiunti ad Azure AD, vedere [Configurare la registrazione dei dispositivi Windows](https://docs.microsoft.com/intune/windows-enroll).  
 
@@ -46,9 +46,9 @@ Per altre informazioni, vedere [Aggiungere dispositivi in Intune](https://docs.m
 ### <a name="autopilot-for-existing-devices"></a>Autopilot per dispositivi esistenti
 <!--1358333-->
 
-[Windows Autopilot per i dispositivi esistenti](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) è disponibile in Windows 10 versione 1809 o successive. Questa funzionalità consente di ricreare l'immagine ed eseguire il provisioning di un dispositivo Windows 7 per la [modalità definita dall'utente di Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) usando una singola sequenza di attività nativa di Configuration Manager.
+[Windows Autopilot per i dispositivi esistenti](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) è disponibile in Windows 10 versione 1809 o successive. Questa funzionalità consente di ricreare l'immagine ed eseguire il provisioning di un dispositivo Windows 7 per la [modalità definita dall'utente di Windows Autopilot](../../autopilot/user-driven.md) usando una singola sequenza di attività nativa di Configuration Manager.
 
-Per altre informazioni, vedere la [sequenza di attività Windows Autopilot per dispositivi esistenti](../osd/deploy-use/windows-autopilot-for-existing-devices.md).
+Per altre informazioni, vedere la [sequenza di attività Windows Autopilot per dispositivi esistenti](../../autopilot/existing-devices.md).
 
 ## <a name="install-the-configuration-manager-client"></a>Installare il client di Configuration Manager
 

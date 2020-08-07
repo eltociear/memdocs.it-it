@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: fb13844dd05049b9186909884aa0c457a8cfacd9
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 98a82d118442a7ca37ff7b2df62bf4702c15ba2c
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428416"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87526016"
 ---
 # <a name="capabilities-in-technical-preview-1703-for-configuration-manager"></a>Funzionalità della versione Technical Preview 1703 per Configuration Manager
 
@@ -31,9 +31,8 @@ Questo articolo presenta le funzionalità disponibili nella Technical Preview pe
 
 È ora possibile distribuire app con licenza sia ai dispositivi che agli utenti. In base alla possibilità dell'app di supportare la gestione delle licenze dei dispositivi, al momento della distribuzione verrà richiesta una licenza appropriata, come indicato di seguito:
 
-|||||
-|-|-|-|-|
-|Versione di Configuration Manager|Gestione delle licenze dei dispositivi supportata|Tipo di raccolta della distribuzione|Licenza richiesta|
+| Versione di Configuration Manager | Gestione delle licenze dei dispositivi supportata | Tipo di raccolta della distribuzione | Licenza richiesta |
+| ----------------------------- | ------------------------------ | -------------------------- | --------------- |
 |Precedente la 1702|Sì|Utente|Licenza utente|
 |Precedente la 1702|No|Utente|Licenza utente|
 |Precedente la 1702|Sì|Dispositivo|Licenza utente|

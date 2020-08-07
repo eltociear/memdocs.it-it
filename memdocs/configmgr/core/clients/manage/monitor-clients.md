@@ -10,12 +10,12 @@ ms.assetid: 2c8f57cf-1968-48de-87fb-4897432ed6e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1f31ac96f29fc302e601b8da071b1486f4e7df90
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 00a10e169db36c62b083c56114159b54185a1040
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696749"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87525914"
 ---
 # <a name="how-to-monitor-clients-in-configuration-manager"></a>Come monitorare i client in Configuration Manager
 
@@ -53,8 +53,8 @@ Configuration Manager offre i seguenti tipi di informazioni come stato del clien
 
     Le icone all'inizio di ogni riga indicano lo stato online del dispositivo:  
 
-    |||  
-    |-|-|  
+    | Icona | Descrizione |
+    | ---- | ----------- |  
     |![icona di stato online per i client](../../../core/clients/manage/media/online-status-icon.png)|Il dispositivo è online|  
     |![icona di stato offline per i client](../../../core/clients/manage/media/offline-status-icon.png)|Il dispositivo è offline|  
     |![icona di stato sconosciuto per i client](../../../core/clients/manage/media/unknown-status-icon.png)|Lo stato online è sconosciuto|  
@@ -178,7 +178,7 @@ Solution for failure 1 -->
 
 Il controllo dei client esegue i controlli e le correzioni seguenti:  
 
-|Controllo client|Azione di correzione|Altre informazioni|  
+|Controllo client|Azione di correzione|Ulteriori informazioni|  
 |------------------|------------------------|----------------------|  
 |Verificare che il controllo client sia stato eseguito di recente|Esecuzione del controllo client|Verifica che il controllo client sia eseguito almeno una volta negli ultimi tre giorni.|  
 |Verificare che siano installati i prerequisiti client|Installazione dei prerequisiti client|Verifica che siano installati i prerequisiti client. Legge il file ccmsetup.xml nella cartella di installazione client per individuare i prerequisiti.|  

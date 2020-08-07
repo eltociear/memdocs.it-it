@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: eacf64245f4cfc779dc92be73e8d7e387b34f909
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: fa29c1b2474d6a0a42b7ff8e3624a3ec8d6a090e
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83427932"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912300"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Novità della versione 1702 di Configuration Manager
 
@@ -271,9 +271,8 @@ A partire dalla versione 1702, la gestione ibrida dei dispositivi mobili con Mic
 
 È ora possibile distribuire app con licenza sia ai dispositivi che agli utenti. In base alla possibilità dell'app di supportare la gestione delle licenze dei dispositivi, al momento della distribuzione verrà richiesta una licenza appropriata, come indicato di seguito:
 
-|||||
-|-|-|-|-|
-|Versione di Configuration Manager|Gestione delle licenze dei dispositivi supportata|Tipo di raccolta della distribuzione|Licenza richiesta|
+| Versione di Configuration Manager | Gestione delle licenze dei dispositivi supportata | Tipo di raccolta della distribuzione | Licenza richiesta |
+| ----------------------------- | ------------------------------ | -------------------------- | --------------- |
 |Precedente la 1702|Sì|Utente|Licenza utente|
 |Precedente la 1702|No|Utente|Licenza utente|
 |Precedente la 1702|Sì|Dispositivo|Licenza utente|

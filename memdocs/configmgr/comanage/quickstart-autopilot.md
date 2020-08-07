@@ -2,7 +2,7 @@
 title: Windows Autopilot con la co-gestione
 titleSuffix: Configuration Manager
 description: Usare Windows Autopilot con la co-gestione in Configuration Manager per semplificare la configurazione di nuovi dispositivi Windows 10.
-ms.date: 02/21/2019
+ms.date: 07/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: e3e3c97f-5945-49ab-a622-9f6fe6b9737e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 91b938b5ab64616a35773406cd18b54de80b40e7
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: f77cb76e3cfd9c932a6f3789f98e5616cdaa27eb
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85590410"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546434"
 ---
 # <a name="windows-autopilot-with-co-management"></a>Windows Autopilot con la co-gestione
 
@@ -96,5 +97,4 @@ Per altre informazioni, vedere gli articoli seguenti:
 
 [Usare Intune per creare i profili di Windows Autopilot](https://docs.microsoft.com/intune/enrollment-autopilot)
 
-Sequenza di attività [Windows Autopilot per dispositivi esistenti](../osd/deploy-use/windows-autopilot-for-existing-devices.md)
-
+[Windows Autopilot per dispositivi esistenti](../../autopilot/existing-devices.md)

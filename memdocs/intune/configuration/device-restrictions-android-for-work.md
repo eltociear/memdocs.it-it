@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f49ba4fffd84ffae3e5b47ad74088b65d599533
-ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
+ms.openlocfilehash: c23044b912b7f0edf2852477aad80dd9be66cf54
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491253"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87526067"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Impostazioni dei dispositivi Android Enterprise per consentire o limitare l'uso delle funzionalità tramite Intune
 
@@ -440,7 +440,7 @@ Queste impostazioni si applicano ai tipi di registrazione Android Enterprise in 
 
   Nei dispositivi, gli utenti non possono impostare un valore di tempo maggiore di quello configurato nel profilo. Gli utenti possono impostare un valore di tempo inferiore. Ad esempio, se il profilo è impostato su `15` minuti, gli utenti possono impostare il valore su 5 minuti, ma non possono impostare il valore su 30 minuti.
 
-- **Numero di errori di accesso prima della cancellazione dei dati del dispositivo**: immettere il numero di password non corrette consentite prima che il dispositivo venga cancellato, da 4 a 11. `0` (zero) potrebbe disabilitare la funzionalità di cancellazione dei dispositivi. Quando il valore è vuoto, Intune non modifica o aggiorna questa impostazione.
+- **Numero di errori di accesso prima della cancellazione dei dati del dispositivo**: immettere il numero di password non corrette consentite prima che il profilo di lavoro nel dispositivo venga cancellato, da 4 a 11. `0` (zero) potrebbe disabilitare la funzionalità di cancellazione dei dispositivi. Quando il valore è vuoto, Intune non modifica o aggiorna questa impostazione.
 
 - **Scadenza password (giorni)** : immettere il numero di giorni prima che sia necessario modificare le password utente (**1**-**365**).
 - **Tipo di password richiesto**: immettere il livello di complessità delle password necessario e se possono essere usati dispositivi biometrici. Le opzioni disponibili sono:
@@ -468,7 +468,7 @@ Queste impostazioni per le password si applicano ai profili personali nei dispos
 
   Nei dispositivi, gli utenti non possono impostare un valore di tempo maggiore di quello configurato nel profilo. Gli utenti possono impostare un valore di tempo inferiore. Ad esempio, se il profilo è impostato su `15` minuti, gli utenti possono impostare il valore su 5 minuti, ma non possono impostare il valore su 30 minuti.
 
-- **Numero di errori di accesso prima della cancellazione dei dati del dispositivo**: immettere il numero di password non corrette consentite prima che il dispositivo venga cancellato, da 4 a 11. `0` (zero) potrebbe disabilitare la funzionalità di cancellazione dei dispositivi. Quando il valore è vuoto, Intune non modifica o aggiorna questa impostazione.
+- **Numero di errori di accesso prima della cancellazione dei dati del dispositivo**: immettere il numero di password non corrette consentite prima che il profilo di lavoro nel dispositivo venga cancellato, da 4 a 11. `0` (zero) potrebbe disabilitare la funzionalità di cancellazione dei dispositivi. Quando il valore è vuoto, Intune non modifica o aggiorna questa impostazione.
 - **Scadenza password (giorni)** : immettere il numero di giorni che devono trascorrere prima che sia necessario cambiare la password del dispositivo, da 1 a 365. Ad esempio, immettere `90` per impostare la scadenza della password dopo 90 giorni. Quando la password scade, agli utenti viene chiesto di creare una nuova password. Quando il valore è vuoto, Intune non modifica o aggiorna questa impostazione.
 - **Tipo di password richiesto**: immettere il livello di complessità delle password necessario e se possono essere usati dispositivi biometrici. Le opzioni disponibili sono:
   - **Impostazione predefinita dispositivo**

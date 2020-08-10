@@ -6,7 +6,7 @@ keywords: Data warehouse di Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/27/2020
+ms.date: 07/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a6cabb4f89d1ad105b88f54ac7a1c43405d1a65d
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: c3a20477b643da961f5c7281d92f3d24a4e7313d
+ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262575"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87443846"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Connettersi al data warehouse con Power BI
 
@@ -40,6 +40,9 @@ ms.locfileid: "87262575"
 - Log inventario del dispositivo
 
 Sono anche evidenziate le tendenze per la registrazione, la conformità, il profilo di configurazione dispositivo e gli aggiornamenti software. I report e i grafici di esempio applicano filtri semplici all'area di disegno. Per usare i filtri avanzati, vedere il riquadro **Filtro** in Power BI Desktop.
+
+> [!NOTE]
+> Le app modello di Power BI consentono ai partner Power BI di creare app Power BI con poco codice o senza codice e di distribuirle a qualsiasi cliente Power BI. Ad esempio, è possibile usare il modello di report di conformità di Power BI nella versione 2.0. La versione 2.0 include una progettazione migliorata e aggiornamenti ai calcoli e ai dati esposti come parte del modello. Per altre informazioni, vedere [Aggiornare un'app modello](https://docs.microsoft.com/power-bi/service-template-apps-install-distribute#update-a-template-app), [App di conformità di Intune (data warehouse)](https://appsource.microsoft.com/product/power-bi/pbi_intune.intune_compliance_dw_app-preview?flightCodes=65ede247-5273-43b8-8a25-b89c7d211fbd) e [Che cosa sono le app modello di Power BI?](https://docs.microsoft.com/power-bi/service-template-apps-overview)
 
 La procedura seguente illustra come scaricare il file di Power BI e come usare il collegamento OData con Power BI.
 

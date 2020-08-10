@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 03/30/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 22dc48a60d03a0cc6bc10e04bc3facbf36983ff9
-ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
+ms.openlocfilehash: 79e2694cfd34f1db8bf11969506ec3d8cbc453d4
+ms.sourcegitcommit: 8a9b85d1c879060ea541f7c8ad1ae34a4ed33ed0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84637580"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87507402"
 ---
 Questi avvisi forniscono importanti informazioni utili per prepararsi per le modifiche e le funzionalità di Intune future.
 
@@ -75,6 +75,9 @@ La [riduzione del supporto dell'amministratore del dispositivo di Google](https:
 - Impostare **Lunghezza minima password**
 - Impostare **Numero di giorni rimanenti prima della scadenza della password**
 - Impostare **Numero di password precedenti di cui impedire il riutilizzo**
+
+
+![Screenshot della pagina dei criteri di conformità di Android](../fundamentals/media/notices/android-compliance-settings.png)
 
 ###### <a name="additional-impacts-based-on-android-os-version"></a>Ulteriori conseguenze in base alla versione del sistema operativo Android
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9796df0da4974b860348bf52ef06db202219136
-ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
+ms.openlocfilehash: b90051e9062978fbc016e461d67fbf081f50c616
+ms.sourcegitcommit: 5a58af4f7d40bbde88a273fba859bf69eeff6107
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491117"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87473679"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identificare i dispositivi di proprietà dell'azienda
 
@@ -52,7 +52,10 @@ Questa funzionalità è supportata nelle piattaforme seguenti:
 | Windows | Supportato (Windows Phone) | Non supportato |
 | iOS/macOS | Non supportato (vedere la nota importante di seguito)  | Supportato |
 | Android OS v10 gestito con gestione dispositivi | Non supportato | Non supportato |
-| Altri dispositivi Android | Non supportato | Supportato |
+| Profilo di lavoro di Android Enterprise | Non supportato | Supportato |
+| Android Enterprise completamente gestito | Non supportate | Supportato |
+| Dispositivi dedicati Android Enterprise | Non supportato | Non supportate |
+| Proprietà aziendale con profilo di lavoro Android Enterprise | Non supportate | Supportato |
 
 <!-- When you upload serial numbers for corporate-owned iOS/iPadOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple's Automated Device Enrollment or Apple Configurator to have them appear as corporate-owned. -->
 
@@ -63,11 +66,6 @@ Questa funzionalità è supportata nelle piattaforme seguenti:
 Per creare l'elenco, generare un elenco di valori a due colonne, delimitato da virgole (file con estensione CSV) senza intestazione. Aggiungere i numeri IMEI o i numeri di serie a 14 cifre nella colonna sinistra e i dettagli nella colonna destra. È possibile importare un solo tipo di ID, numero IMEI o numero di serie in un singolo file con estensione csv. I dettagli sono limitati a 128 caratteri e sono destinati esclusivamente a un uso amministrativo. Non sono visualizzati nel dispositivo. Il limite corrente per ogni file CSV è di 5.000 righe.
 
 **Caricando un file con estensione csv contenente i numeri di serie**: creare un elenco delimitato da virgole (con estensione csv) composto da due colonne senza intestazione e limitato a 5.000 dispositivi o a 5 MB per ogni file con estensione csv.
-
-|||
-|-|-|
-|&lt;ID 1&gt;|&lt;Dettagli sul dispositivo 1&gt;|
-|&lt;ID 2&gt;|&lt;Dettagli sul dispositivo 2&gt;|
 
 Il file con estensione CSV quando viene visualizzato in un editor di testo viene visualizzato come:
 

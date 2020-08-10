@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 535def8c7504d8cd1ea1890c419c2f8b98d4f6f6
-ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
+ms.openlocfilehash: 1f706b2bb898f0969bf33d118291551d0f98d9ef
+ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491202"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87443901"
 ---
 # <a name="set-enrollment-restrictions"></a>Impostare le restrizioni di registrazione
 
@@ -175,6 +175,10 @@ La priorità viene usata se un utente appartiene a più gruppi a cui sono assegn
 Quando si crea una restrizione, questa viene aggiunta all'elenco al livello immediatamente superiore a quello dell'impostazione predefinita.
 
 La registrazione di dispositivi prevede restrizioni predefinite sia per il tipo che per il numero di dispositivi. Queste due restrizioni si applicano a tutti gli utenti, a meno che non vengano sostituite da restrizioni con priorità più alta.
+
+>[!NOTE]
+>Le restrizioni di registrazione vengono applicate agli utenti. Negli scenari di registrazione non gestiti dall'utente, ad esempio la modalità di distribuzione automatica di Windows Autopilot o il provisioning in modalità "White Glove", verranno applicate solo le restrizioni di priorità predefinite (destinate a "Tutti gli utenti").
+
 
 È possibile modificare la priorità di tutte le restrizioni non predefinite.
 

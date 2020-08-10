@@ -1,5 +1,5 @@
 ---
-title: È stato raggiunto il limite massimo di dispositivi registrati | Microsoft Docs
+title: È stato raggiunto il limite di dispositivi macOS registrati
 titlesuffix: Intune Company Portal
 description: ''
 keywords: ''
@@ -19,14 +19,14 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 94be96db8596fbc6a5d8f17e923e687c7972433d
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2e07e7ebd2c209aabf8c0094f9f1220f249fcf6e
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880539"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546468"
 ---
-# <a name="the-limit-of-devices-you-can-register-has-been-reached"></a>È stato raggiunto il limite massimo di dispositivi che è possibile registrare
+# <a name="the-limit-of-macos-devices-you-can-register-has-been-reached"></a>È stato raggiunto il limite massimo di dispositivi macOS che è possibile registrare
 
 Ogni società imposta un limite per il numero di dispositivi che ogni utente può utilizzare per accedere alle risorse aziendali. Ciò consente di proteggere le informazioni aziendali e assicura che ogni utente sia autorizzato ad accedervi da dispositivi e percorsi specifici. Esistono tre operazioni che è possibile eseguire se viene visualizzato un messaggio che indica che **non è stato possibile registrare il dispositivo** perché è stato raggiunto il limite massimo del numero di dispositivi:
 

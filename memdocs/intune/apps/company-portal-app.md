@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/27/2020
+ms.date: 08/04/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d979001f159b427314f8bc53788ccce0acd13d11
-ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
+ms.openlocfilehash: 33977676b4c144573965477154a7939f6061280a
+ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87365543"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87758347"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Come personalizzare le app Portale aziendale Intune, il sito Web Portale aziendale e l'app Intune
 
@@ -105,10 +105,12 @@ La tabella seguente offre altri dettagli di configurazione:
 
 > [!IMPORTANT]
 > Le impostazioni seguenti non si applicano ai dispositivi iOS/iPadOS configurati per la registrazione con la [Registrazione automatica dei dispositivi](../enrollment/device-enrollment-program-enroll-ios.md). Indipendentemente dal modo in cui queste impostazioni sono configurate, i dispositivi iOS/iPadOS configurati per la Registrazione automatica dei dispositivi verranno registrati durante il flusso predefinito e agli utenti verrà richiesto di eseguire l'accesso all'avvio del Portale aziendale.
+> 
+> Le impostazioni seguenti si applicano ai dispositivi Android configurati con [Registrazione per dispositivi mobili Samsung KNOX](../enrollment/android-samsung-knox-mobile-enroll.md). Se un dispositivo è stato configurato per Registrazione per dispositivi mobili Samsung KNOX e la registrazione del dispositivo è impostata su Non disponibile, il dispositivo non sarà in grado di registrarsi durante il flusso predefinito.
 
 |    Opzioni di registrazione dei dispositivi    |    Descrizione    |    Richieste di elenco di controllo    |    Notifica    |    Stato dei dettagli del dispositivo    |    Stato dei dettagli dell'app (per app che richiedono la registrazione)    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
-|    Disponibile, con richieste di conferma    |    Esperienza predefinita con richieste di registrazione in tutte le posizioni possibili.    |    Sì    |    Sì    |    Sì    |    Sì    |
+|    Disponibile, con richieste di conferma    |    Esperienza predefinita con richieste di registrazione in tutte le posizioni possibili.    |    Sì    |    Sì    |    sì    |    sì    |
 |    Disponibile, senza richieste di conferma    |    L'utente può eseguire la registrazione tramite lo stato nei dettagli del dispositivo per il dispositivo corrente o dalle app che richiedono la registrazione.    |    No    |    No    |    Sì    |    Sì    |
 |    Non disponibile    |    Gli utenti non possono eseguire la registrazione.    |    No    |    No    |    No    |    No    |
 
@@ -238,7 +240,7 @@ Alcune piattaforme e configurazioni non consentono azioni self-service nel dispo
 | Sincronizza | Disponibile | Disponibile | Disponibile | Disponibile |
 | Blocco remoto | Solo per Windows Phone | Disponibile | Disponibile | Disponibile |
 | Reimpostazione passcode | Solo per Windows Phone | Disponibile<sup>(8)</sup> | N/D | Disponibile<sup>(6)</sup> |
-| Recupero chiavi | ND | ND | Disponibile<sup>(2)</sup> | N/D |
+| Recupero chiavi | ND | N/D | Disponibile<sup>(2)</sup> | N/D |
 
 <sup>(1)</sup> Il **ritiro** è sempre bloccato nei dispositivi Windows aggiunti ad Azure AD.<br>
 <sup>(2)</sup> Il **recupero chiavi** per MacOS è disponibile solo tramite il portale Web.<br>

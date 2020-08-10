@@ -1,5 +1,5 @@
 ---
-title: Inviare i log al supporto tecnico aziendale per i dispositivi Windows 10 | Microsoft Docs
+title: Inviare i log tramite l'app Portale aziendale per Windows
 description: Inviare tramite posta elettronica i dettagli degli errori e dei log per consentire al supporto tecnico aziendale di correggere i problemi delle app
 keywords: ''
 author: lenewsad
@@ -19,12 +19,12 @@ ms.reviewer: scottduf
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: b2adca8ed11148e80967c231f79f33b18bb3b113
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 1212dae09da7f4420913d18adc404db266f70c45
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881974"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546743"
 ---
 # <a name="email-your-company-support-about-problem-from-company-portal-for-windows"></a>Comunicare tramite posta elettronica i problemi al supporto tecnico aziendale dall'app Portale aziendale per Windows
 

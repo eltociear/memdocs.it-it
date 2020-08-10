@@ -1,5 +1,5 @@
 ---
-title: Come trovare il numero di serie del dispositivo iOS | Documentazione Microsoft
+title: Come trovare il numero di serie del dispositivo macOS
 description: ''
 keywords: ''
 author: lenewsad
@@ -19,14 +19,14 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: de415b788bf3df53d799721e1da54aadf9002fe4
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 8d6647f8569c454a1e4bca6d8af1245f4128e2f3
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878226"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546793"
 ---
-# <a name="how-do-i-find-the-serial-number-on-my-device"></a>Come trovare il numero di serie del dispositivo?
+# <a name="how-do-i-find-the-serial-number-on-my-macos-device"></a>Come trovare il numero di serie del dispositivo macOS
 
 Il numero di serie del dispositivo lo identifica in modo univoco e può essere utile al personale del supporto tecnico in determinate attività, ad esempio la sostituzione del dispositivo con uno nuovo. Per individuare il numero di serie, passare al **menu Apple** > **Informazioni su questo Mac**.
 

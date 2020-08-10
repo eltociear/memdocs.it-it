@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8405ef9c8d83583fe2ceb5da668ccfd79d23a39a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b91751e9879d06b40bdd9518926759da2331115f
+ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79334093"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87758262"
 ---
 # <a name="troubleshoot-mobile-application-management"></a>Risolvere i problemi relativi alla gestione di applicazioni mobili
 
@@ -102,7 +102,7 @@ Finestra di dialogo/Messaggio di errore | Causa | Soluzione |
 -- | --- | --- |
 **L'app non è configurata**: questa app non è stata configurata per l'uso da parte dell'utente. Per assistenza contattare l'amministratore IT. | Non è stato rilevato un criterio di protezione dell'app richiesto per questa app. |Verificare che sia stato distribuito un criterio di protezione dell'app Android al gruppo di sicurezza dell'utente e che questa app rappresenti la destinazione.
 **Failed app launch**: si è verificato un problema di avvio dell'applicazione. Provare ad aggiornare l'app o l'app Portale aziendale di Intune. Per assistenza, contattare l'amministratore IT. | Intune ha rilevato un criterio di protezione dell'app valido, ma l'app si blocca durante l'inizializzazione di MAM. | Assicurarsi che la versione dell'app sia aggiornata. <br><br> Assicurarsi che l'app Portale aziendale di Intune sia installata e aggiornata nel dispositivo. <br><br> Se l'errore persiste, usare l'app Portale aziendale per inviare i log a Intune o creare un [ticket di supporto](../fundamentals/get-support.md#create-an-online-support-ticket).
-**Non sono state trovate app**: nel dispositivo non sono presenti app consentite dall'organizzazione per aprire questo contenuto. Per assistenza contattare l'amministratore IT. | L'utente ha provato ad aprire i dati aziendali o dell'istituto di istruzione con un'altra app, ma Intune non riesce a trovare altre app gestite che possono aprire i dati. | Assicurarsi che sia stato distribuito un criterio di protezione dell'app Android alla protezione dell'utente e che la destinazione sia almeno un'altra app abilitata per MAM che può aprire i dati in questione.
+**Non sono state trovate app**: nel dispositivo non sono presenti app consentite dall'organizzazione per aprire questo contenuto. Per assistenza contattare l'amministratore IT. | L'utente ha provato ad aprire i dati aziendali o dell'istituto di istruzione con un'altra app, ma Intune non riesce a trovare altre app gestite che possono aprire i dati. | Assicurarsi che sia stato distribuito un criterio di protezione dell'app Android nel gruppo di protezione dell'utente e che la destinazione sia almeno un'altra app abilitata per MAM che può aprire i dati in questione.
 **Accesso non riuscito**: provare a ripetere l'accesso. Se il problema persiste, contattare l'amministratore IT per assistenza. | Non è stato possibile autenticare l'account con cui l'utente ha provato ad accedere. | Assicurarsi che l'utente esegua l'accesso con l'account aziendale o dell'istituto di istruzione che è già registrato con il servizio MAM di Intune (il primo account aziendale o dell'istituto di istruzione con cui è stato effettuato correttamente l'accesso in questa app). <br><br> Cancellare i dati dell'app. <br><br> Assicurarsi che la versione dell'app sia aggiornata. <br><br> Assicurarsi che la versione dell'app Portale aziendale sia aggiornata.
 **Connessione a Internet richiesta**: è necessaria una connessione a Internet per verificare se è possibile usare questa app. | Il dispositivo non è connesso a Internet. | Connettere il dispositivo a una rete Wi-Fi o dati.
 **Dispositivo non conforme**: questa app non può essere usata perché si sta usando un dispositivo rooted. Per assistenza contattare l'amministratore IT. | Intune ha rilevato che l'utente sta usando un dispositivo rooted. | Ripristinare le impostazioni predefinite del dispositivo.

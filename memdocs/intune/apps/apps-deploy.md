@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 07/30/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 665e06e6aca0a4ba4f71147325eb587b1b8b4d40
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: cafc7549dfb04bff14b0cdfe8c737ee4971d4db1
+ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461539"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87443823"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Assegnare app ai gruppi con Microsoft Intune
 
@@ -32,7 +32,7 @@ ms.locfileid: "86461539"
 Dopo avere [aggiunto un'app](apps-add.md) a Microsoft Intune, è possibile assegnarla a utenti e dispositivi. Si noti che è possibile assegnare un'app a un dispositivo indipendentemente dal fatto che il dispositivo sia gestito da Intune o meno.
 
 > [!NOTE]
-> La finalità della distribuzione in base alla disponibilità non è supportata per i gruppi di dispositivi, ma solo per i gruppi di utenti.
+> L'intento della distribuzione **Disponibile** è supportato solo per i **gruppi di dispositivi** quando la destinazione sono i dispositivi Android Enterprise completamente gestiti (COBO) e i dispositivi Android Enterprise di proprietà dell'azienda abilitati personalmente (COPE).
 
 La tabella seguente elenca le varie opzioni per l'assegnazione di applicazioni a utenti e dispositivi:
 

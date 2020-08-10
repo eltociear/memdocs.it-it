@@ -1,5 +1,5 @@
 ---
-title: Manca un certificato necessario per il dispositivo | Documentazione Microsoft
+title: Installare il certificato mancante richiesto
 description: ''
 keywords: ''
 author: lenewsad
@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1cd3309ebe05d48fd2b28988ffc09702901c470a
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 162a5c2ff02a762578fb6f52b60b6ff404862329
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881052"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546709"
 ---
 # <a name="install-missing-certificate-required-by-your-organization"></a>Installare il certificato mancante richiesto dall'organizzazione  
 
@@ -44,7 +44,7 @@ Completare questi passaggi per abilitare l'accesso al browser. Dopo aver abilita
 
 1. Nell'app Portale aziendale selezionare il menu nell'angolo a destra.  
 2. Selezionare **Impostazioni**.  
-3. Accanto a **Abilita l'accesso al browser** selezionare **Abilita**.  
+3. Accanto ad **Abilita l'accesso al browser** selezionare **Abilita**.  
 4. Nella schermata relativa all'amministratore del dispositivo selezionare **ATTIVA**. 
 
 ## <a name="identify-and-download-the-missing-certificate-through-web-search"></a>Identificare e scaricare il certificato mancante tramite la ricerca sul Web

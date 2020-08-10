@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 07/30/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a7f382c604d4cddef487871e47ad004389669982
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 8bbeb0c3db963e858230ce9a45f45f976bbfbbef
+ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83984302"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87443880"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>Includere ed escludere assegnazioni di app in Microsoft Intune
 
@@ -88,7 +88,12 @@ Per assegnare un'app ai gruppi usando l'assegnazione di inclusione ed esclusione
 
 Quando si creano le assegnazioni di gruppi, i gruppi che sono già stati assegnati non sono disponibili per la modifica. Se si vuole selezionare un gruppo attualmente non disponibile, rimuovere prima l'app dall'elenco assegnato dell'app.
 
-Per modificare le assegnazioni, nell'elenco **Assegnazioni** dell'app selezionare la riga che contiene l'assegnazione specifica da modificare. È anche possibile rimuovere un'assegnazione selezionando i puntini di sospensione ( **...** ) alla fine di una riga e quindi selezionando **Rimuovi**. Per modificare la visualizzazione dell'elenco **Assegnazioni**, raggruppare per **Tipo di assegnazione** o per **Inclusi/Esclusi**.
+Per modificare le assegnazioni, nell'elenco **Assegnazioni** dell'app selezionare la riga che contiene l'assegnazione specifica da modificare. È anche possibile rimuovere un'assegnazione selezionando i puntini di sospensione ( **...** ) alla fine di una riga e quindi selezionando **Rimuovi**. 
+
+> [!NOTE]
+> La rimozione di un'assegnazione di gruppo non comporta la rimozione dell'app correlata. L'app installata rimarrà nel dispositivo.  
+
+Per modificare la visualizzazione dell'elenco **Assegnazioni**, raggruppare per **Tipo di assegnazione** o per **Inclusi/Esclusi**.
 
 ![Assegnazioni di app in Intune - Procedura completata](./media/apps-inc-exl-assignments/apps-inc-exl-05.png)
 

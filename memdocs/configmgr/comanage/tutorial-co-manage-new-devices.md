@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 7fb02a5c-e286-46b1-a972-6335c858429a
-ms.openlocfilehash: 67d86850dc0440481916984af8635d9e005044c6
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 742cd1e86ac0bff6563c0d3ee4edce7324629480
+ms.sourcegitcommit: c1afc8abd0d7da48815bd2b0e45147774c72c2df
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428612"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87815464"
 ---
 # <a name="tutorial-enable-co-management-for-new-internet-based-devices"></a>Esercitazione: Abilitare la co-gestione per nuovi dispositivi basati su Internet
 
@@ -96,7 +96,7 @@ Per quanto riguarda questo certificato:
 
 ### <a name="identify-a-unique-name-for-your-cloud-management-gateway-in-azure"></a>Identificare un nome univoco per il servizio Cloud Management Gateway in Azure
 
-Nel richiedere il certificato di autenticazione server di Cloud Management Gateway, specificare un nome univoco per identificare il *servizio cloud (versione classica)* in Azure. Per impostazione predefinita, il cloud pubblico di Azure usa *cloudapp.net* e Cloud Management Gateway è ospitato all'interno del dominio cloudapp.net come *\<NomeDNSUnivoco >.cloudapp.net*.  
+Nel richiedere il certificato di autenticazione server di Cloud Management Gateway, specificare un nome univoco per identificare il *servizio cloud (versione classica)* in Azure. Per impostazione predefinita, il cloud pubblico di Azure usa *cloudapp.net* e Cloud Management Gateway è ospitato all'interno del dominio cloudapp.net come *\<YourUniqueDnsName>.cloudapp.net*.  
 
 > [!TIP]  
 > In questa esercitazione il **certificato di autenticazione server di Cloud Management Gateway** usa un FQDN che termina con *contoso.com*.  Dopo aver creato il servizio Cloud Management Gateway, verrà configurato un record di nome canonico (CNAME) nel DNS pubblico dell'organizzazione. Questo record crea un alias per Cloud Management Gateway di cui viene eseguito il mapping al nome usato nel certificato pubblico.  
@@ -125,7 +125,9 @@ Richiedere un tipo di provider di chiavi versione 2 quando si genera una richies
 > [!TIP]  
 > Quando viene distribuito Cloud Management Gateway, viene installato contemporaneamente anche un punto di distribuzione cloud. Per impostazione predefinita, quando si distribuisce Cloud Management Gateway, l'opzione **Consenti il funzionamento di CMG come punto di distribuzione cloud e per la gestione di contenuti da Archiviazione di Azure** è selezionata. La condivisione del percorso del punto di distribuzione cloud nel server con Cloud Management Gateway elimina la necessità di configurazioni e certificati separati per supportare il punto di distribuzione cloud. Anche se il punto di distribuzione cloud non è necessario per l'uso della co-gestione, è utile nella maggior parte degli ambienti.  
 >
-> Se si intende usare altri punti di distribuzione cloud per la co-gestione, è necessario richiedere certificati separati per ogni server aggiuntivo. Per richiedere un certificato pubblico per il punto di distribuzione cloud, usare gli stessi dettagli usati per la richiesta di firma del certificato di Cloud Management Gateway. È necessario modificare solo il nome comune in modo che sia univoco per ogni punto di distribuzione cloud.  
+> Se si usa un altro punto di distribuzione cloud separato, è necessario richiedere certificati distinti per ogni punto di distribuzione cloud aggiuntivo. Per richiedere un certificato pubblico per un punto di distribuzione cloud, usare gli stessi dettagli usati per la richiesta di firma del certificato di Cloud Management Gateway. È necessario modificare solo il nome comune in modo che sia univoco per ogni punto di distribuzione cloud.
+>
+> L'uso di un punto di distribuzione cloud aggiuntivo separato è deprecato e non è più consigliato. Per altre informazioni, vedere [Funzionalità deprecate](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#deprecated-features).
 
 #### <a name="details-for-the-cloud-management-gateway-csr"></a>Dettagli per la richiesta di firma del certificato di Cloud Management Gateway
 
@@ -395,7 +397,7 @@ Ad esempio, *C:\Programmi\Microsoft Configuration Manager\bin\i386\ccmsetup.msi*
 
    - **Autore**: Microsoft  
 
-   - **Argomenti della riga di comando**:  *\<specificare la riga di comando **CCMSETUPCMD**. È possibile usare la riga di comando salvata dalla pagina* Abilitazione *della Configurazione guidata della co-gestione. Questa riga di comando include i nomi del servizio cloud e altri valori, che permettono ai dispositivi di installare il software client di Configuration Manager.>*  
+   - **Argomenti della riga di comando**:  *\<Specify the **CCMSETUPCMD** command line. You can use the command line you saved from the* Enablement *page of the Co-management Configuration Wizard. This command line includes the names of your cloud service and additional values that enable devices to install the Configuration Manager client software.>*  
 
      La struttura della riga di comando dovrebbe essere simile a questo esempio, usando solo i parametri CCMSETUPCMD e SMSSiteCode:  
 
@@ -414,7 +416,7 @@ La procedura seguente distribuisce l'app per l'installazione del client di Confi
 
 1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://endpoint.microsoft.com). Selezionare **App** > **Tutte le app** e quindi selezionare **ConfigMgr Client Setup Bootstrap**, l'app creata per distribuire il client di Configuration Manager.  
 
-2. Fare clic su **Proprietà** e quindi su **Modifica** per **Assegnazioni**. Selezionare **Aggiungi gruppo** nelle assegnazioni **richieste** per impostare i gruppi di Azure Active Directory (AD) che includono gli utenti e i dispositivi che dovranno partecipare alla co-gestione.  
+2. Selezionare **Proprietà** e quindi **Modifica** per **Assegnazioni**. Selezionare **Aggiungi gruppo** nelle assegnazioni **richieste** per impostare i gruppi di Azure Active Directory (AD) che includono gli utenti e i dispositivi che dovranno partecipare alla co-gestione.  
 
 3. Selezionare **Verifica e salva** e quindi **Salva** per salvare la configurazione.
 L'app viene ora richiesta dagli utenti e dai dispositivi cui è stata assegnata. Dopo che l'app installa il client di Configuration Manager in un dispositivo, questo viene gestito tramite la co-gestione.

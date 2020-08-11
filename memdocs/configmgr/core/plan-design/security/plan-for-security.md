@@ -10,12 +10,12 @@ ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 53a30f376bd288e8d50d88ea8f33af37f3cd599e
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: b15b3017dd49c75f4281a3c0bfd1c8a695ab8bae
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110152"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87525999"
 ---
 # <a name="plan-for-security-in-configuration-manager"></a>Pianificare la sicurezza in Configuration Manager
 
@@ -160,9 +160,11 @@ In molti casi, la configurazione e il comportamento predefiniti sono sufficienti
 
 3.  Il certificato è valido, non revocato e non è scaduto. La convalida verifica anche che la chiave privata sia accessibile.  
 
-4.  Il certificato include la funzionalità di autenticazione client o è stato rilasciato al nome del computer.  
+4.  Il certificato ha funzionalità di autenticazione client.
 
-5.  Il certificato ha il periodo di validità più lungo.  
+5.  Il nome del soggetto del certificato contiene il nome del computer locale come sottostringa.  
+
+6.  Il certificato ha il periodo di validità più lungo.  
 
 Configurare i client per l'uso dell'elenco di autorità di certificazione usando i meccanismi seguenti:  
 
@@ -208,7 +210,10 @@ Nella tabella seguente vengono illustrati i valori attributo che Configuration M
 |2.5.4.12|T o Title|Titolo|  
 |2.5.4.42|G o GN o GivenName|Nome specificato|  
 |2.5.4.43|I o Initials|Iniziali|  
-|2.5.29.17|(nessun valore)|Nome alternativo soggetto|  
+|2.5.29.17|(nessun valore)|Nome alternativo soggetto| 
+
+  > [!NOTE]
+  > Se si configura uno dei metodi di selezione dei certificati alternativi sopra indicati, non è necessario che il nome del soggetto del certificato contenga il nome del computer locale.
 
 Se viene individuato più di un certificato appropriato dopo aver applicato i criteri di selezione, è possibile ignorare la configurazione predefinita che prevede la selezione del certificato con il periodo di validità più lungo specificando che nessun certificato è selezionato. In questo scenario, il client non riuscirà a comunicare con i sistemi del sito IIS con un certificato PKI. Il client invia un messaggio di errore al suo punto di stato di fallback assegnato per avvisare circa l'esito negativo della selezione del certificato e consentire la modifica o il perfezionamento dei criteri di selezione del certificato. Il comportamento del client varia a seconda se la connessione non riuscita era su HTTPS o HTTP:  
 

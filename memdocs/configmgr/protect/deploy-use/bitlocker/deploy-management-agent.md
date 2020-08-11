@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 786a7a528c027ab46237dac92378224705b0e026
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: ba72e9accb7cbc5a7dc1149c6c9d947cb3e0692b
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262830"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87526084"
 ---
 # <a name="deploy-bitlocker-management"></a>Distribuire la gestione di BitLocker
 
@@ -131,6 +131,10 @@ Quando si crea più di un criterio, è possibile configurarne la priorità relat
 1. Selezionare **OK** per distribuire il criterio.
 
 È possibile creare più distribuzioni dello stesso criterio. Per visualizzare altre informazioni su ogni distribuzione, selezionare il criterio nel nodo **Gestione di BitLocker** e quindi nel riquadro dei dettagli passare alla scheda **Distribuzioni**.
+
+> [!IMPORTANT]
+> Il client MBAM non avvierà le azioni di Crittografia unità BitLocker se è attiva una connessione RDP (Remote Desktop Protocol). Tutte le connessioni alla console remota devono essere chiuse e un utente deve essere connesso a una sessione della console fisica prima dell'avvio di Crittografia unità BitLocker.
+
 
 ## <a name="monitor"></a>Monitoraggio
 

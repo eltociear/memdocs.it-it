@@ -10,12 +10,12 @@ ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4403c8d0c57fba8fb63e3df729fb8a48ff123362
-ms.sourcegitcommit: d8dc05476ecd5db7ecb36dc649b566b349ba263d
+ms.openlocfilehash: 76e0fd3ad8ceaecb43d2a61c3abe15accda5e5d8
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83732874"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912377"
 ---
 # <a name="manage-boot-images-with-configuration-manager"></a>Gestire le immagini d'avvio con Configuration Manager
 
@@ -80,8 +80,8 @@ Quando un'immagine d'avvio è basata su una versione di Windows ADK diversa da q
 
 Durante l'installazione del sito, Configuration Manager aggiunge automaticamente immagini d'avvio basate su una versione di WinPE dalla versione supportata di Windows ADK. A seconda della versione di Configuration Manager, è possibile aggiungere immagini d'avvio basate su una diversa versione di WinPE dalla versione supportata di Windows ADK. Quando si prova ad aggiungere un'immagine d'avvio che contiene una versione non supportata di WinPE si verifica un errore. L'elenco seguente include le versioni di Windows ADK e WinPE attualmente supportate:
 
-|  |  |
-|---------|---------|
+| Tipo di Windows | Versioni supportate |
+|--------------|--------------------|
 | Versione di Windows ADK | Windows ADK per Windows 10 |
 | Versioni di Windows PE per le immagini d'avvio personalizzabili dalla console di Configuration Manager | Windows PE 10 |
 | Versioni di Windows PE supportate per le immagini d'avvio *non personalizzabili* dalla console di Configuration Manager | - Windows PE 3.1<sup>[Nota 1](#bkmk_note1)</sup> <br> - Windows PE 5 |

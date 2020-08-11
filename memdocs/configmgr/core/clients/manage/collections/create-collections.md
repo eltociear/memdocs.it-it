@@ -10,12 +10,12 @@ ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7eccc3bf6b7ded9db93f5af78d55f090e9704cbc
-ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
+ms.openlocfilehash: 5e81bc9b2135d17c445f8a86ff2214db394f63db
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87438600"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865490"
 ---
 # <a name="how-to-create-collections-in-configuration-manager"></a>Come creare raccolte in Configuration Manager
 
@@ -171,9 +171,8 @@ Nella finestra di dialogo **Proprietà regola di query** specificare le informaz
 
 - **Modifica istruzione query**: apre la finestra di dialogo **Proprietà istruzione query**, dove è possibile scrivere una query da usare come regola per la raccolta. Per altre informazioni sulle query, vedere [Introduzione alle query](../../../servers/manage/introduction-to-queries.md).  
 
-        
-        > [!TIP]  
-        > On the General tab, selecting the checkbox to **Omit duplicate rows (select distinct)** may result in less rows returned and potentially quicker results. 
+    > [!TIP]  
+    > Nella scheda Generale la selezione della casella di controllo **Ometti righe duplicate (select distinct)** può comportare la restituzione di un minor numero di righe e risultati potenzialmente più veloci.
 
 ### <a name="device-category-rule"></a><a name="bkmk-category"></a> Regola categoria di dispositivi
 

@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 400f3e228562dde3e4d61a4d314c174080dab597
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: fc892a4372aa7d72f294ddf93f811d641ca961b5
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87757444"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051425"
 ---
 # <a name="adding-devices-to-windows-autopilot"></a>Aggiunta di dispositivi a Windows Autopilot
 
@@ -112,6 +112,7 @@ I comandi possono essere eseguiti anche in modalità remota, purché siano dispo
 Quando gli ID hardware sono stati acquisiti da dispositivi esistenti, possono essere caricati con diversi mezzi. Vedere la documentazione dettagliata per ogni meccanismo disponibile.
 
 -   [Microsoft Intune](enrollment-autopilot.md).  Questo è il meccanismo preferito per tutti i clienti.
+    - L'interfaccia di amministrazione di Microsoft Endpoint Manager viene usata per la registrazione dei dispositivi in Intune.
 -   [Centro](https://msdn.microsoft.com/partner-center/autopilot)per i partner.  Viene usato dai partner CSP per registrare i dispositivi per conto dei clienti.
 -   [Microsoft 365 Business & amministratore di Office 365](https://support.office.com/article/Create-and-edit-AutoPilot-profiles-5cf7139e-cfa1-4765-8aad-001af1c74faa).  Questa operazione viene in genere usata da piccole e medie imprese (PMI) che gestiscono i propri dispositivi usando Microsoft 365 Business.
 -   [Microsoft Store per le aziende](https://docs.microsoft.com/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles).  È possibile che si stia già usando MSfB per gestire le app e le impostazioni.

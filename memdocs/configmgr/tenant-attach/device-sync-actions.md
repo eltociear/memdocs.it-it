@@ -2,7 +2,7 @@
 title: Collegamento del tenant di Microsoft Endpoint Manager
 titleSuffix: Configuration Manager
 description: Caricare i dispositivi Configuration Manager nel servizio cloud e intraprendere le azioni dall'interfaccia di amministrazione.
-ms.date: 07/10/2020
+ms.date: 08/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -10,12 +10,12 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: a9e97c74e4825dc49ce628b3ae176c55f4288966
-ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
+ms.openlocfilehash: 784a287176066ce34c3499ecdc91a450e2d6160c
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86210301"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127546"
 ---
 # <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a>Connessione tenant di Microsoft Endpoint Manager: azioni dispositivo e sincronizzazione dispositivo
 <!--3555758 live 3/4/2020-->
@@ -38,88 +38,98 @@ A partire da Configuration Manager versione 2002, è possibile caricare i dispos
 
 ## <a name="internet-endpoints"></a>Endpoint Internet
 
-- `https://aka.ms/configmgrgateway`
-- `https://*.manage.microsoft.com` <!--7424742-->
+[!INCLUDE [Internet endpoints for tenant attach](../core/plan-design/network/includes/internet-endpoints-tenant-attach.md)]
 
-## <a name="enable-device-upload"></a>Abilita caricamento dispositivo
+## <a name="enable-device-upload-when-co-management-is-already-enabled"></a><a name="bkmk_edit"></a>Abilita caricamento dispositivo quando la co-gestione è già abilitata
 
-- Se la co-gestione è attualmente abilitata, [modificare le proprietà di co-gestione](#bkmk_edit) per abilitare il caricamento del dispositivo.
-- Se la co-gestione non è abilitata, [usare la **Configurazione guidata co-gestione** ](#bkmk_config) per abilitare il caricamento del dispositivo.
-   - È possibile caricare i dispositivi senza abilitare la registrazione automatica per la co-gestione o cambiare i carichi di lavoro in Intune.
-- Verranno caricati tutti i dispositivi gestiti da Configuration Manager con **Sì** nella colonna **client** . Se necessario, è possibile limitare il caricamento a una singola raccolta di dispositivi.
+Se è attualmente abilitata la co-gestione, verranno usate le proprietà di co-gestione per abilitare il caricamento del dispositivo. Quando la co-gestione non è già abilitata, [usare la configurazione guidata della **co-gestione** ](#bkmk_config) per abilitare il caricamento dei dispositivi.
 
-### <a name="edit-co-management-properties-to-enable-device-upload"></a><a name="bkmk_edit"></a>Modificare le proprietà di co-gestione per abilitare il caricamento del dispositivo
-
-Se la co-gestione è attualmente abilitata, modificare le proprietà di co-gestione per abilitare il caricamento dei dispositivi attenendosi alle istruzioni seguenti:
+Quando la co-gestione è già abilitata, modificare le proprietà di co-gestione per abilitare il caricamento del dispositivo attenendosi alle istruzioni seguenti:
 
 1. Nella console di amministrazione di Configuration Manager accedere a **Amministrazione** > **Panoramica** > **Servizi cloud** > **Co-gestione**.
-1. Fare clic con il pulsante destro del mouse sulle impostazioni di co-gestione e selezionare **Proprietà**.
-1. Nella scheda **Configure upload** (Configura caricamento) selezionare **Carica nell'interfaccia di amministrazione di Microsoft Endpoint Manager**. Fare clic su **Apply**.
+1. Sulla barra multifunzione selezionare **Proprietà** per i criteri di produzione di co-gestione.
+1. Nella scheda **Configure upload** (Configura caricamento) selezionare **Carica nell'interfaccia di amministrazione di Microsoft Endpoint Manager**. Selezionare **Applica**.
    - L'impostazione predefinita per il caricamento del dispositivo è **Tutti i dispositivi personali gestiti da Microsoft Endpoint Configuration Manager**. Se necessario, è possibile limitare il caricamento a una singola raccolta di dispositivi.
 1. Selezionare l'opzione per **abilitare l'analisi degli endpoint per i dispositivi caricati in Microsoft Endpoint Manager** se si vuole ottenere informazioni dettagliate per ottimizzare l'esperienza dell'utente finale in [endpoint Analytics](../../analytics/overview.md).
 
    [![Caricare i dispositivi nell'interfaccia di amministrazione di Microsoft Endpoint Manager](../../analytics/media/6051638-configure-upload-configmgr.png)](../../analytics/media/6051638-configure-upload-configmgr.png#lightbox)
 1. Quando richiesto, accedere con l'account di *amministratore globale*.
-1. Fare clic su **Sì** per accettare la notifica **Crea un'applicazione di AAD**. Questa azione esegue il provisioning di un'entità servizio e crea una registrazione dell'applicazione Azure AD per semplificare la sincronizzazione.
-1. Fare clic su **OK** per uscire dalle proprietà di co-gestione dopo aver apportato le modifiche.
+1. Selezionare **Sì** per accettare la notifica di **creazione dell'applicazione AAD** . Questa azione esegue il provisioning di un'entità servizio e crea una registrazione dell'applicazione Azure AD per semplificare la sincronizzazione.
+1. Scegliere **OK** per uscire dalle proprietà di co-gestione dopo avere apportato le modifiche.
 
 
-### <a name="use-the-configure-co-management-wizard-to-enable-device-upload"></a><a name="bkmk_config"></a>Usare la configurazione guidata della co-gestione per abilitare il caricamento del dispositivo
-Se la co-gestione non è abilitata, usare la **Configurazione guidata co-gestione** per abilitare il caricamento del dispositivo. È possibile caricare i dispositivi senza abilitare la registrazione automatica per la co-gestione o cambiare i carichi di lavoro in Intune. Abilitare il caricamento del dispositivo attenendosi alle istruzioni seguenti:
+## <a name="enable-device-upload-when-co-management-isnt-enabled"></a><a name="bkmk_config"></a>Abilita caricamento dispositivo quando la co-gestione non è abilitata
+
+Se la co-gestione non è abilitata, verrà usata la **Configurazione guidata co-gestione** per abilitare il caricamento del dispositivo. È possibile caricare i dispositivi senza abilitare la registrazione automatica per la co-gestione o cambiare i carichi di lavoro in Intune. Verranno caricati tutti i dispositivi gestiti da Configuration Manager con **Sì** nella colonna **client** . Se necessario, è possibile limitare il caricamento a una singola raccolta di dispositivi. Se nell'ambiente è già abilitata la co-gestione, [modificare le proprietà di co-gestione](#bkmk_edit) per abilitare il caricamento del dispositivo.
+
+Quando la co-gestione non è abilitata, usare le istruzioni seguenti per abilitare il caricamento del dispositivo:
 
 1. Nella console di amministrazione di Configuration Manager accedere a **Amministrazione** > **Panoramica** > **Servizi cloud** > **Co-gestione**.
-1. Nella barra multifunzione fare clic su **Configura la co-gestione** per aprire la procedura guidata.
-1. Nella pagina **Onboarding del tenant** selezionare **AzurePublicCloud** per l'ambiente in uso. Il cloud di Azure per enti pubblici non è supportato.
-1. Fare clic su **Accedi**. Usare l'account di *amministratore globale* per accedere.
+1. Sulla barra multifunzione selezionare **Configura co-gestione** per aprire la procedura guidata.
+1. Nella pagina **Onboarding del tenant** selezionare **AzurePublicCloud** per l'ambiente in uso. Il cloud di Azure per enti pubblici e Azure Cina 21Vianet non sono supportati.
+1. Selezionare **Accedi**. Usare l'account di *amministratore globale* per accedere.
 1. Assicurarsi che l'opzione **carica nell'interfaccia di amministrazione di Microsoft Endpoint Manager** sia selezionata nella pagina **onboarding del tenant** .
    - Verificare che l'opzione **Abilita registrazione automatica client per la co-gestione** non sia selezionata se non si vuole abilitare la co-gestione adesso. Se si vuole abilitare la co-gestione, selezionare l'opzione.
    - Se si Abilita la co-gestione insieme al caricamento del dispositivo, verranno fornite ulteriori pagine della procedura guidata per il completamento. Per altre informazioni, vedere [Abilitare la co-gestione](../comanage/how-to-enable.md).
 
    [![Configurazione guidata della co-gestione](./media/3555758-comanagement-wizard.png)](./media/3555758-comanagement-wizard.png#lightbox)
-1. Fare clic su **Avanti** e quindi su **Sì** per accettare la notifica **Crea un'applicazione di AAD**. Questa azione esegue il provisioning di un'entità servizio e crea una registrazione dell'applicazione Azure AD per semplificare la sincronizzazione.
+1. Scegliere **Avanti** e quindi **Sì** per accettare la notifica di **creazione dell'applicazione AAD** . Questa azione esegue il provisioning di un'entità servizio e crea una registrazione dell'applicazione Azure AD per semplificare la sincronizzazione.
+     - Facoltativamente, è possibile importare un'applicazione Azure AD creata in precedenza durante il caricamento del tenant di connessione (a partire dalla versione 2006). Per ulteriori informazioni, vedere la sezione [importare un'applicazione Azure ad creata in precedenza](#bkmk_aad_app) .
 1. Nella pagina **Configura caricamento** selezionare l'impostazione consigliata per il caricamento dei **dispositivi per tutti i dispositivi gestiti da Microsoft endpoint Configuration Manager**. Se necessario, è possibile limitare il caricamento a una singola raccolta di dispositivi.
 1. Selezionare l'opzione per **abilitare l'analisi degli endpoint per i dispositivi caricati in Microsoft Endpoint Manager** se si vuole ottenere informazioni dettagliate per ottimizzare l'esperienza dell'utente finale in [endpoint Analytics](../../analytics/overview.md)
-1. Fare clic su **Riepilogo** per verificare la selezione e quindi su **Avanti**.
-1. Al termine della procedura guidata, fare clic su **Chiudi**.  
-
-
-## <a name="review-your-upload"></a><a name="bkmk_review"></a>Verifica il caricamento
-
-1. Aprire **CMGatewaySyncUploadWorker. log** dalla &lt; directory di installazione di ConfigMgr> \Logs.
-1. Il tempo di sincronizzazione successivo è indicato dalle voci di log simili a `Next run time will be at approximately: 02/28/2020 16:35:31` .
-1. Per i caricamenti dei dispositivi, cercare voci di log simili a `Batching N records` . **N** è il numero di dispositivi caricati nel cloud. 
-1. Il caricamento viene eseguito ogni 15 minuti per le modifiche. Una volta caricate le modifiche, potrebbero essere necessari altri 5-10 minuti affinché le modifiche apportate al client siano visualizzate nell'interfaccia di **amministrazione di Microsoft Endpoint Manager**.
+1. Selezionare **Riepilogo** per verificare la selezione, quindi scegliere **Avanti**.
+1. Al termine della procedura guidata, selezionare **Chiudi**.  
 
 ## <a name="perform-device-actions"></a>Eseguire azioni del dispositivo
 
 1. In un browser passare a`endpoint.microsoft.com`
 1. Selezionare **dispositivi** quindi **tutti i dispositivi** per visualizzare i dispositivi caricati. **ConfigMgr** verrà visualizzato nella colonna **gestito da** per i dispositivi caricati.
    [![Tutti i dispositivi nell'interfaccia di amministrazione di Microsoft Endpoint Manager](./media/3555758-all-devices.png)](./media/3555758-all-devices.png#lightbox)
-1. Fare clic su un dispositivo per caricare la relativa pagina **Panoramica** .
-1. Fare clic su una delle azioni seguenti:
+1. Selezionare un dispositivo per caricare la pagina di **Panoramica** .
+1. Scegliere una delle azioni seguenti:
    - **Sincronizzazione dei criteri del computer**
    - **Sincronizzazione dei criteri utente**
    - **Ciclo di valutazione app**
 
    [![Panoramica del dispositivo nell'interfaccia di amministrazione di Microsoft Endpoint Manager](./media/3555758-device-overview-actions.png)](./media/3555758-device-overview-actions.png#lightbox)
 
-## <a name="known-issues"></a>Problemi noti
+## <a name="import-a-previously-created-azure-ad-application-optional"></a><a name="bkmk_aad_app"></a>Importare un'applicazione Azure AD creata in precedenza (facoltativo)
+<!--6479246-->
+*(Introdotta nella versione 2006)*
 
-### <a name="specific-devices-dont-synchronize"></a>Dispositivi specifici non sincronizzati
+Durante un [nuovo onboarding](#bkmk_config), un amministratore può specificare un'applicazione creata in precedenza durante il caricamento in un tenant. Non condividere o riutilizzare Azure AD applicazioni in più gerarchie. Se si dispone di più gerarchie, creare applicazioni Azure AD separate per ciascuna di esse.
 
-<!--7099564-->
-È possibile che dispositivi specifici, che sono Configuration Manager client, non vengano caricati nel servizio.
+Nella pagina **Onboarding del tenant** nella **Configurazione guidata della co-gestione** selezionare **Importa facoltativamente un'app Web separata per sincronizzare i dati del client Configuration Manager nell'interfaccia di amministrazione di Microsoft Endpoint Manager**. Questa opzione richiederà di specificare le informazioni seguenti per l'app Azure AD:
 
-**Dispositivi interessati:** Se un dispositivo è un punto di distribuzione che usa lo stesso certificato PKI sia per la funzionalità del punto di distribuzione che per l'agente client, il dispositivo non verrà incluso nel tenant Connetti dispositivo Sincronizza.
+- Nome del tenant di Azure AD
+- ID tenant di Azure AD
+- Nome dell'applicazione
+- ID client
+- Chiave privata
+- Scadenza della chiave privata
+- URI ID app
 
-**Comportamento:** Quando si esegue la connessione tenant durante la fase di caricamento, viene eseguita la prima volta una sincronizzazione completa. I cicli di sincronizzazione successivi sono sincronizzazioni Delta. Qualsiasi aggiornamento ai dispositivi interessati provocherà la rimozione del dispositivo dalla sincronizzazione.
+### <a name="azure-ad-application-permissions-and-configuration"></a>Azure AD le autorizzazioni e la configurazione dell'applicazione
 
-## <a name="log-files"></a>File di log
-Usare i log seguenti che si trovano nel punto di connessione del servizio:
+L'uso di un'applicazione creata in precedenza durante il caricamento in un attacco tenant richiede le autorizzazioni seguenti:
 
-- **CMGatewaySyncUploadWorker. log**
-- **CMGatewayNotificationWorker. log**
+- Autorizzazioni Configuration Manager microservizi:
+   - CmCollectionData. Read
+   - CmCollectionData. Write
+
+- Autorizzazioni Microsoft Graph:
+   - Autorizzazione directory. Read. All [Applications](https://docs.microsoft.com/graph/permissions-reference#application-permissions)
+   - Directory. Read. tutte le autorizzazioni per la [directory delegata](https://docs.microsoft.com/graph/permissions-reference#directory-permissions)
+
+- Assicurarsi che sia selezionata l'opzione **Concedi l'autorizzazione dell'amministratore per il tenant** per l'applicazione Azure ad. Per altre informazioni, vedere [concedere il consenso dell'amministratore in registrazioni app](https://docs.microsoft.com/azure/active-directory/manage-apps/grant-admin-consent).
+
+- L'applicazione importata deve essere configurata come segue:
+   - Registrato solo per gli **account in questa directory aziendale**. Per altre informazioni, vedere [modificare gli utenti che possono accedere all'applicazione](https://docs.microsoft.com/azure/active-directory/develop/quickstart-modify-supported-accounts#to-change-who-can-access-your-application).
+   -  Ha un URI ID applicazione e un segreto validi
+
+
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per ulteriori informazioni sui file di log di allocazione tenant, vedere [risolvere i problemi di connessione tenant](troubleshoot.md).
+- [Registrare Configuration Manager dispositivi in endpoint Analytics](../../analytics/enroll-configmgr.md#bkmk_cm_enroll)
+- Per informazioni sui file di log di connessione del tenant, vedere [risolvere i problemi di connessione tenant](troubleshoot.md).

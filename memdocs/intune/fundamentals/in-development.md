@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/24/2020
+ms.date: 08/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e76816768090a624247db7a84da8c6bdffb800bc
-ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
+ms.openlocfilehash: 0b7f1a4280b409ec4a12c6371fd2e6cba8a571ca
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87443837"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048022"
 ---
 # <a name="in-development-for-microsoft-intune"></a>In fase di sviluppo per Microsoft Intune
 
@@ -125,9 +125,6 @@ Per visualizzare le impostazioni correnti dell'estensione dell'app per l'accesso
 
 Si applica a:
 - iOS/iPadOS
-
-### <a name="improvement-to-update-device-settings-page-in-company-portal-app-for-android-to-show-descriptions---7414768---"></a>Ottimizzazione della pagina Aggiorna le impostazioni del dispositivo nell'app Portale aziendale app per Android per visualizzare le descrizioni<!-- 7414768 -->
-Nell'app Portale aziendale nei dispositivi Android la pagina **Aggiorna le impostazioni del dispositivo** elenca le impostazioni che un utente deve aggiornare per essere conforme. L'esperienza utente è stata migliorata in modo che le impostazioni elencate vengano espanse per impostazione predefinita e visualizzino la descrizione e il pulsante **Risolvi** (se applicabile). Prima le impostazioni erano compresse per impostazione predefinita. Questo nuovo comportamento predefinito riduce il numero di clic, in modo che gli utenti possano risolvere i problemi più rapidamente.
 
 <!-- ***********************************************-->
 <!-- ## Device enrollment-->

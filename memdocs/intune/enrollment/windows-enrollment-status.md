@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 08/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f8991b772f5562538403492735f1f4c2fdc87e8
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 75f6585144f62636033c94f701a57cb70e018c26
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093448"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051588"
 ---
 # <a name="set-up-the-enrollment-status-page"></a>Configurare la pagina relativa allo stato della registrazione
  
@@ -31,7 +31,7 @@ ms.locfileid: "85093448"
  
 La pagina relativa allo stato della registrazione (ESP) visualizza lo stato di avanzamento del provisioning dopo la registrazione di un nuovo dispositivo, nonché quando i nuovi utenti eseguono l'accesso al dispositivo.  Ciò consente agli amministratori IT di impedire (bloccare) facoltativamente l'accesso al dispositivo fino a quando non ne viene eseguito il provisioning completo, fornendo allo stesso tempo agli utenti informazioni sulle attività rimanenti durante il processo di provisioning.
 
-La pagina relativa allo stato della registrazione può essere usata come parte di qualsiasi scenario di provisioning di [Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/) e può anche essere usata separatamente da Windows Autopilot come parte dell'esperienza predefinita per Azure AD Join, nonché per tutti i nuovi utenti che accedono al dispositivo per la prima volta.
+La pagina relativa allo stato della registrazione può essere usata come parte di qualsiasi scenario di provisioning di [Windows Autopilot](../../autopilot/index.yml) e può anche essere usata separatamente da Windows Autopilot come parte dell'esperienza predefinita per Azure AD Join, nonché per tutti i nuovi utenti che accedono al dispositivo per la prima volta.
 
 È possibile creare più profili della pagina relativa allo stato della registrazione con configurazioni diverse che specificano:
 

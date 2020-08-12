@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2b0c65e12349f8b4c887b5a633a1cd94c272ca5a
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 37724c4d9acdfcdb9e371a21a7b15c509de78c60
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093353"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865473"
 ---
 # <a name="troubleshoot-iosipados-device-enrollment-problems-in-microsoft-intune"></a>Risoluzione dei problemi di registrazione dei dispositivi iOS/iPadOS in Microsoft Intune
 
@@ -109,8 +109,9 @@ Raccogliere le informazioni seguenti sul problema:
 1. Rimuovere l'app Portale aziendale dal dispositivo.
 2. Scaricare e installare l'app **Portale aziendale Microsoft Intune** da **App Store**.
 3. Registrare nuovamente il dispositivo.
- > [!NOTE]
-    > Questo errore può verificarsi anche se l'utente tenta di registrare più dispositivi rispetto a quanto consentito dalla registrazione dei dispositivi. Seguire i passaggi per la risoluzione descritti nella sezione **Numero massimo dispositivi raggiunto** riportata sotto, se questa procedura non risolve il problema.
+
+> [!NOTE]
+> Questo errore può verificarsi anche se l'utente tenta di registrare più dispositivi rispetto a quanto consentito dalla registrazione dei dispositivi. Seguire i passaggi per la risoluzione descritti nella sezione **Numero massimo dispositivi raggiunto** riportata sotto, se questa procedura non risolve il problema.
 
 ### <a name="device-cap-reached"></a>Numero massimo dispositivi raggiunto
 
@@ -186,7 +187,7 @@ Rinnovare il certificato APN, quindi eseguire di nuovo la registrazione del disp
 
 Quando si attiva un dispositivo gestito da Registrazione automatica del dispositivo a cui è assegnato un profilo di registrazione, la registrazione ha esito negativo e viene visualizzato il messaggio di errore seguente:
 
-```
+```output
 asciidoc
 mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR Connection invalid <error: 0x1a49aebc0> { count = 1, transaction: 0, voucher = 0x0, contents = "XPCErrorDescription" => <string: 0x1a49aee18> { length = 18, contents = "Connection invalid" } }
 iPhone mobileassetd[83] <Notice>: Client connection invalid (Connection invalid); terminating connection

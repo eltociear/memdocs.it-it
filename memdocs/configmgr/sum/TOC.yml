@@ -32,7 +32,7 @@
       items:
         - name: Sincronizzare gli aggiornamenti software da un punto di aggiornamento software disconnesso
           href: get-started/synchronize-software-updates-disconnected.md
-        - name: Sincronizzare gli aggiornamenti di Office 365 da un punto di aggiornamento software disconnesso
+        - name: Sincronizzare gli aggiornamenti delle app Microsoft 365 da un punto di aggiornamento software disconnesso
           href: get-started/synchronize-office-updates-disconnected.md
 - name: Distribuire e usare
   items:
@@ -62,7 +62,7 @@
       href: deploy-use/service-a-server-group.md
     - name: Dashboard di Gestione client di Office 365
       href: deploy-use/office-365-dashboard.md
-    - name: Gestire gli aggiornamenti di Office 365 ProPlus
+    - name: Gestire gli aggiornamenti delle app Microsoft 365
       href: deploy-use/manage-office-365-proplus-updates.md
     - name: Ottimizzare il recapito degli aggiornamenti di Windows 10
       href: deploy-use/optimize-windows-10-update-delivery.md

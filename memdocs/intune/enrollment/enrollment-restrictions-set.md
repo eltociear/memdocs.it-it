@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1f706b2bb898f0969bf33d118291551d0f98d9ef
-ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
+ms.openlocfilehash: e5ed799d01ea4fdae1f9ecb013b4cf73deb0e6f0
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87443901"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051656"
 ---
 # <a name="set-enrollment-restrictions"></a>Impostare le restrizioni di registrazione
 
@@ -147,7 +147,7 @@ I metodi seguenti si qualificano per essere autorizzati come registrazione azien
 - L'utente che esegue la registrazione usa un [account del manager di registrazione dispositivi]( device-enrollment-manager-enroll.md).
 - Il dispositivo viene registrato tramite [Windows Autopilot](enrollment-autopilot.md).
 - Il dispositivo viene registrato con Windows Autopilot ma non è un'opzione di sola registrazione MDM dalle impostazioni di Windows.
-- Il numero IMEI del dispositivo è indicato in **Registrazione del dispositivo** >  **[Identificatori dei dispositivi aziendali](corporate-identifiers-add.md)** . (Funzionalità non supportata per Windows Phone 8.1.)
+- Il numero IMEI del dispositivo è indicato in **Registrazione del dispositivo** >  **[Identificatori dei dispositivi aziendali](corporate-identifiers-add.md)** .
 - Il dispositivo viene registrato tramite un [pacchetto di provisioning in blocco](windows-bulk-enroll.md).
 - Il dispositivo viene registrato tramite un oggetto Criteri di gruppo o la [registrazione automatica da Configuration Manager per la co-gestione](https://docs.microsoft.com/configmgr/comanage/quickstart-paths#bkmk_path1).
  

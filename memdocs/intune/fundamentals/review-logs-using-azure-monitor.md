@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 010bbd18c09424ed2434dc19405851bb5c254591
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f71bbc2022068616b90f37c209d41d28ea5970d0
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990781"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912525"
 ---
 # <a name="send-log-data-to-storage-event-hubs-or-log-analytics-in-intune-preview"></a>Inviare i dati dei log alla risorsa di archiviazione, agli hub eventi o a Log Analytics in Intune (anteprima)
 
@@ -139,21 +139,21 @@ Le tabelle seguenti indicano una stima dei costi che varia a seconda delle dimen
 
 **Log di controllo con 100.000 utenti**
 
-| | |
-|---|---|
+| Category | Valore |
+| -------- | ----- |
 |Eventi al giorno| 1,5 milioni|
 |Volume stimato di dati al mese| 90 GB|
-|Costo stimato al mese (USD)| $ 1,93|
-|Costo stimato all'anno (USD)| $ 23,12|
+|Costo stimato al mese (USD)| $1,93|
+|Costo stimato all'anno (USD)| $23,12|
 
 **Log di controllo con 1.000 utenti**
 
-| | |
-|---|---|
+| Category | Valore |
+| -------- | ----- |
 |Eventi al giorno| 15.000|
 |Volume stimato di dati al mese| 900 MB|
-|Costo stimato al mese (USD)| $ 0,02|
-|Costo stimato all'anno (USD)| $ 0,24|
+|Costo stimato al mese (USD)| $0,02|
+|Costo stimato all'anno (USD)| $0,24|
 
 ### <a name="event-hub-messages-for-activity-logs"></a>Messaggi dell'hub eventi per i log attività
 
@@ -161,33 +161,33 @@ Gli eventi vengono in genere raggruppati in batch ogni cinque minuti e inviati c
 
 In un tenant di grandi dimensioni con più di 100.000 utenti, ad esempio, si verificano in genere circa 18 eventi al secondo, pari a 5.400 eventi ogni cinque minuti (300 secondi x 18 eventi). I log di controllo sono pari a circa 2 KB per evento, ovvero 10,8 MB di dati. In tale intervallo di cinque minuti vengono quindi inviati 43 messaggi all'hub eventi.
 
-La tabella seguente contiene i costi stimati al mese per un hub eventi di base negli Stati Uniti occidentali, a seconda del volume dei dati degli eventi. Per ottenere una stima del volume di dati previsto per i log, usare il [calcolatore dei prezzi di Hub eventi](https://azure.microsoft.com/pricing/details/event-hubs/).
+La tabella seguente contiene una stima del costo mensile per un hub eventi di base negli Stati Uniti occidentali, a seconda del volume di dati degli eventi. Per ottenere una stima del volume di dati previsto per i log, usare il [calcolatore dei prezzi di Hub eventi](https://azure.microsoft.com/pricing/details/event-hubs/).
 
 **Log di controllo con 100.000 utenti**
 
-| | |
-|---|---|
+| Category | Valore |
+| -------- | ----- |
 |Eventi al secondo| 18|
-|Eventi per ogni intervallo di cinque minuti| 5\.400|
+|Eventi per intervallo di cinque minuti| 5.400|
 |Volume per intervallo| 10,8 MB|
 |Messaggi per intervallo| 43|
 |Messaggi al mese| 371.520|
-|Costo stimato al mese (USD)| $ 10,83|
+|Costo stimato al mese (USD)| $10,83|
 
 **Log di controllo con 1.000 utenti**
 
-| | |
-|---|---|
-|Eventi al secondo|0,1 |
-|Eventi per ogni intervallo di cinque minuti| 52|
+| Category | Valore |
+| -------- | ----- |
+|Eventi al secondo|0.1 |
+|Eventi per intervallo di cinque minuti| 52|
 |Volume per intervallo|104 KB |
 |Messaggi per intervallo|1 |
-|Messaggi al mese|8\.640 |
-|Costo stimato al mese (USD)|$ 10,80 |
+|Messaggi al mese|8.640 |
+|Costo stimato al mese (USD)|$10,80 |
 
 ### <a name="log-analytics-cost-considerations"></a>Considerazioni sui costi di Log Analytics
 
-Per esaminare i costi relativi alla gestione dell'area di lavoro di Log Analytics, vedere [Gestire i costi controllando il volume e la conservazione dei dati in Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-cost-storage).
+Per esaminare i costi legati alla gestione l'area di lavoro Log Analytics, vedere [Gestire i costi controllando i volumi e la conservazione di dati in Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-cost-storage).
 
 ## <a name="frequently-asked-questions"></a>Domande frequenti
 
@@ -215,19 +215,19 @@ I costi di archiviazione dipendono dalle dimensioni dei log e dal periodo di con
 
 ### <a name="how-much-does-it-cost-to-stream-my-data-to-an-event-hub"></a>Quanto costa trasmettere i dati a un hub eventi?
 
-I costi di streaming dipendono dal numero di messaggi ricevuti al minuto. Per informazioni dettagliate su come vengono calcolati i costi e sulle stime dei costi basate sul numero di messaggi, vedere [Messaggi dell'hub eventi per i log attività](#event-hub-messages-for-activity-logs) (in questo articolo).
+Il costo per la trasmissione dipende dal numero di messaggi ricevuti al minuto. Per informazioni dettagliate su come vengono calcolati i costi e sulle stime dei costi basate sul numero di messaggi, vedere [Messaggi dell'hub eventi per i log attività](#event-hub-messages-for-activity-logs) (in questo articolo).
 
 ### <a name="how-do-i-integrate-intune-audit-logs-with-my-siem-system"></a>Come integrare i log di controllo di Intune con il sistema di informazioni di sicurezza e gestione degli eventi?
 
-Usare Monitoraggio di Azure con Hub eventi per trasmettere i log al sistema di informazioni di sicurezza e gestione degli eventi. Prima di tutto, [trasmettere i log a un hub eventi](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub), quindi [configurare lo strumento di informazioni di sicurezza e gestione degli eventi](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub#access-data-from-your-event-hub) con l'hub eventi configurato. 
+Usare Monitoraggio di Azure con Hub eventi per trasmettere i log nel sistema di informazioni di sicurezza e gestione degli eventi. Prima di tutto, [trasmettere i log a un hub eventi](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub), quindi [configurare lo strumento di informazioni di sicurezza e gestione degli eventi](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub#access-data-from-your-event-hub) con l'hub eventi configurato. 
 
 ### <a name="what-siem-tools-are-currently-supported"></a>Quali strumenti di informazioni di sicurezza e gestione degli eventi sono attualmente supportati?
 
-Monitoraggio di Azure è attualmente supportato da [Splunk](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-integrate-activity-logs-with-splunk), QRadar e [Sumo Logic](https://help.sumologic.com/Send-Data/Applications-and-Other-Data-Sources/Azure_Active_Directory) (apre un nuovo sito Web). Per altre informazioni sul funzionamento dei connettori, vedere [Trasmettere i dati di monitoraggio di Azure a un hub eventi per l'utilizzo da parte di uno strumento esterno](https://docs.microsoft.com/azure/azure-monitor/platform/stream-monitoring-data-event-hubs).
+Monitoraggio di Azure è attualmente supportato da [Splunk](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-integrate-activity-logs-with-splunk), QRadar e [Sumo Logic](https://help.sumologic.com/Send-Data/Applications-and-Other-Data-Sources/Azure_Active_Directory) (apre un nuovo sito Web). Per altre informazioni sul funzionamento dei connettori, vedere [Trasmettere i dati di monitoraggio di Azure a un hub eventi per il consumo da parte di uno strumento esterno](https://docs.microsoft.com/azure/azure-monitor/platform/stream-monitoring-data-event-hubs).
 
 ### <a name="can-i-access-the-data-from-an-event-hub-without-using-an-external-siem-tool"></a>È possibile accedere ai dati da un hub eventi senza usare uno strumento di informazioni di sicurezza e gestione degli eventi esterno?
 
-Sì. Per accedere ai log dall'applicazione personalizzata, è possibile usare l'[API di Hub eventi](https://docs.microsoft.com/azure/event-hubs/event-hubs-dotnet-standard-getstarted-receive-eph).
+Sì. È possibile usare l'[API di Hub eventi](https://docs.microsoft.com/azure/event-hubs/event-hubs-dotnet-standard-getstarted-receive-eph) per accedere ai log da un'applicazione personalizzata.
 
 ### <a name="what-data-is-stored"></a>Quali dati vengono archiviati?
 
@@ -236,5 +236,5 @@ Intune non archivia i dati inviati attraverso la pipeline. Intune instrada i dat
 ## <a name="next-steps"></a>Passaggi successivi
 
 * [Archiviare i log attività in un account di archiviazione](https://docs.microsoft.com/azure/active-directory/reports-monitoring/quickstart-azure-monitor-route-logs-to-storage-account)
-* [Instradare i log attività a un hub eventi](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub)
+* [Trasmettere i log attività a un hub eventi](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub)
 * [Integrare i log attività con Log Analytics](https://docs.microsoft.com/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics)

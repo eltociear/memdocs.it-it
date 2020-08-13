@@ -135,7 +135,6 @@
 #### [Operazioni preliminari per la registrazione di Windows](windows-enrollment-company-portal.md)
 #### [Registrare il dispositivo Windows 10](enroll-windows-10-device.md)
 #### [Registrare il dispositivo Windows 8.1 o Windows RT 8.1](enroll-your-w81-or-rt81-windows.md)
-#### [Registrare il dispositivo Windows Phone 8.1](enroll-your-wp81-windows.md)
 ### [Crittografare il dispositivo](encrypt-your-device-windows.md)
 ### [Impostare o modificare la password del dispositivo](set-or-change-your-password-windows.md)
 ### [Rimuovere il dispositivo da Intune](unenroll-your-device-from-intune-windows.md)

@@ -5,17 +5,17 @@ description: Usare le sequenze di attività di Configuration Manager per acquisi
 ms.date: 08/17/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: d566d85c-bf7a-40e7-8239-57640a1db5f4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 93a39ba21b9e7d6cacfe59f763756aeef3736d52
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6a1f11c46689b213b795c0d71221728f916a68bb
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707349"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125492"
 ---
 # <a name="create-a-task-sequence-to-capture-and-restore-user-state-in-configuration-manager"></a>Creare una sequenza di attività per acquisire e ripristinare lo stato utente in Configuration Manager
 

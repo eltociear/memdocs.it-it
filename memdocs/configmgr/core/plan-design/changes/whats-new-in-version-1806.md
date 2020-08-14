@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 295940337f191b791d8c7a86de4003466213df6b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ae2846c2a5f7fea86287a05c8cc8f6013d660df6
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702339"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128951"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Novità della versione 1806 di Configuration Manager (Current Branch)
 
@@ -296,7 +296,7 @@ Per altre informazioni, vedere [Creare applicazioni Windows](../../../apps/get-s
 <!--1358149-->
 Lo Strumento di personalizzazione di Office è ora integrato con il Programma di installazione di Office 365 nella console di Configuration Manager. Quando si crea una distribuzione per Office 365, configurare dinamicamente le impostazioni di gestibilità di Office più recenti. Lo Strumento di personalizzazione di Office viene aggiornato quando vengono rilasciate nuove build di Office 365. Questa integrazione consente di usufruire delle nuove impostazioni di gestibilità di Office 365 non appena sono disponibili. 
 
-Per altre informazioni, vedere [Distribuire app di Office 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md#deploy-office-365-apps).
+Per altre informazioni, vedere [Distribuire app di Office 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 
 ### <a name="support-for-new-windows-app-package-formats"></a>Supporto per nuovi formati di pacchetti di app Windows
@@ -546,7 +546,7 @@ Le seguenti aree dell'area di lavoro **Monitoraggio** supportano ora la copia de
 
 Fare clic con il pulsante destro del mouse sull'asset e selezionare **Copia**. Questa azione copia le risorse selezionate come elenco delimitato da virgole che include i dettagli completi. I tasti di scelta rapida **CTRL** + **C** funzionano anche in queste visualizzazioni. 
 
-Per altre informazioni, vedere [Miglioramenti della console nella versione 1806](../../servers/manage/admin-console.md#copy-details-in-monitoring-views).
+Per altre informazioni, vedere [Miglioramenti della console nella versione 1806](../../servers/manage/admin-console-tips.md#copy-details-in-monitoring-views).
 
 
 ### <a name="improvements-to-the-surface-dashboard"></a>Miglioramenti al dashboard di Surface
@@ -568,7 +568,7 @@ Per altre informazioni, vedere [Dashboard dei dispositivi Surface](../../clients
 <!--1358202-->
 Per impostazione predefinita il nodo **Dispositivi** dell'area di lavoro **Asset e conformità** visualizza ora una colonna per **Utente attualmente connesso**. Viene visualizzata anche per qualsiasi elenco di dispositivi specifici della raccolta. Questo valore è aggiornato quanto lo [stato del client](../../clients/manage/monitor-clients.md#bkmk_indStatus). Quando l'utente esegue l'accesso, il client cancella questo valore. Se nessun utente è connesso, il valore è vuoto. 
 
-Per altre informazioni, vedere [Miglioramenti della console nella versione 1806](../../servers/manage/admin-console.md#view-users-for-a-device).
+Per altre informazioni, vedere [Miglioramenti della console nella versione 1806](../../servers/manage/admin-console-tips.md#view-users-for-a-device).
 
 
 ### <a name="submit-feedback-from-the-configuration-manager-console"></a>Inviare commenti e suggerimenti dalla console di Configuration Manager  
@@ -576,7 +576,7 @@ Per altre informazioni, vedere [Miglioramenti della console nella versione 1806]
 
 Commenti e suggerimenti Ora è possibile comunicare direttamente al team di Configuration Manager le proprie esperienze. Inviare commenti e suggerimenti dalla console di Configuration Manager è molto semplice. Siamo interessati a ogni tipo di feedback: apprezzamenti, problemi e suggerimenti. Nella console di Configuration Manager fare clic sul pulsante Smile nell'angolo superiore destro sopra la barra multifunzione. Questi commenti e suggerimenti vengono inviati direttamente al team del prodotto Microsoft per Configuration Manager. Anche se l'uso dell'Hub di Feedback di Windows 10 è ancora supportato, è consigliabile usare il meccanismo per l'invio di feedback disponibile nella console.  
 
-Per altre informazioni, vedere [Miglioramenti della console nella versione 1806](../../servers/manage/admin-console.md#send-feedback) e [Commenti e suggerimenti sul prodotto](../../understand/find-help.md#BKMK_1806Feedback).
+Per altre informazioni, vedere [Miglioramenti della console nella versione 1806](../../servers/manage/admin-console-tips.md#send-feedback) e [Commenti e suggerimenti sul prodotto](../../understand/find-help.md#BKMK_1806Feedback).
 
 
 

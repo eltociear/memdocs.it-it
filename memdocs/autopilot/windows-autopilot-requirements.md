@@ -17,12 +17,12 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: 4e3d777be9c4deb9c3e167ef53c82249f97f78b4
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: e1380a38fb66ce2771d3cf91ecd9117b19ff31c4
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87756504"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217142"
 ---
 # <a name="windows-autopilot-requirements"></a>Requisiti di Windows Autopilot
 
@@ -60,7 +60,7 @@ Negli ambienti con accesso a Internet più restrittivo o per quelli che richiedo
 
 Per ulteriori informazioni su ciascuno di questi servizi e sui requisiti specifici, esaminare i dettagli seguenti:
 
-<table><th>Service<th>Informazioni
+<table><th>Servizio<th>Informazioni
 <tr><td><b>Servizio di distribuzione di Windows Autopilot<b><td>Dopo la connessione di rete, ogni dispositivo Windows 10 contatterà il servizio di distribuzione di Windows Autopilot.  Con Windows 10 versione 1903 e successive, vengono usati gli URL seguenti: https://ztd.dds.microsoft.com https://cs.dds.microsoft.com . <br>
 
 <tr><td><b>Attivazione di Windows<b><td>Windows Autopilot richiede anche servizi di attivazione Windows. Vedere <a href="https://support.microsoft.com/help/921471/windows-activation-or-validation-fails-with-error-code-0x8004fe33">attivazione o convalida di Windows non riuscita con codice di errore 0x8004FE33</a> per informazioni dettagliate sugli URL che devono essere accessibili per i servizi di attivazione.<br>
@@ -82,7 +82,7 @@ Se il servizio di ottimizzazione recapito è inaccessibile, il processo Autopilo
 Se non è possibile inviare dati di diagnostica, il processo Autopilot continuerà, ma i servizi che dipendono dai dati di diagnostica, ad esempio Windows Analytics, non funzioneranno.
 <tr><td><b>Indicatore stato connettività di rete<b><td>Windows deve essere in grado di indicare che il dispositivo è in grado di accedere a Internet. Per ulteriori informazioni, vedere <a href="https://docs.microsoft.com/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#14-network-connection-status-indicator">indicatore di stato della connessione di rete (NCSI)</a>.
 
-<a href="http://www.msftconnecttest.com">www.msftconnecttest.com</a> deve essere risolvibile tramite DNS e accessibile tramite http.
+<code>www.msftconnecttest.com</code> deve essere risolvibile tramite DNS e accessibile tramite HTTP.
 <tr><td><b>Windows Notification Services (WNS)<b><td>Questo servizio viene usato per consentire a Windows di ricevere notifiche da app e servizi. Per ulteriori informazioni, vedere <a href="https://docs.microsoft.com/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#26-microsoft-store">Microsoft Store</a> .<br>
 
 Se i servizi WNS non sono disponibili, il processo Autopilot continuerà senza notifiche.
@@ -95,7 +95,7 @@ Se il Microsoft Store non è accessibile, il processo Autopilot continuerà senz
 <tr><td><b>Join AAD ibrido<b><td>Il dispositivo può essere aggiunto ad AAD ibrido. Il computer deve trovarsi nella rete aziendale per far funzionare il join di AAD ibrido. Vedere i dettagli in <a href="user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join">modalità basata sull'utente di Windows Autopilot</a>
 <tr><td><b>Modalità di distribuzione automatica Autopilot e guanto bianco di Autopilot<b><td>I dispositivi TPM del firmware, che vengono forniti solo da Intel, AMD o Qualcomm, non includono tutti i certificati necessari in fase di avvio e devono essere in grado di recuperarli dal produttore al primo utilizzo. I dispositivi con chip TPM discreti (inclusi i dispositivi di qualsiasi altro produttore) sono dotati di questi certificati preinstallati. Per altri dettagli, vedere <a href="https://docs.microsoft.com/windows/security/information-protection/tpm/tpm-recommendations">suggerimenti sui TPM</a> . Verificare che questi URL siano accessibili per ogni provider TPM del firmware, in modo che i certificati possano essere richiesti correttamente: 
 
-  <br>Intel- https://ekop.intel.com/ekcertservice  <br>Qualcomm- https://ekcert.spserv.microsoft.com/EKCertificate/GetEKCertificate/v1  <br>AMDhttps://ftpm.amd.com/pki/aia
+  <br>Intel- https://www.intel.com/  <br>Qualcomm- https://ekcert.spserv.microsoft.com/EKCertificate/GetEKCertificate/v1  <br>AMD https://ftpm.amd.com/pki/aia
 
 </table>
 

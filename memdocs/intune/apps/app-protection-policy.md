@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 08/06/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28401c314d70f1d810fe12e815d8558afc8aab89
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 9688397218539ef3cc16f6fed91380e1820dbb15
+ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502596"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87997982"
 ---
 # <a name="app-protection-policies-overview"></a>Panoramica dei criteri di protezione app
 
@@ -323,6 +323,11 @@ La finalità di questa procedura è di continuare a assicurare la protezione e l
   
 ### <a name="ios-share-extension"></a>Estensione di condivisione iOS
 È possibile usare l'estensione di condivisione di iOS/iPadOS per aprire i dati aziendali o dell'istituto di istruzione nelle app non gestite, anche con i criteri di trasferimento dei dati impostati su **Solo app gestite** o **Nessuna app**. I criteri di protezione delle app di Intune non possono controllare l'estensione di condivisione di iOS/iPadOS senza la gestione del dispositivo. Pertanto, Intune _**crittografa i dati "aziendali" prima che vengano condivisi all'esterno dell'app**_. È possibile convalidare il comportamento di crittografia provando ad aprire il file "aziendale" all'esterno dell'app gestita. Il file deve essere crittografato e non deve poter essere aperto all'esterno dell'app gestita.
+
+### <a name="universal-links-support"></a>Supporto di collegamenti universali
+Per impostazione predefinita, i criteri di protezione delle app di Intune impediscono l'accesso al contenuto di un'applicazione non autorizzata. In iOS/iPadOS è disponibile una funzionalità che consente di aprire contenuto o applicazioni specifici usando [collegamenti universali](https://developer.apple.com/ios/universal-links/). 
+
+Gli utenti possono disabilitare i collegamenti universali di un'app visitando i collegamenti in Safari e selezionando **Apri in nuova scheda** o **Apri**. Per poter usare i collegamenti universali con i criteri di protezione delle app di Intune, è importante riabilitare i collegamenti universali. L'utente finale deve eseguire il comando **Apri in** <***nome dell'app***> in Safari dopo aver premuto a lungo un collegamento corrispondente. Questa operazione dovrebbe richiedere a qualsiasi app protetta aggiuntiva di indirizzare tutti i collegamenti universali all'applicazione protetta nel dispositivo.
 
 ### <a name="multiple-intune-app-protection-access-settings-for-same-set-of-apps-and-users"></a>Più impostazioni di accesso della protezione delle app di Intune per lo stesso set di app e utenti
 I criteri di protezione delle app di Intune relativi all'accesso vengono applicati in un ordine specifico nei dispositivi degli utenti finali quando cercano di accedere a un'app di destinazione dall'account aziendale. In generale, una cancellazione ha la precedenza, seguita da un avviso che può essere ignorato. Ad esempio, se possibile per l'app o l'utente specifico, un'impostazione di versione minima del sistema operativo iOS/iPadOS che avvisa l'utente che può essere eseguito un aggiornamento della versione di iOS/iPadOS verrà applicata dopo l'impostazione di versione minima del sistema operativo iOS/iPadOS che impedisce all'utente di accedere. Quindi, nello scenario in cui l'amministratore IT configura la versione minima del sistema operativo iOS su 11.0.0.0 e la versione minima del sistema operativo iOS (solo avvisi) su 11.1.0.0, se il dispositivo che tenta di accedere all'app usa iOS 10, l'utente finale verrebbe bloccato in base all'impostazione più restrittiva per la versione minima del sistema operativo iOS che comporta il blocco dell'accesso.

@@ -5,17 +5,17 @@ description: Tutte le impostazioni di gestione di BitLocker disponibili in Confi
 ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: f7ade768-2b2b-4aab-8ee1-73624d03a9c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9ce6a9c566fec22e69c0a4a7fde01b911330ec1d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cb95a05fd3d347b70dd5d53ce972bce0c23c18cc
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708619"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127884"
 ---
 # <a name="bitlocker-settings-reference"></a>Informazioni di riferimento sulle impostazioni di BitLocker
 
@@ -25,7 +25,7 @@ ms.locfileid: "81708619"
 
 I criteri di gestione di BitLocker in Configuration Manager includono i gruppi di criteri seguenti:
 
-- Installazione
+- Configurazione
 - unità del sistema operativo
 - Unità fissa
 - Unità rimovibile
@@ -36,7 +36,7 @@ Le sezioni seguenti descrivono e suggeriscono le configurazioni per le impostazi
 > [!NOTE]
 > Queste impostazioni sono basate su Configuration Manager versione 2002. La versione 1910 non include tutte queste impostazioni.
 
-## <a name="setup"></a>Installazione
+## <a name="setup"></a>Configurazione
 
 Le impostazioni in questa pagina consentono di configurare le opzioni di crittografia di BitLocker globali.
 
@@ -66,7 +66,7 @@ Per i dispositivi Windows 10, abilitare l'opzione **Metodo di crittografia dell'
 - XTS-AES a 256 bit
 
 > [!TIP]
-> BitLocker usa Advanced Encryption Standard (AES) come algoritmo di crittografia con lunghezze di chiave configurabili di 128 o 256 bit. Nei dispositivi Windows 10 la crittografia AES supporta la modalità Cipher Block Chaining (CBC) o Ciphertext Stealing (XTS).
+> L'algoritmo di crittografia utilizzato da BitLocker è AES (Advanced Encryption Standard), con chiavi di lunghezza configurabile a 128 o 256 bit. Nei dispositivi Windows 10 la crittografia AES supporta la modalità Cipher Block Chaining (CBC) o Ciphertext Stealing (XTS).
 >
 > Se è necessario usare un'unità rimovibile nei dispositivi che non eseguono Windows 10, usare AES-CBC.
 
@@ -92,7 +92,7 @@ Quando questo criterio non viene configurato, BitLocker rimuove i relativi segre
 
 *Configurazione consigliata*: **Non configurato**
 
-Configurare questo criterio per usare la protezione BitLocker basata su certificati smart card. Specificare quindi il certificato **Identificatore oggetto**.
+Configurare questo criterio per utilizzare la protezione BitLocker basata su certificati smart card. Specificare quindi il certificato **Identificatore oggetto**.
 
 Quando questo criterio non viene configurato, BitLocker usa l'identificatore oggetto predefinito `1.3.6.1.4.1.311.67.1.1` per specificare un certificato.
 
@@ -100,7 +100,7 @@ Quando questo criterio non viene configurato, BitLocker usa l'identificatore ogg
 
 *Configurazione consigliata*: **Non configurato**
 
-Configurare questo criterio per usare un agente di recupero dati basato su certificati o il lettore BitLocker To Go.
+Configurare questo criterio per utilizzare un agente recupero dati basato su certificati o il lettore BitLocker To Go.
 
 Quando questo criterio non viene configurato, BitLocker non usa il campo **Identificazione**.
 
@@ -110,7 +110,7 @@ Se l'organizzazione richiede misure di sicurezza più elevate, configurare il ca
 
 Le impostazioni in questa pagina consentono di configurare le impostazioni di crittografia per l'unità in cui è installato Windows.
 
-### <a name="operating-system-drive-encryption-settings"></a>Impostazioni di crittografia per l'unità del sistema operativo
+### <a name="operating-system-drive-encryption-settings"></a>Impostazioni crittografia dell'unità del sistema operativo
 
 *Configurazione consigliata*: **Enabled**
 
@@ -161,7 +161,7 @@ Usare queste impostazioni per impostare i vincoli per le password per sbloccare 
 
 - **Richiedi password solo ASCII per unità del sistema operativo rimovibili**
 
-Se si abilita l'impostazione di questo criterio, gli utenti possono configurare una password che soddisfi i requisiti definiti.
+Se si abilita questa impostazione di criteri, gli utenti possono configurare una password che soddisfi i requisiti definiti.
 
 #### <a name="general-usage-notes-for-os-drive-password-policy"></a>Note sull'utilizzo generale per i criteri per le password dell'unità del sistema operativo
 

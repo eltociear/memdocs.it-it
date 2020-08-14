@@ -17,12 +17,12 @@ ROBOTS: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8df3c23417f146821d6f9b73e8b68f59c71a31df
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 28eaf0462a91f20bb6a3c5bc5d6de65845e1f06b
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988958"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051605"
 ---
 # <a name="require-multi-factor-authentication-for-intune-device-enrollments"></a>Richiedere l'autenticazione a più fattori per le registrazioni di dispositivi Intune
 
@@ -36,7 +36,7 @@ L'autenticazione MFA funziona richiedendo due o più dei seguenti metodi di veri
 - Un oggetto fisico (un dispositivo attendibile non facile da duplicare, come un telefono).
 - Una caratteristica fisica biometrica, ad esempio un'impronta digitale.
 
-Multi-Factor Authentication è supportata per i dispositivi iOS/iPadOS, Android, Windows 8.1, Windows Phone 8.1 o Windows 10 Mobile o versioni successive.
+L'autenticazione MFA è supportata nei dispositivi iOS/iPadOS, Android, Windows 8.1 o versioni successive.
 
 Quando si abilita Multi-Factor Authentication, gli utenti finali devono fornire due tipi di credenziali per registrare un dispositivo.
 

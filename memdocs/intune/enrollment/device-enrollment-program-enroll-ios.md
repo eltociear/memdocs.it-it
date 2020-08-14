@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fa06e5fee4658ad3c7f19ec39bd126ce69d8cd41
-ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
+ms.openlocfilehash: 05a0c4e5a78281f78a986d0512abfeca155494dd
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86891514"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051673"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Registrare automaticamente i dispositivi iOS/iPadOS con Registrazione automatica del dispositivo di Apple
 
@@ -328,23 +328,28 @@ Vedere [Registrare il dispositivo iOS/iPadOS in Intune con Device Enrollment Pro
 > [!NOTE]
 > Oltre a rinnovare il token di Registrazione automatica del dispositivo annualmente, sarà necessario rinnovare il token del programma di registrazione in Intune e Apple Business Manager quando la password dell'ID Apple gestito viene modificata per l'utente che ha configurato il token in Apple Business Manager oppure quando l'utente abbandona l'organizzazione di Apple Business Manager.
 
-1. Passare a business.apple.com.  
-2. In **Gestisci i server** scegliere il server MDM associato al file di token da rinnovare.
-3. Scegliere **Genera nuovo token**.
+1. Passare a business.apple.com.
+2. Fare clic su **Settings** (Impostazioni) in basso a sinistra
+3. In  **MDM Servers** (Server MDM) scegliere il server MDM associato al token ADE/DEP da rinnovare.
+4. Fare clic su **Download token** (Scarica token).
 
     ![Screenshot della generazione di un nuovo token.](./media/device-enrollment-program-enroll-ios/generatenewtoken.png)
 
-4. Scegliere **Token del server**.  
-5. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS/iPadOS** > **Registrazione di iOS/iPadOS** > **Token del programma di registrazione** > scegliere il token.
+5. Al prompt selezionare "Download Server Token" (Scarica token server)
+> [!NOTE]
+> Non fare clic su **"Download server token"** (Scarica token server) se non si intende rinnovare il token, come indicato nel prompt, perché verrebbe invalidato il token attualmente usato da Intune (o qualsiasi altra soluzione MDM). Se il token è già stato scaricato, assicurarsi di continuare con i passaggi successivi fino a quando il token non viene rinnovato.
+
+6. Dopo aver scaricato il token, nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere quindi **Dispositivi** > **iOS/iPadOS** > **Registrazione di iOS/iPadOS** > **Token del programma di registrazione** > scegliere il token.
     ![Screenshot dei token del programma di registrazione.](./media/device-enrollment-program-enroll-ios/enrollmentprogramtokens.png)
 
-6. Scegliere **Rinnova il token** e immettere l'ID Apple usato per creare il token originale.  
+7. Scegliere **Rinnova il token** e immettere l'ID Apple usato per creare il token originale (se non è già compilato automaticamente).  
     ![Screenshot della generazione di un nuovo token.](./media/device-enrollment-program-enroll-ios/renewtoken.png)
 
-7. Selezionare **Avanti** per passare alla pagina **Tag di ambito** e assegnare i tag di ambito, se necessario.
+8. Caricare il token appena scaricato.
 
-8. Selezionare **Avanti** e caricare il token appena scaricato.  
-9. Scegliere **Rinnova il token**. Viene visualizzata la conferma che il token è stato rinnovato.   
+9. Selezionare **Avanti** per passare alla pagina **Tag di ambito** e assegnare i tag di ambito, se necessario.
+
+10. Scegliere **Rinnova il token**. Viene visualizzata la conferma che il token è stato rinnovato.   
     ![Screenshot della conferma.](./media/device-enrollment-program-enroll-ios/confirmation.png)
 
 ## <a name="delete-an-automated-device-enrollment-token-from-intune"></a>Eliminare un token di Registrazione automatica del dispositivo da Intune

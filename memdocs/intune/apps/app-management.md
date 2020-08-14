@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 617c6b89bfc52d926e2ddb422c36db39edec6908
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 99dc504f8fc3148463288820dc810bab892e3081
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093036"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912402"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Informazioni sulla gestione delle app in Microsoft Intune
 
@@ -51,8 +51,8 @@ MAM di Intune supporta due configurazioni:
 
 Intune offre un'ampia gamma di funzionalità che consente di usare le app necessarie nei dispositivi in cui le si vuole eseguire. Nella tabella seguente è disponibile un riepilogo delle funzionalità di gestione delle app.
 
-|  | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10 | Windows Phone 8.1 |
-|-------------------------------------------------------------------------------------|---------|-----|-------|------------|-------------------|
+| Funzionalità di gestione delle app | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10 | Windows Phone 8.1 |
+|-------------------------- | -------------------------- | ---------- | ----- | ---------- | ----------------- |
 | Aggiunta e assegnazione delle app a utenti e dispositivi | Sì | Sì | Sì | Sì | Sì |
 | Assegnazione delle app a dispositivi non registrati con Intune | Sì | Sì | No | No | No |
 | Uso dei criteri di configurazione delle app per controllare il comportamento di avvio delle app | Sì | Sì | No | No | No |

@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/05/2019
+ms.date: 08/07/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: aed17d518213f875e15f2261ec1a18640357203a
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 4f53aa731dbe7483f7fbe97c509a82677072c25c
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880949"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88047975"
 ---
 # <a name="device-password-requirements-for-enrolled-devices"></a>Requisiti delle password del dispositivo per i dispositivi registrati
 
@@ -89,13 +89,15 @@ Per altre informazioni o per conoscere i requisiti specifici dell'organizzazione
 | Password scaduta. | Impostare una nuova password. L'organizzazione richiede di modificare la password dopo un determinato numero di giorni. |
 | La password è stata usata troppo di recente. | Scegliere una password non usata in precedenza. L'organizzazione richiede un periodo di tempo specifico prima di riutilizzare una password. |
 
-## <a name="next-steps"></a>Passaggi successivi
+## <a name="update-password-passcode-pin"></a>Aggiornare password, passcode, PIN
 
-Vedere gli articoli seguenti per creare o modificare la password, il codice o il PIN del dispositivo.  
+Gli articoli seguenti illustrano come modificare la password, il passcode o il PIN del dispositivo. Per le istruzioni più aggiornate, fare riferimento alla documentazione del produttore del dispositivo. 
 
 - [Impostare la password del dispositivo in Windows 10](set-or-change-your-password-windows.md)  
 - [Impostare il passcode del dispositivo in iOS](set-or-change-your-passcode-ios.md)  
 - [Impostare il PIN o la password del dispositivo Android](set-your-pin-or-password-android.md)  
+
+## <a name="next-steps"></a>Passaggi successivi
 
 Serve ancora assistenza? Contattare il supporto tecnico. Per informazioni sul contatto vedere il [sito Web del portale aziendale](https://go.microsoft.com/fwlink/?linkid=2010980).  
 

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: a8a4ce1c3d54311db18decc85f57d3e03298d339
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: f6087011a0390997d704278af6ffd5e6071bf031
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904685"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129019"
 ---
 # <a name="what39s-new-in-version-1706-of-configuration-manager"></a>Novità della versione 1706 di Configuration Manager
 
@@ -78,7 +78,7 @@ Questa versione include dei miglioramenti per il funzionamento dei punti di aggi
 - Indipendentemente dalla configurazione di fallback, un client tenta di raggiungere l'ultimo punto di aggiornamento del software che ha usato per 120 minuti. Dopo l'esito negativo nel raggiungere il server per 120 minuti, il client controlla quindi il proprio pool di punti di aggiornamento del software disponibili, per poterne trovare uno nuovo.
 - Dopo l'esito negativo nel raggiungere il server originale per due ore, il client passa a un ciclo più breve per contattare un nuovo punto di aggiornamento del software. Ciò significa che se un client non riesce a connettersi con un nuovo server, seleziona rapidamente il server successivo dal relativo pool di server disponibili e cerca di contattarne uno nuovo.
 
-Per altre informazioni, vedere la sezione [Punti di aggiornamento software](../../servers/deploy/configure/boundary-groups.md#software-update-points) nell'argomento Gruppi di limiti e relazioni per il Current Branch.
+Per altre informazioni, vedere la sezione [Punti di aggiornamento software](../../servers/deploy/configure/boundary-groups.md#bkmk_sup) nell'argomento Gruppi di limiti e relazioni per il Current Branch.
 
 ### <a name="azure-ad-integration-with-configuration-manager"></a>Integrazione di Azure AD con Configuration Manager
 <!-- 1248187, 1290765, 1258052, 1298097, 1319334, 1319883, 1352135, 1353331 -->
@@ -228,7 +228,7 @@ In questa versione è stato considerevolmente migliorato il tempo di download pe
 Per informazioni dettagliate, vedere [Integrazione con Windows Update for Business in Windows 10](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md#configure-windows-update-for-business-deferral-policies).
 
 ### <a name="improved-user-notifications-for-office-365-updates"></a>Notifiche utente migliorate per gli aggiornamenti di Office 365
-Sono stati apportati miglioramenti per usare l'esperienza utente a portata di clic di Office quando un client installa un aggiornamento di Office 365. I miglioramenti includono le notifiche a comparsa e in-app e un conto alla rovescia. Per altre informazioni, vedere [Comportamento di riavvio e notifiche client per gli aggiornamenti di Office 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md#restart-behavior-and-client-notifications-for-office-365-updates)
+Sono stati apportati miglioramenti per usare l'esperienza utente a portata di clic di Office quando un client installa un aggiornamento di Office 365. I miglioramenti includono le notifiche a comparsa e in-app e un conto alla rovescia. Per altre informazioni, vedere [Comportamento di riavvio e notifiche client per gli aggiornamenti di Office 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md)
 
 ## <a name="reporting"></a>Reporting
 

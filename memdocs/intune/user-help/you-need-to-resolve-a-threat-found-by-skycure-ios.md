@@ -17,14 +17,14 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 605d31f2f7a32c9344ca1e24fc3f78da57fb46a0
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 5a4f96b260a9e534dac5345510f16e142e694456
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83877154"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865976"
 ---
-# <a name="resolve-a-threat-found-by-symantec-endpoint-protection-mobile"></a>Risolvere una minaccia rilevata da Symantec Endpoint Protection Mobile
+# <a name="resolve-a-threat-found-by-symantec-endpoint-protection-mobile-on-ios"></a>Risolvere una minaccia rilevata da Symantec Endpoint Protection Mobile in iOS
 
 Symantec Endpoint Protection (SEP) Mobile è un servizio Mobile Threat Defender che identifica le potenziali minacce nei dispositivi Android. Le minacce vengono segnalate all'app Portale aziendale e sono indicate come problemi di non conformità non risolti. Se il dispositivo viene identificato come non conforme, si potrebbe non essere in grado di:
 

@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 08/07/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: a8d48235141c0b5ad07fbdce4d24e894f8103e6f
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2e32b6e1c5e976669e78d3cf00610fbd57b68dd1
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882400"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048039"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>Configurare l'accesso del dispositivo iOS alle risorse aziendali  
 
@@ -35,12 +35,12 @@ Dopo la registrazione, il dispositivo diventa *gestito*. L'organizzazione può a
 > [!NOTE]
 > Microsoft non vende per alcun motivo a terze parti i dati raccolti dal servizio.  
 
-Per mantenere l'accesso alle informazioni aziendali o dell'istituto di istruzione dal dispositivo, è necessario configurare il dispositivo in base alle impostazioni preferite dell'organizzazione. Questo articolo descrive come usare il Portale aziendale per registrare il dispositivo e mantenere i requisiti relativi alle impostazioni dell'organizzazione.  
+Per mantenere l'accesso alle informazioni aziendali o dell'istituto di istruzione dal dispositivo, è necessario configurare il dispositivo in base alle impostazioni preferite dell'organizzazione. Questo articolo descrive come usare il Portale aziendale per registrare il dispositivo e gestire i requisiti per l'accesso.  
 </br>
 > [!VIDEO https://www.youtube.com/embed/mJyv6YcHi7c?rel=0]
 
 > [!NOTE]
-> Se si è provato ad accedere alla posta elettronica aziendale nell'app Posta ed è stata ricevuta una richiesta di impostare il dispositivo come gestito, questo è il posto giusto. Eseguire le istruzioni seguenti per accedere alla posta elettronica e ad altre risorse aziendali sul dispositivo iOS.  
+> Se si è provato ad accedere alla posta elettronica aziendale nell'app Posta ed è stata ricevuta una richiesta di impostare il dispositivo come gestito, questo è il posto giusto. Seguire le istruzioni riportate di seguito, che consentono di riottenere l'accesso alla posta elettronica e ad altre risorse aziendali sul dispositivo iOS.  
 
 
 ## <a name="what-to-expect-from-the-company-portal-app"></a>Aspettative relative all'app Portale aziendale  
@@ -56,11 +56,15 @@ Se dopo la registrazione l'organizzazione applica un nuovo requisito di sicurezz
 
 Per altre informazioni sulla registrazione, vedere [Che cosa avviene quando si installa l'app Portale aziendale e si registra il dispositivo?](https://docs.microsoft.com//mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios).  
 
+## <a name="prerequisties"></a>Prerequisiti  
+
+* Passare all'App Store per scaricare e installare l'[app Portale aziendale Intune](install-and-sign-in-to-the-intune-company-portal-app-ios.md) nel dispositivo. 
+* Avere a disposizione una connessione Wi-Fi fino al completamento di tutti i passaggi.
+* Avere accesso al Web browser Safari nel dispositivo.
+
 ## <a name="enroll-your-ios-device"></a>Registrare il dispositivo iOS  
 
-Passare all'App Store per scaricare e installare l'[app Portale aziendale Intune](install-and-sign-in-to-the-intune-company-portal-app-ios.md) nel dispositivo. Durante la registrazione è anche necessario mantenere una connessione Wi-Fi e avere accesso a Safari. 
-
-La sospensione per un periodo più lungo di qualche minuto durante la registrazione può determinare la chiusura dell'app o la fine della configurazione. Se ciò accade, aprire l'app Portale aziendale e riprovare.  
+La sospensione per un periodo più lungo di qualche minuto durante la registrazione può determinare la chiusura dell'app Portale aziendale o la fine della configurazione. In tal caso, riaprire l'app e riprovare.  
 
 1. Aprire l'app Portale aziendale e accedere con l'account aziendale o dell'istituto di istruzione.  
 

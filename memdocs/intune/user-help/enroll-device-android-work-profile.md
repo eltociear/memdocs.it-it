@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/08/2020
+ms.date: 08/07/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,16 +19,18 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2be81c19a48d89876f71293e6f868d8cee0e1192
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 39d68f7cec9cdd4baef84d07d7284f6407f659c5
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531401"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048056"
 ---
 # <a name="enroll-device-with-android-work-profile"></a>Registrare un dispositivo con profilo di lavoro Android
 
-Registrare il dispositivo Android personale per accedere a posta elettronica, app e altri dati aziendali o dell'istituto di istruzione. Durante la registrazione verrà configurato un profilo di lavoro Android. Questo profilo separa i dati personali nel dispositivo dai dati aziendali. L'organizzazione gestisce il profilo di lavoro, costituito da file e dati di lavoro. Il supporto tecnico aziendale non può gestire i dati personali nel dispositivo dell'utente.  
+Registrare il dispositivo Android personale per accedere a posta elettronica, app e altri dati aziendali o dell'istituto di istruzione. Durante la registrazione verrà configurato un profilo di lavoro Android, che separa i dati personali nel dispositivo dai dati aziendali. Se questo tipo di installazione è richiesta, l'organizzazione lo comunicherà tramite il canale di comunicazione preferito o l'app Portale aziendale Intune. 
+
+Dopo aver configurato il profilo, l'organizzazione gestirà il lato aziendale, costituito solo dai file e dai dati aziendali. Il supporto tecnico aziendale non può gestire i dati personali nel dispositivo dell'utente.  
 </br>
 > [!VIDEO https://www.youtube.com/embed/9Dl8HsGk4tI]
 

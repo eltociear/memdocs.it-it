@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 3ebca81f459f0e49345db08f992c288514a7331a
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: a0d1ee33e3aca6dbb6ff6e349eb9a578aad6ae88
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461607"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048073"
 ---
 # <a name="attack-surface-reduction-policy-settings-for-endpoint-security-in-intune"></a>Impostazioni dei criteri di riduzione della superficie di attacco nella sicurezza degli endpoint di Intune
 
@@ -181,10 +181,10 @@ Piattaforme e profili supportati:
   - **Imponi i componenti e le app dello Store**
   - **Controlla i componenti e le app dello Store**
   - **Imponi i componenti, le app dello Store e Smartlocker**
-  - **Controlla i componenti, le app dello Store e Smartlocker**
+  - CSP **Controlla i componenti, le app dello Store e Smartlocker**: [Provider di servizi di configurazione AppLocker](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
 
 - **Impedisci agli utenti di ignorare gli avvisi di SmartScreen**  
-  [PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
+  CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
   - **Non configurato**  (*impostazione predefinita*) - Gli utenti possono ignorare gli avvisi di SmartScreen per i file e le app dannose.
   - **Sì** - SmartScreen è abilitato e gli utenti non possono ignorare gli avvisi per i file o le app dannose.

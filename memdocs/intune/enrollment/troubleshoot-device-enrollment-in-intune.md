@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8f400c946f26de272b782194df3f1b1930ab0b4
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 87f81c9f33fd267bcd57a14b59c88d36a937fecd
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093510"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865823"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Risolvere i problemi di registrazione dei dispositivi in Microsoft Intune
 
@@ -67,7 +67,7 @@ Verificare che all'utente non siano assegnati più dispositivi rispetto al numer
 
 2. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Utenti** > **Tutti gli utenti** > selezionare l'utente > **Dispositivi**. Prendere nota del numero di dispositivi.
 
-3. Se il numero di dispositivi registrati per l'utente ha già raggiunto la restrizione sul limite di dispositivi, non è possibile registrarne altri, a meno che:
+3. Se il numero di dispositivi registrati per l'utente ha già raggiunto la restrizione per il limite di dispositivi, non è possibile registrarne altri, a meno che:
     - [I dispositivi esistenti vengano rimossi](../remote-actions/devices-wipe.md), o
     - Si aumenti il limite di dispositivi[ impostando le restrizioni del dispositivo](enrollment-restrictions-set.md).
 
@@ -290,7 +290,9 @@ Dopo aver eseguito la registrazione, vengono ripristinati il corretto funzioname
 
 Per registrare dispositivi gestiti con Registrazione automatica del dispositivo con affinità utente è necessario abilitare un endpoint nome utente/misto WS-Trust 1.3 per la richiesta di token utente. Active Directory abilita questo endpoint per impostazione predefinita. Per ottenere un elenco di endpoint abilitati, usare il cmdlet Get-AdfsEndpoint di PowerShell e cercare l'endpoint trust/13/UsernameMixed. Ad esempio:
 
-      Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
+```powershell
+Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
+```
 
 Per altre informazioni, vedere la [documentazione di Get-AdfsEndpoint](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 

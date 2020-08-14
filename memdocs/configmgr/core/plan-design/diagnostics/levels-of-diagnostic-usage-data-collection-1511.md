@@ -5,18 +5,18 @@ description: Informazioni sui livelli dei dati di diagnostica e di utilizzo racc
 ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 9e614ae1-47d2-4a93-ba0a-89dc50d1e266
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: eaebab1e3c03ad2ffbcebf57bbccf88ce151923e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 94166557b07050706401c122b835579762bfa982
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81697109"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128832"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1511-of-configuration-manager"></a>Livelli di raccolta di dati per utilizzo diagnostico per la versione 1511 di Configuration Manager
 

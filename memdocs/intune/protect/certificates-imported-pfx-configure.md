@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d09f3a2e734709f769aebcd4e8aab4fec774d4fc
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 630d270202f1064c9e80e7cb87df3929138ee54a
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461828"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048107"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Configurare e usare i certificati PKCS importati con Intune
 
@@ -56,7 +56,8 @@ Per usare i certificati PKCS importati con Intune, è necessaria l'infrastruttur
 
 - **Connettore di certificati PFX per Microsoft Intune**:
 
-  Ogni tenant di Intune supporta una sola istanza di questo connettore. È possibile installare questo connettore nello stesso server di un'istanza del connettore di certificati di Microsoft Intune.
+  Ogni tenant di Intune supporta più istanze di questo connettore. Verificare che ogni connettore abbia accesso alla chiave privata usata per crittografare le password dei file PFX caricati.
+  È possibile installare questo connettore nello stesso server di un'istanza del connettore di certificati di Microsoft Intune.
 
   Questo connettore gestisce le richieste per i file PFX importati in Intune per la crittografia S/MIME della posta elettronica per un utente specifico.
 

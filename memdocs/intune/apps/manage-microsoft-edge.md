@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/08/2020
+ms.date: 08/05/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35ee8b225abe48aa4b8b0ca78b9e5b137d0721f6
-ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
+ms.openlocfilehash: 49d731ef6e9508367ded8ed5d711b744be7d2db1
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87758364"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912546"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>Gestire l'accesso Web usando Microsoft Edge per iOS e Android con Microsoft Intune
 
@@ -114,7 +114,7 @@ Questo scenario di configurazione funziona solo con i dispositivi registrati. Tu
 
 ## <a name="general-app-configuration-scenarios"></a>Scenari generali di configurazione delle app
 
-Edge per iOS e Android offre agli amministratori la possibilità di personalizzare la configurazione predefinita per diverse impostazioni in-app. Questa funzionalità è attualmente disponibile solo quando Edge per iOS e Android dispone di un Criterio di protezione app di Intune applicato all'account aziendale o dell'Istituto di istruzione che ha eseguito l'accesso all'app.
+Edge per iOS e Android offre agli amministratori la possibilità di personalizzare la configurazione predefinita per diverse impostazioni in-app. Questa funzionalità è attualmente disponibile solo quando Edge per iOS e Android ha criteri di Protezione app di Intune applicati all'account aziendale o dell'istituto di istruzione che ha eseguito l'accesso all'app e le impostazioni dei criteri vengono recapitate tramite criteri di configurazione delle app gestite.
 
 > [!IMPORTANT]
 > Edge per Android non supporta le impostazioni di Chromium disponibili nella versione gestita di Google Play.
@@ -246,12 +246,12 @@ Microsoft Edge per Android può essere abilitato come app in modalità tutto sch
 |    Chiave    |    Valore    |
 |-----------|-------------|
 |    com.microsoft.intune.mam.managedbrowser.enableKioskMode    |    **true** abilita la modalità tutto schermo per Microsoft Edge per Android<br>**false** (impostazione predefinita) disabilita la modalità tutto schermo    |
-|    com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode    |    **true** visualizza la barra degli indirizzi in modalità tutto schermo<br> **false** (impostazione predefinita) nasconde la barra degli indirizzi in modalità tutto schermo    |
-|    com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode    |    **true** visualizza la barra delle azioni inferiore in modalità tutto schermo<br> **false** (impostazione predefinita) nasconde la barra inferiore in modalità tutto schermo    |
+|    com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode    |    **true** visualizza la barra degli indirizzi in modalità tutto schermo<br> **false** (impostazione predefinita) nasconde la barra degli indirizzi quando è abilitata la modalità tutto schermo    |
+|    com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode    |    **true** visualizza la barra delle azioni inferiore in modalità tutto schermo<br> **false** (impostazione predefinita) nasconde la barra inferiore quando è abilitata la modalità tutto schermo    |
 
 ## <a name="data-protection-app-configuration-scenarios"></a>Scenari di configurazione dell'app per la protezione dei dati
 
-Microsoft Edge per iOS e Android supporta i criteri di configurazione delle app per le seguenti impostazioni di protezione dati quando l'app viene gestita da Microsoft Endpoint Manager con criteri di protezione delle app di Intune applicati all'account aziendale o dell'istituto di istruzione che ha eseguito l'accesso all'app:
+Microsoft Edge per iOS e Android supporta i criteri di configurazione delle app per le seguenti impostazioni di protezione dati quando l'app viene gestita da Microsoft Endpoint Manager con criteri di protezione delle app di Intune applicati all'account aziendale o dell'istituto di istruzione che ha eseguito l'accesso all'app e le impostazioni dei criteri vengono recapitate tramite criteri di configurazione delle app gestite:
 
 - Gestire la sincronizzazione degli account
 - Gestire siti Web con restrizioni

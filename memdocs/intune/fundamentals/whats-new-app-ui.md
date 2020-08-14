@@ -1,12 +1,12 @@
 ---
-title: Aggiornamenti dell'interfaccia utente per le applicazioni degli utenti finali in Intune
+title: Aggiornamenti dell'interfaccia utente per le app degli utenti finali in Intune | Microsoft Docs
 titleSuffix: Microsoft Intune
 description: Informazioni sulle novità dell'interfaccia utente per le app usate nei dispositivi degli utenti finali con Microsoft Intune.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/11/2020
+ms.date: 08/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 11aba38d63621472b5e8513b066b96120d649c31
-ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
+ms.openlocfilehash: cbb66833397d16ec18ce015d26a19bd28a1113c4
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84740877"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048158"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aggiornamenti dell'interfaccia utente per le applicazioni degli utenti finali in Intune
 
@@ -34,6 +34,13 @@ Informazioni sugli aggiornamenti più recenti per le app Microsoft Intune. Il si
 
 Per gli studenti o i dipendenti, è consigliabile fare riferimento alle schermate e ai collegamenti alla documentazione della Guida per il portale aziendale. Per altre informazioni su come usare l'app Portale aziendale, vedere la [documentazione della Guida dell'utente per il portale aziendale](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done).  
 
+## <a name="week-of-august-10-2020"></a>Settimana del 10 agosto 2020
+
+### <a name="improvement-to-update-device-settings-page-in-company-portal-app-for-android-to-shows-descriptions---7414768---"></a>Miglioramento della pagina Aggiorna le impostazioni del dispositivo nell'app Portale aziendale app per Android per visualizzare le descrizioni<!-- 7414768 -->
+
+Nell'app Portale aziendale nei dispositivi Android la pagina **Aggiorna le impostazioni del dispositivo** elenca le impostazioni che devono essere aggiornate per la conformità. Gli utenti espandono il problema per visualizzare altre informazioni e vedere il pulsante **Risolvi**.
+
+Questa esperienza utente è stata migliorata. Le impostazioni elencate vengono espanse per impostazione predefinita per mostrare la descrizione e il pulsante **Risolvi**, se applicabile. In precedenza, i problemi erano compressi per impostazione predefinita. Questo nuovo comportamento predefinito riduce il numero di clic, in modo che gli utenti possano risolvere i problemi più rapidamente.
 
 ## <a name="week-of-june-8-2020"></a>Settimana del 8 giugno 2020 
 

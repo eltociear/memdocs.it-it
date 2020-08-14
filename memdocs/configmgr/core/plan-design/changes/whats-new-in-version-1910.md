@@ -10,12 +10,12 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a52b70b0a753036c506e5d515cbac048d6771295
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 1567531ed83586f47ba2f79372e0b7962c1341dc
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83879062"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128917"
 ---
 # <a name="whats-new-in-version-1910-of-configuration-manager-current-branch"></a>Novità della versione 1910 di Configuration Manager Current Branch
 
@@ -98,19 +98,19 @@ Per altre informazioni sulle modifiche mensili al servizio cloud Desktop Analyti
 <!--3197353-->
 Sono state aggiunte alcune ottimizzazioni significative al motore CMPivot. È ora possibile spostare più operazioni di elaborazione nel client ConfigMgr. Le ottimizzazioni riducono drasticamente il carico della CPU del server e della rete necessario per eseguire le query CMPivot. Grazie a queste ottimizzazioni, è ora possibile analizzare diversi gigabyte di dati del client in tempo reale. 
 
-Per altre informazioni, vedere [Ottimizzazioni per il motore CMPivot](../../servers/manage/cmpivot.md#bkmk_optimization).
+Per altre informazioni, vedere [Ottimizzazioni per il motore CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_optimization).
 
 ### <a name="additional-cmpivot-entities-and-enhancements"></a>Entità CMPivot aggiuntive e miglioramenti
 <!--5410930-->
 È stata aggiunta una serie di nuove entità CMPivot e sono stati introdotti miglioramenti alle entità per facilitare l'individuazione e la risoluzione dei problemi. Per eseguire una query sono state incluse le entità seguenti:
 
-- Registri eventi di Windows ([WinEvent](../../servers/manage/cmpivot.md#bkmk_WinEvent))
-- Contenuto del file ([FileContent](../../servers/manage/cmpivot.md#bkmk_File))
-- DLL caricate dai processi ([ProcessModule](../../servers/manage/cmpivot.md#bkmk_ProcessModule))
-- Informazioni Azure Active Directory ([AADStatus](../../servers/manage/cmpivot.md#bkmk_AadStatus))
-- Stato di Endpoint Protection ([EPStatus](../../servers/manage/cmpivot.md#bkmk_EPStatus))
+- Registri eventi di Windows ([WinEvent](../../servers/manage/cmpivot-changes.md#bkmk_WinEvent))
+- Contenuto del file ([FileContent](../../servers/manage/cmpivot-changes.md#bkmk_File))
+- DLL caricate dai processi ([ProcessModule](../../servers/manage/cmpivot-changes.md#bkmk_ProcessModule))
+- Informazioni Azure Active Directory ([AADStatus](../../servers/manage/cmpivot-changes.md#bkmk_AadStatus))
+- Stato di Endpoint Protection ([EPStatus](../../servers/manage/cmpivot-changes.md#bkmk_EPStatus))
 
-Questa versione include anche diversi [altri miglioramenti](../../servers/manage/cmpivot.md#bkmk_Other) a CMPivot. Per altre informazioni, vedere l'articolo su [CMPivot a partire dalla versione 1910](../../servers/manage/cmpivot.md#bkmk_cmpivot1910).
+Questa versione include anche diversi [altri miglioramenti](../../servers/manage/cmpivot-changes.md#bkmk_Other) a CMPivot. Per altre informazioni, vedere l'articolo su [CMPivot a partire dalla versione 1910](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot1910).
 
 ## <a name="content-management"></a><a name="bkmk_content"></a> Gestione dei contenuti
 

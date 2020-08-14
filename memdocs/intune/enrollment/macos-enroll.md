@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1de1b015daad50837142ce9628543f0b2d7587d7
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 7c0973805a0646ec7df87f36eea183a9456f7e39
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093756"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865507"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Configurare la registrazione per i dispositivi macOS in Intune
 
@@ -62,6 +62,7 @@ Per informazioni su altre attività dell'utente finale, vedere gli articoli segu
 Per le organizzazioni che acquistano dispositivi per i propri utenti, Intune supporta i seguenti metodi di registrazione dei dispositivi macOS di proprietà dell'azienda:
 - [Registrazione automatica del dispositivo di Apple](device-enrollment-program-enroll-macos.md): le organizzazioni possono acquistare dispositivi macOS tramite Registrazione automatica del dispositivo. Registrazione automatica del dispositivo consente di distribuire un profilo di registrazione in modalità wireless per includere i dispositivi nella gestione.
 - [Manager di registrazione dispositivi](device-enrollment-manager-enroll.md): è possibile usare un account del manager di registrazione dispositivi per registrare fino a 1.000 dispositivi.
+- [Registrazione diretta](device-enrollment-direct-enroll-macos.md): la registrazione diretta non cancella il dispositivo.
 
 ## <a name="block-macos-enrollment"></a>Bloccare la registrazione di macOS
 Per impostazione predefinita, Intune consente la registrazione dei dispositivi macOS. Per bloccare la registrazione dei i dispositivi macOS, vedere [Impostare le restrizioni sul tipo di dispositivi](enrollment-restrictions-set.md).

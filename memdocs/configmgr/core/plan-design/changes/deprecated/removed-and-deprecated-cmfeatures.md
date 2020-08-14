@@ -2,7 +2,7 @@
 title: Funzionalità deprecate
 titleSuffix: Configuration Manager
 description: Informazioni sulle funzionalità che Configuration Manager non supporta più.
-ms.date: 05/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 40eda7184d7be5010bf51e3ac0d30d6d9442203c
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 5ee84a41a5c47ce554e4618b897c8e4933bdbe73
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905071"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129053"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Funzionalità rimosse e deprecate per Configuration Manager
 
@@ -31,7 +31,6 @@ Le funzionalità seguenti sono deprecate. È ancora possibile usarle al momento,
 
 |Funzionalità|Primo annuncio riguardo agli elementi deprecati|Supporto&nbsp;rimosso|
 |-----------|---|--------------|
-| Opzione di Desktop Analytics **Visualizza dati recenti** per la registrazione e gli aggiornamenti di sicurezza dei dispositivi.<!-- 7080949 --> Per altre informazioni, vedere [Latenza dei dati](../../../../desktop-analytics/troubleshooting.md#data-latency).|Maggio 2020|Luglio 2020|
 |È stata modificata l'implementazione per la condivisione del contenuto da Azure. Usare un gateway di gestione cloud abilitato per il contenuto. Non sarà possibile creare un punto di distribuzione cloud tradizionale in futuro.|Febbraio 2019|DA DEFINIRE<sup>[Nota 1](#bkmk_note1)</sup>|
 |Distribuzione classica del servizio in Azure per il gateway di gestione cloud e il punto di distribuzione cloud. Per altre informazioni, vedere [Pianificare il gateway di gestione cloud](../../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager).|Novembre 2018|DA DEFINIRE<sup>[Nota 1](#bkmk_note1)</sup>|
 
@@ -45,6 +44,7 @@ Le funzionalità seguenti non sono più supportate. In alcuni casi, non sono pi�
 
 |Funzionalità|Primo annuncio riguardo agli elementi deprecati|Supporto&nbsp;rimosso|  
 |-----------|---|--------------|  
+| Opzione di Desktop Analytics **Visualizza dati recenti** per la registrazione e gli aggiornamenti di sicurezza dei dispositivi.<!-- 7080949 --> Per altre informazioni, vedere [Latenza dei dati](../../../../desktop-analytics/troubleshooting.md#data-latency).|Maggio 2020|Luglio 2020|
 | Integrazione di Windows Analytics e Preparazione aggiornamenti. Per altre informazioni, vedere [KB 4521815: Ritiro di Windows Analytics il 31 gennaio 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement). | 14 ottobre 2019 | 31 gennaio 2020 |
 | Valutazione dell'attestazione dell'integrità dei dispositivi per i criteri di conformità dell'accesso condizionale <!--1235616 aka 3608202--> Per altre informazioni, vedere [Che ne è stato della gestione di dispositivi mobili ibrida?](../../../../mdm/understand/what-happened-to-hybrid.md).| 3 luglio 2019 | Versione 1910 |
 | App Portale aziendale di Configuration Manager | 21 maggio 2019 | Versione 1910 |

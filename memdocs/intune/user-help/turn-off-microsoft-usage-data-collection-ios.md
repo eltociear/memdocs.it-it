@@ -19,14 +19,14 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: a9ea1274ca231cd60da9158ff19bf717e47316c2
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2cfdd7d65fd1f474588fcb225853835654a8fa5e
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881715"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866061"
 ---
-# <a name="how-to-turn-off-microsoft-data-collection"></a>Come disattivare la raccolta dati di Microsoft
+# <a name="how-to-turn-off-microsoft-data-collection-for-ios-devices"></a>Come disattivare la raccolta dati di Microsoft per i dispositivi iOS
 
 Microsoft raccoglie automaticamente determinati dati per i suoi prodotti e servizi allo scopo di migliorare l'affidabilità e le prestazioni dei prodotti Microsoft, inclusa l'app Portale aziendale. Anche se questi dati sono resi anonimi, alcuni utenti potrebbero non acconsentire alla raccolta. Il personale del supporto tecnico dell'azienda non ha alcun controllo sulla raccolta di questi dati e non può modificare la selezione dell'impostazione.
 

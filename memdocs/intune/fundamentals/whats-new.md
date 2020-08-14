@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 07/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2cd5e8f6e1975adf33131ca47049eb2d4a6f68cd
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 894ef12107b8e8b520ca69a463be47ef339bd9b4
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262881"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051631"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Novità di Microsoft Intune
 
@@ -54,6 +54,23 @@ Per informazioni sulle novità di Microsoft Intune ogni settimana, vedere l'[int
 ### Role-based access control
 ### Scripts
 
+<!-- ########################## -->
+## <a name="week-of-august-10-2020"></a>Settimana del 10 agosto 2020
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-management"></a>Gestione dei dispositivi
+
+#### <a name="tenant-attach-install-an-application-from-the-admin-center----in7220536-cm6024389--"></a>Collegamento di tenant: installare un'applicazione dall'interfaccia di amministrazione <!-- IN7220536 CM6024389-->
+È ora possibile avviare l'installazione di un'applicazione in tempo reale per un dispositivo collegato al tenant dall'interfaccia di amministrazione di Microsoft Endpoint Manager. Per altre informazioni, vedere [Collegamento di tenant: installare un'applicazione dall'interfaccia di amministrazione](../../configmgr/tenant-attach/applications.md).
+
+<!-- ########################## -->
+## <a name="week-of-july-27-2020"></a>Settimana del 27 luglio 2020
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="monitor-and-troubleshoot"></a>Monitorare e risolvere i problemi
+
+#### <a name="power-bi-compliance-report-template-v20---636958---"></a>Modello di report di conformità Power BI V2.0<!-- 636958 -->
+Le app modello di Power BI consentono ai partner Power BI di creare app Power BI con poco codice o senza codice e di distribuirle a qualsiasi cliente Power BI. Gli amministratori possono aggiornare la versione del modello di report di conformità Power BI da V1.0 a V2.0. La versione 2.0 include una progettazione migliorata e aggiornamenti ai calcoli e ai dati esposti come parte del modello. Per altre informazioni, vedere [Connettersi al data warehouse con Power BI](../developer/reports-proc-get-a-link-powerbi.md) e [Aggiornare un'app modello](https://docs.microsoft.com/power-bi/service-template-apps-install-distribute#update-a-template-app). Vedere anche il post di Blog [Announcing a New Version of the PowerBI Compliance Report with Intune Data Warehouse](https://aka.ms/new_compliance_report) (Annuncio di una nuova versione del report di conformità di Power BI con data warehouse di Intune).
 
 <!-- ########################## -->
 ## <a name="week-of-july-13-2020--2007-service-release"></a>Settimana del 13 luglio 2020 (versione del servizio 2007)
@@ -61,14 +78,11 @@ Per informazioni sulle novità di Microsoft Intune ogni settimana, vedere l'[int
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="app-management"></a>Gestione delle app
 
-#### <a name="win32-app-installation-notifications-and-the-company-portal---7485945----"></a>Notifiche di installazione dell'app Win32 e Portale aziendale<!-- 7485945  -->
-Gli utenti finali possono ora decidere se le applicazioni visualizzate nel [portale aziendale Web di Microsoft Intune](https://portal.manage.microsoft.com/) devono essere aperte dall'app Portale aziendale o dal sito Web Portale aziendale. Questa opzione è disponibile solo se l'utente finale ha installato l'app Portale aziendale e avvia un'applicazione del portale aziendale Web all'esterno di un browser. 
-
 #### <a name="exchange-on-premises-connector-support---7138486----"></a>Supporto del connettore locale per Exchange<!-- 7138486  -->
 Intune eliminerà il supporto per la funzionalità del connettore locale per Exchange dal servizio Intune a partire dalla versione 2007 (luglio). Dopo la rimozione, i clienti esistenti con un connettore attivo potranno continuare a usare la funzionalità corrente. I nuovi clienti e i clienti esistenti che non hanno un connettore attivo non potranno più creare nuovi connettori o gestire i dispositivi Exchange ActiveSync (EAS) da Intune. Per questi clienti, Microsoft consiglia l'uso dell'[autenticazione ibrida moderna (HMA)](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) di Exchange per proteggere l'accesso a Exchange locale. HMA abilita sia i criteri di Protezione app di Intune (noti anche come MAM) sia l'accesso condizionale tramite Outlook Mobile per Exchange locale.
 
-#### <a name="smime-for-outlook-on-ios-and-android-enterprise-devices-managed-without-enrollment---6517155----"></a>S/MIME per Outlook nei dispositivi iOS e Android Enterprise gestiti senza registrazione<!-- 6517155  -->
-È ora possibile abilitare S/MIME per Outlook nei dispositivi iOS e Android Enterprise usando i criteri di configurazione delle app per i dispositivi gestiti senza registrazione. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) selezionare **App** > **Criteri di configurazione dell'app** > **Aggiungi** > **Dispositivi gestiti**. Inoltre, è possibile scegliere se consentire agli utenti di modificare questa impostazione in Outlook. Per informazioni generali su S/MIME, vedere [Panoramica di S/MIME per firmare e crittografare la posta elettronica in Intune](../protect/certificates-s-mime-encryption-sign.md). Per altre informazioni sulle impostazioni di configurazione di Outlook, vedere [Impostazioni di configurazione di Microsoft Outlook](../apps/app-configuration-policies-outlook.md) e [Aggiungere criteri di configurazione delle app per le app gestite senza registrazione dei dispositivi](../apps/app-configuration-policies-managed-app.md). Per informazioni su S/MIME specifiche di Microsoft Exchange, vedere [Scenari S/MIME](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-scenarios) e [Chiavi di configurazione - Impostazioni S/MIME](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-settings).
+#### <a name="smime-for-outlook-on-ios-and-android-devices-without-enrollment---6517155---"></a>S/MIME per Outlook nei dispositivi iOS e Android senza registrazione<!-- 6517155 -->
+È ora possibile abilitare S/MIME per Outlook nei dispositivi iOS e Android usando criteri di configurazione delle app per le app gestite. Questo consente la consegna dei criteri indipendentemente dallo stato di registrazione del dispositivo. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) selezionare **App** > **Criteri di configurazione dell'app** > **Aggiungi** > **Dispositivi gestiti**. Inoltre, è possibile scegliere se consentire agli utenti di modificare questa impostazione in Outlook. Tuttavia, per distribuire automaticamente certificati S/MIME in Outlook per iOS e Android, il dispositivo deve essere registrato. Per informazioni generali su S/MIME, vedere [Panoramica di S/MIME per firmare e crittografare la posta elettronica in Intune](https://docs.microsoft.com/mem/intune/protect/certificates-s-mime-encryption-sign). Per altre informazioni sulle impostazioni di configurazione di Outlook, vedere [Impostazioni di configurazione di Microsoft Outlook](../apps/app-configuration-policies-outlook.md) e [Aggiungere criteri di configurazione delle app per le app gestite senza registrazione dei dispositivi](../apps/app-configuration-policies-managed-app.md). Per informazioni su S/MIME specifiche di Outlook per iOS e Android, vedere [Scenari S/MIME](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-scenarios) e [Chiavi di configurazione - Impostazioni S/MIME](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-settings). 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-configuration"></a>Configurazione del dispositivo

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 2168f844f1c9ef98ea21da68b73531bca7aad999
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 4708c0d8e9a7d2a3b87310b64311d67d8b84a16a
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905185"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126791"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Funzionalità della versione Technical Preview 1806 per Configuration Manager
 
@@ -240,7 +240,7 @@ Lo Strumento di personalizzazione di Office è ora integrato con il Programma di
  Provare a completare le attività. Inviare quindi [commenti e suggerimenti](capabilities-in-technical-preview-1804.md#bkmk_feedback).
 
 1. Nella console di Configuration Manager accedere all'area di lavoro **Raccolta software** e selezionare il nodo **Gestione client di Office 365**.
-2. Fare clic sul riquadro **Programma di installazione di Office 365** nel dashboard per avviare l'installazione guidata del client di Office 365. Per altre informazioni, vedere [Distribuire app di Office 365](../../sum/deploy-use/manage-office-365-proplus-updates.md#deploy-office-365-apps).
+2. Fare clic sul riquadro **Programma di installazione di Office 365** nel dashboard per avviare l'installazione guidata del client di Office 365. Per altre informazioni, vedere [Distribuire app di Office 365](../../sum/deploy-use/manage-office-365-proplus-updates.md).
 3. Nella pagina delle **impostazioni di Office** passare alla **pagina Web di Office**. Usare lo Strumento di personalizzazione di Office online per specificare le impostazioni per questa distribuzione. 
 4. Al termine, fare clic su **Invia** in alto a destra. Completare l'installazione guidata del client di Office 365.
 

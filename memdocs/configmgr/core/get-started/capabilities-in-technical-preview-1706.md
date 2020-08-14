@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d554f4f6e0c68912f4fac91bc1a8db2807b26a04
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 79258786b56cc3e7fe4971391903772700768a89
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078788"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126757"
 ---
 # <a name="capabilities-in-technical-preview-1706-for-configuration-manager"></a>Funzionalità della versione Technical Preview 1706 per Configuration Manager
 
@@ -72,7 +72,7 @@ Questa versione include dei miglioramenti per il funzionamento dei punti di aggi
   - Questo ciclo continua fino a quando il client si connette a un punto di aggiornamento del software da poter usare.
   - Fino a quando il client non trova un punto di aggiornamento del software, vengono aggiunti dei server aggiuntivi al pool di server disponibili quando si raggiunge l'ora di fallback per ogni gruppo di limiti adiacente.
 
-Per altre informazioni, vedere la sezione [Punti di aggiornamento software](../servers/deploy/configure/boundary-groups.md#software-update-points) nell'argomento Gruppi di limiti e relazioni per il Current Branch.
+Per altre informazioni, vedere la sezione [Punti di aggiornamento software](../servers/deploy/configure/boundary-groups.md#bkmk_sup) nell'argomento Gruppi di limiti e relazioni per il Current Branch.
 
 
 ## <a name="site-server-role-high-availability"></a>Disponibilità elevata per il ruolo del server del sito

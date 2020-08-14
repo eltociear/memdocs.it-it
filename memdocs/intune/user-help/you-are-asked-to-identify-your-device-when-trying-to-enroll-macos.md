@@ -19,14 +19,14 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 06e6b170667d16afa699706e2349e01710a0dc6e
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 27a251a4f0bacd41d5cbf2e69d194b01c0a93def
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880895"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866248"
 ---
-# <a name="you-need-to-identify-your-device-when-youre-trying-to-enroll"></a>È necessario identificare il dispositivo durante il tentativo di registrazione
+# <a name="youre-asked-to-identify-your-macos-device-during-enrollment"></a>Viene richiesto di identificare il dispositivo macOS durante la registrazione
 
 Se si sta provando a registrare un dispositivo macOS in Intune e viene visualizzata una schermata che richiede di identificare il dispositivo, significa che almeno uno dei dispositivi è già stato registrato e assegnato al proprio account con un metodo diverso dall'app Portale aziendale. Per il corretto funzionamento dell'app Portale aziendale, è necessario indicare se il dispositivo in uso è già stato registrato in Intune.
 

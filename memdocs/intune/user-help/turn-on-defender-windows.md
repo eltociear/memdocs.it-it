@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/15/2020
+ms.date: 08/07/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,37 +19,55 @@ ms.reviewer: shburbid
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2169abf9955446d6299a64c7ce2ae03723faa792
-ms.sourcegitcommit: 5c15b59cde085787b85f032f88add70a11d8e9a2
+ms.openlocfilehash: a57010a5c8089b0ac979cf43c3706467d83faea2
+ms.sourcegitcommit: 532a06163f462527254d23e7dc505b18c0c4f938
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86447977"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88110699"
 ---
 # <a name="turn-on-windows-defender-to-access-company-resources"></a>Abilitare Windows Defender per accedere alle risorse aziendali
 
-L'azienda o l'istituto di istruzione vuole assicurarsi che i dispositivi che accedono alle proprie risorse siano protetti. Esistono modi diversi, tra cui [Windows Defender](https://www.microsoft.com/safety/pc-security/windows-defender.aspx), una tecnologia di protezione integrata di Windows che difende da software dannoso.
+Le organizzazioni vogliono garantire che i dispositivi che accedono alle risorse siano protetti, quindi potrebbero richiedere l'uso di [Windows Defender](https://www.microsoft.com/safety/pc-security/windows-defender.aspx). Windows Defender è un software antivirus incluso in Windows che può aiutare a proteggere il dispositivo da virus e altri malware e minacce. 
 
-È possibile che sia necessario modificare alcune impostazioni di Windows Defender per risolvere i problemi di accesso. Per eseguire questa procedura può essere necessario accedere a punti diversi del computer.
+Questo articolo descrive come aggiornare le impostazioni del dispositivo per soddisfare i requisiti antivirus dell'organizzazione e risolvere i problemi di accesso. 
 
 ## <a name="turn-on-windows-defender"></a>Abilitare Windows Defender
+Seguire questa procedura per attivare Windows Defender nel dispositivo. 
 
-1. Aprire **Pannello di controllo** da **Start**.
-2. Aprire **Strumenti di amministrazione** > **Modifica Criteri di gruppo**. Si aprirà l'**Editor Criteri di gruppo locali** in una nuova finestra.
-3. Aprire **Configurazione computer** > **Modelli amministrativi** > **Componenti di Windows** > **Windows Defender Antivirus**. L'impostazione **Disabilita Windows Defender Antivirus** si trova sotto le cartelle di altre impostazioni. 
-4. Aprire **Disabilita Windows Defender Antivirus** e verificare che sia impostata l'opzione **Disabilitato** o **Non configurato**.
+1. Selezionare il menu **Start**.
+2. Nella barra di ricerca digitare **criteri di gruppo**. Selezionare quindi **Modifica Criteri di gruppo** tra i risultati elencati. Verrà aperto l'Editor Criteri di gruppo locali.
+4. Selezionare **Configurazione computer** > **Modelli amministrativi** > **Componenti di Windows** > **Windows Defender Antivirus**. 
+5. Scorrere fino alla fine dell'elenco e selezionare **Disabilita Windows Defender Antivirus**.  
+6. Selezionare **Disabilitato** o **Non configurato**. Potrebbe risultare non intuitivo selezionare queste opzioni perché i nomi indicano che è in corso la disattivazione di Windows Defender. Queste opzioni assicurano in realtà che venga attivato. 
+7. Selezionare **Applica** > **OK**.  
 
-## <a name="turn-on-real-time-protection"></a>Abilitare la protezione in tempo reale
 
-Verificare che la protezione in tempo reale sia abilitata selezionando **Start** e cercando **Sicurezza di Windows**. Selezionare **Impostazioni di Protezione da virus e minacce** e verificare che sia **Protezione in tempo reale** che **Protezione fornita dal cloud** siano su **Attivato**. Se queste opzioni non sono visualizzate, precedere come segue per abilitarle:
+## <a name="turn-on-real-time-and-cloud-delivered-protection"></a>Attivare la protezione in tempo reale e fornita dal cloud
 
-1. Aprire **Pannello di controllo** da **Start**.
-2. Aprire **Strumenti di amministrazione** > **Modifica Criteri di gruppo**. Si aprirà l'**Editor Criteri di gruppo locali** in una nuova finestra.
-3. Aprire **Configurazione computer** > **Modelli amministrativi** > **Componenti di Windows** > **Sicurezza di Windows** > **Protezione da virus e minacce**.
-4. Aprire l'impostazione **Nascondi l'area Protezione da virus e minacce** e impostarla su **Disattivata**.
+Seguire questa procedura per attivare la protezione in tempo reale e fornita dal cloud. Insieme, queste funzionalità antivirus proteggono da spyware e possono fornire correzioni per i problemi relativi al malware tramite il cloud. 
+
+1. Selezionare il menu **Start**.
+2. Nella barra di ricerca digitare **sicurezza di Windows**. Selezionare il risultato corrispondente. 
+3. Selezionare **Protezione da virus e minacce**.
+4. In **Impostazioni di Protezione da virus e minacce** selezionare **Gestisci impostazioni**.
+5. Selezionare ogni commutatore in **Protezione in tempo reale** e **Protezione fornita dal cloud** per attivare queste opzioni. 
+
+Se queste opzioni non sono visualizzate sullo schermo, potrebbero essere nascoste. Seguire questa procedura per renderle visibili.  
+
+1. Selezionare il menu **Start**.  
+2. Nella barra di ricerca digitare **criteri di gruppo**. Selezionare quindi **Modifica Criteri di gruppo** tra i risultati elencati. Verrà aperto l'Editor Criteri di gruppo locali.
+3. Selezionare **Configurazione computer** > **Modelli amministrativi** > **Componenti di Windows** > **Sicurezza di Windows** > **Protezione da virus e minacce**.
+4. Selezionare **Nascondi l'area Protezione da virus e minacce**.
+5. Selezionare **Disabilitato** > **Applica** > **OK**.  
 
 ## <a name="update-your-antivirus-definitions"></a>Aggiornare le definizioni di antivirus
+Seguire questa procedura per aggiornare le definizioni di antivirus.  
+1. Selezionare il menu **Start**.
+2. Nella barra di ricerca digitare **sicurezza di Windows**. Selezionare il risultato corrispondente. 
+3. Selezionare **Protezione da virus e minacce**.
+4. In **Virus & threat protection updates** (Aggiornamenti di protezione da virus e minacce) selezionare **Verifica disponibilità di aggiornamenti**. Se questa opzione non è visualizzata sullo schermo, completare il primo set di passaggi in [Attivare la protezione in tempo reale](turn-on-defender-windows.md#turn-on-real-time-and-cloud-delivered-protection). Controllare di nuovo se sono disponibili aggiornamenti. 
 
-Verificare che le definizioni di antivirus siano aggiornate selezionando **Start** e cercando **Windows Defender Security Center**. Selezionare **Aggiornamenti della protezione** e **Verifica se sono disponibili aggiornamenti:** per assicurarsi che il dispositivo abbia una protezione aggiornata da virus. Se questa opzione non viene visualizzata, seguire la procedura in [Abilitare la protezione in tempo reale](turn-on-defender-windows.md#turn-on-real-time-protection)
+## <a name="next-steps"></a>Passaggi successivi  
 
 Serve ancora assistenza? Contattare l'amministratore IT. Per informazioni sul contatto vedere il [sito Web del portale aziendale](https://go.microsoft.com/fwlink/?linkid=2010980).

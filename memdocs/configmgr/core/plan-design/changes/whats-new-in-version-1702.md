@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: fa29c1b2474d6a0a42b7ff8e3624a3ec8d6a090e
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: f2486e838e01415786e24c077af1997b3dfb7638
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912300"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129070"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Novità della versione 1702 di Configuration Manager
 
@@ -121,7 +121,7 @@ Usare lo [strumento per la pulizia della raccolta contenuto](../hierarchy/conten
 È possibile usare OMS Connector per connettersi a Log Analytics di OMS nel cloud di Microsoft Azure per enti pubblici. A questo scopo, è necessario modificare un file di configurazione prima di installare OMS Connector, in modo che quest'ultimo possa funzionare con il cloud di Azure per enti pubblici. Per altre informazioni, vedere [Usare OMS Connector con il cloud di Azure per enti pubblici](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm).
 
 ### <a name="software-update-points-are-added-to-boundary-groups"></a>Aggiunta di punti di aggiornamento software ai gruppi di limiti
-A partire dalla versione 1702, i client usano i gruppi di limiti per trovare un nuovo punto di aggiornamento software se quello corrente non è più disponibile. È possibile aggiungere singoli punti di aggiornamento software a diversi gruppi di limiti per controllare quali server possono essere trovati da un client. Per altre informazioni, vedere la sezione [Punti di aggiornamento software](../../servers/deploy/configure/boundary-groups.md#software-update-points) dell'argomento [Configurare gruppi di limiti](../../servers/deploy/configure/boundary-groups.md).
+A partire dalla versione 1702, i client usano i gruppi di limiti per trovare un nuovo punto di aggiornamento software se quello corrente non è più disponibile. È possibile aggiungere singoli punti di aggiornamento software a diversi gruppi di limiti per controllare quali server possono essere trovati da un client. Per altre informazioni, vedere la sezione [Punti di aggiornamento software](../../servers/deploy/configure/boundary-groups.md#bkmk_sup) dell'argomento [Configurare gruppi di limiti](../../servers/deploy/configure/boundary-groups.md).
 
 
 <!-- ## Migration  -->
@@ -221,7 +221,7 @@ A partire da questa versione, quando si aggiorna la versione di Windows ADK e qu
 ## <a name="software-updates"></a>Aggiornamenti software
 
 ### <a name="deploy-office-365-apps-to-clients"></a>Distribuire le app di Office 365 sui client
-A partire dalla versione 1702, nel dashboard Gestione client di Office 365 è possibile avviare il programma di installazione di Office 365, che consente di configurare le impostazioni di installazione di Office 365, scaricare file dalle reti di distribuzione del contenuto (CDN) e distribuire i file come applicazione in Configuration Manager. Per informazioni dettagliate, vedere [Gestire gli aggiornamenti di Office 365 ProPlus](../../../sum/deploy-use/manage-office-365-proplus-updates.md#deploy-office-365-apps).
+A partire dalla versione 1702, nel dashboard Gestione client di Office 365 è possibile avviare il programma di installazione di Office 365, che consente di configurare le impostazioni di installazione di Office 365, scaricare file dalle reti di distribuzione del contenuto (CDN) e distribuire i file come applicazione in Configuration Manager. Per informazioni dettagliate, vedere [Gestire gli aggiornamenti di Office 365 ProPlus](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_deploy).
 
 > [!IMPORTANT]
 > L'app di Office 365 creata e distribuita mediante la Creazione guidata dell'applicazione di Office 365 in Configuration Manager non viene gestita automaticamente da Configuration Manager fino a quando non si abilita l'impostazione dell'agente client degli aggiornamenti software **Enable management of the Office 365 Client Again** (Abilita di nuovo la gestione del client Office 365). Per altre informazioni, vedere [Informazioni sulle impostazioni client](../../clients/deploy/about-client-settings.md).

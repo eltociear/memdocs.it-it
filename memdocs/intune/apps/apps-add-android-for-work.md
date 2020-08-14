@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc8fb5b50475c523741128d64582be29d4bf5ffe
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: b8ce02a86236e390983b4e1ecca8d48d4767e49e
+ms.sourcegitcommit: 9eebe77af18045fceb3d41b43d76b370fe92b30e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262660"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87821632"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Aggiungere app Google Play gestite a dispositivi Android Enterprise con Intune
 
@@ -175,8 +175,8 @@ I collegamenti Web vengono aperti con Microsoft Edge o qualsiasi altra app brows
 Se è stata approvata un'app dallo Store e l'app non è ancora visualizzata nel carico di lavoro **App**, forzare una sincronizzazione immediata come descritto di seguito:
 
 1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Selezionare **App** > **Amministrazione del tenant** > **Connettori e token** > **Google Play gestito**.
-5. Nel riquadro **Google Play gestito** scegliere **Aggiorna**.  
+3. Selezionare **Amministrazione del tenant** > **Connettori e token** > **Google Play gestito**.
+5. Nel riquadro **Google Play gestito** scegliere **Sincronizza**.  
     La pagina aggiorna l'ora e lo stato dell'ultima sincronizzazione.
 6. Nell'interfaccia di amministrazione di Microsoft Endpoint Manager selezionare **App** > **Tutte le app**.  
     L'app della versione gestita di Google Play, appena resa disponibile, viene visualizzata.

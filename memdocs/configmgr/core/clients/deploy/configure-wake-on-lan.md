@@ -2,7 +2,7 @@
 title: Configurare la riattivazione LAN
 titleSuffix: Configuration Manager
 description: Selezionare le impostazioni di riattivazione LAN in Configuration Manager.
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b475a0c8-85d6-4cc4-b11f-32c0cc98239e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 512d942d79d11178f010c4f0adb41a25ee432743
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: dcf6005d0364106df8717a1151dbad617e455ff9
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694119"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127036"
 ---
 # <a name="how-to-configure-wake-on-lan-in-configuration-manager"></a>Come configurare la riattivazione LAN in Configuration Manager
 
@@ -28,7 +28,7 @@ Specificare le impostazioni di riattivazione LAN per Configuration Manager quand
 A partire da Configuration Manager 1810, è disponibile una nuova funzionalità per riattivare i computer sospesi. È ora possibile riattivare un client dalla console di Configuration Manager anche se il client non si trova nella stessa subnet del server del sito. Se è necessario eseguire attività di manutenzione o query nei dispositivi, i client remoti in stato di sospensione non costituiranno un limite per le operazioni. Il server del sito usa il canale di notifica client per identificare altri client attivi nella stessa subnet remota e usa tali client per inviare una richiesta di riattivazione LAN (Magic Packet). L'uso del canale di notifica client consente di evitare instabilità negli indirizzi MAC, che potrebbero causare l'arresto della porta da parte del router. La nuova versione di Riattivazione LAN può essere abilitata contemporaneamente alla [versione precedente](#bkmk_wol-previous).
 
 ### <a name="limitations"></a>Limitazioni
-
+<!--7323898, 7363492-->
 - Almeno un client nella subnet di destinazione deve essere attivo.
 - Questa funzionalità non supporta le tecnologie di rete seguenti:
    - IPv6
@@ -38,12 +38,6 @@ A partire da Configuration Manager 1810, è disponibile una nuova funzionalità 
 - I computer si riattivano solo quando ricevono la notifica client **Riattiva**.
     - Per eseguire la riattivazione in base a una scadenza, viene usata la versione precedente di Riattivazione LAN.
     -  Se la versione precedente non è abilitata, la riattivazione dei client non si verifica per le distribuzioni create con le impostazioni **Utilizza riattivazione LAN per riattivare i client per le distribuzioni richieste** o **Invia pacchetti di riattivazione**.  
-
-> [!IMPORTANT]
-> La funzionalità di riattivazione LAN è consigliata per l'uso solo in una quantità limitata di dispositivi (100) alla volta.
->
-> Quando si usa la funzionalità di riattivazione LAN per riattivare i computer dalla console di amministrazione di Configuration Manager, le richieste di riattivazione vengono inserite in una coda interna condivisa da altre funzionalità di azione in tempo reale. Esempi di queste altre funzionalità sono l'esecuzione di script, CMPivot e altre notifiche client con canale rapido. A seconda delle prestazioni dei sistemi del sito, le azioni di riattivazione potrebbero richiedere una quantità di tempo prolungata e ritardare altre azioni in tempo reale. Si consiglia di non riattivare più di 100 computer alla volta. Per sapere se si sta creando un backlog in quest'area che può causare ritardi, è possibile verificare se nella directory ...\inboxes\objmgr.box se è presente un numero elevato di file con estensione OPA.
-
 
 ### <a name="security-role-permissions"></a>Autorizzazioni del ruolo di sicurezza
 
@@ -85,7 +79,7 @@ A partire da Configuration Manager versione 1902, è possibile specificare la po
 
 Se sono abilitate entrambe le versioni di Riattivazione LAN, è possibile usare la notifica client **Riattiva** e la riattivazione in corrispondenza di una scadenza. Il funzionamento della notifica client è leggermente diverso rispetto alla versione tradizionale di Riattivazione LAN. Per una breve descrizione del funzionamento della notifica client, vedere la sezione [Riattivazione LAN a partire dalla versione 1810](#bkmk_wol-1810). La nuova impostazione client **Consenti la riattivazione della rete** cambia le proprietà della scheda di interfaccia di rete per abilitare Riattivazione LAN. Non è più necessario cambiarle manualmente per i nuovi computer aggiunti all'ambiente. Le altre funzionalità di Riattivazione LAN non sono cambiate.
 
-A partire dalla versione 1902, la notifica client **Riattiva** rispetta l'attuale impostazione di **Numero di porta di riattivazione LAN (UDP)** .
+A partire dalla versione 1902, la notifica client **Riattiva** rispetta l'attuale impostazione di **Numero di porta di riattivazione LAN (UDP)**.
 
 
 ## <a name="wake-on-lan-for-version-1806-and-earlier"></a><a name="bkmk_wol-previous"></a> Riattivazione LAN per la versione1806 e precedenti
@@ -119,7 +113,7 @@ Un computer che riceve le impostazioni client proxy di riattivazione sospenderà
 2. Fare clic su **Impostazioni client predefinite**, quindi su **Proprietà**.
 3. Selezionare **Risparmio energia** e quindi scegliere **Sì** per **Abilitare il proxy di riattivazione**.
 4. Riesaminare e, se necessario, configurare le altre impostazioni proxy di riattivazione. Per altre informazioni su queste impostazioni, vedere [Impostazioni di risparmio energia](../../../core/clients/deploy/about-client-settings.md#power-management).
-5. Fare clic su **OK** per chiudere la finestra di dialogo e su **OK** per chiudere la finestra di dialogo Impostazioni client predefinite.
+5. Fare clic su **OK** per chiudere la finestra di dialogo e quindi fare clic su **OK** per chiudere la finestra di dialogo Impostazioni client predefinite .
 
 È possibile utilizzare i seguenti report di riattivazione LAN per monitorare l'installazione e la configurazione del proxy di riattivazione:
 

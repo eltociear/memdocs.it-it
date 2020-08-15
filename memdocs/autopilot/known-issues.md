@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 9e620892adc8a6db4ba76f8058bcb6105dba5a18
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 5e0177097d1ff08ceeca6f6692f943856c40e6de
+ms.sourcegitcommit: 69a6829ace9fc1999e58e5f31348521b638ef0ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87756637"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88239498"
 ---
 # <a name="windows-autopilot---known-issues"></a>Windows Autopilot-problemi noti
 
@@ -59,7 +59,7 @@ Questo problema si verifica perché Windows 10, versione 1903 e 1909, Elimina il
 - La funzionalità Windows Autopilot for existing devices non disattiva correttamente la pagina "Activities" durante la configurazione guidata.  Per questo motivo, verrà visualizzata la pagina aggiuntiva durante la configurazione guidata.
 - Lo stato di attestazione TPM non è cancellato da Sysprep/generalize, causando un errore di attestazione TPM durante il flusso di configurazione successiva.  Questo non è un problema particolarmente comune, ma è possibile eseguirlo durante i test se si esegue Sysprep/generalize, quindi si riavvia o si ricrea la creazione dell'immagine del dispositivo per tornare indietro tramite un guanto bianco o uno scenario di distribuzione automatica.
 - L'attestazione TPM potrebbe non riuscire se il dispositivo ha un certificato AIK valido, ma nessun certificato EK.  (Correlato all'elemento precedente).
-- Se l'attestazione TPM ha esito negativo durante il processo del guanto bianco di Windows Autopilot, la pagina di destinazione risulta bloccata.  Fondamentalmente, la pagina di destinazione del guanto bianco, in cui si fa clic su "provisioning" per avviare il processo di guanto bianco, non segnala correttamente gli errori.
+- Se l'attestazione TPM ha esito negativo durante il processo del guanto bianco di Windows Autopilot, la pagina di destinazione non risponde.  Fondamentalmente, la pagina di destinazione del guanto bianco, in cui si fa clic su "provisioning" per avviare il processo di guanto bianco, non segnala correttamente gli errori.
 - L'attestazione TPM ha esito negativo in un nuovo TPMs Infineon (versione firmware > 7,69).  Prima di questa correzione, era stato accettato solo un elenco specifico di versioni del firmware.
 - I modelli di denominazione dei dispositivi possono troncare il nome del computer a 14 caratteri anziché 15.
 - I criteri di accesso assegnati generano un riavvio che può interferire con la configurazione di dispositivi a chiosco singolo per app.
@@ -79,7 +79,7 @@ Questo problema si verifica perché Windows 10, versione 1903 e 1909, Elimina il
 <tr><td>0xc1036501<td>Il dispositivo non può eseguire una registrazione MDM automatica perché sono presenti più configurazioni MDM in Azure AD. Vedere <a href="https://oofhours.com/2019/10/01/inside-windows-autopilot-self-deploying-mode/">nella modalità di distribuzione automatica di Windows Autopilot</a>.
 </table>
 <tr><td>Il guanto bianco fornisce una schermata rossa e il registro eventi di <b>registrazione/amministrazione del dispositivo Microsoft-Windows-User</b> Visualizza il <b>codice di errore HRESULT 0x801C03F3</b><td>Questo problema può verificarsi se Azure AD non riesce a trovare un oggetto dispositivo AAD per il dispositivo che si sta provando a distribuire. Questa situazione si verificherà se si elimina manualmente l'oggetto. Per risolvere il problema, rimuovere il dispositivo da AAD, Intune e Autopilot, quindi registrarlo di nuovo con Autopilot, che ricreerà l'oggetto dispositivo AAD.<br> 
-<br>Per ottenere i log di risoluzione dei problemi, usare: <b>AutopilotMdmdiagnosticstool.exe area; c:\autopilot.cabCAB TPM</b>
+<br>Per ottenere i log di risoluzione dei problemi, usare: <b> AutopilotMdmdiagnosticstool.exe area; c:\autopilot.cabCAB TPM </b>
 <tr><td>Il guanto bianco fornisce una schermata rossa<td>Il guanto bianco non è supportato in una macchina virtuale.
 <tr><td>Errore durante l'importazione dei dispositivi Windows Autopilot da un file CSV<td>Verificare che il file CSV non sia stato modificato in Microsoft Excel o in un editor diverso da blocco note. Alcuni di questi editor possono presentare caratteri aggiuntivi che fanno sì che il formato del file non sia valido. 
 <tr><td>Windows Autopilot per i dispositivi esistenti non segue l'esperienza di configurazione guidata Autopilot.<td>Verificare che il file di profilo JSON sia salvato in formato <b>ANSI/ASCII</b> , non Unicode o UTF-8.

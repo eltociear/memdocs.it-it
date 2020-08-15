@@ -10,14 +10,14 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 784a287176066ce34c3499ecdc91a450e2d6160c
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 676ae288003b257802eea495c4101a95129eaf34
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127546"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88251865"
 ---
-# <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a>Connessione tenant di Microsoft Endpoint Manager: azioni dispositivo e sincronizzazione dispositivo
+# <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a> Connessione tenant di Microsoft Endpoint Manager: azioni dispositivo e sincronizzazione dispositivo
 <!--3555758 live 3/4/2020-->
 *Si applica a: Configuration Manager (Current Branch)*
 
@@ -34,13 +34,13 @@ A partire da Configuration Manager versione 2002, è possibile caricare i dispos
    - È stato individuato con [Azure Active Directory individuazione utente](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) e [Active Directory individuazione utente](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
       - Ciò significa che l'account utente deve essere un oggetto utente sincronizzato in Azure AD.
    - Autorizzazione **avvia Configuration Manager azione** in **attività remote** nell'interfaccia di amministrazione di Microsoft Endpoint Manager.
-
+- Se il sito di amministrazione centrale ha un [provider remoto](../core/plan-design/hierarchy/plan-for-the-sms-provider.md), seguire le istruzioni per le [autorità di certificazione hanno uno scenario di provider remoto](../core/servers/manage/cmpivot-changes.md#cas-has-a-remote-provider) nell'articolo CMPivot. <!--7796824-->
 
 ## <a name="internet-endpoints"></a>Endpoint Internet
 
 [!INCLUDE [Internet endpoints for tenant attach](../core/plan-design/network/includes/internet-endpoints-tenant-attach.md)]
 
-## <a name="enable-device-upload-when-co-management-is-already-enabled"></a><a name="bkmk_edit"></a>Abilita caricamento dispositivo quando la co-gestione è già abilitata
+## <a name="enable-device-upload-when-co-management-is-already-enabled"></a><a name="bkmk_edit"></a> Abilita caricamento dispositivo quando la co-gestione è già abilitata
 
 Se è attualmente abilitata la co-gestione, verranno usate le proprietà di co-gestione per abilitare il caricamento del dispositivo. Quando la co-gestione non è già abilitata, [usare la configurazione guidata della **co-gestione** ](#bkmk_config) per abilitare il caricamento dei dispositivi.
 
@@ -58,7 +58,7 @@ Quando la co-gestione è già abilitata, modificare le proprietà di co-gestione
 1. Scegliere **OK** per uscire dalle proprietà di co-gestione dopo avere apportato le modifiche.
 
 
-## <a name="enable-device-upload-when-co-management-isnt-enabled"></a><a name="bkmk_config"></a>Abilita caricamento dispositivo quando la co-gestione non è abilitata
+## <a name="enable-device-upload-when-co-management-isnt-enabled"></a><a name="bkmk_config"></a> Abilita caricamento dispositivo quando la co-gestione non è abilitata
 
 Se la co-gestione non è abilitata, verrà usata la **Configurazione guidata co-gestione** per abilitare il caricamento del dispositivo. È possibile caricare i dispositivi senza abilitare la registrazione automatica per la co-gestione o cambiare i carichi di lavoro in Intune. Verranno caricati tutti i dispositivi gestiti da Configuration Manager con **Sì** nella colonna **client** . Se necessario, è possibile limitare il caricamento a una singola raccolta di dispositivi. Se nell'ambiente è già abilitata la co-gestione, [modificare le proprietà di co-gestione](#bkmk_edit) per abilitare il caricamento del dispositivo.
 
@@ -82,7 +82,7 @@ Quando la co-gestione non è abilitata, usare le istruzioni seguenti per abilita
 
 ## <a name="perform-device-actions"></a>Eseguire azioni del dispositivo
 
-1. In un browser passare a`endpoint.microsoft.com`
+1. In un browser passare a `endpoint.microsoft.com`
 1. Selezionare **dispositivi** quindi **tutti i dispositivi** per visualizzare i dispositivi caricati. **ConfigMgr** verrà visualizzato nella colonna **gestito da** per i dispositivi caricati.
    [![Tutti i dispositivi nell'interfaccia di amministrazione di Microsoft Endpoint Manager](./media/3555758-all-devices.png)](./media/3555758-all-devices.png#lightbox)
 1. Selezionare un dispositivo per caricare la pagina di **Panoramica** .
@@ -93,7 +93,7 @@ Quando la co-gestione non è abilitata, usare le istruzioni seguenti per abilita
 
    [![Panoramica del dispositivo nell'interfaccia di amministrazione di Microsoft Endpoint Manager](./media/3555758-device-overview-actions.png)](./media/3555758-device-overview-actions.png#lightbox)
 
-## <a name="import-a-previously-created-azure-ad-application-optional"></a><a name="bkmk_aad_app"></a>Importare un'applicazione Azure AD creata in precedenza (facoltativo)
+## <a name="import-a-previously-created-azure-ad-application-optional"></a><a name="bkmk_aad_app"></a> Importare un'applicazione Azure AD creata in precedenza (facoltativo)
 <!--6479246-->
 *(Introdotta nella versione 2006)*
 

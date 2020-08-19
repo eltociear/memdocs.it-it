@@ -121,7 +121,7 @@
     - name: 'Distribuire profili certificato, Wi-Fi, VPN e di posta elettronica'
       href: deploy-use/deploy-wifi-vpn-email-cert-profiles.md
     - name: Impostazioni di termini e condizioni
-      href: ../mdm/understand/what-happened-to-hybrid.md?toc=/sccm/protect/toc.json&bc=/sccm/protect/breadcrumb/toc.json
+      href: ../mdm/understand/what-happened-to-hybrid.md?toc=/mem/configmgr/protect/toc.json&bc=/mem/configmgr/protect/breadcrumb/toc.json
     - name: Monitorare la protezione
       items:
         - name: 'Monitorare i profili Wi-Fi, di posta elettronica e VPN'

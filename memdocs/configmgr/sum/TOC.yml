@@ -48,12 +48,12 @@
         - name: Distribuire automaticamente gli aggiornamenti software
           href: deploy-use/automatically-deploy-software-updates.md
         - name: Creare una distribuzione in più fasi
-          href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json
+          href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json
     - name: Monitorare gli aggiornamenti software
       href: deploy-use/monitor-software-updates.md
       items:
         - name: Gestire e monitorare le distribuzioni in più fasi
-          href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json
+          href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json
     - name: Manutenzione degli aggiornamenti software
       href: deploy-use/software-updates-maintenance.md
     - name: Gruppi di orchestrazione

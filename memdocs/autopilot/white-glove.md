@@ -13,12 +13,12 @@ ms.audience: itpro
 author: greg-lindsay
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: b86c59b2ef38ea54dd2d7bc0d0d237aeafc30b02
-ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
+ms.openlocfilehash: df7b4bc3cbac23024dc8d108a91defebbf6dde38
+ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559553"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88614692"
 ---
 # <a name="windows-autopilot-for-white-glove-deployment"></a>Distribuzione di Windows Autopilot per il guanto bianco
 
@@ -36,7 +36,7 @@ Con **Windows Autopilot per la distribuzione del guanto bianco**, il processo di
 
 Le distribuzioni di guanti bianchi usano Microsoft Intune in Windows 10, versione 1903 e successive. Le distribuzioni di questo tipo si basano su scenari basati sull' [utente](user-driven.md) di Windows Autopilot esistenti e supportano scenari di modalità guidati dall'utente per i dispositivi Azure Active Directory aggiunti e ibridi Azure Active Directory aggiunti.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 Oltre ai [requisiti di Windows Autopilot](software-requirements.md), per la distribuzione del guanto di Windows Autopilot è necessario anche:
 
@@ -59,7 +59,7 @@ Per essere pronti a provare Windows Autopilot per la distribuzione del guanto bi
 
 Se non è possibile completare questi scenari, Windows Autopilot per la distribuzione del guanto bianco avrà esito negativo perché si basa su questi scenari.
 
-Prima di avviare il processo di guanto bianco nella struttura del servizio di provisioning, è necessario configurare un'ulteriore impostazione del profilo di Autopilot usando l'account rIntune:
+Prima di avviare il processo di guanto bianco nella funzionalità del servizio di provisioning, è necessario configurare un'ulteriore impostazione del profilo di Autopilot usando l'account di Intune:
 
  ![Consenti guanto bianco](images/allow-white-glove-oobe.png)
 

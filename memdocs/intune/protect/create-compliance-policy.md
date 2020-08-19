@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e541eb04f8de689ee76a68556bb1b2eb90914b96
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 9c1431105bdba9731bda4599e310889bfbf86a2c
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461437"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252255"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Creare criteri di conformità in Microsoft Intune
 
@@ -53,7 +53,6 @@ Per usare criteri di conformità del dispositivo, attenersi a quanto segue:
   - macOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - Registrazione dei dispositivi in Intune (necessaria per visualizzarne lo stato di conformità)
 
@@ -70,7 +69,6 @@ Per usare criteri di conformità del dispositivo, attenersi a quanto segue:
    - *Android Enterprise*
    - *iOS/iPadOS*
    - *macOS*
-   - *Windows Phone 8.1*
    - *Windows 8.1 e versioni successive*
    - *Windows 10 e versioni successive*
 
@@ -89,7 +87,7 @@ Per usare criteri di conformità del dispositivo, attenersi a quanto segue:
    - [Android Enterprise](compliance-policy-create-android-for-work.md)
    - [iOS/iPadOS](compliance-policy-create-ios.md)
    - [macOS](compliance-policy-create-mac-os.md)
-   - [Windows Phone 8.1, Windows 8.1 versioni successive](compliance-policy-create-windows-8-1.md)
+   - [Windows 8.1 e versioni successive](compliance-policy-create-windows-8-1.md)
    - [Windows 10 e versioni successive](compliance-policy-create-windows.md)  
 
 6. Nella scheda **Percorsi** è possibile forzare la conformità in base al percorso del dispositivo. Scegliere un percorso esistente. Se non è ancora disponibile un percorso, vedere [Usare i percorsi (isolamento di rete)](use-network-locations.md) per informazioni aggiuntive.

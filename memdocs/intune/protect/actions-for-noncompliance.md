@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/27/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e881dc386fa0fe0b98b5e3d4480e1957c251808
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: d262041c982d3d9a629ccb550a1376e5e479a759
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262677"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252776"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Configurare azioni per i dispositivi non conformi in Intune
 
@@ -63,8 +63,6 @@ Quando viene inviato il messaggio di posta elettronica, Intune include le inform
     - Dispositivi in modalità tutto schermo di Android Enterprise
   - iOS/iPadOS
   - macOS
-  - Windows 10 Mobile
-  - Windows Phone 8.1 e versioni successive
 
 - **Retire the noncompliant device** (Ritira dispositivo non conforme): Questa azione rimuovere tutti i dati aziendali dal dispositivo e rimuovere il dispositivo dalla gestione di Intune. Per impedire la cancellazione accidentale di un dispositivo, questa azione supporta una pianificazione minima di **30** giorni.
 
@@ -75,8 +73,6 @@ Quando viene inviato il messaggio di posta elettronica, Intune include le inform
     - Profilo di lavoro di Android Enterprise
   - iOS/iPadOS
   - macOS
-  - Windows 10 Mobile
-  - Windows Phone 8.1 e versioni successive
 
   Altre informazioni sul [ritiro dei dispositivi](../remote-actions/devices-wipe.md#retire).
 

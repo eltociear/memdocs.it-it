@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/21/2019
+ms.date: 08/12/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: cffdadab0518fbc6a52d0f2bf60752c165fd1c3e
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: cb9812505bb1a4560c7b5668aee5b83d5cc0aec7
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881505"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179588"
 ---
 # <a name="enroll-windows-10-devices-with-intune-company-portal"></a>Registrare dispositivi Windows 10 in Portale aziendale Intune
 
@@ -37,7 +37,7 @@ Windows 10 è supportato in vari tipi di dispositivo, inclusi desktop, telefoni 
 ## <a name="enroll-windows-10-version-1607-and-later-device"></a>Registrare un dispositivo con Windows 10 versione 1607 e successive 
 Questa procedura descrive come registrare un dispositivo che esegue Windows 10, versione 1607 e successive.  
 
-1. Fare clic su **Start**. Se si usa un dispositivo Windows 10 Mobile, passare all'elenco **Tutte le app**.
+1. Fare clic su **Start**. 
 
 2. Aprire l'app **Impostazioni**. Se l'app non è subito disponibile nell'elenco delle app, passare alla barra di ricerca e digitare "impostazioni".
 
@@ -72,7 +72,7 @@ Non è ancora possibile accedere agli indirizzi di posta elettronica, ai file o 
 ## <a name="enroll-windows-10-version-1511-and-earlier-device"></a>Registrare un dispositivo con Windows 10 versione 1511 e precedenti  
 Questa procedura descrive come registrare un dispositivo che esegue Windows 10, versione 1511 e precedenti.  
 
-1. Fare clic su **Start**. Se si usa un dispositivo Windows 10 Mobile, passare all'elenco **Tutte le app**.
+1. Fare clic su **Start**. 
 
 2. Aprire l'app **Impostazioni**. Se l'app non è subito disponibile nell'elenco delle app, passare alla barra di ricerca e digitare "impostazioni".
 

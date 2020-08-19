@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/28/2020
+ms.date: 08/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72d0345c91f525fb6dc28adeabe8522801c51a9f
-ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
+ms.openlocfilehash: 649b9417f349509e4d1630d0cfecfe8e5b6b1430
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87365424"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146491"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Creare profili VPN per la connessione ai server VPN in Intune
 
@@ -37,9 +37,7 @@ Si supponga, ad esempio, di voler configurare i dispositivi iOS/iPadOS con le im
 >
 > * Android 4 e versioni successive
 > * Dispositivi registrati che eseguono Windows 8.1 e versioni successive
-> * Windows Phone 8.1 e versioni successive
 > * Dispositivi registrati che eseguono Windows 10 Desktop
-> * Windows 10 Mobile
 > * Windows Holographic for Business
 
 ## <a name="vpn-connection-types"></a>Tipi di connessione VPN
@@ -57,7 +55,6 @@ Si supponga, ad esempio, di voler configurare i dispositivi iOS/iPadOS con le im
   - macOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - Cisco AnyConnect
   - Amministratore dispositivo Android
@@ -90,7 +87,6 @@ Si supponga, ad esempio, di voler configurare i dispositivi iOS/iPadOS con le im
   - macOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - IKEv2
   - iOS/iPadOS
@@ -115,7 +111,6 @@ Si supponga, ad esempio, di voler configurare i dispositivi iOS/iPadOS con le im
   - iOS/iPadOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - SonicWall Mobile Connect
   - Amministratore dispositivo Android
@@ -125,7 +120,6 @@ Si supponga, ad esempio, di voler configurare i dispositivi iOS/iPadOS con le im
   - macOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - Zscaler
   - Profili di lavoro Android Enterprise: Usare i [criteri di configurazione delle app](../apps/app-configuration-vpn-ae.md)
@@ -149,7 +143,6 @@ Si supponga, ad esempio, di voler configurare i dispositivi iOS/iPadOS con le im
       - **macOS**
       - **Windows 10 e versioni successive**
       - **Windows 8.1 e versioni successive**
-      - **Windows Phone 8.1**
     - **Profilo**: selezionare **VPN**.
 
 4. Selezionare **Crea**.
@@ -167,7 +160,6 @@ Si supponga, ad esempio, di voler configurare i dispositivi iOS/iPadOS con le im
     - [macOS](vpn-settings-macos.md)
     - [Windows 10](vpn-settings-windows-10.md) (incluso Windows Holographic for Business)
     - [Windows 8.1](vpn-settings-windows-8-1.md)
-    - [Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)
 
 8. Selezionare **Avanti**.
 9. In **Tag ambito** (facoltativo) assegnare un tag per filtrare il profilo a gruppi IT specifici, ad esempio `US-NC IT Team` o `JohnGlenn_ITDepartment`. Per altre informazioni sui tag di ambito, vedere [Usare il controllo degli accessi in base al ruolo (RBAC) e i tag di ambito per l'infrastruttura IT distribuita](../fundamentals/scope-tags.md).

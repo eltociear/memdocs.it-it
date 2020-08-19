@@ -13,12 +13,12 @@ ms.audience: itpro
 author: greg-lindsay
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: ac0b8d5262e774902dc79dace5c94e49002e2569
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: b86c59b2ef38ea54dd2d7bc0d0d237aeafc30b02
+ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252004"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559553"
 ---
 # <a name="windows-autopilot-for-white-glove-deployment"></a>Distribuzione di Windows Autopilot per il guanto bianco
 
@@ -34,9 +34,7 @@ Con **Windows Autopilot per la distribuzione del guanto bianco**, il processo di
 
  ![OEM](images/wg02.png)
 
-Le distribuzioni di guanti bianchi usano Microsoft Intune in Windows 10, versione 1903 e successive. Le distribuzioni di questo tipo si basano su scenari basati sugli [utenti](user-driven.md) di Windows Autopilot esistenti e supportano scenari di modalità guidati dall'utente per entrambi:
-- Join Azure Active Directory
--  Join Azure Active Directory
+Le distribuzioni di guanti bianchi usano Microsoft Intune in Windows 10, versione 1903 e successive. Le distribuzioni di questo tipo si basano su scenari basati sull' [utente](user-driven.md) di Windows Autopilot esistenti e supportano scenari di modalità guidati dall'utente per i dispositivi Azure Active Directory aggiunti e ibridi Azure Active Directory aggiunti.
 
 ## <a name="prerequisites"></a>Prerequisiti
 

@@ -60,6 +60,8 @@
           href: actions-for-noncompliance.md
         - name: Monitorare la conformità dei dispositivi
           href: compliance-policy-monitor.md
+        - name: Partner per la conformità dei dispositivi
+          href: device-compliance-partners.md
     - name: Sicurezza degli endpoint
       href: endpoint-security.md
       items:

@@ -11,12 +11,12 @@ ms.assetid: e179e30a-a1fc-461e-8087-ff3a55803450
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3d854e4b70a59a364b8611947feea89d4678e7e6
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: e0db550369ca2d81f42a25e68960b5f8f27be168
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724845"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700481"
 ---
 # <a name="install-and-configure-the-exchange-connector"></a>Installare e configurare Exchange Connector
 
@@ -76,10 +76,10 @@ I seguenti ruoli di gestione di Exchange Server includono questi cmdlet:
 - Gestione delle organizzazioni di sola visualizzazione
 - Gestione server
 
-Per ulteriori informazioni, vedere informazioni sui [gruppi del ruolo di gestione](https://docs.microsoft.com/exchange/understanding-management-role-groups-exchange-2013-help) nella documentazione di Exchange Server 2013.
+Per ulteriori informazioni, vedere informazioni sui [gruppi del ruolo di gestione](/exchange/understanding-management-role-groups-exchange-2013-help) nella documentazione di Exchange Server 2013.
 
 > [!TIP]  
-> Se si tenta di installare o usare il connettore Exchange Server senza i cmdlet richiesti, verrà visualizzato l'errore seguente nel file EasDisc. log nel computer del server del sito: `Invoking cmdlet <cmdlet> failed`.
+> Se si tenta di installare o usare il connettore Exchange Server senza i cmdlet richiesti, verrà visualizzato l'errore seguente nel file EasDisc. log nel computer del server del sito: `Invoking cmdlet <cmdlet> failed` .
 
 ## <a name="install-the-connector"></a>Installare il connettore
 
@@ -91,7 +91,7 @@ Per ulteriori informazioni, vedere informazioni sui [gruppi del ruolo di gestion
 
     - **Exchange Server locale**: specificare un singolo server o un array del server Accesso client per ogni sito Active Directory.
 
-        Se il server o l'array è offline, Configuration Manager cerca di trovare un server Accesso client da usare. Se questa operazione ha esito negativo, Client Access Server tenta di usare un server delle cassette postali per effettuare una connessione a un server Accesso client. Quando ritenta la connessione, registra gli avvisi seguenti nel file EasDisc. log nel computer del server del sito: `Failed to open runspace for site <site_name>`.
+        Se il server o l'array è offline, Configuration Manager cerca di trovare un server Accesso client da usare. Se questa operazione ha esito negativo, Client Access Server tenta di usare un server delle cassette postali per effettuare una connessione a un server Accesso client. Quando ritenta la connessione, registra gli avvisi seguenti nel file EasDisc. log nel computer del server del sito: `Failed to open runspace for site <site_name>` .
 
     - **Exchange Server ospitato**: specificare l'indirizzo server dell'ambiente Exchange Online.
 
@@ -103,7 +103,7 @@ Per ulteriori informazioni, vedere informazioni sui [gruppi del ruolo di gestion
 
 1. Nella pagina **Impostazioni** configurare le impostazioni del dispositivo mobile nei gruppi seguenti:
 
-    - **Generalee**
+    - **Generale**
     - **Password**
     - **Gestione della posta elettronica**
     - **Sicurezza**
@@ -123,7 +123,7 @@ Verificare l'installazione del connettore Exchange Server con i messaggi di stat
 
     L'installazione può non riuscire se il server Accesso client specificato è offline. Se Configuration Manager non riesce a installare correttamente il connettore, Configuration Manager ritenta l'installazione ogni 60 minuti. Il tentativo continua fino a quando l'installazione non riesce o si rimuove il connettore Exchange Server.
 
-- Nel computer del server del sito esaminare **SiteComp. log** per la voce seguente: `Component SMS_EXCHANGE_CONNECTOR flagged for installation`. Registra quindi l'installazione riuscita con il testo seguente: `STATMSG: ID=1015`.
+- Nel computer del server del sito esaminare **SiteComp. log** per la voce seguente: `Component SMS_EXCHANGE_CONNECTOR flagged for installation` . Registra quindi l'installazione riuscita con il testo seguente: `STATMSG: ID=1015` .
 
 Al termine dell'installazione, monitorare i dispositivi mobili rilevati e gestiti dal connettore. Visualizzare le raccolte di dispositivi mobili e usare i report per i dispositivi mobili.
 

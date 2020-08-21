@@ -10,12 +10,12 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 676ae288003b257802eea495c4101a95129eaf34
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 4bdfbabf27906eb8a79ec8ba24f51c3e176dc028
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88251865"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700406"
 ---
 # <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a> Connessione tenant di Microsoft Endpoint Manager: azioni dispositivo e sincronizzazione dispositivo
 <!--3555758 live 3/4/2020-->
@@ -27,7 +27,7 @@ A partire da Configuration Manager versione 2002, è possibile caricare i dispos
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- Un account *amministratore globale* per l'accesso quando si applica questa modifica. Per ulteriori informazioni, vedere la pagina relativa ai [ruoli di amministratore Azure Active Directory (Azure ad)](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-ad-administrator-roles).
+- Un account *amministratore globale* per l'accesso quando si applica questa modifica. Per ulteriori informazioni, vedere la pagina relativa ai [ruoli di amministratore Azure Active Directory (Azure ad)](/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-ad-administrator-roles).
    - Il caricamento crea un'app di terze parti e un'entità servizio di prima entità nel tenant del Azure AD.
 - Un ambiente cloud pubblico di Azure.
 - Gli account utente che attivano le azioni del dispositivo presentano i prerequisiti seguenti:
@@ -118,13 +118,13 @@ L'uso di un'applicazione creata in precedenza durante il caricamento in un attac
    - CmCollectionData. Write
 
 - Autorizzazioni Microsoft Graph:
-   - Autorizzazione directory. Read. All [Applications](https://docs.microsoft.com/graph/permissions-reference#application-permissions)
-   - Directory. Read. tutte le autorizzazioni per la [directory delegata](https://docs.microsoft.com/graph/permissions-reference#directory-permissions)
+   - Autorizzazione directory. Read. All [Applications](/graph/permissions-reference#application-permissions)
+   - Directory. Read. tutte le autorizzazioni per la [directory delegata](/graph/permissions-reference#directory-permissions)
 
-- Assicurarsi che sia selezionata l'opzione **Concedi l'autorizzazione dell'amministratore per il tenant** per l'applicazione Azure ad. Per altre informazioni, vedere [concedere il consenso dell'amministratore in registrazioni app](https://docs.microsoft.com/azure/active-directory/manage-apps/grant-admin-consent).
+- Assicurarsi che sia selezionata l'opzione **Concedi l'autorizzazione dell'amministratore per il tenant** per l'applicazione Azure ad. Per altre informazioni, vedere [concedere il consenso dell'amministratore in registrazioni app](/azure/active-directory/manage-apps/grant-admin-consent).
 
 - L'applicazione importata deve essere configurata come segue:
-   - Registrato solo per gli **account in questa directory aziendale**. Per altre informazioni, vedere [modificare gli utenti che possono accedere all'applicazione](https://docs.microsoft.com/azure/active-directory/develop/quickstart-modify-supported-accounts#to-change-who-can-access-your-application).
+   - Registrato solo per gli **account in questa directory aziendale**. Per altre informazioni, vedere [modificare gli utenti che possono accedere all'applicazione](/azure/active-directory/develop/quickstart-modify-supported-accounts#to-change-who-can-access-your-application).
    -  Ha un URI ID applicazione e un segreto validi
 
 

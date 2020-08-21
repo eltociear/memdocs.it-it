@@ -10,12 +10,12 @@ ms.assetid: b36f5e4a-2b57-4d18-83f6-197081ac2a0a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bfe2d395187f8af86e2d09156a45f7398a5bc670
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: 474d59ec22d1edaf8e662298e90555e6772d302b
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724615"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698797"
 ---
 # <a name="how-to-bulk-enroll-devices-with-on-premises-mdm-in-configuration-manager"></a>Come registrare in blocco i dispositivi con MDM locale in Configuration Manager
 
@@ -88,11 +88,11 @@ Il profilo di registrazione consente di specificare le impostazioni necessarie p
 
 1. Completare la procedura guidata.
 
-## <a name="create-an-enrollment-package"></a><a name="bkmk_createPpkg"></a>Creare un pacchetto di registrazione
+## <a name="create-an-enrollment-package"></a><a name="bkmk_createPpkg"></a> Creare un pacchetto di registrazione
 
 Il pacchetto di registrazione (ppkg) è il file usato per registrare in blocco i dispositivi per MDM locale. Creare questo file con Configuration Manager. Sebbene sia possibile creare tipi simili di pacchetti con Windows ICD, solo i pacchetti creati in Configuration Manager possono essere usati per registrare i dispositivi per MDM locale. Un pacchetto creato con Windows ICD può fornire solo il nome dell'entità utente (UPN) necessario per la registrazione, ma non può avviare il processo di registrazione effettivo.
 
-Il processo per creare il pacchetto di registrazione richiede Windows Assessment and Deployment Kit (ADK) per Windows 10. Nel computer che esegue la console di Configuration Manager installare la versione più recente di Windows ADK. Selezionare la funzionalità **progettazione immagini e configurazione (ICD)** ed eventuali dipendenze. Questa versione non deve corrispondere alla versione usata per la distribuzione del sistema operativo da parte del Configuration Manager sito. Per altre informazioni, vedere [scaricare Windows ADK per Windows 10](https://docs.microsoft.com/windows-hardware/get-started/adk-install).
+Il processo per creare il pacchetto di registrazione richiede Windows Assessment and Deployment Kit (ADK) per Windows 10. Nel computer che esegue la console di Configuration Manager installare la versione più recente di Windows ADK. Selezionare la funzionalità **progettazione immagini e configurazione (ICD)** ed eventuali dipendenze. Questa versione non deve corrispondere alla versione usata per la distribuzione del sistema operativo da parte del Configuration Manager sito. Per altre informazioni, vedere [scaricare Windows ADK per Windows 10](/windows-hardware/get-started/adk-install).
 
 1. Nella console di Configuration Manager passare all'area di lavoro **asset e conformità** , espandere **tutti i dispositivi di proprietà dell'azienda**, espandere **Windows**e selezionare il nodo **profili di registrazione** .
 
@@ -109,14 +109,14 @@ Il processo per creare il pacchetto di registrazione richiede Windows Assessment
         > [!IMPORTANT]
         > Configuration Manager non salva la password e non è possibile personalizzarla o modificarla. Una volta chiusa la finestra in cui viene visualizzata la password, non è possibile recuperare la password.
 
-1. Selezionare **Esporta**. Configuration Manager usa Windows ADK per creare il pacchetto di registrazione.
+1. Selezionare **Export** (Esporta). Configuration Manager usa Windows ADK per creare il pacchetto di registrazione.
 
 Configuration Manager tiene traccia dei pacchetti di registrazione validi. Nella console espandere il nodo **profilo di registrazione** e selezionare **pacchetti esportati**.
 
 > [!TIP]
 > Se si rimuove un pacchetto di registrazione dalla console di Configuration Manager, non è possibile usarlo per registrare i dispositivi. Usare questo metodo per gestire i pacchetti di registrazione che non si desidera vengano usati da altri utenti per la registrazione in blocco.
 
-## <a name="bulk-enroll-a-device"></a><a name="bkmk_getPpkg"></a>Registrare in blocco un dispositivo
+## <a name="bulk-enroll-a-device"></a><a name="bkmk_getPpkg"></a> Registrare in blocco un dispositivo
 
 È possibile usare un pacchetto per registrare i dispositivi prima o dopo il processo di configurazione guidata del dispositivo. Il pacchetto di registrazione può anche essere incluso come parte di un pacchetto di provisioning OEM (Original Equipment Manufacturer).
 
@@ -144,7 +144,7 @@ Per usare il pacchetto per la registrazione in blocco, è necessario distribuirl
 
 Viene avviato il processo di registrazione.
 
-## <a name="verify-enrollment"></a><a name="bkmk_verifyEnroll"></a>Verificare la registrazione
+## <a name="verify-enrollment"></a><a name="bkmk_verifyEnroll"></a> Verificare la registrazione
 
 ### <a name="verify-bulk-enrollment-on-the-device"></a>Verificare la registrazione in blocco sul dispositivo
 

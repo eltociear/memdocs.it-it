@@ -10,12 +10,12 @@ ms.assetid: 23e1e4dc-623a-4521-ad04-ae9482927097
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1987ba504630ab1d4b23cdb54710f0cbaa3db28a
-ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
+ms.openlocfilehash: 26846066aa713d40fdacfe75810d43cafd1c3f04
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506251"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693676"
 ---
 # <a name="create-configuration-items-for-windows-devices-with-on-premises-mdm-in-configuration-manager"></a>Creare elementi di configurazione per dispositivi Windows con MDM locale in Configuration Manager
 
@@ -60,7 +60,7 @@ Per informazioni più generali sulle impostazioni di conformità in Configuratio
 
     - **Informazioni**
 
-    - **Avviso**
+    - **Warning**
 
     - **Critico**
 
@@ -75,7 +75,7 @@ Per informazioni più generali sulle impostazioni di conformità in Configuratio
 
 È possibile visualizzare il nuovo elemento di configurazione nel nodo **Elementi di configurazione** dell'area di lavoro **Asset e conformità** .
 
-## <a name="settings-reference"></a><a name="bkmk_setref"></a>Riferimento alle impostazioni  
+## <a name="settings-reference"></a><a name="bkmk_setref"></a> Riferimento alle impostazioni  
 
 Le sezioni seguenti illustrano in dettaglio le impostazioni specifiche disponibili in ogni gruppo. Configurare queste impostazioni nella pagina **Impostazioni dispositivo** della creazione **guidata dell'elemento di configurazione** per i dispositivi **Windows 8.1 e Windows 10** gestiti *senza* il client di Configuration Manager.
 
@@ -271,7 +271,7 @@ Selezionare **Importa**, quindi specificare i valori seguenti:
   - **Peer**
 - **Ruolo**: se si sceglie l'archivio certificati **SPC** (Software Publisher certificate), scegliere il ruolo da associare al certificato:
   - **Operatore di telefonia mobile**
-  - **Manager**
+  - **Responsabile**
   - **Autenticazione utente**
   - **Amministratore IT**
   - **Utente non autenticato**
@@ -325,7 +325,7 @@ Queste impostazioni sono solo per i dispositivi che eseguono Windows 10 team.
 
 ### <a name="windows-information-protection"></a>Windows Information Protection  
 
-Per ulteriori informazioni su come configurare la protezione dei dati aziendali con Configuration Manager, vedere [proteggere i dati aziendali mediante Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
+Per ulteriori informazioni su come configurare la protezione dei dati aziendali con Configuration Manager, vedere [proteggere i dati aziendali mediante Windows Information Protection (WIP)](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
 
 ### <a name="microsoft-edge-legacy"></a>Legacy Microsoft Edge
 

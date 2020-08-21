@@ -10,12 +10,12 @@ ms.assetid: e9e0da6d-bd5a-48d9-930a-e74b34b9286c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d07a014cdcb3f371a90028ec09be3c0c939b8424
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: 95ac4160895394eb075589ed18a317923f317b45
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724655"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695393"
 ---
 # <a name="what-happened-to-hybrid-mdm"></a>Che ne è stato della gestione di dispositivi mobili ibrida?
 
@@ -80,6 +80,6 @@ La nota seguente è l'annuncio originale di deprecazione:
 
 Per altre informazioni sulle funzionalità supportate per la gestione dei dispositivi MDM, vedere gli articoli seguenti:
 
-- [Informazioni su Microsoft Intune](https://docs.microsoft.com/intune/what-is-intune)
+- [Informazioni su Microsoft Intune](/intune/what-is-intune)
 - [Che cos'è MDM locale?](manage-mobile-devices-with-on-premises-infrastructure.md)
 - [Gestione di dispositivi con Exchange](../deploy-use/manage-mobile-devices-with-exchange-activesync.md)

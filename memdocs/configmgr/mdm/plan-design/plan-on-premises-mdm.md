@@ -10,12 +10,12 @@ ms.assetid: 02979fb8-ea7e-4ec6-b7e0-ecbfda73e52d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5690e4fe003939d00dee1185e6f6551813c346e5
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: 60139e3e26195f2feb8b5533c1d26e3e8fb8c3d0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724695"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693744"
 ---
 # <a name="plan-for-on-premises-mdm-in-configuration-manager"></a>Pianificare la gestione dei dispositivi mobili locale in Configuration Manager
 
@@ -29,7 +29,7 @@ Quando si prevede di implementare la gestione di dispositivi mobili (MDM) locale
 - Registrazione del dispositivo
 
 > [!IMPORTANT]
-> Mentre il sito o qualsiasi dispositivo mobile non si connette a Microsoft Intune, l'organizzazione richiede ancora le licenze di Intune per usare questa funzionalità. Per ulteriori informazioni, vedere [Microsoft Intune Licensing](https://docs.microsoft.com/intune/fundamentals/licenses).
+> Mentre il sito o qualsiasi dispositivo mobile non si connette a Microsoft Intune, l'organizzazione richiede ancora le licenze di Intune per usare questa funzionalità. Per ulteriori informazioni, vedere [Microsoft Intune Licensing](/intune/fundamentals/licenses).
 
 Considerare i requisiti seguenti prima di preparare l'infrastruttura di Configuration Manager per la gestione di MDM locale.
 
@@ -37,7 +37,7 @@ Considerare i requisiti seguenti prima di preparare l'infrastruttura di Configur
 
 Current Branch of Configuration Manager supporta la registrazione nella gestione dei dispositivi mobili locale per i dispositivi che eseguono Windows 10. Questi tipi di dispositivi includono principalmente computer portatili, Internet e Surface Hub. Per altre informazioni e per l'elenco di edizioni specifiche, vedere [versioni del sistema operativo supportate per client e dispositivi](../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md#bkmk_OnpremOS).
 
-## <a name="site-system-roles"></a><a name="bkmk_roles"></a> Ruoli del sistema del sito
+## <a name="site-system-roles"></a><a name="bkmk_roles"></a> Site system roles
 
 MDM locale richiede almeno uno dei seguenti ruoli del sistema del sito:
 
@@ -56,7 +56,7 @@ A seconda delle esigenze dell'organizzazione, è possibile installare questi ruo
 
 Per informazioni più generali, vedere [pianificare i server e i ruoli del sistema del sito](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md).
 
-## <a name="trusted-communications"></a><a name="bkmk_trustedComs"></a>Comunicazioni attendibili
+## <a name="trusted-communications"></a><a name="bkmk_trustedComs"></a> Comunicazioni attendibili
 
 MDM locale richiede l'abilitazione dei ruoli del sistema del sito per le comunicazioni HTTPS. A seconda delle esigenze, è possibile usare l'autorità di certificazione (CA) dell'organizzazione per stabilire le connessioni attendibili tra i server e i dispositivi. È anche possibile usare una CA disponibile pubblicamente come autorità attendibile. In entrambi i casi, è necessario configurare i certificati seguenti:
 
@@ -66,7 +66,7 @@ MDM locale richiede l'abilitazione dei ruoli del sistema del sito per le comunic
 
 Per altre informazioni, vedere [configurare i certificati per le comunicazioni attendibili in MDM locale](../get-started/set-up-certificates-on-premises-mdm.md).
 
-## <a name="device-enrollment"></a><a name="bkmk_enrollment"></a>Registrazione del dispositivo
+## <a name="device-enrollment"></a><a name="bkmk_enrollment"></a> Registrazione del dispositivo
 
 Per abilitare la registrazione del dispositivo per MDM locale:
 

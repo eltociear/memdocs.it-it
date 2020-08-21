@@ -10,12 +10,12 @@ ms.assetid: 41cdebfe-b595-40aa-a385-32e0746255ed
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 43bb35243b4f7e7b1e45b66319efd4ec21e92542
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 79d483f95c12c1da1e34ca556836a1f42bbffbef
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701339"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699450"
 ---
 # <a name="support-center-user-interface-reference"></a>Informazioni di riferimento sull'interfaccia utente del Supporto tecnico
 
@@ -585,16 +585,16 @@ La scheda **Configuration** dello strumento Support Center Viewer fornisce le vi
 Questa visualizzazione illustra le stesse informazioni presenti nella scheda **Client** del Supporto tecnico.
 
 #### <a name="operating-system"></a>Sistema operativo
-Dettagli del sistema operativo client. Usa la classe [Win32_OperatingSystem](https://docs.microsoft.com/windows/desktop/CIMWin32Prov/win32-operatingsystem).
+Dettagli del sistema operativo client. Usa la classe [Win32_OperatingSystem](/windows/desktop/CIMWin32Prov/win32-operatingsystem).
 
 #### <a name="computer"></a>Computer
-Dettagli del computer client. Usa la classe [Win32_OperatingSystem](https://docs.microsoft.com/windows/desktop/CIMWin32Prov/win32-operatingsystem).
+Dettagli del computer client. Usa la classe [Win32_OperatingSystem](/windows/desktop/CIMWin32Prov/win32-operatingsystem).
 
 #### <a name="services"></a>Servizi
-Dettagli dei servizi in esecuzione nel computer client. Usa la classe [Win32_Service](https://docs.microsoft.com/windows/desktop/CIMWin32Prov/win32-service).
+Dettagli dei servizi in esecuzione nel computer client. Usa la classe [Win32_Service](/windows/desktop/CIMWin32Prov/win32-service).
 
 #### <a name="network-adapters"></a>Schede di rete
-Dettagli delle schede di rete installate nel computer client. Usa la classe [Win32_NetworkAdapterConfiguration](https://docs.microsoft.com/windows/desktop/CIMWin32Prov/win32-networkadapterconfiguration).
+Dettagli delle schede di rete installate nel computer client. Usa la classe [Win32_NetworkAdapterConfiguration](/windows/desktop/CIMWin32Prov/win32-networkadapterconfiguration).
 
 
 ### <a name="logs-tab"></a><a name="bkmk_viewer-logs"></a> Scheda Logs (Log)

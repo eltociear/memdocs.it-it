@@ -10,12 +10,12 @@ ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 37e4db2ad801c5923ba3db54554af0bb13968048
-ms.sourcegitcommit: 64727a4b025a589e270842da39516c4c42563a34
+ms.openlocfilehash: 9e71baef06349a00d49bc7fdc799d078c29939d8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84301436"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699518"
 ---
 # <a name="recover-a-configuration-manager-site"></a>Ripristinare un sito di Configuration Manager
 
@@ -181,7 +181,7 @@ Usare questa opzione quando è già stato eseguito il ripristino del database de
     Dopo il ripristino del database del sito mediante un metodo esterno a Configuration Manager, eseguire il programma di installazione e selezionare questa opzione per completare il ripristino del database del sito.  
 
     > [!NOTE]  
-    > Quando si usa DPM per il backup del database del sito, usare le procedure DPM per ripristinare il database del sito in una posizione specifica prima di continuare il processo di ripristino in Configuration Manager. Per altre informazioni su DPM, vedere la raccolta della documentazione di [Data Protection Manager](https://docs.microsoft.com/system-center/dpm).  
+    > Quando si usa DPM per il backup del database del sito, usare le procedure DPM per ripristinare il database del sito in una posizione specifica prima di continuare il processo di ripristino in Configuration Manager. Per altre informazioni su DPM, vedere la raccolta della documentazione di [Data Protection Manager](/system-center/dpm).  
 
 - In una gerarchia, quando si recupera il database di un sito primario, il processo di ripristino recupera dal sito di amministrazione centrale tutte le modifiche apportate al database del sito dopo l'ultimo backup. Quando si ripristina il sito di amministrazione centrale, il processo di ripristino recupera queste modifiche da un sito primario di riferimento. Quando si ripristina il database del sito per un sito primario autonomo, si perdono le modifiche apportate al sito dopo l'ultimo backup.  
 
@@ -193,7 +193,7 @@ Usare questa opzione quando non si è verificata alcuna perdita di dati nel serv
 
 Configuration Manager consente il rilevamento delle modifiche per il database del sito in SQL Server. Il rilevamento delle modifiche consente a Configuration Manager di cercare le informazioni sulle modifiche apportate alle tabelle di database dopo un punto di ripristino precedente. Il periodo di conservazione specifica per quanto tempo verranno conservate le informazioni di rilevamento delle modifiche. Per impostazione predefinita, il database del sito è configurato per un periodo di conservazione di cinque giorni. Quando si ripristina un database del sito, il processo di ripristino viene eseguito in modo diverso a seconda che il backup rientri o meno nel periodo di memorizzazione. Se, ad esempio, nel server SQL si verifica un errore e l'ultimo backup risale a sette giorni fa, il backup non è compreso nel periodo di conservazione.
 
-Per altre informazioni sui meccanismi interni di rilevamento delle modifiche di SQL Server, vedere i post di blog seguenti del team di SQL Server: [Change Tracking Cleanup - part 1](https://docs.microsoft.com/archive/blogs/sql_server_team/change-tracking-cleanup-part-1) (Pulizia del rilevamento modifiche - parte 1) e [Change Tracking Cleanup - part 2](https://docs.microsoft.com/archive/blogs/sql_server_team/change-tracking-cleanup-part-2) (Pulizia del rilevamento modifiche - parte 2).
+Per altre informazioni sui meccanismi interni di rilevamento delle modifiche di SQL Server, vedere i post di blog seguenti del team di SQL Server: [Change Tracking Cleanup - part 1](/archive/blogs/sql_server_team/change-tracking-cleanup-part-1) (Pulizia del rilevamento modifiche - parte 1) e [Change Tracking Cleanup - part 2](/archive/blogs/sql_server_team/change-tracking-cleanup-part-2) (Pulizia del rilevamento modifiche - parte 2).
 
 ### <a name="reinitialization-of-site-or-global-data"></a>Reinizializzazione dei dati globali o del sito
 
@@ -378,7 +378,7 @@ Dopo il ripristino di un sito, è necessario reinstallare gli [aggiornamenti rap
 
 ### <a name="recover-custom-reports"></a>Recuperare i report personalizzati
 
-Alcuni clienti creano report personalizzati in SQL Server Reporting Services. Quando si verifica un errore in questo componente, recuperare i report da un backup del server di report. Per altre informazioni sul ripristino dei report personalizzati in Reporting Services, vedere [Operazioni di backup e ripristino per Reporting Services](https://docs.microsoft.com/sql/reporting-services/install-windows/backup-and-restore-operations-for-reporting-services).
+Alcuni clienti creano report personalizzati in SQL Server Reporting Services. Quando si verifica un errore in questo componente, recuperare i report da un backup del server di report. Per altre informazioni sul ripristino dei report personalizzati in Reporting Services, vedere [Operazioni di backup e ripristino per Reporting Services](/sql/reporting-services/install-windows/backup-and-restore-operations-for-reporting-services).
 
 ### <a name="recover-content-files"></a>Ripristinare i file di contenuto
 
@@ -410,7 +410,7 @@ Come parte delle proprietà del punto di migrazione stato, è possibile specific
 
 ### <a name="regenerate-the-certificates-for-distribution-points"></a>Rigenerare i certificati per i punti di distribuzione
 
-Dopo aver ripristinato un sito, **distmgr.log** potrebbe elencare la voce seguente per uno o più punti di distribuzione: `Failed to decrypt cert PFX data`. Questa voce indica che i dati del certificato del punto di distribuzione non possono essere decrittografati dal sito. Per risolvere questo problema, rigenerare o reimportare il certificato per i punti di distribuzione interessati. Usare il cmdlet[Set-CMDistributionPoint](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmdistributionpoint) di PowerShell.
+Dopo aver ripristinato un sito, **distmgr.log** potrebbe elencare la voce seguente per uno o più punti di distribuzione: `Failed to decrypt cert PFX data`. Questa voce indica che i dati del certificato del punto di distribuzione non possono essere decrittografati dal sito. Per risolvere questo problema, rigenerare o reimportare il certificato per i punti di distribuzione interessati. Usare il cmdlet[Set-CMDistributionPoint](/powershell/module/configurationmanager/set-cmdistributionpoint) di PowerShell.
 
 ### <a name="update-certificates-used-for-cloud-based-distribution-points"></a>Aggiornare i certificati usati per i punti di distribuzione basati sul cloud
 

@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: eb393b05e1ee93239b43725a67b9a1b3e54e71ed
-ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
+ms.openlocfilehash: 5250d3296df19c454f55ed166e998f8c940c98db
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997952"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700795"
 ---
 # <a name="desktop-analytics-data-privacy"></a>Privacy dei dati di Desktop Analytics
 
 Desktop Analytics si impegna a fondo per proteggere la privacy dei dati dei clienti, concentrandosi sui principi seguenti:
 
-- **Trasparenza:** gli eventi di diagnostica di Windows sono documentati in modo completo. Esaminarli insieme ai team di sicurezza e conformità dell'azienda. Il visualizzatore dati di diagnostica di Windows consente di visualizzare i dati di diagnostica inviati da un determinato dispositivo. Per altre informazioni, vedere [Panoramica del visualizzatore dati di diagnostica](https://docs.microsoft.com/windows/configuration/diagnostic-data-viewer-overview).  
+- **Trasparenza:** gli eventi di diagnostica di Windows sono documentati in modo completo. Esaminarli insieme ai team di sicurezza e conformità dell'azienda. Il visualizzatore dati di diagnostica di Windows consente di visualizzare i dati di diagnostica inviati da un determinato dispositivo. Per altre informazioni, vedere [Panoramica del visualizzatore dati di diagnostica](/windows/configuration/diagnostic-data-viewer-overview).  
 
 - **Controllo:** è possibile controllare il livello dei dati di diagnostica da condividere con Microsoft. Windows 10 versione 1709 aggiunge nuovi criteri per limitare i dati di diagnostica avanzati al minimo richiesto da Desktop Analytics.  
 
@@ -30,7 +30,7 @@ Desktop Analytics si impegna a fondo per proteggere la privacy dei dati dei clie
 
 - **Attendibilità:** Desktop Analytics supporta l'[informativa sulla privacy](https://privacy.microsoft.com/privacystatement) di Microsoft e le [condizioni del servizio online](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46).  
 
-Per altre informazioni, vedere [Servizi di Windows in cui Microsoft è il responsabile del trattamento secondo il GDPR](https://docs.microsoft.com/windows/privacy/gdpr-it-guidance#windows-services-where-microsoft-is-the-processor-under-the-gdpr).<!-- 5353168 -->
+Per altre informazioni, vedere [Servizi di Windows in cui Microsoft è il responsabile del trattamento secondo il GDPR](/windows/privacy/gdpr-it-guidance#windows-services-where-microsoft-is-the-processor-under-the-gdpr).<!-- 5353168 -->
 
 ## <a name="data-flow"></a>Flusso di dati
 
@@ -57,7 +57,7 @@ La figura seguente illustra il flusso dei dati di diagnostica da singoli disposi
 
 3. I dispositivi inviano i dati di diagnostica al servizio di gestione dati di diagnostica di Microsoft per Windows. Tutti i dati di diagnostica sono crittografati tramite HTTPS e usano l'associazione del certificato durante il trasferimento dal dispositivo a questo servizio. Il servizio Gestione dati Microsoft è ospitato negli Stati Uniti.
 
-      - Gli errori dell'applicazione, gli errori del kernel, le applicazioni che non rispondono e altri problemi specifici dell'applicazione usano l'API Segnalazione errori Windows per inviare segnalazioni di problemi specifici dell'applicazione a Microsoft. Vedere [Uso di WER](https://docs.microsoft.com/windows/win32/wer/using-wer) per dettagli specifici su questo flusso di dati.
+      - Gli errori dell'applicazione, gli errori del kernel, le applicazioni che non rispondono e altri problemi specifici dell'applicazione usano l'API Segnalazione errori Windows per inviare segnalazioni di problemi specifici dell'applicazione a Microsoft. Vedere [Uso di WER](/windows/win32/wer/using-wer) per dettagli specifici su questo flusso di dati.
       
 4. Ogni giorno, Microsoft crea uno snapshot delle informazioni dettagliate incentrate sull'IT. Questo snapshot combina i dati di diagnostica di Windows con l'input per i dispositivi registrati. Questo processo avviene nell'archiviazione temporanea, che viene usata solo da Desktop Analytics. L'archiviazione temporanea è ospitata nei data center di Microsoft negli Stati Uniti. Tutti i dati vengono inviati tramite un canale crittografato SSL (HTTPS). Gli snapshot vengono separati in base all'ID commerciale.  
 
@@ -71,23 +71,23 @@ Per le domande frequenti sulla alla privacy per Desktop Analytics, vedere [Doman
 
 Per altre informazioni sugli aspetti correlati alla privacy, vedere gli articoli seguenti:
 
-- [Windows 10 e GDPR: informazioni per amministratori IT e decision maker](https://docs.microsoft.com/windows/privacy/gdpr-it-guidance)  
+- [Windows 10 e GDPR: informazioni per amministratori IT e decision maker](/windows/privacy/gdpr-it-guidance)  
 
-- [Configurare i dati di diagnostica di Windows nell'organizzazione](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
+- [Configurare i dati di diagnostica di Windows nell'organizzazione](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
 
-- [Eventi e campi dei dati di diagnostica per i responsabili valutazione di Windows 7, Windows 8 e Windows 8.1](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/appraiser-diagnostic-data-events-and-fields)  
+- [Eventi e campi dei dati di diagnostica per i responsabili valutazione di Windows 7, Windows 8 e Windows 8.1](/previous-versions/windows/it-pro/windows-8.1-and-8/appraiser-diagnostic-data-events-and-fields)  
 
-- [Campi ed eventi di diagnostica Windows livello base per Windows 10, versione 1809](https://docs.microsoft.com/windows/privacy/basic-level-windows-diagnostic-events-and-fields-1809)  
+- [Campi ed eventi di diagnostica Windows livello base per Windows 10, versione 1809](/windows/privacy/basic-level-windows-diagnostic-events-and-fields-1809)  
 
-- [Campi ed eventi di dati di diagnostica avanzati di Windows 10, versione 1709 usati da Desktop Analytics](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)  
+- [Campi ed eventi di dati di diagnostica avanzati di Windows 10, versione 1709 usati da Desktop Analytics](/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)  
 
-- [Segnalazione errori di installazione Windows](https://docs.microsoft.com/windows/deployment/upgrade/windows-error-reporting)
+- [Segnalazione errori di installazione Windows](/windows/deployment/upgrade/windows-error-reporting)
 
-- [Panoramica del visualizzatore dati di diagnostica](https://docs.microsoft.com/windows/privacy/diagnostic-data-viewer-overview)  
+- [Panoramica del visualizzatore dati di diagnostica](/windows/privacy/diagnostic-data-viewer-overview)  
 
 - [Condizioni di licenza e documentazione](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=31)  
 
-- [Sicurezza dei dati di Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/data-security)
+- [Sicurezza dei dati di Log Analytics](/azure/azure-monitor/platform/data-security)
 
 - [Sicurezza e privacy nei data center di Microsoft Azure](https://azure.microsoft.com/global-infrastructure/)  
 

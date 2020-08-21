@@ -10,12 +10,12 @@ ms.assetid: f3058277-c597-4dac-86d1-41b6f7e62b36
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a8eed671b723091f2a43350f42ca82d90e0d9da3
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 8c5cc09b7c2723a5dbdd1030cb0053ae75b1ff22
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906142"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699467"
 ---
 # <a name="use-the-hotfix-installer-to-install-updates-for-configuration-manager"></a>Usare il programma di installazione di hotfix per installare gli aggiornamenti per Configuration Manager
 
@@ -207,7 +207,7 @@ Il catalogo per Updates Publisher, **SCUPCatalog.cab**, è disponibile nel perco
 > [!IMPORTANT]  
 > Poiché viene creato utilizzando i percorsi specifici per il server del sito in cui viene installato il pacchetto di aggiornamento, il file SCUPCatalog.cab non può essere utilizzato in altri server del sito.  
 
-Al termine della procedura guidata è possibile importare il catalogo in Updates Publisher e usare gli aggiornamenti software di Configuration Manager per distribuire gli aggiornamenti. Per altre informazioni su Updates Publisher, vedere [Updates Publisher 2011](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
+Al termine della procedura guidata è possibile importare il catalogo in Updates Publisher e usare gli aggiornamenti software di Configuration Manager per distribuire gli aggiornamenti. Per altre informazioni su Updates Publisher, vedere [Updates Publisher 2011](/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
 
 Usare la procedura seguente per importare il file SCUPCatalog.cab in Updates Publisher e pubblicare gli aggiornamenti.  
 
@@ -261,4 +261,4 @@ Per informazioni su come distribuire i pacchetti ai client di Configuration Mana
 > [!NOTE]  
 > Per aggiornare un database del sito, è necessario distribuire l'aggiornamento nel server del sito per tale sito.  
 
-Per informazioni su come creare le raccolte, vedere [Come creare raccolte](../../../core/clients/manage/collections/create-collections.md).  
+Per informazioni su come creare le raccolte, vedere [Come creare raccolte](../../../core/clients/manage/collections/create-collections.md).

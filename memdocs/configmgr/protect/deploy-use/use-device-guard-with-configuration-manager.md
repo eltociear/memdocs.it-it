@@ -10,12 +10,12 @@ ms.assetid: 5e5d854c-9cc1-4dd8-b33f-0fcac675b395
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f9aff29d2773c4994272317d5fcd486b83cba8d7
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 0dcd519a7703b5de94f779dc5dbe48aa0d34a3bc
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210180"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700464"
 ---
 # <a name="windows-defender-application-control-management-with-configuration-manager"></a>Gestione di Controllo di applicazioni di Windows Defender con Configuration Manager
 
@@ -26,7 +26,7 @@ Controllo di applicazioni di Windows Defender è progettato per proteggere i PC 
 
 Controllo di applicazioni di Windows Defender è un livello di protezione basato su software che applica un elenco esplicito di programmi software che possono essere eseguiti in un PC. Autonomamente, Controllo di applicazioni non ha alcun prerequisito hardware o firmware. I criteri di Controllo di applicazioni distribuiti con Configuration Manager abilitano un criterio nei PC inclusi in raccolte di destinazione che soddisfano i requisiti minimi relativi a SKU e versione di Windows descritti in questo articolo. Facoltativamente, è possibile abilitare la protezione basata su hypervisor di Controllo di applicazioni distribuiti con Configuration Manager usando Criteri di gruppo su hardware idoneo.
 
-Per altre informazioni su Controllo di applicazioni di Windows Defender, vedere la [Guida alla distribuzione di Controllo di applicazioni di Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide).
+Per altre informazioni su Controllo di applicazioni di Windows Defender, vedere la [Guida alla distribuzione di Controllo di applicazioni di Windows Defender](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide).
 
    > [!NOTE]
    > - A partire da Windows 10, versione 1709, i criteri di integrità del codice configurabili sono noti come Controllo di applicazioni di Windows Defender.
@@ -131,7 +131,7 @@ Per verificare che il software specifico sia bloccato o controllato, vedere i re
 <!--Reworked article to put this inline while working on VSO 1355092
 ## Automatically let software run if it is trusted by Intelligent Security Graph
 
-You can let locked-down devices run software with a good reputation as determined by the Microsoft Intelligent Security Graph (ISG). The ISG includes [Windows Defender SmartScreen](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) and other Microsoft services. The devices must be running Windows Defender SmartScreen for this software to be trusted.
+You can let locked-down devices run software with a good reputation as determined by the Microsoft Intelligent Security Graph (ISG). The ISG includes [Windows Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) and other Microsoft services. The devices must be running Windows Defender SmartScreen for this software to be trusted.
 
 1. Open the **Create Windows Defender Application Policy** wizard.
 2. On the **Inclusions** page, check the box for **Authorize software that is trusted by the Intelligent Security Graph**.
@@ -153,6 +153,3 @@ In questo caso, l'esecuzione del software potrebbe ancora essere consentita anch
 ## <a name="next-steps"></a>Passaggi successivi
 
  [Gestire i criteri antimalware e le impostazioni del firewall](endpoint-antimalware-firewall.md)
-
-
-

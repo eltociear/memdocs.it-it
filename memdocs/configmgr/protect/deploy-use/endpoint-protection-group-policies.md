@@ -10,12 +10,12 @@ ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6c43ca9e1007c62835015a8c26a478af7da34ebb
-ms.sourcegitcommit: c1afc8abd0d7da48815bd2b0e45147774c72c2df
+ms.openlocfilehash: d028dc6149ae1fee2d61634b96ccf450fc8f4b24
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87819993"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700600"
 ---
 # <a name="use-group-policy-settings-to-manage-endpoint-protection-in-previous-versions-of-windows"></a>Usare le impostazioni di Criteri di gruppo per gestire Endpoint Protection nelle versioni precedenti di Windows
 
@@ -42,7 +42,7 @@ ms.locfileid: "87819993"
     - [Dispositivo locale](#load-endpoint-protection-group-policy-settings-into-your-local-device)
 
 > [!NOTE]
-> Per informazioni su come usare le impostazioni di Criteri di gruppo per gestire Microsoft Defender Antivirus in Windows 10, Windows Server 2019 e Windows Server 2016, vedere [Usare le impostazioni di Criteri di gruppo per configurare e gestire Microsoft Defender Antivirus](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/use-group-policy-microsoft-defender-antivirus).
+> Per informazioni su come usare le impostazioni di Criteri di gruppo per gestire Microsoft Defender Antivirus in Windows 10, Windows Server 2019 e Windows Server 2016, vedere [Usare le impostazioni di Criteri di gruppo per configurare e gestire Microsoft Defender Antivirus](/windows/security/threat-protection/microsoft-defender-antivirus/use-group-policy-microsoft-defender-antivirus).
 
 ## <a name="copy-endpoint-protection-policy-definitions"></a>Copiare le definizioni dei criteri di Endpoint Protection
 
@@ -75,7 +75,7 @@ Se si usa un [archivio centrale per i modelli amministrativi di Criteri di grupp
     
     dove **DC** è il nome del controller di dominio e **contoso.com** è il dominio.
 
-3. Aprire la [Console Gestione Criteri di gruppo](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) e creare un nuovo oggetto Criteri di gruppo (GPO) nel dominio, ad esempio **Endpoint Protection**.
+3. Aprire la [Console Gestione Criteri di gruppo](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) e creare un nuovo oggetto Criteri di gruppo (GPO) nel dominio, ad esempio **Endpoint Protection**.
 4. Fare clic con il pulsante destro del mouse sull'oggetto Criteri di gruppo per Endpoint Protection e quindi scegliere **Modifica**.
 5. Nella Editor Gestione Criteri di gruppo passare a **Configurazione computer** > **Criteri**  > **Modelli amministrativi: Definizioni criteri** > **Componenti di Windows** > **Endpoint Protection**.
 

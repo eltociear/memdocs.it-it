@@ -10,12 +10,12 @@ ms.assetid: 1c975c5e-efd1-4d47-a315-39ccb32633dc
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 00f07e20c24ea9bb7d06b18f300e0206696c5e20
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4d5f0c9127cc5c5819368eb0454d7bc63546ccc1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707939"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699501"
 ---
 # <a name="extend-and-migrate-on-premises-site-to-microsoft-azure"></a>Estendere ed eseguire la migrazione di un sito locale in Microsoft Azure
 
@@ -68,7 +68,7 @@ Microsoft.KeyVault/vaults/deploy/action <br>
 Microsoft.KeyVault/vaults/read <br>
 
 
-Per altre informazioni sulle autorizzazioni e sull'assegnazione di ruoli, vedere [Gestire l'accesso alle risorse di Azure tramite il controllo degli accessi in base al ruolo](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-portal).
+Per altre informazioni sulle autorizzazioni e sull'assegnazione di ruoli, vedere [Gestire l'accesso alle risorse di Azure tramite il controllo degli accessi in base al ruolo](/azure/role-based-access-control/role-assignments-portal).
 
 ## <a name="run-the-tool"></a>Eseguire lo strumento
 
@@ -105,15 +105,15 @@ Per altre informazioni sulle autorizzazioni e sull'assegnazione di ruoli, vedere
     |**Subnet**|Selezionare la subnet da usare. Se è necessario creare una nuova subnet, usare il [portale di Azure](https://portal.azure.com).|
     |**Nome computer**|Immettere il nome della macchina virtuale del server del sito passivo in Azure. Si tratta dello stesso nome visualizzato nel [portale di Azure](https://portal.azure.com).|
     |**Local admin username** (Nome utente amministratore locale)|Immettere il nome dell'utente amministratore locale creato dalla macchina virtuale di Azure prima dell'aggiunta al dominio.|
-    |**Password dell'amministratore locale**|La password dell'utente amministratore locale. Per proteggere la password durante la distribuzione di Azure, archiviarla come segreto in [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-overview). Usare quindi il riferimento qui. Se necessario, crearne una nuova dal [portale di Azure](https://portal.azure.com).|
+    |**Password dell'amministratore locale**|La password dell'utente amministratore locale. Per proteggere la password durante la distribuzione di Azure, archiviarla come segreto in [Azure Key Vault](/azure/key-vault/key-vault-overview). Usare quindi il riferimento qui. Se necessario, crearne una nuova dal [portale di Azure](https://portal.azure.com).|
     |**FQDN dominio**|Il nome di dominio completo (FQDN) del dominio Active Directory da usare per l'aggiunta. Per impostazione predefinita, lo strumento ricava questo valore dal computer in uso.|
     |**Nome utente di dominio**|Nome dell'utente del dominio a cui è consentita l'aggiunta al dominio. Per impostazione predefinita, lo strumento usa il nome dell'utente attualmente connesso.|
-    |**Password del dominio**|La password dell'utente del dominio usata per l'aggiunta al dominio. Lo strumento la verifica dopo aver selezionato **Avvio**. Per proteggere la password durante la distribuzione di Azure, archiviarla come segreto in [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-overview). Usare quindi il riferimento qui. Se necessario, crearne una nuova dal [portale di Azure](https://portal.azure.com).|
+    |**Password del dominio**|La password dell'utente del dominio usata per l'aggiunta al dominio. Lo strumento la verifica dopo aver selezionato **Avvio**. Per proteggere la password durante la distribuzione di Azure, archiviarla come segreto in [Azure Key Vault](/azure/key-vault/key-vault-overview). Usare quindi il riferimento qui. Se necessario, crearne una nuova dal [portale di Azure](https://portal.azure.com).|
     |**Domain DNS IP** (IP DNS dominio)|Usato per l'aggiunta al dominio. Per impostazione predefinita, lo strumento usa il DNS del computer in uso.|
     |**Tipo**|Sola lettura. Visualizza *Server del sito passivo* come tipo.|
 
     > [!IMPORTANT]
-    > Per impostazione predefinita, le macchine virtuali sono impostate su **No** per **Usa licenza di Windows Server esistente**. Se si vuole usare le licenze di Windows Server locali con Software Assurance, configurare questa impostazione nel [portale di Azure](https://portal.azure.com) dopo il provisioning delle macchine virtuali. Per altre informazioni, vedere [Vantaggio Azure Hybrid per Windows Server](https://docs.microsoft.com/windows-server/get-started/azure-hybrid-benefit).
+    > Per impostazione predefinita, le macchine virtuali sono impostate su **No** per **Usa licenza di Windows Server esistente**. Se si vuole usare le licenze di Windows Server locali con Software Assurance, configurare questa impostazione nel [portale di Azure](https://portal.azure.com) dopo il provisioning delle macchine virtuali. Per altre informazioni, vedere [Vantaggio Azure Hybrid per Windows Server](/windows-server/get-started/azure-hybrid-benefit).
 
 1. Per avviare il provisioning della macchina virtuale di Azure, selezionare **Avvio**. Per monitorare lo stato della distribuzione, passare alla scheda delle **distribuzioni in Azure** nello strumento. Per ottenere lo stato più recente, selezionare **Refresh Deployment Status** (Aggiorna stato distribuzione).
 

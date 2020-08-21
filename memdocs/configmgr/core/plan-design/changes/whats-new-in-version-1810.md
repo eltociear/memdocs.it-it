@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: a0d7f561a324d20f503b8fee3e8a869774c70d89
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 04630815b3d10a232d7fc0eea50296062c823194
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128968"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699841"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Novità della versione 1810 di Configuration Manager (Current Branch)
 
@@ -236,7 +236,7 @@ Per altre informazioni, vedere [Creare applicazioni](../../../apps/deploy-use/cr
 ### <a name="task-sequence-support-of-windows-autopilot-for-existing-devices"></a>Supporto della sequenza di attività di Windows Autopilot per i dispositivi esistenti
 
 <!--3607717, fka 1358333-->
-[Windows Autopilot per i dispositivi esistenti](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) è ora disponibile con Windows 10 versione 1809 o successiva. Questa nuova funzionalità consente di ricreare l'immagine ed eseguire il provisioning di un dispositivo Windows 7 per la [modalità definita dall'utente di Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) usando una singola sequenza di attività nativa di Configuration Manager.
+[Windows Autopilot per i dispositivi esistenti](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) è ora disponibile con Windows 10 versione 1809 o successiva. Questa nuova funzionalità consente di ricreare l'immagine ed eseguire il provisioning di un dispositivo Windows 7 per la [modalità definita dall'utente di Windows Autopilot](/windows/deployment/windows-autopilot/user-driven) usando una singola sequenza di attività nativa di Configuration Manager.
 
 Per altre informazioni, vedere [Windows Autopilot per dispositivi esistenti](../../../../autopilot/existing-devices.md).
 
@@ -287,7 +287,7 @@ Per altre informazioni, vedere [Variabili della sequenza di attività](../../../
 <!--1358146-->
 Creare distribuzioni in più fasi per gli aggiornamenti software. Le distribuzioni in più fasi consentono di orchestrare un'implementazione coordinata e in sequenza del software basata su criteri e gruppi personalizzabili.
 
-Per altre informazioni, vedere [Creare distribuzioni in più fasi](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json).
+Per altre informazioni, vedere [Creare distribuzioni in più fasi](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json).
 
 
 ### <a name="improvement-to-maintenance-windows-for-software-updates"></a>Miglioramento delle finestre di manutenzione per gli aggiornamenti software
@@ -427,7 +427,7 @@ Il prerequisito MDM locale relativo alla configurazione di una sottoscrizione di
 
 A parte le nuove funzionalità, questa versione include anche ulteriori modifiche, ad esempio correzioni di bug. Per altre informazioni, vedere [Riepilogo delle modifiche in Configuration Manager Current Branch, versione 1810](https://support.microsoft.com/help/4482169).
 
-Per altre informazioni sulle modifiche apportate ai cmdlet di Windows PowerShell per Configuration Manager, vedere le [note sulla versione di PowerShell versione 1810](https://docs.microsoft.com/powershell/sccm/1810-release-notes?view=sccm-ps).
+Per altre informazioni sulle modifiche apportate ai cmdlet di Windows PowerShell per Configuration Manager, vedere le [note sulla versione di PowerShell versione 1810](/powershell/sccm/1810-release-notes?view=sccm-ps).
 
 L'aggiornamento cumulativo seguente (4488598) è disponibile nella console a partire dal 25 marzo 2019: [Aggiornamento cumulativo 2 per Configuration Manager Current Branch, versione 1810](https://support.microsoft.com/help/4488598). Questa versione sostituisce il precedente aggiornamento cumulativo, KB 4486457.
 

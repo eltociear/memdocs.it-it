@@ -10,12 +10,12 @@ ms.assetid: 95c13c00-909f-4fbb-bbaa-1eba9d54d8c5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1ace560130e43fd5675b51b6d507e84043c01407
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 81371828078264e185dc0a1883dd383257949ef4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904078"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700096"
 ---
 # <a name="schema-extensions-for-configuration-manager"></a>Estensioni dello schema per Configuration Manager
 
@@ -25,7 +25,7 @@ ms.locfileid: "82904078"
 
 -   È consigliabile, ma non obbligatorio, estendere lo schema di Active Directory.  
 
-Prima di [estendere lo schema di Active Directory](https://docs.microsoft.com/sccm/core/plan-design/network/extend-the-active-directory-schema) occorre acquisire familiarità con Active Directory Domain Services e la [modifica dello schema di Active Directory](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759402(v=ws.10)).  
+Prima di [estendere lo schema di Active Directory](/sccm/core/plan-design/network/extend-the-active-directory-schema) occorre acquisire familiarità con Active Directory Domain Services e la [modifica dello schema di Active Directory](/previous-versions/windows/it-pro/windows-server-2003/cc759402(v=ws.10)).  
 
 ## <a name="considerations-for-extending-the-active-directory-schema-for-configuration-manager"></a>Considerazioni relative all'estensione dello schema di Active Directory per Configuration Manager  
 
@@ -142,4 +142,4 @@ Quando si estende lo schema per Configuration Manager, le classi e gli attributi
 > - Attributo: cn=MS-SMS-Site-Boundaries  
 >   -   Classe: cn=MS-SMS-Server-Locator-Point  
 
-Per assicurarsi che gli elenchi precedenti siano aggiornati, esaminare il file **ConfigMgr_ad_schema.LDF** nella cartella **\SMSSETUP\BIN\x64** del supporto di installazione di Configuration Manager.  
+Per assicurarsi che gli elenchi precedenti siano aggiornati, esaminare il file **ConfigMgr_ad_schema.LDF** nella cartella **\SMSSETUP\BIN\x64** del supporto di installazione di Configuration Manager.

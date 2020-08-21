@@ -9,12 +9,12 @@ ms.assetid: 1f703376-5f2c-4fd2-8209-7028c931ddc7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e32956d2ca9385c22e9073cfa2665e1f61b3ebd3
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 8325102e9a818191eae5061b7adf60dbbb7269b5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078635"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700702"
 ---
 # <a name="use-the-setup-wizard-to-install-configuration-manager-sites"></a>Usare l'installazione guidata per installare i siti di Configuration Manager
 
@@ -37,7 +37,7 @@ Installare un sito secondario dalla console di Configuration Manager. I siti sec
 >   - [Microsoft Endpoint Configuration Manager - macOS Client (64-bit)](https://www.microsoft.com/download/details.aspx?id=100850)
 >   - [Client per UNIX e Linux](https://www.microsoft.com/download/details.aspx?id=47719)
 > - [**Note sulla versione**](release-notes.md) <!-- https://go.microsoft.com/fwlink/?LinkID=626571 -->
-> - [**Leggere la documentazione**](https://docs.microsoft.com/sccm)<!-- https://go.microsoft.com/fwlink/p/?LinkId=626547 -->
+> - [**Leggere la documentazione**](/sccm)<!-- https://go.microsoft.com/fwlink/p/?LinkId=626547 -->
 > - **Ottenere assistenza per l'installazione**: [Forum TechNet: Configuration Manager (Current Branch) - Distribuzione del sito e del client](https://social.technet.microsoft.com/Forums/en-us/home?forum=ConfigMgrDeployment) <!--NOTE: this link requires en-us locale to work-->   <!-- https://go.microsoft.com/fwlink/p/?LinkId=626549 -->
 > - **Community di Configuration Manager**: [Community di System Center: Come partecipare](https://social.technet.microsoft.com/wiki/contents/articles/11504.system-center-community-how-to-participate.aspx) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626544 -->
 > - [**Home page di Configuration Manager**](https://www.microsoft.com/cloud-platform/system-center-configuration-manager) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626545 -->
@@ -418,4 +418,4 @@ Usare la console di Configuration Manager per installare un sito secondario.
 2. Selezionare il sito secondario che si sta installando e quindi scegliere **Mostra stato installazione** sulla barra multifunzione.  
 
     > [!TIP]  
-    > Quando si installano più siti secondari simultaneamente, il controllo dei prerequisiti viene eseguito su un sito alla volta. Il controllo deve venire completato prima di passare al sito successivo.  
+    > Quando si installano più siti secondari simultaneamente, il controllo dei prerequisiti viene eseguito su un sito alla volta. Il controllo deve venire completato prima di passare al sito successivo.

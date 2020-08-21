@@ -10,12 +10,12 @@ ms.assetid: 7e4ec207-bb49-401f-af1b-dd705ecb465d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 12753b3800b3b304bd13c992b57d22bf9e1bfad8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2e85b36d0caeb6ceb99f56220e271774dc0db0f6
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704799"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699246"
 ---
 # <a name="configure-sql-server-always-on-availability-groups-for-configuration-manager"></a>Configurare gruppi di disponibilità Always On di SQL Server con Configuration Manager
 
@@ -45,7 +45,7 @@ Adottare la procedura seguente per creare un gruppo di disponibilità e quindi s
     ALTER DATABASE [CM_xxx] SET RECOVERY FULL;
     ```
 
-    I gruppi di disponibilità supportano solo il modello di backup FULL. Per altre informazioni, vedere [Visualizzare o modificare il modello di recupero di un database](https://docs.microsoft.com/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server).
+    I gruppi di disponibilità supportano solo il modello di backup FULL. Per altre informazioni, vedere [Visualizzare o modificare il modello di recupero di un database](/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server).
 
 3. Usare SQL Server per creare un backup completo del database del sito. Scegliere una delle seguenti opzioni:
 
@@ -55,13 +55,13 @@ Adottare la procedura seguente per creare un gruppo di disponibilità e quindi s
 
     Per altre informazioni, vedere gli articoli seguenti nella documentazione di SQL Server:
 
-    - [Creare un backup completo del database](https://docs.microsoft.com/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server)
-    - [Ripristinare un backup del database tramite SSMS](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)
+    - [Creare un backup completo del database](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server)
+    - [Ripristinare un backup del database tramite SSMS](/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)
 
     > [!NOTE]  
     > Se si prevede di passare da un gruppo di disponibilità a una versione autonoma in una replica esistente, rimuovere prima il database dal gruppo di disponibilità.
 
-4. Nel server che ospiterà la replica primaria iniziale del gruppo usare la [Creazione guidata gruppo di disponibilità](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio) per creare il gruppo di disponibilità. Nella procedura guidata:
+4. Nel server che ospiterà la replica primaria iniziale del gruppo usare la [Creazione guidata gruppo di disponibilità](/sql/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio) per creare il gruppo di disponibilità. Nella procedura guidata:
 
     - Nella pagina **Seleziona database** selezionare il database per il sito di Configuration Manager.  
 
@@ -82,7 +82,7 @@ Adottare la procedura seguente per creare un gruppo di disponibilità e quindi s
 
     2. Eseguire lo [script di verifica](sql-server-alwayson-for-a-highly-available-site-database.md#prerequisites) per assicurarsi che il database del sito in ogni replica sia configurato correttamente.
 
-    3. Se è necessario impostare le configurazioni nelle repliche secondarie, prima di continuare, eseguire il failover manuale della replica primaria nella replica secondaria. È possibile configurare solo il database di una replica primaria. Per altre informazioni, vedere [Eseguire un failover manuale pianificato di un gruppo di disponibilità](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server) nella documentazione di SQL Server.
+    3. Se è necessario impostare le configurazioni nelle repliche secondarie, prima di continuare, eseguire il failover manuale della replica primaria nella replica secondaria. È possibile configurare solo il database di una replica primaria. Per altre informazioni, vedere [Eseguire un failover manuale pianificato di un gruppo di disponibilità](/sql/database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server) nella documentazione di SQL Server.
 
 6. Quando tutte le repliche soddisfano i requisiti, il gruppo di disponibilità è pronto per essere usato con Configuration Manager.
 
@@ -121,7 +121,7 @@ A partire dalla versione 1906, eseguire l'installazione di Configuration Manager
 
 1. Aggiungere una replica secondaria usando le procedure di SQL Server.
 
-    1. [Aggiungere una replica secondaria a un gruppo di disponibilità Always On](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server).
+    1. [Aggiungere una replica secondaria a un gruppo di disponibilità Always On](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server).
 
     1. Controllare lo stato in SQL Management Studio. Attendere che il gruppo di disponibilità torni allo stato di integrità completa.
 
@@ -137,7 +137,7 @@ Per altre informazioni sull'esecuzione manuale di questo processo nella versione
 
 A partire dalla versione 1906 è possibile usare l'installazione di Configuration Manager per rimuovere un membro di replica. Usare lo stesso processo descritto in [Aggiungere un nuovo membro di replica sincrona](#bkmk_sync-add).
 
-Per altre informazioni sull'esecuzione manuale di questo processo nella versione 1902 o precedenti, vedere [Rimuovere una replica secondaria da un gruppo di disponibilità](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server).  
+Per altre informazioni sull'esecuzione manuale di questo processo nella versione 1902 o precedenti, vedere [Rimuovere una replica secondaria da un gruppo di disponibilità](/sql/database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server).  
 
 
 ## <a name="asynchronous-replicas"></a><a name="bkmk_async"></a> Repliche asincrone
@@ -146,7 +146,7 @@ Nel gruppo di disponibilità usato con Configuration Manager è possibile usare 
 
 ### <a name="configure-an-asynchronous-commit-replica"></a>Configurare una replica con commit asincrono
 
-Per altre informazioni, vedere [Aggiungere una replica secondaria a un gruppo di disponibilità](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server).
+Per altre informazioni, vedere [Aggiungere una replica secondaria a un gruppo di disponibilità](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server).
 
 ### <a name="use-the-asynchronous-replica-to-recover-your-site"></a>Usare la replica asincrona per il ripristino del sito
 
@@ -163,14 +163,14 @@ Usare la procedura seguente se non si vuole più ospitare il database del sito i
 
 1. Usare il comando seguente per arrestare il sito di Configuration Manager: `preinst.exe /stopsite`. Per altre informazioni, vedere [Strumento di manutenzione gerarchia](../../manage/hierarchy-maintenance-tool-preinst.exe.md).
 
-2. Usare SQL Server per creare un backup completo del database del sito dalla replica primaria. Per altre informazioni, vedere [Creare un backup completo del database](https://docs.microsoft.com/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server).
+2. Usare SQL Server per creare un backup completo del database del sito dalla replica primaria. Per altre informazioni, vedere [Creare un backup completo del database](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server).
 
-3. Usare SQL Server per ripristinare il backup del database del sito nel server che ospiterà il database del sito. Per altre informazioni, vedere [Ripristinare un backup del database tramite SSMS](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).
+3. Usare SQL Server per ripristinare il backup del database del sito nel server che ospiterà il database del sito. Per altre informazioni, vedere [Ripristinare un backup del database tramite SSMS](/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).
 
     > [!Note]  
     > Se il server di replica primaria del gruppo di disponibilità ospiterà l'istanza singola del database del sito, ignorare questo passaggio.
 
-4. Nel server che ospiterà il database del sito, modificare il modello di backup per il database del sito da **FULL** a **SIMPLE**. Per altre informazioni, vedere [Visualizzare o modificare il modello di recupero di un database](https://docs.microsoft.com/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server).
+4. Nel server che ospiterà il database del sito, modificare il modello di backup per il database del sito da **FULL** a **SIMPLE**. Per altre informazioni, vedere [Visualizzare o modificare il modello di recupero di un database](/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server).
 
 5. Eseguire il **programma di installazione di Configuration Manager**`\BIN\X64\setup.exe` dalla cartella di installazione del sito di Configuration Manager.
 
@@ -188,4 +188,4 @@ Usare la procedura seguente se non si vuole più ospitare il database del sito i
 
 9. Dopo aver specificato le informazioni per il nuovo percorso del database, completare l'installazione con il processo e le configurazioni normali. Al termine dell'installazione, il sito viene riavviato e inizia a usare il nuovo percorso del database.
 
-10. Per pulire i server che erano membri del gruppo di disponibilità, seguire le indicazioni riportate in [Rimuovere un gruppo di disponibilità](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/remove-an-availability-group-sql-server).
+10. Per pulire i server che erano membri del gruppo di disponibilità, seguire le indicazioni riportate in [Rimuovere un gruppo di disponibilità](/sql/database-engine/availability-groups/windows/remove-an-availability-group-sql-server).

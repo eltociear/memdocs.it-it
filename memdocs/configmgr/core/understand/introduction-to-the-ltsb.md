@@ -10,12 +10,12 @@ ms.assetid: 694bc29f-a7fd-4e06-815a-1a9c5e9ac563
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d4f5ff0e1c8c92fbadc286e9909388eb66aa8f7b
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 1370c1bf80283ff30ad54378ad58ecd9a5d24d47
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906097"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699365"
 ---
 # <a name="introduction-to-the-long-term-servicing-branch-of-configuration-manager"></a>Introduzione a Long Term Servicing Branch di Configuration Manager
 
@@ -26,7 +26,7 @@ Long-Term Servicing Branch (LTSB) di Configuration Manager è un ramo distinto p
 In base a Configuration Manager versione 1606, LTSB offre funzionalità ridotte rispetto all'edizione Current Branch di Configuration Manager.
 
 > [!TIP]   
-> Configuration Manager LTSB non è correlato a Long-Term Servicing Channel (LTSC) della suite di System Center. Per altre informazioni, vedere [Panoramica delle opzioni di versione di System Center](https://docs.microsoft.com/system-center/ltsc-and-sac-overview).
+> Configuration Manager LTSB non è correlato a Long-Term Servicing Channel (LTSC) della suite di System Center. Per altre informazioni, vedere [Panoramica delle opzioni di versione di System Center](/system-center/ltsc-and-sac-overview).
 
 ## <a name="features-that-arent-available"></a>Funzionalità non disponibili
 
@@ -53,7 +53,7 @@ Le integrazioni cloud, così come tutte le funzionalità incluse nell'edizione C
 
 ## <a name="find-ltsb-documentation"></a>Trovare la documentazione di LTSB
 
-LTSB si basa su Current Branch versione 1606. Usare la [documentazione di Current Branch](https://docs.microsoft.com/mem/configmgr/) con le avvertenze e le limitazioni specifiche di LTSB. Tali avvertenze e limitazioni sono descritte negli articoli seguenti:
+LTSB si basa su Current Branch versione 1606. Usare la [documentazione di Current Branch](../../index.yml) con le avvertenze e le limitazioni specifiche di LTSB. Tali avvertenze e limitazioni sono descritte negli articoli seguenti:
 
 - [Installare LTSB](install-the-ltsb.md)
 - [Aggiornare LTSB a Current Branch](convert-to-current-branch.md)

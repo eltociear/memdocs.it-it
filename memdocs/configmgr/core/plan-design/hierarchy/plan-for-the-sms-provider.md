@@ -10,12 +10,12 @@ ms.assetid: 5d5d6273-0d8a-43c7-865a-cdb1736dcae3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b01ea9b089da3cfcfc3e8d23e7ad25d27ab2fec7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c83d0da07474c8b078ee226d249b73f00562e0f5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692759"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700164"
 ---
 # <a name="plan-for-the-sms-provider"></a>Piano per il provider SMS
 
@@ -165,7 +165,7 @@ Sono disponibili i livelli seguenti:
 
 - **Autenticazione del certificato**: richiede l'autenticazione con un certificato valido emesso da un'autorità di certificazione PKI attendibile. Questo certificato non viene configurato in Configuration Manager. Configuration Manager richiede che l'amministratore acceda a Windows usando l'infrastruttura a chiave pubblica (PKI).  
 
-- **Autenticazione di Windows Hello for Business**: richiede l'autenticazione a due fattori avanzata associata a un dispositivo e l'uso di dati biometrici o di un PIN. Per altre informazioni, vedere [Windows Hello for Business](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification).  
+- **Autenticazione di Windows Hello for Business**: richiede l'autenticazione a due fattori avanzata associata a un dispositivo e l'uso di dati biometrici o di un PIN. Per altre informazioni, vedere [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-identity-verification).  
 
 ### <a name="exclusions"></a>Esclusioni
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fe50aad3cb35ab5908f604560f4dcd22800919a5
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: 4ff86d203fc35167b5e35f81f171e7c00e468f3a
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353446"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699297"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>Riferimento tecnico per i controlli crittografici
 
@@ -260,5 +260,4 @@ Per migliorare la sicurezza dei client e server di Configuration Manager, esegui
 - Disabilitare SSL 3.0, TLS 1.0 e TLS 1.1 
 - Riordinare i pacchetti di crittografia relativi a TLS 
 
-Per altre informazioni, vedere [Come limitare l'utilizzo di determinati algoritmi e protocolli crittografici in Schannel.dll](https://support.microsoft.com/help/245030/) e [Prioritizing Schannel Cipher Suites](https://docs.microsoft.com/windows/win32/secauthn/prioritizing-schannel-cipher-suites) (Definizione delle priorità dei pacchetti di crittografia in Schannel). Queste procedure non influiscono sulle funzionalità di Configuration Manager.
-
+Per altre informazioni, vedere [Come limitare l'utilizzo di determinati algoritmi e protocolli crittografici in Schannel.dll](https://support.microsoft.com/help/245030/) e [Prioritizing Schannel Cipher Suites](/windows/win32/secauthn/prioritizing-schannel-cipher-suites) (Definizione delle priorità dei pacchetti di crittografia in Schannel). Queste procedure non influiscono sulle funzionalità di Configuration Manager.

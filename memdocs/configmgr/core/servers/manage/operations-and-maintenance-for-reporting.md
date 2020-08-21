@@ -10,12 +10,12 @@ ms.assetid: b89bcfbf-f5b6-4fb1-bb5e-a5cc18ec0c78
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 414d1138a7682d6b9acbc7731035fff1842a1fe7
-ms.sourcegitcommit: c1afc8abd0d7da48815bd2b0e45147774c72c2df
+ms.openlocfilehash: 21bb81e9851ab80d7807df337a67005e5b6b292a
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87815413"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699654"
 ---
 # <a name="operations-and-maintenance-for-reporting-in-configuration-manager"></a>Operazioni e manutenzione per la creazione di report in Configuration Manager
 
@@ -33,7 +33,7 @@ Configuration Manager archivia i report in SQL Server Reporting Services. I repo
 Quando si esegue un report, il titolo, la descrizione e la categoria del report vengono visualizzati nella lingua del sistema operativo locale. Per altre informazioni, vedere [Lingue per i report](configuring-reporting.md#-languages-for-reports).
 
 > [!NOTE]  
-> Gestione report è uno strumento di gestione e accesso ai report basato sul Web. È possibile usarlo per amministrare una singola istanza del server di report tramite una connessione HTTPS. Usare Gestione report per attività operative, ad esempio per visualizzare i report, modificarne proprietà e gestire le sottoscrizioni di report associate. Questo articolo illustra la procedura per visualizzare un report e modificare le proprietà di un report in Gestione report. Per informazioni sulle altre opzioni di Gestione report, vedere [Che cos'è Gestione report?](https://docs.microsoft.com/sql/reporting-services/report-server/manage-a-reporting-services-native-mode-report-server)
+> Gestione report è uno strumento di gestione e accesso ai report basato sul Web. È possibile usarlo per amministrare una singola istanza del server di report tramite una connessione HTTPS. Usare Gestione report per attività operative, ad esempio per visualizzare i report, modificarne proprietà e gestire le sottoscrizioni di report associate. Questo articolo illustra la procedura per visualizzare un report e modificare le proprietà di un report in Gestione report. Per informazioni sulle altre opzioni di Gestione report, vedere [Che cos'è Gestione report?](/sql/reporting-services/report-server/manage-a-reporting-services-native-mode-report-server)
 
 Utilizzare le procedure seguenti per eseguire un report di Configuration Manager.
 
@@ -261,7 +261,7 @@ Utilizzare la procedura seguente per creare una sottoscrizione report per il rec
 Quando si crea una sottoscrizione report per il recapito di un report tramite posta elettronica, Reporting Services invia un messaggio di posta elettronica ai destinatari configurati. Il messaggio include il report come allegato. Il server di report non convalida gli indirizzi di posta elettronica né li ottiene da un server di posta elettronica. È possibile inviare tramite posta elettronica i report a qualsiasi account di posta elettronica valido interno o esterno all'organizzazione.
 
 > [!NOTE]
-> Per abilitare l'opzione di sottoscrizione **Posta elettronica** è necessario configurare le impostazioni di posta elettronica in Reporting Services. Per altre informazioni, vedere [Recapito tramite posta elettronica in Reporting Services](https://docs.microsoft.com/sql/reporting-services/subscriptions/e-mail-delivery-in-reporting-services).
+> Per abilitare l'opzione di sottoscrizione **Posta elettronica** è necessario configurare le impostazioni di posta elettronica in Reporting Services. Per altre informazioni, vedere [Recapito tramite posta elettronica in Reporting Services](/sql/reporting-services/subscriptions/e-mail-delivery-in-reporting-services).
 
 È possibile selezionare una o entrambe le seguenti opzioni di recapito tramite posta elettronica:
 

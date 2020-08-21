@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: db70eab54f319197f267173fe857d0fb147a7eba
-ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
+ms.openlocfilehash: ecd8b83224cbcbfe367a3b1db160d680952a4407
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746562"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700838"
 ---
 # <a name="monitor-connection-health"></a>Monitorare l'integrità della connessione
 
@@ -334,7 +334,7 @@ Per altre informazioni, vedere M365AHandler.log nel client.
 <!--1004-->
 Se il controllo ha esito negativo, un utente ha selezionato un livello inferiore di dati di diagnostica di Windows nel dispositivo. L'esito negativo può anche essere causato da un oggetto Criteri di gruppo in conflitto. Per altre informazioni, vedere [Impostazioni di Windows](enroll-devices.md#windows-settings).
 
-A seconda dei requisiti aziendali, è possibile disabilitare la scelta da parte dell'utente tramite Criteri di gruppo. Usare l'impostazione per **configurare l'interfaccia utente dell'impostazione del consenso esplicito per la telemetria**. Per altre informazioni, vedere [Configure Windows diagnostic data in your organization](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management) (Configurare i dati di diagnostica di Windows nell'organizzazione).
+A seconda dei requisiti aziendali, è possibile disabilitare la scelta da parte dell'utente tramite Criteri di gruppo. Usare l'impostazione per **configurare l'interfaccia utente dell'impostazione del consenso esplicito per la telemetria**. Per altre informazioni, vedere [Configure Windows diagnostic data in your organization](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management) (Configurare i dati di diagnostica di Windows nell'organizzazione).
 
 ### <a name="check-user-proxy"></a>Controlla il proxy utente
 
@@ -455,7 +455,7 @@ Desktop Analytics usa il servizio account Microsoft per un'identità del disposi
 
 Assicurarsi che il servizio **Assistente per l'accesso all'account Microsoft** non sia disabilitato. Il tipo di avvio deve essere **Manuale (avvio trigger)** .
 
-Per disabilitare l'accesso dell'account Microsoft dell'utente finale, usare le impostazioni dei criteri anziché bloccare l'endpoint. Per altre informazioni, vedere [Account Microsoft nell'organizzazione](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication).
+Per disabilitare l'accesso dell'account Microsoft dell'utente finale, usare le impostazioni dei criteri anziché bloccare l'endpoint. Per altre informazioni, vedere [Account Microsoft nell'organizzazione](/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication).
 
 ### <a name="windows-diagnostic-data-opt-in"></a>Consenso esplicito per i dati di diagnostica di Windows
 

@@ -10,12 +10,12 @@ ms.assetid: a7975dc8-46ab-4dae-86b6-dc3e3cf3b2f0
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 92bf86225cf869622fd4b496fd3e8e852b651a70
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: aae6db43a03f524773cad4c26ff11817da02a323
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694359"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699671"
 ---
 # <a name="modify-your-configuration-manager-infrastructure"></a>Modificare l'infrastruttura di Configuration Manager
 
@@ -195,11 +195,11 @@ Se si sposta il database del sito, rivedere anche le configurazioni seguenti:
 
 - Quando i servizi vengono eseguiti con un account utente locale di dominio, registrare manualmente il SPN. Il SPN consente ai client SQL e ad altri sistemi del sito di eseguire l'autenticazione con Kerberos. Senza l'autenticazione Kerberos, la comunicazione con il database potrebbe non riuscire.
 
-Per altre informazioni su SPN e connessioni Kerberos, vedere [Registrazione di un nome dell'entità servizio per le connessioni Kerberos](https://docs.microsoft.com/sql/database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections).
+Per altre informazioni su SPN e connessioni Kerberos, vedere [Registrazione di un nome dell'entità servizio per le connessioni Kerberos](/sql/database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections).
 
 È possibile registrare un SPN per l'account del servizio SQL Server del server di database del sito usando lo strumento **Setspn**. Eseguire Setspn come amministratore di dominio in un computer nello stesso dominio di SQL Server.
 
-Le procedure seguenti sono esempi di come configurare il nome dell'entità servizio per l'account del servizio SQL Server. Per altre informazioni su Setspn, vedere la [panoramica su Setspn](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731241\(v=ws.11\)).
+Le procedure seguenti sono esempi di come configurare il nome dell'entità servizio per l'account del servizio SQL Server. Per altre informazioni su Setspn, vedere la [panoramica su Setspn](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731241\(v=ws.11\)).
 
 ### <a name="manually-create-a-domain-user-spn-for-the-sql-server-service-account"></a>Creare manualmente il nome dell'entità di servizio (SPN) di un utente di dominio per l'account del servizio SQL Server
 

@@ -10,12 +10,12 @@ ms.assetid: 315e2613-dc71-46b1-80cb-26161d08103a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f4089f52d912491b3b1396906fe391c5c334e061
-ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
+ms.openlocfilehash: eaceea5f83bd93fee8261a94147383cde001f90b
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84814895"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699586"
 ---
 # <a name="integrate-with-power-bi-report-server"></a>Integrare il server di report di Power BI
 
@@ -23,13 +23,13 @@ ms.locfileid: "84814895"
 
 <!--3721603-->
 
-A partire dalla versione 2002, è possibile integrare [Server di report di Power BI](https://docs.microsoft.com/power-bi/report-server/get-started) con la creazione di report di Configuration Manager. Questa integrazione offre una visualizzazione moderna e prestazioni migliori. Aggiunge il supporto della console per report di Power BI simili a quelli già esistenti con SQL Server Reporting Services.
+A partire dalla versione 2002, è possibile integrare [Server di report di Power BI](/power-bi/report-server/get-started) con la creazione di report di Configuration Manager. Questa integrazione offre una visualizzazione moderna e prestazioni migliori. Aggiunge il supporto della console per report di Power BI simili a quelli già esistenti con SQL Server Reporting Services.
 
 Salvare i file di report di Power BI Desktop (con estensione PBIX) e distribuirli nel server di report di Power BI. Questo processo è simile a quello dei file di report di SQL Server Reporting Services (con estensione RDL). È anche possibile avviare i report nel browser direttamente dalla console di Configuration Manager.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- Licenza del server di report di Power BI. Per altre informazioni, vedere [Licenze di Server di report di Power BI](https://docs.microsoft.com/power-bi/report-server/get-started#licensing-power-bi-report-server).
+- Licenza del server di report di Power BI. Per altre informazioni, vedere [Licenze di Server di report di Power BI](/power-bi/report-server/get-started#licensing-power-bi-report-server).
 
 - Scaricare [Server di report di Microsoft Power BI - settembre 2019](https://www.microsoft.com/download/details.aspx?id=57270) o versioni successive.
 
@@ -40,7 +40,7 @@ Salvare i file di report di Power BI Desktop (con estensione PBIX) e distribuirl
 
     > [!IMPORTANT]
     > - Usare solo le versioni di Power BI Desktop dall'[Area download Microsoft](https://www.microsoft.com/download/). Non usare una versione da Microsoft Store.
-    > - Usare solo una versione di [Power BI Desktop dichiarata come **ottimizzata per Server di report di Power BI**](https://docs.microsoft.com/power-bi/report-server/install-powerbi-desktop).
+    > - Usare solo una versione di [Power BI Desktop dichiarata come **ottimizzata per Server di report di Power BI**](/power-bi/report-server/install-powerbi-desktop).
 
 - L’integrazione di Power BI usa la stessa amministrazione basata su ruoli per la creazione di report.
     > [!NOTE]
@@ -54,7 +54,7 @@ Questo processo varia a seconda che il ruolo sia già presente nel sito.
 
 Usare questo processo solo se si ha già un punto di Reporting Services nel sito. Eseguire tutti i passaggi di questo processo nello stesso server:
 
-1. In **Configuration Manager del server di report** eseguire il backup delle **chiavi di crittografia**. Per altre informazioni, vedere [Chiavi di crittografia SSRS - Eseguire il backup e il ripristino delle chiavi di crittografia](https://docs.microsoft.com/sql/reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys).
+1. In **Configuration Manager del server di report** eseguire il backup delle **chiavi di crittografia**. Per altre informazioni, vedere [Chiavi di crittografia SSRS - Eseguire il backup e il ripristino delle chiavi di crittografia](/sql/reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys).
 
     > [!WARNING]
     > Se si ignora questo passaggio, si perderà l'accesso a tutti i report personalizzati in SQL Server Reporting Services.

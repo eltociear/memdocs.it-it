@@ -10,12 +10,12 @@ ms.assetid: ae72df4b-5f5d-4e19-9052-bda28edfbace
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b012dd1e7da0d6a3efb4d1cc33b8a79ef319bc0a
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 262234edbd6fac6973653ca6cac62853fde23b2d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268998"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700113"
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-configuration-manager"></a>Informazioni su come i client trovano i servizi e le risorse del sito per Configuration Manager
 
@@ -62,7 +62,7 @@ Un client seleziona un punto di gestione con cui comunicare in base al relativo 
 
 È possibile usare i punti di gestione preferiti. I punti di gestione preferiti sono punti di gestione del sito assegnato di un client associati a un gruppo di limiti che il client usa per individuare i server del sistema del sito. L'associazione di un punto di gestione preferito a un gruppo di limiti come server del sistema del sito è simile al modo in cui i punti di distribuzione o i punti di migrazione stato sono associati a un gruppo di limiti. Se si abilitano i punti di gestione preferiti per la gerarchia, quando un client usa un punto di gestione dal sito assegnato, verrà effettuato un tentativo di usare un punto di gestione preferito prima di altri punti di gestione dal sito assegnato.  
 
-Per configurare l'affinità del punto di gestione, è possibile usare anche le informazioni nel blog dedicato all'[affinità del punto di gestione](https://docs.microsoft.com/archive/blogs/jchalfant/management-point-affinity-added-in-configmgr-2012-r2-cu3). L'affinità del punto di gestione esegue l'override del comportamento predefinito per i punti di gestione assegnati e consente al client di usare uno o più punti di gestione specifici.  
+Per configurare l'affinità del punto di gestione, è possibile usare anche le informazioni nel blog dedicato all'[affinità del punto di gestione](/archive/blogs/jchalfant/management-point-affinity-added-in-configmgr-2012-r2-cu3). L'affinità del punto di gestione esegue l'override del comportamento predefinito per i punti di gestione assegnati e consente al client di usare uno o più punti di gestione specifici.  
 
 Ogni volta che un client deve contattare un punto di gestione, controlla l'elenco dei punti di gestione archiviato in locale in Windows Management Instrumentation (WMI). Il client crea un elenco di punti di gestione iniziale quando viene installato. Successivamente aggiorna periodicamente l'elenco con informazioni dettagliate su ogni punto di gestione nella gerarchia.  
 
@@ -244,4 +244,4 @@ Quando gli altri meccanismi di individuazione del servizio hanno esito negativo,
 
 Per impostazione predefinita, un sito primario pubblica in WINS il primo punto di gestione nel sito configurato per HTTP e il primo punto di gestione configurato per HTTPS.  
 
-Se non si desidera che i client trovino un punto di gestione HTTP in WINS, configurare i client con la proprietà CCMSetup.exe Client.msi **SMSDIRECTORYLOOKUP=NOWINS**.  
+Se non si desidera che i client trovino un punto di gestione HTTP in WINS, configurare i client con la proprietà CCMSetup.exe Client.msi **SMSDIRECTORYLOOKUP=NOWINS**.

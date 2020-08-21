@@ -10,12 +10,12 @@ ms.assetid: 395403dc-6997-4415-93fd-6b1eeb6ba31a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 06e308a54ee9636a7781667823e7b7f98ae6f25c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cb2529dbbe923a5035f0b7586dab696cd6fc917e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701269"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699416"
 ---
 # <a name="configuration-manager-tools"></a>Strumenti di Configuration Manager
 
@@ -25,7 +25,7 @@ Gli strumenti di Configuration Manager comprendono [strumenti basati su client](
 
 A partire dalla versione 1806 di Configuration Manager, questi strumenti sono inclusi nella cartella `CD.Latest\SMSSETUP\Tools` nel server del sito. Non è necessaria un'ulteriore installazione.<!--1357145--> Usare queste versioni degli strumenti con Configuration Manager versione 1806 e versioni successive.
 
-Tutti i sistemi operativi Windows indicati come client supportati in [Sistemi operativi supportati per client e dispositivi](https://docs.microsoft.com/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices) sono supportati per l'uso con questi strumenti.
+Tutti i sistemi operativi Windows indicati come client supportati in [Sistemi operativi supportati per client e dispositivi](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices) sono supportati per l'uso con questi strumenti.
 
 > [!Note]  
 > Il [System Center 2012 R2 Configuration Manager Toolkit](https://www.microsoft.com/download/details.aspx?id=50012) è ancora disponibile nell'Area download Microsoft. Per Configuration Manager versione 1806 e versioni successive, usare le versioni degli strumenti nella cartella CD.Latest nel server del sito. Alcuni strumenti erano precedentemente presenti nel toolkit ma non sono stati inclusi nella versione 1806. Questi strumenti legacy non sono più supportati.
@@ -86,13 +86,13 @@ Questi strumenti si trovano nella sottocartella `ServerTools`:
 
 - [Estendi ed esegui la migrazione dell'ambiente locale di Configuration Manager in Microsoft Azure](azure-migration-tool.md): consente di creare a livello di codice macchine virtuali di Azure per Configuration Manager. <!--3556022--> 
 
-- [Strumento di pulizia della raccolta contenuto](../plan-design/hierarchy/content-library-cleanup-tool.md): usare **ContentLibraryCleanup.exe** in `CD.Latest\SMSSETUP\TOOLS\ContentLibraryCleanup` per rimuovere contenuto orfano da un punto di distribuzione.  
+- [Content Library Cleanup Tool](../plan-design/hierarchy/content-library-cleanup-tool.md): usare **ContentLibraryCleanup.exe** in `CD.Latest\SMSSETUP\TOOLS\ContentLibraryCleanup` per rimuovere contenuto orfano da un punto di distribuzione.  
 
-- [Strumento Gestione gerarchia](../servers/manage/hierarchy-maintenance-tool-preinst.exe.md): usare **Preinst.exe** nella cartella condivisa `\<SiteServerName>\SMS_<SiteCode>\bin\X64\00000409` nel server del sito per passare i comandi al componente di gestione della gerarchia.  
+- [Strumento di manutenzione gerarchia](../servers/manage/hierarchy-maintenance-tool-preinst.exe.md): usare **Preinst.exe** nella cartella condivisa `\<SiteServerName>\SMS_<SiteCode>\bin\X64\00000409` nel server del sito per passare i comandi al componente di gestione della gerarchia.  
 
-- [Strumento di reimpostazione dell'aggiornamento](../servers/manage/update-reset-tool.md): usare **CMUpdateReset.exe** in `CD.Latest\SMSSETUP\TOOLS\CMUpdateReset` per risolvere i problemi quando gli aggiornamenti nella console registrano problemi di download o replica.  
+- [Strumento di reimpostazione dell'aggiornamento](../servers/manage/update-reset-tool.md): usare **CMUpdateReset.exe** in `CD.Latest\SMSSETUP\TOOLS\CMUpdateReset` per risolvere i problemi quando gli aggiornamenti nella console mostrano problemi di download o replica.  
 
-- [Strumento Connessione al servizio](../servers/manage/hierarchy-maintenance-tool-preinst.exe.md): usare **ServiceConnectionTool.exe** in `CD.Latest\SMSSETUP\TOOLS\ServiceConnectionTool` per mantenere aggiornato il sito quando il punto di connessione del servizio è offline.   
+- [Strumento di connessione del servizio](../servers/manage/hierarchy-maintenance-tool-preinst.exe.md): usare **ServiceConnectionTool.exe** in `CD.Latest\SMSSETUP\TOOLS\ServiceConnectionTool` per mantenere aggiornato il sito quando il punto di connessione del servizio è offline.   
 
 - [Microsoft Deployment Toolkit (MDT)](../../mdt/use-the-mdt.md): Raccolta unificata di strumenti, processi e linee guida per l'automazione delle distribuzioni dei sistemi operativi desktop e server.
 

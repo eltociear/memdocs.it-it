@@ -10,12 +10,12 @@ ms.assetid: 41dcc259-f147-4420-bff2-b65bdf8cff77
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 35269e7c727031a9cd66072985f3d9ec362978cf
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3598c95d1431915431d96b16c10c7c913741fe3d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706319"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699994"
 ---
 # <a name="introduction-to-certificate-profiles-in-configuration-manager"></a>Introduzione ai profili certificato in Configuration Manager
 
@@ -59,11 +59,11 @@ Esistono tre tipi di profilo certificato:
 
 ## <a name="requirements"></a>Requisiti
 
-Per distribuire i profili certificato che usano SCEP, installare il punto di registrazione certificati in un server del sistema del sito. Installare anche un modulo criteri per il servizio Registrazione dispositivi di rete (NDES), il Modulo criteri di Configuration Manager, in un server che esegue Windows Server 2012 R2 o versione successiva. Questo server richiede il ruolo Servizi certificati Active Directory. Richiede anche un servizio Registrazione dispositivi di rete (NDES) funzionante e accessibile ai dispositivi che richiedono i certificati. Se i dispositivi devono esetguire la registraizone per i certificati da Internet, il server NDES deve essere accessibile da Internet. Ad esempio, per abilitare in modo sicuro il traffico verso il server NDES da Internet è possibile usare [Azure Application Proxy](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
+Per distribuire i profili certificato che usano SCEP, installare il punto di registrazione certificati in un server del sistema del sito. Installare anche un modulo criteri per il servizio Registrazione dispositivi di rete (NDES), il Modulo criteri di Configuration Manager, in un server che esegue Windows Server 2012 R2 o versione successiva. Questo server richiede il ruolo Servizi certificati Active Directory. Richiede anche un servizio Registrazione dispositivi di rete (NDES) funzionante e accessibile ai dispositivi che richiedono i certificati. Se i dispositivi devono esetguire la registraizone per i certificati da Internet, il server NDES deve essere accessibile da Internet. Ad esempio, per abilitare in modo sicuro il traffico verso il server NDES da Internet è possibile usare [Azure Application Proxy](/azure/active-directory/manage-apps/application-proxy).
 
 Anche i certificati PFX richiedono un punto di registrazione certificati. Specificare inoltre la CA per il certificato e le credenziali di accesso pertinenti. È possibile specificare Microsoft o Entrust come autorità di certificazione.  
 
-Per altre informazioni sul modo in cui il servizio Registrazione dispositivi di rete supporta moduli criteri per consentire la distribuzione di certificati da parte di Configuration Manager, vedere [Uso di un modulo criteri con il servizio Registrazione dispositivi di rete](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn473016\(v=ws.11\)).
+Per altre informazioni sul modo in cui il servizio Registrazione dispositivi di rete supporta moduli criteri per consentire la distribuzione di certificati da parte di Configuration Manager, vedere [Uso di un modulo criteri con il servizio Registrazione dispositivi di rete](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn473016\(v=ws.11\)).
 
 A seconda dei requisiti, Configuration Manager supporta la distribuzione dei certificati in più archivi certificati in diversi tipi di dispositivi e sistemi operativi. Sono supportati i dispositivi e i sistemi operativi seguenti:  
 

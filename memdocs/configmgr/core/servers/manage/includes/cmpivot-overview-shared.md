@@ -4,18 +4,18 @@ ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
 ms.date: 07/13/2020
-ms.openlocfilehash: 80302a1c369c36a08cc1a55e20cf339dbc8d2883
-ms.sourcegitcommit: 6d987bb69d0eb9955a3003202864f58d6aaa426a
+ms.openlocfilehash: 8e95fce122a3e153f2aa391dcd5e40439f8e5820
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381047"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88703638"
 ---
 <!--This file is shared by the CMPivot overview articles for both Microsoft Endpoint Manager tenant attach and Configuration Manager-->
 
 ## <a name="queries"></a>Query
 
-Le query possono essere usate per cercare termini, identificare tendenze, analizzare schemi e offrire molte altre informazioni dettagliate in base ai dati dell'utente. CMPivot usa un sottoinsieme del modello [Analisi dei log di Azure](https://docs.microsoft.com/azure/kusto/query) di flusso di dati per l'istruzione dell'espressione tabulare. La struttura tipica di un'istruzione dell'espressione tabulare è una combinazione di entità client e di operatori di dati tabulari, ad esempio filtri e proiezioni. La combinazione è rappresentata dal carattere barra verticale (|), quindi l'istruzione ha una forma molto regolare che rappresenta visivamente il flusso di dati tabulari da sinistra a destra. Ogni operatore accetta un set di dati tabulari configurati "dalla pipe" e input aggiuntivi, inclusi altri set di dati tabulari, dal corpo dell'operatore, quindi emette un set di dati tabulari per l'operatore successivo seguente: `entity | operator1 | operator2 | ...`
+Le query possono essere usate per cercare termini, identificare tendenze, analizzare schemi e offrire molte altre informazioni dettagliate in base ai dati dell'utente. CMPivot usa un sottoinsieme del modello [Analisi dei log di Azure](/azure/kusto/query) di flusso di dati per l'istruzione dell'espressione tabulare. La struttura tipica di un'istruzione dell'espressione tabulare è una combinazione di entità client e di operatori di dati tabulari, ad esempio filtri e proiezioni. La combinazione è rappresentata dal carattere barra verticale (|), quindi l'istruzione ha una forma molto regolare che rappresenta visivamente il flusso di dati tabulari da sinistra a destra. Ogni operatore accetta un set di dati tabulari configurati "dalla pipe" e input aggiuntivi, inclusi altri set di dati tabulari, dal corpo dell'operatore, quindi emette un set di dati tabulari per l'operatore successivo seguente: `entity | operator1 | operator2 | ...`
 
 Nell'esempio seguente l'entità è `CCMRecentlyUsedApplications`, vale a dire un riferimento alle applicazioni usate di recente, e l'operatore è where, che esclude i record dal rispettivo input in base a un predicato per record:
 

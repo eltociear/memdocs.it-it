@@ -10,12 +10,12 @@ ms.assetid: 868049d3-3209-47ec-b34a-9cc26941893a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 63f815394414167ad4f887c5970538eab22c931a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 8d15252c3b3c93c7e90e517c502c4c3dd2dfcf20
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906155"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700045"
 ---
 # <a name="create-queries-in-configuration-manager"></a>Creare query in Configuration Manager
 
@@ -49,9 +49,9 @@ Questo articolo descrive come creare e importare query in Configuration Manager.
     > [!TIP]  
     > È possibile usare la documentazione di riferimento seguente per costruire le query WQL:  
     >   
-    > -   [WQL (SQL per WMI)](https://docs.microsoft.com/windows/win32/wmisdk/wql-sql-for-wmi)  
-    > -   [Clausola WHERE](https://docs.microsoft.com/windows/win32/wmisdk/where-clause)  
-    > -   [Operatori WQL](https://docs.microsoft.com/windows/win32/wmisdk/wql-operators)  
+    > -   [WQL (SQL per WMI)](/windows/win32/wmisdk/wql-sql-for-wmi)  
+    > -   [Clausola WHERE](/windows/win32/wmisdk/where-clause)  
+    > -   [Operatori WQL](/windows/win32/wmisdk/wql-operators)  
 
 8.  Nella scheda **Criteri** della finestra di dialogo **Proprietà istruzione** &lt;nome query\> specificare i criteri usati per definire i risultati della query. Ad esempio, è possibile restituire solo le risorse con un codice di sito **XYZ**. È possibile configurare più criteri per una query.  
 

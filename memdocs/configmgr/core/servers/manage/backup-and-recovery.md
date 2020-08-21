@@ -10,12 +10,12 @@ ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 46d2af2d89e41e931add0f77931b442b68835235
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 8d766a172f934e27398ec2633ef0ec23ba4ade5e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906469"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700685"
 ---
 # <a name="back-up-a-configuration-manager-site"></a>Eseguire il backup di un sito di Configuration Manager
 
@@ -47,7 +47,7 @@ Le sezioni di questo articolo illustrano come eseguire un backup dei siti. Per r
 ####  <a name="using-data-protection-manager-to-back-up-your-site-database"></a>Utilizzo di Data Protection Manager per eseguire il backup del database del sito
 È possibile usare Microsoft System Center Data Protection Manager (DPM) per eseguire un backup del database del sito di Configuration Manager.
 
-È necessario creare un nuovo gruppo di protezione dati in DPM per il computer del database del sito. Nella pagina **Seleziona membri del gruppo** della procedura guidata Crea nuovo gruppo protezione dati selezionare il servizio SMS Writer dall'elenco di origine dei dati. Selezionare quindi il database del sito come membro appropriato. Per altre informazioni su DPM, vedere la raccolta della documentazione di [Data Protection Manager](https://docs.microsoft.com/system-center/dpm).  
+È necessario creare un nuovo gruppo di protezione dati in DPM per il computer del database del sito. Nella pagina **Seleziona membri del gruppo** della procedura guidata Crea nuovo gruppo protezione dati selezionare il servizio SMS Writer dall'elenco di origine dei dati. Selezionare quindi il database del sito come membro appropriato. Per altre informazioni su DPM, vedere la raccolta della documentazione di [Data Protection Manager](/system-center/dpm).  
 
 > [!IMPORTANT]  
 >  Configuration Manager non supporta il backup di DPM per un cluster SQL Server che usa un'istanza denominata. Supporta tuttavia il backup di DPM in un cluster di SQL Server che usa l'istanza predefinita di SQL Server.  
@@ -144,7 +144,7 @@ Il file AfterBackup.bat consente di archiviare lo snapshot di backup al termine 
 Se il file AfterBackup.bat non è presente, questo passaggio viene ignorato dall'attività di backup, senza alcun effetto sull'operazione di backup. Per verificare che l'attività di backup abbia eseguito correttamente questo script, passare al nodo **Stato componente** nell'area di lavoro **Monitoraggio** ed esaminare i messaggi di stato relativi a **SMS_SITE_BACKUP**. Quando l'attività avvia correttamente il file di comando AfterBackup.bat, viene visualizzato l'ID messaggio **5040**.  
 
 > [!TIP]  
->  Per archiviare i file di backup del server sito con AfterBackup.bat è necessario usare uno strumento di comando copia nel file batch. Uno di questi strumenti è [Robocopy](https://docs.microsoft.com/windows-server/administration/windows-commands/robocopy) in Windows Server. Ad esempio, creare il file AfterBackup.bat con il seguente comando: `Robocopy E:\ConfigMgr_Backup \\ServerName\ShareName\ConfigMgr_Backup /MIR`  
+>  Per archiviare i file di backup del server sito con AfterBackup.bat è necessario usare uno strumento di comando copia nel file batch. Uno di questi strumenti è [Robocopy](/windows-server/administration/windows-commands/robocopy) in Windows Server. Ad esempio, creare il file AfterBackup.bat con il seguente comando: `Robocopy E:\ConfigMgr_Backup \\ServerName\ShareName\ConfigMgr_Backup /MIR`  
 
 Sebbene l'uso previsto del file AfterBackup.bat sia l'archiviazione di snapshot di backup, è possibile creare un file AfterBackup.bat che consenta di eseguire attività aggiuntive al termine di ogni operazione di backup.  
 
@@ -165,7 +165,7 @@ Se si modificano report personalizzati creati o predefiniti in SQL Server Report
 > [!IMPORTANT]  
 >  Quando Configuration Manager viene aggiornato a una versione più recente, i report predefiniti potrebbero essere sovrascritti da nuovi report. Se si modifica un report predefinito, assicurarsi di eseguirne il backup e quindi di ripristinarlo in Reporting Services.  
 
-Per altre informazioni sul backup di report personalizzati in Reporting Services, vedere [Operazioni di backup e ripristino per Reporting Services](https://docs.microsoft.com/sql/reporting-services/install-windows/backup-and-restore-operations-for-reporting-services).  
+Per altre informazioni sul backup di report personalizzati in Reporting Services, vedere [Operazioni di backup e ripristino per Reporting Services](/sql/reporting-services/install-windows/backup-and-restore-operations-for-reporting-services).  
 
 ### <a name="back-up-content-files"></a>Eseguire il backup di file di contenuto  
 La raccolta contenuto in Configuration Manager è la posizione in cui vengono archiviati tutti i file di contenuto per tutte le distribuzioni software. La raccolta contenuto si trova sul server del sito e in corrispondenza di ogni punto di distribuzione. L'attività di manutenzione Backup server sito non esegue il backup della libreria contenuto o dei file di origine del pacchetto. Quando si verifica un errore sul server del sito, le informazioni sulla raccolta contenuto vengono ripristinate nel database del sito, ma è necessario ripristinare la raccolta contenuto e i file di origine del pacchetto.  
@@ -231,9 +231,9 @@ L'ID writer per SMS Writer è: **03ba67dd-dc6d-4729-a038-251f7018463b**.
 Il servizio SMS Writer deve essere eseguito all'interno dell'account di sistema locale.  
 
 ### <a name="volume-shadow-copy-service"></a>Servizio Copia Shadow del volume  
-VSS è un set di API COM che consente di implementare un framework per l'esecuzione dei backup del volume durante la scrittura delle applicazioni di un sistema nei volumi. VSS offre un'interfaccia coerente che consente il coordinamento tra le applicazioni utente per l'aggiornamento dei dati sul disco (il servizio SMS Writer) e quelle che eseguono il backup delle applicazioni (il servizio Gestione backup). Per altre informazioni, vedere [Servizio Copia Shadow del volume](https://docs.microsoft.com/windows-server/storage/file-server/volume-shadow-copy-service).  
+VSS è un set di API COM che consente di implementare un framework per l'esecuzione dei backup del volume durante la scrittura delle applicazioni di un sistema nei volumi. VSS offre un'interfaccia coerente che consente il coordinamento tra le applicazioni utente per l'aggiornamento dei dati sul disco (il servizio SMS Writer) e quelle che eseguono il backup delle applicazioni (il servizio Gestione backup). Per altre informazioni, vedere [Servizio Copia Shadow del volume](/windows-server/storage/file-server/volume-shadow-copy-service).  
 
 
 
 ## <a name="next-steps"></a>Passaggi successivi
-Dopo aver creato un backup, esercitarsi a [ripristinare il sito](recover-sites.md) con tale backup. Questa esercitazione permette di acquisire familiarità con il processo di ripristino prima di fare affidamento su di esso. Può consentire anche di verificare che il backup sia stato utile allo scopo designato.  
+Dopo aver creato un backup, esercitarsi a [ripristinare il sito](recover-sites.md) con tale backup. Questa esercitazione permette di acquisire familiarità con il processo di ripristino prima di fare affidamento su di esso. Può consentire anche di verificare che il backup sia stato utile allo scopo designato.

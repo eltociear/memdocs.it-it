@@ -10,12 +10,12 @@ ms.assetid: 104fb4cc-6e83-40a3-8e6b-ac909fb9ec7d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a32f0a59a0b3ce3ad864fecf61fe7281b8ebbdd2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 068511c5b3b0c15eb355c484b241a76d9dd512e2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704419"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700181"
 ---
 # <a name="plan-for-the-site-database-for-configuration-manager"></a>Pianificare il database del sito per Configuration Manager
 
@@ -31,7 +31,7 @@ Il server di database del sito è un computer in cui viene eseguita una versione
 
 -  Per l'utilizzo del gruppo di disponibilità non SQL, il modello di recupero del database deve essere impostato su SIMPLE  
 
-Altre informazioni sui modelli di recupero SQL sono disponibili in [Modelli di recupero (SQL Server)](https://docs.microsoft.com/sql/relational-databases/backup-restore/recovery-models-sql-server).
+Altre informazioni sui modelli di recupero SQL sono disponibili in [Modelli di recupero (SQL Server)](/sql/relational-databases/backup-restore/recovery-models-sql-server).
 
 Per ospitare il database del sito è possibile usare le configurazioni di SQL Server seguenti:  
 
@@ -61,4 +61,4 @@ Se si usa un computer server database remoto, verificare che la connessione di r
 -   Quando il database del sito ha un percorso condiviso con il server del sito, non è possibile usare un server SQL del cluster per il server di database del sito.  
 
 
-In genere, un server del sistema del sito supporta ruoli del sistema del sito solo da un unico sito di Configuration Manager. È tuttavia possibile usare istanze diverse di SQL Server, su server cluster o non cluster che eseguono SQL Server, per ospitare un database da diversi siti di Configuration Manager. Per supportare i database da siti diversi, è necessario configurare ogni istanza di SQL Server in modo da usare porte univoche per la comunicazione.  
+In genere, un server del sistema del sito supporta ruoli del sistema del sito solo da un unico sito di Configuration Manager. È tuttavia possibile usare istanze diverse di SQL Server, su server cluster o non cluster che eseguono SQL Server, per ospitare un database da diversi siti di Configuration Manager. Per supportare i database da siti diversi, è necessario configurare ogni istanza di SQL Server in modo da usare porte univoche per la comunicazione.

@@ -10,12 +10,12 @@ ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 542069b82ea4c68a48ccc47b79007fd2fa25322a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 1c54648f1f98ad5fef8efd16d2abe53f204a38f5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906017"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700668"
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>Scelta del ramo di Configuration Manager da usare
 
@@ -85,7 +85,7 @@ L'opzione LTSB è basata sulla versione 1606. Questo ramo non riceve aggiornamen
 Per installare la versione LTSB come nuovo sito o come aggiornamento da un sito supportato di System Center 2012 Configuration Manager, usare il [supporto di base](../servers/manage/updates.md#bkmk_Baselines) della versione 1606 ricevuto con System Center 2016. È possibile usare il supporto di base per installare un nuovo sito che esegue la versione 1606 di Current Branch o che esegue Long-Term Servicing Branch.
 
 > [!TIP]  
-> Per informazioni su System Center 2016, vedere la relativa [documentazione](https://docs.microsoft.com/system-center/index). Questa documentazione indica inoltre come ottenere System Center 2016, che richiede un contratto di licenza Microsoft o diritti analoghi.  
+> Per informazioni su System Center 2016, vedere la relativa [documentazione](/system-center/index). Questa documentazione indica inoltre come ottenere System Center 2016, che richiede un contratto di licenza Microsoft o diritti analoghi.  
 >  
 > Per trovare Configuration Manager versione 1606 in Volume Licensing Service Center (VLSC), passare alla scheda **Downloads and Keys** (Download e codici) di [VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx), cercare `System Center 2016` e selezionare **System Center 2016 Datacenter** o **System Center 2016 Standard**.  
 >  

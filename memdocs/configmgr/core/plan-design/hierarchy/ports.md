@@ -10,12 +10,12 @@ ms.assetid: c6777fb0-0754-4abf-8a1b-7639d23e9391
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b75ebe7e768080a1239e817c514b634cdcf64179
-ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
+ms.openlocfilehash: 2495c0d7b5b19b5d6f7741d3b28b6a9a0e213fc3
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587173"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700147"
 ---
 # <a name="ports-used-in-configuration-manager"></a>Porte usate in Configuration Manager
 
@@ -759,7 +759,7 @@ Se SQL Server ospita un database da più di un sito, ogni database deve usare un
 
 Se si abilita un firewall basato su host su SQL Server, configurarlo in modo da consentire le porte appropriate. Inoltre, configurare i firewall di rete tra i computer che comunicano con SQL Server.  
 
-Per un esempio di come configurare SQL Server per l'uso di una porta specifica, vedere [Configurare un server per l'attesa su una porta TCP specifica](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port).  
+Per un esempio di come configurare SQL Server per l'uso di una porta specifica, vedere [Configurare un server per l'attesa su una porta TCP specifica](/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port).  
 
 ### <a name="discovery-and-publishing"></a><a name="bkmk_discovery"> </a> Individuazione e pubblicazione
 

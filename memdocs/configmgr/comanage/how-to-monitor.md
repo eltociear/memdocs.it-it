@@ -10,12 +10,12 @@ ms.assetid: e83a7b0d-b381-4b4a-8eca-850385abbebb
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: eab91146ec21bbee888d496012419f47bca4b599
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: ac3bbb7c755be82b171f35442d2dbaf446dfea84
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776974"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695121"
 ---
 # <a name="how-to-monitor-co-management-in-configuration-manager"></a>Come monitorare la co-gestione in Configuration Manager
 
@@ -102,8 +102,8 @@ Esistono centinaia di possibili errori. La tabella seguente elenca gli errori pi
 
 | Errore | Descrizione |
 |---------|---------|
-| 2147549183 (0x8000FFFF) | La registrazione MDM non è ancora stata configurata in Azure AD oppure l'URL di registrazione non è previsto.<br><br>[Abilitare la registrazione automatica di Windows 10](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment) |
-| 2149056536 (0x80180018)<br>MENROLL_E_USERLICENSE | La licenza dell'utente ha uno stato non valido e blocca la registrazione<br><br>[Assegnare licenze agli utenti](https://docs.microsoft.com/intune/licenses-assign) |
+| 2147549183 (0x8000FFFF) | La registrazione MDM non è ancora stata configurata in Azure AD oppure l'URL di registrazione non è previsto.<br><br>[Abilitare la registrazione automatica di Windows 10](/intune/windows-enroll#enable-windows-10-automatic-enrollment) |
+| 2149056536 (0x80180018)<br>MENROLL_E_USERLICENSE | La licenza dell'utente ha uno stato non valido e blocca la registrazione<br><br>[Assegnare licenze agli utenti](/intune/licenses-assign) |
 | 2149056555 (0x8018002B)<br>MENROLL_E_MDM_NOT_CONFIGURED | Quando si tenta di eseguire automaticamente la registrazione in Intune, ma la configurazione di Azure AD non viene applicata completamente. Questo problema dovrebbe essere temporaneo e il dispositivo riproverà dopo un breve periodo. |
 | 2149056554 (0x‭8018002A‬)<br>&nbsp; | L'utente ha annullato l'operazione<br><br>Se la registrazione MDM richiede l'autenticazione a più fattori e l'utente non ha eseguito l'accesso con un secondo fattore supportato, Windows visualizza una notifica di tipo avviso popup con cui invita l'utente a eseguire la registrazione. Se l'utente non risponde alla notifica di tipo avviso popup, si verifica questo errore. Questo problema dovrebbe essere temporaneo e Configuration Manager eseguirà un nuovo tentativo con richiesta all'utente. Gli utenti devono usare l'autenticazione a più fattori quando accedono a Windows. È anche necessario informare gli utenti di questo possibile comportamento e invitarli a intervenire se richiesto. |
 | 2149056532 (0x80180014)<br>MENROLL_E_DEVICENOTSUPPORTED | La gestione di dispositivi mobili non è supportata. Controllare le restrizioni dei dispositivi. |
@@ -114,7 +114,7 @@ Esistono centinaia di possibili errori. La tabella seguente elenca gli errori pi
 | 3399548929 | È necessario l'accesso dell'utente<br><br>Questo problema dovrebbe essere temporaneo. Si verifica quando l'utente esegue rapidamente la disconnessione prima che avvenga l'attività di registrazione. |
 | 3400073236 | Richiesta del token di sicurezza ADAL non riuscita.<br><br>Controllare la configurazione di Azure AD e assicurarsi che gli utenti riescano a eseguire l'autenticazione. |
 | 2149122477 | Problema HTTP generico |
-| 3400073247 | L'autenticazione Windows integrata in ADAL è supportata solo nel flusso federato<br><br>[Pianificare l'implementazione dell'aggiunta ad Azure Active Directory ibrido](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan) |
+| 3400073247 | L'autenticazione Windows integrata in ADAL è supportata solo nel flusso federato<br><br>[Pianificare l'implementazione dell'aggiunta ad Azure Active Directory ibrido](/azure/active-directory/devices/hybrid-azuread-join-plan) |
 | 3399942148 | Il server o il proxy non è stato trovato.<br><br>Questo problema dovrebbe essere temporaneo e verificarsi quando il client non riesce a comunicare con il cloud. Se persiste, assicurarsi che il client abbia una connessione costante ad Azure. | 
 | 2149056532 | Piattaforma o versione specifica non supportata<br><br>Verificare che il dispositivo soddisfi i [requisiti minimi](overview.md#windows-10) per la co-gestione. |
 | 2147943568 | Elemento non trovato<br><br>Questo problema dovrebbe essere temporaneo. Se persiste, contattare il supporto tecnico Microsoft. |
@@ -124,7 +124,7 @@ Esistono centinaia di possibili errori. La tabella seguente elenca gli errori pi
 | 2149134055 | Nome Winhttp non risolto<br><br>Il client non riesce a risolvere il nome del servizio. Controllare la configurazione DNS. |
 | 2149134050 | Timeout di Internet<br><br>Questo problema dovrebbe essere temporaneo e verificarsi quando il client non riesce a comunicare con il cloud. Se persiste, assicurarsi che il client abbia una connessione costante ad Azure. |
 
-Per altre informazioni, vedere [MDM Registration Error Values](https://docs.microsoft.com/windows/desktop/mdmreg/mdm-registration-constants) (Valori degli errori di registrazione MDM).
+Per altre informazioni, vedere [MDM Registration Error Values](/windows/desktop/mdmreg/mdm-registration-constants) (Valori degli errori di registrazione MDM).
 
 ## <a name="deployment-policies"></a>Criteri di distribuzione
 

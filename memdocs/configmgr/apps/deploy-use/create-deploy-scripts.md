@@ -10,12 +10,12 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2113baf43c377379a2a996c59fd13e55072cf898
-ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
+ms.openlocfilehash: db3a673d99efc40bd6fa0da7930c66c648136e03
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82605185"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695360"
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Creare ed eseguire gli script di PowerShell dalla console di Configuration Manager
 
@@ -205,7 +205,7 @@ La sezione di convalida della finestra di dialogo **Proprietà dei parametri del
 
 Un'espressione regolare è una forma di programmazione compatta per controllare una stringa di caratteri rispetto a una convalida codificata. Ad esempio, si potrebbe verificare se manca un carattere alfabetico maiuscolo nel campo *FirstName* inserendo `[^A-Z]` nel campo *RegEx*.
 
-L'elaborazione delle espressioni regolari per questa finestra di dialogo è supportata da .NET Framework. Per istruzioni sull'uso delle espressioni regolari, vedere [Espressione regolare .NET](https://docs.microsoft.com/dotnet/standard/base-types/regular-expressions) e [Linguaggio per le espressioni regolari](https://docs.microsoft.com/dotnet/standard/base-types/regular-expression-language-quick-reference).
+L'elaborazione delle espressioni regolari per questa finestra di dialogo è supportata da .NET Framework. Per istruzioni sull'uso delle espressioni regolari, vedere [Espressione regolare .NET](/dotnet/standard/base-types/regular-expressions) e [Linguaggio per le espressioni regolari](/dotnet/standard/base-types/regular-expression-language-quick-reference).
 
 
 ## <a name="script-examples"></a>Esempi di script
@@ -294,7 +294,7 @@ Dopo aver avviato l'esecuzione di uno script in una raccolta di dispositivi, usa
 
 ## <a name="script-output"></a>Output dello script
 
-I client restituiscono l'output dello script con la formattazione JSON inviando tramite pipe i risultati dello script al cmdlet [ConvertTo-Json](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-json). Il formato JSON restituisce in modo coerente output dello script leggibile. Per gli script che non restituiscono oggetti come output, il cmdlet ConvertTo-Json converte l'output in una stringa semplice restituita dal client al posto di output in formati JSON.  
+I client restituiscono l'output dello script con la formattazione JSON inviando tramite pipe i risultati dello script al cmdlet [ConvertTo-Json](/powershell/module/microsoft.powershell.utility/convertto-json). Il formato JSON restituisce in modo coerente output dello script leggibile. Per gli script che non restituiscono oggetti come output, il cmdlet ConvertTo-Json converte l'output in una stringa semplice restituita dal client al posto di output in formati JSON.  
 
 - Gli script con un risultato sconosciuto o dove il client era offline, non vengono visualizzati nei grafici o nel set di dati. <!--507179-->
 - Evitare di restituire un output troppo grande poiché verrà troncato in corrispondenza di 4 KB. <!--508488-->
@@ -302,7 +302,7 @@ I client restituiscono l'output dello script con la formattazione JSON inviando 
 
    ![Convertire un oggetto enum in un valore stringa](./media/run-scripts/enum-tostring-JSON.png)
 
-È possibile visualizzare l'output degli script dettagliato in formato JSON non elaborato o strutturato. Questo tipo di formattazione rende più facile leggere e analizzare l'output. Se lo script restituisce testo in formato JSON valido o se l'output può essere convertito in formato JSON tramite il cmdlet di PowerShell [ConvertTo-json](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-json), è possibile visualizzare l'output dettagliato come **output JSON** o **output non elaborato**. In caso contrario, l'unica opzione è **Output dello script**.
+È possibile visualizzare l'output degli script dettagliato in formato JSON non elaborato o strutturato. Questo tipo di formattazione rende più facile leggere e analizzare l'output. Se lo script restituisce testo in formato JSON valido o se l'output può essere convertito in formato JSON tramite il cmdlet di PowerShell [ConvertTo-json](/powershell/module/microsoft.powershell.utility/convertto-json), è possibile visualizzare l'output dettagliato come **output JSON** o **output non elaborato**. In caso contrario, l'unica opzione è **Output dello script**.
 
 ### <a name="example-script-output-is-convertible-to-valid-json"></a>Esempio: output dello script convertibile in formato JSON valido
 

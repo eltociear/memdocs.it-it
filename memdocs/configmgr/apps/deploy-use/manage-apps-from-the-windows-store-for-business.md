@@ -10,16 +10,16 @@ ms.assetid: 8cdb22a6-72d7-41f5-9bed-c098b1bcf675
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7d6a61324f8c777ba5ed09dd26816152d6f17af9
-ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
+ms.openlocfilehash: a8125f55215fd597d9611723e1d36629850bff44
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82643211"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695223"
 ---
 # <a name="manage-apps-from-the-microsoft-store-for-business-and-education-with-configuration-manager"></a>Gestire app da Microsoft Store per le aziende e Microsoft Store per la formazione con Configuration Manager
 
-In [Microsoft Store per le aziende e Microsoft Store per la formazione](https://docs.microsoft.com/microsoft-store/) è possibile trovare e ottenere le app Windows per l'organizzazione. Quando si connette lo Store a Configuration Manager, viene eseguita quindi la sincronizzazione dell'elenco di app ottenute. È possibile visualizzare le app nella console di Configuration Manager e distribuirle come si distribuisce qualsiasi altra app.
+In [Microsoft Store per le aziende e Microsoft Store per la formazione](/microsoft-store/) è possibile trovare e ottenere le app Windows per l'organizzazione. Quando si connette lo Store a Configuration Manager, viene eseguita quindi la sincronizzazione dell'elenco di app ottenute. È possibile visualizzare le app nella console di Configuration Manager e distribuirle come si distribuisce qualsiasi altra app.
 
 ## <a name="online-and-offline-apps"></a><a name="bkmk_apps"></a> App online e offline
 
@@ -29,7 +29,7 @@ Microsoft Store per le aziende e Microsoft Store per la formazione supportano du
 
 - **Offline**: questo tipo consente di memorizzare nella cache le app e le licenze da distribuire direttamente nella rete locale, senza che i dispositivi debbano connettersi allo Store o avere una connessione Internet.
 
-Per altre informazioni, vedere [Panoramica di Microsoft Store per le aziende e Microsoft Store per la formazione](https://docs.microsoft.com/microsoft-store/microsoft-store-for-business-overview).
+Per altre informazioni, vedere [Panoramica di Microsoft Store per le aziende e Microsoft Store per la formazione](/microsoft-store/microsoft-store-for-business-overview).
 
 ### <a name="summary-of-capabilities"></a>Riepilogo delle funzionalità
 
@@ -64,7 +64,7 @@ Prima di distribuire app di Microsoft Store per le aziende e Microsoft Store per
 
 - Quando l'account dell'amministratore locale accede al dispositivo, non può accedere alle app di Microsoft Store per le aziende e Microsoft Store per la formazione.  
 
-- I dispositivi devono avere una connessione Internet attiva a Microsoft Store per le aziende e Microsoft Store per la formazione. Per altre informazioni, inclusa la configurazione del proxy, vedere [Prerequisiti](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business).  
+- I dispositivi devono avere una connessione Internet attiva a Microsoft Store per le aziende e Microsoft Store per la formazione. Per altre informazioni, inclusa la configurazione del proxy, vedere [Prerequisiti](/microsoft-store/prerequisites-microsoft-store-for-business).  
 
 ### <a name="notes-for-devices-running-earlier-versions-of-windows-10"></a>Note per i dispositivi che eseguono versioni precedenti di Windows 10
 
@@ -110,17 +110,17 @@ Quando si sincronizza l'elenco di app di Microsoft Store per le aziende o Micros
 
 Connettere il sito di Configuration Manager ad Azure AD e a Microsoft Store per le aziende e Microsoft Store per la formazione. Per altre informazioni e dettagli relativi a questo processo, vedere [Configurare i servizi di Azure](../../core/servers/deploy/configure/azure-services-wizard.md). Creare una connessione al servizio **Microsoft Store per le aziende**.
 
-Assicurarsi che il punto di connessione del servizio e i dispositivi di destinazione siano in grado di accedere al servizio cloud. Per altre informazioni, vedere [Prerequisiti per Microsoft Store per le aziende e Microsoft Store per la formazione - Configurazione del proxy](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration).
+Assicurarsi che il punto di connessione del servizio e i dispositivi di destinazione siano in grado di accedere al servizio cloud. Per altre informazioni, vedere [Prerequisiti per Microsoft Store per le aziende e Microsoft Store per la formazione - Configurazione del proxy](/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration).
 
 ### <a name="supplemental-information-and-configuration"></a><a name="bkmk_config"></a> Informazioni e configurazioni aggiuntive
 
 Nella pagina **App** della Procedura guidata per i servizi di Azure configurare prima di tutto l'**Ambiente di Azure** e l'**App Web**. Leggere quindi la sezione **Altre informazioni** nella parte inferiore della pagina. Queste informazioni includono le azioni aggiuntive seguenti nel portale di Microsoft Store per le aziende e Microsoft Store per la formazione:  
 
-- Configurare Configuration Manager come strumento di gestione dello Store. Per altre informazioni, vedere [Configurare un provider di gestione](https://docs.microsoft.com/microsoft-store/configure-mdm-provider-microsoft-store-for-business).  
+- Configurare Configuration Manager come strumento di gestione dello Store. Per altre informazioni, vedere [Configurare un provider di gestione](/microsoft-store/configure-mdm-provider-microsoft-store-for-business).  
 
-- Abilitare il supporto per le app con licenza offline. Per altre informazioni, vedere [Distribuire app offline](https://docs.microsoft.com/microsoft-store/distribute-offline-apps).  
+- Abilitare il supporto per le app con licenza offline. Per altre informazioni, vedere [Distribuire app offline](/microsoft-store/distribute-offline-apps).  
 
-- Ottenere almeno un'app. Per altre informazioni, vedere [Trovare e acquisire app](https://docs.microsoft.com/microsoft-store/find-and-acquire-apps-overview).  
+- Ottenere almeno un'app. Per altre informazioni, vedere [Trovare e acquisire app](/microsoft-store/find-and-acquire-apps-overview).  
 
 Nella pagina **Configurazioni** della Procedura guidata per i servizi di Azure specificare le informazioni seguenti:  
 
@@ -161,7 +161,7 @@ Per ogni app dello Store gestita è possibile visualizzare le informazioni segue
 
 Dopo aver distribuito le app online, tutte le app vengono aggiornate direttamente da Microsoft Store. Configuration Manager non verifica inoltre che le app online siano conformi alla versione. Windows segnala solo che l'app è installata.  
 
-Quando vengono distribuite app offline in dispositivi Windows 10 tramite il client di Configuration Manager, non consentire agli utenti di aggiornare le applicazioni esterne alle distribuzioni di Configuration Manager. Il controllo degli aggiornamenti per le app offline è particolarmente importante in ambienti multiutente, come ad esempio nelle classi. Per disabilitare Microsoft Store è possibile usare i [criteri di gruppo](https://docs.microsoft.com/windows/configuration/stop-employees-from-using-microsoft-store#block-microsoft-store-using-group-policy).
+Quando vengono distribuite app offline in dispositivi Windows 10 tramite il client di Configuration Manager, non consentire agli utenti di aggiornare le applicazioni esterne alle distribuzioni di Configuration Manager. Il controllo degli aggiornamenti per le app offline è particolarmente importante in ambienti multiutente, come ad esempio nelle classi. Per disabilitare Microsoft Store è possibile usare i [criteri di gruppo](/windows/configuration/stop-employees-from-using-microsoft-store#block-microsoft-store-using-group-policy).
 
 Quando l'amministratore di Microsoft Store per le aziende e Microsoft Store per la formazione ottiene un'app offline, non pubblicare l'app per gli utenti tramite lo Store. In questo modo si impedisce agli utenti di eseguire l'installazione o l'aggiornamento online. Gli utenti ricevono gli aggiornamenti delle app offline solo tramite Configuration Manager.
 

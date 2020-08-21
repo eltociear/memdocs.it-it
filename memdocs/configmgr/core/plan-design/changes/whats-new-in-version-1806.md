@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: ae2846c2a5f7fea86287a05c8cc8f6013d660df6
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 3b153dad513107b118d11fa95e3feaa035a1bc90
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128951"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692639"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Novità della versione 1806 di Configuration Manager (Current Branch)
 
@@ -280,9 +280,9 @@ Creare una distribuzione in più fasi per un'applicazione. Le distribuzioni in p
 
 Per altre informazioni, vedere gli articoli seguenti:  
 
-- [Creare una distribuzione in più fasi](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+- [Creare una distribuzione in più fasi](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
 
-- [Gestire e monitorare le distribuzioni in più fasi](../../../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+- [Gestire e monitorare le distribuzioni in più fasi](../../../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
 
 
 ### <a name="provision-windows-app-packages-for-all-users-on-a-device"></a>Effettuare il provisioning dei pacchetti di app Windows per tutti gli utenti in un dispositivo
@@ -308,7 +308,7 @@ Per altre informazioni, vedere [Creare applicazioni Windows](../../../apps/get-s
 
 ### <a name="uninstall-application-on-approval-revocation"></a>Disinstallare l'applicazione in caso di revoca dell'approvazione
 <!--1357891-->
-Quando si revoca l'approvazione per un'applicazione, il comportamento è stato modificato. Ora, quando si nega la richiesta per l'applicazione, il client disinstalla l'applicazione dal dispositivo dell'utente. Questo comportamento richiede l'abilitazione della [funzionalità facoltativa](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_options) **Approva le richieste dell'applicazione per gli utenti per ogni dispositivo**. 
+Quando si revoca l'approvazione per un'applicazione, il comportamento è stato modificato. Ora, quando si nega la richiesta per l'applicazione, il client disinstalla l'applicazione dal dispositivo dell'utente. Questo comportamento richiede l'abilitazione della [funzionalità facoltativa](/sccm/core/servers/manage/install-in-console-updates#bkmk_options) **Approva le richieste dell'applicazione per gli utenti per ogni dispositivo**. 
 
 Per altre informazioni, vedere l'argomento relativo alla [distribuzione delle applicazioni](../../../apps/deploy-use/deploy-applications.md#bkmk_approval).
 
@@ -348,7 +348,7 @@ Per altre informazioni, vedere [Impostazioni delle fasi](../../../osd/deploy-use
 
 ### <a name="improvements-to-windows-10-in-place-upgrade-task-sequence"></a>Miglioramenti alla sequenza di attività di aggiornamento sul posto di Windows 10
 <!--1358500-->
-Il modello di sequenza di attività predefinita per l'aggiornamento sul posto di Windows 10 include ora un altro nuovo gruppo con azioni consigliate da aggiungere in caso di esito negativo del processo di aggiornamento. Queste azioni facilitano la risoluzione dei problemi. Uno di questi strumenti è [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag) di Windows. È uno strumento di diagnostica autonomo per ottenere i dettagli sui motivi per cui un aggiornamento a Windows 10 non è riuscito. 
+Il modello di sequenza di attività predefinita per l'aggiornamento sul posto di Windows 10 include ora un altro nuovo gruppo con azioni consigliate da aggiungere in caso di esito negativo del processo di aggiornamento. Queste azioni facilitano la risoluzione dei problemi. Uno di questi strumenti è [SetupDiag](/windows/deployment/upgrade/setupdiag) di Windows. È uno strumento di diagnostica autonomo per ottenere i dettagli sui motivi per cui un aggiornamento a Windows 10 non è riuscito. 
 
 Per altre informazioni, vedere [Creare una sequenza di attività per aggiornare un sistema operativo](../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md#recommended-task-sequence-steps-on-failure).
 
@@ -584,7 +584,7 @@ Per altre informazioni, vedere [Miglioramenti della console nella versione 1806]
 
 A parte le nuove funzionalità, questa versione include anche ulteriori modifiche, ad esempio correzioni di bug. Per altre informazioni, vedere [Riepilogo delle modifiche in Configuration Manager Current Branch, versione 1806](https://support.microsoft.com/help/4459701).
 
-Per altre informazioni sulle modifiche apportate ai cmdlet di Windows PowerShell per Configuration Manager, vedere le [note sulla versione di PowerShell 1806](https://docs.microsoft.com/powershell/sccm/1806_release_notes?view=sccm-ps).
+Per altre informazioni sulle modifiche apportate ai cmdlet di Windows PowerShell per Configuration Manager, vedere le [note sulla versione di PowerShell 1806](/powershell/sccm/1806_release_notes?view=sccm-ps).
 
 L'aggiornamento cumulativo seguente (4462978) è disponibile nella console a partire dal 24 ottobre 2018: [Aggiornamento cumulativo per Configuration Manager Current Branch, versione 1806](https://support.microsoft.com/help/4462978).
 

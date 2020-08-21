@@ -10,12 +10,12 @@ ms.assetid: 066caf00-e419-4efb-93d3-ba4ba878297c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 93c3887307c32ea636a6dbb064cda13f4b9130c6
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 996cff4b8b333a59b774afb979bbdd89aae536a1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905125"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692894"
 ---
 # <a name="plan-for-the-migration-of-configuration-manager-objects-to-configuration-manager-current-branch"></a>Pianificare la migrazione degli oggetti di Configuration Manager a Configuration Manager Current Branch
 
@@ -123,7 +123,7 @@ Quando si esegue la migrazione da una gerarchia di origine di System Center 2012
 È possibile eseguire la migrazione di elementi e linee di base di configurazione.  
 
 > [!NOTE]  
->  Gli elementi di configurazione non interpretati delle gerarchie di origine di Configuration Manager 2007 non sono supportati per la migrazione. Non è possibile eseguire la migrazione o importare questi elementi di configurazione nella gerarchia di destinazione. Per altre informazioni sugli elementi di configurazione non interpretati, vedere Uninterpreted Configuration Item (Elemento di configurazione non interpretato) nell'argomento [About Configuration Items in Desired Configuration Management](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694136(v=technet.10)#uninterpreted-configuration-item) (Informazioni sugli elementi di configurazione nella gestione configurazione desiderata) nella libreria della documentazione di Configuration Manager 2007.  
+>  Gli elementi di configurazione non interpretati delle gerarchie di origine di Configuration Manager 2007 non sono supportati per la migrazione. Non è possibile eseguire la migrazione o importare questi elementi di configurazione nella gerarchia di destinazione. Per altre informazioni sugli elementi di configurazione non interpretati, vedere Uninterpreted Configuration Item (Elemento di configurazione non interpretato) nell'argomento [About Configuration Items in Desired Configuration Management](/previous-versions/system-center/configuration-manager-2007/bb694136(v=technet.10)#uninterpreted-configuration-item) (Informazioni sugli elementi di configurazione nella gestione configurazione desiderata) nella libreria della documentazione di Configuration Manager 2007.  
 
 È possibile importare pacchetti di configurazione di Configuration Manager 2007. Il processo di importazione converte automaticamente i pacchetti di configurazione in un formato compatibile con Configuration Manager Current Branch.  
 
@@ -160,4 +160,4 @@ Per altre informazioni sui report, vedere [Introduzione ai report](../servers/ma
 ##  <a name="plan-to-migrate-software-metering-rules-customizations"></a><a name="Plan_Migrate_SWM_Rules"></a> Pianificare la migrazione di personalizzazioni delle regole di misurazione del software  
  La misurazione del software non presenta modifiche significative tra Configuration Manager 2007 e Configuration Manager Current Branch. È possibile eseguire la migrazione delle regole di controllo software da una gerarchia di origine supportata a una gerarchia di destinazione.  
 
- Per impostazione predefinita, le regole di controllo software di cui viene eseguita la migrazione in una gerarchia di destinazione non sono associate ad alcun sito specifico nella gerarchia di destinazione, ma vengono invece applicate a tutti i client della gerarchia. Per applicare una regola di controllo software ai client di un sito specifico, è necessario modificare la regola di controllo dopo la migrazione.  
+ Per impostazione predefinita, le regole di controllo software di cui viene eseguita la migrazione in una gerarchia di destinazione non sono associate ad alcun sito specifico nella gerarchia di destinazione, ma vengono invece applicate a tutti i client della gerarchia. Per applicare una regola di controllo software ai client di un sito specifico, è necessario modificare la regola di controllo dopo la migrazione.

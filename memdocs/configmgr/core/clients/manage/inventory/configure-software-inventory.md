@@ -10,12 +10,12 @@ ms.assetid: f86559de-092a-4ce8-9b43-5d7530e0b763
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f6fcf4736c30d8743d0d26b52aac60ef12b5c9cd
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 9663f71118836513d95ec914d0f70b09cda9954f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906309"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693064"
 ---
 # <a name="how-to-configure-software-inventory-in-configuration-manager"></a>Come configurare l'inventario software in Configuration Manager
 
@@ -44,7 +44,7 @@ Questa procedura consente di configurare le impostazioni client predefinite per 
    > [!TIP]
    >   Il codice di errore 80041006 in inventoryprovider.log significa che il provider WMI ha esaurito la memoria. Ciò significa che è stato raggiunto il limite di quota di memoria per un provider e il provider di inventario non può continuare.
    > In questo caso, l'agente di inventario crea un report con 0 voci in modo che non venga segnalato alcun articolo di inventario. <br/>
-   > Una possibile soluzione per questo errore è ridurre l'ambito della raccolta inventario software. Nelle circostanze in cui l'errore si verifica dopo la limitazione dell'ambito di inventario, una soluzione può essere aumentare la proprietà [MemoryPerHost](https://techcommunity.microsoft.com/t5/ask-the-performance-team/memory-and-handle-quotas-in-the-wmi-provider-service/ba-p/373319) definita nella classe[_ProviderHostQuotaConfiguration](https://docs.microsoft.com/windows/win32/wmisdk/--providerhostquotaconfiguration).
+   > Una possibile soluzione per questo errore è ridurre l'ambito della raccolta inventario software. Nelle circostanze in cui l'errore si verifica dopo la limitazione dell'ambito di inventario, una soluzione può essere aumentare la proprietà [MemoryPerHost](https://techcommunity.microsoft.com/t5/ask-the-performance-team/memory-and-handle-quotas-in-the-wmi-provider-service/ba-p/373319) definita nella classe[_ProviderHostQuotaConfiguration](/windows/win32/wmisdk/--providerhostquotaconfiguration).
 
 <!--SMS.480648 include WMI Out of memory tip -->
 

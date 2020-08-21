@@ -10,12 +10,12 @@ ms.assetid: a44006eb-8650-49f6-94e1-18fa0ca959ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 39d6bf22cb24492a0f4e3f59313184ce522b5d09
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: e15f8511464b6d8b8486bb874a256df1c375e31b
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455005"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694577"
 ---
 # <a name="install-and-assign-configuration-manager-windows-10-clients-using-azure-ad-for-authentication"></a>Installare e assegnare client di Configuration Manager in dispositivi Windows 10 usando Azure AD per l'autenticazione
 
@@ -40,7 +40,7 @@ La configurazione di Azure AD può essere più semplice per alcuni clienti rispe
 
   - L'utente che ha eseguito l'accesso deve essere un'identità Azure AD.
 
-  - Se l'utente è un'identità federata o sincronizzata, configurare sia [Individuazione utente Active Directory](../../servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) che [Individuazione utente Azure AD](../../servers/deploy/configure/about-discovery-methods.md#azureaddisc) di Configuration Manager. Per altre informazioni sulle identità ibride, vedere [Definire una strategia di adozione della soluzione ibrida di gestione delle identità](https://docs.microsoft.com/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-identity-adoption-strategy).<!--497750-->
+  - Se l'utente è un'identità federata o sincronizzata, configurare sia [Individuazione utente Active Directory](../../servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) che [Individuazione utente Azure AD](../../servers/deploy/configure/about-discovery-methods.md#azureaddisc) di Configuration Manager. Per altre informazioni sulle identità ibride, vedere [Definire una strategia di adozione della soluzione ibrida di gestione delle identità](/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-identity-adoption-strategy).<!--497750-->
 
 - Oltre ai [prerequisiti esistenti](../../plan-design/configs/site-and-site-system-prerequisites.md#bkmk_2012MPpreq) per il ruolo del sistema del sito punto di gestione, abilitare anche **ASP.NET 4.5** in questo server. Includere eventuali altre opzioni che vengono automaticamente selezionate quando si abilita ASP.NET 4.5.  
 
@@ -70,13 +70,13 @@ Tali impostazioni consentono di configurare i dispositivi Windows 10 come aggiun
     - **Registra automaticamente i nuovi dispositivi Windows 10 aggiunti al dominio con Azure Active Directory**: impostare su **Sì** o **No**. L'impostazione predefinita è **Sì**. Questo è il comportamento predefinito anche in Windows 10, versione 1709.
 
         > [!TIP]
-        > I dispositivi aggiunti in modo ibrido vengono inseriti in un dominio di Active Directory locale e registrati con Azure AD. Per altre informazioni, vedere [Dispositivi aggiunti ad Azure AD ibrido](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid).<!-- MEMDocs#325 -->
+        > I dispositivi aggiunti in modo ibrido vengono inseriti in un dominio di Active Directory locale e registrati con Azure AD. Per altre informazioni, vedere [Dispositivi aggiunti ad Azure AD ibrido](/azure/active-directory/devices/concept-azure-ad-join-hybrid).<!-- MEMDocs#325 -->
 
     - **Consenti ai client di usare un gateway di gestione cloud**: impostare su **Sì** (impostazione predefinita) o su **No**.  
 
 2. Distribuire le impostazioni client per la raccolta necessaria di dispositivi. Non distribuire queste impostazioni alle raccolte di utenti.
 
-Per verificare se il dispositivo è aggiunto in modo ibrido, eseguire `dsregcmd.exe /status` in un prompt dei comandi. Se il dispositivo è aggiunto ad Azure AD oppure è aggiunto in modo ibrido, nel campo **AzureAdjoined** nei risultati è presente il valore **Sì**. Per altre informazioni, vedere [comando dsregcmd - stato del dispositivo](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-device-dsregcmd).
+Per verificare se il dispositivo è aggiunto in modo ibrido, eseguire `dsregcmd.exe /status` in un prompt dei comandi. Se il dispositivo è aggiunto ad Azure AD oppure è aggiunto in modo ibrido, nel campo **AzureAdjoined** nei risultati è presente il valore **Sì**. Per altre informazioni, vedere [comando dsregcmd - stato del dispositivo](/azure/active-directory/devices/troubleshoot-device-dsregcmd).
 
 ## <a name="install-and-register-the-client-using-azure-ad-identity"></a>Installare e registrare il client usando l'identità di Azure AD
 

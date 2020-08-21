@@ -10,12 +10,12 @@ ms.assetid: 5beb5564-2fdf-4f0a-8801-d0cec8214c43
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d481976a6c86da67670871690ba16985a67c80d8
-ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
+ms.openlocfilehash: a685e10ecdb2f6fac8d5634fd932facf52fddcb0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746460"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694951"
 ---
 # <a name="paths-to-co-management"></a>Percorsi per la co-gestione
 
@@ -34,10 +34,10 @@ Scegliendo questo percorso è possibile registrare rapidamente i dispositivi ges
 
 Prerequisiti per la configurazione:
 - Azure AD ibrido
-    - Una delle [opzioni di identità ibrida di Azure AD](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin) seguenti:  
-       - [Sincronizzazione dell'hash delle password](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin#password-hash-synchronization) con l'[accesso Single Sign-On facile](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso)
-       - [Autenticazione pass-through](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-pta) con l'[accesso Single Sign-On facile](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso)
-       - [SSO federato (con Active Directory Federation Services (AD FS))](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin#federation-that-uses-a-new-or-existing-farm-with-ad-fs-in-windows-server-2012-r2)
+    - Una delle [opzioni di identità ibrida di Azure AD](/azure/active-directory/hybrid/plan-connect-user-signin) seguenti:  
+       - [Sincronizzazione dell'hash delle password](/azure/active-directory/hybrid/plan-connect-user-signin#password-hash-synchronization) con l'[accesso Single Sign-On facile](/azure/active-directory/hybrid/how-to-connect-sso)
+       - [Autenticazione pass-through](/azure/active-directory/hybrid/how-to-connect-pta) con l'[accesso Single Sign-On facile](/azure/active-directory/hybrid/how-to-connect-sso)
+       - [SSO federato (con Active Directory Federation Services (AD FS))](/azure/active-directory/hybrid/plan-connect-user-signin#federation-that-uses-a-new-or-existing-farm-with-ad-fs-in-windows-server-2012-r2)
     - Azure AD Connect
     - Licenza Azure AD Premium
     - Configurare l'aggiunta ad Azure AD ibrido (scegliere una delle opzioni):
@@ -61,4 +61,3 @@ Prerequisiti per la configurazione:
 4. [Usare Intune per distribuire il client di Configuration Manager](how-to-prepare-Win10.md)  
 
 Per un'esercitazione dedicata a questo percorso, vedere [Esercitazione: Abilitare la co-gestione per nuovi dispositivi basati su Internet](tutorial-co-manage-new-devices.md).
-

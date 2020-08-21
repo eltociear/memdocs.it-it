@@ -10,12 +10,12 @@ ms.assetid: 4d26deed-3b16-4116-b640-f618f2c20f5a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7f7085b7ee6f0f723c9bcf9d10cb85b03f990a44
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e3ceb036180d002956eb0f62348ad317dfce6e7e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689069"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695138"
 ---
 # <a name="security-and-privacy-for-application-management-in-configuration-manager"></a>Sicurezza e privacy per la gestione delle applicazioni in Configuration Manager
 
@@ -182,7 +182,7 @@ Quando si installa il ruolo del sistema del sito del punto per siti Web del Cata
 
 Se si configura l'impostazione client **Consentire l'esecuzione in modalità di attendibilità elevata delle applicazioni Silverlight** su **No**, i client non rimuovono il certificato di firma di Microsoft.  
 
-Per altre informazioni sulle applicazioni attendibili in Silverlight, vedere [Trusted Applications (Applicazioni attendibili)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/ee721083\(v=vs.95\)).  
+Per altre informazioni sulle applicazioni attendibili in Silverlight, vedere [Trusted Applications (Applicazioni attendibili)](/previous-versions/windows/silverlight/dotnet-windows-silverlight/ee721083\(v=vs.95\)).  
 
 
 ## <a name="privacy-information-for-application-management"></a>Informazioni sulla privacy per la gestione delle applicazioni  
@@ -239,4 +239,4 @@ Le funzionalità seguenti consentono di distribuire il software in modo efficien
 
 - Il Catalogo applicazioni consente all'amministratore di Configuration Manager di pubblicare tutte le applicazioni, i programmi o gli script che gli utenti dovranno eseguire. Configuration Manager non ha alcun controllo sui tipi di programmi o script che vengono pubblicati nel catalogo, né sul tipo di informazioni trasmesse.  
 
-- Configuration Manager potrebbe trasmettere informazioni tra i client e i ruoli del sistema del sito del Catalogo applicazioni. Queste informazioni potrebbero consentire l'identificazione di computer e account di accesso. Le informazioni trasmesse tra il client e i server non vengono crittografate, a meno che tali ruoli del sistema non siano configurati in modo da richiedere che i client si connettano tramite HTTPS.  
+- Configuration Manager potrebbe trasmettere informazioni tra i client e i ruoli del sistema del sito del Catalogo applicazioni. Queste informazioni potrebbero consentire l'identificazione di computer e account di accesso. Le informazioni trasmesse tra il client e i server non vengono crittografate, a meno che tali ruoli del sistema non siano configurati in modo da richiedere che i client si connettano tramite HTTPS.

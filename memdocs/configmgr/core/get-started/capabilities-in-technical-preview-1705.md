@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3259bd1b20740046e70b1ef53281b0ff235a3896
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 0ddad23dfde87fa402c01d4eaa21a1b76db27d93
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905473"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692928"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-configuration-manager"></a>Funzionalità della versione Technical Preview 1705 per Configuration Manager
 
@@ -121,12 +121,12 @@ Con questa versione è ora possibile usare le repliche con commit asincrono nei 
 
 - Questa versione non supporta il failover per l'uso della replica con commit asincrono come database del sito.
   > [!CAUTION]  
-  > Poiché Configuration Manager non convalida lo stato della replica con commit asincrono per verificare che sia corrente, e [per comportamento normale del prodotto, una replica di questo tipo può non essere sincronizzata](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-2014#AvailabilityModes), l'uso di una replica con commit asincrono come database del sito può mettere a rischio l'integrità dei dati del sito.  
+  > Poiché Configuration Manager non convalida lo stato della replica con commit asincrono per verificare che sia corrente, e [per comportamento normale del prodotto, una replica di questo tipo può non essere sincronizzata](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-2014#AvailabilityModes), l'uso di una replica con commit asincrono come database del sito può mettere a rischio l'integrità dei dati del sito.  
 
 - In un gruppo di disponibilità è possibile usare lo stesso numero e tipo di repliche supportate dalla versione di SQL Server in uso.   In precedenza, il supporto era limitato a due repliche con commit sincrono.
 
 ### <a name="configure-an-asynchronous-commit-replica"></a>Configurare una replica con commit asincrono
-Per aggiungere una replica asincrona a un [gruppo di disponibilità usato con Configuration Manager](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md), non è necessaria eseguire gli script di configurazione necessari per configurare una replica sincrona, perché non viene offerto supporto per l'uso di tale replica asincrona come database del sito. Per altre informazioni, vedere [Aggiungere una replica secondaria a un gruppo di disponibilità](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server?view=sql-server-2014).
+Per aggiungere una replica asincrona a un [gruppo di disponibilità usato con Configuration Manager](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md), non è necessaria eseguire gli script di configurazione necessari per configurare una replica sincrona, perché non viene offerto supporto per l'uso di tale replica asincrona come database del sito. Per altre informazioni, vedere [Aggiungere una replica secondaria a un gruppo di disponibilità](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server?view=sql-server-2014).
 
 ### <a name="use-the-asynchronous-replica-to-recover-your-site"></a>Usare la replica asincrona per il ripristino del sito
 Prima di usare una replica asincrona per ripristinare il database del sito, è necessario arrestare il sito primario attivo per evitare altre operazioni di scrittura nel database del sito. Dopo aver arrestato il sito, è possibile usare una replica asincrona al posto di un [database ripristinato manualmente](../servers/manage/recover-sites.md#use-a-site-database-that-has-been-manually-recovered).
@@ -246,7 +246,7 @@ A questo punto il sito di Configuration Manager è connesso ad Azure AD.
 Prima di iniziare, verificare che i file di origine dell'installazione client vengano archiviati localmente nel dispositivo nel quale viene installato il client.
 Usare le istruzioni in [Come distribuire i client nei computer Windows](../clients/deploy/deploy-clients-to-windows-computers.md#BKMK_Manual) con la riga di comando per l'installazione seguente, sostituendo con valori personalizzati i valori dell'esempio:
 
-**ccmsetup.exe /NoCrlCheck /Source:C:\CLIENT  CCMHOSTNAME=SCCMPROXYCONTOSO.CLOUDAPP.NET/CCM_Proxy_ServerAuth/72457598037527932 SMSSiteCode=HEC AADTENANTID=780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME=contoso  AADCLIENTAPPID=\<GUID> AADRESOURCEURI=<https://contososerver>**
+**ccmsetup.exe /NoCrlCheck /Source:C:\CLIENT  CCMHOSTNAME=SCCMPROXYCONTOSO.CLOUDAPP.NET/CCM_Proxy_ServerAuth/72457598037527932 SMSSiteCode=HEC AADTENANTID=780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME=contoso  AADCLIENTAPPID=\<GUID> AADRESOURCEURI=<code>https://contososerver</code>**
 
 - **/NoCrlCheck**: se il punto di gestione o il gateway di gestione cloud usa un certificato server non pubblico, il client potrebbe non raggiungere il percorso CRL.
 - **/Source**: Cartella locale:   posizione dei file di installazione del client.
@@ -254,7 +254,7 @@ Usare le istruzioni in [Come distribuire i client nei computer Windows](../clien
 - **SMSMP**: nome del punto di gestione di ricerca. Può trattarsi della rete Intranet.
 - **SMSSiteCode**: codice del sito del sito di Configuration Manager.
 - **AADTENANTID**, **AADTENANTNAME**: nome e ID del tenant di Azure AD collegato a Configuration Manager. È possibile trovarlo eseguendo dsregcmd.exe /status da un prompt dei comandi su dispositivo aggiunto ad Azure AD.
-- **AADCLIENTAPPID**: ID app client di Azure AD. Per informazioni su come trovarlo, vedere [Usare il portale per creare un'applicazione Azure Active Directory e un'entità servizio che possano accedere alle risorse](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
+- **AADCLIENTAPPID**: ID app client di Azure AD. Per informazioni su come trovarlo, vedere [Usare il portale per creare un'applicazione Azure Active Directory e un'entità servizio che possano accedere alle risorse](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
 - **AADResourceUri**: URI di identificazione dell'app server di Azure AD caricata.
 
 ## <a name="use-azure-services-wizard-to-configure-a-connection-to-oms"></a>Usare la Procedura guidata Servizi di Azure per configurare una connessione a OMS
@@ -265,7 +265,7 @@ A partire dalla versione Technical Preview 1705, la **Procedura guidata Servizi 
 -   Configuration Manager si connette a OMS per funzionalità quali Log Analytics o Preparazione aggiornamenti.
 
 ### <a name="prerequisites-for-the-oms-connector"></a>Prerequisiti per il connettore OMS
-I prerequisiti per configurare una connessione a OMS sono identici a quelli [indicati per la versione Current Branch 1702](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm). Tali informazioni viene ripetute di seguito:  
+I prerequisiti per configurare una connessione a OMS sono identici a quelli [indicati per la versione Current Branch 1702](/azure/azure-monitor/platform/collect-sccm). Tali informazioni viene ripetute di seguito:  
 
 -   Fornire l'autorizzazione di Configuration Manager a OMS.
 

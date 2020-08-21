@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 337b494bdce24463c19dd22ae975af5e99d6d895
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 59d343d09f827edec5db0dd5302c75c00a0c8455
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905840"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694509"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Funzionalità della versione Technical Preview 1511 per Configuration Manager
 
@@ -34,7 +34,7 @@ Per i computer connessi tramite WUfB, Configuration Manager non potrà segnalare
 
 -   Windows 10 Desktop Pro o Windows 10 Enterprise Edition versione 1511 o successive  
 
--   Computer da gestire tramite [Windows Update for Business](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb).  
+-   Computer da gestire tramite [Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb).  
 
 ### <a name="try-it-out"></a>Verifica  
  Prova a completare l'attività seguente e quindi usa le informazioni relative a commenti e suggerimenti nella parte superiore di questo argomento per comunicare i risultati:  
@@ -67,7 +67,7 @@ Quando Microsoft pubblica un nuovo aggiornamento dei client per desktop di Offic
 
 4. È possibile verificare la conformità degli aggiornamenti di Office 365 usando il monitoraggio integrato nella console o i report.  
 
-   Per istruzioni dettagliate, vedere [Gestire gli aggiornamenti del client di Office 365 con Configuration Manager Technical Preview](https://docs.microsoft.com/deployoffice/manage-microsoft-365-apps-updates-configuration-manager).  
+   Per istruzioni dettagliate, vedere [Gestire gli aggiornamenti del client di Office 365 con Configuration Manager Technical Preview](/deployoffice/manage-microsoft-365-apps-updates-configuration-manager).  
 
 ##  <a name="support-for-sql-server-alwayson-for-highly-available-databases"></a><a name="BKMK_AlwasyOn"></a> Supporto per SQL Server AlwaysOn per database a disponibilità elevata  
  Configuration Manager ora supporta l'utilizzo di un gruppo di disponibilità SQL Server AlwaysOn per ospitare il database del sito.  Quando si installa un nuovo sito, è possibile indirizzare il programma di installazione all'uso del gruppo di disponibilità anziché una normale istanza di SQL Server.  
@@ -110,7 +110,7 @@ Prova a completare le attività seguenti, quindi usa le informazioni relative a 
  Usare le procedure seguenti per creare e configurare prima di tutto il gruppo di disponibilità e quindi installare un nuovo sito di Configuration Manager che utilizza il gruppo di disponibilità.  
 
 #### <a name="to-create-a-sql-server-alwayson-availability-group"></a>Per creare un gruppo di disponibilità SQL Server AlwaysOn  
-Il processo per [creare un gruppo di disponibilità di SQL Server](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-ver15) è documentato nella raccolta di documentazione di SQL Server.  Quando si crea il gruppo di disponibilità, verificare che siano soddisfatti i requisiti seguenti per l'uso con Configuration Manager:  
+Il processo per [creare un gruppo di disponibilità di SQL Server](/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-ver15) è documentato nella raccolta di documentazione di SQL Server.  Quando si crea il gruppo di disponibilità, verificare che siano soddisfatti i requisiti seguenti per l'uso con Configuration Manager:  
 
 -   Un massimo di tre membri:  
 
@@ -202,4 +202,4 @@ Prova a completare l'attività seguente e quindi usa le informazioni relative a 
 
 1.  [Distribuire gli aggiornamenti software](../../sum/deploy-use/deploy-software-updates.md) nella raccolta del cluster di server.  
 
-2.  [Monitorare la distribuzione degli aggiornamenti software](../../sum/deploy-use/monitor-software-updates.md).  
+2.  [Monitorare la distribuzione degli aggiornamenti software](../../sum/deploy-use/monitor-software-updates.md).

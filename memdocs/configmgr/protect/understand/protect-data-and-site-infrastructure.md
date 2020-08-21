@@ -10,12 +10,12 @@ ms.assetid: 2117f786-d521-4790-9e8d-ec096c63c9d7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 381f9d190b1d73bbbab6142fd9587e881d0870ce
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2a73fff7fd2eb5d630d6047a7da6f131188f06c5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708599"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693489"
 ---
 # <a name="protect-data-and-site-infrastructure"></a>Proteggere dati e infrastruttura e del sito
 
@@ -33,7 +33,7 @@ Si vuole che gli utenti accedano in modo sicuro alle risorse dell'organizzazione
   - Controllo di applicazioni di Microsoft Defender
 
   > [!TIP]
-  > Per gestire Endpoint Protection in dispositivi Windows 10 con co-gestione usando il servizio cloud di Microsoft Endpoint Manager, spostare il [carico di lavoro **Endpoint Protection**](../../comanage/workloads.md#endpoint-protection) in Intune. Per altre informazioni, vedere [Endpoint Protection per Microsoft Intune](https://docs.microsoft.com/intune/endpoint-protection-windows-10).
+  > Per gestire Endpoint Protection in dispositivi Windows 10 con co-gestione usando il servizio cloud di Microsoft Endpoint Manager, spostare il [carico di lavoro **Endpoint Protection**](../../comanage/workloads.md#endpoint-protection) in Intune. Per altre informazioni, vedere [Endpoint Protection per Microsoft Intune](/intune/endpoint-protection-windows-10).
 
 - Proteggere i dati archiviati nei client Windows locali con Crittografia unità BitLocker (BDE). Configuration Manager offre una gestione completa del ciclo di vita di BitLocker che sostituisce l'uso di Microsoft BitLocker Administration and Monitoring (MBAM). Per altre informazioni, vedere [Pianificare la gestione di BitLocker](../plan-design/bitlocker-management.md).
 
@@ -43,4 +43,4 @@ Si vuole che gli utenti accedano in modo sicuro alle risorse dell'organizzazione
 
 - I profili Wi-Fi forniscono un set di strumenti e risorse che consentono di gestire le impostazioni di rete wireless nei dispositivi dell'organizzazione. Distribuendo queste impostazioni, è possibile ridurre al minimo l'impegno richiesto agli utenti finali per connettersi alle reti wireless. Per altre informazioni, vedere [Profili Wi-Fi](../deploy-use/create-wifi-profiles.md).  
 
-- Eseguire il provisioning dei dispositivi con i certificati necessari agli utenti per connettersi alle risorse. Per altre informazioni, vedere i [profili certificato](../deploy-use/introduction-to-certificate-profiles.md).  
+- Eseguire il provisioning dei dispositivi con i certificati necessari agli utenti per connettersi alle risorse. Per altre informazioni, vedere i [profili certificato](../deploy-use/introduction-to-certificate-profiles.md).

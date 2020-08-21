@@ -10,12 +10,12 @@ ms.assetid: 9875c443-19bf-43a0-9203-3a741f305096
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 23cc7d0c642637a310f53280bafed6a2a28d2834
-ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
+ms.openlocfilehash: ea1965d6cae90808156957be1c9634e4c1631aa8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83406680"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694526"
 ---
 # <a name="create-a-configuration-manager-lab-in-azure"></a>Creare un lab di Configuration Manager in Azure
 
@@ -66,7 +66,7 @@ Questo processo richiede una sottoscrizione di Azure in cui è possibile creare 
 
         - **Nome utente amministratore**: Nome di un utente nelle macchine virtuali con diritti amministrativi. Questo utente viene usato per accedere alle macchine virtuali.  
 
-        - **Password amministratore**: La password deve soddisfare i requisiti di complessità di Azure. Per altre informazioni, vedere [adminPassword](https://docs.microsoft.com/rest/api/compute/virtualmachines/createorupdate#osprofile).  
+        - **Password amministratore**: La password deve soddisfare i requisiti di complessità di Azure. Per altre informazioni, vedere [adminPassword](/rest/api/compute/virtualmachines/createorupdate#osprofile).  
 
     > [!Important]  
     > Azure richiede le impostazioni seguenti. Usare i valori predefiniti. Non modificarli.  
@@ -86,7 +86,7 @@ Azure convalida le impostazioni e inizia la distribuzione. Controllare lo stato 
 
 Per visualizzare lo stato degli script di configurazione, collegarsi al server `<prefix>PS1` e visualizzare il file`%windir%\TEMP\ProvisionScript\PS1.json` seguente. Se tutti i passaggi sono stati completati, il processo è terminato.
 
-Per connettersi alle macchine virtuali, ottenere prima gli indirizzi IP pubblici per ogni macchina virtuale dal portale di Azure. Quando ci si connette alla macchina virtuale, il nome di dominio è `contoso.com`. Usare le credenziali specificate nel modello di distribuzione. Per altre informazioni, vedere [Come connettersi e accedere a una macchina virtuale di Azure che esegue Windows](https://docs.microsoft.com/azure/virtual-machines/windows/connect-logon).
+Per connettersi alle macchine virtuali, ottenere prima gli indirizzi IP pubblici per ogni macchina virtuale dal portale di Azure. Quando ci si connette alla macchina virtuale, il nome di dominio è `contoso.com`. Usare le credenziali specificate nel modello di distribuzione. Per altre informazioni, vedere [Come connettersi e accedere a una macchina virtuale di Azure che esegue Windows](/azure/virtual-machines/windows/connect-logon).
 
 
 

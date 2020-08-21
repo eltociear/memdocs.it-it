@@ -10,12 +10,12 @@ ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 35379aed71544a25a98ec4dfa421be70c1bae851
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 4a1e19025af82c9beeed8c227871df94b4674791
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83427691"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692707"
 ---
 # <a name="install-a-cloud-distribution-point-for-configuration-manager"></a>Installare un punto di distribuzione cloud per Configuration Manager
 
@@ -91,7 +91,7 @@ Per consentire l'uso di Windows BranchCache a un punto di distribuzione cloud, i
 
 - Se il server del sito ha il ruolo del sistema del sito di punto di distribuzione locale, configurare l'opzione nelle proprietà del ruolo per **abilitare e configurare BranchCache**. Per altre informazioni, vedere [Configurare un punto di distribuzione](install-and-configure-distribution-points.md#bkmk_config-general).
 
-- Se il server del sito non ha il ruolo di punto di distribuzione, installare la funzionalità BranchCache in Windows. Per altre informazioni, vedere [Installare la funzionalità BranchCache](https://docs.microsoft.com/windows-server/networking/branchcache/deploy/install-the-branchcache-feature).
+- Se il server del sito non ha il ruolo di punto di distribuzione, installare la funzionalità BranchCache in Windows. Per altre informazioni, vedere [Installare la funzionalità BranchCache](/windows-server/networking/branchcache/deploy/install-the-branchcache-feature).
 
 Se è già stato distribuito contenuto a un punto di distribuzione cloud e quindi si decide di abilitare BranchCache, installare prima di tutto la funzionalità. Ridistribuire quindi il contenuto nel punto di distribuzione cloud.
 
@@ -234,7 +234,7 @@ Configurare le soglie per la quantità di dati da archiviare nel punto di distri
 Specificare le soglie per ogni punto di distribuzione cloud durante l'installazione oppure usare la scheda **Avvisi** delle proprietà del punto di distribuzione cloud.  
 
 > [!NOTE]  
-> Gli avvisi per un punto di distribuzione cloud dipendono dalle statistiche di utilizzo di Azure, che possono richiedere fino a 24 ore per diventare disponibili. Per altre informazioni su Analisi archiviazione per Azure, vedere [Storage Analytics](https://docs.microsoft.com/rest/api/storageservices/storage-analytics) (Analisi archiviazione).  
+> Gli avvisi per un punto di distribuzione cloud dipendono dalle statistiche di utilizzo di Azure, che possono richiedere fino a 24 ore per diventare disponibili. Per altre informazioni su Analisi archiviazione per Azure, vedere [Storage Analytics](/rest/api/storageservices/storage-analytics) (Analisi archiviazione).  
 
 In un ciclo orario il sito primario che monitora il punto di distribuzione cloud scarica i dati delle transazioni da Azure e li archivia nel file `CloudDP-<ServiceName>.log` nel server del sito. Configuration Manager valuta quindi queste informazioni in rapporto alle quote di trasferimento e archiviazione per ogni punto di distribuzione cloud. Quando il trasferimento dei dati raggiunge o supera il volume specificato per gli avvisi o gli avvisi critici, Configuration Manager genera l'avviso appropriato.  
 
@@ -345,7 +345,7 @@ Select-AzureSubscription $azureSubscriptionName
 Set-AzureServiceDiagnosticsExtension -StorageAccountName $storage_name -StorageAccountKey $key -DiagnosticsConfigurationPath $public_config –ServiceName $service_name -Slot 'Production' -Verbose
 ```
 
-L'esempio seguente è un file **diagnostics.wadcfgx** di esempio cui viene fatto riferimento nella variabile **public_config** nello script di PowerShell precedente. Per altre informazioni, vedere [Versioni e cronologia degli schemi di configurazione dell'estensione di Diagnostica di Azure](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics-schema).  
+L'esempio seguente è un file **diagnostics.wadcfgx** di esempio cui viene fatto riferimento nella variabile **public_config** nello script di PowerShell precedente. Per altre informazioni, vedere [Versioni e cronologia degli schemi di configurazione dell'estensione di Diagnostica di Azure](/azure/monitoring-and-diagnostics/azure-diagnostics-schema).  
 
 ``` XML
 <?xml version="1.0" encoding="utf-8"?>

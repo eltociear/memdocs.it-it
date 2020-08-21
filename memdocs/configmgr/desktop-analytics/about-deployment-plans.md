@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: acaa7c8a906edd78f0c54c5735c97c55434d848b
-ms.sourcegitcommit: 7ee69b207261ffc282e535f793a536540d160557
+ms.openlocfilehash: 0e9f1551f75c1cb8499c5eab846588ee6ddc1d80
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87400716"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693387"
 ---
 # <a name="about-deployment-plans-in-desktop-analytics"></a>Informazioni sui pani di distribuzione in Desktop Analytics
 
@@ -70,7 +70,7 @@ Vedere la **Decisione relativa all'aggiornamento di Windows** per ogni dispositi
 
 La decisione di aggiornamento di Windows di **sostituire il dispositivo** può essere presa per uno dei motivi seguenti:
 
-- Il controllo del processore richiesto di Windows 10 non è riuscito. Per altre informazioni, vedere [Requisiti hardware minimi](https://docs.microsoft.com/windows-hardware/design/minimum/minimum-hardware-requirements-overview#31-processor).
+- Il controllo del processore richiesto di Windows 10 non è riuscito. Per altre informazioni, vedere [Requisiti hardware minimi](/windows-hardware/design/minimum/minimum-hardware-requirements-overview#31-processor).
 - È presente un blocco BIOS
 - La memoria non è sufficiente
 - Un componente critico di avvio nel sistema ha un driver bloccato
@@ -132,4 +132,4 @@ Dopo aver creato un piano di distribuzione, usare Configuration Manager per dist
 
 - [Informazioni sugli aggiornamenti della sicurezza e delle funzionalità](about-updates.md)  
 
-- [Creare un piano di distribuzione](create-deployment-plans.md)  
+- [Creare un piano di distribuzione](create-deployment-plans.md)

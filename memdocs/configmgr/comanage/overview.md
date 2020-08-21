@@ -10,12 +10,12 @@ ms.topic: overview
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: a7f38f48946244deb6026d040c44159d0384f7b1
-ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
+ms.openlocfilehash: f9e1809447f8d8ea8f6e0382575b71bfdec71fac
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85854440"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695053"
 ---
 # <a name="what-is-co-management"></a>Informazioni sulla co-gestione
 
@@ -102,15 +102,15 @@ Per abilitare la co-gestione, non è richiesto l'onboarding del sito in Azure AD
 
 - I dispositivi Windows 10 devono essere connessi ad Azure AD. Possono essere di uno dei due tipi seguenti:  
 
-  - [Aggiunto ad Azure AD ibrido](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid), il dispositivo è aggiunto ad Active Directory locale e registrato in Azure Active Directory.
+  - [Aggiunto ad Azure AD ibrido](/azure/active-directory/devices/concept-azure-ad-join-hybrid), il dispositivo è aggiunto ad Active Directory locale e registrato in Azure Active Directory.
 
-  - [Aggiunto solo ad Azure AD](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan). Questo tipo è anche noto come "aggiunto a un dominio cloud".<!--SCCMDocs issue 605-->  
+  - [Aggiunto solo ad Azure AD](/azure/active-directory/devices/azureadjoin-plan). Questo tipo è anche noto come "aggiunto a un dominio cloud".<!--SCCMDocs issue 605-->  
 
 ### <a name="intune"></a>Intune
 
-- [Configurare Intune](https://docs.microsoft.com/intune/setup-steps)  
+- [Configurare Intune](/intune/setup-steps)  
 
-- [Abilitare la registrazione automatica di Windows 10](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment)  
+- [Abilitare la registrazione automatica di Windows 10](/intune/windows-enroll#enable-windows-10-automatic-enrollment)  
 
 ### <a name="windows-10"></a>Windows 10
 
@@ -129,7 +129,7 @@ Aggiornare i dispositivi a Windows 10, versione 1709 o successive. Per altre inf
 | Importare le app di Azure in Configuration Manager | **Amministratore completo** di Configuration Manager<br>Non sono necessari altri ruoli di Azure |
 | Abilitare la co-gestione in Configuration Manager | Un utente di Azure AD<br>**Amministratore completo** di Configuration Manager con diritti appartenenti all'ambito **Tutti**.<!--SCCMDoc issue 626--> |
 
-Per altre informazioni sui ruoli di Azure, vedere [Informazioni sui diversi ruoli](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles).
+Per altre informazioni sui ruoli di Azure, vedere [Informazioni sui diversi ruoli](/azure/role-based-access-control/rbac-and-directory-admin-roles).
 
 Per altre informazioni sui ruoli di Configuration Manager, vedere [Nozioni fondamentali di amministrazione basata su ruoli](../core/understand/fundamentals-of-role-based-administration.md).
 
@@ -167,4 +167,4 @@ Per altre informazioni, vedere [Come monitorare la co-gestione](how-to-monitor.m
 
 - [Altre informazioni sul valore immediato e guida introduttiva alla co-gestione](quickstarts.md)  
 
-- [Esercitazione: Abilitare la co-gestione per i client di Configuration Manager esistenti](tutorial-co-manage-clients.md)  
+- [Esercitazione: Abilitare la co-gestione per i client di Configuration Manager esistenti](tutorial-co-manage-clients.md)

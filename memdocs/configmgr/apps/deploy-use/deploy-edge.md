@@ -10,18 +10,18 @@ ms.assetid: 73b420be-5d6a-483a-be66-c4d274437508
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 423864c2c954cc67da4ef54d55d7263ae346e786
-ms.sourcegitcommit: 24ce7df7dadf2385afe364b817ec58feeb04c700
+ms.openlocfilehash: cc10f262e4639ffdd8513bece662116f5ed39516
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86212295"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695374"
 ---
 # <a name="microsoft-edge-management"></a>Gestione di Microsoft Edge
 
 *Si applica a: Configuration Manager (Current Branch)*
 
-Il nuovo Microsoft Edge è disponibile per le aziende. A partire da Configuration Manager versione 1910, è ora possibile distribuire [Microsoft Edge versione 77 e successive](https://docs.microsoft.com/deployedge/) agli utenti. Per installare la compilazione Edge selezionata, viene usato uno script di PowerShell. Lo script disattiva anche gli aggiornamenti automatici per Edge in modo che possano essere gestiti con Configuration Manager.
+Il nuovo Microsoft Edge è disponibile per le aziende. A partire da Configuration Manager versione 1910, è ora possibile distribuire [Microsoft Edge versione 77 e successive](/deployedge/) agli utenti. Per installare la compilazione Edge selezionata, viene usato uno script di PowerShell. Lo script disattiva anche gli aggiornamenti automatici per Edge in modo che possano essere gestiti con Configuration Manager.
 
 ## <a name="deploy-microsoft-edge"></a><a name="bkmk_Microsoft_Edge"></a>Distribuire Microsoft Edge
 <!--4561024-->
@@ -31,7 +31,7 @@ Gli amministratori possono scegliere tra il canale Beta, Dev e stabile, insieme 
 
 Per i client in cui verrà distribuito Microsoft Edge:
 
-- I [criteri di esecuzione](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies) di PowerShell non possono essere impostati su Con restrizioni.
+- I [criteri di esecuzione](/powershell/module/microsoft.powershell.core/about/about_execution_policies) di PowerShell non possono essere impostati su Con restrizioni.
   - PowerShell viene eseguito per eseguire l'installazione.
 
 - Il programma di installazione di Microsoft Edge e [CMPivot](../../core/servers/manage/cmpivot.md) sono firmati con il certificato di **firma del codice Microsoft**. Se il certificato non è elencato nell'archivio **Autori attendibili**, sarà necessario aggiungerlo. In caso contrario, il programma di installazione di Microsoft Edge e CMPivot non verranno eseguiti quando i criteri di esecuzione di PowerShell sono impostati su **AllSigned**. <!--7585106-->
@@ -47,7 +47,7 @@ Il dispositivo che esegue la console di Configuration Manager richiede l'accesso
 
 #### <a name="configuration-manager-version-1910"></a>Configuration Manager versione 1910
 
-Nella versione 1910, quando viene distribuito Microsoft Edge, lo script di installazione disattiva gli aggiornamenti automatici per Microsoft Edge in modo che possano essere gestiti con Configuration Manager. È possibile modificare questo comportamento ricorrendo a Criteri di gruppo. Per altre informazioni, vedere [Pianificare la distribuzione di Microsoft Edge](https://docs.microsoft.com/deployedge/deploy-edge-plan-deployment#define-and-configure-policies) e [Criteri di aggiornamento di Microsoft Edge](https://docs.microsoft.com/DeployEdge/microsoft-edge-update-policies).
+Nella versione 1910, quando viene distribuito Microsoft Edge, lo script di installazione disattiva gli aggiornamenti automatici per Microsoft Edge in modo che possano essere gestiti con Configuration Manager. È possibile modificare questo comportamento ricorrendo a Criteri di gruppo. Per altre informazioni, vedere [Pianificare la distribuzione di Microsoft Edge](/deployedge/deploy-edge-plan-deployment#define-and-configure-policies) e [Criteri di aggiornamento di Microsoft Edge](/DeployEdge/microsoft-edge-update-policies).
 
 #### <a name="configuration-manager-version-2002-and-later"></a>Configuration Manager versione 2002 e successive
 <!--4561024-->

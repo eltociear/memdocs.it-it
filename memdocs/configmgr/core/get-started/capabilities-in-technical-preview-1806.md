@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 4708c0d8e9a7d2a3b87310b64311d67d8b84a16a
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 44fcea129b6f45c292bcdd6b83004131ce2d4e96
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126791"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694424"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Funzionalità della versione Technical Preview 1806 per Configuration Manager
 
@@ -81,10 +81,10 @@ SCUP continua a supportare altri cataloghi e scenari. L'elenco dei cataloghi nel
 
     > [!Tip]  
     > Il punto di aggiornamento software richiede HTTPS perché è un requisito per le API WSUS usate per gestire i certificati di firma. Non è necessario che anche i client siano abilitati per HTTPS. Per altre informazioni sull'abilitazione di HTTPS in WSUS, vedere gli articoli seguenti per ulteriore assistenza:  
-    > - [Secure WSUS with the Secure Sockets Layer Protocol](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) (Proteggere WSUS con il protocollo Secure Sockets Layer) 
-    > - [Post di blog sul supporto di WSUS](https://docs.microsoft.com/archive/blogs/sus/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names)
+    > - [Secure WSUS with the Secure Sockets Layer Protocol](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) (Proteggere WSUS con il protocollo Secure Sockets Layer) 
+    > - [Post di blog sul supporto di WSUS](/archive/blogs/sus/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names)
 
-- Spazio su disco sufficiente nel punto di aggiornamento software, cartella WSUSContent, per archiviare il contenuto binario di origine per gli aggiornamenti software di terze parti. La quantità di memoria richiesta varia in base al fornitore, ai tipi di aggiornamenti e agli aggiornamenti specifici pubblicati per la distribuzione. Se è necessario spostare la cartella WSUSContent in un'altra unità con maggiore spazio disponibile, vedere il post di blog del team di supporto tecnico di WSUS relativo alla [modifica del percorso in cui WSUS archivia aggiornamenti in locale](https://docs.microsoft.com/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally).  
+- Spazio su disco sufficiente nel punto di aggiornamento software, cartella WSUSContent, per archiviare il contenuto binario di origine per gli aggiornamenti software di terze parti. La quantità di memoria richiesta varia in base al fornitore, ai tipi di aggiornamenti e agli aggiornamenti specifici pubblicati per la distribuzione. Se è necessario spostare la cartella WSUSContent in un'altra unità con maggiore spazio disponibile, vedere il post di blog del team di supporto tecnico di WSUS relativo alla [modifica del percorso in cui WSUS archivia aggiornamenti in locale](/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally).  
 
 - Abilitare e distribuire l'impostazione client [Abilita gli aggiornamenti software di terze parti](../clients/deploy/about-client-settings.md#enable-third-party-software-updates) nel gruppo **Aggiornamenti software**.  
 
@@ -354,4 +354,4 @@ In [Configuration Manager versione 1710](../plan-design/changes/whats-new-in-ver
 
 
 ## <a name="next-steps"></a>Passaggi successivi
-Per informazioni sull'installazione o l'aggiornamento del ramo Technical Preview, vedere [Technical Preview per Configuration Manager](technical-preview.md).    
+Per informazioni sull'installazione o l'aggiornamento del ramo Technical Preview, vedere [Technical Preview per Configuration Manager](technical-preview.md).

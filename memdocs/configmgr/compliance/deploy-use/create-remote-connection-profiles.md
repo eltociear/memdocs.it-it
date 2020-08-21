@@ -10,12 +10,12 @@ ms.assetid: 8c6eabc4-5dda-4682-b03e-3a450e6ef65a
 author: mestew
 manager: dougeby
 ms.author: mstewart
-ms.openlocfilehash: f9f4e1ffe8b28efda0f59e6a252f39c95e2b7749
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 1434d7802eb1ed68cb0a575778bdae1e5e99c9ec
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240117"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694747"
 ---
 # <a name="remote-connection-profiles-in-configuration-manager"></a>Profili di connessione remota in Configuration Manager
 
@@ -35,7 +35,7 @@ Configuration Manager crea un gruppo di sicurezza nei client per la **connession
 
 ### <a name="external-dependencies"></a>Dipendenze esterne  
 
-- Se si vuole consentire agli utenti di connettersi da Internet, installare e configurare un server Gateway Desktop remoto. Per altre informazioni su come installare e configurare un server Gateway Desktop remoto, vedere [Servizi Desktop remoto - Accedere da qualsiasi luogo](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/rds-plan-access-from-anywhere).
+- Se si vuole consentire agli utenti di connettersi da Internet, installare e configurare un server Gateway Desktop remoto. Per altre informazioni su come installare e configurare un server Gateway Desktop remoto, vedere [Servizi Desktop remoto - Accedere da qualsiasi luogo](/windows-server/remote/remote-desktop-services/rds-plan-access-from-anywhere).
 
 - Se i client eseguono un firewall basato su host, questo deve consentire il programma mstsc.exe. Quando si configura un profilo di connessione remota, abilitare l'impostazione **Consenti eccezione Windows Firewall per connessioni in domini Windows e in reti private**. Questa impostazione consente a Configuration Manager di configurare automaticamente Windows Firewall.
 
@@ -83,7 +83,7 @@ Quando un utente si connette in remoto a un computer aziendale, scarica un file 
         - Ad eccezione dei punti (`.`) tra i segmenti e i due punti (`:`) prima della porta, gli unici caratteri speciali consentiti sono il trattino (`–`) e il carattere di sottolineatura (`_`).
         - Configuration Manager non supporta l'utilizzo di un IDN (Internationalized Domain Name) per questo valore.
 
-    - **Consenti connessioni solo da computer che eseguono Desktop remoto con Autenticazione a livello di rete**: abilitata per impostazione predefinita, questa impostazione aggiunge un livello aggiuntivo di sicurezza per la connessione. Per altre informazioni, vedere [Consentire l'accesso a Desktop remoto](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/clients/remote-desktop-allow-access#why-allow-connections-only-with-network-level-authentication).
+    - **Consenti connessioni solo da computer che eseguono Desktop remoto con Autenticazione a livello di rete**: abilitata per impostazione predefinita, questa impostazione aggiunge un livello aggiuntivo di sicurezza per la connessione. Per altre informazioni, vedere [Consentire l'accesso a Desktop remoto](/windows-server/remote/remote-desktop-services/clients/remote-desktop-allow-access#why-allow-connections-only-with-network-level-authentication).
 
     - Abilitare le impostazioni di connessione seguenti:
 
@@ -162,4 +162,4 @@ Configuration Manager include report predefiniti che è possibile usare per moni
 > [!IMPORTANT]  
 > Quando si usano i parametri **Filtro dispositivo** e **Filtro utente** nei report per le impostazioni di conformità, usare il carattere jolly `%`.  
 
-Per altre informazioni sulle modalità di configurazione della creazione di report in Configuration Manager, vedere [Introduzione ai report](../../core/servers/manage/introduction-to-reporting.md).  
+Per altre informazioni sulle modalità di configurazione della creazione di report in Configuration Manager, vedere [Introduzione ai report](../../core/servers/manage/introduction-to-reporting.md).

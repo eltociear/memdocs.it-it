@@ -302,8 +302,6 @@
           href: compliance-policy-create-windows.md
         - name: Impostazioni dei criteri di conformità - Windows 8.1
           href: compliance-policy-create-windows-8-1.md
-        - name: Impostazioni dei criteri di conformità - Windows Phone 8.1
-          href: compliance-policy-create-windows-8-1.md
     - name: Impostazioni dei criteri di sicurezza degli endpoint
       items:
         - name: Impostazioni dei criteri antivirus

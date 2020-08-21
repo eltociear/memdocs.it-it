@@ -10,12 +10,12 @@ ms.assetid: d17e1188-d277-438f-9236-db9cd213b421
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: af90154b848ddcd7cbff21917ef122ab10585098
-ms.sourcegitcommit: 1d8bf691780b94a945e94945115d4d1df4242808
+ms.openlocfilehash: 15b58b841ca87cf2b5e04c98dfd35c487c941e78
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84663861"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693319"
 ---
 # <a name="collection-evaluation-in-configuration-manager"></a>Valutazione raccolta in Configuration Manager
 
@@ -27,7 +27,7 @@ Configuration Manager usa la *valutazione raccolta* per aggiornare l'appartenenz
 
 ## <a name="evaluation-process"></a>Processo di valutazione
 
-Il file [colleval.log](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files#BKMK_ServerLogs) registra quando l'analizzatore di raccolte crea, modifica ed elimina le raccolte.
+Il file [colleval.log](../../../plan-design/hierarchy/log-files.md#BKMK_ServerLogs) registra quando l'analizzatore di raccolte crea, modifica ed elimina le raccolte.
 
 A un livello elevato, ogni singola valutazione raccolta e ogni aggiornamento seguono questi passaggi:
 
@@ -105,5 +105,5 @@ Nell'esempio seguente l'installazione di DNS nel server esistente fa diventare i
 ## <a name="next-steps"></a>Passaggi successivi
 - [Come creare le raccolte](create-collections.md)
 - [Procedure consigliate per le raccolte](best-practices-for-collections.md)
-- [Collection Evaluation Viewer](https://docs.microsoft.com/mem/configmgr/core/support/ceviewer)
+- [Collection Evaluation Viewer](../../../support/ceviewer.md)
 - Sessione [ConfigMgrDogs Troubleshoot ConfigMgr 2012](https://channel9.msdn.com/Events/TechEd/Australia/2014/DCI411) su TechEd Australia

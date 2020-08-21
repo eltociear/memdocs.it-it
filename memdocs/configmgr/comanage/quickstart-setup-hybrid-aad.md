@@ -10,12 +10,12 @@ ms.assetid: 27dd26d1-e99c-4431-b2f8-60406394b6db
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8e2f7bbb51c72fa3d0f2a36e8a5419552d468b4c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 405303b3988e8c853ba30e8fb6d620d782b0474e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691219"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694900"
 ---
 # <a name="set-up-hybrid-azure-ad-for-co-management"></a>Configurare Azure AD ibrido per la co-gestione
 
@@ -26,8 +26,8 @@ Nel video seguente il Senior Program Manager Sandeep Deo e il Product Marketing 
 > [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/Configuring-Devices-in-Azure-Active-Directory/player]
 
 Il processo di aggiunta ad Azure AD ibrido registra automaticamente i dispositivi aggiunti a un dominio locale in Azure AD. Per altre informazioni su questo processo, vedere gli articoli seguenti:
-- [Informazioni sulla gestione dei dispositivi in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-introduction) 
-- [Come pianificare l'aggiunta ad Azure AD ibrido](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)
+- [Informazioni sulla gestione dei dispositivi in Azure Active Directory](/azure/active-directory/device-management-introduction) 
+- [Come pianificare l'aggiunta ad Azure AD ibrido](/azure/active-directory/devices/hybrid-azuread-join-plan)
 
 L'aggiunta ad Azure AD ibrido è uno dei pilastri per la co-gestione. Questo processo può essere complesso per alcuni clienti, ad esempio:
 - L'organizzazione usa una soluzione di gestione delle identità di terze parti 
@@ -41,14 +41,14 @@ Per risolvere questi problemi possono essere utili alcune indicazioni. Questo ar
 I dispositivi sono simili agli utenti quando si tratta di creare un'identità che si vuole proteggere. Per proteggere l'identità di un dispositivo in qualsiasi momento e in qualsiasi posizione, è necessario aggiungere l'identità del dispositivo in Azure AD.
 
 In base al tipo di dominio in uso, esistono due modi principali per eseguire questa operazione. Configurare l'aggiunta ad Azure AD ibrido per uno dei seguenti tipi di dominio:  
-- [Domini federati](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-federated-domains)  
-- [Domini gestiti](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains)  
+- [Domini federati](/azure/active-directory/devices/hybrid-azuread-join-federated-domains)  
+- [Domini gestiti](/azure/active-directory/devices/hybrid-azuread-join-managed-domains)  
 
 I due metodi precedenti offrono un'esperienza ottimale. Per informazioni più dettagliate, inclusa una descrizione completa della procedura manuale, vedere gli articoli seguenti:
-- [Configurare manualmente i dispositivi aggiunti ad Azure AD ibrido](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)  
-- [Autenticazione pass-through di AD FS per Azure AD ibrido](https://docs.microsoft.com/windows-server/identity/ad-fs/ad-fs-overview), che include l'individuazione di Azure AD  
+- [Configurare manualmente i dispositivi aggiunti ad Azure AD ibrido](/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)  
+- [Autenticazione pass-through di AD FS per Azure AD ibrido](/windows-server/identity/ad-fs/ad-fs-overview), che include l'individuazione di Azure AD  
 
-Per indicazioni sulla risoluzione dei problemi, vedere la [guida alla risoluzione dei problemi per l'aggiunta ad Azure AD ibrido in Windows 10](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current).
+Per indicazioni sulla risoluzione dei problemi, vedere la [guida alla risoluzione dei problemi per l'aggiunta ad Azure AD ibrido in Windows 10](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current).
 
 
 
@@ -66,5 +66,4 @@ Dopo il completamento della distribuzione e dei test nell'ambiente di pre-produz
 
 Se è necessaria assistenza per la configurazione di Azure AD in qualsiasi punto del processo, passare a [Microsoft FastTrack](https://Microsoft.com/FastTrack/), eseguire l'accesso e richiedere assistenza. 
 
-Per altre informazioni, vedere [Ottenere assistenza da FastTrack](quickstart-fasttrack.md). 
-
+Per altre informazioni, vedere [Ottenere assistenza da FastTrack](quickstart-fasttrack.md).

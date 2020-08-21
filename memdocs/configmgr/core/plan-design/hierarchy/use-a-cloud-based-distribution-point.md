@@ -10,12 +10,12 @@ ms.assetid: 3cd9c725-6b42-427d-9191-86e67f84e48c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 52c2b70d2b094d5a89d80aafa61f1db67a53816f
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: b488e0953648b42baa59dc347b0bc942bac291fe
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83987722"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692571"
 ---
 # <a name="use-a-cloud-distribution-point-in-configuration-manager"></a>Usare un punto di distribuzione cloud in Configuration Manager
 
@@ -89,7 +89,7 @@ La distribuzione e l'utilizzo del punto di distribuzione cloud includono i compo
 ### <a name="azure-resource-manager"></a>Azure Resource Manager
 
 <!--1322209-->
-A partire dalla versione 1806, è possibile creare un punto di distribuzione cloud usando una **distribuzione Azure Resource Manager**. [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) è una piattaforma moderna per la gestione di tutte le risorse di una soluzione come una singola entità detta [gruppo di risorse](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups). Quando si distribuisce un punto di distribuzione cloud con Azure Resource Manager, il sito usa Azure Active Directory (Azure AD) per autenticare e creare le risorse cloud necessarie. Questa distribuzione modernizzata non richiede il certificato di gestione classico di Azure.  
+A partire dalla versione 1806, è possibile creare un punto di distribuzione cloud usando una **distribuzione Azure Resource Manager**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) è una piattaforma moderna per la gestione di tutte le risorse di una soluzione come una singola entità detta [gruppo di risorse](/azure/azure-resource-manager/resource-group-overview#resource-groups). Quando si distribuisce un punto di distribuzione cloud con Azure Resource Manager, il sito usa Azure Active Directory (Azure AD) per autenticare e creare le risorse cloud necessarie. Questa distribuzione modernizzata non richiede il certificato di gestione classico di Azure.  
 
 > [!Note]  
 > Questa funzionalità non supporta i provider di servizi cloud di Azure. La distribuzione di punti di distribuzione cloud con Azure Resource Manager continua a usare il servizio cloud classico, non supportato dal provider di servizi cloud. Per altre informazioni, vedere [Available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services) (servizi di Azure disponibili in Azure CSP).  
@@ -244,9 +244,9 @@ Un punto di distribuzione cloud usa i componenti di Azure seguenti, che implican
 
 - I punti di distribuzione cloud usano gli archivi BLOB standard seguenti in base al modello di distribuzione:  
 
-    - Una distribuzione di Azure Resource Manager usa l'archiviazione di Azure con ridondanza locale. Questa modifica riduce il costo dell'account di archiviazione. La distribuzione classica non usava le funzionalità aggiuntive di archiviazione con ridondanza geografica. Per altre informazioni, vedere [Archiviazione con ridondanza locale](https://docs.microsoft.com/azure/storage/common/storage-redundancy-lrs).  
+    - Una distribuzione di Azure Resource Manager usa l'archiviazione di Azure con ridondanza locale. Questa modifica riduce il costo dell'account di archiviazione. La distribuzione classica non usava le funzionalità aggiuntive di archiviazione con ridondanza geografica. Per altre informazioni, vedere [Archiviazione con ridondanza locale](/azure/storage/common/storage-redundancy-lrs).  
 
-    - Una distribuzione classica con Configuration Manager versione 1810 o precedente usa l'archiviazione con ridondanza geografica di Azure. Per altre informazioni, vedere [Archiviazione con ridondanza geografica](https://docs.microsoft.com/azure/storage/common/storage-redundancy-grs).  
+    - Una distribuzione classica con Configuration Manager versione 1810 o precedente usa l'archiviazione con ridondanza geografica di Azure. Per altre informazioni, vedere [Archiviazione con ridondanza geografica](/azure/storage/common/storage-redundancy-grs).  
 
 #### <a name="other-costs"></a>Altri costi
 
@@ -375,11 +375,11 @@ Se l'organizzazione usa ExpressRoute, isolare la sottoscrizione di Azure per il 
 
 ### <a name="do-i-need-to-maintain-the-azure-virtual-machines"></a>È necessario gestire le macchine virtuali di Azure?
 
-Non è necessaria alcuna manutenzione. La progettazione del punto di distribuzione cloud usa Azure come PaaS (piattaforma come servizio). Tramite la sottoscrizione offerta dall'utente, Configuration Manager crea le macchine virtuali, le risorse di archiviazione e la rete necessari. Azure protegge e aggiorna le macchine virtuali. Queste macchine virtuali non fanno parte dell'ambiente locale, come accade con l'infrastruttura come servizio (IaaS). Il punto di distribuzione cloud è un PaaS che estende l'ambiente di Configuration Manager nel cloud. Per altre informazioni, vedere [Vantaggi di sicurezza di un modello di servizio cloud PaaS](https://docs.microsoft.com/azure/security/security-paas-deployments#security-advantages-of-a-paas-cloud-service-model).  
+Non è necessaria alcuna manutenzione. La progettazione del punto di distribuzione cloud usa Azure come PaaS (piattaforma come servizio). Tramite la sottoscrizione offerta dall'utente, Configuration Manager crea le macchine virtuali, le risorse di archiviazione e la rete necessari. Azure protegge e aggiorna le macchine virtuali. Queste macchine virtuali non fanno parte dell'ambiente locale, come accade con l'infrastruttura come servizio (IaaS). Il punto di distribuzione cloud è un PaaS che estende l'ambiente di Configuration Manager nel cloud. Per altre informazioni, vedere [Vantaggi di sicurezza di un modello di servizio cloud PaaS](/azure/security/security-paas-deployments#security-advantages-of-a-paas-cloud-service-model).  
 
 ### <a name="does-the-cloud-distribution-point-use-azure-cdn"></a>Il punto di distribuzione cloud usa la rete CDN di Azure?
 
-La rete per la distribuzione di contenuti (CDN) di Azure è una soluzione globale per distribuire rapidamente contenuto con larghezza di banda elevata memorizzandolo nella cache di nodi fisici posizionati strategicamente in tutto il mondo. Per ulteriori informazioni, vedere [Definizione di rete per la distribuzione di contenuti](https://docs.microsoft.com/azure/cdn/cdn-overview).
+La rete per la distribuzione di contenuti (CDN) di Azure è una soluzione globale per distribuire rapidamente contenuto con larghezza di banda elevata memorizzandolo nella cache di nodi fisici posizionati strategicamente in tutto il mondo. Per ulteriori informazioni, vedere [Definizione di rete per la distribuzione di contenuti](/azure/cdn/cdn-overview).
 
 Il punto di distribuzione cloud di Configuration Manager non supporta attualmente la rete CDN di Azure.
 

@@ -10,12 +10,12 @@ ms.assetid: f7ade768-2b2b-4aab-8ee1-73624d03a9c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cb95a05fd3d347b70dd5d53ce972bce0c23c18cc
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: be9db7d0ee68f22073a3537e53fc93bf8faff9e0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127884"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693523"
 ---
 # <a name="bitlocker-settings-reference"></a>Informazioni di riferimento sulle impostazioni di BitLocker
 
@@ -119,7 +119,7 @@ Se si abilita questa impostazione, l'utente deve proteggere unità del sistema o
 > [!NOTE]
 > Se l'unità è già crittografata e si disabilita questa impostazione, BitLocker esegue la decrittografia dell'unità.  
 
-Se si dispone di dispositivi privi di [TPM (Trusted Platform Module)](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-top-node), usare l'opzione **Consenti BitLocker senza TPM compatibile (password obbligatoria)** . Questa impostazione consente a BitLocker di crittografare l'unità del sistema operativo, anche se il dispositivo è privo di TPM. Se si consente questa opzione, Windows chiede all'utente di specificare una password di BitLocker.
+Se si dispone di dispositivi privi di [TPM (Trusted Platform Module)](/windows/security/information-protection/tpm/trusted-platform-module-top-node), usare l'opzione **Consenti BitLocker senza TPM compatibile (password obbligatoria)** . Questa impostazione consente a BitLocker di crittografare l'unità del sistema operativo, anche se il dispositivo è privo di TPM. Se si consente questa opzione, Windows chiede all'utente di specificare una password di BitLocker.
 
 Nei dispositivi con un TPM compatibile, all'avvio possono essere usati due tipi di metodi di autenticazione per fornire ulteriore protezione ai dati crittografati. Quando il computer viene avviato, è possibile usare solo il TPM per l'autenticazione oppure può anche essere necessario inserire un PIN. Configurare le seguenti impostazioni:
 

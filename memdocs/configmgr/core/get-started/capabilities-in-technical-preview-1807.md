@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: ace27e9035af6696e455382a32365be0e3824d65
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 8ead53c71e336001ac820a437fa67758c6375cbd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905207"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694373"
 ---
 # <a name="capabilities-in-configuration-manager-technical-preview-version-1807"></a>Funzionalità in Configuration Manager Technical Preview versione 1807 
 
@@ -73,7 +73,7 @@ Per visualizzare altri dettagli su un elemento disponibile, fare clic nell'hub. 
 
 L'area di lavoro **Community** include anche i nodi seguenti:
 
-- **Documentazione**: visualizza la [libreria della documentazione](https://docs.microsoft.com/sccm/) di Configuration Manager  
+- **Documentazione**: visualizza la [libreria della documentazione](/sccm/) di Configuration Manager  
 
 - **Commenti e suggerimenti**: visualizza il [sito UserVoice](https://configurationmanager.uservoice.com/) di Configuration Manager  
 
@@ -82,7 +82,7 @@ L'area di lavoro **Community** include anche i nodi seguenti:
 
 - Usare la console di Configuration Manager in un sistema operativo client.  
 
-    - In alternativa, ma non consigliato: in un sistema operativo server disabilitare [ Protezione avanzata di Internet Explorer](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10)).
+    - In alternativa, ma non consigliato: in un sistema operativo server disabilitare [ Protezione avanzata di Internet Explorer](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10)).
 
 - Il computer con la console deve avere accesso a Internet e la connettività ai siti seguenti:  
     - `https://aka.ms`  
@@ -121,7 +121,7 @@ Vedere il file di log **OfflineServicingMgr.log**.
 ## <a name="co-managed-device-sync-activity-from-intune"></a><a name="bkmk_comgmt"></a> Attività di sincronizzazione dei dispositivi con co-gestione con Intune
 <!--1358565-->
 
-Consente di indicare nella console di Configuration Manager se un dispositivo con co-gestione è attivo con Microsoft Intune. Questo stato si basa sui dati provenienti dal [data warehouse di Intune](https://docs.microsoft.com/intune/reports-nav-create-intune-reports). Il dashboard **Stato client** nella console di Configuration Manager mostra i **Clienti inattivi che usano Intune**. Questa nuova categoria è destinata ai dispositivi con co-gestione inattivi con Configuration Manager, ma sincronizzati con il servizio di Intune nell'ultima settimana.
+Consente di indicare nella console di Configuration Manager se un dispositivo con co-gestione è attivo con Microsoft Intune. Questo stato si basa sui dati provenienti dal [data warehouse di Intune](/intune/reports-nav-create-intune-reports). Il dashboard **Stato client** nella console di Configuration Manager mostra i **Clienti inattivi che usano Intune**. Questa nuova categoria è destinata ai dispositivi con co-gestione inattivi con Configuration Manager, ma sincronizzati con il servizio di Intune nell'ultima settimana.
 
 
 ### <a name="try-it-out"></a>Verifica

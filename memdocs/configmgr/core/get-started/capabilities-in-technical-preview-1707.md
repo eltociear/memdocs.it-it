@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 4ddae3e4c4cf31cb05376bfa437d722f16652fad
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6ff280a01b7388f3e4d296625a94c0184a0e6b09
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705139"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692979"
 ---
 # <a name="capabilities-in-technical-preview-1707-for-configuration-manager"></a>Funzionalità della versione Technical Preview 1707 per Configuration Manager
 
@@ -85,7 +85,7 @@ Per creare e distribuire i criteri di Windows Defender Application Guard, config
 3. Nella scheda **Home** nel gruppo **Crea** fare clic su **Crea i criteri di Windows Defender Application Guard**.
 4. Usando il post di blog come riferimento, è possibile selezionare e configurare le impostazioni disponibili per provare la funzionalità.
 5. In questa versione è stata aggiunta alla procedura guidata la nuova pagina **Definizione di rete**. Usare questa pagina per specificare l'identità aziendale e definire il limite di rete aziendale.<br>I PC Windows 10 archiviano solo un elenco di isolamento rete nel client. In questa versione è possibile creare due tipi diversi di elenchi di isolamento rete, uno da Windows Information Protection e uno da Windows Defender Application Guard, e distribuirli al client. Se si distribuiscono entrambi i criteri, questi elenchi di isolamento rete devono corrispondere. Se si distribuiscono elenchi che non corrispondono allo stesso client, la distribuzione avrà esito negativo.
-Altre informazioni su come specificare le definizioni di rete sono disponibili nella [documentazione di Windows Information Protection](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr).
+Altre informazioni su come specificare le definizioni di rete sono disponibili nella [documentazione di Windows Information Protection](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr).
 
 6. Al termine, completare la procedura guidata e distribuire il criterio in uno o più dispositivi Windows 10.
 

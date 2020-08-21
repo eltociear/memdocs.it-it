@@ -10,12 +10,12 @@ ms.assetid: 01b30260-f03a-4851-a549-d1b76e8cfc69
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dd238319ba064f57911eee58e1299e17a2ce5b60
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: db59ad55c52f8d937b23704af310dc8879fe8a6d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694599"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692877"
 ---
 # <a name="evaluate-configuration-manager-by-building-your-own-lab-environment"></a>Valutare Configuration Manager creando un proprio ambiente lab
 
@@ -48,7 +48,7 @@ I computer client vengono installati all'interno di Hyper-V. È anche possibile 
  Quando si crea questo lab è necessario avere un ambiente di lavoro funzionale. L'ambiente non deve essere tuttavia ottimizzato per fattori come prestazioni del sistema, gestione dello spazio su disco rigido e archiviazione SQL Server.  
 
 ##  <a name="recommended-reading-before-you-build-the-lab"></a><a name="BKMK_EvalRec"></a> Letture consigliate prima di iniziare il lab  
- Molti contenuti sono disponibili in [Documentazione per Configuration Manager](https://docs.microsoft.com/sccm/). Prima di iniziare il lab, è consigliata la lettura degli argomenti di questa libreria elencati di seguito:  
+ Molti contenuti sono disponibili in [Documentazione per Configuration Manager](/sccm/). Prima di iniziare il lab, è consigliata la lettura degli argomenti di questa libreria elencati di seguito:  
 
 -   Informazioni sui concetti di base che riguardano la console di Configuration Manager e i portali degli utenti finali nonché scenari di esempio sono disponibili in [Introduzione a Configuration Manager](../../core/understand/introduction.md).  
 
@@ -60,4 +60,4 @@ I computer client vengono installati all'interno di Hyper-V. È anche possibile 
 
 -   Informazioni sulla gestione dei contenuti sono disponibili in [Concetti di base per la gestione dei contenuti in System Center Configuration Manager](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md).  
 
--   Informazioni su come supportare correttamente le operazioni quotidiane del processo di distribuzione sono disponibili in [Informazioni su come i client trovano i servizi e le risorse del sito per Configuration Manager](../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md).  
+-   Informazioni su come supportare correttamente le operazioni quotidiane del processo di distribuzione sono disponibili in [Informazioni su come i client trovano i servizi e le risorse del sito per Configuration Manager](../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md).

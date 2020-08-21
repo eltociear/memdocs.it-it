@@ -10,12 +10,12 @@ ms.assetid: 5b30b0d5-722d-4d4b-9ed7-5a43de315461
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2e74f969016d79254ceb8e8323b6e3914969ecc7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8e1a55efa6b23aa489ea65b3296e33847163a5c4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689269"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695240"
 ---
 # <a name="link-users-and-devices-with-user-device-affinity-in-configuration-manager"></a>Collegare utenti e dispositivi con l'affinità utente-dispositivo in Configuration Manager
 
@@ -162,4 +162,4 @@ Quando si disabilita l'impostazione client **Configurare automaticamente l'affin
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-È anche possibile usare Microsoft Intune per trovare l'uso principale di un dispositivo registrato. Per altre informazioni, vedere [Trovare l'utente primario di un dispositivo Intune](https://docs.microsoft.com/intune/find-primary-user) nella documentazione di Intune.
+È anche possibile usare Microsoft Intune per trovare l'uso principale di un dispositivo registrato. Per altre informazioni, vedere [Trovare l'utente primario di un dispositivo Intune](/intune/find-primary-user) nella documentazione di Intune.

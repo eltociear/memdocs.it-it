@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: b7643c73d2e9dad00e926bdc3db905016c45860a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 062ae289ff53952d670592be6ff0027a91a627d4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905213"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694407"
 ---
 # <a name="capabilities-in-technical-preview-18062-for-configuration-manager"></a>Funzionalità della versione Technical Preview 1806.2 per Configuration Manager
 
@@ -147,7 +147,7 @@ Quando si crea una distribuzione in più fasi e si configura manualmente una fas
 <!--1357427-->
 Configuration Manager supporta ora la distribuzione dei nuovi formati di pacchetto dell'app (con estensione msix) e bundle dell'app (con estensione msixbundle) di Windows 10. Le build più recenti di [Windows Insider Preview](https://insider.windows.com/) supportano attualmente questi nuovi formati.
 
-Per una panoramica di MSIX, vedere [A closer look at MSIX](https://docs.microsoft.com/archive/blogs/sgern/a-closer-look-at-msix) (MSIX più da vicino).
+Per una panoramica di MSIX, vedere [A closer look at MSIX](/archive/blogs/sgern/a-closer-look-at-msix) (MSIX più da vicino).
 
 Per informazioni su come creare una nuova app MSIX, vedere [MSIX support introduced in Insider Build 17682](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376) (Introduzione del supporto di MSIX nella build di Insider 17682).
 
@@ -168,7 +168,7 @@ Provare a completare le attività. Inviare quindi [commenti e suggerimenti](capa
 <!--1358204-->
 Quando si usa il metodo di installazione [push client](../clients/deploy/plan/client-installation-methods.md#client-push-installation) per il client di Configuration Manager, il server del sito crea una connessione remota al client per avviare l'installazione. A partire da questa versione, il sito può richiedere l'autenticazione reciproca Kerberos non consentendo il fallback a NTLM prima di stabilire la connessione. Questo miglioramento consente di proteggere la comunicazione tra il server e il client. 
 
-A seconda dei criteri di sicurezza, l'ambiente può già preferire o richiedere l'autenticazione Kerberos rispetto all'autenticazione NTLM meno recente. Per altre informazioni sulle considerazioni relative alla sicurezza per questi protocolli di autenticazione, vedere l'[impostazione dei criteri di sicurezza di Windows per limitare NTLM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers#security-considerations).
+A seconda dei criteri di sicurezza, l'ambiente può già preferire o richiedere l'autenticazione Kerberos rispetto all'autenticazione NTLM meno recente. Per altre informazioni sulle considerazioni relative alla sicurezza per questi protocolli di autenticazione, vedere l'[impostazione dei criteri di sicurezza di Windows per limitare NTLM](/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers#security-considerations).
 
 
 ### <a name="prerequisite"></a>Prerequisito
@@ -218,7 +218,7 @@ Per altre informazioni, vedere gli articoli seguenti:
 
 - [Co-gestione per dispositivi Windows 10](../../comanage/overview.md)  
 
-- [Informazioni sulla gestione delle app in Microsoft Intune](https://docs.microsoft.com/intune/app-management)  
+- [Informazioni sulla gestione delle app in Microsoft Intune](/intune/app-management)  
 
 
 
@@ -319,7 +319,7 @@ Questa versione include i miglioramenti seguenti:
 
     - Distribuzione di un [punto di distribuzione cloud con Azure Resource Manager](capabilities-in-technical-preview-1805.md#cloud-distribution-point-support-for-azure-resource-manager)  
 
-- I clienti usano Windows AutoPilot per il provisioning di Windows 10 nei dispositivi aggiunti ad Azure Active Directory che sono connessi alla rete locale. Per installare o aggiornare il client di Configuration Manager su questi dispositivi, ora non è più necessario un punto di distribuzione cloud o un punto di distribuzione locale con l'opzione **Consenti connessione anonima dei client** configurata. In alternativa, abilitare l'opzione del sito **Use Configuration Manager-generated certificates for HTTP site systems** (Usa certificati generati da Configuration Manager per i sistemi del sito HTTP), che consente a un client aggiunto a un dominio cloud di comunicare con un punto di distribuzione abilitato per HTTP locale. Per altre informazioni, vedere [Comunicazioni client sicure migliorate](https://docs.microsoft.com/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications).<!--515854-->  
+- I clienti usano Windows AutoPilot per il provisioning di Windows 10 nei dispositivi aggiunti ad Azure Active Directory che sono connessi alla rete locale. Per installare o aggiornare il client di Configuration Manager su questi dispositivi, ora non è più necessario un punto di distribuzione cloud o un punto di distribuzione locale con l'opzione **Consenti connessione anonima dei client** configurata. In alternativa, abilitare l'opzione del sito **Use Configuration Manager-generated certificates for HTTP site systems** (Usa certificati generati da Configuration Manager per i sistemi del sito HTTP), che consente a un client aggiunto a un dominio cloud di comunicare con un punto di distribuzione abilitato per HTTP locale. Per altre informazioni, vedere [Comunicazioni client sicure migliorate](/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications).<!--515854-->  
 
 
 
@@ -338,4 +338,4 @@ Il report include le parti seguenti:
 
 
 ## <a name="next-steps"></a>Passaggi successivi
-Per informazioni sull'installazione o l'aggiornamento del ramo Technical Preview, vedere [Technical Preview per Configuration Manager](technical-preview.md).    
+Per informazioni sull'installazione o l'aggiornamento del ramo Technical Preview, vedere [Technical Preview per Configuration Manager](technical-preview.md).

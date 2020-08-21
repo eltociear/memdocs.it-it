@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: f6087011a0390997d704278af6ffd5e6071bf031
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: e0f2801a9bf3d587d0117a720f4151f431441291
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129019"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692826"
 ---
 # <a name="what39s-new-in-version-1706-of-configuration-manager"></a>Novità della versione 1706 di Configuration Manager
 
@@ -213,7 +213,7 @@ In questa versione è stato considerevolmente migliorato il tempo di download pe
 
 #### <a name="prerequisites"></a>Prerequisiti
 - Tutti i punti di aggiornamento software devono eseguire Windows Server 2016.    
-- Questa funzionalità è di una versione non definitiva ed è necessario attivarla per renderla disponibile. Per altre informazioni, vedere la sezione relativa all'[abilitazione delle funzionalità facoltative dagli aggiornamenti](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
+- Questa funzionalità è di una versione non definitiva ed è necessario attivarla per renderla disponibile. Per altre informazioni, vedere la sezione relativa all'[abilitazione delle funzionalità facoltative dagli aggiornamenti](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
 
 #### <a name="to-manage-surface-driver-updates"></a>Per gestire gli aggiornamenti dei driver di Surface
 

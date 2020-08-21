@@ -10,12 +10,12 @@ ms.assetid: 2aca914f-641e-4bc8-98d4-bbf0a2a5276f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7e4e84b55c929dd878cb0720b3f61dfceedcf449
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 8585f04e6cedf9cb5158dbebc41b00565eabd989
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904102"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692724"
 ---
 # <a name="prepare-windows-servers-to-support-configuration-manager"></a>Preparare i server di Windows per il supporto di Configuration Manager
 
@@ -98,7 +98,7 @@ I ruoli di Windows seguenti sono necessari per supportare specifiche funzionalit
 ##  <a name="iis-request-filtering-for-distribution-points"></a><a name="BKMK_IISFiltering"></a> Filtro richieste IIS per i punti di distribuzione  
 Per impostazione predefinita, IIS usa il filtro richieste per bloccare l'accesso di diverse estensioni di file e percorsi di cartelle con la comunicazione HTTP o HTTPS. In un punto di distribuzione questo impedisce ai client di scaricare i pacchetti con estensioni o percorsi di cartelle bloccati.  
 
-Quando i file origine pacchetto contengono estensioni bloccate in IIS dalla configurazione del filtro richieste, è necessario configurare il filtro richieste per abilitarle. Per farlo, [modificare la funzionalità del filtro richieste](https://docs.microsoft.com/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)) in Gestione IIS nei computer del punto di distribuzione.  
+Quando i file origine pacchetto contengono estensioni bloccate in IIS dalla configurazione del filtro richieste, è necessario configurare il filtro richieste per abilitarle. Per farlo, [modificare la funzionalità del filtro richieste](/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)) in Gestione IIS nei computer del punto di distribuzione.  
 
 Le estensioni di file seguenti vengono usate da Configuration Manager per applicazioni e pacchetti. Verificare che le configurazioni del filtro richieste non blocchino queste estensioni di file:  
 
@@ -136,4 +136,4 @@ Ad esempio, i file di origine per una distribuzione software potrebbero includer
 - HEAD
 - PROPFIND
 
-Per altre informazioni, vedere [Configure request filtering in IIS](https://docs.microsoft.com/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)#http-verbs) (Configurare il filtro richieste in IIS). 
+Per altre informazioni, vedere [Configure request filtering in IIS](/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)#http-verbs) (Configurare il filtro richieste in IIS).

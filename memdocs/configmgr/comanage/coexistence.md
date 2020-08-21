@@ -10,12 +10,12 @@ ms.assetid: ed4dc65e-e5d5-4f75-88ac-f4849ec8fc10
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f22ba6f29e0c85e19ab66d1b052085db5303cc2c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 055d79c56417135e2b08a31bc05a3ca30b5fd581
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690309"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695104"
 ---
 # <a name="third-party-mdm-coexistence-with-configuration-manager"></a>Coesistenza di servizi MDM di terze parti con Configuration Manager
 
@@ -23,12 +23,12 @@ Quando si gestiscono i dispositivi Windows 10 contemporaneamente tramite Configu
 
 Il client Configuration Manager può coesistere con un servizio MDM di terze parti in un dispositivo con Windows 10 versione 1709 o successiva, aggiunto ad Azure Active Directory. Il dispositivo può essere di uno dei due tipi seguenti:
 
-- [Aggiunto solo ad Azure AD](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan). Questo tipo è anche noto come "aggiunto a un dominio cloud".  
+- [Aggiunto solo ad Azure AD](/azure/active-directory/devices/azureadjoin-plan). Questo tipo è anche noto come "aggiunto a un dominio cloud".  
 
-- [Aggiunto a dominio ibrido](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan), per cui il dispositivo è aggiunto ad Active Directory locale e registrato in Azure Active Directory.  
+- [Aggiunto a dominio ibrido](/azure/active-directory/devices/hybrid-azuread-join-plan), per cui il dispositivo è aggiunto ad Active Directory locale e registrato in Azure Active Directory.  
 
 > [!Note]  
-> I [dispositivi di proprietà personale](https://docs.microsoft.com/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device) non sono supportati.  
+> I [dispositivi di proprietà personale](/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device) non sono supportati.  
 
 Quando il client Configuration Manager rileva che il dispositivo viene gestito anche da un servizio MDM di terze parti, disattiva automaticamente determinati carichi di lavoro di Configuration Manager. Questo comportamento consente al servizio MDM di acquisire queste funzioni. Evita inoltre l'uso di impostazioni in conflitto nel client che potrebbero influire negativamente sul dispositivo e sull'esperienza utente. In questo caso vengono disattivati i carichi di lavoro seguenti in Configuration Manager:
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: b5a9a4a7f23942ac06dc16a0b54b657c7fd617a9
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: a2e032e2aecfd53dc3a92cfb9c40798b4dcd1db9
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715612"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692775"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>Certificati per il gateway di gestione cloud
 
@@ -258,8 +258,8 @@ Configurare un punto di gestione locale con la modalità di connessione client i
 
 - *Gruppo di lavoro*: il dispositivo non è stato aggiunto a un dominio o ad Azure AD, ma ha un [certificato di autenticazione client](#bkmk_clientauth).
 - *Aggiunto a un dominio AD*: il dispositivo viene aggiunto a un dominio di Active Directory locale.
-- *Aggiunto ad Azure AD*: (o aggiunto al dominio cloud) il dispositivo viene aggiunto a un tenant di Azure AD. Per altre informazioni, vedere [Dispositivi aggiunti ad Azure AD](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join).
-- *Aggiunto ad AD ibrido*: il dispositivo viene aggiunto ad Active Directory locale e registrato con Azure AD. Per altre informazioni, vedere [Dispositivi aggiunti ad Azure AD ibrido](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid).
+- *Aggiunto ad Azure AD*: (o aggiunto al dominio cloud) il dispositivo viene aggiunto a un tenant di Azure AD. Per altre informazioni, vedere [Dispositivi aggiunti ad Azure AD](/azure/active-directory/devices/concept-azure-ad-join).
+- *Aggiunto ad AD ibrido*: il dispositivo viene aggiunto ad Active Directory locale e registrato con Azure AD. Per altre informazioni, vedere [Dispositivi aggiunti ad Azure AD ibrido](/azure/active-directory/devices/concept-azure-ad-join-hybrid).
 - *HTTP*: nelle proprietà del punto di gestione le connessioni client sono impostate su **HTTP**.
 - *HTTPS*: nelle proprietà del punto di gestione le connessioni client sono impostate su **HTTPS**.
 - *E-HTTP*: nella scheda **Sicurezza delle comunicazioni** delle proprietà del sito configurare le impostazioni di sistema del sito per **HTTPS o HTTP** e abilitare l'opzione **Usa i certificati generati da Configuration Manager per sistemi del sito HTTP**. Si configura il punto di gestione per il protocollo HTTP. Il punto di gestione HTTP è pronto per la comunicazione HTTP e HTTPS (scenari di autenticazione basata su token).
@@ -282,9 +282,9 @@ Per creare il gateway di gestione cloud in Azure, il punto di connessione del se
 
 Per altre informazioni e istruzioni su come caricare un certificato di gestione, vedere gli articoli seguenti nella documentazione di Azure:
 
-- [Servizi cloud e certificati di gestione](https://docs.microsoft.com/azure/cloud-services/cloud-services-certs-create#what-are-management-certificates)  
+- [Servizi cloud e certificati di gestione](/azure/cloud-services/cloud-services-certs-create#what-are-management-certificates)  
 
-- [Caricare un certificato di gestione dei servizi di Azure](https://docs.microsoft.com/azure/azure-api-management-certs)  
+- [Caricare un certificato di gestione dei servizi di Azure](/azure/azure-api-management-certs)  
 
 > [!IMPORTANT]
 > Assicurarsi di copiare l'ID sottoscrizione associato al certificato di gestione. Usare questo certificato per creare il gateway di gestione cloud nella console di Configuration Manager.
@@ -295,4 +295,4 @@ Per altre informazioni e istruzioni su come caricare un certificato di gestione,
 
 - [Domande frequenti sul gateway di gestione cloud](cloud-management-gateway-faq.md)  
 
-- [Sicurezza e privacy per il gateway di gestione del cloud](security-and-privacy-for-cloud-management-gateway.md)  
+- [Sicurezza e privacy per il gateway di gestione del cloud](security-and-privacy-for-cloud-management-gateway.md)

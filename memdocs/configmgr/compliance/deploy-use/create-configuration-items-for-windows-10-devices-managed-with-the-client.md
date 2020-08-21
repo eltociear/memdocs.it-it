@@ -10,12 +10,12 @@ ms.assetid: 14226fbe-dd07-4432-910b-130790624a4e
 author: mestew
 manager: dougeby
 ms.author: mstewart
-ms.openlocfilehash: ade07cf23807d340ee5e0c7955a042a44f9031c5
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 9589b9e542c9d323ab7a23af169725c1a54bfb70
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240440"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694764"
 ---
 # <a name="create-configuration-items-for-windows-10-devices"></a>Creare elementi di configurazione per dispositivi Windows 10
 
@@ -140,9 +140,9 @@ Gli elementi di configurazione di Windows Information Protection in Configuratio
   
 Per informazioni sulle modalità di configurazione di WIP con Configuration Manager, vedere:
 
-- [Proteggere i dati aziendali con Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
-- [Creare e distribuire un criterio di Windows Information Protection (WIP) con Configuration Manager](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)
-- [Limitazioni nell'uso di Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/limitations-with-wip)
+- [Proteggere i dati aziendali con Windows Information Protection (WIP)](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
+- [Creare e distribuire un criterio di Windows Information Protection (WIP) con Configuration Manager](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)
+- [Limitazioni nell'uso di Windows Information Protection (WIP)](/windows/security/information-protection/windows-information-protection/limitations-with-wip)
 
 ## <a name="see-also"></a>Vedere anche  
 [Elementi di configurazione per dispositivi gestiti con il client di Configuration Manager](../../compliance/deploy-use/create-configuration-items.md)

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 98a82d118442a7ca37ff7b2df62bf4702c15ba2c
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: 9209a1a948c43a21f097ba836a6761b53ddc9530
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87526016"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692962"
 ---
 # <a name="capabilities-in-technical-preview-1703-for-configuration-manager"></a>Funzionalità della versione Technical Preview 1703 per Configuration Manager
 
@@ -82,7 +82,7 @@ Nella versione Technical Preview 1703 solo Windows Store per le aziende Business
 
 - Usare le informazioni disponibili in questo argomento di anteprima in sostituzione della procedura di configurazione descritta nella sezione [Configurare la sincronizzazione di Windows Store per le aziende](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md#bkmk_setup) dell'argomento per la versione Current Branch [Gestire le app da Windows Store per le aziende con Configuration Manager](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).
 
-- Per altre informazioni sulle app Web, vedere [Autenticazione e autorizzazione nel servizio app di Azure](https://docs.microsoft.com/azure/app-service/app-service-authentication-overview) e [Panoramica di App Web](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview).
+- Per altre informazioni sulle app Web, vedere [Autenticazione e autorizzazione nel servizio app di Azure](/azure/app-service/app-service-authentication-overview) e [Panoramica di App Web](/azure/app-service-web/app-service-web-overview).
 
 ### <a name="prerequisites-and-planning"></a>Prerequisiti e pianificazione
 Quando si configura una connessione tra Configuration Manager e Windows Store per le aziende, è necessario specificare una cartella in cui verranno mantenuti i contenuti delle app sincronizzati dall'archivio. Per assicurarsi che questa cartella sia protetta e che il relativo contenuto possa essere distribuito ai dispositivi, verificare che siano disponibili le autorizzazioni seguenti:

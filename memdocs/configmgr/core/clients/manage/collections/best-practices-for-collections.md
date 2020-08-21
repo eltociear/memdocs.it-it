@@ -10,12 +10,12 @@ ms.assetid: 7a2abb79-9ae5-4a25-9e18-5dcf528de3bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3ee640a70eea9f2e8470e852409911d28e542bc2
-ms.sourcegitcommit: 1d8bf691780b94a945e94945115d4d1df4242808
+ms.openlocfilehash: b1bc72a3691e4a6f47c29a5a91ef11c92f0f7e7c
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84663375"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693285"
 ---
 # <a name="best-practices-for-collections-in-configuration-manager"></a>Procedure consigliate per le raccolte in Configuration Manager
 
@@ -96,7 +96,7 @@ Exclude:
 
 ## <a name="use-ceviewer-to-monitor-collection-evaluation"></a>Usare CEViewer per monitorare la valutazione raccolta
 
-È possibile usare [Collection Evaluation Viewer](https://docs.microsoft.com/mem/configmgr/core/support/ceviewer) (CEViewer) per monitorare il numero di raccolte in fase di valutazione e il tempo di esecuzione dell'aggiornamento di ogni raccolta. CEViewer si trova nella cartella *CD.Latest* del server del sito.
+È possibile usare [Collection Evaluation Viewer](../../../support/ceviewer.md) (CEViewer) per monitorare il numero di raccolte in fase di valutazione e il tempo di esecuzione dell'aggiornamento di ogni raccolta. CEViewer si trova nella cartella *CD.Latest* del server del sito.
 
 Per eseguire manualmente un controllo simile con SQL, è possibile usare la query seguente:
 
@@ -111,5 +111,3 @@ FROM (
 WHERE ([t2].[IncrementalEvaluationStartTime] IS NOT NULL) AND ([t2].[LastIncrementalRefreshTime] IS NOT NULL) and (refreshtype='4' or refreshtype='6')
 ORDER BY [t2].[value] DESC
 ```
-
-

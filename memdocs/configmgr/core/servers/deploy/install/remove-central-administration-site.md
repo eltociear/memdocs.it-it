@@ -10,12 +10,12 @@ ms.assetid: 16975644-8dfa-4f22-b45a-c54a9250dbd2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 237c326c4420aec13ad6c9ca9b07d9f5304b6945
-ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
+ms.openlocfilehash: 5a1d9d4ce8cdd19efb440d4d73fafdc96a514bcd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84613984"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699161"
 ---
 # <a name="remove-the-central-administration-site"></a>Rimuovere il sito di amministrazione centrale
 
@@ -141,7 +141,7 @@ Dopo aver rimosso il sito di amministrazione centrale, esaminare i passaggi segu
 
   - Ricreare i [supporti di distribuzione del sistema operativo](../../../../osd/deploy-use/create-task-sequence-media.md).
 
-- Se si esegue la connessione di Configuration Manager con [Monitoraggio di Azure](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=configmgr/core/context/core-context), è necessario reimpostare la connessione. La prima cosa da fare per risolvere eventuali problemi è [rinnovare la chiave privata](../configure/azure-services-wizard.md#bkmk_renew). Se il problema persiste, ricreare la connessione.<!-- 5584635 -->
+- Se si esegue la connessione di Configuration Manager con [Monitoraggio di Azure](/azure/azure-monitor/platform/collect-sccm?context=/mem/configmgr/core/context/core-context), è necessario reimpostare la connessione. La prima cosa da fare per risolvere eventuali problemi è [rinnovare la chiave privata](../configure/azure-services-wizard.md#bkmk_renew). Se il problema persiste, ricreare la connessione.<!-- 5584635 -->
 
 - Nella versione 2002, se si abilita la sincronizzazione dei driver di Surface, riconfigurare questa funzionalità dopo aver rimosso il sito di amministrazione centrale. Per altre informazioni, vedere [Driver di Microsoft Surface e aggiornamenti del firmware](../../../../sum/deploy-use/surface-drivers.md).<!-- 5728727 -->
 

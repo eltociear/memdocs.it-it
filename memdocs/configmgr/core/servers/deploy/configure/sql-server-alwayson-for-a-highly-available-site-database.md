@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 05553af3e973805eed62c68f13afc3cf7d3d2ee3
-ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
+ms.openlocfilehash: c9cf8e74793213e47dd503de1fdf1284bdc7d6a9
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87438593"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699229"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Preparare l'uso di gruppi di disponibilità Always On di SQL Server con Configuration Manager
 
@@ -76,13 +76,13 @@ Usare un'edizione *Enterprise* di SQL Server.
 
 Ogni istanza di SQL Server può essere eseguita con un account utente di dominio (**account del servizio**) o con un account non di dominio. Ogni replica in un gruppo può avere una configurazione diversa.
 
-- Usare un account con autorizzazioni minime. Per altre informazioni, vedere [Considerazioni sulla sicurezza per un'installazione di SQL Server](https://docs.microsoft.com/sql/sql-server/install/security-considerations-for-a-sql-server-installation).  
+- Usare un account con autorizzazioni minime. Per altre informazioni, vedere [Considerazioni sulla sicurezza per un'installazione di SQL Server](/sql/sql-server/install/security-considerations-for-a-sql-server-installation).  
 
-- Per altre informazioni sulla configurazione degli account del servizio e delle autorizzazioni per SQL Server, vedere [Configurare account di servizio e autorizzazioni di Windows](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions).  
+- Per altre informazioni sulla configurazione degli account del servizio e delle autorizzazioni per SQL Server, vedere [Configurare account di servizio e autorizzazioni di Windows](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions).  
 
-- Per usare un account non di dominio, sono necessari certificati. Per altre informazioni, vedere [Utilizzare certificati per un endpoint del mirroring del database (Transact-SQL)](https://docs.microsoft.com/sql/database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql).  
+- Per usare un account non di dominio, sono necessari certificati. Per altre informazioni, vedere [Utilizzare certificati per un endpoint del mirroring del database (Transact-SQL)](/sql/database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql).  
 
-- Per altre informazioni vedere [Creare un endpoint del mirroring del database per i gruppi di disponibilità Always On](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell).  
+- Per altre informazioni vedere [Creare un endpoint del mirroring del database per i gruppi di disponibilità Always On](/sql/database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell).  
 
 
 ### <a name="database"></a>Database
@@ -104,7 +104,7 @@ Configurare il database di ogni replica con le impostazioni seguenti:
     GO
     ```
 
-    Per altre informazioni, vedere [Integrazione CLR](https://docs.microsoft.com/sql/relational-databases/clr-integration/clr-integration-enabling).  
+    Per altre informazioni, vedere [Integrazione CLR](/sql/relational-databases/clr-integration/clr-integration-enabling).  
 
 - Impostare **Max text repl size** su `2147483647`:  
 
@@ -120,7 +120,7 @@ Configurare il database di ogni replica con le impostazioni seguenti:
     ALTER DATABASE [CM_xxx] SET TRUSTWORTHY ON;
     ```
 
-    Per altre informazioni, vedere [Proprietà di database TRUSTWORTHY](https://docs.microsoft.com/sql/relational-databases/security/trustworthy-database-property).
+    Per altre informazioni, vedere [Proprietà di database TRUSTWORTHY](/sql/relational-databases/security/trustworthy-database-property).
 
 - Abilitare **Service Broker**:  
 
@@ -217,9 +217,9 @@ Eseguire lo script SQL seguente per verificare le configurazioni di database per
 - Per ripristinare la replica sincrona, è possibile usare la replica con commit asincrono. Per altre informazioni, vedere [Opzioni di ripristino del database del sito](../../manage/recover-sites.md#site-database-recovery-options).  
 
     > [!Warning]  
-    > Configuration Manager non supporta il *failover* per l'uso della replica con commit asincrono come database del sito. Per altre informazioni, vedere [Failover e modalità di failover (gruppi di disponibilità AlwaysOn)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups).  
+    > Configuration Manager non supporta il *failover* per l'uso della replica con commit asincrono come database del sito. Per altre informazioni, vedere [Failover e modalità di failover (gruppi di disponibilità AlwaysOn)](/sql/database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups).  
 
-Configuration Manager non convalida lo stato della replica con commit asincrono per verificare che sia aggiornato. L'uso di una replica con commit asincrono come database del sito può mettere a rischio l'integrità del sito e dei dati. Una replica di questo tipo potrebbe non essere sincronizzata. Per altre informazioni, vedere [Panoramica di Gruppi di disponibilità AlwaysOn (SQL Server)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server).
+Configuration Manager non convalida lo stato della replica con commit asincrono per verificare che sia aggiornato. L'uso di una replica con commit asincrono come database del sito può mettere a rischio l'integrità del sito e dei dati. Una replica di questo tipo potrebbe non essere sincronizzata. Per altre informazioni, vedere [Panoramica di Gruppi di disponibilità AlwaysOn (SQL Server)](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server).
 
 Ogni membro di replica deve avere la configurazione seguente:
 
@@ -239,17 +239,17 @@ Ogni membro di replica deve avere la configurazione seguente:
     > - Si esegue il programma di installazione di Configuration Manager per specificare l'uso del database del sito nel gruppo di disponibilità.  
     > - Si installa un qualsiasi aggiornamento di Configuration Manager (non solo gli aggiornamenti che si applicano al database del sito).  
 
-- Tutti i membri devono usare la stessa [modalità di seeding](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas).<!-- SCCMDocs-pr#3899 --> Il programma di installazione di Configuration Manager include un controllo dei prerequisiti per verificare questa configurazione quando si crea un database usando l'installazione o il ripristino.
+- Tutti i membri devono usare la stessa [modalità di seeding](/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas).<!-- SCCMDocs-pr#3899 --> Il programma di installazione di Configuration Manager include un controllo dei prerequisiti per verificare questa configurazione quando si crea un database usando l'installazione o il ripristino.
 
     > [!Note]  
-    > Quando il programma di installazione crea il database e si configura il seeding **automatico**, il gruppo di disponibilità deve avere le autorizzazioni necessarie per creare il database. Questo requisito si applica sia a un nuovo database che a un nuovo ripristino. Per altre informazioni, vedere l'articolo sul [seeding automatico per la replica secondaria](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas#security).<!-- SCCMDocs-pr#3900 -->
+    > Quando il programma di installazione crea il database e si configura il seeding **automatico**, il gruppo di disponibilità deve avere le autorizzazioni necessarie per creare il database. Questo requisito si applica sia a un nuovo database che a un nuovo ripristino. Per altre informazioni, vedere l'articolo sul [seeding automatico per la replica secondaria](/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas#security).<!-- SCCMDocs-pr#3900 -->
 
 #### <a name="replica-member-location"></a>Percorso dei membri della replica
 
 Tutte le repliche in un gruppo di disponibilità devono essere ospitate in locale o in Microsoft Azure. Non sono supportati gruppi che includono un membro locale e un membro in Azure.
 
 > [!NOTE]
-> Se per SQL Server si usa una macchina virtuale di Azure, abilitare **Floating IP**. Per altre informazioni, vedere [Configurare un servizio di bilanciamento del carico per un gruppo di disponibilità SQL Server Always On in macchine virtuali di Azure](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/availability-group-load-balancer-portal-configure).<!-- SCCMDocs#1928 -->
+> Se per SQL Server si usa una macchina virtuale di Azure, abilitare **Floating IP**. Per altre informazioni, vedere [Configurare un servizio di bilanciamento del carico per un gruppo di disponibilità SQL Server Always On in macchine virtuali di Azure](/azure/azure-sql/virtual-machines/windows/availability-group-load-balancer-portal-configure).<!-- SCCMDocs#1928 -->
 
 Il programma di installazione di Configuration Manager deve connettersi a ogni replica. Quando si imposta un gruppo di disponibilità in Azure e il gruppo si trova dietro un bilanciamento del carico interno o esterno, aprire le seguenti porte predefinite:
 
@@ -263,11 +263,11 @@ Al termine dell'installazione, le porte seguenti devono rimanere aperte per Conf
 
 È possibile usare porte personalizzate per queste configurazioni. Usare le stesse porte personalizzate usate dall'endpoint e in tutte le repliche nel gruppo di disponibilità.
 
-Per la replica SQL dei dati tra i siti, creare una regola di bilanciamento del carico per ogni porta nel servizio di bilanciamento del carico di Azure. Per altre informazioni, vedere [Configurare le porte a disponibilità elevata per un bilanciamento del carico interno](https://docs.microsoft.com/azure/load-balancer/load-balancer-configure-ha-ports).<!-- MEMDocs#252 -->
+Per la replica SQL dei dati tra i siti, creare una regola di bilanciamento del carico per ogni porta nel servizio di bilanciamento del carico di Azure. Per altre informazioni, vedere [Configurare le porte a disponibilità elevata per un bilanciamento del carico interno](/azure/load-balancer/load-balancer-configure-ha-ports).<!-- MEMDocs#252 -->
 
 #### <a name="listener"></a>Listener
 
-Il gruppo di disponibilità deve avere almeno un *listener del gruppo di disponibilità*. Il nome virtuale di questo listener viene usato quando si configura Configuration Manager per usare il database del sito nel gruppo di disponibilità. Anche se un gruppo di disponibilità può contenere più listener, Configuration Manager può usarne solo uno. Per altre informazioni, vedere [Creare o configurare un listener del gruppo di disponibilità (SQL Server)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server).
+Il gruppo di disponibilità deve avere almeno un *listener del gruppo di disponibilità*. Il nome virtuale di questo listener viene usato quando si configura Configuration Manager per usare il database del sito nel gruppo di disponibilità. Anche se un gruppo di disponibilità può contenere più listener, Configuration Manager può usarne solo uno. Per altre informazioni, vedere [Creare o configurare un listener del gruppo di disponibilità (SQL Server)](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server).
 
 #### <a name="file-paths"></a>Percorsi di file
 
@@ -294,7 +294,7 @@ Prendere ad esempio in considerazione i seguenti scenari:
 #### <a name="multi-subnet-failover"></a>Failover su più subnet
 
 <!-- SCCMDocs-pr#3734 -->
-A partire dalla versione 1906, è possibile abilitare la [parola chiave della stringa di connessione MultiSubnetFailover](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) in SQL Server. È anche necessario aggiungere manualmente i valori seguenti al Registro di sistema di Windows nel server del sito:
+A partire dalla versione 1906, è possibile abilitare la [parola chiave della stringa di connessione MultiSubnetFailover](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) in SQL Server. È anche necessario aggiungere manualmente i valori seguenti al Registro di sistema di Windows nel server del sito:
 
 ``` Registry
 HKLM:\SOFTWARE\Microsoft\SMS\Identification
@@ -315,11 +315,11 @@ Le limitazioni seguenti si applicano a tutti gli scenari.
 
 ### <a name="unsupported-sql-server-options-and-configurations"></a>Opzioni e configurazioni di SQL Server non supportate
 
-- **Gruppi di disponibilità di base**: introdotti con SQL Server 2016 Standard Edition, i gruppi di disponibilità di base non supportano l'accesso in lettura alle repliche secondarie, requisito essenziale per l'uso con Configuration Manager. Per altre informazioni, vedere [Gruppi di disponibilità di base (gruppi di disponibilità AlwaysOn)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups?view=sql-server-2017).  
+- **Gruppi di disponibilità di base**: introdotti con SQL Server 2016 Standard Edition, i gruppi di disponibilità di base non supportano l'accesso in lettura alle repliche secondarie, requisito essenziale per l'uso con Configuration Manager. Per altre informazioni, vedere [Gruppi di disponibilità di base (gruppi di disponibilità AlwaysOn)](/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups?view=sql-server-2017).  
 
-- **Istanza del cluster di failover**: le istanze del cluster di failover non sono supportate per una replica usata con Configuration Manager. Per altre informazioni, vedere [Istanze del cluster di failover AlwaysOn (SQL Server)](https://docs.microsoft.com/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server).  
+- **Istanza del cluster di failover**: le istanze del cluster di failover non sono supportate per una replica usata con Configuration Manager. Per altre informazioni, vedere [Istanze del cluster di failover AlwaysOn (SQL Server)](/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server).  
 
-- **MultiSubnetFailover**: Nella versione 1902 e nelle versioni precedenti l'uso di un gruppo di disponibilità con Configuration Manager in una configurazione con più subnet non è supportato. Non è possibile usare nemmeno la stringa di connessione tramite parola chiave [MultiSubnetFailover](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover).
+- **MultiSubnetFailover**: Nella versione 1902 e nelle versioni precedenti l'uso di un gruppo di disponibilità con Configuration Manager in una configurazione con più subnet non è supportato. Non è possibile usare nemmeno la stringa di connessione tramite parola chiave [MultiSubnetFailover](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover).
 
     Per supportare questa configurazione, aggiornare Configuration Manager alla versione 1906 o a versioni successive. Per altre informazioni, vedere il prerequisito relativo al [failover su più subnet](sql-server-alwayson-for-a-highly-available-site-database.md#multi-subnet-failover).
 
@@ -382,7 +382,7 @@ Quando un database del sito usa un gruppo di disponibilità, eseguire l'attivit�
 
 ### <a name="transaction-log"></a>Log delle transazioni  
 
-Impostare il modello di recupero del database del sito su **Completo**. Questa configurazione è un requisito necessario per usare Configuration Manager in un gruppo di disponibilità. Pianificare il monitoraggio e la gestione delle dimensioni del log delle transazioni del database del sito. Nel modello di recupero Completo le transazioni non vengono finalizzate fino a quando non viene eseguito un backup completo del database o del log delle transazioni. Per altre informazioni, vedere [Backup e ripristino di database SQL Server](https://docs.microsoft.com/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases).
+Impostare il modello di recupero del database del sito su **Completo**. Questa configurazione è un requisito necessario per usare Configuration Manager in un gruppo di disponibilità. Pianificare il monitoraggio e la gestione delle dimensioni del log delle transazioni del database del sito. Nel modello di recupero Completo le transazioni non vengono finalizzate fino a quando non viene eseguito un backup completo del database o del log delle transazioni. Per altre informazioni, vedere [Backup e ripristino di database SQL Server](/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases).
 
 
 ## <a name="changes-for-site-recovery"></a>Modifiche per il ripristino del sito

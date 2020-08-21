@@ -10,12 +10,12 @@ ms.assetid: a7f91e63-4750-402e-9970-dd14be7f76a3
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5f441bc277f9c91cb1a83ce97879bd29b6349481
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: dc8e31245212136cd67f6f8cac062723c2cabefb
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701609"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696005"
 ---
 # <a name="manage-certificates-and-security-for-updates-publisher"></a>Gestire certificati e sicurezza per Updates Publisher
 
@@ -76,7 +76,7 @@ Di seguito è riportato un esempio di come configurare il certificato di firma n
    -   Per i certificati emessi dall'autorità di certificazione: aggiungere il certificato all'archivio certificati **Autori attendibili**.
 
    > [!NOTE]
-   > L'agente di Windows Update verifica se l'impostazione di Criteri di gruppo **Allow signed content from intranet Microsoft update service location** (Consenti contenuto firmato dal percorso del servizio di aggiornamento Microsoft nella rete Intranet) è abilitata nel computer locale. È necessario abilitare questa impostazione dei criteri per l'agente di Windows Update affinché venga eseguita la scansione degli aggiornamenti che sono stati creati e pubblicati con Updates Publisher. Per altre informazioni sull'abilitazione di questa impostazione di Criteri di gruppo, vedere [Come configurare Criteri di gruppo sui computer client](https://docs.microsoft.com/previous-versions/bb530967(v=technet.10)).
+   > L'agente di Windows Update verifica se l'impostazione di Criteri di gruppo **Allow signed content from intranet Microsoft update service location** (Consenti contenuto firmato dal percorso del servizio di aggiornamento Microsoft nella rete Intranet) è abilitata nel computer locale. È necessario abilitare questa impostazione dei criteri per l'agente di Windows Update affinché venga eseguita la scansione degli aggiornamenti che sono stati creati e pubblicati con Updates Publisher. Per altre informazioni sull'abilitazione di questa impostazione di Criteri di gruppo, vedere [Come configurare Criteri di gruppo sui computer client](/previous-versions/bb530967(v=technet.10)).
 
 
 

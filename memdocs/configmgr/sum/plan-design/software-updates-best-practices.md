@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 6d20389a-9de2-4a64-bced-9fc4fa519174
-ms.openlocfilehash: eb9a675970abb581a793208c73506e1e94cc6f63
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 3a48ce044f3d1aecbebf2ba93e936dd34b904140
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906699"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696639"
 ---
 # <a name="best-practices-for-software-updates-in-configuration-manager"></a>Procedure consigliate per aggiornamenti software in Configuration Manager
 
@@ -41,7 +41,7 @@ Per altre informazioni sulla condivisione del database WSUS, vedere i post di bl
 
 - [Come implementare un database SUSDB condiviso per i punti di aggiornamento software di Configuration Manager](https://techcommunity.microsoft.com/t5/Configuration-Manager-Archive/How-to-implement-a-shared-SUSDB-for-Configuration-Manager/ba-p/274103)  
 
-- [Considerazioni per più istanze WSUS che condividono un database del contenuto quando si usa Configuration Manager](https://docs.microsoft.com/archive/blogs/wsus/considerations-for-multiple-wsus-instances-sharing-a-content-database-when-using-system-center-configuration-manager-but-without-network-load-balancing-nlb).
+- [Considerazioni per più istanze WSUS che condividono un database del contenuto quando si usa Configuration Manager](/archive/blogs/wsus/considerations-for-multiple-wsus-instances-sharing-a-content-database-when-using-system-center-configuration-manager-but-without-network-load-balancing-nlb).
 
 
 ### <a name="when-configuration-manager-and-wsus-use-the-same-sql-server-configure-one-to-use-a-named-instance-and-the-other-to-use-the-default-instance"></a><a name="bkmk_sql-instance"></a> Se Configuration Manager e WSUS usano la stessa istanza di SQL Server, configurarne una per l'utilizzo di un'istanza denominata e l'altra per l'utilizzo dell'istanza predefinita  

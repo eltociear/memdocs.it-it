@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 0c2464bfba05d640868af7d5c8be7c32c0999946
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9cd0df25c64c4ca1e0d2ce98de5d2915f7564241
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705409"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693030"
 ---
 # <a name="capabilities-in-technical-preview-1612-for-configuration-manager"></a>Funzionalità della versione Technical Preview 1612 per Configuration Manager
 
@@ -185,7 +185,7 @@ Per eseguire lo strumento:
 2. Immettere quindi una riga di comando che includa le opzioni della riga di comando obbligatorie e le opzioni facoltative che si vogliono usare.
 
 **Problema noto** Quando si esegue lo strumento, se un pacchetto o una distribuzione ha esito negativo o è in corso, è possibile che venga restituito un errore simile al seguente:
--  *System.InvalidOperationException: non è possibile eseguire la pulizia della raccolta contenuto perché il pacchetto \<packageID> non è installato completamente.*
+-  *System.InvalidOperationException: non è possibile eseguire la pulizia della raccolta contenuto perché il pacchetto \<packageID> non è installato completamente*.
 
 **Soluzione alternativa:** Nessuna. Lo strumento non è in grado di identificare in modo affidabile i file orfani quando il contenuto è in corso o la sua distribuzione ha avuto esito negativo. Di conseguenza, lo strumento non consente di eseguire la pulizia del contenuto fino a quando il problema non viene risolto.
 
@@ -201,7 +201,7 @@ Per eseguire lo strumento:
 | **/dp &lt;FQDN punto di distribuzione>**  | **Richiesto** </br> Specificare il nome di dominio completo (FQDN) del punto di distribuzione che si desidera pulire. </br></br> Esempio:  ***ContentLibraryCleanup.exe /dp server1.contoso.com***|
 | **/ps &lt;FQDN sito primario>**       | **Facoltativa** per la pulizia del contenuto di un punto di distribuzione in un sito primario.</br>**Obbligatoria** per la pulizia del contenuto di un punto di distribuzione in un sito secondario. </br></br> Specificare il nome FQDN del sito primario a cui appartiene il punto di distribuzione o del padre primario se il punto di distribuzione si trova in un sito secondario. </br></br> Esempio: ***ContentLibraryCleanup.exe /dp server1.contoso.com /ps siteserver1.contoso.com*** |
 | **/sc &lt;codice del sito primario>**  | **Facoltativa** per la pulizia del contenuto di un punto di distribuzione in un sito primario.</br>**Obbligatoria** per la pulizia del contenuto di un punto di distribuzione in un sito secondario. </br></br> Specificare il codice del sito primario a cui appartiene il punto di distribuzione o del sito primario padre se il punto di distribuzione si trova in un sito secondario.</br></br> Esempio: ***ContentLibraryCleanup.exe /dp server1.contoso.com /sc ABC*** |
-| **/log\<directory file di log>**       |**Facoltativo** </br> Specificare la directory in cui salvare i file di log. Può essere un'unità locale o una condivisione di rete.</br></br> Se questa opzione non viene usata, i file di log vengono salvati automaticamente nella cartella Temp dell'utente.</br></br> Esempio di unità locale: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log C:\Users\Administrator\Desktop*** </br></br>Esempio di condivisione di rete: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log \\&lt;condivisione>\&lt;cartella>***|
+| **/log \<log file directory>**       |**Facoltativo** </br> Specificare la directory in cui salvare i file di log. Può essere un'unità locale o una condivisione di rete.</br></br> Se questa opzione non viene usata, i file di log vengono salvati automaticamente nella cartella Temp dell'utente.</br></br> Esempio di unità locale: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log C:\Users\Administrator\Desktop*** </br></br>Esempio di condivisione di rete: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log \\&lt;condivisione>\&lt;cartella>***|
 
 
 ## <a name="improvements-for-in-console-search"></a>Miglioramenti per la ricerca nella console
@@ -317,4 +317,4 @@ Dopo aver apportato queste modifiche alla configurazione, è possibile creare cr
 
 ## <a name="change-to-configuring-multi-factor-authentication-for-device-enrollment"></a>Modifica alla configurazione dell'autenticazione a più fattori per la registrazione dei dispositivi
 
-Ora che è possibile configurare l'autenticazione a più fattori (MFA) per la registrazione del dispositivo nel portale di Azure, l'opzione di autenticazione a più fattori è stata rimossa nella console di Configuration Manager. Altre informazioni sull'impostazione dell'MFA per la registrazione sono disponibili [in questo argomento su Microsoft Intune](/mem/intune/enrollment/multi-factor-authentication).
+Ora che è possibile configurare l'autenticazione a più fattori (MFA) per la registrazione del dispositivo nel portale di Azure, l'opzione di autenticazione a più fattori è stata rimossa nella console di Configuration Manager. Altre informazioni sull'impostazione dell'MFA per la registrazione sono disponibili [in questo argomento su Microsoft Intune](../../../intune/enrollment/multi-factor-authentication.md).

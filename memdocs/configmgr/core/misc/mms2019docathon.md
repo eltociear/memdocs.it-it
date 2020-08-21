@@ -9,12 +9,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e671118578d059e2b8416e6854a701ce7c405c0f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c6e4c0f7c6a1be519a33343508da3bd72cd2cd48
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701209"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695580"
 ---
 # <a name="mms-2019-docathon"></a>MMS 2019 Docathon
 
@@ -51,7 +51,7 @@ Creare un [account GitHub](https://github.com/join)
 
 - I dipendenti Microsoft devono effettuare alcuni passaggi in più e seguire una procedura leggermente diversa per fornire il proprio contributo  
 
-Per altre informazioni, vedere [Configurazione dell'account GitHub](https://docs.microsoft.com/contribute/get-started-setup-github) nella Guida per i collaboratori di docs.microsoft.com.
+Per altre informazioni, vedere [Configurazione dell'account GitHub](/contribute/get-started-setup-github) nella Guida per i collaboratori di docs.microsoft.com.
 
 ## <a name="scope"></a>Ambito
 
@@ -68,7 +68,7 @@ Eventuali modifiche ad altri contenuti di docs.microsoft.com saranno apprezzate 
 Leggere le informazioni su [come segnalare problemi](../understand/use-docs.md#bkmk_docfeedback) e [come contribuire](../understand/use-docs.md#bkmk_contribute). Quasi tutte le modifiche di base possono eseguite attraverso l'esperienza utente del browser per GitHub.  
 
 > [!Note]  
-> Se si è interessati al flusso di lavoro più complesso con git e VSCode, vedere [Installare gli strumenti di creazione del contenuto](https://docs.microsoft.com/contribute/get-started-setup-tools). E/o chiedere aiuto ad Aaron o Erik. Può essere opportuno usare il flusso di lavoro più complesso per le seguenti operazioni:
+> Se si è interessati al flusso di lavoro più complesso con git e VSCode, vedere [Installare gli strumenti di creazione del contenuto](/contribute/get-started-setup-tools). E/o chiedere aiuto ad Aaron o Erik. Può essere opportuno usare il flusso di lavoro più complesso per le seguenti operazioni:
 >
 > - Creare un nuovo articolo
 > - Aggiungere immagini
@@ -134,13 +134,13 @@ I riconoscimenti seguenti vengono calcolati in base al numero di contributi idon
 
 - [Stile Microsoft](https://aka.ms/MicrosoftStyle)
 
-    - [Guida rapida](https://docs.microsoft.com/contribute/style-quick-start)
+    - [Guida rapida](/contribute/style-quick-start)
 
-    - [10 suggerimenti principali di Microsoft sullo stile e il tono](https://docs.microsoft.com/style-guide/top-10-tips-style-voice)
+    - [10 suggerimenti principali di Microsoft sullo stile e il tono](/style-guide/top-10-tips-style-voice)
 
-- [Guida per i collaboratori](https://docs.microsoft.com/contribute)
+- [Guida per i collaboratori](/contribute)
 
-- [Come usare Markdown per scrivere articoli di Docs](https://docs.microsoft.com/contribute/markdown-reference)
+- [Come usare Markdown per scrivere articoli di Docs](/contribute/markdown-reference)
 
 ## <a name="official-rules"></a>Regolamento ufficiale
 
@@ -166,7 +166,7 @@ Concorso dell'Evento Docathon del Microsoft Cloud + AI Developer Relations Conte
 
 5. MODALITÀ DI PARTECIPAZIONE
 
-    Per creare un contributo, inviare modifiche agli articoli nei repository GitHub seguenti: IntuneDocs, SCCMDocs, sccm-docs-powershell-ref. Per altre informazioni sulla modalità di invio, vedere [Come contribuire ai documenti](https://docs.microsoft.com/sccm/core/understand/use-docs#bkmk_contribute).
+    Per creare un contributo, inviare modifiche agli articoli nei repository GitHub seguenti: IntuneDocs, SCCMDocs, sccm-docs-powershell-ref. Per altre informazioni sulla modalità di invio, vedere [Come contribuire ai documenti](/sccm/core/understand/use-docs#bkmk_contribute).
 
     Per inviare un contributo, inviare una richiesta pull su GitHub.
 

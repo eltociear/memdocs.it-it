@@ -10,12 +10,12 @@ ms.assetid: 6bc26e36-9914-4606-ae8d-f7b23218942f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 220ebb558a0e01f701cab621381ad951a8fd0738
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: aa7f95e18775862427254839a2aab2c229e31057
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88123902"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697331"
 ---
 # <a name="customize-the-self-service-portal"></a>Personalizzare il portale self-service
 
@@ -128,7 +128,7 @@ Il portale self-service visualizza il testo di avviso in base alle regole seguen
 
 1. Creare una cartella `<language>` per ogni lingua supportata nel percorso dell'applicazione `Self Service Website`. Ad esempio, `es-es` per spagnolo (Spagna). Per impostazione predefinita, il percorso completo è `C:\inetpub\Microsoft BitLocker Management Solution\Self Service Website\es-es`.
 
-    Per un elenco dei codici lingua validi che è possibile usare, vedere [National Language Support (NLS) API Reference](https://docs.microsoft.com/windows/win32/intl/locale-identifiers#predefined-locale-identifiers) (Riferimento API NLS).
+    Per un elenco dei codici lingua validi che è possibile usare, vedere [National Language Support (NLS) API Reference](/windows/win32/intl/locale-identifiers#predefined-locale-identifiers) (Riferimento API NLS).
 
     > [!TIP]
     > Il nome della cartella della lingua può essere anche il nome della lingua di sistema. Ad esempio, **es** per spagnolo, anziché **es-es** per spagnolo (Spagna) e **es-ar** per spagnolo (Argentina). Se l'utente imposta il browser su **es-es**e la cartella della lingua non esiste, il server Web controlla in modo ricorsivo la cartella delle impostazioni locali **padre**. (Le impostazioni locali padre sono definite in .NET.) Ad esempio, `Self Service Website\es\Notice.txt`. Questo fallback ricorsivo simula le regole di caricamento delle risorse .NET.

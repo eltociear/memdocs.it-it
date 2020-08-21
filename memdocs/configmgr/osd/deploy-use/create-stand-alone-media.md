@@ -10,12 +10,12 @@ ms.assetid: c6b9ccd2-78d9-4f0e-b25a-70d0866300ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 62c667706a9d77b3bb7d2b6bbdfde3cde8bb8365
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 57b353dd9dd9fcf7f97d10480f4067bd65a1f483
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125186"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697977"
 ---
 # <a name="create-stand-alone-media"></a>Creare supporti autonomi
 
@@ -140,7 +140,7 @@ Prima di eseguire la Creazione guidata del supporto per la sequenza di attività
 
         - Configuration Manager scrive un file di testo denominato `MediaLabel.txt` nella radice del supporto. Per impostazione predefinita, il file include un'unica riga di testo: `label=Configuration Manager`. Se si personalizza l'etichetta del supporto, verrà utilizzata l'etichetta personalizzata anziché il valore predefinito.  
 
-    - **Includi il file autorun.inf sul supporto**<!-- 4090666 -->: a partire dalla versione 1906, Configuration Manager non aggiunge il file autorun.inf per impostazione predefinita. Questo file è generalmente bloccato da prodotti antimalware. Per altre informazioni sulla funzionalità di esecuzione automatica di Windows, vedere [Creating an AutoRun-enabled CD-ROM Application](https://docs.microsoft.com/windows/desktop/shell/autoplay) (Creazione di un'applicazione CD-ROM abilitata per l'esecuzione automatica). Se il file è ancora richiesto dallo scenario, selezionare questa opzione per includerlo.  
+    - **Includi il file autorun.inf sul supporto**<!-- 4090666 -->: a partire dalla versione 1906, Configuration Manager non aggiunge il file autorun.inf per impostazione predefinita. Questo file è generalmente bloccato da prodotti antimalware. Per altre informazioni sulla funzionalità di esecuzione automatica di Windows, vedere [Creating an AutoRun-enabled CD-ROM Application](/windows/desktop/shell/autoplay) (Creazione di un'applicazione CD-ROM abilitata per l'esecuzione automatica). Se il file è ancora richiesto dallo scenario, selezionare questa opzione per includerlo.  
 
 5. Nella pagina **Sicurezza** specificare le opzioni seguenti:
 
@@ -151,7 +151,7 @@ Prima di eseguire la Creazione guidata del supporto per la sequenza di attività
         >
         > In un supporto autonomo vengono crittografati solo i passaggi delle sequenze di attività e le relative variabili. Il contenuto rimanente del supporto non viene crittografato. Non includere informazioni riservate negli script di sequenza di attività. Archiviare e implementare tutte le informazioni riservate usando variabili della sequenza di attività.  
 
-    - **Seleziona l'intervallo di date di validità per il supporto autonomo**: impostare le date di inizio e di scadenza facoltative per il supporto. Per impostazione predefinita, questa impostazione è disabilitata. Le date vengono confrontate con l'ora di sistema nel computer prima che il supporto autonomo venga eseguito. Quando l'ora di sistema è precedente all'ora di inizio o successiva all'ora di scadenza, il supporto autonomo non si avvia. Queste opzioni sono disponibili anche tramite il cmdlet PowerShell [New-CMStandaloneMedia](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmstandalonemedia?view=sccm-ps).  
+    - **Seleziona l'intervallo di date di validità per il supporto autonomo**: impostare le date di inizio e di scadenza facoltative per il supporto. Per impostazione predefinita, questa impostazione è disabilitata. Le date vengono confrontate con l'ora di sistema nel computer prima che il supporto autonomo venga eseguito. Quando l'ora di sistema è precedente all'ora di inizio o successiva all'ora di scadenza, il supporto autonomo non si avvia. Queste opzioni sono disponibili anche tramite il cmdlet PowerShell [New-CMStandaloneMedia](/powershell/module/configurationmanager/new-cmstandalonemedia?view=sccm-ps).  
 
 6. Nella pagina **CD/DVD autonomo** selezionare la sequenza di attività per la distribuzione del sistema operativo. È possibile selezionare solo le sequenze di attività associate a un'immagine d'avvio. Verificare l'elenco di contenuti a cui si fa riferimento nella sequenza di attività.  
 

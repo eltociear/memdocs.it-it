@@ -9,12 +9,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 16be2d118d8529b816862fced43ffe07bff0697c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8ccadb3736d2eeea88618f905be20d834a523f27
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701099"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695478"
 ---
 # <a name="configuration-manager"></a>Configuration Manager
 
@@ -22,4 +22,4 @@ ms.locfileid: "81701099"
 
 Benvenuti in Configuration Manager. È possibile usare Configuration Manager per fornire servizi IT più efficaci grazie a funzionalità per la distribuzione del software sicura e scalabile, la gestione delle impostazioni di conformità e la gestione completa degli asset di server, desktop e dispositivi mobili.  
 
-Il contenuto più aggiornato per questa versione di Configuration Manager è disponibile online nella posizione seguente: [Documentazione online per Configuration Manager](https://docs.microsoft.com/configmgr).
+Il contenuto più aggiornato per questa versione di Configuration Manager è disponibile online nella posizione seguente: [Documentazione online per Configuration Manager](/configmgr).

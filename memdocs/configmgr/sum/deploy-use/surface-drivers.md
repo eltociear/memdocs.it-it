@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: e9f9f4e6-5b4f-4b8f-94d6-db9b2b239113
-ms.openlocfilehash: f276db618a2e67832ffa5575622e00eea02c7422
-ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
+ms.openlocfilehash: c0b4942e8a6e81477814e24281e0d9e3752c5f90
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87438627"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696872"
 ---
 # <a name="manage-surface-drivers-with-configuration-manager"></a>Gestire i driver di Surface con Configuration Manager
 
@@ -154,12 +154,12 @@ No. Anche se l'aggiornamento viene importato in WSUS, non verrà importato nella
 
 ### <a name="what-alternative-methods-do-i-have-to-deploy-surface-driver-and-firmware-updates"></a>Quali sono i metodi alternativi per distribuire gli aggiornamenti dei driver e del firmware di Surface?
 
-Per informazioni su come distribuire gli aggiornamenti dei driver e del firmware di Surface tramite canali alternativi, vedere [Gestire gli aggiornamenti dei driver e del firmware di Surface](https://docs.microsoft.com/surface/manage-surface-driver-and-firmware-updates). Se si vuole scaricare il file con estensione msi o exe e quindi eseguire la distribuzione tramite i canali di distribuzione software tradizionali, vedere [Mantenere aggiornato il firmware di Surface con Configuration Manager](https://docs.microsoft.com/archive/blogs/thejoncallahan/keeping-surface-firmware-updated-with-configuration-manager).
+Per informazioni su come distribuire gli aggiornamenti dei driver e del firmware di Surface tramite canali alternativi, vedere [Gestire gli aggiornamenti dei driver e del firmware di Surface](/surface/manage-surface-driver-and-firmware-updates). Se si vuole scaricare il file con estensione msi o exe e quindi eseguire la distribuzione tramite i canali di distribuzione software tradizionali, vedere [Mantenere aggiornato il firmware di Surface con Configuration Manager](/archive/blogs/thejoncallahan/keeping-surface-firmware-updated-with-configuration-manager).
 
 ## <a name="next-steps"></a>Passaggi successivi
 
 Per altre informazioni sui driver di Surface, vedere i seguenti articoli:
 
-- [Considerazioni su Surface e System Center Configuration Manager](https://docs.microsoft.com/surface/considerations-for-surface-and-system-center-configuration-manager#deploy-surface-app-with-configuration-manager)
+- [Considerazioni su Surface e System Center Configuration Manager](/surface/considerations-for-surface-and-system-center-configuration-manager#deploy-surface-app-with-configuration-manager)
 - [Cronologia degli aggiornamenti di Surface](https://support.microsoft.com/help/4036283/surface-surface-update-history)
 - [Scaricare il firmware e i driver più recenti per i dispositivi Surface](/surface/manage-surface-driver-and-firmware-updates)

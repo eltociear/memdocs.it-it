@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: dd18355b9e472866a4d684162913795443ab07ef
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 112a1fe4a47cce330593d34da7ce8d9180457497
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268522"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698906"
 ---
 # <a name="get-support-for-desktop-analytics"></a>Ottenere supporto per Desktop Analytics
 
@@ -31,7 +31,7 @@ Microsoft offre supporto globale tecnico e per la prevendita, la fatturazione e 
 
 ## <a name="help-and-support"></a>Guida e supporto tecnico
 
-Per richiedere assistenza per Desktop Analytics, usare l'opzione **Guida e supporto** nel portale in **Risoluzione dei problemi e supporto tecnico**. In questo modo si archivia un ticket di supporto per Desktop Analytics. Per creare e gestire una richiesta di supporto, è necessario che l'account disponga di un ruolo Azure Active Directory (Azure AD) che includa l'azione **microsoft.office365.supportTickets/tickets/manage**. Per altre informazioni, vedere [Ruoli di amministratore in Azure AD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles).
+Per richiedere assistenza per Desktop Analytics, usare l'opzione **Guida e supporto** nel portale in **Risoluzione dei problemi e supporto tecnico**. In questo modo si archivia un ticket di supporto per Desktop Analytics. Per creare e gestire una richiesta di supporto, è necessario che l'account disponga di un ruolo Azure Active Directory (Azure AD) che includa l'azione **microsoft.office365.supportTickets/tickets/manage**. Per altre informazioni, vedere [Ruoli di amministratore in Azure AD](/azure/active-directory/users-groups-roles/directory-assign-admin-roles).
 
 Se il problema riguarda anche Configuration Manager e non solo Desktop Analytics, passare al [supporto tecnico Microsoft](https://aka.ms/cmcbsupport) per aprire una nuova richiesta di supporto. Usare la categoria **Desktop Analytics**.
 

@@ -10,20 +10,20 @@ ms.assetid: dc245916-bc11-4983-9c4d-015f655007c1
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 66f31983e34ff37cd2df8532cd9d45d372ef1f3b
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: efc43258e65752e7371c9baadf61598aac820062
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125101"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697994"
 ---
 # <a name="manage-and-monitor-phased-deployments"></a>Gestire e monitorare le distribuzioni in più fasi
 
 Questo articolo descrive come gestire e monitorare le distribuzioni in più fasi. Le attività di gestione comprendono l'avvio manuale della fase successiva e la sospensione o la ripresa di una fase. 
 
 È necessario prima creare una distribuzione in più fasi: 
-- [Applicazione](create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
-- [Aggiornamento software](create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json)  
+- [Applicazione](create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
+- [Aggiornamento software](create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json)  
 - [Sequenza di attività](create-phased-deployment-for-task-sequence.md)  
 
 
@@ -79,7 +79,7 @@ Quando si seleziona l'impostazione, **Inizia manualmente la seconda fase della d
 4. Selezionare la distribuzione in più fasi e fare clic su **Sospendi** o su **Riprendi** nella barra multifunzione. 
 
 > [!NOTE]
-> A partire dal 21 aprile 2020 Office 365 ProPlus viene rinominato come **App di Microsoft 365 per grandi imprese**. Per altre informazioni, vedere [Modifica del nome di Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). È comunque possibile che il nome precedente venga visualizzato in Configuration Manager e nella documentazione corrispondente mentre la console viene aggiornata. 
+> A partire dal 21 aprile 2020 Office 365 ProPlus viene rinominato come **App di Microsoft 365 per grandi imprese**. Per altre informazioni, vedere [Modifica del nome di Office 365 ProPlus](/deployoffice/name-change). È comunque possibile che il nome precedente venga visualizzato in Configuration Manager e nella documentazione corrispondente mentre la console viene aggiornata. 
 
 <!-- Removed for 1806, need to clarify behavior with engineering
 When you suspend a phased deployment, it sets the available and deadline times on the active deployments to a future time. When you resume, it generates a new schedule based on when you resume the phased deployment. The new schedule helps to avoid problems if you resume after the original deadline. For example, the initial schedule has the required deadline seven days after the deployment is available. You suspend it on the second day. If you aren't ready to resume it until day eight, you don't want the deployment to be immediately past the deadline. So it generates a new deadline starting from when you resume the phased deployment on day eight. 
@@ -128,4 +128,3 @@ L'obiettivo della fase è lo stesso di **Percentuale di esiti positivi della dis
 
 Ad esempio, le proprietà seguenti sono relative alla stessa fase del riquadro dei criteri per l'esito positivo riportato, in cui il criterio è il 65%:  
 ![Scheda Impostazioni delle fasi nelle proprietà della fase](media/phase-properties-phase-settings.png)
-

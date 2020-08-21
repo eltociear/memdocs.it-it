@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: be1401f28ccbd15de2561a19169ed67a81a91550
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: 1e86f331531d166e30ec7284d3852930fb3e62af
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87526033"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695818"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-configuration-manager"></a>Funzionalità della versione Technical Preview 1601 per Configuration Manager
 
@@ -75,11 +75,11 @@ Nella Technical Preview 1601 è stato aggiunto il supporto delle funzionalità s
 
     -   Sottoscrizione di Microsoft Intune. La sottoscrizione di Microsoft Intune deve essere configurata nella console di Configuration Manager.  
 
-    -   [Prerequisiti per la registrazione automatica in Azure AD](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1).  
+    -   [Prerequisiti per la registrazione automatica in Azure AD](/azure/active-directory/devices/hybrid-azuread-join-plan?rnd=1).  
 
     Per usare l'opzione, è necessario creare un criterio di conformità in Configuration Manager con le regole specifiche descritte di seguito e impostare un criterio di accesso condizionale nella console di Intune.  Inoltre, per assicurarsi che l'accesso sia consentito solo ai PC conformi, è necessario impostare il requisito PC Windows per l'opzione **I dispositivi devono essere conformi**. Di seguito sono descritte le regole dei criteri di conformità applicabili ai PC gestiti da Configuration Manager.  
 
-    -   **Richiedi la registrazione in Azure Active Directory:** questa regola controlla se il dispositivo dell'utente è stato aggiunto all'area di lavoro in Azure AD e in caso contrario il dispositivo viene registrato automaticamente in Azure AD. La registrazione automatica è supportata solo in Windows 8.1. Per i PC con Windows 7, distribuire un file MSI per eseguire la registrazione automatica. Per altre informazioni, vedere [qui](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1).  
+    -   **Richiedi la registrazione in Azure Active Directory:** questa regola controlla se il dispositivo dell'utente è stato aggiunto all'area di lavoro in Azure AD e in caso contrario il dispositivo viene registrato automaticamente in Azure AD. La registrazione automatica è supportata solo in Windows 8.1. Per i PC con Windows 7, distribuire un file MSI per eseguire la registrazione automatica. Per altre informazioni, vedere [qui](/azure/active-directory/devices/hybrid-azuread-join-plan?rnd=1).  
 
     -   **Tutti gli aggiornamenti richiesti installati con una scadenza precedente a un determinato numero di giorni:** questa regola controlla se il dispositivo dell'utente ha tutti gli aggiornamenti necessari (specificati nella regola **Richiedi aggiornamenti automatici**) entro la scadenza e il periodo di tolleranza specificati dall'utente e installa automaticamente eventuali aggiornamenti necessari in sospeso.  
 
@@ -213,4 +213,4 @@ Un client è online se è attualmente connesso a un ruolo del sistema del sito d
 
  Per visualizzare le nuove impostazioni, scegliere **Modalità tutto schermo - Samsung KNOX** nella pagina **Impostazioni dispositivo** dell'elemento di configurazione della **Creazione guidata dell'elemento di configurazione**.  
 
- Per altre informazioni, vedere [Come creare elementi di configurazione per dispositivi Windows 8.1 e Windows 10 gestiti senza il client Configuration Manager](../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).  
+ Per altre informazioni, vedere [Come creare elementi di configurazione per dispositivi Windows 8.1 e Windows 10 gestiti senza il client Configuration Manager](../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md).

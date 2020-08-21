@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
-ms.openlocfilehash: a870d2bf18b9e7f064e914f450aee0f5e3e2e545
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 4604b6d2c0396b9192c031264cffef8b8641d557
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906708"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696682"
 ---
 # <a name="prerequisites-for-software-updates-in-configuration-manager"></a>Prerequisiti per aggiornamenti software in Configuration Manager
 
@@ -95,7 +95,7 @@ Gli aggiornamenti e il problema descritti in questa sezione si applicano solo a 
 
 ### <a name="historical-information-about-kb-3095113"></a>Informazioni cronologiche su KB 3095113
 
- L'aggiornamento [KB 3095113](https://support.microsoft.com/kb/3095113) è stato [rilasciato come hotfix](https://docs.microsoft.com/archive/blogs/wsus/important-update-for-wsus-4-0-kb-3095113) nell'ottobre del 2015 per aggiungere il supporto per gli aggiornamenti di Windows 10 a WSUS. L'aggiornamento abilita WSUS per la sincronizzazione e la distribuzione degli aggiornamenti nella classificazione **Aggiornamenti** per Windows 10.
+ L'aggiornamento [KB 3095113](https://support.microsoft.com/kb/3095113) è stato [rilasciato come hotfix](/archive/blogs/wsus/important-update-for-wsus-4-0-kb-3095113) nell'ottobre del 2015 per aggiungere il supporto per gli aggiornamenti di Windows 10 a WSUS. L'aggiornamento abilita WSUS per la sincronizzazione e la distribuzione degli aggiornamenti nella classificazione **Aggiornamenti** per Windows 10.
 
 Se si sincronizzano gli eventuali aggiornamenti senza avere prima installato [KB 3095113](https://support.microsoft.com/kb/3095113), nel database WSUS (SUSDB) vengono inseriti dati inutilizzabili. Tali dati devono essere cancellati prima di poter distribuire correttamente gli aggiornamenti. Non è possibile scaricare gli aggiornamenti di Windows 10 in questo stato usando il Download guidato degli aggiornamenti software.
 
@@ -115,13 +115,13 @@ ERROR: DownloadContentFiles() failed with hr=0x80073633
 # This log is truncated for readability.
 ```
 
-Storicamente, quando si verificavano, questi errori venivano risolti eseguendo una versione modificata dei [passaggi di risoluzione per WSUS](https://docs.microsoft.com/archive/blogs/wsus/how-to-delete-upgrades-in-wsus). Poiché questi passaggi sono simili alla risoluzione per non eseguire i passaggi manuali necessari dopo l'installazione di KB 3159706, entrambi i set di passaggi sono stati combinati in un'unica risoluzione nella sezione seguente:
+Storicamente, quando si verificavano, questi errori venivano risolti eseguendo una versione modificata dei [passaggi di risoluzione per WSUS](/archive/blogs/wsus/how-to-delete-upgrades-in-wsus). Poiché questi passaggi sono simili alla risoluzione per non eseguire i passaggi manuali necessari dopo l'installazione di KB 3159706, entrambi i set di passaggi sono stati combinati in un'unica risoluzione nella sezione seguente:
 
 - [Per eseguire il ripristino dalla sincronizzazione degli aggiornamenti prima di installare KB 3095113 o KB 3159706](#bkmk_fix-upgrades).
 
 ### <a name="historical-information-about-kb-3159706"></a>Informazioni cronologiche su KB 3159706
 
-L'aggiornamento KB 3148812 è stata inizialmente rilasciato in aprile del 2016 per consentire a WSUS di decrittografare in modo nativo i file con estensione esd usati per l'aggiornamento dei pacchetti Windows 10. L'[aggiornamento KB 3148812 ha causato problemi per alcuni clienti](https://docs.microsoft.com/archive/blogs/wsus/the-long-term-fix-for-kb3148812-issues) ed è stato sostituito con [KB 3159706](https://support.microsoft.com/help/3159706). Prima di poter aggiornare i dispositivi con Windows 10 versione 1607 e successive, è necessario installare l'aggiornamento KB 3159706 in tutti i punti di aggiornamento software e nei server del sito. Tuttavia, possono verificarsi problemi se non si è consapevoli che l'aggiornamento KB richiede i passaggi manuali seguenti dopo l'installazione:
+L'aggiornamento KB 3148812 è stata inizialmente rilasciato in aprile del 2016 per consentire a WSUS di decrittografare in modo nativo i file con estensione esd usati per l'aggiornamento dei pacchetti Windows 10. L'[aggiornamento KB 3148812 ha causato problemi per alcuni clienti](/archive/blogs/wsus/the-long-term-fix-for-kb3148812-issues) ed è stato sostituito con [KB 3159706](https://support.microsoft.com/help/3159706). Prima di poter aggiornare i dispositivi con Windows 10 versione 1607 e successive, è necessario installare l'aggiornamento KB 3159706 in tutti i punti di aggiornamento software e nei server del sito. Tuttavia, possono verificarsi problemi se non si è consapevoli che l'aggiornamento KB richiede i passaggi manuali seguenti dopo l'installazione:
 
 1. Da un prompt dei comandi con privilegi elevati eseguire `"C:\Program Files\Update Services\Tools\wsusutil.exe" postinstall /servicing`.
 1. Riavviare il servizio WSUS in tutti i server WSUS.
@@ -138,13 +138,13 @@ Seguire questa procedura per risolvere sia l'errore 0xc1800118 che l'errore "Err
 1. Disabilitare la classificazione **Aggiornamenti** sia in WSUS che in Configuration Manager. Si vuole evitare che venga eseguita una sincronizzazione fino a quando non viene richiesto da queste istruzioni.  
    - Deselezionare la classificazione **Aggiornamenti** nelle proprietà del componente del punto di aggiornamento software per il sito di primo livello.
      - Per altre informazioni, vedere [Configurare le classificazioni e i prodotti](../get-started/configure-classifications-and-products.md).
-   - Deselezionare la classificazione **Aggiornamenti** da WSUS in **Prodotti e classificazioni** nella [pagina **Opzioni**](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/manage/setting-up-update-synchronizations) oppure usare PowerShell ISE in esecuzione come amministratore.
+   - Deselezionare la classificazione **Aggiornamenti** da WSUS in **Prodotti e classificazioni** nella [pagina **Opzioni**](/windows-server/administration/windows-server-update-services/manage/setting-up-update-synchronizations) oppure usare PowerShell ISE in esecuzione come amministratore.
       ```PowerShell
       Get-WsusClassification | Where-Object -FilterScript {$_.Classification.Title -Eq "Upgrades"} | Set-WsusClassification -Disable
       ```  
      - Se si condivide il database WSUS tra più server WSUS, è sufficiente deselezionare la classificazione **Aggiornamenti** una volta per ogni database.  
 1. In ogni server WSUS, da un prompt dei comandi con privilegi elevati eseguire: `"C:\Program Files\Update Services\Tools\wsusutil.exe" postinstall /servicing`. Riavviare quindi il servizio WSUS in tutti i server WSUS.
-   -  WSUS attiva la [modalità utente singolo](https://docs.microsoft.com/sql/relational-databases/databases/set-a-database-to-single-user-mode) per il database prima di verificare se è necessaria la manutenzione. La manutenzione viene eseguita o meno in base ai risultati di questa verifica. Viene quindi riattivata la modalità multiutente per il database. 
+   -  WSUS attiva la [modalità utente singolo](/sql/relational-databases/databases/set-a-database-to-single-user-mode) per il database prima di verificare se è necessaria la manutenzione. La manutenzione viene eseguita o meno in base ai risultati di questa verifica. Viene quindi riattivata la modalità multiutente per il database. 
    - Se si condivide il database WSUS tra più server WSUS, è necessario eseguire questa operazione di manutenzione una sola volta per ogni database.
 1. Eliminare tutti gli aggiornamenti di Windows 10 da ogni database WSUS usando PowerShell ISE in esecuzione come amministratore.
    ```PowerShell

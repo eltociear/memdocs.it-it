@@ -10,12 +10,12 @@ ms.assetid: d09a82c6-bbd1-49ca-8ffe-e3ce87b85d33
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d035e6fbd776a03ce38a4cd0fc12755100b60c91
-ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
+ms.openlocfilehash: 988a9c31fca8d06104ce317f4709ee990089d723
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82643239"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699144"
 ---
 # <a name="use-a-sql-server-cluster-for-the-site-database"></a>Usare un cluster di SQL Server per il database del sito
 
@@ -63,7 +63,7 @@ Tenere presente i prerequisiti seguenti:
 - Per supportare l'autenticazione Kerberos, abilitare il protocollo di comunicazione di rete **TCP/IP** per la connessione di rete di ogni nodo del cluster di SQL Server. Il protocollo **Named pipe** non è obbligatorio, ma può essere usato per risolvere i problemi relativi all'autenticazione Kerberos. Le impostazioni del protocollo di rete vengono configurate in **Gestione configurazione SQL Server** di **Configurazione di rete SQL Server**.  
 
 - Quando si usa un cluster di SQL Server per il database del sito, ci sono requisiti dei certificati specifici. Per altre informazioni, vedere gli articoli seguenti:
-  - [Installare un certificato in una configurazione del cluster di failover di SQL](https://docs.microsoft.com/sql/database-engine/configure-windows/manage-certificates?view=sql-server-ver15#provision-failover-cluster-cert)
+  - [Installare un certificato in una configurazione del cluster di failover di SQL](/sql/database-engine/configure-windows/manage-certificates?view=sql-server-ver15#provision-failover-cluster-cert)
   - [Requisiti dei certificati PKI per Configuration Manager](../../../plan-design/network/pki-certificate-requirements.md#BKMK_PKIcertificates_for_servers)
 
   > [!NOTE]
@@ -101,7 +101,7 @@ Configuration Manager non supporta il backup di Data Protection Manager (DPM) pe
 
 Ecco le attività principali da completare per preparare il database del sito:
 
-- Creare il cluster di SQL Server virtuale per ospitare il database del sito in un ambiente cluster di Windows Server esistente. Per passaggi dettagliati sull'installazione e configurazione di un cluster di SQL Server, vedere la documentazione specifica della versione di SQL Server in uso. Per altre informazioni, vedere [Creare un nuovo cluster di failover di SQL Server](https://docs.microsoft.com/sql/sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup?view=sql-server-2017).  
+- Creare il cluster di SQL Server virtuale per ospitare il database del sito in un ambiente cluster di Windows Server esistente. Per passaggi dettagliati sull'installazione e configurazione di un cluster di SQL Server, vedere la documentazione specifica della versione di SQL Server in uso. Per altre informazioni, vedere [Creare un nuovo cluster di failover di SQL Server](/sql/sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup?view=sql-server-2017).  
 
 - In ogni computer nel cluster di SQL Server inserire un file nella cartella radice di ogni unità in cui non si vuole che Configuration Manager installi i componenti del sito. Assegnare al file il nome `NO_SMS_ON_DRIVE.SMS`. Per impostazione predefinita, Configuration Manager installa alcuni componenti in ogni nodo fisico per supportare alcune operazioni, ad esempio il backup.  
 
@@ -117,4 +117,4 @@ Per installare un sito che usa un database del sito in cluster, eseguire il prog
 - Nella pagina **Informazioni database** specificare il nome dell'istanza virtuale del cluster di SQL Server che ospita il database del sito. L'istanza virtuale sostituisce il nome del computer che esegue SQL Server.  
 
     > [!IMPORTANT]  
-    > Quando si immette il nome dell'istanza del cluster di SQL Server virtuale, non immettere il nome di Windows Server virtuale creato dal cluster di Windows Server. Se si usa il nome virtuale di Windows Server, il database del sito viene installato nel disco rigido locale del nodo del cluster di Windows Server attivo. In questo modo, si impedisce il failover se il nodo non riesce.  
+    > Quando si immette il nome dell'istanza del cluster di SQL Server virtuale, non immettere il nome di Windows Server virtuale creato dal cluster di Windows Server. Se si usa il nome virtuale di Windows Server, il database del sito viene installato nel disco rigido locale del nodo del cluster di Windows Server attivo. In questo modo, si impedisce il failover se il nodo non riesce.

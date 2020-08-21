@@ -10,12 +10,12 @@ ms.assetid: d8d5c345-1e91-410b-b8a9-0170dcfa846e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0a720c68fc705187dedb6ff04fc3898a8b0b21c8
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: b4975f67c84c2354d13457981ac90ba4481d292f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124364"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697586"
 ---
 # <a name="manage-user-state-in-configuration-manager"></a>Gestire lo stato utente in Configuration Manager
 
@@ -27,7 +27,7 @@ ms.locfileid: "88124364"
 
 - Distribuzioni di aggiornamenti in cui si desidera acquisire e ripristinare lo stato utente sullo stesso computer.  
 
-Configuration Manager usa l'Utilità di migrazione stato utente (USMT) 10.0 per gestire la migrazione dei dati sullo stato utente da un computer di origine a un computer di destinazione al termine dell'installazione del sistema operativo. Per altre informazioni sugli scenari comuni di migrazione per USMT 10.0 vedere  [Scenari di migrazione comuni](https://docs.microsoft.com/windows/deployment/usmt/usmt-common-migration-scenarios).
+Configuration Manager usa l'Utilità di migrazione stato utente (USMT) 10.0 per gestire la migrazione dei dati sullo stato utente da un computer di origine a un computer di destinazione al termine dell'installazione del sistema operativo. Per altre informazioni sugli scenari comuni di migrazione per USMT 10.0 vedere  [Scenari di migrazione comuni](/windows/deployment/usmt/usmt-common-migration-scenarios).
 
 Vedere le sezioni seguenti per informazioni sull'acquisizione e sul ripristino dei dati utente.
 
@@ -129,4 +129,4 @@ Creare un'associazione computer per definire una relazione tra un computer di or
 
 ## <a name="restore-user-state-data-when-an-operating-system-deployment-fails"></a><a name="BKMK_MigrationFails"></a> Ripristinare i dati dello stato utente in caso di errore di distribuzione del sistema operativo
 
-Se la distribuzione del sistema operativo non riesce, usare la funzionalità USMT 10.0 LoadState per recuperare i dati dello stato utente acquisito durante il processo di distribuzione. Sono inclusi i dati memorizzati su un punto di migrazione dello stato o i dati salvati localmente sul computer di destinazione. Per ulteriori informazioni su questa caratteristica di USMT, vedere [Sintassi di LoadState](https://docs.microsoft.com/windows/deployment/usmt/usmt-loadstate-syntax).
+Se la distribuzione del sistema operativo non riesce, usare la funzionalità USMT 10.0 LoadState per recuperare i dati dello stato utente acquisito durante il processo di distribuzione. Sono inclusi i dati memorizzati su un punto di migrazione dello stato o i dati salvati localmente sul computer di destinazione. Per ulteriori informazioni su questa caratteristica di USMT, vedere [Sintassi di LoadState](/windows/deployment/usmt/usmt-loadstate-syntax).

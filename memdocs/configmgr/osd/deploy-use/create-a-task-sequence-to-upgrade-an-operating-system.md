@@ -10,12 +10,12 @@ ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 907c36b6f06bbf4fbbabb9ee1b2df6cadb0acb75
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: ca002664bd55dbac79ace5cfe4bf88cd41d65b89
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125458"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698096"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>Creare una sequenza di attività per aggiornare un sistema operativo in Configuration Manager
 
@@ -66,7 +66,7 @@ Per aggiornare il sistema operativo nei client, è possibile creare una sequenza
     - **Codice Product Key**: specificare il codice Product Key Windows per il sistema operativo da installare. Specificare i codici Product Key per contratti multilicenza codificati o i codici Product Key standard. Se si usa un codice Product Key standard, separare ogni gruppo di cinque caratteri con un trattino (`-`). Ad esempio: `XXXXX-XXXXX-XXXXX-XXXXX-XXXXX`. Se l'aggiornamento è per un'edizione per contratti multilicenza, il codice Product Key potrebbe non essere obbligatorio.  
 
         > [!Note]  
-        > Questo codice Product Key può essere un codice ad attivazione multipla (MAK) o un codice generico di contratti multilicenza (GVLK). Un codice GVLK è anche definito codice di configurazione client del servizio di gestione delle chiavi (KMS). Per altre informazioni, vedere [Pianificare l'attivazione dei contratti multilicenza](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client). Per un elenco di codici di configurazione client KMS, vedere l'[Appendice A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) della Guida di attivazione di Windows Server.
+        > Questo codice Product Key può essere un codice ad attivazione multipla (MAK) o un codice generico di contratti multilicenza (GVLK). Un codice GVLK è anche definito codice di configurazione client del servizio di gestione delle chiavi (KMS). Per altre informazioni, vedere [Pianificare l'attivazione dei contratti multilicenza](/windows/deployment/volume-activation/plan-for-volume-activation-client). Per un elenco di codici di configurazione client KMS, vedere l'[Appendice A](/windows-server/get-started/kmsclientkeys) della Guida di attivazione di Windows Server.
 
     - **Ignora tutti i messaggi sulla compatibilità non rilevanti**: selezionare questa impostazione se si esegue l'aggiornamento a Windows Server 2016. Se non si seleziona questa impostazione, la sequenza di attività non può essere completata perché il programma di installazione di Windows rimane in attesa che l'utente selezioni **Conferma** in una finestra di dialogo di compatibilità delle app di Windows.  
 
@@ -217,7 +217,7 @@ per raccogliere i log dal client, aggiungere passaggi in questo gruppo.
 
 per eseguire strumenti di diagnostica aggiuntivi, aggiungere passaggi in questo gruppo. Automatizzare questi strumenti per la raccolta di informazioni aggiuntive dal sistema subito dopo l'errore.  
 
-Uno di questi strumenti è [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag) di Windows. È uno strumento di diagnostica autonomo per ottenere i dettagli sui motivi per cui un aggiornamento a Windows 10 non è riuscito.  
+Uno di questi strumenti è [SetupDiag](/windows/deployment/upgrade/setupdiag) di Windows. È uno strumento di diagnostica autonomo per ottenere i dettagli sui motivi per cui un aggiornamento a Windows 10 non è riuscito.  
 
 - In Configuration Manager [creare un pacchetto](../../apps/deploy-use/packages-and-programs.md#create-a-package-and-program) per lo strumento.  
 
@@ -225,13 +225,13 @@ Uno di questi strumenti è [SetupDiag](https://docs.microsoft.com/windows/deploy
     `SetupDiag.exe /Output:"%_SMSTSLogPath%\SetupDiagResults.log"`  
 
 > [!TIP]
-> Usare sempre la versione più recente di SetupDiag per avere a disposizione le funzionalità più recenti e le correzioni ai problemi noti. Per altre informazioni, vedere [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag).
+> Usare sempre la versione più recente di SetupDiag per avere a disposizione le funzionalità più recenti e le correzioni ai problemi noti. Per altre informazioni, vedere [SetupDiag](/windows/deployment/upgrade/setupdiag).
 
 ## <a name="additional-recommendations"></a>Suggerimenti aggiuntivi
 
 ### <a name="windows-documentation"></a>Documentazione di Windows
 
-Vedere l'articolo [Risolvere gli errori di aggiornamento di Windows 10](https://docs.microsoft.com/windows/deployment/upgrade/resolve-windows-10-upgrade-errors) nella documentazione di Windows. Questo articolo include anche informazioni dettagliate sul processo di aggiornamento.  
+Vedere l'articolo [Risolvere gli errori di aggiornamento di Windows 10](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors) nella documentazione di Windows. Questo articolo include anche informazioni dettagliate sul processo di aggiornamento.  
 
 ### <a name="check-minimum-disk-space"></a>Controllare lo spazio minimo su disco
 
@@ -272,12 +272,12 @@ Se si vuole modificare il dispositivo da BIOS a UEFI durante questa sequenza di 
 ### <a name="manage-bitlocker"></a>Gestire BitLocker
 
 <!--SCCMDocs issue #494-->
-Se si usa la crittografia dischi BitLocker, per impostazione predefinita il programma di installazione di Windows la sospenderà automaticamente durante l'aggiornamento. A partire da Windows 10 versione 1803, il programma di installazione di Windows include il parametro della riga di comando `/BitLocker` per controllare questo comportamento. Se i requisiti di sicurezza richiedono di mantenere sempre attiva la crittografia dischi, usare la **variabile della sequenza di attività** [OSDSetupAdditionalUpgradeOptions](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) nel gruppo **Preparazione dell'aggiornamento** per includere `/BitLocker TryKeepActive`. Per altre informazioni, vedere [Opzioni della riga di comando di Installazione di Windows](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#bitlocker).
+Se si usa la crittografia dischi BitLocker, per impostazione predefinita il programma di installazione di Windows la sospenderà automaticamente durante l'aggiornamento. A partire da Windows 10 versione 1803, il programma di installazione di Windows include il parametro della riga di comando `/BitLocker` per controllare questo comportamento. Se i requisiti di sicurezza richiedono di mantenere sempre attiva la crittografia dischi, usare la **variabile della sequenza di attività** [OSDSetupAdditionalUpgradeOptions](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) nel gruppo **Preparazione dell'aggiornamento** per includere `/BitLocker TryKeepActive`. Per altre informazioni, vedere [Opzioni della riga di comando di Installazione di Windows](/windows-hardware/manufacture/desktop/windows-setup-command-line-options#bitlocker).
 
 ### <a name="remove-default-apps"></a>Rimuovere le app predefinite
 
 <!--SCCMDocs issue #526-->
-Alcuni clienti rimuovono le app predefinite di cui è stato effettuato il provisioning in Windows 10. Ad esempio, l'app Bing Meteo o Microsoft Solitaire Collection. In alcune situazioni, queste app ritornano dopo l'aggiornamento di Windows 10. Per altre informazioni, vedere l'articolo su [come mantenere le app rimosse da Windows 10](https://docs.microsoft.com/windows/application-management/remove-provisioned-apps-during-update).
+Alcuni clienti rimuovono le app predefinite di cui è stato effettuato il provisioning in Windows 10. Ad esempio, l'app Bing Meteo o Microsoft Solitaire Collection. In alcune situazioni, queste app ritornano dopo l'aggiornamento di Windows 10. Per altre informazioni, vedere l'articolo su [come mantenere le app rimosse da Windows 10](/windows/application-management/remove-provisioned-apps-during-update).
 
 Aggiungere il passaggio **Esegui riga di comando** alla sequenza di attività nel gruppo **Preparazione dell'aggiornamento**. Specificare una riga di comando simile a quella dell'esempio seguente:
 

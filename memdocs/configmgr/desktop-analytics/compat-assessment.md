@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 7b2bff4f8365693c86540c9b0578307340f13a49
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: c9268514b43f4f728d3fff4715d4d71308a712f3
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268896"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699076"
 ---
 # <a name="compatibility-assessment-in-desktop-analytics"></a>Valutazione della compatibilità in Desktop Analytics
 
@@ -180,13 +180,13 @@ Quando si aggiorna il sito e i client di Configuration Manager alla versione 190
 
 #### <a name="16-bit-apps"></a>App a 16 bit
 
-Rimuovere dalle applicazioni tutti i componenti a 16 bit e sostituirli con equivalenti a 32 o 64 bit. Per altre informazioni, vedere [Storia di Windows Vista e Windows Server 2008 per sviluppatori: guida di riferimento dettagliata sulla compatibilità delle applicazioni](https://docs.microsoft.com/previous-versions/aa480152\(v=msdn.10\)).
+Rimuovere dalle applicazioni tutti i componenti a 16 bit e sostituirli con equivalenti a 32 o 64 bit. Per altre informazioni, vedere [Storia di Windows Vista e Windows Server 2008 per sviluppatori: guida di riferimento dettagliata sulla compatibilità delle applicazioni](/previous-versions/aa480152\(v=msdn.10\)).
 
 L'altra opzione consiste nell'abilitare NT Virtual DOS Machine (NTVDM) per il supporto in Windows 10.
 
 #### <a name="requires-admin-privileges"></a>Richiede privilegi di amministratore
 
-L'app richiede che l'utente abbia l'accesso amministrativo al dispositivo. Usare un manifesto dell'app per le app che richiedono autorizzazioni di amministratore. Per altre informazioni, vedere [Creare e incorporare un manifesto dell'applicazione](https://docs.microsoft.com/previous-versions/bb756929\(v=msdn.10\)).
+L'app richiede che l'utente abbia l'accesso amministrativo al dispositivo. Usare un manifesto dell'app per le app che richiedono autorizzazioni di amministratore. Per altre informazioni, vedere [Creare e incorporare un manifesto dell'applicazione](/previous-versions/bb756929\(v=msdn.10\)).
 
 Desktop Analytics consiglia di sottoporre l'app a test pilota per individuare eventuali regressioni.
 
@@ -196,7 +196,7 @@ Molte applicazioni Java si basano su una distribuzione Java Runtime Environment 
 
 #### <a name="not-dpi-aware"></a>Non sensibile ai valori DPI
 
-L'app potrebbe riscontrare problemi di visualizzazione con risoluzioni dello schermo avanzate in Windows 10. Usare un manifesto dell'app per evitare problemi con alte risoluzioni DPI. Per altre informazioni, vedere [Manifesti dell'applicazione](https://docs.microsoft.com/windows/desktop/SbsCs/application-manifests).
+L'app potrebbe riscontrare problemi di visualizzazione con risoluzioni dello schermo avanzate in Windows 10. Usare un manifesto dell'app per evitare problemi con alte risoluzioni DPI. Per altre informazioni, vedere [Manifesti dell'applicazione](/windows/desktop/SbsCs/application-manifests).
 
 Desktop Analytics consiglia di sottoporre l'app a test pilota per individuare eventuali regressioni.
 
@@ -220,13 +220,13 @@ Desktop Analytics consiglia di sottoporre l'app a test pilota per individuare ev
 
 #### <a name="net-framework-2030"></a>.NET Framework 2.0/3.0
 
-I framework .NET 2.0 e 3.5 sono supportati in Windows 10. Potrebbe essere necessario abilitare la funzionalità Windows. Per altre informazioni, vedere [Installare .NET Framework 3.5 in Windows 10](https://docs.microsoft.com/dotnet/framework/install/dotnet-35-windows-10).
+I framework .NET 2.0 e 3.5 sono supportati in Windows 10. Potrebbe essere necessario abilitare la funzionalità Windows. Per altre informazioni, vedere [Installare .NET Framework 3.5 in Windows 10](/dotnet/framework/install/dotnet-35-windows-10).
 
 #### <a name="ui-access"></a>Accesso all'interfaccia utente
 
 Le applicazioni con accesso all'interfaccia utente possono ignorare i livelli di controllo dell'interfaccia utente per indirizzare l'input verso finestre con privilegi più elevati sul desktop. Usare questa impostazione solo per applicazioni di assistive technology con interfaccia utente.
 
-Se nell'app non vengono usate funzionalità di accessibilità, impostare il flag di accesso all'interfaccia utente nel manifesto dell'app su False. Per altre informazioni, vedere [Creare e incorporare un manifesto dell'applicazione](https://docs.microsoft.com/previous-versions/bb756929\(v=msdn.10\)).
+Se nell'app non vengono usate funzionalità di accessibilità, impostare il flag di accesso all'interfaccia utente nel manifesto dell'app su False. Per altre informazioni, vedere [Creare e incorporare un manifesto dell'applicazione](/previous-versions/bb756929\(v=msdn.10\)).
 
 Desktop Analytics consiglia di sottoporre l'app a test pilota per individuare eventuali regressioni.
 
@@ -245,4 +245,4 @@ Desktop Analytics elenca e raggruppa in base alla disponibilità anche tutti i d
 
 ## <a name="see-also"></a>Vedere anche
 
-Il FastTrack Center Benefit per Windows 10 offre l'accesso a **Desktop App Assure**. Questo vantaggio è un nuovo servizio progettato per risolvere i problemi relativi alla compatibilità di Windows 10 e App di Microsoft 365 per grandi imprese. Per altre informazioni, vedere [Desktop App Assure](https://docs.microsoft.com/fasttrack/win-10-desktop-app-assure).
+Il FastTrack Center Benefit per Windows 10 offre l'accesso a **Desktop App Assure**. Questo vantaggio è un nuovo servizio progettato per risolvere i problemi relativi alla compatibilità di Windows 10 e App di Microsoft 365 per grandi imprese. Per altre informazioni, vedere [Desktop App Assure](/fasttrack/win-10-desktop-app-assure).

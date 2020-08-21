@@ -10,12 +10,12 @@ ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 2b851c03424af0ba0f826716b401705879338855
-ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
+ms.openlocfilehash: e0395d41c2886bca1d623fb2736bfc86012f89b4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84436670"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696753"
 ---
 #  <a name="manage-settings-for-software-updates"></a><a name="BKMK_ManageSUSettings"></a> Gestire le impostazioni per gli aggiornamenti software  
 
@@ -40,7 +40,7 @@ Esistono impostazioni di Criteri di gruppo specifiche usate dall'agente di Windo
 Quando viene creato il punto di aggiornamento software per un sito, i client ricevono criteri computer che forniscono il nome server del punto di aggiornamento software e configurano i criteri locali **Specifica il percorso del servizio di aggiornamento Microsoft nella rete Intranet** sul computer. L'agente WUA recupera il nome server specificato nell'impostazione **Impostare il servizio di aggiornamento nella rete Intranet per il rilevamento degli aggiornamenti** e quindi si connette a questo server quando analizza la conformità degli aggiornamenti software. Quando vengono creati i criteri dominio per l'impostazione **Specifica il percorso del servizio di aggiornamento Microsoft nella rete Intranet** , questi sovrascrivono i criteri locali e l'agente WUA potrebbe connettersi a un server diverso rispetto al punto di aggiornamento software. In questo caso, il client potrebbe analizzare la conformità degli aggiornamenti software in base ai diversi prodotti, classificazioni e lingue. Pertanto, non è consigliabile configurare i criteri di Active Directory per i computer client.  
 
 ### <a name="allow-signed-content-from-intranet-microsoft-update-service-location-group-policy"></a>Criteri di gruppo Consenti contenuto firmato dal percorso del servizio di aggiornamento Microsoft nella rete Intranet  
-È necessario abilitare l'impostazione di Criteri di gruppo **Consenti contenuto firmato dal percorso del servizio di aggiornamento Microsoft nella rete Intranet** prima che l'agente WUA sui computer analizzi gli aggiornamenti software creati e pubblicati con System Center Updates Publisher. Quando l'impostazione dei criteri viene abilitata, WUA accetterà gli aggiornamenti software ricevuti tramite un percorso Intranet se gli aggiornamenti software sono firmati nell'archivio certificati **Autori attendibili** sul computer locale. Per ulteriori informazioni sulle impostazioni di Criteri di gruppo necessarie per Updates Publisher, vedere [Updates Publisher 2011 Documentation Library (Libreria della documentazione di Updates Publisher 2011)](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
+È necessario abilitare l'impostazione di Criteri di gruppo **Consenti contenuto firmato dal percorso del servizio di aggiornamento Microsoft nella rete Intranet** prima che l'agente WUA sui computer analizzi gli aggiornamenti software creati e pubblicati con System Center Updates Publisher. Quando l'impostazione dei criteri viene abilitata, WUA accetterà gli aggiornamenti software ricevuti tramite un percorso Intranet se gli aggiornamenti software sono firmati nell'archivio certificati **Autori attendibili** sul computer locale. Per ulteriori informazioni sulle impostazioni di Criteri di gruppo necessarie per Updates Publisher, vedere [Updates Publisher 2011 Documentation Library (Libreria della documentazione di Updates Publisher 2011)](/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10)).  
 
 ### <a name="automatic-updates-configuration"></a>Configurazione di Aggiornamenti automatici  
 Aggiornamenti automatici consente di ricevere aggiornamenti della sicurezza e altri download importanti sui computer client. Aggiornamenti automatici viene configurato tramite l'impostazione di Criteri di gruppo **Configura Aggiornamenti automatici** o tramite il Pannello di controllo sul computer locale. Quando Aggiornamenti automatici viene abilitato, i computer client riceveranno le notifiche degli aggiornamenti e, in base alle impostazioni configurate, i computer client scaricheranno e installeranno gli aggiornamenti necessari. Quando Aggiornamenti automatici coesiste con gli aggiornamenti software, su ogni computer client potrebbero essere visualizzate icone di notifica e notifiche popup per lo stesso aggiornamento. Inoltre, quando è necessario un riavvio, su ogni computer client potrebbe essere visualizzata una finestra di dialogo di riavvio per lo stesso aggiornamento.  
@@ -139,4 +139,4 @@ Se usato, è necessario attivare il controllo CRL nelle console di Configuration
 #### <a name="to-enable-crl-checking"></a>Per attivare il controllo CRL  
 Nel computer che esegue il controllo CRL eseguire quanto segue da un prompt dei comandi del DVD del prodotto: **\SMSSETUP\BIN\X64\\** <*lingua*> **\UpdDwnldCfg.exe /checkrevocation**.  
 
-Per l'inglese (USA), ad esempio, eseguire **\SMSSETUP\BIN\X64\00000409\UpdDwnldCfg.exe /checkrevocation**  
+Per l'inglese (USA), ad esempio, eseguire **\SMSSETUP\BIN\X64\00000409\UpdDwnldCfg.exe /checkrevocation**

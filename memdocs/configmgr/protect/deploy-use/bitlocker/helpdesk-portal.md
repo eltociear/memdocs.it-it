@@ -10,12 +10,12 @@ ms.assetid: 81f03922-90f6-4e8f-be65-da64ccb21cf2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7b64e09561def3d19c306b9cfcd4f7eb808763fd
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: bf9301e4fcb279b7d79a6f6c3d0a90ab3d15e277
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129257"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697314"
 ---
 # <a name="bitlocker-administration-and-monitoring-website"></a>Sito Web di amministrazione e monitoraggio BitLocker
 
@@ -48,7 +48,7 @@ Per accedere ad aree specifiche del sito Web di amministrazione e monitoraggio, 
 
 Se un utente immette un PIN errato per un numero eccessivo di volte, può verificarsi un blocco del TPM. Il numero di volte in cui un utente può immettere un PIN errato prima del blocco del TPM varia in base al produttore. Dall'area **Manage TPM** (Gestisci TPM) del sito Web di amministrazione e monitoraggio accedere al sistema dati di recupero chiavi centralizzato.
 
-Per altre informazioni sulla proprietà del TPM, vedere [Configurare MBAM per depositare il TPM e archiviare le password OwnerAuth](https://docs.microsoft.com/microsoft-desktop-optimization-pack/mbam-v25/mbam-25-security-considerations#bkmk-tpm).
+Per altre informazioni sulla proprietà del TPM, vedere [Configurare MBAM per depositare il TPM e archiviare le password OwnerAuth](/microsoft-desktop-optimization-pack/mbam-v25/mbam-25-security-considerations#bkmk-tpm).
 
 > [!NOTE]
 > A partire da Windows 10, versione 1607, Windows non mantiene la password del proprietario del TPM durante il provisioning del TPM.
@@ -159,7 +159,7 @@ Per ripristinare un'unità spostata, usare l'area **Drive recovery** (Ripristino
 
 Se l'unità spostata è stata configurata per l'uso di un chip TPM nel computer originale, attenersi alla procedura seguente. In caso contrario, il processo di ripristino è terminato.
 
-1. Dopo aver sbloccato l'unità, avviare il computer in modalità WinRE. Aprire un prompt dei comandi in WinRE e usare il comando `manage-bde` per decrittografare l'unità. Questo strumento costituisce l'unico modo per rimuovere la protezione **TPM più PIN** senza il chip TPM originale. Per altre informazioni su questo comando, vedere [Manage-bde](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker#bkmk-managebde).
+1. Dopo aver sbloccato l'unità, avviare il computer in modalità WinRE. Aprire un prompt dei comandi in WinRE e usare il comando `manage-bde` per decrittografare l'unità. Questo strumento costituisce l'unico modo per rimuovere la protezione **TPM più PIN** senza il chip TPM originale. Per altre informazioni su questo comando, vedere [Manage-bde](/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker#bkmk-managebde).
 
 1. Al termine, avviare normalmente il computer. Configuration Manager procederà ad applicare i criteri di BitLocker per crittografare l'unità con la configurazione TPM più PIN del nuovo computer.
 
@@ -184,7 +184,7 @@ Usare l'ID chiave di ripristino per recuperare un pacchetto della chiave di ripr
 
     `repair-bde C: D: -kp F:\RecoveryKeyPackage -rp 111111-222222-333333-444444-555555-666666-777777-888888`
 
-Per altre informazioni su questo comando, vedere [Repair-bde](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker#bkmk-repairbde).
+Per altre informazioni su questo comando, vedere [Repair-bde](/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker#bkmk-repairbde).
 
 ## <a name="reports"></a>Report
 

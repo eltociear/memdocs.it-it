@@ -10,12 +10,12 @@ ms.assetid: 140c522f-d09a-40b6-a4b0-e0d14742834a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9cb8097fbdd57184e5cd0e229cf96dcb317cf1e5
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: cc05ae5a9be6c437fab60f8c4c5a45d61e8c3e65
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127342"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694883"
 ---
 # <a name="tutorial-enable-co-management-for-existing-configuration-manager-clients"></a>Esercitazione: Abilitare la co-gestione per i client di Configuration Manager esistenti
 
@@ -50,7 +50,7 @@ Usare questa esercitazione in questi casi:
 
 Se le configurazioni non sono già presenti nell'ambiente, in questa esercitazione verranno eseguite le operazioni seguenti:
 
-- Configurare [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-select-installation) tra l'istanza di Active Directory locale e il tenant di Azure Active Directory (AD).
+- Configurare [Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-select-installation) tra l'istanza di Active Directory locale e il tenant di Azure Active Directory (AD).
 
 > [!TIP]
 > Non è più necessario acquistare e assegnare singole licenze di Intune o EMS ai propri utenti. Per altre informazioni, vedere [Domande frequenti su prodotto e licenze](../core/understand/product-and-licensing-faq.md#bkmk_mem).
@@ -78,10 +78,10 @@ Quando si configura un'istanza di Azure AD ibrido, si sta effettivamente configu
 >
 > Per altre informazioni su Azure AD ibrido, vedere gli articoli seguenti nella documentazione di Azure Active Directory:
 >
-> - [Pianificare l'implementazione dell'aggiunta ad Azure AD](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)
-> - [Pianificare l'implementazione dell'aggiunta ad Azure AD ibrido](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)
-> - [Controllare l'aggiunta dei dispositivi ad Azure AD ibrido](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-control)
-> - [Configurare l'aggiunta ad Azure AD ibrido per i domini federati](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-federated-domains)  
+> - [Pianificare l'implementazione dell'aggiunta ad Azure AD](/azure/active-directory/devices/azureadjoin-plan)
+> - [Pianificare l'implementazione dell'aggiunta ad Azure AD ibrido](/azure/active-directory/devices/hybrid-azuread-join-plan)
+> - [Controllare l'aggiunta dei dispositivi ad Azure AD ibrido](/azure/active-directory/devices/hybrid-azuread-join-control)
+> - [Configurare l'aggiunta ad Azure AD ibrido per i domini federati](/azure/active-directory/devices/hybrid-azuread-join-federated-domains)  
 
 ### <a name="set-up-azure-ad-connect"></a>Configurare Azure AD Connect
 
@@ -92,7 +92,7 @@ A partire dalla versione 1.1.819.0, Azure AD Connect offre una procedura guidata
 Per configurare Azure AD Connect, sono necessarie le credenziali di amministratore globale per Azure AD.  
 
 > [!TIP]  
-> La procedura seguente non deve essere considerata obbligatoria per la configurazione di Azure AD Connect, ma viene illustrata per semplificare la configurazione della co-gestione tra Intune e Configuration Manager. Per contenuto autorevole su questa procedura e sulle procedure correlate per la configurazione di Azure AD, vedere [Configurare l'aggiunta ad Azure AD ibrido per i domini gestiti](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains) nella documentazione di Azure AD.  
+> La procedura seguente non deve essere considerata obbligatoria per la configurazione di Azure AD Connect, ma viene illustrata per semplificare la configurazione della co-gestione tra Intune e Configuration Manager. Per contenuto autorevole su questa procedura e sulle procedure correlate per la configurazione di Azure AD, vedere [Configurare l'aggiunta ad Azure AD ibrido per i domini gestiti](/azure/active-directory/devices/hybrid-azuread-join-managed-domains) nella documentazione di Azure AD.  
 
 #### <a name="configure-a-hybrid-azure-ad-join-using-azure-ad-connect"></a>Configurare l'aggiunta ad Azure AD ibrido con Azure AD Connect
 
@@ -107,7 +107,7 @@ Per configurare Azure AD Connect, sono necessarie le credenziali di amministrato
    È possibile selezionare l'opzione per supportare i dispositivi Windows di livello inferiore aggiunti al dominio, ma tenere presente che la co-gestione dei dispositivi è supportata solo per Windows 10.
 8. Nella pagina **Punto di connessione del servizio** per ogni foresta locale per la quale si vuole che Azure AD Connect configuri il punto di connessione del servizio, eseguire questa procedura e quindi selezionare **Avanti**:  
    1. Selezionare la foresta.  
-   2. Selezionare il servizio di autenticazione.  Se si ha un dominio federato, selezionare il server AD FS, a meno che l'organizzazione non abbia esclusivamente client Windows 10 e sia stata configurata la sincronizzazione di computer/dispositivi o che l'organizzazione non usi [Seamless SSO](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso).  
+   2. Selezionare il servizio di autenticazione.  Se si ha un dominio federato, selezionare il server AD FS, a meno che l'organizzazione non abbia esclusivamente client Windows 10 e sia stata configurata la sincronizzazione di computer/dispositivi o che l'organizzazione non usi [Seamless SSO](/azure/active-directory/hybrid/how-to-connect-sso).  
    3. Fare clic su **Aggiungi** per immettere le credenziali di amministratore aziendale.  
 9. Se si ha un dominio gestito, ignorare questo passaggio.  
 
@@ -115,7 +115,7 @@ Per configurare Azure AD Connect, sono necessarie le credenziali di amministrato
 10. Nella pagina **Pronto per la configurazione** selezionare **Configura**.
 11. Nella pagina **La configurazione è stata completata** selezionare **Esci**.
 
-Se si verificano problemi con il completamento dell'aggiunta ad Azure AD ibrido per i dispositivi Windows aggiunti al dominio, vedere [Risolvere i problemi dei dispositivi Windows correnti aggiunti ad Azure AD ibrido](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current).
+Se si verificano problemi con il completamento dell'aggiunta ad Azure AD ibrido per i dispositivi Windows aggiunti al dominio, vedere [Risolvere i problemi dei dispositivi Windows correnti aggiunti ad Azure AD ibrido](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current).
 
 ## <a name="configure-client-settings-to-direct-clients-to-register-with-azure-ad"></a>Configurare le impostazioni client per fare in modo che i client eseguano la registrazione con Azure AD
 
@@ -155,7 +155,7 @@ La registrazione automatica consente inoltre agli utenti di registrare i propri 
     > [!NOTE]
     > È possibile che in alcuni tenant queste opzioni non siano disponibili per la configurazione.<!-- SCCMDocs#1230 -->
     >
-    > **Microsoft Intune** definisce la modalità di configurazione dell'app MDM per Azure AD. **Registrazione di Microsoft Intune** è un'app specifica di Azure AD che viene creata quando si applicano i criteri di autenticazione a più fattori per la registrazione in iOS e Android. Per altre informazioni, vedere [Richiedere l'autenticazione a più fattori per le registrazioni di dispositivi Intune](https://docs.microsoft.com/intune/enrollment/multi-factor-authentication).
+    > **Microsoft Intune** definisce la modalità di configurazione dell'app MDM per Azure AD. **Registrazione di Microsoft Intune** è un'app specifica di Azure AD che viene creata quando si applicano i criteri di autenticazione a più fattori per la registrazione in iOS e Android. Per altre informazioni, vedere [Richiedere l'autenticazione a più fattori per le registrazioni di dispositivi Intune](/intune/enrollment/multi-factor-authentication).
 
 5. Per l'ambito utente MDM selezionare **Tutti** e quindi fare clic su **Salva**.  
 

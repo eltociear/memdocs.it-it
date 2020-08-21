@@ -10,12 +10,12 @@ ms.assetid: 8eed50f5-80a4-422e-8aa6-a7ccb2171475
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a3cf735dfa2dd73ed39a24c2d674a966acddf05a
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: c2861214bcdc9162b0121304b342d1d9d48be170
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125118"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697943"
 ---
 # <a name="deploy-windows-to-go-with-configuration-manager"></a>Distribuire Windows To Go con Configuration Manager
 
@@ -23,7 +23,7 @@ ms.locfileid: "88125118"
 
 In questo argomento viene illustrato come eseguire il provisioning di Windows To Go in Configuration Manager. Windows To Go è una funzionalità aziendale di Windows 8 che permette di creare un'area di lavoro di Windows To Go che può essere avviata da un'unità esterna connessa tramite USB nei computer che soddisfano i requisiti di certificato di Windows 7 o Windows 8, indipendentemente dal sistema operativo in esecuzione nel computer. Le aree di lavoro di Windows To Go possono utilizzare la stessa immagine che utilizzano le organizzazioni per i desktop e laptop e possono essere gestite allo stesso modo.  
 
- Per altre informazioni su Windows To Go, vedere [Windows To Go: panoramica della funzionalità](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh831833(v=ws.11)).  
+ Per altre informazioni su Windows To Go, vedere [Windows To Go: panoramica della funzionalità](/previous-versions/windows/it-pro/windows-8.1-and-8/hh831833(v=ws.11)).  
 
 ## <a name="provision-windows-to-go"></a>Provisioning di Windows To Go  
  Windows To Go è un sistema operativo archiviato in un'unità esterna con collegamento USB. È possibile eseguire il provisioning dell'unità di Windows To Go esattamente come viene eseguito per le distribuzioni di altri sistemi operativi. Tuttavia, poiché Windows To Go è progettato come soluzione altamente mobile e incentrata sull'utente, è necessario adottare un approccio leggermente diverso al provisioning di queste unità.  
@@ -461,4 +461,4 @@ In questo argomento viene illustrato come eseguire il provisioning di Windows To
  Quando il computer viene riavviato dall'unità Windows To Go, l'unità esegue il riavvio in Windows PE ed esegue la connessione al punto di gestione per ottenere i criteri necessari per il completamento della distribuzione del sistema operativo. Configuration Manager configura e prepara l'unità Windows To Go. Quando Configuration Manager completa la preparazione dell'unità, l'utente può riavviare il computer per finalizzare il processo di provisioning, ad esempio mediante l'unione a un dominio o l'installazione di applicazioni. Questo processo è lo stesso per tutti i supporti preinstallati.  
 
 ###  <a name="user-logs-in-to-windows-8"></a><a name="BKMK_UserLogsIn"></a> L'utente accede a Windows 8  
- Quando Configuration Manager completa il processo di provisioning e viene visualizzata la schermata di blocco di Windows 8, l'utente può eseguire l'accesso al sistema operativo.  
+ Quando Configuration Manager completa il processo di provisioning e viene visualizzata la schermata di blocco di Windows 8, l'utente può eseguire l'accesso al sistema operativo.

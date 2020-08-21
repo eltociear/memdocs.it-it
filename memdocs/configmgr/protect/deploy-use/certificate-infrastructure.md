@@ -10,12 +10,12 @@ ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 590c6fd336ec19949b5f5b99b25b3104524a52d6
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 656cc80c929eb7e829dd06b642a83cb174d3b0c8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210112"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697246"
 ---
 # <a name="configure-certificate-infrastructure"></a>Configurare l'infrastruttura di certificazione
 
@@ -34,7 +34,7 @@ Usare questi passaggi per configurare l'infrastruttura per i certificati SCEP o 
 
 ### <a name="to-install-and-configure-the-network-device-enrollment-service-and-dependencies"></a>Per installare e configurare il servizio Registrazione dispositivi di rete e le dipendenze  
 
-1. Su un server che esegue Windows Server 2012 R2, installare e configurare il ruolo servizio Registrazione dispositivi di rete per il ruolo del server Servizi certificati Active Directory. Per altre informazioni, vedere [Linee guida per il Servizio Registrazione dispositivi di rete](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\)).
+1. Su un server che esegue Windows Server 2012 R2, installare e configurare il ruolo servizio Registrazione dispositivi di rete per il ruolo del server Servizi certificati Active Directory. Per altre informazioni, vedere [Linee guida per il Servizio Registrazione dispositivi di rete](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\)).
 
 2. Controllare e, se necessario, modificare le autorizzazioni di sicurezza per i modelli di certificato usati dal servizio Registrazione dispositivi di rete:  
 
@@ -44,7 +44,7 @@ Usare questi passaggi per configurare l'infrastruttura per i certificati SCEP o 
 
    -   Per l'account del servizio SCEP usato dal pool di applicazioni del servizio Registrazione dispositivi di rete: autorizzazioni **Lettura** e **Registrazione**.  
 
-        Questo non è un requisito specifico di Configuration Manager ma è parte della configurazione del servizio Registrazione dispositivi di rete. Per altre informazioni, vedere [Linee guida per il Servizio Registrazione dispositivi di rete](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\)).  
+        Questo non è un requisito specifico di Configuration Manager ma è parte della configurazione del servizio Registrazione dispositivi di rete. Per altre informazioni, vedere [Linee guida per il Servizio Registrazione dispositivi di rete](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\)).  
 
    > [!TIP]  
    >  Per identificare i modelli di certificato usati dal servizio Registrazione dispositivi di rete, visualizzare la seguente chiave del Registro di sistema sul server che esegue il servizio Registrazione dispositivi di rete: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP.  
@@ -79,7 +79,7 @@ Usare questi passaggi per configurare l'infrastruttura per i certificati SCEP o 
 
    - **Lunghezza massima stringa di query in (byte)** : **65534**  
 
-     Per altre informazioni su queste impostazioni e sulla loro configurazione, vedere [Limiti richiesta di IIS](https://docs.microsoft.com/iis/configuration/system.webServer/security/requestFiltering/requestLimits/).
+     Per altre informazioni su queste impostazioni e sulla loro configurazione, vedere [Limiti richiesta di IIS](/iis/configuration/system.webServer/security/requestFiltering/requestLimits/).
 
 7. Per poter richiedere un certificato il cui periodo di validità è inferiore a quello del modello di certificato in uso: Questa configurazione è disabilitata per impostazione predefinita da una CA globale (enterprise). Per abilitare questa opzione in una CA globale (enterprise), usare lo strumento della riga di comando Certutil, quindi arrestare e riavviare il servizio certificati usando i seguenti comandi:  
 
@@ -89,7 +89,7 @@ Usare questi passaggi per configurare l'infrastruttura per i certificati SCEP o 
 
    3. **net start certsvc**  
 
-      Per altre informazioni, vedere [Strumenti e impostazioni di Servizi certificati](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc780742\(v=ws.10\)).
+      Per altre informazioni, vedere [Strumenti e impostazioni di Servizi certificati](/previous-versions/windows/it-pro/windows-server-2003/cc780742\(v=ws.10\)).
 
 8. Verificare che il servizio Registrazione dispositivi di rete sia in funzione usando il collegamento seguente come esempio: `https://server.contoso.com/certsrv/mscep/mscep.dll`. Verrà visualizzata la pagina Web incorporata del servizio Registrazione dispositivi di rete. Questa pagina Web illustra il servizio e spiega che i dispositivi di rete usano l'URL per inviare richieste di certificati.  
 
@@ -201,4 +201,4 @@ Usare questi passaggi per configurare l'infrastruttura per i certificati SCEP o 
    Per disinstallare il modulo criteri di Configuration Manager, usare **Programmi e funzionalità** nel Pannello di controllo. 
 
  
-Ora che sono stati completati i passaggi di configurazione, si è pronti a distribuire i certificati a utenti e dispositivi creando e distribuendo profili certificato. Per altre informazioni su come creare profili certificato, vedere [Come creare profili certificato in Configuration Manager](../../protect/deploy-use/create-certificate-profiles.md).  
+Ora che sono stati completati i passaggi di configurazione, si è pronti a distribuire i certificati a utenti e dispositivi creando e distribuendo profili certificato. Per altre informazioni su come creare profili certificato, vedere [Come creare profili certificato in Configuration Manager](../../protect/deploy-use/create-certificate-profiles.md).

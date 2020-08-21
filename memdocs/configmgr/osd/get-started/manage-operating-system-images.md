@@ -10,12 +10,12 @@ ms.assetid: fab13949-371c-4a4c-978e-471db1e54966
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: aa574cd3db2e7a3d3277912ed4a383f71d33e59c
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 2f8b8a45ff83ce903f5737c94144e6ca5ab50826
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124288"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697654"
 ---
 # <a name="manage-os-images-with-configuration-manager"></a>Gestire le immagini del sistema operativo con Configuration Manager
 
@@ -89,7 +89,7 @@ Prima di poter usare un'immagine del sistema operativo, è necessario aggiungerl
 
 5. Completare la procedura guidata.  
 
-Per il cmdlet di PowerShell equivalente a questa procedura guidata della console, vedere [New-CMOperatingSystemImage](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmoperatingsystemimage?view=sccm-ps).
+Per il cmdlet di PowerShell equivalente a questa procedura guidata della console, vedere [New-CMOperatingSystemImage](/powershell/module/configurationmanager/new-cmoperatingsystemimage?view=sccm-ps).
 
 Quindi distribuire l'immagine del sistema operativo ai punti di distribuzione.  
 
@@ -122,4 +122,4 @@ Usare le distribuzioni multicast per consentire a più computer di scaricare sim
 
          Se si seleziona l'opzione **Trasferisci il pacchetto solo via multicast**, è necessario specificare anche l'opzione di distribuzione della sequenza attività **Scaricare il contenuto localmente quando necessario eseguendo la sequenza attività**. Per altre informazioni, vedere [Deploy a task sequence](../deploy-use/deploy-a-task-sequence.md).  
 
-5. Selezionare **OK** per salvare le impostazioni e chiudere le proprietà dell'immagine.  
+5. Selezionare **OK** per salvare le impostazioni e chiudere le proprietà dell'immagine.

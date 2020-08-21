@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 0513c1908b1360a50653931dda57e5d148055240
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 18ea44f662591a21750fb630425ddfb975678aa2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905682"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695597"
 ---
 # <a name="capabilities-in-technical-preview-1606-for-configuration-manager"></a>Funzionalità della versione Technical Preview 1606 per Configuration Manager
 
@@ -80,9 +80,9 @@ Opzioni simili sono state aggiunte alla procedura guidata di distribuzione degli
 
 Controllo dispositivo è una funzionalità di Windows 10 che usa funzioni hardware e software per controllare accuratamente ciò che può essere eseguita sul dispositivo.
 
-Per altre informazioni, vedere [Introduzione a Device Guard](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control).
+Per altre informazioni, vedere [Introduzione a Device Guard](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control).
 
-In questa versione Configuration Manager può interagire con Controllo dispositivo e [Windows AppLocker](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd723678(v=ws.10)) in modo che i file eseguibili e le DLL che vengono distribuite con Configuration Manager siano automaticamente attendibili, in quanto provenienti da un programma di installazione gestito, perciò sia consentita la loro esecuzione sul dispositivo di destinazione, mentre non sarà consentita agli altri software se non esplicitamente specificato da altre regole di AppLocker.  
+In questa versione Configuration Manager può interagire con Controllo dispositivo e [Windows AppLocker](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd723678(v=ws.10)) in modo che i file eseguibili e le DLL che vengono distribuite con Configuration Manager siano automaticamente attendibili, in quanto provenienti da un programma di installazione gestito, perciò sia consentita la loro esecuzione sul dispositivo di destinazione, mentre non sarà consentita agli altri software se non esplicitamente specificato da altre regole di AppLocker.  
 
 Attualmente questa funzionalità non è configurabile dalla console di Configuration Manager. Per configurare i criteri è necessario configurare una chiave di registro su ciascun client e configurare servizi di Windows sul client.
 Al termine configurare il file di criteri di AppLocker. Dopo aver configurato il file dei criteri è possibile distribuirlo a qualsiasi dispositivo compatibile con il client.
@@ -95,9 +95,9 @@ I criteri con regole del programma di installazione gestito, come tutti i criter
 
 Per altre informazioni, vedere gli articoli seguenti:
 
-- [Introduzione a Controllo dispositivo](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)
+- [Introduzione a Controllo dispositivo](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)
 
-- [Pianificazione e introduzione al processo di distribuzione di Controllo di applicazioni di Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)
+- [Pianificazione e introduzione al processo di distribuzione di Controllo di applicazioni di Windows Defender](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)
 
   ##  <a name="multiple-device-management-points-for-on-premises-mobile-device-management"></a><a name="dmp_onprem"></a> Punti di gestione dei dispositivi multipli per la gestione dei dispositivi mobili locale  
   Con la versione Technical Preview 1606, Gestione dispositivi mobili locali supporta una nuova funzionalità di Windows 10 Anniversary Update che configura automaticamente un dispositivo registrato affinché usi più di un punto di gestione periferiche. Questa funzionalità consente al dispositivo il fallback su un altro punto di gestione periferiche quando quello che usa di solito non è disponibile. La funzionalità è operativa solo nei PC in cui è stato installato Windows 10 Anniversary Update.  
@@ -170,8 +170,8 @@ Il modo più semplice per ottenere l'esportazione della radice dei certificati c
 #### <a name="upload-the-management-certificate-to-azure"></a>Caricare il certificato di gestione in Azure
 
 È necessario un certificato di gestione di Azure perché Configuration Manager possa accedere all'API di Azure e configurare il servizio proxy cloud. Per altre informazioni e istruzioni su come caricare un certificato di gestione, vedere gli articoli seguenti nella documentazione di Azure:
-- [Panoramica sui certificati per i servizi cloud di Azure](https://azure.microsoft.com/documentation/articles/cloud-services-certs-create/)
-- [Caricare un certificato di gestione dell'API di gestione di Azure](https://azure.microsoft.com/documentation/articles/azure-api-management-certs/).
+- [Panoramica sui certificati per i servizi cloud di Azure](/azure/cloud-services/cloud-services-certs-create)
+- [Caricare un certificato di gestione dell'API di gestione di Azure](/previous-versions/azure/azure-api-management-certs).
 
 Assicurarsi di copiare l'ID sottoscrizione associato al certificato di gestione. Sarà necessario per configurare il servizio proxy cloud nella console di Configuration Manager.
 

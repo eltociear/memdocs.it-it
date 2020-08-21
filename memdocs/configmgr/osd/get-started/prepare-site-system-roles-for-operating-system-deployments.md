@@ -10,12 +10,12 @@ ms.assetid: 0ef5f3ce-b0e4-4775-b5c2-b245e45b4194
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1beec2f5ef7b6da9f1f093300ec6c2b239e7396e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 5d9331ce452e40944e4a9b363773d254a32f2c58
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708799"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697484"
 ---
 # <a name="prepare-site-system-roles-for-os-deployments-with-configuration-manager"></a>Preparare i ruoli di sistema del sito per le distribuzioni dei sistemi operativi
 
@@ -116,7 +116,7 @@ Le dimensioni dello stato utente influiscono direttamente sull'archiviazione su 
 
 Per acquisire e ripristinare lo stato utente durante la distribuzione dei sistemi operativi, è necessario usare un pacchetto per Utilità di migrazione stato utente (USMT) che punti ai file di origine USMT. Configuration Manager crea automaticamente questo pacchetto nella console di Configuration Manager in **Raccolta software** > **Gestione applicazioni** > **Pacchetti**. Configuration Manager usa USMT 10 per acquisire lo stato utente da un sistema operativo e quindi ripristinarlo in un altro sistema operativo. Windows Assessment and Deployment Kit (Windows ADK) per Windows 10 include USMT 10.
 
-Per una descrizione dei diversi scenari di migrazione per USMT 10, vedere [Scenari di migrazione comuni](https://docs.microsoft.com/windows/deployment/usmt/usmt-common-migration-scenarios) nella documentazione di Windows.  
+Per una descrizione dei diversi scenari di migrazione per USMT 10, vedere [Scenari di migrazione comuni](/windows/deployment/usmt/usmt-common-migration-scenarios) nella documentazione di Windows.  
 
 
 ### <a name="retention-policy"></a>Criteri di conservazione  
@@ -156,4 +156,4 @@ Quando si usano queste procedure guidate, viene richiesto di specificare le info
 
 -   Se il punto di migrazione stato deve rispondere solo alle richieste di ripristino dei dati dello stato utente. Quando si abilita questa opzione, non è possibile usare il punto di migrazione stato per archiviare i dati dello stato utente.  
 
-Per i passaggi relativi all'installazione di un ruolo di sistema del sito, vedere [Aggiungere ruoli di sistema del sito](../../core/servers/deploy/configure/add-site-system-roles.md).  
+Per i passaggi relativi all'installazione di un ruolo di sistema del sito, vedere [Aggiungere ruoli di sistema del sito](../../core/servers/deploy/configure/add-site-system-roles.md).

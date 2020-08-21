@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 070c616ed8411bcd90b2d3edb12b04edd57241e1
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 2fa46770adfbf3e688bbdc561d8193967f3913cd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85590474"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698589"
 ---
 # <a name="what39s-new-in-version-1606-of-configuration-manager"></a>Novità della versione 1606 di Configuration Manager
 
@@ -86,7 +86,7 @@ Per spostarsi tra i vari nodi di un'area di lavoro, è ora possibile immettere l
 Di seguito sono riportate le modifiche del nodo Amministrazione nella console di Configuration Manager:
 ### <a name="oms-connector"></a>Connettore OMS
 
-È ora possibile connettere le raccolte di Configuration Manager da System Center Configuration Manager a [Microsoft Operations Management Suite (OMS)](https://azure.microsoft.com/documentation/articles/operations-management-suite-overview/). In questo modo i dati, ad esempio le raccolte delle distribuzioni di Configuration Manager, sono visibili in OMS. Per altre informazioni, vedere [Sincronizzazione dei dati da Configuration Manager a Microsoft Operations Management Suite](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm).
+È ora possibile connettere le raccolte di Configuration Manager da System Center Configuration Manager a [Microsoft Operations Management Suite (OMS)](/azure/azure-monitor/overview). In questo modo i dati, ad esempio le raccolte delle distribuzioni di Configuration Manager, sono visibili in OMS. Per altre informazioni, vedere [Sincronizzazione dei dati da Configuration Manager a Microsoft Operations Management Suite](/azure/azure-monitor/platform/collect-sccm).
 
 Il connettore OMS è una funzionalità di versione non definitiva. Per abilitarla, vedere [Usare le funzionalità di versioni non definitive degli aggiornamenti](../../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease).
 

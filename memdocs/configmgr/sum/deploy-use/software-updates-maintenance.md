@@ -10,12 +10,12 @@ ms.technology: configmgr-sum
 ms.assetid: 4b0e2e90-aac7-4d06-a707-512eee6e576c
 manager: dougeby
 ms.author: mstewart
-ms.openlocfilehash: 560b432bb90f99207fd15bc07e7aff98ffd59ebf
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a327d50a2743f81407530355b6fd5101ce6a8b02
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703009"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696906"
 ---
 # <a name="software-updates-maintenance"></a>Manutenzione degli aggiornamenti software
 
@@ -130,11 +130,11 @@ L'aggiunta di indici non cluster consente di migliorare le prestazioni della pul
 
 Quando il database WSUS si trova in un server SQL remoto, può essere necessario aggiungere autorizzazioni in SQL per creare gli indici. L'account usato per la connessione al database WSUS e la creazione di indici può variare. Se si specifica un [account di connessione al server WSUS nelle proprietà del punto di aggiornamento software](../get-started/install-a-software-update-point.md#wsus-server-connection-account), verificare che l'account disponga delle autorizzazioni SQL. Se non si specifica un account di connessione al server WSUS, l'account computer del server del sito deve disporre delle autorizzazioni SQL.
 
-- Per la creazione di un indice è richiesta l'autorizzazione `ALTER` per la tabella o vista. L'account deve essere un membro del ruolo predefinito del server`sysadmin` o dei ruoli predefiniti del database `db_ddladmin` e `db_owner`. Per altre informazioni sulla creazione dell'indice e le autorizzazioni, vedere [CREATE INDEX (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/create-index-transact-sql?view=sql-server-2017#permissions).
-- È necessario concedere all'account l'autorizzazione del server `CONNECT SQL`. Per altre informazioni, vedere [Autorizzazione del server GRANT (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017).
+- Per la creazione di un indice è richiesta l'autorizzazione `ALTER` per la tabella o vista. L'account deve essere un membro del ruolo predefinito del server`sysadmin` o dei ruoli predefiniti del database `db_ddladmin` e `db_owner`. Per altre informazioni sulla creazione dell'indice e le autorizzazioni, vedere [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql?view=sql-server-2017#permissions).
+- È necessario concedere all'account l'autorizzazione del server `CONNECT SQL`. Per altre informazioni, vedere [Autorizzazione del server GRANT (Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017).
 
 > [!NOTE]  
->  Se il database WSUS si trova in un server SQL remoto tramite una porta non predefinita, non è possibile aggiungere gli indici. Per questo scenario, è possibile creare un [alias del server usando Gestione configurazione SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client?view=sql-server-2017). Dopo l'aggiunta dell'alias e quando Configuration Manager può stabilire una connessione con il database, gli indici verranno aggiunti.
+>  Se il database WSUS si trova in un server SQL remoto tramite una porta non predefinita, non è possibile aggiungere gli indici. Per questo scenario, è possibile creare un [alias del server usando Gestione configurazione SQL Server](/sql/database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client?view=sql-server-2017). Dopo l'aggiunta dell'alias e quando Configuration Manager può stabilire una connessione con il database, gli indici verranno aggiunti.
 
 ### <a name="remove-obsolete-updates-from-the-wsus-database"></a>Rimuovere gli aggiornamenti obsoleti dal database di WSUS
 
@@ -150,8 +150,8 @@ Gli aggiornamenti obsoleti sono aggiornamenti inutilizzati e revisioni di aggior
 
 Quando il database WSUS è in un server SQL remoto, l'account computer del server del sito richiede le autorizzazioni di SQL seguenti:
 
-- Ruoli predefiniti del database `db_datareader` e `db_datawriter`. Per altre informazioni, vedere [Ruoli a livello di database](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles?view=sql-server-2017#fixed-database-roles).
-- L'autorizzazione del server `CONNECT SQL` deve essere concessa all'account computer del server del sito. Per altre informazioni, vedere [Autorizzazione del server GRANT (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017).
+- Ruoli predefiniti del database `db_datareader` e `db_datawriter`. Per altre informazioni, vedere [Ruoli a livello di database](/sql/relational-databases/security/authentication-access/database-level-roles?view=sql-server-2017#fixed-database-roles).
+- L'autorizzazione del server `CONNECT SQL` deve essere concessa all'account computer del server del sito. Per altre informazioni, vedere [Autorizzazione del server GRANT (Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017).
 
 #### <a name="wsus-cleanup-wizard"></a>Pulizia guidata WSUS
 

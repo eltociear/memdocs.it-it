@@ -10,12 +10,12 @@ ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9f0ed1d5913154d90242d1aa2a47efbcf7d22282
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: 2dd722ddcf0e5ea6e944a76366204ac83ede05ec
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943791"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698957"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Elenco dei controlli dei prerequisiti per Configuration Manager
 
@@ -279,7 +279,7 @@ Per altre informazioni, vedere l'articolo del supporto tecnico Microsoft relativ
 
 L'istanza di SQL Server è configurata per usare le regole di confronto **SQL_Latin1_General_CP1_CI_AS**.
 
-Se il database del sito di Configuration Manager è già installato, questo controllo si applica anche al database. Per informazioni su come modificare le regole di confronto del database e dell'istanza di SQL Server, vedere [Regole di confronto e supporto Unicode di SQL](https://docs.microsoft.com/sql/relational-databases/collations/collation-and-unicode-support).
+Se il database del sito di Configuration Manager è già installato, questo controllo si applica anche al database. Per informazioni su come modificare le regole di confronto del database e dell'istanza di SQL Server, vedere [Regole di confronto e supporto Unicode di SQL](/sql/relational-databases/collations/collation-and-unicode-support).
 
 Se si usa un sistema operativo cinese ed è necessario il supporto GB18030, questo controllo non è applicabile. Per altre informazioni sull'attivazione del supporto GB18030, vedere [Supporto internazionale](../../../plan-design/hierarchy/international-support.md).
 
@@ -379,7 +379,7 @@ Quando si usa SQL Server Always On, le repliche del gruppo di disponibilità son
 <!-- SCCMDocs-pr#3899 -->
 *Si applica a: server di database del sito*
 
-A partire dalla versione 1906, quando si usa SQL Server Always On è necessario configurare le repliche dei gruppi di disponibilità con la stessa [modalità seeding](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas).
+A partire dalla versione 1906, quando si usa SQL Server Always On è necessario configurare le repliche dei gruppi di disponibilità con la stessa [modalità seeding](/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas).
 
 ### <a name="sql-availability-group-replicas-must-be-healthy"></a>Le repliche dei gruppi di disponibilità di SQL devono essere integre
 
@@ -741,7 +741,7 @@ L'account configurato per eseguire il servizio SQL Server per l'istanza di datab
 
 A partire dalla versione 1810, è possibile controllare se il database del sito ha un backlog di dati di rilevamento modifiche di SQL.<!--SCCMDocs-pr issue 3023-->  
 
-Eseguire manualmente il controllo tramite una stored procedure nel database del sito. Creare prima di tutto una [connessione di diagnostica](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017) al database del sito. Il metodo più semplice è usare l'editor di query del motore di database di SQL Server Management Studio e connettersi a `admin:<instance name>`.
+Eseguire manualmente il controllo tramite una stored procedure nel database del sito. Creare prima di tutto una [connessione di diagnostica](/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017) al database del sito. Il metodo più semplice è usare l'editor di query del motore di database di SQL Server Management Studio e connettersi a `admin:<instance name>`.
 
 In una finestra di query di connessione amministrativa dedicata, eseguire i comandi seguenti:
 
@@ -804,7 +804,7 @@ Configuration Manager usa SQL Server Native Client nei seguenti ruoli del sistem
 
 SQL Server riserva almeno 8 GB di memoria per il sito di amministrazione centrale e per il sito primario e almeno 4 GB di memoria per il sito secondario.
 
-Per altre informazioni, vedere [Come configurare le opzioni di memoria tramite SQL Server Management Studio](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options#how-to-configure-memory-options-using-).
+Per altre informazioni, vedere [Come configurare le opzioni di memoria tramite SQL Server Management Studio](/sql/database-engine/configure-windows/server-memory-server-configuration-options#how-to-configure-memory-options-using-).
 
 > [!NOTE]  
 > Questo controllo non è applicabile a SQL Server Express in un sito secondario. In questa edizione la memoria riservata è limitata a 1 GB.  
@@ -849,7 +849,7 @@ Per altre informazioni, vedere [Preparare Active Directory per la pubblicazione 
 
 WinRM 1.1 è installato nel server del sito primario o nel computer della console di Configuration Manager per l'esecuzione della console di gestione fuori banda.
 
-WinRM viene installato automaticamente con tutte le versioni di Windows attualmente supportate. Per altre informazioni, vedere [Installazione e configurazione di Gestione remota Windows](https://docs.microsoft.com/windows/win32/winrm/installation-and-configuration-for-windows-remote-management).
+WinRM viene installato automaticamente con tutte le versioni di Windows attualmente supportate. Per altre informazioni, vedere [Installazione e configurazione di Gestione remota Windows](/windows/win32/winrm/installation-and-configuration-for-windows-remote-management).
 
 ### <a name="wsus-on-site-server"></a>WSUS nel server di sito
 
@@ -857,4 +857,4 @@ WinRM viene installato automaticamente con tutte le versioni di Windows attualme
 
 Una versione supportata di Windows Server Update Services (WSUS) è installata nel server del sito.
 
-Quando si usa un punto di aggiornamento software in un server diverso rispetto al server del sito, è necessario installare la console di amministrazione WSUS nel server del sito. Per altre informazioni su WSUS, vedere [Windows Server Update Services](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus).
+Quando si usa un punto di aggiornamento software in un server diverso rispetto al server del sito, è necessario installare la console di amministrazione WSUS nel server del sito. Per altre informazioni su WSUS, vedere [Windows Server Update Services](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus).

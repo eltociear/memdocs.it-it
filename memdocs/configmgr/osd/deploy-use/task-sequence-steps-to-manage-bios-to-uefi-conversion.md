@@ -10,12 +10,12 @@ ms.assetid: bd3df04a-902f-4e91-89eb-5584b47d9efa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 761270fe9419330e2d60d0483554ee6c932c1b26
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: bf108cec074129f9b70e7cd2658cf2b1c8c10bc2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124886"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697909"
 ---
 # <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>Passaggi della sequenza di attività per la gestione della conversione da BIOS a UEFI
 
@@ -91,7 +91,7 @@ Windows 10 include **MBR2GPT**, un semplice strumento di conversione. Questo str
     > [!TIP]
     > È anche possibile scegliere di eseguire lo strumento MBR2GPT.EXE in Windows PE anziché nel sistema operativo completo. Aggiungere un passaggio per riavviare il computer in Windows PE prima del passaggio per eseguire lo strumento MBR2GPT.EXE. A questo punto rimuovere l'opzione **/AllowFullOS** dalla riga di comando.
 
-    Per altre informazioni sullo strumento e sulle opzioni disponibili, vedere [MBR2GPT.EXE](https://docs.microsoft.com/windows/deployment/mbr-to-gpt).
+    Per altre informazioni sullo strumento e sulle opzioni disponibili, vedere [MBR2GPT.EXE](/windows/deployment/mbr-to-gpt).
 
     1. Aggiungere un passaggio per eseguire lo strumento OEM che converte il firmware da BIOS a UEFI. Si tratta generalmente del passaggio **Esegui riga di comando** con una riga di comando per eseguire lo strumento OEM.
 

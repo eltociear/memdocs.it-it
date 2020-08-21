@@ -10,12 +10,12 @@ ms.assetid: 9cbfc406-d009-446d-8fee-4938de48c919
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b16ba822cb538b62fac06ee550dd17cfa8f077be
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 0e4fc5b019de25234ae964137f6b374ecbbca7d8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124562"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697790"
 ---
 # <a name="customize-boot-images-with-configuration-manager"></a>Personalizzare le immagini d'avvio con Configuration Manager
 
@@ -49,7 +49,7 @@ Ogni versione di Configuration Manager supporta una versione specifica di Window
 
 - **WinPE-WDS-Tools**: installa gli strumenti dei Servizi di distribuzione Windows.  
 
-  È possibile aggiungere altri pacchetti Windows PE. Per altre informazioni sui componenti facoltativi che è possibile aggiungere all'immagine di avvio, vedere [WinPE: aggiungere pacchetti (informazioni di riferimento sui componenti facoltativi)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
+  È possibile aggiungere altri pacchetti Windows PE. Per altre informazioni sui componenti facoltativi che è possibile aggiungere all'immagine di avvio, vedere [WinPE: aggiungere pacchetti (informazioni di riferimento sui componenti facoltativi)](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
 
 > [!NOTE]
 >All'avvio di WinPE da un'immagine di avvio personalizzata che include strumenti aggiunti dall'utente, è possibile aprire un prompt dei comandi da WinPE e digitare il nome del file dello strumento per eseguirlo. La posizione di questi strumenti viene aggiunta automaticamente alla variabile di percorso. Il prompt dei comandi può essere aggiunto solo se l'impostazione **Abilita supporto comandi (solo test)** è selezionata nella scheda **Personalizzazione** nella finestra delle proprietà dell'immagine di avvio.
@@ -72,7 +72,7 @@ Ogni versione di Configuration Manager supporta una versione specifica di Window
     Dove C:\WinPEWAIK è la cartella che contiene l'immagine di avvio e C:\WinPEMount è la cartella montata.  
 
    > [!NOTE]
-   >  Per altre informazioni, vedere [Informazioni di riferimento su DISM (Gestione e manutenzione immagini distribuzione)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
+   >  Per altre informazioni, vedere [Informazioni di riferimento su DISM (Gestione e manutenzione immagini distribuzione)](/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
 
 5. Dopo avere montato l'immagine di avvio, usare DISM per aggiungere componenti facoltativi all'immagine di avvio. In Windows PE 5 i componenti facoltativi a 64 bit si trovano in <*Percorso di installazione*>\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs.  
 
@@ -108,7 +108,7 @@ Ogni versione di Configuration Manager supporta una versione specifica di Window
     **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Programmi (x86)\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-WDS-Tools_en-us.cab"**  
 
    > [!TIP]
-   >  Per altre informazioni sui componenti facoltativi che è possibile aggiungere all'immagine di avvio, vedere [Informazioni di riferimento sui componenti facoltativi Windows PE](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
+   >  Per altre informazioni sui componenti facoltativi che è possibile aggiungere all'immagine di avvio, vedere [Informazioni di riferimento sui componenti facoltativi Windows PE](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
 
 6. Usare DISM per aggiungere specifici driver all'immagine di avvio, se necessario. Digitare quanto segue per aggiungere driver all'immagine di avvio:  
 
@@ -194,7 +194,7 @@ Ogni versione di Configuration Manager supporta una versione specifica di Window
     Dove C:\WinPEWAIK è la cartella che contiene l'immagine di avvio e C:\WinPEMount è la cartella montata.  
 
    > [!NOTE]
-   > Per altre informazioni, vedere [Informazioni di riferimento su DISM (Gestione e manutenzione immagini distribuzione)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
+   > Per altre informazioni, vedere [Informazioni di riferimento su DISM (Gestione e manutenzione immagini distribuzione)](/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
 
 5. Dopo avere montato l'immagine di avvio, usare DISM per aggiungere componenti facoltativi all'immagine di avvio. In Windows PE 3.1, ad esempio, i componenti facoltativi si trovano in <*PercorsoInstallazione*>\Windows AIK\Tools\PETools\amd64\WinPE_FPs\\.  
 
@@ -224,7 +224,7 @@ Ogni versione di Configuration Manager supporta una versione specifica di Window
     **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Programmi\Windows AIK\Tools\PETools\amd64\WinPE_FPs\en-us\winpe-wds-tools_en-us.cab"**  
 
    > [!TIP]
-   >  Per altre informazioni sui diversi pacchetti che è possibile aggiungere all'immagine di avvio, vedere [Aggiungere un pacchetto a un'immagine Windows PE](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd799312(v=ws.10)).
+   >  Per altre informazioni sui diversi pacchetti che è possibile aggiungere all'immagine di avvio, vedere [Aggiungere un pacchetto a un'immagine Windows PE](/previous-versions/windows/it-pro/windows-7/dd799312(v=ws.10)).
 
 6. Usare DISM per aggiungere specifici driver all'immagine di avvio, se necessario. Se necessario, digitare quanto segue per aggiungere driver all'immagine di avvio:  
 
@@ -290,4 +290,4 @@ Ogni versione di Configuration Manager supporta una versione specifica di Window
 
     3.  Fare clic sull'immagine di avvio identificata nel passaggio 3.  
 
-    4.  Nella scheda **Home** , nel gruppo **Distribuzione** , fare clic su **Aggiorna punti di distribuzione**.  
+    4.  Nella scheda **Home** , nel gruppo **Distribuzione** , fare clic su **Aggiorna punti di distribuzione**.

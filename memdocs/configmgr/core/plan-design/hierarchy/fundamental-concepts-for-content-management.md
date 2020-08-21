@@ -10,12 +10,12 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d8f29ed1e3201da139daeaa1fadca739ff44dc8e
-ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
+ms.openlocfilehash: 11649452012de33ef1e62007d71466d5a45c56ca
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86384945"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698606"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Concetti di base per la gestione dei contenuti in Configuration Manager
 
@@ -132,7 +132,7 @@ Usare la tabella seguente per confrontare le funzionalità principali di queste 
 
 ## <a name="branchcache"></a>BranchCache
 
-[BranchCache](https://docs.microsoft.com/windows-server/networking/branchcache/branchcache) è una tecnologia di Windows. I client che supportano BranchCache e hanno scaricato una distribuzione configurata per BranchCache agiscono da origine di contenuto per altri client abilitati per BranchCache.  
+[BranchCache](/windows-server/networking/branchcache/branchcache) è una tecnologia di Windows. I client che supportano BranchCache e hanno scaricato una distribuzione configurata per BranchCache agiscono da origine di contenuto per altri client abilitati per BranchCache.  
 
 Ad esempio, è necessario un punto di distribuzione che esegue Windows Server 2012 o versione successiva ed è configurato come server BranchCache. Quando il primo client abilitato per BranchCache richiede un contenuto da questo server, il client scarica tale contenuto e lo memorizza nella cache.  
 
@@ -145,9 +145,9 @@ Per altre informazioni, vedere [Supporto per Windows BranchCache](../configs/sup
 ## <a name="delivery-optimization"></a>Ottimizzazione recapito
 
 <!-- 1324696 -->
-I gruppi di limiti di Configuration Manager consentono di definire e regolamentare la distribuzione del contenuto nella rete aziendale e negli uffici remoti. [Ottimizzazione recapito di Windows](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) è una tecnologia peer-to-peer basata sul cloud per la condivisione di contenuti tra dispositivi Windows 10. Configurare Ottimizzazione recapito in modo che usi i gruppi di limiti per la condivisione di contenuti tra peer. Le impostazioni del client applicano l'identificatore del gruppo di limiti come identificatore di gruppo di Ottimizzazione recapito sul client. Quando comunica con il servizio cloud Ottimizzazione recapito, il client usa questo identificatore per individuare i peer con il contenuto. Per altre informazioni, vedere impostazioni client per [ottimizzazione recapito](../../clients/deploy/about-client-settings.md#delivery-optimization).
+I gruppi di limiti di Configuration Manager consentono di definire e regolamentare la distribuzione del contenuto nella rete aziendale e negli uffici remoti. [Ottimizzazione recapito di Windows](/windows/deployment/update/waas-delivery-optimization) è una tecnologia peer-to-peer basata sul cloud per la condivisione di contenuti tra dispositivi Windows 10. Configurare Ottimizzazione recapito in modo che usi i gruppi di limiti per la condivisione di contenuti tra peer. Le impostazioni del client applicano l'identificatore del gruppo di limiti come identificatore di gruppo di Ottimizzazione recapito sul client. Quando comunica con il servizio cloud Ottimizzazione recapito, il client usa questo identificatore per individuare i peer con il contenuto. Per altre informazioni, vedere impostazioni client per [ottimizzazione recapito](../../clients/deploy/about-client-settings.md#delivery-optimization).
 
-Ottimizzazione recapito è la tecnologia consigliata per ottimizzare il recapito degli aggiornamenti di Windows 10 dei file di installazione rapida per gli aggiornamenti qualitativi di Windows 10. A partire da Configuration Manager versione 1910, l'accesso Internet al servizio cloud Ottimizzazione recapito è un requisito per utilizzare le funzionalità peer-to-peer. Per informazioni sugli endpoint Internet necessari, vedere [Domande frequenti per Ottimizzazione recapito](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions). L'ottimizzazione può essere usata per tutti gli aggiornamenti di Windows. Per altre informazioni, vedere [Ottimizzare il recapito degli aggiornamenti di Windows 10](../../../sum/deploy-use/optimize-windows-10-update-delivery.md).
+Ottimizzazione recapito è la tecnologia consigliata per ottimizzare il recapito degli aggiornamenti di Windows 10 dei file di installazione rapida per gli aggiornamenti qualitativi di Windows 10. A partire da Configuration Manager versione 1910, l'accesso Internet al servizio cloud Ottimizzazione recapito è un requisito per utilizzare le funzionalità peer-to-peer. Per informazioni sugli endpoint Internet necessari, vedere [Domande frequenti per Ottimizzazione recapito](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions). L'ottimizzazione può essere usata per tutti gli aggiornamenti di Windows. Per altre informazioni, vedere [Ottimizzare il recapito degli aggiornamenti di Windows 10](../../../sum/deploy-use/optimize-windows-10-update-delivery.md).
 
 
 ## <a name="microsoft-connected-cache"></a>Microsoft Connected Cache

@@ -10,12 +10,12 @@ ms.assetid: 58849e40-30d5-4153-84b3-ca4af3a4f09d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5f92e76047a70f6d86406b1a364603163d902e62
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7ad20f80f4727fe18947bed05ded6e7b107fab12
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703219"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124085"
 ---
 # <a name="user-experiences-for-os-deployment"></a>Esperienze utente per la distribuzione del sistema operativo
 
@@ -146,8 +146,7 @@ Il conteggio dei passaggi totali non include gli elementi seguenti nella sequenz
 
 - Passaggi che vengono disabilitati in modo esplicito. Un passaggio disabilitato non viene eseguito durante la sequenza di attività.
 
-    > [!NOTE]
-    > I passaggi abilitati in un gruppo disabilitato sono ancora inclusi nel conteggio totale.
+- A partire dalla versione 2006 i passaggi abilitati in un gruppo disabilitato non vengono contati.<!--6448412--> Nella versione 2002 i passaggi abilitati in un gruppo disabilitato sono ancora inclusi nel conteggio totale.
 
 ## <a name="task-sequence-error"></a>Errore di sequenza di attività
 
@@ -157,6 +156,6 @@ Se la sequenza di attività non riesce, viene visualizzata la finestra **Errore 
 
 - Le informazioni dell'intestazione possono essere personalizzate allo stesso modo della finestra di stato della sequenza di attività.
 
-- Vengono visualizzati il nome della sequenza di attività, un codice di errore e un messaggio generale per gli utenti, ad esempio `Task sequence: Upgrade to Windows 10 Enterprise has failed with the error code (0x80004005). For more information, contact your system administrator or helpdesk operator.`
+- Vengono visualizzati il nome della sequenza di attività, un codice di errore e un messaggio generale per gli utenti, Ad esempio: `Task sequence: Upgrade to Windows 10 Enterprise has failed with the error code (0x80004005). For more information, contact your system administrator or helpdesk operator.`
 
 - La finestra si chiude automaticamente dopo un periodo di timeout. Per impostazione predefinita, questo timeout è di 15 minuti. È possibile personalizzare questo valore con la variabile della sequenza di attività [SMSTSErrorDialogTimeout](task-sequence-variables.md#SMSTSErrorDialogTimeout).

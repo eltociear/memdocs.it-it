@@ -1,11 +1,11 @@
 ---
 title: Impostazioni di conformità di Windows 8.1 in Microsoft Intune - Azure | Microsoft Docs
-description: Visualizzare un elenco di tutte le impostazioni che è possibile usare durante l'impostazione della conformità per i dispositivi Windows 8.1 e Windows Phone 8.1 in Microsoft Intune. Verificare la conformità nella versione minima e massima del sistema operativo, impostare le restrizioni relative alla password e la lunghezza, abilitare la crittografia nell'archiviazione dati e così via.
+description: Visualizzare un elenco di tutte le impostazioni che è possibile usare durante l'impostazione della conformità per i dispositivi Windows 8.1 in Microsoft Intune. Verificare la conformità nella versione minima e massima del sistema operativo, impostare le restrizioni relative alla password e la lunghezza, abilitare la crittografia nell'archiviazione dati e così via.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 08/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,38 +15,31 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0189fea7f73b70286a6daf844a10806d4c1e8a5d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9b423d289e81c48479adcaa7a594974b23a9476c
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79353203"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252708"
 ---
 # <a name="windows-81-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Impostazioni di Windows 8.1 per contrassegnare un dispositivo come conforme o non conforme in Intune
 
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 Questo articolo elenca e descrive le diverse impostazioni di conformità che è possibile configurare nei dispositivi Windows 8.1 in Intune. Nella soluzione di gestione di dispositivi mobili (MDM), usare queste impostazioni per bloccare le password semplice, impostare una versione minima e massima del sistema operativo e così via.
 
 Questa funzionalità si applica a:
 
-- Windows Phone 8.1
 - Windows 8.1 e versioni successive
 
 Come amministratore di Intune, usare queste impostazioni di conformità per proteggere le risorse dell'organizzazione. Per altre informazioni sui criteri di conformità e sul loro funzionamento, vedere [Introduzione ai criteri di conformità dei dispositivi](device-compliance-get-started.md).
 
 ## <a name="before-you-begin"></a>Prima di iniziare
 
-[Creare i criteri di conformità](create-compliance-policy.md#create-the-policy). Per **Piattaforma** selezionare **Windows Phone 8.1** o **Windows 8.1 e versioni successive**.
+[Creare i criteri di conformità](create-compliance-policy.md#create-the-policy). In **Piattaforma** selezionare **Windows 8.1 e versioni successive**.
 
 ## <a name="device-properties"></a>Proprietà dispositivo
 
 ### <a name="operating-system-version"></a>Versione del sistema operativo
-
-**Windows Phone 8.1 e versioni successive**
-- **Versione minima del sistema operativo per dispositivi mobili**:  
-  immettere la versione minima consentita. Quando un dispositivo non soddisfa il requisito relativo alla versione minima del sistema operativo, viene segnalato come non conforme. Viene visualizzato un collegamento con informazioni su come eseguire l'aggiornamento. L'utente del dispositivo può scegliere di aggiornare il dispositivo e quindi ottenere l'accesso alle risorse aziendali.
-
-- **Versione massima del sistema operativo per dispositivi mobili**:  
-  immettere la versione massima consentita. Quando un dispositivo usa una versione del sistema operativo successiva rispetto a quella specificata nella regola, l'accesso alle risorse dell'organizzazione viene bloccato. All'utente del dispositivo viene chiesto di contattare l'amministratore IT. Il dispositivo non può accedere alle risorse dell'organizzazione finché una regola non viene modificata in modo da consentire la versione del sistema operativo.
 
 **Windows 8.1 e versioni successive**
 - **Versione minima del sistema operativo**:  

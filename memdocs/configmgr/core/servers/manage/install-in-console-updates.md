@@ -2,7 +2,7 @@
 title: Aggiornamenti nella console
 titleSuffix: Configuration Manager
 description: Installare gli aggiornamenti in Configuration Manager dal cloud Microsoft
-ms.date: 06/02/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a0d7f36c921f782c0baad740d8e643f54cee0309
-ms.sourcegitcommit: 5e339c07001e911cf75ef922e6c66a7efdeab6f1
+ms.openlocfilehash: f22a28c173c980bdf598a5afc8a969a86ec96cc2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84637670"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699773"
 ---
 # <a name="install-in-console-updates-for-configuration-manager"></a>Installare gli aggiornamenti nella console per Configuration Manager
 
@@ -96,13 +96,13 @@ Esaminare i passaggi seguenti prima di installare un aggiornamento dalla console
 
 Esaminare l'elenco di controllo dell'aggiornamento valido per le azioni da eseguire prima di iniziare l'aggiornamento:
 
+- [Elenco di controllo per l'installazione dell'aggiornamento 2006](checklist-for-installing-update-2006.md)
+
 - [Elenco di controllo per l'installazione dell'aggiornamento 2002](checklist-for-installing-update-2002.md)
 
 - [Elenco di controllo per l'installazione dell'aggiornamento 1910](checklist-for-installing-update-1910.md)  
 
 - [Elenco di controllo per l'installazione dell'aggiornamento 1906](checklist-for-installing-update-1906.md)  
-
-- [Elenco di controllo per l'installazione dell'aggiornamento 1902](checklist-for-installing-update-1902.md)
 
 ### <a name="step-2-run-the-prerequisite-checker-before-installing-an-update"></a><a name="bkmk_step2"></a> Passaggio 2: Eseguire il controllo dei prerequisiti prima di installare un aggiornamento  
 
@@ -362,13 +362,13 @@ Passare all'area di lavoro **Monitoraggio** e selezionare il nodo **Site Servici
 
 Dopo l'aggiornamento del sito, esaminare l'elenco di controllo post-aggiornamento per la versione applicabile:  
 
+- [Elenco di controllo post-aggiornamento per la versione 2006](checklist-for-installing-update-2006.md#post-update-checklist)
+
 - [Elenco di controllo post-aggiornamento per la versione 2002](checklist-for-installing-update-2002.md#post-update-checklist)
 
 - [Elenco di controllo post-aggiornamento per la versione 1910](checklist-for-installing-update-1910.md#post-update-checklist)  
 
 - [Elenco di controllo post-aggiornamento per la versione 1906](checklist-for-installing-update-1906.md#post-update-checklist)  
-
-- [Elenco di controllo post-aggiornamento per la versione 1902](checklist-for-installing-update-1902.md#post-update-checklist)  
 
 ## <a name="enable-optional-features-from-updates"></a><a name="bkmk_options"></a> Abilitare le funzionalità facoltative degli aggiornamenti  
 
@@ -378,7 +378,7 @@ Per visualizzare le funzionalità disponibili e il relativo stato, nella console
 
 Quando una funzionalità non è facoltativa, viene installata automaticamente e non compare nel nodo **Funzionalità**.  
 
-> [!Important]  
+> [!IMPORTANT]
 > In una gerarchia a più siti abilitare le funzionalità facoltative o di versioni non definitive solo dal sito di amministrazione centrale. Questo comportamento assicura che non ci siano conflitti all'interno della gerarchia. <!--507197-->  
 
 Quando si abilita una nuova funzionalità o una funzionalità non definitiva, gestione gerarchie (HMAN) di Configuration Manager deve elaborare la modifica prima che tale funzionalità diventi disponibile. L'elaborazione della modifica è spesso immediata. A seconda del ciclo di elaborazione HMAN, il completamento può richiedere fino a 30 minuti. Dopo l'elaborazione della modifica, per poter usare la funzionalità riavviare prima la console.
@@ -391,32 +391,33 @@ Le funzionalità seguenti sono facoltative nella versione più recente di Config
 
 <!--Note to include in target articles
 
-> [!Note]  
+> [!NOTE]
 > Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](install-in-console-updates.md#bkmk_options).  
 
 -->
 
 - [Hub della community](community-hub.md)<!--3555935, C098DA03-C33C-4E15-B337-6C0FEEB3CB8A-->
+- [Gruppi di orchestrazione](../../../sum/deploy-use/orchestration-groups.md)<!--3098816, 290B66D8-C735-4895-B59A-DD732D84A697-->
+- [Tipo di distribuzione sequenze di attività](../../../apps/get-started/creating-windows-applications.md#bkmk_tsdt) <!-- 3555953, CB0CDFFB-9C6F-4B18-8954-A43A387302A2-->
 - [Gestione di BitLocker](../../../protect/plan-design/bitlocker-management.md) <!-- 3601034,6DD56E46-C3EC-4E38-A16F-E98644BB6434 -->
 - [Sincronizzare i risultati di appartenenza alla raccolta con Azure Active Directory](../../clients/manage/collections/create-collections.md#bkmk_aadcollsync) <!--3607475,C2127144-C8DE-49F6-9CB3-D4F5B59F9515-->
 - [Individuazione dei gruppi utenti in Azure Active Directory](../deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco) <!--3611956,023715E7-BFBA-4E9E-A80F-B5B626464ADD-->
 - [Gruppi di applicazioni](../../../apps/deploy-use/create-app-groups.md) <!--3555907,EE16A1D8-EF1B-4094-845F-AC107E7C621D-->
 - [Debugger di sequenze di attività](../../../osd/deploy-use/debug-task-sequence.md) <!--3612274,C3F37661-69E4-4D53-A39C-5D02F97E0E71-->
 - [Package Conversion Manager](../../../apps/pcm/package-conversion-manager.md) <!--1357861,4E0C09AF-7FC1-4412-A8BB-166D9BCD0093-->
-- [App client per dispositivi con co-gestione](../../../comanage/workloads.md#client-apps) (precedentemente note come *App per dispositivi mobili per dispositivi con co-gestione*) <!--1357892,CC3AE625-BF72-49B1-8AB1-AF0DCF2D6F4C-->
 - [Aggiornamenti software di terze parti ](../../../sum/deploy-use/third-party-software-updates.md)<!--1357605,1352101,1358714;B5E192AE-C81F-4348-9EF9-07A3C0FBE597-->
 - [Approva le richieste dell'applicazione per gli utenti per ogni dispositivo](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-settings) <!--1357015,4BA987C9-08FC-48E2-BFFE-C9DCF35B496A-->  
 - [Crea ed esegui script](../../../apps/deploy-use/create-deploy-scripts.md) <!--1236459,566F8720-F415-4E10-9A51-CDE682BA2B2E-->
 - [Aggiornamenti driver di Surface](../../../sum/get-started/configure-classifications-and-products.md) <!--1098490,82AD973A-7CDF-4B67-A665-72875D6E099A-->
 - [Gateway di gestione cloud](../../clients/manage/cmg/plan-cloud-management-gateway.md) <!--1101764,DD043119-789C-4158-AC79-725E999F385A-->
 - [Creazione di PFX](../../../protect/deploy-use/introduction-to-certificate-profiles.md) <!--1321368,CED76B79-929C-4C45-981F-B9BCA6D38A17-->
-- [Connettore di Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm) <!--1258052,73A7EC4D-EF22-4EA4-82A9-419C2A8CFC4D-->
+- [Connettore di Azure Log Analytics](/azure/azure-monitor/platform/collect-sccm) <!--1258052,73A7EC4D-EF22-4EA4-82A9-419C2A8CFC4D-->
 - [Criteri di Windows Defender Exploit Guard](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md) <!--1355468,8491D4C8-8484-46B8-BCD6-17DC2CADBAEB-->
 - [VPN per Windows 10](../../../protect/deploy-use/vpn-profiles.md) <!--1283610,EDBEBA3D-3A4D-4465-84D9-D71EB811E7F6-->
 - [Manutenzione di una raccolta compatibile con cluster (gruppi di server)](../../../sum/deploy-use/service-a-server-group.md) <!--1081776,290B66D8-C735-4895-B59A-DD732D84A697-->
 - [Windows Hello for Business](../../../protect/deploy-use/windows-hello-for-business-settings.md) (noto in precedenza come *Passport for Work*) <!--1245704,8BCA2642-3719-4862-A355-9D39C979E1B4-->
 
-> [!Tip]  
+> [!TIP]
 > Per altre informazioni sulle funzionalità che richiedono il consenso per l'abilitazione, vedere [Funzionalità di versioni non definitive](pre-release-features.md).  
 >
 > Per altre informazioni sulle funzionalità disponibili solo nel ramo Technical Preview, vedere [Technical Preview](../../get-started/technical-preview.md).
@@ -435,4 +436,4 @@ Se dopo una sincronizzazione riuscita con il servizio cloud Microsoft non si rie
 
     Se si ritiene che siano presenti le configurazioni e i prerequisiti necessari per un aggiornamento mancante, verificare che il punto di connessione del servizio sia in modalità online. Usare quindi l'opzione **Controlla aggiornamenti** nel nodo **Aggiornamenti e manutenzione** per forzare un controllo. Se il punto di connessione del servizio è in modalità offline, usare lo strumento di connessione del servizio per eseguire manualmente la sincronizzazione con il servizio cloud.  
 
-- L'account non ha le autorizzazioni corrette di amministrazione basata su ruoli per visualizzare gli aggiornamenti nella console di Configuration Manager. Per altre informazioni, vedere la sezione relativa alle [autorizzazioni per la gestione degli aggiornamenti](#assign-permissions-to-view-and-manage-updates-and-features).  
+- L'account non ha le autorizzazioni corrette di amministrazione basata su ruoli per visualizzare gli aggiornamenti nella console di Configuration Manager. Per altre informazioni, vedere la sezione relativa alle [autorizzazioni per la gestione degli aggiornamenti](#assign-permissions-to-view-and-manage-updates-and-features).

@@ -2,7 +2,7 @@
 title: Creare una sequenza di attività per distribuzioni non di sistema operativo
 titleSuffix: Configuration Manager
 description: Creare sequenze di attività non destinate alla distribuzione di un sistema operativo, ad esempio per la distribuzione di software o l'automazione delle attività
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 92aaec8a-8751-442a-b64b-62ab05b5bf50
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 583a90452fe077057b93150e9cb635fe9269de5a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1c5ef6d4a17623428f299ff9df676dcba49e7f0c
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709069"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698155"
 ---
 # <a name="create-a-task-sequence-for-non-os-deployments"></a>Creare una sequenza di attività per distribuzioni non di sistema operativo
 
@@ -32,13 +32,15 @@ Le sequenze di attività in Configuration Manager consentono di automatizzare di
 
 - [Impostazione della configurazione](../../compliance/understand/ensure-device-compliance.md)
 
-Considerare anche altre tecnologie di automazione di Microsoft System Center, ad esempio [Orchestrator](https://docs.microsoft.com/system-center/orchestrator/) e [Service Management Automation](https://docs.microsoft.com/system-center/sma/).  
+Considerare anche altre tecnologie di automazione di Microsoft System Center, ad esempio [Orchestrator](/system-center/orchestrator/) e [Service Management Automation](/system-center/sma/).  
 
 L'efficacia delle sequenze di attività risiede nella loro flessibilità e nel modo in cui si usano. Sono in grado di configurare le impostazioni client, distribuire il software, aggiornare i driver, modificare gli stati utente ed effettuare altre attività in modo indipendente dalla distribuzione del sistema operativo. È possibile creare una sequenza di attività personalizzata per aggiungere qualsiasi numero di attività. L'uso di sequenze di attività personalizzate per la distribuzione non del sistema operativo è supportato in Configuration Manager. Tuttavia, se una sequenza di attività genera risultati indesiderati o incoerenti, considerare i possibili modi per semplificare l'operazione:
 
 - Usare passaggi più semplici
 - Dividere le azioni tra più sequenze di attività
 - Adottare un approccio graduale alla creazione e ai test della sequenza di attività
+
+## <a name="supported-steps"></a>Passaggi supportati
 
 I passaggi seguenti sono supportati in una sequenza di attività personalizzata di distribuzione non del sistema operativo:  
 
@@ -65,3 +67,7 @@ I passaggi seguenti sono supportati in una sequenza di attività personalizzata 
 - [Imposta variabili dinamiche](../understand/task-sequence-steps.md#BKMK_SetDynamicVariables)  
 
 - [Imposta variabile della sequenza di attività](../understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable)  
+
+## <a name="next-steps"></a>Passaggi successivi
+
+[Creare una sequenza di attività personalizzata](create-a-custom-task-sequence.md)

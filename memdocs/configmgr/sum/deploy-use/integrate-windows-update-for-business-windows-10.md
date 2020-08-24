@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-ms.openlocfilehash: 8bfd535c93cb9f1dcfc42705f3cce61874dfe226
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 51e64f8f815c4ba90522acf6529cff4d971dd553
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709319"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699807"
 ---
 # <a name="integrate-with-windows-update-for-business"></a>Integrare Windows Update per le aziende
 
@@ -24,7 +24,7 @@ ms.locfileid: "81709319"
 Windows Update for Business (WUfB) consente di mantenere i dispositivi basati su Windows 10 nell'organizzazione sempre aggiornati con le difese per la sicurezza e le funzionalità di Windows più recenti, quando questi dispositivi si connettono direttamente al servizio Windows Update (WU). Configuration Manager è in grado di distinguere tra i computer Windows 10 che ricevono gli aggiornamenti software da Windows Update for Business e i computer che li ricevono da WSUS.  
 
 > [!WARNING]
-> Se si usa la co-gestione per i dispositivi e si sono spostati i [criteri di Windows Update](../../comanage/workloads.md#windows-update-policies) in Intune, i dispositivi otterranno i [criteri di Windows Update for Business da Intune](https://docs.microsoft.com/intune/windows-update-for-business-configure).
+> Se si usa la co-gestione per i dispositivi e si sono spostati i [criteri di Windows Update](../../comanage/workloads.md#windows-update-policies) in Intune, i dispositivi otterranno i [criteri di Windows Update for Business da Intune](/intune/windows-update-for-business-configure).
 > - Se il client di Configuration Manager è ancora installato nel dispositivo co-gestito, le impostazioni per gli aggiornamenti cumulativi e gli aggiornamenti delle funzionalità sono gestiti da Intune. Tuttavia, l'applicazione di patch di terze parti, se abilitata nelle [**Impostazioni client**](../../core/clients/deploy/about-client-settings.md#enable-third-party-software-updates), è ancora gestita da Configuration Manager.  
 
  Alcune funzionalità di Configuration Manager non sono disponibili per i client di Configuration Manager configurati per ricevere gli aggiornamenti da Windows Update. Tra queste, Windows Update for Business e Windows Insider:  
@@ -38,7 +38,7 @@ Windows Update for Business (WUfB) consente di mantenere i dispositivi basati su
 
 - Nel complesso, i report di Endpoint Protection per Defender basati sullo stato di conformità degli aggiornamenti non restituiscono risultati precisi a causa della mancanza dei dati di analisi.  
 
-- Configuration Manager non sarà in grado di distribuire gli aggiornamenti Microsoft, ad esempio Office, Internet Explorer e Visual Studio, ai client connessi a Windows Update for Business per la ricezione degli aggiornamenti.  
+- Configuration Manager non sarà in grado di distribuire gli aggiornamenti Microsoft, ad esempio Microsoft 365 Apps, Internet Explorer e Visual Studio, ai client connessi a Windows Update for Business per la ricezione degli aggiornamenti.  
 
 - Configuration Manager non è in grado di distribuire gli aggiornamenti di terze parti pubblicati in WSUS e gestiti tramite Configuration Manager ai client connessi a Windows Update for Business per la ricezione degli aggiornamenti. Se non si desidera che eventuali aggiornamenti di terze parti siano installati nei client connessi a WUfB, disabilitare l'impostazione client denominata [Abilitare aggiornamento software nei client](../../core/clients/deploy/about-client-settings.md#software-updates).
 
@@ -52,7 +52,7 @@ Usare la procedura seguente per identificare i client che usano WUfB per ottener
 
 - Client che eseguono Windows 10 Desktop Pro o Windows 10 Enterprise Edition versione 1511 o successive
 
-- [Windows Update for Business](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb) è distribuito e i client usano WUfB per ottenere gli aggiornamenti di Windows 10.  
+- [Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb) è distribuito e i client usano WUfB per ottenere gli aggiornamenti di Windows 10.  
 
 ### <a name="to-identify-clients-that-use-wufb"></a>Per identificare i client che usano WUfB  
 
@@ -74,7 +74,7 @@ A partire da Configuration Manager versione 1706, è possibile configurare i cri
 
 > [!NOTE]
 > A partire da Configuration Manager versione 1802, è possibile impostare i criteri di differimento per Windows Insider. <!--507201-->  
-Per altre informazioni sul programma Windows Insider, vedere [Introduzione al programma Windows Insider per le aziende](https://docs.microsoft.com/windows/deployment/update/waas-windows-insider-for-business).
+Per altre informazioni sul programma Windows Insider, vedere [Introduzione al programma Windows Insider per le aziende](/windows/deployment/update/waas-windows-insider-for-business).
 
 ### <a name="prerequisites-for-deferral-policies"></a>Prerequisiti per i criteri di rinvio
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/10/2020
+ms.date: 08/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee6ccebc9610f74f9f34c08bc8204e652e0a01db
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: d47f1e121a5010a17d213d21d3208977e8f75514
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85092872"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217635"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Aggiungere le impostazioni Wi-Fi per dispositivi Windows 10 e versioni successive in Intune
 
@@ -101,12 +101,14 @@ I profili aziendali usano il protocollo EAP (Extensible Authentication Protocol)
   - **Tempo massimo per l'autenticazione prima del timeout**: immettere il numero massimo di secondi di attesa prima dell'autenticazione in rete, da 1 a 120 secondi.
   - **Consenti a Windows di richiedere credenziali di autenticazione aggiuntive all'utente**: se si sceglie **Sì**, il sistema Windows potrà chiedere credenziali aggiuntive all'utente, se il metodo di autenticazione lo richiede. Scegliere **No** per nascondere questi prompt.
 
-- **Consenti memorizzazione nella cache Pairwise Master Key (PMK)** : selezionare **Sì** per memorizzare nella cache la chiave PMK usata nell'autenticazione. La memorizzazione nella cache in genere consente una procedura di autenticazione in rete più rapida. Scegliere **No** per imporre l'handshake di autenticazione ogni volta che l'utente si connette alla rete Wi-Fi.
+- **Consenti memorizzazione nella cache Pairwise Master Key (PMK)** : selezionare **Sì** per memorizzare nella cache la chiave PMK usata nell'autenticazione. La memorizzazione nella cache in genere consente una procedura di autenticazione in rete più rapida. Scegliere **No** per imporre l'handshake di autenticazione ogni volta che l'utente si connette alla rete Wi-Fi. Per usare l'impostazione **Abilita la preautenticazione**, selezionare **Sì**.
 
   - **Durata massima dell'archiviazione di un PMK nella cache**: immettere il numero di minuti di memorizzazione di una chiave PMK (Pairwise Master Key) nella cache, da 5 a 1440 minuti.
   - **Numero massimo di PMK archiviati nella cache**: immettere il numero di chiavi archiviate nella cache, da 1 a 255.
 
 - **Abilita la preautenticazione**: la preautenticazione consente l'autenticazione del profilo presso tutti i punti di accesso alla rete nel profilo prima della connessione. Quando si passa da un punto di accesso a un altro, la preautenticazione riconnette più rapidamente l'utente o i dispositivi. Scegliere **Sì** per consentire l'autenticazione del profilo presso tutti i punti di accesso alla rete inclusi nel raggio di copertura. Scegliere **No** per chiedere all'utente o al dispositivo di eseguire separatamente l'autenticazione a ogni punto di accesso.
+
+  Per usare questa impostazione, impostare **Consenti memorizzazione nella cache Pairwise Master Key (PMK)** su **Sì**.
 
   - **Numero massimo di tentativi di preautenticazione**: immettere il numero di tentativi di preautenticazione, da 1 a 16.
 

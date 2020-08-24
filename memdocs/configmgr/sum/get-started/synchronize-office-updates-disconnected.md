@@ -1,8 +1,8 @@
 ---
-title: Sincronizzare gli aggiornamenti di Office 365 senza una connessione Internet
+title: Sincronizzare gli aggiornamenti di Microsoft 365 Apps senza una connessione Internet
 titleSuffix: Configuration Manager
-description: Sincronizzare gli aggiornamenti di Office 365 nel punto di aggiornamento software di livello superiore disconnesso da Internet.
-ms.date: 04/21/2020
+description: Sincronizzare gli aggiornamenti di Microsoft 365 Apps nel punto di aggiornamento software di livello superiore disconnesso da Internet.
+ms.date: 08/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -10,21 +10,21 @@ ms.assetid: a8fa7e7a-bf55-42de-b0c2-c56777dc1508
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 3627d2f7772b7b9e133d742b0ee4f94dba6e457a
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: 49e0f5e1dff466e62cdba0def917dd34510e48ee
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110356"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696770"
 ---
-# <a name="synchronize-office-365-updates-from-a-disconnected-software-update-point"></a><a name="bkmk_O365"></a> Sincronizzare gli aggiornamenti di Office 365 da un punto di aggiornamento software disconnesso
+# <a name="synchronize-microsoft-365-apps-updates-from-a-disconnected-software-update-point"></a><a name="bkmk_O365"></a> Sincronizzare gli aggiornamenti di Microsoft 365 Apps da un punto di aggiornamento software disconnesso
 
 *Si applica a: Configuration Manager (Current Branch)*
 <!--4065163-->
-A partire da Configuration Manager versione 2002, è possibile usare uno strumento per importare gli aggiornamenti di Office 365 da un server WSUS connesso a Internet in un ambiente di Configuration Manager disconnesso. In passato, quando si esportavano e importavano i metadati per il software aggiornato in ambienti disconnessi, non era possibile distribuire gli aggiornamenti di Office 365. Gli aggiornamenti di Office 365 richiedono metadati aggiuntivi scaricati da un'API di Office e dalla rete CDN di Office, operazione impossibile per gli ambienti disconnessi.
+A partire da Configuration Manager versione 2002, è possibile usare uno strumento per importare gli aggiornamenti di Microsoft 365 Apps da un server WSUS connesso a Internet in un ambiente di Configuration Manager disconnesso. In passato, quando si esportavano e importavano i metadati per il software aggiornato in ambienti disconnessi, non era possibile distribuire gli aggiornamenti di Microsoft 365 Apps. Gli aggiornamenti di Microsoft 365 Apps richiedono metadati aggiuntivi scaricati da un'API di Office e dalla rete CDN di Office, operazione impossibile per gli ambienti disconnessi.
 
 > [!Note]
-> A partire dal 21 aprile 2020, Office 365 ProPlus viene rinominato come **App di Microsoft 365 per grandi imprese**. Per altre informazioni, vedere [Modifica del nome di Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). È comunque possibile che vengano ancora visualizzati riferimenti al nome precedente nella console di Configuration Manager e nella documentazione di supporto mentre la console viene aggiornata.
+> A partire dal 21 aprile 2020, Office 365 ProPlus viene rinominato come **App di Microsoft 365 per grandi imprese**. Per altre informazioni, vedere [Modifica del nome di Office 365 ProPlus](/deployoffice/name-change). È comunque possibile che vengano ancora visualizzati riferimenti al nome precedente nella console di Configuration Manager e nella documentazione di supporto mentre la console viene aggiornata.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -35,26 +35,26 @@ A partire da Configuration Manager versione 2002, è possibile usare uno strumen
 - Copiare lo strumento OfflineUpdateExporter e le relative dipendenze nel server WSUS connesso a Internet.
   - Lo strumento e le relative dipendenze si trovano nella directory **&lt;ConfigMgrInstallDir>/tools/OfflineUpdateExporter**.
 - È necessario che l'utente che esegue lo strumento faccia parte del gruppo **WSUS Administrators**.
-- La directory creata per archiviare i metadati e il contenuto di aggiornamento di Office deve disporre degli elenchi di controllo di accesso (ACL) appropriati per proteggere i file.
+- La directory creata per archiviare i metadati e il contenuto di aggiornamento di Microsoft 365 Apps deve disporre degli elenchi di controllo di accesso (ACL) appropriati per proteggere i file.
     - È anche necessario che la directory sia vuota.
 - I dati spostati dal server WSUS online nell'ambiente disconnesso devono essere trasferiti in modo sicuro.
 
 > [!IMPORTANT]
-> Il contenuto verrà scaricato per tutte le lingue di Office 365. Ogni aggiornamento può avere circa 10 GB di contenuto.
+> Il contenuto verrà scaricato per tutte le lingue di Microsoft 365 Apps. Ogni aggiornamento può avere circa 10 GB di contenuto.
 
-## <a name="synchronize-then-decline-unneeded-office-365-updates"></a>Sincronizzare e rifiutare gli aggiornamenti di Office 365 non necessari
+## <a name="synchronize-then-decline-unneeded-microsoft-365-apps-updates"></a>Sincronizzare e rifiutare gli aggiornamenti di Microsoft 365 Apps non necessari
 
 1. Nel server WSUS connesso a Internet aprire la console WSUS.
 1. Selezionare **Opzioni**, quindi **Prodotti e classificazioni**.
-1. Nella scheda **Prodotti** selezionare **Client Office 365** e selezionare **Aggiornamenti** nella scheda **Classificazioni**. [![Prodotti e classificazioni per gli aggiornamenti di Office 365 in WSUS](./media/4065163-o365-updates-product-classification.png)](./media/4065163-o365-updates-product-classification.png#lightbox)
-1. Passare a **Sincronizzazioni** e selezionare **Sincronizza** per ottenere gli aggiornamenti di Office 365 in WSUS.
-1. Al termine della sincronizzazione, rifiutare gli aggiornamenti di Office 365 che non devono essere distribuiti con Configuration Manager. Non è necessario approvare gli aggiornamenti di Office 365 per poterli scaricare.  
-   - Il rifiuto degli aggiornamenti di Office 365 non necessari in WSUS, non ne impedisce l'esportazione durante un'esportazione WsusUtil.exe, ma impedisce allo strumento OfflineUpdateExporter di scaricarne il contenuto.
-   - Lo strumento OfflineUpdateExporter scarica gli aggiornamenti di Office 365. Sarà comunque necessario approvare il download per altri prodotti, se si esportano i relativi aggiornamenti.
-    - Creare una [nuova visualizzazione per gli aggiornamenti in WSUS](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/manage/viewing-and-managing-updates#to-create-a-new-update-view-on-wsus) per visualizzare e rifiutare facilmente gli aggiornamenti di Office 365 non necessari in WSUS.
+1. Nella scheda **Prodotti** selezionare **Client Office 365** e selezionare **Aggiornamenti** nella scheda **Classificazioni**. [![ Prodotti e classificazioni per gli aggiornamenti di Microsoft 365 Apps in WSUS](./media/4065163-o365-updates-product-classification.png)](./media/4065163-o365-updates-product-classification.png#lightbox)
+1. Passare a **Sincronizzazioni** e selezionare **Sincronizza** per ottenere gli aggiornamenti di Microsoft 365 Apps in WSUS.
+1. Al termine della sincronizzazione, rifiutare gli aggiornamenti di Microsoft 365 Apps che non si vuole distribuire con Configuration Manager. Non è necessario approvare gli aggiornamenti di Microsoft 365 Apps per poterli scaricare.  
+   - Il rifiuto degli aggiornamenti di Microsoft 365 Apps non necessari in WSUS, non ne impedisce l'esportazione durante un'esportazione WsusUtil.exe, ma impedisce allo strumento OfflineUpdateExporter di scaricarne il contenuto.
+   - Lo strumento OfflineUpdateExporter scarica gli aggiornamenti di Microsoft 365 Apps automaticamente. Sarà comunque necessario approvare il download per altri prodotti, se si esportano i relativi aggiornamenti.
+    - Creare una [nuova visualizzazione per gli aggiornamenti in WSUS](/windows-server/administration/windows-server-update-services/manage/viewing-and-managing-updates#to-create-a-new-update-view-on-wsus) per visualizzare e rifiutare facilmente gli aggiornamenti di Microsoft 365 Apps non necessari in WSUS.
 1. Se si stanno approvando il download e l’esportazione di altri aggiornamenti di prodotto, attendere il completamento del download del contenuto prima di eseguire l’esportazione WsusUtil.exe e copiare il contenuto della cartella WSUSContent. Per altre informazioni, vedere [Sincronizzare gli aggiornamenti software da un punto di aggiornamento software disconnesso](synchronize-software-updates-disconnected.md).
 
-## <a name="exporting-the-office-365-updates"></a>Esportazione degli aggiornamenti di Office 365
+## <a name="exporting-the-microsoft-365-apps-updates"></a>Esportazione degli aggiornamenti di Microsoft 365 Apps
 
 1. Copiare la cartella OfflineUpdateExporter da Configuration Manager nel server WSUS connesso a Internet.
     - Lo strumento e le relative dipendenze si trovano nella directory **&lt;ConfigMgrInstallDir>/tools/OfflineUpdateExporter**.
@@ -62,13 +62,13 @@ A partire da Configuration Manager versione 2002, è possibile usare uno strumen
 
    |Parametro OfflineUpdateExporter|Descrizione|
    |---|---|
-   |**-O**|  **-Office**. Specifica se il prodotto per l'esportazione degli aggiornamenti è Office 365|
+   |**-O**|  **-Office**. Specifica se il prodotto per l'esportazione degli aggiornamenti è Office 365 o Microsoft 365 Apps|
    |**-D**|**-Destination**. La destinazione è un parametro obbligatorio ed è necessario specificare il percorso completo della cartella di destinazione.|
 
    - Lo strumento **OfflineUpdateExporter** esegue le operazioni seguenti:
       - Si connette a WSUS
-      - Legge i metadati di aggiornamento di Office 365 in WSUS
-      - Scarica il contenuto ed eventuali metadati aggiuntivi necessari per gli aggiornamenti di Office 365 nella cartella di destinazione
+      - Legge i metadati di aggiornamento di Microsoft 365 Apps in WSUS
+      - Scarica il contenuto ed eventuali metadati aggiuntivi necessari per gli aggiornamenti di Microsoft 365 Apps nella cartella di destinazione
 
 1. Al prompt dei comandi nel server WSUS connesso a Internet passare alla cartella che contiene WsusUtil.exe. Per impostazione predefinita, lo strumento si trova in %*ProgramFiles*%\Update Services\Tools. Ad esempio, se lo strumento si trova nel percorso predefinito, digitare **cd %ProgramFiles%\Update Services\Tools**.
    - Se si usa Windows Server 2012, assicurarsi che l'aggiornamento [KB2819484](https://support.microsoft.com/help/2819484/cab-file-that-is-exported-by-using-the-wsusutil-exe-command-is-display) sia installato nei server WSUS.
@@ -86,7 +86,7 @@ A partire da Configuration Manager versione 2002, è possibile usare uno strumen
 1. Se sono stati approvati aggiornamenti per altri prodotti, copiare il contenuto della cartella WSUSContent nella cartella WSUSContent del server WSUS disconnesso di livello superiore.
 1. Copiare la cartella di destinazione usata per **OfflineUpdateExporter** nel server del sito di Configuration Manager di livello superiore nella rete disconnessa.
 
-## <a name="import-the-office-365-updates"></a>Importare gli aggiornamenti di Office 365
+## <a name="import-the-microsoft-365-apps-updates"></a>Importare gli aggiornamenti di Microsoft 365 Apps
 
 1. Nel server WSUS disconnesso di livello superiore importare i metadati di aggiornamento dal file **export.xml.gz** generato nel server WSUS connesso a Internet.
    
@@ -96,9 +96,9 @@ A partire da Configuration Manager versione 2002, è possibile usare uno strumen
     
     Per impostazione predefinita, lo strumento WsusUtil.exe si trova in %*ProgramFiles*%\Update Services\Tools.
 
-1. Al termine dell'importazione, è necessario configurare una proprietà di controllo del sito nel server del sito di Configuration Manager disconnesso di livello superiore. Questa modifica di configurazione indirizza Configuration Manager al contenuto per Office 365. Per modificare la configurazione della proprietà:
+1. Al termine dell'importazione, è necessario configurare una proprietà di controllo del sito nel server del sito di Configuration Manager disconnesso di livello superiore. Questa modifica di configurazione indirizza Configuration Manager al contenuto per Microsoft 365 Apps. Per modificare la configurazione della proprietà:
    1. Copiare lo [script di PowerShell O365OflBaseUrlConfigured](#bkmk_o365_script) nel server del sito di Configuration Manager disconnesso di livello superiore.
-   1. Modificare `"D:\Office365updates\content"` nel percorso completo della directory copiata contenente il contenuto e i metadati di Office generati da OfflineUpdateExporter.
+   1. Modificare `"D:\Office365updates\content"` nel percorso completo della directory copiata contenente il contenuto e i metadati di Microsoft 365 Apps generati da OfflineUpdateExporter.
       > [!IMPORTANT]
       > Solo i percorsi locali funzionano per la proprietà O365OflBaseUrlConfigured.
    1. Salvare lo script come `O365OflBaseUrlConfigured.ps1`
@@ -108,7 +108,7 @@ A partire da Configuration Manager versione 2002, è possibile usare uno strumen
 1. Fare clic con il pulsante destro del mouse sul sito di livello superiore e scegliere **Configura componenti del sito** > **Punto di aggiornamento software**.
 1. Nella scheda **Classificazioni** selezionare *Aggiornamenti*. Nella scheda **Prodotti** selezionare *Client Office 365*.
 1. [Sincronizzare gli aggiornamenti software](synchronize-software-updates.md#manually-start-software-updates-synchronization) per Configuration Manager
-1. Al termine della sincronizzazione, usare il normale processo per distribuire gli aggiornamenti di Office 365.
+1. Al termine della sincronizzazione, usare il normale processo per distribuire gli aggiornamenti di Microsoft 365 Apps.
 
 ## <a name="proxy-configuration"></a><a name="bkmk_O365_ki"></a> Configurazione proxy
 

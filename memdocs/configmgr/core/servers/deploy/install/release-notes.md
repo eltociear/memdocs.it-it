@@ -2,20 +2,20 @@
 title: Note sulla versione
 titleSuffix: Configuration Manager
 description: Informazioni su problemi urgenti non ancora risolti nel prodotto o trattati in un articolo della Knowledge Base del supporto tecnico Microsoft.
-ms.date: 05/21/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 131b6104d5724c8a4eeb0bb68c4afd9a5319abb7
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: 9c1152b14da7c0a473e266b1ac1e6da2778aa105
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83823963"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126292"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Note sulla versione per Configuration Manager
 
@@ -29,10 +29,10 @@ Questo articolo include note sulla versione per l'edizione Current Branch di Con
 
 Per informazioni sulle nuove funzionalità introdotte con le diverse versioni, vedere gli articoli seguenti:
 
+- [Novità della versione 2006](../../../plan-design/changes/whats-new-in-version-2006.md)
 - [Novità della versione 2002](../../../plan-design/changes/whats-new-in-version-2002.md)
 - [Novità della versione 1910](../../../plan-design/changes/whats-new-in-version-1910.md)
 - [Novità della versione 1906](../../../plan-design/changes/whats-new-in-version-1906.md)  
-- [Novità della versione 1902](../../../plan-design/changes/whats-new-in-version-1902.md)
 
 Per informazioni sulle nuove funzionalità di Desktop Analytics, vedere [Novità di Desktop Analytics](../../../../desktop-analytics/whats-new.md).
 
@@ -121,24 +121,15 @@ Esistono due casi in cui le sequenze di attività non possono essere eseguite in
 
 - Si configura il sito per HTTP migliorato e il punto di gestione è HTTP.<!-- 6358851 -->
 
-    Per risolvere il problema, configurare il punto di gestione per HTTPS.
+    Per risolvere il problema, eseguire l'aggiornamento alla versione 2006. In alternativa, configurare il punto di gestione per HTTPS.
 
 - Il client è stato installato e registrato con un token di registrazione in blocco per l'autenticazione.<!-- 6377921 -->
 
-    Per risolvere il problema, usare uno dei metodi di autenticazione seguenti:
+    Per risolvere il problema, eseguire l'aggiornamento alla versione 2006. In alternativa, usare uno dei metodi di autenticazione seguenti:
 
   - Preregistrare il dispositivo nella rete interna
   - Configurare il dispositivo con un certificato di autenticazione client
   - Aggiungere il dispositivo ad Azure AD
-
-### <a name="after-passive-site-server-is-promoted-the-default-boot-image-packages-still-have-package-source-on-the-previous-active-server"></a>Dopo che il server del sito passivo viene alzato di livello, i pacchetti di immagini di avvio predefiniti hanno ancora come origini dei pacchetti il server attivo precedente
-
-<!--3453224, SCCMDocs-pr issue 3097-->
-*Si applica a: Configuration Manager versione 1810*
-
-Se si ha un server del sito in modalità passiva (server B), quando lo si alza di livello alla modalità attiva il percorso del contenuto per le immagini d'avvio predefinite continua a fare riferimento al server attivo in precedenza (server A). Se il server A registra un errore hardware non è possibile aggiornare o modificare le immagini d'avvio predefinite.
-
-Non esiste una soluzione alternativa per questo problema.
 
 ## <a name="software-updates"></a>Aggiornamenti software
 
@@ -160,7 +151,7 @@ Un utente con uno di questi ruoli può avviare la procedura guidata Crea una dis
 Per risolvere il problema, creare un ruolo di sicurezza personalizzato. Copiare un ruolo di sicurezza esistente e aggiungere le autorizzazioni seguenti nella classe oggetto **Distribuzione in più fasi**:
 
 - Creazione  
-- Elimina  
+- Delete  
 - Modifica  
 - Lettura  
 
@@ -171,7 +162,7 @@ Per altre informazioni, vedere [Creare ruoli di sicurezza personalizzati](../con
 ### <a name="an-extended-security-update-for-windows-7-causes-them-to-show-as-unable-to-enroll"></a><a name="dawin7-diagtrack"></a> A causa di una patch di sicurezza estesa per Windows 7 viene indicato che **non è possibile registrare** i dispositivi
 
 <!-- 7283186 -->
-_Si applica a: Configuration Manager versioni 1902, 1906, 1910 e 2002_
+_Si applica a: Configuration Manager versioni 2002 e precedenti_
 
 La patch di sicurezza estesa di aprile 2020 per Windows 7 ha modificato la versione minima richiesta di diagtrack.dll da 10586 a 10240. A causa di questa modifica, per i dispositivi Windows 7 viene indicato che **non è possibile eseguire la registrazione** nel dashboard **Integrità connessione** di Desktop Analytics. Quando si esegue il drill-down nella visualizzazione del dispositivo per questo stato, la proprietà **Configurazione del servizio DiagTrack** visualizza lo stato seguente: `Connected User Experience and Telemetry (diagtrack.dll) component is outdated. Check requirements.`
 

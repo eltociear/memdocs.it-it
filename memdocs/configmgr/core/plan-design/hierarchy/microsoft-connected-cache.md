@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5bea4fab3b32464cc0d03469d4966fe3611d2f76
-ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
+ms.openlocfilehash: cd44270d8662d9e7b1b26db92e2f66035edc24f1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84814920"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699331"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Microsoft Connected Cache in Configuration Manager
 
@@ -61,7 +61,7 @@ Quando si configurano i client per l'uso del server di Connected Cache, questi c
 
   - Il sito Web predefinito abilitato sulla porta 80
 
-  - Non preinstallare la funzionalità [Application Request Routing](https://docs.microsoft.com/iis/extensions/planning-for-arr/application-request-routing-version-2-overview) (ARR) di IIS. Connected Cache installa ARR e ne configura le impostazioni. Microsoft non può garantire che la configurazione ARR di Connected Cache non crei conflitti con altre applicazioni presenti nel server che usano anch'esse questa funzionalità.
+  - Non preinstallare la funzionalità [Application Request Routing](/iis/extensions/planning-for-arr/application-request-routing-version-2-overview) (ARR) di IIS. Connected Cache installa ARR e ne configura le impostazioni. Microsoft non può garantire che la configurazione ARR di Connected Cache non crei conflitti con altre applicazioni presenti nel server che usano anch'esse questa funzionalità.
 
   - Il punto di distribuzione richiede l'accesso internet a Microsoft cloud. Gli URL specifici possono variare a seconda del contenuto specifico abilitato per il cloud. Assicurarsi di consentire anche gli endpoint per l'ottimizzazione recapito. Per altre informazioni, vedere i [requisiti di accesso Internet](../network/internet-endpoints.md).
 
@@ -132,11 +132,11 @@ Quando i client scaricano il contenuto gestito dal cloud, usano Ottimizzazione r
 - Se si abilitano [Criteri di Windows Update per le aziende](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md): Aggiornamenti delle funzionalità e della qualità di Windows 10
 - Per i [carichi di lavoro con co-gestione](../../../comanage/workloads.md):
   - Windows Update for Business: Aggiornamenti delle funzionalità e della qualità di Windows 10
-  - App A portata di clic di Office: App e aggiornamenti di Office
+  - App A portata di clic di Office: Microsoft 365 Apps e aggiornamenti
   - App client: App e aggiornamenti di Microsoft Store
   - Endpoint Protection: Aggiornamenti delle definizioni di Windows Defender
 
-In Windows 10 1809 o versione successiva, verificare questo comportamento con **Get-DeliveryOptimizationStatus** Windows PowerShell cmdlet. Nell'output di cmdlet, rivedere il valore di **BytesFromCacheServer**. Per altre informazioni, vedere [Monitorare Ottimizzazione recapito](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-setup#monitor-delivery-optimization).
+In Windows 10 1809 o versione successiva, verificare questo comportamento con **Get-DeliveryOptimizationStatus** Windows PowerShell cmdlet. Nell'output di cmdlet, rivedere il valore di **BytesFromCacheServer**. Per altre informazioni, vedere [Monitorare Ottimizzazione recapito](/windows/deployment/update/waas-delivery-optimization-setup#monitor-delivery-optimization).
 
 Se il server di cache restituisce errori HTTP, il client di Ottimizzazione recapito esegue il fallback all'origine cloud originale.
 
@@ -184,7 +184,7 @@ A partire dalla versione 1910, quando si abilita Connected Cache nei punti di di
 
 - Questa funzionalità supporta solo il tipo di app Win32 di Intune.
 
-  - Per questo scopo, creare e assegnare, ovvero distribuire, una nuova app in Intune. Le app create prima di Intune versione 1811 non funzionano. Per altre informazioni, vedere [Gestione delle app Win32 di Intune](https://docs.microsoft.com/intune/apps/apps-win32-app-management).
+  - Per questo scopo, creare e assegnare, ovvero distribuire, una nuova app in Intune. Le app create prima di Intune versione 1811 non funzionano. Per altre informazioni, vedere [Gestione delle app Win32 di Intune](/intune/apps/apps-win32-app-management).
 
   - Le dimensioni dell'app devono essere di almeno 100 MB.
   

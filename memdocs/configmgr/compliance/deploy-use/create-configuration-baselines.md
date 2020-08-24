@@ -10,12 +10,12 @@ ms.assetid: 678c9622-c61b-47d1-ba25-690616e431c7
 author: mestew
 manager: dougeby
 ms.author: mstewart
-ms.openlocfilehash: 01355230d0dc8969555740cc25a08e0b8d2967d0
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 4c96a7636902bd313f8e8868917b45d8fa49e1f7
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240474"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127138"
 ---
 # <a name="create-configuration-baselines-in-configuration-manager"></a>Creare linee di base di configurazione in Configuration Manager
 
@@ -84,7 +84,7 @@ Per creare una linea di base di configurazione mediante la finestra di dialogo *
 <!--3608345-->
 *(Funzionalità introdotta nella versione 1910)*
 
-A partire dalla versione 1910 è possibile aggiungere la valutazione delle linee di base di configurazione personalizzate come regola di valutazione dei criteri di conformità. Quando si crea o si modifica una linea di base di configurazione, è disponibile l'opzione, **Valuta questa baseline come parte della valutazione dei criteri di conformità**. Quando si aggiunge o si modifica una regola dei criteri di conformità, è disponibile una nuova condizione denominata **Includi le baseline configurate in una valutazione dei criteri di conformità**. Per i dispositivi con co-gestione, e quando si configura Intune per acquisire i risultati della valutazione della conformità di Configuration Manager come parte dello stato di conformità generale, queste informazioni vengono inviate ad Azure AD. È quindi possibile usarlo per l'accesso condizionale alle risorse di Office 365. Per altre informazioni, vedere [Accesso condizionale con la co-gestione](../../comanage/quickstart-conditional-access.md).
+A partire dalla versione 1910 è possibile aggiungere la valutazione delle linee di base di configurazione personalizzate come regola di valutazione dei criteri di conformità. Quando si crea o si modifica una linea di base di configurazione, è disponibile l'opzione, **Valuta questa baseline come parte della valutazione dei criteri di conformità**. Quando si aggiunge o si modifica una regola dei criteri di conformità, è disponibile una nuova condizione denominata **Includi le baseline configurate in una valutazione dei criteri di conformità**. Per i dispositivi con co-gestione, e quando si configura Intune per acquisire i risultati della valutazione della conformità di Configuration Manager come parte dello stato di conformità generale, queste informazioni vengono inviate ad Azure AD. È quindi possibile usarle per l'accesso condizionale alle risorse di Microsoft 365 App. Per altre informazioni, vedere [Accesso condizionale con la co-gestione](../../comanage/quickstart-conditional-access.md).
 
 Per includere linee di base di configurazione personalizzate come parte della valutazione dei criteri di conformità, eseguire le operazioni seguenti:
 

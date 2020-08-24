@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 08/11/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a91a84ece833bf893395e494a0e99fa675f14c2a
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 8d050139ae017f5800670518a41d75fba469ceac
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429649"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146474"
 ---
 # <a name="windows-10-and-newer-device-settings-to-upgrade-editions-or-enable-s-mode-in-intune"></a>Impostazioni dei dispositivi Windows 10 e versioni successive per l'aggiornamento dell'edizione o per l'abilitazione della modalità S in Intune
 
@@ -40,7 +40,7 @@ Per altre informazioni su questa funzionalità, vedere [Aggiornare le edizioni d
 
 - **Edizione a cui eseguire l'aggiornamento**: selezionare l'edizione Windows 10 a cui eseguire l'aggiornamento. I dispositivi a cui è destinato questo criterio vengono aggiornati all'edizione che scelta.
 - **Codice Product Key**: immettere il codice Product Key ricevuto da Microsoft. Dopo aver creato il criterio con il codice Product Key, la chiave non può essere aggiornata e viene nascosta per motivi di sicurezza. Per modificare il codice Product Key, immettere nuovamente l'intero codice.
-- **File di licenza**: per l'edizione **Windows 10 Holographic for Business** o **Windows 10 Mobile**, scegliere **Sfoglia** per selezionare il file di licenza ricevuto da Microsoft. Il file di licenza include le informazioni di licenza delle edizioni a cui si stanno aggiornando i dispositivi.
+- **File di licenza**: per l'edizione **Windows 10 Holographic for Business** scegliere **Sfoglia** per selezionare il file di licenza ricevuto da Microsoft. Il file di licenza include le informazioni di licenza delle edizioni a cui si stanno aggiornando i dispositivi.
 
 ## <a name="mode-switch"></a>Cambio di modalità
 

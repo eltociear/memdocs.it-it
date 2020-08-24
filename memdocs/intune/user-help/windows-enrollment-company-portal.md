@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/24/2019
+ms.date: 08/12/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 5e7cd5e5fa5f04e674b2fd9d37c8895b72372c4c
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2a79b5c433a286321426f2b14f63768e575b5556
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881395"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179469"
 ---
 # <a name="windows-device-enrollment-in-intune-company-portal"></a>Registrazione di un dispositivo Windows in Portale aziendale Intune  
 
@@ -75,10 +75,8 @@ La procedura di registrazione è diversa per versioni differenti dei dispositivi
     * __1607 o successive__: registrare il dispositivo tramite il [percorso **Impostazioni** > **Accedi all'azienda o all'istituto di istruzione**](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
     * __1511 o precedenti__: registrare il dispositivo tramite il [percorso **Impostazioni** > **Account**](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
 
-## <a name="enroll-non-windows-10-devices"></a>Registrare dispositivi non Windows 10  
-Usare gli articoli seguenti per registrare altri dispositivi Windows supportati tramite il sito Web Portale aziendale:   
-* [Dispositivo Windows 8.1. o Windows RT 8.1](enroll-your-W81-or-rt81-windows.md)  
-* [Dispositivo Windows Phone 8.1](enroll-your-wp81-windows.md)    
+## <a name="enroll-other-windows-devices"></a>Registrare altri dispositivi Windows  
+È possibile registrare i dispositivi [Windows 8.1. o Windows RT 8.1](enroll-your-W81-or-rt81-windows.md) tramite il sito Web Portale aziendale. 
 
 ## <a name="it-administrator-support"></a>Supporto per amministratori IT  
 Gli amministratori IT che riscontrano problemi durante la registrazione dei dispositivi possono vedere [Risoluzione dei problemi di registrazione dei dispositivi Windows in Microsoft Intune](https://support.microsoft.com/help/4469913). Questo articolo elenca gli errori comuni, le cause e le procedure per risolverli.  
@@ -91,4 +89,4 @@ Per altre informazioni sulla gestione dei dispositivi, il portale aziendale e co
 * [Cosa accade quando si registra il dispositivo in Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)  
 * [Quali sono le informazioni visibili per l'organizzazione quando si registra il dispositivo?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)  
 
-Serve assistenza? Contattare l'amministratore IT. [Visitare il sito Web Portale aziendale](https://go.microsoft.com/fwlink/?linkid=2010980) per trovare le informazioni di contatto IT per l'organizzazione.  
+Serve aiuto? Contattare l'amministratore IT. [Visitare il sito Web Portale aziendale](https://go.microsoft.com/fwlink/?linkid=2010980) per trovare le informazioni di contatto IT per l'organizzazione.  

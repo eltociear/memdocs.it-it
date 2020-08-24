@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/15/2020
+ms.date: 08/14/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 832ddbde9e3cf4782c7d3867ad6a09cc250960c7
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: 6bb3397432f1c171418ea99510cb04f1bdefc639
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088327"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252793"
 ---
 # <a name="use-compliance-policies-to-set-rules-for-devices-you-manage-with-intune"></a>Usare i criteri di conformità per configurare regole per i dispositivi gestiti con Intune
 
@@ -31,9 +31,7 @@ Criteri di conformità in Intune:
 
 - Consentono di definire le regole e le impostazioni che gli utenti e i dispositivi devono soddisfare per adeguarsi ai criteri stessi.
 - Includono azioni applicabili ai dispositivi non conformi. Le azioni per la non conformità possono inviare agli utenti avvisi relativi alle condizioni di non conformità e proteggere i dati nei dispositivi non conformi.
-- È possibile [combinare questi criteri con l'accesso condizionale](#integrate-with-conditional-access) per bloccare gli utenti e i dispositivi che non rispettano le regole e sono stati contrassegnati come non conformi.
-
-  L'accesso condizionale può anche funzionare con i dati sullo stato di conformità dei dispositivi gestiti con partner di gestione di dispositivi mobili di terze parti. Per abilitare questa funzionalità, si aggiunge il supporto per il partner sia ad Azure AD che a Intune. Per altre informazioni, vedere Aggiungere il supporto per i partner per la conformità dei dispositivi. 
+- Possono essere [combinati con l'accesso condizionale](#integrate-with-conditional-access), che può quindi bloccare utenti e dispositivi che non rispettano le regole.
 
 I criteri di conformità in Intune sono costituiti da due parti:
 
@@ -126,7 +124,6 @@ Gli argomenti seguenti sono collegati ad articoli dedicati per diversi aspetti d
   - [iOS](compliance-policy-create-ios.md)
   - [macOS](compliance-policy-create-mac-os.md)
   - [Windows Holographic for Business](compliance-policy-create-windows.md#windows-holographic-for-business)
-  - [Windows Phone 8.1](compliance-policy-create-windows-8-1.md)
   - [Windows 8.1 e versioni successive](compliance-policy-create-windows-8-1.md)
   - [Windows 10 e versioni successive](compliance-policy-create-windows.md)
 
@@ -163,13 +160,13 @@ La tabella seguente descrive come vengono gestite le impostazioni non conformi q
 
 |**Impostazione di criteri**| **Platform** |
 | --- | ----|
-| **Configurazione di PIN o password** | - **Android 4.0 e versioni successive**: In quarantena<br>- **Samsung KNOX Standard 4.0 e versioni successive**: In quarantena<br>- **Android Enterprise**: In quarantena  <br>  <br>- **iOS 8.0 e versioni successive**: Corretto<br>- **macOS 10.11 e versioni successive**: Corretto  <br>  <br>- **Windows 8.1 e versioni successive**: Corretto<br>- **Windows Phone 8.1 e versioni successive**: Corretto|
-| **Crittografia dispositivo** | - **Android 4.0 e versioni successive**: In quarantena<br>- **Samsung KNOX Standard 4.0 e versioni successive**: In quarantena<br>- **Android Enterprise**: In quarantena<br><br>- **iOS 8.0 e versioni successive**: Corretto (impostando il PIN)<br>- **macOS 10.11 e versioni successive**: Corretto (impostando il PIN)<br><br>- **Windows 8.1 e versioni successive**: Non applicabile<br>- **Windows Phone 8.1 e versioni successive**: Corretto |
-| **Dispositivo jailbroken o rooted** | - **Android 4.0 e versioni successive**: In quarantena (non è un'impostazione)<br>- **Samsung KNOX Standard 4.0 e versioni successive**: In quarantena (non è un'impostazione)<br>- **Android Enterprise**: In quarantena (non è un'impostazione)<br><br>- **iOS 8.0 e versioni successive**: In quarantena (non è un'impostazione)<br>- **macOS 10.11 e versioni successive**: Non applicabile<br><br>- **Windows 8.1 e versioni successive**: Non applicabile<br>- **Windows Phone 8.1 e versioni successive**: Non applicabile |
-| **Profilo di posta elettronica** | - **Android 4.0 e versioni successive**: Non applicabile<br>- **Samsung KNOX Standard 4.0 e versioni successive**: Non applicabile<br>- **Android Enterprise**: Non applicabile<br><br>- **iOS 8.0 e versioni successive**: In quarantena<br>- **macOS 10.11 e versioni successive**: In quarantena<br><br>- **Windows 8.1 e versioni successive**: Non applicabile<br>- **Windows Phone 8.1 e versioni successive**: Non applicabile |
-| **Versione minima del sistema operativo** | - **Android 4.0 e versioni successive**: In quarantena<br>- **Samsung KNOX Standard 4.0 e versioni successive**: In quarantena<br>- **Android Enterprise**: In quarantena<br><br>- **iOS 8.0 e versioni successive**: In quarantena<br>- **macOS 10.11 e versioni successive**: In quarantena<br><br>- **Windows 8.1 e versioni successive**: In quarantena<br>- **Windows Phone 8.1 e versioni successive**: In quarantena |
-| **Versione massima del sistema operativo** | - **Android 4.0 e versioni successive**: In quarantena<br>- **Samsung KNOX Standard 4.0 e versioni successive**: In quarantena<br>- **Android Enterprise**: In quarantena<br><br>- **iOS 8.0 e versioni successive**: In quarantena<br>- **macOS 10.11 e versioni successive**: In quarantena<br><br>- **Windows 8.1 e versioni successive**: In quarantena<br>- **Windows Phone 8.1 e versioni successive**: In quarantena |
-| **Attestazione dell'integrità di Windows** | - **Android 4.0 e versioni successive**: Non applicabile<br>- **Samsung KNOX Standard 4.0 e versioni successive**: Non applicabile<br>- **Android Enterprise**: Non applicabile<br><br>- **iOS 8.0 e versioni successive**: Non applicabile<br>- **macOS 10.11 e versioni successive**: Non applicabile<br><br>- **Windows 10 e Windows 10 Mobile**: In quarantena<br>- **Windows 8.1 e versioni successive**: In quarantena<br>- **Windows Phone 8.1 e versioni successive**: Non applicabile |
+| **Configurazione di PIN o password** | - **Android 4.0 e versioni successive**: In quarantena<br>- **Samsung KNOX Standard 4.0 e versioni successive**: In quarantena<br>- **Android Enterprise**: In quarantena  <br>  <br>- **iOS 8.0 e versioni successive**: Corretto<br>- **macOS 10.11 e versioni successive**: Corretto  <br>  <br>- **Windows 8.1 e versioni successive**: Corretto|
+| **Crittografia dispositivo** | - **Android 4.0 e versioni successive**: In quarantena<br>- **Samsung KNOX Standard 4.0 e versioni successive**: In quarantena<br>- **Android Enterprise**: In quarantena<br><br>- **iOS 8.0 e versioni successive**: Corretto (impostando il PIN)<br>- **macOS 10.11 e versioni successive**: Corretto (impostando il PIN)<br><br>- **Windows 8.1 e versioni successive**: Non applicabile|
+| **Dispositivo jailbroken o rooted** | - **Android 4.0 e versioni successive**: In quarantena (non è un'impostazione)<br>- **Samsung KNOX Standard 4.0 e versioni successive**: In quarantena (non è un'impostazione)<br>- **Android Enterprise**: In quarantena (non è un'impostazione)<br><br>- **iOS 8.0 e versioni successive**: In quarantena (non è un'impostazione)<br>- **macOS 10.11 e versioni successive**: Non applicabile<br><br>- **Windows 8.1 e versioni successive**: Non applicabile |
+| **Profilo di posta elettronica** | - **Android 4.0 e versioni successive**: Non applicabile<br>- **Samsung KNOX Standard 4.0 e versioni successive**: Non applicabile<br>- **Android Enterprise**: Non applicabile<br><br>- **iOS 8.0 e versioni successive**: In quarantena<br>- **macOS 10.11 e versioni successive**: In quarantena<br><br>- **Windows 8.1 e versioni successive**: Non applicabile |
+| **Versione minima del sistema operativo** | - **Android 4.0 e versioni successive**: In quarantena<br>- **Samsung KNOX Standard 4.0 e versioni successive**: In quarantena<br>- **Android Enterprise**: In quarantena<br><br>- **iOS 8.0 e versioni successive**: In quarantena<br>- **macOS 10.11 e versioni successive**: In quarantena<br><br>- **Windows 8.1 e versioni successive**: In quarantena|
+| **Versione massima del sistema operativo** | - **Android 4.0 e versioni successive**: In quarantena<br>- **Samsung KNOX Standard 4.0 e versioni successive**: In quarantena<br>- **Android Enterprise**: In quarantena<br><br>- **iOS 8.0 e versioni successive**: In quarantena<br>- **macOS 10.11 e versioni successive**: In quarantena<br><br>- **Windows 8.1 e versioni successive**: In quarantena |
+| **Attestazione dell'integrità di Windows** | - **Android 4.0 e versioni successive**: Non applicabile<br>- **Samsung KNOX Standard 4.0 e versioni successive**: Non applicabile<br>- **Android Enterprise**: Non applicabile<br><br>- **iOS 8.0 e versioni successive**: Non applicabile<br>- **macOS 10.11 e versioni successive**: Non applicabile<br><br>- **Windows 10**: In quarantena<br>- **Windows 8.1 e versioni successive**: In quarantena |
 
 ---------------------------
 

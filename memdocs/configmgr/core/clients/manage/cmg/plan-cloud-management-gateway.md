@@ -2,7 +2,7 @@
 title: Pianificare il gateway di gestione cloud
 titleSuffix: Configuration Manager
 description: Pianificare e progettare il gateway di gestione di cloud (CMG) per semplificare la gestione dei client basati su Internet.
-ms.date: 06/10/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2d6165678331811f4b04e8b1f540f3dcbb7f015d
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: d5b9a65b768d02d02084d778fd36255341a808b2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502256"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692843"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Pianificare il gateway di gestione cloud in Configuration Manager
 
@@ -53,7 +54,7 @@ Un gateway di gestione cloud può essere utile in scenari diversi. Gli scenari s
 
 - Installare il client Configuration Manager in dispositivi Windows 10 tramite Internet. L'uso di Azure AD consente al dispositivo di eseguire l'autenticazione nel gateway di gestione cloud per la registrazione e l'assegnazione dei client. È possibile installare il client manualmente oppure usando un altro metodo di distribuzione del software, ad esempio Microsoft Intune.  
 
-- Nuovo provisioning di dispositivi von co-gestione. Quando si esegue la registrazione automatica dei client esistenti, CMG non è necessario per la co-gestione. È necessario per i nuovi dispositivi che prevedono l'uso di Windows AutoPilot, Azure AD, Microsoft Intune e Configuration Manager. Per altre informazioni, vedere [Percorsi della co-gestione](../../../../comanage/quickstart-paths.md).
+- Nuovo provisioning di dispositivi von co-gestione. Quando si esegue la registrazione automatica dei client esistenti, CMG non è necessario per la co-gestione. È necessario per i nuovi dispositivi che prevedono l'uso di Windows Autopilot, Azure AD, Microsoft Intune e Configuration Manager. Per altre informazioni, vedere [Percorsi della co-gestione](../../../../comanage/quickstart-paths.md).
 
 ### <a name="specific-use-cases"></a>Casi d'uso specifici
 
@@ -104,10 +105,10 @@ La distribuzione e l'utilizzo del gateway di gestione cloud includono i componen
 ### <a name="azure-resource-manager"></a>Azure Resource Manager
 
 <!-- 1324735 -->
-Creare il Cloud Management Gateway usando una **distribuzione Azure Resource Manager**. [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) è una piattaforma moderna per la gestione di tutte le risorse di una soluzione come una singola entità detta [gruppo di risorse](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups). Quando si distribuisce Cloud Management Gateway con Azure Resource Manager, il sito usa Azure Active Directory (Azure AD) per autenticare e creare le risorse cloud necessarie. Questa distribuzione modernizzata non richiede il certificato di gestione classico di Azure.  
+Creare il Cloud Management Gateway usando una **distribuzione Azure Resource Manager**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) è una piattaforma moderna per la gestione di tutte le risorse di una soluzione come una singola entità detta [gruppo di risorse](/azure/azure-resource-manager/resource-group-overview#resource-groups). Quando si distribuisce Cloud Management Gateway con Azure Resource Manager, il sito usa Azure Active Directory (Azure AD) per autenticare e creare le risorse cloud necessarie. Questa distribuzione modernizzata non richiede il certificato di gestione classico di Azure.  
 
 > [!NOTE]
-> Questa funzionalità non supporta i provider di servizi cloud di Azure. La distribuzione del gateway di gestione cloud con Azure Resource Manager continua infatti a usare il servizio cloud classico, non supportato dal provider di servizi cloud. Per altre informazioni, vedere [Available Azure services in Azure CSP](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services) (servizi di Azure disponibili in Azure CSP).
+> Questa funzionalità non supporta i provider di servizi cloud di Azure. La distribuzione del gateway di gestione cloud con Azure Resource Manager continua infatti a usare il servizio cloud classico, non supportato dal provider di servizi cloud. Per altre informazioni, vedere [Available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services) (servizi di Azure disponibili in Azure CSP).
 
 A partire da Configuration Manager versione 1902, Azure Resource Manager è l'unico meccanismo di distribuzione per le nuove istanze di Cloud Management Gateway. Le distribuzioni esistenti continuano a funzionare normalmente.<!-- 3605704 -->
 
@@ -123,6 +124,8 @@ Creare il gateway di gestione client nel sito di livello superiore della gerarch
 È possibile creare più servizi Cloud Management Gateway (CMG) in Azure ed è possibile creare più punti di connessione del gateway di gestione cloud. Più punti di connessione del gateway di gestione cloud offrono un bilanciamento del carico del traffico client dal gateway di gestione cloud ai ruoli locali.
 
 A partire dalla versione 1902 è possibile associare un Cloud Management Gateway a un gruppo di limiti. Questa configurazione consente ai client di usare Cloud Management Gateway per impostazione predefinita o come fallback per le comunicazioni client in base alle [relazioni del gruppo di limiti](../../../servers/deploy/configure/boundary-groups.md). Questo comportamento è particolarmente utile in scenari con succursali e VPN. È possibile indirizzare il traffico client da collegamenti WAN lenti e dispendiosi per usare invece servizi più veloci in Microsoft Azure.<!--3640932-->
+
+A partire dalla versione 2006 i client Intranet possono accedere a un punto di aggiornamento software di CMG quando viene assegnato a un gruppo di limiti. Per altre informazioni, vedere [Configurare gruppi di limiti](../../../servers/deploy/configure/boundary-groups.md#bkmk_cmg-sup). <!--7102873-->
 
 > [!NOTE]
 > I client basati su Internet non rientrano in alcun gruppo di limiti.
@@ -213,7 +216,7 @@ Per altre informazioni, vedere le seguenti domande frequenti: [Gli account utent
 
 - I punti di aggiornamento software che usano un bilanciamento del carico di rete non funzionano con il gateway di gestione cloud. <!--505311-->  
 
-- Le distribuzioni del gateway di gestione cloud che usano il modello Azure Resource Manager non abilitano il supporto dei provider di servizi cloud di Azure. La distribuzione del gateway di gestione cloud con Azure Resource Manager continua infatti a usare il servizio cloud classico, non supportato dal provider di servizi cloud. Per altre informazioni, vedere [Servizi di Azure disponibili nel programma Azure Cloud Solution Provider](https://docs.microsoft.com/partner-center/azure-plan-available).
+- Le distribuzioni del gateway di gestione cloud che usano il modello Azure Resource Manager non abilitano il supporto dei provider di servizi cloud di Azure. La distribuzione del gateway di gestione cloud con Azure Resource Manager continua infatti a usare il servizio cloud classico, non supportato dal provider di servizi cloud. Per altre informazioni, vedere [Servizi di Azure disponibili nel programma Azure Cloud Solution Provider](/partner-center/azure-plan-available).
 
 ### <a name="support-for-configuration-manager-features"></a>Supporto delle funzionalità di Configuration Manager
 
@@ -222,7 +225,7 @@ La tabella seguente elenca il supporto di Cloud Management Gateway (CMG) per le 
 |Funzionalità  |Supporto  |
 |---------|---------|
 | Aggiornamenti software     | ![Supportato](media/green_check.png) |
-| Protezione degli endpoint     | ![Supportato](media/green_check.png) <sup>[Nota 1](#bkmk_note1)</sup> |
+| Protezione degli endpoint     | ![Supportata](media/green_check.png) <sup>[Nota&nbsp;1](#bkmk_note1)</sup> |
 | Inventario hardware e software     | ![Supportato](media/green_check.png) |
 | Stato del client e notifiche     | ![Supportato](media/green_check.png) |
 | Esecuzione di script     | ![Supportato](media/green_check.png) |
@@ -232,10 +235,11 @@ La tabella seguente elenca il supporto di Cloud Management Gateway (CMG) per le 
 | Installazione client<br>(con [autenticazione del token](../../deploy/deploy-clients-cmg-token.md)) | ![Supportato](media/green_check.png) (2002) |
 | Distribuzione del software (indirizzata a dispositivi)     | ![Supportato](media/green_check.png) |
 | Distribuzione del software (indirizzata a utenti, obbligatoria)<br>(con integrazione di Azure AD)     | ![Supportato](media/green_check.png) |
-| Distribuzione del software (indirizzata a utenti, disponibile)<br>([tutti i requisiti](../../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices)) | ![Supportato](media/green_check.png) |
+| Distribuzione del software (indirizzata a utenti, disponibile)<br>([tutti i requisiti](../../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications)) | ![Supportato](media/green_check.png) |
 | [Sequenza di attività di aggiornamento sul posto](../../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md) di Windows 10 | ![Supportato](media/green_check.png) |
-| Sequenze di attività che non usano le immagini d'avvio e vengono distribuite con un'opzione: **Scaricare tutto il contenuto in locale prima di avviare la sequenza di attività** | ![Supportato](media/green_check.png) |
-| Sequenze di attività che non usano immagini d'avvio con [un'opzione di download](../../../../osd/deploy-use/deploy-a-task-sequence.md#deploy-windows-10-in-place-upgrade-via-cmg) | ![Supportato](media/green_check.png) (1910)|
+| Sequenza di attività senza un'immagine di avvio, distribuita con l'opzione per **Scaricare tutto il contenuto localmente prima di avviare la sequenza di attività** | ![Supportato](media/green_check.png) |
+| Sequenza di attività senza un'immagine d'avvio, distribuita con [un'opzione di download](../../../../osd/deploy-use/deploy-a-task-sequence.md#deploy-windows-10-in-place-upgrade-via-cmg) | ![Supportato](media/green_check.png) (1910) |
+| Sequenza di attività con un'immagine d'avvio, iniziata dal Software Center | ![Supportato](media/green_check.png) (2006) |
 | Qualsiasi altro scenario di sequenza di attività     | ![Non supportato](media/Red_X.png) |
 | Push client     | ![Non supportato](media/Red_X.png) |
 | Assegnazione automatica al sito     | ![Non supportato](media/Red_X.png) |
@@ -256,12 +260,18 @@ La tabella seguente elenca il supporto di Cloud Management Gateway (CMG) per le 
 |![Non supportato](media/Red_X.png) = Questa funzionalità non è supportata con CMG |
 
 #### <a name="note-1-support-for-endpoint-protection"></a><a name="bkmk_note1"></a> Nota 1: Supporto della protezione endpoint
-<!-- 4350561 -->
-Per applicare i criteri di protezione endpoint, i dispositivi aggiunti a un dominio devono disporre dell'accesso al dominio. I dispositivi con accesso sporadico alla rete interna possono riscontrare ritardi nell'applicazione dei criteri di protezione endpoint. Se è necessario che i dispositivi applichino i criteri di protezione endpoint subito dopo averli ricevuti, prendere in considerazione una delle opzioni seguenti:
 
-- Usare la co-gestione, passare il [carico di lavoro Endpoint Protection](../../../../comanage/workloads.md#endpoint-protection) a Intune e gestire [Microsoft Defender Antivirus](https://docs.microsoft.com/mem/intune/configuration/device-restrictions-windows-10#microsoft-defender-antivirus) dal cloud.
+A partire dalla versione 2006, i client che comunicano tramite CMG possono applicare immediatamente i criteri Endpoint Protection senza una connessione attiva ad Active Directory.<!--4773948-->
+
+<!-- 4350561 -->
+Nella versione 2002 e precedenti, per applicare i criteri di protezione endpoint, i dispositivi aggiunti a un dominio devono disporre dell'accesso al dominio. I dispositivi con accesso sporadico alla rete interna possono riscontrare ritardi nell'applicazione dei criteri di protezione endpoint. Se è necessario che i dispositivi applichino i criteri di protezione endpoint subito dopo averli ricevuti, prendere in considerazione una delle opzioni seguenti:
+
+- Aggiornare il sito e i client alla versione 2006.
+
+- Usare la co-gestione, passare il [carico di lavoro Endpoint Protection](../../../../comanage/workloads.md#endpoint-protection) a Intune e gestire [Microsoft Defender Antivirus](../../../../../intune/configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) dal cloud.
 
 - Usare gli [elementi di configurazione](../../../../compliance/deploy-use/create-configuration-items.md) invece dei [criteri antimalware](../../../../protect/deploy-use/endpoint-antimalware-policies.md) nativi per applicare i criteri di protezione endpoint.
+
 
 ## <a name="cost"></a>Costi
 
@@ -315,7 +325,7 @@ Cloud Management Gateway (CMG) usa i componenti di Azure seguenti, che implicano
 
 - Un CMG può anche essere un punto di distribuzione cloud per distribuire contenuti ai client. Questa funzionalità riduce i certificati necessari e i costi delle macchine virtuali di Azure. Per altre informazioni, vedere [Modify a CMG](setup-cloud-management-gateway.md#modify-a-cmg) (Modificare un gateway di gestione cloud).<!--1358651-->  
 
-- CMG usa l'archiviazione con ridondanza locale di Azure. Per altre informazioni, vedere [Archiviazione con ridondanza locale](https://docs.microsoft.com/azure/storage/common/storage-redundancy-lrs).  
+- CMG usa l'archiviazione con ridondanza locale di Azure. Per altre informazioni, vedere [Archiviazione con ridondanza locale](/azure/storage/common/storage-redundancy-lrs).  
 
 ### <a name="other-costs"></a>Altri costi
 

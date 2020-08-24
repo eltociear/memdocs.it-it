@@ -2,20 +2,20 @@
 title: Strumento di connessione del servizio
 titleSuffix: Configuration Manager
 description: Lo strumento consente di connettersi al servizio cloud di Configuration Manager per caricare manualmente le informazioni sull'utilizzo.
-ms.date: 07/02/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 48aa08f3318aaa4629691bfb30b60580cd3e25f0
-ms.sourcegitcommit: 03d2331876ad61d0a6bb1efca3aa655b88f73119
+ms.openlocfilehash: 8b56b849be6abd2634e29d35e58494d4d3215857
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85946845"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126087"
 ---
 # <a name="use-the-service-connection-tool-for-configuration-manager"></a>Usare lo strumento di connessione del servizio per Configuration Manager
 
@@ -78,7 +78,7 @@ Per modificare questo comportamento, usare uno dei parametri seguenti per impost
 - **-downloadsiteversion**: scaricare gli aggiornamenti e gli hotfix con versione successiva a quella del sito.
 
     > [!IMPORTANT]
-    > A causa di un problema noto in Configuration Manager versione 2002, il comportamento predefinito non funziona come previsto. Usare il parametro **-downloadsiteversion** per scaricare gli aggiornamenti necessari per la versione 2002.<!-- 7594517 -->
+    > A causa di un problema noto in Configuration Manager versione 2002, il comportamento predefinito non funziona come previsto. Eseguire l'aggiornamento alla versione 2006. In alternativa, usare il parametro **-downloadsiteversion** per scaricare gli aggiornamenti necessari per la versione 2002.<!-- 7594517 -->
 
 Per altre informazioni, vedere [Parametri della riga di comando](#bkmk_cmd).
 

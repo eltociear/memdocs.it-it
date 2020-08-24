@@ -2,20 +2,20 @@
 title: Crittografare i dati di ripristino
 titleSuffix: Configuration Manager
 description: Crittografare le chiavi di ripristino di BitLocker, i pacchetti di ripristino e gli hash delle password TPM attraverso la rete e nel database di Configuration Manager.
-ms.date: 04/15/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 1ee6541a-e243-43ea-be16-d0349f7f0c6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 79f50cf4b0d241df2fc8d12dc46c833af278bd5a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2c74f1ac74b120fac2dabcd5f84f288b41368324
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709349"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697297"
 ---
 # <a name="encrypt-recovery-data"></a>Crittografare i dati di ripristino
 
@@ -36,7 +36,7 @@ Considerata la natura sensibile di queste informazioni, è opportuno proteggerle
     > [!NOTE]
     > Attualmente non è supportato il protocollo HTTP avanzato.
 
-- Prendere inoltre in considerazione la possibilità di crittografare questi dati quando vengono archiviati nel database del sito. È possibile usare la crittografia a livello di cella di SQL Server con il proprio certificato.
+- Prendere inoltre in considerazione la possibilità di crittografare questi dati quando vengono archiviati nel database del sito. Se si installa un certificato SQL, Configuration Manager crittografa i dati in SQL.
 
     Se non si vuole creare un certificato di crittografia di gestione di BitLocker, acconsentire esplicitamente all'archiviazione in testo normale dei dati di ripristino. Quando si creano criteri di gestione di BitLocker, abilitare l'opzione **Consenti l'archiviazione delle informazioni di ripristino come testo normale**.
 
@@ -77,7 +77,7 @@ Nel client usare il file **BitLockerManagementHandler.log** per risolvere i prob
 
 ### <a name="sql-encryption-certificate"></a>Certificato di crittografia SQL
 
-Usare questo certificato per abilitare la crittografia a livello di cella di SQL Server per i dati di ripristino di BitLocker. È possibile usare un processo personalizzato per creare e distribuire il certificato di crittografia di gestione di BitLocker, a condizione che siano soddisfatti i requisiti seguenti:
+Utilizzare questo certificato SQL per Configuration Manager per crittografare i dati di ripristino di BitLocker nel database del sito. È possibile usare un processo personalizzato per creare e distribuire il certificato di crittografia di gestione di BitLocker, a condizione che siano soddisfatti i requisiti seguenti:
 
 - Il nome del certificato di crittografia di gestione di BitLocker deve essere `BitLockerManagement_CERT`.
 
@@ -203,9 +203,9 @@ Se il certificato è valido, lo script restituisce un valore `1`.
 
 Per altre informazioni su questi comandi SQL, vedere gli articoli seguenti:
 
-- [Chiavi di crittografia del database e di SQL Server](https://docs.microsoft.com/sql/relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine)
-- [CREATE CERTIFICATE](https://docs.microsoft.com/sql/t-sql/statements/create-certificate-transact-sql)
-- [BACKUP CERTIFICATE](https://docs.microsoft.com/sql/t-sql/statements/backup-certificate-transact-sql)
-- [CREATE MASTER KEY](https://docs.microsoft.com/sql/t-sql/statements/create-master-key-transact-sql)
-- [BACKUP MASTER KEY](https://docs.microsoft.com/sql/t-sql/statements/backup-master-key-transact-sql)
-- [Concedere le autorizzazioni per i certificati](https://docs.microsoft.com/sql/t-sql/statements/grant-certificate-permissions-transact-sql)
+- [Chiavi di crittografia del database e di SQL Server](/sql/relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine)
+- [CREATE CERTIFICATE](/sql/t-sql/statements/create-certificate-transact-sql)
+- [BACKUP CERTIFICATE](/sql/t-sql/statements/backup-certificate-transact-sql)
+- [CREATE MASTER KEY](/sql/t-sql/statements/create-master-key-transact-sql)
+- [BACKUP MASTER KEY](/sql/t-sql/statements/backup-master-key-transact-sql)
+- [Concedere le autorizzazioni per i certificati](/sql/t-sql/statements/grant-certificate-permissions-transact-sql)

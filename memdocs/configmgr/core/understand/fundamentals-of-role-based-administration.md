@@ -10,12 +10,12 @@ ms.assetid: 0a2d6c3f-a4e4-4c19-b087-3caada480de9
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 62faf2fd736f9751e8b33e821cb814f527a1197c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c39d3380212debe97c2d2f33de6a98fecfb8402e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707089"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126053"
 ---
 # <a name="fundamentals-of-role-based-administration-for-configuration-manager"></a>Nozioni fondamentali di amministrazione basata su ruoli per Configuration Manager
 
@@ -27,7 +27,7 @@ Con Configuration Manager si usa l'amministrazione basata su ruoli per protegger
 
 - I*ruoli di sicurezza* vengono assegnati agli utenti (o a gruppi di utenti) amministratori per fornire loro le autorizzazioni per diversi oggetti di Configuration Manager, ad esempio le autorizzazioni per la creazione o la modifica delle impostazioni client.  
 
-- Gli *ambiti di sicurezza* vengono usati per raggruppare istanze specifiche di oggetti che un utente amministratore ha la responsabilità di gestire, ad esempio un'applicazione che installa Microsoft Office 2010.  
+- Gli *ambiti di sicurezza* vengono usati per raggruppare istanze specifiche di oggetti che un utente amministratore ha la responsabilità di gestire, ad esempio un'applicazione che installa Microsoft 365 Apps.  
 
 - Le*raccolte* vengono usate per specificare i gruppi di utenti e le risorse dispositivi che l'utente amministratore può gestire.  
 

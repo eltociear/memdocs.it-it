@@ -10,12 +10,12 @@ ms.assetid: 4cf640b3-610c-4c3c-b966-c62e9f5654ff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 94f002ecd12d08ffd5f3d4767e315e0d83714929
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: f5b9addd35dd3e9252c1b988de4bb006e9a5bc0d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764051"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694968"
 ---
 # <a name="conditional-access-with-co-management"></a>Accesso condizionale con la co-gestione
 
@@ -81,7 +81,7 @@ Altri esempi includono:
 
 - Nestlé, che usa l'accesso condizionale basato su app per oltre 150.000 dipendenti  
 
-- La società produttrice di software di automazione Cadence, che può ora essere certa che "solo i dispositivi gestiti abbiano accesso ad app di Office 365 come Teams e alla rete Intranet aziendale." Possono anche offrire alla forza lavoro "accesso più sicuro ad altre app basate sul cloud, ad esempio Workday e Salesforce." Per altre informazioni sull'esperienza di Cadence con Intune, vedere [Cadence increases the pace of business with mobile collaboration tools in Microsoft 365](https://customers.microsoft.com/story/cadence-partner-professional-services-microsoft-365) (Cadence aumenta la produttività con gli strumenti per la collaborazione per dispositivi mobili in Microsoft 365).
+- La società produttrice di software di automazione Cadence, che può ora essere certa che "solo i dispositivi gestiti abbiano accesso ad app Microsoft 365 come Teams e alla rete Intranet aziendale." Possono anche offrire alla forza lavoro "accesso più sicuro ad altre app basate sul cloud, ad esempio Workday e Salesforce." Per altre informazioni sull'esperienza di Cadence con Intune, vedere [Cadence increases the pace of business with mobile collaboration tools in Microsoft 365](https://customers.microsoft.com/story/cadence-partner-professional-services-microsoft-365) (Cadence aumenta la produttività con gli strumenti per la collaborazione per dispositivi mobili in Microsoft 365).
 
 Intune supporta anche l'integrazione completa con prodotti dei partner come Cisco ISE, Aruba Clear Pass e Citrix NetScaler. Con la collaborazione di questi partner è possibile usare i controlli di accesso basati sulla registrazione in Intune e lo stato di conformità del dispositivo su queste altre piattaforme.
 
@@ -108,12 +108,11 @@ L'accesso condizionale è facile da usare quando si [abilita la co-gestione](how
 
 Per altre informazioni sull'uso dell'accesso condizionale, vedere gli articoli seguenti: 
 
-- [Accesso condizionale in Azure AD](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)  
+- [Accesso condizionale in Azure AD](/azure/active-directory/conditional-access/overview)  
 
-- [Criteri di conformità dei dispositivi in Intune](https://docs.microsoft.com/intune/device-compliance)  
+- [Criteri di conformità dei dispositivi in Intune](/intune/device-compliance)  
 
-- [Accesso condizionale basato su app con Intune](https://docs.microsoft.com/intune/app-based-conditional-access-intune)  
+- [Accesso condizionale basato su app con Intune](/intune/app-based-conditional-access-intune)  
 
 > [!Note]  
-> Le funzionalità di accesso condizionale diventano disponibili immediatamente per i dispositivi aggiunti ad Azure AD ibrido. Queste funzionalità includono l'autenticazione a più fattori e il controllo di accesso per l'aggiunta ad Azure AD join ibrido. Questo comportamento deriva dal fatto che sono basate sulle proprietà di Azure AD. Per sfruttare la valutazione basata sulla configurazione di Intune e Configuration Manager, abilitare la co-gestione. Questa configurazione consente di usufruire del controllo di accesso direttamente da Intune per i dispositivi conformi. Offre inoltre la funzionalità di valutazione dei criteri di conformità di Intune.  
-
+> Le funzionalità di accesso condizionale diventano disponibili immediatamente per i dispositivi aggiunti ad Azure AD ibrido. Queste funzionalità includono l'autenticazione a più fattori e il controllo di accesso per l'aggiunta ad Azure AD join ibrido. Questo comportamento deriva dal fatto che sono basate sulle proprietà di Azure AD. Per sfruttare la valutazione basata sulla configurazione di Intune e Configuration Manager, abilitare la co-gestione. Questa configurazione consente di usufruire del controllo di accesso direttamente da Intune per i dispositivi conformi. Offre inoltre la funzionalità di valutazione dei criteri di conformità di Intune.

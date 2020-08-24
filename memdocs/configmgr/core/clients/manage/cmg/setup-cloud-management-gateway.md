@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: d1e7b2c359e21ac4a12219d27655603954702fa8
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: a5800b40b581f2a65c4adcea0d229977ae61f774
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86410870"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693336"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Configurare il gateway di gestione cloud per Configuration Manager
 
@@ -40,7 +40,7 @@ Usare l'elenco di controllo seguente per assicurarsi di avere le informazioni e 
 
   - Integrazione con [Azure AD](../../../servers/deploy/configure/azure-services-wizard.md) per la **Gestione cloud**. L'individuazione utenti di Azure AD non è necessaria. Per integrare il sito con Azure AD e distribuire il servizio CMG tramite Azure Resource Manager, è necessario un **amministratore globale**.
 
-  - I provider di risorse **Microsoft.ClassicCompute** & **Microsoft.Storage** devono essere registrati nella sottoscrizione di Azure. Per altre informazioni, vedere [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services).
+  - I provider di risorse **Microsoft.ClassicCompute** & **Microsoft.Storage** devono essere registrati nella sottoscrizione di Azure. Per altre informazioni, vedere [Azure Resource Manager](/azure/azure-resource-manager/resource-manager-supported-services).
 
   - Un **proprietario della sottoscrizione**  deve eseguire l'accesso per distribuire il servizio CMG.
 
@@ -141,7 +141,7 @@ Il punto di connessione del Cloud Management Gateway è il ruolo di sistema del 
 
 Per la risoluzione dei problemi relativi all'integrità del Cloud Management Gateway, usare **CMGService.log** e **SMS_Cloud_ProxyConnector.log**. Per altre informazioni, vedere [File di log](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
 
-## <a name="configure-client-facing-roles-for-cmg-traffic"></a>Configurare i ruoli lato client per il traffico del Cloud Management Gateway
+## <a name="configure-client-facing-roles-for-cmg-traffic"></a><a name="bkmk_role"></a>Configurare i ruoli lato client per il traffico del Cloud Management Gateway
 
 Configurare il punto di gestione e il punto di aggiornamento software per accettare il traffico del Cloud Management Gateway. Eseguire questa procedura nel sito primario per tutti i punti di gestione e i punti di aggiornamento software che servono i client basati su Internet.  
 
@@ -158,7 +158,7 @@ Configurare il punto di gestione e il punto di aggiornamento software per accett
 Ripetere questi passaggi in base alle esigenze per i punti di gestione aggiuntivi e per gli eventuali punti di aggiornamento software.
 
 ## <a name="configure-boundary-groups"></a>Configurare gruppi di limiti
-
+ 
 <!--3640932-->
 A partire dalla versione 1902 è possibile associare un Cloud Management Gateway a un gruppo di limiti. Questa configurazione consente ai client di usare Cloud Management Gateway per impostazione predefinita o come fallback per le comunicazioni client in base alle relazioni del gruppo di limiti.
 
@@ -207,7 +207,7 @@ Per installare il client di Configuration Manager nei sistemi attualmente non co
 
 Per le opzioni 1 e 2 usare il parametro **/mp** per specificare l'URL di CMG quando si esegue **ccmsetup.exe**. Per altre informazioni vedere [Proprietà e parametri di installazione client](../../deploy/about-client-installation-properties.md#mp).
 
-Per l'opzione 3, a partire da Configuration Manager versione 2002, è possibile installare il client nei sistemi non connessi all'intranet usando un token di registrazione in blocco. Per altre informazioni su questo metodo, vedere [Creare un token di registrazione in blocco](../../deploy/deploy-clients-cmg-token.md#create-a-bulk-registration-token).
+Per l'opzione 3, a partire da Configuration Manager versione 2002, è possibile installare il client nei sistemi non connessi all'intranet usando un token di registrazione in blocco. Per altre informazioni su questo metodo, vedere [Creare un token di registrazione in blocco](../../deploy/deploy-clients-cmg-token.md#bulk-registration-token).
 
 ### <a name="configure-off-premises-clients-for-cmg"></a>Configurare i client non locali per Cloud Management Gateway
 

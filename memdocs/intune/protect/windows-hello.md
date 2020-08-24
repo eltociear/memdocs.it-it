@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/27/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: d120ee0f55651ab1661e426e5889aaf8a4c7e670
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 7088bfd5b27d986e12a175de1bdea0bf060c3ad3
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262864"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252521"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Integrare Windows Hello for Business in Microsoft Intune  
 
@@ -45,17 +45,15 @@ Intune supporta anche i tipi di criteri seguenti per gestire alcune impostazioni
 Questo articolo illustra come creare criteri predefiniti di Windows Hello for Business che abbiano come destinazione l'intera organizzazione.
 
 > [!IMPORTANT]
-> Nelle versioni di Windows 10 Desktop e Mobile precedenti all'aggiornamento dell'anniversario era possibile impostare due diversi PIN da usare per l'autenticazione alle risorse:
+> Prima dell'aggiornamento dell'anniversario era possibile impostare due diversi PIN da usare per l'autenticazione alle risorse:
 >
 > - Il **PIN dispositivo** che poteva essere usato per sbloccare il dispositivo e connetterlo alle risorse cloud.
 > - Il **PIN di lavoro** che veniva usato per accedere alle risorse di Azure AD nei dispositivi personali dell'utente (BYOD).
-> 
+>
 > Nell'aggiornamento dell'anniversario questi due PIN sono stati uniti in un unico PIN dispositivo.
 > Eventuali criteri di configurazione di Intune impostati per controllare il PIN del dispositivo ed eventuali criteri di Windows Hello for Business configurati, ora impostano questo nuovo valore di PIN.
-> Se entrambi i tipi di criteri sono stati impostati per controllare il PIN, i criteri di Windows Hello for Business verranno applicati ai dispositivi Windows 10 Desktop e Mobile.
+> Se sono stati impostati entrambi i tipi di criteri per controllare il PIN, verranno applicati i criteri di Windows Hello for Business.
 > Per assicurarsi che i conflitti dei criteri vengano risolti e che i criteri dei PIN vengano applicati correttamente, aggiornare i criteri di Windows Hello for Business in modo che corrispondano alle impostazioni nei criteri di configurazione e chiedere agli utenti di sincronizzare i propri dispositivi nell'app Portale aziendale.
-
-
 
 ## <a name="create-a-windows-hello-for-business-policy"></a>Creare un criterio di Windows Hello for Business
 
@@ -65,13 +63,13 @@ Questo articolo illustra come creare criteri predefiniti di Windows Hello for Bu
 
 3. Selezionare una delle opzioni seguenti per **Configurare Windows Hello for Business**:
 
-     - **Attivata**. Selezionare questa impostazione se si vuole configurare le impostazioni di Windows Hello for Business.  Quando si seleziona *Abilitato* vengono visualizzate le impostazioni aggiuntive per Windows Hello e possono essere configurate per i dispositivi.
+   - **Attivata**. Selezionare questa impostazione se si vuole configurare le impostazioni di Windows Hello for Business.  Quando si seleziona *Abilitato* vengono visualizzate le impostazioni aggiuntive per Windows Hello e possono essere configurate per i dispositivi.
 
-    - **Disabilitato**. Se non si vuole abilitare Windows Hello for Business durante la registrazione del dispositivo, selezionare questa opzione. Quando l'opzione è disabilitata, gli utenti non possono eseguire il provisioning di Windows Hello for Business tranne che nei telefoni cellulari aggiunti ad Azure Active Directory in cui potrebbe essere obbligatorio eseguirlo. Con l'impostazione *Disabilitato* è comunque possibile configurare le impostazioni successive per Windows Hello for Business, anche se questo criterio non abiliterà Windows Hello for Business.
+   - **Disabilitato**. Se non si vuole abilitare Windows Hello for Business durante la registrazione del dispositivo, selezionare questa opzione. Quando è disabilitato, gli utenti non possono effettuare il provisioning di Windows Hello for Business. Con l'impostazione *Disabilitato* è comunque possibile configurare le impostazioni successive per Windows Hello for Business, anche se questo criterio non abiliterà Windows Hello for Business.
 
-    - **Non configurato**. Selezionare questa impostazione se non si vuole usare Intune per controllare le impostazioni di Windows Hello for Business. Eventuali impostazioni di Windows Hello for Business presenti nei dispositivi Windows 10 non verranno modificate. Tutte le altre impostazioni nel riquadro non sono disponibili.
+   - **Non configurato**. Selezionare questa impostazione se non si vuole usare Intune per controllare le impostazioni di Windows Hello for Business. Eventuali impostazioni di Windows Hello for Business presenti nei dispositivi Windows 10 non verranno modificate. Tutte le altre impostazioni nel riquadro non sono disponibili.
 
-4. Se si seleziona **Abilitato** nel passaggio precedente, configurare le impostazioni obbligatorie che verranno applicate a tutti i dispositivi Windows 10 e Windows 10 Mobile registrati. Dopo aver configurato queste impostazioni selezionare **Salva**.
+4. Se è stato selezionato **Abilitato** nel passaggio precedente, configurare le impostazioni necessarie che verranno applicate a tutti i dispositivi Windows 10 registrati. Dopo aver configurato queste impostazioni, selezionare **Salva**.
 
    - **Usa un modulo TPM (Trusted Platform Module)** :
 

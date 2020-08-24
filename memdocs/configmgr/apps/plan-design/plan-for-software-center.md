@@ -2,7 +2,7 @@
 title: Pianificare Software Center
 titleSuffix: Configuration Manager
 description: Decidere come configurare e personalizzare Software Center per consentire agli utenti di interagire con Configuration Manager.
-ms.date: 11/29/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c6826794-aa19-469d-ae47-1a0db68a1ff1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 15da90b12504fdaf7a4dd0a36704391eead877cd
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 5b32fc2de3c945ff2292f119a10d84d982d08677
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689029"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127359"
 ---
 # <a name="plan-for-software-center"></a>Pianificare Software Center
 
@@ -27,64 +27,35 @@ Per informazioni sulle altre funzionalità di Software Center, vedere il [Manual
 
 ## <a name="configure-software-center"></a><a name="bkmk_userex"></a> Configurare Software Center  
 
-Aggiornare i siti e i client di Configuration Manager alla versione 1906 o successiva per trarre vantaggio dai miglioramenti più recenti.
+Aggiornare i siti e i client di Configuration Manager alla versione 1906 o successiva per sfruttare i vantaggi offerti dalle funzionalità più recenti di Software Center.
 
-Di seguito sono elencati i miglioramenti apportati a Software Center:
-
-> [!Important]  
+> [!IMPORTANT]
 > Questi miglioramenti iterativi di Software Center e il punto di gestione sono concepiti per il ritiro dei ruoli del catalogo applicazioni.
 >
 > - L'esperienza utente di Silverlight non è supportata a partire dalla versione Current Branch 1806.
 > - A partire dalla versione 1906, i client aggiornati usano automaticamente il punto di gestione per le distribuzioni di applicazioni disponibili per gli utenti. Non è inoltre possibile installare nuovi ruoli del Catalogo applicazioni.
-> - Il supporto per i ruoli del Catalogo applicazioni termina con la versione 1910.  
+> - Il supporto per i ruoli del Catalogo applicazioni termina con la versione 1910.
 
-### <a name="starting-in-version-1802"></a>A partire dalla versione 1802
+- L'impostazione client **Usa il nuovo Software Center** nel gruppo **Agente computer** è abilitata per impostazione predefinita. La versione precedente di Software Center non è più supportata. Per altre informazioni, vedere [Funzionalità rimosse e deprecate](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).
 
-- L'impostazione client **Usa il nuovo Software Center** nel gruppo **Agente computer** è abilitata per impostazione predefinita. La versione precedente di Software Center non è più supportata. Per altre informazioni, vedere [Funzionalità rimosse e deprecate](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).  
+- Specificare la visibilità del collegamento al sito Web del Catalogo applicazioni nella scheda **Stato dell'installazione** di Software Center. Per altre informazioni, vedere Impostazioni client di [Software Center](../../core/clients/deploy/about-client-settings.md#software-center).
 
-- Gli utenti possono cercare e installare le applicazioni disponibili per gli utenti nei dispositivi aggiunti ad Azure Active Directory (Azure AD). Per altre informazioni, vedere [Deploy user-available applications on Azure AD-joined devices](../deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices) (Distribuire applicazioni disponibili per l'utente in dispositivi aggiunti ad Azure AD).  
+- A partire dalla versione 1906, è possibile aggiungere a Software Center fino a cinque schede personalizzate. Per altre informazioni, vedere [Impostazioni client di Software Center](../../core/clients/deploy/about-client-settings.md#software-center). <!--4063773-->
 
-### <a name="starting-in-version-1806"></a>A partire dalla versione 1806
+- In Software Center gli utenti possono configurare l'affinità utente-dispositivo. Per altre informazioni, vedere [Collegare utenti e dispositivi mediante l'affinità utente dispositivo](../deploy-use/link-users-and-devices-with-user-device-affinity.md).
 
-- Specificare la visibilità del collegamento al sito Web del Catalogo applicazioni nella scheda **Stato dell'installazione** di Software Center. Per altre informazioni, vedere Impostazioni client di [Software Center](../../core/clients/deploy/about-client-settings.md#software-center).  
-
-- I ruoli del catalogo applicazioni non sono più necessari per visualizzare le applicazioni disponibili per gli utenti in Software Center. Questa modifica consente di ridurre l'infrastruttura server necessaria per distribuire le applicazioni agli utenti. Software Center ora si affida al punto di gestione per ottenere queste informazioni e questo consente una migliore scalabilità degli ambienti di grandi dimensioni, che vengono assegnati a [gruppi di limiti](../../core/servers/deploy/configure/boundary-groups.md#management-points).<!--1358309-->  
-
-    > [!Note]  
-    > Se il Catalogo applicazioni è attualmente in uso, continua a funzionare anche se si aggiorna Configuration Manager alla versione 1806. I ruoli Punto per siti Web e Punto per servizi Web del Catalogo applicazioni non sono più *necessari*, ma sono ancora *supportati*. L'**esperienza utente di Silverlight** per il *punto per siti Web* del Catalogo applicazioni non è più supportata. Per altre informazioni, vedere [Funzionalità rimosse e deprecate](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).
-    >
-    > Iniziare a pianificare la rimozione dei ruoli del Catalogo applicazioni dall'infrastruttura in futuro. Sfruttare i miglioramenti di Software Center per usare il punto di gestione e semplificare l'ambiente di Configuration Manager.  
-
-### <a name="starting-in-version-1902"></a>A partire dalla versione 1902
-
-- Configurare l'affinità utente-dispositivo. Per altre informazioni, vedere [Collegare utenti e dispositivi mediante l'affinità utente dispositivo](../deploy-use/link-users-and-devices-with-user-device-affinity.md).
-
-### <a name="starting-in-version-1906"></a>A partire dalla versione 1906
-
-- Software Center comunica ora con un punto di gestione per le app destinate agli utenti, se disponibili. Non usa più il catalogo applicazioni. Grazie a questa modifica, è più facile rimuovere il catalogo applicazioni dal sito.
-
-- In precedenza, Software Center selezionava il primo punto di gestione nell'elenco di server disponibili. A partire da questa versione, usa lo stesso punto di gestione del client. Questa modifica consente a Software Center di usare lo stesso punto di gestione del client dal sito primario assegnato.
-
-- Il punto di gestione include endpoint di Software Center per supportare le nuove funzionalità. L'integrità di questi endpoint viene ora controllata ogni cinque minuti. Segnala eventuali problemi usando messaggi di stato per il componente SMS_MP_CONTROL_MANAGER del sito.
-
-- Non è possibile aggiungere nuovi ruoli del Catalogo applicazioni al sito. I ruoli esistenti continuano a funzionare. Solo i client esistenti usano il Catalogo applicazioni per le distribuzioni disponibili per gli utenti. I client aggiornati usano automaticamente il punto di gestione per tutte le distribuzioni.
-
-- È possibile aggiungere fino a 5 schede personalizzate a Software Center. Per altre informazioni, vedere [Impostazioni client di Software Center](../../core/clients/deploy/about-client-settings.md#software-center). <!--4063773-->
-
-### <a name="summary-of-infrastructure-requirements-per-version"></a>Riepilogo dei requisiti dell'infrastruttura per ogni versione
-
-Usare la tabella seguente per conoscere i requisiti di Software Center in base alla versione specifica di Configuration Manager:
-
-| Tipo di dispositivo | Versione sito | Infrastruttura |
-|-----------------|--------------|----------------|
-| Dispositivo aggiunto ad Azure AD<br>(o "aggiunto a un dominio cloud") | 1802 o 1806 | Punto di gestione per tutte le distribuzioni di app |
-| Dispositivo [aggiunto ad Azure AD ibrido](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) in Internet | 1802 o 1806 | Gateway di gestione cloud e punto di gestione per tutte le distribuzioni di app |
-| Dispositivo aggiunto a un dominio di Active Directory locale | 1802 | Catalogo applicazioni necessario per le app disponibili per gli utenti in Software Center |
-| Dispositivo aggiunto a un dominio di Active Directory locale | 1806 | Punto di gestione per tutte le distribuzioni di app |
-
-> [!Important]  
+> [!IMPORTANT]
 > Per sfruttare i vantaggi delle nuove funzionalità di Configuration Manager, aggiornare prima di tutto i clienti alla versione più recente. Anche se le nuove funzionalità vengono visualizzate nella console di Configuration Manager quando si esegue l'aggiornamento del sito e della console, lo scenario completo risulta funzionante solo dopo l'aggiornamento alla versione più recente del client.
 
+### <a name="software-center-and-user-available-applications"></a>Software Center e applicazioni disponibili per gli utenti
+
+- I ruoli del Catalogo applicazioni non sono più necessari per visualizzare le applicazioni disponibili per gli utenti in Software Center. Questo comportamento consente di ridurre l'infrastruttura server necessaria per distribuire le applicazioni agli utenti. Per ottenere queste informazioni, Software Center si basa sul punto di gestione, che consente una maggiore scalabilità degli ambienti di grandi dimensioni tramite l'assegnazione di questi ultimi a [gruppi di limiti](../../core/servers/deploy/configure/boundary-groups.md#management-points).<!--1358309-->
+
+- Gli utenti possono cercare e installare le applicazioni disponibili per gli utenti nei dispositivi aggiunti ad Azure Active Directory (Azure AD). A partire dalla versione 2006, è possibile ottenere le app disponibili per gli utenti in dispositivi basati su Internet e aggiunti a un dominio. Per altre informazioni, vedere [Distribuire applicazioni disponibili per l'utente](../deploy-use/deploy-applications.md#deploy-user-available-applications).
+
+- A partire dalla versione 1906, Software Center comunica con un punto di gestione per le app destinate agli utenti disponibili. Non usa più il catalogo applicazioni. Grazie a questa modifica, è più facile rimuovere il catalogo applicazioni dal sito.
+
+- In precedenza, Software Center selezionava il primo punto di gestione nell'elenco di server disponibili. A partire dalla versione 1906, usa lo stesso punto di gestione del client. Questa modifica consente a Software Center di usare lo stesso punto di gestione del client dal sito primario assegnato.
 
 ## <a name="replace-toast-notifications-with-dialog-window"></a><a name="bkmk_impact"></a> Sostituzione delle notifiche di tipo avviso popup con una finestra di dialogo
 
@@ -132,7 +103,7 @@ Alla finestra di dialogo seguente:
 > [!IMPORTANT]
 > In Configuration Manager 1902, in determinate circostanze, la finestra di dialogo non sostituisce le notifiche di tipo avviso popup. Per risolvere questo problema, installare l'[aggiornamento cumulativo per Configuration Manager versione 1902](https://support.microsoft.com/help/4500571/update-rollup-for-configuration-manager-current-branch-1902). <!--4404715-->
 
-## <a name="branding-software-center"></a>Personalizzazione di Software Center
+## <a name="brand-software-center"></a>Personalizzare Software Center
 
 Modificare l'aspetto di Software Center in modo che risponda ai requisiti di personalizzazione dell'organizzazione. Questa configurazione consente agli utenti di considerare attendibile Software Center.
 
@@ -156,7 +127,7 @@ Configuration Manager applica la personalizzazione per Software Center in base a
 
 #### <a name="application-catalog-branding-priorities"></a>Priorità di personalizzazione del Catalogo applicazioni
 
-> [!Important]
+> [!IMPORTANT]
 > L'esperienza utente di Silverlight per il catalogo applicazioni non è supportata a partire dalla versione Current Branch 1806. A partire dalla versione 1906, i client aggiornati usano automaticamente il punto di gestione per le distribuzioni di applicazioni disponibili per gli utenti. Non è inoltre possibile installare nuovi ruoli del Catalogo applicazioni. Il supporto per i ruoli del Catalogo applicazioni termina con la versione 1910.  
 
 Se si usa il Catalogo applicazioni, la personalizzazione segue queste priorità:  
@@ -166,7 +137,6 @@ Se si usa il Catalogo applicazioni, la personalizzazione segue queste priorità:
 2. *Nome dell'organizzazione* e *colore* specificati nelle proprietà del punto per siti Web del Catalogo applicazioni. Per altre informazioni, vedere [Opzioni di configurazione per il punto per siti Web del Catalogo applicazioni](../../core/servers/deploy/configure/configuration-options-for-site-system-roles.md#BKMK_ApplicationCatalog_Website).  
 
 3. Impostazione client **Nome organizzazione** nel gruppo **Agente computer**. Per altre informazioni, vedere [About client settings](../../core/clients/deploy/about-client-settings.md#computer-agent) (Informazioni sulle impostazioni client).  
-
 
 ## <a name="see-also"></a>Vedere anche
 

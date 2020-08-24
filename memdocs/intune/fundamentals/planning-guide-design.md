@@ -6,7 +6,7 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 3/22/2019
+ms.date: 08/12/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d29294f1d9556f195fe70f0e2cb36cc8c9ddcfba
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 37ea8cf3f8615630ccc5b1f5fcc72f69c66db3ef
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357727"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179571"
 ---
 # <a name="create-a-design"></a>Creare una progettazione
 
@@ -311,7 +311,7 @@ Di seguito è riportato un esempio di progettazione di un profilo Wi-Fi:
 | **Tipo** | **Nome profilo** | **Piattaforma per i dispositivi** | **Casi d'uso** |
 |:---:|:---:|:---:|:---:|
 | Wi-Fi | Profilo Wi-Fi Asia | Android | Aziendale, BYOD Asia|
-| Wi-Fi | Profilo Wi-Fi America del Nord | Android, iOS/iPadOS, Windows 10 Mobile | Aziendale, BYOD America del Nord |
+| Wi-Fi | Profilo Wi-Fi America del Nord | Android, iOS/iPadOS | Aziendale, BYOD America del Nord |
 
 Per determinare le esigenze specifiche a livello di profili Wi-Fi, è possibile [scaricare un modello della tabella qui sopra](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0).
 
@@ -323,7 +323,7 @@ Di seguito è riportato un esempio di come documentare la progettazione di un pr
 
 | **Tipo** | **Nome profilo** | **Piattaforma per i dispositivi** | **Casi d'uso** |
 |:---:|:---:|:---:|:---:|
-| VPN | Profilo VPN Cisco AnyConnect | Android, iOS/iPadOS, Windows 10 Mobile | Aziendale, BYOD America del Nord e Germania|
+| VPN | Profilo VPN Cisco AnyConnect | Android, iOS/iPadOS | Aziendale, BYOD America del Nord e Germania|
 | VPN | Pulse Secure | Android | Aziendale, BYOD Asia |
 
 Per determinare le esigenze specifiche a livello di profili VPN, è possibile [scaricare un modello della tabella qui sopra](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0).
@@ -374,7 +374,7 @@ I criteri di protezione delle app consentono di ridurre al minimo le perdite di 
 | **Applicazione** | **Scopo** | **Piattaforme** | **Caso d'uso** | **Criterio di protezione dell'app** |
 |:---:|:---:|:---:|:---:|:---:|
 | Outlook Mobile  | Disponibile | iOS | Aziendale - Dirigenti | Non può essere jailbroken, crittografia dei file |                                                         
-| Word | Disponibile | iOS/iPadOS, Android - Samsung Knox, non Knox, Windows 10 Mobile | Aziendale, BYOD | Non può essere jailbroken, crittografia dei file |                                                         
+| Word | Disponibile | iOS/iPadOS, Android - Samsung Knox, non Knox | Aziendale, BYOD | Non può essere jailbroken, crittografia dei file |                                                         
 
 
 Per determinare le esigenze specifiche a livello di criteri di protezione delle app, è possibile [scaricare un modello della tabella qui sopra](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0).
@@ -388,7 +388,7 @@ Di seguito è riportato un esempio di come progettare i criteri di conformità:
 
 | **Nome criterio** | **Piattaforma per i dispositivi** | **Impostazioni** | **Gruppo di destinazione** |
 |:---:|:---:|:---:|:---:|
-| Criteri di conformità | iOS/iPadOS, Android - Samsung Knox, non Knox, Windows 10 Mobile | PIN - obbligatorio, non può essere jailbroken | Aziendale, BYOD |
+| Criteri di conformità | iOS/iPadOS, Android - Samsung Knox, non Knox | PIN - obbligatorio, non può essere jailbroken | Aziendale, BYOD |
 
 
 Per determinare le esigenze specifiche a livello di criteri di conformità, è possibile [scaricare un modello della tabella qui sopra](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0).

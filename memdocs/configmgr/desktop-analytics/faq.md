@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: d1f18c135f200b2a9e40b970871c73a0d98893a2
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: b24369f2c2f21208f188cf5c0c2ef3a28db83c04
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429834"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700821"
 ---
 # <a name="desktop-analytics-faq"></a>Domande frequenti su Desktop Analytics
 
@@ -73,7 +73,7 @@ Sì. Per altre informazioni, vedere [Conversione da BIOS a UEFI durante un aggio
 
 ### <a name="can-i-use-desktop-analytics-with-windows-10-ltsc"></a>È possibile usare Desktop Analytics con Windows 10 LTSC?
 
-Desktop Analytics non supporta i dispositivi Windows 10 Long-Term Servicing Channel (LTSC). Per altre informazioni, vedere [Panoramica di Windows as a Service](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel).
+Desktop Analytics non supporta i dispositivi Windows 10 Long-Term Servicing Channel (LTSC). Per altre informazioni, vedere [Panoramica di Windows as a Service](/windows/deployment/update/waas-overview#long-term-servicing-channel).
 
 ### <a name="can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal"></a>È possibile ridurre la quantità di tempo necessaria per l'aggiornamento dei dati nel portale di Desktop Analytics?
 
@@ -106,7 +106,7 @@ I dati di diagnostica di Windows provenienti dai computer del cliente vengono cr
 
 ### <a name="can-i-use-update-compliance-together-with-desktop-analytics"></a>È possibile usare Conformità aggiornamenti insieme a Desktop Analytics?
 
-Sì. Se attualmente si usa [Conformità aggiornamenti](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started) nel portale di Azure, è possibile continuare a farlo ora e dopo gennaio 2020.
+Sì. Se attualmente si usa [Conformità aggiornamenti](/windows/deployment/update/update-compliance-get-started) nel portale di Azure, è possibile continuare a farlo ora e dopo gennaio 2020.
 
 Per altre informazioni, vedere [KB 4521815: Ritiro di Windows Analytics il 31 gennaio 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
 
@@ -126,7 +126,7 @@ Sì, le funzionalità di Windows Analytics seguenti sono state ritirate o non so
 #### <a name="upgrade-readiness"></a>Preparazione aggiornamenti
 
 - Dati di individuazione siti di Internet Explorer
-- Dati analitici del componente aggiuntivo per Office (ora [disponibile in Configuration Manager](#bkmk_office))
+- Dati analitici del componente aggiuntivo per Microsoft 365 Apps (ora [disponibile in Configuration Manager](#bkmk_office))
 - Dati analitici di Hub di Feedback
 
 #### <a name="update-compliance"></a>Conformità aggiornamenti
@@ -151,9 +151,9 @@ Sì, le funzionalità di Windows Analytics seguenti sono state ritirate o non so
 
 ## <a name="other"></a>Altro
 
-### <a name="can-i-use-desktop-analytics-for-my-office-365-proplus-upgrades"></a><a name="bkmk_office"></a> È possibile usare Desktop Analytics per gli aggiornamenti di Office 365 ProPlus?
+### <a name="can-i-use-desktop-analytics-for-my-microsoft-365-apps-upgrades"></a><a name="bkmk_office"></a> È possibile usare Desktop Analytics per gli aggiornamenti di Microsoft 365 Apps?
 
-No, Desktop Analytics si concentra su Windows. Microsoft ha sviluppato Desktop Analytics in stretta collaborazione con molti clienti. Il feedback dei clienti riguarda il modo in cui Desktop Analytics migliora la capacità di gestire le distribuzioni di Windows in tutta sicurezza. I clienti esprimono anche interesse per una maggiore integrazione della [preparazione per Office 365 ProPlus](../sum/deploy-use/office-365-dashboard.md#bkmk_o365_readiness) con gli strumenti di gestione di Office in Configuration Manager e Intune. Microsoft continua a investire in queste aree concentrandosi al contempo su scenari Windows in Desktop Analytics.
+No, Desktop Analytics si concentra su Windows. Microsoft ha sviluppato Desktop Analytics in stretta collaborazione con molti clienti. Il feedback dei clienti riguarda il modo in cui Desktop Analytics migliora la capacità di gestire le distribuzioni di Windows in tutta sicurezza. I clienti esprimono anche interesse per una maggiore integrazione della [preparazione per Microsoft 365 Apps](../sum/deploy-use/office-365-dashboard.md#bkmk_o365_readiness) con gli strumenti di gestione di Microsoft 365 Apps in Configuration Manager e Intune. Microsoft continua a investire in queste aree concentrandosi al contempo su scenari Windows in Desktop Analytics.
 
 ### <a name="how-can-i-provide-feedback-about-desktop-analytics"></a>Come si invia il feedback relativo a Desktop Analytics?
 

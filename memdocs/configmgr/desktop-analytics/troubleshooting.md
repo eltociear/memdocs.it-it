@@ -2,7 +2,7 @@
 title: Risolvere i problemi di Desktop Analytics
 titleSuffix: Configuration Manager
 description: Dettagli tecnici che consentono di risolvere i problemi relativi a Desktop Analytics.
-ms.date: 07/01/2020
+ms.date: 08/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,11 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 68506ba11e356a1e9f14d58880a80bdf3cfcb5f4
-ms.sourcegitcommit: fb03634b8494903fc6855ad7f86c8694ffada8df
+ms.openlocfilehash: e83e8d5d967b4cd3bbcb817c149cd40284bb5f9c
+ms.sourcegitcommit: 66c58078a32af3872d98f7c62af4f8047ee81b50
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85828976"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88089946"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>Risolvere i problemi di Desktop Analytics
 
@@ -72,6 +73,9 @@ Desktop Analytics aggiunge le applicazioni seguenti ad Azure AD:
 Se è necessario effettuare il provisioning di queste app dopo aver completato l'installazione, andare al riquadro **Servizi connessi**. Selezionare **Configurare l'accesso a utenti e applicazioni** ed effettuare il provisioning delle app.  
 
 - **App Azure AD per Configuration Manager**. Se è necessario eseguire il provisioning o risolvere i problemi di connessione dopo aver completato l'installazione, vedere [Creare e importare app per Configuration Manager](#create-and-import-app-for-configuration-manager). Questa app richiede le autorizzazioni **Write CM Collection Data** (Scrivi dati raccolta CM) e **Read CM Collection Data** (Leggi dati raccolta CM) nell'API del **servizio Configuration Manager**.  
+
+    > [!NOTE]
+    > Desktop Analytics supporta più gerarchie di Configuration Manager che dipendono da un singolo tenant di Azure AD.<!-- 4814075 --> In caso di gerarchie multiple configurate con lo stesso ID commerciale all'interno di un ambiente, usare [app diverse](connect-configmgr.md#bkmk_connect) per ciascuna gerarchia per condividere il tenant di Azure AD e l'istanza di Desktop Analytics.
 
 ### <a name="create-and-import-app-for-configuration-manager"></a>Creare e importare app per Configuration Manager
 

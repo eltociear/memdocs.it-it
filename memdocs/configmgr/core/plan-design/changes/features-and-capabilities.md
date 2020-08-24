@@ -10,12 +10,12 @@ ms.assetid: 5d388399-07ca-431c-a9b2-56c69771aa87
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5cdd0a9497f07d80813aca5dc169c4d61944e85d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 74b150b5a2157104b6a380489202fd309224a3bb
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706399"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129036"
 ---
 # <a name="features-and-capabilities-of-configuration-manager"></a>Caratteristiche e funzionalità di Configuration Manager
 
@@ -49,7 +49,7 @@ Con CMPivot è possibile eseguire immediatamente query sui dispositivi online e 
 
 ## <a name="application-management"></a>Gestione delle applicazioni
 
-È disponibile un set di strumenti e risorse che consentono di creare, gestire, distribuire e monitorare le applicazioni in una vasta gamma di dispositivi gestiti. Dalla console di Configuration Manager è anche possibile distribuire, aggiornare e gestire Office 365. Configuration Manager si integra con il Microsoft Store per le aziende e la formazione per distribuire app basate sul cloud. Per altre informazioni, vedere [Introduzione alla gestione delle applicazioni](../../../apps/understand/introduction-to-application-management.md).
+È disponibile un set di strumenti e risorse che consentono di creare, gestire, distribuire e monitorare le applicazioni in una vasta gamma di dispositivi gestiti. Dalla console di Configuration Manager è possibile distribuire, aggiornare e gestire Microsoft 365 Apps. Configuration Manager si integra con il Microsoft Store per le aziende e la formazione per distribuire app basate sul cloud. Per altre informazioni, vedere [Introduzione alla gestione delle applicazioni](../../../apps/understand/introduction-to-application-management.md).
 
 ## <a name="os-deployment"></a>Distribuzione del sistema operativo
 

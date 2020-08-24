@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/22/2020
+ms.date: 08/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4beb6c5a91f9f379006df482ff10066831389b6
-ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
+ms.openlocfilehash: 1cb05cb518d4edfb443bf4f70ff1c51154e17f4c
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216400"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217639"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Come creare e assegnare criteri di protezione delle app
 
@@ -103,7 +103,7 @@ Quando si crea un criterio di protezione delle app per app iOS/iPadOS e Android,
     - **Avvio condizionale per Android** - Per informazioni, vedere [Impostazioni dei criteri di protezione delle app per Android - Avvio condizionale](app-protection-policy-settings-android.md#conditional-launch).
 
 9. Fare clic su **Avanti** per visualizzare la pagina **Assegnazioni**.<br>
-   La pagina **Assegnazioni** consente di assegnare i criteri di protezione delle app a gruppi di utenti.
+   La pagina **Assegnazioni** consente di assegnare i criteri di protezione delle app a gruppi di utenti. Per rendere effettivi i criteri, è necessario applicarli a un gruppo di utenti.
 
 10. Fare clic su **Avanti: Rivedi e crea** per esaminare i valori e le impostazioni immessi per i criteri di protezione delle app.
 
@@ -111,6 +111,9 @@ Quando si crea un criterio di protezione delle app per app iOS/iPadOS e Android,
 
     > [!TIP]
     > Queste impostazioni dei criteri vengono applicate solo quando si usano le app nel contesto aziendale. Quando gli utenti finali usano l'app per eseguire un'attività personale, questi criteri non hanno effetto. Si noti che ogni nuovo file creato viene considerato un file personale.
+
+    > [!IMPORTANT]
+    > L'applicazione dei criteri di protezione delle app ai dispositivi esistenti può richiedere del tempo. Quando i criteri saranno applicati, gli utenti finali riceveranno una notifica sul dispositivo. Applicare i criteri di protezione delle app ai dispositivi prima di applicare le regole di accesso condizionale.
 
 Gli utenti finali possono scaricare le app dall'Apple Store o da Google Play. Per altre informazioni, vedere:
 * [Aspettative dalla gestione dell'app per Android con criteri di protezione delle app](../fundamentals/end-user-mam-apps-android.md)

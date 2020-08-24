@@ -2,20 +2,20 @@
 title: Requisiti per l'accesso a Internet
 titleSuffix: Configuration Manager
 description: Informazioni sugli endpoint Internet a cui consentire l'accesso per usufruire delle funzionalità complete di Configuration Manager.
-ms.date: 07/07/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 71f2a75d59af6f8d5c77e96d780e6d02352e5045
-ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
+ms.openlocfilehash: fbb5d524551f5ff2c0a04b62b0f494046eee7a45
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86137347"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692682"
 ---
 # <a name="internet-access-requirements"></a>Requisiti per l'accesso a Internet
 
@@ -89,11 +89,11 @@ Per altre informazioni su questa funzione, vedere [Configurare i servizi di Azur
 
 ## <a name="co-management"></a>Co-gestione
 
-Se si registrano dispositivi di Windows 10 in Microsoft Intune per la co-gestione, assicurarsi che questi dispositivi possano accedere agli endpoint richiesti da Intune. Per altre informazioni, vedere [Endpoint di rete per Microsoft Intune](https://docs.microsoft.com/intune/intune-endpoints).
+Se si registrano dispositivi di Windows 10 in Microsoft Intune per la co-gestione, assicurarsi che questi dispositivi possano accedere agli endpoint richiesti da Intune. Per altre informazioni, vedere [Endpoint di rete per Microsoft Intune](/intune/intune-endpoints).
 
 ## <a name="microsoft-store-for-business"></a>Microsoft Store per le aziende
 
-Se si integra Configuration Manager con [Microsoft Store per le aziende](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md), assicurarsi che il punto di connessione del servizio e i dispositivi di destinazione siano in grado di accedere al servizio cloud. Per altre informazioni, vedere [Configurazione del proxy per Microsoft Store per le aziende](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration).
+Se si integra Configuration Manager con [Microsoft Store per le aziende](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md), assicurarsi che il punto di connessione del servizio e i dispositivi di destinazione siano in grado di accedere al servizio cloud. Per altre informazioni, vedere [Configurazione del proxy per Microsoft Store per le aziende](/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration).
 
 ## <a name="delivery-optimization"></a>Ottimizzazione recapito
 
@@ -103,7 +103,7 @@ Anche i punti di distribuzione che supportano Microsoft Connected Cache richiedo
 
 Per altre informazioni, vedere gli articoli seguenti:
 
-- [Domande frequenti sull'ottimizzazione recapito](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)
+- [Domande frequenti sull'ottimizzazione recapito](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)
 - [Concetti di base per la gestione dei contenuti in Configuration Manager](../hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization)
 - [Microsoft Connected Cache in Configuration Manager](../hierarchy/microsoft-connected-cache.md)
 
@@ -201,8 +201,6 @@ Consentire al punto di aggiornamento software attivo di accedere agli endpoint s
 
 - `http://*.download.windowsupdate.com`  
 
-- `http://test.stats.update.microsoft.com`  
-
 - `http://ntservicepack.microsoft.com`  
 
 Per altre informazioni sugli aggiornamenti software, vedere [Pianificare gli aggiornamenti software](../../../sum/plan-design/plan-for-software-updates.md).
@@ -224,10 +222,10 @@ Potrebbe essere necessario aggiungere endpoint a un firewall posto tra due siste
 
 - `https://<FQDN for software update point on parent site>`  
 
-## <a name="manage-office-365"></a>Gestire Office 365
+## <a name="manage-microsoft-365-apps"></a>Gestire Microsoft 365 Apps
 
 > [!NOTE]
-> A partire dal 21 aprile 2020, Office 365 ProPlus viene rinominato come **App di Microsoft 365 per grandi imprese**. Per altre informazioni, vedere [Modifica del nome di Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). È comunque possibile che vengano ancora visualizzati riferimenti al nome precedente nella console di Configuration Manager e nella documentazione di supporto mentre la console viene aggiornata.
+> A partire dal 21 aprile 2020, Office 365 ProPlus viene rinominato come **App di Microsoft 365 per grandi imprese**. Per altre informazioni, vedere [Modifica del nome di Office 365 ProPlus](/deployoffice/name-change). È comunque possibile che vengano ancora visualizzati riferimenti al nome precedente nella console di Configuration Manager e nella documentazione di supporto mentre la console viene aggiornata.
 
 Se si usa Configuration Manager per distribuire e aggiornare App di Microsoft 365 per grandi imprese, abilitare gli endpoint seguenti:
 
@@ -275,15 +273,21 @@ Se si usa la **vista geografica**, consentire l'accesso all'endpoint seguente:
 
 ## <a name="desktop-analytics"></a>Desktop Analytics
 
-Per altre informazioni sugli endpoint necessari per il servizio cloud Desktop Analytics, vedere [Abilitare la condivisione dei dati](../../../desktop-analytics/enable-data-sharing.md#endpoints).
+Per altre informazioni, vedere [Abilitare la condivisione dei dati](../../../desktop-analytics/enable-data-sharing.md#endpoints).
+
+[!INCLUDE [Internet endpoints for Desktop Analytics](includes/internet-endpoints-desktop-analytics.md)]
 
 ## <a name="tenant-attach"></a>Collegamento di tenant
 
-Per altre informazioni sugli endpoint necessari per le funzionalità di collegamento del tenant, vedere [Abilitare il collegamento del tenant](../../../tenant-attach/device-sync-actions.md#internet-endpoints).
+Per altre informazioni, vedere [Abilita Collegamento di tenant](../../../tenant-attach/device-sync-actions.md).
+
+[!INCLUDE [Internet endpoints for tenant attach](includes/internet-endpoints-tenant-attach.md)]
 
 ## <a name="endpoint-analytics"></a>Analisi degli endpoint
 
-Per altre informazioni sugli endpoint necessari per l'analisi degli endpoint, vedere [Configurazione del proxy di analisi degli endpoint](../../../../analytics/troubleshoot.md#bkmk_endpoints).
+Per altre informazioni, vedere [Configurazione dell'analisi degli endpoint](../../../../analytics/troubleshoot.md#bkmk_endpoints).
+
+[!INCLUDE [Internet endpoints for Endpoint analytics](includes/internet-endpoints-endpoint-analytics.md)]
 
 ## <a name="asset-intelligence"></a>Asset intelligence
 

@@ -2,7 +2,7 @@
 title: Hub della community e GitHub
 titleSuffix: Configuration Manager
 description: Abilitare e usare l'hub della community di Configuration Manager
-ms.date: 07/27/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 88cead9a-64fe-471e-b57c-81707cefe46c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c0b812fa3b373d6bd5bd2bebed8b1540ceb7bdd6
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: ae0abdd4a159759037768c8f27d5643bdf612f6e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262082"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128172"
 ---
 # <a name="community-hub-and-github"></a>Hub della community e GitHub
 <!--3555935, 3555936-->
@@ -66,6 +66,37 @@ L'hub della community supporta gli oggetti seguenti:
 
 [![Tutti gli elementi scaricati dall'hub della community](./media/3555935-community-hub-downloads.png)](./media/3555935-community-hub-downloads.png#lightbox)
 
+
+## <a name="direct-links-to-community-hub-items"></a><a name="bkmk_deeplink"></a> Collegamenti diretti agli elementi dell'hub della community
+<!--4224406-->
+*(Introdotto nella versione 2006)* È possibile esplorare facilmente e fare riferimento a elementi nel nodo dell'hub della community della console di Configuration Manager con un collegamento diretto. Questa funzionalità rende più semplice la collaborazione e consente di condividere i collegamenti agli elementi dell'hub della community con i colleghi. Questi collegamenti diretti sono attualmente disponibile solo per gli elementi del nodo dell'hub della console.
+
+### <a name="prerequisites-for-direct-links"></a>Prerequisiti per i collegamenti diretti
+
+- Console di Configuration Manager versione 2006 o successive
+- Non è possibile usare l'account predefinito Administrator locale quando si segue un collegamento all'hub della community.
+
+### <a name="sharing-and-opening-direct-links"></a>Condivisione e apertura di collegamenti diretti
+
+Per condividere un elemento:
+1. Passare all'elemento nell'hub e selezionare **Condividi**.
+1. Incollare il collegamento copiato e condividerlo con altri utenti.
+
+Per aprire un collegamento condiviso:
+1. Fare clic sul collegamento da un computer in cui è installata la console di Configuration Manager.
+   - Ad esempio, usare questo collegamento per condividere lo [script di configurazione dell'aggiornamento automatico di Edge](https://communityhub.microsoft.com/item/7200) (`https://communityhub.microsoft.com/item/7200`).
+1. Selezionare **Avvia l'hub della community** quando viene richiesto.
+1. La console viene aperta direttamente con lo script nell'hub della community.
+
+## <a name="known-issues"></a><a name="bkmk_known"></a> Problemi noti
+
+### <a name="unable-to-access-community-hub-node-when-running-console-as-a-different-user"></a>Non è possibile accedere al nodo dell'hub della community quando si esegue la console come utente diverso
+<!--7826897-->
+Se è stato eseguito l'accesso come utente con diritti inferiori e si sceglie **Esegui come** per eseguire l'accesso come utente diverso e aprire la console di Configuration Manager, potrebbe non essere possibile accedere al nodo **Hub della community**.
+
+### <a name="downloaded-reports-dont-get-removed-from-your-downloads-page"></a>I report scaricati non vengono rimossi dalla pagina dei download
+<!--7851305-->
+Se si elimina un report scaricato dal nodo **Monitoraggio** > **Report**, il report non viene eliminato dalla pagina **Hub della community** > **Download personali** e non è possibile scaricare di nuovo il report. 
 
 ## <a name="next-steps"></a>Passaggi successivi
 

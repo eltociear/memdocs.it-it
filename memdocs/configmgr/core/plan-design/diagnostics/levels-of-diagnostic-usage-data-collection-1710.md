@@ -5,18 +5,18 @@ description: Informazioni sui livelli dei dati di diagnostica e di utilizzo racc
 ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 8fce5391-8e75-4f99-813a-76f8842be5bc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: fcc3d2e34c9387e158b3b35cd104c9fc43136ace
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 925595b0e810f89bed6d79de1e0cd89450e45e9a
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81697039"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128747"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1710-of-configuration-manager"></a>Livelli di raccolta di dati per utilizzo diagnostico per la versione 1710 di Configuration Manager
 
@@ -445,7 +445,7 @@ Per Configuration Manager versione 1710, questo livello include quanto segue:
 
     - Numero di script e statistiche di esecuzione
 
-    - Numero dei siti con riattivazione LAN (WOL)
+    - Numero di siti con riattivazione LAN (WOL)
 
     - Statistiche sull'utilizzo e sulle prestazioni dalla funzionalità di creazione di report  
 

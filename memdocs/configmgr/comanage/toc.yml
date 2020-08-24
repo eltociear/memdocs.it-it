@@ -50,5 +50,7 @@
       href: how-to-prepare-Win10.md
     - name: Passare i carichi di lavoro a Intune
       href: how-to-switch-workloads.md
+    - name: App nel portale aziendale
+      href: company-portal.md
     - name: Monitorare la co-gestione
       href: how-to-monitor.md

@@ -2,20 +2,20 @@
 title: Impostazioni client
 titleSuffix: Configuration Manager
 description: Informazioni sulle impostazioni predefinite e personalizzate per il controllo dei comportamenti client
-ms.date: 07/28/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9f6bb29930a6e2d4faf4ffdd141d3c9cd1831305
-ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
+ms.openlocfilehash: e70a44fee7b4805884faeda0a5fb1eab72d3371e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87365509"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127002"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Informazioni sulle impostazioni client in Configuration Manager
 
@@ -139,7 +139,7 @@ Impostare questa opzione su **Sì** se si vuole che gli utenti ricevano i criter
 
 - Il punto di gestione basato su Internet deve eseguire l'autenticazione dell'utente tramite l'autenticazione di Windows (Kerberos o NTLM). Per altre informazioni, vedere [Considerazioni per le comunicazioni client da Internet o da una foresta non attendibile](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).  
 
-- Il gateway di gestione cloud autentica correttamente l'utente tramite Azure Active Directory. Per altre informazioni, vedere [Deploy user-available applications on Azure AD-joined devices](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices) (Distribuire applicazioni disponibili per l'utente in dispositivi aggiunti ad Azure AD).  
+- Il gateway di gestione cloud autentica correttamente l'utente tramite Azure Active Directory. Per altre informazioni, vedere [Distribuire applicazioni disponibili per l'utente](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications).
 
 Se si imposta questa opzione su **No** o uno o più dei requisiti precedenti non vengono soddisfatti, un computer connesso a Internet riceve solo criteri computer. In questo scenario gli utenti possono comunque visualizzare, richiedere e installare applicazioni da un Catalogo applicazioni basato su Internet. Se questa impostazione corrisponde a **No**, ma l'opzione **Abilitare i criteri utente nei client** è impostata su **Sì**, gli utenti ricevono i criteri client solo quando il computer è connesso alla Intranet.  
 
@@ -244,7 +244,7 @@ Per altre informazioni su questa impostazione, vedere [Certificati per Microsoft
 
 ### <a name="organization-name-displayed-in-software-center"></a>Nome organizzazione visualizzato in Software Center
 
-Digitare il nome visualizzato dagli utenti in Software Center. Queste informazioni di personalizzazione consentono agli utenti di identificare questa applicazione come origine attendibile. Per altre informazioni sulla priorità di questa impostazione, vedere [Personalizzazione di Software Center](../../../apps/plan-design/plan-for-software-center.md#branding-software-center).  
+Digitare il nome visualizzato dagli utenti in Software Center. Queste informazioni di personalizzazione consentono agli utenti di identificare questa applicazione come origine attendibile. Per altre informazioni sulla priorità di questa impostazione, vedere [Personalizzazione di Software Center](../../../apps/plan-design/plan-for-software-center.md#brand-software-center).  
 
 ### <a name="use-new-software-center"></a>Usa il nuovo Software Center
 
@@ -468,41 +468,40 @@ Perché un file MIF venga raccolto dall'inventario hardware, deve trovarsi nel p
 > [!NOTE]  
 > Questa impostazione è disponibile solo nelle impostazioni del client predefinite.
 
+## <a name="metered-internet-connections"></a>Connessioni Internet a consumo
 
+È possibile gestire la modalità con cui i computer Windows 8 e versioni successive usano connessioni Internet a consumo per comunicare con Configuration Manager. I provider Internet talvolta applicano un addebito per il traffico dati in entrata e in uscita quando si usa una connessione Internet a consumo.
 
-## <a name="metered-internet-connections"></a>Connessioni Internet a consumo  
-
-È possibile gestire la modalità con cui i computer Windows 8 e versioni successive usano connessioni Internet a consumo per comunicare con Configuration Manager. I provider Internet talvolta applicano un addebito per il traffico dati in entrata e in uscita quando si usa una connessione Internet a consumo.  
-
-> [!NOTE]  
-> L'impostazione client configurata non viene applicata negli scenari seguenti:  
+> [!NOTE]
+> L'impostazione client configurata non viene applicata negli scenari seguenti:
 >
 > - Se il computer usa una connessione dati in roaming, il client di Gestione configurazione non esegue alcuna operazione che richieda il trasferimento dei dati nei siti di Configuration Manager.  
 > - Se le proprietà di connessione di rete di Windows sono configurate come connessioni non a consumo, il client Gestione configurazione si comporta come se la connessione non fosse a consumo e pertanto trasferisce i dati al sito.  
 
 ### <a name="client-communication-on-metered-internet-connections"></a>Comunicazione dei client nelle connessioni Internet a consumo
 
-Per questa impostazione scegliere una delle opzioni seguenti:  
+Per questa impostazione scegliere una delle opzioni seguenti:
 
-- **Consenti**: tutte le comunicazioni client sono consentite tramite la connessione Internet a consumo, a meno che il dispositivo client usi una connessione dati in roaming.  
+- **Consenti**: tutte le comunicazioni client sono consentite tramite la connessione Internet a consumo, a meno che il dispositivo client usi una connessione dati in roaming.
 
-- **Limite**: sono consentite solo le comunicazioni client seguenti tramite la connessione Internet a consumo:  
+- **Limite**: il client comunica solo tramite la connessione Internet a consumo per i comportamenti seguenti:
 
-    - Recupero dei criteri client  
+  - Scaricare i criteri client
 
-    - Messaggi di stato del client da inviare al sito  
+  - Invio di messaggi di stato del client
 
-    - Richieste di installazione software da Software Center  
+  - Richiesta di installazioni software da Software Center
 
-    - Distribuzioni richieste (quando viene raggiunta la scadenza per l'installazione)  
+  - Download di criteri e contenuto aggiuntivi per le distribuzioni necessarie alla scadenza dell'installazione
 
-    Se il client raggiunge il limite di trasferimento dei dati per la connessione Internet a consumo, non prova più a comunicare con i siti di Configuration Manager.  
+  Se il client raggiunge il limite di trasferimento dei dati per la connessione Internet a consumo, la comunicazione con il sito viene interrotta.
 
-- **Blocca**: il client di Configuration Manager non prova a comunicare con i siti di Configuration Manager in presenza di una connessione Internet a consumo. Questa opzione corrisponde all'impostazione predefinita.  
+- **Blocca**: in presenza di una connessione Internet a consumo per il dispositivo, il client di Configuration Manager non prova a comunicare con il sito. Questa opzione corrisponde all'impostazione predefinita.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Il client consente sempre le installazioni software da Software Center, indipendentemente dalle impostazioni della connessione Internet a consumo. Se l'utente richiede un'installazione software quando il dispositivo è in una rete a consumo, Software Center rispetta la finalità dell'utente.<!-- MEMDocs#285 -->
 
+A partire dalla versione 2006, l'installazione e l'aggiornamento del client funzionano entrambi quando questa impostazione client viene configurata con il valore **Consenti** o **Limite**. Questo comportamento consente al client di rimanere aggiornato, mentre la comunicazione client continua a essere gestita in una rete a consumo. È possibile controllare questo comportamento durante l'installazione del client con il parametro **/AllowMetered** di ccmsetup. Per altre informazioni vedere [Proprietà e parametri di installazione client](../../clients/deploy/about-client-installation-properties.md#allowmetered).<!--6976145-->
 
 ## <a name="power-management"></a>Risparmio energia  
 
@@ -894,7 +893,7 @@ Questa impostazione consente di configurare la porta locale per il listener HTTP
 
 ### <a name="enable-management-of-the-office-365-client-agent"></a>Abilitare la gestione dell'agente del client Office 365
 
-Impostare questa opzione su **Sì** per consentire la configurazione delle impostazioni di installazione di Office 365. Questa opzione consente anche il download di file dalle reti per la distribuzione di contenuti (CDN) di Office e la distribuzione dei file come applicazione in Configuration Manager. Per altre informazioni, vedere [Gestire gli aggiornamenti di Office 365 ProPlus](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
+Se si imposta questa opzione su **Sì**, viene abilitata la configurazione delle impostazioni di installazione di App di Microsoft 365. Questa opzione consente anche il download di file dalle reti per la distribuzione di contenuti (CDN) di Office e la distribuzione dei file come applicazione in Configuration Manager. Per altre informazioni, vedere [Gestire App di Microsoft 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ### <a name="enable-installation-of-software-updates-in-all-deployments-maintenance-window-when-software-update-maintenance-window-is-available"></a><a name="bkmk_SUMMaint"></a> Consenti l'installazione degli aggiornamenti software nella finestra di manutenzione "Tutte le distribuzioni" quando la finestra di manutenzione "Aggiornamento software" è disponibile
 
@@ -980,9 +979,9 @@ Scegliere **Sì** per creare automaticamente affinità utente-dispositivo in bas
 <!--3485366-->
 Se questa opzione è impostata su **Sì**, gli utenti possono identificare i propri dispositivi primari in Software Center. Per altre informazioni, vedere il [Manuale dell'utente di Software Center](../../understand/software-center.md#work-information).
 
-## <a name="windows-analytics"></a>Windows Analytics
+## <a name="windows-diagnostic-data"></a>Dati di Diagnostica Windows
 
-> [!Important]  
-> Il servizio Windows Analytics è stato ritirato il 31 gennaio 2020. Per altre informazioni, vedere [KB 4521815: Ritiro di Windows Analytics il 31 gennaio 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
+> [!IMPORTANT]
+> In precedenza questo gruppo si chiamava **Windows Analytics**. Microsoft ha ritirato il servizio Windows Analytics il 31 gennaio 2020. Per altre informazioni, vedere [KB 4521815: Ritiro di Windows Analytics il 31 gennaio 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement).
 >
-> Desktop Analytics è l'evoluzione di Windows Analytics. Per altre informazioni, vedere [Che cos'è Desktop Analytics](../../../desktop-analytics/overview.md).
+> Desktop Analytics è l'evoluzione di Windows Analytics. Usare Desktop Analytics per gestire le impostazioni dei dati di diagnostica di Windows. Per altre informazioni, vedere [Che cos'è Desktop Analytics](../../../desktop-analytics/overview.md).

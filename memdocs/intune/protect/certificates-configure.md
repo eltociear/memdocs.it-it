@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 33464c6e0abff9f28e18f9bf6a82e2601dbf115f
-ms.sourcegitcommit: 7ee69b207261ffc282e535f793a536540d160557
+ms.openlocfilehash: b1db36b0ea3d2ba691811958a01043a606b4681a
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87400733"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88251973"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Usare i certificati per l'autenticazione in Microsoft Intune
 
@@ -80,14 +80,14 @@ Quando si usa un'autorità di certificazione (CA) di terze parti (non Microsoft)
 | Piattaforma              | Profilo di certificato attendibile | Profilo di certificato PKCS | Profilo di certificato SCEP | Profilo di certificato PKCS importato  |
 |--|--|--|--|---|
 | Amministratore dispositivo Android | ![Supportato](./media/certificates-configure/green-check.png) | ![Supportato](./media/certificates-configure/green-check.png) | ![Supportato](./media/certificates-configure/green-check.png)|  ![Supportato](./media/certificates-configure/green-check.png) |
-| Android Enterprise <br> - Dispositivi completamente gestiti (proprietario del dispositivo)   | ![Supportato](./media/certificates-configure/green-check.png) |   | ![Supportato](./media/certificates-configure/green-check.png) |   |
-| Android Enterprise <br> - Dedicato (proprietario del dispositivo)   | ![Supportato](./media/certificates-configure/green-check.png)  | ![Supportato](./media/certificates-configure/green-check.png) | ![Supportato](./media/certificates-configure/green-check.png)  |   |
-| Android Enterprise <br> - Profilo di lavoro    | ![Supportato](./media/certificates-configure/green-check.png) | ![Supportato](./media/certificates-configure/green-check.png) | ![Supportato](./media/certificates-configure/green-check.png) | ![Supportato](./media/certificates-configure/green-check.png) |
-| iOS/iPadOS                   | ![Supportato](./media/certificates-configure/green-check.png) | ![Supportato](./media/certificates-configure/green-check.png) | ![Supportato](./media/certificates-configure/green-check.png) | ![Supportato](./media/certificates-configure/green-check.png) |
-| macOS                 | ![Supportato](./media/certificates-configure/green-check.png) |  ![Supportato](./media/certificates-configure/green-check.png) |![Supportato](./media/certificates-configure/green-check.png)|![Supportato](./media/certificates-configure/green-check.png)|
-| Windows Phone 8.1     |![Supportato](./media/certificates-configure/green-check.png)  |  | ![Supportato](./media/certificates-configure/green-check.png)| ![Supportato](./media/certificates-configure/green-check.png) |
+| Android Enterprise <br> - Dispositivi completamente gestiti (proprietario del dispositivo)   | ![Supportato](./media/certificates-configure/green-check.png) |   | ![Supportato](./media/certificates-configure/green-check.png) |  ![Supportato](./media/certificates-configure/green-check.png)  |
+| Android Enterprise <br> - Dedicato (proprietario del dispositivo)   | ![Supportato](./media/certificates-configure/green-check.png)  | ![Supportato](./media/certificates-configure/green-check.png) | ![Funzionalità supportata](./media/certificates-configure/green-check.png)  | ![Supportato](./media/certificates-configure/green-check.png)|
+| Android Enterprise <br> - Profilo di lavoro di proprietà aziendale   | ![Supportato](./media/certificates-configure/green-check.png)  |  | ![Supportato](./media/certificates-configure/green-check.png)  | ![Supportato](./media/certificates-configure/green-check.png)  |
+| Android Enterprise <br> - Profilo di lavoro    | ![Supportato](./media/certificates-configure/green-check.png) | ![Supportato](./media/certificates-configure/green-check.png) | ![Funzionalità supportata](./media/certificates-configure/green-check.png) | ![Supportato](./media/certificates-configure/green-check.png) |
+| iOS/iPadOS                   | ![Supportato](./media/certificates-configure/green-check.png) | ![Supportato](./media/certificates-configure/green-check.png) | ![Funzionalità supportata](./media/certificates-configure/green-check.png) | ![Supportato](./media/certificates-configure/green-check.png) |
+| macOS                 | ![Supportato](./media/certificates-configure/green-check.png) |  ![Funzionalità supportata](./media/certificates-configure/green-check.png) |![Supportato](./media/certificates-configure/green-check.png)|![Supportato](./media/certificates-configure/green-check.png)|
 | Windows 8.1 e versioni successive |![Supportato](./media/certificates-configure/green-check.png)  |  |![Supportato](./media/certificates-configure/green-check.png) |   |
-| Windows 10 e versioni successive  | ![Supportato](./media/certificates-configure/green-check.png) | ![Supportato](./media/certificates-configure/green-check.png) | ![Supportato](./media/certificates-configure/green-check.png) | ![Supportato](./media/certificates-configure/green-check.png) |
+| Windows 10 e versioni successive  | ![Supportato](./media/certificates-configure/green-check.png) | ![Funzionalità supportata](./media/certificates-configure/green-check.png) | ![Funzionalità supportata](./media/certificates-configure/green-check.png) | ![Supportato](./media/certificates-configure/green-check.png) |
 
 ## <a name="export-the-trusted-root-ca-certificate"></a>Esportare il certificato CA radice attendibile
 

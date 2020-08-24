@@ -5,23 +5,23 @@ description: Informazioni su come gestire le immagini d'avvio di Windows PE usat
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 76e0fd3ad8ceaecb43d2a61c3abe15accda5e5d8
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: 74b8b0f29172140a19c402c79b7ea9b7339cf3e5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912377"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697637"
 ---
 # <a name="manage-boot-images-with-configuration-manager"></a>Gestire le immagini d'avvio con Configuration Manager
 
 *Si applica a: Configuration Manager (Current Branch)*
 
-Un'immagine d'avvio in Configuration Manager è un'immagine [Windows PE](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-intro) (WinPE) che viene usata durante la distribuzione di un sistema operativo. Le immagini d'avvio si usano per avviare un computer in WinPE. Questo sistema operativo di base contiene servizi e componenti limitati. Configuration Manager usa WinPE per preparare il computer di destinazione per l'installazione di Windows.
+Un'immagine d'avvio in Configuration Manager è un'immagine [Windows PE](/windows-hardware/manufacture/desktop/winpe-intro) (WinPE) che viene usata durante la distribuzione di un sistema operativo. Le immagini d'avvio si usano per avviare un computer in WinPE. Questo sistema operativo di base contiene servizi e componenti limitati. Configuration Manager usa WinPE per preparare il computer di destinazione per l'installazione di Windows.
 
 ## <a name="default-boot-images"></a><a name="BKMK_BootImageDefault"></a> Immagini d'avvio predefinite
 
@@ -80,17 +80,21 @@ Quando un'immagine d'avvio è basata su una versione di Windows ADK diversa da q
 
 Durante l'installazione del sito, Configuration Manager aggiunge automaticamente immagini d'avvio basate su una versione di WinPE dalla versione supportata di Windows ADK. A seconda della versione di Configuration Manager, è possibile aggiungere immagini d'avvio basate su una diversa versione di WinPE dalla versione supportata di Windows ADK. Quando si prova ad aggiungere un'immagine d'avvio che contiene una versione non supportata di WinPE si verifica un errore. L'elenco seguente include le versioni di Windows ADK e WinPE attualmente supportate:
 
-| Tipo di Windows | Versioni supportate |
-|--------------|--------------------|
-| Versione di Windows ADK | Windows ADK per Windows 10 |
-| Versioni di Windows PE per le immagini d'avvio personalizzabili dalla console di Configuration Manager | Windows PE 10 |
-| Versioni di Windows PE supportate per le immagini d'avvio *non personalizzabili* dalla console di Configuration Manager | - Windows PE 3.1<sup>[Nota 1](#bkmk_note1)</sup> <br> - Windows PE 5 |
+- Versione di Windows ADK: Windows ADK per Windows 10
+
+- Versioni di Windows PE per le immagini d'avvio personalizzabili dalla console di Configuration Manager: Windows PE 10
+
+- Versioni di Windows PE supportate per le immagini d'avvio *non personalizzabili* dalla console di Configuration Manager
+
+  - Windows PE 3.1<sup>[Nota 1](#bkmk_note1)</sup>
+
+  - Windows PE 5
 
 Ad esempio, usare la console di Configuration Manager per personalizzare le immagini d'avvio basate su Windows PE 10 di Windows ADK per Windows 10. Nel caso di un'immagine d'avvio basata su Windows PE 5, personalizzarla in un altro computer usando la versione di Gestione e manutenzione immagini distribuzione di Windows ADK per Windows 8. Aggiungere quindi l'immagine d'avvio personalizzata alla console di Configuration Manager. Per altre informazioni, vedere gli articoli seguenti:
 
 - [Personalizzare le immagini di avvio](customize-boot-images.md)
 - [Supporto per Windows 10 ADK](../../core/plan-design/configs/support-for-windows-10.md#windows-10-adk)
-- [DISM supported platforms](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms) (Piattaforme supportate per Gestione e manutenzione immagini distribuzione)
+- [DISM supported platforms](/windows-hardware/manufacture/desktop/dism-supported-platforms) (Piattaforme supportate per Gestione e manutenzione immagini distribuzione)
 
 <a name="bkmk_note1"></a>
 
@@ -202,11 +206,11 @@ Nella scheda **Personalizzazione** selezionare una delle seguenti impostazioni:
 - **Imposta il layout di tastiera predefinito in WinPE**: <!--4910348-->A partire dalla versione 1910, configurare il layout predefinito della tastiera per un'immagine d'avvio. Se si seleziona una lingua diversa da en-US, Configuration Manager include ancora en-US nelle impostazioni locali di input disponibili. Nel dispositivo, il layout iniziale della tastiera corrisponde alle impostazioni locali selezionate, ma l'utente può passare a en-US se necessario.
 
 > [!Tip]
-> Usare il cmdlet di PowerShell [Set-CMBootImage](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) per configurare queste impostazioni da uno script.
+> Usare il cmdlet di PowerShell [Set-CMBootImage](/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) per configurare queste impostazioni da uno script.
 
 #### <a name="optional-components"></a>Componenti facoltativi
 
-Nella scheda **Componenti facoltativi** specificare i componenti aggiunti a Windows PE per l'utilizzo con Configuration Manager. Per altre informazioni sui componenti facoltativi, vedere [WinPE: aggiungere pacchetti (informazioni di riferimento sui componenti facoltativi)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).  
+Nella scheda **Componenti facoltativi** specificare i componenti aggiunti a Windows PE per l'utilizzo con Configuration Manager. Per altre informazioni sui componenti facoltativi, vedere [WinPE: aggiungere pacchetti (informazioni di riferimento sui componenti facoltativi)](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).  
 
 I componenti seguenti sono richiesti da Configuration Manager e vengono sempre aggiunti alle immagini d'avvio:
 
@@ -299,4 +303,4 @@ Usare la procedura seguente per impostare la lingua di WinPE per distribuzioni d
 
 1. Prima di aggiornare l'immagine d'avvio, verificare che il file di risorse della sequenza di attività appropriato (tsres.dll) sia incluso nella cartella della lingua corrispondente nel server del sito. Ad esempio, il file di risorse inglese è nel percorso seguente: `<ConfigMgrInstallationFolder>\OSD\bin\x64\00000409\tsres.dll`  
 
-2. Come parte del comando di preavvio, impostare la variabile di ambiente **SMSTSLanguageFolder** sull'ID lingua appropriato. L'ID lingua deve essere specificato usando il formato decimale e non esadecimale. Ad esempio, per impostare l'ID lingua su Inglese, specificare il valore decimale **1033** e non il valore esadecimale 00000409 del nome della cartella.  
+2. Come parte del comando di preavvio, impostare la variabile di ambiente **SMSTSLanguageFolder** sull'ID lingua appropriato. L'ID lingua deve essere specificato usando il formato decimale e non esadecimale. Ad esempio, per impostare l'ID lingua su Inglese, specificare il valore decimale **1033** e non il valore esadecimale 00000409 del nome della cartella.

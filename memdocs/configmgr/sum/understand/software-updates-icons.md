@@ -10,12 +10,12 @@ ms.technology: configmgr-sum
 ms.assetid: 63c5ef72-5715-4d86-85a2-71beba469fab
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 3843dd4ab4fe5a9aecaae8e6f207c3d037fc1950
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ff616c9ee61e85e4e77aeef6254ca9922427270c
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700049"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129424"
 ---
 # <a name="icons-used-for-software-updates-in-configuration-manager"></a>Icone usate per gli aggiornamenti software in Configuration Manager
 
@@ -59,7 +59,7 @@ Gli aggiornamenti software sincronizzati vengono visualizzati nella console di C
 
 - Migliora l'efficienza del pacchetto dei file di aggiornamento software, che viene installato nei client se l'aggiornamento software viene approvato per l'installazione. Ad esempio, l'aggiornamento software sostituito potrebbe contenere file che non sono più rilevanti per la correzione o per i sistemi operativi ora supportati dal nuovo aggiornamento software e quindi tali file non sono inclusi nel pacchetto di file di aggiornamento software sostitutivo.  
 
-- Aggiorna le versioni più recenti di un prodotto o, in altre parole, non è più applicabile alle versioni o configurazioni precedenti di un prodotto. Gli aggiornamenti software possono anche sostituire altri aggiornamenti software se sono state apportate modifiche per espandere il supporto della lingua. Ad esempio, una revisione recente di un aggiornamento prodotto per Microsoft Office potrebbe rimuovere il supporto per un sistema operativo precedente, ma potrebbe aggiungere supporto aggiuntivo per nuove lingue nel rilascio dell'aggiornamento software iniziale.  
+- Aggiorna le versioni più recenti di un prodotto o, in altre parole, non è più applicabile alle versioni o configurazioni precedenti di un prodotto. Gli aggiornamenti software possono anche sostituire altri aggiornamenti software se sono state apportate modifiche per espandere il supporto della lingua. Ad esempio, una revisione recente di un aggiornamento prodotto per Microsoft 365 Apps potrebbe rimuovere il supporto per un sistema operativo precedente, ma potrebbe aggiungere supporto aggiuntivo per nuove lingue nel rilascio dell'aggiornamento software iniziale.  
 
   Nella scheda Regole di sostituzione delle proprietà del componente del punto di aggiornamento software è possibile specificare come gestire gli aggiornamenti software sostituiti. Per altre informazioni, vedere [Supersedence rules](../plan-design/plan-for-software-updates.md#BKMK_SupersedenceRules).  
 

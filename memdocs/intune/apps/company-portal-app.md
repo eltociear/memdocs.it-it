@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/04/2020
+ms.date: 08/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 33977676b4c144573965477154a7939f6061280a
-ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
+ms.openlocfilehash: a82fbfa9e494828450729e29467580c29a590282
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87758347"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179554"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Come personalizzare le app Portale aziendale Intune, il sito Web Portale aziendale e l'app Intune
 
@@ -232,18 +232,16 @@ Per personalizzare le azioni self-service disponibili per gli utenti vedere [Per
 
 Alcune piattaforme e configurazioni non consentono azioni self-service nel dispositivo. La tabella seguente contiene altri dettagli sulle azioni self-service:
 
-| Action | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
+| Action | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | macOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
 | Ritiro | Disponibile<sup>(1)</sup> | Disponibile<sup>(9)</sup> | Disponibile | Disponibile<sup>(7)</sup> |
 | Cancellazione | Disponibile | Disponibile<sup>(5)</sup><sup>(9)</sup> | N/D | Disponibile<sup>(7)</sup> |
 | Ridenominazione<sup>(4)</sup> | Disponibile | Disponibile | Disponibile | Disponibile |
 | Sincronizza | Disponibile | Disponibile | Disponibile | Disponibile |
-| Blocco remoto | Solo per Windows Phone | Disponibile | Disponibile | Disponibile |
-| Reimpostazione passcode | Solo per Windows Phone | Disponibile<sup>(8)</sup> | N/D | Disponibile<sup>(6)</sup> |
-| Recupero chiavi | ND | N/D | Disponibile<sup>(2)</sup> | N/D |
+| Recupero chiavi | ND | ND | Disponibile<sup>(2)</sup> | N/D |
 
 <sup>(1)</sup> Il **ritiro** è sempre bloccato nei dispositivi Windows aggiunti ad Azure AD.<br>
-<sup>(2)</sup> Il **recupero chiavi** per MacOS è disponibile solo tramite il portale Web.<br>
+<sup>(2)</sup> Il **recupero chiavi** per macOS è disponibile solo tramite il portale Web.<br>
 <sup>(3) </sup> tutte le azioni remote sono disabilitate se si usa la registrazione di un manager di registrazione dispositivi.<br>
 <sup>(4)</sup> La **ridenominazione** modifica solo il nome del dispositivo nell'app Portale aziendale o nel portale Web, non nel dispositivo.<br>
 <sup>(5)</sup> La **cancellazione** non è disponibile nei dispositivi iOS/iPadOS registrati dall'utente.<br>

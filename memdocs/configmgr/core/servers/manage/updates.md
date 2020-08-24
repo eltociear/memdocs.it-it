@@ -2,7 +2,7 @@
 title: Aggiornamenti e manutenzione
 titleSuffix: Configuration Manager
 description: Informazioni sul metodo di manutenzione nella console denominato Aggiornamenti e manutenzione che semplifica l'individuazione e l'installazione degli aggiornamenti consigliati.
-ms.date: 07/17/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a177c51aad6bfd85adc0da8019646453eb969517
-ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
+ms.openlocfilehash: 3d8d9097b95a5daf06dc0260173e616fa2f88eb4
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871969"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126138"
 ---
 # <a name="updates-and-servicing-for-configuration-manager"></a>Aggiornamenti e manutenzione per Configuration Manager
 
@@ -60,13 +60,14 @@ Le versioni supportate seguenti di Configuration Manager sono attualmente dispon
 
 | Version | Data di disponibilità | [Data di fine supporto](current-branch-versions-supported.md) | Versione di base | Aggiornamento nella console |  
 |-------------|-----------|------------|--------------|------------------------|  
+| [**2006**](../../plan-design/changes/whats-new-in-version-2006.md)<br /> (5.00.9012) | 11 agosto 2020 | Febbraio 11, 2022 | No | Sì |
 | [**2002**](../../plan-design/changes/whats-new-in-version-2002.md)<br /> (5.00.8968) | 1 aprile 2020 | 1 ottobre 2021 | Sì<sup>[Nota 1](#bkmk_note1)</sup> | Sì |
 | [**1910**](../../plan-design/changes/whats-new-in-version-1910.md)<br /> (5.00.8913) | 29 novembre 2019 | 29 maggio 2021 | No | Sì |
 | [**1906**](../../plan-design/changes/whats-new-in-version-1906.md)<br /> (5.00.8853) | 26 luglio 2019 | 26 gennaio 2021 | No | Sì |
 | [**1902**](../../plan-design/changes/whats-new-in-version-1902.md)<br /> (5.00.8790) | 27 marzo 2019 | 27 settembre 2020 | Sì | Sì |
 | [**1810**](../../plan-design/changes/whats-new-in-version-1810.md)<br /> (5.00.8740) | 27 novembre 2018 | 1 dicembre 2020 | No | Sì |
 
-**Data disponibilità** si riferisce a quando viene rilasciato l'[anello di aggiornamento anticipato](checklist-for-installing-update-2002.md#early-update-ring). I supporti di base saranno disponibili in Volume License Service Center dopo che l'aggiornamento sarà disponibile a livello globale.
+**Data disponibilità** si riferisce a quando viene rilasciato l'[anello di aggiornamento anticipato](checklist-for-installing-update-2006.md#early-update-ring). I supporti di base saranno disponibili in Volume License Service Center dopo che l'aggiornamento sarà disponibile a livello globale.
 
 <a name="bkmk_note1"></a>
 
@@ -109,7 +110,7 @@ Quando si usa un'installazione di Configuration Manager Current Branch pronta pe
 
 Questi aggiornamenti includono:  
 
-- Nuove versioni, ad esempio 1906, 1910 o 2002.
+- Nuove versioni, ad esempio 1910, 2002 o 2006.
 
 - Aggiornamenti che includono nuove funzionalità per la versione corrente.
 

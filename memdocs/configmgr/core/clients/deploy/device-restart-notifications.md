@@ -2,7 +2,7 @@
 title: Notifiche di riavvio del dispositivo
 titleSuffix: Configuration Manager
 description: Riavviare il comportamento delle notifiche per diverse impostazioni client in Configuration Manager.
-ms.date: 06/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 5ef1bff8-9733-4b5a-b65f-26b94accd210
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: b326c4dd8112a72555239f2c3eda078ebf47bf82
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: feb9f4206df65ee34228577a9e589ddd1be72870
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347220"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127249"
 ---
 # <a name="device-restart-notifications-in-configuration-manager"></a>Notifiche di riavvio del dispositivo in Configuration Manager
 
@@ -33,25 +33,25 @@ Le [impostazioni client per il riavvio del computer](#client-settings) modifican
 
 ## <a name="restart-notification-types"></a>Tipi di notifica di riavvio
 
-Quando un dispositivo richiede un riavvio, l'utente finale riceve una notifica da parte del client. Gli utenti possono ricevere quattro tipi di notifiche generali.
+Quando un dispositivo richiede un riavvio, l'utente finale riceve una notifica da parte del client.
 
 ### <a name="toast-notification"></a>Avviso popup
 
 Una notifica di tipo avviso popup di Windows informa l'utente che è necessario riavviare il dispositivo. Le informazioni della notifica di tipo avviso popup possono essere diverse a seconda della versione di Configuration Manager in esecuzione. Questo tipo di notifica è nativo per il sistema operativo Windows. È anche possibile notare software di terze parti che usa questo tipo di notifica.
 
-![Notifica di tipo avviso popup del riavvio in sospeso](media/3555947-restart-toast.png)
+:::image type="content" source="media/3555947-restart-toast.png" alt-text="Notifica di tipo avviso popup del riavvio in sospeso":::
 
 ### <a name="software-center-notification-with-snooze"></a>Notifica di Software Center con sospensione
 
 Software Center mostra una notifica con un'opzione di sospensione e il tempo rimanente prima di forzare il riavvio dei dispositivi. Il messaggio può essere diverso a seconda della versione di Configuration Manager.
 
-![Notifica di riavvio in sospeso di Software Center con pulsante di rinvio](media/3976435-snooze-restart-countdown.png)
+:::image type="content" source="media/3976435-snooze-restart-countdown.png" alt-text="Notifica di riavvio in sospeso di Software Center con pulsante di rinvio":::
 
 ### <a name="software-center-final-countdown-notification"></a>Notifica finale del conto alla rovescia di Software Center
 
 Software Center mostra questa notifica finale di conto alla rovescia che l'utente non può chiudere né sospendere.
 
-![Notifica finale del conto alla rovescia di Software Center](media/3976435-final-restart-countdown.png)
+:::image type="content" source="media/3976435-final-restart-countdown.png" alt-text="Notifica finale del conto alla rovescia di Software Center":::
 
 A partire dalla versione 1906, l'utente non visualizzerà un indicatore di stato nella notifica di riavvio fino a quando non mancheranno meno di 24 ore al riavvio.
 
@@ -59,17 +59,47 @@ A partire dalla versione 1906, l'utente non visualizzerà un indicatore di stato
 
 Se l'utente installa in modo proattivo il software necessario prima della scadenza ed è necessario un riavvio, viene visualizzata una notifica diversa. La notifica seguente si verifica quando l'impostazione dell'esperienza utente consente le notifiche e non si usano notifiche di tipo avviso popup per la distribuzione. Per altre informazioni sulla configurazione di queste impostazioni, vedere le impostazioni dell'[esperienza utente**di**distribuzione](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-ux) e [Notifiche utente per le distribuzioni richieste](../../../apps/deploy-use/deploy-applications.md#bkmk_notify).
 
-![Notifica per il software installato in modo proattivo](media/3976435-proactive-user-restart-notification.png)
+:::image type="content" source="media/3976435-proactive-user-restart-notification.png" alt-text="Notifica per il software installato in modo proattivo":::
 
 #### <a name="available-apps"></a>App disponibili
 
 Se non si usano le notifiche di tipo avviso popup, la finestra di dialogo per il software contrassegnato come **disponibile** è simile al software installato in modo proattivo. Per il software **disponibile**, la notifica non ha una scadenza per il riavvio e l'utente può scegliere il proprio intervallo per rinviarlo. Per altre informazioni, vedere [Impostazioni di approvazione](../../../apps/deploy-use/deploy-applications.md#bkmk_approval).
 
-![Il software contrassegnato come "disponibile" non ha una scadenza per il riavvio nella notifica.](media/3555947-deployment-marked-available-restart.png)
+:::image type="content" source="media/3555947-deployment-marked-available-restart.png" alt-text="Il software disponibile non ha una scadenza per il riavvio nella notifica":::
+
+### <a name="software-center-notification-of-required-restart"></a>Notifica di Software Center di richiesta di riavvio
+
+<!--3601213-->
+
+A partire dalla versione 2006 è possibile configurare le impostazioni del client per impedire il riavvio automatico dei dispositivi quando richiesto da una distribuzione. Quando per una distribuzione richiesta è necessario eseguire il riavvio, ma l'impostazione del client **Configuration Manager può forzare il riavvio di un dispositivo** è disabilitata, vedere la notifica seguente:
+
+:::image type="content" source="media/3601213-restart-your-computer.png" alt-text="Notifica di Software Center per il riavvio del computer":::
+
+Se si sceglie **Posponi** per questa notifica, la notifica verrà visualizzata nuovamente in base alla frequenza delle notifiche di promemoria di riavvio specificata. Il dispositivo non verrà riavviato fino a quando non si seleziona **Riavvia** o non si riavvia Windows manualmente.
+
+> [!NOTE]
+> Per impostazione predefinita, Configuration Manager può comunque forzare il riavvio dei dispositivi.
 
 ## <a name="client-settings"></a>Impostazioni client
 
 Per controllare i comportamenti di riavvio del client, configurare le impostazioni client del dispositivo seguenti nel gruppo **Riavvio del computer**. Per altre informazioni, vedere [Come configurare le impostazioni client](configure-client-settings.md).
+
+### <a name="configuration-manager-can-force-a-device-to-restart"></a>Configuration Manager può forzare il riavvio di un dispositivo
+
+<!--3601213-->
+
+A partire dalla versione 2006 è possibile configurare le impostazioni del client per impedire il riavvio automatico dei dispositivi quando richiesto da una distribuzione. Configuration Manager abilita questa impostazione per impostazione predefinita
+
+> [!IMPORTANT]
+> Questa impostazione client si applica a tutte le distribuzioni di applicazioni, aggiornamenti software e pacchetti nel dispositivo. Fino a quando un utente non riavvia manualmente il dispositivo:
+>
+> - Gli aggiornamenti software e le revisioni dell'app potrebbero non essere installate completamente
+> - È possibile che non vengano eseguite le installazioni di software aggiuntivo
+
+Quando si disabilita questa impostazione, non è possibile specificare la quantità di tempo dopo la scadenza per il riavvio del dispositivo o la visualizzazione della notifica con il conto alla rovescia visualizzata all'utente.
+
+> [!NOTE]
+> Per sfruttare i vantaggi delle nuove funzionalità di Configuration Manager, dopo l'aggiornamento del sito aggiornare anche i client alla versione più recente. Anche se le nuove funzionalità vengono visualizzate nella console di Configuration Manager quando si esegue l'aggiornamento del sito e della console, lo scenario completo risulta funzionante solo dopo l'aggiornamento alla versione più recente del client.
 
 ### <a name="specify-the-amount-of-time-after-the-deadline-before-a-device-gets-restarted-minutes"></a>Specificare la durata dell'attesa dopo la scadenza prima del riavvio di un dispositivo (minuti)
 
@@ -123,17 +153,17 @@ Se l'impostazione **Quando una distribuzione richiede un riavvio, mostra una fin
 
   - Se mancano più di 24 ore al riavvio, viene visualizzato un orario di riavvio stimato. La tempistica di questa notifica è basata sull'impostazione: **Specificare la durata dell'attesa dopo la scadenza prima del riavvio di un dispositivo (minuti)** .
 
-    ![Mancano più di 24 ore al riavvio](media/3976435-notification-greater-than-24-hours.png)
+    :::image type="content" source="media/3976435-notification-greater-than-24-hours.png" alt-text="Mancano più di 24 ore al riavvio":::
 
   - Se mancano meno di 24 ore al riavvio, viene visualizzato un indicatore di stato. La tempistica di questa notifica è basata sull'impostazione: **Specificare la durata dell'attesa dopo la scadenza prima del riavvio di un dispositivo (minuti)** .
 
-    ![Mancano meno di 24 ore al riavvio](media/3976435-notification-less-than-24-hours.png)
+    :::image type="content" source="media/3976435-notification-less-than-24-hours.png" alt-text="Mancano meno di 24 ore al riavvio":::
 
 Se l'utente seleziona **Posponi**, viene visualizzata un'altra notifica temporanea alla scadenza del periodo di sospensione. Questo comportamento presuppone che non sia ancora stato raggiunto il conto alla rovescia finale. La tempistica della notifica successiva è basata sull'impostazione: **Specificare la frequenza delle notifiche del promemoria presentate all'utente dopo la scadenza prima che un dispositivo venga riavviato (minuti)** . Se l'utente seleziona **Posponi** e l'intervallo di sospensione è pari a un'ora, Software Center invia una nuova notifica all'utente entro 60 minuti. Questo comportamento presuppone che non sia ancora stato raggiunto il conto alla rovescia finale.
 
 Quando viene raggiunto il conto alla rovescia finale, Software Center mostra all'utente una notifica che non può chiudere. L'indicatore di stato è rosso e l'utente non può usare l'opzione **Posponi**.
 
-![Notifica finale del conto alla rovescia di Software Center nella versione 1906](media/3976435-1906-final-restart-countdown.png)
+:::image type="content" source="media/3976435-1906-final-restart-countdown.png" alt-text="Notifica finale del conto alla rovescia di Software Center nella versione 1906":::
 
 ### <a name="proactively-install-required-software-before-the-deadline"></a>Installare in modo proattivo il software richiesto prima della scadenza
 
@@ -141,7 +171,7 @@ Se l'utente installa in modo proattivo un software che richiede il riavvio prima
 
 La notifica seguente si verifica quando l'impostazione dell'esperienza utente consente le notifiche e non si usano notifiche di tipo avviso popup per la distribuzione:
 
-![Notifica per il software installato in modo proattivo](media/3976435-proactive-user-restart-notification.png)
+:::image type="content" source="media/3976435-proactive-user-restart-notification.png" alt-text="Notifica per il software installato in modo proattivo":::
 
 Quando la distribuzione raggiunge la scadenza, Software Center si comporta come per [installare il software necessario entro o dopo la scadenza](#install-required-software-at-or-after-the-deadline).
 
@@ -193,25 +223,25 @@ Nel gruppo [Riavvio del computer](#client-settings) abilitare l'opzione seguente
 
 La configurazione di questa impostazione client modifica l'esperienza utente per tutte le distribuzioni richieste che richiedono un riavvio con notifiche di tipo avviso popup:
 
-![Notifica di tipo avviso popup per riavvio richiesto](media/3555947-restart-toast-initial.png)  
+:::image type="content" source="media/3555947-restart-toast-initial.png" alt-text="Notifica di tipo avviso popup per riavvio richiesto":::
 
 Alla finestra di dialogo di Software Center più invasiva:
 
-![Finestra di dialogo per riavviare il computer](media/3976435-proactive-user-restart-notification.png)
+:::image type="content" source="media/3976435-proactive-user-restart-notification.png" alt-text="Finestra di dialogo per riavviare il computer":::
 
 Se l'utente non ha riavviato il dispositivo dopo l'installazione, riceverà una notifica come promemoria. Questo promemoria temporaneo verrà visualizzato all'utente in base all'impostazione client: **Visualizzare una notifica temporanea in cui viene indicato l'intervallo di disconnessione dell'utente o di riavvio del computer (minuti)** . Questa impostazione rappresenta il tempo complessivo a disposizione dell'utente per riavviare il computer prima che venga forzato il riavvio.
 
 - Notifica temporanea quando si usano le notifiche di tipo avviso popup:
 
-  ![Notifica di tipo avviso popup del riavvio in sospeso](media/3555947-restart-toast.png)
+    :::image type="content" source="media/3555947-restart-toast.png" alt-text="Notifica di tipo avviso popup del riavvio in sospeso":::
 
 - Notifica temporanea quando si usa la finestra di dialogo di Software Center, non un avviso popup:
 
-  ![Notifica di riavvio in sospeso di Software Center con pulsante di rinvio](media/3555947-1902-hide-notification.png)
+    :::image type="content" source="media/3555947-1902-hide-notification.png" alt-text="Notifica di riavvio in sospeso di Software Center con pulsante di rinvio":::
 
 Se l'utente non ha riavviato dopo la notifica temporanea, riceverà la notifica finale del conto alla rovescia e non avrà la possibilità di chiuderla. L'intervallo di tempo in cui viene visualizzata la notifica finale è basato sull'impostazione client: **Visualizzare una finestra di dialogo che l'utente non può chiudere in cui viene indicato l'intervallo per il conto alla rovescia prima della disconnessione dell'utente o del riavvio del computer (minuti)** . Se, ad esempio, l'impostazione è 60, la notifica finale viene visualizzata un'ora prima che venga forzato il riavvio:
 
-![Notifica finale del conto alla rovescia di Software Center](media/3555947-1902-final-countdown.png)
+:::image type="content" source="media/3555947-1902-final-countdown.png" alt-text="Notifica finale del conto alla rovescia di Software Center":::
 
 Le impostazioni seguenti devono avere una durata più breve della [finestra di manutenzione](../manage/collections/use-maintenance-windows.md) più breve applicata al computer:
 

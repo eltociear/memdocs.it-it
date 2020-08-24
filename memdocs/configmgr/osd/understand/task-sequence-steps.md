@@ -2,20 +2,20 @@
 title: Passaggi della sequenza di attività
 titleSuffix: Configuration Manager
 description: Informazioni sui passaggi che è possibile aggiungere a una sequenza di attività di Configuration Manager.
-ms.date: 07/06/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 61070d98c5b7d453f493cf7ea2995705ee43f325
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 51a636ffc4adad20e6bc1c69b3194db7a0fa72fd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546621"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697365"
 ---
 # <a name="task-sequence-steps"></a>Passaggi della sequenza di attività
 
@@ -66,10 +66,10 @@ Usare le variabili della sequenza di attività seguenti con questo passaggio:
 
 Gestire questo passaggio con i cmdlet di PowerShell seguenti:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepApplyDataImage](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepApplyDataImage?view=sccm-ps)
-- [New-CMTSStepApplyDataImage](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepApplyDataImage?view=sccm-ps)
-- [Remove-CMTSStepApplyDataImage](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepApplyDataImage?view=sccm-ps)
-- [Set-CMTSStepApplyDataImage](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepApplyDataImage?view=sccm-ps)
+- [Get-CMTSStepApplyDataImage](/powershell/module/configurationmanager/Get-CMTSStepApplyDataImage?view=sccm-ps)
+- [New-CMTSStepApplyDataImage](/powershell/module/configurationmanager/New-CMTSStepApplyDataImage?view=sccm-ps)
+- [Remove-CMTSStepApplyDataImage](/powershell/module/configurationmanager/Remove-CMTSStepApplyDataImage?view=sccm-ps)
+- [Set-CMTSStepApplyDataImage](/powershell/module/configurationmanager/Set-CMTSStepApplyDataImage?view=sccm-ps)
 
 ### <a name="properties-for-apply-data-image"></a>Proprietà per Applica immagine dei dati
 
@@ -133,10 +133,10 @@ Usare le variabili della sequenza di attività seguenti con questo passaggio:
 
 Gestire questo passaggio con i cmdlet di PowerShell seguenti:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepApplyDriverPackage](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepApplyDriverPackage?view=sccm-ps)
-- [New-CMTSStepApplyDriverPackage](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepApplyDriverPackage?view=sccm-ps)
-- [Remove-CMTSStepApplyDriverPackage](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepApplyDriverPackage?view=sccm-ps)
-- [Set-CMTSStepApplyDriverPackage](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepApplyDriverPackage?view=sccm-ps)
+- [Get-CMTSStepApplyDriverPackage](/powershell/module/configurationmanager/Get-CMTSStepApplyDriverPackage?view=sccm-ps)
+- [New-CMTSStepApplyDriverPackage](/powershell/module/configurationmanager/New-CMTSStepApplyDriverPackage?view=sccm-ps)
+- [Remove-CMTSStepApplyDriverPackage](/powershell/module/configurationmanager/Remove-CMTSStepApplyDriverPackage?view=sccm-ps)
+- [Set-CMTSStepApplyDriverPackage](/powershell/module/configurationmanager/Set-CMTSStepApplyDriverPackage?view=sccm-ps)
 
 ### <a name="properties-for-apply-driver-package"></a>Proprietà per Applica pacchetto di driver
 
@@ -150,7 +150,7 @@ Specificare il pacchetto di driver che contiene i driver di dispositivo necessar
 
 Selezionare questa opzione per aggiungere il parametro `/recurse` alla riga di comando di DISM quando Windows applica il pacchetto di driver.
 
-Quando si abilita questa opzione, è anche possibile specificare altri parametri della riga di comando di DISM. Usare la variabile della sequenza di attività [OSDInstallDriversAdditionalOptions](task-sequence-variables.md#OSDInstallDriversAdditionalOptions) per includere altre opzioni. Per altre informazioni, vedere [Windows 10 DISM Command-Line Options](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options) (Opzioni della riga di comando di DISM Windows 10).<!-- SCCMDocs#2125 -->
+Quando si abilita questa opzione, è anche possibile specificare altri parametri della riga di comando di DISM. Usare la variabile della sequenza di attività [OSDInstallDriversAdditionalOptions](task-sequence-variables.md#OSDInstallDriversAdditionalOptions) per includere altre opzioni. Per altre informazioni, vedere [Windows 10 DISM Command-Line Options](/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options) (Opzioni della riga di comando di DISM Windows 10).<!-- SCCMDocs#2125 -->
 
 #### <a name="select-the-mass-storage-driver-within-the-package-that-needs-to-be-installed-before-setup-on-pre-windows-vista-operating-systems"></a>Selezionare il driver di archiviazione di massa nel pacchetto da installare prima che Configuration Manager installi i sistemi operativi Windows precedenti a Windows Vista
 
@@ -200,10 +200,10 @@ Usare le variabili della sequenza di attività seguenti con questo passaggio:
 
 Gestire questo passaggio con i cmdlet di PowerShell seguenti:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepApplyNetworkSetting](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepApplyNetworkSetting?view=sccm-ps)
-- [New-CMTSStepApplyNetworkSetting](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepApplyNetworkSetting?view=sccm-ps)
-- [Remove-CMTSStepApplyNetworkSetting](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepApplyNetworkSetting?view=sccm-ps)
-- [Set-CMTSStepApplyNetworkSetting](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepApplyNetworkSetting?view=sccm-ps)
+- [Get-CMTSStepApplyNetworkSetting](/powershell/module/configurationmanager/Get-CMTSStepApplyNetworkSetting?view=sccm-ps)
+- [New-CMTSStepApplyNetworkSetting](/powershell/module/configurationmanager/New-CMTSStepApplyNetworkSetting?view=sccm-ps)
+- [Remove-CMTSStepApplyNetworkSetting](/powershell/module/configurationmanager/Remove-CMTSStepApplyNetworkSetting?view=sccm-ps)
+- [Set-CMTSStepApplyNetworkSetting](/powershell/module/configurationmanager/Set-CMTSStepApplyNetworkSetting?view=sccm-ps)
 
 ### <a name="properties-for-apply-network-settings"></a>Proprietà per Applica impostazioni di rete
 
@@ -216,6 +216,9 @@ Selezionare questa opzione per aggiungere il computer di destinazione al gruppo 
 #### <a name="join-a-domain"></a>Aggiunta a un dominio
 
 Selezionare questa opzione per aggiungere il computer di destinazione al dominio specificato. Specificare o selezionare il dominio, ad esempio `fabricam.com`. Specificare o selezionare un percorso LDAP (Lightweight Directory Access Protocol) per un'unità organizzativa. Ad esempio: `LDAP//OU=computers, DC=Fabricam.com, C=com`.  
+
+> [!NOTE]
+> Quando un client aggiunto ad Azure Active Directory (Azure AD) esegue una sequenza di attività di distribuzione del sistema operativo, il client nel nuovo sistema operativo non si unirà automaticamente ad Azure AD. Anche se non è aggiunto ad Azure AD, il client viene comunque gestito.
 
 #### <a name="account"></a>Account
 
@@ -261,10 +264,10 @@ Usare le variabili della sequenza di attività seguenti con questo passaggio:
 
 Gestire questo passaggio con i cmdlet di PowerShell seguenti:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepApplyOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepApplyOperatingSystem?view=sccm-ps)
-- [New-CMTSStepApplyOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepApplyOperatingSystem?view=sccm-ps)
-- [Remove-CMTSStepApplyOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepApplyOperatingSystem?view=sccm-ps)
-- [Set-CMTSStepApplyOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepApplyOperatingSystem?view=sccm-ps)
+- [Get-CMTSStepApplyOperatingSystem](/powershell/module/configurationmanager/Get-CMTSStepApplyOperatingSystem?view=sccm-ps)
+- [New-CMTSStepApplyOperatingSystem](/powershell/module/configurationmanager/New-CMTSStepApplyOperatingSystem?view=sccm-ps)
+- [Remove-CMTSStepApplyOperatingSystem](/powershell/module/configurationmanager/Remove-CMTSStepApplyOperatingSystem?view=sccm-ps)
+- [Set-CMTSStepApplyOperatingSystem](/powershell/module/configurationmanager/Set-CMTSStepApplyOperatingSystem?view=sccm-ps)
 
 ### <a name="behaviors-for-apply-os-image"></a>Comportamenti per Applica immagine del sistema operativo
 
@@ -387,10 +390,10 @@ Usare le variabili della sequenza di attività seguenti con questo passaggio:
 
 Gestire questo passaggio con i cmdlet di PowerShell seguenti:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepApplyWindowsSetting](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepApplyWindowsSetting?view=sccm-ps)
-- [New-CMTSStepApplyWindowsSetting](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepApplyWindowsSetting?view=sccm-ps)
-- [Remove-CMTSStepApplyWindowsSetting](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepApplyWindowsSetting?view=sccm-ps)
-- [Set-CMTSStepApplyWindowsSetting](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepApplyWindowsSetting?view=sccm-ps)
+- [Get-CMTSStepApplyWindowsSetting](/powershell/module/configurationmanager/Get-CMTSStepApplyWindowsSetting?view=sccm-ps)
+- [New-CMTSStepApplyWindowsSetting](/powershell/module/configurationmanager/Get-CMTSStepApplyWindowsSetting?view=sccm-ps)
+- [Remove-CMTSStepApplyWindowsSetting](/powershell/module/configurationmanager/Remove-CMTSStepApplyWindowsSetting?view=sccm-ps)
+- [Set-CMTSStepApplyWindowsSetting](/powershell/module/configurationmanager/Set-CMTSStepApplyWindowsSetting?view=sccm-ps)
 
 ### <a name="properties-for-apply-windows-settings"></a>Proprietà per Applica impostazioni Windows
 
@@ -447,7 +450,7 @@ Configurare le seguenti impostazioni:
 - Fallback della lingua dell'interfaccia utente
 - Impostazioni locali dell'utente
 
-Per altre informazioni sui valori dei file di risposte dell'installazione di Windows, vedere [Microsoft-Windows-International-Core](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core).
+Per altre informazioni sui valori dei file di risposte dell'installazione di Windows, vedere [Microsoft-Windows-International-Core](/windows-hardware/customize/desktop/unattend/microsoft-windows-international-core).
 
 > [!NOTE]
 > Se si crea un file di risposte personalizzato per l'installazione di Windows (unattend.xml), questo passaggio sovrascrive tutti i valori esistenti. Per automatizzare un processo dinamico per queste impostazioni, usare le variabili della sequenza di attività correlate, ad esempio, [OSDWindowsSettingsInputLocale](task-sequence-variables.md#OSDWindowsSettingsInputLocale). 
@@ -499,10 +502,10 @@ Usare le variabili della sequenza di attività seguenti con questo passaggio:
 
 Gestire questo passaggio con i cmdlet di PowerShell seguenti:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepAutoApplyDriver](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepAutoApplyDriver?view=sccm-ps)
-- [New-CMTSStepAutoApplyDriver](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepAutoApplyDriver?view=sccm-ps)
-- [Remove-CMTSStepAutoApplyDriver](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepAutoApplyDriver?view=sccm-ps)
-- [Set-CMTSStepAutoApplyDriver](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepAutoApplyDriver?view=sccm-ps)
+- [Get-CMTSStepAutoApplyDriver](/powershell/module/configurationmanager/Get-CMTSStepAutoApplyDriver?view=sccm-ps)
+- [New-CMTSStepAutoApplyDriver](/powershell/module/configurationmanager/New-CMTSStepAutoApplyDriver?view=sccm-ps)
+- [Remove-CMTSStepAutoApplyDriver](/powershell/module/configurationmanager/Remove-CMTSStepAutoApplyDriver?view=sccm-ps)
+- [Set-CMTSStepAutoApplyDriver](/powershell/module/configurationmanager/Set-CMTSStepAutoApplyDriver?view=sccm-ps)
 
 ### <a name="properties-for-auto-apply-drivers"></a>Proprietà per Applica automaticamente i driver
 
@@ -554,10 +557,10 @@ Usare le variabili della sequenza di attività seguenti con questo passaggio:
 
 Gestire questo passaggio con i cmdlet di PowerShell seguenti:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepCaptureNetworkSettings](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepCaptureNetworkSettings?view=sccm-ps)
-- [New-CMTSStepCaptureNetworkSettings](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepCaptureNetworkSettings?view=sccm-ps)
-- [Remove-CMTSStepCaptureNetworkSettings](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepCaptureNetworkSettings?view=sccm-ps)
-- [Set-CMTSStepCaptureNetworkSettings](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepCaptureNetworkSettings?view=sccm-ps)
+- [Get-CMTSStepCaptureNetworkSettings](/powershell/module/configurationmanager/Get-CMTSStepCaptureNetworkSettings?view=sccm-ps)
+- [New-CMTSStepCaptureNetworkSettings](/powershell/module/configurationmanager/New-CMTSStepCaptureNetworkSettings?view=sccm-ps)
+- [Remove-CMTSStepCaptureNetworkSettings](/powershell/module/configurationmanager/Remove-CMTSStepCaptureNetworkSettings?view=sccm-ps)
+- [Set-CMTSStepCaptureNetworkSettings](/powershell/module/configurationmanager/Set-CMTSStepCaptureNetworkSettings?view=sccm-ps)
 
 ### <a name="properties-for-capture-network-settings"></a>Proprietà per Acquisisci impostazioni di rete
 
@@ -607,10 +610,10 @@ Usare le variabili della sequenza di attività seguenti con questo passaggio:
 
 Gestire questo passaggio con i cmdlet di PowerShell seguenti:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepCaptureSystemImage](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepCaptureSystemImage?view=sccm-ps)
-- [New-CMTSStepCaptureSystemImage](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepCaptureSystemImage?view=sccm-ps)
-- [Remove-CMTSStepCaptureSystemImage](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepCaptureSystemImage?view=sccm-ps)
-- [Set-CMTSStepCaptureSystemImage](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepCaptureSystemImage?view=sccm-ps)
+- [Get-CMTSStepCaptureSystemImage](/powershell/module/configurationmanager/Get-CMTSStepCaptureSystemImage?view=sccm-ps)
+- [New-CMTSStepCaptureSystemImage](/powershell/module/configurationmanager/New-CMTSStepCaptureSystemImage?view=sccm-ps)
+- [Remove-CMTSStepCaptureSystemImage](/powershell/module/configurationmanager/Remove-CMTSStepCaptureSystemImage?view=sccm-ps)
+- [Set-CMTSStepCaptureSystemImage](/powershell/module/configurationmanager/Set-CMTSStepCaptureSystemImage?view=sccm-ps)
 
 ### <a name="properties-for-capture-os-image"></a>Proprietà per Acquisisci immagine del sistema operativo
 
@@ -669,10 +672,10 @@ Usare le variabili della sequenza di attività seguenti con questo passaggio:
 
 Gestire questo passaggio con i cmdlet di PowerShell seguenti:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepCaptureUserState](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepCaptureUserState?view=sccm-ps)
-- [New-CMTSStepCaptureUserState](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepCaptureUserState?view=sccm-ps)
-- [Remove-CMTSStepCaptureUserState](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepCaptureUserState?view=sccm-ps)
-- [Set-CMTSStepCaptureUserState](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepCaptureUserState?view=sccm-ps)
+- [Get-CMTSStepCaptureUserState](/powershell/module/configurationmanager/Get-CMTSStepCaptureUserState?view=sccm-ps)
+- [New-CMTSStepCaptureUserState](/powershell/module/configurationmanager/New-CMTSStepCaptureUserState?view=sccm-ps)
+- [Remove-CMTSStepCaptureUserState](/powershell/module/configurationmanager/Remove-CMTSStepCaptureUserState?view=sccm-ps)
+- [Set-CMTSStepCaptureUserState](/powershell/module/configurationmanager/Set-CMTSStepCaptureUserState?view=sccm-ps)
 
 ### <a name="properties-for-capture-user-state"></a>Proprietà per Acquisisci stato utente
 
@@ -718,7 +721,7 @@ Abilitare questa opzione per specificare una delle impostazioni seguenti:
 
 - **Esegui acquisizione localmente utilizzando i collegamenti invece di copiare i file**: Abilitare questa impostazione per usare i collegamenti reali NTFS per l'acquisizione dei file.  
 
-    Per altre informazioni sulla migrazione di dati tramite i collegamenti reali, vedere [Archivio delle migrazioni con collegamento reale](https://docs.microsoft.com/windows/deployment/usmt/usmt-hard-link-migration-store).  
+    Per altre informazioni sulla migrazione di dati tramite i collegamenti reali, vedere [Archivio delle migrazioni con collegamento reale](/windows/deployment/usmt/usmt-hard-link-migration-store).  
 
 - **Acquisisci in modalità non in linea (solo Windows PE)** : abilitare questa impostazione per acquisire lo stato utente in Windows PE invece che nel sistema operativo completo.  
 
@@ -751,10 +754,10 @@ Usare le variabili della sequenza di attività seguenti con questo passaggio:
 
 Gestire questo passaggio con i cmdlet di PowerShell seguenti:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepCaptureWindowsSettings](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepCaptureWindowsSettings?view=sccm-ps)
-- [New-CMTSStepCaptureWindowsSettings](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepCaptureWindowsSettings?view=sccm-ps)
-- [Remove-CMTSStepCaptureWindowsSettings](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepCaptureWindowsSettings?view=sccm-ps)
-- [Set-CMTSStepCaptureWindowsSettings](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepCaptureWindowsSettings?view=sccm-ps)
+- [Get-CMTSStepCaptureWindowsSettings](/powershell/module/configurationmanager/Get-CMTSStepCaptureWindowsSettings?view=sccm-ps)
+- [New-CMTSStepCaptureWindowsSettings](/powershell/module/configurationmanager/New-CMTSStepCaptureWindowsSettings?view=sccm-ps)
+- [Remove-CMTSStepCaptureWindowsSettings](/powershell/module/configurationmanager/Remove-CMTSStepCaptureWindowsSettings?view=sccm-ps)
+- [Set-CMTSStepCaptureWindowsSettings](/powershell/module/configurationmanager/Set-CMTSStepCaptureWindowsSettings?view=sccm-ps)
 
 ### <a name="properties-for-capture-windows-settings"></a>Proprietà per Acquisisci impostazioni Windows
 
@@ -771,7 +774,6 @@ Acquisire l'utente registrato e i nomi dell'organizzazione dal computer.
 #### <a name="migrate-time-zone"></a>Esegui la migrazione del fuso orario
 
 Acquisire l'impostazione relativa al fuso orario nel computer.  
-
 
 
 ## <a name="check-readiness"></a><a name="BKMK_CheckReadiness"></a> Verifica conformità
@@ -791,6 +793,8 @@ A partire dalla versione 2002, questo passaggio include otto nuovi controlli. Ne
 - **Scheda di rete connessa**
   - **La scheda di rete non è wireless**
 
+A partire dalla versione 2006, questo passaggio include un controllo per determinare se il dispositivo usa UEFI, **Computer is in UEFI mode** (Computer in modalità UEFI).<!--6452769-->
+
 > [!IMPORTANT]
 > Per sfruttare i vantaggi di questa nuova funzionalità di Configuration Manager, dopo l'aggiornamento del sito aggiornare anche i client alla versione più recente. Anche se le nuove funzionalità vengono visualizzate nella console di Configuration Manager quando si esegue l'aggiornamento del sito e della console, lo scenario completo risulta funzionante solo dopo l'aggiornamento alla versione più recente del client.
 
@@ -804,23 +808,24 @@ Usare le variabili della sequenza di attività seguenti con questo passaggio:
 - [_TS_CRSPEED](task-sequence-variables.md#TSCRSPEED)
 - [_TS_CRDISK](task-sequence-variables.md#TSCRDISK)
 - [_TS_CROSTYPE](task-sequence-variables.md#TSCROSTYPE)
-- [_TS_CRARCH](task-sequence-variables.md#TSCRARCH)
-- [_TS_CRMINOSVER](task-sequence-variables.md#TSCRMINOSVER)
-- [_TS_CRMAXOSVER](task-sequence-variables.md#TSCRMAXOSVER)
-- [_TS_CRCLIENTMINVER](task-sequence-variables.md#TSCRCLIENTMINVER)
-- [_TS_CROSLANGUAGE](task-sequence-variables.md#TSCROSLANGUAGE)
-- [_TS_CRACPOWER](task-sequence-variables.md#TSCRACPOWER)
-- [_TS_CRNETWORK](task-sequence-variables.md#TSCRNETWORK)
-- [_TS_CRWIRED](task-sequence-variables.md#TSCRWIRED)
+- [_TS_CRARCH](task-sequence-variables.md#TSCRARCH) (a partire dalla versione 2002)
+- [_TS_CRMINOSVER](task-sequence-variables.md#TSCRMINOSVER) (a partire dalla versione 2002)
+- [_TS_CRMAXOSVER](task-sequence-variables.md#TSCRMAXOSVER) (a partire dalla versione 2002)
+- [_TS_CRCLIENTMINVER](task-sequence-variables.md#TSCRCLIENTMINVER) (a partire dalla versione 2002)
+- [_TS_CROSLANGUAGE](task-sequence-variables.md#TSCROSLANGUAGE) (a partire dalla versione 2002)
+- [_TS_CRACPOWER](task-sequence-variables.md#TSCRACPOWER) (a partire dalla versione 2002)
+- [_TS_CRNETWORK](task-sequence-variables.md#TSCRNETWORK) (a partire dalla versione 2002)
+- [_TS_CRUEFI](task-sequence-variables.md#TSCRUEFI) (a partire dalla versione 2006)
+- [_TS_CRWIRED](task-sequence-variables.md#TSCRWIRED) (a partire dalla versione 2002)
 
 ### <a name="cmdlets-for-check-readiness"></a>Cmdlet per Verifica conformità
 
 Gestire questo passaggio con i cmdlet di PowerShell seguenti:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepPrestartCheck](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepPrestartCheck?view=sccm-ps)
-- [New-CMTSStepPrestartCheck](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepPrestartCheck?view=sccm-ps)
-- [Remove-CMTSStepPrestartCheck](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepPrestartCheck?view=sccm-ps)
-- [Set-CMTSStepPrestartCheck](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepPrestartCheck?view=sccm-ps)
+- [Get-CMTSStepPrestartCheck](/powershell/module/configurationmanager/Get-CMTSStepPrestartCheck?view=sccm-ps)
+- [New-CMTSStepPrestartCheck](/powershell/module/configurationmanager/New-CMTSStepPrestartCheck?view=sccm-ps)
+- [Remove-CMTSStepPrestartCheck](/powershell/module/configurationmanager/Remove-CMTSStepPrestartCheck?view=sccm-ps)
+- [Set-CMTSStepPrestartCheck](/powershell/module/configurationmanager/Set-CMTSStepPrestartCheck?view=sccm-ps)
 
 ### <a name="properties-for-check-readiness"></a>Proprietà per Verifica conformità
 
@@ -870,6 +875,10 @@ A partire dalla versione 2002, verificare che il dispositivo sia collegato e non
 
 A partire dalla versione 2002, verificare che il dispositivo disponga di una scheda di rete connessa alla rete. Si può anche selezionare il controllo dipendente per verificare che **la scheda di rete non sia wireless**.
 
+#### <a name="computer-is-in-uefi-mode"></a>Computer in modalità UEFI
+
+A partire dalla versione 2006, determinare se il dispositivo è configurato per UEFI o BIOS.
+
 ### <a name="options-for-check-readiness"></a>Opzioni per Verifica conformità
 
 > [!NOTE]  
@@ -898,10 +907,10 @@ Usare le variabili della sequenza di attività seguenti con questo passaggio:
 
 Gestire questo passaggio con i cmdlet di PowerShell seguenti:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepConnectNetworkFolder](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepConnectNetworkFolder?view=sccm-ps)
-- [New-CMTSStepConnectNetworkFolder](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepConnectNetworkFolder?view=sccm-ps)
-- [Remove-CMTSStepConnectNetworkFolder](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepConnectNetworkFolder?view=sccm-ps)
-- [Set-CMTSStepConnectNetworkFolder](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepConnectNetworkFolder?view=sccm-ps)
+- [Get-CMTSStepConnectNetworkFolder](/powershell/module/configurationmanager/Get-CMTSStepConnectNetworkFolder?view=sccm-ps)
+- [New-CMTSStepConnectNetworkFolder](/powershell/module/configurationmanager/New-CMTSStepConnectNetworkFolder?view=sccm-ps)
+- [Remove-CMTSStepConnectNetworkFolder](/powershell/module/configurationmanager/Remove-CMTSStepConnectNetworkFolder?view=sccm-ps)
+- [Set-CMTSStepConnectNetworkFolder](/powershell/module/configurationmanager/Set-CMTSStepConnectNetworkFolder?view=sccm-ps)
 
 ### <a name="properties-for-connect-to-network-folder"></a>Proprietà per Connetti alla cartella di rete
 
@@ -945,10 +954,10 @@ A partire dalla versione 1906, con questo passaggio usare le variabili della seq
 
 Gestire questo passaggio con i cmdlet di PowerShell seguenti:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepDisableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepDisableBitLocker?view=sccm-ps)
-- [New-CMTSStepDisableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepDisableBitLocker?view=sccm-ps)
-- [Remove-CMTSStepDisableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepDisableBitLocker?view=sccm-ps)
-- [Set-CMTSStepDisableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepDisableBitLocker?view=sccm-ps)
+- [Get-CMTSStepDisableBitLocker](/powershell/module/configurationmanager/Get-CMTSStepDisableBitLocker?view=sccm-ps)
+- [New-CMTSStepDisableBitLocker](/powershell/module/configurationmanager/New-CMTSStepDisableBitLocker?view=sccm-ps)
+- [Remove-CMTSStepDisableBitLocker](/powershell/module/configurationmanager/Remove-CMTSStepDisableBitLocker?view=sccm-ps)
+- [Set-CMTSStepDisableBitLocker](/powershell/module/configurationmanager/Set-CMTSStepDisableBitLocker?view=sccm-ps)
 
 ### <a name="properties-for-disable-bitlocker"></a>Proprietà per Disattiva BitLocker
 
@@ -1000,10 +1009,10 @@ Per aggiungere questo passaggio nell'editor della sequenza di attività, selezio
 
 Gestire questo passaggio con i cmdlet di PowerShell seguenti:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepDownloadPackageContent](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepDownloadPackageContent?view=sccm-ps)
-- [New-CMTSStepDownloadPackageContent](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepDownloadPackageContent?view=sccm-ps)
-- [Remove-CMTSStepDownloadPackageContent](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepDownloadPackageContent?view=sccm-ps)
-- [Set-CMTSStepDownloadPackageContent](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepDownloadPackageContent?view=sccm-ps)
+- [Get-CMTSStepDownloadPackageContent](/powershell/module/configurationmanager/Get-CMTSStepDownloadPackageContent?view=sccm-ps)
+- [New-CMTSStepDownloadPackageContent](/powershell/module/configurationmanager/New-CMTSStepDownloadPackageContent?view=sccm-ps)
+- [Remove-CMTSStepDownloadPackageContent](/powershell/module/configurationmanager/Remove-CMTSStepDownloadPackageContent?view=sccm-ps)
+- [Set-CMTSStepDownloadPackageContent](/powershell/module/configurationmanager/Set-CMTSStepDownloadPackageContent?view=sccm-ps)
 
 ### <a name="properties-for-download-package-content"></a>Proprietà per Scarica contenuto pacchetto
 
@@ -1054,12 +1063,9 @@ Se si configurano le [proprietà della sequenza di attività](../deploy-use/mana
 
 ## <a name="enable-bitlocker"></a><a name="BKMK_EnableBitLocker"></a> Attiva BitLocker
 
-Usare questo passaggio per attivare la crittografia BitLocker in almeno due partizioni nel disco rigido. La prima partizione attiva include il codice bootstrap di Windows. Un'altra partizione contiene il sistema operativo. La partizione bootstrap deve rimanere non crittografata.  
+La crittografia unità BitLocker offre una crittografia di basso livello dei contenuti di un volume del disco. Usare questo passaggio per attivare la crittografia BitLocker in almeno due partizioni nel disco rigido. La prima partizione attiva include il codice bootstrap di Windows. Un'altra partizione contiene il sistema operativo. La partizione bootstrap deve rimanere non crittografata.  
 
-Usare il passaggio **Pre-provisioning di BitLocker** per abilitare BitLocker in un'unità in Windows PE. Per altre informazioni, vedere [Pre-provisioning di BitLocker](#BKMK_PreProvisionBitLocker).  
-
-> [!NOTE]  
-> La crittografia unità BitLocker offre una crittografia di basso livello dei contenuti di un volume del disco.  
+Per abilitare BitLocker in un'unità in Windows PE, usare il passaggio [Pre-provisioning di BitLocker](#BKMK_PreProvisionBitLocker).
 
 Questo passaggio può essere eseguito solo nel sistema operativo completo. Non viene eseguito in Windows PE.
 
@@ -1071,7 +1077,9 @@ Quando si specifica **Solo TPM**, **TPM e chiave di avvio su USB** o **TPM e PIN
 - Attivato  
 - Proprietà consentita  
 
-Questo passaggio completa le eventuali operazioni rimanenti di inizializzazione TPM. I passaggi rimanenti non richiedono la presenza fisica né operazioni di riavvio. Se necessario, il passaggio**Attiva BitLocker** completa in modo trasparente i passaggi rimanenti dell'inizializzazione TPM seguenti:  
+A partire dalla versione 2006, è possibile ignorare questo passaggio per i computer che non dispongono di un TPM o quando il TPM non è abilitato. Una nuova impostazione rende più semplice la gestione del comportamento della sequenza di attività nei dispositivi che non supportano completamente BitLocker.<!--6995601-->
+
+Questo passaggio completa le eventuali operazioni rimanenti di inizializzazione TPM. Le azioni rimanenti non richiedono la presenza fisica né operazioni di riavvio. Se necessario, il passaggio**Attiva BitLocker** completa in modo trasparente le azioni rimanenti dell'inizializzazione TPM seguenti:
 
 - Creazione della coppia di chiavi di verifica autenticità.  
 - Creazione di un valore di autorizzazione del proprietario e del deposito in Active Directory, che deve essere stato esteso per supportare questo valore.  
@@ -1095,10 +1103,10 @@ Usare le variabili della sequenza di attività seguenti con questo passaggio:
 
 Gestire questo passaggio con i cmdlet di PowerShell seguenti:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepEnableBitLocker?view=sccm-ps)
-- [New-CMTSStepEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepEnableBitLocker?view=sccm-ps)
-- [Remove-CMTSStepEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepEnableBitLocker?view=sccm-ps)
-- [Set-CMTSStepEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepEnableBitLocker?view=sccm-ps)
+- [Get-CMTSStepEnableBitLocker](/powershell/module/configurationmanager/Get-CMTSStepEnableBitLocker?view=sccm-ps)
+- [New-CMTSStepEnableBitLocker](/powershell/module/configurationmanager/New-CMTSStepEnableBitLocker?view=sccm-ps)
+- [Remove-CMTSStepEnableBitLocker](/powershell/module/configurationmanager/Remove-CMTSStepEnableBitLocker?view=sccm-ps)
+- [Set-CMTSStepEnableBitLocker](/powershell/module/configurationmanager/Set-CMTSStepEnableBitLocker?view=sccm-ps)
 
 ### <a name="properties-for-enable-bitlocker"></a>Proprietà per Attiva BitLocker
 
@@ -1118,6 +1126,18 @@ Specifica l'unità da crittografare Per crittografare l'unità del sistema opera
 
 Per crittografare un'unità dati specifica, non del sistema operativo, selezionare **Unità specifica**. Selezionare quindi l'unità nell'elenco.  
 
+#### <a name="disk-encryption-mode"></a>Modalità di crittografia del disco
+
+<!--6995601-->
+A partire dalla versione 2006, selezionare uno degli algoritmi di crittografia seguenti:
+
+- AES_128
+- AES_256
+- XTS_AES256
+- XTS_AES128
+
+Per impostazione predefinita o se non specificato, nel passaggio si usa ancora il metodo di crittografia predefinito per la versione del sistema operativo. Se il passaggio viene eseguito in una versione di Windows che non supporta l'algoritmo specificato, viene eseguito il fallback all'impostazione predefinita del sistema operativo. In questa circostanza il motore della sequenza di attività invia il messaggio di stato 11911.
+
 #### <a name="use-full-disk-encryption"></a>Usa la crittografia del disco completo
 
 <!--SCCMDocs-pr issue 2671-->
@@ -1136,6 +1156,10 @@ Selezionare questa opzione per consentire il completamento della crittografia un
 
 In caso di dischi rigidi di grandi dimensioni il processo di crittografia può richiedere diverse ore. Se non si seleziona questa opzione, la sequenza di attività può proseguire immediatamente.  
 
+#### <a name="skip-this-step-for-computers-that-do-not-have-a-tpm-or-when-tpm-is-not-enabled"></a>Ignora questo passaggio per computer senza TPM o con TPM non abilitato
+
+<!--6995601-->
+A partire dalla versione 2006, selezionare questa opzione per ignorare la crittografia delle unità in un computer che non contiene un modulo TPM supportato o abilitato. Ad esempio, usare questa opzione quando si distribuisce un sistema operativo in una macchina virtuale. Per impostazione predefinita, questa impostazione è disabilitata per il passaggio **Attiva BitLocker**. Se si abilita questa impostazione e per il dispositivo non è disponibile un TPM funzionante, il motore della sequenza di attività registrerà un errore in smsts.log e invierà il messaggio di stato 11912. La sequenza di attività continua dopo questo passaggio.
 
 
 ## <a name="format-and-partition-disk"></a><a name="BKMK_FormatandPartitionDisk"></a> Formato e disco partizione
@@ -1162,10 +1186,10 @@ Usare le variabili della sequenza di attività seguenti con questo passaggio:
 
 Gestire questo passaggio con i cmdlet di PowerShell seguenti:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepPartitionDisk](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtssteppartitiondisk?view=sccm-ps)
-- [New-CMTSStepPartitionDisk](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtssteppartitiondisk?view=sccm-ps)
-- [Remove-CMTSStepPartitionDisk](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtssteppartitiondisk?view=sccm-ps)
-- [Set-CMTSStepPartitionDisk](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtssteppartitiondisk?view=sccm-ps)
+- [Get-CMTSStepPartitionDisk](/powershell/module/configurationmanager/get-cmtssteppartitiondisk?view=sccm-ps)
+- [New-CMTSStepPartitionDisk](/powershell/module/configurationmanager/new-cmtssteppartitiondisk?view=sccm-ps)
+- [Remove-CMTSStepPartitionDisk](/powershell/module/configurationmanager/remove-cmtssteppartitiondisk?view=sccm-ps)
+- [Set-CMTSStepPartitionDisk](/powershell/module/configurationmanager/set-cmtssteppartitiondisk?view=sccm-ps)
 
 ### <a name="properties-for-format-and-partition-disk"></a>Proprietà per Formato e disco partizione
 
@@ -1174,6 +1198,31 @@ Nella scheda **Proprietà** per questo passaggio, configurare le impostazioni de
 #### <a name="disk-number"></a>Numero disco
 
 Numero del disco fisico da formattare. Il numero è basato sull'ordinamento di enumerazione dei dischi Windows.  
+
+#### <a name="variable-name-to-store-disk-number"></a>Nome della variabile in cui archiviare il numero del disco
+
+<!--6610288-->
+
+A partire dalla versione 2006, usare una variabile della sequenza di attività per specificare il disco di destinazione da formattare. Questa opzione supporta sequenze di attività più complesse con comportamenti dinamici. Uno script personalizzato, ad esempio, può rilevare il disco e impostare la variabile in base al tipo di hardware. È quindi possibile usare più istanze di questo passaggio per configurare tipi di hardware e partizioni diversi.
+
+Se si seleziona questa proprietà, immettere un nome di variabile personalizzato. Aggiungere un passaggio precedente nella sequenza di attività per impostare questa variabile personalizzata su un valore intero per il disco fisico.
+
+La procedura fittizia seguente illustra un esempio:
+
+- **Esegui script PowerShell**: uno script personalizzato per raccogliere i dischi di destinazione
+  - Imposta `myOSDisk` su `1`
+  - Imposta `myDataDisk` su `2`
+
+- **Formato e disco partizione** per il disco del sistema operativo: specifica la variabile `myOSDisk`
+  - Configura il disco 1 come disco di sistema
+
+- **Formato e disco partizione** per il disco dati: specifica la variabile `myDataDisk`
+  - Configura il disco 2 per l'archiviazione dei dati non elaborati
+
+Una variante di questo esempio usa numeri di disco e piani di partizionamento per i diversi tipi di hardware.
+
+> [!NOTE]
+> È comunque possibile usare la variabile della sequenza di attività **OSDDiskIndex** esistente. Ogni istanza del passaggio **Formato e disco partizione**, tuttavia, usa lo stesso valore di indice. Se si vuole impostare il numero di disco per più istanze di questo passaggio a livello di codice, usare questa proprietà della variabile.
 
 #### <a name="disk-type"></a>Tipo di disco
 
@@ -1194,8 +1243,8 @@ Informazioni specifiche sulla partizione o sul volume creato dalla sequenza di a
 
 Per creare una nuova partizione, selezionare **Nuovo** per aprire la finestra di dialogo **Proprietà della partizione**. Specificare il tipo e la dimensione della partizione e se si tratta di una partizione di avvio. Per modificare una partizione esistente, selezionare la partizione da modificare e quindi selezionare il pulsante **Proprietà**. Per altre informazioni su come configurare le partizioni del disco rigido, vedere uno degli articoli seguenti:  
 
-- [Partizioni in un disco rigido basato su UEFI/GPT](https://docs.microsoft.com/windows-hardware/manufacture/desktop/configure-uefigpt-based-hard-drive-partitions)  
-- [Partizioni in un disco rigido basato su BIOS/MBR](https://docs.microsoft.com/windows-hardware/manufacture/desktop/configure-biosmbr-based-hard-drive-partitions)  
+- [Partizioni in un disco rigido basato su UEFI/GPT](/windows-hardware/manufacture/desktop/configure-uefigpt-based-hard-drive-partitions)  
+- [Partizioni in un disco rigido basato su BIOS/MBR](/windows-hardware/manufacture/desktop/configure-biosmbr-based-hard-drive-partitions)  
 
 Per eliminare una partizione, scegliere la partizione e quindi selezionare **Elimina**.  
 
@@ -1246,10 +1295,10 @@ Usare le variabili della sequenza di attività seguenti con questo passaggio:
 
 Gestire questo passaggio con i cmdlet di PowerShell seguenti:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepInstallApplication](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepinstallapplication?view=sccm-ps)
-- [New-CMTSStepInstallApplication](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepinstallapplication?view=sccm-ps)
-- [Remove-CMTSStepInstallApplication](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepinstallapplication?view=sccm-ps)
-- [Set-CMTSStepInstallApplication](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepinstallapplication?view=sccm-ps)
+- [Get-CMTSStepInstallApplication](/powershell/module/configurationmanager/get-cmtsstepinstallapplication?view=sccm-ps)
+- [New-CMTSStepInstallApplication](/powershell/module/configurationmanager/new-cmtsstepinstallapplication?view=sccm-ps)
+- [Remove-CMTSStepInstallApplication](/powershell/module/configurationmanager/remove-cmtsstepinstallapplication?view=sccm-ps)
+- [Set-CMTSStepInstallApplication](/powershell/module/configurationmanager/set-cmtsstepinstallapplication?view=sccm-ps)
 
 ### <a name="properties-for-install-application"></a>Proprietà per Installa applicazione
 
@@ -1359,10 +1408,10 @@ Usare le variabili della sequenza di attività seguenti con questo passaggio:
 
 Gestire questo passaggio con i cmdlet di PowerShell seguenti:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepInstallSoftware](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepinstallsoftware?view=sccm-ps)
-- [New-CMTSStepInstallSoftware](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepinstallsoftware?view=sccm-ps)
-- [Remove-CMTSStepInstallSoftware](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepinstallsoftware?view=sccm-ps)
-- [Set-CMTSStepInstallSoftware](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepinstallsoftware?view=sccm-ps)
+- [Get-CMTSStepInstallSoftware](/powershell/module/configurationmanager/get-cmtsstepinstallsoftware?view=sccm-ps)
+- [New-CMTSStepInstallSoftware](/powershell/module/configurationmanager/new-cmtsstepinstallsoftware?view=sccm-ps)
+- [Remove-CMTSStepInstallSoftware](/powershell/module/configurationmanager/remove-cmtsstepinstallsoftware?view=sccm-ps)
+- [Set-CMTSStepInstallSoftware](/powershell/module/configurationmanager/set-cmtsstepinstallsoftware?view=sccm-ps)
 
 > [!TIP]
 > Usare la memorizzazione anticipata del contenuto nella cache per scaricare un pacchetto di aggiornamento del sistema operativo applicabile prima che un utente installi la sequenza di attività. Per altre informazioni, vedere [Configurare la pre-cache del contenuto](../deploy-use/configure-precache-content.md).
@@ -1443,10 +1492,10 @@ Usare le variabili della sequenza di attività seguenti con questo passaggio:
 
 Gestire questo passaggio con i cmdlet di PowerShell seguenti:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepInstallUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepinstallupdate?view=sccm-ps)
-- [New-CMTSStepInstallUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepinstallupdate?view=sccm-ps)
-- [Remove-CMTSStepInstallUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepinstallupdate?view=sccm-ps)
-- [Set-CMTSStepInstallUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepinstallupdate?view=sccm-ps)
+- [Get-CMTSStepInstallUpdate](/powershell/module/configurationmanager/get-cmtsstepinstallupdate?view=sccm-ps)
+- [New-CMTSStepInstallUpdate](/powershell/module/configurationmanager/new-cmtsstepinstallupdate?view=sccm-ps)
+- [Remove-CMTSStepInstallUpdate](/powershell/module/configurationmanager/remove-cmtsstepinstallupdate?view=sccm-ps)
+- [Set-CMTSStepInstallUpdate](/powershell/module/configurationmanager/set-cmtsstepinstallupdate?view=sccm-ps)
 
 Per altre indicazioni e un diagramma di flusso tecnico per questo passaggio, vedere [Installa aggiornamenti software](install-software-updates.md).
 
@@ -1489,6 +1538,9 @@ Se uno degli aggiornamenti riavvia il computer in modo imprevisto, ripetere ques
 
 Usare questo passaggio per aggiungere il computer di destinazione a un dominio o un gruppo di lavoro.  
 
+> [!NOTE]
+> Quando un client aggiunto ad Azure Active Directory (Azure AD) esegue una sequenza di attività di distribuzione del sistema operativo, il client nel nuovo sistema operativo non si unirà automaticamente ad Azure AD. Anche se non è aggiunto ad Azure AD, il client viene comunque gestito.
+
 Questo passaggio della sequenza di attività viene eseguito solo nel sistema operativo completo. Non viene eseguito in Windows PE.
 
 Per aggiungere questo passaggio nell'editor della sequenza di attività, selezionare **Aggiungi**, selezionare **Generale** e quindi selezionare **Aggiunta a dominio o gruppo di lavoro**.
@@ -1509,10 +1561,10 @@ Usare le variabili della sequenza di attività seguenti con questo passaggio:
 
 Gestire questo passaggio con i cmdlet di PowerShell seguenti:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepJoinDomainWorkgroup](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepJoinDomainWorkgroup?view=sccm-ps)
-- [New-CMTSStepJoinDomainWorkgroup](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepJoinDomainWorkgroup?view=sccm-ps)
-- [Remove-CMTSStepJoinDomainWorkgroup](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepJoinDomainWorkgroup?view=sccm-ps)
-- [Set-CMTSStepJoinDomainWorkgroup](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepJoinDomainWorkgroup?view=sccm-ps)
+- [Get-CMTSStepJoinDomainWorkgroup](/powershell/module/configurationmanager/Get-CMTSStepJoinDomainWorkgroup?view=sccm-ps)
+- [New-CMTSStepJoinDomainWorkgroup](/powershell/module/configurationmanager/New-CMTSStepJoinDomainWorkgroup?view=sccm-ps)
+- [Remove-CMTSStepJoinDomainWorkgroup](/powershell/module/configurationmanager/Remove-CMTSStepJoinDomainWorkgroup?view=sccm-ps)
+- [Set-CMTSStepJoinDomainWorkgroup](/powershell/module/configurationmanager/Set-CMTSStepJoinDomainWorkgroup?view=sccm-ps)
 
 ### <a name="properties-for-join-domain-or-workgroup"></a>Proprietà per Aggiunta a dominio o gruppo di lavoro
 
@@ -1551,10 +1603,10 @@ Per aggiungere questo passaggio nell'editor della sequenza di attività, selezio
 
 Gestire questo passaggio con i cmdlet di PowerShell seguenti:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepPrepareConfigMgrClient](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepPrepareConfigMgrClient?view=sccm-ps)
-- [New-CMTSStepPrepareConfigMgrClient](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepPrepareConfigMgrClient?view=sccm-ps)
-- [Remove-CMTSStepPrepareConfigMgrClient](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepPrepareConfigMgrClient?view=sccm-ps)
-- [Set-CMTSStepPrepareConfigMgrClient](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepPrepareConfigMgrClient?view=sccm-ps)
+- [Get-CMTSStepPrepareConfigMgrClient](/powershell/module/configurationmanager/Get-CMTSStepPrepareConfigMgrClient?view=sccm-ps)
+- [New-CMTSStepPrepareConfigMgrClient](/powershell/module/configurationmanager/New-CMTSStepPrepareConfigMgrClient?view=sccm-ps)
+- [Remove-CMTSStepPrepareConfigMgrClient](/powershell/module/configurationmanager/Remove-CMTSStepPrepareConfigMgrClient?view=sccm-ps)
+- [Set-CMTSStepPrepareConfigMgrClient](/powershell/module/configurationmanager/Set-CMTSStepPrepareConfigMgrClient?view=sccm-ps)
 
 
 
@@ -1577,10 +1629,10 @@ Usare le variabili della sequenza di attività seguenti con questo passaggio:
 
 Gestire questo passaggio con i cmdlet di PowerShell seguenti:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepPrepareWindows](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepPrepareWindows?view=sccm-ps)
-- [New-CMTSStepPrepareWindows](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepPrepareWindows?view=sccm-ps)
-- [Remove-CMTSStepPrepareWindows](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepPrepareWindows?view=sccm-ps)
-- [Set-CMTSStepPrepareWindows](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepPrepareWindows?view=sccm-ps)
+- [Get-CMTSStepPrepareWindows](/powershell/module/configurationmanager/Get-CMTSStepPrepareWindows?view=sccm-ps)
+- [New-CMTSStepPrepareWindows](/powershell/module/configurationmanager/New-CMTSStepPrepareWindows?view=sccm-ps)
+- [Remove-CMTSStepPrepareWindows](/powershell/module/configurationmanager/Remove-CMTSStepPrepareWindows?view=sccm-ps)
+- [Set-CMTSStepPrepareWindows](/powershell/module/configurationmanager/Set-CMTSStepPrepareWindows?view=sccm-ps)
 
 ### <a name="properties-for-prepare-windows-for-capture"></a>Proprietà per Prepara Windows per l'acquisizione
 
@@ -1622,10 +1674,10 @@ Per aggiungere questo passaggio nell'editor della sequenza di attività, selezio
 
 Gestire questo passaggio con i cmdlet di PowerShell seguenti:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepOfflineEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepOfflineEnableBitLocker?view=sccm-ps)
-- [New-CMTSStepOfflineEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepOfflineEnableBitLocker?view=sccm-ps)
-- [Remove-CMTSStepOfflineEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepOfflineEnableBitLocker?view=sccm-ps)
-- [Set-CMTSStepOfflineEnableBitLocker](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepOfflineEnableBitLocker?view=sccm-ps)
+- [Get-CMTSStepOfflineEnableBitLocker](/powershell/module/configurationmanager/Get-CMTSStepOfflineEnableBitLocker?view=sccm-ps)
+- [New-CMTSStepOfflineEnableBitLocker](/powershell/module/configurationmanager/New-CMTSStepOfflineEnableBitLocker?view=sccm-ps)
+- [Remove-CMTSStepOfflineEnableBitLocker](/powershell/module/configurationmanager/Remove-CMTSStepOfflineEnableBitLocker?view=sccm-ps)
+- [Set-CMTSStepOfflineEnableBitLocker](/powershell/module/configurationmanager/Set-CMTSStepOfflineEnableBitLocker?view=sccm-ps)
 
 ### <a name="properties-for-pre-provision-bitlocker"></a>Proprietà per Pre-provisioning di BitLocker
 
@@ -1635,6 +1687,18 @@ Nella scheda **Proprietà** per questo passaggio, configurare le impostazioni de
 
 Specificare l'unità per cui si vuole abilitare BitLocker. BitLocker consente di crittografare solo lo spazio usato nell'unità.  
 
+#### <a name="disk-encryption-mode"></a>Modalità di crittografia del disco
+
+<!--6995601-->
+A partire dalla versione 2006, selezionare uno degli algoritmi di crittografia seguenti:
+
+- AES_128
+- AES_256
+- XTS_AES256
+- XTS_AES128
+
+Per impostazione predefinita o se non specificato, nel passaggio si usa ancora il metodo di crittografia predefinito per la versione del sistema operativo. Se il passaggio viene eseguito in una versione di Windows che non supporta l'algoritmo specificato, viene eseguito il fallback all'impostazione predefinita del sistema operativo. In questa circostanza il motore della sequenza di attività invia il messaggio di stato 11911.
+
 #### <a name="use-full-disk-encryption"></a>Usa la crittografia del disco completo
 
 <!--SCCMDocs-pr issue 2671-->
@@ -1642,7 +1706,7 @@ Per impostazione predefinita, questo passaggio consente di crittografare solo lo
 
 #### <a name="skip-this-step-for-computers-that-do-not-have-a-tpm-or-when-tpm-is-not-enabled"></a>Ignora questo passaggio per computer senza TPM o con TPM non abilitato
 
-Selezionare questa opzione per ignorare la crittografia delle unità in un computer che non contiene un modulo TPM supportato o abilitato. Ad esempio, usare questa opzione quando si distribuisce un sistema operativo in una macchina virtuale.  
+Selezionare questa opzione per ignorare la crittografia delle unità in un computer che non contiene un modulo TPM supportato o abilitato. Ad esempio, usare questa opzione quando si distribuisce un sistema operativo in una macchina virtuale. Per impostazione predefinita, questa impostazione è abilitata per il passaggio **Pre-provisioning di BitLocker**. Il passaggio non riesce in un dispositivo senza TPM o con un TPM non inizializzato. A partire dalla versione 2006, se per il dispositivo non è disponibile un TPM funzionante, il motore della sequenza di attività registrerà un avviso in smsts.log e invierà il messaggio di stato 11912.
 
 
 
@@ -1673,10 +1737,10 @@ Usare le variabili della sequenza di attività seguenti con questo passaggio:
 
 Gestire questo passaggio con i cmdlet di PowerShell seguenti:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepReleaseStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepReleaseStateStore?view=sccm-ps)
-- [New-CMTSStepReleaseStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepReleaseStateStore?view=sccm-ps)
-- [Remove-CMTSStepReleaseStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepReleaseStateStore?view=sccm-ps)
-- [Set-CMTSStepReleaseStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepReleaseStateStore?view=sccm-ps)
+- [Get-CMTSStepReleaseStateStore](/powershell/module/configurationmanager/Get-CMTSStepReleaseStateStore?view=sccm-ps)
+- [New-CMTSStepReleaseStateStore](/powershell/module/configurationmanager/New-CMTSStepReleaseStateStore?view=sccm-ps)
+- [Remove-CMTSStepReleaseStateStore](/powershell/module/configurationmanager/Remove-CMTSStepReleaseStateStore?view=sccm-ps)
+- [Set-CMTSStepReleaseStateStore](/powershell/module/configurationmanager/Set-CMTSStepReleaseStateStore?view=sccm-ps)
 
 ### <a name="properties-for-release-state-store"></a>Proprietà per Rilascia archiviazione stati
 
@@ -1712,10 +1776,10 @@ Usare le variabili della sequenza di attività seguenti con questo passaggio:
 
 Gestire questo passaggio con i cmdlet di PowerShell seguenti:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepRequestStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepRequestStateStore?view=sccm-ps)
-- [New-CMTSStepRequestStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepRequestStateStore?view=sccm-ps)
-- [Remove-CMTSStepRequestStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepRequestStateStore?view=sccm-ps)
-- [Set-CMTSStepRequestStateStore](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepRequestStateStore?view=sccm-ps)
+- [Get-CMTSStepRequestStateStore](/powershell/module/configurationmanager/Get-CMTSStepRequestStateStore?view=sccm-ps)
+- [New-CMTSStepRequestStateStore](/powershell/module/configurationmanager/New-CMTSStepRequestStateStore?view=sccm-ps)
+- [Remove-CMTSStepRequestStateStore](/powershell/module/configurationmanager/Remove-CMTSStepRequestStateStore?view=sccm-ps)
+- [Set-CMTSStepRequestStateStore](/powershell/module/configurationmanager/Set-CMTSStepRequestStateStore?view=sccm-ps)
 
 ### <a name="properties-for-request-state-store"></a>Proprietà per Richiedi archiviazione stati
 
@@ -1766,10 +1830,10 @@ Usare le variabili della sequenza di attività seguenti con questo passaggio:
 
 Gestire questo passaggio con i cmdlet di PowerShell seguenti:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepReboot](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepreboot?view=sccm-ps)
-- [New-CMTSStepReboot](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepreboot?view=sccm-ps)
-- [Remove-CMTSStepReboot](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepreboot?view=sccm-ps)
-- [Set-CMTSStepReboot](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepreboot?view=sccm-ps)
+- [Get-CMTSStepReboot](/powershell/module/configurationmanager/get-cmtsstepreboot?view=sccm-ps)
+- [New-CMTSStepReboot](/powershell/module/configurationmanager/new-cmtsstepreboot?view=sccm-ps)
+- [Remove-CMTSStepReboot](/powershell/module/configurationmanager/remove-cmtsstepreboot?view=sccm-ps)
+- [Set-CMTSStepReboot](/powershell/module/configurationmanager/set-cmtsstepreboot?view=sccm-ps)
 
 ### <a name="properties-for-restart-computer"></a>Proprietà per Riavvia computer
 
@@ -1830,10 +1894,10 @@ Usare le variabili della sequenza di attività seguenti con questo passaggio:
 
 Gestire questo passaggio con i cmdlet di PowerShell seguenti:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepRestoreUserState](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepRestoreUserState?view=sccm-ps)
-- [New-CMTSStepRestoreUserState](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepRestoreUserState?view=sccm-ps)
-- [Remove-CMTSStepRestoreUserState](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepRestoreUserState?view=sccm-ps)
-- [Set-CMTSStepRestoreUserState](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepRestoreUserState?view=sccm-ps)
+- [Get-CMTSStepRestoreUserState](/powershell/module/configurationmanager/Get-CMTSStepRestoreUserState?view=sccm-ps)
+- [New-CMTSStepRestoreUserState](/powershell/module/configurationmanager/New-CMTSStepRestoreUserState?view=sccm-ps)
+- [Remove-CMTSStepRestoreUserState](/powershell/module/configurationmanager/Remove-CMTSStepRestoreUserState?view=sccm-ps)
+- [Set-CMTSStepRestoreUserState](/powershell/module/configurationmanager/Set-CMTSStepRestoreUserState?view=sccm-ps)
 
 ### <a name="properties-for-restore-user-state"></a>Proprietà per Ripristina stato utente
 
@@ -1894,10 +1958,10 @@ Usare le variabili della sequenza di attività seguenti con questo passaggio:
 
 Gestire questo passaggio con i cmdlet di PowerShell seguenti:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepRunCommandLine](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepruncommandline?view=sccm-ps)
-- [New-CMTSStepRunCommandLine](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepruncommandline?view=sccm-ps)
-- [Remove-CMTSStepRunCommandLine](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepruncommandline?view=sccm-ps)
-- [Set-CMTSStepRunCommandLine](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepruncommandline?view=sccm-ps)
+- [Get-CMTSStepRunCommandLine](/powershell/module/configurationmanager/get-cmtsstepruncommandline?view=sccm-ps)
+- [New-CMTSStepRunCommandLine](/powershell/module/configurationmanager/new-cmtsstepruncommandline?view=sccm-ps)
+- [Remove-CMTSStepRunCommandLine](/powershell/module/configurationmanager/remove-cmtsstepruncommandline?view=sccm-ps)
+- [Set-CMTSStepRunCommandLine](/powershell/module/configurationmanager/set-cmtsstepruncommandline?view=sccm-ps)
 
 ### <a name="properties-for-run-command-line"></a>Proprietà per Esegui riga di comando
 
@@ -2012,10 +2076,10 @@ Usare le variabili della sequenza di attività seguenti con questo passaggio:
 
 Gestire questo passaggio con i cmdlet di PowerShell seguenti:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepRunPowerShellScript](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtssteprunpowershellscript?view=sccm-ps)
-- [New-CMTSStepRunPowerShellScript](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtssteprunpowershellscript?view=sccm-ps)
-- [Remove-CMTSStepRunPowerShellScript](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtssteprunpowershellscript?view=sccm-ps)
-- [Set-CMTSStepRunPowerShellScript](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtssteprunpowershellscript?view=sccm-ps)
+- [Get-CMTSStepRunPowerShellScript](/powershell/module/configurationmanager/get-cmtssteprunpowershellscript?view=sccm-ps)
+- [New-CMTSStepRunPowerShellScript](/powershell/module/configurationmanager/new-cmtssteprunpowershellscript?view=sccm-ps)
+- [Remove-CMTSStepRunPowerShellScript](/powershell/module/configurationmanager/remove-cmtssteprunpowershellscript?view=sccm-ps)
+- [Set-CMTSStepRunPowerShellScript](/powershell/module/configurationmanager/set-cmtssteprunpowershellscript?view=sccm-ps)
 
 > [!Note]  
 > Usare gli script PowerShell firmati in formato Unicode. Il formato ANSI, ovvero l'impostazione predefinita, non funziona con questo passaggio.
@@ -2169,10 +2233,10 @@ Quando si aggiunge una sequenza di attività figlio a una sequenza di attività,
 
 A partire dalla versione 1906, gestire questo passaggio con i cmdlet di PowerShell seguenti:<!-- 2839943, SCCMDocs#1118 -->
 
-- **Get-CMTSStepRunTaskSequence**
-- **New-CMTSStepRunTaskSequence**
-- **Remove-CMTSStepRunTaskSequence**
-- **Set-CMTSStepRunTaskSequence**
+- [Get-CMTSStepRunTaskSequence](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepruntasksequence?view=sccm-ps)
+- [New-CMTSStepRunTaskSequence](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepruntasksequence?view=sccm-ps)
+- [Remove-CMTSStepRunTaskSequence](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepruntasksequence?view=sccm-ps)
+- [Set-CMTSStepRunTaskSequence](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepruntasksequence?view=sccm-ps)
 
 Per altre informazioni, vedere [Note sulla versione 1906 - Nuovi cmdlet](https://docs.microsoft.com/powershell/sccm/1906-release-notes?view=sccm-ps#new-cmdlets).
 
@@ -2241,15 +2305,19 @@ Per impostare una variabile dinamica da usare nella sequenza di attività, aggiu
 
     Specificare una o più variabili da impostare per una regola che restituisce true oppure impostare variabili senza usare una regola. Selezionare una variabile esistente o creare una variabile personalizzata.  
 
-    - **Existing task sequence variables** (Variabili esistenti della sequenza di attività): selezionare una o più variabili da un elenco di variabili esistenti della sequenza di attività. Le variabili di matrice non sono disponibili per la selezione.  
+  - **Existing task sequence variables** (Variabili esistenti della sequenza di attività): selezionare una o più variabili da un elenco di variabili esistenti della sequenza di attività. Le variabili di matrice non sono disponibili per la selezione.  
 
-    - **Custom task sequence variables** (Variabili personalizzate della sequenza di attività): definire una variabile personalizzata della sequenza di attività. È anche possibile specificare una variabile esistente della sequenza di attività. Questa impostazione è utile per specificare una matrice di variabili esistenti, ad esempio **OSDAdapter**, perché le matrici di variabili non sono incluse nell'elenco di variabili esistenti della sequenza di attività.  
+  - **Custom task sequence variables** (Variabili personalizzate della sequenza di attività): definire una variabile personalizzata della sequenza di attività. È anche possibile specificare una variabile esistente della sequenza di attività. Questa impostazione è utile per specificare una matrice di variabili esistenti, ad esempio **OSDAdapter**, perché le matrici di variabili non sono incluse nell'elenco di variabili esistenti della sequenza di attività.  
 
-Dopo aver selezionato le variabili per una regola, specificare un valore per ogni variabile. La variabile è impostata sul valore specificato quando la regola restituisce true. Per ogni variabile è possibile selezionare **Valore segreto** per nascondere il valore della variabile. Per impostazione predefinita, alcune variabili esistenti nascondono i valori, ad esempio la variabile **OSDCaptureAccountPassword**.  
+Dopo aver selezionato le variabili per una regola, specificare un valore per ogni variabile. La variabile è impostata sul valore specificato quando la regola restituisce true. Per ogni variabile, è possibile selezionare **Non visualizzare questo valore** per nascondere il valore della variabile. Per impostazione predefinita, alcune variabili esistenti nascondono i valori, ad esempio la variabile **OSDCaptureAccountPassword**.  
 
 > [!IMPORTANT]  
-> Configuration Manager rimuove tutti i valori contrassegnati come **Valore segreto** quando si importa una sequenza di attività con il passaggio **Imposta variabili dinamiche**. Immettere di nuovo il valore per la variabile dinamica dopo l'importazione della sequenza di attività.  
+> Quando si importa una sequenza di attività con il passaggio **Imposta variabili dinamiche**, Configuration Manager rimuove tutti i valori contrassegnati come **Non visualizzare questo valore**. Dopo aver importato la sequenza di attività, immettere di nuovo il valore per la variabile dinamica.
 
+Quando si usa l'opzione **Non visualizzare questo valore**, il valore della variabile non viene visualizzato nell'editor della sequenza di attività. Il file di log della sequenza di attività (**smsts.log**) o il debugger della sequenza di attività non visualizzeranno neanche il valore della variabile. La variabile è ancora utilizzabile dalla sequenza di attività durante l'esecuzione. Se non è più necessario nascondere queste variabili, prima di tutto eliminarle, quindi ridefinire le variabili senza selezionare l'opzione per nasconderle.  
+
+> [!WARNING]  
+> Se si includono variabili nella riga di comando del passaggio **Esegui riga di comando**, il file di log della sequenza di attività visualizza la riga di comando completa, inclusi i valori delle variabili. Per impedire la comparsa di dati potenzialmente sensibili nel file di log, impostare la variabile della sequenza di attività **OSDDoNotLogCommand**  su `TRUE`.
 
 
 ## <a name="set-task-sequence-variable"></a><a name="BKMK_SetTaskSequenceVariable"></a> Imposta variabile della sequenza di attività
@@ -2271,10 +2339,10 @@ Le variabili della sequenza di attività vengono lette dalle azioni della sequen
 
 Gestire questo passaggio con i cmdlet di PowerShell seguenti:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepSetVariable](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepsetvariable?view=sccm-ps)
-- [New-CMTSStepSetVariable](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepsetvariable?view=sccm-ps)
-- [Remove-CMTSStepSetVariable](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepsetvariable?view=sccm-ps)
-- [Set-CMTSStepSetVariable](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepsetvariable?view=sccm-ps)
+- [Get-CMTSStepSetVariable](/powershell/module/configurationmanager/get-cmtsstepsetvariable?view=sccm-ps)
+- [New-CMTSStepSetVariable](/powershell/module/configurationmanager/new-cmtsstepsetvariable?view=sccm-ps)
+- [Remove-CMTSStepSetVariable](/powershell/module/configurationmanager/remove-cmtsstepsetvariable?view=sccm-ps)
+- [Set-CMTSStepSetVariable](/powershell/module/configurationmanager/set-cmtsstepsetvariable?view=sccm-ps)
 
 ### <a name="properties-for-set-task-sequence-variable"></a>Proprietà per Imposta variabile della sequenza di attività
 
@@ -2289,8 +2357,13 @@ Specificare il nome di una variabile di azione o predefinita della sequenza di a
 <!--1358330-->
 Abilitare questa opzione per mascherare i dati sensibili archiviati nelle variabili della sequenza di attività. ad esempio quando si specifica una password.
 
-> [!Note]  
+> [!NOTE]
 > Abilitare questa opzione e quindi impostare il valore della variabile della sequenza di attività. In caso contrario, il valore della variabile non viene impostato nel modo desiderato e ciò potrebbe causare comportamenti imprevisti quando viene eseguita la sequenza di attività.<!--SCCMdocs issue #800-->
+
+Quando si usa l'opzione **Non visualizzare questo valore**, il valore della variabile non viene visualizzato nell'editor della sequenza di attività. Il file di log della sequenza di attività (**smsts.log**) o il debugger della sequenza di attività non visualizzeranno neanche il valore della variabile. La variabile è ancora utilizzabile dalla sequenza di attività durante l'esecuzione. Se non è più necessario nascondere questa variabile, prima di tutto eliminarla e quindi ridefinire la variabile senza selezionare l'opzione per nasconderla.
+
+> [!WARNING]
+> Se si includono variabili nella riga di comando del passaggio **Esegui riga di comando**, il file di log della sequenza di attività visualizza la riga di comando completa, inclusi i valori delle variabili. Per impedire la comparsa di dati potenzialmente sensibili nel file di log, impostare la variabile della sequenza di attività **OSDDoNotLogCommand**  su `TRUE`.<!-- 6963278 -->
 
 #### <a name="value"></a>Valore  
 
@@ -2340,7 +2413,7 @@ Questo passaggio esegue le azioni seguenti:
 
 #### <a name="set-up-the-configuration-manager-client"></a>Impostazione del client di Configuration Manager  
 
-1. Al termine dell'installazione minima di Windows, verrà ripresa la sequenza di attività usando setupcomplete.cmd. Per altre informazioni, vedere [Eseguire uno script al termine dell'installazione (SetupComplete. cmd)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/add-a-custom-script-to-windows-setup#run-a-script-after-setup-is-complete-setupcompletecmd).  
+1. Al termine dell'installazione minima di Windows, verrà ripresa la sequenza di attività usando setupcomplete.cmd. Per altre informazioni, vedere [Eseguire uno script al termine dell'installazione (SetupComplete. cmd)](/windows-hardware/manufacture/desktop/add-a-custom-script-to-windows-setup#run-a-script-after-setup-is-complete-setupcompletecmd).  
 
 2. Abilitare o disabilitare l'account Administrator locale, in base all'opzione selezionata nel passaggio **Applica impostazioni Windows**.  
 
@@ -2353,7 +2426,7 @@ Questo passaggio esegue le azioni seguenti:
 L'esecuzione della sequenza di attività continua con il passaggio successivo.  
 
 > [!Note]  
-> Criteri di gruppo di Windows viene in genere eseguito dopo il completamento della sequenza di attività. Questo comportamento è coerente nelle diverse versioni di Windows. Altre azioni personalizzate durante la sequenza di attività possono attivare la valutazione di Criteri di gruppo. Per altre informazioni sull'ordine delle operazioni, vedere [Eseguire uno script al termine dell'installazione (SetupComplete. cmd)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/add-a-custom-script-to-windows-setup#run-a-script-after-setup-is-complete-setupcompletecmd). <!-- 2841304 -->
+> Criteri di gruppo di Windows viene in genere eseguito dopo il completamento della sequenza di attività. Questo comportamento è coerente nelle diverse versioni di Windows. Altre azioni personalizzate durante la sequenza di attività possono attivare la valutazione di Criteri di gruppo. Per altre informazioni sull'ordine delle operazioni, vedere [Eseguire uno script al termine dell'installazione (SetupComplete. cmd)](/windows-hardware/manufacture/desktop/add-a-custom-script-to-windows-setup#run-a-script-after-setup-is-complete-setupcompletecmd). <!-- 2841304 -->
 
 
 ### <a name="variables-for-setup-windows-and-configmgr"></a>Variabili per Imposta Windows e ConfigMgr
@@ -2366,10 +2439,10 @@ Usare le variabili della sequenza di attività seguenti con questo passaggio:
 
 Gestire questo passaggio con i cmdlet di PowerShell seguenti:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepSetupWindowsAndConfigMgr](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
-- [New-CMTSStepSetupWindowsAndConfigMgr](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
-- [Remove-CMTSStepSetupWindowsAndConfigMgr](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
-- [Set-CMTSStepSetupWindowsAndConfigMgr](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
+- [Get-CMTSStepSetupWindowsAndConfigMgr](/powershell/module/configurationmanager/get-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
+- [New-CMTSStepSetupWindowsAndConfigMgr](/powershell/module/configurationmanager/new-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
+- [Remove-CMTSStepSetupWindowsAndConfigMgr](/powershell/module/configurationmanager/remove-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
+- [Set-CMTSStepSetupWindowsAndConfigMgr](/powershell/module/configurationmanager/set-cmtsstepsetupwindowsandconfigmgr?view=sccm-ps)
 
 ### <a name="properties-for-setup-windows-and-configmgr"></a>Proprietà per Imposta Windows e ConfigMgr
 
@@ -2388,6 +2461,8 @@ Se è disponibile un pacchetto client di pre-produzione e il computer è un memb
 Il passaggio della sequenza di attività specifica automaticamente l'assegnazione del sito e la configurazione predefinita. Usare questo campo per specificare eventuali proprietà di installazione aggiuntive da usare quando si installa il client. Per immettere più proprietà di installazione, separarle con uno spazio.  
 
 Specificare le opzioni della riga di comando da usare durante l'installazione del client. Ad esempio, immettere `/skipprereq: silverlight.exe` per segnalare a CCMSetup.exe di non installare i prerequisiti di Microsoft Silverlight. Per altre informazioni sulle opzioni della riga di comando disponibili per CCMSetup.exe, vedere [About client installation properties](../../core/clients/deploy/about-client-installation-properties.md) (Informazioni sulle proprietà di installazione del client).  
+
+Quando si esegue una sequenza di attività di distribuzione del sistema operativo in un client basato su Internet, che sia aggiunto ad Azure AD o usi l'autenticazione basata su token, è necessario specificare la proprietà [CCMHOSTNAME](../../core/clients/deploy/about-client-installation-properties.md#ccmhostname) nel passaggio **Imposta Windows e ConfigMgr**. Ad esempio: `CCMHOSTNAME=OTTERFALLS.CLOUDAPP.NET/CCM_Proxy_MutualAuth/12345678907927939`.
 
 ### <a name="options-for-setup-windows-and-configmgr"></a>Opzioni per Imposta Windows e ConfigMgr
 
@@ -2421,10 +2496,10 @@ Usare le variabili della sequenza di attività seguenti con questo passaggio:
 
 Gestire questo passaggio con i cmdlet di PowerShell seguenti:<!-- SCCMDocs #1118 -->
 
-- [Get-CMTSStepUpgradeOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/Get-CMTSStepUpgradeOperatingSystem?view=sccm-ps)
-- [New-CMTSStepUpgradeOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/New-CMTSStepUpgradeOperatingSystem?view=sccm-ps)
-- [Remove-CMTSStepUpgradeOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/Remove-CMTSStepUpgradeOperatingSystem?view=sccm-ps)
-- [Set-CMTSStepUpgradeOperatingSystem](https://docs.microsoft.com/powershell/module/configurationmanager/Set-CMTSStepUpgradeOperatingSystem?view=sccm-ps)
+- [Get-CMTSStepUpgradeOperatingSystem](/powershell/module/configurationmanager/Get-CMTSStepUpgradeOperatingSystem?view=sccm-ps)
+- [New-CMTSStepUpgradeOperatingSystem](/powershell/module/configurationmanager/New-CMTSStepUpgradeOperatingSystem?view=sccm-ps)
+- [Remove-CMTSStepUpgradeOperatingSystem](/powershell/module/configurationmanager/Remove-CMTSStepUpgradeOperatingSystem?view=sccm-ps)
+- [Set-CMTSStepUpgradeOperatingSystem](/powershell/module/configurationmanager/Set-CMTSStepUpgradeOperatingSystem?view=sccm-ps)
 
 ### <a name="properties-for-upgrade-os"></a>Proprietà per Aggiorna sistema operativo
 
@@ -2450,7 +2525,7 @@ Specificare il codice Product Key da applicare al processo di aggiornamento.
 
 #### <a name="provide-the-following-driver-content-to-windows-setup-during-upgrade"></a>Specifica il seguente contenuto del driver in Installazione di Windows durante l'aggiornamento
 
-Aggiungere driver al computer di destinazione durante il processo di aggiornamento. I driver devono essere compatibili con Windows 10. Questa impostazione corrisponde all'opzione della riga di comando `/InstallDriver` di Installazione di Windows. Per altre informazioni, vedere [Opzioni della riga di comando di Installazione di Windows](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#installdrivers).
+Aggiungere driver al computer di destinazione durante il processo di aggiornamento. I driver devono essere compatibili con Windows 10. Questa impostazione corrisponde all'opzione della riga di comando `/InstallDriver` di Installazione di Windows. Per altre informazioni, vedere [Opzioni della riga di comando di Installazione di Windows](/windows-hardware/manufacture/desktop/windows-setup-command-line-options#installdrivers).
 
 Specificare una delle opzioni seguenti:  
 
@@ -2486,7 +2561,7 @@ Il programma di installazione restituisce un codice di uscita come risultato del
 |MOSETUP_E_COMPAT_SYSREQ_BLOCK (0xC1900200)|Non idoneo per Windows 10.|  
 |MOSETUP_E_COMPAT_INSTALLDISKSPACE_BLOCK (0xC190020E)|Spazio libero su disco insufficiente.|  
 
-Per altre informazioni su questo parametro, vedere [Opzioni della riga di comando di Installazione di Windows](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#compat).  
+Per altre informazioni su questo parametro, vedere [Opzioni della riga di comando di Installazione di Windows](/windows-hardware/manufacture/desktop/windows-setup-command-line-options#compat).  
 
 #### <a name="ignore-any-dismissible-compatibility-messages"></a>Ignora tutti i messaggi sulla compatibilità non rilevanti
 

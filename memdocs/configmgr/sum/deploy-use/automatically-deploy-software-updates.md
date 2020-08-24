@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: ae1f52b0744f79f79e00e5dfe2d6a76c903cf4a4
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 3f49d7d001de07a7d3d6a7bdbb5f9ff90de018c9
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240032"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699875"
 ---
 #  <a name="automatically-deploy-software-updates"></a>Distribuire automaticamente gli aggiornamenti software  
 
@@ -47,9 +47,9 @@ Approvare e distribuire automaticamente gli aggiornamenti software usando una re
 
          - Il modello **Patch martedì** offre impostazioni comuni da usare quando si distribuiscono aggiornamenti software su base ciclica mensile.  
 
-         - Il modello **Aggiornamenti del client Office 365** offre impostazioni comuni da usare quando si distribuiscono aggiornamenti per client Office 365 Pro Plus.
+         - Il modello **Aggiornamenti del client Office 365** offre impostazioni comuni da usare quando si distribuiscono aggiornamenti per client Microsoft 365 Apps.
              > [!Note]
-             > A partire dal 21 aprile 2020 Office 365 ProPlus viene rinominato come **App di Microsoft 365 per grandi imprese**. Se le regole di distribuzione automatica si basano sulla proprietà "Titolo", a partire dal 9 giugno 2020 sarà necessario modificare questa proprietà. `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)` è un esempio del nuovo titolo. Per altre informazioni sulla modifica delle regole di distribuzione automatica per la modifica del titolo, vedere [Aggiornare i canali per le app Microsoft 365](manage-office-365-proplus-updates.md#bkmk_channel). Per altre informazioni sulla modifica dei nomi, vedere [Modifica dei nomi di Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change).
+             > A partire dal 21 aprile 2020 Office 365 ProPlus viene rinominato come **App di Microsoft 365 per grandi imprese**. Se le regole di distribuzione automatica si basano sulla proprietà "Titolo", a partire dal 9 giugno 2020 sarà necessario modificare questa proprietà. `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)` è un esempio del nuovo titolo. Per altre informazioni sulla modifica delle regole di distribuzione automatica per la modifica del titolo, vedere [Aggiornare i canali per le app Microsoft 365](manage-office-365-proplus-updates.md#bkmk_channel). Per altre informazioni sulla modifica dei nomi, vedere [Modifica dei nomi di Office 365 ProPlus](/deployoffice/name-change).
 
          - Il modello **Aggiornamenti di SCEP e di Windows Defender Antivirus** offre impostazioni comuni da usare quando si distribuiscono aggiornamenti delle definizioni di Endpoint Protection.  
 
@@ -199,7 +199,7 @@ Approvare e distribuire automaticamente gli aggiornamenti software usando una re
 
         - **Abilita replica differenziale binaria**: Abilitare questa impostazione per usare la replica differenziale binaria per il pacchetto di distribuzione. Per altre informazioni, vedere [Replica differenziale binaria](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#binary-differential-replication).  
 
-    - **Nessun pacchetto di distribuzione**: a partire dalla versione 1806, è possibile distribuire gli aggiornamenti software nei dispositivi senza prima scaricare e distribuire il contenuto nei punti di distribuzione. Questa impostazione è utile quando il contenuto degli aggiornamenti è particolarmente esteso. Usarla anche quando si vuole che i client ottengano sempre i contenuti dal servizio cloud Microsoft Update. I client in questo scenario possono anche scaricare il contenuto da peer in cui è già presente il contenuto necessario. Il client Gestione configurazione continua a gestire il download del contenuto, quindi è in grado di usare la funzionalità peer cache di Configuration Manager o altre tecnologie, ad esempio Ottimizzazione recapito. Questa funzionalità supporta qualsiasi tipo di aggiornamento supportato dalla gestione degli aggiornamenti software di Configuration Manager, tra cui gli aggiornamenti di Windows e Office.<!--1357933-->  
+    - **Nessun pacchetto di distribuzione**: a partire dalla versione 1806, è possibile distribuire gli aggiornamenti software nei dispositivi senza prima scaricare e distribuire il contenuto nei punti di distribuzione. Questa impostazione è utile quando il contenuto degli aggiornamenti è particolarmente esteso. Usarla anche quando si vuole che i client ottengano sempre i contenuti dal servizio cloud Microsoft Update. I client in questo scenario possono anche scaricare il contenuto da peer in cui è già presente il contenuto necessario. Il client Gestione configurazione continua a gestire il download del contenuto, quindi è in grado di usare la funzionalità peer cache di Configuration Manager o altre tecnologie, ad esempio Ottimizzazione recapito. Questa funzionalità supporta qualsiasi tipo di aggiornamento supportato dalla gestione degli aggiornamenti software di Configuration Manager, tra cui gli aggiornamenti di Microsoft 365 Apps.<!--1357933-->  
 
         > [!Note]  
         > Quando si seleziona questa opzione e si applicano le impostazioni, non è più modificare modificarle. Le altre opzioni sono disattivate.<!--SCCMDocs-pr issue 3003-->  
@@ -244,7 +244,7 @@ Dopo aver creato una regola di distribuzione automatica, aggiungere altre distri
      - Avvisi
      - Impostazioni di download  
 
-Le distribuzioni possono essere aggiunte anche a livello di codice usando i cmdlet di Windows PowerShell. Per una descrizione completa dell'uso di questo metodo, vedere [New-CMSoftwareUpdateDeployment](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmsoftwareupdatedeployment).
+Le distribuzioni possono essere aggiunte anche a livello di codice usando i cmdlet di Windows PowerShell. Per una descrizione completa dell'uso di questo metodo, vedere [New-CMSoftwareUpdateDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdatedeployment).
 
 Per altre informazioni sul processo di distribuzione, vedere [Software update deployment process](../understand/software-updates-introduction.md#BKMK_DeploymentProcess).
 

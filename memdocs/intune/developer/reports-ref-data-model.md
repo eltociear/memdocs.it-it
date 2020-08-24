@@ -6,7 +6,7 @@ keywords: Data warehouse di Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/28/2020
+ms.date: 08/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db6feb746aa7177f56ff6e87565d67e207d4d9ef
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 1fb6ec17ce058247529ab1e51d50d876e4c97408
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165448"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252674"
 ---
 # <a name="microsoft-intune-data-warehouse-data-model"></a>Modello di dati del data warehouse di Microsoft Intune
 
@@ -60,6 +60,9 @@ Un modello di schema a stella è ottimizzato per l'analisi di dati e la flessibi
 ## <a name="time-daily-snapshots"></a>Tempo: snapshot giornalieri
 
 Il warehouse si trova a valle rispetto ai dati di Intune. Intune crea uno snapshot giornaliero a mezzanotte UTC e lo archivia nel warehouse. La durata degli snapshot acquisiti varia in base alla tabella dei fatti in uso. Alcune tabelle li mantengono per sette giorni, altre per 30 giorni e altre per periodi ancora più lunghi.
+
+> [!NOTE]
+> Il data warehouse non sincronizza i dispositivi Jamf. Per altre informazioni su Jamf, vedere [Risoluzione dei problemi relativi all'integrazione di Jamf Pro con Microsoft Intune](..\protect\troubleshoot-jamf.md) e [Dati inviati da Jamf Pro a Intune](..\protect\data-jamf-sends-to-intune.md).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

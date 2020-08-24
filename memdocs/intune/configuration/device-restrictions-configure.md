@@ -1,11 +1,11 @@
 ---
 title: Limitare le funzionalità dei i dispositivi tramite i criteri in Microsoft Intune - Azure | Microsoft Docs
-description: Aggiungere un profilo del dispositivo per limitare le funzionalità dell'amministratore di dispositivi Android e dei dispositivi Android Enterprise, macOS, iOS, iPadOS, Windows Phone e Windows 10 in Microsoft Intune.
+description: Aggiungere un profilo del dispositivo per limitare le funzionalità dell'amministratore di dispositivi Android e dei dispositivi Android Enterprise, macOS, iOS, iPadOS e Windows 10 in Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 08/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 951293ff723ff0243d4068656497cbe0bca27ef9
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e710678e3ac4775f5737090b791446c7a6e8285c
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989169"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146355"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>Configurare le impostazioni relative alle restrizioni dei dispositivi in Microsoft Intune
 
@@ -50,7 +50,6 @@ Questo articolo illustra come creare un profilo di limitazioni del dispositivo. 
         - **macOS**
         - **Windows 10 e versioni successive**
         - **Windows 8.1 e versioni successive**
-        - **Windows Phone 8.1**
 
     - **Profilo**: Selezionare **Limitazioni del dispositivo**.
 
@@ -70,7 +69,6 @@ Questo articolo illustra come creare un profilo di limitazioni del dispositivo. 
     - [Android Enterprise](device-restrictions-android-for-work.md)
     - [iOS/iPadOS](device-restrictions-ios.md)
     - [macOS](device-restrictions-macos.md)
-    - [Windows Phone 8.1](device-restrictions-windows-phone-8-1.md)
     - [Windows 8.1](device-restrictions-windows-8-1.md)
     - [Windows 10 e versioni successive](device-restrictions-windows-10.md)
     - [Windows 10 Team](device-restrictions-windows-10-teams.md)

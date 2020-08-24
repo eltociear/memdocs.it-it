@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/10/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 77a69af395aee293f927682f9d1a095c11a1d8a5
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: f0119ace5e1ec511ec0e8235a1dcea4b7199c058
+ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048090"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559539"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Creare e assegnare profili di certificato SCEP in Intune
 
@@ -211,13 +211,15 @@ Dopo aver [configurato l'infrastruttura](certificates-scep-configure.md) per sup
 
    - **Algoritmo hash**:
 
-     *(Si applica ad Android, Android Enterprise, Windows Phone 8.1, Windows 8.1 e versioni successive e Windows 10 e versioni successive)*
+     *(Si applica ad Android, Android Enterprise, Windows 8.1 e versioni successive e Windows 10 e versioni successive)*
 
      selezionare uno dei tipi di algoritmo hash disponibili da usare con questo certificato. Selezionare il livello di sicurezza più avanzato supportato dai dispositivi che verranno connessi.
 
    - **Certificato radice**:
 
      Selezionare il *profilo certificato attendibile* configurato in precedenza e assegnato a utenti e dispositivi applicabili per questo profilo di certificato SCEP. Il profilo di certificato attendibile viene usato per eseguire il provisioning di utenti e dispositivi con il certificato CA radice attendibile. Per informazioni sul profilo di certificato attendibile, vedere [Esportare il certificato CA radice attendibile](certificates-configure.md#export-the-trusted-root-ca-certificate) e [Creare profili di certificato attendibili](certificates-configure.md#create-trusted-certificate-profiles) in *Usare i certificati per l'autenticazione in Intune*. Se sono disponibili un'autorità di certificazione radice e un'autorità di certificazione emittente, selezionare il profilo del certificato radice trusted che convalida l'autorità di certificazione emittente.
+     > [!NOTE]
+     > Nei dispositivi iOS/iPadOS, se sono disponibili un'autorità di certificazione radice e un'autorità di certificazione emittente, selezionare il profilo del certificato radice trusted che convalida l'autorità di certificazione radice. 
 
    - **Utilizzo chiavi avanzato**:
 

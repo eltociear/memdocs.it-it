@@ -2,7 +2,7 @@
 title: Livelli dei dati di diagnostica e utilizzo
 titleSuffix: Configuration Manager
 description: Informazioni sui livelli dei dati di diagnostica e di utilizzo raccolti da Configuration Manager
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.assetid: 3c46bdb2-5bda-47c8-b5f4-9365a4b3521c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9de63280786d620229c7d408f09ef2fe583e231d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0d27e4a2f82de75cde853f3ce95c98ea8a12c465
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703799"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126506"
 ---
 # <a name="levels-of-diagnostic-usage-data"></a>Livelli dei dati di diagnostica e utilizzo
 
@@ -63,11 +63,11 @@ Per modificare il livello di raccolta dati, è necessario disporre di autorizzaz
 
 Gli articoli seguenti illustrano in dettaglio i dati specifici raccolti da Configuration Manager a ogni livello con ogni versione supportata:
 
+- [Dati di diagnostica e utilizzo per la versione 2006](levels-of-diagnostic-usage-data-collection-2006.md)
 - [Dati di diagnostica e utilizzo per la versione 2002](levels-of-diagnostic-usage-data-collection-2002.md)
 - [Dati di diagnostica e utilizzo per la versione 1910](levels-of-diagnostic-usage-data-collection-1910.md)
 - [Dati di diagnostica e utilizzo per la versione 1906](levels-of-diagnostic-usage-data-collection-1906.md)
-- [Dati di diagnostica e utilizzo per la versione 1902](levels-of-diagnostic-usage-data-collection-1902.md)
-- [Dati di diagnostica e utilizzo per la versione 1810](levels-of-diagnostic-usage-data-collection-1810.md)
+- [Dati di utilizzo e di diagnostica per la versione 1902](levels-of-diagnostic-usage-data-collection-1902.md)
 
 ## <a name="next-steps"></a>Passaggi successivi
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 08/14/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,17 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99dc504f8fc3148463288820dc810bab892e3081
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: 3b4a3334649b411390088a665f9a8fe9db8b47e1
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912402"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252306"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Informazioni sulla gestione delle app in Microsoft Intune
-
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Gli amministratori IT possono usare Microsoft Intune per gestire le app client usate dai dipendenti dell'azienda. Questa funzionalità si aggiunge alla gestione dei dispositivi e alla protezione dei dati. Una delle priorità di un amministratore è fare in modo che gli utenti finali abbiano accesso alle app necessarie per lavorare. Non sempre questo obiettivo risulta semplice da raggiungere, perché:
 - Esiste una vasta gamma di piattaforme per dispositivi e tipi di applicazione.
@@ -44,29 +41,30 @@ In aggiunta, potrebbe essere necessario assegnare e gestire le app su dispositiv
 MAM consente di gestire e proteggere i dati dell'organizzazione all'interno di un'applicazione. Con **MAM senza registrazione** (MAM-WE) un'app correlata all'istituto di istruzione o all'azienda contenente dati sensibili può essere gestita in quasi tutti i [dispositivi](app-management.md#app-management-capabilities-by-platform), inclusi i dispositivi personali in scenari **Bring-Your-Own-Device** (BYOD). La maggior parte delle app di produttività, ad esempio le app per Microsoft Office, può essere gestita da MAM di Intune. Vedere l'elenco ufficiale delle [app protette da Microsoft Intune](apps-supported-intune-apps.md) disponibili al pubblico.
 
 MAM di Intune supporta due configurazioni:
-- **MDM + MAM di Intune**: Gli amministratori IT possono gestire le app solo usando MAM e i criteri di protezione delle app nei dispositivi registrati con la gestione di dispositivi mobili (MDM) di Intune. Per gestire le app con MDM + MAM, i clienti devono usare la console di Intune nel portale di Azure all'indirizzo https://portal.azure.com.
-- **MAM senza registrazione del dispositivo**: questa configurazione, detta anche MAM-WE, consente agli amministratori IT di gestire le app tramite MAM e i criteri di protezione delle app nei dispositivi non registrati con MDM di Intune. Ciò significa che le app possono essere gestite da Intune nei dispositivi registrati con provider EMM di terze parti. Per gestire le app con MAM-WE, i clienti devono usare la console di Intune nel portale di Azure all'indirizzo https://portal.azure.com. Le app possono essere gestite da Intune anche nei dispositivi registrati con provider EMM (Enterprise Mobility Management) di terze parti o non registrati affatto in un sistema MDM. Per altre informazioni su BYOD ed EMS di Microsoft, vedere [Decisioni in merito alla tecnologia per l'abilitazione di BYOD con Microsoft Enterprise Mobility + Security (EMS)](../fundamentals/byod-technology-decisions.md).
+
+- **MDM + MAM di Intune**: Gli amministratori IT possono gestire le app solo usando MAM e i criteri di protezione delle app nei dispositivi registrati con la gestione di dispositivi mobili (MDM) di Intune. Per gestire le app con MDM e MAM, i clienti devono usare Intune nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+- **MAM senza registrazione del dispositivo**: questa configurazione, detta anche MAM-WE, consente agli amministratori IT di gestire le app tramite MAM e i criteri di protezione delle app nei dispositivi non registrati con MDM di Intune. Ciò significa che le app possono essere gestite da Intune nei dispositivi registrati con provider EMM di terze parti. Per gestire le app con MAM-WE, i clienti devono usare Intune nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). Le app possono essere gestite da Intune anche nei dispositivi registrati con provider EMM (Enterprise Mobility Management) di terze parti o non registrati affatto in un sistema MDM. Per altre informazioni su BYOD ed EMS di Microsoft, vedere [Decisioni in merito alla tecnologia per l'abilitazione di BYOD con Microsoft Enterprise Mobility + Security (EMS)](../fundamentals/byod-technology-decisions.md).
 
 ## <a name="app-management-capabilities-by-platform"></a>Funzionalità di gestione delle app per piattaforma
 
 Intune offre un'ampia gamma di funzionalità che consente di usare le app necessarie nei dispositivi in cui le si vuole eseguire. Nella tabella seguente è disponibile un riepilogo delle funzionalità di gestione delle app.
 
-| Funzionalità di gestione delle app | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10 | Windows Phone 8.1 |
-|-------------------------- | -------------------------- | ---------- | ----- | ---------- | ----------------- |
-| Aggiunta e assegnazione delle app a utenti e dispositivi | Sì | Sì | Sì | Sì | Sì |
-| Assegnazione delle app a dispositivi non registrati con Intune | Sì | Sì | No | No | No |
-| Uso dei criteri di configurazione delle app per controllare il comportamento di avvio delle app | Sì | Sì | No | No | No |
-| Uso dei criteri di provisioning delle app per dispositivi mobili per rinnovare app scadute | No | Sì | No | No | No |
-| Protezione dei dati aziendali in app con criteri di protezione delle app | Sì | Sì | No | No <sup>1</sup> | No |
-| Rimozione solo dei dati aziendali da un'app installata (cancellazione selettiva di app) | Sì | Sì | No | Sì | Sì |
-| Monitoraggio delle assegnazioni di app | Sì | Sì | Sì | Sì | Sì |
-| Assegnazione e monitoraggio delle app acquistate con Volume Purchase Program da un App Store | No | No | No | Sì | No |
-| Installazione obbligatoria delle app nei dispositivi (obbligatorio) <sup>2</sup> | Sì | Sì | Sì | Sì | Sì |
-| Installazione facoltativa nei dispositivi dal Portale aziendale (installazione disponibile) | Sì <sup>3</sup> | Sì | Sì | Sì | Sì |
-| Installazione di un collegamento a un'app sul Web (collegamento Web) | Sì <sup>4</sup> | Sì | Sì | Sì | Sì |
-| App interne (line-of-business) | Sì | Sì | Sì | Sì | No |
-| App da uno Store | Sì | Sì | No | Sì | Sì |
-| Aggiornare le app | Sì | Sì | No | Sì | Sì |
+| Funzionalità di gestione delle app | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10 |
+|-------------------------- | -------------------------- | ---------- | ----- | ---------- |
+| Aggiunta e assegnazione delle app a utenti e dispositivi | Sì | Sì | Sì | Sì |
+| Assegnazione delle app a dispositivi non registrati con Intune | Sì | Sì | No | No |  |
+| Uso dei criteri di configurazione delle app per controllare il comportamento di avvio delle app | Sì | Sì | No | No |
+| Uso dei criteri di provisioning delle app per dispositivi mobili per rinnovare app scadute | No | Sì | No | No |
+| Protezione dei dati aziendali in app con criteri di protezione delle app | Sì | Sì | No | No <sup>1</sup> |
+| Rimozione solo dei dati aziendali da un'app installata (cancellazione selettiva di app) | Sì | Sì | No | Sì |
+| Monitoraggio delle assegnazioni di app | Sì | Sì | Sì | Sì |
+| Assegnazione e monitoraggio delle app acquistate con Volume Purchase Program da un App Store | No | No | No | Sì |
+| Installazione obbligatoria delle app nei dispositivi (obbligatorio) <sup>2</sup> | Sì | Sì | Sì | Sì |
+| Installazione facoltativa nei dispositivi dal Portale aziendale (installazione disponibile) | Sì <sup>3</sup> | Sì | Sì | Sì |
+| Installazione di un collegamento a un'app sul Web (collegamento Web) | Sì <sup>4</sup> | Sì | Sì | Sì |
+| App interne (line-of-business) | Sì | Sì | Sì | Sì |
+| App da uno Store | Sì | Sì | No | Sì |
+| Aggiornare le app | Sì | Sì | No | Sì |
 
 <sup>1</sup> Considerare l'uso di [Windows Information Protection](../protect/windows-information-protection-configure.md) per proteggere le applicazioni sui dispositivi che eseguono Windows 10.<br>
 <sup>2</sup> Si applica solo ai dispositivi gestiti da Intune.<br>
@@ -113,13 +111,15 @@ Nella parte superiore del menu di spostamento del carico di lavoro App sono disp
 ### <a name="try-the-interactive-guide"></a>Provare la guida interattiva
 La guida interattiva [Gestire e proteggere le applicazioni per dispositivi mobili e desktop con Microsoft Endpoint Manager](https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager) presenta in modo dettagliato l'interfaccia di amministrazione di Microsoft Endpoint Manager per illustrare come gestire i dispositivi registrati in Intune, imporre la conformità con i criteri e proteggere i dati dell'organizzazione.</br></br>
 
-> [!VIDEO https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager]
+<div align=”center”>
+<iframe allowfullscreen width="95%" height="450" src="https://mslearn.cloudguides.com/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager" frameborder="0" scrolling="no"/></iframe>
+</div>
 
 ## <a name="additional-information"></a>Informazioni aggiuntive
 Gli elementi seguenti all'interno della console offrono funzionalità correlate alle app:
 - **Microsoft Store per le aziende**: consente di configurare l'integrazione di Microsoft Store per le aziende. In seguito è possibile sincronizzare le applicazioni acquistate con Intune, assegnarle e monitorare l'uso delle licenze. Per altre informazioni, vedere [App acquistate in base al volume tramite Microsoft Store per le aziende](windows-store-for-business.md).
 - **Certificato Windows Enterprise**: consente di applicare o visualizzare lo stato di un certificato di firma del codice usato per distribuire le app line-of-business ai dispositivi Windows gestiti.
-- **Certificato Symantec per Windows**: consente di applicare o visualizzare lo stato di un certificato di firma del codice Symantec necessario per distribuire i file con estensione appx XAP e WP8.x ai dispositivi Windows 10 Mobile.
+- **Certificato Symantec per Windows**: Applicare o visualizzare lo stato di un certificato di firma codice Symantec.
 - **Chiavi di sideload Windows**: consente di aggiungere una chiave di sideload di Windows che può essere usata per installare un'app direttamente nei dispositivi, invece di pubblicare e scaricare l'app da Windows Store. Per altre informazioni, vedere [Sideload di un'app di Windows](app-sideload-windows.md).
 - **Token VPP Apple**: consente di applicare e visualizzare le licenze Volume Purchase Program (VPP) di iOS. Per altre informazioni, vedere [App per iOS/iPadOS acquistate con Volume Purchase Program di Apple](vpp-apps-ios.md).
 - **Google Play gestito**: Google Play gestito è lo store di app aziendali di Google e l'unica origine di applicazioni per Android Enterprise. Per altre informazioni, vedere [Aggiungere app di Google Play gestite a dispositivi Android Enterprise con Intune](apps-add-android-for-work.md).

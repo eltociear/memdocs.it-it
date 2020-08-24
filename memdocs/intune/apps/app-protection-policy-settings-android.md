@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/16/2020
+ms.date: 08/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96f5b4c8400e993de4ecde0aa3d7c30f82a20e6b
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: d8fd15b7bdc52d3cd8dc00f77dced42e9bb6bd66
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262711"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252153"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Impostazioni dei criteri di protezione delle app di Android in Microsoft Intune
 Questo articolo descrive le impostazioni dei criteri di protezione delle app per dispositivi Android. Le impostazioni dei criteri descritte possono essere [configurate](app-protection-policies.md) per i criteri di protezione delle app nel riquadro **Impostazioni** del portale di Azure.
@@ -127,9 +127,9 @@ Per altre informazioni, vedere [Eccezioni dei criteri di trasferimento dei dati 
 
 
 ## <a name="conditional-launch"></a>Avvio condizionale
-Configurare le impostazioni dell'avvio condizionale per definire i requisiti di sicurezza dell'accesso per i criteri di protezione dell'accesso. 
+Configurare le impostazioni dell'avvio condizionale per definire i requisiti di sicurezza dell'accesso per i criteri di protezione delle app. 
 
-Per impostazione predefinita, per alcune impostazioni i valori e le azioni sono preconfigurati. È possibile eliminare alcune impostazioni, ad esempio *Versione minima del sistema operativo*. È anche possibile selezionare impostazioni aggiuntive dall'elenco a discesa **Selezionare una voce**. 
+Per impostazione predefinita, per alcune impostazioni i valori e le azioni sono preconfigurati. È possibile eliminare alcune impostazioni, come *Versione minima del sistema operativo*. È anche possibile selezionare impostazioni aggiuntive dall'elenco a discesa **Selezionare una voce**. 
 
 | Impostazione | Uso |  
 |---------|------------| 

@@ -10,12 +10,12 @@ ms.assetid: b670cfaf-96a4-4fcb-9caa-0f2e8c2c6198
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 835dcd0c86244c1731cb6c6e040d577160759614
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 6c42015880cae09be48feff9c42b6b2a0d2c8544
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83267791"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129315"
 ---
 # <a name="optimize-windows-10-update-delivery-with-configuration-manager"></a>Ottimizzare il recapito degli aggiornamenti di Windows 10 con Configuration Manager
 
@@ -70,7 +70,7 @@ Per usare Ottimizzazione recapito per tutti i file di installazione di Windows U
 > [!IMPORTANT]
 > - La funzionalità Ottimizzazione del recapito deve essere abilitata (impostazione predefinita) e non ignorata. Per altre informazioni, vedere [Ottimizzazione recapito di Windows](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference).
 > - Verificare le [impostazioni client di Ottimizzazione recapito](../../core/clients/deploy/about-client-settings.md#delivery-optimization) quando si modificano le [impostazioni client degli aggiornamenti software](../../core/clients/deploy/about-client-settings.md#software-updates) per il contenuto delta.
-> - Non è possibile usare Ottimizzazione recapito per gli aggiornamenti del client di Office 365 se è abilitato Office COM. Office COM viene usato da Configuration Manager per gestire gli aggiornamenti per i client di Office 365. È possibile annullare la registrazione di Office COM per consentire l'uso di Ottimizzazione recapito per gli aggiornamenti di Office 365. Quando Office COM è disabilitato, gli aggiornamenti software per Office 365 vengono gestiti dall'attività pianificata predefinita di Aggiornamenti automatici di Office 2.0. Ciò significa che Configuration Manager non impone né monitora il processo di installazione per gli aggiornamenti di Office 365. Configuration Manager continuerà a raccogliere informazioni dall'inventario hardware per popolare il dashboard di gestione client di Office 365 nella console. Per informazioni su come annullare la registrazione di Office COM, vedere l'argomento sull'[abilitazione dei client di Office 365 al ricevimento di aggiornamenti dalla rete CDN di Office anziché da Configuration Manager](https://docs.microsoft.com/deployoffice/manage-office-365-proplus-updates-with-configuration-manager#enable-office-365-clients-to-receive-updates-from-the-office-cdn-instead-of-configuration-manager).
+> - Non è possibile usare Ottimizzazione recapito per gli aggiornamenti del client di Microsoft 365 Apps se è abilitato Office COM. Office COM viene usato da Configuration Manager per gestire gli aggiornamenti per i client di Microsoft 365 Apps. È possibile annullare la registrazione di Office COM per consentire l'uso di Ottimizzazione recapito per gli aggiornamenti di Microsoft 365 Apps. Quando Office COM è disabilitato, gli aggiornamenti software per Microsoft 365 Apps vengono gestiti dall'attività pianificata predefinita di Aggiornamenti automatici di Office 2.0. Ciò significa che Configuration Manager non impone né monitora il processo di installazione per gli aggiornamenti di Microsoft 365 Apps. Configuration Manager continuerà a raccogliere informazioni dall'inventario hardware per popolare il dashboard di gestione client di Office 365 nella console. Per informazioni su come annullare la registrazione di Office COM, vedere l'argomento sull'[abilitazione dei client di Office 365 al ricevimento di aggiornamenti dalla rete CDN di Office anziché da Configuration Manager](https://docs.microsoft.com/deployoffice/manage-office-365-proplus-updates-with-configuration-manager#enable-office-365-clients-to-receive-updates-from-the-office-cdn-instead-of-configuration-manager).
 > - Quando si usa un CMG per l'archiviazione del contenuto, il contenuto per gli aggiornamenti di terze parti non viene scaricato nei client se è abilitata l'[impostazione client](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) **Consenti ai client di scaricare contenuto differenziale quando disponibile**. <!--6598587-->
 
 
@@ -98,8 +98,8 @@ La selezione della tecnologia di peer caching appropriata per i file di installa
 |---------|---------|---------|---------|
 | Supportata tra subnet diverse | Sì | Sì | No |
 | Limitazione larghezza di banda | Sì (nativa) | Sì (tramite BITS) | Sì (tramite BITS) |
-| Supporto del contenuto parziale | Sì, per tutti i tipi di contenuto supportati elencati nella riga successiva di questa colonna. | Solo per Office 365 e gli aggiornamenti rapidi | Sì, per tutti i tipi di contenuto supportati elencati nella riga successiva di questa colonna. |
-| Tipi di contenuto supportati | **Tramite ConfigMgr:** </br> - Aggiornamenti rapidi </br> - Tutti gli aggiornamenti di Windows (a partire dalla versione 1910) Non sono inclusi gli aggiornamenti di Office.</br> </br> **Tramite Microsoft Cloud:**</br> - Windows e aggiornamenti della sicurezza</br> - Driver</br> - App di Windows Store</br> - App di Windows Store per le aziende | Tutti i tipi di contenuto ConfigMgr, incluse le immagini scaricate in [Windows PE](../../osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md) | Tutti i tipi di contenuto di ConfigMgr, ad eccezione delle immagini |
+| Supporto del contenuto parziale | Sì, per tutti i tipi di contenuto supportati elencati nella riga successiva di questa colonna. | Solo per Microsoft 365 Apps e gli aggiornamenti rapidi | Sì, per tutti i tipi di contenuto supportati elencati nella riga successiva di questa colonna. |
+| Tipi di contenuto supportati | **Tramite ConfigMgr:** </br> - Aggiornamenti rapidi </br> - Tutti gli aggiornamenti di Windows (a partire dalla versione 1910) Non sono inclusi gli aggiornamenti di Microsoft 365 Apps.</br> </br> **Tramite Microsoft Cloud:**</br> - Windows e aggiornamenti della sicurezza</br> - Driver</br> - App di Windows Store</br> - App di Windows Store per le aziende | Tutti i tipi di contenuto ConfigMgr, incluse le immagini scaricate in [Windows PE](../../osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md) | Tutti i tipi di contenuto di ConfigMgr, ad eccezione delle immagini |
 | Controllo delle dimensioni della cache su disco | Sì | Sì | Sì |
 | Individuazione di un'origine peer | Automatico | Manuale (impostazione agente client) | Automatico |
 | Individuazione peer | Tramite il servizio cloud Ottimizzazione recapito (richiede l'accesso a Internet) | Tramite il punto di gestione (basato su gruppi di limiti client) | Multicast |

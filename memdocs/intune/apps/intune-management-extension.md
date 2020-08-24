@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 529d7a7da1257b9ebce1e1ab3cec706e8f100403
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: 0f4080c5cfcc6635478bd88b7d9edf42dd3d8576
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270940"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179486"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Usare gli script di PowerShell nei dispositivi Windows 10 in Intune
 
-Usare l'estensione di gestione di Microsoft Intune per caricare script di PowerShell in Intune da eseguire in dispositivi Windows 10. L'estensione di gestione migliora la gestione di dispositivi mobili (MDM, Mobile Device Management) di Windows 10 e rende più semplice passare a una gestione moderna.
+Usare l'estensione di gestione di Microsoft Intune per caricare script di PowerShell in Intune da eseguire in dispositivi Windows 10. L'estensione di gestione migliora la gestione dei dispositivi Windows e rende più semplice passare a una gestione moderna.
 
 Questa funzionalità si applica a:
 

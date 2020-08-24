@@ -10,12 +10,12 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2db1a719aaf1cb79973f1af8e2de3c1bbb91d605
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 0401207ec98331c33e87a0ac03b5cd7f750c17e7
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83879080"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698715"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Novità della versione 1906 di Configuration Manager Current Branch
 
@@ -87,7 +87,7 @@ Per altre informazioni, vedere [Informazioni dettagliate sulla gestione](../../s
 
 - Aggiunta di un nuovo membro di replica sincrona dalla configurazione<!--3127336-->: è ora possibile aggiungere un nuovo nodo di replica secondaria a un gruppo di disponibilità SQL Always On esistente. Invece di un processo manuale, usare la configurazione di Configuration Manager per apportare questa modifica. Per altre informazioni, vedere [Configurare gruppi di disponibilità AlwaysOn di SQL Server](../../servers/deploy/configure/configure-aoag.md#bkmk_sync).
 
-- Failover su più subnet<!-- SCCMDocs-pr#3734 -->: è ora possibile abilitare la [parola chiave della stringa di connessione MultiSubnetFailover](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) in SQL Server. È anche necessario configurare manualmente il server del sito. Per altre informazioni, vedere il prerequisito relativo al [failover su più subnet](../../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md#multi-subnet-failover).
+- Failover su più subnet<!-- SCCMDocs-pr#3734 -->: è ora possibile abilitare la [parola chiave della stringa di connessione MultiSubnetFailover](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) in SQL Server. È anche necessario configurare manualmente il server del sito. Per altre informazioni, vedere il prerequisito relativo al [failover su più subnet](../../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md#multi-subnet-failover).
 
 - Supporto per le viste distribuite<!-- SCCMDocs-pr#3792 -->: Il database del sito può essere ospitato in un gruppo di disponibilità Always On di SQL Server ed è possibile abilitare i collegamenti della replica di database per l'uso di [viste distribuite](../hierarchy/data-transfers-between-sites.md#bkmk_dbrep).
 
@@ -149,7 +149,7 @@ Per altre informazioni, vedere [Agente di raccolta dei log](../../../desktop-ana
 
 Per CMPivot sono ora disponibili operatori aritmetici aggiuntivi, aggregatori e la possibilità di aggiungere join di query, ad esempio l'uso congiunto di Registry e File.
 
-Per altre informazioni, vedere [CMPivot](../../servers/manage/cmpivot.md#bkmk_cmpivot1906).
+Per altre informazioni, vedere [CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot1906).
 
 ### <a name="cmpivot-standalone"></a>Modalità autonoma per CMPivot
 
@@ -171,7 +171,7 @@ Al ruolo [**Amministratore della protezione**](../../understand/fundamentals-of-
 - Run CMPivot on Collection (Esecuzione di CMPivot su raccolta)
 - Read on Inventory Report (Lettura su report inventario)
 
-Per altre informazioni, vedere [CMPivot](../../servers/manage/cmpivot.md#bkmk_cmpivot_secadmin1906).
+Per altre informazioni, vedere [CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot_secadmin1906).
 
 
 ## <a name="content-management"></a><a name="bkmk_content"></a> Gestione dei contenuti
@@ -198,7 +198,7 @@ Per altre informazioni, vedere [Cache in rete di Ottimizzazione recapito in Conf
 ### <a name="support-for-windows-virtual-desktop"></a>Supporto per Desktop virtuale Windows
 
 <!--3556025-->
-[Desktop virtuale Windows](https://docs.microsoft.com/azure/virtual-desktop/) è una funzionalità di anteprima di Microsoft Azure e Microsoft 365. È ora possibile usare Configuration Manager per gestire questi dispositivi virtuali che eseguono Windows in Azure.
+[Desktop virtuale Windows](/azure/virtual-desktop/) è una funzionalità di anteprima di Microsoft Azure e Microsoft 365. È ora possibile usare Configuration Manager per gestire questi dispositivi virtuali che eseguono Windows in Azure.
 
 Analogamente a un server terminal, questi dispositivi virtuali consentono l'esecuzione di più sessioni utente attive simultanee. Per migliorare le prestazioni dei client, Configuration Manager disabilita ora i criteri utente su tutti i dispositivi che consentono l'esecuzione di più sessioni utente. Anche se si abilitano i criteri utente, il client li disabilita per impostazione predefinita in questi dispositivi che includono Desktop virtuale Windows e i server terminal.
 
@@ -505,7 +505,7 @@ Il collegamento ipertestuale  **Visualizza gli elementi necessari** è disponibi
    - **Raccolta software** > **Manutenzione pacchetti di Windows 10** > **Tutti gli aggiornamenti di Windows 10**
    - **Raccolta software** > **Gestione client di Office 365** > **Aggiornamenti di Office 365**
 
-Per altre informazioni, vedere [Monitorare gli aggiornamenti software](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates), [Gestire Windows come servizio](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates) e [Gestire gli aggiornamenti di Office 365 ProPlus](../../../sum/deploy-use/manage-office-365-proplus-updates.md#drill-through-required-office-365-updates).
+Per altre informazioni, vedere [Monitorare gli aggiornamenti software](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates), [Gestire Windows come servizio](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates) e [Gestire gli aggiornamenti di Office 365 ProPlus](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 
 ## <a name="office-management"></a><a name="bkmk_o365"></a> Gestione di Office
@@ -538,7 +538,7 @@ Per altre informazioni, vedere [Creare e distribuire criteri di Windows Defender
 
 È ora possibile impostare ambiti di protezione per le cartelle. Se si ha accesso a un oggetto nella cartella ma non si ha accesso alla cartella, non sarà possibile visualizzare l'oggetto. Analogamente, se si ha accesso a una cartella ma non a un oggetto all'interno della cartella, non sarà possibile visualizzare l'oggetto. Fare clic con il pulsante destro del mouse su una cartella, scegliere **Imposta ambiti di protezione** e quindi scegliere gli ambiti di protezione da applicare.
 
-Per altre informazioni, vedere [Uso della console di Configuration Manager ](../../servers/manage/admin-console.md#tips) e [Configurare l'amministrazione basata su ruoli](../../servers/deploy/configure/configure-role-based-administration.md#bkmk_config-folder).
+Per altre informazioni, vedere [Suggerimenti sulla console di Configuration Manager ](../../servers/manage/admin-console-tips.md) e [Configurare l'amministrazione basata su ruoli](../../servers/deploy/configure/configure-role-based-administration.md#bkmk_config-folder).
 
 ### <a name="add-smbios-guid-column-to-device-and-device-collection-nodes"></a>Aggiungi la colonna GUID SMBIOS ai nodi Dispositivo e Raccolta di dispositivi
 
@@ -622,7 +622,7 @@ A partire da questa versione, le funzionalità seguenti non sono più in version
 
 A parte le nuove funzionalità, questa versione include anche ulteriori modifiche, ad esempio correzioni di bug. Per altre informazioni, vedere [Riepilogo delle modifiche in Configuration Manager Current Branch, versione 1906](https://support.microsoft.com/help/4514258).
 
-Per altre informazioni sulle modifiche apportate ai cmdlet di Windows PowerShell per Configuration Manager, vedere le [note sulla versione 1906 di PowerShell](https://docs.microsoft.com/powershell/sccm/1906-release-notes?view=sccm-ps).
+Per altre informazioni sulle modifiche apportate ai cmdlet di Windows PowerShell per Configuration Manager, vedere le [note sulla versione 1906 di PowerShell](/powershell/sccm/1906-release-notes?view=sccm-ps).
 
 L'aggiornamento cumulativo seguente (4517869) è disponibile nella console a partire dal 1° ottobre 2019: [Aggiornamento cumulativo per Configuration Manager Current Branch, versione 1906](https://support.microsoft.com/help/4517869).
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: c7bb6d01a35ce42002207d57d27fc41c37646d15
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 7015ab4c180ed56b00149ffbff99c9e5a8112e95
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268862"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126002"
 ---
 # <a name="how-to-connect-configuration-manager-with-desktop-analytics"></a>Come connettere Configuration Manager a Desktop Analytics
 
@@ -84,8 +84,11 @@ Usare questa procedura per connettere Configuration Manager a Desktop Analytics 
 
     - **ID commerciale**: questo valore deve essere popolato automaticamente con l'ID dell'organizzazione. In caso contrario, assicurarsi che il server proxy sia configurato in modo da consentire tutti gli [endpoint](enable-data-sharing.md#endpoints) necessari prima di continuare. In alternativa, recuperare manualmente l'ID commerciale dal [portale di Desktop Analytics](monitor-connection-health.md#bkmk_ViewCommercialID).
 
-    - **Livello dei dati di diagnostica di Windows 10**: selezionare almeno **Base**. Vedere [Livelli dei dati di diagnostica](enable-data-sharing.md#diagnostic-data-levels)
-  
+    - **Livello dei dati di diagnostica di Windows 10**: selezionare almeno **Obbligatorio**. Per altre informazioni, vedere [Livelli dei dati di diagnostica](enable-data-sharing.md#diagnostic-data-levels).
+
+        > [!TIP]
+        > In Configuration Manager versione 2002 e precedenti, questo valore era chiamato **Base**.<!-- 7363467 -->
+
     - **Consenti il nome del dispositivo nei dati di diagnostica**: selezionare **Abilita**
 
         > [!NOTE]
@@ -128,7 +131,7 @@ Configuration Manager crea criteri di impostazioni per configurare i dispositivi
 
 ## <a name="monitor-connection-health"></a><a name="bkmk_monitor"></a> Monitorare l'integrità della connessione
 
-Monitorare la configurazione dei dispositivi per Desktop Analytics. Nella console di Configuration Manager passare all'area di lavoro **Raccolta software**, espandere il nodo **Manutenzione di Desktop Analytics** e selezionare la dashboard **Integrità connessione**.
+Monitorare la configurazione dei dispositivi per Desktop Analytics. Nella console di Configuration Manager passare all'area di lavoro **Raccolta software**, espandere il nodo **Manutenzione di Desktop Analytics** e selezionare il dashboard **Integrità connessione**.
 
 Per altre informazioni, vedere [Monitorare l'integrità della connessione](monitor-connection-health.md).
 

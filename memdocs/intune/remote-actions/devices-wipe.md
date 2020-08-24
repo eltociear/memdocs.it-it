@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eccb45ee4a0aade230ba8c18f68c4f0bc992e011
-ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
+ms.openlocfilehash: 50c1842357a79ce3228b7b0a5283dc9a4e98b2d6
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491321"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252340"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Rimuovere i dispositivi con la cancellazione, la disattivazione o l'annullamento manuale della registrazione
 
@@ -132,14 +132,14 @@ I dispositivi in modalità tutto schermo possono solo essere cancellati. Non è 
 
 ### <a name="windows"></a>Windows
 
-|Tipo di dati|Windows 8.1 (MDM) e Windows RT 8.1|Windows RT|Windows Phone 8.1 e Windows Phone 8|Windows 10|
+|Tipo di dati|Windows 8.1 (MDM) e Windows RT 8.1|Windows RT|Windows 10|
 |-------------|----------------------------------------------------------------|--------------|-----------------------------------------|--------|
-|App aziendali e dati associati installati da Intune|Le chiavi vengono revocate per i file protetti da EFS. L'utente non può aprire i file.|Le app aziendali non vengono rimosse.|Vengono disinstallate le app installate inizialmente attraverso il portale aziendale e vengono rimossi i dati dell'app aziendale.|Le app vengono disinstallate Le chiavi di trasferimento locale vengono rimosse.<br>Per Windows 10 versione 1709 (Creators Update) e versioni successive, la funzionalità App di Microsoft 365 non viene rimossa. Le app Win32 installate dall'estensione di gestione di Intune non verranno disinstallate nei dispositivi di cui è stata annullata la registrazione. Gli amministratori possono sfruttare l'esclusione di assegnazione per non offrire l'app Win32 ai dispositivi BYOD.|
-|Impostazioni|Le configurazioni impostate dai criteri di Intune non vengono più applicate. Gli utenti possono modificare le impostazioni.|Le configurazioni impostate dai criteri di Intune non vengono più applicate. Gli utenti possono modificare le impostazioni.|Le configurazioni impostate dai criteri di Intune non vengono più applicate. Gli utenti possono modificare le impostazioni.|Le configurazioni impostate dai criteri di Intune non vengono più applicate. Gli utenti possono modificare le impostazioni.|
-|Impostazioni del profilo Wi-Fi e VPN|Rimosso.|Rimosso.|Non supportata.|Rimosso.|
-|Impostazioni del profilo certificato|Certificati rimossi e revocati.|Certificati rimossi e revocati.|Non supportata.|Certificati rimossi e revocati.|
-|Posta elettronica|Rimuove i messaggi di posta elettronica abilitati per EFS. Sono inclusi i messaggi e gli allegati di posta elettronica nell'app Mail per Windows.|Non supportata.|I profili di posta elettronica di cui viene eseguito il provisioning con Intune vengono rimossi. I messaggi di posta elettronica memorizzati nella cache del dispositivo vengono eliminati.|Rimuove i messaggi di posta elettronica abilitati per EFS. Sono inclusi i messaggi e gli allegati di posta elettronica nell'app Mail per Windows. Rimuove gli account di posta elettronica di cui Intune ha effettuato il provisioning.|
-|Separazione di Azure AD|No.|No.|Il record di Azure AD viene rimosso.|Il record di Azure AD viene rimosso.|
+|App aziendali e dati associati installati da Intune|Le chiavi vengono revocate per i file protetti da EFS. L'utente non può aprire i file.|Le app aziendali non vengono rimosse.|Le app vengono disinstallate Le chiavi di trasferimento locale vengono rimosse.<br>Per Windows 10 versione 1709 (Creators Update) e versioni successive, la funzionalità App di Microsoft 365 non viene rimossa. Le app Win32 installate dall'estensione di gestione di Intune non verranno disinstallate nei dispositivi di cui è stata annullata la registrazione. Gli amministratori possono sfruttare l'esclusione di assegnazione per non offrire l'app Win32 ai dispositivi BYOD.|
+|Impostazioni|Le configurazioni impostate dai criteri di Intune non vengono più applicate. Gli utenti possono modificare le impostazioni.|Le configurazioni impostate dai criteri di Intune non vengono più applicate. Gli utenti possono modificare le impostazioni.|Le configurazioni impostate dai criteri di Intune non vengono più applicate. Gli utenti possono modificare le impostazioni.|
+|Impostazioni del profilo Wi-Fi e VPN|Rimosso.|Rimosso.|Rimosso.|
+|Impostazioni del profilo certificato|Certificati rimossi e revocati.|Certificati rimossi e revocati.|Certificati rimossi e revocati.|
+|Posta elettronica|Rimuove i messaggi di posta elettronica abilitati per EFS. Sono inclusi i messaggi e gli allegati di posta elettronica nell'app Mail per Windows.|Non supportata.|Rimuove i messaggi di posta elettronica abilitati per EFS. Sono inclusi i messaggi e gli allegati di posta elettronica nell'app Mail per Windows. Rimuove gli account di posta elettronica di cui Intune ha effettuato il provisioning.|
+|Separazione di Azure AD|No.|No.|Il record di Azure AD viene rimosso.|
 
 > [!NOTE]
 > Per i dispositivi Windows 10 che si aggiungono Azure AD durante la configurazione iniziale (OOBE), il comando Ritiro rimuoverà tutti gli account Azure AD dal dispositivo. Per accedere come amministratore locale e ottenere nuovamente l'accesso ai dati locali dell'utente, seguire la procedura descritta in [Avviare il PC in modalità provvisoria](https://support.microsoft.com/en-us/help/12376/windows-10-start-your-pc-in-safe-mode). 
@@ -167,7 +167,8 @@ Per rimuovere i dispositivi dal portale di Intune, è possibile eliminarli dal r
 3. Nella casella **Elimina i dispositivi non archiviati per il numero di giorni specificato** immettere un numero compreso tra 30 e 270.
 4. Scegliere **Salva**.
 
-
+> [!NOTE]
+> Le regole di pulizia dei dispositivi non sono disponibili per scenari Android Enterprise quali [Completamente gestito](https://docs.microsoft.com/mem/intune/enrollment/android-fully-managed-enroll), [Dedicato](https://docs.microsoft.com/mem/intune/enrollment/android-kiosk-enroll) e [Dispositivi di proprietà dell'azienda con profilo di lavoro](https://docs.microsoft.com/mem/intune/enrollment/android-corporate-owned-work-profile-enroll). 
 
 ## <a name="delete-devices-from-the-azure-active-directory-portal"></a>Eliminare dispositivi dal portale di Azure Active Directory
 

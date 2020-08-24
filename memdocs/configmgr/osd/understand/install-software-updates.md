@@ -5,17 +5,17 @@ description: Suggerimenti per l'uso del passaggio della sequenza di attività In
 ms.date: 05/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.assetid: 72d1ccd5-3763-4f88-9273-e1a73e8f4286
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6528e979222bc6ecea2a57a003ff5266b5c096c5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 73acd43ef9d7924682de9df66487c5a04297e640
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703309"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697501"
 ---
 # <a name="install-software-updates"></a>Installa aggiornamenti software
 
@@ -104,10 +104,10 @@ Per altre informazioni, vedere [Applicare aggiornamenti software a un'immagine d
 
 - Selezione manuale degli aggiornamenti
 - Maggiore tempo per distribuire l'immagine ai punti di distribuzione
-- Supporta solo aggiornamenti basati su CBS. Non è possibile applicare gli aggiornamenti di Office
+- Supporta solo aggiornamenti basati su CBS. Non può applicare aggiornamenti di Microsoft 365 Apps
 
 > [!Tip]  
-> È possibile automatizzare la selezione degli aggiornamenti software tramite PowerShell. Usare il cmdlet [Get-CMSoftwareUpdate](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmsoftwareupdate?view=sccm-ps) per ottenere un elenco degli aggiornamenti. Usare quindi il cmdlet [New-CMOperatingSystemImageUpdateSchedule](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmoperatingsystemimageupdateschedule?view=sccm-ps) per creare la pianificazione delle installazioni offline. L'esempio seguente illustra un metodo per automatizzare questa azione:
+> È possibile automatizzare la selezione degli aggiornamenti software tramite PowerShell. Usare il cmdlet [Get-CMSoftwareUpdate](/powershell/module/configurationmanager/get-cmsoftwareupdate?view=sccm-ps) per ottenere un elenco degli aggiornamenti. Usare quindi il cmdlet [New-CMOperatingSystemImageUpdateSchedule](/powershell/module/configurationmanager/new-cmoperatingsystemimageupdateschedule?view=sccm-ps) per creare la pianificazione delle installazioni offline. L'esempio seguente illustra un metodo per automatizzare questa azione:
 >
 > ```PowerShell
 > # Get the OS image

@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4972f6e8689ad44dbd1a19adcde104cd5f59038c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f758456ad75c4acde1b050be75d653cc0e1dcfa1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702399"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700368"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Novità della versione 1902 di Configuration Manager Current Branch
 
@@ -121,7 +121,7 @@ Per altre informazioni, vedere [Progettazione della gerarchia CMG](../../clients
 <!--3610960-->
 Configuration Manager supporta ora l'esecuzione di CMPivot dal sito di amministrazione centrale in una gerarchia. Il sito primario gestisce ancora la comunicazione con il client. Quando CMPivot viene eseguito dal sito di amministrazione centrale, comunica con il sito primario tramite il canale di sottoscrizione dei messaggi ad alta velocità. Questa comunicazione non si basa sulla replica SQL standard tra siti.
 
-Per altre informazioni, vedere [CMPivot per i dati in tempo reale in Configuration Manager](../../servers/manage/cmpivot.md#bkmk_cmpivot1902).
+Per altre informazioni, vedere [CMPivot per i dati in tempo reale in Configuration Manager](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot1902).
 
 ### <a name="edit-or-copy-powershell-scripts"></a>Modificare o copiare gli script di PowerShell
 
@@ -349,9 +349,9 @@ Per altre informazioni, vedere [About client settings](../../clients/deploy/abou
 <!--3556021-->
 Usare Configuration Manager per spostare le cartelle note di Windows in OneDrive for Business. Queste cartelle includono Desktop, Documenti e Immagini. Per semplificare gli aggiornamenti di Windows 10, distribuire queste impostazioni ai client Windows 7 prima di distribuire una sequenza di attività.
 
-Per altre informazioni su questa funzionalità di OneDrive for Business, vedere [Reindirizzare e spostare le cartelle note di Windows su OneDrive](https://docs.microsoft.com/onedrive/redirect-known-folders).
+Per altre informazioni su questa funzionalità di OneDrive for Business, vedere [Reindirizzare e spostare le cartelle note di Windows su OneDrive](/onedrive/redirect-known-folders).
 
-Prima di tutto, [trovare l'ID tenant di Office 365](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id). Distribuire quindi il client di sincronizzazione di OneDrive versione 18.111.0603.0004 o successiva. Per altre informazioni, vedere [Distribuire le app OneDrive mediante Configuration Manager](https://docs.microsoft.com/onedrive/deploy-on-windows).  
+Prima di tutto, [trovare l'ID tenant di Office 365](/onedrive/find-your-office-365-tenant-id). Distribuire quindi il client di sincronizzazione di OneDrive versione 18.111.0603.0004 o successiva. Per altre informazioni, vedere [Distribuire le app OneDrive mediante Configuration Manager](/onedrive/deploy-on-windows).  
 
 Per creare e distribuire un profilo di OneDrive for Business, nella console di Configuration Manager passare all'area di lavoro **Asset e conformità**. Espandere **Impostazioni di conformità** e selezionare il nodo **Profili di OneDrive for Business**.  
 
@@ -413,7 +413,7 @@ In base ai suggerimenti dei clienti raccolti durante il Midwest Management Summi
 - Organizzare le visualizzazioni in base a valori interi nel nodo **Distribuzioni** dell'area di lavoro **Monitoraggio**
 - Spostare l'avviso per un numero elevato di risultati
 
-Per altre informazioni, vedere [Uso della console di Configuration Manager](../../servers/manage/admin-console.md#tips).
+Per altre informazioni, vedere [Suggerimenti sulla console di Configuration Manager](../../servers/manage/admin-console-tips.md).
 
 ### <a name="configuration-manager-console-notifications"></a>Notifiche della console di Configuration Manager
 
@@ -425,7 +425,7 @@ Per fornire informazioni più accurate che consentano di intraprendere l'azione 
 
 Queste notifiche sono visualizzate in una barra nella parte superiore della finestra della console sotto la barra multifunzione. Sostituiscono l'esperienza precedente che avvisava della disponibilità di aggiornamenti di Configuration Manager. Queste notifiche nella console visualizzano comunque informazioni critiche, ma non interferiscono con l'interazione tra utente e console. Le notifiche critiche non possono essere ignorate. Tutte le notifiche della console sono visualizzate in una nuova area di notifica della barra del titolo.
 
-Per altre informazioni, vedere [Uso della console di Configuration Manager](../../servers/manage/admin-console.md).
+Per altre informazioni, vedere [Notifiche della console di Configuration Manager](../../servers/manage/admin-console-notifications.md).
 
 ### <a name="confirmation-of-console-feedback"></a>Conferma del feedback della console
 
@@ -453,7 +453,7 @@ Per altre informazioni, vedere [Uso della console di Configuration Manager](../.
 <!--3600878-->
 È ora possibile cercare un indirizzo MAC in una visualizzazione dispositivi della console di Configuration Manager. Questa proprietà è utile per gli amministratori della distribuzione di sistemi operativi durante la risoluzione dei problemi delle distribuzioni basate su Pre-Boot eXecution Environment. Quando si visualizza un elenco di dispositivi, aggiungere la colonna **Indirizzo MAC** alla visualizzazione. Usare il campo di ricerca per aggiungere i criteri di ricerca **Indirizzo MAC**.
 
-Per altre informazioni, vedere [Uso della console di Configuration Manager](../../servers/manage/admin-console.md#tips).
+Per altre informazioni, vedere [Suggerimenti sulla console di Configuration Manager](../../servers/manage/admin-console-tips.md).
 
 ### <a name="use-net-47-for-improved-console-accessibility"></a>Usare .NET 4.7 per una migliore accessibilità della console
 
@@ -479,7 +479,7 @@ Quando si installa o si aggiorna un server del sito, questo copia i file di inst
 
 A parte le nuove funzionalità, questa versione include anche ulteriori modifiche, ad esempio correzioni di bug. Per altre informazioni, vedere [Riepilogo delle modifiche in Configuration Manager Current Branch, versione 1902](https://support.microsoft.com/help/4498910).
 
-Per altre informazioni sulle modifiche apportate ai cmdlet di Windows PowerShell per Configuration Manager, vedere le [note sulla versione 1902 di PowerShell](https://docs.microsoft.com/powershell/sccm/1902-release-notes?view=sccm-ps).
+Per altre informazioni sulle modifiche apportate ai cmdlet di Windows PowerShell per Configuration Manager, vedere le [note sulla versione 1902 di PowerShell](/powershell/sccm/1902-release-notes?view=sccm-ps).
 
 L'aggiornamento cumulativo seguente (4500571) è disponibile nella console a partire dal 17 giugno 2019: [Aggiornamento cumulativo per Configuration Manager Current Branch, versione 1902](https://support.microsoft.com/help/4500571).
 

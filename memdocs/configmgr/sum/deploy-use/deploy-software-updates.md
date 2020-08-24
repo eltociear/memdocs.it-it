@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 04536d51-3bf7-45e5-b4af-36ceed10583d
-ms.openlocfilehash: 00accfc5150226830b68beb194fa168c08148b84
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: a6e27e2d03983fdf627016d0e3b41aaa378afe29
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110424"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693472"
 ---
 # <a name="deploy-software-updates"></a>Distribuire gli aggiornamenti software  
 
@@ -69,8 +69,8 @@ Il seguente elenco descrive il flusso di lavoro generale per la distribuzione ma
 Per altre informazioni e per la procedura dettagliata, vedere [Distribuire manualmente gli aggiornamenti software](manually-deploy-software-updates.md).
 
 > [!Note]
-> - A partire dal 21 aprile 2020 Office 365 ProPlus viene rinominato come **App di Microsoft 365 per grandi imprese**. Per altre informazioni, vedere [Modifica del nome di Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). È comunque possibile che vengano ancora visualizzati riferimenti al nome precedente nella console di Configuration Manager e nella documentazione di supporto mentre la console viene aggiornata.
-> - Quando vengono distribuiti manualmente, gli aggiornamenti del client Office 365 sono disponibili nel nodo **Aggiornamenti di Office 365** in **Gestione client di Office 365** dell'area di lavoro **Raccolta software**. 
+> - A partire dal 21 aprile 2020 Office 365 ProPlus viene rinominato come **App di Microsoft 365 per grandi imprese**. Per altre informazioni, vedere [Modifica del nome di Office 365 ProPlus](/deployoffice/name-change). È comunque possibile che vengano ancora visualizzati riferimenti al nome precedente nella console di Configuration Manager e nella documentazione di supporto mentre la console viene aggiornata.
+> - Quando vengono distribuiti manualmente, gli aggiornamenti del client Microsoft 365 Apps sono disponibili nel nodo **Aggiornamenti di Office 365** in **Gestione client di Office 365** dell'area di lavoro **Raccolta software**. 
 
 ## <a name="automatically-deploy-software-updates"></a><a name="bkmk_auto"></a> Distribuire automaticamente gli aggiornamenti software
 
@@ -115,5 +115,5 @@ Per altre informazioni e per la procedura dettagliata, vedere [Distribuire autom
 <!--1358146-->
 A partire dalla versione 1810, creare distribuzioni in più fasi per gli aggiornamenti software. Le distribuzioni in più fasi consentono di orchestrare un'implementazione coordinata e in sequenza del software basata su criteri e gruppi personalizzabili.
 
-Per altre informazioni, vedere [Creare distribuzioni in più fasi](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json).
+Per altre informazioni, vedere [Creare distribuzioni in più fasi](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json).
 

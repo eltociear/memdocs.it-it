@@ -2,7 +2,7 @@
 title: Riferimento ai file di log
 titleSuffix: Configuration Manager
 description: Riferimento di tutti i file di log per i componenti client, server e dipendenti di Configuration Manager.
-ms.date: 07/09/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 296ac8448292b46318921cb952b5b8545a34f1fa
-ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
+ms.openlocfilehash: 1e24a7fe6a81408de48a73889db923cc8c5094ea
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86210333"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700549"
 ---
 # <a name="log-file-reference"></a>Riferimento ai file di log
 
@@ -331,6 +331,7 @@ Nella tabella seguente sono elencati i file di log disponibili nel server del si
 |sitestat.log|Registra il processo di monitoraggio di disponibilità e spazio su disco di tutti i sistemi del sito.|Server del sito|
 |SMS_AZUREAD_DISCOVERY_AGENT.log| File di log per l'individuazione di utenti e gruppi di utenti di Azure Active Directory (Azure AD). Nella versione 1910 e versioni precedenti era inclusa anche la sincronizzazione dei risultati dell'appartenenza alla raccolta in Azure AD.| Server del sito|
 |SMS_BUSINESS_APP_PROCESS_MANAGER.log|File di log per il componente che sincronizza le app da Microsoft Store per le aziende.|Server del sito|
+|SMS_DataEngine.log|File di log per informazioni dettagliate sulla gestione.|Server del sito|
 |SMS_ISVUPDATES_SYNCAGENT.log| File di log per la sincronizzazione degli aggiornamenti software di terze parti.| Punto di aggiornamento software di livello superiore nella gerarchia di Configuration Manager.|
 |SMS_OrchestrationGroup.log| File di log per i gruppi di orchestrazione|Server del sito|
 |SMS_PhasedDeployment.log| File di log per distribuzioni in più fasi|Sito principale della gerarchia di Configuration Manager|
@@ -350,7 +351,7 @@ Nella tabella seguente sono elencati i file di log disponibili nel server del si
 |statesys.log|Registra l'elaborazione dei messaggi di sistema di stato.|Server del sito|  
 |statmgr.log|Registra la scrittura di tutti i messaggi di stato nel database.|Server del sito|  
 |swmproc.log|Registra l'elaborazione di file e impostazioni di controllo.|Server del sito|
-|UXAnalyticsUploadWorker.log|Registra il caricamento dei dati nel servizio per l'analisi degli endpoint.|Server del sito|   
+|UXAnalyticsUploadWorker.log|Registra il caricamento dei dati nel servizio per l'analisi degli endpoint.|Server del sito|
 
 ### <a name="site-server-installation"></a><a name="BKMK_SiteInstallLog"></a> Installazione del server del sito
 
@@ -783,7 +784,7 @@ Nella tabella seguente sono elencati i file di log contenenti informazioni relat
 |MP_ClientIDManager.log|Registra le risposte del punto di gestione alle richieste dell'ID client originate dalle sequenze di attività a partire da PXE o dal supporto di avvio.|Server del sistema del sito|  
 |MP_DriverManager.log|Registra le risposte del punto di gestione alle richieste dell'operazione sequenza di attività Applica automaticamente i driver.|Server del sistema del sito|  
 |OfflineServicingMgr.log|Registra informazioni dettagliate sulle pianificazioni della manutenzione offline e sulle azioni di applicazione aggiornamenti sui file di formato Windows Imaging (WIM) del sistema operativo.|Server del sistema del sito|  
-|Setupact.log|Registra informazioni dettagliate sui registri di Windows Sysprep e di installazione. Per altre informazioni, vedere [File di log](https://docs.microsoft.com/windows/deployment/upgrade/log-files).|Client|  
+|Setupact.log|Registra informazioni dettagliate sui registri di Windows Sysprep e di installazione. Per altre informazioni, vedere [File di log](/windows/deployment/upgrade/log-files).|Client|  
 |Setupapi.log|Registra informazioni dettagliate sui registri di Windows Sysprep e di installazione.|Client|  
 |Setuperr.log|Registra informazioni dettagliate sui registri di Windows Sysprep e di installazione.|Client|  
 |smpisapi.log|Registra informazioni dettagliate sulle azioni di acquisizione e ripristino dello stato del client, nonché informazioni sulle soglie.|Client|  
@@ -893,7 +894,7 @@ Per la manutenzione vengono usati la stessa infrastruttura e lo stesso processo 
 |DISM.log|Registra tutte le azioni usando Gestione e manutenzione immagini distribuzione. Se necessario, DISM.log punterà a CBS.log per altri dettagli.|Client|
 |setupact.log|File di log primario per la maggior parte degli errori che si verificano durante il processo di installazione di Windows. Il file di log è disponibile nella cartella %windir%\$Windows.~BT\sources\panther.|Client|
 
-Per altre informazioni, vedere [Online Servicing-Related Log Files](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-troubleshooting-and-log-files#online-servicing-related-log-files) (File di log correlati alla manutenzione online).
+Per altre informazioni, vedere [Online Servicing-Related Log Files](/windows-hardware/manufacture/desktop/deployment-troubleshooting-and-log-files#online-servicing-related-log-files) (File di log correlati alla manutenzione online).
 
 ### <a name="windows-update-agent"></a><a name="BKMK_WULog"></a> Agente di Windows Update
 
@@ -903,7 +904,7 @@ Nella tabella seguente sono elencati i file di log contenenti informazioni corre
 |--------------|-----------------|----------------------------|  
 |WindowsUpdate.log|Registra informazioni dettagliate che indicano il momento in cui l'agente di Windows Update si connette al server WSUS e recupera gli aggiornamenti software per la valutazione della conformità, nonché se vi sono aggiornamenti per i componenti dell'agente.|Client|  
 
-Per altre informazioni, vedere [File di log di Windows Update](https://docs.microsoft.com/windows/deployment/update/windows-update-logs).
+Per altre informazioni, vedere [File di log di Windows Update](/windows/deployment/update/windows-update-logs).
 
 ### <a name="wsus-server"></a><a name="BKMK_WSUSLog"></a> Server WSUS
 

@@ -2,20 +2,20 @@
 title: Informazioni di riferimento sulle variabili della sequenza di attività
 titleSuffix: Configuration Manager
 description: Informazioni sulle variabili per controllare e personalizzare una sequenza di attività di Configuration Manager.
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b3ddd1a4b59ba750e9fca5f8386762b4a5dddb13
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 86a19970b58747d83ae8823eb8e2a85c40c03c4d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429806"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697348"
 ---
 # <a name="task-sequence-variables"></a>Variabili della sequenza di attività
 
@@ -372,6 +372,13 @@ Variabile di sola lettura che indica se il controllo di **Alimentazione da rete 
 *Si applica al passaggio [Verifica conformità](task-sequence-steps.md#BKMK_CheckReadiness).*
 
 Variabile di sola lettura che indica se il controllo di **Scheda di rete connessa** ha restituito true (`1`) o false (`0`). Se non si abilita il controllo, il valore di questa variabile di sola lettura è vuoto.
+
+### <a name="_ts_cruefi"></a><a name="TSCRUEFI"></a> _TS_CRUEFI
+
+*A partire dalla versione 2006* <!--6452769-->
+*Si applica al passaggio [Verifica conformità](task-sequence-steps.md#BKMK_CheckReadiness).*
+
+Variabile di sola lettura che indica che **Computer is in UEFI mode** (Computer in modalità UEFI) ha restituito il valore BIOS (`0`) o UEFI (`1`). Se non si abilita il controllo, il valore di questa variabile di sola lettura è vuoto.
 
 ### <a name="_ts_crwired"></a><a name="TSCRWIRED"></a> _TS_CRWIRED
 
@@ -796,7 +803,7 @@ Specifica opzioni aggiuntive da aggiungere alla riga di comando di DISM durante 
 
 Per usare questa variabile, abilitare l'impostazione **Installa il pacchetto driver eseguendo DISM con l'opzione di ricorsione** nel passaggio **Applica pacchetto di driver**.
 
-Per altre informazioni, vedere [Windows 10 DISM Command-Line Options](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options) (Opzioni della riga di comando di DISM Windows 10).
+Per altre informazioni, vedere [Windows 10 DISM Command-Line Options](/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options) (Opzioni della riga di comando di DISM Windows 10).
 
 ### <a name="osdjoinaccount"></a><a name="OSDJoinAccount"></a> OSDJoinAccount
 

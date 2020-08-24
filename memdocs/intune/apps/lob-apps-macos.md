@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 08/18/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 673adad15e92fb06cf5cf7c3589b06ab8b1b337a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 407189163107da24e19b84c2011fa47f6a796475
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990664"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88591694"
 ---
 # <a name="how-to-add-macos-line-of-business-lob-apps-to-microsoft-intune"></a>Come aggiungere app line-of-business (LOB) per macOS in Microsoft Intune
 
@@ -42,8 +42,7 @@ Usare le informazioni di questo articolo per aggiungere le app line-of-business 
 Prima di caricare il file line-of-business in Microsoft Intune, è necessario scaricare uno strumento esterno, contrassegnare lo strumento scaricato come eseguibile ed eseguire l'analisi preliminare dei file con estensione *pkg* con tale strumento. L'analisi preliminare dei file con estensione *pkg* deve essere eseguita in un dispositivo macOS. Usare lo strumento di wrapping delle app di Intune per Mac per abilitare la gestione delle app Mac con Microsoft Intune.
 
 > [!IMPORTANT]
-> Il file con estensione *pkg* deve essere firmato con il certificato "Programma di installazione ID sviluppatore", ottenuto da un account sviluppatore Apple. Per caricare le app LOB per macOS in Microsoft Intune, si possono usare solo file con estensione *pkg*. La conversione di altri formati, ad esempio da *dmg* a *pkg*, non è supportata.
->
+> Il file con estensione *pkg* deve essere firmato con il certificato "Programma di installazione ID sviluppatore", ottenuto da un account sviluppatore Apple. Per caricare le app LOB per macOS in Microsoft Intune, si possono usare solo file con estensione *pkg*. È però supportata la conversione di altri formati, ad esempio da *dmg* a *pkg*. Per altre informazioni sulla conversione di tipi di applicazioni non pkg, vedere [Come distribuire app in formato DMG o APP in computer Mac gestiti da Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-deploy-dmg-or-app-format-apps-to-intune-managed-macs/ba-p/1503416).
 
 1. Scaricare lo [strumento di wrapping delle app di Intune per Mac](https://github.com/msintuneappsdk/intune-app-wrapping-tool-mac).
 
@@ -93,7 +92,7 @@ Prima di caricare il file line-of-business in Microsoft Intune, è necessario sc
     - **Nome**: immettere il nome dell'app che viene visualizzato nel portale aziendale. Verificare che tutti i nomi di app usati siano univoci. Se il nome di un'app è usato due volte, solo una delle due app viene visualizzata nel portale aziendale.
     - **Descrizione**: immettere la descrizione dell'app. La descrizione viene visualizzata nel portale aziendale.
     - **Autore**: Immettere il nome dell'autore dell'app.
-    - **Sistema operativo minimo**: selezionare dall'elenco la versione minima del sistema operativo in cui è possibile installare l'app. L'installazione non verrà eseguita se si assegna l'app a un dispositivo con un sistema operativo precedente.
+    - **Sistema operativo minimo**: scegliere nell'elenco la versione minima del sistema operativo in cui è possibile installare l'app. L'installazione non verrà eseguita se si assegna l'app a un dispositivo con un sistema operativo precedente.
     - **Categoria**: selezionare una o più categorie di app predefinite o una categoria creata dall'utente. Le categorie consentono agli utenti di trovare più facilmente l'app nel portale aziendale.
     - **Visualizza come app in primo piano nel portale aziendale**: Visualizzare chiaramente l'app nella pagina principale del portale aziendale quando gli utenti cercano le app.
     - **URL di informazioni**: Immettere l'URL di un sito Web che include informazioni sull'app (facoltativo). L'URL viene visualizzato nel portale aziendale.

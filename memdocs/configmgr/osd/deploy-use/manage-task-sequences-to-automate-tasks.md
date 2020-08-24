@@ -2,19 +2,20 @@
 title: Gestire le sequenze di attività
 titleSuffix: Configuration Manager
 description: Creare, modificare, distribuire, importare ed esportare sequenze di attività per gestirle e automatizzarle nel proprio ambiente.
-ms.date: 02/26/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f79829b7cd6ec70764a20fb05f4438176c41b470
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 609f5d010018fa23dd4a533b2f1079f07d8c2283
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85591035"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125066"
 ---
 # <a name="manage-task-sequences-to-automate-tasks"></a>Gestire le sequenze di attività per automatizzare le attività
 
@@ -39,6 +40,30 @@ Creare sequenze attività usando la Creazione guidata della sequenza di attivit�
 ## <a name="edit"></a><a name="BKMK_ModifyTaskSequence"></a> Modifica  
 
 Modificare una sequenza di attività aggiungendo o rimuovendo passaggi, aggiungendo o rimuovendo gruppi oppure modificando l'ordine dei passaggi. Per altre informazioni, vedere [Usare l'editor delle sequenze di attività](../understand/task-sequence-editor.md).
+
+## <a name="reduce-the-size-of-task-sequence-policy"></a><a name="bkmk_policysize"></a>Ridurre le dimensioni dei criteri delle sequenze di attività
+
+<!--6982275-->
+Quando le dimensioni dei criteri delle sequenze di attività superano 32 MB, il client non riesce a elaborare i criteri di grandi dimensioni. Il client non riesce quindi a eseguire la distribuzione della sequenza di attività.
+
+La dimensione della sequenza di attività archiviate nel database del sito è minore, ma può comunque causare problemi se troppo grande. Quando il client elabora per intero i criteri di una sequenza di attività, dimensioni superiori a 32 MB possono determinare problemi.
+
+A partire dal 2006 è possibile usare le [informazioni dettagliate sulla gestione](../../core/servers/manage/management-insights.md#operating-system-deployment) per controllare che le dimensioni dei criteri della sequenza di attività sui clienti non superino i 32 MB.
+
+Per ridurre le dimensioni complessive dei criteri di distribuzione di una sequenza di attività, eseguire le azioni seguenti:
+
+- Separare i segmenti funzionali in sequenze di attività figlio e usare il passaggio [Esegui la sequenza di attività](../understand/task-sequence-steps.md#child-task-sequence). Le dimensioni dei criteri di ogni sequenza di attività hanno un limite di 32 MB.
+
+    > [!NOTE]
+    > La riduzione del numero totale di passaggi e gruppi in una sequenza di attività ha un effetto minimo sulle dimensioni dei criteri. Ogni passaggio corrisponde a circa 2 KB nei criteri. Lo spostamento di gruppi di passaggi in una sequenza di attività figlio ha un impatto più consistente.
+
+- Ridurre il numero di aggiornamenti software nelle distribuzioni alla stessa raccolta della sequenza di attività.
+
+- Anziché immettere uno script nel passaggio [Esegui script PowerShell](../understand/task-sequence-steps.md#BKMK_RunPowerShellScript), farvi riferimento tramite un pacchetto.
+
+- È previsto un limite di 8 KB per le dimensioni dell'ambiente della sequenza di attività durante l'esecuzione. Rivedere l'utilizzo delle variabili della sequenza di attività personalizzate, che possono anch'esse contribuire alle dimensioni dei criteri.
+
+- Come ultima risorsa, suddividere una sequenza di attività dinamica complessa in sequenze di attività separate con distribuzioni distinte in raccolte diverse.
 
 ## <a name="software-center-properties"></a><a name="bkmk_prop-general"></a> Proprietà di Software Center
 

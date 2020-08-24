@@ -10,12 +10,12 @@ ms.assetid: 230be984-d2cd-4d53-bd7a-bc24dd93fc22
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 1aae76845d18d8191b6f773df5491d3a144940c1
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 25ccc3936d156a4d9b5442190ea957b2d1eaf1f6
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694549"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699705"
 ---
 # <a name="introduction-to-reporting-in-configuration-manager"></a>Introduzione alla creazione di report in Configuration Manager
 
@@ -39,7 +39,7 @@ Configuration Manager usa SQL Server Reporting Services come soluzione principal
 
 - Esporta report in una varietà dei formati più diffusi.  
 
-Per altre informazioni, vedere [Che cos'è SQL Server Reporting Services (SSRS)?](https://docs.microsoft.com/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports?view=sql-server-ver15)
+Per altre informazioni, vedere [Che cos'è SQL Server Reporting Services (SSRS)?](/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports?view=sql-server-ver15)
 
 ## <a name="power-bi-report-server"></a>Server di report di Power BI
 
@@ -47,7 +47,7 @@ Per altre informazioni, vedere [Che cos'è SQL Server Reporting Services (SSRS)?
 
 A partire dalla versione 2002, è possibile integrare il Server di report di Power BI con la creazione di report di Configuration Manager. Questa integrazione offre una visualizzazione moderna e prestazioni migliori. Aggiunge il supporto della console per report di Power BI simili a quelli già esistenti con SQL Server Reporting Services. Per altre informazioni, vedere [Integrare il server di report di Power BI](powerbi-report-server.md).
 
-Server di report di Power BI è un server di report locale con un portale Web in cui è possibile visualizzare e gestire i report. Include strumenti per creare report di Power BI, report impaginati, report per dispositivi mobili e indicatori KPI. Per altre informazioni, vedere [Che cos'è Server di report di Power BI?](https://docs.microsoft.com/power-bi/report-server/get-started).
+Server di report di Power BI è un server di report locale con un portale Web in cui è possibile visualizzare e gestire i report. Include strumenti per creare report di Power BI, report impaginati, report per dispositivi mobili e indicatori KPI. Per altre informazioni, vedere [Che cos'è Server di report di Power BI?](/power-bi/report-server/get-started).
 
 ## <a name="reporting-services-point"></a>Punto di Reporting Services
 
@@ -124,7 +124,7 @@ Configuration Manager usa Generatore report di Microsoft SQL Server Reporting Se
 
  L'installazione di Generatore report aggiunge il supporto per più di 20 lingue. Quando si esegue Generatore report, i dati vengono visualizzati nella lingua del sistema operativo del computer locale. Se Generatore report non supporta la lingua, visualizza i dati in inglese. Generatore report supporta tutte le funzionalità di SQL Server Reporting Services, tra cui:
 
-- Offre un ambiente di creazione report intuitivo con un aspetto simile a Microsoft Office.  
+- Offre un ambiente di creazione report intuitivo con un aspetto simile a Microsoft 365 Apps.  
 
 - Offre il flessibile layout di report di SQL Server Report Definition Language (RDL).  
 

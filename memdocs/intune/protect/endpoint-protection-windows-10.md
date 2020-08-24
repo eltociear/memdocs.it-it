@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/23/2020
+ms.date: 08/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fedca34aaf390dfec655e3166f3a153af93a7ce0
-ms.sourcegitcommit: 7b3eed763b394075766ea080968889a8538bfe56
+ms.openlocfilehash: 69b4df0b5ceb947ab875f82a0d6f5ac59ce89eef
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506591"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252623"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Impostazioni di Windows 10 (e versioni successive) per la protezione dei dispositivi con Intune
 
@@ -453,13 +453,16 @@ Microsoft Edge deve essere installato nel dispositivo.
   
   Se la crittografia di Windows è attivata mentre è attivo un altro metodo di crittografia, il dispositivo potrebbe diventare instabile.  
 
-- **Crittografa la scheda di memoria (solo dispositivi mobili)**  
-  *Questa impostazione si applica solo ai dispositivi Windows 10 Mobile.*  
-  **Impostazione predefinita**: Non configurato  
-  Provider di servizi di configurazione BitLocker: [RequireStorageCardEncryption](https://go.microsoft.com/fwlink/?linkid=872524)  
+<!-- Support Deprecated for Windows 10 Mobile as of August 2020
 
-  - scegliere **Rendi obbligatorio** per crittografare le eventuali schede di memoria rimovibili usate dal dispositivo.  
-  - **Non configurato**: non richiedere la crittografia delle schede di archiviazione e non richiedere all'utente di attivarla.  
+- **Encrypt storage card (mobile only)**  
+  *This setting only applies to Windows 10 mobile.*  
+  **Default**: Not configured  
+  BitLocker CSP: [RequireStorageCardEncryption](https://go.microsoft.com/fwlink/?linkid=872524)  
+
+  - **Require** to encrypt any removable storage cards used by the device.  
+  - **Not configured** - Don't require storage card encryption, and don't prompt the user to turn it on.  
+-->
 
 ### <a name="bitlocker-base-settings"></a>Impostazioni di base di BitLocker  
 
@@ -642,7 +645,7 @@ Queste impostazioni si applicano in modo specifico alle unità dati del sistema 
     **Impostazione predefinita**: Non configurato  
 
     - **Abilita**: archiviare le informazioni di ripristino di BitLocker in Azure Active Directory (Azure AD).  
-    - **Non configurata**: le informazioni di ripristino di BitLocker non vengono archiviate in AAD.  
+    - **Non configurata**: le informazioni di ripristino di BitLocker non vengono archiviate in Azure AD.  
 
   - **Informazioni di ripristino di BitLocker archiviate in Azure Active Directory**  
     **Impostazione predefinita**: Backup delle password di ripristino e dei pacchetti di chiavi  
@@ -739,7 +742,7 @@ Queste impostazioni si applicano in modo specifico alle unità dati fisse.
     **Impostazione predefinita**: Non configurato  
 
     - **Abilita**: archiviare le informazioni di ripristino di BitLocker in Azure Active Directory (Azure AD).  
-    - **Non configurata**: le informazioni di ripristino di BitLocker non vengono archiviate in AAD.
+    - **Non configurata**: le informazioni di ripristino di BitLocker non vengono archiviate in Azure AD.
 
   - **Informazioni di ripristino di BitLocker archiviate in Azure Active Directory**  
     **Impostazione predefinita**: Backup delle password di ripristino e dei pacchetti di chiavi  

@@ -2,7 +2,7 @@
 title: Ridimensionamento e scalabilità
 titleSuffix: Configuration Manager
 description: Determinare il numero di ruoli del sistema del sito e di siti necessari per supportare i dispositivi nell'ambiente.
-ms.date: 11/29/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c5a42100-2f60-4952-b495-918025ea6559
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5109ababd00011784618f9c989e1d2b756a322d9
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 0d8057d61ebaaa8a545d21b31331faec1c04884e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715629"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126699"
 ---
 # <a name="size-and-scale-numbers-for-configuration-manager"></a>Numeri di ridimensionamento e scalabilità per Configuration Manager
 
@@ -184,6 +184,8 @@ Limitare il numero di ambiti di protezione nelle regole di distribuzione automat
 Ogni istanza del provider SMS supporta connessioni simultanee da più richieste. Gli unici limiti su queste connessioni sono il numero di connessioni server disponibili per Windows e le risorse disponibili sul server per rispondere alle richieste di connessione.
 
 Per altre informazioni, vedere [Piano per il provider SMS](../hierarchy/plan-for-the-sms-provider.md).
+
+Il servizio di amministrazione è un'API REST su ogni istanza del provider SMS. Supporta fino a 5.000 richieste al secondo e 200 richieste per ogni indirizzo IP del client.
 
 ## <a name="client-numbers-for-sites-and-hierarchies"></a><a name="bkmk_clientnumbers"></a> Numero di client per siti e gerarchie
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
-ms.openlocfilehash: 928ef8a8ebc90807912f22901743725df9aa67e7
-ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
+ms.openlocfilehash: b03b57ff9797eb4fbe5a269723e98d39ae438803
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82842224"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127223"
 ---
 # <a name="co-management-workloads"></a>Carichi di lavoro con co-gestione
 
@@ -104,7 +104,7 @@ Per altre informazioni sulla funzionalità Intune, vedere [Creare un profilo di 
 
 <!--1357841-->
 
-Questo carico di lavoro consente di gestire le app di Office 365 nei dispositivi con co-gestione.
+Questo carico di lavoro consente di gestire le app di Microsoft 365 Apps nei dispositivi con co-gestione.
 
 - Dopo lo spostamento del carico di lavoro, l'app viene visualizzata nel **portale aziendale** sul dispositivo  
 

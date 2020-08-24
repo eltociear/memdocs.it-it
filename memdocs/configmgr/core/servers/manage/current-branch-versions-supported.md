@@ -2,7 +2,7 @@
 title: Versioni Current Branch
 titleSuffix: Configuration Manager
 description: Informazioni sulla cronologia delle versioni di Configuration Manager e sulle fasi del servizio offerto.
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 35b5baec-d313-46aa-9d14-c443aa0d6c09
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 429e8159058e9126d578f9d33769ffc32eb73def
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 28920512fa2f9353ea5dbb038b140293b0e8c5e8
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692689"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126163"
 ---
 # <a name="support-for-configuration-manager-current-branch-versions"></a>Supporto per le versioni Current Branch di Configuration Manager
 
@@ -27,11 +27,11 @@ Microsoft prevede di rilasciare diversi aggiornamenti per le versioni Current Br
 
 - Fase di manutenzione **Aggiornamenti della sicurezza (solo)** : quando viene resa disponibile una nuova versione Current Branch, Microsoft supporta solo gli aggiornamenti della sicurezza per le versioni precedenti per il ciclo di vita di supporto rimanente per tali versioni (mostrato nella figura 1).  
 
-[ ![Immagine della sequenza temporale per la manutenzione e il supporto di Configuration Manager](media/servicing_support_timeline.png)](media/servicing_support_timeline.png#lightbox)
+:::image type="content" source="media/servicing_support_timeline.png" alt-text="Sequenza temporale per la manutenzione e il supporto di Configuration Manager" lightbox="media/servicing_support_timeline.png":::
 
 Figura 1. Esempio di sovrapposizione del ciclo di rilascio per il supporto della manutenzione della versione Current Branch. Questo esempio ha il solo scopo di illustrare il ciclo e non rappresenta le date di rilascio effettive o previste.
 
-> [!NOTE]  
+> [!NOTE]
 > La versione Current Branch più recente è sempre nella fase di manutenzione **Aggiornamenti di sicurezza e critici**. Questo significa che, nel caso in cui venga rilevato un errore del codice che richiede un aggiornamento critico, è necessario che sia installata la versione Current Branch più recente per ricevere una correzione. Tutte le altre versioni Current Branch supportate sono idonee a ricevere gli aggiornamenti della sicurezza.
 >
 > Il supporto termina completamente allo scadere del ciclo di vita di 18 mesi della versione Current Branch corrente.

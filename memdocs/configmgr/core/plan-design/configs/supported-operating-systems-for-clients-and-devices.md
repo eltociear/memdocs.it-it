@@ -2,7 +2,7 @@
 title: Client e dispositivi supportati
 titleSuffix: Configuration Manager
 description: Informazioni sulle versioni dei sistemi operativi supportate da Configuration Manager per client e dispositivi.
-ms.date: 02/19/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e9e0ec6df5f80b318cb78ed8cddc986b613230e1
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: e573a2887bd527daac9a05fec2e83ef39fbfc4e1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904541"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700317"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Versioni dei sistemi operativi per client e dispositivi supportate da Configuration Manager
 
@@ -44,7 +44,7 @@ Per gestire le versioni dei sistemi operativi Windows seguenti, usare il client 
 #### <a name="windows-virtual-desktop"></a>Desktop virtuale Windows
 
 <!--3556025-->
-[Desktop virtuale Windows](https://docs.microsoft.com/azure/virtual-desktop/) è un servizio di virtualizzazione di desktop e app eseguito su Microsoft Azure. A partire dalla versione 1906, usare Configuration Manager per gestire questi dispositivi virtuali che eseguono Windows in Azure.
+[Desktop virtuale Windows](/azure/virtual-desktop/) è un servizio di virtualizzazione di desktop e app eseguito su Microsoft Azure. A partire dalla versione 1906, usare Configuration Manager per gestire questi dispositivi virtuali che eseguono Windows in Azure.
 
 Analogamente a un server terminal, alcuni di questi dispositivi virtuali consentono l'esecuzione di più sessioni utente attive simultanee. Per migliorare le prestazioni dei client, Configuration Manager disabilita ora i criteri utente su tutti i dispositivi che consentono l'esecuzione di più sessioni utente. Anche se si abilitano i criteri utente, il client li disabilita per impostazione predefinita in questi dispositivi, che includono server terminal e Windows 10 Enterprise multisessione.
 
@@ -58,6 +58,16 @@ Se in questo scenario è necessario usare criteri utente e si accettano le poten
 
 > [!Note]  
 > Non è possibile usare la co-gestione con un client che esegue la multisessione di Windows 10 Enterprise. <!-- SCCMDocs-pr#3950 -->
+
+A partire dalla versione 2006, la piattaforma **Windows 10 Enterprise multisessione** è ora disponibile nell'elenco delle versioni del sistema operativo supportate negli oggetti con regole dei requisiti o elenchi di applicabilità.<!--6527576-->
+
+> [!NOTE]
+> Se in precedenza era stata selezionata la piattaforma **Windows 10** di primo livello, con questa azione sono state selezionate automaticamente tutte le piattaforme figlio. Questa nuova piattaforma non viene selezionata automaticamente. Se si vuole aggiungere **Windows 10 Enterprise multisessione**, selezionarla manualmente nell'elenco.
+
+Per altre informazioni, vedere gli articoli seguenti:
+
+- [Supporto per gli ambienti di virtualizzazione](support-for-virtualization-environments.md)
+- [Gestire i client di Configuration Manager in un'infrastruttura VDI (Virtual Desktop Infrastructure)](../../clients/deploy/plan/considerations-for-managing-clients-in-a-vdi.md)
 
 ### <a name="supported-server-os-versions"></a>Versioni del sistema operativo server supportate
 
@@ -96,7 +106,7 @@ Configuration Manager verifica e supporta le edizioni di Windows Server Datacent
 
 #### <a name="note-2"></a><a name="bkmk_note2"></a> Nota 2
 
-Per supportare l'[installazione push client](../../clients/deploy/plan/client-installation-methods.md#client-push-installation), aggiungere il servizio File server del ruolo del server Servizi file e archiviazione. Per altre informazioni sull'installazione di funzionalità di Windows in Server Core, vedere [Install roles, role services, and features by using Windows PowerShell cmdlets](https://docs.microsoft.com/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#install-roles-role-services-and-features-by-using-windows-powershell-cmdlets) (Installare ruoli, servizi ruolo e funzionalità tramite cmdlet di Windows PowerShell).  
+Per supportare l'[installazione push client](../../clients/deploy/plan/client-installation-methods.md#client-push-installation), aggiungere il servizio File server del ruolo del server Servizi file e archiviazione. Per altre informazioni sull'installazione di funzionalità di Windows in Server Core, vedere [Install roles, role services, and features by using Windows PowerShell cmdlets](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#install-roles-role-services-and-features-by-using-windows-powershell-cmdlets) (Installare ruoli, servizi ruolo e funzionalità tramite cmdlet di Windows PowerShell).  
 
 #### <a name="note-3"></a><a name="bkmk_note3"></a> Nota 3
 
@@ -125,7 +135,7 @@ La nuova app Software Center non è supportata in alcuna versione di Windows Ser
 - **Windows 10 Enterprise** (x86, x64)  
 
 - **Windows 10 IoT Enterprise** (x86, x64)  
-    Questa versione include il canale di manutenzione a lungo termine. Per altre informazioni, vedere [Panoramica di Windows 10 IoT Enterprise](https://docs.microsoft.com/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->  
+    Questa versione include il canale di manutenzione a lungo termine. Per altre informazioni, vedere [Panoramica di Windows 10 IoT Enterprise](/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->  
 
 - **Windows Embedded 8.1 Industry** (x86, x64)
 
@@ -151,8 +161,8 @@ La nuova app Software Center non è supportata in alcuna versione di Windows Ser
 
 - Windows CE 7.0 (processori ARM e x86)  
 
-    > [!Note]
-    > Il supporto è deprecato per Windows CE 7.0 in Configuration Manager. Per altre informazioni, vedere [Elementi rimossi e deprecati per i client di Configuration Manager](../changes/deprecated/removed-and-deprecated-client.md).
+    > [!IMPORTANT]
+    > La versione 2006 di Configuration Manager elimina il supporto per Windows CE 7.0 come client. La deprecazione è stata annunciata con la [versione 1906](../changes/whats-new-in-version-1906.md#bkmk_deprecated).
 
 #### <a name="supported-languages-include"></a>Le lingue supportate includono
 
@@ -325,7 +335,7 @@ Configuration Manager include funzionalità predefinite per la gestione dei disp
 - **Windows 10 Pro Enterprise** (x86, x64)  
 
 - **Windows 10 IoT Enterprise** (x86, x64)  
-    Questa versione include il canale di manutenzione a lungo termine. Per altre informazioni, vedere [Panoramica di Windows 10 IoT Enterprise](https://docs.microsoft.com/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->  
+    Questa versione include il canale di manutenzione a lungo termine. Per altre informazioni, vedere [Panoramica di Windows 10 IoT Enterprise](/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->  
 
 - **Windows 10 IoT Mobile Enterprise**  
 
@@ -335,9 +345,8 @@ Configuration Manager include funzionalità predefinite per la gestione dei disp
 
 - **Windows 10 Mobile Enterprise**  
 
-    > [!Note]
-    > Il supporto è deprecato per Windows 10 Mobile e Windows 10 Mobile Enterprise in Configuration Manager. Per altre informazioni, vedere [Elementi rimossi e deprecati per i client di Configuration Manager](../changes/deprecated/removed-and-deprecated-client.md).
-
+    > [!IMPORTANT]
+    > La versione 2006 di Configuration Manager elimina il supporto per Windows 10 Mobile e Windows 10 Mobile Enterprise come client. La deprecazione è stata annunciata con la [versione 1906](../changes/whats-new-in-version-1906.md#bkmk_deprecated).
 
 ## <a name="exchange-server-connector"></a><a name="bkmk_ExSrvConOS"></a> Connettore Exchange Server  
 

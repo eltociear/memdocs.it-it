@@ -10,12 +10,12 @@ ms.assetid: e80d1151-91db-4a27-8411-a957297b67d0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b8ee7d00f3b5c98528d9999b83b07aa393b72e36
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: df3188e827623db8faa0b27be2fe282031e9fa50
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704159"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126393"
 ---
 # <a name="manage-network-bandwidth-for-content"></a>Gestire la larghezza di banda della rete per il contenuto
 Per gestire più facilmente la larghezza di banda della rete usata per il processo di gestione del contenuto di Configuration Manager, è possibile usare i controlli predefiniti per la pianificazione e la limitazione della larghezza di banda della rete. È inoltre possibile usare contenuto pre-installato. Le sezioni seguenti includono informazioni più dettagliate su queste opzioni.
@@ -61,7 +61,7 @@ Facoltativamente, è possibile configurare il punto di distribuzione come **pre-
 
     -   **Scarica automaticamente il contenuto quando i pacchetti sono assegnati ai punti di distribuzione**: usare questa opzione quando si hanno pacchetti più piccoli e le impostazioni di pianificazione e limitazione della larghezza di banda della rete forniscono sufficiente controllo per la distribuzione del contenuto.  
 
-    -   **Scarica solo le modifiche di contenuto nel punto di distribuzione**: usare questa opzione quando si prevede che i futuri aggiornamenti al contenuto del pacchetto abbiano in genere dimensioni più piccole rispetto al pacchetto iniziale. Ad esempio, può essere opportuno pre-installare un'applicazione come Microsoft Office perché la dimensione del pacchetto iniziale è superiore a 700 MB e quindi troppo grande da inviare attraverso la rete. Tuttavia, gli aggiornamenti del contenuto di questo pacchetto possono essere inferiori a 10 MB e sono quindi accettabili per la distribuzione in rete. Un altro esempio può essere rappresentato dai pacchetti driver per i quali la dimensione iniziale è grande, ma le aggiunte incrementali possono avere dimensioni ridotte.  
+    -   **Scarica solo le modifiche di contenuto nel punto di distribuzione**: usare questa opzione quando si prevede che i futuri aggiornamenti al contenuto del pacchetto abbiano in genere dimensioni più piccole rispetto al pacchetto iniziale. Ad esempio, può essere opportuno pre-installare un'applicazione come Microsoft 365 Apps perché la dimensione del pacchetto iniziale è superiore a 700 MB e quindi troppo grande per essere inviato attraverso la rete. Tuttavia, gli aggiornamenti del contenuto di questo pacchetto possono essere inferiori a 10 MB e sono quindi accettabili per la distribuzione in rete. Un altro esempio può essere rappresentato dai pacchetti driver per i quali la dimensione iniziale è grande, ma le aggiunte incrementali possono avere dimensioni ridotte.  
 
     -   **Copia manualmente il contenuto del pacchetto nel punto di distribuzione**: usare questa opzione quando si hanno pacchetti di grandi dimensioni, ad esempio un sistema operativo, e non si vuole mai usare la rete per distribuire il contenuto nel punto di distribuzione. Quando si seleziona questa opzione, è necessario pre-installare il contenuto nel punto di distribuzione.  
 

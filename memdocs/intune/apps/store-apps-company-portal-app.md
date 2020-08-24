@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/21/2020
+ms.date: 08/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7926bd972fd24f39bd4e3f520fd250526502812a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: c41f22e2aa60803067b9015f2ae3a84db43ff894
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983946"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179537"
 ---
 # <a name="add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>Aggiungere l'app Portale aziendale di Windows 10 usando Microsoft Intune
 
@@ -71,7 +71,7 @@ Per altre informazioni su come Intune gestisce le dipendenze per le app universa
 
 ## <a name="frequently-asked-questions"></a>Domande frequenti 
 ### <a name="how-do-i-update-the-company-portal-app-on-my-users-devices-if-they-have-already-installed-the-older-apps-from-the-store"></a>Come si aggiorna l'app Portale aziendale nei dispositivi degli utenti se hanno già installato le app precedenti dallo Store?
-Se gli utenti hanno già installato le app Portale aziendale di Windows 8.1 o Windows Phone 8.1 da Microsoft Store, queste dovrebbero essere aggiornate automaticamente all'ultima versione senza alcun intervento da parte dell'amministratore o dell'utente. Se l'aggiornamento non viene eseguito, chiedere agli utenti di controllare se hanno abilitato gli aggiornamenti automatici per le app dello Store nei dispositivi.   
+Se gli utenti hanno già installato le app Portale aziendale di Windows 8.1 da Microsoft Store, queste dovrebbero essere aggiornate automaticamente all'ultima versione senza alcun intervento da parte dell'amministratore o degli utenti. Se l'aggiornamento non viene eseguito, chiedere agli utenti di controllare se hanno abilitato gli aggiornamenti automatici per le app dello Store nei dispositivi.   
 
 ### <a name="how-do-i-upgrade-my-sideloaded-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>Come aggiornare l'app Portale aziendale di Windows 8.1 trasferita localmente all'app Portale aziendale di Windows 10?
 Il percorso di migrazione consigliato consiste nell'eliminare l'assegnazione dell'app Portale aziendale di Windows 8.1 impostando l'azione di assegnazione su **Disinstalla**. Dopo aver selezionato questa impostazione, è possibile assegnare l'app Portale aziendale di Windows 10 usando una delle opzioni descritte in precedenza.  
@@ -80,8 +80,8 @@ Se è necessario trasferire localmente l'app e si è assegnata l'app Portale azi
 
 Se è necessario trasferire localmente l'app e si è firmata e assegnata l'app Portale aziendale di Windows 8.1 con il certificato di firma codice Symantec, seguire la procedura descritta nella prossima sezione.
 
-### <a name="how-do-i-upgrade-my-signed-and-sideloaded-windows-phone-81-company-portal-app-or-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>Come aggiornare l'app Portale aziendale di Windows 8.1 o Windows Phone 8.1 firmata e trasferita localmente all'app Portale aziendale di Windows 10?
-Il percorso di migrazione consigliato consiste nell'eliminare l'assegnazione esistente dell'app Portale aziendale di Windows 8.1 o Windows Phone 8.1 impostando l'azione di assegnazione su **Disinstalla**. Dopo aver selezionato questa impostazione, è possibile assegnare l'app Portale aziendale di Windows 10 normalmente.  
+### <a name="how-do-i-upgrade-my-signed-and-sideloaded-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>Come si aggiorna l'app Portale aziendale di Windows 8.1 firmata e trasferita localmente all'app Portale aziendale di Windows 10?
+Il percorso di migrazione consigliato consiste nell'eliminare l'assegnazione esistente dell'app Portale aziendale di Windows 8.1 impostando l'azione di assegnazione su **Disinstalla**. Dopo aver selezionato questa impostazione, è possibile assegnare l'app Portale aziendale di Windows 10 normalmente.  
 
 In caso contrario, è necessario aggiornare e firmare l'app Portale aziendale di Windows 10 per assicurarsi che il percorso di aggiornamento venga rispettato.  
 
@@ -99,7 +99,7 @@ Ecco come firmare e assegnare l'app in questo modo:
 |---|---|
 | InputWin10AppxBundle  |  Percorso del file appxbundle di origine. |
 | OutputWin10AppxBundle | Percorso di output per il file appxbundle firmato. 
-| Win81Appx  | Percorso del file con estensione appx dell'app Portale aziendale di Windows 8.1 o Windows Phone 8.1. |
+| Win81Appx  | Percorso del file (con estensione appx) dell'app Portale aziendale per Windows 8.1. |
 | PfxFilePath  |  Percorso del file (con estensione pfx) del certificato di firma codice di Symantec Enterprise Mobile.  |
 | PfxPassword  | Password del certificato di firma codice di Symantec Enterprise Mobile. |
 | PublisherId | ID editore dell'azienda. Se assente, viene usato il campo Subject del certificato di firma codice mobile aziendale Symantec. |

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 15cf7f3621f25a82f0e16d5275369ec93225bbf7
-ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
+ms.openlocfilehash: 5c5337433b0d64ec1f6bf1efae97bd2391031f2e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86422838"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694270"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>Esercitazione: Distribuire Windows 10 a un gruppo pilota
 
@@ -32,7 +32,7 @@ In questa esercitazione si apprenderà come:
 
 Se non si ha una sottoscrizione di Azure, creare un [account gratuito](https://azure.microsoft.com/free) prima di iniziare. Se configurato correttamente, l'uso di Desktop Analytics non comporta costi di Azure.
 
-Desktop Analytics usa un'*area di lavoro Log Analytics* nella sottoscrizione di Azure. Un'area di lavoro è sostanzialmente un contenitore che include informazioni sull'account e semplici informazioni di configurazione per l'account. Per altre informazioni, vedere [Gestire le aree di lavoro](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor/toc.json).
+Desktop Analytics usa un'*area di lavoro Log Analytics* nella sottoscrizione di Azure. Un'area di lavoro è sostanzialmente un contenitore che include informazioni sull'account e semplici informazioni di configurazione per l'account. Per altre informazioni, vedere [Gestire le aree di lavoro](/azure/log-analytics/log-analytics-manage-access?toc=%2fazure%2fazure-monitor%2ftoc.json).
 
 
 
@@ -56,7 +56,7 @@ Prima di iniziare questa esercitazione, verificare di avere i prerequisiti segue
 
     - Client Configuration Manager versione 1902 con aggiornamento cumulativo (4500571) o versione successiva  
 
-- Approvazione aziendale per configurare il livello dei dati di diagnostica di Windows su **Avanzata (con limitazioni)** nei dispositivi pilota  
+- Approvazione aziendale per configurare il livello dei dati di diagnostica di Windows su **Opzionale (con limitazioni)** nei dispositivi pilota  
 
     Per altre informazioni, vedere [Privacy di Desktop Analytics](privacy.md).
 
@@ -102,7 +102,7 @@ Usare questa procedura per accedere a Desktop Analytics e configurarlo nella sot
 
         Se non si seleziona questa opzione, Desktop Analytics aggiunge comunque gli utenti come membri del gruppo di sicurezza. Un **Amministratore globale** deve assegnare manualmente il ruolo **Amministratore di Desktop Analytics** per gli utenti.  
 
-        Per altre informazioni sull'assegnazione delle autorizzazioni del ruolo di amministratore in Azure Active Directory e sulle autorizzazioni assegnate agli **Amministratori di Desktop Analytics**, vedere [Autorizzazioni del ruolo Amministratore in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles).  
+        Per altre informazioni sull'assegnazione delle autorizzazioni del ruolo di amministratore in Azure Active Directory e sulle autorizzazioni assegnate agli **Amministratori di Desktop Analytics**, vedere [Autorizzazioni del ruolo Amministratore in Azure Active Directory](/azure/active-directory/users-groups-roles/directory-assign-admin-roles).  
 
     - Desktop Analytics preconfigura il gruppo di sicurezza **Proprietari dell'area di lavoro** in Azure Active Directory per creare e gestire aree di lavoro e piani di distribuzione. 
 
@@ -193,7 +193,7 @@ Installare l'aggiornamento cumulativo versione 1902 (4500571) di Configuration M
 
     - **ID commerciale**: questo valore deve essere popolato automaticamente con l'ID dell'organizzazione  
 
-    - **Livello dei dati di diagnostica di Windows 10**: selezionare almeno **Avanzata (con limitazioni)**  
+    - **Livello dei dati di diagnostica di Windows 10**: selezionare almeno **Opzionale (con limitazioni)**  
 
     - **Consenti il nome del dispositivo nei dati di diagnostica**: selezionare **Abilita**  
   
@@ -339,7 +339,7 @@ Quindi distribuire il pacchetto di aggiornamento del sistema operativo ai punti 
     - **Codice Product Key**: specificare il codice Product Key Windows per il sistema operativo da installare. Specificare i codici Product Key per contratti multilicenza codificati o i codici Product Key standard. Se si usa un codice Product Key standard, separare ogni gruppo di cinque caratteri con un trattino (-). Ad esempio: *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*. Se l'aggiornamento è per un'edizione per contratti multilicenza, il codice Product Key potrebbe non essere obbligatorio.  
 
         > [!Note]  
-        > Questo codice Product Key può essere un codice ad attivazione multipla (MAK) o un codice generico di contratti multilicenza (GVLK). Un codice GVLK è anche definito codice di configurazione client del servizio di gestione delle chiavi (KMS). Per altre informazioni, vedere [Pianificare l'attivazione dei contratti multilicenza](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client). Per un elenco di codici di configurazione client KMS, vedere l'[Appendice A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys) della Guida di attivazione di Windows Server.
+        > Questo codice Product Key può essere un codice ad attivazione multipla (MAK) o un codice generico di contratti multilicenza (GVLK). Un codice GVLK è anche definito codice di configurazione client del servizio di gestione delle chiavi (KMS). Per altre informazioni, vedere [Pianificare l'attivazione dei contratti multilicenza](/windows/deployment/volume-activation/plan-for-volume-activation-client). Per un elenco di codici di configurazione client KMS, vedere l'[Appendice A](/windows-server/get-started/kmsclientkeys) della Guida di attivazione di Windows Server.
 
 6. Nella pagina **Includi aggiornamenti** selezionare **Avanti** per non installare alcun aggiornamento software.  
 

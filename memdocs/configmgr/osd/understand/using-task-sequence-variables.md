@@ -2,7 +2,7 @@
 title: Come usare le variabili della sequenza di attività
 titleSuffix: Configuration Manager
 description: Informazioni su come usare le variabili in una sequenza di attività di Configuration Manager.
-ms.date: 11/29/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: bc7de742-9e5c-4a70-945c-df4153a61cc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1cf428b479e9311c92f6d14d9c376817ee5e3ab5
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 7013ae10de753cbcb664771bd30dc51b259aa390
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022263"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697552"
 ---
 # <a name="how-to-use-task-sequence-variables-in-configuration-manager"></a>Come usare le variabili della sequenza di attività in Configuration Manager
 
@@ -78,7 +78,7 @@ Quando si specifica un nome per una nuova variabile della sequenza di attività,
 
 - I nomi delle variabili della sequenza di attività non possono iniziare o finire con uno spazio né contenere spazi. Gli spazi lasciati all'inizio o alla fine di un nome di variabile vengono ignorati dalla sequenza di attività.  
 
-Non è previsto un limite massimo di variabili della sequenza di attività che possono essere create. Tuttavia, il numero di variabili è limitato dalle dimensioni dell'ambiente della sequenza di attività. Il limite di dimensione totale per l'ambiente della sequenza di attività è 32 MB.  
+Non è previsto un limite massimo di variabili della sequenza di attività che possono essere create. Tuttavia, il numero di variabili è limitato dalle dimensioni dell'ambiente della sequenza di attività. Il limite di dimensione totale per l'ambiente della sequenza di attività è 8 kB. Per altre informazioni, vedere [Ridurre le dimensioni dei criteri delle sequenze di attività](../deploy-use/manage-task-sequences-to-automate-tasks.md#bkmk_policysize).
 
 ### <a name="read-only-variables"></a><a name="bkmk_read-only"></a> Variabili di sola lettura
 
@@ -167,7 +167,7 @@ L'ambiente include utenti in più paesi/aree, pertanto si vuole eseguire una que
     (Get-Culture).TwoLetterISOLanguageName
     ```
 
-    Per altre informazioni sul cmdlet, vedere [Get-Culture](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-culture). Per altre informazioni sui nomi di lingua ISO di due lettere, vedere l'[elenco di codici ISO 639-1](https://wikipedia.org/wiki/List_of_ISO_639-1_codes).
+    Per altre informazioni sul cmdlet, vedere [Get-Culture](/powershell/module/microsoft.powershell.utility/get-culture). Per altre informazioni sui nomi di lingua ISO di due lettere, vedere l'[elenco di codici ISO 639-1](https://wikipedia.org/wiki/List_of_ISO_639-1_codes).
 
 1. Per l'opzione **Output nella variabile della sequenza di attività** specificare `CurrentOSLanguage`.
 
@@ -190,10 +190,10 @@ Quando il passaggio **Esegui script PowerShell** viene eseguito in un dispositiv
 
 Il dispositivo XYZ, ad esempio, è un membro della raccolta ABC. Si assegna MyVariable alla raccolta ABC con il valore 1. Si assegna MyVariable anche al dispositivo XYZ con il valore 2. La variabile assegnata al dispositivo XYZ ha priorità più alta rispetto alla variabile assegnata alla raccolta ABC. Quando una sequenza di attività con questa variabile viene eseguita nel dispositivo XYZ, MyVariable ha il valore 2.
 
-Se si vuole che le variabili con ambito dispositivo e raccolta non siano visibili nella console di Configuration Manager, è possibile nasconderle. Quando si usa l'opzione **Non visualizzare questo valore nella console di Configuration Manager**, il valore della variabile non viene visualizzato nella console. La variabile è ancora utilizzabile dalla sequenza di attività durante l'esecuzione. Se non è più necessario nascondere queste variabili, prima di tutto eliminarle, quindi ridefinire le variabili senza selezionare l'opzione per nasconderle.  
+Se si vuole che le variabili con ambito dispositivo e raccolta non siano visibili nella console di Configuration Manager, è possibile nasconderle. Quando si usa l'opzione **Non visualizzare questo valore nella console di Configuration Manager**, il valore della variabile non viene visualizzato nella console. Il file di log della sequenza di attività (**Smsts. log**) o il debugger della sequenza di attività non visualizzeranno neanche il valore della variabile. La variabile è ancora utilizzabile dalla sequenza di attività durante l'esecuzione. Se non è più necessario nascondere queste variabili, prima di tutto eliminarle, quindi ridefinire le variabili senza selezionare l'opzione per nasconderle.  
 
 > [!WARNING]  
-> L'impostazione **Non visualizzare questo valore nella console di Configuration Manager** si applica solo alla console di Configuration Manager. I valori per le variabili vengono comunque visualizzati nel file di log della sequenza di attività (**smsts.log**).
+> Se si includono variabili nella riga di comando del passaggio **Esegui riga di comando**, il file di log della sequenza di attività visualizza la riga di comando completa, inclusi i valori delle variabili. Per impedire la comparsa di dati potenzialmente sensibili nel file di log, impostare la variabile della sequenza di attività **OSDDoNotLogCommand**  su `TRUE`.
 
 È possibile gestire le variabili per dispositivo in un sito primario oppure in un sito di amministrazione centrale. Configuration Manager non supporta più di 1.000 variabili assegnate per dispositivo.  
 

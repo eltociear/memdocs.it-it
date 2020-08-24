@@ -2,7 +2,7 @@
 title: HTTP avanzato
 titleSuffix: Configuration Manager
 description: Usare l'autenticazione moderna per proteggere le comunicazioni client senza dover usare certificati PKI.
-ms.date: 07/10/2020
+ms.date: 08/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4deac022-e397-4f1f-bc0a-cea6c6c6368d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 79b4119a12826596fcc91fa1b4ead4e151e2ddd8
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 5d28e0ccef767770092d03898489104ae6f8c674
+ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262099"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87997904"
 ---
 # <a name="enhanced-http"></a>HTTP avanzato
 
@@ -118,6 +118,11 @@ A partire dalla versione 1902, è anche possibile abilitare HTTP avanzato per il
 
 Per altre informazioni sul modo in cui il client comunica con il punto di gestione e il punto di distribuzione in questa configurazione, vedere [Comunicazioni da client a sistemi e servizi del sito](communications-between-endpoints.md#Planning_Client_to_Site_System).
 
+## <a name="validate-the-certificate"></a>Verificare il certificato
+
+Quando si abilita il protocollo HTTP migliorato, il server del sito genera un certificato autofirmato denominato **SMS Role SSL Certificate**. Questo certificato viene emesso dal certificato radice di **emissione SMS**. Il punto di gestione aggiunge questo certificato al sito Web predefinito IIS associato alla porta 443.
+
+Per visualizzare lo stato della configurazione, esaminare **mpcontrol. log**.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -10,12 +10,12 @@ ms.assetid: 681f0893-e83b-476e-9ec0-a5dc7c9deeb6
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 344ba7f6a6b0ee7683c3ac7661338f01be601a10
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a8091ecf4abc113d41f053c1152152262131a4bb
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701449"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146083"
 ---
 # <a name="websites-for-site-system-servers-in-configuration-manager"></a>Siti Web per i server del sistema del sito in Configuration Manager
 
@@ -83,7 +83,7 @@ Altre considerazioni:
 -   Le porte TCP/IP configurate in IIS per il sito Web personalizzato devono corrispondere alle porte di richiesta client per il sito.  
 
 ## <a name="switch-between-default-and-custom-websites"></a>Passare dai siti Web predefiniti a quelli personalizzati e viceversa  
-Anche se è possibile selezionare o deselezionare in qualsiasi momento la casella di controllo per l'uso di siti Web personalizzati in un sito primario (si tratta di una casella di controllo nella scheda Generale delle proprietà del sito), effettuare un'attenta pianificazione prima di apportare questa modifica. Quando questa configurazione viene modificata, è necessario disinstallare e quindi reinstallare tutti i ruoli del sistema del sito applicabili nel sito primario e nei siti secondari figlio:  
+Anche se è possibile selezionare o deselezionare in qualsiasi momento la casella di controllo per l'uso di siti Web personalizzati in un sito primario (si tratta di una casella di controllo nella scheda Porte delle proprietà del sito), effettuare un'attenta pianificazione prima di apportare questa modifica. Quando questa configurazione viene modificata, è necessario disinstallare e quindi reinstallare tutti i ruoli del sistema del sito applicabili nel sito primario e nei siti secondari figlio:  
 
 I seguenti ruoli **vengono reinstallati automaticamente**:  
 

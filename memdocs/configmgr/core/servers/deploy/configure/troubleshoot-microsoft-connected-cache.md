@@ -10,12 +10,12 @@ ms.assetid: 121e0341-4f51-4d54-a357-732c26caf7c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0a8c975798c506339a981e8648003387dc1e9838
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: b24ed0aa963373fc0933a2c34b7b036d77cc9a2b
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878107"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699212"
 ---
 # <a name="troubleshoot-microsoft-connected-cache-in-configuration-manager"></a>Risolvere i problemi relativi a Microsoft Connected Cache in Configuration Manager
 
@@ -223,12 +223,12 @@ Il server di cache di Ottimizzazione recapito aggiunge le regole di riscrittura 
 Lo spazio su disco necessario per ogni server di cache di Ottimizzazione recapito può variare in base ai requisiti di aggiornamento dell'organizzazione. 100 GB dovrebbero essere uno spazio sufficiente per memorizzare nella cache il contenuto seguente:
 
 - Un aggiornamento delle funzionalità
-- Da due a tre mesi di aggiornamenti qualitativi e di Office
+- Da due a tre mesi di aggiornamenti qualitativi e di Microsoft 365 Apps
 - App Microsoft Intune e app incluse in Windows
 
 Il server di cache di Ottimizzazione recapito non deve utilizzare molta memoria di sistema o tempo del processore. Se si nota un notevole consumo di risorse di memoria o del processore dopo aver installato il server di cache di Ottimizzazione recapito, analizzare i file di log di IIS e ARR.
 
-Se i file di log di IIS e ARR occupano troppo spazio sul server, sono disponibili vari metodi per gestire i file di log. Per altre informazioni, vedere [Gestione dell'archiviazione dei file di log IIS](https://docs.microsoft.com/iis/manage/provisioning-and-managing-iis/managing-iis-log-file-storage#overview).
+Se i file di log di IIS e ARR occupano troppo spazio sul server, sono disponibili vari metodi per gestire i file di log. Per altre informazioni, vedere [Gestione dell'archiviazione dei file di log IIS](/iis/manage/provisioning-and-managing-iis/managing-iis-log-file-storage#overview).
 
 ## <a name="see-also"></a>Vedere anche
 

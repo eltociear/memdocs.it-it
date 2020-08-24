@@ -2,7 +2,7 @@
 title: Documentazione nella console
 titleSuffix: Configuration Manager
 description: Questo articolo viene visualizzato solo nella console di Configuration Manager.
-ms.date: 07/14/2020
+ms.date: 08/12/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e7d80d2f528365e7759ce7ceb50639b0d474e329
-ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
+ms.openlocfilehash: b9501590f05a0e765a706af036bc2d1b994e7470
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86891463"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696481"
 ---
 <!-- 
 - Feature 1357546
@@ -27,7 +27,7 @@ ms.locfileid: "86891463"
 
 # <a name="microsoft-endpoint-configuration-manager-documentation"></a>Documentazione di Microsoft Endpoint Configuration Manager
 
-*Ultimo aggiornamento: 14 luglio 2020*
+*Ultimo aggiornamento: Agosto 12, 2020*
 
 Questo contenuto offre informazioni utili per l'apprendimento e il supporto di Configuration Manager.
 
@@ -35,43 +35,43 @@ Nota: questo contenuto viene aggiornato il secondo lunedì di ogni mese con i da
 
 Per altre informazioni, vedere gli articoli seguenti:
 
-- [Libreria della documentazione di Configuration Manager](https://docs.microsoft.com/mem/configmgr)  
-- [Uso della documentazione di Configuration Manager](https://docs.microsoft.com/mem/configmgr/core/understand/use-docs)
+- [Libreria della documentazione di Configuration Manager](../../index.yml)  
+- [Uso della documentazione di Configuration Manager](../understand/use-docs.md)
 
 ## <a name="recommended"></a>Consigliato
 
 Elenco aggiornato di articoli importanti.
 
-- [Collegamento del tenant di Microsoft Endpoint Manager](https://docs.microsoft.com/mem/configmgr/tenant-attach/)
-- [Analisi degli endpoint](https://docs.microsoft.com/mem/analytics/)
-- [Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/)
-- [Co-gestione per dispositivi Windows 10](https://docs.microsoft.com/mem/configmgr/comanage/)  
-- [CMPivot](https://docs.microsoft.com/mem/configmgr/core/servers/manage/cmpivot)  
-- [Pianificare la gestione di BitLocker](https://docs.microsoft.com/mem/configmgr/protect/plan-design/bitlocker-management)  
-- [Gestione di Microsoft Edge](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/deploy-edge)  
-- [Gestire gli aggiornamenti di Office 365 ProPlus](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/manage-office-365-proplus-updates)  
-- [Fundamentals of Configuration Manager current branch and Windows as a service](https://docs.microsoft.com/mem/configmgr/core/understand/configuration-manager-and-windows-as-service) (Nozioni di base su Configuration Manager Current Branch e Windows distribuito come servizio)
-- [Ottimizzare il recapito degli aggiornamenti di Windows 10 con Configuration Manager](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/optimize-windows-10-update-delivery)
-- [Versioni di Technical Preview](https://docs.microsoft.com/mem/configmgr/core/get-started/technical-preview)
+- [Collegamento del tenant di Microsoft Endpoint Manager](../../tenant-attach/index.yml)
+- [Analisi degli endpoint](../../../analytics/index.yml)
+- [Desktop Analytics](../../desktop-analytics/index.yml)
+- [Co-gestione per dispositivi Windows 10](../../comanage/index.yml)  
+- [CMPivot](../servers/manage/cmpivot.md)  
+- [Pianificare la gestione di BitLocker](../../protect/plan-design/bitlocker-management.md)  
+- [Gestione di Microsoft Edge](../../apps/deploy-use/deploy-edge.md)  
+- [Gestire gli aggiornamenti delle app Microsoft 365](../../sum/deploy-use/manage-office-365-proplus-updates.md)  
+- [Fundamentals of Configuration Manager current branch and Windows as a service](../understand/configuration-manager-and-windows-as-service.md) (Nozioni di base su Configuration Manager Current Branch e Windows distribuito come servizio)
+- [Ottimizzare il recapito degli aggiornamenti di Windows 10 con Configuration Manager](../../sum/deploy-use/optimize-windows-10-update-delivery.md)
+- [Versioni di Technical Preview](../get-started/technical-preview.md)
 
 ## <a name="trending"></a>Di tendenza
 
-Gli articoli più visualizzati tra il 1° e il 30 giugno 2020.
+Gli articoli più visualizzati tra il 1° e il 31 luglio 2020.
 
 | Visualizzazioni pagina | Titolo |
 |------------|-------|
-| 21317 | [Pianificare il gateway di gestione cloud](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
-| 19402 | [Riferimento ai file di log](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files) |
-| 18826 | [Come abilitare Transport Layer Security (TLS) 1.2 nei client](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) |
-| 16525 | [Panoramica dell'abilitazione di Transport Layer Security (TLS) 1.2](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2) |
-| 16142 | [Porte usate per le connessioni](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/ports) |
-| 15834 | [Novità della versione 2002](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2002) |
-| 13963 | [Che cos'è Configuration Manager?](https://docs.microsoft.com/mem/configmgr/core/understand/introduction) |
-| 13727 | [Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/overview) |
-| 13603 | [Co-gestione per dispositivi Windows 10](https://docs.microsoft.com/mem/configmgr/comanage/overview) |
-| 13049 | [Manuale dell'utente di Software Center](https://docs.microsoft.com/mem/configmgr/core/understand/software-center) |
+| 25526 | [Come abilitare Transport Layer Security (TLS) 1.2 nei client](../plan-design/security/enable-tls-1-2-client.md) |
+| 22168 | [Panoramica dell'abilitazione di Transport Layer Security (TLS) 1.2](../plan-design/security/enable-tls-1-2.md) |
+| 18114 | [Riferimento ai file di log](../plan-design/hierarchy/log-files.md) |
+| 17355 | [Pianificare il gateway di gestione cloud](../clients/manage/cmg/plan-cloud-management-gateway.md) |
+| 15548 | [Che cos'è Configuration Manager?](../understand/introduction.md) |
+| 14783 | [Porte usate per le connessioni](../plan-design/hierarchy/ports.md) |
+| 13029 | [Manuale dell'utente di Software Center](../understand/software-center.md) |
+| 12939 | [Co-gestione per dispositivi Windows 10](../../comanage/overview.md) |
+| 12256 | [Desktop Analytics](../../desktop-analytics/overview.md) |
+| 11343 | [Novità della versione 2002](../plan-design/changes/whats-new-in-version-2002.md) |
 
-La [pagina hub di Configuration Manager](https://docs.microsoft.com/mem/configmgr/) ha avuto 36.220 visualizzazioni in questo periodo di tempo.
+La [pagina hub di Configuration Manager](../../index.yml) ha avuto 35.558 visualizzazioni in questo periodo di tempo.
 
 ## <a name="recently-updated"></a>Aggiornata di recente
 
@@ -79,32 +79,32 @@ Articoli con un aggiornamento recente e significativo.
 
 | Ultima revisione | Titolo |
 |---------------|-------|
-| 29/06/2020 | [Technical Preview 2006](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2006) |
-| 25/06/2020 | [Installazione del report di esempio di Power BI](https://docs.microsoft.com/mem/configmgr/core/servers/manage/powerbi-sample-reports) |
-| 24/06/2020 | [Versioni di SQL Server supportate](https://docs.microsoft.com/mem/configmgr/core/plan-design/configs/support-for-sql-server-versions) |
-| 18/06/2020 | [Gestione degli aggiornamenti dei driver di Surface](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/surface-drivers) |
-| 17/06/2020 | [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/mem/configmgr/protect/deploy-use/defender-advanced-threat-protection) |
-| 10/06/2020 | [Pianificare il gateway di gestione cloud](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
-| 10/06/2020 | [Manuale dell'utente di Software Center](https://docs.microsoft.com/mem/configmgr/core/understand/software-center) |
-| 10/06/2020 | [Domande frequenti su Cloud Management Gateway](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/cloud-management-gateway-faq) |
-| 05/06/2020 | [Procedure consigliate per le raccolte](https://docs.microsoft.com/mem/configmgr/core/clients/manage/collections/best-practices-for-collections) |
-| 05/06/2020 | [Valutazione delle raccolte](https://docs.microsoft.com/mem/configmgr/core/clients/manage/collections/collection-evaluation) |
+| 31/07/2020 | [Panoramica di CMPivot collegato al tenant](../../tenant-attach/cmpivot-overview-attached.md) |
+| 27/07/2020 | [Hub della community e GitHub](../servers/manage/community-hub.md) |
+| 14/7/2020 | [Technical Preview 2007](../get-started/2020/technical-preview-2007.md) |
+| 10/7/2020 | [Collegamento del tenant di Microsoft Endpoint Manager](../../tenant-attach/device-sync-actions.md) |
+| 8/7/2020 | [Tenant attach - Dettagli dei client di ConfigMgr (anteprima) nell'interfaccia di amministrazione](../../tenant-attach/client-details.md) |
+| 8/7/2020 | [Risolvere i problemi dei dettagli del client](../../tenant-attach/troubleshoot-client-details.md) |
+| 7/7/2020 | [Risolvere i problemi delle azioni del dispositivo e del collegamento di tenant](../../tenant-attach/troubleshoot.md) |
+| 7/7/2020 | [Domande frequenti su prodotto e licenze](../understand/product-and-licensing-faq.md) |
+| 7/7/2020 | [Requisiti per l'accesso a Internet](../plan-design/network/internet-endpoints.md) |
+| 01/01/2020 | [Novità di Desktop Analytics](../../desktop-analytics/whats-new.md) |
 
 ## <a name="troubleshooting-articles"></a>Articoli sulla risoluzione dei problemi
 
 Procedure dettagliate guidate che semplificano la risoluzione dei problemi relativi a funzionalità e componenti di Configuration Manager.
 
-- [Risolvere i problemi relativi alla distribuzione di applicazioni](https://docs.microsoft.com/mem/configmgr/apps/understand/app-deployment-technical-reference)
+- [Risolvere i problemi relativi alla distribuzione di applicazioni](../../apps/understand/app-deployment-technical-reference.md)
 - [Risoluzione dei problemi di avvio PXE](https://support.microsoft.com/help/4468612)
 - [Informazioni e risoluzione dei problemi di aggiornamento e manutenzione in Configuration Manager](https://support.microsoft.com/help/4490424)
 - [Risoluzione dei problemi di sincronizzazione degli aggiornamenti software](https://support.microsoft.com/help/10059)
 - [Informazioni e risoluzione dei problemi di distribuzione del contenuto](https://support.microsoft.com/help/4482728)
-- [Informazioni e risoluzione dei problemi di integrazione di Microsoft Store per le aziende](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/troubleshoot-microsoft-store-for-business-integration)
+- [Informazioni e risoluzione dei problemi di integrazione di Microsoft Store per le aziende](../../apps/deploy-use/troubleshoot-microsoft-store-for-business-integration.md)
 - [Risoluzione dei problemi di gestione degli aggiornamenti software](https://support.microsoft.com/help/10680)
 - [Risoluzione dei problemi relativi al passaggio Installa applicazione della sequenza di attività](https://support.microsoft.com/help/18408/)
-- [Risolvere i problemi di Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/troubleshooting)
-- [Risolvere i problemi relativi a Microsoft Connected Cache](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/troubleshoot-microsoft-connected-cache)
-- [Risolvere i problemi relativi a BitLocker](https://docs.microsoft.com/mem/configmgr/protect/tech-ref/bitlocker/troubleshoot)
+- [Risolvere i problemi di Desktop Analytics](../../desktop-analytics/troubleshooting.md)
+- [Risolvere i problemi relativi a Microsoft Connected Cache](../servers/deploy/configure/troubleshoot-microsoft-connected-cache.md)
+- [Risolvere i problemi relativi a BitLocker](../../protect/tech-ref/bitlocker/troubleshoot.md)
 
 ## <a name="new-and-updated-support-articles"></a>Articoli di supporto nuovi e aggiornati
 
@@ -117,4 +117,4 @@ Articoli di supporto nuovi o aggiornati tra il 16 maggio e il 17 luglio 2020.
 - [KB 4563473 Aggiornamento cumulativo per i problemi di connessione del tenant di Configuration Manager versione 2002](https://support.microsoft.com/help/4563473)
 - [KB 4567007 Errori di avvio PXE o ritardo della sequenza delle attività dopo l'aggiornamento a Configuration Manager Current Branch, versione 2002](https://support.microsoft.com/help/4567007)
 
-Per sottoscrivere la notifica Atom o RSS dei nuovi articoli di supporto di Configuration Manager, vedere [Aggiornamenti dei contenuti del supporto](https://support.microsoft.com/help/4089498/) e selezionare **Microsoft Endpoint Configuration Manager**.  
+Per sottoscrivere la notifica Atom o RSS dei nuovi articoli di supporto di Configuration Manager, vedere [Aggiornamenti dei contenuti del supporto](https://support.microsoft.com/help/4089498/) e selezionare **Microsoft Endpoint Configuration Manager**.

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 119f787f15b8c907d0c760a12b973ca984f4348c
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: b4663ca5640bcfea4338912ff471a3253b744d5f
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268539"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125832"
 ---
 # <a name="health-status-monitoring-in-desktop-analytics"></a>Monitoraggio dello stato di integrità in Desktop Analytics
 
@@ -27,7 +27,7 @@ Per altre informazioni su come usare questa funzionalità, vedere [Monitorare l'
 ![Screenshot della pagina Monitora integrità di Desktop Analytics](media/monitor-health.png)
 
 > [!NOTE]  
-> Desktop Analytics raccoglie dati sull'integrità solo dai dispositivi che offrono dati di utilizzo utilizzabili come denominatore. Ciò significa che non sono inclusi i dispositivi Windows 7 e Windows 10 non impostati per la condivisione dei dati di diagnostica a livello Avanzata (con limitazioni). Se più del 10% dei dispositivi che eseguono Windows 10 è impostato per la condivisione dei dati di diagnostica a livelli diversi da Avanzata (con limitazioni), nell'area banner della pagina **Monitora integrità** viene visualizzato un avviso.  
+> Desktop Analytics raccoglie dati sull'integrità solo dai dispositivi che offrono dati di utilizzo utilizzabili come denominatore. Ciò significa che non sono inclusi i dispositivi Windows 7 e Windows 10 non impostati per la condivisione dei dati di diagnostica a livello Opzionale (con limitazioni). Se più del 10% dei dispositivi che eseguono Windows 10 è impostato per la condivisione dei dati di diagnostica a livelli diversi da Opzionale (con limitazioni), nell'area banner della pagina **Monitora integrità** viene visualizzato un avviso.  
 
 Per visualizzare altre informazioni su un'app specifica, selezionarla nell'elenco.
 

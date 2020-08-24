@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5ed799d01ea4fdae1f9ecb013b4cf73deb0e6f0
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: b056eb0bab2416a87f443c025a76c22b580ed3c9
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051656"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252443"
 ---
 # <a name="set-enrollment-restrictions"></a>Impostare le restrizioni di registrazione
 
@@ -47,11 +47,10 @@ Le restrizioni di registrazione specifiche che è possibile creare includono:
   - iOS/iPadOS
   - macOS
   - Windows
-  - Windows Mobile
-- Versione del sistema operativo della piattaforma per iOS/iPadOS, amministratore di dispositivi Android, profilo di lavoro Android Enterprise, Windows e Windows Mobile. (È possibile usare solo le versioni di Windows 10. Lasciare questo campo vuoto se è consentito Windows 8.1.)
+- Versione del sistema operativo della piattaforma per iOS/iPadOS, amministratore di dispositivi Android, profilo di lavoro Android Enterprise e Windows.
   - Versione minima.
   - Versione massima.
-- Limitare i [dispositivi di proprietà personale](device-enrollment.md#bring-your-own-device) (solo iOS, amministratore di dispositivi Android, profilo di lavoro Android Enterprise, macOS, Windows e Windows Mobile).
+- Limitare i [dispositivi di proprietà personale](device-enrollment.md#bring-your-own-device) (iOS, amministratore di dispositivi Android, profilo di lavoro Android Enterprise, macOS e Windows).
 
 ## <a name="default-restrictions"></a>Restrizioni predefinite
 

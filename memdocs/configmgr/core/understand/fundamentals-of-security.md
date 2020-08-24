@@ -10,12 +10,12 @@ ms.assetid: 035b7f73-8b78-4ed1-835e-a31f9a5c4a02
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 95b8bf41d74e7011eed40116f4fe34e2c356d67e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6c702916f73d1fbc842966161a6958a61d24044a
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707059"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126070"
 ---
 # <a name="fundamentals-of-security-for-configuration-manager"></a>Nozioni fondamentali sulla sicurezza di Configuration Manager
 
@@ -82,7 +82,7 @@ Il livello di protezione finale si basa sulle autorizzazioni per gli oggetti nel
 
  Un amministratore assegna *ruoli di sicurezza* a utenti amministratori e autorizzazioni di gruppo. Le autorizzazioni sono collegate a diversi tipi di oggetto di Configuration Manager, ad esempio per creare o modificare le impostazioni client. 
 
- Gli *ambiti di sicurezza* raggruppano istanze specifiche di oggetti che un utente amministratore ha la responsabilità di gestire, ad esempio un'applicazione che installa Microsoft Office. 
+ Gli *ambiti di sicurezza* raggruppano istanze specifiche di oggetti che un utente amministratore ha la responsabilità di gestire, ad esempio un'applicazione che installa Microsoft 365 Apps. 
 
  La combinazione di ruoli di sicurezza, ambiti di sicurezza e raccolte consente di definire gli oggetti che possono essere visualizzati e gestiti da un utente amministrativo. Configuration Manager installa alcuni ruoli di sicurezza predefiniti per le attività di gestione comuni. È possibile creare ruoli di sicurezza personalizzati per supportare requisiti aziendali specifici.  
 

@@ -10,12 +10,12 @@ ms.assetid: d17e1188-d277-438f-9236-db9cd213b421
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0665c6378ac81d6f6f254501760647048ce66b0b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4e43f5a36f2a1bf44959b9645c2fb48a22cc71f1
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81695329"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126774"
 ---
 # <a name="introduction-to-collections-in-configuration-manager"></a>Introduzione alle raccolte in Configuration Manager
 
@@ -34,7 +34,7 @@ Di seguito sono descritti alcuni esempi di uso delle raccolte:
 |Operazione|Esempio|  
 |---------|-------|  
 |Raggruppamento di risorse|È possibile creare raccolte per il raggruppamento delle risorse in base alla gerarchia dell'organizzazione.<br /><br /> Ad esempio, si potrebbe creare una raccolta di tutti i computer nell'unità organizzativa (OU) di Active Directory "Sede centrale Milano". Per altre informazioni su come creare questo tipo di raccolta, vedere [Come creare le raccolte](../../../../core/clients/manage/collections/create-collections.md).<br /><br /> Si potrebbe usare questa raccolta per operazioni quali la configurazione delle impostazioni di Endpoint Protection, la configurazione delle impostazioni di risparmio energia per i dispositivi o l'installazione del client di Configuration Manager.|  
-|Distribuzione delle applicazioni|È possibile creare una raccolta di tutti i computer in cui non è installato Microsoft Office 2013 e quindi distribuirlo in tutti i computer di tale raccolta.<br /><br /> È anche possibile usare i requisiti dell'applicazione per eseguire questa attività. Per altre informazioni, vedere [Come creare applicazioni in Configuration Manager](../../../../apps/deploy-use/create-applications.md).|  
+|Distribuzione delle applicazioni|È possibile creare una raccolta di tutti i computer in cui non è installato Microsoft Office 365 e quindi distribuirlo in tutti i computer di tale raccolta.<br /><br /> È anche possibile usare i requisiti dell'applicazione per eseguire questa attività. Per altre informazioni, vedere [Come creare applicazioni in Configuration Manager](../../../../apps/deploy-use/create-applications.md).|  
 |[Gestione delle impostazioni client](../../../../core/clients/deploy/about-client-settings.md)|Sebbene le impostazioni client predefinite in Configuration Manager siano valide per tutti i dispositivi e tutti gli utenti, è possibile creare impostazioni client personalizzate applicabili a una raccolta di dispositivi o a una raccolta di utenti.<br /><br /> Ad esempio, se si vuole che il controllo remoto sia disponibile in tutti i dispositivi a parte alcuni, configurare impostazioni client predefinite per consentire il controllo remoto e quindi configurare impostazioni client personalizzate che non consentono il controllo remoto e distribuirle alla raccolta dei client che rappresentano l'eccezione. |  
 |[Risparmio energia](../power/introduction-to-power-management.md)|È possibile configurare impostazioni di risparmio energia specifiche per ogni raccolta.|  
 |[Amministrazione basata su ruoli](../../../../core/servers/deploy/configure/configure-role-based-administration.md)|Usare le raccolte per controllare i gruppi di utenti con accesso a varie funzionalità nella console di Configuration Manager.|  

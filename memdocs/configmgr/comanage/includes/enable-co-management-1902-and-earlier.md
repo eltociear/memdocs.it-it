@@ -4,15 +4,17 @@ ms.author: mstewart
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: include
-ms.date: 08/23/2019
-ms.openlocfilehash: d8eaaa403bd1dd97214b4eff82be79d5c2a6566e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.date: 08/11/2020
+ms.openlocfilehash: 4c669bbbd9f996ae820f695925ba63cd6a92da2a
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690399"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127308"
 ---
 <!--Don't apply H2/H3 in this include file since they are context driven by article-->
+Per abilitare la co-gestione per Configuration Manager versione 1902 e versioni precedenti, seguire le istruzioni riportate di seguito:
+
 1. Nella console di Configuration Manager passare all'area di lavoro **Amministrazione**, espandere **Servizi cloud** e selezionare il nodo **Co-gestione**. Fare clic su **Configura la co-gestione** nella barra multifunzione per aprire la **procedura guidata di configurazione della co-gestione**.
 
 2. Nella pagina **Sottoscrizione** della procedura guidata fare clic su **Accedi**. Accedere al tenant di Intune e quindi selezionare **Avanti**.  
@@ -21,8 +23,7 @@ ms.locfileid: "81690399"
 
     Questa azione abilita la registrazione automatica dei client in Intune per i client di Configuration Manager esistenti. Quando si sceglie **Pilota**, vengono registrati automaticamente in Intune solo i client di Configuration Manager che sono membri della raccolta pilota. Questa opzione consente di abilitare la co-gestione su un subset di client per iniziare a testarla e implementarla mediante un approccio per fasi. 
 
-    > [!Note]  
-    > A partire dalla versione 1806, la registrazione automatica non è immediata per tutti i client. Questo comportamento consente una migliore scalabilità della registrazione per gli ambienti di grandi dimensioni. Configuration Manager sceglie in modo casuale la registrazione in base al numero di client. Se l'ambiente include 100.000 client, ad esempio, quando si abilita questa impostazione, la registrazione viene eseguita in più giorni.<!--1358003-->  
+    La registrazione automatica non è immediata per tutti i client. Questo comportamento consente una migliore scalabilità della registrazione per gli ambienti di grandi dimensioni. Configuration Manager sceglie in modo casuale la registrazione in base al numero di client. Se l'ambiente include 100.000 client, ad esempio, quando si abilita questa impostazione, la registrazione viene eseguita in più giorni.<!--1358003-->  
 
 4. Per i dispositivi basati su Internet già registrati in Intune, copiare e salvare la riga di comando nella pagina **Enablement** (Abilitazione). È possibile usare questa riga di comando per installare il client di Configuration Manager come app in Intune. Se non si salva la riga di comando a questo punto, sarà possibile esaminare la co-gestione in qualsiasi momento per ottenere la riga di comando.
 

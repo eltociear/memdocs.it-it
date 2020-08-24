@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 08/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b846aa1ead9bb2d1c1b15d783e646e59047c16ee
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 0e18395aae96adec3bf4bbf60bdcccdd205dc90d
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988405"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146338"
 ---
 # <a name="upgrade-windows-10-editions-or-switch-out-of-s-mode-on-devices-using-microsoft-intune"></a>Aggiornare le edizioni Windows 10 o disattivare la modalità S nei dispositivi con Microsoft Intune
 
@@ -50,7 +50,7 @@ Questo articolo elenca i percorsi di aggiornamento supportati e illustra come cr
 Prima di aggiornare i dispositivi, assicurarsi di avere i prerequisiti seguenti:
 
 - Un codice Product Key valido per installare la versione di Windows aggiornata in tutti i dispositivi da usare come destinazione dei criteri, ad esempio le edizioni Windows 10 Desktop. È possibile usare codici ad attivazione multipla o chiavi del server di gestione delle chiavi.
-- Per le edizioni Windows 10 Mobile e Windows 10 Holographic è possibile usare un file di licenza Microsoft. Il file di licenza include le informazioni di licenza per installare la versione aggiornata in tutti i dispositivi a cui sono destinati i criteri.
+- Per le edizioni Windows 10 Holographic è possibile usare un file di licenza Microsoft. Il file di licenza include le informazioni di licenza per installare la versione aggiornata in tutti i dispositivi a cui sono destinati i criteri.
 - I dispositivi Windows 10 a cui vengono assegnati i criteri vengono registrati in Microsoft Intune. Non è possibile usare i criteri di aggiornamento dell'edizione con i PC che eseguono il software client per PC di Intune.
 
 ## <a name="supported-upgrade-paths"></a>Percorsi di aggiornamento supportati
@@ -70,7 +70,6 @@ La tabella seguente riporta i percorsi di aggiornamento supportati per il profil
 | Windows 10 Core | Windows 10 Education <br/>Windows 10 Enterprise <br/>Windows 10 Pro Education | 
 | Windows 10 Core N | Windows 10 Education N <br/>Windows 10 Enterprise N <br/>Windows 10 Pro Education N | 
 | Windows 10 Holographic | Windows 10 Holographic for Business |
-| Windows 10 Mobile | Windows 10 Mobile Enterprise |
 
 <!--The following table provides information about the supported upgrade paths for Windows 10 editions in this policy:
 
@@ -125,7 +124,7 @@ La tabella seguente riporta i percorsi di aggiornamento supportati per il profil
 
 11. In **Rivedi e crea** rivedere le impostazioni. Quando si seleziona **Crea**, le modifiche vengono salvate e il profilo viene assegnato. Il criterio viene visualizzato anche nell'elenco dei profili.
 
-Alla successiva sincronizzazione di ogni dispositivo viene applicato il criterio.
+Il criterio viene applicato alla sincronizzazione successiva di ogni dispositivo.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

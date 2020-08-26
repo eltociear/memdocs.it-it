@@ -51,7 +51,7 @@
           displayName: 'psk, oma-uri, eap'
         - name: Risoluzione dei problemi relativi al Wi-Fi
           href: troubleshoot-wi-fi-profiles.md
-    - name: Modelli amministrativi in Windows
+    - name: Modelli amministrativi
       displayName: 'admx, gpo, group policy'
       items:
         - name: Creare modelli amministrativi

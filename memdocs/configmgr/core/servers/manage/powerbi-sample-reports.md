@@ -2,7 +2,7 @@
 title: Installare report di esempio di Power BI
 titleSuffix: Configuration Manager
 description: Informazioni su come installare i report di esempio di Power BI in Configuration Manager
-ms.date: 08/12/2020
+ms.date: 08/18/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,18 +10,18 @@ ms.assetid: 7e9bc22c-67ac-4a86-b613-944a4928e583
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 450c76617cf12a3201aa990c90843cb2e0f0edee
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: 025788a4ed4a26123f24ec667348eae97821295e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179435"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699688"
 ---
 # <a name="install-power-bi-sample-reports"></a>Installare report di esempio di Power BI
 <!--5679791-->
 *Si applica a: Configuration Manager (Current Branch)*
 
-A partire dalla versione 2002, è possibile integrare [Server di report di Power BI](https://docs.microsoft.com/power-bi/report-server/get-started) con la creazione di report di Configuration Manager. Sono disponibili per il download report di esempio da installare in Configuration Manager. Questo articolo illustra come installare report di esempio di Power BI in Configuration Manager.
+A partire dalla versione 2002, è possibile integrare [Server di report di Power BI](/power-bi/report-server/get-started) con la creazione di report di Configuration Manager. Sono disponibili per il download report di esempio da installare in Configuration Manager. Questo articolo illustra come installare report di esempio di Power BI in Configuration Manager.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -34,7 +34,7 @@ A partire dalla versione 2002, è possibile integrare [Server di report di Power
     > [!IMPORTANT]
     > Usare solo le versioni di Power BI Desktop dall'[Area download Microsoft](https://www.microsoft.com/download/). Non usare una versione dal Microsoft Store.
     >
-    > Usare solo una versione di Power BI Desktop [ottimizzata per Server di report di Power BI](https://docs.microsoft.com/power-bi/report-server/install-powerbi-desktop).
+    > Usare solo una versione di Power BI Desktop [ottimizzata per Server di report di Power BI](/power-bi/report-server/install-powerbi-desktop).
 
 ## <a name="download-the-sample-reports"></a>Scaricare i report di esempio
 
@@ -64,9 +64,14 @@ Per installare i report di esempio:
 
 1. Specificare il nome del database di Configuration Manager e il nome del server di database quando richiesto, e selezionare **Carica**.
 
-    Quando si carica o si applica il modello di dati, ignorare eventuali errori.
-
     :::image type="content" source="media/sample-report-database.png" alt-text="Specificare il nome del database e del server di database" lightbox="media/sample-report-database.png":::
+
+    > [!NOTE]
+    > Quando si carica o si applica il modello di dati, ignorare eventuali errori. Se ad esempio viene visualizzato il messaggio di errore seguente: "La connessione a tabelle da più di un database non è supportata nella modalità DirectQuery", selezionare **Chiudi**. Quindi aggiornare le impostazioni dell'origine dati:
+    >
+    > 1. Sulla barra multifunzione di Power BI Desktop selezionare **Modifica query**, quindi **Impostazioni origine dati**.
+    > 1. Selezionare **Cambia origine**, verificare i nomi del server e del database e selezionare **OK**.
+    > 1. Chiudere la finestra di impostazioni dell'origine dati e quindi selezionare **Applica modifiche**.
 
 1. Quando vengono caricati i dati del report, selezionare **File** > **Salva con nome** e quindi **Server di report di Power BI**.
 

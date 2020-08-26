@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 51a974247d7281d6134b699a5865f801d1ed6094
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 9d58ffee30986efeda1716358ab7aa6c1d36cbf5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905714"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695682"
 ---
 # <a name="capabilities-in-technical-preview-1609-for-configuration-manager"></a>Funzionalità della versione Technical Preview 1609 per Configuration Manager
 
@@ -91,7 +91,7 @@ La procedura per creare e distribuire un'applicazione di Configuration Manager d
 
 Sono state aggiunte molte nuove impostazioni che è possibile usare negli elementi di configurazione relativi a diverse piattaforme di dispositivi.
 Si tratta di impostazioni che in precedenza esistevano nella configurazione autonoma di Microsoft Intune, rese ora disponibili per Intune con Configuration Manager.
-Per assistenza con queste impostazioni, aprire [Gestire impostazioni e funzionalità nei dispositivi con i criteri di Microsoft Intune](/mem/intune/configuration/device-profiles) e selezionare il sottoargomento relativo alle impostazioni per la piattaforma desiderata.
+Per assistenza con queste impostazioni, aprire [Gestire impostazioni e funzionalità nei dispositivi con i criteri di Microsoft Intune](../../../intune/configuration/device-profiles.md) e selezionare il sottoargomento relativo alle impostazioni per la piattaforma desiderata.
 
 
 ### <a name="new-settings-for-android-devices"></a>Nuove impostazioni per i dispositivi Android
@@ -238,7 +238,7 @@ Le sezioni seguenti illustrano le modifiche introdotte con questa versione di an
 ### <a name="changes-in-ui-and-behavior-for-boundary-groups-and-content-locations"></a>Modifiche all'interfaccia utente e al comportamento per gruppi limite e percorsi del contenuto
 Di seguito sono riportate le modifiche principali ai gruppi limite e alle modalità di ricerca del contenuto da parte dei client. Molti di queste modifiche e concetti funzionano in combinazione.
 - **Rimozione delle configurazioni per i punti lenti o veloci:** I singoli punti di distribuzione non vengono più configurati come punti di distribuzione lenti o veloci.  Al contrario, ogni sistema del sito associato a un gruppo limite viene trattato ugualmente. Grazie a questa modifica, la scheda **Riferimenti** delle proprietà del gruppo limite non supporta la configurazione Veloce o Lento.
-- **Nuovo gruppo di limiti predefinito in ogni sito:**  Ogni sito primario ha un nuovo gruppo di limiti predefinito denominato ***Default-Site-Boundary-Group\<codicesito>***.  Quando un client non è presente in un percorso di rete che viene assegnato a un gruppo limite, il client usa i sistemi del sito associati al gruppo predefinito del sito assegnato. Considerare l'uso di questo gruppo limite come sostituzione del concetto di percorso del contenuto di fallback.    
+- **Nuovo gruppo di limiti predefinito in ogni sito:**  Ogni sito primario ha un nuovo gruppo di limiti predefinito denominato ***Default-Site-Boundary-Group\<sitecode>***.  Quando un client non è presente in un percorso di rete che viene assegnato a un gruppo limite, il client usa i sistemi del sito associati al gruppo predefinito del sito assegnato. Considerare l'uso di questo gruppo limite come sostituzione del concetto di percorso del contenuto di fallback.    
   -  Rimozione dell'opzione **'Consenti percorso origine di fallback per il contenuto'** : la configurazione di un punto di distribuzione da usare per il fallback non avviene più in modo esplicito e le opzioni per impostare questa proprietà vengono rimosse dall'interfaccia utente.
 
   Il risultato dell'impostazione **Allow fallback source locations for content** (Consenti percorsi di origine di fallback per il contenuto) in un tipo di distribuzione per le applicazioni cambia. Questa impostazione su un tipo di distribuzione consente ora al client di usare il gruppo limite del sito predefinito come percorso di origine del contenuto.
@@ -317,8 +317,8 @@ Configurando i vari gruppi adiacenti perché siano disponibili in momenti divers
 
 ### <a name="update-existing-boundary-groups-to-the-new-model"></a><a name="bkmk_update"></a>Aggiornare i gruppi limite esistenti al nuovo modello
 Quando si installa la versione 1609 e si aggiorna il sito, le configurazioni seguenti vengono eseguite in automatico. Tali configurazioni sono utili per verificare che il comportamento di fallback corrente rimanga disponibile finché non si configurano i nuovi gruppi limite e le relazioni.  
-- Vengono aggiunti punti di distribuzione non protetti di un sito al gruppo limite *Default-Site-Boundary-Group\<CodiceSito>* di tale sito.
-- Viene creata una copia di ogni gruppo limite esistente che include un server del sito configurato con una connessione lenta. Il nome del nuovo gruppo è ***\<nome originale del gruppo limite >-Slow-Tmp***:  
+- I punti di distribuzione non protetti di un sito vengono aggiunti al gruppo di limiti *Default-Site-Boundary-Group\<sitecode>* di tale sito.
+- Viene creata una copia di ogni gruppo limite esistente che include un server del sito configurato con una connessione lenta. Il nome del nuovo gruppo è ***\<original boundary group name>-Slow-Tmp***:  
   -   I sistemi del sito che dispongono di una connessione veloce rimangono nel gruppo limite originale.
   -   Viene aggiunta una copia dei sistemi del sito con connessione lenta alla copia del gruppo limite. I sistemi del sito originale configurati con connessione lenta rimangono nel gruppo limite originale per la compatibilità con le versioni precedenti, ma non vengono usati da questo gruppo limite.
   -   Questa copia del gruppo limite non dispone di limiti associati. Tuttavia, viene creato un collegamento fallback tra il gruppo originale e la nuova copia del gruppo limite che presenta l'ora di fallback impostata su zero.
@@ -347,7 +347,7 @@ Nel dashboard vengono visualizzati i grafici per:
 - Versioni dei client di Office 365
 - Lingue dei client di Office 365
 - Canali dei client di Office 365     
-Per altre informazioni, vedere [Panoramica dei canali di aggiornamento per Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-update-channels).
+Per altre informazioni, vedere [Panoramica dei canali di aggiornamento per Office 365 ProPlus](/deployoffice/overview-update-channels).
 - Regole di distribuzione automatica con il client di Office 365 selezionato nel set dei prodotti disponibili.
 
 Sul dashboard è possibile eseguire le azioni seguenti:

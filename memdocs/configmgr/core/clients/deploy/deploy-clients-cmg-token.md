@@ -2,7 +2,7 @@
 title: Autenticazione basata su token per CMG
 titleSuffix: Configuration Manager
 description: Registrare un client nella rete interna per un token univoco o creare un token di registrazione in blocco per i dispositivi basati su Internet.
-ms.date: 06/10/2020
+ms.date: 08/17/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8146c9c2605f8693ad7375b974a5dd13c089d946
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 55997c9185a221d105aa8ad40bbb14021463d07b
+ms.sourcegitcommit: da5bfbe16856fdbfadc40b3797840e0b5110d97d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715663"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512700"
 ---
 # <a name="token-based-authentication-for-cloud-management-gateway"></a>Autenticazione basata su token per Cloud Management Gateway
 
@@ -25,13 +25,13 @@ ms.locfileid: "84715663"
 
 Cloud Management Gateway (CMG) supporta molti tipi di client, ma anche con [HTTP avanzato](../../plan-design/hierarchy/enhanced-http.md), questi client richiedono un [certificato di autenticazione client](../manage/cmg/certificates-for-cloud-management-gateway.md#for-internet-based-clients-communicating-with-the-cloud-management-gateway). Può essere complicato gestire il provisioning di questo requisito del certificato nei client basati su Internet che non si connettono spesso alla rete interna, non possono essere aggiunti ad Azure Active Directory (Azure AD) e non hanno un metodo per installare un certificato emesso da PKI.
 
-Per risolvere questi problemi, a partire dalla versione 2002 Configuration Manager estende il supporto dei dispositivi con i metodi seguenti:
+Per risolvere questi problemi, a partire dalla versione 2002 Configuration Manager estende il supporto dei dispositivi inviando i propri token di autenticazione. Per sfruttare i vantaggi di questa funzionalità, dopo l'aggiornamento del sito aggiornare anche i client alla versione più recente. Lo scenario completo non funzionerà fin quando anche la versione del client sarà la più recente. Se necessario, assicurarsi di [promuovere la nuova versione del client al livello di produzione](../manage/upgrade/test-client-upgrades.md#to-promote-the-new-client-to-production).
 
-- Registrazione nella rete interna per un token univoco
+ I client si registrano inizialmente per ricevere questi token con uno dei due metodi seguenti:
 
-- Creare un token di registrazione in blocco per i dispositivi basati su Internet
+- Rete interna
 
-Per sfruttare i vantaggi di questa funzionalità, dopo l'aggiornamento del sito aggiornare anche i client alla versione più recente. Lo scenario completo non funzionerà fin quando anche la versione del client sarà la più recente. Se necessario, assicurarsi di [promuovere la nuova versione del client al livello di produzione](../manage/upgrade/test-client-upgrades.md#to-promote-the-new-client-to-production).
+- Registrazione in blocco
 
 Questo token viene gestito dal client di Configuration Manager insieme al punto di gestione, quindi non esiste alcuna dipendenza dalla versione del sistema operativo. Questa funzionalità è disponibile per qualsiasi [versione del sistema operativo client supportata](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md).
 
@@ -40,15 +40,20 @@ Questo token viene gestito dal client di Configuration Manager insieme al punto 
 >
 > Microsoft consiglia di aggiungere i dispositivi ad Azure AD. I dispositivi basati su Internet possono usare Azure AD per l'autenticazione con Configuration Manager. Sono inoltre supportati scenari di dispositivi e utenti in cui il dispositivo è connesso a Internet o è connesso alla rete interna. Per altre informazioni, vedere [Installare e registrare il client usando l'identità di Azure AD](deploy-clients-cmg-azure.md#install-and-register-the-client-using-azure-ad-identity).
 
-## <a name="register-on-the-internal-network"></a>Registrare nella rete interna
+## <a name="internal-network-registration"></a>Registrazione tramite rete interna
 
-Questo metodo richiede che il client si registri prima nel punto di gestione nella rete interna. La registrazione del client si verifica in genere subito dopo l'installazione. Il punto di gestione fornisce al client un token univoco che conferma che sta usando un certificato autofirmato. Quando il client esegue il roaming su Internet, per comunicare con CMG associa il certificato autofirmato al token emesso dal punto di gestione. Il client rinnova il token una volta al mese ed è valido per 90 giorni.
+Questo metodo richiede che il client si registri prima nel punto di gestione nella rete interna. La registrazione del client si verifica in genere subito dopo l'installazione. Il punto di gestione fornisce al client un token univoco che conferma che sta usando un certificato autofirmato. Quando il client esegue il roaming su Internet, per comunicare con CMG associa il certificato autofirmato al token emesso dal punto di gestione.
 
 Il sito abilita questo comportamento per impostazione predefinita.
 
-## <a name="create-a-bulk-registration-token"></a>Creare un token di registrazione in blocco
+## <a name="bulk-registration-token"></a>Token di registrazione in blocco
 
 Se non è possibile installare e registrare i client nella rete interna, creare un token di registrazione in blocco. Usare questo token quando il client viene installato in un dispositivo basato su Internet e viene registrato tramite CMG. Il token di registrazione in blocco ha un periodo di validità breve e non viene archiviato nel client o nel sito. Consente al client di generare un token univoco, che in combinazione con il certificato autofirmato ne consente l'autenticazione per CMG.
+
+> [!NOTE]
+> Non confondere i token di registrazione in blocco con quelli inviati da Configuration Manager ai singoli dispositivi. Il token di registrazione in blocco consente al client di installare e comunicare inizialmente con il sito. Questa comunicazione iniziale è sufficientemente lunga da consentire al sito di inviare al client uno specifico token di autenticazione univoco. Il client usa quindi il proprio token di autenticazione per tutte le comunicazioni con il sito mentre è connesso a Internet. A parte la registrazione iniziale, il client non usa né archivia il token di registrazione in blocco.
+
+Per creare un token di registrazione in blocco da usare durante l'installazione del client nei dispositivi basati su Internet, completare le azioni seguenti:
 
 1. Accedere al server del sito di livello superiore nella gerarchia con privilegi di amministratore locale.
 
@@ -140,6 +145,12 @@ Esempio: `BulkRegistrationTokenTool.exe /lifetime 4320`
 2. Espandere **Sicurezza**, selezionare il nodo **Certificati** e selezionare il token di registrazione in blocco da bloccare.
 
 3. Nella scheda **Home** della barra multifunzione o nel menu di scelta rapida selezionare **Blocca**. Per sbloccare i token di registrazione in blocco precedentemente bloccati, selezionare l'azione **Sblocca**.
+
+## <a name="token-renewal"></a>Rinnovo del token
+
+Una volta al mese il client rinnova il proprio token univoco inviato da Configuration Manager, che è valido per 90 giorni. Non è necessario che un client si connetta alla rete interna per rinnovare il token. Purché il token sia ancora valido, la connessione al sito con CMG è sufficiente. Se il token non viene rinnovato entro 90 giorni, il client deve connettersi direttamente a un punto di gestione in una rete interna per riceverne uno nuovo.
+
+Non è possibile rinnovare un token di registrazione in blocco. Dopo la scadenza di un token di registrazione in blocco, generarne uno nuovo per la registrazione dei dispositivi basati su Internet tramite CMG.
 
 ## <a name="see-also"></a>Vedere anche
 

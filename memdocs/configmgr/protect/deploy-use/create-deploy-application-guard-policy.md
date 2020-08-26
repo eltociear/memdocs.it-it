@@ -10,29 +10,29 @@ ms.assetid: 33a6c1d9-4dd8-411c-a748-693a5bd2ea5a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1189f8c89215bc228c533a88f38f5ae59b6855ee
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: 3fb7559f624afdb16ef228c61331387c163fbd54
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84454937"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697110"
 ---
 # <a name="create-and-deploy-microsoft-defender-application-guard-policy"></a>Creare e distribuire criteri di Microsoft Defender Application Guard
 
 *Si applica a: Configuration Manager (Current Branch)*
 <!-- 1351960 -->  
-È possibile creare e distribuire criteri di [Microsoft Defender Application Guard](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview) usando Configuration Manager Endpoint Protection. Questi criteri consentono di proteggere gli utenti aprendo i siti Web non attendibili in un contenitore isolato protetto non accessibile da altre parti del sistema operativo.
+È possibile creare e distribuire criteri di [Microsoft Defender Application Guard](/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview) usando Configuration Manager Endpoint Protection. Questi criteri consentono di proteggere gli utenti aprendo i siti Web non attendibili in un contenitore isolato protetto non accessibile da altre parti del sistema operativo.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Per creare e distribuire criteri di Microsoft Defender Application Guard, è necessario usare la versione Windows 10 Fall Creators Update (1709). I dispositivi Windows 10 in cui verranno distribuiti i criteri devono essere configurati con [criteri di isolamento di rete](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard#network-isolation-settings). Per altre informazioni, vedere [Panoramica di Microsoft Defender Application Guard](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview).
+Per creare e distribuire criteri di Microsoft Defender Application Guard, è necessario usare la versione Windows 10 Fall Creators Update (1709). I dispositivi Windows 10 in cui verranno distribuiti i criteri devono essere configurati con [criteri di isolamento di rete](/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard#network-isolation-settings). Per altre informazioni, vedere [Panoramica di Microsoft Defender Application Guard](/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview).
 
 ## <a name="create-a-policy-and-to-browse-the-available-settings"></a>Creare un criterio e individuare le impostazioni disponibili
 
 1. Nella console di Configuration Manager scegliere **Asset e conformità**.
 2. Nell'area di lavoro **Asset e conformità** scegliere **Panoramica** > **Endpoint Protection** > **Windows Defender Application Guard**.
 3. Nella scheda **Home** nel gruppo **Crea** fare clic su **Crea i criteri di Windows Defender Application Guard**.
-4. Usando l'[articolo](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard) come riferimento, è possibile selezionare e configurare le impostazioni disponibili. Configuration Manager consente di configurare determinate impostazioni dei criteri:
+4. Usando l'[articolo](/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard) come riferimento, è possibile selezionare e configurare le impostazioni disponibili. Configuration Manager consente di configurare determinate impostazioni dei criteri:
    - [Impostazioni per l'interazione degli host](#bkmk_HIS)
    - [Comportamento dell'applicazione](#bkmk_ABS)
    - [Gestione file](#bkmk_FM)
@@ -44,7 +44,7 @@ Per creare e distribuire criteri di Microsoft Defender Application Guard, è nec
     >  - uno da Windows Information Protection
     >  - uno da Microsoft Defender Application Guard
     >
-    > Se si distribuiscono entrambi i criteri, questi elenchi di isolamento rete devono corrispondere. Se si distribuiscono elenchi che non corrispondono allo stesso client, la distribuzione avrà esito negativo. Per altre informazioni, vedere la [documentazione di Windows Information Protection](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr).
+    > Se si distribuiscono entrambi i criteri, questi elenchi di isolamento rete devono corrispondere. Se si distribuiscono elenchi che non corrispondono allo stesso client, la distribuzione avrà esito negativo. Per altre informazioni, vedere la [documentazione di Windows Information Protection](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr).
 
 6. Al termine, completare la procedura guidata e distribuire i criteri in uno o più dispositivi Windows 10 1709.
 
@@ -78,7 +78,7 @@ Consentono di configurare il comportamento delle applicazioni all'interno della 
 
 ### <a name="file-management"></a><a name="bkmk_FM"></a> Gestione file
 <!--3555858-->
-A partire dalla versione 1906 di Configuration Manager, un'impostazione dei criteri consente agli utenti di considerare attendibili i file che si aprono normalmente in Application Guard. Al termine dell'esecuzione, i file vengono aperti nel dispositivo host anziché in Application Guard. Per altre informazioni sui criteri di Application Guard, vedere [Configurare le impostazioni dei criteri di Microsoft Defender Application Guard](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard).
+A partire dalla versione 1906 di Configuration Manager, un'impostazione dei criteri consente agli utenti di considerare attendibili i file che si aprono normalmente in Application Guard. Al termine dell'esecuzione, i file vengono aperti nel dispositivo host anziché in Application Guard. Per altre informazioni sui criteri di Application Guard, vedere [Configurare le impostazioni dei criteri di Microsoft Defender Application Guard](/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard).
 
 - **Consenti agli utenti di ritenere attendibili i file aperti in Windows Defender Application Guard**: consente all'utente di contrassegnare i file come attendibili. Quando un file è attendibile, viene aperto nell'host anziché in Application Guard. Si applica ai client Windows 10 versione 1809 o successive.
   - **Non consentito:** non consente agli utenti di contrassegnare i file come attendibili (impostazione predefinita).
@@ -103,5 +103,5 @@ I dispositivi che eseguono Windows 10, versione 2004 mostreranno errori nella cr
 ## <a name="next-steps"></a>Passaggi successivi
 
 Per altre informazioni su Microsoft Defender Application Guard, vedere
- - [Panoramica di Microsoft Defender Application Guard](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview).
-- [Domande frequenti su Microsoft Defender Application Guard](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/faq-md-app-guard).
+ - [Panoramica di Microsoft Defender Application Guard](/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview).
+- [Domande frequenti su Microsoft Defender Application Guard](/windows/security/threat-protection/microsoft-defender-application-guard/faq-md-app-guard).

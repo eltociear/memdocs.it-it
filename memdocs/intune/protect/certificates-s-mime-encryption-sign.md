@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fedb6c6f7cd9e396d990b4129f81fab4d812ec9c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 3d935e79dfe2fd0d786dae596cafe173b66018c9
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988634"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663295"
 ---
 # <a name="smime-overview-to-sign-and-encrypt-email-in-intune"></a>Panoramica di S/MIME per firmare e crittografare la posta elettronica in Intune
 
@@ -30,7 +30,6 @@ I certificati di posta elettronica, noti anche come certificati S/MIME, fornisco
 - iOS/iPadOS
 - macOS
 - Windows 10 e versioni successive
-- Windows Phone
 
 Nei dispositivi iOS/iPadOS è possibile creare un profilo di posta elettronica gestito da Intune che usa S/MIME e certificati per firmare e crittografare i messaggi di posta elettronica in ingresso e in uscita. Per altre piattaforme, S/MIME può essere supportato o meno. Se è supportato, installare certificati che usano la firma e la crittografia S/MIME. L'utente finale può quindi abilitare S/MIME nella propria applicazione di posta elettronica.
 
@@ -44,13 +43,13 @@ I certificati usati per la firma consentono all'app client di posta elettronica 
 
 Per usare certificati di firma, creare nell'autorità di certificazione (CA) un modello basato sulla firma. Nell'autorità di certificazione di Microsoft Active Directory, [Configurare il modello di certificato del server](https://docs.microsoft.com/windows-server/networking/core-network-guide/cncg/server-certs/configure-the-server-certificate-template) elenca i passaggi necessari per creare modelli di certificato.
 
-I certificati di firma in Intune usano certificati PKCS. [Configurare e usare i certificati PKCS](certficates-pfx-configure.md) descrive come distribuire e usare i certificati PKCS nell'ambiente Intune in uso. Questi passaggi includono:
+I certificati di firma in Intune usano certificati PKCS. [Configurare e usare i certificati PKCS](certficates-pfx-configure.md) descrive come distribuire e usare i certificati PKCS nell'ambiente Intune in uso. La procedura include i passaggi seguenti:
 
 - Download e installazione del connettore di certificati di Microsoft Intune per il supporto delle richieste di certificato PKCS. Il connettore ha gli stessi requisiti di rete dei [dispositivi gestiti](../fundamentals/intune-endpoints.md#access-for-managed-devices).
 - Creazione di un profilo certificato radice trusted peri dispositivi. Questo passaggio include l'uso di certificati radice trusted e intermedi per l'autorità di certificazione e quindi la distribuzione del profilo ai dispositivi.
 - Creazione di un profilo certificato PKCS tramite il modello di certificato creato. Questo profilo rilascia i certificati di firma ai dispositivi e distribuisce il profilo certificato PKCS a questi ultimi.
 
-È anche possibile importare un certificato di firma per un utente specifico. Il certificato di firma viene distribuito in tutti i dispositivi registrati da tale utente. Per importare certificati in Intune, usare i [cmdlet di PowerShell disponibili in GitHub](https://github.com/Microsoft/Intune-Resource-Access). Per distribuire un certificato PKCS importato in Intune da usare per la firma di messaggi di posta elettronica, seguire la procedura descritta in [Configurare e usare i certificati PKCS con Intune](certficates-pfx-configure.md). Questi passaggi includono:
+È anche possibile importare un certificato di firma per un utente specifico. Il certificato di firma viene distribuito in tutti i dispositivi registrati da tale utente. Per importare certificati in Intune, usare i [cmdlet di PowerShell disponibili in GitHub](https://github.com/Microsoft/Intune-Resource-Access). Per distribuire un certificato PKCS importato in Intune da usare per la firma di messaggi di posta elettronica, seguire la procedura descritta in [Configurare e usare i certificati PKCS con Intune](certficates-pfx-configure.md). La procedura include i passaggi seguenti:
 
 - Download e installazione del connettore di certificati PFX per Microsoft Intune. Questo connettore recapita i certificati PKCS importati ai dispositivi.
 - Importazione di certificati di firma S/MIME per la posta elettronica in Intune.
@@ -66,7 +65,7 @@ Quando si invia un messaggio di posta elettronica crittografato a un altro utent
 
 Per distribuire certificati S/MIME con Intune, è necessario importare in Intune tutti i certificati di crittografia di un utente. Intune distribuisce quindi tutti i certificati a ogni dispositivo registrato dall'utente in questione. Per importare certificati in Intune, usare i [cmdlet di PowerShell disponibili in GitHub](https://github.com/Microsoft/Intune-Resource-Access).
 
-Per distribuire un certificato PKCS importato in Intune da usare per la crittografia di messaggi di posta elettronica, seguire la procedura descritta in [Configurare e usare i certificati PKCS con Intune](certficates-pfx-configure.md). Questi passaggi includono:
+Per distribuire un certificato PKCS importato in Intune da usare per la crittografia di messaggi di posta elettronica, seguire la procedura descritta in [Configurare e usare i certificati PKCS con Intune](certficates-pfx-configure.md). La procedura include i passaggi seguenti:
 
 - Download e installazione del connettore di certificati PFX per Microsoft Intune. Questo connettore recapita i certificati PKCS importati ai dispositivi.
 - Importazione di certificati di crittografia S/MIME per la posta elettronica in Intune.

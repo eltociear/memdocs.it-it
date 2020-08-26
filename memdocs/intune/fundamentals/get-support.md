@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/19/2020
+ms.date: 08/25/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6fef418394a37f0074ddb17cc170a61603b1d7f8
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: f71a74c69235e8e079f2cd325582dbbe9bb4a3f1
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093096"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820664"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Come ottenere supporto per Microsoft Intune
 
@@ -83,8 +83,6 @@ Questo problema si verifica quando l'account del nuovo tenant non è stato auten
 
     > [!div class="mx-imgBorder"]
     > ![Confermare il tipo di gestione](./media/get-support/confirm-management-selection.png)
-
-  - Se si apre Guida e supporto tecnico da **Risoluzione dei problemi e supporto tecnico** > **Guida e supporto tecnico**, il tipo di gestione selezionato non verrà visualizzato di seguito a *Guida e supporto tecnico*.
 
   - Se si esegue il drill-down in qualsiasi altro nodo, ad esempio *Dispositivi*, *App* o *Utenti* e quindi si seleziona *Guida e supporto tecnico*, non sarà possibile selezionare un tipo di gestione e il tipo non verrà visualizzato di seguito a *Guida e supporto tecnico*. In questo caso si presuppone che il tipo di gestione sia *Intune*. Se non si vuole che il contesto sia Intune, usare l'opzione **?** in modo che sia possibile selezionare un tipo di gestione diverso.
 

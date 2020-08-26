@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 37ea8cf3f8615630ccc5b1f5fcc72f69c66db3ef
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: 6412b0d23edb9f93becb3973cc1ae02c0a068dea
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179571"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663243"
 ---
 # <a name="create-a-design"></a>Creare una progettazione
 
@@ -296,8 +296,8 @@ Di seguito è riportato un esempio di come documentare i certificati durante la 
 
 | **Tipo** | **Nome profilo** | **Piattaforma per i dispositivi** | **Casi d'uso** |   
 |:---:|:---:|:---:|:---:|
-| CA radice | CA radice aziendale | Android, iOS/iPadOS, Windows Mobile | Aziendale, BYOD  |                                                           
-| SCEP | Certificato utente | Android, iOS/iPadOS, Windows Mobile | Aziendale, BYOD |                                                           
+| CA radice | CA radice aziendale | Android, iOS/iPadOS | Aziendale, BYOD  |                                                           
+| SCEP | Certificato utente | Android, iOS/iPadOS | Aziendale, BYOD |                                                           
 
 
 Per determinare le esigenze specifiche a livello di profili di certificato, è possibile [scaricare un modello della tabella qui sopra](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0).

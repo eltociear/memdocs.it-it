@@ -2,7 +2,7 @@
 title: Pianificare Software Center
 titleSuffix: Configuration Manager
 description: Decidere come configurare e personalizzare Software Center per consentire agli utenti di interagire con Configuration Manager.
-ms.date: 08/11/2020
+ms.date: 08/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c6826794-aa19-469d-ae47-1a0db68a1ff1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5b32fc2de3c945ff2292f119a10d84d982d08677
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 802dbaa4188199e555a5cc0143ed599ad454e27e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127359"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695172"
 ---
 # <a name="plan-for-software-center"></a>Pianificare Software Center
 
@@ -43,6 +43,8 @@ Aggiornare i siti e i client di Configuration Manager alla versione 1906 o succe
 - A partire dalla versione 1906, è possibile aggiungere a Software Center fino a cinque schede personalizzate. Per altre informazioni, vedere [Impostazioni client di Software Center](../../core/clients/deploy/about-client-settings.md#software-center). <!--4063773-->
 
 - In Software Center gli utenti possono configurare l'affinità utente-dispositivo. Per altre informazioni, vedere [Collegare utenti e dispositivi mediante l'affinità utente dispositivo](../deploy-use/link-users-and-devices-with-user-device-affinity.md).
+
+- A partire dalla versione 2006, è possibile configurare i dispositivi co-gestiti per l'uso del Portale aziendale per le app di Intune e di Configuration Manager. Per altre informazioni, vedere [Usare l'app Portale aziendale in dispositivi con co-gestione](../../comanage/company-portal.md).<!--CMADO-3601237,INADO-4297660-->
 
 > [!IMPORTANT]
 > Per sfruttare i vantaggi delle nuove funzionalità di Configuration Manager, aggiornare prima di tutto i clienti alla versione più recente. Anche se le nuove funzionalità vengono visualizzate nella console di Configuration Manager quando si esegue l'aggiornamento del sito e della console, lo scenario completo risulta funzionante solo dopo l'aggiornamento alla versione più recente del client.
@@ -141,4 +143,7 @@ Se si usa il Catalogo applicazioni, la personalizzazione segue queste priorità:
 ## <a name="see-also"></a>Vedere anche
 
 - [Manuale dell'utente di Software Center](../../core/understand/software-center.md)
+
 - [Pianificare e configurare la gestione delle applicazioni](plan-for-and-configure-application-management.md)
+
+- [Usare l'app Portale aziendale in dispositivi con co-gestione](../../comanage/company-portal.md)

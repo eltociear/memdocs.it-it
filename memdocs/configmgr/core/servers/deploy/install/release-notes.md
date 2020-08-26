@@ -2,7 +2,7 @@
 title: Note sulla versione
 titleSuffix: Configuration Manager
 description: Informazioni su problemi urgenti non ancora risolti nel prodotto o trattati in un articolo della Knowledge Base del supporto tecnico Microsoft.
-ms.date: 08/11/2020
+ms.date: 08/17/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
@@ -10,12 +10,12 @@ ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9c1152b14da7c0a473e266b1ac1e6da2778aa105
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: a29c165e13e82144d7fea767ca719a0c84c88023
+ms.sourcegitcommit: da5bfbe16856fdbfadc40b3797840e0b5110d97d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126292"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512649"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Note sulla versione per Configuration Manager
 
@@ -112,6 +112,20 @@ Questo errore si verifica perché non esiste una cartella `scripts` nella direct
 Per risolvere il problema, creare una cartella denominata `scripts` nella directory `AdminConsole\bin`. Copiare i file dalla cartella localizzata nella nuova cartella `scripts` creata. Distribuire Microsoft Edge, versione 77 e successive, dopo aver copiato i file.
 
 ## <a name="os-deployment"></a>Distribuzione del sistema operativo
+
+### <a name="client-policy-error-when-you-deploy-a-task-sequence"></a>Errore dei criteri client quando si distribuisce una sequenza di attività
+
+<!-- 7970134 -->
+
+*Si applica a: Configuration Manager versione 2006, anello di aggiornamento anticipato*
+
+Quando si distribuisce una sequenza di attività a un client, una sequenza di attività obbligatoria non viene installata entro la scadenza e in Software Center non viene visualizzata una sequenza di attività disponibile. Viene visualizzato il messaggio di stato 10803 con una descrizione analoga al messaggio di errore seguente:
+
+*Il client non riesce a scaricare il criterio. Il servizio di trasferimento dei dati ha restituito "Errore BITS: 'Risposta del server non valida. Il protocollo seguito dal server non era quello definito. (-2145386469).*
+
+Questo problema si verifica quando si configura il punto di gestione per HTTPS e il dispositivo usa la versione1906 o precedente del client di Configuration Manager.
+
+Per risolvere questo problema, aggiornare il client di Configuration Manager nel dispositivo alla versione 1910 o successiva.
 
 ### <a name="task-sequences-cant-run-over-cmg"></a>Le sequenze di attività non possono essere eseguite su Cloud Management Gateway
 

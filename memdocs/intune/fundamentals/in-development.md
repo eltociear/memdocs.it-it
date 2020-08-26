@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0b7f1a4280b409ec4a12c6371fd2e6cba8a571ca
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: 0d443cb784c19956f52347a10f4123c622ab82a8
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048022"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820063"
 ---
 # <a name="in-development-for-microsoft-intune"></a>In fase di sviluppo per Microsoft Intune
 
@@ -72,9 +72,6 @@ Il Portale aziendale Windows supporta ora le applicazioni di Configuration Manag
 <!-- ***********************************************-->
 ## <a name="device-configuration"></a>Configurazione del dispositivo
 
-### <a name="set-device-compliance-state-from-third-party-mdm-partners---6361689-----"></a>Impostare lo stato di conformità del dispositivo da partner MDM di terze parti<!-- 6361689   -->
-I clienti di Microsoft 365 proprietari di soluzioni MDM di terze parti saranno in grado di applicare criteri di accesso condizionale per le app Microsoft 365 in iOS e Android tramite l'integrazione del servizio Conformità del dispositivo di Microsoft Intune. Il fornitore di MDM di terze parti potrà usare il servizio Conformità del dispositivo di Intune per inviare i dati di conformità del dispositivo a Intune. Intune li valuterà quindi per determinare se il dispositivo è attendibile e impostare gli attributi di accesso condizionale in Azure AD.  Ai clienti verrà richiesto di impostare criteri di accesso condizionale di Azure AD dall'interfaccia di amministrazione di Microsoft Endpoint Manager o dal portale di Azure AD.
-
 ### <a name="create-pkcs-certificate-profiles-for-android-enterprise-fully-managed-devices-cobo---4839686---"></a>Creare nuovi profili dei certificati PKCS per dispositivi Android Enterprise completamente gestiti (COBO)<!-- 4839686 -->
 È possibile creare profili dei certificati PKCS per distribuire certificati ai proprietari di dispositivi Android Enterprise e a dispositivi con profilo di lavoro (**Dispositivi** > **Profili di configurazione**  > **Crea profilo** > **Android Enterprise > Solo proprietario del dispositivo** oppure **Android Enterprise > Solo profilo di lavoro** per la piattaforma > **PKCS** per il profilo).
 
@@ -84,47 +81,6 @@ Per altre informazioni sui certificati PKCS, vedere [Configurare e usare i certi
 
 Si applica a:
 - Android Enterprise completamente gestito (COBO)
-
-### <a name="use-netmotion-as-a-vpn-connection-type-for-iosipados-and-macos-devices---1333631---"></a>Usare NetMotion come tipo di connessione VPN per dispositivi iOS/iPadOS e macOS<!-- 1333631 -->
-Quando si crea un profilo VPN, NetMotion è disponibile come tipo di connessione VPN (**Dispositivi** > **Configurazione dispositivo** > **Crea profilo** > **iOS/iPadOS** oppure **macOS** per la piattaforma > **VPN** per il profilo > **NetMotion** per il tipo di connessione).
-
-Per altre informazioni sui profili VPN in Intune, vedere [Creare profili VPN per la connessione ai server VPN](../configuration/vpn-settings-configure.md).
-
-Si applica a:
-- iOS/iPadOS
-- macOS
-
-### <a name="more-protected-extensible-authentication-protocol-peap-options-for-windows-10-wi-fi-profiles---3805024---"></a>Più opzioni PEAP (Protected Extensible Authentication Protocol) per i profili Wi-Fi Windows 10<!-- 3805024 -->
-Nei dispositivi Windows 10 è possibile creare profili Wi-Fi e selezionare il tipo EAP (Extensible Authentication Protocol) per autenticare le connessioni Wi-Fi (**Dispositivi** > **Profili di configurazione** > **Crea profilo** > **Windows 10 e versioni successive** per la piattaforma > **Wi-Fi** per il profilo > **Enterprise**). Selezionando PEAP (Protected EAP), le nuove impostazioni disponibili sono le seguenti:
-
-- **Esegui la convalida del server nella fase 1 di PEAP**: nella fase 1 della negoziazione PEAP i dispositivi eseguono la convalida del certificato e verificano il server.
-  - **Disabilita le richieste utente per la convalida del server nella fase 1 di PEAP**: nella fase 1 della negoziazione PEAP non vengono visualizzate le richieste utente che richiedono di autorizzare nuovi server PEAP per le autorità di certificazione attendibili.
-- **Richiedi cryptobinding**: impedisce le connessioni ai server PEAP che non usano cryptobinding durante la negoziazione PEAP.
-
-Per visualizzare le impostazioni che è attualmente possibile configurare, passare a [Aggiungere le impostazioni Wi-Fi per dispositivi Windows 10 e versioni successive](../configuration/wi-fi-settings-windows.md).
-
-Si applica a: 
-- Windows 10 e versioni successive
-
-### <a name="configure-the-macos-microsoft-enterprise-sso-plug-in---5627576---"></a>Configurare il plug-in Microsoft Enterprise Single Sign-On per macOS<!-- 5627576 -->
-Il team di Microsoft Azure AD ha creato un'estensione dell'app per accesso Single Sign-On di reindirizzamento per consentire agli utenti di macOS 10.15 e versioni successive di accedere ad app, app dell'organizzazione e siti Web Microsoft che supportano la funzionalità SSO di Apple ed eseguire l'autenticazione usando Azure AD con un unico accesso. Grazie alla versione del plug-in Microsoft Enterprise Single Sign-On, è possibile configurare l'estensione SSO con il nuovo tipo di estensione dell'app Microsoft Azure AD (**Dispositivi** > **Profili di configurazione** > **Crea profilo** > **macOS** per la piattaforma > **Funzionalità del dispositivo** per il profilo >  **Tipo di estensione dell'app per accesso Single Sign-On** > Tipo di estensione dell'app per accesso Single Sign-On > **Microsoft Azure AD**).
-
-Per poter usare l'accesso Single Sign-On con il tipo di estensione dell'app per accesso Single Sign-On di Microsoft Azure AD, gli utenti devono installare l'app Portale aziendale e accedervi nei dispositivi macOS. 
-
-Per altre informazioni sulle estensioni dell'app per l'accesso Single Sign-On per macOS, vedere [Estensione dell'app Single Sign-On](../configuration/device-features-configure.md#single-sign-on-app-extension).
-
-Si applica a:
-- macOS 10.15 e versioni successive
-
-### <a name="use-sso-app-extensions-on-more-iosipados-apps-with-the-microsoft-enterprise-sso-plug-in---7369991---"></a>Usare le estensioni dell'app per l'accesso Single Sign-On in altre app iOS/iPadOS con il plug-in Microsoft Enterprise Single Sign-On<!-- 7369991 -->
-Il [plug-in Microsoft Enterprise Single Sign-On per dispositivi Apple](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin) può essere usato con tutte le app che supportano le estensioni dell'app per accesso Single Sign-On. In Intune questa funzionalità consente di usare il plug-in con le app iOS/iPadOS per dispositivi mobili che non usano Microsoft Authentication Library (MSAL) per i dispositivi Apple. Per le app non è necessario usare MSAL, ma è necessario eseguire l'autenticazione con gli endpoint di Azure AD.
-
-Per configurare le app iOS/iPadOS per l'uso dell'accesso Single Sign-On con il plug-in, aggiungere gli identificatori di aggregazione di app in un profilo di configurazione iOS/iPadO (**Dispositivi** > **Profili di configurazione** > **Crea profilo** > **iOS/iPadOS** per la piattaforma > **Funzionalità del dispositivo** per il profilo > **Estensione dell'app per l'accesso Single Sign-On** > **Microsoft Azure AD** per il tipo di estensione dell'app per l'accesso Single Sign-On > **ID aggregazione di app**).
-
-Per visualizzare le impostazioni correnti dell'estensione dell'app per l'accesso Single Sign-On che è possibile configurare, passare a [Estensione dell'app Single Sign-On](../configuration/ios-device-features-settings.md#single-sign-on-app-extension).
-
-Si applica a:
-- iOS/iPadOS
 
 <!-- ***********************************************-->
 <!-- ## Device enrollment-->
@@ -155,9 +111,6 @@ Sarà possibile sfruttare la potenza della funzionalità locale di Configuration
 
 ### <a name="deploy-software-updates-to-macos-devices----3194876---"></a>Distribuire gli aggiornamenti software nei dispositivi macOS <!-- 3194876 -->
 Sarà possibile distribuire gli aggiornamenti software a gruppi di dispositivi macOS. Questa funzionalità include aggiornamenti critici, firmware, file di configurazione e altri aggiornamenti. Sarà possibile inviare aggiornamenti alla successiva sincronizzazione del dispositivo oppure selezionare una pianificazione settimanale per distribuire gli aggiornamenti entro o al di fuori degli intervalli di tempo impostati. Ciò può risultare utile quando si vuole aggiornare i dispositivi al di fuori delle ore di lavoro standard o quando l'help desk occupa tutto il personale. Si otterrà anche un report dettagliato di tutti i dispositivi macOS a cui sono stati distribuiti gli aggiornamenti. È possibile esaminare il report per ogni singolo dispositivo per visualizzare lo stato di specifici aggiornamenti.
-
-### <a name="associated-licenses-revoked-before-deletion-of-apple-vpp-token--6195322---"></a>Revoca delle licenze associate prima dell'eliminazione del token VPP Apple<!--6195322 -->
-In un aggiornamento futuro, quando si elimina un token VPP Apple in Microsoft Endpoint Manager, tutte le licenze assegnate a Intune associate a tale token verranno automaticamente revocate prima dell'eliminazione.
 
 <!-- ***********************************************-->
 <!--## Intune apps-->
@@ -192,13 +145,6 @@ Lo strumento di gestione delle minacce e delle vulnerabilità in Microsoft Defen
 A breve Microsoft Defender ATP potrà generare un'attività di sicurezza di Endpoint Manager (**Endpoint Manager** > **Sicurezza degli endpoint** > **Attività di sicurezza**) con i dettagli sulle vulnerabilità e visualizzare i dispositivi interessati. Gli amministratori IT possono accettare l'attività di sicurezza e distribuire la configurazione richiesta. 
 
 Per altre informazioni sulle attività di sicurezza, vedere [Usare Intune per risolvere le vulnerabilità identificate da Microsoft Defender ATP](../protect/atp-manage-vulnerabilities.md).
-
-### <a name="changes-for-endpoint-security-antivirus-policy-exclusions--5583940-6018119----"></a>Modifiche per le esclusioni dei criteri antivirus per la sicurezza degli endpoint<!--5583940, 6018119  -->
-Saranno introdotte due modifiche per la gestione degli elenchi di esclusione di Microsoft Defender Antivirus configurati come parte dei criteri antivirus per la sicurezza degli endpoint. (**Sicurezza degli endpoint** > **Antivirus** > **Crea un criterio** > **Windows 10 e versioni successive** per la piattaforma). Queste due modifiche consentono di evitare conflitti tra i criteri e i criteri esistenti in conflitto non saranno più in conflitto per l'elenco di esclusioni:
-
-- Sarà prima aggiunto un nuovo tipo di profilo per Windows 10 e versioni successive: **Esclusioni di Microsoft Defender Antivirus**.  Questo nuovo tipo di profilo include solo le impostazioni per specificare un elenco di *processi*, *estensioni di file*, *file* e *cartelle* di Defender che non devono essere analizzati da Microsoft Defender. Si semplifica così la gestione degli elenchi di esclusione che vengono quindi separati da altre configurazioni dei criteri.
-- La seconda modifica riguarda l'elenco di esclusioni definito in profili diversi. Questo elenco verrà unito a un unico elenco di esclusioni per ogni dispositivo o utente, in base ai singoli criteri applicati a un utente o a un dispositivo specifico. Ad esempio, nel caso di un utente con tre criteri distinti, gli elenchi di esclusione dei tre criteri vengono uniti in un unico superset di esclusioni di Microsoft Defender Antivirus, che vengono quindi applicati all'utente. Sono inclusi in questa unione gli elenchi di esclusioni del nuovo tipo di profilo aggiunto e tutti i criteri esistenti configurati in un profilo *Microsoft Defender Antivirus*.
-
 
 
 <!-- ***********************************************-->

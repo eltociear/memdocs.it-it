@@ -2,7 +2,7 @@
 title: Impostazioni client
 titleSuffix: Configuration Manager
 description: Informazioni sulle impostazioni predefinite e personalizzate per il controllo dei comportamenti client
-ms.date: 08/11/2020
+ms.date: 08/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e70a44fee7b4805884faeda0a5fb1eab72d3371e
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 8045df681560972a353e08ee43c10b6ae86dc50f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127002"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693421"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Informazioni sulle impostazioni client in Configuration Manager
 
@@ -167,7 +167,7 @@ Impostare questa opzione su **Sì** se si vuole che i client possano ottenere co
 
 ### <a name="automatically-register-new-windows-10-domain-joined-devices-with-azure-active-directory"></a>Registra automaticamente i nuovi dispositivi Windows 10 aggiunti al dominio con Azure Active Directory
 
-Quando si configura Azure Active Directory per il supporto dell'aggiunta ibrida, Configuration Manager configura i dispositivi Windows 10 per questa funzionalità. Per altre informazioni, vedere [How to configure hybrid Azure Active Directory joined devices](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) (Come configurare dispositivi aggiunti ad Azure Active Directory in modo ibrido).
+Quando si configura Azure Active Directory per il supporto dell'aggiunta ibrida, Configuration Manager configura i dispositivi Windows 10 per questa funzionalità. Per altre informazioni, vedere [How to configure hybrid Azure Active Directory joined devices](/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) (Come configurare dispositivi aggiunti ad Azure Active Directory in modo ibrido).
 
 ### <a name="enable-clients-to-use-a-cloud-management-gateway"></a>Consenti ai client di usare un gateway di gestione cloud
 
@@ -341,11 +341,11 @@ Per altre informazioni su queste impostazioni, vedere [Notifiche di riavvio del 
 ## <a name="delivery-optimization"></a>Ottimizzazione recapito
 
 <!-- 1324696 -->
-I gruppi di limiti di Configuration Manager consentono di definire e regolamentare la distribuzione del contenuto nella rete aziendale e negli uffici remoti. [Ottimizzazione recapito di Windows](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) è una tecnologia peer-to-peer basata sul cloud per la condivisione di contenuti tra dispositivi Windows 10. Configurare Ottimizzazione recapito in modo che usi i gruppi di limiti per la condivisione di contenuti tra peer.
+I gruppi di limiti di Configuration Manager consentono di definire e regolamentare la distribuzione del contenuto nella rete aziendale e negli uffici remoti. [Ottimizzazione recapito di Windows](/windows/deployment/update/waas-delivery-optimization) è una tecnologia peer-to-peer basata sul cloud per la condivisione di contenuti tra dispositivi Windows 10. Configurare Ottimizzazione recapito in modo che usi i gruppi di limiti per la condivisione di contenuti tra peer.
 
 > [!Note]
 > - Ottimizzazione recapito è disponibile solo nei client Windows 10.
-> - L'accesso a Internet al servizio cloud Ottimizzazione recapito è un requisito per utilizzare le funzionalità peer-to-peer. Per informazioni sugli endpoint Internet necessari, vedere [Domande frequenti per Ottimizzazione recapito](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions).
+> - L'accesso a Internet al servizio cloud Ottimizzazione recapito è un requisito per utilizzare le funzionalità peer-to-peer. Per informazioni sugli endpoint Internet necessari, vedere [Domande frequenti per Ottimizzazione recapito](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions).
 > - Quando si usa un CMG per l'archiviazione del contenuto, il contenuto per gli aggiornamenti di terze parti non viene scaricato nei client se è abilitata l'[impostazione client](#allow-clients-to-download-delta-content-when-available) **Consenti ai client di scaricare contenuto differenziale quando disponibile**. <!--6598587--> 
 
 ### <a name="use-configuration-manager-boundary-groups-for-delivery-optimization-group-id"></a>Use Configuration Manager Boundary Groups for Delivery Optimization Group ID (Usare i gruppi di limiti di Configuration Manager per l'ID del gruppo di Ottimizzazione recapito)
@@ -641,6 +641,17 @@ Impostare questa opzione su **Sì** per stabilire connessioni Desktop remoto a c
 
 ## <a name="software-center"></a>Software Center
 
+### <a name="select-the-user-portal"></a>Selezionare il portale per gli utenti
+
+<!--CMADO-3601237,INADO-4297660-->
+A partire dalla versione 2006, se si distribuisce il Portale aziendale a dispositivi co-gestiti, configurare questa impostazione su **Portale aziendale**. Questa impostazione assicura che gli utenti ricevano notifiche solo dal Portale aziendale.
+
+Se si installa il Portale aziendale in un dispositivo co-gestito, ma si configura questa impostazione su **Software Center**, gli utenti visualizzeranno le notifiche di entrambi i portali. Questa esperienza può essere disorientante per gli utenti.
+
+Se si cambia l'impostazione client per il Portale aziendale, quando un utente seleziona una notifica di Configuration Manager, viene avviato il Portale aziendale. Se la notifica riguarda uno scenario non supportato dal Portale aziendale, la selezione della notifica avvia Software Center.
+
+Il comportamento del Portale aziendale varia a seconda della configurazione del carico di lavoro di co-gestione. Per altre informazioni, vedere [Usare l'app Portale aziendale in dispositivi con co-gestione](../../../comanage/company-portal.md).
+
 ### <a name="select-these-new-settings-to-specify-company-information"></a>Selezionare le nuove impostazioni per specificare le informazioni aziendali
 
 Impostare questa opzione su **Sì** e quindi specificare le impostazioni seguenti per personalizzare Software Center per l'organizzazione:
@@ -927,11 +938,11 @@ Questa impostazione client include le opzioni seguenti:
 
 - **Normale**: Installazione di Windows usa più risorse di sistema ed effettua l'aggiornamento più velocemente. Usa più tempo processore e quindi il tempo totale di installazione è più breve, ma l'interruzione per l'utente è più lunga.  
 
-    - Consente di configurare il file setupconfig.ini nel dispositivo con l'[opzione della riga di comando di installazione di Windows `/Priority Normal`](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
+    - Consente di configurare il file setupconfig.ini nel dispositivo con l'[opzione della riga di comando di installazione di Windows `/Priority Normal`](/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
 
 - **Bassa**: è possibile continuare a usare il dispositivo durante il download e l'applicazione degli aggiornamenti in background. Il tempo totale di installazione è più lungo, ma l'interruzione per l'utente è più breve. Potrebbe essere necessario aumentare il tempo di esecuzione massimo dell'aggiornamento per evitare un timeout quando si usa questa opzione.  
 
-    - Rimuove l'[opzione della riga di comando di installazione di Windows `/Priority`](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) dal file setupconfig.ini.
+    - Rimuove l'[opzione della riga di comando di installazione di Windows `/Priority`](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) dal file setupconfig.ini.
 
 
 ### <a name="enable-third-party-software-updates"></a>Enable third party software updates (Abilita aggiornamenti software di terze parti)
@@ -940,7 +951,7 @@ Se questa opzione è impostata su **Sì**, vengono impostati i criteri per **Con
 
 ### <a name="enable-dynamic-update-for-feature-updates"></a><a name="bkmk_du"></a>Abilitare l'aggiornamento dinamico per gli aggiornamenti delle funzionalità
 <!--4062619-->
-A partire da Configuration Manager versione 1906, è possibile configurare l'[aggiornamento dinamico per Windows 10](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847). L'aggiornamento dinamico installa i language pack, le funzionalità su richiesta, i driver e gli aggiornamenti cumulativi durante l'installazione di Windows indicando al client di scaricare questi aggiornamenti da Internet. Quando questa impostazione è impostata su **Sì** o **No**, Configuration Manager modifica il file [setupconfig](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) usato durante l'installazione dell'aggiornamento delle funzionalità.
+A partire da Configuration Manager versione 1906, è possibile configurare l'[aggiornamento dinamico per Windows 10](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847). L'aggiornamento dinamico installa i language pack, le funzionalità su richiesta, i driver e gli aggiornamenti cumulativi durante l'installazione di Windows indicando al client di scaricare questi aggiornamenti da Internet. Quando questa impostazione è impostata su **Sì** o **No**, Configuration Manager modifica il file [setupconfig](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) usato durante l'installazione dell'aggiornamento delle funzionalità.
 
 - **Non configurato**: il valore predefinito. Non vengono apportate modifiche al file setupconfig.
   - L'aggiornamento dinamico è abilitato per impostazione predefinita in tutte le versioni supportate di Windows 10.

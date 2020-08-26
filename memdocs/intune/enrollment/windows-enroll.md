@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9104716c469168a5ab2c5c1b49caf14071150db1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 48560af1ff31d5660f00e775a2f510b88c08fd9c
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988897"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820596"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Configurare la registrazione dei dispositivi Windows
 
@@ -123,7 +123,7 @@ Azure Active Directory ha un CNAME diverso che usa per la registrazione dei disp
 
 | Tipo | Nome dell'host | Punta a | TTL |
 | --- | --- | --- | --- |
-| NAME | EnterpriseRegistration. company_domain.com | EnterpriseRegistration.windows.net | 1 ora|
+| CNAME | EnterpriseRegistration. company_domain.com | EnterpriseRegistration.windows.net | 1 ora|
 
 Per altre informazioni sulla registrazione dei dispositivi, vedere [Gestire le identità dei dispositivi usando il portale di Azure](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal)
 

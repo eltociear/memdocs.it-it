@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e558d0fe2f6112f522420d51cad4943e819b4fb0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3ee2e89dcfd7ab963dae3b14b5e7d53daaa07ff4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79360717"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695988"
 ---
 # <a name="use-custom-policies-in-microsoft-intune-to-allow-and-block-apps-for-samsung-knox-standard-devices"></a>Usare criteri personalizzati in Microsoft Intune per consentire e bloccare le app per dispositivi Samsung Knox Standard 
 
@@ -38,7 +38,7 @@ Queste impostazioni possono essere usate solo dai dispositivi che eseguono Samsu
 2. Selezionare **Dispositivi** > **Profili di configurazione** > **Crea profilo**.
 3. Immettere le impostazioni seguenti:
 
-    - **Nome**: immettere un nome descrittivo per il profilo. Assegnare ai profili nomi che possano essere identificati facilmente in un secondo momento. Un nome di profilo valido, ad esempio, è **Profilo personalizzato Windows Phone**.
+    - **Nome**: immettere un nome descrittivo per il profilo. Assegnare ai profili nomi che possano essere identificati facilmente in un secondo momento. Un nome di profilo valido, ad esempio, è **Profilo personalizzato Android**.
     - **Descrizione**: immettere una descrizione che offra una panoramica dell'impostazione e altri dettagli importanti.
     - **Piattaforma**: Selezionare **Android**.
     - **Tipo di profilo**: Selezionare **Personalizzato**.

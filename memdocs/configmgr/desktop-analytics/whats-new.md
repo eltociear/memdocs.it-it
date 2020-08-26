@@ -2,7 +2,7 @@
 title: Novità di Desktop Analytics
 titleSuffix: Configuration Manager
 description: Riepilogo delle nuove funzionalità della versione mensile più recente del servizio cloud Desktop Analytics.
-ms.date: 07/01/2020
+ms.date: 08/19/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,11 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: ec554d755b92d1c710def580a34fdbbddc7b4d45
-ms.sourcegitcommit: 2c5fd7c8603b88b753765f3cc298d0a0bacaf521
+ms.openlocfilehash: c41c6333cfee1b6a24bb84c0f020c14c303fd904
+ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85819976"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88614740"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>Novità di Desktop Analytics
 
@@ -26,6 +27,18 @@ Informazioni sulle novità mensili di Desktop Analytics.
 
 Per ricevere una notifica quando questa pagina viene aggiornata, copiare e incollare l'URL seguente nel lettore di feed RSS: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
+
+## <a name="august-2020"></a>Agosto 2020
+
+### <a name="apps-deployed-from-configuration-manager-are-important-by-default"></a>Le app distribuite da Configuration Manager sono importanti per impostazione predefinita
+
+<!-- 4859763 -->
+
+La configurazione dell'**importanza** di un'app è essenziale per consentire a Desktop Analytics di determinare i dispositivi da includere nelle distribuzioni pilota. Un amministratore doveva configurare manualmente l'importanza per tutte le app in Desktop Analytics. Solo dopo aver convalidato il progetto pilota era possibile continuare con una distribuzione di produzione.
+
+Ora qualsiasi app distribuita con Configuration Manager viene automaticamente configurata come importante da Desktop Analytics per impostazione predefinita. Questo comportamento consente di configurare più rapidamente le app nell'ambiente per accelerare il percorso verso una distribuzione di produzione.
+
+Per altre informazioni, vedere [Asset - App](about-assets.md#apps).
 
 ## <a name="july-2020"></a>Luglio 2020
 

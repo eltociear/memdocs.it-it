@@ -10,12 +10,12 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 4bdfbabf27906eb8a79ec8ba24f51c3e176dc028
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: bac86ca5a74d35b64e211936806ef1735f4e0eea
+ms.sourcegitcommit: 231e2c3913a1d585310dfab7ffcd5c78c6bc5703
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700406"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970465"
 ---
 # <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a> Connessione tenant di Microsoft Endpoint Manager: azioni dispositivo e sincronizzazione dispositivo
 <!--3555758 live 3/4/2020-->
@@ -39,6 +39,8 @@ A partire da Configuration Manager versione 2002, è possibile caricare i dispos
 ## <a name="internet-endpoints"></a>Endpoint Internet
 
 [!INCLUDE [Internet endpoints for tenant attach](../core/plan-design/network/includes/internet-endpoints-tenant-attach.md)]
+
+Il punto di connessione del servizio esegue una connessione in uscita prolungata a questi endpoint. Verificare che il proxy usato per il punto di connessione del servizio non verifichi il timeout delle connessioni in uscita troppo rapidamente. Si consiglia di 3 minuti per le connessioni in uscita a questi endpoint Internet. <!--7820969-->
 
 ## <a name="enable-device-upload-when-co-management-is-already-enabled"></a><a name="bkmk_edit"></a> Abilita caricamento dispositivo quando la co-gestione è già abilitata
 

@@ -103,6 +103,8 @@
               href: advanced-threat-protection-monitor.md
         - name: Migrazione della regola del firewall
           href: endpoint-security-firewall-rule-tool.md
+        - name: Collegamento di tenant
+          href: tenant-attach-intune.md
         - name: Crittografare i dischi
           items:
             - name: Gestire i criteri BitLocker
@@ -308,8 +310,10 @@
           items:
             - name: Impostazioni di Defender Antivirus per macOS
               href: antivirus-microsoft-defender-settings-macos.md
-            - name: Impostazioni di Microsoft Defender Antivirus per Windows 10
+            - name: Impostazioni di Defender Antivirus per Windows 10
               href: antivirus-microsoft-defender-settings-windows.md
+            - name: Impostazioni di Defender Antivirus per il collegamento al tenant
+              href: antivirus-microsoft-defender-settings-windows-tenant-attach.md
             - name: Impostazioni dell'esperienza di Sicurezza di Windows
               href: antivirus-security-experience-windows-settings.md
         - name: Impostazioni del profilo di crittografia del disco

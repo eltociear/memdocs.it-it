@@ -14,6 +14,14 @@
       href: cmpivot-overview-attached.md
     - name: Script di esempio CMPivot
       href: cmpivot-samples-attached.md
+- name: Sicurezza degli endpoint per dispositivi collegati al tenant (anteprima)
+  items:
+    - name: Abilitare la sicurezza degli endpoint
+      href: atp-onboard.md
+    - name: Creare e distribuire i criteri antivirus per la sicurezza degli endpoint
+      href: deploy-antivirus-policy.md
+    - name: Impostazioni per i criteri di Microsoft Defender Antivirus
+      href: ../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json
 - name: Risoluzione dei problemi
   items:
     - name: Azioni del dispositivo e collegamento di tenant

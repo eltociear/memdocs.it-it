@@ -18,23 +18,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ed3a554ee374df1513a07fa2365e147f34d787f0
-ms.sourcegitcommit: 5291e1946eddbb97670f8e02beb5beef82b22f38
+ms.openlocfilehash: 2c78b65dc5b4b228df9dc5884adbc75e63c282ef
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87953527"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907959"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Distribuire dispositivi aggiunti ad Azure AD ibrido usando Intune e Windows Autopilot
 È possibile usare Intune e Windows Autopilot per configurare i dispositivi aggiunti ad Azure Active Directory ibrido. A tale scopo, eseguire i passaggi descritti in questo articolo.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Configurare correttamente i [dispositivi aggiunti ad Azure AD ibrido](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan). Assicurarsi di [verificare la registrazione del dispositivo](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains#verify-the-registration) usando il cmdlet Get-MsolDevice.
+Configurare correttamente i [dispositivi aggiunti ad Azure AD ibrido](/azure/active-directory/devices/hybrid-azuread-join-plan). Assicurarsi di [verificare la registrazione del dispositivo](/azure/active-directory/devices/hybrid-azuread-join-managed-domains#verify-the-registration) usando il cmdlet Get-MsolDevice.
 
 I dispositivi da registrare devono anche:
 - Eseguire Windows 10 versione 1809 o successiva.
-- Avere accesso a Internet [conformemente ai requisiti di rete di Windows Autopilot documentati](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements#networking-requirements).
+- Avere accesso a Internet [conformemente ai requisiti di rete di Windows Autopilot documentati](/windows/deployment/windows-autopilot/windows-autopilot-requirements#networking-requirements).
 - Avere accesso a un controller di dominio Active Directory, in modo da poter essere connessi alla rete dell'organizzazione (in cui è possibile risolvere i record DNS per il dominio di Active Directory e il controller di dominio Active Directory e comunicare con il controller di dominio per autenticare l'utente.
 - Essere in grado di effettuare il ping del controller di dominio del dominio cui si sta tentando di aggiungere il dispositivo.
 - Se si usa un proxy, è necessario abilitare e configurare l'opzione delle impostazioni proxy WPAD.
@@ -103,7 +103,7 @@ Il connettore di Intune per Active Directory deve essere installato in un comput
 
 Intune Connector richiede gli [stessi endpoint di Intune](../intune/fundamentals/intune-endpoints.md).
 
-1. Disattivare la Configurazione sicurezza avanzata IE. Per impostazione predefinita, in Windows Server la Configurazione sicurezza avanzata di Internet Explorer è attivata. Se non è possibile accedere al connettore di Intune per Active Directory, disattivare la Configurazione sicurezza avanzata IE per l'amministratore. [Come disattivare la Configurazione sicurezza avanzata di Internet Explorer](https://blogs.technet.microsoft.com/chenley/2011/03/10/how-to-turn-off-internet-explorer-enhanced-security-configuration). 
+1. Disattivare la Configurazione sicurezza avanzata IE. Per impostazione predefinita, in Windows Server la Configurazione sicurezza avanzata di Internet Explorer è attivata. Se non è possibile accedere al connettore di Intune per Active Directory, disattivare la Configurazione sicurezza avanzata IE per l'amministratore. [Come disattivare la Configurazione sicurezza avanzata di Internet Explorer](/archive/blogs/chenley/how-to-turn-off-internet-explorer-enhanced-security-configuration). 
 2. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) selezionare **Dispositivi** > **Windows** > **Registrazione Windows** > **Connettore di Intune per Active Directory** > **Aggiungi**. 
 3. Seguire le istruzioni per scaricare il connettore.
 4. Aprire il file di installazione del connettore scaricato *ODJConnectorBootstrapper.exe* per installare il connettore.
@@ -210,7 +210,7 @@ Il passaggio dello stato del profilo del dispositivo da *Non assegnato* ad *Asse
    - **Piattaforma**: selezionare **Windows 10 e versioni successive**.
    - **Tipo di profilo**: selezionare **Aggiunta a un dominio (anteprima)** .
 3. Selezionare **Impostazioni** e quindi specificare **Prefisso nome computer** e **Nome dominio**.
-4. (Facoltativo) Specificare **Unità organizzativa** (OU) in [formato nome distinto (DN)](https://docs.microsoft.com/windows/desktop/ad/object-names-and-identities#distinguished-name). Alcune delle opzioni possibili sono:
+4. (Facoltativo) Specificare **Unità organizzativa** (OU) in [formato nome distinto (DN)](/windows/desktop/ad/object-names-and-identities#distinguished-name). Alcune delle opzioni possibili sono:
    - Specificare un'unità organizzativa in cui è stato delegato il controllo al dispositivo Windows 2016 che esegue Intune Connector.
    - Specificare un'unità organizzativa in cui è stato delegato il controllo ai computer radice nell'implementazione Active Directory locale.
    - Se questo campo viene lasciato vuoto, l'oggetto computer verrà creato nel contenitore predefinito Active Directory (CN=Computers se non è mai stato [modificato](https://support.microsoft.com/en-us/help/324949/redirecting-the-users-and-computers-containers-in-active-directory-dom)).

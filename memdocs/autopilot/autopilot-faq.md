@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 164288a9c5f178801d84a2ed6110e49349e6259e
-ms.sourcegitcommit: 5291e1946eddbb97670f8e02beb5beef82b22f38
+ms.openlocfilehash: bbdea6ed044d7fff82f8da49cfb7b57a47e4677c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87953627"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908309"
 ---
 # <a name="windows-autopilot-faq"></a>Domande frequenti su Windows Autopilot
 
@@ -73,7 +73,7 @@ Alla fine viene fornito un [Glossario](#glossary) delle abbreviazioni usate in q
 | --- | --- |
 | È necessario che ogni hash hardware inviato dall'OEM includa l'UUID SMBIOS (identificatore univoco universale), l'indirizzo MAC (Media Access Control) e il numero di serie del disco univoco (se si usa lo strumento Windows 10 OEM Activation 3,0)?    | Sì. Poiché Windows Autopilot è basato sulla possibilità di identificare in modo univoco i dispositivi che applicano la configurazione cloud, è fondamentale inviare hash hardware che soddisfino il requisito descritto.   |
 | Qual è il motivo per cui sono necessari l'UUID SMBIOS, l'indirizzo MAC e il numero di serie del disco nei dettagli dell'hash hardware?    | Per la creazione dell'hash hardware, questi sono i campi necessari per identificare un dispositivo, in quanto le parti del dispositivo vengono aggiunte o rimosse. Poiché non è presente un identificatore univoco per i dispositivi Windows, questa è la logica migliore per identificare un dispositivo.    |
-| Qual è la differenza tra hash hardware OA3, hash hardware 4K e hash hardware di Windows Autopilot?    | No.  Si tratta di nomi diversi per la stessa cosa.  L'output dello strumento OA3 è denominato hash OA3, che è di dimensioni 4K, che è utilizzabile per lo scenario di distribuzione di Windows Autopilot. Nota: quando si usa una versione precedente non supportata di Windows OA3Tool, si ottiene un hash di dimensioni diverso, che non può essere usato per la distribuzione di Windows Autopilot.  |
+| Qual è la differenza tra hash hardware OA3, hash hardware 4K e hash hardware di Windows Autopilot?    | Nessuno.  Si tratta di nomi diversi per la stessa cosa.  L'output dello strumento OA3 è denominato hash OA3, che è di dimensioni 4K, che è utilizzabile per lo scenario di distribuzione di Windows Autopilot. Nota: quando si usa una versione precedente non supportata di Windows OA3Tool, si ottiene un hash di dimensioni diverso, che non può essere usato per la distribuzione di Windows Autopilot.  |
 |  Qual è il pensiero della sostituzione e del ripristino delle parti per la scheda di interfaccia di rete (Network Interface Controller) e il disco? L'hash hardware diventa non valido?   |  Sì.  Se si sostituiscono parti, è necessario raccogliere il nuovo hash hardware, sebbene dipenda da ciò che viene sostituito e dalle caratteristiche delle parti. Se ad esempio si sostituisce il TPM o la scheda madre, si tratta di un nuovo dispositivo ed è necessario avere un nuovo hash hardware. Se si sostituisce una scheda di rete, probabilmente non è un nuovo dispositivo e il dispositivo funzionerà con l'hash hardware precedente.  Tuttavia, come procedura consigliata, è necessario presupporre che l'hash hardware precedente non sia valido e ottenga un nuovo hash hardware dopo le modifiche apportate all'hardware. Questa operazione è consigliata in qualsiasi momento in cui si sostituisce parti. |
 
 ## <a name="motherboard-replacement"></a>Sostituzione della motherboard
@@ -87,7 +87,7 @@ Alla fine viene fornito un [Glossario](#glossary) delle abbreviazioni usate in q
 | Domanda | Risposta |
 | --- | --- |
 | Un requisito specifico per l'UUID di SMBIOS?    | Deve essere univoco come specificato nei requisiti hardware di Windows 10.    |
-| Qual è il requisito della tabella SMBIOS per soddisfare le esigenze dell'hash hardware di Windows Autopilot?    | Deve soddisfare tutti i requisiti hardware di Windows 10.  Ulteriori dettagli sono disponibili [qui](https://msdn.microsoft.com/library/jj128256(v=vs.85).aspx).    |
+| Qual è il requisito della tabella SMBIOS per soddisfare le esigenze dell'hash hardware di Windows Autopilot?    | Deve soddisfare tutti i requisiti hardware di Windows 10.  Ulteriori dettagli sono disponibili [qui](/previous-versions/windows/hardware/cert-program/windows-hardware-certification-requirements-for-client-and-server-systems).    |
 | Se il SMBIOS supporta UUID e il numero di serie, è sufficiente che lo strumento OA3 generi l'hash hardware?    | No.  Come minimo, i campi SMBIOS seguenti devono essere popolati con valori univoci: ProductKeyID SmbiosSystemManufacturer SmbiosSystemProductName SmbiosSystemSerialNumber SmbiosSkuNumber SmbiosSystemFamily MacAddress SmbiosUuid DiskSerialNumber TPM EkPub |
 
 ## <a name="technical-interface"></a>Interfaccia tecnica

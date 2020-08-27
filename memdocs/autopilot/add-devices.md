@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: fc892a4372aa7d72f294ddf93f811d641ca961b5
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: b8737646946e1c575ddb8ebdd26397712c412e20
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051425"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908569"
 ---
 # <a name="adding-devices-to-windows-autopilot"></a>Aggiunta di dispositivi a Windows Autopilot
 
@@ -53,7 +53,7 @@ Windows Autopilot non richiede autorizzazioni di amministratore delegato quando 
 
 Se un dispositivo esistente sta già eseguendo una versione supportata del canale semestrale di Windows 10 e registrato in un servizio MDM quale Intune, il servizio MDM può chiedere al dispositivo l'ID hardware (noto anche come hash hardware).  Al termine, può registrare automaticamente il dispositivo con Windows Autopilot.
 
-Per istruzioni su come eseguire questa operazione con Microsoft Intune, vedere la pagina relativa alla [creazione di un profilo di distribuzione Autopilot](https://docs.microsoft.com/intune/enrollment-autopilot#create-an-autopilot-deployment-profile) che descrive l'impostazione "Converti tutti i dispositivi di destinazione in Autopilot". 
+Per istruzioni su come eseguire questa operazione con Microsoft Intune, vedere la pagina relativa alla [creazione di un profilo di distribuzione Autopilot](/intune/enrollment-autopilot#create-an-autopilot-deployment-profile) che descrive l'impostazione "Converti tutti i dispositivi di destinazione in Autopilot". 
 
 Si noti inoltre che quando si utilizza lo scenario [Windows Autopilot for existing devices](existing-devices.md) , non è necessario pre-registrare i dispositivi con Windows Autopilot.  Viene invece utilizzato un file di configurazione (AutopilotConfigurationFile.js) contenente tutte le impostazioni del profilo di Windows Autopilot; il dispositivo può essere registrato con Windows Autopilot dopo il fatto che usa la stessa impostazione "Converti tutti i dispositivi di destinazione in Autopilot".
 
@@ -74,10 +74,10 @@ Si noti che l'hash hardware contiene anche i dettagli relativi al momento in cui
 
 ### <a name="collecting-the-hardware-id-from-existing-devices-using-microsoft-endpoint-configuration-manager"></a>Raccolta dell'ID hardware dai dispositivi esistenti utilizzando Microsoft endpoint Configuration Manager
 
-Microsoft endpoint Configuration Manager raccoglie automaticamente gli hash hardware per i dispositivi Windows 10 esistenti. Per ulteriori informazioni, vedere [raccogliere informazioni da Configuration Manager per Windows Autopilot](https://docs.microsoft.com/configmgr/comanage/how-to-prepare-win10#windows-autopilot). È possibile estrarre le informazioni hash da Configuration Manager in un file CSV.
+Microsoft endpoint Configuration Manager raccoglie automaticamente gli hash hardware per i dispositivi Windows 10 esistenti. Per ulteriori informazioni, vedere [raccogliere informazioni da Configuration Manager per Windows Autopilot](/configmgr/comanage/how-to-prepare-win10#windows-autopilot). È possibile estrarre le informazioni hash da Configuration Manager in un file CSV.
 
 > [!Note]
-> Prima di caricare il file CSV in Intune, assicurarsi che la prima riga contenga il numero di serie del dispositivo, l'ID prodotto Windows, l'hash hardware, il tag di gruppo e l'utente assegnato. Se sono presenti informazioni di intestazione nella parte superiore del file CSV, eliminare le informazioni di intestazione. Vedere i dettagli in [registrare i dispositivi Windows in Intune](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot).
+> Prima di caricare il file CSV in Intune, assicurarsi che la prima riga contenga il numero di serie del dispositivo, l'ID prodotto Windows, l'hash hardware, il tag di gruppo e l'utente assegnato. Se sono presenti informazioni di intestazione nella parte superiore del file CSV, eliminare le informazioni di intestazione. Vedere i dettagli in [registrare i dispositivi Windows in Intune](/intune/enrollment/enrollment-autopilot).
 
 ### <a name="collecting-the-hardware-id-from-existing-devices-using-powershell"></a>Raccolta dell'ID hardware dai dispositivi esistenti tramite PowerShell
 
@@ -115,7 +115,7 @@ Quando gli ID hardware sono stati acquisiti da dispositivi esistenti, possono es
     - L'interfaccia di amministrazione di Microsoft Endpoint Manager viene usata per la registrazione dei dispositivi in Intune.
 -   [Centro](https://msdn.microsoft.com/partner-center/autopilot)per i partner.  Viene usato dai partner CSP per registrare i dispositivi per conto dei clienti.
 -   [Microsoft 365 Business & amministratore di Office 365](https://support.office.com/article/Create-and-edit-AutoPilot-profiles-5cf7139e-cfa1-4765-8aad-001af1c74faa).  Questa operazione viene in genere usata da piccole e medie imprese (PMI) che gestiscono i propri dispositivi usando Microsoft 365 Business.
--   [Microsoft Store per le aziende](https://docs.microsoft.com/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles).  È possibile che si stia già usando MSfB per gestire le app e le impostazioni.
+-   [Microsoft Store per le aziende](/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles).  È possibile che si stia già usando MSfB per gestire le app e le impostazioni.
 
 Di seguito è riportato un riepilogo delle funzionalità di ogni piattaforma.<br>
 <br>
@@ -173,7 +173,7 @@ Di seguito è riportato un riepilogo delle funzionalità di ogni piattaforma.<br
 Per ulteriori informazioni sugli ID dispositivo, vedere anche gli argomenti seguenti:
 - [Identificazione del dispositivo](#device-identification)
 - [Linee guida sui dispositivi di Windows Autopilot](autopilot-device-guidelines.md)
-- [Aggiungere dispositivi a un account cliente](https://docs.microsoft.com/partner-center/autopilot)
+- [Aggiungere dispositivi a un account cliente](/partner-center/autopilot)
 
 
 ## <a name="summary"></a>Riepilogo

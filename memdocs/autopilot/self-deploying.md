@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 5fccc36ff1ecacaee3d2aa3ed7c317faaaefc113
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 5ab51eda0791d42ed49b90e97b25ee66ee72c6dc
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87756540"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907949"
 ---
 # <a name="windows-autopilot-self-deploying-mode"></a>Modalità di distribuzione automatica di Windows Autopilot
 
@@ -32,7 +32,7 @@ La modalità di distribuzione automatica unisce il dispositivo in Azure Active D
 >[!NOTE]
 >La modalità di distribuzione automatica non supporta l'aggiunta o la Aggiunta ad Azure AD ibrido di Active Directory.  Tutti i dispositivi verranno aggiunti a Azure Active Directory.
 
-La modalità di distribuzione automatica è progettata per distribuire Windows 10 come chiosco multimediale, dispositivo di firma digitale o dispositivo condiviso. Quando si configura un chiosco multimediale, è possibile sfruttare il nuovo browser Kiosk, un'app basata su Microsoft Edge, che può essere usata per creare un'esperienza di esplorazione personalizzata e gestita da MDM. In combinazione con i criteri MDM per creare un account locale e configurarlo per l'accesso automatico, è possibile automatizzare la configurazione completa del dispositivo. Per altre informazioni su queste opzioni, vedere semplificazione della gestione di chioschi multimediali con Windows 10.  Per altri dettagli, vedere [configurare un chiosco multimediale o un accesso digitale in Intune o altro servizio MDM](https://docs.microsoft.com/windows/configuration/setup-kiosk-digital-signage#set-up-a-kiosk-or-digital-sign-in-intune-or-other-mdm-service) .
+La modalità di distribuzione automatica è progettata per distribuire Windows 10 come chiosco multimediale, dispositivo di firma digitale o dispositivo condiviso. Quando si configura un chiosco multimediale, è possibile sfruttare il nuovo browser Kiosk, un'app basata su Microsoft Edge, che può essere usata per creare un'esperienza di esplorazione personalizzata e gestita da MDM. In combinazione con i criteri MDM per creare un account locale e configurarlo per l'accesso automatico, è possibile automatizzare la configurazione completa del dispositivo. Per altre informazioni su queste opzioni, vedere semplificazione della gestione di chioschi multimediali con Windows 10.  Per altri dettagli, vedere [configurare un chiosco multimediale o un accesso digitale in Intune o altro servizio MDM](/windows/configuration/setup-kiosk-digital-signage#set-up-a-kiosk-or-digital-sign-in-intune-or-other-mdm-service) .
 
 >[!NOTE]
 >La modalità di distribuzione automatica non associa attualmente un utente al dispositivo (poiché non è stato specificato alcun ID utente o password come parte del processo).  Di conseguenza, alcune funzionalità Azure AD e Intune (ad esempio il ripristino di BitLocker, l'installazione di app dalla Portale aziendale o l'accesso condizionale) potrebbero non essere disponibili per un utente che accede al dispositivo. Per ulteriori informazioni, vedere gli [scenari e le funzionalità di Windows Autopilot](windows-autopilot-scenarios.md) e [impostare l'algoritmo di crittografia BitLocker per i dispositivi Autopilot](bitlocker.md).
@@ -46,7 +46,7 @@ Poiché la modalità di distribuzione automatica usa l'hardware TPM 2,0 di un di
 >[!IMPORTANT]
 >Se si tenta di eseguire una distribuzione in modalità self-Deploying in un dispositivo che non dispone del supporto TPM 2,0 o in una macchina virtuale, il processo avrà esito negativo durante la verifica del dispositivo con un errore di timeout 0x800705B4 (i TPMs virtuali Hyper-V non sono supportati). Si noti anche che la finestra 10, versione 1903 o successiva, è necessaria per usare la modalità di distribuzione automatica a causa di problemi con l'attestazione del dispositivo TPM in Windows 10, versione 1809. Poiché Windows 10 Enterprise 2019 LTSC si basa su Windows 10 versione 1809, la modalità di distribuzione automatica non è supportata anche in Windows 10 Enterprise 2019 LTSC. Vedere [problemi noti di Windows Autopilot](known-issues.md) per esaminare altri errori noti e soluzioni.
 
-Per visualizzare un logo specifico dell'organizzazione e il nome dell'organizzazione durante il processo di Autopilot, Azure Active Directory la personalizzazione dell'azienda deve essere configurata con le immagini e il testo da visualizzare.  Per informazioni dettagliate, vedere [Guida introduttiva: aggiungere informazioni personalizzate distintive dell'azienda alla pagina di accesso in Azure ad](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding) . 
+Per visualizzare un logo specifico dell'organizzazione e il nome dell'organizzazione durante il processo di Autopilot, Azure Active Directory la personalizzazione dell'azienda deve essere configurata con le immagini e il testo da visualizzare.  Per informazioni dettagliate, vedere [Guida introduttiva: aggiungere informazioni personalizzate distintive dell'azienda alla pagina di accesso in Azure ad](/azure/active-directory/fundamentals/customize-branding) . 
 
 ## <a name="step-by-step"></a>Procedura dettagliata
 

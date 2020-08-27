@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 8388febead5953fd6c76e7e40571d3b2e1b91e4d
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: e084663527d48c83d42d426792da0bedddd35942
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87756499"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907929"
 ---
 # <a name="windows-autopilot-reset"></a>Ripristino di Windows Autopilot
 
@@ -55,7 +55,7 @@ I requisiti aggiuntivi e i dettagli di configurazione si applicano a ogni scenar
 
 **Si applica a: Windows 10, versione 1709 e successive**
 
-Per eseguire questa attività, è necessario il ruolo di amministratore del servizio Intune.  Per altre informazioni, vedere [Aggiungere utenti e concedere autorizzazioni amministrative a Intune](https://docs.microsoft.com/intune/users-add).
+Per eseguire questa attività, è necessario il ruolo di amministratore del servizio Intune.  Per altre informazioni, vedere [Aggiungere utenti e concedere autorizzazioni amministrative a Intune](/intune/users-add).
 
 Gli amministratori IT possono eseguire un ripristino di Windows Autopilot locale per rimuovere rapidamente i file personali, le app e le impostazioni e ripristinare i dispositivi Windows 10 dalla schermata di blocco in qualsiasi momento e applicare le impostazioni originali e la registrazione di gestione (Azure Active Directory e la gestione dei dispositivi), in modo che i dispositivi siano pronti per l'uso. Con la reimpostazione di un autopilot locale, i dispositivi vengono restituiti a uno stato completamente configurato o approvato dall'IT.
 
@@ -66,7 +66,7 @@ Per abilitare la reimpostazione di Autopilot locale in Windows 10:
 
 ### <a name="enable-local-windows-autopilot-reset"></a>Abilitare la reimpostazione di Windows Autopilot locale
 
-Per abilitare una reimpostazione di Windows Autopilot locale, è necessario configurare il criterio **DisableAutomaticReDeploymentCredentials** . Questo criterio è documentato nei [criteri CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-credentialproviders), **CredentialProviders/DisableAutomaticReDeploymentCredentials**. Per impostazione predefinita, Windows Autopilot locale è disabilitato. In questo modo si garantisce che la reimpostazione di un autopilot locale non venga attivata per errore.
+Per abilitare una reimpostazione di Windows Autopilot locale, è necessario configurare il criterio **DisableAutomaticReDeploymentCredentials** . Questo criterio è documentato nei [criteri CSP](/windows/client-management/mdm/policy-csp-credentialproviders), **CredentialProviders/DisableAutomaticReDeploymentCredentials**. Per impostazione predefinita, Windows Autopilot locale è disabilitato. In questo modo si garantisce che la reimpostazione di un autopilot locale non venga attivata per errore.
 
 È possibile impostare i criteri utilizzando uno di questi metodi:
 
@@ -77,7 +77,7 @@ Per abilitare una reimpostazione di Windows Autopilot locale, è necessario conf
 
 - Progettazione configurazione Windows
 
-    È possibile [utilizzare Progettazione configurazione Windows](https://docs.microsoft.com/windows/configuration/provisioning-packages/provisioning-create-package) per impostare le **impostazioni di Runtime > criteri > CredentialProviders > DisableAutomaticReDeploymentCredentials** impostazione su 0, quindi creare un pacchetto di provisioning.
+    È possibile [utilizzare Progettazione configurazione Windows](/windows/configuration/provisioning-packages/provisioning-create-package) per impostare le **impostazioni di Runtime > criteri > CredentialProviders > DisableAutomaticReDeploymentCredentials** impostazione su 0, quindi creare un pacchetto di provisioning.
 
 - Configurare l'app per i PC scolastici
 
@@ -131,9 +131,9 @@ Al termine della reimpostazione, il dispositivo è nuovamente pronto per l'uso.
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 
-Per la reimpostazione di Windows Autopilot è necessario che [ambiente ripristino Windows (WinRE)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference) sia configurato e abilitato correttamente nel dispositivo. Se non è configurata e abilitata, verrà segnalato un errore, ad esempio `Error code: ERROR_NOT_SUPPORTED (0x80070032)` .
+Per la reimpostazione di Windows Autopilot è necessario che [ambiente ripristino Windows (WinRE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference) sia configurato e abilitato correttamente nel dispositivo. Se non è configurata e abilitata, verrà segnalato un errore, ad esempio `Error code: ERROR_NOT_SUPPORTED (0x80070032)` .
 
-Per assicurarsi che WinRE sia abilitato, usare lo [strumentoREAgentC.exe](https://docs.microsoft.com/windows-hardware/manufacture/desktop/reagentc-command-line-options) per eseguire il comando seguente:
+Per assicurarsi che WinRE sia abilitato, usare lo [ strumentoREAgentC.exe](/windows-hardware/manufacture/desktop/reagentc-command-line-options) per eseguire il comando seguente:
 
 ```
 reagentc /enable

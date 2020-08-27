@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 4c8e66e9fb0ac4527f10824332f8ac5ae1646181
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 4ae8ffdf39b7812a869d3a7ef5b5289f46f8369a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87757395"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908356"
 ---
 # <a name="windows-autopilot-motherboard-replacement-scenario-guidance"></a>Guida allo scenario di sostituzione della scheda madre di Windows Autopilot
 
@@ -73,7 +73,7 @@ Per annullare la registrazione di un dispositivo Autopilot da Intune, un amminis
 
 Il processo di annullamento della registrazione importerà circa 15 minuti.  È possibile accelerare il processo facendo clic sul pulsante "Sincronizza" e quindi "Aggiorna" la visualizzazione finché il dispositivo non è più presente.
 
-Altre informazioni sulla deregistrazione dei dispositivi da Intune sono disponibili [qui](https://docs.microsoft.com/intune/enrollment-autopilot#create-an-autopilot-device-group).
+Altre informazioni sulla deregistrazione dei dispositivi da Intune sono disponibili [qui](/intune/enrollment-autopilot#create-an-autopilot-device-group).
 
 ### <a name="deregister-from-mpc"></a>Annullare la registrazione da MPC
 
@@ -122,9 +122,9 @@ I processi di ripristino e sostituzione delle chiavi variano tra le strutture.  
 
 I tecnici di riparazione devono accedere al dispositivo riparato per acquisire il nuovo ID dispositivo.  Supponendo che il tecnico di riparazione non abbia accesso alle credenziali di accesso del cliente, dovrà ricreare l'immagine del dispositivo per ottenere l'accesso, in base ai passaggi seguenti:
 
-1. Il tecnico di riparazione crea un' [unità USB di avvio di WinPE](https://docs.microsoft.com/windows-hardware/manufacture/desktop/oem-deployment-of-windows-10-for-desktop-editions#create-a-bootable-windows-pe-winpe-partition).
+1. Il tecnico di riparazione crea un' [unità USB di avvio di WinPE](/windows-hardware/manufacture/desktop/oem-deployment-of-windows-10-for-desktop-editions#create-a-bootable-windows-pe-winpe-partition).
 2. Il tecnico di riparazione avvia il dispositivo in WinPE.
-3. Il tecnico della riparazione [applica una nuova immagine di Windows al dispositivo](https://docs.microsoft.com/windows-hardware/manufacture/desktop/work-with-windows-images).
+3. Il tecnico della riparazione [applica una nuova immagine di Windows al dispositivo](/windows-hardware/manufacture/desktop/work-with-windows-images).
 
     **Nota**: idealmente, la stessa versione di Windows deve essere ricreata con l'immagine nel dispositivo che era originariamente nel dispositivo, quindi è necessario un coordinamento tra la struttura di ripristino e il cliente per acquisire queste informazioni nel momento in cui il dispositivo arriva per la riparazione.  Questo potrebbe includere il cliente che invia la struttura di ripristino un'immagine personalizzata (file con estensione PPK) tramite una chiavetta USB, ad esempio.
  
@@ -194,7 +194,7 @@ Nel dispositivo passare a impostazioni > Aggiorna & sicurezza > ripristino e far
 
 ![reset](images/reset.png)
 
-Tuttavia, è probabile che la funzionalità di ripristino non possa accedere a Windows perché non dispongono delle credenziali utente per l'accesso, nel qual caso è necessario usare altri metodi per ricreare l'immagine del dispositivo, ad esempio lo [strumento di gestione e manutenzione immagini distribuzione](https://docs.microsoft.com/windows-hardware/manufacture/desktop/oem-deployment-of-windows-10-for-desktop-editions#use-a-deployment-script-to-apply-your-image).
+Tuttavia, è probabile che la funzionalità di ripristino non possa accedere a Windows perché non dispongono delle credenziali utente per l'accesso, nel qual caso è necessario usare altri metodi per ricreare l'immagine del dispositivo, ad esempio lo [strumento di gestione e manutenzione immagini distribuzione](/windows-hardware/manufacture/desktop/oem-deployment-of-windows-10-for-desktop-editions#use-a-deployment-script-to-apply-your-image).
 
 ## <a name="return-the-repaired-device-to-the-customer"></a>Restituzione del dispositivo riparato al cliente
 

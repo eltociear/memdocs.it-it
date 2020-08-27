@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ce002acf118fb39712f8195247f556b01faa830f
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: d29830b919393c247ed2696eb9e55adc114015aa
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865521"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908515"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-windows-autopilot"></a>Registrare i dispositivi Windows in Intune usando Windows Autopilot
 
@@ -36,13 +36,13 @@ Esistono quattro tipi di distribuzione Autopilot:
 - [Autopilot per dispositivi esistenti](existing-devices.md) consente di distribuire facilmente la versione più recente di Windows 10 nei dispositivi esistenti
 - [Modalità Definita dall'utente](user-driven.md) per utenti tradizionali.
 
-Questo articolo illustra come configurare Autopilot su PC Windows. Per altre informazioni sull'uso di Autopilot per Hololens, vedere [Windows Autopilot per HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot).
+Questo articolo illustra come configurare Autopilot su PC Windows. Per altre informazioni sull'uso di Autopilot per Hololens, vedere [Windows Autopilot per HoloLens 2](/hololens/hololens2-autopilot).
 
 ## <a name="prerequisites"></a>Prerequisiti
 
 - [Sottoscrizione di Intune](../intune/fundamentals/licenses.md)
 - [La registrazione automatica di Windows deve essere abilitata](../intune/enrollment/windows-enroll.md#enable-windows-10-automatic-enrollment)
-- [Sottoscrizione di Azure Active Directory Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
+- [Sottoscrizione di Azure Active Directory Premium](/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
 
 ## <a name="how-to-get-the-csv-for-import-in-intune"></a>Come ottenere il file con estensione csv da importare in Intune
 
@@ -93,7 +93,7 @@ Per ulteriori informazioni, vedere il cmdlet di PowerShell informazioni.
 
 ## <a name="create-an-autopilot-deployment-profile"></a>Creare un profilo di distribuzione Autopilot
 I profili di distribuzione AutoPilot vengono usati per configurare i dispositivi AutoPilot. È possibile creare fino a 350 profili per ogni tenant.
-1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **Windows** > **Registrazione Windows** > **Profili di distribuzione** > **Crea profilo** > **PC Windows** o **HoloLens**. Questo articolo illustra come configurare Autopilot su PC Windows. Per altre informazioni sull'uso di Autopilot per Hololens, vedere [Windows Autopilot per HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot).
+1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **Windows** > **Registrazione Windows** > **Profili di distribuzione** > **Crea profilo** > **PC Windows** o **HoloLens**. Questo articolo illustra come configurare Autopilot su PC Windows. Per altre informazioni sull'uso di Autopilot per Hololens, vedere [Windows Autopilot per HoloLens 2](/hololens/hololens2-autopilot).
 2. Nella pagina **Informazioni di base** specificare un **Nome** e una **Descrizione** facoltativa.
 
     ![Screenshot della pagina Informazioni di base](media/enrollment-autopilot/create-profile-basics.png)
@@ -114,12 +114,12 @@ I profili di distribuzione AutoPilot vengono usati per configurare i dispositivi
     - **Contratto di licenza con l'utente finale**: (Windows 10, versione 1709 o successive): scegliere se si vuole visualizzare il contratto di licenza per gli utenti.
     - **Impostazioni di privacy**: scegliere se si vuole visualizzare le impostazioni di privacy per gli utenti.
     >[!IMPORTANT]
-    >Il valore predefinito per l'impostazione Dati di diagnostica varia in base alle versioni di Windows. Per i dispositivi che eseguono Windows 10, versione 1903, il valore predefinito è impostato su Completa durante l'esperienza predefinita. Per altre informazioni, vedere i [dati di diagnostica di Windows](https://docs.microsoft.com/windows/privacy/windows-diagnostic-data) <br>
+    >Il valore predefinito per l'impostazione Dati di diagnostica varia in base alle versioni di Windows. Per i dispositivi che eseguono Windows 10, versione 1903, il valore predefinito è impostato su Completa durante l'esperienza predefinita. Per altre informazioni, vedere i [dati di diagnostica di Windows](/windows/privacy/windows-diagnostic-data) <br>
     
-    - **Nascondi le opzioni di cambio di account (richiede Windows 10 versione 1809 o successiva)** : scegliere **Nascondi** per impedire che le opzioni dell'account vengano visualizzate nella pagina di accesso aziendale e nella pagina degli errori di dominio. Per questa opzione è necessario [configurare le informazioni personalizzate distintive dell'azienda in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding).
+    - **Nascondi le opzioni di cambio di account (richiede Windows 10 versione 1809 o successiva)** : scegliere **Nascondi** per impedire che le opzioni dell'account vengano visualizzate nella pagina di accesso aziendale e nella pagina degli errori di dominio. Per questa opzione è necessario [configurare le informazioni personalizzate distintive dell'azienda in Azure Active Directory](/azure/active-directory/fundamentals/customize-branding).
     - **Tipo di account utente**: scegliere il tipo di account utente (**Amministratore** o **Standard**). Per consentire all'utente che aggiunge il dispositivo di essere un amministratore locale, aggiungerlo al gruppo di amministratori locale. L'utente non viene abilitato come amministratore predefinito nel dispositivo.
     - **Consenti modalità " White Glove" per OOBE**  (richiede Windows 10, versione 1903 o successive; [requisiti fisici aggiuntivi](white-glove.md#prerequisites)): scegliere **Sì** per consentire il supporto per la modalità "White Glove".
-    - **Applica il modello di nome di dispositivo** (richiede Windows 10 versione 1809 o successive e un tipo di join per Azure AD): scegliere **Sì** per creare un modello da usare per assegnare il nome a un dispositivo durante la registrazione. I nomi non devono superare i 15 caratteri e possono contenere lettere, numeri e trattini. I nomi non possono contenere solo numeri. Usare la [macro %SERIAL%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) per aggiungere un numero di serie specifico per l'hardware. In alternativa, usare la [macro %RAND:x%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) per aggiungere una stringa casuale di numeri, dove x corrisponde al numero di cifre da aggiungere. È possibile specificare solo un prefisso per dispositivi ibridi in un [profilo di aggiunta a un dominio](../intune/enrollment/windows-autopilot-hybrid.md#create-and-assign-a-domain-join-profile). 
+    - **Applica il modello di nome di dispositivo** (richiede Windows 10 versione 1809 o successive e un tipo di join per Azure AD): scegliere **Sì** per creare un modello da usare per assegnare il nome a un dispositivo durante la registrazione. I nomi non devono superare i 15 caratteri e possono contenere lettere, numeri e trattini. I nomi non possono contenere solo numeri. Usare la [macro %SERIAL%](/windows/client-management/mdm/accounts-csp) per aggiungere un numero di serie specifico per l'hardware. In alternativa, usare la [macro %RAND:x%](/windows/client-management/mdm/accounts-csp) per aggiungere una stringa casuale di numeri, dove x corrisponde al numero di cifre da aggiungere. È possibile specificare solo un prefisso per dispositivi ibridi in un [profilo di aggiunta a un dominio](./windows-autopilot-hybrid.md#create-and-assign-a-domain-join-profile). 
     - **Lingua (area geografica)** \*: scegliere la lingua da usare per il dispositivo. Questa opzione è disponibile solo se si è scelta l'opzione **Distribuzione automatica** in **Modalità di distribuzione**.
     - **Configura automaticamente la tastiera**\*: se è selezionata una **Lingua (area geografica)** , scegliere **Sì** per ignorare la pagina di selezione della tastiera. Questa opzione è disponibile solo se si è scelta l'opzione **Distribuzione automatica** in **Modalità di distribuzione**.
 8. Selezionare **Avanti**.
@@ -176,7 +176,7 @@ Questo report è in anteprima. I record di distribuzione dei dispositivi sono at
 
 ## <a name="assign-a-user-to-a-specific-autopilot-device"></a>Assegnare un utente a un dispositivo Autopilot specifico
 
-È possibile assegnare un utente a un dispositivo Autopilot specifico. Questa assegnazione precompila un utente di Azure Active Directory nella pagina di accesso [distintiva dell'azienda](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding) durante l'installazione di Windows. Consente inoltre di definire il nome di un messaggio di saluto personalizzato. Questa informazione non viene precompilata nella pagina di accesso di Windows né la modifica. Solo gli utenti con licenza di Intune possono essere assegnati con questa procedura.
+È possibile assegnare un utente a un dispositivo Autopilot specifico. Questa assegnazione precompila un utente di Azure Active Directory nella pagina di accesso [distintiva dell'azienda](/azure/active-directory/fundamentals/customize-branding) durante l'installazione di Windows. Consente inoltre di definire il nome di un messaggio di saluto personalizzato. Questa informazione non viene precompilata nella pagina di accesso di Windows né la modifica. Solo gli utenti con licenza di Intune possono essere assegnati con questa procedura.
 
 Prerequisiti: il portale aziendale di Azure Active Directory deve essere configurato; Windows 10 versione 1809 o successiva.
 
@@ -223,7 +223,7 @@ Se non si è interessati alla gestione di dispositivi mobili, è possibile usare
 
 ## <a name="windows-autopilot-for-existing-devices"></a>Windows Autopilot per dispositivi esistenti
 
-È possibile raggruppare dispositivi Windows in base all'ID correlatore quando vengono registrati usando [AutoPilot per i dispositivi esistenti](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) tramite Configuration Manager. L'ID correlatore è un parametro del file di configurazione di Autopilot. L'[attributo del dispositivo Azure AD enrollmentProfileName](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) viene impostato automaticamente su "OfflineAutopilotprofile-\<correlator ID\>". In questo modo sarà possibile creare gruppi dinamici di Azure AD arbitrari in base all'ID correlatore tramite l'attributo enrollmentprofileName.
+È possibile raggruppare dispositivi Windows in base all'ID correlatore quando vengono registrati usando [AutoPilot per i dispositivi esistenti](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) tramite Configuration Manager. L'ID correlatore è un parametro del file di configurazione di Autopilot. L'[attributo del dispositivo Azure AD enrollmentProfileName](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) viene impostato automaticamente su "OfflineAutopilotprofile-\<correlator ID\>". In questo modo sarà possibile creare gruppi dinamici di Azure AD arbitrari in base all'ID correlatore tramite l'attributo enrollmentprofileName.
 
 >[!WARNING] 
 > Dato che l'ID correlatore non è già elencato in Intune, il dispositivo può riportare qualsiasi ID correlatore desiderato. Se l'utente crea un ID correlatore corrispondente a un nome di profilo di Autopilot o di Registrazione automatica del dispositivo Apple, il dispositivo verrà aggiunto a un gruppo di dispositivi di Azure AD dinamico in base all'attributo enrollmentProfileName. Per evitare questo conflitto:

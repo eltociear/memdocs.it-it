@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: da15ea9ceae46c9c54858a6be0f724c5d67d22ce
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 8c339e2a55fd8876ce8a144bb72c7c0a37de8346
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252174"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907835"
 ---
 # <a name="overview-of-windows-autopilot"></a>Panoramica di Windows Autopilot
 
@@ -56,7 +56,7 @@ Una volta distribuita, è possibile gestire i dispositivi Windows 10 con:
 Con Windows Autopilot è possibile preparare rapidamente un dispositivo per un nuovo utente con la reimpostazione di Windows Autopilot. È anche possibile usare Reimposta in scenari di interruzioni/correzioni per riportare rapidamente un dispositivo a uno stato pronto per l'azienda.
 
 Windows Autopilot consente di:
-* Aggiungere automaticamente i dispositivi a Azure Active Directory (Azure AD) o Active Directory (tramite Aggiunta ad Azure AD ibrido). Per ulteriori informazioni sulle differenze tra queste due opzioni di join, vedere [Introduzione alla gestione dei dispositivi in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-introduction).
+* Aggiungere automaticamente i dispositivi a Azure Active Directory (Azure AD) o Active Directory (tramite Aggiunta ad Azure AD ibrido). Per ulteriori informazioni sulle differenze tra queste due opzioni di join, vedere [Introduzione alla gestione dei dispositivi in Azure Active Directory](/azure/active-directory/device-management-introduction).
 * Registrare automaticamente i dispositivi nei servizi MDM, ad esempio Microsoft Intune ([*richiede una sottoscrizione Azure ad Premium per la configurazione*](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Windows-10-Azure-AD-and-Microsoft-Intune-Automatic-MDM/ba-p/244067)).
 * Limitare la creazione dell'account amministratore.
 * Creare e assegnare automaticamente i dispositivi ai gruppi di configurazione in base al profilo del dispositivo.
@@ -72,9 +72,9 @@ Dal punto di vista del professionista IT, l'unica interazione richiesta dall'ute
 
 ## <a name="requirements"></a>Requisiti
 
-Per usare Windows Autopilot è necessaria una [versione supportata](https://docs.microsoft.com/windows/release-information/) del canale semestrale di Windows 10. È supportato anche Windows 10 Enterprise LTSC 2019. Per ulteriori informazioni, vedere la pagina relativa ai requisiti per il software, la [rete](networking-requirements.md), la [configurazione](configuration-requirements.md)e le [licenze](licensing-requirements.md) di [Windows Autopilot](software-requirements.md).
+Per usare Windows Autopilot è necessaria una [versione supportata](/windows/release-information/) del canale semestrale di Windows 10. È supportato anche Windows 10 Enterprise LTSC 2019. Per ulteriori informazioni, vedere la pagina relativa ai requisiti per il software, la [rete](networking-requirements.md), la [configurazione](configuration-requirements.md)e le [licenze](licensing-requirements.md) di [Windows Autopilot](software-requirements.md).
 
 ## <a name="related-topics"></a>Argomenti correlati
 
-[Registrare i dispositivi Windows in Intune usando Windows Autopilot](https://docs.microsoft.com/intune/enrollment-autopilot)<br>
+[Registrare i dispositivi Windows in Intune usando Windows Autopilot](/intune/enrollment-autopilot)<br>
 [Scenari e funzionalità di Windows Autopilot](windows-autopilot-scenarios.md)

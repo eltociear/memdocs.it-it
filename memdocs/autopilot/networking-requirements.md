@@ -17,12 +17,12 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: 18031ff51e8086d29f706110946adeacb63d908e
-ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
+ms.openlocfilehash: 3c24610a2ac10dfae6a8ba73062edf29188938ea
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88590905"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907989"
 ---
 # <a name="windows-autopilot-networking-requirements"></a>Requisiti di rete di Windows Autopilot
 
@@ -38,7 +38,7 @@ Potrebbe essere necessaria una configurazione aggiuntiva per concedere l'accesso
 - richiedere l'autenticazione prima di poter ottenere l'accesso a Internet. 
 
 > [!NOTE]
-> La smart card e l'autenticazione basata su certificato non sono supportate durante la configurazione guidata. Per altre informazioni, vedere [Smart Card e autenticazione basata su certificati](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan#smartcards-and-certificate-based-authentication).
+> La smart card e l'autenticazione basata su certificato non sono supportate durante la configurazione guidata. Per altre informazioni, vedere [Smart Card e autenticazione basata su certificati](/azure/active-directory/devices/azureadjoin-plan#smartcards-and-certificate-based-authentication).
 
 Per ulteriori informazioni su ciascuno di questi servizi e sui requisiti specifici, esaminare i dettagli seguenti:
 
@@ -53,7 +53,7 @@ Per ulteriori informazioni su ciascuno di questi servizi e sui requisiti specifi
 
 Se Windows Update è inaccessibile, il processo Autopilot continuerà, ma gli aggiornamenti critici non saranno disponibili.
 
-<tr><td><b>Ottimizzazione recapito<b><td>Autopilot Contatta il servizio di <a href="https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization">Ottimizzazione recapito</a> durante il download delle app e degli aggiornamenti. Questo contatto stabilisce la condivisione peer-to-peer del contenuto, in modo che solo pochi dispositivi debbano scaricarlo da Internet.
+<tr><td><b>Ottimizzazione recapito<b><td>Autopilot Contatta il servizio di <a href="/windows/deployment/update/waas-delivery-optimization">Ottimizzazione recapito</a> durante il download delle app e degli aggiornamenti. Questo contatto stabilisce la condivisione peer-to-peer del contenuto, in modo che solo pochi dispositivi debbano scaricarlo da Internet.
 - Aggiornamenti - di Windows Microsoft Store app e aggiornamenti delle app di - Office aggiornamenti di Intune app - Win32<br>
 
 Se il servizio di ottimizzazione recapito è inaccessibile, il processo Autopilot continuerà comunque con i download dell'ottimizzazione del recapito dal cloud (senza peer-to-peer).
@@ -69,7 +69,7 @@ Se non è possibile inviare i dati di diagnostica, il processo Autopilot continu
 <tr><td><b>Windows Notification Services (WNS)<b><td>Questo servizio viene usato per consentire a Windows di ricevere notifiche da app e servizi. Per ulteriori informazioni, vedere <a href="https://docs.microsoft.com/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#26-microsoft-store">Microsoft Store</a>.<br>
 
 Se i servizi WNS non sono disponibili, il processo Autopilot continuerà senza notifiche.
-<tr><td><b>Microsoft Store, Microsoft Store per le aziende<b><td>È possibile effettuare il push delle app nel Microsoft Store al dispositivo, attivato tramite Intune (MDM).Gli aggiornamenti delle app e le app aggiuntive possono essere necessari anche quando l'utente accede per la prima volta. Per ulteriori informazioni, vedere <a href="https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business">prerequisiti per Microsoft Store for Business and Education</a> (include anche Azure ad e Windows Notification Services).<br>
+<tr><td><b>Microsoft Store, Microsoft Store per le aziende<b><td>È possibile effettuare il push delle app nel Microsoft Store al dispositivo, attivato tramite Intune (MDM).Gli aggiornamenti delle app e le app aggiuntive possono essere necessari anche quando l'utente accede per la prima volta. Per ulteriori informazioni, vedere <a href="/microsoft-store/prerequisites-microsoft-store-for-business">prerequisiti per Microsoft Store for Business and Education</a> (include anche Azure ad e Windows Notification Services).<br>
 
 Se il Microsoft Store non è accessibile, il processo Autopilot continuerà senza Microsoft Store app.
 
@@ -87,4 +87,3 @@ Se il Microsoft Store non è accessibile, il processo Autopilot continuerà senz
 **Passaggi successivi**
 
 [Requisiti per le licenze di Windows Autopilot](licensing-requirements.md)
-

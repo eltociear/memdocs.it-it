@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: d37ca65d89ffc37365ae3c71ba0fe0e1f15cf42d
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: fc13a3a73e5e043d01bf5c7a3d310c496714caee
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87756666"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908393"
 ---
 # <a name="windows-autopilot-deployment-for-existing-devices"></a>Distribuzione di Windows Autopilot per i dispositivi esistenti
 
@@ -36,7 +36,7 @@ In questo argomento viene descritto come convertire i computer Windows 7 o Windo
 
 - Una versione attualmente supportata di Microsoft endpoint Configuration Manager Branch Current Branch o Technical Preview. 
 - [Windows ADK](https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit) 1803 o versione successiva
-    - Per ulteriori informazioni sul supporto Configuration Manager, vedere [supporto per Windows 10 ADK](https://docs.microsoft.com/configmgr/core/plan-design/configs/support-for-windows-10#windows-10-adk).
+    - Per ulteriori informazioni sul supporto Configuration Manager, vedere [supporto per Windows 10 ADK](/configmgr/core/plan-design/configs/support-for-windows-10#windows-10-adk).
 - Licenze Microsoft Intune assegnate
 - Azure Active Directory Premium
 - Windows 10 versione 1809 o successiva importata in Configuration Manager come immagine del sistema operativo
@@ -51,8 +51,8 @@ Se lo si desidera, è possibile configurare una [pagina relativa allo stato dell
 Per abilitare e configurare la pagina di registrazione e stato:
 
 1. Aprire [Intune nel portale di Azure](https://aka.ms/intuneportal).
-2. Accedere a **Intune > la registrazione del dispositivo > la registrazione di Windows** e [configurare una pagina relativa allo stato della registrazione](https://docs.microsoft.com/intune/windows-enrollment-status). 
-3. Accedere **Azure Active Directory > Mobility (MDM e MAM) > Microsoft Intune** e [configurare la registrazione MDM automatica](https://docs.microsoft.com/configmgr/mdm/deploy-use/enroll-hybrid-windows#enable-windows-10-automatic-enrollment) e configurare l'ambito utente MDM per alcuni o tutti gli utenti. 
+2. Accedere a **Intune > la registrazione del dispositivo > la registrazione di Windows** e [configurare una pagina relativa allo stato della registrazione](/intune/windows-enrollment-status). 
+3. Accedere **Azure Active Directory > Mobility (MDM e MAM) > Microsoft Intune** e [configurare la registrazione MDM automatica](/configmgr/mdm/deploy-use/enroll-hybrid-windows#enable-windows-10-automatic-enrollment) e configurare l'ambito utente MDM per alcuni o tutti gli utenti. 
 
 Vedere gli esempi seguenti.
 
@@ -203,7 +203,7 @@ Vedere gli esempi seguenti.
    - <u>Immagine d'avvio</u>: fare clic su **Sfoglia** e selezionare un'immagine di avvio di Windows 10 (1803 o versione successiva)
    - Fare clic su **Avanti**, quindi nella pagina Installa Windows fare clic su **Sfoglia** e selezionare un **pacchetto di immagini** Windows 10 e un **Indice immagine**, versione 1803 o successiva.
    - Selezionare la **partizione e formattare il computer di destinazione prima di installare la** casella di controllo sistema operativo.
-   - Selezionare o deselezionare **la casella di controllo Configura sequenza attività per l'utilizzo con BitLocker** . Ciò è facoltativo.
+   - Selezionare o deselezionare **la casella di controllo Configura sequenza attività per l'utilizzo con BitLocker** . Questo indirizzo è facoltativo.
    - <u>Codice Product Key</u> e <u>modalità di gestione licenze server</u>: facoltativamente, immettere un codice Product Key e la modalità di gestione licenze server.
    - <u>Genera in modo casuale la password dell'amministratore locale e disattiva l'account su tutte le piattaforme di supporto (scelta consigliata)</u>: facoltativo.
    - <u>Abilitare l'account e specificare la password dell'amministratore locale</u>: facoltativa.
@@ -220,13 +220,13 @@ Vedere gli esempi seguenti.
    - Deselezionare la casella di controllo **Acquisisci impostazioni utente e file** .
    - Deselezionare la casella di controllo **Acquisisci impostazioni di rete** .
    - Deselezionare la casella di controllo **Acquisisci impostazioni di Microsoft Windows** .
-   - Fare clic su **Avanti**.
+   - Fare clic su **Next** (Avanti).
 
      >[!NOTE]
      >Poiché la sequenza di attività Autopilot for existing devices viene completata in Windows PE, la migrazione dei dati di utilità di migrazione stato utente (USMT) non è supportata perché non è possibile ripristinare lo stato utente nel nuovo sistema operativo.  Il Toolkit di migrazione stato utente (USMT), inoltre, non supporta i dispositivi aggiunti a Azure AD.
 
 7. Nella pagina Includi aggiornamenti scegliere una delle tre opzioni disponibili. Questa selezione è facoltativa.
-8. Nella pagina Installa applicazioni aggiungere le applicazioni, se necessario. Ciò è facoltativo.
+8. Nella pagina Installa applicazioni aggiungere le applicazioni, se necessario. Questo indirizzo è facoltativo.
 9. Fare clic su **Avanti**, confermare le impostazioni, fare clic su **Avanti**, quindi fare clic su **Chiudi**.
 10. Fare clic con il pulsante destro del mouse sulla sequenza di attività Autopilot for existing devices e scegliere **modifica**.
 11. Nell'editor della sequenza di attività, nel gruppo **Installa sistema operativo** , fare clic sull'azione **Applica impostazioni Windows** .
@@ -273,7 +273,7 @@ Assicurarsi quindi che tutto il contenuto necessario per la sequenza di attivit�
 
 1. Fare clic con il pulsante destro del mouse sulla sequenza attività **Autopilot for existing devices** e quindi scegliere **Distribuisci**.
 2. Nella distribuzione guidata del software immettere i dettagli seguenti **delle impostazioni** **generali** e di distribuzione:
-    - <u>Sequenza di attività</u>: **Autopilot per i dispositivi esistenti**.
+    - <u>Sequenza di attività</u>:  **Autopilot per i dispositivi esistenti**.
     - <u>Raccolta</u>: fare clic su **Sfoglia** e quindi selezionare **Autopilot per la raccolta di dispositivi esistente** (o un'altra raccolta desiderata).
     - Fare clic su **Avanti** per specificare **le impostazioni di distribuzione**.
     - <u>Azione</u>: **Install**.
@@ -325,4 +325,4 @@ Vedere anche [aggiunta di dispositivi a Windows Autopilot](add-devices.md).
 
 ## <a name="speeding-up-the-deployment-process"></a>Velocizzare il processo di distribuzione
 
-Per rimuovere circa 20 minuti dal processo di distribuzione, vedere il Blog di Michael Niehaus con le istruzioni per [velocizzare Windows Autopilot per i dispositivi esistenti](https://blogs.technet.microsoft.com/mniehaus/2018/10/25/speeding-up-windows-autopilot-for-existing-devices/).
+Per rimuovere circa 20 minuti dal processo di distribuzione, vedere il Blog di Michael Niehaus con le istruzioni per [velocizzare Windows Autopilot per i dispositivi esistenti](/archive/blogs/mniehaus/speeding-up-windows-autopilot-for-existing-devices).

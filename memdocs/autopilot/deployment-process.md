@@ -12,12 +12,12 @@ ms.sitesec: library
 audience: itpro
 author: greg-lindsay
 ms.topic: article
-ms.openlocfilehash: 7a8ff5a1748dc94f7e0d5001ba8aed27a225de7b
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 96c76aacf8185af671354c89cd5b89775a470710
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87756697"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908366"
 ---
 #  <a name="windows-autopilot-deployment-process"></a>Processo di distribuzione di Windows Autopilot
 
@@ -28,4 +28,4 @@ I processi di distribuzione di Windows Autopilot sono riepilogati nel poster rip
 
 [![Distribuire Windows 10 con Autopilot](media/windows10-autopilot-flowchart.png)](media/Windows10AutopilotFlowchart.pdf)
 
-**Nota**: il processo di Windows Autopilot per i dispositivi esistenti è incluso nel [poster della distribuzione di Microsoft endpoint Configuration Manager](https://docs.microsoft.com/windows/deployment/windows-10-deployment-posters#deploy-windows-10-with-microsoft-endpoint-configuration-manager). 
+**Nota**: il processo di Windows Autopilot per i dispositivi esistenti è incluso nel [poster della distribuzione di Microsoft endpoint Configuration Manager](/windows/deployment/windows-10-deployment-posters#deploy-windows-10-with-microsoft-endpoint-configuration-manager).

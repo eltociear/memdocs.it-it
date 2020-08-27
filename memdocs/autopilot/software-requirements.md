@@ -17,12 +17,12 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: 5e449505d9d8a15bab50906ea45dd12482cc27ef
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 2eb4f23fbe6126c095f049f36b08adac15c1e02c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88253327"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907939"
 ---
 # <a name="windows-autopilot-software-requirements"></a>Requisiti software di Windows Autopilot
 
@@ -34,7 +34,7 @@ Windows Autopilot dipende da funzionalità specifiche disponibili nei servizi Wi
 
 ## <a name="software-requirements"></a>Requisiti software
 
-- È necessaria una [versione supportata](https://docs.microsoft.com/windows/release-information/) del canale semestrale di Windows 10. È supportato anche il canale di manutenzione a lungo termine di Windows 10 Enterprise 2019 (LTSC).
+- È necessaria una [versione supportata](/windows/release-information/) del canale semestrale di Windows 10. È supportato anche il canale di manutenzione a lungo termine di Windows 10 Enterprise 2019 (LTSC).
 - Sono supportate le edizioni seguenti:
   - Windows 10 Pro
   - Windows 10 Pro Education
@@ -49,4 +49,3 @@ Windows Autopilot dipende da funzionalità specifiche disponibili nei servizi Wi
 ## <a name="next-steps"></a>Passaggi successivi
 
 [Requisiti di rete di Windows Autopilot](networking-requirements.md)
-

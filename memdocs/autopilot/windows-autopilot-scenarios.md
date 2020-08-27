@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 063d791b4b2373f195625c996c6b4a1667015ad3
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: b8b91e25d01a64cfeee601c898c355111b960b7c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87756493"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907872"
 ---
 # <a name="windows-autopilot-scenarios-and-capabilities"></a>Scenari e funzionalità di Windows Autopilot
 
@@ -27,7 +27,7 @@ ms.locfileid: "87756493"
 
 ## <a name="scenarios"></a>Scenari
 
-Windows Autopilot include il supporto per un elenco in continua crescita di scenari, progettati per supportare esigenze aziendali comuni. Queste esigenze possono variare in base al tipo di organizzazione e al passaggio a Windows 10 e [alla gestione moderna](https://docs.microsoft.com/windows/client-management/manage-windows-10-in-your-organization-modern-management).
+Windows Autopilot include il supporto per un elenco in continua crescita di scenari, progettati per supportare esigenze aziendali comuni. Queste esigenze possono variare in base al tipo di organizzazione e al passaggio a Windows 10 e [alla gestione moderna](/windows/client-management/manage-windows-10-in-your-organization-modern-management).
 
 In questa guida vengono descritti gli scenari di Windows Autopilot seguenti:
 
@@ -49,7 +49,7 @@ Questi scenari sono riepilogati nel video seguente.
 
 ### <a name="windows-autopilot-is-self-updating-during-oobe"></a>Windows Autopilot si aggiorna autonomamente durante la configurazione guidata
 
-A partire da Windows 10, versione 1903, gli aggiornamenti critici e funzionali di Autopilot inizieranno a essere scaricati automaticamente durante la configurazione guidata dopo che un dispositivo è connesso a una rete e gli [aggiornamenti critici del driver e della patch di Windows Zero-Day (ZDP)](https://docs.microsoft.com/windows-hardware/customize/desktop/windows-updates-during-oobe) sono stati completati. L'utente o l'amministratore IT non può rifiutare esplicitamente questi aggiornamenti di Autopilot perché sono necessari per il corretto funzionamento della distribuzione di Windows Autopilot.  Windows segnalerà all'utente che il dispositivo sta controllando, scaricando e installando gli aggiornamenti.
+A partire da Windows 10, versione 1903, gli aggiornamenti critici e funzionali di Autopilot inizieranno a essere scaricati automaticamente durante la configurazione guidata dopo che un dispositivo è connesso a una rete e gli [aggiornamenti critici del driver e della patch di Windows Zero-Day (ZDP)](/windows-hardware/customize/desktop/windows-updates-during-oobe) sono stati completati. L'utente o l'amministratore IT non può rifiutare esplicitamente questi aggiornamenti di Autopilot perché sono necessari per il corretto funzionamento della distribuzione di Windows Autopilot.  Windows segnalerà all'utente che il dispositivo sta controllando, scaricando e installando gli aggiornamenti.
 
 Per ulteriori informazioni, vedere l' [aggiornamento di Windows Autopilot](autopilot-update.md) .
 
@@ -61,15 +61,15 @@ In Windows 10, la versione 1903 e successive Cortana VoiceOver e riconoscimento 
 
 HKLM\Software\Microsoft\Windows\CurrentVersion\OOBE\EnableVoiceForAllEditions
 
-Il valore della chiave è un DWORD con **0** = disabled e **1** = Enabled.
+Il valore della chiave è un DWORD con  **0** = disabled e **1** = Enabled.
 
-| valore | Description |
+| valore | Descrizione |
 | --- | --- |
 | 0 | Cortana VoiceOver è disabilitato |
 | 1 | Cortana VoiceOver è abilitato |
 | Nessun valore | Il dispositivo eseguirà il fallback al comportamento predefinito dell'edizione |
 
-Per modificare questo valore di chiave, usare lo strumento WCD per creare come PPKG come descritto [qui](https://docs.microsoft.com/windows/configuration/wcd/wcd-oobe#nforce).
+Per modificare questo valore di chiave, usare lo strumento WCD per creare come PPKG come descritto [qui](/windows/configuration/wcd/wcd-oobe#nforce).
 
 ### <a name="bitlocker-encryption"></a>Crittografia BitLocker
 

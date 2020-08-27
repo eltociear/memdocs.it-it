@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: b2c9d3b8741fdae30b42aede8f5c7443e35d8bc7
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 09632eccf99774d4170fe60f51b6703cd8b90fed
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88251960"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907919"
 ---
 # <a name="windows-autopilot-user-driven-mode"></a>Modalità definita dall'utente di Windows Autopilot
 
@@ -41,7 +41,7 @@ Il resto del processo è automatizzato, come il dispositivo:
 
 Eventuali richieste aggiuntive durante la configurazione guidata (OOBE) possono essere evitate. vedere [configurazione dei profili di Autopilot](profiles.md) per le opzioni disponibili.
 
-La modalità basata sull'utente di Windows Autopilot supporta i dispositivi Azure Active Directory e ibridi Azure Active Directory aggiunti. Per altre informazioni su queste due opzioni di join, vedere [che cos'è un'identità del dispositivo](https://docs.microsoft.com/azure/active-directory/devices/overview).
+La modalità basata sull'utente di Windows Autopilot supporta i dispositivi Azure Active Directory e ibridi Azure Active Directory aggiunti. Per altre informazioni su queste due opzioni di join, vedere [che cos'è un'identità del dispositivo](/azure/active-directory/devices/overview).
 
 Il flusso del processo completato durante il processo guidato dall'utente è il seguente:
 
@@ -67,7 +67,7 @@ Per ulteriori informazioni sulle opzioni di join disponibili, vedere le sezioni 
 
 Per completare una distribuzione basata sull'utente utilizzando Windows Autopilot, attenersi alla seguente procedura di preparazione:
 
-1. Assicurarsi che gli utenti che eseguiranno le distribuzioni in modalità basata sull'utente possano aggiungere dispositivi ai Azure Active Directory. Per ulteriori informazioni, vedere [configurare le impostazioni del dispositivo](https://docs.microsoft.com/azure/active-directory/device-management-azure-portal#configure-device-settings) nella documentazione di Azure Active Directory.
+1. Assicurarsi che gli utenti che eseguiranno le distribuzioni in modalità basata sull'utente possano aggiungere dispositivi ai Azure Active Directory. Per ulteriori informazioni, vedere [configurare le impostazioni del dispositivo](/azure/active-directory/device-management-azure-portal#configure-device-settings) nella documentazione di Azure Active Directory.
 2. Creare un profilo di Autopilot per la modalità guidata dall'utente con le impostazioni desiderate. In Microsoft Intune, questa modalità viene scelta in modo esplicito durante la creazione del profilo. Con Microsoft Store for business e partner Center, la modalità basata sull'utente è l'impostazione predefinita e non deve essere selezionata.
 3. Se si usa Intune, creare un gruppo di dispositivi in Azure Active Directory e assegnare il profilo di Autopilot al gruppo.
 
@@ -84,7 +84,7 @@ Per ogni dispositivo che verrà distribuito usando la distribuzione guidata dall
 
 ## <a name="user-driven-mode-for-hybrid-azure-active-directory-join"></a>Modalità guidata dall'utente per il join ibrido Azure Active Directory
 
-Windows Autopilot richiede che i dispositivi siano Azure Active Directory Uniti in join. Se si dispone di un ambiente di Active Directory locale, è possibile aggiungere i dispositivi al dominio locale. Per aggiungere i dispositivi, è necessario configurare i dispositivi Autopilot per essere [aggiunti a un ibrido per Azure Active Directory (Azure ad)](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan). 
+Windows Autopilot richiede che i dispositivi siano Azure Active Directory Uniti in join. Se si dispone di un ambiente di Active Directory locale, è possibile aggiungere i dispositivi al dominio locale. Per aggiungere i dispositivi, è necessario configurare i dispositivi Autopilot per essere [aggiunti a un ibrido per Azure Active Directory (Azure ad)](/azure/active-directory/devices/hybrid-azuread-join-plan). 
 
 ### <a name="requirements"></a>Requisiti
 
@@ -97,7 +97,7 @@ Per eseguire una distribuzione ibrida Azure AD aggiunta dall'utente tramite Wind
 - Il dispositivo deve avere accesso a un controller di dominio Active Directory. Deve essere connessa alla rete dell'organizzazione. Deve essere in grado di risolvere i record DNS per il dominio di Active Directory e il controller di dominio AD. Deve essere in grado di comunicare con il controller di dominio per autenticare l'utente.
 - Il dispositivo deve essere in grado di accedere a Internet, seguendo i [requisiti di rete di Windows Autopilot documentati](networking-requirements.md).
 - È necessario installare Intune Connector per Active Directory.
- - Nota: Intune Connector eseguirà un join AD locale. Pertanto, gli utenti non necessitano dell'autorizzazione di AD-join locale. Si presuppone che il connettore sia [configurato per eseguire questa azione](https://docs.microsoft.com/intune/windows-autopilot-hybrid#increase-the-computer-account-limit-in-the-organizational-unit) per conto dell'utente. 
+ - Nota: Intune Connector eseguirà un join AD locale. Pertanto, gli utenti non necessitano dell'autorizzazione di AD-join locale. Si presuppone che il connettore sia [configurato per eseguire questa azione](/intune/windows-autopilot-hybrid#increase-the-computer-account-limit-in-the-organizational-unit) per conto dell'utente. 
 - Se si usa un proxy, è necessario abilitare e configurare l'opzione delle impostazioni proxy WPAD.
 
 **Azure ad aggiunta al dispositivo**: il processo di join di Azure ad ibrido usa il contesto di sistema per eseguire il join del Azure ad del dispositivo. Non è influenzato dalle impostazioni delle autorizzazioni di Azure AD join basate sull'utente. Tutti gli utenti possono aggiungere dispositivi a Azure AD per impostazione predefinita.
@@ -145,9 +145,9 @@ Successivamente, verificare che la configurazione della VPN (app Win32, certific
 Per le configurazioni VPN che si connettono automaticamente, i passaggi di convalida potrebbero essere diversi.
 
 > [!NOTE]
-> Per questo scenario è possibile usare Always On VPN. Per ulteriori informazioni, vedere la documentazione relativa alla [distribuzione di always on VPN](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment) . Si noti che Intune non è ancora in grado di distribuire il profilo VPN per computer necessario. 
+> Per questo scenario è possibile usare Always On VPN. Per ulteriori informazioni, vedere la documentazione relativa alla [distribuzione di always on VPN](/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment) . Si noti che Intune non è ancora in grado di distribuire il profilo VPN per computer necessario. 
 
-Per convalidare il processo, verificare che sia stato installato l'aggiornamento cumulativo di Windows 10 necessario in Windows 10 1903 o Windows 10 1909. È possibile installare manualmente l'aggiornamento durante la configurazione guidata scaricando prima l'ultima versione cumulativa da https://catalog.update.microsoft.com . A tale scopo, seguire questa procedura:
+Per convalidare il processo, verificare che sia stato installato l'aggiornamento cumulativo di Windows 10 necessario in Windows 10 1903 o Windows 10 1909. È possibile installare manualmente l'aggiornamento durante la configurazione guidata scaricando prima l'ultima versione cumulativa da https://catalog.update.microsoft.com . Seguire questa procedura:
 
 1. Premere MAIUSC + F10 per aprire un prompt dei comandi.
 2. Inserire una chiave USB contenente l'aggiornamento scaricato.
@@ -163,7 +163,4 @@ In alternativa, è possibile avviare Windows Update per installare gli aggiornam
 
 ### <a name="step-by-step-instructions"></a>Istruzioni dettagliate
 
-Vedere [distribuire dispositivi ibridi Azure ad aggiunti con Intune e Windows Autopilot](https://docs.microsoft.com/intune/windows-autopilot-hybrid).
-
-
-
+Vedere [distribuire dispositivi ibridi Azure ad aggiunti con Intune e Windows Autopilot](/intune/windows-autopilot-hybrid).

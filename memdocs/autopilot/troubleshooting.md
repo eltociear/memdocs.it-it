@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: c89731edddd94da99e114cf98c10547c096ebb53
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: f6a9e3008a493185a2338a5af1106806d86dd130
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252014"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907909"
 ---
 # <a name="troubleshooting-windows-autopilot"></a>Risoluzione dei problemi di Windows Autopilot
 
@@ -115,7 +115,7 @@ Oltre alle voci del registro eventi, il registro di sistema e le opzioni di trac
 
 Le impostazioni del profilo di Autopilot ricevute dal servizio di distribuzione Autopilot vengono archiviate nel registro di sistema del dispositivo. Queste informazioni sono reperibili in **HKLM\SOFTWARE\Microsoft\Provisioning\Diagnostics\Autopilot**. Le voci del registro di sistema disponibili includono:
 
-| Valore | Descrizione |
+| valore | Descrizione |
 |-------|-------------|
 | AadTenantId | GUID del tenant Azure AD cui l'utente ha effettuato l'accesso. L'utente riceve un errore se questa voce non corrisponde al tenant usato per registrare il dispositivo. |
 | CloudAssignedTenantDomain | Il tenant Azure AD il dispositivo è stato registrato con, ad esempio, "contosomn.onmicrosoft.com". Se il dispositivo non è registrato con Autopilot, questo valore sarà vuoto. |
@@ -126,7 +126,7 @@ Le impostazioni del profilo di Autopilot ricevute dal servizio di distribuzione 
 
 ### <a name="windows-10-semi-annual-channel-supported-versions"></a>Versioni supportate del canale semestrale di Windows 10
 
-Nei dispositivi che eseguono una [versione supportata](https://docs.microsoft.com/windows/release-information/) del canale semestrale di Windows 10, è possibile usare la traccia ETW per ottenere informazioni dettagliate da Autopilot e dai componenti correlati. È possibile visualizzare i file di traccia ETW utilizzando Windows Performance Analyzer o strumenti simili. Per ulteriori informazioni, vedere [il Blog sulla risoluzione dei problemi avanzata](https://blogs.technet.microsoft.com/mniehaus/2017/12/13/troubleshooting-windows-autopilot-level-300400/).
+Nei dispositivi che eseguono una [versione supportata](/windows/release-information/) del canale semestrale di Windows 10, è possibile usare la traccia ETW per ottenere informazioni dettagliate da Autopilot e dai componenti correlati. È possibile visualizzare i file di traccia ETW utilizzando Windows Performance Analyzer o strumenti simili. Per ulteriori informazioni, vedere [il Blog sulla risoluzione dei problemi avanzata](/archive/blogs/mniehaus/troubleshooting-windows-autopilot-level-300400).
 
 ## <a name="troubleshooting-azure-ad-join-issues"></a>Risoluzione dei problemi di Azure AD join
 
@@ -144,7 +144,7 @@ Vedere [questo articolo della Knowledge base](https://support.microsoft.com/help
 
 Il codice di errore 80180018 viene in genere segnalato in una pagina di errore intitolata "si è verificato un problema". Questo errore indica che la registrazione MDM non è riuscita.
 
-Se la reimpostazione di Autopilot non riesce immediatamente con l'errore si è verificata una **difficoltà. Accedere con un account amministratore per vedere perché e reimpostare manualmente**. per ulteriori informazioni, vedere [risolvere i problemi di reimpostazione di Autopilot](https://docs.microsoft.com/education/windows/autopilot-reset#troubleshoot-autopilot-reset) .
+Se la reimpostazione di Autopilot non riesce immediatamente con l'errore si è verificata una **difficoltà. Accedere con un account amministratore per vedere perché e reimpostare manualmente**. per ulteriori informazioni, vedere [risolvere i problemi di reimpostazione di Autopilot](/education/windows/autopilot-reset#troubleshoot-autopilot-reset) .
 
 ## <a name="profile-download"></a>Download del profilo
 
@@ -162,9 +162,9 @@ Se è necessario riavviare un computer durante la configurazione guidata:
 - Premere MAIUSC + F10 per aprire un prompt dei comandi.
 - Immettere **Shutdown/r/t 0** per riavviare immediatamente oppure arrestare **/s/t 0** per arrestarlo immediatamente.
 
-Per altre informazioni, vedere [Opzioni della riga di comando di Installazione di Windows](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
+Per altre informazioni, vedere [Opzioni della riga di comando di Installazione di Windows](/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
 
 ## <a name="related-topics"></a>Argomenti correlati
 
 [Windows Autopilot-problemi noti](known-issues.md)<br>
-[Diagnosticare gli errori MDM in Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)<br>
+[Diagnosticare gli errori MDM in Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)<br>

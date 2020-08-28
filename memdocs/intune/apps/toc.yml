@@ -53,11 +53,11 @@
               href: windows-store-for-business.md
             - name: App Google Play gestite
               href: apps-add-android-for-work.md
-        - name: Office 365 Suite
+        - name: Famiglia di prodotti Microsoft 365
           items:
-            - name: App di Office 365 per Windows 10
+            - name: App di Microsoft 365 per Windows 10
               href: apps-add-office365.md
-            - name: App di Office 365 per macOS
+            - name: App di Microsoft 365 per macOS
               href: apps-add-office365-macos.md
         - name: App di sistema Android Enterprise
           href: apps-ae-system.md

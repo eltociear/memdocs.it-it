@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: c9268514b43f4f728d3fff4715d4d71308a712f3
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: dbe827371f84bb90e2a7f2468aa139cba073fe49
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699076"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819746"
 ---
 # <a name="compatibility-assessment-in-desktop-analytics"></a>Valutazione della compatibilità in Desktop Analytics
 
@@ -245,4 +245,4 @@ Desktop Analytics elenca e raggruppa in base alla disponibilità anche tutti i d
 
 ## <a name="see-also"></a>Vedere anche
 
-Il FastTrack Center Benefit per Windows 10 offre l'accesso a **Desktop App Assure**. Questo vantaggio è un nuovo servizio progettato per risolvere i problemi relativi alla compatibilità di Windows 10 e App di Microsoft 365 per grandi imprese. Per altre informazioni, vedere [Desktop App Assure](/fasttrack/win-10-desktop-app-assure).
+Il FastTrack Center Benefit per Windows 10 offre l'accesso a **Desktop App Assure**. Questo vantaggio è un nuovo servizio progettato per risolvere i problemi relativi alla compatibilità di Windows 10 e App di Microsoft 365 per grandi imprese. Per altre informazioni, vedere [Desktop App Assure](/fasttrack/win-10-app-assure).

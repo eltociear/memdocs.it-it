@@ -17,12 +17,12 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: 400a6ea8b63ccb560c62740a4519a6db002fd01e
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: aafd83f1aa09881c9e7c4196b91798ab0d278a87
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907882"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993656"
 ---
 # <a name="windows-autopilot-requirements"></a>Requisiti di Windows Autopilot
 
@@ -60,7 +60,7 @@ Negli ambienti con accesso a Internet più restrittivo o per quelli che richiedo
 
 Per ulteriori informazioni su ciascuno di questi servizi e sui requisiti specifici, esaminare i dettagli seguenti:
 
-<table><th>Servizio<th>Informazioni
+<table><th>Service<th>Informazioni
 <tr><td><b>Servizio di distribuzione di Windows Autopilot<b><td>Dopo la connessione di rete, ogni dispositivo Windows 10 contatterà il servizio di distribuzione di Windows Autopilot.  Con Windows 10 versione 1903 e successive, vengono usati gli URL seguenti: https://ztd.dds.microsoft.com https://cs.dds.microsoft.com . <br>
 
 <tr><td><b>Attivazione di Windows<b><td>Windows Autopilot richiede anche servizi di attivazione Windows. Vedere <a href="https://support.microsoft.com/help/921471/windows-activation-or-validation-fails-with-error-code-0x8004fe33">attivazione o convalida di Windows non riuscita con codice di errore 0x8004FE33</a> per informazioni dettagliate sugli URL che devono essere accessibili per i servizi di attivazione.<br>
@@ -90,7 +90,7 @@ Se i servizi WNS non sono disponibili, il processo Autopilot continuerà senza n
 
 Se il Microsoft Store non è accessibile, il processo Autopilot continuerà senza Microsoft Store app.
 
-<tr><td><b>Office 365<b><td>Come parte della configurazione del dispositivo Intune, potrebbe essere necessaria l'installazione delle app Microsoft 365 per Enterprise. Per altre informazioni, vedere <a href="https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2">URL e intervalli di indirizzi IP per office 365</a> (include tutti i servizi Office, i nomi DNS, gli indirizzi IP, include Azure ad e altri servizi che potrebbero sovrapporsi a quelli elencati in precedenza).
+<tr><td><b>Microsoft 365<b><td>Come parte della configurazione del dispositivo Intune, potrebbe essere necessaria l'installazione delle app Microsoft 365 per Enterprise. Per altre informazioni, vedere <a href="https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2">URL e intervalli di indirizzi IP per office 365</a> (include tutti i servizi Office, i nomi DNS, gli indirizzi IP, include Azure ad e altri servizi che potrebbero sovrapporsi a quelli elencati in precedenza).
 <tr><td><b>Elenchi di revoche di certificati (CRL)<b><td>Alcuni di questi servizi dovranno inoltre controllare gli elenchi di revoche di certificati (CRL) per i certificati utilizzati nei servizi.Un elenco completo di queste attività è documentato in <a href="https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2#bkmk_crl">URL e intervalli di indirizzi IP di office 365</a> e <a href="https://aka.ms/o365chains">catene di certificati di Office 365</a>.
 <tr><td><b>Join AAD ibrido<b><td>Il dispositivo può essere aggiunto ad AAD ibrido. Il computer deve trovarsi nella rete aziendale per far funzionare il join di AAD ibrido. Vedere i dettagli in <a href="user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join">modalità basata sull'utente di Windows Autopilot</a>
 <tr><td><b>Modalità di distribuzione automatica Autopilot e guanto bianco di Autopilot<b><td>I dispositivi TPM del firmware, che vengono forniti solo da Intel, AMD o Qualcomm, non includono tutti i certificati necessari in fase di avvio e devono essere in grado di recuperarli dal produttore al primo utilizzo. I dispositivi con chip TPM discreti (inclusi i dispositivi di qualsiasi altro produttore) sono dotati di questi certificati preinstallati. Per altri dettagli, vedere <a href="/windows/security/information-protection/tpm/tpm-recommendations">suggerimenti sui TPM</a> . Verificare che questi URL siano accessibili per ogni provider TPM del firmware, in modo che i certificati possano essere richiesti correttamente: 

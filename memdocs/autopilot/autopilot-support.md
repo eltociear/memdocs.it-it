@@ -14,12 +14,12 @@ ms.reviewer: ''
 manager: laurawi
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: f4727acde8a42a56e79dbbe22ae4ab0ce1ca9245
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: bfd8f4f88b5462fb6fdc21287ad77bb133b83f90
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87757375"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993188"
 ---
 # <a name="windows-autopilot-support-information"></a>Informazioni sul supporto di Windows Autopilot
 
@@ -38,5 +38,5 @@ Prima di contattare le risorse elencate di seguito per i problemi correlati a Wi
 | Utenti del centro per i partner Microsoft (MPC) | Usare le [risorse della Guida](https://partner.microsoft.com/support) disponibili in MPC. |
 | Utenti di Microsoft Store for business (MSfB) | Usare le risorse della Guida disponibili in MSfB. |
 | Utenti di Intune | Dal portale di Microsoft Azure fare clic su [Guida e supporto](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview). |
-| Microsoft 365 Business | Il supporto è accessibile direttamente tramite il portale di Microsoft 365 Business al momento dell'accesso: https://support.microsoft.com/en-us . |
+| Microsoft 365 Business Premium | Il supporto è accessibile direttamente tramite il portale di Microsoft 365 Business Premium quando si è connessi:  https://support.microsoft.com/en-us . |
 | Query relative al test dell'assistente al debug gestito | Contattare MDAHelp@microsoft.com . |

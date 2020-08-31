@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa8a18d24fb27b1d1ca7ea7dbe4fad532f85d662
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: e4772743bc85df54251dc8926c69b9a5afbab559
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82022722"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663277"
 ---
 # <a name="prevent-unauthorized-access-to-company-data-using-microsoft-intune"></a>Impedire l'accesso non autorizzato ai dati aziendali usando Microsoft Intune
 
@@ -51,4 +51,4 @@ Completare l'[esercitazione introduttiva di Azure Information Protection](https:
 Come parte delle procedure successive, è possibile ottenere informazioni su altre strategie per incrementare la protezione dei dati aziendali, ad esempio: 
 
 * Informazioni su come usare [Azure Information Protection in dispositivi iOS/iPadOS e Android](https://docs.microsoft.com/information-protection/rms-client/mobile-app-faq).
-* Per i computer Mac e Windows Phone, vedere le [domande frequenti sull'applicazione di condivisione Microsoft Rights Management](https://technet.microsoft.com/dn451248).
+* Per i computer Mac, vedere [Applicazione di condivisione Microsoft Rights Management](https://technet.microsoft.com/dn451248).

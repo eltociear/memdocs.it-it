@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/16/2020
+ms.date: 08/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c23044b912b7f0edf2852477aad80dd9be66cf54
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: 8b08d5f1395c30b646885470c95fed2c7a96d3f9
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87526067"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819610"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Impostazioni dei dispositivi Android Enterprise per consentire o limitare l'uso delle funzionalità tramite Intune
 
@@ -435,29 +435,33 @@ Queste impostazioni si applicano ai tipi di registrazione Android Enterprise in 
 
   - Android 7.0 e versioni successive con il profilo di lavoro abilitato
 
-- **Lunghezza minima password**: immettere la lunghezza minima per la password che deve essere compresa tra da 4 e 16 caratteri.
-- **Numero massimo di minuti di inattività fino al blocco del profilo di lavoro**: immettere il periodo di tempo per cui i dispositivi devono rimanere inattivi prima che lo schermo venga bloccato automaticamente. Gli utenti devono immettere le credenziali per riottenere l'accesso. Ad esempio, immettere `5` per bloccare il dispositivo dopo 5 minuti di inattività. Quando il valore è vuoto o impostato su **Non configurato**, Intune non modifica o aggiorna questa impostazione.
+  Configurare inoltre:
 
-  Nei dispositivi, gli utenti non possono impostare un valore di tempo maggiore di quello configurato nel profilo. Gli utenti possono impostare un valore di tempo inferiore. Ad esempio, se il profilo è impostato su `15` minuti, gli utenti possono impostare il valore su 5 minuti, ma non possono impostare il valore su 30 minuti.
+  - **Lunghezza minima password**: immettere la lunghezza minima per la password che deve essere compresa tra da 4 e 16 caratteri.
+  - **Numero massimo di minuti di inattività fino al blocco del profilo di lavoro**: immettere il periodo di tempo per cui i dispositivi devono rimanere inattivi prima che lo schermo venga bloccato automaticamente. Gli utenti devono immettere le credenziali per riottenere l'accesso. Ad esempio, immettere `5` per bloccare il dispositivo dopo 5 minuti di inattività. Quando il valore è vuoto o impostato su **Non configurato**, Intune non modifica o aggiorna questa impostazione.
 
-- **Numero di errori di accesso prima della cancellazione dei dati del dispositivo**: immettere il numero di password non corrette consentite prima che il profilo di lavoro nel dispositivo venga cancellato, da 4 a 11. `0` (zero) potrebbe disabilitare la funzionalità di cancellazione dei dispositivi. Quando il valore è vuoto, Intune non modifica o aggiorna questa impostazione.
+    Nei dispositivi, gli utenti non possono impostare un valore di tempo maggiore di quello configurato nel profilo. Gli utenti possono impostare un valore di tempo inferiore. Ad esempio, se il profilo è impostato su `15` minuti, gli utenti possono impostare il valore su 5 minuti, ma non possono impostare il valore su 30 minuti.
 
-- **Scadenza password (giorni)** : immettere il numero di giorni prima che sia necessario modificare le password utente (**1**-**365**).
-- **Tipo di password richiesto**: immettere il livello di complessità delle password necessario e se possono essere usati dispositivi biometrici. Le opzioni disponibili sono:
-  - **Impostazione predefinita dispositivo**
-  - **Protezione biometrica bassa**: [Biometrica complessa e vulnerabile a confronto](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (apre il sito Web Android)
-  - **Richiesto**
-  - **Almeno numerico**: include caratteri numerici, ad esempio `123456789`.
-  - **Complessa numerica**: i numeri consecutivi o ripetuti (ad esempio, `1111` o `1234`) non sono consentiti.
-  - **Almeno alfabetico**: include lettere dell'alfabeto. Numeri e simboli non sono richiesti.
-  - **Almeno alfanumerico**: include lettere maiuscole, lettere minuscole e caratteri numerici.
-  - **Almeno alfanumerico con simboli**: include lettere maiuscole, lettere minuscole, caratteri numerici, segni di punteggiatura e simboli.
+  - **Numero di errori di accesso prima della cancellazione dei dati del dispositivo**: immettere il numero di password non corrette consentite prima che il profilo di lavoro nel dispositivo venga cancellato, da 4 a 11. `0` (zero) potrebbe disabilitare la funzionalità di cancellazione dei dispositivi. Quando il valore è vuoto, Intune non modifica o aggiorna questa impostazione.
 
-- **Impedisci riutilizzo delle password precedenti**: usare questa impostazione per impedire agli utenti di creare password già usate in precedenza. immettere il numero di password usate in precedenza che non è possibile usare, da 1 a 24. Ad esempio, immettere `5` in modo che gli utenti non possano definire una nuova password uguale alla password corrente o a una qualsiasi delle quattro precedenti. Quando il valore è vuoto, Intune non modifica o aggiorna questa impostazione.
-- **Sblocco con impronta digitale**: **Blocca** impedisce agli utenti finali di usare lo scanner di impronta digitale del dispositivo per sbloccarlo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di sbloccare il dispositivo tramite impronta digitale.
-- **Smart Lock e altri agenti di attendibilità**: **Blocca** impedisce a Smart Lock o altri agenti di attendibilità di modificare le impostazioni della schermata di blocco nei dispositivi compatibili. Questa funzionalità, chiamata anche agente di attendibilità, consente di disabilitare o ignorare la password della schermata di blocco del dispositivo se si trova in una posizione attendibile. Ad esempio, ignorare la password del profilo di lavoro quando i dispositivi sono connessi a un dispositivo Bluetooth specifico oppure quando si trovano nelle vicinanze di un tag NFC. Usare questa impostazione per impedire agli utenti di configurare Smart Lock.
+  - **Scadenza password (giorni)** : immettere il numero di giorni prima che sia necessario modificare le password utente (**1**-**365**).
+  - **Tipo di password richiesto**: immettere il livello di complessità delle password necessario e se possono essere usati dispositivi biometrici. Le opzioni disponibili sono:
+    - **Impostazione predefinita dispositivo**
+    - **Protezione biometrica bassa**: [Biometrica complessa e vulnerabile a confronto](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (apre il sito Web Android)
+    - **Richiesto**
+    - **Almeno numerico**: include caratteri numerici, ad esempio `123456789`.
+    - **Complessa numerica**: i numeri consecutivi o ripetuti (ad esempio, `1111` o `1234`) non sono consentiti.
+    - **Almeno alfabetico**: include lettere dell'alfabeto. Numeri e simboli non sono richiesti.
+    - **Almeno alfanumerico**: include lettere maiuscole, lettere minuscole e caratteri numerici.
+    - **Almeno alfanumerico con simboli**: include lettere maiuscole, lettere minuscole, caratteri numerici, segni di punteggiatura e simboli.
 
-  Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
+  - **Impedisci riutilizzo delle password precedenti**: usare questa impostazione per impedire agli utenti di creare password già usate in precedenza. immettere il numero di password usate in precedenza che non è possibile usare, da 1 a 24. Ad esempio, immettere `5` in modo che gli utenti non possano definire una nuova password uguale alla password corrente o a una qualsiasi delle quattro precedenti. Quando il valore è vuoto, Intune non modifica o aggiorna questa impostazione.
+  - **Sblocco del viso**: **Blocca** impedisce agli utenti di usare il riconoscimento facciale del dispositivo per sbloccare il profilo di lavoro. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di sbloccare il dispositivo tramite riconoscimento facciale.
+  - **Sblocco con impronta digitale**: **Blocca** impedisce agli utenti di usare lo scanner di impronta digitale del dispositivo per sbloccare il profilo di lavoro. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di sbloccare il dispositivo tramite impronta digitale.
+  - **Sblocco dell'iride**: **Blocca** impedisce agli utenti di usare lo scanner dell'iride del dispositivo per sbloccare il profilo di lavoro. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di sbloccare il dispositivo con lo scanner dell'iride.
+  - **Smart Lock e altri agenti di attendibilità**: **Blocca** impedisce a Smart Lock o altri agenti di attendibilità di modificare le impostazioni della schermata di blocco nei dispositivi compatibili. Questa funzionalità, chiamata anche agente di attendibilità, consente di disabilitare o ignorare la password della schermata di blocco del dispositivo se si trova in una posizione attendibile. Ad esempio, ignorare la password del profilo di lavoro quando i dispositivi sono connessi a un dispositivo Bluetooth specifico oppure quando si trovano nelle vicinanze di un tag NFC. Usare questa impostazione per impedire agli utenti di configurare Smart Lock.
+
+    Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
 
 ### <a name="password"></a>Password
 
@@ -481,7 +485,9 @@ Queste impostazioni per le password si applicano ai profili personali nei dispos
   - **Almeno alfanumerico con simboli**: include lettere maiuscole, lettere minuscole, caratteri numerici, segni di punteggiatura e simboli.
 
 - **Impedisci riutilizzo delle password precedenti**: usare questa impostazione per impedire agli utenti di creare password già usate in precedenza. immettere il numero di password usate in precedenza che non è possibile usare, da 1 a 24. Ad esempio, immettere `5` in modo che gli utenti non possano definire una nuova password uguale alla password corrente o a una qualsiasi delle quattro precedenti. Quando il valore è vuoto, Intune non modifica o aggiorna questa impostazione.
-- **Sblocco con impronta digitale**: **Blocca** impedisce agli utenti finali di usare lo scanner di impronta digitale del dispositivo per sbloccarlo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di sbloccare il dispositivo tramite impronta digitale.
+- **Sblocco con impronta digitale**: **Blocca** impedisce agli utenti di usare lo scanner di impronta digitale del dispositivo per sbloccarlo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di sbloccare il dispositivo tramite impronta digitale.
+- **Sblocco del viso**: **Blocca** impedisce agli utenti di usare il riconoscimento facciale del dispositivo per sbloccarlo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di sbloccare il dispositivo tramite riconoscimento facciale.
+- **Sblocco dell'iride**: **Blocca** impedisce agli utenti di usare lo scanner dell'iride del dispositivo per sbloccarlo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire agli utenti di sbloccare il dispositivo con lo scanner dell'iride.
 - **Smart Lock e altri agenti di attendibilità**: **Blocca** impedisce a Smart Lock o altri agenti di attendibilità di modificare le impostazioni della schermata di blocco nei dispositivi compatibili. Questa funzionalità, chiamata anche agente di attendibilità, consente di disabilitare o ignorare la password della schermata di blocco del dispositivo se si trova in una posizione attendibile. Ad esempio, ignorare la password del profilo di lavoro quando i dispositivi sono connessi a un dispositivo Bluetooth specifico oppure quando si trovano nelle vicinanze di un tag NFC. Usare questa impostazione per impedire agli utenti di configurare Smart Lock.
 
   Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.

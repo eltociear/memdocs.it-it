@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/09/2020
+ms.date: 08/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f2718c73cb34e01c84ef07d5085c698028ca285c
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: b6d3f3ea7423cf87d2644611bcbd6e298ac60699
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461998"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820324"
 ---
 # <a name="intune-data-warehouse-collections"></a>Raccolte del data warehouse di Intune
 
@@ -253,8 +253,9 @@ L'entità **device** elenca tutti i dispositivi registrati in gestione e le prop
 | SubscriberCarrier          | Gestore telefonico del sottoscrittore del dispositivo                                                                                                                                                       |
 | PhoneNumber                | Numero di telefono del dispositivo                                                                                                                                                             |
 | IMEI                       | IMEI                                                                                                                                                                                   |
-| CellularTechnology         | Tecnologia cellulare del dispositivo                                                                                                                                                    |
+| CellularTechnology         | Tecnologia cellulare del dispositivo.                                                                                                                                                    |
 | WiFiMacAddress             | MAC Wi-Fi                                                                                                                                                                              |
+| windowsOsEdition             | Edizione del sistema operativo Windows.                                                                                                                                                                              |
 
 
 ## <a name="devicetypes"></a>deviceTypes
@@ -305,7 +306,7 @@ L'entità **deviceEnrollmentType** indica in che modo è stato registrato un dis
 
 ### <a name="example"></a>Esempio
 
-| enrollmentTypeID |                Name                |                                        Description                                       |
+| enrollmentTypeID |                Name                |                                        Descrizione                                       |
 |------------------|------------------------------------|------------------------------------------------------------------------------------------|
 | 0                | Sconosciuto                            | Il tipo di registrazione non è stato raccolto                                                      |
 | 1                | UserEnrollment                     | Registrazione basata sull'utente tramite il canale BYOD.                                           |

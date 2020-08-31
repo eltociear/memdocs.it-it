@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e1ac5180a30959618f37d909511785b4de1c407
-ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
+ms.openlocfilehash: 380e39406dcc0b5bd286605804e3aa3c52750dd1
+ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 08/19/2020
-ms.locfileid: "88591241"
+ms.locfileid: "88614733"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Impostare l'autorità di gestione dei dispositivi mobili
 
@@ -38,7 +38,7 @@ Le configurazioni possibili sono:
 
 - **Mobilità e sicurezza di base per Office 365**: se è stata attivata questa configurazione, l'autorità MDM sarà impostata su "Office 365". Se si vuole iniziare a usare Intune, sarà necessario acquistare licenze di Intune.
 
-- **Coesistenza con la funzionalità di mobilità e sicurezza di base per Office 365**: è possibile aggiungere Intune al tenant se si usa già la funzionalità di mobilità e sicurezza di base per Office 365 e impostare l'autorità di gestione su Intune o su questa funzionalità per ogni utente per determinare quale servizio verrà usato per gestire i dispositivi registrati in MDM. L'autorità di gestione di ogni utente è definita in base alla licenza assegnata all’utente. Se l'utente ha solo una licenza per Microsoft 365 Basic o Standard, i dispositivi saranno gestiti dalla funzionalità di mobilità e sicurezza di base per Office 365. Se, invece, dispone di una licenza che applica Intune, i dispositivi saranno gestiti da Intune. Se si aggiunge una licenza che applica Intune a un utente precedentemente gestito dalla funzionalità di mobilità e sicurezza di base per Office 365, i dispositivi passeranno alla gestione di Intune. Assicurarsi di aver assegnato agli utenti le configurazioni di Intune per sostituire la funzionalità di mobilità e sicurezza di base per Office 365 prima di trasferirli su Intune. In caso contrario, i dispositivi degli utenti perderanno la configurazione della funzionalità di mobilità e sicurezza di base per Office 365 e non riceveranno alcuna sostituzione da Intune.
+- **[Coesistenza](#coexistence) con la funzionalità di mobilità e sicurezza di base per Office 365**: è possibile aggiungere Intune al tenant se si usa già la funzionalità di mobilità e sicurezza di base per Office 365 e impostare l'autorità di gestione su Intune o su questa funzionalità per ogni utente per determinare quale servizio verrà usato per gestire i dispositivi registrati in MDM. L'autorità di gestione di ogni utente è definita in base alla licenza assegnata all’utente. Se l'utente ha solo una licenza per Microsoft 365 Basic o Standard, i dispositivi saranno gestiti dalla funzionalità di mobilità e sicurezza di base per Office 365. Se, invece, dispone di una licenza che applica Intune, i dispositivi saranno gestiti da Intune. Se si aggiunge una licenza che applica Intune a un utente precedentemente gestito dalla funzionalità di mobilità e sicurezza di base per Office 365, i dispositivi passeranno alla gestione di Intune. Assicurarsi di aver assegnato agli utenti le configurazioni di Intune per sostituire la funzionalità di mobilità e sicurezza di base per Office 365 prima di trasferirli su Intune. In caso contrario, i dispositivi degli utenti perderanno la configurazione della funzionalità di mobilità e sicurezza di base per Office 365 e non riceveranno alcuna sostituzione da Intune.
 
 ## <a name="set-mdm-authority-to-intune"></a>Impostare l'autorità MDM su Intune
 
@@ -85,9 +85,9 @@ La coesistenza viene abilitata con tre passaggi principali:
 ### <a name="preparation"></a>Preparazione
 
 Prima di abilitare la coesistenza con la funzionalità di mobilità e sicurezza di base, considerare i punti seguenti:
-- Assicurarsi di avere licenze con supporto per Intune sufficienti per gli utenti che si intende gestire tramite Intune.
-- Verificare a quali utenti sono assegnate licenze con supporto per Intune. Dopo aver abilitato la coesistenza, i dispositivi degli utenti a cui è già stata assegnata una licenza di Intune passeranno a Intune. Per evitare cambi di dispositivi imprevisti, è consigliabile non assegnare licenze con supporto per Intune fino a quando non è stata abilitata la coesistenza.
-- Creare e distribuire i criteri di Intune per sostituire i criteri di sicurezza dei dispositivi originariamente distribuiti tramite il portale Sicurezza e conformità di Office 365. Questa sostituzione deve essere eseguita per tutti gli utenti che si prevede di spostare dalla funzionalità di mobilità e sicurezza di base a Intune. Se non sono assegnati criteri di Intune a questi utenti, l'abilitazione della coesistenza può comportare la perdita delle impostazioni di mobilità e sicurezza di base. Queste impostazioni andranno perse senza sostituzione, come ad esempio i profili di posta elettronica gestiti.
+- Assicurarsi di avere un numero di [licenze di Intune](licenses.md) sufficiente per gli utenti da gestire tramite Intune.
+- Verificare a quali utenti sono assegnate licenze di Intune. Dopo aver abilitato la coesistenza, i dispositivi degli utenti a cui è già stata assegnata una licenza di Intune passeranno a Intune. Per evitare cambi di dispositivi imprevisti, è consigliabile non assegnare licenze di Intune fino a quando non è stata abilitata la coesistenza.
+- Creare e distribuire i criteri di Intune per sostituire i criteri di sicurezza dei dispositivi originariamente distribuiti tramite il portale Sicurezza e conformità di Office 365. Questa sostituzione deve essere eseguita per tutti gli utenti che si prevede di spostare dalla funzionalità di mobilità e sicurezza di base a Intune. Se non sono assegnati criteri di Intune a questi utenti, l'abilitazione della coesistenza può comportare la perdita delle impostazioni di mobilità e sicurezza di base. Queste impostazioni andranno perse senza sostituzione, come ad esempio i profili di posta elettronica gestiti. Anche se si sostituiscono i criteri di sicurezza dei dispositivi con i criteri di Intune, gli utenti potrebbero ricevere la richiesta di ripetere l'autenticazione dei loro profili di posta elettronica dopo lo spostamento dei dispositivi nella gestione di Intune.
 
 ### <a name="add-intune-mdm-authority"></a>Aggiungere l'autorità MDM Intune
 
@@ -101,7 +101,7 @@ Per abilitare la coesistenza, è necessario aggiungere Intune come autorità MDM
 
 ### <a name="migrate-users-and-devices-optional"></a>Eseguire la migrazione di utenti e dispositivi (facoltativo)
 
-Una volta abilitata l'autorità MDM Intune, viene attivata la coesistenza e si può iniziare a gestire gli utenti tramite Intune. Se si vuole che i dispositivi precedentemente gestiti dalla funzionalità di mobilità e sicurezza di base vengano ora gestiti da Intune, assegnare agli utenti corrispondenti una licenza con supporto per Intune. I dispositivi degli utenti passeranno a Intune alla successiva sincronizzazione di MDM. Le impostazioni applicate a questi dispositivi tramite la funzionalità di mobilità e sicurezza di base non verranno più applicate e verranno rimosse dai dispositivi.
+Una volta abilitata l'autorità MDM Intune, viene attivata la coesistenza e si può iniziare a gestire gli utenti tramite Intune. Se si vuole che i dispositivi precedentemente gestiti dalla funzionalità di mobilità e sicurezza di base vengano ora gestiti da Intune, assegnare agli utenti corrispondenti una licenza di Intune. I dispositivi degli utenti passeranno a Intune alla successiva sincronizzazione di MDM. Le impostazioni applicate a questi dispositivi tramite la funzionalità di mobilità e sicurezza di base non verranno più applicate e verranno rimosse dai dispositivi.
 
 ## <a name="mobile-device-cleanup-after-mdm-certificate-expiration"></a>Pulizia dei dispositivi mobili dopo la scadenza del certificato MDM
 

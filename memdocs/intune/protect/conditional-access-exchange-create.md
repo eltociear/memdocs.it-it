@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb70d5842ce13b5baa9dc60ec2ed9cd698bad75c
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 19a2d82f23abef49f193859c46a17cbb44a61f49
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252759"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663345"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Configurare l'accesso locale a Exchange per Intune
 
@@ -59,7 +59,7 @@ Prima di configurare l'accesso condizionale, verificare che siano presenti le co
   - Essere **registrato** con Intune o essere un PC aggiunto a un dominio.
   - Essere **registrato in Azure Active Directory**. Inoltre, l'ID client Exchange ActiveSync deve essere registrato con Azure Active Directory.
 
-- Il servizio Registrazione dispositivo Azure AD (DRS) viene attivato automaticamente per i clienti di Intune e Office 365. I clienti che hanno già distribuito il servizio Device Registration Service di ADFS non visualizzano i dispositivi registrati in Active Directory locale. **Ciò non si applica ai PC Windows e ai dispositivi Windows Phone**.
+- Il servizio Registrazione dispositivo Azure AD (DRS) viene attivato automaticamente per i clienti di Intune e Office 365. I clienti che hanno già distribuito il servizio Device Registration Service di ADFS non visualizzano i dispositivi registrati in Active Directory locale. **Ciò non si applica a PC e dispositivi Windows**.
 
 - Essere **conforme** ai criteri di conformità dei dispositivi distribuiti a quel dispositivo.
 
@@ -69,7 +69,6 @@ Prima di configurare l'accesso condizionale, verificare che siano presenti le co
 
 ### <a name="support-for-mobile-devices"></a>Supporto per dispositivi mobili
 
-- **Windows Phone** - Per creare i criteri di accesso condizionale, vedere [Creare criteri di accesso condizionale](../protect/create-conditional-access-intune.md)
 - **App di posta elettronica nativa in iOS/iPadOS** - Per creare i criteri di accesso condizionale, vedere [Creare criteri di accesso condizionale](../protect/create-conditional-access-intune.md)
 - **Client di posta EAS, ad esempio Gmail in Android 4 o versione successiva** - Per creare i criteri di accesso condizionale, vedere [Creare criteri di accesso condizionale](../protect/create-conditional-access-intune.md)
 

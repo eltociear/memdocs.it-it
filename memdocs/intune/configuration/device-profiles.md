@@ -1,11 +1,11 @@
 ---
 title: Funzionalità e impostazioni dei dispositivi in Microsoft Intune - Azure | Microsoft Docs
-description: Panoramica dei diversi profili di dispositivo di Microsoft Intune. Informazioni su funzionalità, restrizioni, posta elettronica, WiFi, VPN, formazione, certificati, aggiornamento a Windows 10, BitLocker e Microsoft Defender, Windows Information Protection, modelli amministrativi e impostazioni di configurazione del dispositivo personalizzate nell'interfaccia di amministrazione di Microsoft Endpoint Manager. Usare questi profili per proteggere i dati e i dispositivi aziendali.
+description: Panoramica dei diversi profili di dispositivo di Microsoft Intune. Informazioni su GPO, funzionalità, restrizioni, posta elettronica, Wi-Fi, VPN, formazione, certificati, aggiornamento a Windows 10, BitLocker e Microsoft Defender, Windows Information Protection, modelli amministrativi e impostazioni di configurazione del dispositivo personalizzate nell'interfaccia di amministrazione di Microsoft Endpoint Manager. Usare questi profili per proteggere i dati e i dispositivi aziendali.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 08/20/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43101602defab75c15c542ec922cba6f2bf96cf0
-ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
+ms.openlocfilehash: 61053fff9d28193c8f4fc1731f72fe0052aba154
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88146321"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820494"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Applicare funzionalità e impostazioni nei dispositivi usando i profili dei dispositivi in Microsoft Intune
 
@@ -41,9 +41,7 @@ Questo articolo offre una panoramica dei diversi tipi di profili che è possibil
 
 ## <a name="administrative-templates"></a>Modelli amministrativi
 
-La funzionalità [Modelli amministrativi](administrative-templates-windows.md) include centinaia di impostazioni che è possibile configurare per Internet Explorer, Microsoft Edge, OneDrive, Desktop remoto, Word, Excel e altre applicazioni di Office.
-
-Questi modelli offrono agli amministratori una visualizzazione semplificata delle impostazioni, simile a quella dei criteri di gruppo ma completamente basata sul cloud.
+La funzionalità [Modelli amministrativi](administrative-templates-windows.md) include centinaia di impostazioni che è possibile configurare per Internet Explorer, Microsoft Edge, OneDrive, Desktop remoto, Word, Excel e altre applicazioni di Office. Questi modelli offrono agli amministratori una visualizzazione semplificata delle impostazioni, simile a quella dei criteri di gruppo ma completamente basata sul cloud.
 
 Questa funzionalità supporta:
 

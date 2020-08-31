@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/20/2020
+ms.date: 08/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5939d12003df78b459ebc12c294434826194b931
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 2e4f98f0f1e60ff08e86dedb2dd34ac9f55157ac
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166128"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820392"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Configurare l'infrastruttura per il supporto di SCEP con Intune
 
@@ -34,7 +34,7 @@ Le informazioni contenute in questo articolo consentono di configurare l'infrast
 
 ## <a name="prerequisites-for-using-scep-for-certificates"></a>Prerequisiti per l'uso di SCEP per i certificati
 
-Prima di procedere, assicurarsi di aver [creato e distribuito un profilo di *certificato attendibile*](certificates-configure.md#export-the-trusted-root-ca-certificate) nei dispositivi che useranno i profili di certificato SCEP. I profili di certificato SCEP fanno riferimento direttamente al profilo di certificato attendibile usato per il provisioning dei dispositivi con un certificato CA radice attendibile.
+Prima di continuare, assicurarsi di aver [creato e distribuito un profilo di *certificato attendibile*](certificates-configure.md#export-the-trusted-root-ca-certificate) nei dispositivi che useranno i profili di certificato SCEP. I profili di certificato SCEP fanno riferimento direttamente al profilo di certificato attendibile usato per il provisioning dei dispositivi con un certificato CA radice attendibile.
 
 ### <a name="servers-and-server-roles"></a>Server e ruoli del server
 
@@ -127,7 +127,7 @@ Per le informazioni nelle sezioni seguenti è richiesta la conoscenza di Windows
 1. Creare un modello di certificato v2 (con compatibilità con Windows 2003) da usare come modello di certificato SCEP. È possibile scegliere:
 
    - Usare lo snap-in *Modelli di certificato* per creare un nuovo modello personalizzato.
-   - Copiare un modello esistente (ad esempio, il modello Utente) e quindi aggiornare la copia da usare come modello per il servizio Registrazione dispositivi di rete.
+   - Copiare un modello esistente (ad esempio, il modello Server Web) e quindi aggiornare la copia da usare come modello per il servizio Registrazione dispositivi di rete.
 
 2. Configurare le impostazioni seguenti nelle schede specificate del modello:
 
@@ -215,7 +215,7 @@ In Connettore di certificati di Intune è possibile usare l'**account di sistema
 
 Dopo aver [creato il modello di certificato SCEP](#create-the-scep-certificate-template), è possibile modificare il modello per verificare il **periodo di validità** nella scheda **Generale**.
 
-Per impostazione predefinita, Intune usa il valore configurato nel modello. È tuttavia possibile configurare la CA per consentire al richiedente di immettere un valore diverso, che può essere impostato dalla console di Intune.
+Per impostazione predefinita, Intune usa il valore configurato nel modello, ma è possibile configurare la CA per consentire al richiedente di immettere un valore diverso, che può essere impostato nella console di Intune.
 
 > [!IMPORTANT]
 > Per iOS/iPadOS e macOS, usare sempre un valore impostato nel modello.
@@ -327,32 +327,51 @@ Le procedure seguenti consentono di configurare il servizio Registrazione dispos
   
 ### <a name="install-and-bind-certificates-on-the-server-that-hosts-ndes"></a>Installare e associare i certificati nel server che ospita il servizio Registrazione dispositivi di rete
 
+Nel server del servizio Registrazione dispositivi di rete sono presenti due certificati richiesti dalla configurazione.
+Questi certificati sono il **certificato di autenticazione client** e il **certificato di autenticazione server**, come accennato nella sezione [Certificati e modelli](#certificates-and-templates).
+
 > [!TIP]
-> Nella procedura seguente è possibile usare un solo certificato per l'*autenticazione server* e per l'*autenticazione client* quando tale certificato è configurato per soddisfare i criteri di entrambi gli usi. I criteri per ogni uso sono descritti nei passaggi 1 e 3 della procedura seguente.
+> Nella procedura seguente è possibile usare un solo certificato per l'*autenticazione server* e per l'*autenticazione client* quando tale certificato è configurato per soddisfare i criteri di entrambi gli usi.
+> Per quanto riguarda il nome del soggetto, è necessario che soddisfi i requisiti del certificato di *autenticazione client*.
 
-1. Richiedere un certificato di **autenticazione server** dalla CA interna o dalla CA pubblica e quindi installare il certificato nel server.
+- **Certificato di autenticazione client** 
 
-   Se il server usa un nome esterno e uno interno per un unico indirizzo di rete, il certificato di autenticazione server deve avere:
+   Questo certificato viene usato durante l'installazione del connettore di certificati di Intune.
 
-   - Un **Nome soggetto** con un nome server pubblico esterno.
-   - Un **Nome alternativo soggetto** che include il nome server interno.
-
-2. Associare il certificato di autenticazione server in IIS:
-
-   1. Dopo avere installato il certificato di autenticazione del server, aprire **Gestione IIS** e selezionare **Sito Web predefinito**. Nel riquadro **Azioni** selezionare **Associazioni**.
-
-   1. Selezionare **Aggiungi**, impostare **Tipo** su **https**, quindi verificare che la porta sia **443**.
+   Richiedere e installare un certificato di **autenticazione client** alla CA interna o a un'autorità di certificazione pubblica.
    
-   1. Per **Certificato SSL**, specificare il certificato di autenticazione server.
-
-3. Nel server NDES, richiedere e installare un **certificato di autenticazione client** dalla CA interna o pubblica.
-
-   Il certificato di autenticazione client deve avere le seguenti proprietà:
+   Il certificato deve soddisfare i requisiti seguenti:
 
    - **Utilizzo chiavi avanzato**: questo valore deve includere **Autenticazione client**.
-   - **Nome soggetto**: il valore deve essere uguale al nome DNS del server in cui si installa il certificato (server del servizio Registrazione dispositivi di rete).
+   - **Nome soggetto**: impostare un nome comune con un valore che deve essere uguale al nome di dominio completo del server in cui si installa il certificato (il server del servizio Registrazione dispositivi di rete).
 
-4. Il server che ospita il servizio Registrazione dispositivi di rete è ora pronto per supportare Connettore di certificati di Intune.
+- **Certificato di autenticazione server**
+
+   Questo certificato viene usato in IIS. Si tratta di un semplice certificato server Web che consente al client di considerare attendibile l'URL del servizio Registrazione dispositivi di rete.
+   
+   1. Richiedere un certificato di **autenticazione server** dalla CA interna o dalla CA pubblica e quindi installare il certificato nel server.
+      
+      A seconda di come viene esposto il servizio Registrazione dispositivi di rete su Internet, sono previsti requisiti diversi. 
+      
+      Una configurazione corretta è:
+   
+      - **Nome soggetto**: impostare un nome comune con un valore che deve essere uguale al nome di dominio completo del server in cui si installa il certificato (il server del servizio Registrazione dispositivi di rete).
+      - **Nome alternativo del soggetto**: impostare le voci DNS per ogni URL a cui risponde il servizio Registrazione dispositivi di rete, ad esempio il nome FQDN interno e gli URL esterni.
+   
+      > [!NOTE]
+      > Se si usa il proxy dell'app Azure AD, il connettore del proxy dell'app AAD convertirà le richieste dall'URL esterno all'URL interno.
+      > Di conseguenza, il servizio Registrazione dispositivi di rete risponderà solo alle richieste indirizzate all'URL interno, solitamente il nome FQDN del server del servizio Registrazione dispositivi di rete.
+      >
+      > In questa situazione, l'URL esterno non è necessario.
+   
+   2. Associare il certificato di autenticazione server in IIS:
+
+      1. Dopo avere installato il certificato di autenticazione del server, aprire **Gestione IIS** e selezionare **Sito Web predefinito**. Nel riquadro **Azioni** selezionare **Associazioni**.
+
+      1. Selezionare **Aggiungi**, impostare **Tipo** su **https**, quindi verificare che la porta sia **443**.
+   
+      1. Per **Certificato SSL**, specificare il certificato di autenticazione server.
+
 
 ## <a name="install-the-intune-certificate-connector"></a>Installare Connettore di certificati di Intune
 
@@ -372,7 +391,7 @@ Connettore di certificati di Microsoft Intune viene installato nel server in cui
 
    1. Assicurarsi che .NET Framework 4.5 sia installato, perché è richiesto da Connettore di certificati di Intune. .NET Framework 4.5 è incluso automaticamente in Windows Server 2012 R2 e versioni più recenti.
 
-   2. Eseguire il programma di installazione (**NDESConnectorSetup.exe**). Il programma di installazione installa anche il modulo dei criteri per il servizio Registrazione dispositivi di rete e il servizio Web del punto di registrazione certificati di IIS. Il servizio Web del punto di registrazione certificati, *CertificateRegistrationSvc*, viene eseguito come applicazione in IIS.
+   2. Per eseguire il programma di installazione (**NDESConnectorSetup.exe**), usare un account con autorizzazioni di amministratore per il server. Il programma di installazione installa anche il modulo dei criteri per il servizio Registrazione dispositivi di rete e il servizio Web del punto di registrazione certificati di IIS. Il servizio Web del punto di registrazione certificati, *CertificateRegistrationSvc*, viene eseguito come applicazione in IIS.
 
       Quando si installa NDES per la configurazione autonoma di Intune, il servizio CRP viene installato automaticamente con Connettore di certificati.
 

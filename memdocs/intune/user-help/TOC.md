@@ -2,11 +2,11 @@
 
 ## [Che cos'è la registrazione dei dispositivi?](use-managed-devices-to-get-work-done.md)
 
-## [Informazioni visibili per l'azienda con Intune](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
+## [Quali informazioni possono essere visualizzate dall'organizzazione?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
 
 ## [Requisiti per le password dei dispositivi](password-does-not-meet-it-administrator-requirements.md)
 
-## [Accedere al portale aziendale](sign-in-to-the-company-portal.md)  
+## [Come accedere al Portale aziendale](sign-in-to-the-company-portal.md)  
 
 ## [Installare un'app Mobile Threat Defense](set-up-mobile-threat-defense.md)  
 
@@ -20,7 +20,7 @@
 #### Registrare con credenziali derivate
 ##### [Registrare con Entrust Datacard](enroll-android-device-entrust-datacard.md)
 ##### [Registrare con Intercede](enroll-android-device-intercede.md)
-##### [Registrare con Disa Purebred](enroll-android-device-disa-purebred.md)
+##### [Registrare con DISA Purebred](enroll-android-device-disa-purebred.md)
 ### [Passa alla configurazione della gestione dei nuovi dispositivi](move-to-new-device-management-setup.md)
 ### [Usare le app gestite nel dispositivo](use-managed-apps-on-your-device-android.md)
 ### [Crittografare il dispositivo](encrypt-your-device-android.md)
@@ -64,7 +64,6 @@
 
 ## [Uso del dispositivo iOS](using-your-iOS-device-with-intune.md)
 ### [Effetti della reimpostazione del dispositivo iOS](effects-of-device-reset-company-portal-ios.md)
-### [Installare e accedere al Portale aziendale](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
 ### Registrare il dispositivo
 #### [Registrare il dispositivo iOS](enroll-your-device-in-intune-ios.md)
 #### [Registrare il dispositivo iOS fornito dall'organizzazione](enroll-your-device-dep-ios.md)
@@ -143,7 +142,7 @@
 #### [Inviare i log dall'app Portale aziendale](send-logs-to-your-it-admin-cp-windows.md)
 #### [Inviare i log dall'app Impostazioni del dispositivo](send-logs-to-your-it-admin-settings-windows.md)
 #### [La versione di Windows non è supportata](your-windows-version-isnt-yet-supported.md)
-#### [Installare Office 365 nel dispositivo Windows 10](install-office-windows.md)
+#### [Installare Office nel dispositivo Windows 10](install-office-windows.md)
 #### [È necessario crittografare il dispositivo](you-need-to-enable-windows-encryption.md)
 #### [Il dispositivo richiede software antimalware](your-device-needs-antimalware-software.md)
 #### [Abilitare l'avvio protetto](you-need-to-enable-secure-boot-windows.md)

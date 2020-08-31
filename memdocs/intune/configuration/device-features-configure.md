@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/06/2020
+ms.date: 08/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 349fdc7b0f13f0999b8c9993bcaba1d458ebac59
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 28bf8edb1b7c80e2362e9b145f38bd383dffa625
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989200"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820579"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Aggiungere impostazioni relative alle funzionalità dei dispositivi iOS, iPadOS e macOS in Intune
 
@@ -133,7 +133,7 @@ Si applica a:
 
 La maggior parte delle app line-of-business (LOB) richiedono un certo livello di autenticazione utente per il supporto della sicurezza. In molti casi l'autenticazione richiede di immettere ripetutamente le stesse credenziali. Per migliorare l'esperienza utente, gli sviluppatori possono creare app che usano l'accesso Single Sign-On (SSO). L'uso dell'accesso Single Sign-On riduce il numero di volte in cui un utente deve immettere le credenziali.
 
-Il profilo di accesso Single Sign-On si basa su Kerberos. Kerberos è un protocollo di autenticazione di rete che usa la crittografia a chiave segreta per autenticare le applicazioni client-server. Le impostazioni di Intune definiscono le informazioni sull'account Kerberos durante l'accesso ai server o alle app specificate e gestiscono le verifiche di Kerberos per le pagine Web e le app native. Apple consiglia di usare le impostazioni dell'[estensione dell'app SSO Kerberos](#single-sign-on-app-extension) (in questo articolo) anziché le impostazioni SSO.  
+Il profilo di accesso Single Sign-On si basa su Kerberos. Kerberos è un protocollo di autenticazione di rete che usa la crittografia a chiave segreta per autenticare le applicazioni client-server. Le impostazioni di Intune definiscono le informazioni sull'account Kerberos durante l'accesso ai server o ad app specifiche e gestiscono le verifiche di Kerberos per le pagine Web e le app native. Apple consiglia di usare le impostazioni dell'[estensione dell'app SSO Kerberos](#single-sign-on-app-extension) (in questo articolo) anziché le impostazioni SSO.  
 
 Per usare l'accesso Single Sign-On, assicurarsi di avere:
 
@@ -153,7 +153,7 @@ Queste impostazioni configurano un'estensione dell'app che abilita l'accesso Sin
 
 In Intune usare queste impostazioni per configurare un'estensione dell'app SSO creata dalla propria organizzazione, dal provider di identità, da Microsoft o da Apple. L'estensione dell'app SSO gestisce l'autenticazione per gli utenti. Queste impostazioni configurano le estensioni dell'app SSO di tipo reindirizzamento e credenziali.
 
-- Il tipo reindirizzamento è progettato per i protocolli di autenticazione moderni, ad esempio OpenID Connect, OAuth e SAML2. È possibile usare un'estensione di reindirizzamento generica nei dispositivi macOS. Per i dispositivi iOS/iPadOS è possibile scegliere tra l'estensione per l'accesso Single Sign-On di Microsoft Azure AD ([plug-in Microsoft Enterprise Single Sign-On](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)) e un'estensione di reindirizzamento generica.
+- Il tipo reindirizzamento è progettato per i protocolli di autenticazione moderni, ad esempio OpenID Connect, OAuth e SAML2. È possibile scegliere tra l'estensione per l'accesso Single Sign-On di Microsoft Azure AD ([plug-in Microsoft Enterprise Single Sign-On](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)) e un'estensione di reindirizzamento generica.
 - Il tipo credenziali è progettato per i flussi di autenticazione con richiesta e risposta. È possibile scegliere tra un'estensione con credenziali specifiche di Kerberos di Apple e un'estensione con credenziali generiche.
 
 Per un elenco delle impostazioni che è possibile configurare in Intune, vedere [Estensione dell'app Single Sign-On per iOS/iPadOS](ios-device-features-settings.md#single-sign-on-app-extension) ed [Estensione dell'app Single Sign-On per macOS](macos-device-features-settings.md#single-sign-on-app-extension).

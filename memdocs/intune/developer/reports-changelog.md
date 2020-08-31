@@ -6,7 +6,7 @@ keywords: Data warehouse di Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/09/2020
+ms.date: 08/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d6f460039aaff282476c3e8e3d074a332cde716f
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: c77d69e076956ab66deeb5fb8256afc6038225b3
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461216"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820035"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Registro modifiche per l'API data warehouse di Intune
 
@@ -52,6 +52,14 @@ La tabella seguente elenca la proprietà aggiunta all'entità [devicePropertyHis
 
 ## <a name="2004"></a>2004 
 _Data di rilascio: aprile 2020_
+
+### <a name="v10-changes"></a>Modifiche v1.0
+
+La tabella seguente include la proprietà aggiunta all'entità [devices](../developer/intune-data-warehouse-collections.md#devices) nel data warehouse di Intune.
+
+|    Raccolta                          |    Modifica     |    Informazioni sulla descrizione                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    windowsOsEdition     |    Aggiunta    |    Edizione del sistema operativo Windows.                                                                                                                                                                                                                                                                     |
 
 ### <a name="beta-changes"></a>Modifiche alla versione beta
 

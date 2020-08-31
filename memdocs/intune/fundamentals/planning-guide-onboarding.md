@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8396a9713e5ce4b6001aefb55485a908f0e605dd
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 19de56bfab6e4f4cf2f1243c6cbaf98053e6ba5e
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357662"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663260"
 ---
 # <a name="implement-your-microsoft-intune-plan"></a>Implementare il piano di Microsoft Intune
 
@@ -130,7 +130,7 @@ Intune supporta l'accesso condizionale per Exchange Online, Exchange locale, Sha
 
 ### <a name="task-13-enroll-devices"></a>Attività 13: Registrare i dispositivi
 
-Intune supporta le piattaforme per dispositivi mobili iOS/iPadOS, Mac OS, Android, Windows desktop e Windows Mobile. Registrare le piattaforme per dispositivi mobili a seconda delle esigenze, in base ai casi d'uso e ai requisiti per la distribuzione di Intune.
+Intune supporta le piattaforme per dispositivi desktop iOS/iPadOS, Mac OS, Android e Windows. Registrare le piattaforme per dispositivi mobili a seconda delle esigenze, in base ai casi d'uso e ai requisiti per la distribuzione di Intune.
 
 - Altre informazioni su [come registrare i dispositivi](../enrollment/device-enrollment.md).
 

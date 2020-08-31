@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 08/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 10bea151002673b36600d4d9deaa36bb8fc3ff79
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b7bcb685a33bc8d06226b51aaa051656360b436d
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086525"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819950"
 ---
 # <a name="add-vpn-settings-on-macos-devices-in-microsoft-intune"></a>Aggiungere impostazioni VPN in dispositivi macOS in Microsoft Intune
 
@@ -38,36 +38,35 @@ A seconda delle impostazioni selezionate, non tutti i valori nell'elenco seguent
 ## <a name="base-vpn-settings"></a>Impostazioni VPN di base
 
 **Nome della connessione**: immettere un nome per la connessione. Questo nome viene visualizzato dagli utenti finali nel momento in cui esplorano l'elenco delle connessioni VPN disponibili nel dispositivo.
-- **Indirizzo IP o FQDN**: specificare l'indirizzo IP o il nome di dominio completo del server VPN a cui si connetteranno i dispositivi. Esempi: **192.168.1.1**, **vpn.contoso.com**.
-- **Metodo di autenticazione**: scegliere il metodo di autenticazione dei dispositivi al server VPN:
-  - **Certificati**: in **Certificato di autenticazione** scegliere un profilo di certificato SCEP o PKCS creato in precedenza per autenticare la connessione. Per altre informazioni sui profili di certificato, vedere [Come configurare i certificati](../protect/certificates-configure.md).
+
+- **Indirizzo IP o FQDN**: immettere l'indirizzo IP o il nome di dominio completo del server VPN a cui si connettono i dispositivi. Ad esempio, immettere `192.168.1.1` o `vpn.contoso.com`.
+- **Metodo di autenticazione**: scegliere il metodo di autenticazione dei dispositivi al server VPN. Le opzioni disponibili sono:
+  - **Certificati**: in **Certificato di autenticazione** selezionare un profilo di certificato SCEP o PKCS creato in precedenza per autenticare la connessione. Per altre informazioni sui profili di certificato, vedere [Come configurare i certificati](../protect/certificates-configure.md).
   - **Nome utente e password**: gli utenti finali devono specificare un nome utente e una password per accedere al server VPN.
-- **Tipo di connessione**: selezionare il tipo di connessione VPN dall'elenco di fornitori seguente:
+- **Tipo di connessione**: Selezionare il tipo di connessione VPN dall'elenco di fornitori seguente:
   - **Check Point Capsule VPN**
   - **Cisco AnyConnect**
   - **SonicWall Mobile Connect**
   - **F5 Edge Client**
+  - **NetMotion Mobility**
   - **Pulse Secure**
-  - **VPN personalizzata**
+  - **VPN personalizzata**: selezionare questa opzione se il fornitore della VPN non è presente nell'elenco. Configurare inoltre:
+
+    - **Identificatore VPN**: immettere un identificatore per l'app VPN in uso. Questo identificatore viene fornito dal provider VPN.
+    - **Immettere le coppie chiave-valore per gli attributi della VPN personalizzata**: aggiungere o importare **chiavi** e **valori** che consentono di personalizzare la connessione VPN. Questi valori vengono in genere forniti dal provider VPN.
+
 - **Split tunneling**: **abilitare** o **disabilitare** questa opzione che consente ai dispositivi di stabilire la connessione da usare in base al traffico. Ad esempio, un utente in un hotel userà la connessione VPN per accedere ai file di lavoro, ma userà la rete standard dell'hotel per la normale esplorazione sul Web.
 
 <!--- **Per-app VPN** - Select this option if you want to associate this VPN connection with an iOS/iPadOS or macOS app so that the connection will be opened when the app is run. You can associate the VPN profile with an app when you assign the software. For more information, see [How to assign and monitor apps](../apps/apps-deploy.md). --->
 
-## <a name="custom-vpn-settings"></a>Impostazioni VPN personalizzate
-
-Se si seleziona **VPN personalizzata**, configurare queste altre impostazioni:
-
-- **Identificatore VPN**: immettere un identificatore per l'app VPN in uso. Questo identificatore viene fornito dal provider VPN.
-- **Immettere le coppie chiave-valore per gli attributi della VPN personalizzata**: aggiungere o importare **chiavi** e **valori** che consentono di personalizzare la connessione VPN. Questi valori vengono in genere forniti dal provider VPN.
-
 ## <a name="proxy-settings"></a>Impostazioni proxy
 
-- **Script di configurazione automatica**: consente di usare un file per la configurazione del server proxy. Immettere l'**URL server proxy** che contiene il file di configurazione. Immettere ad esempio `http://proxy.contoso.com`.
+- **Script di configurazione automatica**: consente di usare un file per configurare il server proxy. Immettere l'**URL server proxy** che contiene il file di configurazione. Immettere ad esempio `http://proxy.contoso.com`.
 - **Indirizzo**: immettere l'indirizzo del server proxy (ad esempio un indirizzo IP).
-- **Numero di porta**: immettere il numero di porta associato al server proxy.
+- **Numero porta**: immettere il numero di porta associato al server proxy.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Il profilo è stato creato, ma non è ancora operativo. [Assegnare il profilo](device-profile-assign.md) e [monitorarne lo stato](device-profile-monitor.md).
+Il profilo è stato creato, ma potrebbe non essere ancora operativo. Assicurarsi di [assegnare il profilo](device-profile-assign.md) e [monitorarne lo stato](device-profile-monitor.md).
 
 Configurare le impostazioni VPN nei dispositivi [Android](vpn-settings-android.md), [Android Enterprise](vpn-settings-android-enterprise.md), [iOS/iPadOS](vpn-settings-ios.md) e [Windows 10](vpn-settings-windows-10.md).

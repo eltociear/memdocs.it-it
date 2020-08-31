@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/12/2020
+ms.date: 08/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a82fbfa9e494828450729e29467580c29a590282
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: 3a23db0f04895bda6f187e466965a959c891f1ad
+ms.sourcegitcommit: 19ef60175cbfd5c5d1e213a6d64eded34ee42041
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179554"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88725435"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Come personalizzare le app Portale aziendale Intune, il sito Web Portale aziendale e l'app Intune
 
@@ -45,7 +45,7 @@ La tabella seguente fornisce i dettagli di personalizzazione per l'esperienza ut
 | **Mostra su intestazione** | Specificare se l'intestazione nelle esperienze utente finale deve includere **il logo e il nome dell'organizzazione**, **solo il logo dell'organizzazione** o **solo il nome dell'organizzazione**. Le caselle di anteprima seguenti visualizzano solo i logo, non il nome.  |
 | **Carica il logo per lo sfondo con colore del tema** | Caricare il logo che si desidera visualizzare sopra il colore del tema selezionato. Per assicurare un aspetto ottimale, caricare un logo con uno sfondo trasparente. È possibile visualizzare il risultato nella casella di anteprima sotto l'impostazione.<p>Dimensioni massime immagine: 400 x 400 px<br>Dimensioni massime del file:   750 kB<br>Tipo di file: PNG, JPG o JPEG |
 | **Carica il logo per lo sfondo bianco o chiaro** | Caricare il logo da visualizzare sopra gli sfondi di colore bianco o chiaro. Per assicurare un aspetto ottimale, caricare un logo con uno sfondo trasparente. È possibile visualizzare il risultato su uno sfondo bianco nella casella di anteprima sotto l'impostazione.<p>Dimensioni massime immagine: 400 x 400 px<br>Dimensioni massime del file: 750 kB<br>Tipo di file: PNG, JPG o JPEG |
-| **Carica l'immagine del marchio** | Caricare un'immagine del marchio dell'organizzazione.<p><ul><li>Larghezza immagine consigliata: Maggiore di 1125 px (deve essere almeno 650 px)</li><li>Dimensioni massime immagine: 1,3 MB</li><li>Tipo di file: PNG, JPG o JPEG</li><li>Viene visualizzato nelle posizioni seguenti:</li><ul><li>Portale aziendale iOS/iPadOS: Immagine di sfondo nella pagina del profilo dell'utente.</li><li>Sito Web del portale aziendale:   Immagine di sfondo nella pagina del profilo dell'utente.</li><li>App Intune Android: nel menu e come immagine di sfondo nella pagina del profilo dell'utente.</li></ul></ul> |
+| **Carica l'immagine del marchio** | Caricare un'immagine del marchio dell'organizzazione.<p><ul><li>Larghezza immagine consigliata: Maggiore di 1125 px (deve essere almeno 650 px)</li><li>Dimensioni massime immagine: 1,3 MB</li><li>Tipo di file: PNG, JPG o JPEG</li><li>Viene visualizzato nelle posizioni seguenti:</li><ul><li>Portale aziendale iOS/iPadOS: Immagine di sfondo nella pagina del profilo dell'utente.</li><li>Portale aziendale Windows: Immagine di sfondo nella pagina del profilo dell'utente.</li><li>Sito Web del portale aziendale:   Immagine di sfondo nella pagina del profilo dell'utente.</li><li>App Intune Android: nel menu e come immagine di sfondo nella pagina del profilo dell'utente.</li></ul></ul> |
 
 > [!NOTE]
 > Quando si installa un'applicazione iOS/iPadOS dal Portale aziendale, viene inviata una richiesta. Ciò avviene quando l'app iOS/iPadOS è collegata all'App Store, a un programma Volume Purchase Program (VPP) oppure a un'app line-of-business. La richiesta consente agli utenti di accettare l'azione o consentire la gestione dell'app. Nella richiesta sarà visualizzato il nome della società o, quando il nome della società non è disponibile, sarà visualizzato **Portale aziendale**.
@@ -90,7 +90,7 @@ Immettere le informazioni sul supporto dell'organizzazione per consentire ai dip
 
 ### <a name="enrollment"></a>Registrazione
 
-La tabella seguente offre altri dettagli di configurazione:
+La tabella seguente include dettagli di configurazione specifici della registrazione:
 
 | Nome del campo | Lunghezza massima | Altre informazioni |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -110,13 +110,13 @@ La tabella seguente offre altri dettagli di configurazione:
 
 |    Opzioni di registrazione dei dispositivi    |    Descrizione    |    Richieste di elenco di controllo    |    Notifica    |    Stato dei dettagli del dispositivo    |    Stato dei dettagli dell'app (per app che richiedono la registrazione)    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
-|    Disponibile, con richieste di conferma    |    Esperienza predefinita con richieste di registrazione in tutte le posizioni possibili.    |    Sì    |    Sì    |    sì    |    sì    |
+|    Disponibile, con richieste di conferma    |    Esperienza predefinita con richieste di registrazione in tutte le posizioni possibili.    |    Sì    |    sì    |    sì    |    Sì    |
 |    Disponibile, senza richieste di conferma    |    L'utente può eseguire la registrazione tramite lo stato nei dettagli del dispositivo per il dispositivo corrente o dalle app che richiedono la registrazione.    |    No    |    No    |    Sì    |    Sì    |
 |    Non disponibile    |    Gli utenti non possono eseguire la registrazione.    |    No    |    No    |    No    |    No    |
 
 ### <a name="privacy"></a>Privacy
 
-La tabella seguente offre dettagli di configurazione specifici per la privacy:
+La tabella seguente include dettagli di configurazione specifici della privacy:
 
 | Nome del campo | Lunghezza massima | Altre informazioni |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -125,7 +125,7 @@ La tabella seguente offre dettagli di configurazione specifici per la privacy:
 
 ### <a name="device-ownership-notification"></a>Notifica relativa alla proprietà del dispositivo
 
-La tabella seguente offre dettagli di configurazione specifici per le notifiche:
+La tabella seguente include dettagli di configurazione specifici delle notifiche:
 
 | Nome del campo | Lunghezza massima | Altre informazioni |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -133,7 +133,12 @@ La tabella seguente offre dettagli di configurazione specifici per le notifiche:
 
 ### <a name="app-sources"></a>Origini app
 
-È possibile scegliere le origini app aggiuntive che verranno visualizzate sul Portale aziendale. La tabella seguente offre dettagli di configurazione specifici per le origini app:
+È possibile scegliere le origini app aggiuntive che verranno visualizzate sul Portale aziendale.
+
+> [!NOTE]
+> Il Portale aziendale supporta le applicazioni di Configuration Manager. Questa funzionalità consente agli utenti finali di visualizzare le applicazioni distribuite di Configuration Manager e Intune nel Portale aziendale per i clienti co-gestiti. Per altre informazioni, vedere [Usare l'app Portale aziendale in dispositivi con co-gestione](/mem/configmgr/comanage/company-portal).
+
+La tabella seguente offre dettagli di configurazione specifici per le origini app:
 
 | Nome del campo | Lunghezza massima | Altre informazioni |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -149,7 +154,7 @@ La tabella seguente offre dettagli di configurazione specifici per le notifiche:
 
 ### <a name="customizing-user-self-service-actions-for-the-company-portal"></a>Personalizzazione delle azioni self-service che l'utente può eseguire sul Portale aziendale
 
-È possibile personalizzare le azioni self-service del dispositivo disponibili che vengono visualizzate dagli utenti finali nell'app e nel sito Web Portale aziendale. Per contribuire a evitare le azioni non previste nel dispositivo, sarà possibile configurare le impostazioni per l'app Portale aziendale selezionando **Amministrazione del tenant** > **Personalizzazione**. 
+È possibile personalizzare le azioni self-service del dispositivo disponibili che vengono visualizzate dagli utenti finali nell'app e nel sito Web Portale aziendale. Per contribuire a evitare le azioni non previste nel dispositivo, sarà possibile configurare le impostazioni per l'app Portale aziendale selezionando **Amministrazione del tenant** > **Personalizzazione**.
 
 Sono disponibili le azioni seguenti:
 - Nascondi il pulsante **Rimuovi** nei dispositivi Windows aziendali.
@@ -158,7 +163,7 @@ Sono disponibili le azioni seguenti:
 - Nascondi il pulsante **Ripristina** nei dispositivi iOS/iPadOS aziendali.
 
 > [!NOTE]
-> Queste azioni possono essere usate per limitare le azioni del dispositivo nell'app e nel sito Web Portale aziendale e non implementano criteri di restrizione dei dispositivi. Per impedire agli utenti di eseguire il ripristino delle impostazioni di fabbrica o la rimozione di MDM dalle impostazioni, è necessario configurare i criteri di restrizione dei dispositivi. 
+> Queste azioni possono essere usate per limitare le azioni del dispositivo nell'app e nel sito Web Portale aziendale e non implementano criteri di restrizione dei dispositivi. Per impedire agli utenti di eseguire il ripristino delle impostazioni di fabbrica o la rimozione di MDM dalle impostazioni, è necessario configurare i criteri di restrizione dei dispositivi.
 
 ## <a name="opening-web-company-portal-applications"></a>Apertura di applicazioni Portale aziendale Web
 Per le applicazioni Web Portale aziendale, se l'utente finale ha installato l'applicazione Portale aziendale, per gli utenti finali verrà visualizzata una finestra di dialogo in cui viene chiesto come vogliono aprire l'applicazione all'esterno del browser. Se l'app non si trova nel percorso di Portale aziendale, per il sito Web Portale aziendale verrà aperta la home page. Se l'app si trova nel percorso, il Portale aziendale aprirà l'app specifica. 
@@ -238,7 +243,7 @@ Alcune piattaforme e configurazioni non consentono azioni self-service nel dispo
 | Cancellazione | Disponibile | Disponibile<sup>(5)</sup><sup>(9)</sup> | N/D | Disponibile<sup>(7)</sup> |
 | Ridenominazione<sup>(4)</sup> | Disponibile | Disponibile | Disponibile | Disponibile |
 | Sincronizza | Disponibile | Disponibile | Disponibile | Disponibile |
-| Recupero chiavi | ND | ND | Disponibile<sup>(2)</sup> | N/D |
+| Recupero chiavi | N/D | N/D | Disponibile<sup>(2)</sup> | N/D |
 
 <sup>(1)</sup> Il **ritiro** è sempre bloccato nei dispositivi Windows aggiunti ad Azure AD.<br>
 <sup>(2)</sup> Il **recupero chiavi** per macOS è disponibile solo tramite il portale Web.<br>

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/30/2020
+ms.date: 08/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 894ef12107b8e8b520ca69a463be47ef339bd9b4
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: aa6839cef79623b456cd31eec6b894eae7687de3
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051631"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820273"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Novità di Microsoft Intune
 
@@ -55,6 +55,127 @@ Per informazioni sulle novità di Microsoft Intune ogni settimana, vedere l'[int
 ### Scripts
 
 <!-- ########################## -->
+## <a name="week-of-august-24-2020-2008-service-release"></a>Settimana del 24 agosto 2020 (versione del servizio 2008)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="app-management"></a>Gestione delle app
+
+#### <a name="associated-licenses-revoked-before-deletion-of-apple-vpp-token--6195322----"></a>Revoca delle licenze associate prima dell'eliminazione del token VPP Apple<!--6195322  -->
+Quando si elimina un token VPP Apple in Microsoft Endpoint Manager, tutte le licenze assegnate a Intune associate a tale token vengono automaticamente revocate prima dell'eliminazione.
+
+#### <a name="improvement-to-update-device-settings-page-in-company-portal-app-for-android-to-shows-descriptions----7414768-wnstaged---"></a>Miglioramento della pagina Aggiorna le impostazioni del dispositivo nell'app Portale aziendale app per Android per visualizzare le descrizioni <!-- 7414768 wnstaged -->
+Nell'app Portale aziendale nei dispositivi Android la pagina **Aggiorna le impostazioni del dispositivo** elenca le impostazioni che devono essere aggiornate per la conformità. Gli utenti espandono il problema per visualizzare altre informazioni e vedere il pulsante **Risolvi**.
+
+Questa esperienza utente è stata migliorata. Le impostazioni elencate vengono espanse per impostazione predefinita per mostrare la descrizione e il pulsante **Risolvi**, se applicabile. In precedenza, i problemi erano compressi per impostazione predefinita. Questo nuovo comportamento predefinito riduce il numero di clic, in modo che gli utenti possano risolvere i problemi più rapidamente.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-configuration"></a>Configurazione del dispositivo
+
+#### <a name="use-netmotion-as-a-vpn-connection-type-for-iosipados-and-macos-devices---1333631-----"></a>Usare NetMotion come tipo di connessione VPN per dispositivi iOS/iPadOS e macOS<!-- 1333631   -->
+Quando si crea un profilo VPN, NetMotion è disponibile come tipo di connessione VPN (**Dispositivi** > **Configurazione dispositivo** > **Crea profilo** > **iOS/iPadOS** oppure **macOS** per la piattaforma > **VPN** per il profilo > **NetMotion** per il tipo di connessione).
+
+Per altre informazioni sui profili VPN in Intune, vedere [Creare profili VPN per la connessione ai server VPN](../configuration/vpn-settings-configure.md).
+
+Si applica a:
+- iOS/iPadOS
+- macOS
+
+#### <a name="more-protected-extensible-authentication-protocol-peap-options-for-windows-10-wi-fi-profiles---3805024----"></a>Più opzioni PEAP (Protected Extensible Authentication Protocol) per i profili Wi-Fi Windows 10<!-- 3805024  -->
+Nei dispositivi Windows 10 è possibile creare profili Wi-Fi e selezionare il tipo EAP (Extensible Authentication Protocol) per autenticare le connessioni Wi-Fi (**Dispositivi** > **Profili di configurazione** > **Crea profilo** > **Windows 10 e versioni successive** per la piattaforma > **Wi-Fi** per il profilo > **Enterprise**).
+
+Selezionando PEAP (Protected EAP), le nuove impostazioni disponibili sono le seguenti:
+- **Esegui la convalida del server nella fase 1 di PEAP**: Nella fase 1 di negoziazione PEAP il server viene verificato tramite la convalida del certificato.
+  - **Disabilita le richieste utente per la convalida del server nella fase 1 di PEAP**: nella fase 1 della negoziazione PEAP non vengono visualizzate le richieste utente che richiedono di autorizzare nuovi server PEAP per le autorità di certificazione attendibili.
+- **Richiedi cryptobinding**: impedisce le connessioni ai server PEAP che non usano cryptobinding durante la negoziazione PEAP.
+
+Per visualizzare le impostazioni che è possibile configurare, passare a [Aggiungere le impostazioni Wi-Fi per dispositivi Windows 10 e versioni successive](../configuration/wi-fi-settings-windows.md).
+
+Si applica a: 
+- Windows 10 e versioni successive
+
+#### <a name="configure-the-macos-microsoft-enterprise-sso-plug-in---5627576--idstaged---"></a>Configurare il plug-in Microsoft Enterprise Single Sign-On per macOS<!-- 5627576  idstaged -->
+Il team di Microsoft Azure AD ha creato un'estensione dell'app per accesso Single Sign-On di reindirizzamento per consentire agli utenti di macOS 10.15 e versioni successive di accedere ad app, app dell'organizzazione e siti Web Microsoft che supportano la funzionalità SSO di Apple ed eseguire l'autenticazione usando Azure AD con un unico accesso. Grazie alla versione del plug-in Microsoft Enterprise Single Sign-On, è possibile configurare l'estensione SSO con il nuovo tipo di estensione dell'app Microsoft Azure AD (**Dispositivi** > **Profili di configurazione** > **Crea profilo** > **macOS** per la piattaforma > **Funzionalità del dispositivo** per il profilo >  **Tipo di estensione dell'app per accesso Single Sign-On** > Tipo di estensione dell'app per accesso Single Sign-On > **Microsoft Azure AD**).
+
+Per poter usare l'accesso Single Sign-On con il tipo di estensione dell'app per accesso Single Sign-On di Microsoft Azure AD, gli utenti devono installare l'app Portale aziendale e accedervi nei dispositivi macOS. 
+
+Per altre informazioni sulle estensioni dell'app per l'accesso Single Sign-On per macOS, vedere [Estensione dell'app Single Sign-On](../configuration/device-features-configure.md#single-sign-on-app-extension).
+
+Si applica a:
+- macOS 10.15 e versioni successive
+
+#### <a name="prevent-users-from-unlocking-android-enterprise-work-profile-devices-using-face-and-iris-scanning--6069759-idmiss---"></a>Impedire agli utenti di sbloccare i dispositivi con profilo di lavoro Android Enterprise tramite scansione del volto o dell'iride<!--6069759 idmiss -->
+È ora possibile impedire agli utenti di usare la scansione del volto o dell'iride per sbloccare i dispositivi con profilo di lavoro, a livello di dispositivo o a livello di profilo di lavoro. Questa impostazione può essere configurata nelle sezioni **Dispositivi** > **Profili di configurazione** > **Crea profilo** > **Android Enterprise** per la piattaforma > **Profilo di lavoro > Limitazioni del dispositivo** per il profilo > **Impostazioni del profilo di lavoro** e **Password**.
+
+Per altre informazioni, vedere [Impostazioni dei dispositivi Android Enterprise per consentire o limitare l'uso delle funzionalità tramite Intune](../configuration/device-restrictions-android-for-work.md#work-profile-only).
+
+Si applica a: 
+- Profilo di lavoro di Android Enterprise
+
+#### <a name="use-sso-app-extensions-on-more-iosipados-apps-with-the-microsoft-enterprise-sso-plug-in---7369991----"></a>Usare le estensioni dell'app per l'accesso Single Sign-On in altre app iOS/iPadOS con il plug-in Microsoft Enterprise Single Sign-On<!-- 7369991  -->
+Il [plug-in Microsoft Enterprise Single Sign-On per dispositivi Apple](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin) può essere usato con tutte le app che supportano le estensioni dell'app per accesso Single Sign-On. In Intune questa funzionalità consente di usare il plug-in con le app iOS/iPadOS per dispositivi mobili che non usano Microsoft Authentication Library (MSAL) per i dispositivi Apple. Per le app non è necessario usare MSAL, ma è necessario eseguire l'autenticazione con gli endpoint di Azure AD.
+
+Per configurare le app iOS/iPadOS per l'uso dell'accesso Single Sign-On con il plug-in, aggiungere gli identificatori di aggregazione di app in un profilo di configurazione iOS/iPadO (**Dispositivi** > **Profili di configurazione** > **Crea profilo** > **iOS/iPadOS** per la piattaforma > **Funzionalità del dispositivo** per il profilo > **Estensione dell'app per l'accesso Single Sign-On** > **Microsoft Azure AD** per il tipo di estensione dell'app per l'accesso Single Sign-On > **ID aggregazione di app**).
+
+Per visualizzare le impostazioni correnti dell'estensione dell'app per l'accesso Single Sign-On che è possibile configurare, passare a [Estensione dell'app Single Sign-On](../configuration/ios-device-features-settings.md#single-sign-on-app-extension).
+
+Si applica a:
+- iOS/iPadOS
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-security"></a>Sicurezza del dispositivo
+
+#### <a name="deploy-endpoint-security-antivirus-policy-to-tenant-attached-devices-preview---5475441----"></a>Distribuire i criteri antivirus di sicurezza nei dispositivi collegati al tenant (anteprima)<!-- 5475441  -->
+In anteprima è possibile distribuire i [criteri antivirus](../protect/endpoint-security-antivirus-policy.md) di sicurezza degli endpoint nei dispositivi gestiti con Configuration Manager. Per questo scenario è necessario configurare un collegamento al tenant tra una versione supportata di Configuration Manager e la sottoscrizione di Intune. Sono supportate le versioni seguenti di Configuration Manager:
+
+- Configuration Manager (Current Branch) 2006
+
+Per altre informazioni, vedere i [requisiti dei criteri di sicurezza degli endpoint Intune](../protect/tenant-attach-intune.md#specific-requirements-for-intune-endpoint-security-policies) per supportare il collegamento al tenant.
+
+#### <a name="changes-for-endpoint-security-antivirus-policy-exclusions--5583940-6018119------"></a>Modifiche per le esclusioni dei criteri antivirus per la sicurezza degli endpoint<!--5583940, 6018119    -->
+Sono state introdotte due modifiche per la gestione degli elenchi di esclusioni di Microsoft Defender Antivirus configurati come parte dei [criteri antivirus di sicurezza degli endpoint](../protect/endpoint-security-antivirus-policy.md). Le modifiche consentono di evitare conflitti tra criteri diversi e di risolvere i conflitti degli elenchi di esclusioni che potrebbero verificarsi nei criteri distribuiti in precedenza.
+
+Entrambe le modifiche si applicano alle impostazioni dei criteri per i seguenti [provider di configurazione di Microsoft Defender Antivirus](../protect/antivirus-microsoft-defender-settings-windows.md#microsoft-defender-antivirus-exclusions):
+
+- Defender/ExcludedPaths
+- Defender/ExcludedExtensions
+- Defender/ExcludedProcesses
+
+È necessario apportare le modifiche seguenti:
+
+- Nuovo tipo di profilo: **Esclusioni di Microsoft Defender Antivirus**: usare questo nuovo tipo di profilo per Windows 10 e versioni successive per definire un criterio incentrato solo sulle esclusioni dell'antivirus. Questo profilo semplifica la gestione degli elenchi Si semplifica così la gestione degli elenchi di esclusioni separandoli da altre configurazioni dei criteri.
+
+  Le esclusioni che è possibile configurare includono i *processi*, le *estensioni di file*, i *file* e *cartelle* di Defender che non devono essere analizzati da Microsoft Defender.
+
+- **Unione dei criteri**: Intune ora unisce l'elenco di esclusioni definito in profili distinti in un unico elenco di esclusioni da applicare a ogni dispositivo o utente. Ad esempio, nel caso di un utente con tre criteri distinti, gli elenchi di esclusioni dei tre criteri vengono uniti in un unico superset di *esclusioni di Microsoft Defender Antivirus*, che viene quindi applicato all'utente.
+
+
+<!-- ########################## -->
+## <a name="week-of-august-17-2020"></a>Settimana del 17 agosto 2020
+
+### <a name="intune-apps"></a>App di Intune
+
+#### <a name="custom-brand-image-now-displayed-in-the-windows-company-portal-profile-page---4280187---"></a>Immagine del marchio personalizzata visualizzata ora nella pagina del profilo del Portale aziendale Windows<!-- 4280187 -->
+Gli amministratori di Microsoft Intune possono caricare in Intune un'immagine del marchio personalizzata da visualizzare come sfondo nella pagina del profilo utente nell'app Portale aziendale di Windows. Per altre informazioni, vedere [Come personalizzare le app Portale aziendale Intune, il sito Web Portale aziendale e l'app Intune](../apps/company-portal-app.md#branding).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="app-management"></a>Gestione delle app
+
+#### <a name="the-company-portal-adds-configuration-manager-application-support---4297660---"></a>Il Portale aziendale aggiunge il supporto delle applicazioni di Configuration Manager<!-- 4297660 -->
+Il Portale aziendale supporta ora le applicazioni di Configuration Manager. Questa funzionalità consente agli utenti finali di visualizzare le applicazioni distribuite di Configuration Manager e Intune nel Portale aziendale per i clienti co-gestiti. Questo supporto consente agli amministratori di consolidare le diverse esperienze del portale per gli utenti finali. Per altre informazioni, vedere [Usare l'app Portale aziendale in dispositivi con co-gestione](/mem/configmgr/comanage/company-portal). 
+
+### <a name="device-security"></a>Sicurezza del dispositivo
+
+#### <a name="set-device-compliance-state-from-third-party-mdm-providers---6361689---"></a>Impostare lo stato di conformità dei dispositivi di provider MDM di terze parti<!-- 6361689 -->
+
+Intune supporta ora [soluzioni MDM di terze parti come origine dei dettagli di conformità dei dispositivi](../protect/device-compliance-partners.md). Questi dati di conformità di terze parti possono essere usati per applicare i criteri di accesso condizionale per le app Microsoft 365 in iOS e Android tramite l'integrazione con Microsoft Intune.  Intune valuta i dettagli di conformità del provider di terze parti per determinare se un dispositivo è attendibile e quindi imposta gli attributi di accesso condizionale in Azure AD.  Sarà possibile continuare a creare i propri criteri di accesso condizionale di Azure AD dall'interfaccia di amministrazione di Microsoft Endpoint Manager o dal portale di Azure AD.
+
+In questa versione sono supportati i provider MDM di terze parti seguenti, come anteprima pubblica:
+
+- VMware Workspace ONE (in precedenza AirWatch)
+
+*Questo aggiornamento è in fase di distribuzione ai clienti a livello globale. La funzionalità sarà visibile entro la prossima settimana.*
+
+<!-- ########################## -->
 ## <a name="week-of-august-10-2020"></a>Settimana del 10 agosto 2020
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -70,7 +191,7 @@ Per informazioni sulle novità di Microsoft Intune ogni settimana, vedere l'[int
 ### <a name="monitor-and-troubleshoot"></a>Monitorare e risolvere i problemi
 
 #### <a name="power-bi-compliance-report-template-v20---636958---"></a>Modello di report di conformità Power BI V2.0<!-- 636958 -->
-Le app modello di Power BI consentono ai partner Power BI di creare app Power BI con poco codice o senza codice e di distribuirle a qualsiasi cliente Power BI. Gli amministratori possono aggiornare la versione del modello di report di conformità Power BI da V1.0 a V2.0. La versione 2.0 include una progettazione migliorata e aggiornamenti ai calcoli e ai dati esposti come parte del modello. Per altre informazioni, vedere [Connettersi al data warehouse con Power BI](../developer/reports-proc-get-a-link-powerbi.md) e [Aggiornare un'app modello](https://docs.microsoft.com/power-bi/service-template-apps-install-distribute#update-a-template-app). Vedere anche il post di Blog [Announcing a New Version of the PowerBI Compliance Report with Intune Data Warehouse](https://aka.ms/new_compliance_report) (Annuncio di una nuova versione del report di conformità di Power BI con data warehouse di Intune).
+Le app modello di Power BI consentono ai partner Power BI di creare app Power BI con poco codice o senza codice e di distribuirle a qualsiasi cliente Power BI. Gli amministratori possono aggiornare la versione del modello di report di conformità Power BI da V1.0 a V2.0. La versione 2.0 include una progettazione migliorata e aggiornamenti ai calcoli e ai dati esposti come parte del modello. Per altre informazioni, vedere [Connettersi al data warehouse con Power BI](../developer/reports-proc-get-a-link-powerbi.md) e [Aggiornare un'app modello](https://docs.microsoft.com/power-bi/service-template-apps-install-distribute#update-a-template-app). Vedere anche il post di blog sull'[annuncio di una nuova versione del report di conformità di Power BI con data warehouse di Intune](https://aka.ms/new_compliance_report).
 
 <!-- ########################## -->
 ## <a name="week-of-july-13-2020--2007-service-release"></a>Settimana del 13 luglio 2020 (versione del servizio 2007)
@@ -231,7 +352,7 @@ I log DeviceComplianceOrg di Intune in precedenza avevano enumerazioni solo per 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="role-based-access-control"></a>Controllo di accesso in base ai ruoli
 
-#### <a name="assign-profile-and-update-profile-permission-changes--7177586-idready-wnready-wnstaged--"></a>Modifiche delle autorizzazioni Assegna profilo e Aggiorna profilo<!--7177586 idready wnready wnstaged-->
+#### <a name="assign-profile-and-update-profile-permission-changes--7177586-----"></a>Modifiche delle autorizzazioni Assegna profilo e Aggiorna profilo<!--7177586   -->
 Sono state modificate le autorizzazioni di controllo degli accessi in base al ruolo per l'assegnazione del profilo e l'aggiornamento del profilo per il flusso di registrazione automatica dei dispositivi:
 
 Assegna profilo: gli amministratori con questa autorizzazione possono anche assegnare i profili ai token e assegnare un profilo predefinito a un token per la registrazione automatica dei dispositivi.
@@ -243,7 +364,7 @@ Per visualizzare questi ruoli, passare all'[interfaccia di amministrazione di Mi
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="scripting"></a>Scripting
 
-#### <a name="additional-data-warehouse-v10-properties---6125732-wnready---"></a>Proprietà di Data Warehouse v1.0 aggiuntive<!-- 6125732 wnready -->
+#### <a name="additional-data-warehouse-v10-properties---6125732----"></a>Proprietà di Data Warehouse v1.0 aggiuntive<!-- 6125732  -->
 È possibile accedere alle proprietà aggiuntive usando il data warehouse di Intune v1.0. Le proprietà seguenti vengono ora esposte attraverso l'entità [devices](../developer/reports-ref-devices.md#devices):
 - `ethernetMacAddress`: identificatore di rete univoco del dispositivo.
 - `office365Version`: versione di Office 365 installata nel dispositivo.
@@ -368,7 +489,7 @@ Si applica a:
 - Windows 10 e versioni successive
 
 #### <a name="wired-network-device-configuration-profiles-for-macos-devices---3508686----"></a>Profili di configurazione della rete cablata per i dispositivi macOS<!-- 3508686  -->
-È disponibile un nuovo profilo di configurazione dei dispositivi macOS che configura le reti cablate (**Dispositivi** > **Profili di configurazione > **Crea profilo** > **macOS** per la piattaforma > **Rete cablata** per il profilo). Usare questa funzionalità per creare profili 802.1x per gestire le reti cablate e distribuire tali reti nei dispositivi macOS.
+È disponibile un nuovo profilo di configurazione dei dispositivi macOS che configura le reti cablate (**Dispositivi** > **Profili di configurazione**  > **Crea profilo** > **macOS** per la piattaforma > **Rete cablata** per il profilo). Usare questa funzionalità per creare profili 802.1x per gestire le reti cablate e distribuire tali reti nei dispositivi macOS.
 
 Per altre informazioni su questa funzionalità, vedere [Reti cablate nei dispositivi macOS](../configuration/wired-networks-configure.md).
 
@@ -446,7 +567,7 @@ Verranno restituiti nuovi errori per i dispositivi iOS/iPadOS e macOS, tra cui:
 #### <a name="shared-ipads-for-business--6367326-----"></a>IPad condivisi per le aziende<!--6367326   -->
 È possibile usare Intune e Apple Business Manager per configurare in modo semplice e sicuro iPad condiviso, in modo che più dipendenti possano condividere i dispositivi. [iPad condiviso](https://developer.apple.com/education/shared-ipad/) di Apple offre un'esperienza personalizzata per più utenti, pur proteggendo i dati dei singoli utenti. Tramite un ID Apple gestito gli utenti possono accedere alle loro app, ai dati e alle impostazioni personali dopo aver eseguito l'accesso a qualsiasi iPad condiviso nell'organizzazione. iPad condiviso funziona con le identità federate.
 
-Per visualizzare questa funzionalità passare all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Dispositivi** > **iOS** > **Registrazione di iOS** > **Token del programma di registrazione** > scegliere un token** > **Profili** > **Crea profilo** > **iOS**. Nella pagina **Impostazioni di gestione** selezionare **Registra senza affinità utente**. Verrà visualizzata l'opzione **iPad condiviso**.
+Per vedere questa funzionalità passare all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Dispositivi** > **iOS** > **Registrazione di iOS** > **Token del programma di registrazione** > **scegliere un token** > **Profili** > **Crea profilo** > **iOS**. Nella pagina **Impostazioni di gestione** selezionare **Registra senza affinità utente**. Verrà visualizzata l'opzione **iPad condiviso**.
 
 Richiede: iPadOS 13.4 e versioni successive. In questa versione è stato aggiunto il supporto per le sessioni temporanee con iPad condiviso, in modo che gli utenti possano accedere a un dispositivo senza un ID Apple gestito. Al momento della disconnessione, il dispositivo cancella tutti i dati dell'utente e torna a essere immediatamente pronto per l'uso, eliminando la necessità di una cancellazione del dispositivo stesso. 
 
@@ -548,7 +669,7 @@ Le icone di Portale aziendale sono state aggiornate per creare un aspetto più m
 
 Usare i criteri di [sicurezza degli endpoint per il rilevamento e la risposta dell'endpoint](../protect/endpoint-security-edr-policy.md) (EDR) per eseguire l'onboarding e la configurazione dei dispositivi per la distribuzione di Microsoft Defender Advanced Threat Protection (Defender ATP). EDR supporta i criteri per i dispositivi Windows gestiti da Intune (MDM) e un criterio separato per i dispositivi Windows gestiti da Configuration Manager. 
 
-Per usare i criteri per i dispositivi di Configuration Manager, è necessario [configurare Configuration Manager per supportare i criteri EDR](../protect/endpoint-security-edr-policy.md#set-up-configuration-manager-to-support-edr-policy). La configurazione include:
+Per usare i criteri per i dispositivi di Configuration Manager, è necessario [configurare Configuration Manager per supportare i criteri EDR](../protect/tenant-attach-intune.md). La configurazione include:
 
 - La configurazione di Gestione configurazione per il *collegamento di tenant*.
 - L'installazione di un aggiornamento nella console per Configuration Manager per abilitare il supporto per i criteri di EDR. Questo aggiornamento si applica solo alle gerarchie che hanno abilitato il *collegamento di tenant*.
@@ -643,8 +764,8 @@ Si applica a:
 #### <a name="enrollment-restrictions-support-scope-tags--4209550----"></a>Le restrizioni di registrazione supporta i tag di ambito<!--4209550  -->
 È ora possibile assegnare tag di ambito alle restrizioni di registrazione. A tale scopo accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Dispositivi** > **Restrizioni registrazione** > **Crea restrizione**. Creare uno dei due tipi di restrizione. Verrà visualizzata la pagina **Tag di ambito**. Per altre informazioni, vedere [Impostare le restrizioni di registrazione](../enrollment/enrollment-restrictions-set.md).
 
-#### <a name="autopilot-support-for-hololens-2-devices--6305220----"></a>Supporto dei dispositivi Hololens 2 in Autopilot<!--6305220  -->
-Windows Autopilot ora supporta i dispositivi Hololens 2. Per altre informazioni sull'uso di Autopilot per Hololens, vedere [Windows Autopilot per HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot).
+#### <a name="autopilot-support-for-hololens-2-devices--6305220----"></a>Supporto dei dispositivi HoloLens 2 in Autopilot<!--6305220  -->
+Windows Autopilot ora supporta i dispositivi HoloLens 2. Per altre informazioni sull'uso di Autopilot per HoloLens, vedere [Windows Autopilot per HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-management"></a>Gestione dei dispositivi
@@ -752,7 +873,7 @@ Microsoft Endpoint Manager ha riunito Configuration Manager e Intune in un'unica
 È possibile usare criteri di configurazione delle app per gestire l'impostazione S/MIME per Outlook nei dispositivi che eseguono Android Enterprise. È anche possibile scegliere se consentire o meno agli utenti del dispositivo di abilitare o disabilitare S/MIME nelle impostazioni di Outlook. Per usare criteri di configurazione delle app per Android, nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) passare ad **App** > **Criteri di configurazione dell'app**  > **Aggiungi** > **Dispositivi gestiti**. Per altre informazioni sulla configurazione delle impostazioni per Outlook, vedere [Impostazioni di configurazione di Microsoft Outlook](../apps/app-configuration-policies-outlook.md).
 
 #### <a name="pre-release-testing-for-managed-google-play-apps---2681933----"></a>Test della versione preliminare per le app gestite di Google Play<!-- 2681933  -->
-Le organizzazioni che usano [percorsi di test chiusi di Google Play per i test di versioni non definitive dell'app](https://support.google.com/googleplay/android-developer/answer/3131213) possono gestire questi percorsi con Intune. È possibile assegnare in modo selettivo app pubblicate nei percorsi di pre-produzione di Google Play ai gruppi pilota per eseguire i test. In Intune è anche possibile verificare se per un'app è stato pubblicato un percorso di test di compilazione di pre-produzione, oltre a poter assegnare tale percorso a gruppi di utenti o di dispositivi di AAD. Questa funzionalità è disponibile per tutti gli scenari di Android Enterprise attualmente supportati (profilo di lavoro, completamente gestito e dedicato). Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) è possibile aggiungere un'app Google Play gestita selezionando **App** > **Android** > **Aggiungi**. Per altre informazioni, vedere [Uso di tracce di test chiuse di Google Play gestito](../apps/apps-add-android-for-work.md#working-with-managed-google-play-closed-testing-tracks).
+Le organizzazioni che usano [percorsi di test chiusi di Google Play per i test di versioni non definitive dell'app](https://support.google.com/googleplay/android-developer/answer/3131213) possono gestire questi percorsi con Intune. È possibile assegnare in modo selettivo app pubblicate nei percorsi di pre-produzione di Google Play ai gruppi pilota per eseguire i test. In Intune è possibile verificare se per un'app è stato pubblicato un percorso di test di compilazione di pre-produzione, oltre a poter assegnare tale percorso a gruppi di utenti o di dispositivi di Azure AD. Questa funzionalità è disponibile per tutti gli scenari di Android Enterprise attualmente supportati (profilo di lavoro, completamente gestito e dedicato). Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) è possibile aggiungere un'app Google Play gestita selezionando **App** > **Android** > **Aggiungi**. Per altre informazioni, vedere [Uso di tracce di test chiuse di Google Play gestito](../apps/apps-add-android-for-work.md#working-with-managed-google-play-closed-testing-tracks).
 
 #### <a name="microsoft-teams-is-now-included-in-the-office-365-suite-for-macos---5903936----"></a>Microsoft Teams è ora incluso nella famiglia di prodotti Office 365 per macOS<!-- 5903936  -->
 Gli utenti a cui viene assegnato Microsoft Office per macOS in Microsoft Endpoint Manager riceveranno ora Microsoft Teams oltre alle app Microsoft Office esistenti (Word, Excel, PowerPoint, Outlook e OneNote). Intune rileverà i dispositivi Mac esistenti nei quali sono installate altre app Office per macOS e tenterà di installare Microsoft Teams in occasione della successiva sincronizzazione del dispositivo con Intune. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) è possibile trovare **Famiglia di prodotti Office 365** per macOS selezionando **App** > **macOS** > **Aggiungi**. Per altre informazioni, vedere [Assegnare Office 365 a dispositivi macOS con Microsoft Intune](../apps/apps-add-office365-macos.md).

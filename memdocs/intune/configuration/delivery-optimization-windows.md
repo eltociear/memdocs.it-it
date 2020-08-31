@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: kerimh
-ms.openlocfilehash: 4d491a3210229d5dd6c74ccaed7f44c4ae4eb83c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e42d7f303d3d79e2683845b50c7d3dceb11f1686
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990065"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820443"
 ---
 # <a name="delivery-optimization-settings-in-microsoft-intune"></a>Impostazioni di Ottimizzazione recapito in Microsoft Intune
 
@@ -54,7 +54,7 @@ Per informazioni sull'ottimizzazione recapito in Windows 10, vedere [Ottimizzazi
 
 7. Nella pagina **Impostazioni di configurazione** definire il modo in cui si vogliono scaricare gli aggiornamenti e le app. Per informazioni sulle impostazioni disponibili, vedere [Impostazioni di Ottimizzazione recapito per Intune](delivery-optimization-settings.md).
 
-   Al termine della configurazione delle impostazioni, selezionare **Avanti**.
+   Dopo aver configurato le impostazioni, selezionare **Avanti**.
 
 8. Nella pagina **Ambito (tag)** selezionare **Selezionare i tag di ambito** per aprire il riquadro *Seleziona tag* per assegnare tag di ambito al profilo.
   

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/20/2020
+ms.date: 08/24/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,18 +15,18 @@ ms.assetid: f6f5414d-0e41-42fc-b6cf-e7ad76e1e06d
 ms.reviewer: altsou
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
+ms.custom: intune-azure, contperfq1
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5259fe84b11ce5d1ec4a3110dcbc188afb2e6d3e
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: 000ee384ff289b9511b2dde3b1468525ffed63d4
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565683"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820001"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Assegnare profili utente e profili di dispositivo in Microsoft Intune
 
-Dopo aver creato un profilo, completo di tutte le impostazioni specificate, il passaggio successivo consiste nel distribuire o "assegnare" il profilo ai gruppi di utenti o di dispositivi di Azure Active Directory (Azure AD). Con l'assegnazione, gli utenti e i dispositivi ricevono il profilo e vengono applicate le impostazioni specificate.
+Dopo aver creato un profilo, completo di tutte le impostazioni specificate, il passaggio successivo consiste nel distribuire o "assegnare" il profilo ai gruppi di utenti o di dispositivi. Con l'assegnazione, gli utenti e i dispositivi ricevono il profilo e vengono applicate le impostazioni specificate.
 
 Questo articolo illustra come assegnare un profilo e include alcune informazioni sull'uso dei tag di ambito nei profili.
 
@@ -39,27 +39,22 @@ Questo articolo illustra come assegnare un profilo e include alcune informazioni
 
 ## <a name="before-you-begin"></a>Prima di iniziare
 
-Assicurarsi di avere il ruolo appropriato per assegnare i profili. Per altre informazioni, vedere [Controllo degli accessi in base al ruolo (RBAC) con Microsoft Intune](../fundamentals/role-based-access-control.md).
+Assicurarsi di avere il ruolo corretto per assegnare i profili. Per altre informazioni, vedere [Controllo degli accessi in base al ruolo (RBAC) con Microsoft Intune](../fundamentals/role-based-access-control.md).
 
 ## <a name="assign-a-device-profile"></a>Assegnare un profilo di dispositivo
 
 1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selezionare **Dispositivi** > **Profili di configurazione**. Vengono elencati tutti i profili.
-3. Selezionare il profilo che si vuole assegnare e quindi selezionare **Assegnazioni**.
-4. Scegliere **Includi** o **Escludi**, quindi selezionare i gruppi da includere o escludere. Quando si selezionano i gruppi, si sceglie un gruppo di Azure AD. Per selezionare più gruppi, tenere premuto **CTRL** e selezionare i gruppi.
+3. Selezionare il profilo da assegnare > **Proprietà** > **Assegnazioni** > **Modifica**:
 
-    :::image type="content" source="./media/device-profile-assign/group-include-exclude.png" alt-text="Screenshot delle opzioni per includere o escludere i gruppi da un'assegnazione di profilo in Microsoft Intune":::
+    :::image type="content" source="./media/device-profile-assign/properties-select-assignments.png" alt-text="Selezionare le assegnazioni per distribuire il profilo a utenti e gruppi in Microsoft Intune ed Endpoint Manager":::
 
-5. **Salvare** le modifiche.
+4. Selezionare **Gruppi inclusi** o **Gruppi esclusi** e quindi scegliere **Selezionare i gruppi da includere**. Quando si selezionano i gruppi, si sceglie un gruppo di Azure AD. Per selezionare più gruppi, tenere premuto **CTRL** e selezionare i gruppi.
 
-### <a name="evaluate-how-many-users-are-targeted"></a>Valutare il numero di utenti interessati
+    :::image type="content" source="./media/device-profile-assign/select-included-excluded-groups-profile-assignment.png" alt-text="Includere o escludere utenti e gruppi durante l'assegnazione o la distribuzione di un profilo in Microsoft Intune ed Endpoint Manager.":::
 
-Quando si assegna il profilo, è anche possibile usare la funzionalità **Valuta** per calcolare il numero di utenti interessati. Questa funzionalità calcola gli utenti, non i dispositivi.
-
-1. Nell'interfaccia di amministrazione selezionare **Dispositivi** > **Profili di configurazione**.
-2. Selezionare un profilo e quindi **Assegnazioni** > **Valuta**. Viene visualizzato un messaggio che indica il numero di utenti interessati da questo profilo.
-
-Se il pulsante **Valuta** è disattivato, verificare che il profilo sia assegnato a uno o più gruppi.
+5. Selezionare **Verifica e salva**. Questo passaggio non assegna il profilo.
+6. Selezionare **Salva**. Quando si salva, il profilo viene assegnato. I gruppi riceveranno le impostazioni del profilo quando i dispositivi si connettono al servizio Intune.
 
 ## <a name="use-scope-tags-or-applicability-rules"></a>Usare i tag di ambito o le regole di applicabilità
 

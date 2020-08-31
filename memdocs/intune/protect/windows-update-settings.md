@@ -15,12 +15,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c6cb913d0f3d3f806a8a9a2592624b2bcf376f40
-ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
+ms.openlocfilehash: ba826620d1589d081f683e3b4c807115c4a137ae
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83551911"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819712"
 ---
 # <a name="windows-update-settings-for-intune"></a>Impostazioni di aggiornamento di Windows per Intune  
 
@@ -179,12 +179,12 @@ Le impostazioni dell'esperienza utente specificano l'esperienza dell'utente fina
   - **Consenti**: consente agli utenti del dispositivo di usare l'analisi di Windows Update per trovare e scaricare gli aggiornamenti e installare le funzionalità.
   - **Blocca**: impedisce agli utenti del dispositivo di accedere all'analisi di Windows Update, di scaricare gli aggiornamenti e di installare le funzionalità.  
 
-- **Richiedi l'approvazione dell'utente per il riavvio in orario non lavorativo**  
+- **Richiedi l'approvazione utente per ignorare la notifica di riavvio**  
   **Impostazione predefinita**: Non configurato  
   CSP Windows Update: [Update/AutoRestartRequiredNotificationDismissal](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
   
-  - **Non configurato**  
-  - **Obbligatorio**: per richiedere l'approvazione dell'utente per riavviare un dispositivo in orario non lavorativo.  
+  - **No**: chiusura automatica dopo 25 secondi.
+  - **Sì**: richiede la chiusura dell'utente.
    
 - **Avvisa l'utente prima del riavvio automatico obbligatorio con un promemoria ignorabile (ore)**  
   **Impostazione predefinita**: 4  
@@ -239,7 +239,7 @@ Le impostazioni dell'esperienza utente specificano l'esperienza dell'utente fina
   - **Periodo di tolleranza**  
     **Impostazione predefinita**: *Non configurata* CSP Windows Update: [Update/ConfigureDeadlineGracePeriod]( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
 
-    Consente di specificare il numero minimo di giorni dopo la scadenza prima dei riavvii automatici (2 - 7).
+    Consente di specificare il numero minimo di giorni dopo la scadenza prima dei riavvii automatici (0 - 7).
 
   - **Riavvio automatico prima della scadenza**  
     **Impostazione predefinita**:  Sì CSP Windows Update: [Update/ConfigureDeadlineNoAutoReboot](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinenoautoreboot)

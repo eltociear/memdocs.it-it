@@ -1,11 +1,11 @@
 ---
 title: Installare Mobile Threat Defense nel dispositivo mobile
-description: Informazioni su come installare Mobile Threat Defense nel dispositivo mobile.
+description: Informazioni sulle app Mobile Threat Defense e su come configurarle.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/27/2020
+ms.date: 08/20/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,22 +15,40 @@ ms.assetid: ''
 searchScope:
 - User help
 ROBOTS: ''
-ms.custom: intune-enduser
+ms.custom: intune-enduser, contperfq1
 ms.collection: ''
-ms.openlocfilehash: 5df46a4632b198b4b4916f5ce5165b3f116ccac9
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 23d449b6b5edf43ea709f8fce194ac5a8afe8eb4
+ms.sourcegitcommit: 19ef60175cbfd5c5d1e213a6d64eded34ee42041
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881880"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88725350"
 ---
-# <a name="install-mobile-threat-defense"></a>Installare Mobile Threat Defense   
+# <a name="install-mobile-threat-defense-app"></a>Installare un'app Mobile Threat Defense  
 
-Come parte dei requisiti di sicurezza dell'organizzazione, potrebbe essere necessario installare l'app di un fornitore di soluzioni Mobile Threat Defense (MTD). Le app di questo tipo rilevano e avvisano l'utente delle minacce presenti nel dispositivo, ad esempio app sospette, reti o vulnerabilità del sistema operativo.  
+> [!TIP]
+> Sono disponibili diverse app MTD sul mercato. L'organizzazione dovrà indicare quale usare. Se viene chiesto di installare un'app MTD e non si viene reindirizzati immediatamente alla pagina in cui configurarla o installarla, contattare il supporto il personale di supporto IT per assistenza.  
 
-Se non è disponibile l'app MTD necessaria, l'accesso alle app protette con l'account aziendale o dell'istituto di istruzione sarà bloccato. Questo articolo illustra [come installare un'app MTD](set-up-mobile-threat-defense.md#install-app) per sbloccarlo.  
+In base ai requisiti di sicurezza dell'organizzazione, potrebbe essere necessario installare l'app di un fornitore di soluzioni Mobile Threat Defense (MTD). Le app di questo tipo rilevano e avvisano l'utente delle minacce presenti nel dispositivo, ad esempio app sospette, reti o vulnerabilità del sistema operativo.  
 
-Sono disponibili diverse app del fornitore MTD che è possibile installare, tutte con nomi diversi. L'organizzazione comunicherà quale app usare. Se viene richiesto di installare l'app, ma non vengono fornite altre istruzioni o un collegamento per ottenere l'app, contattare il supporto IT. 
+Se l'app MTD necessaria non è disponibile, l'accesso alle app gestite protette con l'account aziendale o dell'istituto di istruzione (ad esempio Microsoft Excel o OneDrive) sarà bloccato. Questo articolo illustra [come configurare un'app MTD](set-up-mobile-threat-defense.md#set-up-mtd-app) e riacquisire l'accesso.    
+
+## <a name="mtd-apps-for-ios"></a>App MTD per iOS
+Le app MTD seguenti vengono comunemente usate nei dispositivi iOS. Selezionare un'app per aprire la relativa presentazione nell'App Store.   
+
+* [Lookout for Work](https://go.microsoft.com/fwlink/?linkid=2139367)
+* [Symantec Endpoint Protection (SEP) Mobile](https://go.microsoft.com/fwlink/?linkid=2139141)
+* [Sandblast Mobile Protect](https://go.microsoft.com/fwlink/?linkid=2139231)
+* [Zimperium zIPS](https://go.microsoft.com/fwlink/?linkid=2139232)
+
+
+## <a name="mtd-apps-for-android"></a>App MTD per Android 
+Le app MTD seguenti vengono comunemente usate nei dispositivi Android. Selezionare un'app per aprire la relativa presentazione in Google Play.  
+
+* [Lookout for Work](https://go.microsoft.com/fwlink/?linkid=2139453)
+* [Symantec Endpoint Protection (SEP) Mobile](https://go.microsoft.com/fwlink/?linkid=2139454)
+* [Sandblast Mobile Protect](https://go.microsoft.com/fwlink/?linkid=2139455)
+* [Zimperium mobile IPS (zIPS)](https://go.microsoft.com/fwlink/?linkid=2139142)  
 
 
 ## <a name="information-your-organization-can-see"></a>Informazioni che l'organizzazione può visualizzare   
@@ -43,14 +61,20 @@ L'organizzazione non può visualizzare i dati nelle app personali, ad esempio SM
 * Bundle dell'app e dimensioni dinamiche: Quantità di spazio usata da un'app nel dispositivo. 
 
 
-## <a name="install-app"></a>Installare l'app    
-Quando si accede a un'app protetta, viene automaticamente richiesto di installare un'app MTD. Per completare l'installazione, seguire i passaggi sullo schermo. Per ulteriori informazioni, seguire la procedura descritta in questa sezione.  
- 
-Potrebbe anche essere richiesto di registrare il dispositivo. La registrazione è necessaria per confermare la propria identità e connettere l'account aziendale o dell'istituto di istruzione al dispositivo. Se non si è registrati, si verrà automaticamente guidati nella procedura corrispondente prima di installare l'app MTD. Quando si arriva alla schermata **Ottieni l'accesso**, è possibile avviare la procedura di installazione.  
+## <a name="set-up-mtd-app"></a>Configurare un'app MTD 
+Quando si accede a un'app protetta, viene richiesto di installare un'app MTD. Seguire i passaggi visualizzati per completare l'installazione e ottenere accesso all'app protetta. 
+
+Per un contesto aggiuntivo, vedere le istruzioni per [iOS](set-up-mobile-threat-defense.md#ios-setup) o [Android](set-up-mobile-threat-defense.md#android-setup) in questa sezione. Questi passaggi sono supplementari e non sostituiscono le istruzioni visualizzate sullo schermo. 
+
+Se viene richiesto di installare un'app MTD, ma non si è certi di quale installare, contattare il personale di supporto IT per assistenza.  
+
+### <a name="device-registration"></a>Registrazione del dispositivo  
+La registrazione del dispositivo è necessaria per confermare la propria identità e connettere l'account aziendale o dell'istituto di istruzione al dispositivo. Se il dispositivo non è registrato, si verrà automaticamente indirizzati ai passaggi visualizzati sullo schermo prima di installare l'app MTD.   
 
 Per altre informazioni sulla registrazione dei dispositivi, vedere [Registrare il dispositivo personale nella rete dell'organizzazione](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network).  
 
 ### <a name="ios-setup"></a>Installazione in iOS  
+Questi passaggi iniziano nella schermata **Ottieni l'accesso**, che viene visualizzato dopo l'accesso a un'app protetta.  
 
 1. Nella schermata **Ottieni l'accesso** seguire le istruzioni per installare l'app MTD richiesta dall'organizzazione.   
 2. Tornare alla schermata **Ottieni l'accesso** e selezionare **Apri**.  
@@ -63,6 +87,7 @@ Per altre informazioni sulla registrazione dei dispositivi, vedere [Registrare i
     * Passare all'app MTD e verificare la presenza di eventuali minacce. Completare i passaggi consigliati per risolvere la minaccia e ottenere di nuovo l'accesso.    
 
 ### <a name="android-setup"></a>Installazione per Android 
+Questi passaggi iniziano nella schermata **Ottieni l'accesso**, che viene visualizzato dopo l'accesso a un'app protetta.  
 
 1. Nella schermata **Ottieni l'accesso** seguire le istruzioni per installare l'app MTD richiesta dall'organizzazione.  
 2. Tornare alla schermata **Ottieni l'accesso** e selezionare **Apri**.  
@@ -74,24 +99,42 @@ Per altre informazioni sulla registrazione dei dispositivi, vedere [Registrare i
     * Nella schermata **Ottieni l'accesso** selezionare **Controlla di nuovo**.  
     * Passare all'app MTD e verificare la presenza di eventuali minacce. Completare i passaggi consigliati per risolvere la minaccia e ottenere di nuovo l'accesso.  
 
-### <a name="installation-failed"></a>L'installazione non è riuscita  
 
-Se l'installazione non riesce, contattare il responsabile del supporto IT. Visitare il [sito Web Portale aziendale](https://go.microsoft.com/fwlink/?linkid=2010980) per trovare le informazioni di contatto dell'organizzazione.  
-
-È anche possibile inviare i log dell'app al responsabile del supporto IT per fornire più contesto sull'installazione.  
-* Utenti Android: [caricare e inviare i log tramite posta elettronica](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android) dall'app Portale aziendale.   
-
-* Utenti di dispositivi iOS: [recuperare e inviare i log](https://docs.microsoft.com/intune/apps/manage-microsoft-edge#use-microsoft-edge-to-access-managed-app-logs) da Microsoft Edge per iOS.  
-
-## <a name="resolve-a-threat"></a>Risolvere una minaccia  
-Se una minaccia supera il livello di minaccia configurato, l'organizzazione può procedere in due modi:  
+## <a name="resolving-a-threat"></a>Risoluzione di una minaccia
+Se viene rilevata una minaccia che supera il livello configurato, l'organizzazione può procedere in due modi:  
    
 * Blocca l'accesso: impedisce all'utente di usare le app protette dell'organizzazione quando è connesso con l'account aziendale o dell'istituto di istruzione.  
 * Cancella i dati: elimina i dati aziendali o dell'istituto di istruzione da una o più app protette dell'organizzazione.  
 
-Per risolvere una minaccia e ottenere nuovamente l'accesso, aprire l'app MTD nel dispositivo. Leggere le informazioni fornite per apprendere in che modo la minaccia potrebbe influire sul dispositivo e come risolverla. Dopo aver seguito i passaggi per risolvere la minaccia, tornare all'app MTD e avviare una nuova analisi. Potrebbero essere necessari alcuni minuti per ottenere di nuovo l'accesso all'organizzazione.  
+Per risolvere una minaccia e ottenere nuovamente l'accesso alle app protette:  
+
+1. Aprire l'app MTD nel proprio dispositivo.     
+2. Leggere i dettagli della minaccia nell'app, che spiegano come potrebbe influire sul dispositivo in caso di mancata risoluzione e come risolverla. 
+3. Dopo avere apportato le modifiche necessarie al dispositivo, tornare nell'app MTD e avviare una nuova analisi. Ripetere questi passaggi fino a risolvere tutte le minacce. Potrebbero essere necessari alcuni minuti prima che le modifiche vengano sincronizzate con l'organizzazione. Una volta sincronizzate le modifiche, sarà possibile ottenere nuovamente l'accesso all'app protetta. 
+
+## <a name="get-support"></a>Ottenere supporto
+Visitare il [sito Web Portale aziendale](https://go.microsoft.com/fwlink/?linkid=2010980) per trovare le informazioni di contatto dell'organizzazione. Contattare il supporto per assistenza su:
+
+* Identificazione dell'app MTD da usare  
+* Installazione  
+* Installazione non riuscita  
+* Rilevamento e risoluzione di una minaccia  
+* Disinstallazione di un'app MTD   
+ 
+
+### <a name="share-app-logs-with-it-support"></a>Condividere i log delle app con il supporto IT  
+È anche possibile inviare i log dell'app al personale del supporto IT per fornire un maggior contesto sull'installazione non riuscita.  
+* Utenti Android: [caricare e inviare i log tramite posta elettronica](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android) dall'app Portale aziendale.   
+
+* Utenti di dispositivi iOS: [recuperare e inviare i log](https://docs.microsoft.com/intune/apps/manage-microsoft-edge#use-microsoft-edge-to-access-managed-app-logs) da Microsoft Edge per iOS.  
+
 
 ## <a name="next-steps"></a>Passaggi successivi  
+
+Per altre informazioni sul funzionamento delle app gestite, su come ottenerle e su come riconoscere che se ne sta usando una, vedere gli articoli seguenti.  
+
+* [Usare le app gestite nel dispositivo Android](use-managed-apps-on-your-device-android.md)
+* [Usare le app gestite nel dispositivo iOS](use-managed-apps-on-your-device-ios.md)  
 
 Serve ancora assistenza? Contattare l'amministratore IT. Per informazioni sul contatto vedere il [sito Web del portale aziendale](https://go.microsoft.com/fwlink/?linkid=2010980).
 

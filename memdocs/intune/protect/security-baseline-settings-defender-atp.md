@@ -18,12 +18,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 zone_pivot_groups: atp-baseline-versions
-ms.openlocfilehash: 8046318c55e2a9791f01fca4a5a54de3f1487782
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: d29240dcbcbbcd5a4399dbfb3648c2a6df47764c
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022187"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663430"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="atp-april-2020"
@@ -110,6 +110,9 @@ Per altre informazioni, vedere [Impostazioni di Criteri di gruppo per BitLocker]
   Questa impostazione si applica solo ai dispositivi con SKU Windows Mobile e Mobile Enterprise.
   - **Sì** (*impostazione predefinita*) - La crittografia delle schede di memoria è obbligatoria per i dispositivi mobili.
   - **Non configurato** - Viene ripristinata l'impostazione predefinita del sistema operativo, che non richiede la crittografia delle schede di memoria.
+
+  > [!NOTE]
+  > Il supporto per [Windows 10 Mobile](https://support.microsoft.com/help/4485197/windows-10-mobile-end-of-support-faq) e [Windows Phone 8.1](https://support.microsoft.com/help/4036480/windows-phone-8-1-end-of-support-faq) è terminato ad agosto 2020.
 
 - **Abilita la crittografia completa del disco per le unità del sistema operativo e le unità dati fisse**  
   CSP: [RequireDeviceEncryption](https://go.microsoft.com/fwlink/?linkid=872523)

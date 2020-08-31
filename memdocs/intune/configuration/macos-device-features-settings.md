@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/15/2020
+ms.date: 08/20/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91bf09a122031b7186840bc17cd44cc5738b2ffe
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 79c389767ad3cb796e2cc7b4cd9a35015e17a837
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093555"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819661"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Impostazioni relative alle funzionalità dei dispositivi macOS in Intune
 
@@ -267,6 +267,15 @@ Questa funzionalità si applica a:
 - **Tipo di estensione dell'app per accesso Single Sign-On**: scegliere il tipo di estensione dell'app per l'accesso Single Sign-On. Le opzioni disponibili sono:
 
   - **Non configurata**: non vengono usate le estensioni dell'app. Per disabilitare un'estensione dell'app, impostare il tipo di estensione dell'app per l'accesso Single Sign-On su **Non configurato**.
+  - **Microsoft Azure AD**: Usa il plug-in Microsoft Enterprise Single Sign-On, che è un'estensione dell'app per accesso Single Sign-On di tipo reindirizzamento. Questo plug-in offre l'accesso SSO per gli account Active Directory in tutte le applicazioni macOS che supportano la funzionalità [Enterprise Single Sign-On di Apple](https://developer.apple.com/documentation/authenticationservices). Usare questo tipo di estensione dell'app SSO per abilitare l'accesso Single Sign-On per le app Microsoft, le app dell'organizzazione e i siti Web che eseguono l'autenticazione con Azure AD.
+
+    Il plug-in per l'accesso Single Sign-On funge da broker di autenticazione avanzato e offre miglioramenti della sicurezza e dell'esperienza utente.
+
+    > [!IMPORTANT]
+    > Per ottenere l'accesso SSO con il tipo di estensione dell'app per accesso Single Sign-On di Microsoft Azure AD, installare prima l'app Portale aziendale macOS nei dispositivi. L'app Portale aziendale distribuisce il plug-in Microsoft Enterprise Single Sign-On ai dispositivi. Le impostazioni dell'estensione dell'app per accesso Single Sign-On di MDM attivano il plug-in. Dopo aver installato l'app Portale aziendale e il profilo dell'estensione dell'app per accesso Single Sign-On nei dispositivi, gli utenti possono accedere con le loro credenziali e creare una sessione nei loro dispositivi. Questa sessione viene usata tra diverse applicazioni senza richiedere agli utenti di eseguire di nuovo l'autenticazione.
+    >
+    > Per altre informazioni sull'app Portale aziendale, vedere [Cosa succede se si installa l'app Portale aziendale e si registra il dispositivo macOS in Intune](../user-help/what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-macos.md). [Scaricare](https://go.microsoft.com/fwlink/?linkid=853070) l'app Portale aziendale.
+
   - **Reindirizzamento**: usare un'estensione dell'app di reindirizzamento generica e personalizzabile per usare Single Sign-On con i flussi di autenticazione moderni. Assicurarsi di conoscere l'estensione e l'ID team per l'estensione dell'app dell'organizzazione.
   - **Credenziali**: usare un'estensione dell'app per le credenziali personalizzabile e generica per usare Single Sign-On con i flussi di autenticazione challenge-and-response (richiesta e risposta). Assicurarsi di conoscere l'ID estensione e l'ID team dell'estensione dell'app per l'accesso Single Sign-On dell'organizzazione.  
   - **Kerberos**: usare l'estensione Kerberos predefinita di Apple, inclusa in macOS Catalina 10.15 e versioni successive. Questa opzione è una versione specifica di Kerberos dell'estensione dell'app **Credenziali**.
@@ -291,7 +300,7 @@ Questa funzionalità si applica a:
   - Tutti gli URL nei profili di estensione dell'app per l'accesso Single Sign-On di Intune devono essere univoci. Non è possibile ripetere un dominio in un profilo di estensione dell'app per l'accesso Single Sign-On, anche se si usano tipi diversi di estensioni dell'app per l'accesso Single Sign-On.
   - Gli URL devono iniziare con `http://` o `https://`.
 
-- **Configurazione aggiuntiva** (reindirizzamento e credenziali): immettere i dati aggiuntivi specifici dell'estensione da passare all'estensione dell'app per l'accesso SSO:
+- **Configurazione aggiuntiva** (Microsoft Azure AD, reindirizzamento e credenziali): immettere i dati aggiuntivi specifici dell'estensione da passare all'estensione dell'app per l'accesso SSO:
   - **Chiave**: immettere il nome dell'elemento che si vuole aggiungere, ad esempio `user name`.
   - **Tipo**: immettere il tipo di dati. Le opzioni disponibili sono:
 
@@ -331,7 +340,13 @@ Questa funzionalità si applica a:
 - **Codice del sito di Active Directory** (solo Kerberos): immettere il nome del sito Active Directory che deve essere usato dall'estensione Kerberos. Potrebbe non essere necessario modificare questo valore poiché l'estensione Kerberos potrebbe trovare automaticamente il codice del sito Active Directory.
 - **Nome cache** (solo Kerberos): immettere il nome GSS (Generic Security Services) della cache Kerberos. Probabilmente non è necessario impostare questo valore.  
 - **Messaggio relativo ai requisiti per le password** (solo Kerberos): immettere una versione in formato testo dei requisiti per le password dell'organizzazione visualizzati agli utenti. Il messaggio viene visualizzato se non sono richiesti i requisiti di complessità delle password di Active Directory o non si specifica la lunghezza minima della password.  
-- **ID aggregazione di app** (solo Kerberos): **aggiungere** gli identificatori delle aggregazioni di app che devono usare l'accesso Single Sign-On nei dispositivi. A queste app viene concesso l'accesso al ticket di concessione ticket Kerberos e al ticket di autenticazione. Anche le app autenticano gli utenti per i servizi a cui sono autorizzati ad accedere.
+- **Abilita la modalità dispositivo condiviso** (solo Microsoft Azure AD): selezionare **Sì** se si distribuisce il plug-in Microsoft Enterprise Single Sign-On ai dispositivi macOS configurati per la funzionalità della modalità dispositivo condiviso di Azure AD. I dispositivi in modalità condivisa consentono a molti utenti di effettuare l'accesso e la disconnessione a livello globale dalle applicazioni che supportano Modalità dispositivo condiviso. Quando questa opzione è impostata su **Non configurato**, Intune non modifica o aggiorna questa impostazione. 
+
+  Se è impostata su **Sì**, tutti gli account utente esistenti vengono cancellati dai dispositivi. Per evitare la perdita di dati o per impedire il ripristino delle impostazioni predefinite, assicurarsi di capire gli effetti di questa impostazione sui dispositivi.
+
+  Per altre informazioni sulla modalità dispositivo condiviso, vedere [Panoramica della modalità dispositivo condiviso](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices).
+
+- **ID bundle dell'app** (Microsoft Azure AD, Kerberos): **aggiungere** gli identificatori delle aggregazioni di app che devono usare l'accesso Single Sign-On nei dispositivi. A queste app viene concesso l'accesso al ticket di concessione ticket Kerberos e al ticket di autenticazione. Anche le app autenticano gli utenti per i servizi a cui sono autorizzati ad accedere.
 - **Mapping dell'area di autenticazione dei domini** (solo Kerberos): **aggiungere** i suffissi DNS di dominio che devono essere mappati all'area di autenticazione. Usare questa impostazione quando i nomi DNS degli host non corrispondono al nome dell'area di autenticazione. Probabilmente non è necessario creare questo mapping da dominio ad area di autenticazione personalizzato.
 - **Certificato PKINIT** (solo Kerberos): **selezionare** il certificato PKINIT (Public Key Cryptography for Initial Authentication) che può essere usato per l'autenticazione Kerberos. È possibile scegliere tra i certificati [PKCS](../protect/certficates-pfx-configure.md) o [SCEP](../protect/certificates-scep-configure.md) aggiunti in Intune. Per altre informazioni sui certificati, vedere [Usare i certificati per l'autenticazione in Microsoft Intune](../protect/certificates-configure.md).
 

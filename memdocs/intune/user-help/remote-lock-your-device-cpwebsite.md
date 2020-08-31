@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/28/2018
+ms.date: 08/20/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 9d932fffa7381cca26699bb37e10783bcd7803dd
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 57d4cc3889c60f9b62d0bb0617731b9ab0058f4c
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880926"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820647"
 ---
 # <a name="remotely-lock-your-device-from-the-company-portal-website"></a>Bloccare il dispositivo in modalità remota dal sito Web del portale aziendale
 
@@ -35,9 +35,7 @@ L'impostazione di blocco remoto funziona per:
 * Android
 * iOS
 * macOS
-* Windows 10
-* Windows 10 Mobile (se per il dispositivo è già stato impostato un passcode)
-* Windows Phone 8.1 (se per il dispositivo è già stato impostato un passcode)  
+* Windows 10  
 
 1. Nel [sito Web del portale aziendale](https://portal.manage.microsoft.com) selezionare il pulsante __Menu__ > __Dispositivi__.  
 
@@ -53,6 +51,8 @@ L'impostazione di blocco remoto funziona per:
 
 4. Viene visualizzato un messaggio che avvisa che il dispositivo sta per essere bloccato. Toccare **Blocco remoto** per confermare.
 
+## <a name="check-the-status-of-remote-lock"></a>Controllare lo stato del blocco remoto
+
 Dopo la conferma, il portale aziendale tenta di bloccare il dispositivo. Durante questo periodo viene visualizzato un messaggio "Blocco remoto in sospeso". Quando il dispositivo è bloccato, lo stato diventa "Blocco remoto riuscito".  
 
 Lo stato del blocco remoto viene visualizzato in tre posizioni:
@@ -66,4 +66,6 @@ Lo stato del blocco remoto viene visualizzato in tre posizioni:
 
 Se il dispositivo viene ritrovato e si vuole rimuovere il blocco dopo aver usato Blocco remoto, immettere il passcode.  
 
-Serve ancora assistenza? Contattare l'amministratore IT. Per informazioni sul contatto vedere il [sito Web del portale aziendale](https://go.microsoft.com/fwlink/?linkid=2010980).
+## <a name="next-steps"></a>Passaggi successivi
+
+Serve assistenza? Contattare il responsabile del supporto IT. Per informazioni sul contatto vedere il [sito Web del portale aziendale](https://go.microsoft.com/fwlink/?linkid=2010980).  

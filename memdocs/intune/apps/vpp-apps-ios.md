@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3dd7730e8ac25c41140f3e375383bf185eae91e6
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 21bc1b47f64318579da439e37f8dcf66d5a0a6ce
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217216"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820511"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Procedura per la gestione delle app iOS e macOS acquistate tramite Volume Purchase Program di Apple con Microsoft Intune
 
@@ -175,7 +175,7 @@ Agli utenti finali verrà richiesto di installare app VPP in numerosi scenari. N
 
 ## <a name="deleting-vpp-tokens"></a>Eliminazione di token VPP
 <!-- 820879 -->  
-È possibile eliminare un token Volume Purchasing Program (VPP) di Apple tramite la console. Ciò potrebbe risultare necessario in presenza di istanze duplicate di un token VPP. L'eliminazione di un token eliminerà anche le eventuali app associate e l'assegnazione. Tuttavia, l'eliminazione di un token non comporta la revoca delle licenze per le app o la disinstallazione di app. 
+È possibile eliminare un token Volume Purchasing Program (VPP) di Apple tramite la console. Ciò potrebbe risultare necessario in presenza di istanze duplicate di un token VPP. L'eliminazione di un token eliminerà anche le eventuali app associate e l'assegnazione. L'eliminazione di un token revoca le licenze delle app associate ma non disinstalla le app.  
 
 >[!NOTE]
 >Intune non può revocare le licenze delle app dopo l'eliminazione di un token. 

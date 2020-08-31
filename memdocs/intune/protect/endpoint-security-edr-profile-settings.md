@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: e26719bb9bf322e3e4bf11b39911e98788707629
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: e7896d2b5dff7132056ed004443e7fa3623f016e
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86460417"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820018"
 ---
 # <a name="endpoint-detection-and-response-policy-settings-for-endpoint-security-in-intune"></a>Impostazioni di criteri per il rilevamento di endpoint e risposta per la sicurezza degli endpoint in Intune
 
@@ -32,7 +32,7 @@ Piattaforme e profili supportati:
 - **Windows 10 e versioni successive**: usare questa piattaforma per i criteri distribuiti nei dispositivi gestiti con Intune.
   - Profilo: **Rilevamento di endpoint e risposta (MDM)**
 
-- **Windows 10 e Windows Server**: usare questa piattaforma per i criteri distribuiti nei dispositivi gestiti da Configuration Manager.
+- **Windows 10 e Windows Server (ConfigMgr)** : usare questa piattaforma per i criteri distribuiti nei dispositivi gestiti da Configuration Manager.
   - Profilo: **Rilevamento di endpoint e risposta (ConfigMgr)**
 
 ## <a name="endpoint-detection-and-response-mdm"></a>Rilevamento di endpoint e risposta (MDM)

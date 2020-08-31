@@ -27,7 +27,7 @@
 - Windows 10 Teams (Surface Hub)
 
    Per altre informazioni sulla gestione dei dispositivi che eseguono Windows 10 Teams, vedere [Gestire Surface Hub con MDM](https://docs.microsoft.com/surface-hub/manage-settings-with-mdm-for-surface-hub)
-- Windows 10 1709 (RS3) e versioni successive, Windows Phone 8.1, Windows 8.1 RT, PC che eseguono Windows 8.1 (modalità di mantenimento)
+- PC Windows 10 1709 (RS3) e versioni successive, PC Windows 8.1 R che eseguono Windows 8.1 (modalità di mantenimento)
 
 > [!NOTE]
 > Non tutte le edizioni di Windows supportano tutte le funzionalità del sistema operativo disponibili che vengono configurate tramite MDM. Vedere la [documentazione di riferimento sui provider di servizi di configurazione Windows](https://docs.microsoft.com/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers). Ogni provider di servizi di configurazione (CSP) evidenzia le edizioni di Windows supportate.

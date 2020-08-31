@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/08/2020
+ms.date: 08/20/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 32d46374186596e8c8721b77510738caadcf78b8
-ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
+ms.openlocfilehash: 09ccfe079511c90f2ce7ecf6c27d4dfcf1c85327
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84814954"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820188"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>Impostazioni dei dispositivi iOS e iPadOS per usare le funzionalità iOS/iPadOS comuni in Intune
 
@@ -301,10 +301,10 @@ Questa funzionalità si applica a:
 
 - **Tipo di estensione dell'app per accesso Single Sign-On**: scegliere il tipo di estensione dell'app per l'accesso Single Sign-On. Le opzioni disponibili sono:
 
-  - **Non configurata**: Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo non userà le estensioni dell'app. Per disabilitare un'estensione dell'app, è possibile impostare il tipo di estensione dell'app per l'accesso Single Sign-On su **Non configurato**.
+  - **Non configurata**: Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo non usa le estensioni dell'app. Per disabilitare un'estensione dell'app, è possibile impostare il tipo di estensione dell'app per l'accesso Single Sign-On su **Non configurato**.
   - **Microsoft Azure AD**: Usa il plug-in Microsoft Enterprise Single Sign-On, che è un'estensione dell'app per accesso Single Sign-On di tipo reindirizzamento. Questo plug-in offre l'accesso SSO per gli account Active Directory in tutte le applicazioni che supportano la funzionalità [Enterprise Single Sign-On di Apple](https://developer.apple.com/documentation/authenticationservices). Usare questo tipo di estensione dell'app SSO per abilitare l'accesso Single Sign-On per le app Microsoft, le app dell'organizzazione e i siti Web che eseguono l'autenticazione con Azure AD.
 
-    Il plug-in per l'accesso Single Sign-On funge da broker di autenticazione avanzato e offre miglioramenti della sicurezza e dell'esperienza utente. Tutte le app che in precedenza usavano l'autenticazione negoziata con l'app Microsoft Authenticator continuano a ottenere l'accesso Single Sign-On con il [plug-in Microsoft Enterprise Single Sign-On per i dispositivi Apple](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin).
+    Il plug-in per l'accesso Single Sign-On funge da broker di autenticazione avanzato e offre miglioramenti della sicurezza e dell'esperienza utente. Tutte le app che usavano l'app Microsoft Authenticator per l'autenticazione continuano a ottenere l'accesso Single Sign-On con il [plug-in Microsoft Enterprise Single Sign-On per i dispositivi Apple](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin).
 
     > [!IMPORTANT]
     > Per ottenere l'accesso SSO con il tipo di estensione dell'app SSO di Microsoft Azure AD, installare prima l'app Microsoft Authenticator iOS/iPadOS nei dispositivi. L'app Authenticator recapita il plug-in Microsoft Enterprise Single Sign-On ai dispositivi e le impostazioni dell'estensione dell'app SSO MDM attivano il plug-in. Quando Authenticator e il profilo dell'estensione dell'app SSO sono installati nei dispositivi, gli utenti devono immettere le credenziali per accedere e creare una sessione nei propri dispositivi. La sessione viene quindi usata su diverse applicazioni senza richiedere agli utenti di eseguire di nuovo l'autenticazione. Per altre informazioni su Authenticator, vedere l'articolo sull'[app Microsoft Authenticator](https://docs.microsoft.com/azure/active-directory/user-help/user-help-auth-app-overview).
@@ -371,7 +371,12 @@ Questa funzionalità si applica a:
 
 - **Codice del sito di Active Directory** (solo Kerberos): immettere il nome del sito Active Directory che deve essere usato dall'estensione Kerberos. Potrebbe non essere necessario modificare questo valore poiché l'estensione Kerberos potrebbe trovare automaticamente il codice del sito Active Directory.
 - **Nome cache** (solo Kerberos): immettere il nome GSS (Generic Security Services) della cache Kerberos. Probabilmente non è necessario impostare questo valore.
-- **ID aggregazione di app** (solo Kerberos): **aggiungere** gli identificatori delle aggregazioni di app che devono usare l'accesso Single Sign-On nei dispositivi. Queste app ricevono l'accesso al Ticket Granting Ticket Kerberos, il ticket di autenticazione, ed eseguono l'autenticazione degli utenti per i servizi a cui sono autorizzati ad accedere.
+- **ID bundle dell'app** (Microsoft Azure AD, Kerberos): immettere gli ID bundle delle app aggiuntive che dovranno accedere con Single Sign-On tramite un'estensione nei dispositivi.
+
+  Se si usa il tipo di estensione dell'app per accesso Single Sign-On di Microsoft Azure AD, queste app usano il plug-in Microsoft Enterprise Single Sign-On per autenticare l'utente senza che sia necessario l'accesso. Gli ID bundle dell'app immessi sono autorizzati a usare l'estensione dell'app per accesso Single Sign-On di Microsoft Azure AD se non usano librerie Microsoft, ad esempio Microsoft Authentication Library (MSAL). L'esperienza per queste app potrebbe non essere uniforme rispetto alle librerie Microsoft. Le app precedenti che usano l'autenticazione MSAL o le app che non usano le librerie Microsoft più recenti devono essere aggiunte a questo elenco per funzionare correttamente con l'estensione dell'app per accesso Single Sign-On di Microsoft Azure.  
+
+  Se si usa il tipo di estensione dell'app per accesso Single Sign-On di Kerberos, queste app hanno accesso al Ticket Granting Ticket Kerberos, il ticket di autenticazione, ed eseguono l'autenticazione degli utenti per i servizi a cui sono autorizzati ad accedere.
+
 - **Mapping dell'area di autenticazione dei domini** (solo Kerberos): **aggiungere** i suffissi DNS di dominio che devono essere mappati all'area di autenticazione. Usare questa impostazione quando i nomi DNS degli host non corrispondono al nome dell'area di autenticazione. Probabilmente non è necessario creare questo mapping da dominio ad area di autenticazione personalizzato.
 - **Certificato PKINIT** (solo Kerberos): **selezionare** il certificato PKINIT (Public Key Cryptography for Initial Authentication) che può essere usato per l'autenticazione Kerberos. È possibile scegliere tra i certificati [PKCS](../protect/certficates-pfx-configure.md) o [SCEP](../protect/certificates-scep-configure.md) aggiunti in Intune. Per altre informazioni sui certificati, vedere [Usare i certificati per l'autenticazione in Microsoft Intune](../protect/certificates-configure.md).
 

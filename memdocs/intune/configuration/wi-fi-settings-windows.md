@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/13/2020
+ms.date: 08/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d47f1e121a5010a17d213d21d3208977e8f75514
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 6bfa28a6b4df30c6303f75d4a5cf91c20ce4e827
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217635"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820630"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Aggiungere le impostazioni Wi-Fi per dispositivi Windows 10 e versioni successive in Intune
 
-È possibile creare un profilo con impostazioni Wi-Fi specifiche e quindi distribuire questo profilo ai dispositivi Windows 10 e versioni successive. Microsoft Intune offre numerose funzionalità, tra cui l'autenticazione nella rete, l'uso di una chiave precondivisa e altro ancora.
+È possibile creare un profilo con impostazioni Wi-Fi specifiche. Distribuire quindi questo profilo nei dispositivi Windows 10 e versioni successive. Microsoft Intune offre numerose funzionalità, tra cui l'autenticazione nella rete, l'uso di una chiave precondivisa e altro ancora.
 
 Questo articolo descrive queste impostazioni.
 
@@ -86,7 +86,7 @@ I profili aziendali usano il protocollo EAP (Extensible Authentication Protocol)
 
     Si supponga ad esempio di creare una rete Wi-Fi **ContosoCorp** e di usare **ContosoCorp** all'interno di questo profilo di configurazione. Nel raggio di copertura è disponibile anche una rete Wi-Fi **ContosoGuest**. Quando si trovano nel raggio di copertura, i dispositivi aziendali devono connettersi automaticamente a **ContosoCorp**. In questo scenario impostare la proprietà **Connetti alla rete preferita se disponibile** su **No**.
 
-  - **Consente di stabilire la connessione a questa rete anche se non trasmette il rispettivo SSID**: scegliere **Sì** per indicare al profilo di configurazione di connettersi automaticamente alla rete, anche quando la rete è nascosta, ovvero quando il relativo SSID non viene trasmesso pubblicamente. Scegliere **No** se non si vuole che il profilo di configurazione si connetta alla rete nascosta.
+- **Consente di stabilire la connessione a questa rete anche se non trasmette il rispettivo SSID**: scegliere **Sì** per indicare al profilo di configurazione di connettersi automaticamente alla rete, anche quando la rete è nascosta, ovvero quando il relativo SSID non viene trasmesso pubblicamente. Scegliere **No** se non si vuole che il profilo di configurazione si connetta alla rete nascosta.
 
 - **Limite per la connessione a consumo**: l'amministratore può scegliere come viene misurato il traffico di rete. Le applicazioni possono quindi modificare il comportamento del traffico di rete in base a questa impostazione. Le opzioni disponibili sono:
 
@@ -124,19 +124,27 @@ I profili aziendali usano il protocollo EAP (Extensible Authentication Protocol)
     > [!NOTE]
     > Quando si usa un tipo EAP, sono supportati solo i profili di certificato SCEP e PKCS.
 
-    - **Server Trust**  
+    **SERVER TRUST**  
 
-      **Nomi dei server per certificati**: da usare con i tipi **EAP-TLS**, **EAP-TTLS** o **PEAP**. Immettere uno o più nomi comuni usati nei certificati emessi dall'autorità di certificazione (CA) attendibile. Se si immettono queste informazioni, è possibile ignorare la finestra di dialogo relativa al trust dinamico visualizzata nei dispositivi degli utenti quando si connettono alla rete Wi-Fi.  
+    - **Nomi dei server per certificati**: da usare con i tipi **EAP-TLS**, **EAP-TTLS** o **PEAP**. Immettere uno o più nomi comuni usati nei certificati emessi dall'autorità di certificazione (CA) attendibile. Se si immettono queste informazioni, è possibile ignorare la finestra di dialogo relativa al trust dinamico visualizzata nei dispositivi degli utenti quando si connettono alla rete Wi-Fi.  
 
-      **Certificato radice per la convalida server**: da usare con i tipi **EAP-TLS**, **EAP-TTLS** o **PEAP**. Scegliere il profilo del certificato radice attendibile usato per autenticare la connessione.  
+    - **Certificato radice per la convalida server**: da usare con i tipi **EAP-TLS**, **EAP-TTLS** o **PEAP**. Scegliere il profilo del certificato radice attendibile usato per autenticare la connessione.  
 
-      **Privacy dell'identità (identità esterna)** : da usare con il tipo EAP **PEAP**. Immettere il testo inviato in risposta a una richiesta di identità EAP. Questo testo può essere costituito da qualsiasi valore. Durante l'autenticazione, viene inviata inizialmente questa identità anonima, seguita da quella effettiva inviata tramite un tunnel sicuro.  
+    - **Privacy dell'identità (identità esterna)** : da usare con il tipo EAP **PEAP**. Immettere il testo inviato in risposta a una richiesta di identità EAP. Questo testo può essere costituito da qualsiasi valore. Durante l'autenticazione, viene inviata inizialmente questa identità anonima, seguita da quella effettiva inviata tramite un tunnel sicuro.  
 
-    - **Autenticazione client**
+    - **Esegui la convalida del server nella fase 1 di PEAP**: se questa opzione è impostata su **Sì** nella fase 1 di negoziazione PEAP i dispositivi eseguono la convalida del certificato e verificano il server. Selezionare **No** per bloccare o impedire questa convalida. Quando questa opzione è impostata su **Non configurato**, Intune non modifica o aggiorna questa impostazione.
 
-      **Certificato client per l'autenticazione client (certificato di identità)** : da usare con il tipo EAP **EAP-TLS**. Scegliere il profilo di certificato usato per autenticare la connessione.
+      Se si seleziona **Sì**, configurare anche:
 
-      **Metodo di autenticazione**: da usare con il tipo EAP **EAP-TTLS**. Selezionare il metodo di autenticazione per la connessione:  
+      **Disabilita le richieste utente per la convalida del server nella fase 1 di PEAP**: se questa opzione è impostata su **Sì** nella fase 1 di negoziazione PEAP, non vengono visualizzate le richieste utente che richiedono di autorizzare nuovi server PEAP per le autorità di certificazione attendibili. Selezionare **No** per visualizzare le richieste. Quando questa opzione è impostata su **Non configurato**, Intune non modifica o aggiorna questa impostazione.
+
+    - **Richiedi cryptobinding**: **Sì** impedisce le connessioni ai server PEAP che non usano cryptobinding durante la negoziazione PEAP. **No** non richiede cryptobinding. Quando questa opzione è impostata su **Non configurato**, Intune non modifica o aggiorna questa impostazione.
+
+    **AUTENTICAZIONE CLIENT**
+
+    - **Certificato client per l'autenticazione client (certificato di identità)** : da usare con il tipo EAP **EAP-TLS**. Scegliere il profilo di certificato usato per autenticare la connessione.
+
+    - **Metodo di autenticazione**: da usare con il tipo EAP **EAP-TTLS**. Selezionare il metodo di autenticazione per la connessione:  
 
       - **Certificati**: selezionare il certificato client che corrisponde al certificato di identità presentato al server.
       - **Nome utente e password**: immettere un **metodo non EAP (identità interna)** per l'autenticazione. Le opzioni disponibili sono:
@@ -146,7 +154,7 @@ I profili aziendali usano il protocollo EAP (Extensible Authentication Protocol)
         - **Microsoft CHAP (MS-CHAP)**
         - **Microsoft CHAP versione 2 (MS-CHAP v2)**
 
-      **Privacy dell'identità (identità esterna)** : da usare con il tipo EAP **EAP-TTLS**. Immettere il testo inviato in risposta a una richiesta di identità EAP. Questo testo può essere costituito da qualsiasi valore. Durante l'autenticazione, viene inviata inizialmente questa identità anonima, seguita da quella effettiva inviata tramite un tunnel sicuro.
+    - **Privacy dell'identità (identità esterna)** : da usare con il tipo EAP **EAP-TTLS**. Immettere il testo inviato in risposta a una richiesta di identità EAP. Questo testo può essere costituito da qualsiasi valore. Durante l'autenticazione, viene inviata inizialmente questa identità anonima, seguita da quella effettiva inviata tramite un tunnel sicuro.
 
 - **Impostazioni del proxy aziendale**: scegliere questa impostazione per usare le impostazioni proxy all'interno dell'organizzazione. Le opzioni disponibili sono:
   - **Nessuno**: non sono state configurate impostazioni proxy.
@@ -161,9 +169,9 @@ Per le impostazioni non disponibili in Intune, è possibile esportare le imposta
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Il profilo viene creato, ma non è ancora operativo. [Assegnare il profilo](device-profile-assign.md).
+Il profilo è stato creato, ma potrebbe non essere operativo. Assicurarsi di [assegnare il profilo](device-profile-assign.md) e [monitorarne lo stato](device-profile-monitor.md).
 
 ## <a name="more-resources"></a>Altre risorse
 
-- Visualizzare le impostazioni disponibili per [Windows 8.1](wi-fi-settings-import-windows-8-1.md).
-- [Panoramica delle impostazioni Wi-Fi](wi-fi-settings-configure.md), incluse altre piattaforme.
+- [Impostazioni Wi-Fi di Windows 8.1](wi-fi-settings-import-windows-8-1.md)
+- [Panoramica delle impostazioni Wi-Fi](wi-fi-settings-configure.md), incluse altre piattaforme

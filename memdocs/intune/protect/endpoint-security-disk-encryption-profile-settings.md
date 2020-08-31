@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 3760aa9820495db6c2460bf2e6d2e9a08d705a10
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 37e9f68951c3576393e6ed3eb3346847029736c4
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462032"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663209"
 ---
 # <a name="disk-encryption-policy-settings-for-endpoint-security-in-intune"></a>Impostazioni dei criteri di crittografia del disco per la sicurezza degli endpoint di Intune
 
@@ -92,6 +92,9 @@ Piattaforme e profili supportati:
   Questa impostazione si applica solo ai dispositivi con SKU Windows Mobile e Mobile Enterprise.
   - **Non configurato** (*impostazione predefinita*): viene ripristinata l'impostazione predefinita del sistema operativo, che non richiede la crittografia delle schede di memoria.
   - **Sì**: la crittografia delle schede di memoria è obbligatoria per i dispositivi mobili.
+
+  > [!NOTE]
+  > Il supporto per [Windows 10 Mobile](https://support.microsoft.com/help/4485197/windows-10-mobile-end-of-support-faq) e [Windows Phone 8.1](https://support.microsoft.com/help/4036480/windows-phone-8-1-end-of-support-faq) è terminato ad agosto 2020.
 
 - **Nascondi richiesta di crittografia di terze parti**  
   CSP: [AllowWarningForOtherDiskEncryption](https://go.microsoft.com/fwlink/?linkid=872525)

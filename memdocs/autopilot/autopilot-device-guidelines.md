@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 326901cef5b337a505d85dc6c5706109ad9cbc1f
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: eb591206ad61878bc2637bf1a10c2a1cec17ddba
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88908542"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057363"
 ---
 # <a name="windows-autopilot-device-guidelines"></a>Linee guida sui dispositivi di Windows Autopilot
 
@@ -29,13 +29,15 @@ ms.locfileid: "88908542"
 
 ## <a name="hardware-and-firmware-best-practice-guidelines-for-windows-autopilot"></a>Linee guida per le procedure consigliate per hardware e firmware per Windows Autopilot
 
-Tutti i dispositivi usati con Windows Autopilot devono soddisfare i [requisiti hardware minimi](/windows-hardware/design/minimum/minimum-hardware-requirements-overview) per Windows 10.  
+Tutti i dispositivi che usano Windows Autopilot devono soddisfare i [requisiti hardware minimi](/windows-hardware/design/minimum/minimum-hardware-requirements-overview) per Windows 10.  
 
 Le procedure consigliate seguenti assicurano che i dispositivi possano essere facilmente sottoposti a provisioning come parte del processo di distribuzione di Windows Autopilot: 
-- Verificare che il TPM 2,0 sia abilitato e in uno stato valido (non in **modalità funzionalità ridotta**) sui dispositivi destinati alla modalità di distribuzione automatica di Windows Autopilot.
-- OEM effettua il provisioning delle informazioni di tupla univoche (SmbiosSystemManufacturer, SmbiosSystemProductName, SmbiosSystemSerialNumber) o PKID + SmbiosSystemSerialNumber nei [campi SMBIOS](/windows-hardware/drivers/bringup/smbios) per specifica Microsoft (produttore, nome prodotto e numero di serie archiviato in SMBIOS Type 1 04h, tipo 1 05h e tipo 1 07h).
-- L'OEM carica gli hash hardware 4K ottenuti usando lo strumento OA3 RS3 + Esegui in modalità di controllo su sistema operativo completo a Microsoft tramite il report CBR prima di distribuire i dispositivi a un cliente o a un partner del canale.
-- Microsoft richiede che i driver di spedizione OEM siano pubblicati per Windows Update entro 30 giorni dall'invio del CBR. Gli aggiornamenti del firmware e del driver di sistema vengono pubblicati Windows Update entro 14 giorni.
+- TPM 2,0 è abilitato e in uno stato valido (non in **modalità funzionalità ridotta**) sui dispositivi destinati alla modalità di distribuzione automatica di Windows Autopilot.
+- L'OEM deve effettuare il provisioning di una delle seguenti informazioni nei [campi SMBIOS](/windows-hardware/drivers/bringup/smbios). Le informazioni devono seguire le specifiche Microsoft (produttore, nome prodotto e numero di serie archiviato in SMBIOS Type 1 04h, digitare 1 05h e digitare 1 07h).
+    - Informazioni univoche sulla tupla (SmbiosSystemManufacturer, SmbiosSystemProductName, SmbiosSystemSerialNumber)
+    - PKID + SmbiosSystemSerialNumber
+- Prima di distribuire i dispositivi a un cliente o a un partner di canale di Autopilot, l'OEM dovrebbe caricare gli hash hardware 4K a Microsoft usando il report CBR. Gli hash devono essere raccolti usando lo strumento OA3 RS3 + Esegui in modalità di controllo sul sistema operativo completo.
+- Microsoft richiede che i driver di spedizione OEM vengano pubblicati per Windows Update entro 30 giorni dalla data di invio CBR. Gli aggiornamenti del firmware e del driver di sistema vengono pubblicati Windows Update entro 14 giorni.
 - L'OEM garantisce che il PKID di cui è stato effettuato il provisioning in SMBIOS venga passato al canale.
 
 ## <a name="software-best-practice-guidelines-for-windows-autopilot"></a>Linee guida per le procedure consigliate del software per Windows Autopilot
@@ -45,7 +47,7 @@ Le procedure consigliate seguenti assicurano che i dispositivi possano essere fa
 - A meno che non venga richiesto esplicitamente dal cliente, non devono essere inclusi altri software preinstallati.
   - Per ogni criterio OEM, le funzionalità di Windows 10, incluse le app predefinite, non devono essere disabilitate o rimosse.
 
-## <a name="related-topics"></a>Argomenti correlati
+## <a name="next-steps"></a>Passaggi successivi
 
 [Consenso del cliente di Windows Autopilot](registration-auth.md)<br>
 [Informazioni aggiuntive sullo scenario di sostituzione della motherboard](autopilot-mbr.md)<br>

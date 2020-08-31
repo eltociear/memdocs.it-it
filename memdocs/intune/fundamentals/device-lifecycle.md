@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9580a5cb99192f81fc83f8d61119f5368f0a5ee
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: 0c8d60a4a943ba2af9ea99f9eb887a9b77a49fcf
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088395"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693506"
 ---
 # <a name="overview-of-the-microsoft-intune-mobile-device-management-mdm-lifecycle"></a>Panoramica del ciclo di vita di gestione di dispositivi mobili (MDM) di Microsoft Intune
 
@@ -36,7 +36,7 @@ Le moderne strategie di gestione di dispositivi mobili (MDM) riguardano una vast
 
 La registrazione dei dispositivi costituisce il primo passaggio. Per poter usufruire di tutte le offerte di Intune e verificare che i dispositivi siano protetti e conformi agli standard aziendali, è possibile scegliere tra una vasta gamma di criteri che consentono di configurare quasi ogni aspetto correlato al funzionamento dei dispositivi gestiti. Ad esempio, gli utenti devono usare una password per i dispositivi che contengono dati aziendali? È possibile impostare questo requisito. È disponibile una rete Wi-Fi aziendale? È possibile configurarla automaticamente. Di seguito sono descritti i tipi di opzioni di configurazione disponibili:
 
-- [**Configurazione del dispositivo**](../configuration/device-profiles.md). Questi criteri consentono di configurare le caratteristiche e le funzionalità dei dispositivi gestiti. Ad esempio, può essere necessario usare una password nei telefoni Windows o disabilitare l'uso della fotocamera negli iPhone.
+- [**Configurazione del dispositivo**](../configuration/device-profiles.md). Questi criteri consentono di configurare le caratteristiche e le funzionalità dei dispositivi gestiti. Si potrebbe ad esempio richiedere l'uso di una password nei telefoni Android o disabilitare l'uso della fotocamera negli iPhone.
 - [**Accesso alle risorse aziendali**](../configuration/device-profiles.md). Quando si consente agli utenti di accedere ai dati aziendali da un dispositivo personale, possono emergere alcuni rischi. Ad esempio, come è possibile garantire che tutti i dispositivi che devono accedere alla posta elettronica aziendale siano configurati correttamente? Come si può garantire l'accesso degli utenti alla rete aziendale con una connessione VPN senza conoscere le complesse impostazioni sottostanti? Con Intune è possibile semplificare il processo configurando automaticamente i dispositivi gestiti per l'accesso alle risorse aziendali comuni.
 - [**Criteri di gestione di PC Windows (con il software client di Intune)** ](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md). Mentre la registrazione dei PC Windows con Intune fornisce la maggior parte delle funzionalità di gestione dei dispositivi, Intune continua a supportare la gestione dei PC Windows con il software client di Intune. Per altre informazioni su alcune delle attività che è possibile eseguire con i PC, iniziare da qui.
 

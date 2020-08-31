@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 08/24/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: b1711dad8163409d05c5299e8d3b54ad619b48ec
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: cba7b357dfae0c9dae06e8a21ddd0583fd96bcae
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462066"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820528"
 ---
 # <a name="endpoint-detection-and-response-policy-for-endpoint-security-in-intune"></a>Criteri per il rilevamento di endpoint e risposta per la sicurezza degli endpoint in Intune
 
@@ -43,24 +43,11 @@ Visualizzare le [impostazioni per i profili di rilevamento di endpoint e rispost
 
 - **Tenant per Microsoft Defender Advanced Threat Protection** - È necessario integrare il tenant di Microsoft Defender ATP con il tenant di Microsoft Endpoint Manager (sottoscrizione a Intune) prima di poter creare criteri EDR. Vedere [Usare Microsoft Defender ATP](advanced-threat-protection.md) nella documentazione di Intune.
 
-**Per supportare i dispositivi da Configuration Manager**:
+**Supporto per i client di Configuration Manager**:
 
-Per supportare l'uso di criteri EDR con i dispositivi di Configuration Manager, l'ambiente di Configuration Manager richiede le configurazioni aggiuntive seguenti. Questo articolo illustra le [indicazioni sulla configurazione](#set-up-configuration-manager-to-support-edr-policy):
+- **Configurare il collegamento al tenant per i dispositivi di Configuration Manager**: per supportare la distribuzione dei criteri EDR nei dispositivi gestiti da Configuration Manager, configurare il *collegamento al tenant*. A questo scopo, è necessario configurare le raccolte di dispositivi di Configuration Manager in modo da supportare i criteri di sicurezza degli endpoint di Intune.
 
-- **Configuration Manager versione 2002 o successiva**: il sito deve eseguire Configuration Manager 2002 o versione successiva.
-
-- **Installare l'aggiornamento di Configuration Manager**: per abilitare il supporto in Configuration Manager 2002 per l'uso dei criteri EDR creati nell'interfaccia di amministrazione di Microsoft Endpoint Manager, installare l'aggiornamento seguente dalla console di Configuration Manager:
-  - **Hotfix di Configuration Manager 2002 (KB4563473)**
-
-- **Configurare il collegamento del tenant**: il collegamento del tenant consente di sincronizzare le raccolte di dispositivi da Configuration Manager all'interfaccia di amministrazione di Microsoft Endpoint Manager. È quindi possibile usare l'interfaccia di amministrazione per distribuire i criteri EDR a tali raccolte.
-
-  Il collegamento del tenant è spesso configurato con la co-gestione, ma è possibile configurarlo automaticamente.
-
-- **Sincronizzare le raccolte di Configuration Manager**: quando si configura il collegamento del tenant, è possibile selezionare le raccolte di dispositivi di Configuration Manager da sincronizzare con l'interfaccia di amministrazione di Microsoft Endpoint Manager. È anche possibile modificare le raccolte di dispositivi sincronizzate in un secondo momento. I criteri EDR per i dispositivi di Configuration Manager possono essere assegnati solo a raccolte sincronizzate.
-
-  Dopo aver selezionato le raccolte da sincronizzare, è necessario abilitarle per l'uso con Microsoft Defender ATP.
-
-- **Autorizzazioni per Azure AD**: per completare la configurazione del collegamento del tenant e configurare le raccolte di Configuration Manager da sincronizzare con l'interfaccia di amministrazione di Microsoft Endpoint Manager, è necessario un account con le autorizzazioni di amministratore globale per la sottoscrizione di Azure.
+  Per configurare il collegamento al tenant, inclusa la sincronizzazione delle raccolte di Configuration Manager con l'interfaccia di amministrazione di Microsoft Endpoint Manager, e consentirne il funzionamento con i criteri di sicurezza degli endpoint, vedere [Configurare il collegamento al tenant per supportare i criteri di Endpoint Protection](../protect/tenant-attach-intune.md).
 
 ## <a name="edr-profiles"></a>Profili EDR
 
@@ -73,7 +60,7 @@ Per supportare l'uso di criteri EDR con i dispositivi di Configuration Manager, 
 
 **Configuration Manager** - Per i dispositivi gestiti con Configuration Manager sono supportati gli elementi seguenti:
 
-- Piattaforma: **Windows 10 e Windows Server**: Configuration Manager distribuisce i criteri ai dispositivi nelle raccolte di Configuration Manager.
+- Piattaforma: **Windows 10 e Windows Server (ConfigMgr)** - Configuration Manager distribuisce i criteri ai dispositivi nelle raccolte di Configuration Manager.
 - Profilo: **Rilevamento di endpoint e risposta (ConfigMgr)**
 
 ## <a name="set-up-configuration-manager-to-support-edr-policy"></a>Configurare Configuration Manager per il supporto dei criteri EDR
@@ -86,8 +73,6 @@ Nelle sezioni seguenti vengono descritte le attività necessarie:
 
 1. [Installare l'aggiornamento per Configuration Manager](#task-1-install-the-update-for-configuration-manager)
 2. [Abilitare il collegamento del tenant](#task-2-configure-tenant-attach-and-synchronize-collections)  
-3. [Selezionare le raccolte da sincronizzare](#task-3-select-collections-to-synchronize)
-4. [Abilitare le raccolte per Microsoft Defender ATP](#task-4-enable-collections-for-microsoft-defender-atp)
 
 > [!TIP]
 > Per altre informazioni sull'uso di Microsoft Defender ATP con Configuration Manager, vedere gli articoli seguenti nella documentazione di Configuration Manager:
@@ -111,8 +96,6 @@ Dopo aver installato l'aggiornamento, tornare qui per continuare a configurare l
 
 ### <a name="task-2-configure-tenant-attach-and-synchronize-collections"></a>Attività 2: configurare il collegamento del tenant e sincronizzare le raccolte
 
-Se la co-gestione è stata abilitata in precedenza, il collegamento del tenant è già configurato ed è possibile passare all'[attività 3](#task-3-select-collections-to-synchronize).
-
 Con il collegamento del tenant è possibile specificare le raccolte di dispositivi dalla distribuzione di Configuration Manager per la sincronizzazione con l'interfaccia di amministrazione di Microsoft Endpoint Manager. Dopo aver sincronizzato le raccolte, usare l'interfaccia di amministrazione per visualizzare le informazioni su tali dispositivi e per distribuire i criteri EDR da Intune.  
 
 Per altre informazioni sul collegamento del tenant, vedere [Abilitare il collegamento di tenant](../../configmgr/tenant-attach/device-sync-actions.md) nella documentazione di Configuration Manager.
@@ -129,82 +112,26 @@ Se si prevede di abilitare la co-gestione, prima di continuare è consigliabile 
 3. Nella pagina **Onboarding del tenant** selezionare **AzurePublicCloud** per l'ambiente in uso. Il cloud di Azure per enti pubblici non è supportato.
    1. Fare clic su **Accedi**. Usare l'account di *amministratore globale* per accedere.
 
-   2. Nella pagina **Onboarding del tenant** verificare che l'opzione **Upload to Microsoft Endpoint Manager admin center** (Carica nell'interfaccia di amministrazione di Microsoft Endpoint Manager) sia selezionata.
+Per i dispositivi gestiti con Intune sono supportati gli elementi seguenti:
 
-   3. Rimuovere il segno di spunta da **Abilita la registrazione automatica dei client per la co-gestione**.
+- Piattaforma: **Windows 10 e versioni successive**: Intune distribuisce i criteri ai dispositivi nei gruppi di Azure AD.
+  - Profilo: **Rilevamento di endpoint e risposta (MDM)**
 
-      Quando questa opzione è selezionata, la procedura guidata visualizza altre pagine per completare la configurazione della co-gestione. Per altre informazioni, vedere [Abilitare la co-gestione](../../configmgr/comanage/how-to-enable.md) nella documentazione di Configuration Manager.
+### <a name="devices-managed-by-configuration-manager-in-preview"></a>Dispositivi gestiti da Configuration Manager *(in anteprima)*
 
-     ![Configurare il collegamento del tenant](media/endpoint-security-edr-policy/tenant-onboarding.png)
+Per i dispositivi gestiti con Configuration Manager sono supportati gli elementi seguenti tramite lo scenario di *collegamento al tenant*:
 
-4. Fare clic su **Avanti** e quindi su **Sì** per accettare la notifica **Crea un'applicazione di AAD**. Questa azione esegue il provisioning di un'entità servizio e crea una registrazione dell'applicazione Azure AD per semplificare la sincronizzazione delle raccolte nell'interfaccia di amministrazione di Microsoft Endpoint Manager.
-
-5. Nella pagina **Configure upload** (Configura caricamento) è possibile configurare le raccolte da sincronizzare. È possibile limitare la configurazione a una o più raccolte di dispositivi o usare l'impostazione di caricamento dei dispositivi consigliata per **All my devices managed by Microsoft Endpoint Configuration Manager** (Tutti i dispositivi personali gestiti da Microsoft Endpoint Configuration Manager).
-
-6. Fare clic su **Riepilogo** per verificare la selezione e quindi su **Avanti**.
-
-7. Al termine della procedura guidata, fare clic su **Chiudi**.
-
-   Il collegamento del tenant è ora configurato e le raccolte selezionate vengono sincronizzate con l'interfaccia di amministrazione di Microsoft Endpoint Manager.
-
-#### <a name="enable-tenant-attach-when-you-use-co-management"></a>Abilitare il collegamento del tenant quando si usa la co-gestione
-
-1. Nella console di amministrazione di Configuration Manager accedere a **Amministrazione** > **Panoramica** > **Servizi cloud** > **Co-gestione**.
-
-2. Fare clic con il pulsante destro del mouse sulle impostazioni di co-gestione e selezionare **Proprietà**.
-
-3. Nella scheda **Configure upload** (Configura caricamento) selezionare **Carica nell'interfaccia di amministrazione di Microsoft Endpoint Manager**. Fare clic su **Apply**.
-   - L'impostazione predefinita per il caricamento del dispositivo è **Tutti i dispositivi personali gestiti da Microsoft Endpoint Configuration Manager**. È anche possibile scegliere di limitare la configurazione a una o più raccolte di dispositivi.
-
-     ![Visualizzare la scheda proprietà di co-gestione](media/endpoint-security-edr-policy/configure-upload.png)
-
-4. Quando richiesto, accedere con l'account di *amministratore globale*.
-
-5. Fare clic su **Sì** per accettare la notifica **Crea un'applicazione di AAD**. Questa azione esegue il provisioning di un'entità servizio e crea una registrazione dell'applicazione Azure AD per semplificare la sincronizzazione.
-
-6. Fare clic su **OK** per uscire dalle proprietà di co-gestione dopo aver apportato le modifiche.
-
-   Il collegamento del tenant è ora configurato e le raccolte selezionate vengono sincronizzate con l'interfaccia di amministrazione di Microsoft Endpoint Manager.
-
-### <a name="task-3-select-collections-to-synchronize"></a>Attività 3: selezionare le raccolte da sincronizzare
-
-Quando il collegamento del tenant è configurato, è possibile selezionare le raccolte da sincronizzare. Se non si è ancora eseguita la sincronizzazione delle raccolte o se è necessario riconfigurare quelle da sincronizzare, è possibile modificare le proprietà della co-gestione nella console di Configuration Manager per eseguire questa operazione.
-
-#### <a name="select-collections"></a>Selezionare le raccolte
-
-1. Nella console di amministrazione di Configuration Manager accedere a **Amministrazione** > **Panoramica** > **Servizi cloud** > **Co-gestione**.
-
-2. Fare clic con il pulsante destro del mouse sulle impostazioni di co-gestione e selezionare **Proprietà**.
-
-3. Nella scheda **Configure upload** (Configura caricamento) selezionare **Carica nell'interfaccia di amministrazione di Microsoft Endpoint Manager**. Fare clic su **Apply**.
-
-   L'impostazione predefinita per il caricamento del dispositivo è **Tutti i dispositivi personali gestiti da Microsoft Endpoint Configuration Manager**. È anche possibile scegliere di limitare la configurazione a una o più raccolte di dispositivi.
-
-### <a name="task-4-enable-collections-for-microsoft-defender-atp"></a>Attività 4: abilitare le raccolte per Microsoft Defender ATP
-
-Dopo aver configurato le raccolte per la sincronizzazione con l'interfaccia di amministrazione di Microsoft Endpoint Manager, è comunque necessario abilitare tali raccolte in modo che siano idonee per l'onboarding e i criteri di Microsoft Defender ATP.  Per eseguire questa operazione è necessario modificare le proprietà di ogni raccolta nella console di Configuration Manager.
-
-#### <a name="enable-collections-for-use-with-advanced-threat-protection"></a>Abilitare le raccolte per l'uso con Advanced Threat Protection
-
-1. Da una console di Configuration Manager connessa al sito di livello superiore, fare clic con il pulsante destro del mouse su una raccolta di dispositivi sincronizzata con l'interfaccia di amministrazione di Microsoft Endpoint Manager e scegliere **Proprietà**.
-
-2. Nella scheda **Sincronizzazione cloud** abilitare l'opzione **Make this collection available to assign Microsoft Defender ATP policies in Intune** (Rendi disponibile questa raccolta per assegnare i criteri di Microsoft Defender ATP in Intune).
-
-   - Non è possibile selezionare questa opzione se la gerarchia di Configuration Manager non è collegata al tenant.
-  
-   ![Configurare la sincronizzazione cloud](media/endpoint-security-edr-policy/cloud-sync.png)
-
-3. Selezionare **OK** per salvare la configurazione.
-
-   I dispositivi in questa raccolta possono ora ricevere i criteri di Microsoft Defender ATP.
+- Piattaforma: **Windows 10 e Windows Server (ConfigMgr)** - Configuration Manager distribuisce i criteri ai dispositivi nelle raccolte di Configuration Manager.
+  - Profilo: **Rilevamento di endpoint e risposta (ConfigMgr) (anteprima)**
 
 ## <a name="create-and-deploy-edr-policies"></a>Creare e distribuire i criteri EDR
 
 Quando la sottoscrizione di Microsoft Defender ATP è integrata con Intune, è possibile creare e distribuire i criteri EDR. Esistono due tipi diversi di criteri EDR che è possibile creare. Un tipo di criterio è per i dispositivi gestiti con Intune tramite MDM. Il secondo tipo è per i dispositivi gestiti con Configuration Manager.
 
-È possibile scegliere il tipo di criterio quando si sceglie la piattaforma per la creazione di un nuovo criterio EDR.
+Scegliere il tipo di criterio da creare durante la configurazione di un nuovo criterio EDR, scegliendo una piattaforma per il criterio.
 
-Prima di poter distribuire i criteri ai dispositivi gestiti da Configuration Manager, [configurare Configuration Manager per il supporto dei criteri EDR](#set-up-configuration-manager-to-support-edr-policy) dall'interfaccia di amministrazione di Microsoft Endpoint Manager.
+Prima di poter distribuire i criteri ai dispositivi gestiti da Configuration Manager, configurare Configuration Manager per il supporto dei criteri EDR dall'interfaccia di amministrazione di Microsoft Endpoint Manager. Vedere [Configurare il collegamento al tenant per supportare i criteri di Endpoint Protection](../protect/tenant-attach-intune.md).
+
 
 ### <a name="create-edr-policies"></a>Creare i criteri EDR
 
@@ -219,7 +146,7 @@ Prima di poter distribuire i criteri ai dispositivi gestiti da Configuration Man
      - Profilo: **Rilevamento di endpoint e risposta (MDM)**
 
    - Configuration Manager: distribuisce i criteri ai dispositivi nelle raccolte di Configuration Manager. Quando si crea il criterio, selezionare:
-     - Piattaforma: **Windows 10 e Windows Server**
+     - Piattaforma: **Windows 10 e Windows Server (ConfigMgr)**
      - Profilo: **Rilevamento di endpoint e risposta (ConfigMgr)**
 
 4. Selezionare **Crea**.
@@ -257,8 +184,7 @@ Prima di poter distribuire i criteri ai dispositivi gestiti da Configuration Man
 
   Il grafico **Dispositivi con sensore di ATP** mostra solo i dispositivi che completano l'onboarding in Microsoft Defender ATP tramite l'uso del profilo **Windows 10 e versioni successive**. Per assicurare che sia disponibile una rappresentazione completa dei dispositivi in questo grafico, distribuire il profilo di onboarding in tutti i dispositivi. I dispositivi che completano l'onboarding in Microsoft Defender ATP tramite metodi esterni, ad esempio Criteri di gruppo o PowerShell, vengono conteggiati come **Dispositivi senza sensore di ATP**.
 
-- Per i criteri destinati alla piattaforma **Windows 10 e Windows Server** (Configuration Manager), verrà visualizzata una panoramica della conformità al criterio ma non sarà possibile eseguire il drill-in per visualizzare dettagli aggiuntivi. La visualizzazione è limitata perché l'interfaccia di amministrazione riceve dettagli di stato limitati da Configuration Manager, che consente di gestire la distribuzione del criterio ai dispositivi di Configuration Manager.
-
+- Per i criteri destinati alla piattaforma **Windows 10 e Windows Server (ConfigMgr)** , verrà visualizzata una panoramica della conformità al criterio ma non sarà possibile eseguire il drill-in per accedere a dettagli aggiuntivi. La visualizzazione è limitata perché l'interfaccia di amministrazione riceve dettagli di stato limitati da Configuration Manager, che consente di gestire la distribuzione del criterio ai dispositivi di Configuration Manager.
 
 [Visualizzare le impostazioni](endpoint-security-edr-profile-settings.md) che è possibile configurare sia per le piattaforme che per i profili.
 

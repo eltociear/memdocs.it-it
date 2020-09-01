@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 0070492304fc75bf51b6eda929c274076c7b2452
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: da7ab26cc748b64426ec256a0814beae4ced1a5f
+ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89193815"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89280933"
 ---
 # <a name="adding-devices-to-windows-autopilot"></a>Aggiunta di dispositivi a Windows Autopilot
 
@@ -92,7 +92,7 @@ Microsoft endpoint Configuration Manager raccoglie automaticamente gli hash hard
 
 ### <a name="collecting-the-hardware-hash-from-existing-devices-using-powershell"></a>Raccolta dell'hash hardware dai dispositivi esistenti tramite PowerShell
 
-L'hash hardware per un dispositivo esistente è disponibile tramite Strumentazione gestione Windows (WMI), purché il dispositivo esegua una versione supportata del canale semestrale di Windows 10. È possibile usare uno script di PowerShell ([Get-WindowsAutoPilotInfo.ps1](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo) per ottenere l'hash hardware e il numero di serie di un dispositivo. Il numero di serie è utile per visualizzare rapidamente a quale dispositivo appartiene l'hash hardware.
+L'hash hardware per un dispositivo esistente è disponibile tramite Strumentazione gestione Windows (WMI), purché il dispositivo esegua una versione supportata del canale semestrale di Windows 10. È possibile usare uno script di PowerShell ([Get-WindowsAutoPilotInfo.ps1](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo)) per ottenere l'hash hardware e il numero di serie di un dispositivo. Il numero di serie è utile per visualizzare rapidamente a quale dispositivo appartiene l'hash hardware.
 
 Per utilizzare questo script, è possibile utilizzare uno dei metodi seguenti:
 - scaricarlo dalla PowerShell Gallery ed eseguirlo in ogni computer.

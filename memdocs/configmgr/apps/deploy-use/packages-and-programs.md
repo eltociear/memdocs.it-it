@@ -10,12 +10,12 @@ ms.assetid: caad0507-9913-415a-b13d-d36f8f0a1b80
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2c125212a13790e196d001f53411633d1e42d4f8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c87ae35fa3e5a76c57342a0d1cad4167b0f14685
+ms.sourcegitcommit: e43e6e83e3b38137ceebc6d299eacd94a925db85
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689289"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88895960"
 ---
 # <a name="packages-and-programs-in-configuration-manager"></a>Pacchetti e programmi in Configuration Manager
 
@@ -67,7 +67,9 @@ I pacchetti possono usare alcune nuove funzionalità di Configuration Manager, i
     - **Cartella di origine**: se il pacchetto contiene file di origine, scegliere **Sfoglia** per aprire la finestra di dialogo **Imposta cartella di origine** e specificare il percorso dei file di origine per il pacchetto.  
 
         > [!NOTE]  
-        > L'account computer del server del sito deve avere autorizzazioni di accesso in lettura alla cartella specificata.  
+        > L'account computer del server del sito deve avere autorizzazioni di accesso in lettura alla cartella specificata.
+        >
+        > Windows limita il percorso di origine a un massimo di 256. Questo limite si applica all'origine del pacchetto e alle applicazioni. Per altre informazioni, vedere [Denominazione di file, percorsi e spazi dei nomi](/windows/win32/fileio/naming-a-file).
 
     - A partire dalla versione 1906, se si vuole memorizzare anticipatamente il contenuto nella cache in un client, specificare **Architettura** e **Lingua** del pacchetto. Per altre informazioni, vedere [Configurare la pre-cache del contenuto](../../osd/deploy-use/configure-precache-content.md).<!--4224642-->  
 
@@ -120,25 +122,25 @@ I pacchetti possono usare alcune nuove funzionalità di Configuration Manager, i
         - L'impostazione di **Requisiti per esecuzione programma** è **Solo se nessun utente è connesso** o **Indipendentemente dalla connessione degli utenti**
         - L'impostazione di **Modalità di esecuzione** è **Esegui con diritti amministrativi**  
 
-    - **Modalità unità**: specificare le informazioni sull'esecuzione del programma in rete. Scegliere una delle seguenti opzioni:  
+    - **Modalità unità**: specificare le informazioni sull'esecuzione del programma in rete. Scegliere una delle opzioni seguenti:  
 
-        - **Viene eseguito con nome UNC**: il programma viene eseguito con un nome UNC (Universal Naming Convention). È l'impostazione predefinita.  
+        - **Viene eseguito con nome UNC**: il programma viene eseguito con un nome UNC (Universal Naming Convention). Questa è l'impostazione predefinita.  
 
         - **Richiede lettera di unità**: il programma richiede una lettera di unità per specificare un percorso completo. Per questa impostazione, Configuration Manager può usare qualsiasi lettera di unità disponibile nel client.  
 
-        - **Richiede lettera di unità specifica**: il programma richiede una lettera di unità specifica per indicarne il percorso completo. Ad esempio, **Z:** . Se il client sta già usando la lettera di unità specificata, il programma non viene eseguito.  
+        - **Richiede lettera di unità specifica**: il programma richiede una lettera di unità specifica, che è necessario specificare per indicarne il percorso completo. Ad esempio, **Z:**. Se il client sta già usando la lettera di unità specificata, il programma non viene eseguito.  
 
-    - **Riconnettiti al punto di distribuzione all'accesso**: consente di indicare se il client si riconnette al punto di distribuzione quando l'utente esegue l'accesso. Per impostazione predefinita, la procedura guidata non abilita questa opzione.
+    - **Riconnettiti al punto di distribuzione all'accesso**: consente di indicare se il client deve riconnettersi al punto di distribuzione quando l'utente esegue l'accesso. Per impostazione predefinita, la procedura guidata non abilita questa opzione.
 
 3. Nella pagina **Requisiti** della **Creazione guidata pacchetto e programma** specificare le informazioni seguenti:  
 
-    - **Esegui prima un altro programma**: consente di identificare un pacchetto e un programma da eseguire prima dell'esecuzione del pacchetto e del programma corrente.  
+    - **Esegui prima un altro programma**: consente di identificare un pacchetto e un programma da eseguire prima dell'esecuzione del pacchetto e del programma correnti.  
 
     - **Requisiti di piattaforma**: Selezionare **Questo programma può essere eseguito in qualsiasi piattaforma** o **Questo programma può essere eseguito solo in piattaforme specifiche**. Scegliere quindi le versioni del sistema operativo che i client devono avere per installare il pacchetto e il programma.  
 
-    - **Spazio su disco stimato**: consente di specificare la quantità di spazio su disco necessaria per l'esecuzione del programma software nel computer. L'impostazione predefinita è **Sconosciuto**. Se necessario, specificare un numero intero maggiore o uguale a zero. Se si imposta un valore, selezionare anche le unità per il valore.  
+    - **Spazio su disco stimato**: specifica la quantità di spazio su disco necessaria per l'esecuzione del programma nel computer. L'impostazione predefinita è **Sconosciuto**. Se necessario, specificare un numero intero maggiore o uguale a zero. Se si imposta un valore, selezionare anche le unità per il valore.  
 
-    - **Tempo di esecuzione massimo consentito (minuti)** : consente di specificare la durata massima di esecuzione prevista per il programma nel computer client. Il valore predefinito è **120** minuti. Usare solo numeri interi maggiori di zero.  
+    - **Tempo di esecuzione massimo consentito (minuti)**: specificare la durata massima di esecuzione prevista per il programma nel computer client. Il valore predefinito è **120** minuti. Usare solo numeri interi maggiori di zero.  
 
         > [!IMPORTANT]  
         > Se si usano finestre di manutenzione per la stessa raccolta in cui viene distribuito il programma, può verificarsi un conflitto se il valore di **Tempo di esecuzione massimo consentito**  è maggiore della finestra di manutenzione pianificata. Se si imposta il tempo di esecuzione massimo su **Sconosciuto**, l'esecuzione del programma inizia durante la finestra di manutenzione e quindi continua come necessario dopo la chiusura della finestra di manutenzione. Se l'utente imposta il tempo di esecuzione massimo su un periodo specifico maggiore della durata di qualsiasi finestra di manutenzione disponibile, il client non esegue il programma.  
@@ -162,7 +164,7 @@ I pacchetti possono usare alcune nuove funzionalità di Configuration Manager, i
         > [!NOTE]  
         > Il nome del programma deve essere univoco all'interno di un pacchetto. Dopo aver creato un programma, non è possibile modificarne il nome.  
 
-    - **Commento** (facoltativo): specificare un commento per il programma del dispositivo, con un massimo di 127 caratteri.  
+    - **Commento** (facoltativo): specificare un commento per il programma del dispositivo con un massimo di 127 caratteri.  
 
     - **Cartella download**: Specificare il nome della cartella nel dispositivo in cui verranno archiviati i file di origine del pacchetto. Il valore predefinito è `\Temp\`.  
 
@@ -178,7 +180,7 @@ I pacchetti possono usare alcune nuove funzionalità di Configuration Manager, i
 
     - **Programma download**: specificare le informazioni relative al momento in cui il dispositivo mobile può scaricare il programma. È possibile specificare **Appena possibile**, **Solo su una rete veloce**o **Solo quando un dispositivo è bloccato**.  
 
-    - **Altri requisiti**: specificare eventuali requisiti aggiuntivi per il programma. Gli utenti visualizzano questi requisiti prima di installare il software. Ad esempio, è possibile informare gli utenti che è necessario chiudere tutte le altre applicazioni prima di eseguire il programma.  
+    - **Altri requisiti**: specificare eventuali requisiti aggiuntivi per il programma. Gli utenti visualizzano questi requisiti prima di installare il software. Ad esempio, è possibile inviare una notifica agli utenti che devono essere chiuse tutte le altre applicazioni prima di eseguire il programma.  
 
 ## <a name="deploy-packages-and-programs"></a>Distribuire pacchetti e programmi  
 
@@ -194,7 +196,7 @@ I pacchetti possono usare alcune nuove funzionalità di Configuration Manager, i
 
 5. Nella pagina **Impostazioni distribuzione** configurare le impostazioni seguenti:  
 
-    - **Scopo**: Scegliere una delle seguenti opzioni:
+    - **Scopo**: scegliere una della seguenti opzioni:
 
         - **Disponibile**: l'utente visualizza il pacchetto e il programma pubblicati in Software Center e può installarli su richiesta.  
 
@@ -225,16 +227,16 @@ I pacchetti possono usare alcune nuove funzionalità di Configuration Manager, i
 
 7. Nella pagina **Esperienza utente** specificare le informazioni seguenti:  
 
-    - **Consenti agli utenti di eseguire il programma indipendentemente dalle assegnazioni**: gli utenti possono installare il software da Software Center indipendentemente da qualsiasi intervallo di installazione pianificato.  
+    - **Consenti agli utenti di eseguire il programma indipendentemente dalle assegnazioni**: gli utenti possono installare il software da Software Center indipendentemente da qualsiasi orario di installazione pianificato.  
 
-    - **Installazione software**: consente l'installazione del software al di fuori di tutte le finestre di manutenzione configurate.  
+    - **Installazione software**: permette l'installazione del software al di fuori di qualsiasi finestra di manutenzione configurata.  
 
-    - **Riavvio del sistema (se necessario per completare l'installazione)** : se per completare l'installazione del software è necessario il riavvio del dispositivo, questa opzione consente di eseguire il riavvio al di fuori di qualsiasi finestra di manutenzione configurata.  
+    - **Riavvio del sistema (se richiesto per completare l'installazione)**: se per completare l'installazione del software è necessario il riavvio del dispositivo, questa opzione consente di eseguire il riavvio al di fuori di qualsiasi finestra di manutenzione configurata.  
 
     - **Embedded devices** (Dispositivi con Embedded): quando si distribuiscono pacchetti e programmi in dispositivi con Windows Embedded con filtro di scrittura abilitato, è possibile specificare di installare i pacchetti e i programmi nella sovrapposizione temporanea ed eseguire il commit delle modifiche successivamente. In alternativa, eseguire il commit delle modifiche alla scadenza dell'installazione o all'interno una finestra di manutenzione. Quando si esegue il commit delle modifiche alla scadenza dell'installazione o all'interno di una finestra di manutenzione, è necessario il riavvio per salvare le modifiche nel dispositivo in modo permanente.  
 
         > [!NOTE]  
-        > Quando si distribuisce un pacchetto o un programma in un dispositivo con Windows Embedded, assicurarsi che il dispositivo sia membro di una raccolta a cui è associata una finestra di manutenzione configurata. Per altre informazioni sull'uso delle finestre di manutenzione quando si distribuiscono pacchetti e programmi a dispositivi con Windows Embedded, vedere [Creazione di applicazioni Windows Embedded](../get-started/creating-windows-embedded-applications.md).  
+        > Quando si distribuisce un pacchetto o un programma in un dispositivo Windows Embedded, assicurarsi che il dispositivo è un membro di una raccolta che dispone di una finestra di manutenzione configurata. Per altre informazioni sull'uso delle finestre di manutenzione quando si distribuiscono pacchetti e programmi a dispositivi con Windows Embedded, vedere [Creazione di applicazioni Windows Embedded](../get-started/creating-windows-embedded-applications.md).  
 
 8. Nella pagina **Punti di distribuzione** specificare le informazioni seguenti:  
 
@@ -243,7 +245,7 @@ I pacchetti possono usare alcune nuove funzionalità di Configuration Manager, i
         > [!IMPORTANT]  
         > Se si configura l'opzione di distribuzione **Esegui programma dal punto di distribuzione**, assicurarsi di abilitare l'opzione per **Copia il contenuto del pacchetto in una condivisione pacchetto nei punti di distribuzione** nella scheda **Accesso ai dati** delle proprietà del pacchetto. In caso contrario, il pacchetto non è disponibile per l'esecuzione dai punti di distribuzione.  
 
-    - **Consenti ai client di usare i punti di distribuzione dal gruppo di limiti del sito predefinito**: quando il contenuto non è disponibile in alcun punto di distribuzione nel gruppo di limiti corrente o in uno vicino, abilitare questa opzione per consentire di provare i punti di distribuzione nel gruppo di limiti predefinito del sito.
+    - **Consenti ai client di usare punti di distribuzione dal gruppo di limiti del sito predefinito**: quando il contenuto non è disponibile in alcun punto di distribuzione nel gruppo di limiti corrente o in uno vicino, abilitare questa opzione per consentire di provare i punti di distribuzione nel gruppo di limiti predefinito del sito.
 
 9. Completare la procedura guidata.  
 
@@ -271,13 +273,13 @@ Apre la **Creazione guidata file di contenuto pre-installazione** per creare un 
 
 Apre la **Creazione guidata programma**, che consente di creare un nuovo programma per il pacchetto.
 
-### <a name="export"></a>Export
+### <a name="export"></a>Esportazione
 
 Apre l'**Esportazione guidata del pacchetto**, che consente di esportare il pacchetto selezionato e il suo contenuto in un file. Usare questo file per importare il file in un'altra gerarchia.
 
 Per informazioni su come importare pacchetti e programmi, vedere [Creare un pacchetto e un programma ](#create-a-package-and-program).
 
-### <a name="deploy"></a>Distribuisci
+### <a name="deploy"></a>Distribuire
 
 Apre la **Distribuzione guidata del software**, che consente di distribuire il pacchetto e il programma selezionati in una raccolta. Per altre informazioni, vedere [Distribuire pacchetti e programmi](#deploy-packages-and-programs).
 
@@ -290,7 +292,7 @@ Verrà visualizzata la **Distribuzione guidata contenuto** per inviare il conten
 Aggiorna i punti di distribuzione con il contenuto più recente per il pacchetto e il programma selezionati.
 
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 - [Script](create-deploy-scripts.md)
 

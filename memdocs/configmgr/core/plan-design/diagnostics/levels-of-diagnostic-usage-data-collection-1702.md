@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 4443d2319bceca2e92f1655660ec384674dac1e7
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: c3859d77726b49973257da47233fedde28f705a1
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128781"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994821"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1702-of-configuration-manager"></a>Livelli di raccolta di dati per utilizzo diagnostico per la versione 1702 di Configuration Manager
 
@@ -340,7 +340,7 @@ Per Configuration Manager versione 1702, questo livello include quanto segue:
 
     - Configurazioni usate per i piani di manutenzione attivi di Windows 10  
 
-    - Numero di aggiornamenti di Office 365 distribuiti  
+    - Numero di aggiornamenti di Microsoft 365 distribuiti  
 
     - Numero di gruppi e assegnazioni di aggiornamento  
 

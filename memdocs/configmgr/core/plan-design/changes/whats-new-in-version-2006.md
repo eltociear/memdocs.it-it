@@ -10,12 +10,12 @@ ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: bdfb122173c913274373f41c3932f1ac094ec953
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: fc12c81a1ec58d17580b91e21a1ba7d2e0cb0cbc
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700283"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819678"
 ---
 # <a name="whats-new-in-version-2006-of-configuration-manager-current-branch"></a>Novità della versione 2006 di Configuration Manager Current Branch
 
@@ -31,6 +31,13 @@ Per sfruttare i vantaggi delle nuove funzionalità di Configuration Manager, dop
 > Per ricevere una notifica quando questa pagina viene aggiornata, copiare e incollare l'URL seguente nel lettore di feed RSS: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2006+-+Configuration+Manager%22&locale=en-us`
 
 ## <a name="microsoft-endpoint-manager-tenant-attach"></a><a name="bkmk_tenant"></a> Collegamento del tenant di Microsoft Endpoint Manager
+
+### <a name="tenant-attach-microsoft-defender-antivirus-policies-in-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> Collegamento di tenant: Criteri di Microsoft Defender Antivirus nell'interfaccia di amministrazione di Microsoft Endpoint Manager
+<!--4812909-->
+È ora possibile creare i criteri per Microsoft Defender Antivirus nella console di Microsoft Endpoint Manager e distribuirli in raccolte di Configuration Manager. Per altre informazioni, tra cui istruzioni dettagliate e impostazioni disponibili, vedere gli articoli seguenti:
+- [Collegamento di tenant: Eseguire l'onboarding di client di Configuration Manager in Microsoft Defender ATP tramite l'interfaccia di amministrazione (anteprima)](../../../tenant-attach/atp-onboard.md)
+- [Collegamento di tenant: Distribuire i criteri antivirus di sicurezza degli endpoint dall'interfaccia di amministrazione (anteprima)](../../../tenant-attach/deploy-antivirus-policy.md)
+- [Impostazioni per i criteri di Microsoft Defender Antivirus per i dispositivi collegati ai tenant in Microsoft Intune](../../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json). 
 
 ### <a name="install-applications-from-the-admin-center"></a>Installare applicazioni dall'interfaccia di amministrazione
 <!--7518897, 6024389-->
@@ -124,7 +131,7 @@ Per un migliore allineamento con i requisiti di Desktop Analytics per i dati di 
 
 | Versione 2006 e successive | Versione 2002 e precedenti |
 |---------|---------|
-| Obbligatoria | Basic |
+| Obbligatorio | Basic |
 | Facoltativo (limitato) | Avanzata (con limitazioni) |
 | N/D | Avanzato |
 | Facoltativo | Full |

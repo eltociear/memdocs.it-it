@@ -2,7 +2,7 @@
 title: Creare distribuzioni in fasi
 titleSuffix: Configuration Manager
 description: Usare distribuzioni in più fasi per automatizzare l'implementazione del software in diverse raccolte.
-ms.date: 04/21/2020
+ms.date: 08/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
@@ -10,59 +10,59 @@ ms.assetid: b634ff68-b909-48d2-9e2c-0933486673c5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d9dcefe942309ad57c823ec669b7aa6630974fa8
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: a14448c03596853be943440c0fab775ee1d19081
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698028"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820426"
 ---
 # <a name="create-phased-deployments-with-configuration-manager"></a>Creare distribuzioni in più fasi con Configuration Manager
 
 *Si applica a: Configuration Manager (Current Branch)*
 
-Le distribuzioni in più fasi automatizzano un'implementazione del software coordinata e in sequenza in più raccolte. È possibile, ad esempio, distribuire il software in una raccolta pilota e quindi continuare automaticamente l'implementazione in base ai criteri di superamento. È possibile creare distribuzioni in più fasi con l'impostazione predefinita di due fasi oppure configurare manualmente più fasi. 
+Le distribuzioni in più fasi automatizzano un'implementazione del software coordinata e in sequenza in più raccolte. È possibile, ad esempio, distribuire il software in una raccolta pilota e quindi continuare automaticamente l'implementazione in base ai criteri di superamento. È possibile creare distribuzioni in più fasi con l'impostazione predefinita di due fasi oppure configurare manualmente più fasi.
 
 Creare distribuzioni in più fasi per gli oggetti seguenti:
-- **Sequenza di attività**  
-    - La distribuzione in più fasi delle sequenze di attività non supporta l'installazione di PXE o di supporti   
-- **Applicazione** (a partire dalla versione 1806) <!--1358147-->  
-- **Aggiornamento software** (a partire dalla versione 1810) <!--1358146-->  
-    - Non è possibile usare una regola di distribuzione automatica con una distribuzione in più fasi
 
-> [!Tip]  
-> La funzionalità della distribuzione in più fasi è stata introdotta per la prima volta nella versione 1802 come [funzionalità di una versione non definitiva](../../core/servers/manage/pre-release-features.md). A partire dalla versione 1806, questa funzionalità non è più in versione non definitiva.<!--1356837-->  
-
-
+- **Sequenza di attività**
+  - La distribuzione in più fasi delle sequenze di attività non supporta l'installazione di PXE o di supporti
+- **Applicazione** <!--1358147-->  
+- **Aggiornamento software** <!--1358146-->  
+  - Non è possibile usare una regola di distribuzione automatica con una distribuzione in più fasi
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-#### <a name="security-scope"></a>Ambito di protezione
+### <a name="security-scope"></a>Ambito di protezione
+
 Le distribuzioni create da distribuzioni in più fasi non sono visualizzabili per l'utente amministratore che non ha l'ambito di protezione **Tutto**. Per altre informazioni, vedere [Ambiti di protezione](../../core/understand/fundamentals-of-role-based-administration.md#bkmk_PlanScope).
 
-#### <a name="distribute-content"></a>Distribuire il contenuto
+### <a name="distribute-content"></a>Distribuire il contenuto
+
 Prima di creare una distribuzione in più fasi, distribuire il contenuto associato in un punto di distribuzione.<!--518293-->  
 
-- **Applicazione**: selezionare l'applicazione di destinazione nella console e usare l'azione **Distribuisci contenuto** nella barra multifunzione. Per altre informazioni, vedere [Distribuire e gestire contenuto](../../core/servers/deploy/configure/deploy-and-manage-content.md).   
+- **Applicazione**: selezionare l'applicazione di destinazione nella console e usare l'azione **Distribuisci contenuto** nella barra multifunzione. Per altre informazioni, vedere [Distribuire e gestire contenuto](../../core/servers/deploy/configure/deploy-and-manage-content.md).
 
-- **Sequenza di attività**: è necessario creare oggetti con riferimenti come il pacchetto di aggiornamento del sistema operativo prima di creare la sequenza di attività. Distribuire questi oggetti prima di creare una distribuzione. Usare l'azione **Distribuisci contenuto** per ogni oggetto o la sequenza di attività. Per visualizzare lo stato di tutti i contenuti con riferimenti, selezionare la sequenza di attività e passare alla scheda **Riferimenti** nel riquadro dei dettagli. Per altre informazioni, vedere il tipo di oggetto in [Preparativi per la distribuzione del sistema operativo](../get-started/prepare-for-operating-system-deployment.md).   
+- **Sequenza di attività**: è necessario creare oggetti con riferimenti come il pacchetto di aggiornamento del sistema operativo prima di creare la sequenza di attività. Distribuire questi oggetti prima di creare una distribuzione. Usare l'azione **Distribuisci contenuto** per ogni oggetto o la sequenza di attività. Per visualizzare lo stato di tutti i contenuti con riferimenti, selezionare la sequenza di attività e passare alla scheda **Riferimenti** nel riquadro dei dettagli. Per altre informazioni, vedere il tipo di oggetto in [Preparativi per la distribuzione del sistema operativo](../get-started/prepare-for-operating-system-deployment.md).
 
 - **Aggiornamento software**: creare il pacchetto di distribuzione e distribuirlo. Usare il Download guidato degli aggiornamenti software. Per altre informazioni, vedere [Scaricare gli aggiornamenti software](../../sum/deploy-use/download-software-updates.md).  
 
-
-
 ## <a name="phase-settings"></a><a name="bkmk_settings"></a> Impostazioni delle fasi
 
-Queste impostazioni sono univoche per le distribuzioni in più fasi. Configurare queste impostazioni durante la creazione o la modifica delle fasi per controllare la pianificazione e il comportamento del processo di distribuzione in più fasi. 
+Queste impostazioni sono univoche per le distribuzioni in più fasi. Configurare queste impostazioni durante la creazione o la modifica delle fasi per controllare la pianificazione e il comportamento del processo di distribuzione in più fasi.
 
+A partire dalla versione 2002, usare i cmdlet di Windows PowerShell seguenti per configurare manualmente le fasi per le distribuzioni in più fasi di aggiornamenti software e sequenze di attività:
 
-#### <a name="criteria-for-success-of-the-first-phase"></a>Criteri per l'esito positivo della prima fase  
+- [New-CMSoftwareUpdatePhase](/powershell/module/configurationmanager/new-cmsoftwareupdatephase?view=sccm-ps)
+- [New-CMTaskSequencePhase](/powershell/module/configurationmanager/new-cmtasksequencephase?view=sccm-ps)
 
-- **Percentuale di esiti positivi della distribuzione**: specificare la percentuale di dispositivi che devono completare la distribuzione per la riuscita della prima fase. Per impostazione predefinita, questo valore è impostato su 95%. In altre parole, il sito considera la prima fase riuscita quando lo stato di conformità del 95% dei dispositivi è **Riuscito** per questa distribuzione. Il sito procede quindi alla seconda fase e crea una distribuzione del software nella raccolta successiva.  
-- **Numero di dispositivi distribuiti correttamente**: Aggiunto in Configuration Manager versione 1902. Specificare il numero di dispositivi che devono completare la distribuzione per la riuscita della prima fase. Questa opzione è utile quando le dimensioni della raccolta sono variabili ed è necessario verificare l'esito positivo per un numero specifico di dispositivi prima di passare alla fase successiva. <!--3555946-->
+### <a name="criteria-for-success-of-the-first-phase"></a>Criteri per l'esito positivo della prima fase
 
+- **Percentuale di esiti positivi della distribuzione**: specificare la percentuale di dispositivi che devono completare la distribuzione per la riuscita della prima fase. Per impostazione predefinita, questo valore è impostato su 95%. In altre parole, il sito considera la prima fase riuscita quando lo stato di conformità del 95% dei dispositivi è **Riuscito** per questa distribuzione. Il sito procede quindi alla seconda fase e crea una distribuzione del software nella raccolta successiva.
 
-#### <a name="conditions-for-beginning-second-phase-of-deployment-after-success-of-the-first-phase"></a>Condizioni per l'inizio della seconda fase della distribuzione dopo la riuscita della prima fase  
+- **Numero di dispositivi distribuiti correttamente**: specificare il numero di dispositivi che devono completare la distribuzione per la riuscita della prima fase. Questa opzione è utile quando le dimensioni della raccolta sono variabili ed è necessario verificare l'esito positivo per un numero specifico di dispositivi prima di passare alla fase successiva. <!--3555946-->
+
+### <a name="conditions-for-beginning-second-phase-of-deployment-after-success-of-the-first-phase"></a>Condizioni per l'inizio della seconda fase della distribuzione dopo la riuscita della prima fase  
 
 - **Inizia automaticamente questa fase dopo un periodo di differimento (in giorni)** : scegliere il numero di giorni di attesa prima di iniziare la seconda fase dopo l'esito positivo della prima. Per impostazione predefinita, questo valore è un giorno.  
 
@@ -71,38 +71,30 @@ Queste impostazioni sono univoche per le distribuzioni in più fasi. Configurare
     > [!Note]  
     > Questa opzione non è disponibile per le distribuzioni in più fasi delle applicazioni.  
 
-
-#### <a name="gradually-make-this-software-available-over-this-period-of-time-in-days"></a>Rendere gradualmente disponibile il software in questo periodo di tempo (in giorni)
+### <a name="gradually-make-this-software-available-over-this-period-of-time-in-days"></a>Rendere gradualmente disponibile il software in questo periodo di tempo (in giorni)
 <!--1358578-->
-A partire dalla versione 1806, configurare questa impostazione affinché l'implementazione in ogni fase avvenga gradualmente. Questo comportamento consente di ridurre il rischio di problemi di distribuzione e diminuisce il carico sulla rete causato dalla distribuzione di contenuto nei client. Il sito rende gradualmente disponibile il software a seconda della configurazione per ogni fase. Tutti i client in una fase hanno una scadenza definita in base al momento in cui il software viene reso disponibile. L'intervallo di tempo tra l'ora di disponibilità e la scadenza è uguale per tutti i client in una fase. Il valore predefinito di questa impostazione è zero, ovvero la distribuzione non è limitata per impostazione predefinita. Non impostare un valore maggiore di 30.<!--SCCMDocs-pr issue 2767--> 
+Configurare questa impostazione affinché l'implementazione in ogni fase avvenga gradualmente. Questo comportamento consente di ridurre il rischio di problemi di distribuzione e diminuisce il carico sulla rete causato dalla distribuzione di contenuto nei client. Il sito rende gradualmente disponibile il software a seconda della configurazione per ogni fase. Tutti i client in una fase hanno una scadenza definita in base al momento in cui il software viene reso disponibile. L'intervallo di tempo tra l'ora di disponibilità e la scadenza è uguale per tutti i client in una fase. Il valore predefinito di questa impostazione è zero, ovvero la distribuzione non è limitata per impostazione predefinita. Non impostare un valore maggiore di 30.<!--SCCMDocs-pr issue 2767-->
 
 ![Criteri di distribuzione in più fasi per le impostazioni di esito positivo](media/phased-deployment-criteria-for-success.png)
 
-#### <a name="configure-the-deadline-behavior-relative-to-when-the-software-is-made-available"></a>Configurare il comportamento della scadenza rispetto al momento in cui viene reso disponibile il software  
+### <a name="configure-the-deadline-behavior-relative-to-when-the-software-is-made-available"></a>Configurare il comportamento della scadenza rispetto al momento in cui viene reso disponibile il software
 
 - **L'installazione è obbligatoria non appena possibile**: imposta come scadenza per l'installazione nel dispositivo il momento in cui il dispositivo viene incluso.  
 
-- **L'installazione è obbligatoria dopo questo periodo di tempo**: imposta la scadenza per l'installazione su un determinato numero di giorni dopo l'inclusione del dispositivo. Per impostazione predefinita, questo valore è 7 giorni.   
-
-
-<!--### Examples
-Include a timeline diagram
--->
-
-
+- **L'installazione è obbligatoria dopo questo periodo di tempo**: imposta la scadenza per l'installazione su un determinato numero di giorni dopo l'inclusione del dispositivo. Per impostazione predefinita, questo valore è 7 giorni.
 
 ## <a name="automatically-create-a-default-two-phase-deployment"></a><a name="bkmk_auto"></a> Creare automaticamente una distribuzione predefinita in due fasi
 
 1. Avviare la procedura guidata Crea una distribuzione in più fasi nella console di Configuration Manager. Questa azione varia in base al tipo di software da distribuire:  
 
-    - **Applicazione** (solo nella versione 1806 o successiva): passare a **Raccolta software**, espandere **Gestione applicazioni** e selezionare **Applicazioni**. Selezionare un'applicazione esistente e quindi scegliere **Crea una distribuzione in più fasi** nella barra multifunzione.  
+    - **Applicazione**: passare a **Raccolta software**, espandere **Gestione applicazioni** e selezionare **Applicazioni**. Selezionare un'applicazione esistente e quindi scegliere **Crea una distribuzione in più fasi** nella barra multifunzione.  
 
-    - **Aggiornamento software** (solo nella versione 1810 o successiva): passare a **Raccolta software**, espandere **Aggiornamenti software** e selezionare **Tutti gli aggiornamenti software**. Selezionare uno o più aggiornamenti e quindi scegliere **Crea una distribuzione in più fasi** nella barra multifunzione.  
+    - **Aggiornamento software**: passare a **Raccolta software**, espandere **Aggiornamenti software** e selezionare **Tutti gli aggiornamenti software**. Selezionare uno o più aggiornamenti e quindi scegliere **Crea una distribuzione in più fasi** nella barra multifunzione.  
 
         Questa azione è disponibile per gli aggiornamenti software dai seguenti nodi:  
         - Aggiornamenti software  
             - **Tutti gli aggiornamenti software**  
-            - **Gruppi di aggiornamenti software**   
+            - **Gruppi di aggiornamenti software**
         - Manutenzione pacchetti di Windows 10, **Aggiornamenti di tutte le piattaforme Windows 10**  
         - Gestione client di Office 365, **Aggiornamenti di Office 365**  
 
@@ -124,35 +116,40 @@ Include a timeline diagram
 > [!NOTE]
 > A partire dal 21 aprile 2020, Office 365 ProPlus viene rinominato come **App di Microsoft 365 per grandi imprese**. Per altre informazioni, vedere [Modifica del nome di Office 365 ProPlus](/deployoffice/name-change). È comunque possibile che il nome precedente venga visualizzato in Configuration Manager e nella documentazione corrispondente mentre la console viene aggiornata.  
 
-## <a name="create-a-phased-deployment-with-manually-configured-phases"></a><a name="bkmk_manual"></a> Creare una distribuzione in più fasi con fasi configurate manualmente
-<!--1358148--> 
+A partire dalla versione 2002, usare i cmdlet di Windows PowerShell seguenti per questa attività:
 
-A partire dalla versione 1806, creare una distribuzione in più fasi con fasi configurate manualmente per una sequenza di attività. Aggiungere fino a 10 fasi aggiuntive dalla scheda **Fasi** della procedura guidata Crea una distribuzione in più fasi. 
+- [New-CMApplicationAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmapplicationautophaseddeployment?view=sccm-ps)
+- [New-CMSoftwareUpdateAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdateautophaseddeployment?view=sccm-ps)
+- [New-CMTaskSequenceAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmtasksequenceautophaseddeployment?view=sccm-ps)
+
+## <a name="create-a-phased-deployment-with-manually-configured-phases"></a><a name="bkmk_manual"></a> Creare una distribuzione in più fasi con fasi configurate manualmente
+<!--1358148-->
+
+Creare una distribuzione in più fasi con fasi configurate manualmente per una sequenza di attività. Aggiungere fino a 10 fasi aggiuntive dalla scheda **Fasi** della procedura guidata Crea una distribuzione in più fasi.
 
 > [!Note]  
 > Al momento non è possibile creare manualmente le fasi per un'applicazione. La procedura guidata crea automaticamente due fasi per le distribuzioni di applicazioni.
 
-
 1. Avviare la procedura guidata Crea una distribuzione in più fasi per una sequenza di attività o per gli aggiornamenti software.  
 
-2. Nella pagina **Generale** della procedura guidata Crea una distribuzione in più fasi assegnare alla distribuzione in più fasi un **Nome** e una **Descrizione** (facoltativa) e quindi selezionare **Configura manualmente tutte le fasi**.  
+1. Nella pagina **Generale** della procedura guidata Crea una distribuzione in più fasi assegnare alla distribuzione in più fasi un **Nome** e una **Descrizione** (facoltativa) e quindi selezionare **Configura manualmente tutte le fasi**.  
 
-3. Nella pagina **Fasi** della procedura guidata Crea una distribuzione in più fasi sono disponibili le azioni seguenti:  
+1. Nella pagina **Fasi** della procedura guidata Crea una distribuzione in più fasi sono disponibili le azioni seguenti:  
 
-    - **Filtrare** l'elenco di fasi di distribuzione. Immettere una stringa di caratteri per trovare una corrispondenza senza distinzione tra maiuscole e minuscole delle colonne Ordine, Nome o Raccolta. 
+    - **Filtrare** l'elenco di fasi di distribuzione. Immettere una stringa di caratteri per trovare una corrispondenza senza distinzione tra maiuscole e minuscole delle colonne Ordine, Nome o Raccolta.
 
     - **Aggiungere** una nuova fase:  
 
         1. Nella pagina **Generale** dell'Aggiunta guidata fasi specificare un **Nome** per la fase e quindi selezionare la **Raccolta di fasi** di destinazione. Le impostazioni aggiuntive in questa pagina sono uguali a quelle usate quando si distribuisce normalmente una sequenza di attività o gli aggiornamenti software.  
 
-        2. Nella pagina **Impostazioni delle fasi** dell'Aggiunta guidata fasi configurare le impostazione di pianificazione e al termine selezionare **Avanti**. Per altre informazioni, vedere [Impostazioni](#bkmk_settings).   
+        1. Nella pagina **Impostazioni delle fasi** dell'Aggiunta guidata fasi configurare le impostazione di pianificazione e al termine selezionare **Avanti**. Per altre informazioni, vedere [Impostazioni](#bkmk_settings).
 
             > [!Note]  
-            > Non è possibile modificare le impostazioni delle fasi **Percentuale di esiti positivi della distribuzione** o **Numero di dispositivi distribuiti correttamente** (versione 1902 o successiva) nella prima fase. Questa impostazione si applica solo alle fasi che hanno una fase precedente.  
+            > Non è possibile modificare le impostazioni delle fasi **Percentuale di esiti positivi della distribuzione** o **Numero di dispositivi distribuiti correttamente** nella prima fase. Queste impostazioni si applicano solo alle fasi che hanno una fase precedente.
 
-        3. Le impostazioni nelle pagine **Esperienza utente** e **Punti di distribuzione** dell'Aggiunta guidata fasi sono uguali a quelle usate quando si distribuisce normalmente una sequenza di attività o gli aggiornamenti software.  
+        1. Le impostazioni nelle pagine **Esperienza utente** e **Punti di distribuzione** dell'Aggiunta guidata fasi sono uguali a quelle usate quando si distribuisce normalmente una sequenza di attività o gli aggiornamenti software.  
 
-        4. Controllare le impostazioni nella pagina **Riepilogo** e quindi completare l'Aggiunta guidata fasi.  
+        1. Controllare le impostazioni nella pagina **Riepilogo** e quindi completare l'Aggiunta guidata fasi.  
 
     - **Modifica**: questa azione apre la finestra Proprietà della fase selezionata, le cui schede sono uguali alle pagine dell'Aggiunta guidata fasi.  
 
@@ -165,12 +162,16 @@ A partire dalla versione 1806, creare una distribuzione in più fasi con fasi co
 
        > [!Important]  
        > Dopo aver modificato l'ordine, controllare le impostazioni delle fasi. Verificare che le impostazioni seguenti siano ancora coerenti con i requisiti per la distribuzione in più fasi:  
-       > 
+       >
        > - Criteri per la riuscita della fase precedente  
-       > - Condizioni per l'inizio di questa fase della distribuzione dopo l'esito positivo della fase precedente   
+       > - Condizioni per l'inizio di questa fase della distribuzione dopo l'esito positivo della fase precedente
 
-5. Selezionare **Avanti**. Controllare le impostazioni nella pagina **Riepilogo** e quindi completare la procedura guidata Crea una distribuzione in più fasi.  
+1. Selezionare **Avanti**. Controllare le impostazioni nella pagina **Riepilogo** e quindi completare la procedura guidata Crea una distribuzione in più fasi.
 
+A partire dalla versione 2002, usare i cmdlet di Windows PowerShell seguenti per questa attività:
+
+- [New-CMSoftwareUpdateManualPhasedDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdatemanualphaseddeployment?view=sccm-ps)
+- [New-CMTaskSequenceManualPhasedDeployment](/powershell/module/configurationmanager/new-cmtasksequencemanualphaseddeployment?view=sccm-ps)
 
 Dopo aver creato una distribuzione in più fasi, aprirne le proprietà per apportare le modifiche:  
 
@@ -182,12 +183,10 @@ Dopo aver creato una distribuzione in più fasi, aprirne le proprietà per appor
 
 - Una distribuzione in più fasi di un'applicazione è sempre di sola lettura.  
 
-
-
 ## <a name="next-steps"></a>Passaggi successivi
 
 Gestire e monitorare le distribuzioni in più fasi:
+
 - [Applicazione](manage-monitor-phased-deployments.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)
 - [Aggiornamento software](manage-monitor-phased-deployments.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json)  
 - [Sequenza di attività](manage-monitor-phased-deployments.md)  
-

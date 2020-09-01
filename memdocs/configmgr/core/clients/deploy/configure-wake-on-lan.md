@@ -2,7 +2,7 @@
 title: Configurare la riattivazione LAN
 titleSuffix: Configuration Manager
 description: Selezionare le impostazioni di riattivazione LAN in Configuration Manager.
-ms.date: 08/11/2020
+ms.date: 08/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b475a0c8-85d6-4cc4-b11f-32c0cc98239e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: dcf6005d0364106df8717a1151dbad617e455ff9
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 33283b13bc28c7d102f014ac3cb4048681343ac2
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127036"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907848"
 ---
 # <a name="how-to-configure-wake-on-lan-in-configuration-manager"></a>Come configurare la riattivazione LAN in Configuration Manager
 
@@ -27,7 +27,7 @@ Specificare le impostazioni di riattivazione LAN per Configuration Manager quand
 <!--3607710-->
 A partire da Configuration Manager 1810, è disponibile una nuova funzionalità per riattivare i computer sospesi. È ora possibile riattivare un client dalla console di Configuration Manager anche se il client non si trova nella stessa subnet del server del sito. Se è necessario eseguire attività di manutenzione o query nei dispositivi, i client remoti in stato di sospensione non costituiranno un limite per le operazioni. Il server del sito usa il canale di notifica client per identificare altri client attivi nella stessa subnet remota e usa tali client per inviare una richiesta di riattivazione LAN (Magic Packet). L'uso del canale di notifica client consente di evitare instabilità negli indirizzi MAC, che potrebbero causare l'arresto della porta da parte del router. La nuova versione di Riattivazione LAN può essere abilitata contemporaneamente alla [versione precedente](#bkmk_wol-previous).
 
-### <a name="limitations"></a>Limitazioni
+### <a name="prerequisites-and-limitations"></a>Prerequisiti e limitazioni
 <!--7323898, 7363492-->
 - Almeno un client nella subnet di destinazione deve essere attivo.
 - Questa funzionalità non supporta le tecnologie di rete seguenti:
@@ -38,6 +38,8 @@ A partire da Configuration Manager 1810, è disponibile una nuova funzionalità 
 - I computer si riattivano solo quando ricevono la notifica client **Riattiva**.
     - Per eseguire la riattivazione in base a una scadenza, viene usata la versione precedente di Riattivazione LAN.
     -  Se la versione precedente non è abilitata, la riattivazione dei client non si verifica per le distribuzioni create con le impostazioni **Utilizza riattivazione LAN per riattivare i client per le distribuzioni richieste** o **Invia pacchetti di riattivazione**.  
+- La durata del lease DHCP non può essere infinita. <!--8018584-->
+   - È possibile che SleepAgent_&lt;*dominio*\>@SYSTEM_0.log diventi molto grande e che si verifichi una broadcast storm negli ambienti in cui i lease DHCP sono impostati su infinito.  
 
 ### <a name="security-role-permissions"></a>Autorizzazioni del ruolo di sicurezza
 

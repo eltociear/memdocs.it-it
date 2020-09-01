@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e0f2801a9bf3d587d0117a720f4151f431441291
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 2e823aad8fcf69861d21a99f0e65dcf8aaa40dcd
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692826"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993387"
 ---
 # <a name="what39s-new-in-version-1706-of-configuration-manager"></a>Novità della versione 1706 di Configuration Manager
 
@@ -44,9 +44,9 @@ Version 1706 drops support for the following products:
 
 ## <a name="site-infrastructure"></a>Infrastruttura del sito
 
-### <a name="client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365"></a>Supporto della peer cache del client per i file di installazione rapida per Windows 10 e Office 365  
+### <a name="client-peer-cache-support-for-express-installation-files-for-windows-10-and-microsoft-365"></a>Supporto della peer cache client per i file di installazione rapida per Windows 10 e Microsoft 365  
 <!-- 1352486 -->
-A partire da questa versione, la peer cache supporta la distribuzione dei file di installazione rapida del contenuto per Windows 10 e dei file di aggiornamento per Office 365. Non sono richieste configurazioni aggiuntive per supportare questa modifica.
+A partire da questa versione, la peer cache supporta la distribuzione dei file di installazione rapida del contenuto per Windows 10 e dei file di aggiornamento per Microsoft 365. Non sono richieste configurazioni aggiuntive per supportare questa modifica.
 
 ### <a name="updates-for-the-data-warehouse"></a>Aggiornamenti per il data warehouse
 <!-- 1277922 -->
@@ -227,8 +227,8 @@ In questa versione è stato considerevolmente migliorato il tempo di download pe
 
 Per informazioni dettagliate, vedere [Integrazione con Windows Update for Business in Windows 10](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md#configure-windows-update-for-business-deferral-policies).
 
-### <a name="improved-user-notifications-for-office-365-updates"></a>Notifiche utente migliorate per gli aggiornamenti di Office 365
-Sono stati apportati miglioramenti per usare l'esperienza utente a portata di clic di Office quando un client installa un aggiornamento di Office 365. I miglioramenti includono le notifiche a comparsa e in-app e un conto alla rovescia. Per altre informazioni, vedere [Comportamento di riavvio e notifiche client per gli aggiornamenti di Office 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md)
+### <a name="improved-user-notifications-for-microsoft-365-updates"></a>Notifiche utente migliorate per gli aggiornamenti di Microsoft 365
+Sono stati apportati miglioramenti per usare l'esperienza utente a portata di clic di Office quando un client installa un aggiornamento di Microsoft 365. I miglioramenti includono le notifiche a comparsa e in-app e un conto alla rovescia. Per altre informazioni, vedere [Comportamento di riavvio e notifiche client per gli aggiornamenti di Microsoft 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md)
 
 ## <a name="reporting"></a>Reporting
 

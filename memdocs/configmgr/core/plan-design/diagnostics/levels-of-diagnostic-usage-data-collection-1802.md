@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: bae73e89852efbc8e85ba4df7e98eb0452d6b754
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: d9fb986285186ce531a43283b002eb88eb9595a1
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128730"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994719"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1802-of-configuration-manager"></a>Livelli di raccolta di dati per utilizzo diagnostico per la versione 1802 di Configuration Manager
 
@@ -144,7 +144,7 @@ Per Configuration Manager versione 1802, questo livello include i dati seguenti:
 
 - Numero di personalizzazioni distinte per catalogo applicazioni
 
-- Numero di applicazioni di Office 365 create tramite il dashboard
+- Numero di applicazioni Microsoft 365 create tramite il dashboard
 
 - Numero di pacchetti per tipo  
 
@@ -387,7 +387,7 @@ Per Configuration Manager versione 1802, questo livello include i dati seguenti:
 
 - Configurazioni usate per i piani di manutenzione attivi di Windows 10  
 
-- Numero di aggiornamenti di Office 365 distribuiti  
+- Numero di aggiornamenti di Microsoft 365 distribuiti  
 
 - Numero di driver di Microsoft Surface sincronizzati
 

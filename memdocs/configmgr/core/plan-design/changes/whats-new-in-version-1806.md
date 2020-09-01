@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3b153dad513107b118d11fa95e3feaa035a1bc90
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3fc0344d7cf4a15925b314e38fd2d6b2ceee9762
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692639"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995008"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Novità della versione 1806 di Configuration Manager (Current Branch)
 
@@ -235,7 +235,7 @@ Per altre informazioni, vedere [Come passare i carichi di lavoro di Configuratio
 
 - **Configurazione del dispositivo**<!--1357903-->: questo carico di lavoro consente di usare Intune per distribuire criteri MDM, pur continuando a usare Configuration Manager per la distribuzione delle applicazioni.  
 
-- **Office 365**<!--1357841-->: i dispositivi non installano le distribuzioni di Office 365 da Configuration Manager.  
+- **Office 365**<!--1357841-->: i dispositivi non installano le distribuzioni di Microsoft 365 da Configuration Manager.  
 
 - **App per dispositivi mobili**<!--1357892-->: qualsiasi app disponibile distribuita da Intune sarà disponibile nel portale aziendale. Le app distribuite da Configuration Manager sono disponibili in Software Center. Si tratta di una [funzionalità di versione non definitiva](../../servers/manage/pre-release-features.md).  
 
@@ -294,9 +294,9 @@ Per altre informazioni, vedere [Creare applicazioni Windows](../../../apps/get-s
 
 ### <a name="office-customization-tool-integration-with-the-office-365-installer"></a>Integrazione dello Strumento di personalizzazione di Office con il Programma di installazione di Office 365
 <!--1358149-->
-Lo Strumento di personalizzazione di Office è ora integrato con il Programma di installazione di Office 365 nella console di Configuration Manager. Quando si crea una distribuzione per Office 365, configurare dinamicamente le impostazioni di gestibilità di Office più recenti. Lo Strumento di personalizzazione di Office viene aggiornato quando vengono rilasciate nuove build di Office 365. Questa integrazione consente di usufruire delle nuove impostazioni di gestibilità di Office 365 non appena sono disponibili. 
+Lo Strumento di personalizzazione di Office è ora integrato con il Programma di installazione di Office 365 nella console di Configuration Manager. Quando si crea una distribuzione per Microsoft 365, configurare dinamicamente le impostazioni di gestibilità di Office più recenti. Lo Strumento di personalizzazione di Office viene aggiornato quando vengono rilasciate nuove build di Microsoft 365. Questa integrazione consente di usufruire delle nuove impostazioni di gestibilità di Microsoft 365 non appena sono disponibili. 
 
-Per altre informazioni, vedere [Distribuire app di Office 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
+Per altre informazioni, vedere [Distribuire app di Microsoft 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 
 ### <a name="support-for-new-windows-app-package-formats"></a>Supporto per nuovi formati di pacchetti di app Windows

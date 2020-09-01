@@ -10,12 +10,12 @@ ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bf69dfd73472cb252d2d821dd8e5fb5eb5a6302f
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: faf8401e6aa89a60f2acbea8e0d97f9efaf09a84
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695767"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994464"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Domande frequenti relative ai rami e alle licenze di Configuration Manager
 
@@ -66,7 +66,7 @@ https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-pla
 -->
 
 > [!IMPORTANT]
-> Configuration Manager non è incluso nel piano di [Microsoft 365 Business](https://www.microsoft.com/microsoft-365/business).
+> Configuration Manager non è incluso nel piano di [Microsoft 365 Business Premium](https://www.microsoft.com/microsoft-365/business).
 
 ### <a name="what-changes-with-licensing-for-co-management-in-microsoft-endpoint-manager"></a><a name="bkmk_mem"></a> Quali modifiche sono state apportate alle licenze per la co-gestione in Microsoft Endpoint Manager?
 
@@ -102,6 +102,7 @@ La licenza di co-gestione consente ai clienti di Configuration Manager con Softw
 |Gestione degli aggiornamenti software|Sì|Sì|
 |Argomento|Sì|Sì|
 |Gestione delle app|Sì|Sì|
+|Cancellazione remota completa/selettiva|Sì|Sì|
 |Assistenza remota<br>(richiesta licenza di TeamViewer)|Sì|Sì|
 |Desktop Analytics<br>(richieste licenze di sottoscrizione Windows)|Sì|N/D|
 |Collegamento di tenant|Sì|N/D|

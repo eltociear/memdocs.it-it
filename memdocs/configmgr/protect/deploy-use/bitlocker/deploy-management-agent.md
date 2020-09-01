@@ -2,7 +2,7 @@
 title: Distribuire la gestione di BitLocker
 titleSuffix: Configuration Manager
 description: Distribuire l'agente di gestione di BitLocker per i client di Configuration Manager e il servizio di ripristino ai punti di gestione
-ms.date: 07/27/2020
+ms.date: 08/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: how-to
@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a7eca5c2f5c00ae559a8567d5fce1e4e36df19c0
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 67130932ee20849530c6e865971c7776c3e6b6b1
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129274"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819933"
 ---
 # <a name="deploy-bitlocker-management"></a>Distribuire la gestione di BitLocker
 
@@ -118,6 +118,8 @@ Per modificare le impostazioni di un criterio esistente, selezionarlo dall'elenc
 
 Quando si crea più di un criterio, è possibile configurarne la priorità relativa. Se si distribuiscono più criteri a un client, viene usato il valore di priorità per determinarne le impostazioni.
 
+A partire dalla versione 2006, è possibile usare i cmdlet di Windows PowerShell per questa attività. Per altre informazioni, vedere [New-CMBlmSetting](/powershell/module/configurationmanager/new-cmblmsetting?view=sccm-ps).
+
 ## <a name="deploy-a-policy"></a>Distribuire un criterio
 
 1. Scegliere un criterio esistente nel nodo **Gestione di BitLocker**. Nella barra multifunzione selezionare **Distribuisci**.
@@ -135,6 +137,7 @@ Quando si crea più di un criterio, è possibile configurarne la priorità relat
 > [!IMPORTANT]
 > Il client MBAM non avvierà le azioni di Crittografia unità BitLocker se è attiva una connessione RDP (Remote Desktop Protocol). Tutte le connessioni alla console remota devono essere chiuse e un utente deve essere connesso a una sessione della console fisica prima dell'avvio di Crittografia unità BitLocker.
 
+A partire dalla versione 2006, è possibile usare i cmdlet di Windows PowerShell per questa attività. Per altre informazioni, vedere [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment?view=sccm-ps).
 
 ## <a name="monitor"></a>Monitoraggio
 

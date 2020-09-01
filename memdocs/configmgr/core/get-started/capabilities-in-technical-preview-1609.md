@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 9d58ffee30986efeda1716358ab7aa6c1d36cbf5
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 05ed0daf56275b2e0ed46b2f9dd93fd66eb360be
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695682"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995535"
 ---
 # <a name="capabilities-in-technical-preview-1609-for-configuration-manager"></a>Funzionalità della versione Technical Preview 1609 per Configuration Manager
 
@@ -347,36 +347,36 @@ Nel dashboard vengono visualizzati i grafici per:
 - Versioni dei client di Office 365
 - Lingue dei client di Office 365
 - Canali dei client di Office 365     
-Per altre informazioni, vedere [Panoramica dei canali di aggiornamento per Office 365 ProPlus](/deployoffice/overview-update-channels).
+Per altre informazioni, vedere [Panoramica dei canali di aggiornamento per App di Microsoft 365](https://docs.microsoft.com/deployoffice/overview-update-channels).
 - Regole di distribuzione automatica con il client di Office 365 selezionato nel set dei prodotti disponibili.
 
 Sul dashboard è possibile eseguire le azioni seguenti:
 - Nella parte superiore del dashboard, usare l'impostazione a discesa **Raccolta** per filtrare i dati del dashboard in base ai membri di una raccolta specifica.
-- Sul lato superiore destro del dashboard, fare clic su **Office 365 Installer** (Programma di installazione di Office 365) per avviare l'installazione guidata di Office 365 Client e distribuire le applicazioni di Office 365 sui client. Per informazioni dettagliate, vedere [Distribuire le app di Office 365 sui client](#deploy-office-365-apps-to-clients).
-- Sul lato centrale a destra del dashboard, fare clic su **Create an ADR** (Crea un ADR) per aprire la creazione guidata delle regole di distribuzione automatica e creare una nuova regola di distribuzione automatica (ADR). Per creare un ADR per le applicazioni di Office 365, selezionare **Office 365 Client** (Client Office 365) quando si sceglie il prodotto. Per altre informazioni, vedere [Distribuire automaticamente gli aggiornamenti software](../../sum/deploy-use/automatically-deploy-software-updates.md).
+- Nel lato superiore destro del dashboard fare clic su **Office 365 Installer** (Programma di installazione di Office 365) per avviare l'installazione guidata di Office 365 Client e distribuire le app di Microsoft 365 ai client. Per informazioni dettagliate, vedere [Distribuire le app di Microsoft 365 ai client](#deploy-microsoft-365-apps-to-clients).
+- Sul lato centrale a destra del dashboard, fare clic su **Create an ADR** (Crea un ADR) per aprire la creazione guidata delle regole di distribuzione automatica e creare una nuova regola di distribuzione automatica (ADR). Per creare una regola di distribuzione automatica per le app di Microsoft 365, selezionare **Office 365 Client** (Client Office 365) quando si sceglie il prodotto. Per altre informazioni, vedere [Distribuire automaticamente gli aggiornamenti software](../../sum/deploy-use/automatically-deploy-software-updates.md).
 - Sul lato inferiore destro del dashboard, fare clic su **Create Client Agent Settings** (Crea impostazioni agente client) per aprire le impostazioni dell'agente client. Per altre informazioni, vedere [About client settings](../clients/deploy/about-client-settings.md) (Informazioni sulle impostazioni client).
 
 
 
-Per altre informazioni sugli aggiornamenti di Office 365 ProPlus, vedere [Manage Office 365 ProPlus updates with Configuration Manager](../../sum/deploy-use/manage-office-365-proplus-updates.md) (Gestire gli aggiornamenti di Office 365 ProPlus con Configuration Manager).
+Per altre informazioni sugli aggiornamenti di Microsoft 365 Apps for enterprise, vedere [Gestire aggiornamenti di App di Microsoft 365 con Configuration Manager](../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
-## <a name="deploy-office-365-apps-to-clients"></a>Distribuire le app di Office 365 sui client
-In questa versione, nel dashboard di gestione del client di Office 365, è possibile avviare l'installazione di Office 365 che consente di configurare le impostazioni di installazione di Office 365, scaricare file dalle reti di distribuzione del contenuto (CDN) e distribuire i file come applicazione in Configuration Manager.
+## <a name="deploy-microsoft-365-apps-to-clients"></a>Distribuire app Microsoft 365 ai client
+In questa versione, nel dashboard di gestione del client di Office 365, è possibile avviare il programma di installazione di Office 365 che consente di configurare le impostazioni di installazione di Microsoft 365, scaricare file dalle reti di distribuzione del contenuto (CDN) e distribuire i file come applicazione in Configuration Manager.
 
-### <a name="limitations-of-office-365-deployment"></a>Limitazioni della distribuzione di Office 365
+### <a name="limitations-of-microsoft-365-deployment"></a>Limitazioni della distribuzione di Microsoft 365
 - Si potrebbero anche presentare problemi quando si tenta di importare le impostazioni client esistenti (XML) durante l'installazione guidata dell'app Office 365. È possibile configurare manualmente le impostazioni del client senza riscontrare problemi.
 
-#### <a name="to-deploy-office-365-apps-to-clients"></a>Per distribuire le app di Office 365 sui client
+#### <a name="to-deploy-microsoft-365-apps-to-clients"></a>Per distribuire app di Microsoft 365 ai client
 1. Nella console di Configuration Manager passare a **Raccolta software** > **Panoramica** > **Office 365 Client Management** (Gestione Client di Office 365).
 2. Fare clic su **Office 365 Installer** (Programma di installazione di Office 365) nel riquadro in alto a destro. Si apre l'installazione guidata dei client di Office 365.
 3. Nella pagina **Impostazioni applicazione** specificare il nome e la descrizione per l'app, immettere il percorso di download per i file e quindi fare clic su **Avanti**. Si noti che è necessario specificare il percorso nel formato &#92;&#92;*server*&#92;*share*.
-4. Nella pagina **Import Client Settings** (Importa impostazioni client) scegliere se importare le impostazioni del client di Office 365 da un file di configurazione XML esistente o se specificare manualmente le impostazioni, quindi fare clic su **Avanti**.
+4. Nella pagina **Importa le impostazioni del client** scegliere se importare le impostazioni del client di Microsoft 365 da un file di configurazione XML esistente o se specificare manualmente le impostazioni, quindi fare clic su **Avanti**.
 Se già si dispone di un file di configurazione, immettere il percorso del file e andare al passaggio 7. Si noti che è necessario specificare il percorso nel formato &#92;&#92;*server*&#92;*share*&#92;*nomedelfile*.XML.
 
     > [!IMPORTANT]
     >In questa Tecnical Preview, si potrebbero anche presentare problemi quando si tenta di importare le impostazioni client esistenti (XML).
 
-5. Nella pagina **Client Products** (Prodotti client) selezionare la suite Office 365 in uso, selezionare le applicazioni da includere, selezionare eventuali prodotti aggiuntivi di Office da includere e quindi fare clic su **Avanti**.
+5. Nella pagina **Prodotti client** selezionare la famiglia di prodotti Microsoft 365 in uso, selezionare le applicazioni da includere, selezionare eventuali prodotti aggiuntivi di Office da includere e quindi fare clic su **Avanti**.
 6. Nella pagina **Impostazioni client** scegliere le impostazioni da includere e fare clic su **Avanti**.
 7. Nella pagina **Distribuzione** scegliere se distribuire l'applicazione, quindi fare clic su pagina **Avanti**.
 Se si sceglie di non distribuire il pacchetto nella procedura guidata, andare al passaggio 9.
@@ -385,7 +385,7 @@ Se si sceglie di non distribuire il pacchetto nella procedura guidata, andare al
 10. È possibile distribuire o modificare l'applicazione esattamente come si farebbe con qualsiasi altra applicazione in Configuration Manager da **Raccolta software** > **Panoramica** > **Gestione applicazioni** > **Applicazioni**.
 
 >[!NOTE]
->Dopo la distribuzione delle applicazioni di Office 365, è possibile creare regole di distribuzione automatica per le applicazioni. Per creare un ADR per le applicazioni di Office 365, fare clic su **Create an ADR** (Crea un ADR) e selezionare **Office 365 Client** (Client Office 365) quando si sceglie il prodotto. Per altre informazioni, vedere [Distribuire automaticamente gli aggiornamenti software](../../sum/deploy-use/automatically-deploy-software-updates.md).
+>Dopo la distribuzione delle app di Microsoft 365, è possibile creare regole di distribuzione automatica per gestire le app. Per creare una regola di distribuzione automatica per le app di Microsoft 365, fare clic su **Crea una regola di distribuzione automatica** e selezionare **Office 365 Client** (Client Office 365) quando si sceglie il prodotto. Per altre informazioni, vedere [Distribuire automaticamente gli aggiornamenti software](../../sum/deploy-use/automatically-deploy-software-updates.md).
 
 ## <a name="improvements-for-bios-to-uefi-conversion"></a><a name="BKMK_UEFIConversion"></a>Miglioramenti della conversione da BIOS a UEFI
 È ora possibile personalizzare una sequenza di attività di distribuzione del sistema operativo con una nuova variabile, TSUEFIDrive, in modo che il passaggio di riavvio del computer prepari una partizione FAT32 sul disco rigido per la transizione a UEFI. La procedura seguente fornisce un esempio sulle modalità di creazione dei passaggi della sequenza di attività per preparare il disco rigido alla conversione da BIOS a UEFI.

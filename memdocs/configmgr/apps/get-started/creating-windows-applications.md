@@ -10,12 +10,12 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2712613eb6d03253c05a011037ac8492992e1f03
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 77fee5931046bc706f965a9a5d738f5a7e2223f4
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695189"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819627"
 ---
 # <a name="create-windows-applications-in-configuration-manager"></a>Creare applicazioni Windows in Configuration Manager
 
@@ -127,6 +127,11 @@ A partire dalla versione 2002, è possibile installare applicazioni complesse us
 È possibile aggiungere una sequenza di attività di distribuzione non di sistema operativo solo come tipo di distribuzione per un'app. Le sequenze di attività a impatto elevato, di distribuzione del sistema operativo o di aggiornamento del sistema operativo non sono supportate. <!--A user-targeted deployment still runs in the user context of the local System account.-->
 
 Quando si aggiunge questo tipo di distribuzione a un'app, configurarne le proprietà nella pagina **Sequenza di attività**. Per altre informazioni, vedere [Opzioni per il tipo di distribuzione **Sequenza di attività**](../deploy-use/create-applications.md#bkmk_dt-ts).
+
+A partire dalla versione 2006, usare i cmdlet di Windows PowerShell seguenti per aggiungere e configurare un tipo di distribuzione sequenza di attività:
+
+- [Add-CMTaskSequenceDeploymentType](/powershell/module/configurationmanager/add-cmtasksequencedeploymenttype?view=sccm-ps)
+- [Set-CMTaskSequenceDeploymentType](/powershell/module/configurationmanager/set-cmtasksequencedeploymenttype?view=sccm-ps)
 
 ### <a name="prerequisites-for-a-task-sequence-deployment-type"></a>Prerequisiti per un tipo di distribuzione sequenza di attività
 

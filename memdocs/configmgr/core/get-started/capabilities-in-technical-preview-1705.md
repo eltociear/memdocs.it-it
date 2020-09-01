@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 0ddad23dfde87fa402c01d4eaa21a1b76db27d93
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 06119bfc096564f70922249121f63c3d2039efe8
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692928"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995450"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-configuration-manager"></a>Funzionalità della versione Technical Preview 1705 per Configuration Manager
 
@@ -136,20 +136,20 @@ Per arrestare il sito, è possibile usare lo[Strumento di manutenzione gerarchia
 Arrestare il sito equivale ad arrestare il servizio Gestione componenti del sito (sitecomp) e poi il servizio SMS_Executive service, nel server del sito.
 
 
-## <a name="improved-user-notifications-for-office-365-updates"></a>Notifiche utente migliorate per gli aggiornamenti di Office 365
-Sono stati apportati miglioramenti per usare l'esperienza utente a portata di clic di Office quando un client installa un aggiornamento di Office 365. I miglioramenti includono le notifiche a comparsa e in-app e un conto alla rovescia. In precedenza, quando un aggiornamento di Office 365 veniva inviato a un client, le applicazioni di Office aperte venivano chiuse automaticamente senza preavviso. Dopo l'aggiornamento, le applicazioni di Office non verranno chiuse in modo imprevisto.
+## <a name="improved-user-notifications-for-microsoft-365-updates"></a>Notifiche utente migliorate per gli aggiornamenti di Microsoft 365
+Sono stati apportati miglioramenti per usare l'esperienza utente a portata di clic di Office quando un client installa un aggiornamento di Microsoft 365. I miglioramenti includono le notifiche a comparsa e in-app e un conto alla rovescia. In precedenza, quando un aggiornamento di Microsoft 365 veniva inviato a un client, le applicazioni di Office aperte venivano chiuse automaticamente senza preavviso. Dopo l'aggiornamento, le applicazioni di Office non verranno chiuse in modo imprevisto.
 
 ### <a name="prerequisites"></a>Prerequisiti
-Questo aggiornamento si applica ai client di Office 365 ProPlus.
+Questo aggiornamento si applica ai client Microsoft 365 Apps for enterprise.
 
 ### <a name="known-issues"></a>Problemi noti
-Quando un client valuta l'assegnazione di un aggiornamento di Office 365 per la prima volta e l'aggiornamento ha una scadenza pianificata nel passato, pianificata immediatamente o pianificata entro 30 minuti, l'esperienza utente di Office 365 può risultare incoerente. Il client potrebbe ad esempio visualizzare una finestra di dialogo con un conto alla rovescia di 30 minuti per l'aggiornamento, ma l'imposizione effettiva potrebbe avviarsi prima della fine del conto alla rovescia. Per evitare questo comportamento, considerare quanto segue:
-- Distribuire l'aggiornamento di Office 365 con una scadenza pianificata dopo più di 60 minuti rispetto all'ora corrente.
+Quando un client valuta l'assegnazione di un aggiornamento di Microsoft 365 per la prima volta e l'aggiornamento ha una scadenza pianificata nel passato, pianificata immediatamente o pianificata entro 30 minuti, l'esperienza utente di Microsoft 365 può risultare incoerente. Il client potrebbe ad esempio visualizzare una finestra di dialogo con un conto alla rovescia di 30 minuti per l'aggiornamento, ma l'imposizione effettiva potrebbe avviarsi prima della fine del conto alla rovescia. Per evitare questo comportamento, considerare quanto segue:
+- Distribuire l'aggiornamento di Microsoft 365 con una scadenza pianificata dopo più di 60 minuti rispetto all'ora corrente.
 - Configurare una finestra di manutenzione durante le ore non lavorative per la raccolta o un periodo di tolleranza per l'imposizione della distribuzione.
 
 ### <a name="try-it-out"></a>Verifica
 Provare a completare le attività seguenti e quindi inviare **Feedback** dalla scheda **Home** della barra multifunzione per comunicarci come è andata:
-- Distribuire l'aggiornamento di Office 365 a un client con una scadenza impostata dopo almeno 60 minuti rispetto all'ora corrente. Osservare il nuovo comportamento nel client.
+- Distribuire l'aggiornamento di Microsoft 365 a un client con una scadenza impostata dopo almeno 60 minuti rispetto all'ora corrente. Osservare il nuovo comportamento nel client.
 
 
 ## <a name="configure-and-deploy-windows-defender-application-guard-policies"></a>Configurare e distribuire i criteri di Windows Defender Application Guard

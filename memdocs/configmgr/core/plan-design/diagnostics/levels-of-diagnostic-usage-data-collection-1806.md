@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e1f10f291619ecf6ff3d5b997046f035c02bf7e7
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 66fc996fe78f0b8171eec61fba277f9d51b0389f
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128662"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994651"
 ---
 # <a name="diagnostic-and-usage-data-for-1806"></a>Dati di utilizzo e di diagnostica per la versione 1806
 
@@ -146,7 +146,7 @@ Per Configuration Manager versione 1806, questo livello include i dati seguenti:
 
 - Numero di personalizzazioni distinte per catalogo applicazioni
 
-- Numero di applicazioni di Office 365 create tramite il dashboard
+- Numero di applicazioni Microsoft 365 create tramite il dashboard
 
 - Numero di pacchetti per tipo  
 
@@ -412,7 +412,7 @@ Per Configuration Manager versione 1806, questo livello include i dati seguenti:
 
 - Configurazioni usate per i piani di manutenzione attivi di Windows 10  
 
-- Numero di aggiornamenti di Office 365 distribuiti  
+- Numero di aggiornamenti di Microsoft 365 distribuiti  
 
 - Numero di driver di Microsoft Surface sincronizzati
 

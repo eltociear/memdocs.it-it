@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 2fa46770adfbf3e688bbdc561d8193967f3913cd
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3817551c75557a275c98e8c62faef46185438a25
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698589"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993608"
 ---
 # <a name="what39s-new-in-version-1606-of-configuration-manager"></a>Novità della versione 1606 di Configuration Manager
 
@@ -126,10 +126,10 @@ Nelle proprietà di un'applicazione o di un pacchetto è ora presente un collega
 
 ## <a name="software-updates"></a>Aggiornamenti software
 
-### <a name="client-setting-to-manage-the-office-365-client-agent"></a>Impostazione del client per la gestione dell'agente client di Office 365
-È ora possibile utilizzare un'impostazione del client Configuration Manager per gestire l'agente client di Office 365. Dopo aver configurato questa impostazione e distribuito gli aggiornamenti di Office 365, l'agente client di Configuration Manager interagisce con l'agente client di Office 365 per scaricare e installare gli aggiornamenti di Office 365 da un punto di distribuzione.
+### <a name="client-setting-to-manage-the-microsoft-365-client-agent"></a>Impostazione del client per la gestione dell'agente client di Microsoft 365
+È ora possibile usare un'impostazione del client di Configuration Manager per gestire l'agente client di Microsoft 365. Dopo aver configurato questa impostazione e distribuito gli aggiornamenti di Microsoft 365, l'agente client di Configuration Manager interagisce con l'agente client di Microsoft 365 per scaricare e installare gli aggiornamenti di Microsoft 365 da un punto di distribuzione.
 
-Per informazioni dettagliate, vedere [Gestire gli aggiornamenti di Office 365 ProPlus con Configuration Manager](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
+Per informazioni dettagliate, vedere [Gestire gli aggiornamenti di Microsoft 365 Apps con Configuration Manager](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ### <a name="manually-switch-clients-to-a-new-software-update-point"></a>Passaggio manuale dei client a un nuovo punto di aggiornamento software
 È possibile abilitare un'opzione che consente ai client di Configuration Manager di passare a un nuovo punto di aggiornamento software quando si verificano problemi con il punto di aggiornamento software attivo. Dopo che l'opzione è stata abilitata, in occasione dell'analisi successiva il client cercherà un altro punto di aggiornamento software.

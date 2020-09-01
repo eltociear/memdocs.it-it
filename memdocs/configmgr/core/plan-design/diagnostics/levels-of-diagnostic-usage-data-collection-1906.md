@@ -10,12 +10,12 @@ ms.assetid: 370fc61f-2d8a-45b4-adc7-7b5d5ede2bf4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9c4b82bba24eccf9be5f410b5d2854d782230a72
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 41465fe916ef985ec0e33596be23f16910149a7a
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126648"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994600"
 ---
 # <a name="diagnostic-and-usage-data-for-version-1906"></a>Dati di diagnostica e utilizzo per la versione 1906
 
@@ -156,7 +156,7 @@ Per Configuration Manager versione 1906, questo livello include i dati seguenti:
 
 - Numero di personalizzazioni distinte per catalogo applicazioni  
 
-- Numero di applicazioni di Office 365 create tramite il dashboard  
+- Numero di applicazioni Microsoft 365 create tramite il dashboard  
 
 - Numero di pacchetti per tipo  
 
@@ -206,7 +206,7 @@ Per Configuration Manager versione 1906, questo livello include i dati seguenti:
 
 - ***[Nuovo]*** Statistiche aggregate sull'uso di gruppi di applicazioni
 
-- ***[Nuovo]*** Statistiche aggregate su componenti aggiuntivi per Office, uso di Office Readiness Toolkit e numero di client con Office 365 ProPlus
+- ***[Nuovo]*** Statistiche aggregate per componenti aggiuntivi di Office, utilizzo di Office Readiness Toolkit e conteggi dei client con Microsoft 365 Apps for enterprise
 
 ### <a name="client"></a>Client  
 
@@ -440,7 +440,7 @@ Per Configuration Manager versione 1906, questo livello include i dati seguenti:
 
 - Configurazioni usate per i piani di manutenzione attivi di Windows 10  
 
-- Numero di aggiornamenti di Office 365 distribuiti  
+- Numero di aggiornamenti di Microsoft 365 distribuiti  
 
 - Numero di driver di Microsoft Surface sincronizzati  
 

@@ -10,12 +10,12 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 0401207ec98331c33e87a0ac03b5cd7f750c17e7
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3736e5343e10bdfc8d5be8abf79ee27e46749834
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698715"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995110"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Novità della versione 1906 di Configuration Manager Current Branch
 
@@ -94,7 +94,7 @@ Per altre informazioni, vedere [Informazioni dettagliate sulla gestione](../../s
     > [!Note]  
     > Questa modifica non si applica ai cluster SQL Server.
 
-- Con il ripristino del sito è possibile ricreare il database in un gruppo SQL Always On. Questo processo funziona con il seeding sia manuale che automatico.<!-- SCCMDocs-pr#3846 -->
+- Site Recovery può ricreare il database in un gruppo SQL Always On. Questo processo funziona con il seeding sia manuale che automatico.<!-- SCCMDocs-pr#3846 -->
 
 - Nuovi controlli dei prerequisiti:<!-- SCCMDocs-pr#3899 -->  
 
@@ -505,7 +505,7 @@ Il collegamento ipertestuale  **Visualizza gli elementi necessari** è disponibi
    - **Raccolta software** > **Manutenzione pacchetti di Windows 10** > **Tutti gli aggiornamenti di Windows 10**
    - **Raccolta software** > **Gestione client di Office 365** > **Aggiornamenti di Office 365**
 
-Per altre informazioni, vedere [Monitorare gli aggiornamenti software](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates), [Gestire Windows come servizio](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates) e [Gestire gli aggiornamenti di Office 365 ProPlus](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
+Per altre informazioni, vedere [Monitorare gli aggiornamenti software](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates), [Gestire Windows come servizio](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates) e [Gestire gli aggiornamenti di App di Microsoft 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 
 ## <a name="office-management"></a><a name="bkmk_o365"></a> Gestione di Office
@@ -514,7 +514,7 @@ Per altre informazioni, vedere [Monitorare gli aggiornamenti software](../../../
 
 <!--4021125-->
 
-Per determinare quali dispositivi sono idonei per l'aggiornamento a Office 365 ProPlus, è disponibile un nuovo dashboard di preparazione. Include il riquadro **Preparazione aggiornamenti di Office 365 ProPlus** rilasciato in Configuration Manager Current Branch versione 1902. Nella console di Configuration Manager accedere all'area di lavoro **Raccolta software**, espandere **Gestione client di Office 365** e selezionare il nodo **Preparazione aggiornamenti di Office 365 ProPlus**.
+Per individuare i dispositivi pronti per l'aggiornamento a Microsoft 365 Apps for enterprise, è disponibile un nuovo dashboard di conformità. Include il riquadro **Preparazione aggiornamenti di Office 365 ProPlus** rilasciato in Configuration Manager Current Branch versione 1902. Nella console di Configuration Manager accedere all'area di lavoro **Raccolta software**, espandere **Gestione client di Office 365** e selezionare il nodo **Preparazione aggiornamenti di Office 365 ProPlus**.
 
 Per altre informazioni sul dashboard, sui prerequisiti e sull'uso di questi dati, vedere [Integrazione per l'idoneità per Office 365 ProPlus](../../../sum/deploy-use/office-365-dashboard.md#bkmk_readiness-dash).
 

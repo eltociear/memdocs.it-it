@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
 ROBOTS: NOINDEX
-ms.openlocfilehash: 63aba639eea221c3a13f7ebeabaa1b96a8439a72
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 484b1d808484984b4beaf434c0c27f2f1bec4e10
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700770"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995195"
 ---
 # <a name="ready-for-modern-desktop-retirement-faq"></a>Domande frequenti sul ritiro di Ready for modern desktop
 
@@ -45,11 +45,11 @@ Le categorie possibili sono:
 
 ### <a name="what-happened-to-the-ready-for-windows-website"></a>Che cosa è successo al sito Web Ready for Windows?
 
-Molti clienti hanno problemi a ottenere Windows 10 e Office 365 ProPlus e a mantenerli aggiornati. Il problema principale è quello di testare le applicazioni, in quanto si tratta in genere di un processo manuale. Per gli amministratori IT e i proprietari delle applicazioni analizzare continuamente le applicazioni esistenti e quindi correggere eventuali problemi è molto dispendioso in termini di tempo.
+Molti clienti hanno problemi a ottenere Windows 10 e Microsoft 365 Apps for enterprise e a mantenerli aggiornati. Il problema principale è quello di testare le applicazioni, in quanto si tratta in genere di un processo manuale. Per gli amministratori IT e i proprietari delle applicazioni analizzare continuamente le applicazioni esistenti e quindi correggere eventuali problemi è molto dispendioso in termini di tempo.
 
-La directory *Ready for modern desktop* includeva un elenco delle soluzioni software supportate e usate nei dispositivi commerciali che eseguono Windows 10 e Office 365 ProPlus. La directory offre un valido aiuto ai responsabili IT che stanno prendendo in considerazione l'idea di adottare le versioni più recenti di Windows 10 e Office 365 per le distribuzioni.
+La directory *Ready for modern desktop* includeva un elenco delle soluzioni software supportate e usate nei dispositivi commerciali che eseguono Windows 10 e Microsoft 365 Apps for enterprise. La directory offre un valido aiuto ai responsabili IT che stanno prendendo in considerazione l'idea di adottare le versioni più recenti di Windows 10 e Microsoft 365 per le distribuzioni.
 
-Il feedback dei responsabili IT è che vorrebbero che questi dati analitici si integrassero con gli strumenti che già usano per pianificare le distribuzioni. Per pianificare e gestire i progetti di aggiornamento di Windows 10 e Office 365 ProPlus, usare [Desktop Analytics](https://aka.ms/dadocs) e le [funzionalità di conformità di Office 365 ProPlus](/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) in Configuration Manager. 
+Il feedback dei responsabili IT è che vorrebbero che questi dati analitici si integrassero con gli strumenti che già usano per pianificare le distribuzioni. Per pianificare e gestire i progetti di aggiornamento di Windows 10 e Microsoft 365 Apps for enterprise, usare [Desktop Analytics](https://aka.ms/dadocs) e le [funzionalità di conformità di App di Microsoft 365](https://docs.microsoft.com/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) in Configuration Manager. 
 
 > [!Note]
 > A partire dal 21 aprile 2020 Office 365 ProPlus viene rinominato come **App di Microsoft 365 per grandi imprese**. Per altre informazioni, vedere [Modifica del nome di Office 365 ProPlus](/deployoffice/name-change). È comunque possibile che vengano ancora visualizzati riferimenti al nome precedente nella console di Configuration Manager e nella documentazione di supporto mentre la console viene aggiornata.
@@ -100,11 +100,11 @@ Desktop Analytics offre un inventario dei [dispositivi e delle app installate](a
 
 ### <a name="can-i-still-list-my-software-solution-in-desktop-analytics"></a>È ancora possibile fare in modo che una soluzione software venga elencata in Desktop Analytics?
 
-Pubblicare un'istruzione di supporto che dichiari che il prodotto funziona con Windows 10 a 32 o a 64 bit oppure con Office 365 ProPlus. Per presentare le soluzioni in Desktop Analytics, rivolgersi al proprio contatto Microsoft.
+Pubblicare una dichiarazione di supporto per confermare che il prodotto funziona con Windows 10 a 32 o a 64 bit oppure con Microsoft 365 Apps for enterprise. Per presentare le soluzioni in Desktop Analytics, rivolgersi al proprio contatto Microsoft.
 
 ### <a name="how-can-listing-my-solutions-benefit-me"></a>Quali sono i vantaggi dell'avere soluzioni elencate in Desktop Analytics?
 
-Migliaia di amministratori IT gestiscono milioni di dispositivi con Configuration Manager e Desktop Analytics. Usano questi strumenti per pianificare e aggiornare in modo sicuro le proprie organizzazioni alla versione più recente di Windows 10 e Office 365 ProPlus. Li usano anche per prendere decisioni di acquisto per le soluzioni software.
+Migliaia di amministratori IT gestiscono milioni di dispositivi con Configuration Manager e Desktop Analytics. Usano questi strumenti per pianificare e aggiornare in modo sicuro le proprie organizzazioni alla versione più recente di Windows 10 e Microsoft 365 Apps for enterprise. Li usano anche per prendere decisioni di acquisto per le soluzioni software.
 
 Microsoft integra le istruzioni di supporto dei fornitori di software con le informazioni di adozione ricevute dai dispositivi commerciali. Le organizzazioni in tutto il mondo usano questi dati negli strumenti di preparazione di Desktop Analytics e Office. 
 
@@ -118,8 +118,8 @@ Valutare le prestazioni delle soluzioni con i report sull'integrità e sulle met
 - [Desktop](/windows/desktop/appxpkg/windows-desktop-application-program)
 - [Componenti aggiuntivi per Office](/office/dev/store/update-unpublish-and-view-metrics) 
 
-### <a name="how-can-i-develop-compatible-assets-for-windows-10-and-office-365-proplus"></a>Come si possono sviluppare risorse compatibili per Windows 10 e Office 365 ProPlus?
+### <a name="how-can-i-develop-compatible-assets-for-windows-10-and-microsoft-365-apps-for-enterprise"></a>Come è possibile sviluppare asset compatibili per Windows 10 e Microsoft 365 Apps for enterprise?
 
 Assicurarsi che le applicazioni desktop siano compatibili adesso e che rimangano compatibili con Windows 10 in futuro. Per informazioni, vedere [Compatibilità delle applicazioni per sviluppatori](https://developer.microsoft.com/windows/desktop/app-compatibility).
 
-Se si sviluppano soluzioni per Office 365 ProPlus, vedere [Procedure consigliate per lo sviluppo di componenti aggiuntivi COM, VSTO e VBA in Office](/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office).
+Se si sviluppano soluzioni per Microsoft 365 Apps for enterprise, vedere [Procedure consigliate per lo sviluppo di componenti aggiuntivi COM, VSTO e VBA in Office](https://docs.microsoft.com/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office).

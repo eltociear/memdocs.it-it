@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d54354c82a6487690aa571eb72554f4eee45747b
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 38ea77e44b1d1754d80d0ec902929f5de620c063
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700566"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993336"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Novità della versione 2002 di Configuration Manager Current Branch
 
@@ -312,13 +312,13 @@ Configuration Manager ora rileva se un aggiornamento dello stack di manutenzione
 
 Per altre informazioni, vedere [Pianificare gli aggiornamenti software](../../../sum/plan-design/plan-for-software-updates.md#bkmk_ssu).
 
-### <a name="office-365-updates-for-disconnected-software-update-points"></a>Aggiornamenti di Office 365 per punti di aggiornamento software disconnessi
+### <a name="microsoft-365-updates-for-disconnected-software-update-points"></a>Aggiornamenti di Microsoft 365 per punti di aggiornamento software disconnessi
 
 <!-- 4065163 -->
 
-È possibile usare un nuovo strumento per importare gli aggiornamenti di Office 365 da un server WSUS connesso a Internet in un ambiente di Configuration Manager disconnesso. In passato, quando si esportavano e importavano i metadati per il software aggiornato in ambienti disconnessi, non era possibile distribuire gli aggiornamenti di Office 365. Gli aggiornamenti di Office 365 richiedono metadati aggiuntivi scaricati da un'API di Office e dalla rete CDN di Office, operazione impossibile per gli ambienti disconnessi.
+È possibile usare un nuovo strumento per importare gli aggiornamenti di Microsoft 365 da un server WSUS connesso a Internet in un ambiente di Configuration Manager disconnesso. In passato, quando si esportavano e importavano i metadati per il software aggiornato in ambienti disconnessi, non era possibile distribuire gli aggiornamenti di Microsoft 365. Gli aggiornamenti di Microsoft 365 richiedono metadati aggiuntivi scaricati da un'API di Office e dalla rete CDN di Office, operazione impossibile per gli ambienti disconnessi.
 
-Per altre informazioni, vedere [Sincronizzare gli aggiornamenti di Office 365 da un punto di aggiornamento software disconnesso](../../../sum/get-started/synchronize-office-updates-disconnected.md).
+Per altre informazioni, vedere [Sincronizzare gli aggiornamenti di Microsoft 365 da un punto di aggiornamento software disconnesso](../../../sum/get-started/synchronize-office-updates-disconnected.md).
 
 <!-- ## <a name="bkmk_o365"></a> Office management -->
 

@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: b3f25f424857d99919450ec1426ee1023bae3aca
-ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
+ms.openlocfilehash: 0070492304fc75bf51b6eda929c274076c7b2452
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89057373"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193815"
 ---
 # <a name="adding-devices-to-windows-autopilot"></a>Aggiunta di dispositivi a Windows Autopilot
 
@@ -130,10 +130,10 @@ Per ulteriori informazioni sull'esecuzione dello script, vedere la guida dello s
 
 Dopo che gli hash hardware sono stati acquisiti da dispositivi esistenti, possono essere caricati in uno dei modi seguenti:
 
-- [Microsoft Intune](enrollment-autopilot.md) è il meccanismo preferito per tutti i clienti.
- - L'interfaccia di amministrazione di Microsoft Endpoint Manager viene usata per la registrazione dei dispositivi in Intune.
-- Il centro per i [partner](https://msdn.microsoft.com/partner-center/autopilot) viene usato dai partner CSP per registrare i dispositivi per i clienti.
-- [Microsoft 365 Business & amministratore di Office 365](https://support.office.com/article/Create-and-edit-AutoPilot-profiles-5cf7139e-cfa1-4765-8aad-001af1c74faa) viene in genere usato da piccole e medie imprese (PMI) che gestiscono i propri dispositivi con Microsoft 365 business.
+- [Microsoft Intune](enrollment-autopilot.md). Questo è il meccanismo preferito per tutti i clienti.
+  - L'interfaccia di amministrazione di Microsoft Endpoint Manager viene usata per la registrazione dei dispositivi in Intune.
+- [Centro](https://msdn.microsoft.com/partner-center/autopilot)per i partner. Viene usato dai partner CSP per registrare i dispositivi per conto dei clienti.
+- [Microsoft 365 Business & amministratore di Office 365](https://support.office.com/article/Create-and-edit-AutoPilot-profiles-5cf7139e-cfa1-4765-8aad-001af1c74faa). Questa operazione viene in genere usata da piccole e medie imprese (PMI) che gestiscono i propri dispositivi usando Microsoft 365 Business.
 - [Microsoft Store per le aziende](/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles). È possibile che si stia già usando MSfB per gestire le app e le impostazioni.
 
 Di seguito è riportato un riepilogo delle funzionalità di ogni piattaforma.<br>

@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 09632eccf99774d4170fe60f51b6703cd8b90fed
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: f5299db1c151d3338fb2060246a7d07beb462779
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907919"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193653"
 ---
 # <a name="windows-autopilot-user-driven-mode"></a>Modalità definita dall'utente di Windows Autopilot
 
@@ -90,10 +90,11 @@ Windows Autopilot richiede che i dispositivi siano Azure Active Directory Uniti 
 
 Per eseguire una distribuzione ibrida Azure AD aggiunta dall'utente tramite Windows Autopilot:
 
+- Il dispositivo deve eseguire Windows 10, versione 1809 o successiva. 
 - È necessario creare un profilo di Windows Autopilot per la modalità guidata dall'utente e 
  - **Azure ad ibrido** join deve essere specificato come opzione selezionata in **join per Azure ad come** nel profilo di Autopilot.
 - Se si usa Intune, è necessario che esista un gruppo di dispositivi in Azure Active Directory con il profilo di Windows Autopilot assegnato a tale gruppo.
-- Il dispositivo deve eseguire Windows 10, versione 1809 o successiva.
+- Se si usa Intune, creare e assegnare un profilo di aggiunta al dominio. Un profilo di configurazione dell'aggiunta a un dominio include informazioni sul dominio Active Directory locale
 - Il dispositivo deve avere accesso a un controller di dominio Active Directory. Deve essere connessa alla rete dell'organizzazione. Deve essere in grado di risolvere i record DNS per il dominio di Active Directory e il controller di dominio AD. Deve essere in grado di comunicare con il controller di dominio per autenticare l'utente.
 - Il dispositivo deve essere in grado di accedere a Internet, seguendo i [requisiti di rete di Windows Autopilot documentati](networking-requirements.md).
 - È necessario installare Intune Connector per Active Directory.

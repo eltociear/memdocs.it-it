@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: d56b06b49846201d6198c1abc81185bf74765ae3
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 5c3d5bd14efddc74e1898f374bbaac2aa962ebf7
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88823497"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193666"
 ---
 # <a name="configure-tenant-attach-to-support-endpoint-security-policies-from-intune"></a>Configurare il collegamento al tenant per supportare i criteri di sicurezza degli endpoint da Intune
 
@@ -187,4 +187,4 @@ Dopo aver configurato le raccolte per la sincronizzazione con l'interfaccia di a
 
 - [Configurare i criteri di sicurezza degli endpoint](endpoint-security-policy.md#create-an-endpoint-security-policy) per *antivirus* e *rilevamento degli endpoint e risposta*.
 
-- Altre informazioni su [Rilevamento di endpoint e risposta](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) sono disponibili nella documentazione di Microsoft Defender ATP.
+- Altre informazioni su [Rilevamento di endpoint e risposta](/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) sono disponibili nella documentazione di Microsoft Defender ATP.

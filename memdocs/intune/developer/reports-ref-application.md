@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 402285b871db6c3ff18e8f89ec0553a51dab9c13
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 42d77d8424464973f7a0c114193c11c9440664cf
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165550"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992960"
 ---
 # <a name="reference-for-application-entities"></a>Informazioni di riferimento per le entità della categoria Application
 
@@ -77,7 +77,7 @@ L'entità **appType** elenca l'origine dell'installazione di un'app.
 | 3 |App di iOS Store | Un'app dello Store iOS. |
 | 4 |App LOB iOS | Un'app line-of-business iOS. |
 | 5 |App dello Store iOS gestita (MAM?) | Un'app iOSstore abilitata per la gestione. |
-| 6 |O365 Pro Plus Suite | App di Microsoft 365 per Windows 10. |
+| 6 |Microsoft 365 Apps for enterprise | App di Microsoft 365 per Windows 10. |
 | 7 |App Web | Un'app Web. |
 | 8 |App di Windows Phone 8.1 Store | Un'app dello Store per Windows Phone 8.1. |
 | 9 |App di Windows Store | Un'app di Windows Store. |

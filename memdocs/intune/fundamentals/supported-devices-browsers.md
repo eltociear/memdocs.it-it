@@ -18,20 +18,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a9622a89b8b689dab7ea2d6d332d1d29c38f5668
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a8bfddd247f2f86d8fc5a9162a5c68efd5e7ffb5
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80085745"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996283"
 ---
 # <a name="supported-operating-systems-and-browsers-in-intune"></a>Sistemi operativi e browser supportati in Intune
 
 Prima di installare Microsoft Intune, controllare quali sistemi operativi e browser sono supportati.
 
-Per informazioni sull'installazione di Intune nel proprio dispositivo, vedere [Usare dispositivi gestiti per lo svolgimento del lavoro](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done) e [Requisiti di configurazione di rete di Intune e larghezza di banda](network-bandwidth-use.md).
+Per informazioni sull'installazione di Intune nel proprio dispositivo, vedere [Usare dispositivi gestiti per lo svolgimento del lavoro](../user-help/use-managed-devices-to-get-work-done.md) e [Requisiti di configurazione di rete di Intune e larghezza di banda](network-bandwidth-use.md).
 
-Per altre informazioni sul supporto del provider di servizi di configurazione, vedere [Configuration service provider reference](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) (Informazioni di riferimento sul provider di servizi di configurazione).
+Per altre informazioni sul supporto del provider di servizi di configurazione, vedere [Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference) (Informazioni di riferimento sul provider di servizi di configurazione).
 
 > [!NOTE]
 > Intune richiede ora Android 5.x (Lollipop) o versioni successive per l'accesso alle risorse aziendali da applicazioni e dispositivi tramite l'app Portale aziendale per Android e Intune App SDK per Android. Questo requisito NON si applica ai dispositivi Teams basati su Polycom Android che eseguono la versione 4.4. Questi dispositivi continueranno a essere supportati. 
@@ -103,7 +103,7 @@ Un [client software Intune](manage-windows-pcs-with-microsoft-intune.md) può es
 
 <!--  ### Exchange ActiveSync management
 
-You can manage [Exchange ActiveSync devices](../enrollment/device-enrollment.md#mobile-device-management-with-exchange-activesync-and-intune) from the Intune console. This option provides a limited set of management capabilities when compared to the other methods. See [Capabilities of built-in Mobile Device Management in Office 365](https://support.office.com/article/Capabilities-of-built-in-Mobile-Device-Management-for-Office-365-a1da44e5-7475-4992-be91-9ccec25905b0) for a list of supported devices.  -->
+You can manage [Exchange ActiveSync devices](../enrollment/device-enrollment.md#mobile-device-management-with-exchange-activesync-and-intune) from the Intune console. This option provides a limited set of management capabilities when compared to the other methods. See [Capabilities of built-in Mobile Device Management in Microsoft 365](https://support.office.com/article/Capabilities-of-built-in-Mobile-Device-Management-for-Office-365-a1da44e5-7475-4992-be91-9ccec25905b0) for a list of supported devices.  -->
 
 ## <a name="intune-supported-web-browsers"></a>Web browser supportati da Intune
 
@@ -131,6 +131,6 @@ La console di Intune è supportata dai browser Silverlight seguenti:
 - Mozilla Firefox con Silverlight abilitato (versioni precedenti alla versione 56)
 
 > [!Note]
-> Microsoft Edge e i browser per dispositivi mobili non sono supportati per il portale classico di Intune perché non supportano [Microsoft Silverlight](https://msdn.microsoft.com/library/cc838158(v=vs.95).aspx).
+> Microsoft Edge e i browser per dispositivi mobili non sono supportati per il portale classico di Intune perché non supportano [Microsoft Silverlight](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838158(v=vs.95)).
 
 Solo gli utenti con autorizzazioni di amministratore del servizio o di amministratore tenant con il ruolo Amministratore globale possono accedere al portale. Per accedere alla console di amministrazione, è necessario che l'account abbia una licenza per l'uso di Intune e lo stato di accesso **Consentito**.

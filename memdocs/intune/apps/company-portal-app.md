@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a23db0f04895bda6f187e466965a959c891f1ad
-ms.sourcegitcommit: 19ef60175cbfd5c5d1e213a6d64eded34ee42041
+ms.openlocfilehash: ec355eb1b388e384b5250e9c17f739cd05941ee7
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88725435"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194230"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Come personalizzare le app Portale aziendale Intune, il sito Web Portale aziendale e l'app Intune
 
@@ -136,7 +136,7 @@ La tabella seguente include dettagli di configurazione specifici delle notifiche
 È possibile scegliere le origini app aggiuntive che verranno visualizzate sul Portale aziendale.
 
 > [!NOTE]
-> Il Portale aziendale supporta le applicazioni di Configuration Manager. Questa funzionalità consente agli utenti finali di visualizzare le applicazioni distribuite di Configuration Manager e Intune nel Portale aziendale per i clienti co-gestiti. Per altre informazioni, vedere [Usare l'app Portale aziendale in dispositivi con co-gestione](/mem/configmgr/comanage/company-portal).
+> Il Portale aziendale supporta le applicazioni di Configuration Manager. Questa funzionalità consente agli utenti finali di visualizzare le applicazioni distribuite di Configuration Manager e Intune nel Portale aziendale per i clienti co-gestiti. Per altre informazioni, vedere [Usare l'app Portale aziendale in dispositivi con co-gestione](../../configmgr/comanage/company-portal.md).
 
 La tabella seguente offre dettagli di configurazione specifici per le origini app:
 

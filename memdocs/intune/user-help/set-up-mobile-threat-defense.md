@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser, contperfq1
 ms.collection: ''
-ms.openlocfilehash: 23d449b6b5edf43ea709f8fce194ac5a8afe8eb4
-ms.sourcegitcommit: 19ef60175cbfd5c5d1e213a6d64eded34ee42041
+ms.openlocfilehash: 37b7006ef912d87276c11e09cb6db0c0f14059c4
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88725350"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193913"
 ---
 # <a name="install-mobile-threat-defense-app"></a>Installare un'app Mobile Threat Defense  
 
@@ -71,7 +71,7 @@ Se viene richiesto di installare un'app MTD, ma non si è certi di quale install
 ### <a name="device-registration"></a>Registrazione del dispositivo  
 La registrazione del dispositivo è necessaria per confermare la propria identità e connettere l'account aziendale o dell'istituto di istruzione al dispositivo. Se il dispositivo non è registrato, si verrà automaticamente indirizzati ai passaggi visualizzati sullo schermo prima di installare l'app MTD.   
 
-Per altre informazioni sulla registrazione dei dispositivi, vedere [Registrare il dispositivo personale nella rete dell'organizzazione](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network).  
+Per altre informazioni sulla registrazione dei dispositivi, vedere [Registrare il dispositivo personale nella rete dell'organizzazione](/azure/active-directory/user-help/user-help-register-device-on-network).  
 
 ### <a name="ios-setup"></a>Installazione in iOS  
 Questi passaggi iniziano nella schermata **Ottieni l'accesso**, che viene visualizzato dopo l'accesso a un'app protetta.  
@@ -124,9 +124,9 @@ Visitare il [sito Web Portale aziendale](https://go.microsoft.com/fwlink/?linkid
 
 ### <a name="share-app-logs-with-it-support"></a>Condividere i log delle app con il supporto IT  
 È anche possibile inviare i log dell'app al personale del supporto IT per fornire un maggior contesto sull'installazione non riuscita.  
-* Utenti Android: [caricare e inviare i log tramite posta elettronica](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android) dall'app Portale aziendale.   
+* Utenti Android: [caricare e inviare i log tramite posta elettronica](./send-logs-to-your-it-admin-by-email-android.md) dall'app Portale aziendale.   
 
-* Utenti di dispositivi iOS: [recuperare e inviare i log](https://docs.microsoft.com/intune/apps/manage-microsoft-edge#use-microsoft-edge-to-access-managed-app-logs) da Microsoft Edge per iOS.  
+* Utenti di dispositivi iOS: [recuperare e inviare i log](/intune/apps/manage-microsoft-edge#use-microsoft-edge-to-access-managed-app-logs) da Microsoft Edge per iOS.  
 
 
 ## <a name="next-steps"></a>Passaggi successivi  
@@ -137,4 +137,3 @@ Per altre informazioni sul funzionamento delle app gestite, su come ottenerle e 
 * [Usare le app gestite nel dispositivo iOS](use-managed-apps-on-your-device-ios.md)  
 
 Serve ancora assistenza? Contattare l'amministratore IT. Per informazioni sul contatto vedere il [sito Web del portale aziendale](https://go.microsoft.com/fwlink/?linkid=2010980).
-

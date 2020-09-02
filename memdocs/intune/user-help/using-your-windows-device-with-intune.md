@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 481113dc64418b1579dbf9b478cd3ebd85b6cb72
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: cbf23dc82f5524bcd8c778c41e964c7a9e46c21e
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179325"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057271"
 ---
 # <a name="using-your-windows-device-with-intune-company-portal"></a>Uso del dispositivo Windows con il Portale aziendale di Intune
 
@@ -33,7 +33,7 @@ Questa sezione descrive le attività e le informazioni del Portale aziendale spe
 ## <a name="how-to-get-company-portal"></a>Come ottenere il Portale aziendale
 Il Portale aziendale è disponibile in versione sito Web, oltre che come app scaricabile. Per [accedere al sito Web del Portale aziendale](https://go.microsoft.com/fwlink/?linkid=2010980), eseguire l'accesso con le credenziali aziendali o dell'istituto di istruzione.  
 
-Per passaggi dettagliati e screenshot, vedere [Accedere al portale aziendale](https://docs.microsoft.com/mem/intune/user-help/sign-in-to-the-company-portal).
+Per passaggi dettagliati e screenshot, vedere [Accedere al portale aziendale](./sign-in-to-the-company-portal.md).
 
 ## <a name="supported-versions"></a>Versioni supportate
 
@@ -67,7 +67,7 @@ Il Portale aziendale supporta altre versioni di Windows, come ad esempio [Window
 * [Aggiornare il dispositivo Windows](you-need-to-update-your-windows-device.md)
 * [Inviare i log dall'app Portale aziendale](send-logs-to-your-it-admin-cp-windows.md)
 * [Inviare i log dall'app Impostazioni del dispositivo](send-logs-to-your-it-admin-settings-windows.md)
-* [Installare Office 365 nel dispositivo Windows 10](install-office-windows.md)
+* [Installare Office nel dispositivo Windows 10](install-office-windows.md)
 * [È necessario crittografare il dispositivo](you-need-to-enable-windows-encryption.md)
 * [Ottenere il software antimalware](your-device-needs-antimalware-software.md)
 * [Abilitare l'avvio protetto](you-need-to-enable-secure-boot-windows.md)

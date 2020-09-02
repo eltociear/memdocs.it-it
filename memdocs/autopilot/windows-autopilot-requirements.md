@@ -17,12 +17,12 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: aafd83f1aa09881c9e7c4196b91798ab0d278a87
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 37d249c75f18d52f7fa17a0e271f45b17465da1a
+ms.sourcegitcommit: 9d5c7a5e6ec430dc02d6d345028f6b29f6579b20
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88993656"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89385333"
 ---
 # <a name="windows-autopilot-requirements"></a>Requisiti di Windows Autopilot
 
@@ -53,14 +53,14 @@ Windows Autopilot dipende da un'ampia gamma di servizi basati su Internet. Per i
 - Verificare la risoluzione dei nomi DNS per i nomi DNS Internet
 - Consentire l'accesso a tutti gli host tramite la porta 80 (HTTP), 443 (HTTPS) e 123 (UDP/NTP)
 
-Negli ambienti con accesso a Internet più restrittivo o per quelli che richiedono l'autenticazione prima di poter ottenere l'accesso a Internet, potrebbe essere necessaria una configurazione aggiuntiva per consentire l'accesso ai servizi richiesti. 
+Negli ambienti con accesso a Internet più restrittivo o per quelli che richiedono l'autenticazione prima di poter ottenere l'accesso a Internet, potrebbe essere necessaria una configurazione aggiuntiva per consentire l'accesso ai servizi necessari. 
 
 > [!NOTE]
 > La smart card e l'autenticazione basata su certificato non sono supportate durante la configurazione guidata. Per altre informazioni, vedere [Smart Card e autenticazione basata su certificati](/azure/active-directory/devices/azureadjoin-plan#smartcards-and-certificate-based-authentication).
 
 Per ulteriori informazioni su ciascuno di questi servizi e sui requisiti specifici, esaminare i dettagli seguenti:
 
-<table><th>Service<th>Informazioni
+<table><th>Servizio<th>Informazioni
 <tr><td><b>Servizio di distribuzione di Windows Autopilot<b><td>Dopo la connessione di rete, ogni dispositivo Windows 10 contatterà il servizio di distribuzione di Windows Autopilot.  Con Windows 10 versione 1903 e successive, vengono usati gli URL seguenti: https://ztd.dds.microsoft.com https://cs.dds.microsoft.com . <br>
 
 <tr><td><b>Attivazione di Windows<b><td>Windows Autopilot richiede anche servizi di attivazione Windows. Vedere <a href="https://support.microsoft.com/help/921471/windows-activation-or-validation-fails-with-error-code-0x8004fe33">attivazione o convalida di Windows non riuscita con codice di errore 0x8004FE33</a> per informazioni dettagliate sugli URL che devono essere accessibili per i servizi di attivazione.<br>

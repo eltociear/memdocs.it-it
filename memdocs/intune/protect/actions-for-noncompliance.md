@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d262041c982d3d9a629ccb550a1376e5e479a759
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: fa533ea8a34fae0c3460d207bb88e6b64b0957eb
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252776"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909653"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Configurare azioni per i dispositivi non conformi in Intune
 
@@ -29,7 +29,7 @@ Per i dispositivi che non soddisfano le regole o i criteri di conformità, è po
 
 ## <a name="overview"></a>Panoramica
 
-Per impostazione predefinita, ogni criterio di conformità include l'azione per la non conformità di **Contrassegna il dispositivo come non conforme** con una pianificazione di zero giorni (**0**). Il risultato di questa impostazione predefinita si ha quando Intune rileva un dispositivo che non è conforme e lo contrassegna immediatamente come non conforme. Dopo che un dispositivo è stato contrassegnato come non conforme, l'[accesso condizionale](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) di Azure Active Directory (AD) può bloccare il dispositivo.
+Per impostazione predefinita, ogni criterio di conformità include l'azione per la non conformità di **Contrassegna il dispositivo come non conforme** con una pianificazione di zero giorni (**0**). Il risultato di questa impostazione predefinita si ha quando Intune rileva un dispositivo che non è conforme e lo contrassegna immediatamente come non conforme. Dopo che un dispositivo è stato contrassegnato come non conforme, l'[accesso condizionale](/azure/active-directory/active-directory-conditional-access-azure-portal) di Azure Active Directory (AD) può bloccare il dispositivo.
 
 Configurando **Azioni per la non conformità** si ottiene la flessibilità necessaria per decidere quali operazioni eseguire sui dispositivi non conformi e quando eseguire questa operazione. Si potrebbe, ad esempio, scegliere di non bloccare immediatamente il dispositivo e di concedere all'utente un periodo di tolleranza per adeguarsi ai criteri di conformità.
 
@@ -107,7 +107,7 @@ Quando viene inviato il messaggio di posta elettronica, Intune include le inform
 
 È possibile [aggiungere azioni per la non conformità](#add-actions-for-noncompliance) quando si configurano i criteri di conformità dei dispositivi o in un secondo momento modificando il criterio. È possibile aggiungere altre azioni a ciascun criterio per soddisfare le proprie esigenze. Tenere presente che ogni criterio di conformità include automaticamente l'azione predefinita per la mancata conformità che contrassegna i dispositivi come non conformi, con una pianificazione impostata su zero giorni.
 
-Per usare i criteri di conformità per impedire ai dispositivi di usare le risorse aziendali, è necessario aver configurato l'accesso condizionale di Azure AD. Vedere [Accesso condizionale in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) o [Modi comuni per usare l'accesso condizionale con Intune](conditional-access-intune-common-ways-use.md) per informazioni aggiuntive.
+Per usare i criteri di conformità per impedire ai dispositivi di usare le risorse aziendali, è necessario aver configurato l'accesso condizionale di Azure AD. Vedere [Accesso condizionale in Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal) o [Modi comuni per usare l'accesso condizionale con Intune](conditional-access-intune-common-ways-use.md) per informazioni aggiuntive.
 
 Per creare criteri di conformità dei dispositivi, vedere le linee guida seguenti specifiche per le piattaforme:
 

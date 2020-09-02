@@ -15,16 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c8d60a4a943ba2af9ea99f9eb887a9b77a49fcf
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 64e15e05ba7613b8bf2941d00a48c19292fafc90
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88693506"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909755"
 ---
 # <a name="overview-of-the-microsoft-intune-mobile-device-management-mdm-lifecycle"></a>Panoramica del ciclo di vita di gestione di dispositivi mobili (MDM) di Microsoft Intune
 
-Tutti i dispositivi gestiti hanno un *ciclo di vita*. Intune può aiutare a gestire il ciclo di vita del dispositivo, dalla registrazione alla configurazione e alla protezione fino al ritiro del dispositivo stesso quando non è più necessario. Ecco un esempio: un iPad acquistato dall'azienda deve prima essere registrato con l'account Microsoft Intune per consentire all'azienda di gestirlo, quindi deve essere configurato in base alle esigenze dell'azienda e i dati archiviati su di esso da un utente devono essere protetti, infine quando l'iPad non è più necessario, è indispensabile [ritirarlo o cancellarne](https://docs.microsoft.com/mem/intune/remote-actions/devices-wipe) tutti i dati sensibili.
+Tutti i dispositivi gestiti hanno un *ciclo di vita*. Intune può aiutare a gestire il ciclo di vita del dispositivo, dalla registrazione alla configurazione e alla protezione fino al ritiro del dispositivo stesso quando non è più necessario. Ecco un esempio: un iPad acquistato dall'azienda deve prima essere registrato con l'account Microsoft Intune per consentire all'azienda di gestirlo, quindi deve essere configurato in base alle esigenze dell'azienda e i dati archiviati su di esso da un utente devono essere protetti, infine quando l'iPad non è più necessario, è indispensabile [ritirarlo o cancellarne](../remote-actions/devices-wipe.md) tutti i dati sensibili.
 
 ![Ciclo di vita del dispositivo](./media/device-lifecycle/device-lifecycle.png "Ciclo di vita del dispositivo Intune")
 

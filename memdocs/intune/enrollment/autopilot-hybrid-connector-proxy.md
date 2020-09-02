@@ -17,20 +17,20 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b26bf4910e6745a60634a2b313a37beeb33192d3
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 9c7300c03ce0ba703f423aa420e9e47534ef2968
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986907"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908684"
 ---
 # <a name="work-with-existing-on-premises-proxy-servers"></a>Usare i server proxy locali esistenti
 
 Questo articolo illustra come configurare il connettore di Intune per Active Directory per l'uso dei server proxy in uscita. L'articolo è destinato ai clienti con ambienti di rete in cui sono presenti proxy.
 
-Per impostazione predefinita, il connettore di Intune per Active Directory tenta di individuare automaticamente un server proxy nella rete usando il protocollo WPAD (Web Proxy Auto-Discovery). Se questo è stato configurato nella rete, è possibile che non siano necessarie altre operazioni di configurazione.  Se sono necessarie modifiche, le sezioni seguenti descrivono come eseguire l'override delle impostazioni predefinite, sfruttando [le funzionalità di .NET Framework standard per la configurazione delle impostazioni proxy](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings).  In tale documentazione sono descritte opzioni aggiuntive.
+Per impostazione predefinita, il connettore di Intune per Active Directory tenta di individuare automaticamente un server proxy nella rete usando il protocollo WPAD (Web Proxy Auto-Discovery). Se questo è stato configurato nella rete, è possibile che non siano necessarie altre operazioni di configurazione.  Se sono necessarie modifiche, le sezioni seguenti descrivono come eseguire l'override delle impostazioni predefinite, sfruttando [le funzionalità di .NET Framework standard per la configurazione delle impostazioni proxy](/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings).  In tale documentazione sono descritte opzioni aggiuntive.
 
-Per altre informazioni sul funzionamento dei connettori, vedere [Informazioni sui connettori di Azure AD Application Proxy](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-connectors).
+Per altre informazioni sul funzionamento dei connettori, vedere [Informazioni sui connettori di Azure AD Application Proxy](/azure/active-directory/manage-apps/application-proxy-connectors).
 
 ## <a name="completely-bypass-outbound-proxies"></a>Ignorare completamente i proxy in uscita
 

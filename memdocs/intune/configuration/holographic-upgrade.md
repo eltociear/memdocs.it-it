@@ -15,18 +15,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d561d2682cf90d5d7075640c260d8f21c8b891b1
-ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
+ms.openlocfilehash: 65a45b13a91671c1de9bcf04f23156d75313285f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83556116"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907770"
 ---
 # <a name="upgrade-devices-running-windows-holographic-to-windows-holographic-for-business"></a>Aggiornare i dispositivi che eseguono Windows Holographic a Windows Holographic for Business
 
 Microsoft Intune include diverse impostazioni utili per la gestione e la protezione dei dispositivi. Questo articolo elenca e descrive le impostazioni per aggiornare i dispositivi Windows Holographic a Windows Holographic for Business.
 
-Usare queste impostazioni nella propria soluzione di gestione di dispositivi mobili (MDM) per aggiornare i dispositivi Windows Holographic. Per Microsoft HoloLens è possibile acquistare Commercial Suite per ottenere la licenza necessaria per l'aggiornamento. Per altre informazioni, vedere [Sbloccare le funzionalità di Windows Holographic for Business](https://docs.microsoft.com/hololens/hololens1-upgrade-enterprise).
+Usare queste impostazioni nella propria soluzione di gestione di dispositivi mobili (MDM) per aggiornare i dispositivi Windows Holographic. Per Microsoft HoloLens è possibile acquistare Commercial Suite per ottenere la licenza necessaria per l'aggiornamento. Per altre informazioni, vedere [Sbloccare le funzionalità di Windows Holographic for Business](/hololens/hololens1-upgrade-enterprise).
 
 Come amministratore di Intune, è possibile creare e assegnare queste impostazioni ai dispositivi.
 

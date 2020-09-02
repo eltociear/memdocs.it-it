@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 682934276a080323976e7045a14450dc382f4574
-ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
+ms.openlocfilehash: da725c63c340a3ff64e1f69f96f59bd5dea30eb3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83406613"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907895"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>Esercitazione: Usare il cloud per configurare Criteri di gruppo nei dispositivi Windows 10 con modelli ADMX e Microsoft Intune
 
@@ -37,7 +37,7 @@ Sono disponibili modelli ADMX per i servizi seguenti:
 - **Office**: scaricare [App di Microsoft 365, Office 2019 e Office 2016](https://www.microsoft.com/download/details.aspx?id=49030).
 - **Windows**: inclusi nel sistema operativo Windows 10.
 
-Per altre informazioni sui criteri ADMX, vedere [Informazioni sui criteri supportati da ADMX](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies).
+Per altre informazioni sui criteri ADMX, vedere [Informazioni sui criteri supportati da ADMX](/windows/client-management/mdm/understanding-admx-backed-policies).
 
 Questi modelli sono inclusi in Microsoft Intune e sono disponibili come profili di tipo **Modelli amministrativi**. In questo profilo vengono configurate le impostazioni da includere e quindi il profilo viene assegnato ai dispositivi.
 
@@ -57,7 +57,7 @@ Questa funzionalità si applica a:
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- Una sottoscrizione Microsoft 365 E3 o E5, che include Intune e Azure Active Directory (AD) Premium. Se non si ha una sottoscrizione E3 o E5, provare la [versione di valutazione gratuita](https://docs.microsoft.com/office365/admin/try-or-buy-microsoft-365?view=o365-worldwide).
+- Una sottoscrizione Microsoft 365 E3 o E5, che include Intune e Azure Active Directory (AD) Premium. Se non si ha una sottoscrizione E3 o E5, provare la [versione di valutazione gratuita](/office365/admin/try-or-buy-microsoft-365?view=o365-worldwide).
 
   Per altre informazioni su ciò che si ottiene con le diverse licenze di Microsoft 365, vedere [Trasforma la tua azienda con Microsoft 365](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans).
 
@@ -190,10 +190,10 @@ Nei passaggi successivi vengono creati gruppi di sicurezza e aggiunti utenti a q
 
 - I gruppi dinamici sono una funzionalità di Azure AD Premium. Se non si ha Azure AD Premium, la licenza consente di creare solo gruppi assegnati. Per altre informazioni sui gruppi dinamici, vedere:
 
-  - [Appartenenza dinamica ai gruppi in Azure Active Directory (parte 1)](https://blogs.technet.microsoft.com/pauljones/2017/08/28/dynamic-group-membership-in-azure-active-directory-part-1/)
-  - [Appartenenza dinamica ai gruppi in Azure Active Directory (parte 2)](https://blogs.technet.microsoft.com/pauljones/2017/08/29/dynamic-group-membership-in-azure-active-directory-part-2/)
+  - [Appartenenza dinamica ai gruppi in Azure Active Directory (parte 1)](/archive/blogs/pauljones/dynamic-group-membership-in-azure-active-directory-part-1)
+  - [Appartenenza dinamica ai gruppi in Azure Active Directory (parte 2)](/archive/blogs/pauljones/dynamic-group-membership-in-azure-active-directory-part-2)
 
-- Azure AD Premium include altri servizi comunemente usati per la gestione di app e dispositivi, tra cui [autenticazione a più fattori (MFA)](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks) e [accesso condizionale](https://docs.microsoft.com/azure/active-directory/conditional-access/overview).
+- Azure AD Premium include altri servizi comunemente usati per la gestione di app e dispositivi, tra cui [autenticazione a più fattori (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks) e [accesso condizionale](/azure/active-directory/conditional-access/overview).
 
 - Molti amministratori chiedono di chiarire quando usare i gruppi di utenti e quando usare i gruppi di dispositivi. Per alcune linee guida, vedere [Gruppi di utenti e gruppi di dispositivi](device-profile-assign.md#user-groups-vs-device-groups).
 
@@ -420,7 +420,7 @@ Al termine, le impostazioni saranno simili alle seguenti:
 > [!div class="mx-imgBorder"]
 > ![Creare un modello amministrativo di OneDrive in Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/one-drive-administrative-template.png)
 
-Per altre informazioni sulle impostazioni client di OneDrive, vedere [Usare Criteri di gruppo per controllare le impostazioni di sincronizzazione di OneDrive](https://docs.microsoft.com/onedrive/use-group-policy).
+Per altre informazioni sulle impostazioni client di OneDrive, vedere [Usare Criteri di gruppo per controllare le impostazioni di sincronizzazione di OneDrive](/onedrive/use-group-policy).
 
 ### <a name="assign-your-template"></a>Assegnare il modello
 
@@ -438,7 +438,7 @@ A questo punto sono stati creati alcuni modelli amministrativi che sono stati as
 Questa sezione usa le risorse seguenti. Queste risorse verranno installate in questa sezione.
 
 - [Intune PowerShell SDK](https://github.com/microsoft/Intune-PowerShell-SDK)
-- [API Microsoft Graph per Intune](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-1.0)
+- [API Microsoft Graph per Intune](/graph/api/resources/intune-graph-overview?view=graph-rest-1.0)
 
 1. Nel **computer Admin** aprire **Windows PowerShell** come amministratore:
 
@@ -458,7 +458,7 @@ Questa sezione usa le risorse seguenti. Queste risorse verranno installate in qu
 
     3. Immettere `Y` per modificarlo.
 
-    I criteri di esecuzione di PowerShell consentono di impedire l'esecuzione di script dannosi. Per altre informazioni, vedere [Informazioni sui criteri di esecuzione](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies).
+    I criteri di esecuzione di PowerShell consentono di impedire l'esecuzione di script dannosi. Per altre informazioni, vedere [Informazioni sui criteri di esecuzione](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
 3. Immettere: `Install-Module -Name Microsoft.Graph.Intune`
 
@@ -581,7 +581,7 @@ Quando non servono più, è possibile:
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-In questa esercitazione si è acquisita familiarità con l'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), è stato usato il generatore di query per creare gruppi dinamici e sono stati creati modelli amministrativi in Intune per configurare le [impostazioni di ADMX](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies). Sono stati anche confrontati i modelli ADMX in locale e nel cloud con Intune. Si è visto inoltre come usare i cmdlet di PowerShell per creare un modello amministrativo.
+In questa esercitazione si è acquisita familiarità con l'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), è stato usato il generatore di query per creare gruppi dinamici e sono stati creati modelli amministrativi in Intune per configurare le [impostazioni di ADMX](/windows/client-management/mdm/understanding-admx-backed-policies). Sono stati anche confrontati i modelli ADMX in locale e nel cloud con Intune. Si è visto inoltre come usare i cmdlet di PowerShell per creare un modello amministrativo.
 
 Per altre informazioni sui modelli amministrativi in Intune, vedere:
 

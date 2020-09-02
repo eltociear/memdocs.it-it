@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c41f22e2aa60803067b9015f2ae3a84db43ff894
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: 2e359a87cb9e62b6d7542d82d9819b5c132a8bc2
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179537"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910265"
 ---
 # <a name="add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>Aggiungere l'app Portale aziendale di Windows 10 usando Microsoft Intune
 
@@ -67,7 +67,7 @@ Per gestire dispositivi e installare app, gli utenti possono installare l'app Po
 
 11. Assegnare l'app Portale aziendale come app obbligatoria al set di utenti o al gruppo di dispositivi selezionato.  
 
-Per altre informazioni su come Intune gestisce le dipendenze per le app universali, vedere [Deploying an appxbundle with dependencies via Microsoft Intune MDM](https://blogs.technet.microsoft.com/configmgrdogs/2016/11/30/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm/) (Distribuzione di un appxbundle con dipendenze tramite MDM di Microsoft Intune).  
+Per altre informazioni su come Intune gestisce le dipendenze per le app universali, vedere [Deploying an appxbundle with dependencies via Microsoft Intune MDM](/archive/blogs/configmgrdogs/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm) (Distribuzione di un appxbundle con dipendenze tramite MDM di Microsoft Intune).  
 
 ## <a name="frequently-asked-questions"></a>Domande frequenti 
 ### <a name="how-do-i-update-the-company-portal-app-on-my-users-devices-if-they-have-already-installed-the-older-apps-from-the-store"></a>Come si aggiorna l'app Portale aziendale nei dispositivi degli utenti se hanno già installato le app precedenti dallo Store?
@@ -110,4 +110,3 @@ Al termine dell'esecuzione, lo script genera la versione firmata dell'app Portal
 ## <a name="next-steps"></a>Passaggi successivi
 
 - [Assegnare app ai gruppi](apps-deploy.md)
-

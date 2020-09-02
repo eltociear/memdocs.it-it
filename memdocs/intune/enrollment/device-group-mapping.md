@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 761e668ae2c774bb52dbe6971d343d60b3e95516
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e6dae19e466d3d0e88ae07d1c82a63b098439632
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986092"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908616"
 ---
 # <a name="categorize-devices-into-groups"></a>Raggruppare i dispositivi in categorie
 
@@ -55,7 +55,7 @@ Il nome della categoria di dispositivi verrà usato per la creazione dei gruppi 
 ### <a name="step-2-create-azure-active-directory-security-groups"></a>Passaggio 2: creare i gruppi di sicurezza di Azure Active Directory
 In questo passaggio verranno creati gruppi dinamici nel portale di Azure, basati sulla categoria di dispositivi e sul nome della categoria di dispositivi.
 
-Per continuare, vedere [Uso degli attributi per creare regole avanzate](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/#using-attributes-to-create-rules-for-device-objects) nella documentazione di Azure Active Directory.
+Per continuare, vedere [Uso degli attributi per creare regole avanzate](/azure/active-directory/users-groups-roles/groups-dynamic-membership#using-attributes-to-create-rules-for-device-objects) nella documentazione di Azure Active Directory.
 
 Usare le informazioni in questa sezione per creare un gruppo di dispositivi con una regola avanzata usando l'attributo **deviceCategory**. Ad esempio (**device.deviceCategory - eq** "*nome della categoria di dispositivi ottenuto dal portale di Azure*".
 

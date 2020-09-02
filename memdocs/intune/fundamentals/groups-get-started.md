@@ -16,12 +16,12 @@ ms.assetid: 323f384d-8a76-4adc-999b-e508d641bfa1
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e8fdd0de8b276017a51c2fd464eef4b1d8505bc
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 82834dc3a7fc60292228acbd62c7c6a8b8a94ee3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075388"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909789"
 ---
 # <a name="microsoft-intune-classic-groups-in-the-azure-portal"></a>Gruppi classici di Microsoft Intune nel portale di Azure
 
@@ -47,9 +47,9 @@ Alcune delle funzionalità dei gruppi di Intune precedentemente previste non son
 ## <a name="how-to-get-started"></a>Come iniziare
 
 - Leggere gli argomenti seguenti per informazioni sui gruppi di sicurezza di Azure AD e sul relativo funzionamento:
-  - [Gestione dell'accesso alle risorse con i gruppi di Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-manage-groups/).
-  - [Gestione dei gruppi in Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/).
-  - [Uso di attributi per la creazione di regole avanzate](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/).
+  - [Gestione dell'accesso alle risorse con i gruppi di Azure Active Directory](/azure/active-directory/fundamentals/active-directory-manage-groups).
+  - [Gestione dei gruppi in Azure Active Directory](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal).
+  - [Uso di attributi per la creazione di regole avanzate](/azure/active-directory/users-groups-roles/groups-dynamic-membership).
 - Assicurarsi che gli amministratori che devono creare gruppi vengano aggiunti al ruolo di Azure AD **Amministratore del servizio Intune**. Il ruolo Amministratore dei servizi di Azure AD non ha le autorizzazioni **Gestisci gruppo**.
 - Se i gruppi di Intune usavano l'opzione **Escludi membri specifici**, determinare se è possibile riprogettare questi gruppi senza esclusioni o se per soddisfare le esigenze aziendali sono necessarie regole avanzate.
 

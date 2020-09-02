@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1e3b12251117e689f3b4a5456cf20bae3797083a
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 49423d1d1b887aaf3ed3323ff36678bb7319b1ad
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87264534"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909466"
 ---
 # <a name="configure-microsoft-defender-atp-on-android-devices-you-manage-with-intune"></a>Configurare Microsoft Defender ATP nei dispositivi Android gestiti con Intune
 
@@ -31,7 +31,7 @@ Prima di procedere, è necessario [configurare Microsoft Defender ATP in Intune]
 
 ## <a name="configure-web-protection-on-devices-that-run-android"></a>Configurare la protezione Web nei dispositivi che eseguono Android
 
-Per impostazione predefinita, Microsoft Defender ATP per Android include e abilita la funzionalità di protezione Web. [Protezione Web](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/web-protection-overview) consente di proteggere i dispositivi da minacce Web e di proteggere gli utenti da attacchi di phishing.
+Per impostazione predefinita, Microsoft Defender ATP per Android include e abilita la funzionalità di protezione Web. [Protezione Web](/windows/security/threat-protection/microsoft-defender-atp/web-protection-overview) consente di proteggere i dispositivi da minacce Web e di proteggere gli utenti da attacchi di phishing.
 
 Anche se è abilitata per impostazione predefinita, esistono motivi validi per disabilitare questa protezione in alcuni dispositivi Android. Ad esempio, è possibile scegliere di usare solo la funzionalità di analisi delle app di Microsoft Defender ATP oppure impedire alla protezione Web di usare la VPN durante l'analisi di URL dannosi.
 
@@ -127,5 +127,5 @@ Per configurare la protezione Web nei dispositivi, usare le procedure seguenti p
 
 Per altre informazioni, vedere la documentazione di Microsoft Defender ATP:
 
-- [Accesso condizionale di Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
-- [Dashboard dei rischi di Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)
+- [Accesso condizionale di Microsoft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
+- [Dashboard dei rischi di Microsoft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)

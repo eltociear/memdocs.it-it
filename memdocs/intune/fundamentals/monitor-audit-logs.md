@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 6ee841cc-5694-4ba1-8f66-1d58edec30a4
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 923a7c192121530d84ca2034b2ca8a4be3cc32d6
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1808743685c6907c11da23f92c5e263860098bea
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990750"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909687"
 ---
 # <a name="use-audit-logs-to-track-and-monitor-events-in-microsoft-intune"></a>Usare i log di controllo per tenere traccia degli eventi e monitorarli in Microsoft Intune
 
@@ -65,7 +65,7 @@ I log di controllo e i log operativi possono essere anche indirizzati a Monitora
 
 ## <a name="use-graph-api-to-retrieve-audit-events"></a>Usare l'API Graph per recuperare gli eventi di controllo
 
-Per informazioni sull'uso dell'API Graph per ottenere fino a un anno di eventi di controllo, vedere [List auditEvents](https://docs.microsoft.com/graph/api/intune-auditing-auditevent-list?view=graph-rest-1.0).
+Per informazioni sull'uso dell'API Graph per ottenere fino a un anno di eventi di controllo, vedere [List auditEvents](/graph/api/intune-auditing-auditevent-list?view=graph-rest-1.0).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

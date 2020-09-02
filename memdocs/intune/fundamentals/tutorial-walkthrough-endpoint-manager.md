@@ -18,16 +18,16 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81ea88bc72e6bcd52dbfe51cb4fa12803605de18
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 650188df0c5e19b3eeb9bfa06197b77414cecb20
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79355543"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910180"
 ---
 # <a name="tutorial-walkthrough-intune-in-microsoft-endpoint-manager"></a>Esercitazione: Procedura dettagliata per Intune in Microsoft Endpoint Manager
 
-[Azure](https://docs.microsoft.com/learn/modules/welcome-to-azure) contiene più di 100 servizi utili in una vasta gamma di scenari e opportunità di cloud computing. Microsoft Intune è uno dei numerosi servizi disponibili in Azure. Intune consente di assicurarsi che i dispositivi, le app e i dati aziendali soddisfino i requisiti di sicurezza dell'azienda. È possibile specificare i requisiti da controllare e ciò che accade se i requisiti non sono soddisfatti. L'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) è la posizione in cui è possibile trovare il servizio Microsoft Intune, oltre ad altre impostazioni correlate alla gestione dei dispositivi. La conoscenza delle funzionalità disponibili in Intune consentirà di eseguire diverse attività di gestione di dispositivi mobili (MDM) e di gestione di applicazioni mobili (MAM).
+[Azure](/learn/modules/welcome-to-azure) contiene più di 100 servizi utili in una vasta gamma di scenari e opportunità di cloud computing. Microsoft Intune è uno dei numerosi servizi disponibili in Azure. Intune consente di assicurarsi che i dispositivi, le app e i dati aziendali soddisfino i requisiti di sicurezza dell'azienda. È possibile specificare i requisiti da controllare e ciò che accade se i requisiti non sono soddisfatti. L'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) è la posizione in cui è possibile trovare il servizio Microsoft Intune, oltre ad altre impostazioni correlate alla gestione dei dispositivi. La conoscenza delle funzionalità disponibili in Intune consentirà di eseguire diverse attività di gestione di dispositivi mobili (MDM) e di gestione di applicazioni mobili (MAM).
 
 > [!NOTE]
 > Microsoft Endpoint Manager è una singola piattaforma integrata per la gestione di tutti gli endpoint. L'interfaccia di amministrazione di Microsoft Endpoint Manager si integra con System Center Configuration Manager e Microsoft Intune.

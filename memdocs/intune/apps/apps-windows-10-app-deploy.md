@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5ed491fd379879369ead35ceb2c618def91d3e53
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 170a5b22362ee3bd9e347af2addc03ef3b542de2
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985932"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907805"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Distribuzione di app di Windows 10 con Microsoft Intune 
 
@@ -69,7 +69,7 @@ In base alla versione di Windows 10 eseguita dagli utenti vengono supportati tip
 
 ## <a name="microsoft-store-for-business-apps"></a>App di Microsoft Store per le aziende
 
-Le app di Microsoft Store per le aziende sono app moderne che si acquistano dal portale di amministrazione Microsoft Store per le aziende e vengono quindi sincronizzate in Microsoft Intune per la gestione. Tali app possono essere con licenza online oppure con licenza offline. Gli aggiornamenti vengono gestiti direttamente da Microsoft Store, senza necessità di altre azioni da parte dell'amministratore. È anche possibile impedire gli aggiornamenti di app specifiche usando un URI (Uniform Resource Identifier) personalizzato. Per altre informazioni, vedere [Enterprise app management - Prevent app from automatic updates](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates) (Gestione delle app aziendali - Impedire gli aggiornamenti automatici delle app). L'utente può anche disabilitare gli aggiornamenti per tutte le app di Microsoft Store per le aziende presenti nel dispositivo. 
+Le app di Microsoft Store per le aziende sono app moderne che si acquistano dal portale di amministrazione Microsoft Store per le aziende e vengono quindi sincronizzate in Microsoft Intune per la gestione. Tali app possono essere con licenza online oppure con licenza offline. Gli aggiornamenti vengono gestiti direttamente da Microsoft Store, senza necessità di altre azioni da parte dell'amministratore. È anche possibile impedire gli aggiornamenti di app specifiche usando un URI (Uniform Resource Identifier) personalizzato. Per altre informazioni, vedere [Enterprise app management - Prevent app from automatic updates](/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates) (Gestione delle app aziendali - Impedire gli aggiornamenti automatici delle app). L'utente può anche disabilitare gli aggiornamenti per tutte le app di Microsoft Store per le aziende presenti nel dispositivo. 
 
 ### <a name="categorize-microsoft-store-for-business-apps"></a>Categorizzare le app di Microsoft Store per le aziende 
 Per categorizzare le app di Microsoft Store per le aziende: 
@@ -106,7 +106,7 @@ Le app line-of-business di Windows (in particolare APPX e MSIX) e le app Microso
   - Errore: Un utente non può fungere da destinazione di un'installazione nel contesto di dispositivo.
 
 > [!IMPORTANT]
-> Se usate in combinazione con uno scenario di provisioning in modalità "White Glove" di Autopilot, non è necessario che le app line-of-business e le app Microsoft Store per le aziende distribuite in un contesto di dispositivo siano destinate a un gruppo di dispositivi. Per altre informazioni, vedere [Distribuzione in modalità "White Glove" di Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove).
+> Se usate in combinazione con uno scenario di provisioning in modalità "White Glove" di Autopilot, non è necessario che le app line-of-business e le app Microsoft Store per le aziende distribuite in un contesto di dispositivo siano destinate a un gruppo di dispositivi. Per altre informazioni, vedere [Distribuzione in modalità "White Glove" di Windows Autopilot](/windows/deployment/windows-autopilot/white-glove).
 
 > [!Note]
 > Dopo il salvataggio dell'assegnazione di un'app con una distribuzione specifica, non è possibile cambiare il contesto dell'assegnazione, fatta eccezione per le app moderne. Per le app moderne è possibile passare dal contesto utente al contesto di dispositivo. 

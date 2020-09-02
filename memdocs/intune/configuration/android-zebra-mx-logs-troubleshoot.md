@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 607e2303cbec9ec7fc069db602d51684b71e6575
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c8cc44cb614154df1a128ee1f1708a3259f88169
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80083837"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910044"
 ---
 # <a name="troubleshoot-and-see-potential-issues-on-android-zebra-devices-in-microsoft-intune"></a>Risolvere e individuare i potenziali problemi relativi ai dispositivi Android Zebra in Microsoft Intune
 
@@ -57,7 +57,7 @@ Per ottenere i log dopo che il profilo è già stato distribuito con Intune, con
 Nel dispositivo i log vengono salvati in `/sdcard/Android/data/com.microsoft.windowsintune.companyportal/files`
 
 ### <a name="get-logs-from-email"></a>Ottenere i log tramite posta elettronica
-Per ottenere i log dopo che il profilo è già stato distribuito con Intune, gli utenti finali possono inviare i log con un messaggio di posta elettronica usando un'app di posta elettronica nel dispositivo. Nel dispositivo Zebra aprire l'app Portale aziendale e [inviare i log](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android). L'uso della funzionalità di invio dei log crea anche un ID di evento imprevisto PowerLift, a cui è possibile fare riferimento se si contatta il supporto tecnico Microsoft.
+Per ottenere i log dopo che il profilo è già stato distribuito con Intune, gli utenti finali possono inviare i log con un messaggio di posta elettronica usando un'app di posta elettronica nel dispositivo. Nel dispositivo Zebra aprire l'app Portale aziendale e [inviare i log](../user-help/send-logs-to-your-it-admin-by-email-android.md). L'uso della funzionalità di invio dei log crea anche un ID di evento imprevisto PowerLift, a cui è possibile fare riferimento se si contatta il supporto tecnico Microsoft.
 
 ## <a name="read-the-logs"></a>Leggere i log
 

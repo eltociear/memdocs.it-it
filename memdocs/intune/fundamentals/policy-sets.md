@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 752e2b1948c1c56c77866b69365d0da2859dd279
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 09da822557e27eca29da2afc342c93a76d698d6c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531641"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909925"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>Usare i set di criteri per raggruppare raccolte di oggetti di gestione
 
@@ -71,7 +71,7 @@ Quando si crea un set di criteri, si crea una singola unità di assegnazione e s
 5. Fare clic su **Avanti: Gestione dei dispositivi**.<br>
    La pagina **Gestione dei dispositivi** consente di aggiungere oggetti di gestione dei dispositivi al set di criteri, ad esempio [profili di configurazione dei dispositivi](../configuration/device-profiles.md) e [criteri di conformità dei dispositivi](../protect/device-compliance-get-started.md). Assicurarsi di includere tutti gli oggetti associati, ad esempio altri criteri, certificati e profili di baseline di sicurezza.
 6. Fare clic su **Avanti: Registrazione del dispositivo**.<br>
-   La pagina **Registrazione del dispositivo** consente di aggiungere oggetti di registrazione del dispositivo al set di criteri, ad esempio [limitazioni del tipo di dispositivo](../enrollment/enrollment-restrictions-set.md), [profili di distribuzione di Windows Autopilot](../enrollment/enrollment-autopilot.md) e [profili delle pagine di stato della registrazione](../enrollment/windows-enrollment-status.md).
+   La pagina **Registrazione del dispositivo** consente di aggiungere oggetti di registrazione del dispositivo al set di criteri, ad esempio [limitazioni del tipo di dispositivo](../enrollment/enrollment-restrictions-set.md), [profili di distribuzione di Windows Autopilot](../../autopilot/enrollment-autopilot.md) e [profili delle pagine di stato della registrazione](../enrollment/windows-enrollment-status.md).
 7. Fare clic su **Avanti: Assegnazioni**.<br>
    La pagina **Assegnazioni** consente di assegnare il set di criteri a utenti e dispositivi. Si noti che è possibile assegnare un set di criteri a un dispositivo indipendentemente dal fatto che il dispositivo sia gestito da Intune o meno.
 8. Fare clic su **Avanti: Rivedi e crea** per verificare i valori immessi per il profilo.

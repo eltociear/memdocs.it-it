@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73a222ee8f847071174ea7dee1c438b69a1bd0ae
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 72bbc3d720f7abb22296d21bfe4869240200c912
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093768"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907736"
 ---
 # <a name="set-up-iosipados-and-ipados-user-enrollment-preview"></a>Configurare la registrazione utente iOS/iPadOS e iPadOS (anteprima)
 
@@ -46,7 +46,7 @@ Un profilo di registrazione definisce le impostazioni applicate a un gruppo di d
 
     ![Creare un profilo di registrazione Apple](./media/ios-user-enrollment/create-profile.png)
 
-2. Nella pagina **Informazioni di base** immettere un **nome** e una **descrizione** per il profilo per scopi amministrativi. Questi dettagli non vengono visualizzati agli utenti. È possibile usare questo campo **Nome** per creare un gruppo dinamico in Azure Active Directory. Usare il nome del profilo per definire il parametro enrollmentProfileName per assegnare i dispositivi con questo profilo di registrazione. Altre informazioni sui [gruppi dinamici di Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices).
+2. Nella pagina **Informazioni di base** immettere un **nome** e una **descrizione** per il profilo per scopi amministrativi. Questi dettagli non vengono visualizzati agli utenti. È possibile usare questo campo **Nome** per creare un gruppo dinamico in Azure Active Directory. Usare il nome del profilo per definire il parametro enrollmentProfileName per assegnare i dispositivi con questo profilo di registrazione. Altre informazioni sui [gruppi dinamici di Azure Active Directory](/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices).
 
     ![Pagina Informazioni di base](./media/ios-user-enrollment/basics-page.png)
 
@@ -58,7 +58,7 @@ Un profilo di registrazione definisce le impostazioni applicate a un gruppo di d
 
     - **Registrazione dispositivi**: tutti gli utenti del profilo usano Registrazione dispositivi.
     - **Registrazione utenti**: tutti gli utenti del profilo usano Registrazione utenti.
-    - **Determinazione in base alla scelta utente**: tutti gli utenti del gruppo potranno scegliere il tipo di registrazione da usare. Quando registrano i propri dispositivi, gli utenti vedranno visualizzate le opzioni **Sono il proprietario del dispositivo** e **(Società) possiede il dispositivo** tra cui scegliere. Se scelgono la seconda opzione, il dispositivo verrà registrato usando la registrazione dispositivi. Se l'utente sceglie **Sono il proprietario del dispositivo**, otterrà un'altra opzione per proteggere l'intero dispositivo o solo le app e i dati correlati al lavoro. La scelta dell'utente finale sulla proprietà del dispositivo determina il tipo di registrazione implementato nel dispositivo. Questa scelta dell'utente viene riflessa anche nell'attributo Proprietà del dispositivo in Intune. Per altre informazioni sull'esperienza utente, vedere [Configurare l'accesso del dispositivo iOS/iPadOS alle risorse aziendali](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp).
+    - **Determinazione in base alla scelta utente**: tutti gli utenti del gruppo potranno scegliere il tipo di registrazione da usare. Quando registrano i propri dispositivi, gli utenti vedranno visualizzate le opzioni **Sono il proprietario del dispositivo** e **(Società) possiede il dispositivo** tra cui scegliere. Se scelgono la seconda opzione, il dispositivo verrà registrato usando la registrazione dispositivi. Se l'utente sceglie **Sono il proprietario del dispositivo**, otterrà un'altra opzione per proteggere l'intero dispositivo o solo le app e i dati correlati al lavoro. La scelta dell'utente finale sulla proprietà del dispositivo determina il tipo di registrazione implementato nel dispositivo. Questa scelta dell'utente viene riflessa anche nell'attributo Proprietà del dispositivo in Intune. Per altre informazioni sull'esperienza utente, vedere [Configurare l'accesso del dispositivo iOS/iPadOS alle risorse aziendali](../user-help/enroll-your-device-in-intune-macos-cp.md).
     
 5. Selezionare **Avanti**.
 
@@ -81,5 +81,3 @@ Dopo aver creato più profili del tipo di registrazione, è possibile modificare
 2. Trascinare e rilasciare i profili nell'elenco nell'ordine in cui si vuole applicarli.
 
 In caso di conflitti tra i profili di un utente, viene applicato all'utente il profilo con priorità più elevata.
-
-

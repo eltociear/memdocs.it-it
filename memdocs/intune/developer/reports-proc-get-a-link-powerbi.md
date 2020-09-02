@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3a20477b643da961f5c7281d92f3d24a4e7313d
-ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
+ms.openlocfilehash: 2e61e7e8bae436e567bceec5f098170cfb7b7c6a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87443846"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907753"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Connettersi al data warehouse con Power BI
 
@@ -42,7 +42,7 @@ ms.locfileid: "87443846"
 Sono anche evidenziate le tendenze per la registrazione, la conformità, il profilo di configurazione dispositivo e gli aggiornamenti software. I report e i grafici di esempio applicano filtri semplici all'area di disegno. Per usare i filtri avanzati, vedere il riquadro **Filtro** in Power BI Desktop.
 
 > [!NOTE]
-> Le app modello di Power BI consentono ai partner Power BI di creare app Power BI con poco codice o senza codice e di distribuirle a qualsiasi cliente Power BI. Ad esempio, è possibile usare il modello di report di conformità di Power BI nella versione 2.0. La versione 2.0 include una progettazione migliorata e aggiornamenti ai calcoli e ai dati esposti come parte del modello. Per altre informazioni, vedere [Aggiornare un'app modello](https://docs.microsoft.com/power-bi/service-template-apps-install-distribute#update-a-template-app), [App di conformità di Intune (data warehouse)](https://appsource.microsoft.com/product/power-bi/pbi_intune.intune_compliance_dw_app-preview?flightCodes=65ede247-5273-43b8-8a25-b89c7d211fbd) e [Che cosa sono le app modello di Power BI?](https://docs.microsoft.com/power-bi/service-template-apps-overview)
+> Le app modello di Power BI consentono ai partner Power BI di creare app Power BI con poco codice o senza codice e di distribuirle a qualsiasi cliente Power BI. Ad esempio, è possibile usare il modello di report di conformità di Power BI nella versione 2.0. La versione 2.0 include una progettazione migliorata e aggiornamenti ai calcoli e ai dati esposti come parte del modello. Per altre informazioni, vedere [Aggiornare un'app modello](/power-bi/service-template-apps-install-distribute#update-a-template-app), [App di conformità di Intune (data warehouse)](https://appsource.microsoft.com/product/power-bi/pbi_intune.intune_compliance_dw_app-preview?flightCodes=65ede247-5273-43b8-8a25-b89c7d211fbd) e [Che cosa sono le app modello di Power BI?](/power-bi/service-template-apps-overview)
 
 La procedura seguente illustra come scaricare il file di Power BI e come usare il collegamento OData con Power BI.
 

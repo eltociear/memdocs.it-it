@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bed118810be877bf4671571814ee6d151d6f727b
-ms.sourcegitcommit: da5bfbe16856fdbfadc40b3797840e0b5110d97d
+ms.openlocfilehash: 358d01a968c98262980f8e121d8e7e92e2880c6c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88512734"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907820"
 ---
 # <a name="intune-discovered-apps"></a>App individuate da Intune
 
@@ -64,7 +64,7 @@ L'elenco seguente include il tipo di piattaforma app, le app monitorate per i di
 | Android Enterprise | Solo le app gestite | Solo le app installate nel profilo di lavoro | Ogni 7 giorni dalla registrazione del dispositivo |
 
 > [!NOTE]
-> - I dispositivi Windows 10 con co-gestione, come indicato nel carico di lavoro delle [app client](https://docs.microsoft.com/mem/configmgr/comanage/workloads#client-apps) in Configuration Manager, attualmente non raccolgono l'inventario delle app con l'estensione di gestione di Intune in base alla pianificazione precedente. Per attenuare questo problema, il carico di lavoro delle [app client](https://docs.microsoft.com/mem/configmgr/comanage/workloads#client-apps) in Configuration Manager deve passare a Intune per consentire l'installazione dell'estensione di gestione di Intune nel dispositivo. Questa estensione è necessaria per l'inventario di Win32 e la distribuzione di PowerShell. Si noti che eventuali modifiche o aggiornamenti per questo comportamento vengono annunciati in [in fase di sviluppo](../fundamentals/in-development.md) e/o [novità](../fundamentals/whats-new.md).
+> - I dispositivi Windows 10 con co-gestione, come indicato nel carico di lavoro delle [app client](../../configmgr/comanage/workloads.md#client-apps) in Configuration Manager, attualmente non raccolgono l'inventario delle app con l'estensione di gestione di Intune in base alla pianificazione precedente. Per attenuare questo problema, il carico di lavoro delle [app client](../../configmgr/comanage/workloads.md#client-apps) in Configuration Manager deve passare a Intune per consentire l'installazione dell'estensione di gestione di Intune nel dispositivo. Questa estensione è necessaria per l'inventario di Win32 e la distribuzione di PowerShell. Si noti che eventuali modifiche o aggiornamenti per questo comportamento vengono annunciati in [in fase di sviluppo](../fundamentals/in-development.md) e/o [novità](../fundamentals/whats-new.md).
 > - I dispositivi macOS personali registrati prima di novembre 2019 possono continuare a mostrare tutte le app installate nel dispositivo fino a quando i dispositivi non vengono registrati nuovamente.
 > - Android Enterprise completamente gestito e dedicato non visualizza le app individuate.
 

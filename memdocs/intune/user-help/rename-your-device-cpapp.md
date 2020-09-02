@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 8c71ef5e1abfcccfdeec6c01551a23bf1d1750bd
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2fcb7be9d5a75f17e2b9c347be9cd5d4eedd925d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881152"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907651"
 ---
 # <a name="rename-device-from-the-company-portal-app-for-windows"></a>Rinominare il dispositivo dall'app Portale aziendale per Windows
 Rinominare un dispositivo per riconoscerlo più facilmente dagli altri dispositivi. L'app Portale aziendale per Windows consente di rinominare i tipi seguenti di dispositivi connessi:  
@@ -47,7 +47,7 @@ Completare il passaggio seguente per rimuovere un dispositivo dalla pagina **Det
      ![Screenshot di esempio dell'app Portale aziendale per Windows, pagina Dettagli dispositivo, campo popup Rinomina.](./media/1808_RenameApp_Popup.png)  
 
 ## <a name="rename-device-from-device-context-menu"></a>Rinominare il dispositivo dal menu di scelta rapida  
-Completare il passaggio seguente per rimuovere un dispositivo tramite le azioni del [menu di scelta rapida](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus).  
+Completare il passaggio seguente per rimuovere un dispositivo tramite le azioni del [menu di scelta rapida](//windows/uwp/design/controls-and-patterns/menus).  
 
 1. Nella pagina **Home** dell'app Portale aziendale passare a **Dispositivi personali**.
 
@@ -61,4 +61,3 @@ Completare il passaggio seguente per rimuovere un dispositivo tramite le azioni 
      ![Screenshot di esempio dell'app Portale aziendale per Windows con home page. Nel dispositivo viene visualizzato il campo popup Rinomina in cui l'utente può digitare il nuovo nome e fare clic su Rinomina o Annulla.](./media/1808_RenameApp_Popup.png)  
 
 Serve ancora assistenza? Contattare l'amministratore IT. Per informazioni sul contatto vedere il [sito Web del portale aziendale](https://go.microsoft.com/fwlink/?linkid=2010980).
-

@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d02329f65d7b7ecec1dbfeaf84ecbe5c8fb53013
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: e986021bb4d575ec3269e97b228cc381e1f2cf72
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079485"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910894"
 ---
 # <a name="quickstart-send-notifications-to-noncompliant-devices"></a>Guida introduttiva: Inviare notifiche a dispositivi non conformi
 
 In questa guida introduttiva si userà Microsoft Intune per l'invio di notifiche di posta elettronica ai membri della forza lavoro che hanno dispositivi non conformi.
 
-Per impostazione predefinita, quando Intune rileva un dispositivo che non è conforme, lo contrassegna immediatamente come non conforme. Quindi l'[accesso condizionale](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) di Azure Active Directory (Azure AD) blocca il dispositivo. Quando un dispositivo non è conforme, Intune consente di aggiungere azioni per la non conformità offrendo la flessibilità necessaria per decidere cosa fare. Ad esempio, è possibile concedere agli utenti un periodo di tolleranza per diventare conformi prima di bloccare i dispositivi non conformi.
+Per impostazione predefinita, quando Intune rileva un dispositivo che non è conforme, lo contrassegna immediatamente come non conforme. Quindi l'[accesso condizionale](/azure/active-directory/active-directory-conditional-access-azure-portal) di Azure Active Directory (Azure AD) blocca il dispositivo. Quando un dispositivo non è conforme, Intune consente di aggiungere azioni per la non conformità offrendo la flessibilità necessaria per decidere cosa fare. Ad esempio, è possibile concedere agli utenti un periodo di tolleranza per diventare conformi prima di bloccare i dispositivi non conformi.
 
 Un'azione da intraprendere quando un dispositivo non soddisfa la conformità è inviare un messaggio di posta elettronica all'utente dei dispositivi. È anche possibile personalizzare la notifica di posta elettronica prima di inviarla. In particolare, è possibile personalizzare i destinatari, l'oggetto e il corpo del messaggio, inclusi il logo aziendale e le informazioni di contatto. Intune inserisce nella notifica di posta elettronica anche i dettagli sul dispositivo non conforme.
 
@@ -37,7 +37,7 @@ Se non si dispone di una sottoscrizione Intune, è possibile [iscriversi per ott
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Per usare i criteri di conformità per impedire ai dispositivi di usare le risorse aziendali, è necessario aver configurato l'accesso condizionale di Azure AD. Se sono state eseguite le procedure descritte nella guida introduttiva [Creare criteri di conformità dei dispositivi](quickstart-set-password-length-android.md), si sta usando Azure Active Directory. Per altre informazioni su Azure AD, vedere [Che cos'è l'accesso condizionale in Azure Active Directory?](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) e [Quali sono i modi comuni per usare l'accesso condizionale con Intune?](../protect/conditional-access-intune-common-ways-use.md).
+Per usare i criteri di conformità per impedire ai dispositivi di usare le risorse aziendali, è necessario aver configurato l'accesso condizionale di Azure AD. Se sono state eseguite le procedure descritte nella guida introduttiva [Creare criteri di conformità dei dispositivi](quickstart-set-password-length-android.md), si sta usando Azure Active Directory. Per altre informazioni su Azure AD, vedere [Che cos'è l'accesso condizionale in Azure Active Directory?](/azure/active-directory/active-directory-conditional-access-azure-portal) e [Quali sono i modi comuni per usare l'accesso condizionale con Intune?](../protect/conditional-access-intune-common-ways-use.md).
 
 ## <a name="sign-in-to-intune"></a>Accedere a Intune
 

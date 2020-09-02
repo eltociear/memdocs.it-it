@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 444fb116150cf3d7a3ab4dcfe4eb450b20119df0
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: 0803563dc525b0835602d54d4bde3de1345aeb33
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86410930"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913376"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>Framework di protezione dei dati con criteri di protezione delle app 
 
@@ -64,7 +64,7 @@ Le impostazioni dei criteri di protezione delle app riportate di seguito devono 
 Microsoft consiglia di esaminare e categorizzare gli scenari di utilizzo e quindi di configurare gli utenti applicando le linee guida definite per tale livello. Come per qualsiasi framework, potrebbe essere necessario modificare le impostazioni del livello corrispondente in base alle esigenze dell'organizzazione, perché la protezione dei dati deve valutare l'ambiente di minaccia, l'entità del rischio e l'impatto sull'usabilità.  
 
 ### <a name="conditional-access-policies"></a>Criteri di accesso condizionale
-Per garantire che solo le app che supportano i criteri di protezione delle app accedano ai dati dell'account aziendale o dell'istituto di istruzione, sono necessari i criteri di accesso condizionale di Azure Active Directory. Vedere **Scenario 1: le app di Office 365 richiedono app approvate con criteri di protezione delle app** nella procedura [Richiedere criteri di protezione delle app per l'accesso alle app cloud con accesso condizionale](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access) per i passaggi necessari per implementare criteri specifici.
+Per garantire che solo le app che supportano i criteri di protezione delle app accedano ai dati dell'account aziendale o dell'istituto di istruzione, sono necessari i criteri di accesso condizionale di Azure Active Directory. Vedere **Scenario 1: le app di Office 365 richiedono app approvate con criteri di protezione delle app** nella procedura [Richiedere criteri di protezione delle app per l'accesso alle app cloud con accesso condizionale](/azure/active-directory/conditional-access/app-protection-based-conditional-access) per i passaggi necessari per implementare criteri specifici.
 
 ### <a name="apps-to-include-in-the-app-protection-policies"></a>App da includere nei criteri di protezione delle app  
 

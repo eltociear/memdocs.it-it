@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5d673c5688c4ab4f3219256412a098855af63ec
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: a82eb416021e86347818c333e74f31318b0661ce
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461879"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908650"
 ---
 # <a name="what-is-device-enrollment-in-intune"></a>Che cos'è la registrazione dei dispositivi in Intune?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -59,16 +59,16 @@ Per impostazione predefinita, i dispositivi di tutte le piattaforme sono autoriz
 |**[BYOD](#bring-your-own-device)** | No | sì | No | [Altre informazioni](windows-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| No |No |No |[Altre informazioni](device-enrollment-manager-enroll.md)|
 |**Registrazione automatica** | No |sì |No | [Altre informazioni](windows-enroll.md#enable-windows-10-automatic-enrollment)|
-|**Autopilot** |sì |sì |No | [Altre informazioni](enrollment-autopilot.md)
+|**Autopilot** |sì |sì |No | [Altre informazioni](../../autopilot/enrollment-autopilot.md)
 |**Registrazione in blocco** |No |No |No | [Altre informazioni](windows-bulk-enroll.md) |
-|**Co-gestione** |No |sì |No | [Altre informazioni](https://docs.microsoft.com/configmgr/core/clients/manage/co-management-overview)
-|**Oggetto Criteri di gruppo** |No |sì |No | [Altre informazioni](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
+|**Co-gestione** |No |sì |No | [Altre informazioni](/configmgr/core/clients/manage/co-management-overview)
+|**Oggetto Criteri di gruppo** |No |sì |No | [Altre informazioni](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
 
 ## <a name="android-enrollment-methods"></a>Metodi di registrazione per Android
 
 | **Personale** | **Metodi di registrazione** | **Ripristino necessario** | **Affinità utente** | **Bloccato** | **Informazioni dettagliate**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**Android Device Admin**|**Avviato dall'utente tramite portale aziendale** | No | sì | No | [Altre informazioni](https://docs.microsoft.com/mem/intune/user-help/enroll-device-android-company-portal)|
+|**Android Device Admin**|**Avviato dall'utente tramite portale aziendale** | No | sì | No | [Altre informazioni](../user-help/enroll-device-android-company-portal.md)|
 |**Profilo aziendale di Android Enterprise**|**Avviato dall'utente tramite portale aziendale**| No | sì | No | [Altre informazioni](android-work-profile-enroll.md)|
 
 

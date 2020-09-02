@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf5c76e276722fb9bab2b5d6fac511f0b22ae1f2
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6def2806bc35acf8becbbedfb031af99378711ee
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79356713"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913835"
 ---
 # <a name="quickstart-create-a-user-in-intune-and-assign-the-user-a-license"></a>Guida introduttiva: Creare un utente in Intune e assegnare una licenza all'utente
 
@@ -59,7 +59,7 @@ Per assegnare una licenza di Intune a un utente:
 2. Selezionare **Utenti** > **Utenti attivi** e quindi selezionare l'utente appena creato.
 3. Selezionare la scheda **Licenze e app**.
 4. In **Seleziona località** selezionare una località per l'utente, se non è già impostata.
-2. Selezionare la casella di controllo **Intune** nella sezione **Licenze**. Se un'altra licenza include Intune, è possibile selezionarla. Il [nome del prodotto](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference) visualizzato viene usato come piano di servizio nella gestione di Azure.
+2. Selezionare la casella di controllo **Intune** nella sezione **Licenze**. Se un'altra licenza include Intune, è possibile selezionarla. Il [nome del prodotto](/azure/active-directory/users-groups-roles/licensing-service-plan-reference) visualizzato viene usato come piano di servizio nella gestione di Azure.
 
     ![Selezionare la località e la licenza di Intune](./media/quickstart-create-user/create-user-03.png)
 

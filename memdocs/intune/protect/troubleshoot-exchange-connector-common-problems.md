@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 57f8b8193fd2f4e871f744743b768ec6248ae0b9
-ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
+ms.openlocfilehash: b1ed3cd24c05586bd5dc9d9a2443a33ffcdc2a48
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85972131"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914804"
 ---
 # <a name="resolve-common-problems-with-the-intune-exchange-connector"></a>Risolvere i problemi comuni di Intune Exchange Connector
  
@@ -56,7 +56,7 @@ Esaminare le sezioni seguenti per risolvere i problemi relativi alle notifiche d
 
 ### <a name="check-the-notification-account-that-retrieves-autodiscover-settings"></a>Controllare l'account di notifica che recupera le impostazioni di individuazione automatica
 
-1. Verificare che il servizio di individuazione automatica e i servizi Web Exchange siano configurati nei servizi Accesso client di Exchange. Per altre informazioni, vedere [Servizi di accesso client](https://docs.microsoft.com/Exchange/architecture/client-access/client-access) e [Servizio di individuazione automatica in Exchange Server](https://docs.microsoft.com/Exchange/architecture/client-access/autodiscover?view=exchserver-2019).
+1. Verificare che il servizio di individuazione automatica e i servizi Web Exchange siano configurati nei servizi Accesso client di Exchange. Per altre informazioni, vedere [Servizi di accesso client](/Exchange/architecture/client-access/client-access) e [Servizio di individuazione automatica in Exchange Server](/Exchange/architecture/client-access/autodiscover?view=exchserver-2019).
 
 2. Verificare che l'account di notifica soddisfi i requisiti seguenti:
 
@@ -71,14 +71,14 @@ Esaminare le sezioni seguenti per risolvere i problemi relativi alle notifiche d
    2. Immettere *Autodiscover.SMTPdomain.com*. L'output dovrebbe essere simile all'immagine seguente: risultati di ![Nslookup](./media/troubleshoot-exchange-connector-common-problems/nslookup-results.png
       )
 
-   È anche possibile testare il servizio di individuazione automatica da Internet all'indirizzo https://testconnectivity.microsoft.com. In alternativa, è possibile testarlo da un dominio locale usando Microsoft Connectivity Analizer Tool. Per altre informazioni, vedere [Microsoft Connectivity Analyzer Tool](https://docs.microsoft.com/previous-versions/office/exchange-remote-connectivity/jj851141(v=exchg.80)).
+   È anche possibile testare il servizio di individuazione automatica da Internet all'indirizzo https://testconnectivity.microsoft.com. In alternativa, è possibile testarlo da un dominio locale usando Microsoft Connectivity Analizer Tool. Per altre informazioni, vedere [Microsoft Connectivity Analyzer Tool](/previous-versions/office/exchange-remote-connectivity/jj851141(v=exchg.80)).
 
 
 ### <a name="check-autodiscover"></a>Controllare l'individuazione automatica
 
 Se l'individuazione automatica ha esito negativo, provare a eseguire la procedura seguente:
 
-1. [Configurare un record DNS di individuazione automatica valido](https://docs.microsoft.com/previous-versions/exchange-server/exchange-150/mt473798(v=exchg.150)).
+1. [Configurare un record DNS di individuazione automatica valido](/previous-versions/exchange-server/exchange-150/mt473798(v=exchg.150)).
 
 2. Impostare come hardcoded l'URL di Servizi Web Exchange nel file di configurazione di Intune Exchange Connector:
 

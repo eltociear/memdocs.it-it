@@ -19,12 +19,12 @@ ms.reviewer: coferro
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 77643d689a2a5693b71f85a7e82b98bddec9a646
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: b61265a1c278b83a91ac1e353794a358dcc5fdb3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881471"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915518"
 ---
 # <a name="reset-device-from-company-portal-website"></a>Reimpostare un dispositivo dal sito Web Portale aziendale
 
@@ -32,7 +32,7 @@ Ripristinare le impostazioni predefinite di un dispositivo usato, perso o rubato
 
 Dopo il ripristino, un dispositivo non viene più visualizzato nel Portale aziendale. App e file esistenti vengono cancellati e nel dispositivo vengono ripristinate le impostazioni predefinite. 
 
-La reimpostazione del dispositivo nel Portale aziendale non è disponibile per tutti i dispositivi iOS. Per altre informazioni per i responsabili del supporto IT sulla reimpostazione del dispositivo e le relative limitazioni, vedere [Rimuovere i dispositivi con la cancellazione, la disattivazione o l'annullamento manuale della registrazione](https://docs.microsoft.com/intune/devices-wipe).  
+La reimpostazione del dispositivo nel Portale aziendale non è disponibile per tutti i dispositivi iOS. Per altre informazioni per i responsabili del supporto IT sulla reimpostazione del dispositivo e le relative limitazioni, vedere [Rimuovere i dispositivi con la cancellazione, la disattivazione o l'annullamento manuale della registrazione](/intune/devices-wipe).  
 
 > [!Note]
 > È anche possibile eseguire la procedura seguente da un altro dispositivo registrato. Aprire l'app Portale aziendale ed eseguire i passaggi per un'esperienza di reimpostazione simile. 

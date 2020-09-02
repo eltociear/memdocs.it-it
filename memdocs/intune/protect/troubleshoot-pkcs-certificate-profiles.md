@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c6f2eb7d6174c706cdd8a3910df1d0ddc2e6ef0
-ms.sourcegitcommit: 532a06163f462527254d23e7dc505b18c0c4f938
+ms.openlocfilehash: acc61df344cb4134a863d75fff517047e78d067d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88110682"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914787"
 ---
 # <a name="troubleshoot-pkcs-certificate-deployment-in-microsoft-intune"></a>Risoluzione dei problemi di distribuzione del certificato PKCS in Microsoft Intune
 
@@ -39,7 +39,7 @@ La causa più comune dei problemi per i profili certificato PKCS è la configura
 - **Autorità di certificazione**: nome di dominio completo (FQDN) interno del computer dell'autorità di certificazione, ad esempio, server1.domain.local.
 - **Nome dell'autorità di certificazione**: nome dell'autorità di certificazione visualizzato in MMC dell'autorità di certificazione. Guardare in **Autorità di certificazione (locale)**
 
-Per verificare la correttezza dell'autorità di certificazione e del nome dell'autorità di certificazione, è possibile usare il [programma da riga di comando certutil](https://docs.microsoft.com/windows-server/administration/windows-commands/certutil) sulla CA.
+Per verificare la correttezza dell'autorità di certificazione e del nome dell'autorità di certificazione, è possibile usare il [programma da riga di comando certutil](/windows-server/administration/windows-commands/certutil) sulla CA.
 
 ## <a name="pkcs-communication-overview"></a>Panoramica della comunicazione PKCS
 
@@ -76,7 +76,7 @@ I file di log per questi ruoli includono il Visualizzatore eventi di Windows, le
 
 - **NDESConnector_date_time.svclog**:
 
-  questo log visualizza le comunicazioni dal Connettore di certificati di Microsoft Intune al servizio cloud di Intune. Per visualizzare questo log è possibile usare lo strumento [Visualizzatore di tracce dei servizi](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe).
+  questo log visualizza le comunicazioni dal Connettore di certificati di Microsoft Intune al servizio cloud di Intune. Per visualizzare questo log è possibile usare lo strumento [Visualizzatore di tracce dei servizi](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe).
 
   Chiave del Registro di sistema associata: *HKLM\SW\Microsoft\MicrosoftIntune\NDESConnector\ConnectionStatus*
 
@@ -84,7 +84,7 @@ I file di log per questi ruoli includono il Visualizzatore eventi di Windows, le
 
 - **CertificateRegistrationPoint_date_time.svclog**:
 
-  Questo log visualizza il modulo criteri del servizio Registrazione dispositivi di rete che riceve e verifica le richieste di certificati. Per visualizzare questo log è possibile usare lo strumento [Visualizzatore di tracce dei servizi](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe).
+  Questo log visualizza il modulo criteri del servizio Registrazione dispositivi di rete che riceve e verifica le richieste di certificati. Per visualizzare questo log è possibile usare lo strumento [Visualizzatore di tracce dei servizi](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe).
 
   Percorso: Nel server che ospita il servizio Registrazione dispositivi di rete: *%program_files%\Microsoft intune\ndesconnectorsvc\logs\logs*
 
@@ -217,7 +217,7 @@ Questo problema si verifica se il computer che ospita Intune NDES Connector non 
 
 **Risoluzione**:
 
-Configurare manualmente il nome del server dei criteri di registrazione certificati nel computer che ospita NDES Connector. Per configurare il nome, usare il cmdlet di PowerShell [Add-CertificateEnrollmentPolicyServer](https://docs.microsoft.com/powershell/module/pkiclient/add-certificateenrollmentpolicyserver?view=win10-ps).
+Configurare manualmente il nome del server dei criteri di registrazione certificati nel computer che ospita NDES Connector. Per configurare il nome, usare il cmdlet di PowerShell [Add-CertificateEnrollmentPolicyServer](/powershell/module/pkiclient/add-certificateenrollmentpolicyserver?view=win10-ps).
 
 ### <a name="the-submission-is-pending"></a>L'invio è in sospeso
 

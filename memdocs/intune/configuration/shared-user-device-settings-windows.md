@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f013074ac67b7622b509d8b9781de3ab5f4041e0
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: d3a1a66988f922a293187f3ed30e3659dee567b1
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429498"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915705"
 ---
 # <a name="windows-10-and-later-settings-to-manage-shared-devices-using-intune"></a>Impostazioni di Windows 10 e versioni successive per la gestione dei dispositivi condivisi con Intune
 
@@ -32,7 +32,7 @@ Con Microsoft Intune gli utenti finali possono accedere a tali dispositivi condi
 
 Questo articolo elenca e descrive le impostazioni usate in un profilo di configurazione di dispositivi Windows 10 e versioni successive. Quando il profilo viene creato in Intune, l'amministratore lo distribuisce o lo assegna ai gruppi di dispositivi nell'organizzazione. Il profilo può anche essere assegnato a gruppi di dispositivi contenenti tipi di dispositivo e versioni del sistema operativo diversi.
 
-Per altre informazioni su questa funzionalità in Intune, vedere [Controllare l'accesso, gli account e le funzionalità di risparmio energia nei PC condivisi o nei dispositivi con più utenti](shared-user-device-settings.md). Per altre informazioni sul provider di servizi di configurazione di Windows, vedere [SharedPC CSP](https://docs.microsoft.com/windows/client-management/mdm/sharedpc-csp) (Provider di servizi di configurazione SharedPC).
+Per altre informazioni su questa funzionalità in Intune, vedere [Controllare l'accesso, gli account e le funzionalità di risparmio energia nei PC condivisi o nei dispositivi con più utenti](shared-user-device-settings.md). Per altre informazioni sul provider di servizi di configurazione di Windows, vedere [SharedPC CSP](/windows/client-management/mdm/sharedpc-csp) (Provider di servizi di configurazione SharedPC).
 
 ## <a name="before-your-begin"></a>Prima di iniziare
 
@@ -40,7 +40,7 @@ Per altre informazioni su questa funzionalità in Intune, vedere [Controllare l'
 
 ## <a name="shared-multi-user-device-settings"></a>Impostazioni dei dispositivi multiutente condivisi
 
-Queste impostazioni usano il [provider di servizi di configurazione SharedPC](https://docs.microsoft.com/windows/client-management/mdm/sharedpc-csp).
+Queste impostazioni usano il [provider di servizi di configurazione SharedPC](/windows/client-management/mdm/sharedpc-csp).
 
 - **Modalità Computer condiviso**: **Enable (Abilita)** attiva la modalità PC condiviso. In questa modalità, può accedere al dispositivo un solo utente alla volta. Un altro utente può accedere solo quando il primo si disconnette. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
 - **Account Guest**: consente di scegliere di creare un'opzione Guest nella schermata di accesso. Gli account Guest non richiedono credenziali o autenticazione utente. Questa impostazione crea un nuovo account locale ogni volta che viene usata. Le opzioni disponibili sono:
@@ -92,10 +92,10 @@ Queste impostazioni usano il [provider di servizi di configurazione SharedPC](ht
   - **Attivata**: usa le impostazioni consigliate per i dispositivi usati negli istituti di istruzione, più restrittive.
   - **Disabilitato**: i criteri per la formazione predefiniti e consigliati non vengono usati.
 
-  Per altre informazioni sulla funzione dei criteri per la formazione, vedere [Consigli sulla configurazione di Windows 10 per i clienti del settore istruzione](https://docs.microsoft.com/education/windows/configure-windows-for-education).
+  Per altre informazioni sulla funzione dei criteri per la formazione, vedere [Consigli sulla configurazione di Windows 10 per i clienti del settore istruzione](/education/windows/configure-windows-for-education).
 
 > [!TIP]
-> [Configurare un PC condiviso o guest](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc) (si apre un altro sito Web di documentazione) è un'ottima risorsa per questa funzionalità di Windows 10, che include concetti e criteri di gruppo che possono essere impostati in modalità condivisa.
+> [Configurare un PC condiviso o guest](/windows/configuration/set-up-shared-or-guest-pc) (si apre un altro sito Web di documentazione) è un'ottima risorsa per questa funzionalità di Windows 10, che include concetti e criteri di gruppo che possono essere impostati in modalità condivisa.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ab862efd37bfeffc392d1d18cbf1f8a2f3deb50e
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: d51f7fd47e876a2e91665fb1a6e72f377de31429
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565700"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88916011"
 ---
 # <a name="set-up-intune-certificate-connector-for-digicert-pki-platform"></a>Configurare il Connettore di certificati di Intune per la piattaforma DigiCert PKI
 
@@ -323,7 +323,7 @@ Dopo aver completato i passaggi precedenti, il Connettore di certificati di Intu
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 
-I log del servizio del Connettore di certificati di Intune sono disponibili in **%Programmi%\Microsoft Intune\NDESConnectorSvc\Logs\Logs** nel computer NDES Connector. Aprire i log in [SvcTraceViewer](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) e cercare i messaggi di eccezione o errore.
+I log del servizio del Connettore di certificati di Intune sono disponibili in **%Programmi%\Microsoft Intune\NDESConnectorSvc\Logs\Logs** nel computer NDES Connector. Aprire i log in [SvcTraceViewer](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) e cercare i messaggi di eccezione o errore.
 
 | Problema/Messaggio di errore | Passaggi per la risoluzione del problema |
 | --- | --- |

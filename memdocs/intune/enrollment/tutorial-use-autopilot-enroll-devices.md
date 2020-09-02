@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 619974819575936912b6a5c386116bdf26448252
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 45ec9e0353feffdc6beb068d5b99426a734d7096
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546844"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915433"
 ---
 # <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>Esercitazione: Usare Autopilot per registrare i dispositivi Windows in Intune
 
@@ -40,12 +40,12 @@ In questa esercitazione si apprenderà come:
 
 Se non si dispone di una sottoscrizione Intune, è possibile [iscriversi per ottenere un account di prova gratuito](../fundamentals/free-trial-sign-up.md).
 
-Per una panoramica di vantaggi, scenari e prerequisiti di Autopilot, vedere [Panoramica di Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
+Per una panoramica di vantaggi, scenari e prerequisiti di Autopilot, vedere [Panoramica di Windows Autopilot](/windows/deployment/windows-autopilot/windows-10-autopilot).
 
 
 ## <a name="prerequisites"></a>Prerequisiti
 - [Configurare la registrazione automatica di Windows](quickstart-setup-auto-enrollment.md)
-- [Sottoscrizione di Azure Active Directory Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
+- [Sottoscrizione di Azure Active Directory Premium](/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
 
 
 ## <a name="add-devices"></a>Aggiungere dispositivi
@@ -128,5 +128,3 @@ Sono disponibili ulteriori informazioni sulle altre opzioni disponibili per Wind
 
 > [!div class="nextstepaction"]
 > [Articolo approfondito sulla registrazione con Autopilot](../../autopilot/enrollment-autopilot.md)
-
-

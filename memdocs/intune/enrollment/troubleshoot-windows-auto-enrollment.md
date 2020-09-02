@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 968aa9b2f7127e9b7f092f36a99b491a75f0b78c
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 6aff5dfe62c1c44ec22f56c287220b59b98a7536
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546867"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915484"
 ---
 # <a name="troubleshoot-windows-10-group-policy-based-auto-enrollment-in-intune"></a>Risolvere i problemi di registrazione automatica basata su Criteri di gruppo di Windows 10 in Intune
 
-È possibile usare Criteri di gruppo per attivare la registrazione automatica nel sistema MDM per i dispositivi Active Directory (AD) aggiunti a un dominio. Per altre informazioni, vedere [Registrare un dispositivo Windows 10 automaticamente tramite Criteri di gruppo](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy).
+È possibile usare Criteri di gruppo per attivare la registrazione automatica nel sistema MDM per i dispositivi Active Directory (AD) aggiunti a un dominio. Per altre informazioni, vedere [Registrare un dispositivo Windows 10 automaticamente tramite Criteri di gruppo](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy).
 
 ## <a name="verify-the-configuration"></a>Verificare la configurazione
 
@@ -37,7 +37,7 @@ Prima di avviare il processo di risoluzione dei problemi, è consigliabile verif
 
    ![Verificare la licenza di Intune](./media/troubleshoot-windows-auto-enrollment/intune-license.png)
 
-- Verificare che la registrazione automatica sia abilitata per tutti gli utenti che registreranno i dispositivi in Intune. Per altre informazioni, vedere [Azure AD e Microsoft Intune: Registrazione MDM automatica nel nuovo portale](https://docs.microsoft.com/windows/client-management/mdm/azure-ad-and-microsoft-intune-automatic-mdm-enrollment-in-the-new-portal).
+- Verificare che la registrazione automatica sia abilitata per tutti gli utenti che registreranno i dispositivi in Intune. Per altre informazioni, vedere [Azure AD e Microsoft Intune: Registrazione MDM automatica nel nuovo portale](/windows/client-management/mdm/azure-ad-and-microsoft-intune-automatic-mdm-enrollment-in-the-new-portal).
 
    ![Verificare la registrazione automatica](./media/troubleshoot-windows-auto-enrollment/verify-auto-enrollment.png)
 
@@ -106,7 +106,7 @@ L'ID evento 75 non viene registrato nelle situazioni seguenti:
 
   Per verificare l'errore, cercare l'ID evento 76 (messaggio dell'evento: Registrazione MDM automatica: Failed (Unknown Win32 Error code: 0x8018002b) (Registrazione MDM automatica: non riuscita (codice errore Win32 sconosciuto: 0x8018002b)). Questo evento indica una registrazione automatica non riuscita.
 
-  Per la risoluzione di questo errore, vedere [Risoluzione dei problemi di registrazione dei dispositivi Windows in Microsoft Intune](https://docs.microsoft.com/intune/troubleshoot-windows-enrollment-errors).
+  Per la risoluzione di questo errore, vedere [Risoluzione dei problemi di registrazione dei dispositivi Windows in Microsoft Intune](/intune/troubleshoot-windows-enrollment-errors).
 
 - La registrazione non è stata attivata. In questo caso, l'ID evento 75 e l'ID evento 76 non vengono registrati.
   

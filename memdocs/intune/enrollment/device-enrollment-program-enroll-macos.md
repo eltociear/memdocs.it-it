@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c4d66638ffbeded5bf514bba1501e5797e38aac
-ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
+ms.openlocfilehash: 7afe3897c040673ad869584e1e8e8f55f4fc08ff
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86210367"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911897"
 ---
 # <a name="automatically-enroll-macos-devices-with-the-apple-business-manager-or-apple-school-manager"></a>Registrare automaticamente i dispositivi macOS con Apple Business Manager o Apple School Manager
 
@@ -109,7 +109,7 @@ Ora che è stato installato il token, è possibile creare un profilo di registra
 
     ![Screenshot di Crea profilo.](./media/device-enrollment-program-enroll-macos/image04.png)
 
-3. Nella pagina **Informazioni di base** immettere un **nome** e una **descrizione** per il profilo per scopi amministrativi. Questi dettagli non vengono visualizzati agli utenti. È possibile usare questo campo **Nome** per creare un gruppo dinamico in Azure Active Directory. Usare il nome del profilo per definire il parametro enrollmentProfileName per assegnare i dispositivi con questo profilo di registrazione. Altre informazioni sui [gruppi dinamici di Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices).
+3. Nella pagina **Informazioni di base** immettere un **nome** e una **descrizione** per il profilo per scopi amministrativi. Questi dettagli non vengono visualizzati agli utenti. È possibile usare questo campo **Nome** per creare un gruppo dinamico in Azure Active Directory. Usare il nome del profilo per definire il parametro enrollmentProfileName per assegnare i dispositivi con questo profilo di registrazione. Altre informazioni sui [gruppi dinamici di Azure Active Directory](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices).
 
     ![Nome e descrizione del profilo.](./media/device-enrollment-program-enroll-macos/createprofile.png)
 
@@ -118,7 +118,7 @@ Ora che è stato installato il token, è possibile creare un profilo di registra
 5. Selezionare **Avanti** per passare alla pagina **Impostazioni di gestione**.
 
 6. In **Affinità utente** scegliere se i dispositivi con questo profilo devono essere o meno registrati con o senza un utente assegnato.
-    - **Registra con affinità utente**: scegliere questa opzione per i dispositivi che appartengono a utenti e che vogliono usare l'app Portale aziendale per servizi come l'installazione di app. Se si usa ADFS, per l'affinità utente è richiesto un [endpoint misto/nome utente WS-Trust 1.3](https://technet.microsoft.com/library/adfs2-help-endpoints). [Altre informazioni](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint). L'autenticazione a più fattori non è supportata per i dispositivi macOS con affinità utente aggiunti con Registrazione automatica del dispositivo.
+    - **Registra con affinità utente**: scegliere questa opzione per i dispositivi che appartengono a utenti e che vogliono usare l'app Portale aziendale per servizi come l'installazione di app. Se si usa ADFS, per l'affinità utente è richiesto un [endpoint misto/nome utente WS-Trust 1.3](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)). [Altre informazioni](/powershell/module/adfs/get-adfsendpoint?view=win10-ps). L'autenticazione a più fattori non è supportata per i dispositivi macOS con affinità utente aggiunti con Registrazione automatica del dispositivo.
 
     - **Registra senza affinità utente**: scegliere questa opzione per un dispositivo non associato a un singolo utente. Usare questa opzione per i dispositivi che eseguono attività senza accedere ai dati utente locali. Le app come l'app Portale aziendale non funzionano.
 

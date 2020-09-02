@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0bfbb73772124ded12d520c6c5742d1576f50f82
-ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
+ms.openlocfilehash: 01df8f50da5b0665c1c29949c1ee2c954e47cc9f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491304"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914889"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Impostazioni della baseline di sicurezza MDM in Windows per Intune
 
@@ -57,7 +57,7 @@ Per informazioni sulle modifiche apportate in questa versione della baseline ris
 
 ## <a name="above-lock"></a>Notifiche sulla schermata di blocco
 
-Per altre informazioni, vedere [Policy CSP - AboveLock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-abovelock) (Provider di servizi di configurazione dei criteri - AboveLock) nella documentazione di Windows.  
+Per altre informazioni, vedere [Policy CSP - AboveLock](/windows/client-management/mdm/policy-csp-abovelock) (Provider di servizi di configurazione dei criteri - AboveLock) nella documentazione di Windows.  
 
 - **Block display of toast notifications** (Blocca visualizzazione notifiche di tipo avviso popup):  
   L'impostazione di questo criterio consente di impedire la visualizzazione delle notifiche dell'app nella schermata di blocco. Se si abilita l'impostazione di questo criterio, le notifiche dell'app non vengono visualizzate nella schermata di blocco. Se si disabilita o non si configura l'impostazione di questo criterio, gli utenti possono scegliere quali app visualizzano le notifiche nella schermata di blocco.  
@@ -76,7 +76,7 @@ Per altre informazioni, vedere [Policy CSP - AboveLock](https://docs.microsoft.c
 
 ## <a name="app-runtime"></a>Runtime app
 
-Per altre informazioni, vedere [Policy CSP - AppRuntime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-appruntime) (Provider di servizi di configurazione dei criteri - AppRuntime) nella documentazione di Windows.
+Per altre informazioni, vedere [Policy CSP - AppRuntime](/windows/client-management/mdm/policy-csp-appruntime) (Provider di servizi di configurazione dei criteri - AppRuntime) nella documentazione di Windows.
 
 - **Account Microsoft facoltativi per le app di 
   Microsoft Store**:  
@@ -87,7 +87,7 @@ Per altre informazioni, vedere [Policy CSP - AppRuntime](https://docs.microsoft.
 
 ## <a name="application-management"></a>Gestione delle applicazioni
 
-Per altre informazioni, vedere [Policy CSP - ApplicationManagement](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement) (Provider di servizi di configurazione dei criteri - ApplicationManagement) nella documentazione di Windows.
+Per altre informazioni, vedere [Policy CSP - ApplicationManagement](/windows/client-management/mdm/policy-csp-applicationmanagement) (Provider di servizi di configurazione dei criteri - ApplicationManagement) nella documentazione di Windows.
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
@@ -119,7 +119,7 @@ Per altre informazioni, vedere [Policy CSP - ApplicationManagement](https://docs
 
 ## <a name="auto-play"></a>Riproduzione automatica
 
-Per altre informazioni, vedere [Policy CSP - Autoplay](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-autoplay) (Provider di servizi di configurazione dei criteri - Autoplay) nella documentazione di Windows.
+Per altre informazioni, vedere [Policy CSP - Autoplay](/windows/client-management/mdm/policy-csp-autoplay) (Provider di servizi di configurazione dei criteri - Autoplay) nella documentazione di Windows.
 
 - **Comportamento di esecuzione automatica predefinito per la riproduzione automatica**:  
   Questa impostazione influisce sul comportamento predefinito per i comandi di esecuzione automatica. I comandi di esecuzione automatica sono archiviati all'interno di file autorun.inf e sono in grado di avviare programmi di installazione e altre routine. Se *Abilitato*, gli amministratori possono modificare il comportamento di esecuzione automatica predefinito in un dispositivo che esegue Windows Vista o versioni successive. Il comportamento può essere impostato in modo da: a) disabilitare completamente i comandi di esecuzione automatica oppure b) ripristinare il comportamento delle versioni precedenti a Windows Vista che prevede l'esecuzione automatica del comando. Se impostato su *Disabilitato* o *Non configurato*, nei dispositivi con Windows Vista o versioni successive viene chiesto all'utente di confermare se eseguire o meno un comando di esecuzione automatica.  
@@ -141,7 +141,7 @@ Per altre informazioni, vedere [Policy CSP - Autoplay](https://docs.microsoft.co
 
 ## <a name="bitlocker"></a>BitLocker
 
-Per altre informazioni, vedere [CSP dei criteri - BitLocker](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bitlocker) nella documentazione di Windows.
+Per altre informazioni, vedere [CSP dei criteri - BitLocker](/windows/client-management/mdm/policy-csp-bitlocker) nella documentazione di Windows.
 
 - **Criterio Impostazioni dell'unità rimovibile**:  
   L'impostazione di questo criterio viene usata per controllare il metodo di crittografia e il livello di codifica. I valori di questo criterio determinano il livello di codifica usato da BitLocker per la crittografia. Per una maggiore sicurezza, le aziende potrebbero voler controllare il livello di crittografia (AES-256 è un algoritmo più avanzato rispetto a AES-128). Se si abilita questa impostazione, è possibile configurare individualmente un algoritmo di crittografia e un livello di codifica per unità dati fisse, unità del sistema operativo e unità dati rimovibili. Per le unità fisse e del sistema operativo è consigliabile usare l'algoritmo XTS-AES. Per le unità rimovibili è consigliabile usare AES-CBC a 128 bit o AES-CBC a 256 bit se l'unità viene usata in altri dispositivi che non eseguono Windows 10 versione 1511 o successiva. La modifica del metodo di crittografia non produce alcun effetto se l'unità è già crittografata o se la crittografia è in corso. In questi casi, l'impostazione di questo criterio viene ignorata.  
@@ -194,7 +194,7 @@ Per altre informazioni, vedere [CSP dei criteri - BitLocker](https://docs.micros
 
 ## <a name="browser"></a>Browser
 
-Per altre informazioni, vedere [Policy CSP - Browser](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser) (Provider di servizi di configurazione dei criteri - Browser) nella documentazione di Windows.
+Per altre informazioni, vedere [Policy CSP - Browser](/windows/client-management/mdm/policy-csp-browser) (Provider di servizi di configurazione dei criteri - Browser) nella documentazione di Windows.
 
 - **Richiedere SmartScreen per Microsoft Edge**:  
   Per impostazione predefinita, Microsoft Edge usa Microsoft Defender SmartScreen (attivato) per proteggere gli utenti da potenziali tentativi di phishing e software dannoso. Per impostazione predefinita, gli utenti non possono disabilitare (disattivare) Microsoft Defender SmartScreen. L'abilitazione di questo criterio determina la disattivazione di Microsoft Defender SmartScreen e ne impedisce l'attivazione da parte degli utenti. Non configurare questo criterio in modo da consentire agli utenti di scegliere di attivare o disattivare Microsoft Defender SmartScreen.  
@@ -228,7 +228,7 @@ Per altre informazioni, vedere [Policy CSP - Browser](https://docs.microsoft.com
 
 ## <a name="connectivity"></a>Connettività
 
-Per altre informazioni, vedere [Policy CSP - Connectivity](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity) (Provider di servizi di configurazione dei criteri - Connectivity) nella documentazione di Windows.
+Per altre informazioni, vedere [Policy CSP - Connectivity](/windows/client-management/mdm/policy-csp-connectivity) (Provider di servizi di configurazione dei criteri - Connectivity) nella documentazione di Windows.
 
 - **Bloccare il download Internet per la Pubblicazione guidata sul Web e l'Ordinazione guidata via Internet**:  
   L'impostazione di questo criterio specifica se Windows deve scaricare un elenco di provider per la Pubblicazione guidata sul Web e l'Ordinazione guidata via Internet. Queste procedure guidate consentono la selezione da un elenco di aziende che offrono servizi quali l'archiviazione online e la stampa di fotografie. Per impostazione predefinita, Windows visualizza i provider scaricati da un sito Web Windows oltre a quelli specificati nel Registro di sistema. Se si abilita l'impostazione di questo criterio, Windows non scarica provider e vengono visualizzati solo i provider di servizi memorizzati nella cache del Registro di sistema locale. Se si disabilita o non si configura l'impostazione di questo criterio, verrà scaricato un elenco di provider quando l'utente usa la Pubblicazione guidata sul Web o l'Ordinazione guidata via Internet. Per altre informazioni che includono i dettagli su come specificare i provider di servizi nel Registro di sistema, vedere la documentazione relativa alla Pubblicazione guidata sul Web e all'Ordinazione guidata via Internet.  
@@ -261,7 +261,7 @@ Per altre informazioni, vedere [Policy CSP - Connectivity](https://docs.microsof
 
 ## <a name="credentials-delegation"></a>Delega di credenziali
 
-Per altre informazioni, vedere [Policy CSP - CredentialsDelegation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-credentialsdelegation) (Provider di servizi di configurazione dei criteri - CredentialsDelegation) nella documentazione di Windows.
+Per altre informazioni, vedere [Policy CSP - CredentialsDelegation](/windows/client-management/mdm/policy-csp-credentialsdelegation) (Provider di servizi di configurazione dei criteri - CredentialsDelegation) nella documentazione di Windows.
 
 - **Delega di credenziali non esportabili con l'host remoto**:  
   L'host remoto consente la delega delle credenziali non esportabili. Quando si usa la delega delle credenziali, i dispositivi forniscono una versione delle credenziali che possono essere esportate nell'host remoto, esponendo in tal modo gli utenti al rischio di furto da parte di malintenzionati nell'host remoto. Se si abilita l'impostazione di questo criterio, l'host supporta la modalità di amministrazione limitata o la modalità Remote Credential Guard. Se si disabilita o non si configura l'impostazione di questo criterio, le modalità di amministrazione limitata e Remote Credential Guard non sono supportate. Gli utenti dovranno sempre passare le proprie credenziali all'host.  
@@ -271,7 +271,7 @@ Per altre informazioni, vedere [Policy CSP - CredentialsDelegation](https://docs
 
 ## <a name="credentials-ui"></a>Interfaccia utente per le credenziali
 
-Per altre informazioni, vedere [Policy CSP - CredentialsUI](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-credentialsui) (Provider di servizi di configurazione dei criteri - CredentialsUI) nella documentazione di Windows.
+Per altre informazioni, vedere [Policy CSP - CredentialsUI](/windows/client-management/mdm/policy-csp-credentialsui) (Provider di servizi di configurazione dei criteri - CredentialsUI) nella documentazione di Windows.
 
 - **Enumerare gli amministratori**:  
   L'impostazione di questo criterio determina la visualizzazione o meno degli account amministratore quando un utente tenta di elevare i privilegi di un'applicazione in esecuzione. Per impostazione predefinita, gli account amministratore non vengono visualizzati quando l'utente prova a elevare i privilegi di un'applicazione in esecuzione. Se si abilita l'impostazione di questo criterio, vengono visualizzati tutti gli account amministratore locali del PC e l'utente potrà sceglierne uno e immettere la password corretta. Se si disabilita l'impostazione di questo criterio, per l'elevazione dei privilegi sarà sempre necessario digitare un nome utente e una password.  
@@ -281,7 +281,7 @@ Per altre informazioni, vedere [Policy CSP - CredentialsUI](https://docs.microso
 
 ## <a name="data-protection"></a>Protezione dati
 
-Per altre informazioni, vedere [Policy CSP - DataProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection) (Provider di servizi di configurazione dei criteri - DataProtection) nella documentazione di Windows.
+Per altre informazioni, vedere [Policy CSP - DataProtection](/windows/client-management/mdm/policy-csp-dataprotection) (Provider di servizi di configurazione dei criteri - DataProtection) nella documentazione di Windows.
 
 - **Bloccare l'accesso diretto alla memoria**:  
   L'impostazione di questo criterio consente di bloccare l'accesso diretto alla memoria (Direct Memory Access, DMA) per tutte le porte downstream PCI collegabili a sistema acceso finché un utente non accede a Windows. Dopo l'accesso di un utente, Windows enumererà i dispositivi PCI connessi alle porte PCI collegabili a sistema acceso. Ogni volta che l'utente blocca il computer, l'accesso diretto alla memoria viene bloccato sulle porte PCI collegabili a sistema acceso senza dispositivi figlio finché l'utente non accede di nuovo. I dispositivi già enumerati quando il computer era sbloccato continueranno a funzionare fino a quando non saranno scollegati. L'impostazione di questo criterio viene applicata solo quando è abilitato BitLocker o la crittografia del dispositivo.  
@@ -291,7 +291,7 @@ Per altre informazioni, vedere [Policy CSP - DataProtection](https://docs.micros
 
 ## <a name="device-guard"></a>Device Guard
 
-Per altre informazioni, vedere [Policy CSP - DeviceGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceguard) (Provider di servizi di configurazione dei criteri - DeviceGuard) nella documentazione di Windows.
+Per altre informazioni, vedere [Policy CSP - DeviceGuard](/windows/client-management/mdm/policy-csp-deviceguard) (Provider di servizi di configurazione dei criteri - DeviceGuard) nella documentazione di Windows.
 
 - **Attiva Credential Guard**:  
   Questa impostazione consente agli utenti di attivare Credential Guard con la sicurezza basata sulla virtualizzazione per proteggere le credenziali al riavvio successivo.  
@@ -319,11 +319,11 @@ Per altre informazioni, vedere [Policy CSP - DeviceGuard](https://docs.microsoft
 
 ## <a name="device-installation"></a>Installazione di dispositivi
 
-Per altre informazioni, vedere [Policy CSP - DeviceInstallation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation) (Provider di servizi di configurazione dei criteri - DeviceInstallation) nella documentazione di Windows.
+Per altre informazioni, vedere [Policy CSP - DeviceInstallation](/windows/client-management/mdm/policy-csp-deviceinstallation) (Provider di servizi di configurazione dei criteri - DeviceInstallation) nella documentazione di Windows.
 
 - **Installazione di dispositivi hardware per identificatori di dispositivo**:  
   L'impostazione di questo criterio consente di specificare un elenco di ID hardware Plug and Play e ID compatibili per i dispositivi la cui installazione non è consentita in Windows. L'impostazione di questo criterio ha la precedenza su qualsiasi altra impostazione di criteri che consente a Windows di installare un dispositivo. Se si abilita l'impostazione di questo criterio, Windows non potrà installare i dispositivi il cui ID hardware o ID compatibile sia presente nell'elenco creato. Se si abilita l'impostazione di questo criterio in un server desktop remoto, l'impostazione del criterio influirà sul reindirizzamento dei dispositivi specificati da un client desktop remoto al server desktop remoto. Se si disabilita o non si configura l'impostazione di questo criterio, è possibile installare e aggiornare i dispositivi in base a quanto consentito o impedito da altre impostazioni di criteri.  
-  [Altre informazioni](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-preventinstallationofmatchingdeviceids)
+  [Altre informazioni](/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-preventinstallationofmatchingdeviceids)
 
   **Impostazione predefinita**: Bloccare l'installazione del dispositivo hardware
 
@@ -341,7 +341,7 @@ Per altre informazioni, vedere [Policy CSP - DeviceInstallation](https://docs.mi
 
 - **Installazione dispositivi hardware per classi di installazione**:  
   L'impostazione di questo criterio consente di specificare un elenco di identificatori univoci globali (GUID) della classe di installazione del dispositivo per i driver di dispositivo la cui installazione non è consentita in Windows. L'impostazione di questo criterio ha la precedenza su qualsiasi altra impostazione di criteri che consente a Windows di installare un dispositivo. Se si abilita l'impostazione di questo criterio, Windows non potrà installare o aggiornare i driver di dispositivo i cui GUID della classe di installazione del dispositivo sono inclusi nell'elenco creato. Se si abilita l'impostazione di questo criterio in un server desktop remoto, l'impostazione del criterio influirà sul reindirizzamento dei dispositivi specificati da un client desktop remoto al server desktop remoto. Se si disabilita o non si configura l'impostazione di questo criterio, Windows potrà installare e aggiornare i dispositivi in base a quanto consentito o impedito da altre impostazioni di criteri.  
-  [Altre informazioni](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-preventinstallationofmatchingdevicesetupclasses)
+  [Altre informazioni](/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-preventinstallationofmatchingdevicesetupclasses)
 
   **Impostazione predefinita**: Bloccare l'installazione del dispositivo hardware
 
@@ -359,7 +359,7 @@ Per altre informazioni, vedere [Policy CSP - DeviceInstallation](https://docs.mi
 
 ## <a name="device-lock"></a>Blocco del dispositivo
 
-Per altre informazioni, vedere [Policy CSP - DeviceLock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock) (Provider di servizi di configurazione dei criteri - DeviceLock) nella documentazione di Windows.
+Per altre informazioni, vedere [Policy CSP - DeviceLock](/windows/client-management/mdm/policy-csp-devicelock) (Provider di servizi di configurazione dei criteri - DeviceLock) nella documentazione di Windows.
 
 - **Impedire l'uso della fotocamera**:  
   Disabilita l'interruttore Attiva/Disattiva per la fotocamera nella schermata di blocco in Impostazioni PC e impedisce di richiamare una fotocamera nella schermata di blocco. Per impostazione predefinita, gli utenti possono abilitare la chiamata di una fotocamera disponibile nella schermata di blocco. Se si abilita questa impostazione, gli utenti non potranno abilitare o disabilitare l'accesso alla fotocamera della schermata di blocco nelle impostazioni del PC e la fotocamera non potrà essere richiamata nella schermata di blocco.  
@@ -437,11 +437,11 @@ Per altre informazioni, vedere [Policy CSP - DeviceLock](https://docs.microsoft.
 
 ## <a name="dma-guard"></a>DMA Guard
 
-Per altre informazioni, vedere [Provider di servizi di configurazione dei criteri - DmaGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard) nella documentazione di Windows.
+Per altre informazioni, vedere [Provider di servizi di configurazione dei criteri - DmaGuard](/windows/client-management/mdm/policy-csp-dmaguard) nella documentazione di Windows.
 
 - **Enumerazione di dispositivi esterni non compatibili con la protezione DMA del kernel**:  
   Questo criterio ha lo scopo di fornire sicurezza aggiuntiva nei confronti dei dispositivi compatibili con DMA esterni. Consente inoltre maggiore controllo sull'enumerazione di dispositivi esterni idonei per DMA non compatibili con il remapping e/o l'isolamento e il sandboxing della memoria del dispositivo. Questo criterio viene applicato solo quando la protezione DMA del kernel è supportata e abilitata dal firmware del sistema. La protezione DMA del kernel è una funzionalità della piattaforma che non può essere controllata tramite criteri o dall'utente finale. Deve essere supportata dal sistema in fase di produzione. Per verificare se il sistema supporta la protezione DMA del kernel, controllare il campo della protezione DMA del kernel nella pagina di riepilogo di MSINFO32.exe.  
-  [Altre informazioni](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
+  [Altre informazioni](/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
 
   **Impostazione predefinita**: Blocca tutto
 
@@ -450,7 +450,7 @@ Per altre informazioni, vedere [Provider di servizi di configurazione dei criter
 
 ## <a name="event-log-service"></a>Servizio Registro eventi
 
-Per altre informazioni, vedere [Policy CSP - EventLogService](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-eventlogservice) (Provider di servizi di configurazione dei criteri - EventLogService) nella documentazione di Windows.
+Per altre informazioni, vedere [Policy CSP - EventLogService](/windows/client-management/mdm/policy-csp-eventlogservice) (Provider di servizi di configurazione dei criteri - EventLogService) nella documentazione di Windows.
 
 - **Dimensioni massime del file registro di protezione in KB**:  
   L'impostazione di questo criterio specifica le dimensioni massime del file di registro espressa in KB. Se si abilita l'impostazione di questo criterio, è possibile configurare le dimensioni massime del file di registro in modo che siano comprese tra 1 MB (1024 KB) e 2 TB (2147483647 KB) in base a incrementi in KB. Se si disabilita o non si configura l'impostazione di questo criterio, le dimensioni massime del file di registro vengono impostate sul valore configurato in locale. Questo valore può essere modificato dall'amministratore locale usando la finestra di dialogo Proprietà registro e l'impostazione predefinita è 20 MB.  
@@ -472,7 +472,7 @@ Per altre informazioni, vedere [Policy CSP - EventLogService](https://docs.micro
 
 ## <a name="experience"></a>Esperienza
 
-Per altre informazioni, vedere [Policy CSP - Experience](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience) (Provider di servizi di configurazione dei criteri - Experience) nella documentazione di Windows.
+Per altre informazioni, vedere [Policy CSP - Experience](/windows/client-management/mdm/policy-csp-experience) (Provider di servizi di configurazione dei criteri - Experience) nella documentazione di Windows.
 
 - **Bloccare Contenuti in evidenza di Windows**:  
   consente agli amministratori IT di disattivare (bloccare) tutte le funzionalità di Windows Spotlight, ovvero Windows Spotlight nella schermata di blocco, Suggerimenti di Windows, le funzionalità per gli utenti consumer Microsoft e altre funzionalità correlate.  
@@ -496,7 +496,7 @@ Per altre informazioni, vedere [Policy CSP - Experience](https://docs.microsoft.
 
 ## <a name="exploit-guard"></a>Exploit Guard
 
-Per altre informazioni, vedere [Policy CSP - ExploitGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-exploitguard) (Provider di servizi di configurazione dei criteri - ExploitGuard) nella documentazione di Windows.
+Per altre informazioni, vedere [Policy CSP - ExploitGuard](/windows/client-management/mdm/policy-csp-exploitguard) (Provider di servizi di configurazione dei criteri - ExploitGuard) nella documentazione di Windows.
 
 - **Carica XML**:  
   Consente all'amministratore IT di distribuire una configurazione che rappresenta il sistema desiderato e le opzioni di mitigazione delle applicazioni a tutti i dispositivi nell'organizzazione. La configurazione è rappresentata da un XML. La Protezione dagli exploit consente di proteggere i dispositivi da malware che usa gli exploit per la diffusione e l'infezione. Usare l'app Sicurezza di Windows o PowerShell per creare un set di mitigazioni, chiamato configurazione. È quindi possibile esportare la configurazione come file XML e condividerla con più computer in rete in modo che abbiano lo stesso set di impostazioni di mitigazione. È anche possibile convertire e importare un file XML di configurazione EMET esistente in un file XML di configurazione di protezione dagli exploit.  
@@ -506,7 +506,7 @@ Per altre informazioni, vedere [Policy CSP - ExploitGuard](https://docs.microsof
 
 ## <a name="file-explorer"></a>Esplora file
 
-Per altre informazioni, vedere [Policy CSP - FileExplorer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-fileexplorer) (Provider di servizi di configurazione dei criteri - FileExplorer) nella documentazione di Windows.  
+Per altre informazioni, vedere [Policy CSP - FileExplorer](/windows/client-management/mdm/policy-csp-fileexplorer) (Provider di servizi di configurazione dei criteri - FileExplorer) nella documentazione di Windows.  
 
 - **Bloccare Protezione esecuzione programmi**:  
   La disattivazione di Protezione esecuzione programmi può consentire ad alcune applicazioni plug-in legacy di funzionare senza terminare Explorer.  
@@ -522,7 +522,7 @@ Per altre informazioni, vedere [Policy CSP - FileExplorer](https://docs.microsof
 
 ## <a name="firewall"></a>Firewall
 
-Per altre informazioni, vedere [2.2.2 FW_PROFILE_TYPE]( https://docs.microsoft.com/openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc) nella documentazione relativa ai protocolli di Windows.
+Per altre informazioni, vedere [2.2.2 FW_PROFILE_TYPE]( /openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc) nella documentazione relativa ai protocolli di Windows.
 
 - **Profilo di dominio del firewall**:  
   Specifica i profili a cui appartiene la regola: Dominio, Privato o Pubblico. Questo valore rappresenta il profilo per le reti connesse ai domini.  
@@ -580,7 +580,7 @@ Per altre informazioni, vedere [2.2.2 FW_PROFILE_TYPE]( https://docs.microsoft.c
 
 ## <a name="internet-explorer"></a>Internet Explorer
 
-Per altre informazioni, vedere [Policy CSP - InternetExplorer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-internetexplorer) (Provider di servizi di configurazione dei criteri - InternetExplorer) nella documentazione di Windows.
+Per altre informazioni, vedere [Policy CSP - InternetExplorer](/windows/client-management/mdm/policy-csp-internetexplorer) (Provider di servizi di configurazione dei criteri - InternetExplorer) nella documentazione di Windows.
 
 - **Internet Explorer - Area con restrizioni - Aggiornamenti alla barra di stato tramite script**:  
   L'impostazione di questo criterio consente di gestire gli aggiornamenti della barra di stato tramite uno script all'interno dell'area.
@@ -1341,7 +1341,7 @@ Per altre informazioni, vedere [Policy CSP - InternetExplorer](https://docs.micr
 
 ## <a name="local-policies-security-options"></a>Opzioni di sicurezza dei criteri locali
 
-Per altre informazioni, vedere [Policy CSP - LocalPoliciesSecurityOptions](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions) (Provider di servizi di configurazione dei criteri - LocalPoliciesSecurityOptions) nella documentazione di Windows.
+Per altre informazioni, vedere [Policy CSP - LocalPoliciesSecurityOptions](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions) (Provider di servizi di configurazione dei criteri - LocalPoliciesSecurityOptions) nella documentazione di Windows.
 
 - **Limitare l'accesso anonimo a named pipe e condivisioni**:  
   Se abilitata, questa impostazione di sicurezza limita l'accesso anonimo alle condivisioni e alle named pipe specificate per le impostazioni: (1) named pipe a cui è possibile accedere in modo anonimo (2) condivisioni alle quali è possibile accedere in modo anonimo.  
@@ -1549,14 +1549,14 @@ Per altre informazioni, vedere [Policy CSP - LocalPoliciesSecurityOptions](https
 
 ## <a name="microsoft-defender"></a>Microsoft Defender
 
-Per altre informazioni, vedere [Policy CSP - Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) (Provider di servizi di configurazione dei criteri - Defender) nella documentazione di Windows.
+Per altre informazioni, vedere [Policy CSP - Defender](/windows/client-management/mdm/policy-csp-defender) (Provider di servizi di configurazione dei criteri - Defender) nella documentazione di Windows.
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 
 - **Impedisci ad Adobe Reader di creare processi figlio**:  
 Questa regola blocca gli attacchi impedendo ad Adobe Reader di creare processi aggiuntivi. Tramite tecniche di ingegneria sociale oppure exploit, il malware può scaricare e avviare payload aggiuntivi e uscire da Adobe Reader. Bloccando la generazione di processi figlio in Adobe Reader si impedisce la diffusione del malware che tenta di usare Adobe Reader come vettore.
-[Altre informazioni](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+[Altre informazioni](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
   **Impostazione predefinita**: Abilitare
 
@@ -1671,7 +1671,7 @@ Questa regola blocca gli attacchi impedendo ad Adobe Reader di creare processi a
   **Impostazione predefinita**: Abilitare
 
 - **Azione della Protezione da applicazioni potenzialmente di Defender**:  
-  CSP: [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)+
+  CSP: [Defender/PUAProtection](/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)+
 
   La funzionalità di protezione da applicazioni potenzialmente indesiderate dell'antivirus Microsoft Defender consente di identificare e bloccare il download e l'installazione delle applicazioni potenzialmente indesiderate negli endpoint di rete. Queste applicazioni non sono considerate virus, malware o altri tipi di minaccia, ma potrebbero agire su endpoint compromettendo le prestazioni e l'uso. Possono essere considerate applicazioni potenzialmente indesiderate anche le applicazioni di dubbia reputazione. Sono applicazioni potenzialmente indesiderate: la creazione di bundle di diversi tipi di software, l'inserimento di annunci nei Web browser, gli strumenti di ottimizzazione per driver e Registro di sistema che rilevano errori e richiedono pagamenti per correggere gli errori, ma rimangono nell'endpoint e non apportano alcuna modifica né alcuna ottimizzazione (noti anche come programmi antivirus non autorizzati). Queste applicazioni possono aumentare il rischio di infezione della rete da parte di malware e incrementare la difficoltà di rilevamento delle infezioni malware e possono causare uno spreco di tempo delle risorse IT per rimuovere il malware dalle applicazioni.
 
@@ -1716,7 +1716,7 @@ Questa regola blocca gli attacchi impedendo ad Adobe Reader di creare processi a
 
 ## <a name="ms-security-guide"></a>Guida alla sicurezza MS
 
-Per altre informazioni, vedere [Policy CSP - MSSecurityGuide](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-mssecurityguide) (Provider di servizi di configurazione dei criteri - MSSecurityGuide) nella documentazione di Windows.
+Per altre informazioni, vedere [Policy CSP - MSSecurityGuide](/windows/client-management/mdm/policy-csp-mssecurityguide) (Provider di servizi di configurazione dei criteri - MSSecurityGuide) nella documentazione di Windows.
 
 - **Applicare le restrizioni di Controllo dell'account all'accesso alla rete**:  
   [Altre informazioni](https://go.microsoft.com/fwlink/?linkid=2067188)
@@ -1745,7 +1745,7 @@ Per altre informazioni, vedere [Policy CSP - MSSecurityGuide](https://docs.micro
 
 ## <a name="mss-legacy"></a>MSS Legacy
 
-Per altre informazioni, vedere [Policy CSP - MSSLegacy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-msslegacy) (Provider di servizi di configurazione dei criteri - MSSLegacy) nella documentazione di Windows.
+Per altre informazioni, vedere [Policy CSP - MSSLegacy](/windows/client-management/mdm/policy-csp-msslegacy) (Provider di servizi di configurazione dei criteri - MSSLegacy) nella documentazione di Windows.
 
 - **Livello di protezione del routing di origine dell'IP di rete**:  
   [Altre informazioni](https://go.microsoft.com/fwlink/?linkid=2067220)
@@ -1769,7 +1769,7 @@ Per altre informazioni, vedere [Policy CSP - MSSLegacy](https://docs.microsoft.c
 
 ## <a name="power"></a>Alimentazione
 
-Per altre informazioni, vedere [Policy CSP - Power](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power) (Provider di servizi di configurazione dei criteri - Power) nella documentazione di Windows.
+Per altre informazioni, vedere [Policy CSP - Power](/windows/client-management/mdm/policy-csp-power) (Provider di servizi di configurazione dei criteri - Power) nella documentazione di Windows.
 
 - **Richiedere la password alla riattivazione durante l'alimentazione da rete elettrica**:  
   L'impostazione di questo criterio specifica se all'utente viene richiesta una password quando il sistema viene riattivato dopo la sospensione. Se si abilita o non si configura l'impostazione di questo criterio, all'utente viene richiesto di immettere una password quando il sistema viene riattivato dopo la sospensione. Se si disabilita l'impostazione di questo criterio, all'utente non viene richiesto di immettere una password quando il sistema viene riattivato dopo la sospensione.  
@@ -1800,7 +1800,7 @@ Per altre informazioni, vedere [Policy CSP - Power](https://docs.microsoft.com/w
 
 ## <a name="remote-assistance"></a>Assistenza remota
 
-Per altre informazioni, vedere [CSP criteri - RemoteAssistance](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remoteassistance#remoteassistance-solicitedremoteassistance) nella documentazione di Windows.
+Per altre informazioni, vedere [CSP criteri - RemoteAssistance](/windows/client-management/mdm/policy-csp-remoteassistance#remoteassistance-solicitedremoteassistance) nella documentazione di Windows.
 
 - **Assistenza remota richiesta**:  
   Questa impostazione di criteri consente di attivare o disattivare Assistenza remota su richiesta in questo computer.
@@ -1837,7 +1837,7 @@ Per altre informazioni, vedere [CSP criteri - RemoteAssistance](https://docs.mic
 
 ## <a name="remote-desktop-services"></a>Servizi Desktop remoto
 
-Per altre informazioni, vedere [Policy CSP - RemoteDesktopServices](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotedesktopservices) (Provider di servizi di configurazione dei criteri - RemoteDesktopServices) nella documentazione di Windows.
+Per altre informazioni, vedere [Policy CSP - RemoteDesktopServices](/windows/client-management/mdm/policy-csp-remotedesktopservices) (Provider di servizi di configurazione dei criteri - RemoteDesktopServices) nella documentazione di Windows.
 
 - **Bloccare il salvataggio delle password**:  
   Controlla se è possibile salvare le password nel computer da Connessione Desktop remoto. Se si abilita questa impostazione, la casella di controllo di salvataggio della password in Connessione Desktop remoto viene disabilitata e gli utenti non potranno salvare le password. Quando un utente apre un file RDP tramite Connessione Desktop remoto e salva le proprie impostazioni, qualsiasi password presente in precedenza nel file RDP viene eliminata. Se si disabilita questa impostazione o la si lascia non configurata, l'utente può salvare le password in Connessione Desktop remoto.  
@@ -1879,7 +1879,7 @@ Per altre informazioni, vedere [Policy CSP - RemoteDesktopServices](https://docs
 
 ## <a name="remote-management"></a>Gestione remota
 
-Per altre informazioni, vedere [Policy CSP - RemoteManagement](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotemanagement) (Provider di servizi di configurazione dei criteri - RemoteManagement) nella documentazione di Windows.
+Per altre informazioni, vedere [Policy CSP - RemoteManagement](/windows/client-management/mdm/policy-csp-remotemanagement) (Provider di servizi di configurazione dei criteri - RemoteManagement) nella documentazione di Windows.
 
 - **Bloccare l'archiviazione eseguita come credenziali**:  
   Autenticazione client di base.  
@@ -1919,7 +1919,7 @@ Per altre informazioni, vedere [Policy CSP - RemoteManagement](https://docs.micr
 
 ## <a name="remote-procedure-call"></a>Chiamata di procedura remota
 
-Per altre informazioni, vedere [Policy CSP - RemoteProcedureCall](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remoteprocedurecall) (Provider di servizi di configurazione dei criteri - RemoteProcedureCall) nella documentazione di Windows.
+Per altre informazioni, vedere [Policy CSP - RemoteProcedureCall](/windows/client-management/mdm/policy-csp-remoteprocedurecall) (Provider di servizi di configurazione dei criteri - RemoteProcedureCall) nella documentazione di Windows.
 
 - **Opzioni client RPC non autenticati**:  
   L'impostazione di questo criterio controlla il modo in cui il runtime del server RPC gestisce i client RPC non autenticati che si connettono a server RPC. L'impostazione di questo criterio influisce su tutte le applicazioni RPC. In un ambiente di dominio usare con cautela l'impostazione di questo criterio perché può influire su una vasta gamma di funzionalità, inclusa l'elaborazione dei Criteri di gruppo stessi. Il ripristino del valore precedente dopo una modifica all'impostazione di questo criterio può richiedere un intervento manuale in ogni computer interessato. Non applicare questa impostazione di criteri a un controller di dominio. Se si disabilita l'impostazione di questo criterio, il runtime del server RPC usa il valore "Autenticato" in Windows Client e il valore "Nessuno" nelle versioni di Windows Server che supportano questa impostazione. Se non si configura l'impostazione di questo criterio, questa rimane disabilitata. Il runtime del server RPC si comporta come se fosse abilitato con il valore "Autenticato" usato per il client Windows e il valore "Nessuno" usato per gli SKU dei server che supportano questa impostazione. Se si abilita l'impostazione di questo criterio, il runtime del server RPC limita i client RPC non autenticati che si connettono ai server RPC in esecuzione in un computer. Un client viene considerato autenticato se usa una named pipe per comunicare con il server o se usa la sicurezza RPC. Le interfacce RPC che hanno richiesto in modo specifico di essere accessibili per i client non autenticati possono essere esenti da questa limitazione, a seconda del valore selezionato per l'impostazione di questo criterio.
@@ -1936,7 +1936,7 @@ Per altre informazioni, vedere [Policy CSP - RemoteProcedureCall](https://docs.m
 
 ## <a name="search"></a>Cerca
 
-Per altre informazioni, vedere [Policy CSP - Search](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search) (Provider di servizi di configurazione dei criteri - Search) nella documentazione di Windows.
+Per altre informazioni, vedere [Policy CSP - Search](/windows/client-management/mdm/policy-csp-search) (Provider di servizi di configurazione dei criteri - Search) nella documentazione di Windows.
 
 - **Disabilitare l'indicizzazione di elementi crittografati**:  
   Consente o impedisce l'indicizzazione di elementi. Questa opzione è per l'indicizzatore di Ricerca di Windows, che stabilisce se deve essere eseguita l'indicizzazione degli elementi che vengono crittografati, ad esempio i file protetti di Windows Information Protection (WIP). Quando i criteri sono abilitati, gli elementi protetti da WIP vengono indicizzati e i relativi metadati vengono archiviati in un percorso non crittografato. I metadati includono elementi come percorso del file e data di modifica. Quando i criteri sono disabilitati, gli elementi protetti da WIP non vengono indicizzati e non appaiono nei risultati di Cortana o Esplora file. Si può inoltre avere un impatto sulle prestazioni delle app Foto e Groove se nel dispositivo sono presenti molti file multimediali protetti con WIP.  
@@ -1946,7 +1946,7 @@ Per altre informazioni, vedere [Policy CSP - Search](https://docs.microsoft.com/
 
 ## <a name="smart-screen"></a>SmartScreen
 
-Per altre informazioni, vedere [Policy CSP - SmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen) (Provider di servizi di configurazione dei criteri - SmartScreen) nella documentazione di Windows.
+Per altre informazioni, vedere [Policy CSP - SmartScreen](/windows/client-management/mdm/policy-csp-smartscreen) (Provider di servizi di configurazione dei criteri - SmartScreen) nella documentazione di Windows.
 
 ::: zone-end
 ::: zone pivot="mdm-preview"
@@ -1992,7 +1992,7 @@ Per altre informazioni, vedere [Policy CSP - SmartScreen](https://docs.microsoft
 
 ## <a name="system"></a>Sistema
 
-Per altre informazioni, vedere [Policy CSP - System](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system) (Provider di servizi di configurazione dei criteri - System) nella documentazione di Windows.
+Per altre informazioni, vedere [Policy CSP - System](/windows/client-management/mdm/policy-csp-system) (Provider di servizi di configurazione dei criteri - System) nella documentazione di Windows.
 
 - **Inizializzazione del driver di esecuzione avvio del sistema**:  
   L'impostazione di questo criterio consente di specificare i driver di esecuzione inizializzati in base a una classificazione determinata da un driver di esecuzione avvio antimalware ad esecuzione anticipata. Il driver di esecuzione avvio antimalware ad esecuzione anticipata può restituire le classificazioni seguenti per ogni driver di esecuzione avvio:
@@ -2012,7 +2012,7 @@ Per altre informazioni, vedere [Policy CSP - System](https://docs.microsoft.com/
 
 ## <a name="wi-fi"></a>Wi-Fi
 
-Per altre informazioni, vedere [Policy CSP - Wifi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-wifi) (Provider di servizi di configurazione dei criteri - Wifi) nella documentazione di Windows.
+Per altre informazioni, vedere [Policy CSP - Wifi](/windows/client-management/mdm/policy-csp-wifi) (Provider di servizi di configurazione dei criteri - Wifi) nella documentazione di Windows.
 
 - **Blocca Internet condiviso**:  
   Specifica se nel dispositivo è possibile la condivisione Internet.  
@@ -2028,7 +2028,7 @@ Per altre informazioni, vedere [Policy CSP - Wifi](https://docs.microsoft.com/wi
 
 ## <a name="windows-connection-manager"></a>Gestione connessioni Windows
 
-Per altre informazioni, vedere [Policy CSP - WindowsConnectionManager](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsconnectionmanager) (Provider di servizi di configurazione dei criteri - WindowsConnectionManager) nella documentazione di Windows.
+Per altre informazioni, vedere [Policy CSP - WindowsConnectionManager](/windows/client-management/mdm/policy-csp-windowsconnectionmanager) (Provider di servizi di configurazione dei criteri - WindowsConnectionManager) nella documentazione di Windows.
 
 - **Bloccare la connessione a reti non di dominio**:  
   L'impostazione di questo criterio impedisce ai computer di connettersi contemporaneamente a una rete basata su dominio e a una rete non basata su dominio. Se l'impostazione di questo criterio è abilitata, il computer risponde ai tentativi di connessione di rete automatica e manuale in base alle circostanze seguenti:
@@ -2087,7 +2087,7 @@ Per altre informazioni, vedere [Policy CSP - WindowsConnectionManager](https://d
 
 ## <a name="windows-ink-workspace"></a>Area Windows Ink
 
-Per altre informazioni, vedere [Policy CSP - WindowsInkWorkspace](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsinkworkspace) (Provider del servizio di configurazione dei criteri - WindowsInkWorkspace) nella documentazione di Windows.
+Per altre informazioni, vedere [Policy CSP - WindowsInkWorkspace](/windows/client-management/mdm/policy-csp-windowsinkworkspace) (Provider del servizio di configurazione dei criteri - WindowsInkWorkspace) nella documentazione di Windows.
 
 - **Area Ink**:  
   Specifica se consentire o meno all'utente di accedere all'area Ink.
@@ -2104,7 +2104,7 @@ Per altre informazioni, vedere [Policy CSP - WindowsInkWorkspace](https://docs.m
 
 ## <a name="windows-powershell"></a>Windows PowerShell
 
-Per altre informazioni, vedere [Policy CSP - WindowsPowerShell](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowspowershell) (Provider di servizi di configurazione dei criteri - WindowsPowerShell) nella documentazione di Windows.
+Per altre informazioni, vedere [Policy CSP - WindowsPowerShell](/windows/client-management/mdm/policy-csp-windowspowershell) (Provider di servizi di configurazione dei criteri - WindowsPowerShell) nella documentazione di Windows.
 
 - **Registrazione dei blocchi di script di PowerShell**:  
   L'impostazione di questo criterio consente la registrazione di tutti gli input di script di PowerShell nel registro eventi Microsoft-Windows-PowerShell/Operational. Se si abilita l'impostazione di questo criterio, Windows PowerShell registrerà l'elaborazione dei comandi, i blocchi di script, le funzioni e gli script, sia se richiamati in modo interattivo che tramite automazione. Se si disabilita l'impostazione di questo criterio, la registrazione dell'input di script di PowerShell verrà disabilitata. Se si abilita la registrazione delle chiamate di blocchi di script, PowerShell registrerà eventi anche all'avvio o all'interruzione di una chiamata di un comando, un blocco di script, una funzione o uno script. L'abilitazione della registrazione delle chiamate genera un volume elevato di registri eventi. Nota: l'impostazione di questo criterio è presente sia in Configurazione computer che in Configurazione utente nell'Editor Criteri di gruppo. L'impostazione dei criteri in Configurazione computer ha la precedenza sull'impostazione dei criteri in Configurazione utente.  

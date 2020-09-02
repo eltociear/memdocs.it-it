@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65459953fab0faed3e0c64b2097dd2a41e795111
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3a1b4d8d49c86bacaa633a4d84a7a2a4afd890c2
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79372569"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912424"
 ---
 # <a name="what-is-intune-for-government"></a>Che cos'è Intune per enti pubblici?
 
@@ -37,6 +37,6 @@ Con Intune per enti pubblici è possibile gestire i dispositivi Windows 10, iOS 
 - Assicurarsi che i dispositivi e le app seguano i requisiti di sicurezza.
 
 ### <a name="next-steps"></a>Passaggi successivi
-- Per altre informazioni su Intune per il governo degli Stati Uniti, vedere [Descrizione del servizio Microsoft Intune per il governo degli Stati Uniti - GCC High e DoD](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-intune-govt-service-description).
+- Per altre informazioni su Intune per il governo degli Stati Uniti, vedere [Descrizione del servizio Microsoft Intune per il governo degli Stati Uniti - GCC High e DoD](/enterprise-mobility-security/solutions/ems-intune-govt-service-description).
 - Approfondire i [requisiti tecnici e le funzionalità](/intune/supported-devices-browsers) di Intune.
-- [Vedere differenze tra le funzionalità di Intune e Intune per il governo degli Stati Uniti](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-intune-govt-service-description).
+- [Vedere differenze tra le funzionalità di Intune e Intune per il governo degli Stati Uniti](/enterprise-mobility-security/solutions/ems-intune-govt-service-description).

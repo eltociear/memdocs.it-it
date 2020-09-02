@@ -13,12 +13,12 @@ ms.localizationpriority: high
 ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d1aefab1e222ddb20b1c033c787ba7d323f59e5
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 0a81e0e59eca03c9c15d7553376ea0c524251a18
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988296"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914855"
 ---
 # <a name="add-iosipados-software-update-policies-in-intune"></a>Aggiungere criteri di aggiornamento software per iOS/iPadOS in Intune
 
@@ -35,7 +35,7 @@ Questa funzionalità si applica a:
 Per impostazione predefinita, i dispositivi si collegano a Intune ogni 8 ore. Se è disponibile un aggiornamento tramite un criterio di aggiornamento, il dispositivo lo scarica. Il dispositivo installa quindi l'aggiornamento alla sincronizzazione successiva nell'ambito della configurazione della pianificazione. Anche se in genere il processo di aggiornamento non richiede alcuna interazione con l'utente, se il dispositivo ha un passcode l'utente deve immetterlo per poter avviare un aggiornamento software. I profili non impediscono agli utenti di aggiornare manualmente il sistema operativo. È possibile impedire agli utenti di aggiornare manualmente il sistema operativo con un criterio di configurazione del dispositivo per limitare la visibilità degli aggiornamenti software.
 
 > [!NOTE]
-> Se si usa la [Modalità applicazione singola autonoma](https://docs.microsoft.com/mem/intune/configuration/device-restrictions-ios#autonomous-single-app-mode-asam), l'impatto degli aggiornamenti del sistema operativo come conseguente comportamento potrebbe risultare indesiderato.
+> Se si usa la [Modalità applicazione singola autonoma](../configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam), l'impatto degli aggiornamenti del sistema operativo come conseguente comportamento potrebbe risultare indesiderato.
 È possibile eseguire un test per valutare l'impatto degli aggiornamenti del sistema operativo nell'app in esecuzione nella Modalità applicazione singola autonoma.
 
 ## <a name="configure-the-policy"></a>Configurare i criteri

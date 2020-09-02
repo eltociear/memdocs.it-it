@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6d50d7f8e4edeaf6d88875fafef977936909d71f
-ms.sourcegitcommit: 532a06163f462527254d23e7dc505b18c0c4f938
+ms.openlocfilehash: 5c7a83f07ce9c3da2fa953a3ea0d97e05b928a6a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88110733"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915467"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Registrazione in blocco per dispositivi Windows
 
@@ -78,7 +78,7 @@ Gli utenti di Azure AD sono utenti standard di questi dispositivi e devono confo
    - Archiviare il pacchetto di provisioning in un'unità USB, inserire l'unità USB nel dispositivo di cui eseguire la registrazione in blocco e applicare il pacchetto durante l'installazione iniziale
    - Archiviare il pacchetto di provisioning in una cartella di rete e applicarlo dopo l'installazione iniziale
 
-   Per istruzioni dettagliate sull'applicazione di un pacchetto di provisioning, vedere [Apply a provisioning package](https://technet.microsoft.com/itpro/windows/configure/provisioning-apply-package) (Applicare un pacchetto di provisioning).
+   Per istruzioni dettagliate sull'applicazione di un pacchetto di provisioning, vedere [Apply a provisioning package](/windows/configuration/provisioning-packages/provisioning-apply-package) (Applicare un pacchetto di provisioning).
 
 3. Dopo aver applicato il pacchetto, il dispositivo verrà riavviato automaticamente in un minuto.
    ![Screenshot della schermata in cui specificare nome, cartella di progetto e descrizione nell'Applicazione immagine e configurazione di Windows](./media/windows-bulk-enroll/bulk-enroll-add.png)

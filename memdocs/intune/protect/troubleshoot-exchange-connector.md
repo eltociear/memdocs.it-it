@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3e7f9c984b81bbe98269b0123371d8097d960ffb
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 57a7b232b7391d6b8716d4c2a56d69b44f6c07ee
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462134"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914753"
 ---
 # <a name="troubleshoot-the-intune-exchange-connector"></a>Risolvere i problemi di Intune Exchange Connector
 
@@ -31,7 +31,7 @@ Questo argomento descrive come risolvere i problemi relativi a Intune Exchange C
 
 > [!IMPORTANT]
 >
-> A partire da luglio 2020, il supporto per Exchange Connector è deprecato e viene sostituito con l'[autenticazione moderna ibrida](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (HMA) di Exchange ed è stata rimossa la possibilità di aggiungere un connettore Exchange a Intune.
+> A partire da luglio 2020, il supporto per Exchange Connector è deprecato e viene sostituito con l'[autenticazione moderna ibrida](/office365/enterprise/hybrid-modern-auth-overview) (HMA) di Exchange ed è stata rimossa la possibilità di aggiungere un connettore Exchange a Intune.
 >
 > I clienti che hanno configurato in precedenza Exchange Connector e lo usano potranno contare sul supporto continuativo per il connettore.
 
@@ -66,7 +66,7 @@ Esaminare i [requisiti di On-Premises Exchange Connector](exchange-connector-ins
 
 - Il computer che ospita Intune Exchange Connector e il server Accesso client di Exchange (CAS) devono essere aggiunti a un dominio e nella stessa rete LAN. Verificare che siano state aggiunte le autorizzazioni richieste per l'account usato da Intune Exchange Connector.
 
-- L'account di notifica viene usato per recuperare le impostazioni di *individuazione automatica*. Per altre informazioni sull'individuazione automatica in Exchange, vedere [Servizio di individuazione automatica in Exchange Server](https://docs.microsoft.com/exchange/architecture/client-access/autodiscover?view=exchserver-2016).
+- L'account di notifica viene usato per recuperare le impostazioni di *individuazione automatica*. Per altre informazioni sull'individuazione automatica in Exchange, vedere [Servizio di individuazione automatica in Exchange Server](/exchange/architecture/client-access/autodiscover?view=exchserver-2016).
 
 - Intune Exchange Connector invia una richiesta all'URL di Servizi Web Exchange usando le credenziali dell'account di notifica per inviare i messaggi di posta elettronica di notifica con il collegamento *Per iniziare* (per la registrazione in Intune). L'uso del collegamento *Per iniziare* per la registrazione è un requisito per i dispositivi Android non Knox. In caso contrario, questi dispositivi verranno bloccati dall'accesso condizionale.
 
@@ -86,4 +86,4 @@ Gli articoli seguenti possono essere utili per risolvere problemi comuni ed erro
 Ottenere assistenza dal supporto tecnico o dalla community di Intune:
 
 - Per informazioni su come usare la console di Intune per risolvere il problema o inviare una richiesta di supporto a Microsoft, vedere [Ottenere supporto](../fundamentals/get-support.md). 
-- Pubblicare il problema nei [forum di Microsoft Intune](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod).  
+- Pubblicare il problema nei [forum di Microsoft Intune](/answers/products/mem).  

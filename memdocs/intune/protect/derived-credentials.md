@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 25d3813d79ec20cc396c3127be6be5371c20247f
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: a83d6301ffe5663abd6025c8f52b2e7a7e0b7982
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461183"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911115"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Usare le credenziali derivate in Microsoft Intune
 
@@ -119,8 +119,8 @@ Di seguito sono riportate alcune considerazioni chiave per ogni partner supporta
 
 Esaminare il flusso di lavoro utente specifico della piattaforma per i dispositivi che si useranno con le credenziali derivate.
 
-- [iOS e iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-disa-purebred)
-- [Dispositivi Android Enterprise completamente gestiti](https://docs.microsoft.com/mem/intune/user-help/enroll-android-device-disa-purebred)
+- [iOS e iPadOS](/intune-user-help/enroll-ios-device-disa-purebred)
+- [Dispositivi Android Enterprise completamente gestiti](../user-help/enroll-android-device-disa-purebred.md)
 
 **I requisiti principali includono**:
 
@@ -138,7 +138,7 @@ Per informazioni su come ottenere e configurare l'app DISA Purebred, vedere [Dis
 
 Esaminare il flusso di lavoro utente specifico della piattaforma per i dispositivi che si useranno con le credenziali derivate.
 
-- [iOS e iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-entrust-datacard)
+- [iOS e iPadOS](/intune-user-help/enroll-ios-device-entrust-datacard)
 - [Dispositivi Android Enterprise completamente gestiti](../user-help/enroll-android-device-entrust-datacard.md)
 
 **I requisiti principali includono**:
@@ -156,7 +156,7 @@ Esaminare il flusso di lavoro utente specifico della piattaforma per i dispositi
 
 Esaminare il flusso di lavoro utente specifico della piattaforma per i dispositivi che si useranno con le credenziali derivate.
 
-- [iOS e iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-intercede)
+- [iOS e iPadOS](/intune-user-help/enroll-ios-device-intercede)
 - [Dispositivi Android Enterprise completamente gestiti](../user-help/enroll-android-device-intercede.md)
 
 **I requisiti principali includono**:

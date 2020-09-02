@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e4f98f0f1e60ff08e86dedb2dd34ac9f55157ac
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: b3d422978fe6e2cbb123b87311e5c175483b9f66
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820392"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915994"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Configurare l'infrastruttura per il supporto di SCEP con Intune
 
@@ -40,7 +40,7 @@ Prima di continuare, assicurarsi di aver [creato e distribuito un profilo di *ce
 
 L'infrastruttura locale seguente deve essere eseguita su server aggiunti a un dominio in Active Directory, ad eccezione del server proxy applicazione Web.
 
-- **Autorità di certificazione** - Usare un'autorità di certificazione (CA) dell'organizzazione (enterprise) di Servizi certificati Microsoft Active Directory eseguita in un'edizione Enterprise di Windows Server 2008 R2 con Service Pack 1 o versioni successive. La versione di Windows Server in uso deve essere supportata da Microsoft. L'opzione CA autonoma non è supportata. Per altre informazioni, vedere [Installare l'autorità di certificazione](https://technet.microsoft.com/library/jj125375.aspx). Se la CA esegue Windows Server 2008 R2 SP1, è necessario [installare l'hotfix da KB2483564](https://support.microsoft.com/kb/2483564/).
+- **Autorità di certificazione** - Usare un'autorità di certificazione (CA) dell'organizzazione (enterprise) di Servizi certificati Microsoft Active Directory eseguita in un'edizione Enterprise di Windows Server 2008 R2 con Service Pack 1 o versioni successive. La versione di Windows Server in uso deve essere supportata da Microsoft. L'opzione CA autonoma non è supportata. Per altre informazioni, vedere [Installare l'autorità di certificazione](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj125375(v=ws.11)). Se la CA esegue Windows Server 2008 R2 SP1, è necessario [installare l'hotfix da KB2483564](https://support.microsoft.com/kb/2483564/).
 
 - **Ruolo del server Servizio Registrazione dispositivi di rete** - È necessario configurare un ruolo del server Servizio Registrazione dispositivi di rete (NDES) in Windows Server 2012 R2 o versione successiva. In una sezione successiva di questo articolo viene illustrata in dettaglio l'[installazione del servizio Registrazione dispositivi di rete](#set-up-ndes).
 
@@ -48,7 +48,7 @@ L'infrastruttura locale seguente deve essere eseguita su server aggiunti a un do
   - Non è possibile usare il servizio Registrazione dispositivi di rete installato nel server che ospita la CA globale (enterprise).
   - Il Connettore di certificati di Microsoft Intune verrà installato nello stesso server che ospita il servizio Registrazione dispositivi di rete.
 
-  Per altre informazioni sul servizio Registrazione dispositivi di rete, vedere [Linee guida per il servizio Registrazione dispositivi di rete](https://technet.microsoft.com/library/hh831498.aspx) nella documentazione di Windows Server e [Uso di un Modulo criteri con il servizio Registrazione dispositivi di rete](https://technet.microsoft.com/library/dn473016.aspx).
+  Per altre informazioni sul servizio Registrazione dispositivi di rete, vedere [Linee guida per il servizio Registrazione dispositivi di rete](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)) nella documentazione di Windows Server e [Uso di un Modulo criteri con il servizio Registrazione dispositivi di rete](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn473016(v=ws.11)).
 
 - **Connettore di certificati di Microsoft Intune** - Connettore di certificati di Microsoft Intune è necessario per usare i profili di certificato SCEP con Intune. Questo articolo include istruzioni per l'[installazione di questo connettore](#install-the-intune-certificate-connector).
 
@@ -56,21 +56,21 @@ L'infrastruttura locale seguente deve essere eseguita su server aggiunti a un do
   - Il connettore ha gli stessi requisiti di rete dei [dispositivi gestiti](../fundamentals/intune-endpoints.md#access-for-managed-devices).
   - Il connettore deve essere eseguito nello stesso server del ruolo del server Servizio Registrazione dispositivi di rete, ovvero un server che esegue Windows Server 2012 R2 o versione successiva.
   - .NET Framework 4.5 è richiesto dal connettore ed è incluso automaticamente in Windows Server 2012 R2.
-  - La sicurezza avanzata di Internet Explorer [deve essere disabilitata nel server che ospita il servizio Registrazione dispositivi di rete](https://technet.microsoft.com/library/cc775800(v=WS.10).aspx) e Connettore di certificati di Microsoft Intune.
+  - La sicurezza avanzata di Internet Explorer [deve essere disabilitata nel server che ospita il servizio Registrazione dispositivi di rete](/previous-versions/windows/it-pro/windows-server-2003/cc775800(v=ws.10)) e Connettore di certificati di Microsoft Intune.
 
 L'infrastruttura locale seguente è facoltativa:
 
 Per consentire ai dispositivi su Internet di ottenere i certificati, è necessario pubblicare l'URL del servizio Registrazione dispositivi di rete esternamente alla rete aziendale. È possibile usare Azure AD Application Proxy, il server proxy applicazione Web o un altro proxy inverso.
 
-- **Azure AD Application Proxy** (facoltativo) - È possibile usare Azure AD Application Proxy invece di un server proxy applicazione Web dedicato per pubblicare l'URL del servizio Registrazione dispositivi di rete in Internet. In questo modo, sia i dispositivi Intranet che i dispositivi con connessione Internet possono ottenere i certificati. Per altre informazioni, vedere [Come fornire l'accesso remoto sicuro alle applicazioni locali](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
+- **Azure AD Application Proxy** (facoltativo) - È possibile usare Azure AD Application Proxy invece di un server proxy applicazione Web dedicato per pubblicare l'URL del servizio Registrazione dispositivi di rete in Internet. In questo modo, sia i dispositivi Intranet che i dispositivi con connessione Internet possono ottenere i certificati. Per altre informazioni, vedere [Come fornire l'accesso remoto sicuro alle applicazioni locali](/azure/active-directory/manage-apps/application-proxy).
 
 - **Server proxy applicazione Web**  (facoltativo) - Usare un server che esegue Windows Server 2012 R2 o versioni successive come server proxy applicazione Web per pubblicare l'URL del servizio Registrazione dispositivi di rete in Internet.  In questo modo, sia i dispositivi Intranet che i dispositivi con connessione Internet possono ottenere i certificati.
 
-  Il server che ospita WAP [deve installare un aggiornamento](https://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) che abilita il supporto per gli URL lunghi usati dal servizio Registrazione dispositivi di rete. Questo aggiornamento è incluso nell' [aggiornamento cumulativo di dicembre 2014](https://support.microsoft.com/kb/3013769)oppure può essere scaricato singolarmente da [KB3011135](https://support.microsoft.com/kb/3011135).
+  Il server che ospita WAP [deve installare un aggiornamento](/archive/blogs/ems/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2) che abilita il supporto per gli URL lunghi usati dal servizio Registrazione dispositivi di rete. Questo aggiornamento è incluso nell' [aggiornamento cumulativo di dicembre 2014](https://support.microsoft.com/kb/3013769)oppure può essere scaricato singolarmente da [KB3011135](https://support.microsoft.com/kb/3011135).
 
   Il server proxy applicazione Web deve avere un certificato SSL che corrisponde al nome pubblicato nei client esterni e deve riconoscere come attendibile il certificato SSL usato nel computer che ospita il servizio Registrazione dispositivi di rete. Questi certificati consentono al server proxy applicazione Web di chiudere la connessione SSL dai client e creare una nuova connessione SSL al servizio Registrazione dispositivi di rete.
 
-  Per altre informazioni, vedere [Plan certificates for WAP](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383650(v=ws.11)#plan-certificates) (Pianificare i certificati per WAP) e le [informazioni generali sui server WAP](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn584113(v=ws.11)).
+  Per altre informazioni, vedere [Plan certificates for WAP](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383650(v=ws.11)#plan-certificates) (Pianificare i certificati per WAP) e le [informazioni generali sui server WAP](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn584113(v=ws.11)).
 
 ### <a name="accounts"></a>Account
 
@@ -82,7 +82,7 @@ Per consentire ai dispositivi su Internet di ottenere i certificati, è necessar
   - **Accesso come servizio**
   - **Accesso come processo batch**
 
-  Per altre informazioni, vedere [Creare un account utente di dominio che funga da account di servizio per il servizio Registrazione dispositivi di rete](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)#to-create-a-domain-user-account-to-act-as-the-ndes-service-account).
+  Per altre informazioni, vedere [Creare un account utente di dominio che funga da account di servizio per il servizio Registrazione dispositivi di rete](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)#to-create-a-domain-user-account-to-act-as-the-ndes-service-account).
 
 - **Accesso al computer che ospita il servizio Registrazione dispositivi di rete** - Sarà necessario un account utente di dominio con le autorizzazioni per installare e configurare i ruoli del server Windows nel server in cui si installa il servizio Registrazione dispositivi di rete.
 
@@ -90,7 +90,7 @@ Per consentire ai dispositivi su Internet di ottenere i certificati, è necessar
 
 ### <a name="network-requirements"></a>Requisiti di rete
 
-È consigliabile pubblicare il servizio Registrazione dispositivi di rete tramite un proxy inverso, ad esempio [Azure AD Application Proxy, proxy di accesso Web](https://azure.microsoft.com/documentation/articles/active-directory-application-proxy-publish/) o un proxy di terze parti. Se non si usa un proxy inverso, consentire il traffico TCP sulla porta 443 da tutti gli host e gli indirizzi IP su Internet al servizio Registrazione dispositivi di rete.
+È consigliabile pubblicare il servizio Registrazione dispositivi di rete tramite un proxy inverso, ad esempio [Azure AD Application Proxy, proxy di accesso Web](/azure/active-directory/manage-apps/application-proxy-add-on-premises-application) o un proxy di terze parti. Se non si usa un proxy inverso, consentire il traffico TCP sulla porta 443 da tutti gli host e gli indirizzi IP su Internet al servizio Registrazione dispositivi di rete.
 
 Consentire tutte le porte e i protocolli necessari per la comunicazione tra il servizio Registrazione dispositivi di rete e qualsiasi infrastruttura di supporto nell'ambiente in uso. Ad esempio, il computer che ospita il servizio Registrazione dispositivi di rete deve comunicare con l'autorità di certificazione, i server DNS, i controller di dominio e a volte anche con altri servizi o server all'interno dell'ambiente, ad esempio Configuration Manager.
 
@@ -234,11 +234,11 @@ Per impostazione predefinita, Intune usa il valore configurato nel modello, ma �
 
 ## <a name="set-up-ndes"></a>Configurare il servizio Registrazione dispositivi di rete
 
-Le procedure seguenti consentono di configurare il servizio Registrazione dispositivi di rete (NDES) per l'uso con Intune. Per altre informazioni, vedere [Linee guida per il servizio Registrazione dispositivi di rete](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v%3dws.11)).
+Le procedure seguenti consentono di configurare il servizio Registrazione dispositivi di rete (NDES) per l'uso con Intune. Per altre informazioni, vedere [Linee guida per il servizio Registrazione dispositivi di rete](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)).
 
 ### <a name="install-the-ndes-service"></a>Installare il servizio Registrazione dispositivi di rete
 
-1. Nel server che ospiterà il servizio Registrazione dispositivi di rete, accedere come **amministratore dell'organizzazione**, quindi usare l'[Aggiunta guidata ruoli e funzionalità](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831809(v=ws.11)) per installare il servizio Registrazione dispositivi di rete:
+1. Nel server che ospiterà il servizio Registrazione dispositivi di rete, accedere come **amministratore dell'organizzazione**, quindi usare l'[Aggiunta guidata ruoli e funzionalità](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831809(v=ws.11)) per installare il servizio Registrazione dispositivi di rete:
 
    1. Nella procedura guidata selezionare **Servizi certificati Active Directory** per ottenere l'accesso ai servizi di ruolo AD CS. Selezionare **Servizio Registrazione dispositivi di rete**, deselezionare **Autorità di certificazione** e quindi completare la procedura guidata.
 

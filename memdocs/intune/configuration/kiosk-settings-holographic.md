@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d18ea0a12f0525b71fbcb8660187af36f1148bee
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 8127281069ce4209adfc2aec82a93f5a60669307
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093165"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911863"
 ---
 # <a name="windows-holographic-for-business-device-settings-to-run-as-a-kiosk-in-intune"></a>Impostazioni dei dispositivi Windows Holographic for Business per l'esecuzione come dispositivo in modalità tutto schermo in Intune
 
@@ -74,7 +74,7 @@ Le app in questa modalità sono disponibili nel menu Start. Sono le uniche app c
   - **Accesso automatico (Windows 10, versione 1803 e successive)** : non supportato in Windows Holographic for Business.
   - **Account utente locali**: scegliere **Aggiungi** per l'account utente locale (per il dispositivo). L'account immesso accede al chiosco multimediale.
   - **Utente o gruppo di Azure AD (Windows 10, versione 1803+)** : richiede credenziali utente per l'accesso al dispositivo. Selezionare **Aggiungi** per scegliere utenti o gruppi di Azure AD nell'elenco. È possibile selezionare più utenti e gruppi. Scegliere **OK** per salvare le modifiche.
-  - **Visitatore di HoloLens**: l'account del visitatore è un account Guest che non richiede credenziali utente o autenticazione, come descritto in [Concetti della modalità PC condiviso](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
+  - **Visitatore di HoloLens**: l'account del visitatore è un account Guest che non richiede credenziali utente o autenticazione, come descritto in [Concetti della modalità PC condiviso](/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
 
 - **Browser e applicazioni**: aggiungere le app da eseguire nel dispositivo in modalità tutto schermo. Ricordarsi che è possibile aggiungere più app.
 
@@ -84,7 +84,7 @@ Le app in questa modalità sono disponibili nel menu Start. Sono le uniche app c
       - **Modalità normale (versione completa di Microsoft Edge)** : Esegue una versione completa di Microsoft Edge con tutte le funzionalità di esplorazione. I dati dell'utente e lo stato vengono salvati tra le sessioni.
       - **Esplorazione pubblica (InPrivate)** : esegue una versione con più schede di Microsoft Edge InPrivate con un'esperienza personalizzata per i chioschi multimediali eseguiti in modalità schermo intero.
 
-      Per altre informazioni su queste opzioni, vedere [Distribuire la modalità tutto schermo di Microsoft Edge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
+      Per altre informazioni su queste opzioni, vedere [Distribuire la modalità tutto schermo di Microsoft Edge](/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
       > [!NOTE]
       > Questa impostazione abilita il browser Microsoft Edge nel dispositivo. Per configurare le impostazioni specifiche di Microsoft Edge, creare un profilo di restrizioni del dispositivo (**Dispositivi** > **Profili di configurazione** > **Crea profilo** > **Windows 10** per la piattaforma > **Restrizioni del dispositivo** > **Browser Microsoft Edge**). Nel [browser Microsoft Edge](device-restrictions-windows-holographic.md#microsoft-edge-browser) sono elencate e descritte le impostazioni Windows Holographic for Business disponibili.
@@ -97,12 +97,12 @@ Le app in questa modalità sono disponibili nel menu Start. Sono le uniche app c
     - **Aggiungi in base all'ID modello utente applicazione**: usare questa opzione per aggiungere app predefinite di Windows come il Blocco note o la Calcolatrice. Immettere le proprietà seguenti:
 
       - **Nome applicazione**: Obbligatorio. Immettere un nome per l'applicazione.
-      - **ID modello utente applicazione (AUMID)** : Obbligatorio. Immettere l'ID modello utente applicazione (AUMID) dell'app Windows. Per ottenere questo ID, vedere [Find the Application User Model ID of an installed app](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (Trovare l'ID modello utente dell'applicazione di un'app installata) per ottenere l'ID.
+      - **ID modello utente applicazione (AUMID)** : Obbligatorio. Immettere l'ID modello utente applicazione (AUMID) dell'app Windows. Per ottenere questo ID, vedere [Find the Application User Model ID of an installed app](/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (Trovare l'ID modello utente dell'applicazione di un'app installata) per ottenere l'ID.
 
     - **AutoLaunch**: Facoltativo. Dopo aver aggiunto le app e il browser, selezionare un'app o un browser per aprirlo automaticamente quando l'utente accede. È possibile configurare una sola app o browser per l'avvio automatico.
     - **Dimensioni del riquadro**: Obbligatorio. Dopo aver aggiunto le app, selezionare una dimensione Piccola, Media, Larga o Grande del riquadro dell'app.
 
-- **Usa un layout Start alternativo**: selezionare **Sì** per immettere un file XML che descrive come le app vengono visualizzate nel menu Start, incluso il relativo ordine. Usare questa opzione se è necessaria una maggiore personalizzazione nel menu Start. [Personalizzare ed esportare il layout della schermata Start](https://docs.microsoft.com/hololens/hololens-kiosk#start-layout-for-hololens) offre alcune indicazioni e include un file XML specifico per i dispositivi Windows Holographic for Business.
+- **Usa un layout Start alternativo**: selezionare **Sì** per immettere un file XML che descrive come le app vengono visualizzate nel menu Start, incluso il relativo ordine. Usare questa opzione se è necessaria una maggiore personalizzazione nel menu Start. [Personalizzare ed esportare il layout della schermata Start](/hololens/hololens-kiosk#start-layout-for-hololens) offre alcune indicazioni e include un file XML specifico per i dispositivi Windows Holographic for Business.
 
 - **Barra delle applicazioni di Windows**: non supportato in Windows Holographic for Business.
 - **Consenti l'accesso alla cartella Download**: non supportato in Windows Holographic for Business.

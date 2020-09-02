@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 50c1842357a79ce3228b7b0a5283dc9a4e98b2d6
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 19c5c1f8e7a68a31150baa079ce9b766b6df72df
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252340"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906753"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Rimuovere i dispositivi con la cancellazione, la disattivazione o l'annullamento manuale della registrazione
 
@@ -168,7 +168,7 @@ Per rimuovere i dispositivi dal portale di Intune, è possibile eliminarli dal r
 4. Scegliere **Salva**.
 
 > [!NOTE]
-> Le regole di pulizia dei dispositivi non sono disponibili per scenari Android Enterprise quali [Completamente gestito](https://docs.microsoft.com/mem/intune/enrollment/android-fully-managed-enroll), [Dedicato](https://docs.microsoft.com/mem/intune/enrollment/android-kiosk-enroll) e [Dispositivi di proprietà dell'azienda con profilo di lavoro](https://docs.microsoft.com/mem/intune/enrollment/android-corporate-owned-work-profile-enroll). 
+> Le regole di pulizia dei dispositivi non sono disponibili per scenari Android Enterprise quali [Completamente gestito](../enrollment/android-fully-managed-enroll.md), [Dedicato](../enrollment/android-kiosk-enroll.md) e [Dispositivi di proprietà dell'azienda con profilo di lavoro](../enrollment/android-corporate-owned-work-profile-enroll.md). 
 
 ## <a name="delete-devices-from-the-azure-active-directory-portal"></a>Eliminare dispositivi dal portale di Azure Active Directory
 
@@ -206,4 +206,3 @@ Applicabile per i dispositivi Windows 10. Altre informazioni su [Fresh Start](de
 ## <a name="next-steps"></a>Passaggi successivi
 
 Se si vuole registrare di nuovo un dispositivo eliminato, vedere [Opzioni di registrazione](../enrollment/enrollment-options.md).
-

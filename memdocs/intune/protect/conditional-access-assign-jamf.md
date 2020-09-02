@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f920513fbef101c60ea5caa3e8c6659557213ba3
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 08586879f3523d1188f18e2d7024f32fae83febc
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989203"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911200"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Imporre la conformità nei computer Mac gestiti con Jamf Pro
 
@@ -124,5 +124,5 @@ Ottenere informazioni su come [rimuovere un dispositivo gestito da Jamf nella do
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- [Accesso condizionale in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
-- [Introduzione all'accesso condizionale in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)
+- [Accesso condizionale in Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal)
+- [Introduzione all'accesso condizionale in Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)

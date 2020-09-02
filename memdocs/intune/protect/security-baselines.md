@@ -18,12 +18,12 @@ ms.custom:
 - intune-azure
 - contperfq1
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ca22e74469cf84967d4d9630293a2b4e617e3d81
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 5a3954057d14aaf24a1a0147d9717cfc01413d51
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698780"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914923"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Usare le baseline di sicurezza per configurare i dispositivi Windows 10 in Intune
 
@@ -46,7 +46,7 @@ Le baseline di sicurezza possono essere utili per definire un flusso di lavoro c
 - Se non si ha familiarità con Intune e non si sa da dove iniziare, le baseline di sicurezza rappresentano un vantaggio. È possibile creare e distribuire rapidamente un profilo sicuro, sapendo che si sta contribuendo alla protezione delle risorse e dei dati dell'organizzazione.
 - Se si usano Criteri di gruppo, la migrazione a Intune per la gestione è molto più semplice con queste baseline. Queste baseline sono incluse in modo nativo in Intune e includono un'esperienza di gestione moderna.
 
-[Baseline della sicurezza di Windows](https://docs.microsoft.com/windows/security/threat-protection/windows-security-baselines) è un'ottima risorsa per scoprire di più su questa funzionalità. [Mobile device management](https://docs.microsoft.com/windows/client-management/mdm/) (Gestione di dispositivi mobili) è una valida fonte di informazioni su MDM e sulle funzionalità disponibili per i dispositivi Windows.
+[Baseline della sicurezza di Windows](/windows/security/threat-protection/windows-security-baselines) è un'ottima risorsa per scoprire di più su questa funzionalità. [Mobile device management](/windows/client-management/mdm/) (Gestione di dispositivi mobili) è una valida fonte di informazioni su MDM e sulle funzionalità disponibili per i dispositivi Windows.
 
 ## <a name="available-security-baselines"></a>Baseline di sicurezza disponibili
 
@@ -62,7 +62,7 @@ Sono disponibili le istanze di baseline di sicurezza seguenti per l'uso con Intu
   - [Baseline di Microsoft Defender ATP per marzo 2020 - versione 3](security-baseline-settings-defender-atp.md?pivots=atp-march-2020)
 
   > [!NOTE]
-  > La baseline di sicurezza di Microsoft Defender ATP è stata ottimizzata per i dispositivi fisici e attualmente se ne sconsiglia l'uso in macchine virtuali (VM) o endpoint VDI. Alcune impostazioni di base possono influire sulle sessioni interattive remote negli ambienti virtualizzati.  Per altre informazioni, vedere [Incremento della conformità alla baseline di sicurezza di Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) nella documentazione di Windows.
+  > La baseline di sicurezza di Microsoft Defender ATP è stata ottimizzata per i dispositivi fisici e attualmente se ne sconsiglia l'uso in macchine virtuali (VM) o endpoint VDI. Alcune impostazioni di base possono influire sulle sessioni interattive remote negli ambienti virtualizzati.  Per altre informazioni, vedere [Incremento della conformità alla baseline di sicurezza di Microsoft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) nella documentazione di Windows.
 
 - **Baseline di Microsoft Edge**
   - [Baseline di Microsoft Edge per aprile 2020 (Edge versione 80 e successive)](security-baseline-settings-edge.md?pivots-edge-april-2020)
@@ -253,9 +253,9 @@ In presenza di un profilo associato a una baseline precedente, la baseline prece
 
 ## <a name="co-managed-devices"></a>Dispositivi con co-gestione
 
-Le baseline di sicurezza nei dispositivi gestiti da Intune sono paragonabili ai dispositivi con co-gestione con Configuration Manager. I dispositivi con co-gestione usano Configuration Manager e Microsoft Intune per gestire contemporaneamente i dispositivi Windows 10. Questa funzionalità consente di collegare gli investimenti esistenti per Configuration Manager ai vantaggi di Intune tramite il cloud. La [panoramica della co-gestione](https://docs.microsoft.com/configmgr/comanage/overview) è un'ottima risorsa se si usa Configuration Manager e si vogliono sfruttare anche i vantaggi del cloud.
+Le baseline di sicurezza nei dispositivi gestiti da Intune sono paragonabili ai dispositivi con co-gestione con Configuration Manager. I dispositivi con co-gestione usano Configuration Manager e Microsoft Intune per gestire contemporaneamente i dispositivi Windows 10. Questa funzionalità consente di collegare gli investimenti esistenti per Configuration Manager ai vantaggi di Intune tramite il cloud. La [panoramica della co-gestione](/configmgr/comanage/overview) è un'ottima risorsa se si usa Configuration Manager e si vogliono sfruttare anche i vantaggi del cloud.
 
-Quando si usano dispositivi con co-gestione, è necessario trasferire il carico di lavoro **Configurazione del dispositivo** (le relative impostazioni) in Intune. In [Co-management workloads](https://docs.microsoft.com/configmgr/comanage/workloads#device-configuration) (Carichi di lavoro di co-gestione) sono disponibili altre informazioni.
+Quando si usano dispositivi con co-gestione, è necessario trasferire il carico di lavoro **Configurazione del dispositivo** (le relative impostazioni) in Intune. In [Co-management workloads](/configmgr/comanage/workloads#device-configuration) (Carichi di lavoro di co-gestione) sono disponibili altre informazioni.
 
 ## <a name="q--a"></a>Domande e risposte
 
@@ -273,11 +273,11 @@ In senso stretto, no. Il team di sicurezza di Microsoft si consulta con varie or
 
 ### <a name="what-certifications-does-microsofts-security-baselines-have"></a>Di quali certificazioni dispongono le baseline di sicurezza Microsoft? 
 
-- Microsoft continua a pubblicare baseline di sicurezza per Criteri di gruppo (GPO) e [Security Compliance Toolkit](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10), come ha fatto per molti anni. Queste baseline sono usate da molte organizzazioni. Le raccomandazioni incluse nelle baseline derivano dalla collaborazione del team di sicurezza Microsoft con clienti aziendali e agenzie esterne, tra le quali il Dipartimento della difesa (DoD, Department of Defense), NIST (National Institute of Standards e Technology) e altri. Microsoft condivide sia le raccomandazioni che le baseline con queste organizzazioni. Anche queste organizzazioni pubblicano raccomandazioni proprie, molto vicine a quelle di Microsoft. In concomitanza con la continua crescita delle soluzioni di gestione dei dispositivi mobili (MDM) nel cloud, Microsoft ha creato raccomandazioni MDM equivalenti per queste baseline di Criteri di gruppo. Queste baseline aggiuntive sono integrate in Microsoft Intune e includono report di conformità per utenti, gruppi e dispositivi che seguono (o non seguono) la baseline.
+- Microsoft continua a pubblicare baseline di sicurezza per Criteri di gruppo (GPO) e [Security Compliance Toolkit](/windows/security/threat-protection/security-compliance-toolkit-10), come ha fatto per molti anni. Queste baseline sono usate da molte organizzazioni. Le raccomandazioni incluse nelle baseline derivano dalla collaborazione del team di sicurezza Microsoft con clienti aziendali e agenzie esterne, tra le quali il Dipartimento della difesa (DoD, Department of Defense), NIST (National Institute of Standards e Technology) e altri. Microsoft condivide sia le raccomandazioni che le baseline con queste organizzazioni. Anche queste organizzazioni pubblicano raccomandazioni proprie, molto vicine a quelle di Microsoft. In concomitanza con la continua crescita delle soluzioni di gestione dei dispositivi mobili (MDM) nel cloud, Microsoft ha creato raccomandazioni MDM equivalenti per queste baseline di Criteri di gruppo. Queste baseline aggiuntive sono integrate in Microsoft Intune e includono report di conformità per utenti, gruppi e dispositivi che seguono (o non seguono) la baseline.
 
 - Molti clienti usano le raccomandazioni delle baseline di Intune come punto di partenza e quindi le personalizzano in base alle esigenze specifiche per IT e sicurezza. La **baseline di sicurezza MDM** per Windows 10 RS5 di Microsoft è la prima baseline rilasciata. Questa baseline è realizzata come infrastruttura generica che consente ai clienti di importare altre baseline di sicurezza basate su CIS, NIST e altri standard. Attualmente, è disponibile per Windows ed è previsto che includerà anche iOS/iPadOS e Android.
 
-- La migrazione da Criteri di gruppo Active Directory locali a una soluzione cloud pura usando Azure Active Directory (AD) con Microsoft Intune è un viaggio. Per semplificare, sono disponibili modelli di Criteri di gruppo inclusi in [Security Compliance Toolkit](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10) che possono agevolare la gestione di dispositivi AD ibridi o aggiunti ad Azure AD. Questi dispositivi possono ottenere le impostazioni MDM dal cloud (Intune) e le impostazioni di Criteri di gruppo dal controller di dominio locale, in base alle esigenze.
+- La migrazione da Criteri di gruppo Active Directory locali a una soluzione cloud pura usando Azure Active Directory (AD) con Microsoft Intune è un viaggio. Per semplificare, sono disponibili modelli di Criteri di gruppo inclusi in [Security Compliance Toolkit](/windows/security/threat-protection/security-compliance-toolkit-10) che possono agevolare la gestione di dispositivi AD ibridi o aggiunti ad Azure AD. Questi dispositivi possono ottenere le impostazioni MDM dal cloud (Intune) e le impostazioni di Criteri di gruppo dal controller di dominio locale, in base alle esigenze.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

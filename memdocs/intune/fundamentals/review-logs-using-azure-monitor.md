@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f71bbc2022068616b90f37c209d41d28ea5970d0
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: c93f50f7c4b2537ab4dbd1d9462f13434e9c158e
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912525"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911523"
 ---
 # <a name="send-log-data-to-storage-event-hubs-or-log-analytics-in-intune-preview"></a>Inviare i dati dei log alla risorsa di archiviazione, agli hub eventi o a Log Analytics in Intune (anteprima)
 
@@ -53,9 +53,9 @@ Per usare questa funzionalità, sono necessari:
 
 A seconda della destinazione scelta per instradare i dati dei log di controllo, è necessario uno dei servizi seguenti:
 
-* Un [account di archiviazione di Azure](https://docs.microsoft.com/azure/storage/common/storage-account-overview) con autorizzazioni *ListKeys*. È consigliabile usare un account di archiviazione generale e non un account di archiviazione BLOB. Per informazioni sui prezzi di archiviazione, vedere il [calcolatore dei prezzi di Archiviazione di Azure](https://azure.microsoft.com/pricing/calculator/?service=storage). 
-* Uno [spazio dei nomi di Hub eventi di Azure](https://docs.microsoft.com/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) per l'integrazione con le soluzioni di terze parti.
-* Un'[area di lavoro di Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/learn/quick-create-workspace) per inviare i log a Log Analytics.
+* Un [account di archiviazione di Azure](/azure/storage/common/storage-account-overview) con autorizzazioni *ListKeys*. È consigliabile usare un account di archiviazione generale e non un account di archiviazione BLOB. Per informazioni sui prezzi di archiviazione, vedere il [calcolatore dei prezzi di Archiviazione di Azure](https://azure.microsoft.com/pricing/calculator/?service=storage). 
+* Uno [spazio dei nomi di Hub eventi di Azure](/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) per l'integrazione con le soluzioni di terze parti.
+* Un'[area di lavoro di Azure Log Analytics](/azure/azure-monitor/learn/quick-create-workspace) per inviare i log a Log Analytics.
 
 ## <a name="send-logs-to-azure-monitor"></a>Inviare i log a Monitoraggio di Azure
 
@@ -83,7 +83,7 @@ A seconda della destinazione scelta per instradare i dati dei log di controllo, 
         1. Selezionare questa opzione > **Configura**. 
         2. Creare una nuova area di lavoro e immettere i dettagli dell'area di lavoro oppure scegliere un'area di lavoro esistente dall'elenco > **OK**.
 
-            L'[area di lavoro di Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/learn/quick-create-workspace) fornisce altri dettagli su queste impostazioni.
+            L'[area di lavoro di Azure Log Analytics](/azure/azure-monitor/learn/quick-create-workspace) fornisce altri dettagli su queste impostazioni.
 
     - **LOG** > **AuditLogs**: scegliere questa opzione per inviare i [log di controllo di Intune](monitor-audit-logs.md) all'account di archiviazione, all'hub eventi o a Log Analytics. I log di controllo mostrano la cronologia di ogni attività che genera una modifica in Intune, inclusi chi l'ha eseguita e quando.
 
@@ -178,7 +178,7 @@ La tabella seguente contiene una stima del costo mensile per un hub eventi di ba
 
 | Category | Valore |
 | -------- | ----- |
-|Eventi al secondo|0.1 |
+|Eventi al secondo|0,1 |
 |Eventi per intervallo di cinque minuti| 52|
 |Volume per intervallo|104 KB |
 |Messaggi per intervallo|1 |
@@ -187,7 +187,7 @@ La tabella seguente contiene una stima del costo mensile per un hub eventi di ba
 
 ### <a name="log-analytics-cost-considerations"></a>Considerazioni sui costi di Log Analytics
 
-Per esaminare i costi legati alla gestione l'area di lavoro Log Analytics, vedere [Gestire i costi controllando i volumi e la conservazione di dati in Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-cost-storage).
+Per esaminare i costi legati alla gestione l'area di lavoro Log Analytics, vedere [Gestire i costi controllando i volumi e la conservazione di dati in Log Analytics](/azure/log-analytics/log-analytics-manage-cost-storage).
 
 ## <a name="frequently-asked-questions"></a>Domande frequenti
 
@@ -199,7 +199,7 @@ I log di controllo e i log operativi (anteprima) sono entrambi disponibili per i
 
 ### <a name="after-an-action-when-do-the-corresponding-logs-show-up-in-the-event-hub"></a>Dopo un'azione, quando vengono visualizzati i log corrispondenti nell'hub eventi?
 
-I log vengono in genere visualizzati nell'hub eventi entro alcuni minuti dopo l'esecuzione dell'azione. Per altre informazioni, vedere [Informazioni su Hub eventi di Azure](https://docs.microsoft.com/azure/event-hubs/).
+I log vengono in genere visualizzati nell'hub eventi entro alcuni minuti dopo l'esecuzione dell'azione. Per altre informazioni, vedere [Informazioni su Hub eventi di Azure](/azure/event-hubs/).
 
 ### <a name="after-an-action-when-do-the-corresponding-logs-show-up-in-the-storage-account"></a>Dopo un'azione, quando vengono visualizzati i log corrispondenti nell'account di archiviazione?
 
@@ -219,22 +219,22 @@ Il costo per la trasmissione dipende dal numero di messaggi ricevuti al minuto. 
 
 ### <a name="how-do-i-integrate-intune-audit-logs-with-my-siem-system"></a>Come integrare i log di controllo di Intune con il sistema di informazioni di sicurezza e gestione degli eventi?
 
-Usare Monitoraggio di Azure con Hub eventi per trasmettere i log nel sistema di informazioni di sicurezza e gestione degli eventi. Prima di tutto, [trasmettere i log a un hub eventi](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub), quindi [configurare lo strumento di informazioni di sicurezza e gestione degli eventi](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub#access-data-from-your-event-hub) con l'hub eventi configurato. 
+Usare Monitoraggio di Azure con Hub eventi per trasmettere i log nel sistema di informazioni di sicurezza e gestione degli eventi. Prima di tutto, [trasmettere i log a un hub eventi](/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub), quindi [configurare lo strumento di informazioni di sicurezza e gestione degli eventi](/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub#access-data-from-your-event-hub) con l'hub eventi configurato. 
 
 ### <a name="what-siem-tools-are-currently-supported"></a>Quali strumenti di informazioni di sicurezza e gestione degli eventi sono attualmente supportati?
 
-Monitoraggio di Azure è attualmente supportato da [Splunk](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-integrate-activity-logs-with-splunk), QRadar e [Sumo Logic](https://help.sumologic.com/Send-Data/Applications-and-Other-Data-Sources/Azure_Active_Directory) (apre un nuovo sito Web). Per altre informazioni sul funzionamento dei connettori, vedere [Trasmettere i dati di monitoraggio di Azure a un hub eventi per il consumo da parte di uno strumento esterno](https://docs.microsoft.com/azure/azure-monitor/platform/stream-monitoring-data-event-hubs).
+Monitoraggio di Azure è attualmente supportato da [Splunk](/azure/active-directory/reports-monitoring/tutorial-integrate-activity-logs-with-splunk), QRadar e [Sumo Logic](https://help.sumologic.com/Send-Data/Applications-and-Other-Data-Sources/Azure_Active_Directory) (apre un nuovo sito Web). Per altre informazioni sul funzionamento dei connettori, vedere [Trasmettere i dati di monitoraggio di Azure a un hub eventi per il consumo da parte di uno strumento esterno](/azure/azure-monitor/platform/stream-monitoring-data-event-hubs).
 
 ### <a name="can-i-access-the-data-from-an-event-hub-without-using-an-external-siem-tool"></a>È possibile accedere ai dati da un hub eventi senza usare uno strumento di informazioni di sicurezza e gestione degli eventi esterno?
 
-Sì. È possibile usare l'[API di Hub eventi](https://docs.microsoft.com/azure/event-hubs/event-hubs-dotnet-standard-getstarted-receive-eph) per accedere ai log da un'applicazione personalizzata.
+Sì. È possibile usare l'[API di Hub eventi](/azure/event-hubs/event-hubs-dotnet-standard-getstarted-receive-eph) per accedere ai log da un'applicazione personalizzata.
 
 ### <a name="what-data-is-stored"></a>Quali dati vengono archiviati?
 
-Intune non archivia i dati inviati attraverso la pipeline. Intune instrada i dati alla pipeline di Monitoraggio di Azure, sotto l'autorità del tenant. Per altre informazioni, vedere [Panoramica di Monitoraggio di Azure](https://docs.microsoft.com/azure/azure-monitor/overview).
+Intune non archivia i dati inviati attraverso la pipeline. Intune instrada i dati alla pipeline di Monitoraggio di Azure, sotto l'autorità del tenant. Per altre informazioni, vedere [Panoramica di Monitoraggio di Azure](/azure/azure-monitor/overview).
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-* [Archiviare i log attività in un account di archiviazione](https://docs.microsoft.com/azure/active-directory/reports-monitoring/quickstart-azure-monitor-route-logs-to-storage-account)
-* [Trasmettere i log attività a un hub eventi](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub)
-* [Integrare i log attività con Log Analytics](https://docs.microsoft.com/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics)
+* [Archiviare i log attività in un account di archiviazione](/azure/active-directory/reports-monitoring/quickstart-azure-monitor-route-logs-to-storage-account)
+* [Trasmettere i log attività a un hub eventi](/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub)
+* [Integrare i log attività con Log Analytics](/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics)

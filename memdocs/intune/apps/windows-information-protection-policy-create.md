@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 66ea84d8defa1d1d5b79f686537b391452cf3c30
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 88eabe07cadf45644f3e10be338a23454c5d1711
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990274"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911982"
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-policy-with-intune"></a>Creare e distribuire criteri di Windows Information Protection (WIP) con Intune
 
@@ -52,11 +52,11 @@ ms.locfileid: "83990274"
 Configurare il provider MAM prima di creare un criterio WIP. Altre informazioni su [come configurare il provider MAM con Intune](app-protection-policies-configure-windows-10.md).  
 
 > [!IMPORTANT]
-> WIP non supporta più identità e può essere presente una sola identità gestita alla volta. Per ulteriori informazioni sulle funzionalità e le limitazioni di WIP, vedere [Proteggere i dati aziendali con Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
+> WIP non supporta più identità e può essere presente una sola identità gestita alla volta. Per ulteriori informazioni sulle funzionalità e le limitazioni di WIP, vedere [Proteggere i dati aziendali con Windows Information Protection (WIP)](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
 
 È inoltre necessario avere la licenza e l'aggiornamento seguenti:
 
-- Una licenza di [Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium)
+- Una licenza di [Azure AD Premium](/azure/active-directory/active-directory-get-started-premium)
 - [Windows Creators Update](https://blogs.windows.com/windowsexperience/2017/04/11/how-to-get-the-windows-10-creators-update/#o61bC2PdrHslHG5J.97)
 
 
@@ -68,7 +68,7 @@ Configurare il provider MAM prima di creare un criterio WIP. Altre informazioni 
 Dopo aver configurato Intune nell'organizzazione, è possibile creare criteri specifici di WIP.
 
 > [!TIP]  
-> Per informazioni correlate sulla creazione di criteri WIP per Intune, incluse le impostazioni disponibili e come configurarle, vedere [Creare criteri di Windows Information Protection (WIP) con il software MAM usando il portale di Azure per Microsoft Intune](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure) nella raccolta di documenti sulla sicurezza di Windows. 
+> Per informazioni correlate sulla creazione di criteri WIP per Intune, incluse le impostazioni disponibili e come configurarle, vedere [Creare criteri di Windows Information Protection (WIP) con il software MAM usando il portale di Azure per Microsoft Intune](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure) nella raccolta di documenti sulla sicurezza di Windows. 
 
 
 1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
@@ -194,4 +194,4 @@ Dopo aver creato i criteri di protezione delle app WIP, è necessario distribuir
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per maggiori dettagli su Windows Information Protection, vedere [Proteggere i dati aziendali con Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
+Per maggiori dettagli su Windows Information Protection, vedere [Proteggere i dati aziendali con Windows Information Protection (WIP)](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).

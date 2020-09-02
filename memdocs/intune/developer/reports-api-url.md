@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ef0ba25d697bca6d6a6af7aad3565e6c2c70841e
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 6b4508c0382b27efba2be9bcdcfa8693784f3e4a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165941"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907127"
 ---
 # <a name="intune-data-warehouse-api-endpoint"></a>Endpoint dell'API data warehouse di Intune
 
@@ -35,7 +35,7 @@ ms.locfileid: "84165941"
 
 In Azure Active Directory (Azure AD) si utilizza OAuth 2.0 per consentire all'utente di autorizzare l'accesso ad applicazioni Web e API Web nel proprio tenant di Azure AD. Questa guida è indipendente dal linguaggio e descrive come inviare e ricevere messaggi HTTP senza usare alcuna libreria open source. Il flusso del codice di autorizzazione OAuth 2.0 è descritto nella [sezione 4.1](https://tools.ietf.org/html/rfc6749#section-4.1) della specifica OAuth 2.0.
 
-Per altre informazioni, vedere [Autorizzare l'accesso alle applicazioni Web tramite OAuth 2.0 e Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code).
+Per altre informazioni, vedere [Autorizzare l'accesso alle applicazioni Web tramite OAuth 2.0 e Azure Active Directory](/azure/active-directory/develop/active-directory-protocols-oauth-code).
 
 ## <a name="api-url-structure"></a>Struttura URL API
 

@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 25950311b5a6936340dbdba01961a5dab6f6ff91
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 25bb413aefa7d91ea825bbe96e057994b1375413
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461353"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915501"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Impostazioni dei dispositivi Windows 10 e Windows Holographic per l'aggiunta di connessioni VPN con Intune
 
@@ -82,14 +82,14 @@ A seconda delle impostazioni selezionate, è possibile che non tutti i valori si
 
     - **Certificati della macchina** (solo IKEv2): selezionare un profilo certificato client dispositivo esistente per autenticare il dispositivo.
 
-      Se si usano [connessioni del tunnel del dispositivo](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/vpn-device-tunnel-config) è necessario selezionare questa opzione.
+      Se si usano [connessioni del tunnel del dispositivo](/windows-server/remote/remote-access/vpn/vpn-device-tunnel-config) è necessario selezionare questa opzione.
 
       Per creare profili certificato in Intune, vedere [Usare i certificati per l'autenticazione](../protect/certificates-configure.md).
 
     - **EAP** (solo IKEv2): selezionare un profilo certificato client EAP (Extensible Authentication Protocol) esistente per l'autenticazione. Immettere i parametri di autenticazione nell'impostazione **XML EAP**.
   - **Ricorda le credenziali a ogni accesso**: memorizza nella cache le credenziali di autenticazione.
   - **XML personalizzato**: immettere i comandi XML personalizzati per la configurazione della connessione VPN.
-  - **XML EAP**: immettere i comandi XML EAP per la configurazione della connessione VPN. Per altre informazioni, vedere [Configurazione EAP](https://docs.microsoft.com/windows/client-management/mdm/eap-configuration).
+  - **XML EAP**: immettere i comandi XML EAP per la configurazione della connessione VPN. Per altre informazioni, vedere [Configurazione EAP](/windows/client-management/mdm/eap-configuration).
 
   - **Tunnel del dispositivo** (solo IKEv2): **Abilita** connette automaticamente il dispositivo alla VPN senza interazione o accesso dell'utente. Questa impostazione si applica ai PC aggiunti ad Azure Active Directory (AD).
 
@@ -159,7 +159,7 @@ Esempio:
 ### <a name="writing-custom-xml"></a>Scrittura di XML personalizzato
 Per altre informazioni su come scrivere comandi XML personalizzati, vedere la documentazione della VPN fornita dai diversi produttori.
 
-Per altre informazioni sulla creazione di XML EAP personalizzato, vedere [EAP configuration](https://docs.microsoft.com/windows/client-management/mdm/eap-configuration) (Configurazione EAP).
+Per altre informazioni sulla creazione di XML EAP personalizzato, vedere [EAP configuration](/windows/client-management/mdm/eap-configuration) (Configurazione EAP).
 
 ## <a name="apps-and-traffic-rules"></a>App e regole del traffico
 

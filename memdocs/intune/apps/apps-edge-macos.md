@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dec48b7037788c8951cd5bc5fcd4206809ca69f6
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: d0b9af43c149912d4972e2f79f5e89840823ca94
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531589"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914039"
 ---
 # <a name="add-microsoft-edge-to-macos-devices-using-microsoft-intune"></a>Aggiungere Microsoft Edge ai dispositivi macOS usando Microsoft Intune
 
@@ -95,6 +95,6 @@ L'app creata viene visualizzata nell'elenco di app, in cui è possibile assegnar
 > Attualmente Apple non consente a Intune di disinstallare Microsoft Edge nei dispositivi macOS.
 
 ## <a name="next-steps"></a>Passaggi successivi
-- Per informazioni su come configurare Microsoft Edge nei dispositivi macOS, vedere [Configurare Microsoft Edge nei dispositivi macOS](https://docs.microsoft.com/deployedge/configure-microsoft-edge-on-mac).
+- Per informazioni su come configurare Microsoft Edge nei dispositivi macOS, vedere [Configurare Microsoft Edge nei dispositivi macOS](/deployedge/configure-microsoft-edge-on-mac).
 - Per informazioni su come includere ed escludere le assegnazioni delle app nei gruppi di utenti, vedere [Includere ed escludere assegnazioni di app](apps-inc-exl-assignments.md).
 - [Assegnare app ai gruppi](apps-deploy.md)

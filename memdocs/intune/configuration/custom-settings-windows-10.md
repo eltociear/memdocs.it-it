@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96074f4bea22b7468b1f210d631f0912eeafe7b5
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 28a867c735a05cfa4a4765534d200b806711f9b5
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428985"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913019"
 ---
 # <a name="use-custom-settings-for-windows-10-devices-in-intune"></a>Usare le impostazioni personalizzate per dispositivi Windows 10 in Intune
 
@@ -36,7 +36,7 @@ Questa funzionalità si applica a:
 
 I profili personalizzati Windows 10 usano impostazioni Open Mobile Alliance Uniform Resource Identifier (OMA-URI) per configurare funzionalità diverse. Tali impostazioni vengono in genere usate dai produttori di dispositivi mobili per controllare le funzionalità del dispositivo.
 
-Windows 10 rende disponibili molte impostazioni CSP (Configuration Service Provider, provider di servizi di configurazione), ad esempio il [provider di servizi di configurazione dei criteri](https://technet.microsoft.com/itpro/windows/manage/how-it-pros-can-use-configuration-service-providers).
+Windows 10 rende disponibili molte impostazioni CSP (Configuration Service Provider, provider di servizi di configurazione), ad esempio il [provider di servizi di configurazione dei criteri](/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers).
 
 Se si sta cercando una determinata impostazione, tenere presente che il [profilo di restrizione del dispositivo Windows 10](device-restrictions-windows-10.md) contiene numerose impostazioni predefinite. Pertanto, potrebbe non essere necessario immettere valori personalizzati.
 
@@ -67,11 +67,11 @@ Dopo aver aggiunto alcune impostazioni, è possibile selezionare **Esporta**. **
 
 ## <a name="find-the-policies-you-can-configure"></a>Individuare i criteri che è possibile configurare
 
-Un elenco completo di tutti i provider di servizi di configurazione (CSP) supportati da Windows 10 è disponibile in [Configuration service provider reference](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference) (Informazioni di riferimento sui provider di servizi di configurazione).
+Un elenco completo di tutti i provider di servizi di configurazione (CSP) supportati da Windows 10 è disponibile in [Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference) (Informazioni di riferimento sui provider di servizi di configurazione).
 
-Non tutte le impostazioni sono compatibili con tutte le versioni di Windows 10. In [Configuration service provider reference](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference) (Informazioni di riferimento sui provider di servizi di configurazione) sono indicate le versioni supportate per ogni provider CSP.
+Non tutte le impostazioni sono compatibili con tutte le versioni di Windows 10. In [Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference) (Informazioni di riferimento sui provider di servizi di configurazione) sono indicate le versioni supportate per ogni provider CSP.
 
-Inoltre, Intune non supporta tutte le impostazioni elencate in [Configuration service provider reference](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference) (Informazioni di riferimento sui provider di servizi di configurazione). Per verificare se Intune supporta l'impostazione desiderata, aprire l'articolo relativo all'impostazione. La pagina di ogni impostazione mostra le operazioni supportate. Per usare Intune, l'impostazione deve supportare le operazioni **Add** o **Replace** e **Get**. Se il valore restituito dall'operazione **Get** non corrisponde al valore fornito dalle operazioni **Add** o **Replace**, Intune segnala un errore di conformità.
+Inoltre, Intune non supporta tutte le impostazioni elencate in [Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference) (Informazioni di riferimento sui provider di servizi di configurazione). Per verificare se Intune supporta l'impostazione desiderata, aprire l'articolo relativo all'impostazione. La pagina di ogni impostazione mostra le operazioni supportate. Per usare Intune, l'impostazione deve supportare le operazioni **Add** o **Replace** e **Get**. Se il valore restituito dall'operazione **Get** non corrisponde al valore fornito dalle operazioni **Add** o **Replace**, Intune segnala un errore di conformità.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

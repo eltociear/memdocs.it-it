@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 09ccfe079511c90f2ce7ecf6c27d4dfcf1c85327
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: ad78240aa9f2a1ef515be2635cfad0ce68e8ecc8
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820188"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909007"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>Impostazioni dei dispositivi iOS e iPadOS per usare le funzionalità iOS/iPadOS comuni in Intune
 
@@ -304,10 +304,10 @@ Questa funzionalità si applica a:
   - **Non configurata**: Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo non usa le estensioni dell'app. Per disabilitare un'estensione dell'app, è possibile impostare il tipo di estensione dell'app per l'accesso Single Sign-On su **Non configurato**.
   - **Microsoft Azure AD**: Usa il plug-in Microsoft Enterprise Single Sign-On, che è un'estensione dell'app per accesso Single Sign-On di tipo reindirizzamento. Questo plug-in offre l'accesso SSO per gli account Active Directory in tutte le applicazioni che supportano la funzionalità [Enterprise Single Sign-On di Apple](https://developer.apple.com/documentation/authenticationservices). Usare questo tipo di estensione dell'app SSO per abilitare l'accesso Single Sign-On per le app Microsoft, le app dell'organizzazione e i siti Web che eseguono l'autenticazione con Azure AD.
 
-    Il plug-in per l'accesso Single Sign-On funge da broker di autenticazione avanzato e offre miglioramenti della sicurezza e dell'esperienza utente. Tutte le app che usavano l'app Microsoft Authenticator per l'autenticazione continuano a ottenere l'accesso Single Sign-On con il [plug-in Microsoft Enterprise Single Sign-On per i dispositivi Apple](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin).
+    Il plug-in per l'accesso Single Sign-On funge da broker di autenticazione avanzato e offre miglioramenti della sicurezza e dell'esperienza utente. Tutte le app che usavano l'app Microsoft Authenticator per l'autenticazione continuano a ottenere l'accesso Single Sign-On con il [plug-in Microsoft Enterprise Single Sign-On per i dispositivi Apple](/azure/active-directory/develop/apple-sso-plugin).
 
     > [!IMPORTANT]
-    > Per ottenere l'accesso SSO con il tipo di estensione dell'app SSO di Microsoft Azure AD, installare prima l'app Microsoft Authenticator iOS/iPadOS nei dispositivi. L'app Authenticator recapita il plug-in Microsoft Enterprise Single Sign-On ai dispositivi e le impostazioni dell'estensione dell'app SSO MDM attivano il plug-in. Quando Authenticator e il profilo dell'estensione dell'app SSO sono installati nei dispositivi, gli utenti devono immettere le credenziali per accedere e creare una sessione nei propri dispositivi. La sessione viene quindi usata su diverse applicazioni senza richiedere agli utenti di eseguire di nuovo l'autenticazione. Per altre informazioni su Authenticator, vedere l'articolo sull'[app Microsoft Authenticator](https://docs.microsoft.com/azure/active-directory/user-help/user-help-auth-app-overview).
+    > Per ottenere l'accesso SSO con il tipo di estensione dell'app SSO di Microsoft Azure AD, installare prima l'app Microsoft Authenticator iOS/iPadOS nei dispositivi. L'app Authenticator recapita il plug-in Microsoft Enterprise Single Sign-On ai dispositivi e le impostazioni dell'estensione dell'app SSO MDM attivano il plug-in. Quando Authenticator e il profilo dell'estensione dell'app SSO sono installati nei dispositivi, gli utenti devono immettere le credenziali per accedere e creare una sessione nei propri dispositivi. La sessione viene quindi usata su diverse applicazioni senza richiedere agli utenti di eseguire di nuovo l'autenticazione. Per altre informazioni su Authenticator, vedere l'articolo sull'[app Microsoft Authenticator](/azure/active-directory/user-help/user-help-auth-app-overview).
 
   - **Reindirizzamento**: usare un'estensione dell'app di reindirizzamento generica e personalizzabile per usare Single Sign-On con i flussi di autenticazione moderni. Assicurarsi di conoscere l'ID estensione dell'app dell'organizzazione.
   - **Credenziali**: usare un'estensione dell'app per le credenziali personalizzabile e generica per usare Single Sign-On con i flussi di autenticazione challenge-and-response (richiesta e risposta). Assicurarsi di conoscere l'ID estensione dell'app dell'organizzazione.
@@ -318,7 +318,7 @@ Questa funzionalità si applica a:
 
 - **Modalità dispositivo condiviso** (solo Microsoft Azure AD): Scegliere **Abilita** se si sta distribuendo il plug-in Microsoft Enterprise Single Sign-On in dispositivi iOS/iPadOS configurati per la funzionalità Modalità dispositivo condiviso di Azure AD. I dispositivi in modalità condivisa consentono a molti utenti di effettuare l'accesso e la disconnessione a livello globale dalle applicazioni che supportano Modalità dispositivo condiviso. Quando questa opzione è impostata su **Non configurato**, Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, i dispositivi iOS/iPadOS non sono destinati alla condivisione tra più utenti.
 
-  Per altre informazioni sulla funzionalità Modalità dispositivo condiviso e su come abilitarla, vedere la [panoramica di Modalità dispositivo condiviso](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices) e le informazioni sull'uso di [Modalità dispositivo condiviso per i dispositivi iOS](https://docs.microsoft.com/azure/active-directory/develop/msal-ios-shared-devices).  
+  Per altre informazioni sulla funzionalità Modalità dispositivo condiviso e su come abilitarla, vedere la [panoramica di Modalità dispositivo condiviso](/azure/active-directory/develop/msal-shared-devices) e le informazioni sull'uso di [Modalità dispositivo condiviso per i dispositivi iOS](/azure/active-directory/develop/msal-ios-shared-devices).  
 
   Questa funzionalità si applica a:
   

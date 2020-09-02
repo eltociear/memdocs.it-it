@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 631b2f0fdf0d5cdd79eee9a3645b5769b756d71b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: c0a71ba59a1704e0f6369f611a2922212a2aa8c6
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990713"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911342"
 ---
 # <a name="set-up-intune"></a>Configurare Intune
 
@@ -30,10 +30,10 @@ Questa procedura di configurazione consente di abilitare la gestione di disposit
 
 Alcuni passaggi, ad esempio la configurazione di una sottoscrizione di Intune e l'impostazione di un'autorità MDM, sono obbligatori per la maggior parte degli scenari. Altre procedure,ad esempio la configurazione di un dominio personalizzato o l'aggiunta di app, sono facoltative e dipendono dalle esigenze specifiche dell'azienda.
 
-Se attualmente si usa Microsoft Endpoint Configuration Manager per gestire computer e server, è possibile [collegare Configuration Manager al cloud con la co-gestione](https://docs.microsoft.com/configmgr/comanage/overview).
+Se attualmente si usa Microsoft Endpoint Configuration Manager per gestire computer e server, è possibile [collegare Configuration Manager al cloud con la co-gestione](/configmgr/comanage/overview).
 
 >[!TIP]
->Se si acquistano almeno 150 licenze per Intune con un piano idoneo, è possibile usare *FastTrack Center Benefit*. Con questo servizio, gli specialisti Microsoft collaborano con gli utenti per preparare l'ambiente per Intune. Vedere [FastTrack Center Benefit per Enterprise Mobility + Security (EMS)](https://docs.microsoft.com/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program).
+>Se si acquistano almeno 150 licenze per Intune con un piano idoneo, è possibile usare *FastTrack Center Benefit*. Con questo servizio, gli specialisti Microsoft collaborano con gli utenti per preparare l'ambiente per Intune. Vedere [FastTrack Center Benefit per Enterprise Mobility + Security (EMS)](/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program).
 
 | Passaggi | Status  |
 |---|---|

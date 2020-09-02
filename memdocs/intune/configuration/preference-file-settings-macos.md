@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ebf65ecc6dbe5059adbd6fec70833bf2fcab9de7
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 478cce186d5f2943aeb5730acf90c3e875c8b687
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988659"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915314"
 ---
 # <a name="add-a-property-list-file-to-macos-devices-using-microsoft-intune"></a>Aggiungere un file di elenco delle proprietà ai dispositivi macOS usando Microsoft Intune
 
@@ -66,7 +66,7 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
 
     - **Preferenza per il nome di dominio**: Immettere l'ID di aggregazione, ad esempio `com.company.application`. Ad esempio, immettere `com.Contoso.applicationName`, `com.Microsoft.Edge` o `com.microsoft.wdav`.
 
-      i file di elenco delle proprietà in genere sono usati per Web browser (Microsoft Edge), [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) e app personalizzate. Quando si crea una preferenza per il dominio, viene creato anche un ID di aggregazione.
+      i file di elenco delle proprietà in genere sono usati per Web browser (Microsoft Edge), [Microsoft Defender Advanced Threat Protection](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) e app personalizzate. Quando si crea una preferenza per il dominio, viene creato anche un ID di aggregazione.
 
     - **File di elenco proprietà**: selezionare il file di elenco delle proprietà associato all'app. Assicurarsi che sia un file `.plist` o `.xml`. Caricare, ad esempio, un file `YourApp-Manifest.plist` o `YourApp-Manifest.xml`.
 
@@ -97,4 +97,4 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
 
 [Assegnare il profilo](device-profile-assign.md) e [monitorarne lo stato](device-profile-monitor.md).
 
-Per altre informazioni sui file delle preferenze per Microsoft Edge, vedere [Configurare le impostazioni dei criteri di Microsoft Edge per macOS](https://docs.microsoft.com/deployedge/configure-microsoft-edge-on-mac).
+Per altre informazioni sui file delle preferenze per Microsoft Edge, vedere [Configurare le impostazioni dei criteri di Microsoft Edge per macOS](/deployedge/configure-microsoft-edge-on-mac).

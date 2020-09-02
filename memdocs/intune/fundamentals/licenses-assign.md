@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e388914a489ee52cd9a29102a01c8221e3037775
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: d770ee040044cdaee9e4a717e9ee3045874952b2
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865687"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906906"
 ---
 # <a name="assign-licenses-to-users-so-they-can-enroll-devices-in-intune"></a>Assegnare licenze agli utenti in modo che possano registrare i dispositivi in Intune
 
@@ -47,7 +47,7 @@ Indipendentemente dal fatto che si decida di aggiungere gli utenti manualmente o
 
 ## <a name="assign-an-intune-license-by-using-azure-active-directory"></a>Assegnare una licenza di Intune con Azure Active Directory
 
-È anche possibile assegnare le licenze di Intune agli utenti usando Azure Active Directory. Per altre informazioni, vedere l'[articolo Assegnare licenze agli utenti in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-licensing-group-assignment-azure-portal). 
+È anche possibile assegnare le licenze di Intune agli utenti usando Azure Active Directory. Per altre informazioni, vedere l'[articolo Assegnare licenze agli utenti in Azure Active Directory](/azure/active-directory/active-directory-licensing-group-assignment-azure-portal). 
 
 ## <a name="use-school-data-sync-to-assign-licenses-to-users-in-intune-for-education"></a>Usare School Data Sync per assegnare licenze Education agli utenti di Intune
 
@@ -76,9 +76,9 @@ La modalità con cui è stato acquistato Intune determina le informazioni di sot
 - Se Intune è stato acquistato con un numero di carta di credito o una fattura, le licenze sono basate su utente.
 
 ## <a name="use-powershell-to-selectively-manage-ems-user-licenses"></a>Usare PowerShell per gestire in modo selettivo le licenze utente di EMS
-Le organizzazioni che usano Microsoft Enterprise Mobility Suite + Security (precedentemente noto come Enterprise Mobility Suite) possono contenere utenti che necessitano solo di Azure Active Directory Premium o dei servizi di Intune nel pacchetto EMS. È possibile assegnare un servizio o un sottoinsieme di servizi tramite i [cmdlet di PowerShell per Azure Active Directory](https://msdn.microsoft.com/library/jj151815.aspx).
+Le organizzazioni che usano Microsoft Enterprise Mobility Suite + Security (precedentemente noto come Enterprise Mobility Suite) possono contenere utenti che necessitano solo di Azure Active Directory Premium o dei servizi di Intune nel pacchetto EMS. È possibile assegnare un servizio o un sottoinsieme di servizi tramite i [cmdlet di PowerShell per Azure Active Directory](/previous-versions/azure/jj151815(v=azure.100)).
 
-Per assegnare in modo selettivo le licenze utente per i servizi EMS, aprire PowerShell come amministratore su un computer dotato del [Modulo di Azure Active Directory per Windows PowerShell](https://msdn.microsoft.com/library/jj151815.aspx#bkmk_installmodule). È possibile installare PowerShell su un computer locale o su un server ADFS.
+Per assegnare in modo selettivo le licenze utente per i servizi EMS, aprire PowerShell come amministratore su un computer dotato del [Modulo di Azure Active Directory per Windows PowerShell](/previous-versions/azure/jj151815(v=azure.100)#bkmk_installmodule). È possibile installare PowerShell su un computer locale o su un server ADFS.
 
 È necessario creare una nuova definizione dello SKU della licenza da applicare solo ai piani del servizio desiderati. A tale scopo, disabilitare i piani a cui non si vuole applicare la nuova definizione. Ad esempio, è possibile creare una definizione dello SKU che non assegna una licenza di Intune. Per visualizzare un elenco dei servizi disponibili, digitare:
 

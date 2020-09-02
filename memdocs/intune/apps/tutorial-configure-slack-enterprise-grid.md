@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 98ab8fd069b0542a29f61d9b0f5b69d7b82a8a1c
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 5daf488d878881c35db689fae0279c0312eb4c6a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074776"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915790"
 ---
 # <a name="tutorial-configure-slack-to-use-intune-for-emm-and-app-configuration"></a>Esercitazione: Configurare Slack per l'uso di Intune per EMM e la configurazione delle app
 
@@ -45,7 +45,7 @@ Per questa esercitazione sarà necessario un tenant di test con le sottoscrizion
 Sarà necessario anche un piano di [Slack Enterprise Grid](https://get.slack.help/hc/articles/360004150931-What-is-Slack-Enterprise-Grid-).
 
 ## <a name="configure-your-slack-enterprise-grid-plan"></a>Configurare il piano Slack Enterprise Grid
-Attivare EMM per il piano Slack Enterprise Grid seguendo le [istruzioni di Slack](https://get.slack.help/hc/articles/115002579426-Enable-Enterprise-Mobility-Management-for-your-org#step-2:-turn-on-emm) e [connettere Azure Active Directory](https://docs.microsoft.com/azure/active-directory/saas-apps/slack-tutorial) come provider di identità (IdP) del piano Grid.
+Attivare EMM per il piano Slack Enterprise Grid seguendo le [istruzioni di Slack](https://get.slack.help/hc/articles/115002579426-Enable-Enterprise-Mobility-Management-for-your-org#step-2:-turn-on-emm) e [connettere Azure Active Directory](/azure/active-directory/saas-apps/slack-tutorial) come provider di identità (IdP) del piano Grid.
 
 ## <a name="sign-in-to-intune"></a>Accedere a Intune
 Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) come Amministratore globale o come Amministratore del servizio Intune. Se è stata creata una sottoscrizione della versione di valutazione di Intune, l'account creato con tale sottoscrizione sarà un amministratore globale.

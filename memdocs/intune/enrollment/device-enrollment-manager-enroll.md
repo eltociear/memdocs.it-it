@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb5dec2fd96c5b5dfe0b82bb30bf653250786c95
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f674cc7b0c7d7314c7152d530cff210319c568df
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986766"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913138"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Registrare i dispositivi in Intune usando un account del manager di registrazione dispositivi
 
@@ -49,7 +49,7 @@ Gli account utente di tipo manager di registrazione dispositivi e i dispositivi 
 
 È possibile usare i metodi seguenti per registrare i dispositivi usando gli account DEM:
 
-- [Windows Autopilot](enrollment-autopilot.md)
+- [Windows Autopilot](../../autopilot/enrollment-autopilot.md)
 - [Registrazione in blocco di dispositivi Windows](windows-bulk-enroll.md)
 - Avvio da parte di un manager di registrazione dispositivi tramite Portale aziendale
 
@@ -77,4 +77,3 @@ La rimozione di un manager di registrazione dispositivi non influisce sui dispos
 
 1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), scegliere **Dispositivi** > **Registra i dispositivi** > **Manager di registrazione dispositivi**.
 2. Nel pannello **Manager di registrazione dispositivi** selezionare l'utente manager di registrazione dispositivi e selezionare **Elimina**.
-

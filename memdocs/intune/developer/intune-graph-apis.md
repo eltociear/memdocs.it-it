@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 541c607bebb57b1ee23df1af3ab80d29cdd0c6fc
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: 720328ebe260c967bef4a879bd0ee33ae2f332a0
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866129"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915688"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Come usare Azure AD per accedere alle API di Intune in Microsoft Graph
 
@@ -53,9 +53,9 @@ Questo articolo:
 
 Per altre informazioni, vedere:
 
-- [Autorizzare l'accesso alle applicazioni Web tramite OAuth 2.0 e Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code)
+- [Autorizzare l'accesso alle applicazioni Web tramite OAuth 2.0 e Azure Active Directory](/azure/active-directory/develop/active-directory-protocols-oauth-code)
 - [Introduzione all'autenticazione di Azure AD](https://www.visualstudio.com/docs/integrate/get-started/auth/oauth)
-- [Integrazione di applicazioni con Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications)
+- [Integrazione di applicazioni con Azure Active Directory](/azure/active-directory/develop/active-directory-integrating-applications)
 - [Informazioni su OAuth 2.0](https://oauth.net/2/)
 
 ## <a name="register-apps-to-use-the-microsoft-graph-api"></a>Registrare le app per l'uso dell'API Microsoft Graph
@@ -80,7 +80,7 @@ Per registrare un'app per l'uso dell'API Microsoft Graph:
 
     2. I valori **Tipo di applicazione** e **URI di reindirizzamento**.
 
-        Questi elementi variano in base ai requisiti. Se ad esempio si usa Azure AD [Authentication Library](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL), impostare **Tipo di applicazione** su `Native` e **URI di reindirizzamento** su `urn:ietf:wg:oauth:2.0:oob`.
+        Questi elementi variano in base ai requisiti. Se ad esempio si usa Azure AD [Authentication Library](/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL), impostare **Tipo di applicazione** su `Native` e **URI di reindirizzamento** su `urn:ietf:wg:oauth:2.0:oob`.
 
         > [!NOTE]
         > Azure Active Directory (Azure AD) Authentication Library (ADAL) e l'API Graph di Azure AD saranno deprecate. Per altre informazioni, vedere [Aggiornare le applicazioni per usare Microsoft Authentication Library (MSAL) e l'API Microsoft Graph](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
@@ -88,7 +88,7 @@ Per registrare un'app per l'uso dell'API Microsoft Graph:
 
         <img src="../media/azure-ad-app-new.png" width="209" height="140" alt="New app properties and values" />
 
-        Per altre informazioni, vedere [Scenari di autenticazione per Azure AD](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios).
+        Per altre informazioni, vedere [Scenari di autenticazione per Azure AD](/azure/active-directory/develop/active-directory-authentication-scenarios).
 
 5. Nel pannello dell'applicazione:
 
@@ -106,7 +106,7 @@ Per registrare un'app per l'uso dell'API Microsoft Graph:
 
     <img src="../media/azure-ad-perm-scopes.png" width="489" height="248" alt="Intune Graph API permission scopes" />
 
-    Scegliere i ruoli necessari per l'app inserendo un segno di spunta a sinistra dei nomi corrispondenti.  Per informazioni sugli specifici ambiti di autorizzazione di Intune, vedere [Ambiti di autorizzazione di Intune](#intune-permission-scopes).  Per informazioni sugli altri ambiti di autorizzazione dell'API Graph, vedere [Informazioni di riferimento sulle autorizzazioni di Microsoft Graph](https://developer.microsoft.com/graph/docs/concepts/permissions_reference).
+    Scegliere i ruoli necessari per l'app inserendo un segno di spunta a sinistra dei nomi corrispondenti.  Per informazioni sugli specifici ambiti di autorizzazione di Intune, vedere [Ambiti di autorizzazione di Intune](#intune-permission-scopes).  Per informazioni sugli altri ambiti di autorizzazione dell'API Graph, vedere [Informazioni di riferimento sulle autorizzazioni di Microsoft Graph](/graph/permissions-reference).
 
     Per ottenere risultati ottimali, scegliere il minor numero di ruoli necessario per implementare l'applicazione.
 
@@ -141,8 +141,8 @@ Azure AD e Microsoft Graph usano ambiti di autorizzazione per controllare l'acce
 Gli ambiti di autorizzazione (anche denominati _ambiti OAuth_) controllano l'accesso alle specifiche entità di Intune e alle relative proprietà. In questa sezione sono riepilogati gli ambiti di autorizzazione per le funzionalità dell'API di Intune.
 
 Per altre informazioni, vedere:
-- [Autenticazione di Azure AD](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-pass-through-authentication)
-- [Ambiti di autorizzazione dell'applicazione](https://docs.microsoft.com/azure/active-directory/develop/active-directory-v2-scopes)
+- [Autenticazione di Azure AD](/azure/active-directory/connect/active-directory-aadconnect-pass-through-authentication)
+- [Ambiti di autorizzazione dell'applicazione](/azure/active-directory/develop/active-directory-v2-scopes)
 
 Quando si concede l'autorizzazione a Microsoft Graph, è possibile specificare gli ambiti seguenti per controllare l'accesso alle funzionalità di Intune. Nella tabella seguente sono riepilogati gli ambiti di autorizzazione dell'API di Intune.  La prima colonna indica il nome della funzionalità, così com'è visualizzato nel portale di Azure, e la seconda colonna specifica il nome dell'ambito di autorizzazione.
 

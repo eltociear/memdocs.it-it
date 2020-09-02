@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cbb66833397d16ec18ce015d26a19bd28a1113c4
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: 42bcbcdbc6cc6f3256ece2f24114f2d2a52083ce
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048158"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915008"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aggiornamenti dell'interfaccia utente per le applicazioni degli utenti finali in Intune
 
@@ -32,7 +32,7 @@ Informazioni sugli aggiornamenti più recenti per le app Microsoft Intune. Il si
 * Avvisare gli studenti e il personale delle modifiche apportate all'app e alla registrazione.
 * Aggiornare le procedure di supporto tecnico o la documentazione dell'organizzazione.  
 
-Per gli studenti o i dipendenti, è consigliabile fare riferimento alle schermate e ai collegamenti alla documentazione della Guida per il portale aziendale. Per altre informazioni su come usare l'app Portale aziendale, vedere la [documentazione della Guida dell'utente per il portale aziendale](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done).  
+Per gli studenti o i dipendenti, è consigliabile fare riferimento alle schermate e ai collegamenti alla documentazione della Guida per il portale aziendale. Per altre informazioni su come usare l'app Portale aziendale, vedere la [documentazione della Guida dell'utente per il portale aziendale](../user-help/use-managed-devices-to-get-work-done.md).  
 
 ## <a name="week-of-august-10-2020"></a>Settimana del 10 agosto 2020
 
@@ -193,7 +193,7 @@ Le schermate e i passaggi per la registrazione nel Portale aziendale per iOS son
 * Aprire l'app Impostazioni per installare il profilo di gestione nel dispositivo in uso.  
 * Tornare all'app Portale aziendale per completare la registrazione.  
 
-Per le schermate e i passaggi per la registrazione aggiornati, vedere [Registrare il dispositivo iOS in Intune](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-ios).  
+Per le schermate e i passaggi per la registrazione aggiornati, vedere [Registrare il dispositivo iOS in Intune](../user-help/enroll-your-device-in-intune-ios.md).  
 
 ### <a name="user-experience-update-for-the-company-portal-app-for-ios----2536024---"></a>Aggiornamento dell'esperienza utente per l'app Portale aziendale per iOS <!-- 2536024 -->
 La home page dell'app Portale aziendale per i dispositivi iOS è stata riprogettata. Con questa modifica, la home page seguirà meglio i modelli dell'interfaccia utente iOS, oltre a garantire un'individuabilità migliorata per le app e gli eBook.  
@@ -217,7 +217,7 @@ Gli amministratori di Microsoft Intune possono caricare un'immagine del marchio 
 ## <a name="week-of-august-27-2018"></a>Settimana del 27 agosto 2018  
 
 ### <a name="new-user-experience-update-for-the-company-portal-website---2000968---"></a>Nuovo aggiornamento dell'esperienza utente per il sito Web Portale aziendale <!--2000968 -->  
-Al sito Web Portale aziendale sono state aggiunte nuove funzionalità basate sui suggerimenti dei clienti. Si noterà un miglioramento significativo delle funzionalità esistenti e dell'usabilità dei dispositivi. Aree specifiche del sito, ad esempio i dettagli del dispositivo, i commenti e suggerimenti, il supporto e la panoramica del dispositivo, presentano ora una nuova progettazione, moderna e reattiva. La [documentazione di sito Web Portale aziendale di Intune](https://docs.microsoft.com/mem/intune/user-help/using-the-intune-company-portal-website) è stata aggiornata per riflettere tali modifiche.   
+Al sito Web Portale aziendale sono state aggiunte nuove funzionalità basate sui suggerimenti dei clienti. Si noterà un miglioramento significativo delle funzionalità esistenti e dell'usabilità dei dispositivi. Aree specifiche del sito, ad esempio i dettagli del dispositivo, i commenti e suggerimenti, il supporto e la panoramica del dispositivo, presentano ora una nuova progettazione, moderna e reattiva. La [documentazione di sito Web Portale aziendale di Intune](../user-help/using-the-intune-company-portal-website.md) è stata aggiornata per riflettere tali modifiche.   
 
 Gli aggiornamenti includono:  
 
@@ -257,7 +257,7 @@ Screenshot di esempio che illustra la visualizzazione Dettagli:
 
 ## <a name="week-of-april-23-2018"></a>Settimana del 23 aprile 2018
 ### <a name="updated-navigation-view-in-the-company-portal-app-for-windows-10----1195010---"></a>Aggiornamento della visualizzazione della navigazione nell'app Portale aziendale per Windows 10 <!-- 1195010 -->
-L'app Portale aziendale Intune per Windows 10 è stata aggiornata con la [visualizzazione della navigazione di Fluent Design System](https://docs.microsoft.com/windows/uwp/design/basics/navigation-basics). A lato dell'app si noterà un elenco verticale statico di tutte le pagine di primo livello. Fare clic su un collegamento per visualizzare rapidamente tutte le pagine e passare da una all'altra. Questo è il primo di molti aggiornamenti che saranno resi disponibili come parte del continuo impegno per creare un'esperienza più adattiva, empatica e familiare in Intune. 
+L'app Portale aziendale Intune per Windows 10 è stata aggiornata con la [visualizzazione della navigazione di Fluent Design System](/windows/uwp/design/basics/navigation-basics). A lato dell'app si noterà un elenco verticale statico di tutte le pagine di primo livello. Fare clic su un collegamento per visualizzare rapidamente tutte le pagine e passare da una all'altra. Questo è il primo di molti aggiornamenti che saranno resi disponibili come parte del continuo impegno per creare un'esperienza più adattiva, empatica e familiare in Intune. 
 
 ![Screenshot del dashboard dell'app Portale aziendale che illustra la visualizzazione della navigazione di Fluent Design](./media/whats-new-app-ui/1804_WindowsCP_Fluent_01.png)
 

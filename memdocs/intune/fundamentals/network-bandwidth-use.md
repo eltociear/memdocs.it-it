@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b3052d8d213ce3190ed29b43f580a8de9c840b7
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: c99300e1c29aa7d3ec7519727dd6d12527626bfa
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943842"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911489"
 ---
 # <a name="intune-network-configuration-requirements-and-bandwidth"></a>Requisiti di configurazione di rete di Intune e larghezza di banda
 
@@ -79,7 +79,7 @@ Per informazioni sull'utilizzo di un server proxy per memorizzare contenuto nell
 
 Ottimizzazione recapito consente di usare Intune per ridurre il consumo di larghezza di banda quando i dispositivi Windows 10 scaricano aggiornamenti e applicazioni. Usando una cache distribuita con organizzazione automatica, è possibile estrarre i download dai server tradizionali e da origini alternative, ad esempio i peer di rete.
 
-Per visualizzare l'elenco completo delle versioni di Windows 10 e dei tipi di contenuto supportati da Ottimizzazione recapito, vedere [l'articolo sugli aggiornamenti di Ottimizzazione recapito per Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#requirements).
+Per visualizzare l'elenco completo delle versioni di Windows 10 e dei tipi di contenuto supportati da Ottimizzazione recapito, vedere [l'articolo sugli aggiornamenti di Ottimizzazione recapito per Windows 10](/windows/deployment/update/waas-delivery-optimization#requirements).
 
 [Ottimizzazione recapito può essere impostata](../configuration/delivery-optimization-settings.md) come parte dei profili di configurazione dei dispositivi.
 
@@ -95,7 +95,7 @@ Durante gli orari configurati è possibile usare BITS in un computer Windows per
 > [!NOTE]
 > Per la gestione di dispositivi mobili in Windows, solo l'interfaccia di gestione del sistema operativo per il tipo di app MobileMSI usa BITS per il download. AppX e MsiX usano il proprio stack di download non BITS e le app Win32 tramite l'agente di Intune usano Ottimizzazione recapito invece di BITS.
 
-Per altre informazioni su BITS e sui computer Windows, vedere [Servizio trasferimento intelligente in background](https://technet.microsoft.com/library/bb968799.aspx) nella libreria TechNet.
+Per altre informazioni su BITS e sui computer Windows, vedere [Servizio trasferimento intelligente in background](/windows/win32/bits/background-intelligent-transfer-service-portal) nella libreria TechNet.
 
 
 #### <a name="use-branchcache-on-computers-requires-intune-software-client"></a>Usare BranchCache nei computer (richiede il client software di Intune)
@@ -111,7 +111,7 @@ Per usarlo nel computer client, BranchCache deve essere abilitato e configurato 
 
 Quando il client di Intune è installato nei computer, BranchCache e la modalità cache distribuita sono abilitati per impostazione predefinita. Tuttavia, se i criteri di gruppo hanno disabilitato BranchCache, Intune non esegue l'override dei criteri e BranchCache rimane disabilitato.
 
-Se si usa BranchCache, collaborare con gli altri amministratori dell'organizzazione per la gestione dei criteri di gruppo e dei criteri firewall di Intune. Assicurarsi che non distribuiscano criteri che disabilitano BranchCache o le eccezioni del firewall. Per altre informazioni su BranchCache, vedere [Panoramica di BranchCache](https://technet.microsoft.com/library/hh831696.aspx).
+Se si usa BranchCache, collaborare con gli altri amministratori dell'organizzazione per la gestione dei criteri di gruppo e dei criteri firewall di Intune. Assicurarsi che non distribuiscano criteri che disabilitano BranchCache o le eccezioni del firewall. Per altre informazioni su BranchCache, vedere [Panoramica di BranchCache](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831696(v=ws.11)).
 
 
 ## <a name="next-steps"></a>Passaggi successivi

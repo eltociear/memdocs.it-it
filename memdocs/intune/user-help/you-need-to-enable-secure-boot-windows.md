@@ -19,12 +19,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser; seodec18
 ms.collection: ''
-ms.openlocfilehash: ede37e43740d6b8e7627df017f0c7acc5f712b3c
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 5b2c14e4447ddf968eaba1874260ad3f684dfb52
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880764"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913036"
 ---
 # <a name="you-need-to-enable-secure-boot"></a>È necessario abilitare l'avvio protetto
 
@@ -32,6 +32,6 @@ L'organizzazione richiede l'abilitazione della funzionalità Avvio protetto di W
 
 L'abilitazione dell'avvio protetto è un'attività avanzata. Se si usa un dispositivo mobile, contattare il supporto tecnico dell'azienda per l'assistenza.
 
-Se si usa un PC, è possibile contattare il supporto tecnico dell'azienda o vedere la sezione "Per riabilitare l'avvio protetto" nella pagina [Disabilitazione dell'avvio protetto](https://msdn.microsoft.com/library/windows/hardware/dn898540(v=vs.85).aspx) per provare ad abilitare l'avvio protetto senza l'aiuto del personale di assistenza.
+Se si usa un PC, è possibile contattare il supporto tecnico dell'azienda o vedere la sezione "Per riabilitare l'avvio protetto" nella pagina [Disabilitazione dell'avvio protetto](/windows-hardware/manufacture/desktop/disabling-secure-boot) per provare ad abilitare l'avvio protetto senza l'aiuto del personale di assistenza.
 
 Serve ancora assistenza? Contattare l'amministratore IT. Per informazioni sul contatto vedere il [sito Web del portale aziendale](https://go.microsoft.com/fwlink/?linkid=2010980).

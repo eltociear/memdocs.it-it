@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eeab1155a7a0035c5e0db15c3a5402d3636edaca
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 7981f661dd345ea80f9ab92debc9657072de1f4e
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461658"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907274"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Criteri di configurazione delle app per Microsoft Intune
 
@@ -71,7 +71,7 @@ Selezionando **App gestite** come **Tipo di registrazione del dispositivo** si f
 ![Tipo di registrazione del dispositivo](./media/app-configuration-policies-overview/device-enrollment-type.png)
 
 > [!NOTE]
-> Per le app con più identità, come Microsoft Outlook, è possibile prendere in considerazione le preferenze dell'utente. L'opzione Posta in arrivo evidenziata, ad esempio, rispetta l'impostazione dell'utente e non modifica la configurazione. Altri parametri consentono di controllare se un utente può o meno modificare l'impostazione. Per altre informazioni, vedere [Distribuzione delle impostazioni di configurazione delle app di Outlook per iOS/iPadOS e Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
+> Per le app con più identità, come Microsoft Outlook, è possibile prendere in considerazione le preferenze dell'utente. L'opzione Posta in arrivo evidenziata, ad esempio, rispetta l'impostazione dell'utente e non modifica la configurazione. Altri parametri consentono di controllare se un utente può o meno modificare l'impostazione. Per altre informazioni, vedere [Distribuzione delle impostazioni di configurazione delle app di Outlook per iOS/iPadOS e Android](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
 
 ## <a name="android-app-configuration-policies"></a>Criteri di configurazione delle app Android
 
@@ -176,7 +176,7 @@ Per raccogliere i log da un dispositivo Android, l'utente o l'utente finale deve
     
 ## <a name="graph-api-support-for-app-configuration"></a>Supporto dell'API Graph per la configurazione delle app
 
-È anche possibile usare l'API Graph per eseguire attività di configurazione delle app. Per informazioni dettagliate, vedere il [riferimento dell'API Graph sulla configurazione di destinazione MAM](https://docs.microsoft.com/graph/api/resources/intune-shared-targetedmanagedappconfiguration?view=graph-rest-beta). Per altre informazioni sull'accesso a Intune e Graph, vedere [Uso di Intune in Microsoft Graph](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-beta).
+È anche possibile usare l'API Graph per eseguire attività di configurazione delle app. Per informazioni dettagliate, vedere il [riferimento dell'API Graph sulla configurazione di destinazione MAM](/graph/api/resources/intune-shared-targetedmanagedappconfiguration?view=graph-rest-beta). Per altre informazioni sull'accesso a Intune e Graph, vedere [Uso di Intune in Microsoft Graph](/graph/api/resources/intune-graph-overview?view=graph-rest-beta).
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 

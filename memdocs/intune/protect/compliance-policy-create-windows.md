@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0357f8fe751738bc3f8a5198db96b2113ee16bfc
-ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
+ms.openlocfilehash: 20d3f3967fa77ab90229915afc8b05043004b125
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559495"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909347"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Impostazioni di Windows 10 e versioni successive per contrassegnare un dispositivo come conforme o non conforme in Intune
 
@@ -49,14 +49,14 @@ Come amministratore di Intune, usare queste impostazioni di conformità per prot
   - **Non configurato** (*impostazione predefinita*): questa impostazione non viene valutata per la conformità o la non conformità.
   - **Rendi obbligatorio**: il dispositivo può proteggere dall'accesso non autorizzato i dati archiviati nell'unità quando il sistema viene spento o viene messo in stato di ibernazione.
   
-  [CSP HealthAttestation del dispositivo - BitLockerStatus](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp)
+  [CSP HealthAttestation del dispositivo - BitLockerStatus](/windows/client-management/mdm/healthattestation-csp)
 
 - **Richiedi l'abilitazione dell'avvio sicuro nel dispositivo**:  
   - **Non configurato** (*impostazione predefinita*): questa impostazione non viene valutata per la conformità o la non conformità.
   - **Rendi obbligatorio**: viene forzato l'avvio del sistema in uno stato attendibile predefinito. I componenti di base usati per avviare il computer devono avere le firme di crittografia corrette considerate attendibili dall'organizzazione che ha prodotto il dispositivo. Il firmware UEFI verifica la firma prima di consentire l'avvio del computer. Se tutti i file vengono manomessi, con conseguente compromissione della firma, il sistema non viene avviato.
 
   > [!NOTE]
-  > L'impostazione **Richiedi l'abilitazione dell'avvio sicuro nel dispositivo** è supportata in alcuni dispositivi TPM 1.2 e 2.0. Per i dispositivi che non supportano TPM 2.0 o versione successiva, lo stato dei criteri in Intune viene indicato come **Non conforme**. Per altre informazioni sulle versioni supportate, vedere [Attestazione dell'integrità dei dispositivi](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation).
+  > L'impostazione **Richiedi l'abilitazione dell'avvio sicuro nel dispositivo** è supportata in alcuni dispositivi TPM 1.2 e 2.0. Per i dispositivi che non supportano TPM 2.0 o versione successiva, lo stato dei criteri in Intune viene indicato come **Non conforme**. Per altre informazioni sulle versioni supportate, vedere [Attestazione dell'integrità dei dispositivi](/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation).
 
 - **Richiedi l'integrità del codice**:  
   l'integrità del codice è una funzionalità che verifica l'integrità di un driver o di un file di sistema ogni volta che viene caricato in memoria.
@@ -65,7 +65,7 @@ Come amministratore di Intune, usare queste impostazioni di conformità per prot
 
 Altre risorse:
 
-- Per informazioni dettagliate sul funzionamento del servizio di attestazione dell'integrità, vedere [CSP HealthAttestation del dispositivo](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp).
+- Per informazioni dettagliate sul funzionamento del servizio di attestazione dell'integrità, vedere [CSP HealthAttestation del dispositivo](/windows/client-management/mdm/healthattestation-csp).
 - [Suggerimento per il supporto: uso delle impostazioni per l'attestazione dell'integrità dei dispositivi come parte dei criteri di conformità di Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643).
 
 ## <a name="device-properties"></a>Proprietà dispositivo
@@ -140,8 +140,8 @@ Si applica solo ai dispositivi con co-gestione che eseguono Windows 10 e version
     > [!TIP]
     > I criteri per le password alfanumeriche possono essere complessi. Invitiamo gli amministratori a leggere i CSP per maggiori informazioni:
     >
-    > - [CSP DeviceLock/AlphanumericDevicePasswordRequired](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-alphanumericdevicepasswordrequired)
-    > - [CSP DeviceLock/MinDevicePasswordComplexCharacters](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-mindevicepasswordcomplexcharacters)
+    > - [CSP DeviceLock/AlphanumericDevicePasswordRequired](/windows/client-management/mdm/policy-csp-devicelock#devicelock-alphanumericdevicepasswordrequired)
+    > - [CSP DeviceLock/MinDevicePasswordComplexCharacters](/windows/client-management/mdm/policy-csp-devicelock#devicelock-mindevicepasswordcomplexcharacters)
 
 - **Lunghezza minima password**:  
   immettere il numero minimo di cifre o caratteri che la password deve avere.
@@ -169,7 +169,7 @@ Si applica solo ai dispositivi con co-gestione che eseguono Windows 10 e version
   - **Non configurato** (*impostazione predefinita*)
   - **Rendi obbligatorio**: usare *Rendi obbligatorio* per crittografare l'archivio dati nei dispositivi.
   
-   [CSP DeviceStatus - DeviceStatus/Compliance/EncryptionCompliance](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+   [CSP DeviceStatus - DeviceStatus/Compliance/EncryptionCompliance](/windows/client-management/mdm/devicestatus-csp)
 
   > [!NOTE]
   > L'impostazione **Encryption of data storage on a device** (Crittografia dell'archivio dati in un dispositivo) verifica in modo generico la presenza di crittografia nel dispositivo. Per impostare la crittografia in modo più affidabile, è consigliabile usare **Richiedi BitLocker**, che sfrutta Attestazione dell'integrità del dispositivo di Windows per convalidare lo stato di Bitlocker a livello di TPM.
@@ -180,28 +180,28 @@ Si applica solo ai dispositivi con co-gestione che eseguono Windows 10 e version
   - **Non configurato** (*impostazione predefinita*): Intune non controlla Microsoft Defender Firewall né modifica le impostazioni esistenti.
   - **Rendi obbligatorio**: attiva Microsoft Defender Firewall e impedisce agli utenti di disattivarlo.
 
-  [CSP Firewall](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp)
+  [CSP Firewall](/windows/client-management/mdm/firewall-csp)
 
   > [!NOTE]
-  > Se il dispositivo viene immediatamente sincronizzato dopo un riavvio o dopo la sospensione, questa impostazione potrebbe segnalare un **errore**. Questo scenario potrebbe non influire sullo stato di conformità complessiva del dispositivo. Per valutare nuovamente lo stato di conformità, [sincronizzare il dispositivo](https://docs.microsoft.com/mem/intune/user-help/sync-your-device-manually-windows) manualmente.
+  > Se il dispositivo viene immediatamente sincronizzato dopo un riavvio o dopo la sospensione, questa impostazione potrebbe segnalare un **errore**. Questo scenario potrebbe non influire sullo stato di conformità complessiva del dispositivo. Per valutare nuovamente lo stato di conformità, [sincronizzare il dispositivo](../user-help/sync-your-device-manually-windows.md) manualmente.
 
 - **Trusted Platform Module (TPM)** :  
   - **Non configurato** (*impostazione predefinita*): Intune non controlla la versione del chip TPM nel dispositivo.
   - **Rendi obbligatorio**: Intune verifica la conformità della versione del chip TPM. Il dispositivo è conforme se la versione del chip TPM è superiore a **0** (zero). Il dispositivo non è conforme se non presenta una versione del chip TPM.
 
-  [CSP DeviceStatus - DeviceStatus/TPM/SpecificationVersion](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+  [CSP DeviceStatus - DeviceStatus/TPM/SpecificationVersion](/windows/client-management/mdm/devicestatus-csp)
   
 - **Antivirus**:  
   - **Non configurato** (*impostazione predefinita)* : Intune non verifica la presenza di soluzioni antivirus installate nel dispositivo.
   - **Rendi obbligatorio**: verificare la conformità usando le soluzioni antivirus registrate nel [Centro sicurezza PC Windows](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), ad esempio Symantec e Microsoft Defender.
 
-  [CSP DeviceStatus - DeviceStatus/Antivirus/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+  [CSP DeviceStatus - DeviceStatus/Antivirus/Status](/windows/client-management/mdm/devicestatus-csp)
 
 - **Antispyware**:  
   - **Non configurato** (*impostazione predefinita*): Intune non verifica la presenza di soluzioni antispyware installate nel dispositivo.
   - **Rendi obbligatorio**: verificare la conformità usando le soluzioni antispyware registrate nel [Centro sicurezza PC Windows](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), ad esempio Symantec e Microsoft Defender.
 
-  [CSP DeviceStatus - DeviceStatus/Antispyware/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+  [CSP DeviceStatus - DeviceStatus/Antispyware/Status](/windows/client-management/mdm/devicestatus-csp)
 
 ### <a name="defender"></a>Defender
 
@@ -221,7 +221,7 @@ Si applica solo ai dispositivi con co-gestione che eseguono Windows 10 e version
   - **Non configurato** (*impostazione predefinita*): Intune non impone alcun requisito.
   - **Rendi obbligatorio**: impone l'aggiornamento dell'intelligence sulla sicurezza di Microsoft Defender.
 
-  [CSP Defender - CSP Defender/Health/SignatureOutOfDate](https://docs.microsoft.com/windows/client-management/mdm/defender-csp)
+  [CSP Defender - CSP Defender/Health/SignatureOutOfDate](/windows/client-management/mdm/defender-csp)
   
   Per altre informazioni, vedere [Aggiornamenti dell'intelligence sulla sicurezza per Microsoft Defender Antivirus e altri prodotti antimalware Microsoft](https://www.microsoft.com/en-us/wdsi/defenderupdates).
 
@@ -229,7 +229,7 @@ Si applica solo ai dispositivi con co-gestione che eseguono Windows 10 e version
   - **Non configurato** (*impostazione predefinita*): Intune non controlla questa funzionalità né modifica le impostazioni esistenti.
   - **Rendi obbligatorio**: attiva la protezione in tempo reale, che analizza il sistema per rilevare malware, spyware e altro software indesiderato.  
 
-  [CSP Criteri - CSP Defender/AllowRealtimeMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
+  [CSP Criteri - CSP Defender/AllowRealtimeMonitoring](/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
 ## <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
 
@@ -251,7 +251,7 @@ Windows Holographic for Business usa la piattaforma **Windows 10 e versioni succ
 
 - **Sicurezza del sistema** > **Crittografia** > **Crittografia dell'archivio dati nel dispositivo**.
 
-Per verificare la crittografia del dispositivo in Microsoft HoloLens, vedere [Verificare la crittografia dispositivo](https://docs.microsoft.com/hololens/security-encryption-data-protection).
+Per verificare la crittografia del dispositivo in Microsoft HoloLens, vedere [Verificare la crittografia dispositivo](/hololens/security-encryption-data-protection).
 
 ## <a name="surface-hub"></a>Surface Hub
 

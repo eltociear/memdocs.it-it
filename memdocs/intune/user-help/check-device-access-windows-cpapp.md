@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 24d83e5ada6109caec2f6238df44559909580931
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: af883fc950a878a70bac2f9121967254583a90d7
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878439"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914447"
 ---
 # <a name="check-access-from-company-portal-app-for-windows"></a>Controllare l'accesso dall'app Portale aziendale per Windows
 
@@ -68,7 +68,7 @@ Completare i passaggi descritti in questo articolo per controllare l'accesso dal
 
     ![Screenshot di esempio dell'app Portale aziendale per Windows, home page, con la sezione Dispositivi personali evidenziata.](./media/1809_CheckAccess_Context_Select_Device.png)  
 
-2. Fare clic con il pulsante destro del mouse o tenere premuto il tasto sinistro su un dispositivo per aprire il relativo [menu di scelta rapida](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus).  
+2. Fare clic con il pulsante destro del mouse o tenere premuto il tasto sinistro su un dispositivo per aprire il relativo [menu di scelta rapida](//windows/uwp/design/controls-and-patterns/menus).  
 
     ![Screenshot di esempio dell'app Portale aziendale per Windows con home page. Il menu di scelta rapida è visibile nella sezione **Dispositivi personali** della pagina e contiene le azioni "Rinomina", "Rimuovi" e "Verifica l'accesso".](./media/1809_DeviceContextMenu_Windows_CP.png)  
 3. Selezionare **Verifica l'accesso**. L'app sincronizza il dispositivo con i requisiti correnti dell'organizzazione e verifica che il dispositivo li soddisfi. Questo controllo può richiedere alcuni minuti.  

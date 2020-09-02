@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43d412fda772fd36710895496087e97d782b8dba
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 950df650466966d7de1c360263b4f6a2c3b0824c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502630"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911659"
 ---
 # <a name="enrolled-device-management-capabilities-of-microsoft-intune"></a>Funzionalità di gestione dei dispositivi registrati di Microsoft Intune
 
@@ -44,7 +44,7 @@ Gli utenti ottengono l'accesso al portale aziendale da cui possono installare le
 |Criteri di configurazione<br><br>Criteri personalizzati| Consentono di gestire molte impostazioni e funzionalità dei dispositivi mobili dell'organizzazione. Ad esempio è possibile impostare una password obbligatoria, limitare il numero di tentativi non riusciti, limitare l'intervallo di tempo prima del blocco dello schermo, impostare la scadenza della password e impedire che vengano usate password già usate in precedenza. È anche possibile controllare l'uso delle funzionalità hardware e software, ad esempio la fotocamera del dispositivo o il Web browser.<br><br>Usare criteri personalizzati quando i criteri di configurazione non includono l'impostazione necessaria. Per i dispositivi iOS/iPadOS è possibile importare le impostazioni esportate dallo strumento Apple Configurator. Per altri dispositivi è possibile usare le impostazioni OMA-URI (Open Mobile Alliance Uniform Resource Identifier) per configurare le impostazioni e le funzionalità nel dispositivo.|[Gestire impostazioni e funzionalità nei dispositivi con i criteri di Microsoft Intune](../protect/device-compliance-get-started.md)|
 |Cancellazione remota, blocco remoto e reimpostazione passcode|Cancella i dati riservati quando un dispositivo viene smarrito o rubato. Ad esempio, è possibile bloccare in remoto il dispositivo, ripristinarne le impostazioni predefinite o cancellare solo i dati aziendali.<br><br>È possibile reimpostare i passcode se gli utenti perdono l'accesso al dispositivo, bloccare i dispositivi persi o rubati o persino cancellarne i dati.|Protezione dei dispositivi con [blocco remoto](../remote-actions/device-remote-lock.md) e [reimpostazione passcode](../remote-actions/device-passcode-reset.md)|
 |Modalità tutto schermo|Consente di bloccare alcune funzionalità dei dispositivi mobili, ad esempio l'acquisizione schermo e l'alimentazione. Consente anche di limitare i dispositivi per eseguire una sola app specificata dall'utente. |[Impostazioni dei criteri di configurazione di iOS in Microsoft Intune](../configuration/device-restrictions-ios.md)|
-|Reimpostazione di Autopilot|Invia un'attività al dispositivo per avviare il processo di reimpostazione in modalità remota, evitando che il personale IT o altri amministratori debbano avviare il processo in ogni computer. Quando si usa la reimpostazione di Autopilot in un dispositivo, l'utente primario del dispositivo viene rimosso. L'utente successivo che accede dopo la reimpostazione verrà impostato come utente primario.|[Ripristino di Windows Autopilot in modalità remota](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)|
+|Reimpostazione di Autopilot|Invia un'attività al dispositivo per avviare il processo di reimpostazione in modalità remota, evitando che il personale IT o altri amministratori debbano avviare il processo in ogni computer. Quando si usa la reimpostazione di Autopilot in un dispositivo, l'utente primario del dispositivo viene rimosso. L'utente successivo che accede dopo la reimpostazione verrà impostato come utente primario.|[Ripristino di Windows Autopilot in modalità remota](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)|
 
 ## <a name="app-management"></a>Gestione delle app
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7163a8a615edd8f1b813801aab1e499ab30e0c20
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4ce8f787c8ba2b08cc47d8f1431ea7d4bdce5e58
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83991012"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914736"
 ---
 # <a name="overview-for-troubleshooting-scep-certificate-profiles-with-microsoft-intune"></a>Panoramica della risoluzione dei problemi di distribuzione dei profili certificato SCEP con Microsoft Intune
 
@@ -80,7 +80,7 @@ L'elenco seguente include i log o le console a cui si fa riferimento nei success
 
 - **NDESConnector_date_time.svclog**:
 
-  questo log visualizza le comunicazioni dal Connettore di certificati di Microsoft Intune al servizio cloud di Intune. Per visualizzare questo log è possibile usare lo strumento [Visualizzatore di tracce dei servizi](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe).
+  questo log visualizza le comunicazioni dal Connettore di certificati di Microsoft Intune al servizio cloud di Intune. Per visualizzare questo log è possibile usare lo strumento [Visualizzatore di tracce dei servizi](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe).
 
   Chiave del Registro di sistema associata: *HKLM\SW\Microsoft\MicrosoftIntune\NDESConnector\ConnectionStatus*
 
@@ -88,7 +88,7 @@ L'elenco seguente include i log o le console a cui si fa riferimento nei success
 
 - **CertificateRegistrationPoint_date_time.svclog**:
 
-  Questo log visualizza il modulo criteri del servizio Registrazione dispositivi di rete che riceve e verifica le richieste di certificati. Per visualizzare questo log è possibile usare lo strumento [Visualizzatore di tracce dei servizi](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe).
+  Questo log visualizza il modulo criteri del servizio Registrazione dispositivi di rete che riceve e verifica le richieste di certificati. Per visualizzare questo log è possibile usare lo strumento [Visualizzatore di tracce dei servizi](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe).
 
   Percorso: Nel server che ospita il servizio Registrazione dispositivi di rete: *%program_files%\Microsoft intune\ndesconnectorsvc\logs\logs*
 
@@ -148,4 +148,4 @@ Nel dispositivo aprire **Visualizzatore eventi** > **Registri applicazioni e ser
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Esaminare la [distribuzione dei profili certificato SCEP](troubleshoot-scep-certificate-profile-deployment.md) 
+Esaminare la [distribuzione dei profili certificato SCEP](troubleshoot-scep-certificate-profile-deployment.md)

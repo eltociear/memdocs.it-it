@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4e917ca63bb671e8dfa46b280a4130051e75ef0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: dae87983f442661046fa48c63b5691f1bef48240
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79342907"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915892"
 ---
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Gestire i PC Windows come computer tramite il client software di Intune
 
@@ -90,7 +90,7 @@ Il client software di Intune supporta [funzionalità di gestione per la protezio
 
 Quando si usa il software client di Intune per gestire i PC Windows, è possibile usare solo i criteri visualizzati nella sezione **Gestione computer**.
 
-Intune gestisce PC Windows tramite criteri in modo analogo a Oggetti Criteri di gruppo di Active Directory Domain Services (AD DS) di Windows Server. Se si gestiscono computer appartenenti a un dominio di Active Directory con Intune, [assicurarsi che i criteri di Intune non siano in conflitto con altri oggetti Criteri di gruppo](resolve-gpo-and-microsoft-intune-policy-conflicts.md) usati nell'organizzazione. Per altre informazioni, vedere [Criteri di gruppo per principianti](https://technet.microsoft.com/library/hh147307.aspx).
+Intune gestisce PC Windows tramite criteri in modo analogo a Oggetti Criteri di gruppo di Active Directory Domain Services (AD DS) di Windows Server. Se si gestiscono computer appartenenti a un dominio di Active Directory con Intune, [assicurarsi che i criteri di Intune non siano in conflitto con altri oggetti Criteri di gruppo](resolve-gpo-and-microsoft-intune-policy-conflicts.md) usati nell'organizzazione. Per altre informazioni, vedere [Criteri di gruppo per principianti](/previous-versions/windows/it-pro/windows-7/hh147307(v=ws.10)).
 
   ![Selezionare il modello per nuovi criteri relativi ai PC Windows](./media/manage-windows-pcs-with-microsoft-intune/select-template-for-pc-policy.png)
 

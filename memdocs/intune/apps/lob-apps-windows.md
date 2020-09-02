@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2614dfc903bf7f10633bf05414ed8a71cdd2e03b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5b70f36873200d0adbbc356d9a482cf13cc2ea49
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990616"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913325"
 ---
 # <a name="add-a-windows-line-of-business-app-to-microsoft-intune"></a>Aggiungere un'app line-of-business per Windows a Microsoft Intune
 
@@ -50,7 +50,7 @@ Un'app line-of-business è un'app che viene aggiunta da un apposito file di inst
    Verranno visualizzati i dettagli dell'app.
 
     > [!NOTE]
-    > Le estensioni file per le app di Windows ora includono **msi**, **appx**, **appxbundle**, **msix** e **msixbundle**. Per altre informazioni su **msix** vedere gli articoli [Documentazione di MSIX](https://docs.microsoft.com/windows/msix/) e [Distribuzione di app MSIX](https://docs.microsoft.com/windows/msix/desktop/managing-your-msix-deployment-enterprise).
+    > Le estensioni file per le app di Windows ora includono **msi**, **appx**, **appxbundle**, **msix** e **msixbundle**. Per altre informazioni su **msix** vedere gli articoli [Documentazione di MSIX](/windows/msix/) e [Distribuzione di app MSIX](/windows/msix/desktop/managing-your-msix-deployment-enterprise).
 
 3. Al termine, selezionare **OK** nel riquadro **File del pacchetto dell'app** per aggiungere l'app.
 
@@ -62,7 +62,7 @@ Un'app line-of-business è un'app che viene aggiunta da un apposito file di inst
     - **Autore**: Immettere il nome dell'autore dell'app.
     - **Contesto di installazione dell'app**: selezionare il contesto di installazione da associare all'app. Per le app dual mode, selezionare il contesto desiderato per l'app. Per tutte le altre app, questa opzione è preselezionata in base al pacchetto e non può essere modificata.
     - **Ignora la versione dell'app**: impostare su **Sì** se lo sviluppatore dell'app aggiorna automaticamente l'app. Questa opzione si applica solo alle app MSI per dispositivi mobili.
-    - **Argomenti della riga di comando**: immettere gli argomenti della riga di comando da applicare per l'esecuzione del file con estensione msi (facoltativo).  Un esempio è **/q**. Non includere il comando msiexec o gli argomenti, ad esempio **/i** oppure **/x**, perché vengono usati automaticamente. Per altre informazioni, vedere [Opzioni della riga di comando](https://docs.microsoft.com/windows/desktop/Msi/command-line-options). Se il file MSI richiede opzioni aggiuntive della riga di comando, considerare la possibilità di usare la [gestione delle app Win32](app-management.md).
+    - **Argomenti della riga di comando**: immettere gli argomenti della riga di comando da applicare per l'esecuzione del file con estensione msi (facoltativo).  Un esempio è **/q**. Non includere il comando msiexec o gli argomenti, ad esempio **/i** oppure **/x**, perché vengono usati automaticamente. Per altre informazioni, vedere [Opzioni della riga di comando](/windows/desktop/Msi/command-line-options). Se il file MSI richiede opzioni aggiuntive della riga di comando, considerare la possibilità di usare la [gestione delle app Win32](app-management.md).
     - **Categoria**: selezionare una o più categorie di app predefinite o una categoria creata dall'utente. Le categorie consentono agli utenti di trovare più facilmente l'app nel portale aziendale.
     - **Visualizza come app in primo piano nel portale aziendale**: Visualizzare chiaramente l'app nella pagina principale del portale aziendale quando gli utenti cercano le app.
     - **URL di informazioni**: Immettere l'URL di un sito Web che include informazioni sull'app (facoltativo). L'URL viene visualizzato nel portale aziendale.

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 61053fff9d28193c8f4fc1731f72fe0052aba154
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: c7e2964281e26e695dcd58629601a34043ab0e55
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820494"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913784"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Applicare funzionalità e impostazioni nei dispositivi usando i profili dei dispositivi in Microsoft Intune
 
@@ -138,7 +138,7 @@ Questa funzionalità supporta:
 
 ## <a name="education"></a>Education
 
-Le [impostazioni di Education - Windows 10](education-settings-configure.md) consentono di configurare le opzioni per l'[app Test ed esami di Windows](https://docs.microsoft.com/education/windows/take-tests-in-windows-10). Quando si configurano queste opzioni, nessun'altra app può essere eseguita sul dispositivo finché il test non è completato.
+Le [impostazioni di Education - Windows 10](education-settings-configure.md) consentono di configurare le opzioni per l'[app Test ed esami di Windows](/education/windows/take-tests-in-windows-10). Quando si configurano queste opzioni, nessun'altra app può essere eseguita sul dispositivo finché il test non è completato.
 
 Le [impostazioni di Education - iOS/iPadOS](../fundamentals/education-settings-configure-ios-shared.md) usano l'app Classroom iOS/iPadOS, progettata per gestire l'insegnamento e controllare i dispositivi degli studenti in aula. È possibile configurare i dispositivi iPad in modo che molti studenti possano condividere un unico dispositivo.
 
@@ -157,7 +157,7 @@ Questa funzionalità supporta:
 
 [Endpoint Protection](../protect/endpoint-protection-configure.md) configura le impostazioni di BitLocker e Microsoft Defender per i dispositivi Windows 10. Configurare quindi il firewall, il gateway e altre risorse nei dispositivi macOS.
 
-Per l'onboarding di Microsoft Defender Advanced Threat Protection (MDATP) in Microsoft Intune, vedere [Configure endpoints using Mobile Device Management (MDM) tools](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm) (Configurare endpoint con gli strumenti di gestione dei dispositivi mobili).
+Per l'onboarding di Microsoft Defender Advanced Threat Protection (MDATP) in Microsoft Intune, vedere [Configure endpoints using Mobile Device Management (MDM) tools](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm) (Configurare endpoint con gli strumenti di gestione dei dispositivi mobili).
 
 Questa funzionalità supporta:
 

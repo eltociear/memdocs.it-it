@@ -18,16 +18,16 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 22910604d19aecb37adef2452d01d46c1435f7ef
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 544257bfb0fc844560cdbb1522345f4f8be63555
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79355257"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907008"
 ---
 # <a name="tutorial-walkthrough-of-microsoft-intune-in-the-azure-portal"></a>Esercitazione: Procedura dettagliata per Microsoft Intune nel portale di Azure
 
-[Azure](https://docs.microsoft.com/learn/modules/welcome-to-azure) contiene più di 100 servizi utili in una vasta gamma di scenari e opportunità di cloud computing. Microsoft Intune è uno dei numerosi servizi disponibili in Azure. Intune consente di assicurarsi che i dispositivi, le app e i dati aziendali soddisfino i requisiti di sicurezza dell'azienda. È possibile specificare i requisiti da controllare e ciò che accade se i requisiti non sono soddisfatti. Il [portale di Azure](https://portal.azure.com) è l'area in cui è disponibile il servizio Microsoft Intune. La conoscenza delle funzionalità disponibili in Intune consentirà di eseguire diverse attività di gestione di dispositivi mobili (MDM) e di gestione di applicazioni mobili (MAM).
+[Azure](/learn/modules/welcome-to-azure) contiene più di 100 servizi utili in una vasta gamma di scenari e opportunità di cloud computing. Microsoft Intune è uno dei numerosi servizi disponibili in Azure. Intune consente di assicurarsi che i dispositivi, le app e i dati aziendali soddisfino i requisiti di sicurezza dell'azienda. È possibile specificare i requisiti da controllare e ciò che accade se i requisiti non sono soddisfatti. Il [portale di Azure](https://portal.azure.com) è l'area in cui è disponibile il servizio Microsoft Intune. La conoscenza delle funzionalità disponibili in Intune consentirà di eseguire diverse attività di gestione di dispositivi mobili (MDM) e di gestione di applicazioni mobili (MAM).
 
 In questa esercitazione:
 > [!div class="checklist"]

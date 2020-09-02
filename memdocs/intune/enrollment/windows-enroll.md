@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48560af1ff31d5660f00e775a2f510b88c08fd9c
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: cf74b7b96f51658f50ae8654b0c3a7e364cac63d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820596"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911803"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Configurare la registrazione dei dispositivi Windows
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Questo articolo offre agli amministratori IT informazioni utili per semplificare la registrazione dei dispositivi Windows per gli utenti. Dopo aver [configurato Intune](../fundamentals/setup-steps.md) gli utenti registrano i dispositivi Windows [accedendo](https://docs.microsoft.com/mem/intune/user-help/windows-enrollment-company-portal) con l'account aziendale o dell'istituto di istruzione.  
+Questo articolo offre agli amministratori IT informazioni utili per semplificare la registrazione dei dispositivi Windows per gli utenti. Dopo aver [configurato Intune](../fundamentals/setup-steps.md) gli utenti registrano i dispositivi Windows [accedendo](../user-help/windows-enrollment-company-portal.md) con l'account aziendale o dell'istituto di istruzione.  
 
 L'amministratore di Intune può semplificare la registrazione nei modi seguenti:
 
@@ -39,7 +39,7 @@ L'amministratore di Intune può semplificare la registrazione nei modi seguenti:
 
 Due fattori determinano in che modo è possibile semplificare la registrazione dei dispositivi Windows:
 
-- **Si usa Azure Active Directory Premium?** <br>[Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) è incluso in Enterprise Mobility + Security e altri piani di licenze.
+- **Si usa Azure Active Directory Premium?** <br>[Azure AD Premium](/azure/active-directory/active-directory-get-started-premium) è incluso in Enterprise Mobility + Security e altri piani di licenze.
 - **Quali versioni dei client Windows richiedono la registrazione da parte degli utenti?** <br>I dispositivi Windows 10 possono essere registrati automaticamente mediante l'aggiunta di un account aziendale o dell'istituto di istruzione. Le versioni precedenti devono essere registrate con l'app del portale aziendale.
 
 ||**Azure AD Premium**|**Altro AD**|
@@ -125,7 +125,7 @@ Azure Active Directory ha un CNAME diverso che usa per la registrazione dei disp
 | --- | --- | --- | --- |
 | CNAME | EnterpriseRegistration. company_domain.com | EnterpriseRegistration.windows.net | 1 ora|
 
-Per altre informazioni sulla registrazione dei dispositivi, vedere [Gestire le identità dei dispositivi usando il portale di Azure](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal)
+Per altre informazioni sulla registrazione dei dispositivi, vedere [Gestire le identità dei dispositivi usando il portale di Azure](/azure/active-directory/devices/device-management-azure-portal)
 
 ## <a name="windows-10-auto-enrollment-and-device-registration"></a>Registrazione automatica di Windows 10 e registrazione dei dispositivi
 

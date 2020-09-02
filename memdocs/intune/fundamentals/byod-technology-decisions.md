@@ -15,12 +15,12 @@ ms.reviewer: pfetty
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a264b9a3b8f0ba15debe7e7323c106f09fa12c6
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: b4523db7f2c7bb27542e7cb3e909ece7c93a996f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455243"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915416"
 ---
 # <a name="technology-decisions-for-enabling-byod-with-microsoft-enterprise-mobility--security-ems"></a>Decisioni in merito alla tecnologia per l'abilitazione di BYOD con Microsoft Enterprise Mobility + Security (EMS)
 
@@ -33,7 +33,7 @@ In questo argomento viene esaminato il caso d'uso semplice di abilitazione di BY
 * Account di posta elettronica ospitati in Exchange Online
 
 ## <a name="common-reasons-to-manage-the-device-mdm"></a>Motivi comuni per scegliere la gestione dei dispositivi (MDM)
-È possibile richiedere facilmente agli utenti di registrare i propri dispositivi nella gestione dei dispositivi tramite la distribuzione di criteri di [accesso condizionale](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) in Exchange Online. L'elenco seguente include i motivi validi per optare per la gestione dei dispositivi personali:
+È possibile richiedere facilmente agli utenti di registrare i propri dispositivi nella gestione dei dispositivi tramite la distribuzione di criteri di [accesso condizionale](/azure/active-directory/active-directory-conditional-access-azure-portal) in Exchange Online. L'elenco seguente include i motivi validi per optare per la gestione dei dispositivi personali:
 
 **WiFi/VPN**: se gli utenti necessitano di un profilo di connettività aziendale per la produttività, è possibile configurarlo facilmente.
 

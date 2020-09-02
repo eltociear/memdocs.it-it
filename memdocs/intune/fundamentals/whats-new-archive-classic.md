@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3c939b2b21bc8bfbf82a997c05f24d91c487a9e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 398f1cd789d0ea2e2c15349e943c8e29545733e1
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81681980"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912322"
 ---
 # <a name="whats-new-in-the-intune-classic-portal---previous-months"></a>Novità del portale di Intune classico - mesi precedenti
 
@@ -345,7 +345,7 @@ __Firefox non supporterà più Silverlight__ <!--VSO TBA-->
 Mozilla sta per rimuovere il supporto per Silverlight nella versione 52 del [browser Firefox](https://www.mozilla.org/firefox), a partire da marzo 2017. Di conseguenza, non sarà più possibile accedere alla console di Intune esistente usando versioni di Firefox superiori alla 51. Si consiglia di usare Internet Explorer 10 o 11 per accedere alla console di amministrazione o una [versione di Firefox precedente alla versione 52](https://ftp.mozilla.org/pub/firefox/releases/). La transizione di Intune al portale di Azure consentirà di supportare una serie di [browser moderni](/azure/azure-preview-portal-supported-browsers-devices) che non dipendono da Silverlight.
 
 __Rimozione del criteri per le cassette postali per dispositivi portatili di Exchange Online__ <!--770687-->
-A partire da dicembre, gli amministratori non potranno più visualizzare o configurare i criteri per le cassette postali per dispositivi portatili di Exchange Online (EAS) all'interno della console di Intune. Questa modifica verrà distribuita in tutti i tenant di Intune nel corso di dicembre e gennaio. La configurazione di tutti i criteri esistenti rimarrà invariata. Per la configurazione dei nuovi criteri, usare Exchange Management Shell. Altre informazioni sono disponibili [qui](https://technet.microsoft.com/library/bb123783%28v=exchg.150%29.aspx).
+A partire da dicembre, gli amministratori non potranno più visualizzare o configurare i criteri per le cassette postali per dispositivi portatili di Exchange Online (EAS) all'interno della console di Intune. Questa modifica verrà distribuita in tutti i tenant di Intune nel corso di dicembre e gennaio. La configurazione di tutti i criteri esistenti rimarrà invariata. Per la configurazione dei nuovi criteri, usare Exchange Management Shell. Altre informazioni sono disponibili [qui](/exchange/mobile-device-mailbox-policies-exchange-2013-help).
 
 __Le app Intune AV Player, Image Viewer e PDF Viewer non sono più supportate in Android__ <!--747553-->
 A partire dalla metà di dicembre 2016, gli utenti non potranno più usare le app Intune AV Player, Image Viewer e PDF Viewer. Queste app sono state sostituite dall'app Azure Information Protection. È possibile trovare altre informazioni sull'app Azure Information Protection [qui](/information-protection/rms-client/mobile-app-faq).

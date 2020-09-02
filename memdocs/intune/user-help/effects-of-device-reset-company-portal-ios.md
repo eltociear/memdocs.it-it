@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1acbb00e5da0766685233cf7136caf8320564200
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 199bd8f267cc84492b21af83bf0761474080f11b
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878077"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913410"
 ---
 # <a name="effects-of-company-portal-ios-device-reset"></a>Effetti della reimpostazione del dispositivo iOS in Portale aziendale 
 
@@ -42,6 +42,6 @@ Se il dispositivo è configurato solo per accedere alla posta elettronica aziend
 
 - L'account di posta elettronica aziendale o dell'istituto di istruzione verrà eliminato. I messaggi di posta elettronica non salvati verranno eliminati.   
 
-L'opzione di reimpostazione del dispositivo non è disponibile per tutti i dispositivi iOS. Per altre informazioni per i responsabili del supporto IT su queste limitazioni, vedere [Rimuovere i dispositivi con la cancellazione, la disattivazione o l'annullamento manuale della registrazione](https://docs.microsoft.com/intune/devices-wipe).  
+L'opzione di reimpostazione del dispositivo non è disponibile per tutti i dispositivi iOS. Per altre informazioni per i responsabili del supporto IT su queste limitazioni, vedere [Rimuovere i dispositivi con la cancellazione, la disattivazione o l'annullamento manuale della registrazione](/intune/devices-wipe).  
 
 Per eventuali domande, contattare il responsabile del supporto IT. Per informazioni sul contatto vedere il [sito Web del portale aziendale](https://go.microsoft.com/fwlink/?linkid=2010980).

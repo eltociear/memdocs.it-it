@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0d127dd8ba455ecb7e10fc94c343d12099a678d5
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 008f750fd15caeac8da9397a1c3ff0684cdf28f7
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079009"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914668"
 ---
 # <a name="how-to-configure-windows-information-protection-in-microsoft-intune"></a>Come configurare Windows Information Protection in Microsoft Intune
 
@@ -38,7 +38,7 @@ Questi criteri di Intune gestiscono l'elenco di app protette da Windows Informat
 > Per usare l'app Portale aziendale di Windows 10 con Windows Information Protection è necessario aggiungere l'app con la modalità **Esente** di Windows Information Protection. 
 
 Per altre informazioni, vedere:
-- [Proteggere i dati aziendali con Windows Information Protection](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
-- [Creare criteri di Windows Information Protection (WIP) usando la console classica per Microsoft Intune](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/create-wip-policy-using-intune)
-- [Creare criteri di Windows Information Protection (WIP) con il software MDM usando il portale di Azure per Microsoft Intune](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/create-wip-policy-using-intune-azure)
-- [Creare criteri di Windows Information Protection (WIP) con il software MAM usando il portale di Azure per Microsoft Intune](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure)
+- [Proteggere i dati aziendali con Windows Information Protection](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
+- [Creare criteri di Windows Information Protection (WIP) usando la console classica per Microsoft Intune](/windows/threat-protection/windows-information-protection/create-wip-policy-using-intune)
+- [Creare criteri di Windows Information Protection (WIP) con il software MDM usando il portale di Azure per Microsoft Intune](/windows/threat-protection/windows-information-protection/create-wip-policy-using-intune-azure)
+- [Creare criteri di Windows Information Protection (WIP) con il software MAM usando il portale di Azure per Microsoft Intune](/windows/threat-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure)

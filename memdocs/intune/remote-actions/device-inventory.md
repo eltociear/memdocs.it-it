@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 27d31e64e99e8dc796b0436052f7220260ab1029
-ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
+ms.openlocfilehash: e6aa3c887a22c468d8d482ce2d4ba0da8202fceb
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84795670"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906821"
 ---
 # <a name="see-device-details-in-intune"></a>Visualizzare i dettagli del dispositivo in Intune
 
@@ -48,10 +48,10 @@ Questo articolo illustra come visualizzare tutti i dispositivi e le relative pro
       - [Reimpostazione di Autopilot](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset) (solo Windows)
       - [Analisi veloce](../configuration/device-restrictions-windows-10.md) (solo Windows 10)
       - [Analisi completa](../configuration/device-restrictions-windows-10.md) (solo Windows 10)
-      - [Aggiornare l'intelligence sulla sicurezza di Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/manage-protection-updates-microsoft-defender-antivirus)
-      - [Rotazione delle chiavi BitLocker](https://docs.microsoft.com/mem/intune/protect/encrypt-devices#to-rotate-the-bitlocker-recovery-key)
+      - [Aggiornare l'intelligence sulla sicurezza di Windows Defender](/windows/security/threat-protection/microsoft-defender-antivirus/manage-protection-updates-microsoft-defender-antivirus)
+      - [Rotazione delle chiavi BitLocker](../protect/encrypt-devices.md#to-rotate-the-bitlocker-recovery-key)
       - [Rinominare il dispositivo](device-rename.md)
-      - [Nuova sessione di assistenza remota](https://docs.microsoft.com/mem/intune/remote-actions/teamviewer-support)
+      - [Nuova sessione di assistenza remota](./teamviewer-support.md)
    - Usare **Proprietà** per assegnare una [categoria del dispositivo creata](../enrollment/device-group-mapping.md) e modificare la proprietà del dispositivo scegliendo dispositivo personale o dispositivo aziendale.
    - **Hardware** include vari dettagli sul dispositivo, ad esempio l'ID del dispositivo, il sistema operativo e la versione, lo spazio di archiviazione e così via.
    - **App individuate** visualizza un elenco di tutte le app installate nel dispositivo individuate da Intune con relativa versione. Per altre informazioni, vedere [App individuate da Intune](../apps/app-discovered-apps.md).

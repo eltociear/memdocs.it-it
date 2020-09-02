@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 10c715bcff63e6ec5a9ec9002926f6ee6608360e
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: 3a64d3f58541194ed4c1a63ac57cddec70ff6873
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455073"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913478"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Come monitorare i criteri di protezione delle app
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -92,7 +92,7 @@ Sono visualizzati gli stessi report disponibili nella parte superiore del riquad
 - **Ultima sincronizzazione**: data dell'ultima sincronizzazione dell'app con Intune.
 
 >[!NOTE]
-> La colonna **Ultima sincronizzazione** contiene lo stesso valore sia nel report Stato dell'utente nella console sia nel [report esportabile con estensione csv](https://docs.microsoft.com/intune/app-protection-policies-monitor#export-app-protection-activities) Criteri di protezione dell'app. La differenza è un leggero ritardo nella sincronizzazione tra i valori nei due report.
+> La colonna **Ultima sincronizzazione** contiene lo stesso valore sia nel report Stato dell'utente nella console sia nel [report esportabile con estensione csv](/intune/app-protection-policies-monitor#export-app-protection-activities) Criteri di protezione dell'app. La differenza è un leggero ritardo nella sincronizzazione tra i valori nei due report.
 >
 > L'ora a cui fa riferimento Ultima sincronizzazione è l'ultima volta in cui Intune ha rilevato l'istanza dell'app. Quando un utente avvia un'app, può informare il servizio Protezione app di Intune al momento dell'avvio, a seconda dell'ultima archiviazione eseguita. Vedere [i tempi degli intervalli tra tentativi per l'archiviazione di Criteri di protezione dell'app](app-protection-policy-delivery.md). Se un utente non ha usato l'app nell'ultimo intervallo di archiviazione, in genere 30 minuti per l'utilizzo attivo, e avvia l'app, si verifica quanto segue:
 >

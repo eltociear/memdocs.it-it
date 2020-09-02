@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3e999cb66c42bd0e04c76cb13689122df187f2f6
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 061ee72dfb473eef8e1373497ad6494fa0c3541c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252725"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912611"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identificare i dispositivi di proprietà dell'azienda
 
@@ -36,7 +36,7 @@ Al momento della registrazione, Intune assegna automaticamente lo stato di propr
 - Registrazione con un account di [manager di registrazione dispositivi](device-enrollment-manager-enroll.md) (tutte le piattaforme)
 - Registrazione con Apple [Device Enrollment Program](device-enrollment-program-enroll-ios.md), [Apple School Manager](apple-school-manager-set-up-ios.md) o [Apple Configurator](apple-configurator-enroll-ios.md) (solo iOS)
 - [Identificazione come di proprietà aziendale prima della registrazione](#identify-corporate-owned-devices-with-imei-or-serial-number) tramite numeri IMEI (International Mobile Equipment Identifier) nel caso di tutte le piattaforme con numeri IMEI oppure tramite i numeri di serie nel caso di iOS e Android
-- Associazione ad Azure Active Directory con credenziali aziendali o dell'istituto di istruzione. [I dispositivi registrati in Azure Active Directory ](https://docs.microsoft.com/azure/active-directory/devices/overview) verranno contrassegnati come personali.
+- Associazione ad Azure Active Directory con credenziali aziendali o dell'istituto di istruzione. [I dispositivi registrati in Azure Active Directory ](/azure/active-directory/devices/overview) verranno contrassegnati come personali.
 - Impostazione come proprietà aziendale [nell'elenco delle proprietà del dispositivo](#change-device-ownership)
 
 Dopo la registrazione, è possibile [modificare l'impostazione della proprietà](#change-device-ownership) tra **Personale** e **Aziendale**.
@@ -49,7 +49,7 @@ Questa funzionalità è supportata nelle piattaforme seguenti:
 
 | Piattaforma | Numeri IMEI | Numeri di serie |
 |---|---|---|
-| Windows | Non supportate | Non supportato |
+| Windows | Non supportato | Non supportato |
 | iOS/macOS | Non supportato (vedere la nota importante di seguito)  | Supportato |
 | Android OS v10 gestito con gestione dispositivi | Non supportato | Non supportato |
 | Profilo di lavoro di Android Enterprise | Non supportato | Supportato |

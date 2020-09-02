@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d9e6806e8d755163d5ae1701ca49ad2daeff464f
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: 45b14b74b6bb08b01ad885eaeffb55a86982a176
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865874"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912781"
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Installare il client software di Intune nei PC Windows
 
@@ -81,7 +81,7 @@ Nei computer in cui verrà installato il software client passare alla cartella i
 
 3. Usare Criteri di gruppo per distribuire il software nei computer della rete.
 
-    Per altre informazioni sull'uso di Criteri di gruppo per distribuire automaticamente il software, vedere [Criteri di gruppo per principianti](https://technet.microsoft.com/library/hh147307.aspx).
+    Per altre informazioni sull'uso di Criteri di gruppo per distribuire automaticamente il software, vedere [Criteri di gruppo per principianti](/previous-versions/windows/it-pro/windows-7/hh147307(v=ws.10)).
 
 ## <a name="deploy-the-client-software-as-part-of-an-image"></a>Installare il software client come parte di un'immagine
 Il software client di Intune può essere distribuito nei computer come parte di un'immagine del sistema operativo, usando come traccia la seguente procedura:

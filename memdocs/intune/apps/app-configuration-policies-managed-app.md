@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 42547885c5f791749517415b325c8c785ec52c13
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: 20b5b3de16023ac475cc41a633e5d3ab915a1bd0
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051404"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910724"
 ---
 # <a name="add-app-configuration-policies-for-managed-apps-without-device-enrollment"></a>Aggiungere criteri di configurazione delle app per le app gestite senza registrazione dei dispositivi
 
@@ -45,13 +45,13 @@ ms.locfileid: "88051404"
  
         Le app abilitate per Intune App SDK supportano le configurazioni in coppie chiave/valore. Per altre informazioni sulle configurazioni chiave-valore supportate, vedere la documentazione delle singole app. Si noti che è possibile usare token che verranno popolati in modo dinamico con i dati generati dall'applicazione. Per eliminare un'impostazione di configurazione generale, scegliere i puntini di sospensione ( **...** ) e selezionare **Elimina**. Per altre informazioni, vedere [Valori di configurazione per l'uso dei token](app-configuration-policies-managed-app.md#configuration-values-for-using-tokens). 
 
-    - **Impostazioni di configurazione di Outlook** - Outlook per iOS e Android offre agli amministratori la possibilità di personalizzare la configurazione predefinita per diverse impostazioni in-app. Per altre informazioni, vedere [Outlook per iOS e Android - Scenari di configurazione delle app generali](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#general-app-configuration-scenarios).
+    - **Impostazioni di configurazione di Outlook** - Outlook per iOS e Android offre agli amministratori la possibilità di personalizzare la configurazione predefinita per diverse impostazioni in-app. Per altre informazioni, vedere [Outlook per iOS e Android - Scenari di configurazione delle app generali](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#general-app-configuration-scenarios).
    
     - **S/MIME** - S/MIME (Secure Multipurpose Internet Mail Extensions) è una specifica che consente agli utenti di inviare e ricevere messaggi di posta elettronica con firma digitale e crittografati.
         - **Abilita S/MIME** - Specificare se i controlli S/MIME sono abilitati o meno durante la composizione di un messaggio di posta elettronica. Valore predefinito: **Non configurato**.
         - **Consenti all'utente di cambiare impostazione** - Specificare se l'utente è autorizzato a modificare l'impostazione. S/MIME deve essere abilitato. Valore predefinito: **Sì**.
         
-    Per altre informazioni sulle impostazioni dei criteri di configurazione per l'app Outlook, vedere [Distribuzione delle impostazioni di configurazione delle app di Outlook per iOS e Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
+    Per altre informazioni sulle impostazioni dei criteri di configurazione per l'app Outlook, vedere [Distribuzione delle impostazioni di configurazione delle app di Outlook per iOS e Android](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
 
 7. Fare clic su **Avanti** per visualizzare la pagina **Assegnazioni**.
 8. Fare clic su **Selezionare i gruppi da includere**.

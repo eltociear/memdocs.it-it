@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78ed3fe234fb4ab236fe35b5e1778582f3eb731d
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: b0324755ef4706e1642357ae7a4e7dc90e719a7e
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461709"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915195"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices"></a>Configurare la registrazione in Intune di dispositivi Android Enterprise completamente gestiti 
 
@@ -60,7 +60,7 @@ Per configurare la gestione di dispositivi Android Enterprise completamente gest
 2. In **Consenti agli utenti di registrare dispositivi utente di proprietà aziendale** scegliere **Sì**.
 
 > [!NOTE]
-> Se sono stati definiti criteri di accesso condizionale di Azure AD che usano il controllo concessione *Richiedi che i dispositivi siano contrassegnati come conformi* o un criterio di blocco e si applicano a **Tutte le app cloud**, **Android** e **Browser**, è necessario escludere l'app cloud **Microsoft Intune** da questi criteri. Ciò è necessario poiché il processo di installazione di Android usa una scheda di Chrome per autenticare gli utenti durante la registrazione. Per altre informazioni, vedere [Documentazione di accesso condizionale di Azure AD](https://docs.microsoft.com/azure/active-directory/conditional-access/).
+> Se sono stati definiti criteri di accesso condizionale di Azure AD che usano il controllo concessione *Richiedi che i dispositivi siano contrassegnati come conformi* o un criterio di blocco e si applicano a **Tutte le app cloud**, **Android** e **Browser**, è necessario escludere l'app cloud **Microsoft Intune** da questi criteri. Ciò è necessario poiché il processo di installazione di Android usa una scheda di Chrome per autenticare gli utenti durante la registrazione. Per altre informazioni, vedere [Documentazione di accesso condizionale di Azure AD](/azure/active-directory/conditional-access/).
 
 Se impostata su **Sì**, questa impostazione rende disponibile per il tenant di Intune un token di registrazione (una stringa casuale) e un codice a matrice. Questo token di registrazione singola è valido per tutti gli utenti e non scade. A seconda del sistema operativo Android e della versione del dispositivo, per registrare il dispositivo è possibile usare il token o il codice a matrice.
 
@@ -70,4 +70,3 @@ Ora è possibile [registrare i dispositivi completamente gestiti](android-dedica
 ## <a name="next-steps"></a>Passaggi successivi
 - [Aggiungere criteri di configurazione dei dispositivi Android Enterprise completamente gestiti](../configuration/device-restrictions-android-for-work.md#fully-managed-dedicated-and-corporate-owned-work-profile)
 - [Configurare criteri di configurazione delle app per dispositivi Android Enterprise completamente gestiti](../apps/app-configuration-policies-use-android.md)
-

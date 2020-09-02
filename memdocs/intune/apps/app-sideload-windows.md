@@ -16,19 +16,19 @@ ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da43cab373021107a940ce0bd71c0f4986d5e907
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: fb981563c2d98389f6d1dda4d050e391e9ad5637
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179622"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910469"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Firmare le app line-of-business per poterle distribuire nei dispositivi Windows con Intune
 
 L'amministratore di Intune ha la possibilità di distribuire app line-of-business (LOB) universali in dispositivi Windows 8.1 Desktop o Windows 10 Desktop e Mobile, inclusa l'app Portale aziendale. Per distribuire le app *con estensione appx* in dispositivi Windows 8.1 Desktop o Windows 10 Desktop e Mobile, è possibile usare un certificato di firma codice di un'autorità di certificazione pubblica già considerata attendibile dai dispositivi Windows oppure usare la propria autorità di certificazione.
 
  > [!NOTE]
- > Windows 8.1 Desktop richiede un criterio enterprise per abilitare il sideload o l'uso delle chiavi di sideload (abilitate automaticamente per i dispositivi aggiunti a un dominio). Per altre informazioni, vedere i [requisiti del sideload in Windows 8](https://blogs.technet.microsoft.com/scd-odtsp/2012/09/27/windows-8-sideloading-requirements-from-technet/).
+ > Windows 8.1 Desktop richiede un criterio enterprise per abilitare il sideload o l'uso delle chiavi di sideload (abilitate automaticamente per i dispositivi aggiunti a un dominio). Per altre informazioni, vedere i [requisiti del sideload in Windows 8](/archive/blogs/scd-odtsp/windows-8-sideloading-requirements-from-technet).
 
 ## <a name="windows-10-sideloading"></a>Sideload in Windows 10
 
@@ -36,11 +36,11 @@ In Windows 10 il sideload è diverso rispetto alle versioni precedenti di Window
 
 - È possibile sbloccare un dispositivo per il sideload usando un criterio enterprise. Intune offre un criterio di configurazione del dispositivo denominato "installazione di app attendibile". L'impostazione del criterio su <allow> è tutto ciò che serve ai dispositivi che già considerano attendibile il certificato usato per firmare l'app APPX.
 
-- I certificati Symantec Phone e le chiavi della licenza per la funzionalità di sideload non sono obbligatori. Tuttavia, se un'autorità di certificazione locale non è disponibile, può essere necessario ottenere un certificato di firma del codice da un'autorità di certificazione pubblica. Per altre informazioni, vedere l'[introduzione alla firma del codice](https://docs.microsoft.com/windows/desktop/SecCrypto/cryptography-tools#introduction-to-code-signing).
+- I certificati Symantec Phone e le chiavi della licenza per la funzionalità di sideload non sono obbligatori. Tuttavia, se un'autorità di certificazione locale non è disponibile, può essere necessario ottenere un certificato di firma del codice da un'autorità di certificazione pubblica. Per altre informazioni, vedere l'[introduzione alla firma del codice](/windows/desktop/SecCrypto/cryptography-tools#introduction-to-code-signing).
 
 ### <a name="code-sign-your-app"></a>Firma del codice dell'app
 
-Il primo passaggio è firmare il codice del pacchetto APPX. Per i dettagli, vedere l'articolo sulla [firma del pacchetto dell'app con SignTool](https://docs.microsoft.com/windows/uwp/packaging/sign-app-package-using-signtool).
+Il primo passaggio è firmare il codice del pacchetto APPX. Per i dettagli, vedere l'articolo sulla [firma del pacchetto dell'app con SignTool](/windows/uwp/packaging/sign-app-package-using-signtool).
 
 ### <a name="upload-your-app"></a>Caricare l'app
 
@@ -98,7 +98,7 @@ Se non si vuole concedere l'accesso a Microsoft Store, è possibile distribuire 
       <img alt="Error message - The Windows app dependency must be provided." src="./media/app-sideload-windows/Win10CP-error-message.png" width="200">
 6. Tornare a Intune e caricare l'app Portale aziendale come una nuova app. Distribuirla come app necessaria al gruppo di utenti di destinazione desiderato.  
 
-Per altre informazioni sul modo in cui Intune gestisce le dipendenze per le app universali, vedere [Deploying an appxbundle with dependencies via Microsoft Intune MDM](https://blogs.technet.microsoft.com/configmgrdogs/2016/11/30/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm/) (Distribuzione di un appxbundle con dipendenze tramite MDM di Microsoft Intune).  
+Per altre informazioni sul modo in cui Intune gestisce le dipendenze per le app universali, vedere [Deploying an appxbundle with dependencies via Microsoft Intune MDM](/archive/blogs/configmgrdogs/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm) (Distribuzione di un appxbundle con dipendenze tramite MDM di Microsoft Intune).  
 
 ### <a name="how-do-i-update-the-company-portal-on-my-users-devices-if-they-have-already-installed-the-older-apps-from-the-store"></a>Come aggiornare l'app Portale aziendale nei dispositivi degli utenti se hanno già installato le app precedenti dallo Store?
 
@@ -136,4 +136,4 @@ Di seguito viene descritto come firmare e distribuire l'app in questo modo:
 |      PublisherId      |      ID editore dell'azienda. Se assente, viene usato il campo 'Subject' del certificato di firma codice mobile aziendale Symantec .       |
 |        SdkPath        | Percorso della cartella radice di Windows 10 SDK. Questo argomento è facoltativo e l'impostazione predefinita è ${env:ProgramFiles(x86)}\Windows Kits\10. |
 
-Al termine dell'esecuzione, lo script genererà la versione firmata dell'app Portale aziendale di Windows 10. Sarà quindi possibile distribuire la versione firmata dell'app come app line-of-business tramite Intune, in modo da aggiornare le versioni attualmente distribuite alla nuova app.  
+Al termine dell'esecuzione, lo script genererà la versione firmata dell'app Portale aziendale di Windows 10. Sarà quindi possibile distribuire la versione firmata dell'app come app line-of-business tramite Intune, in modo da aggiornare le versioni attualmente distribuite alla nuova app.

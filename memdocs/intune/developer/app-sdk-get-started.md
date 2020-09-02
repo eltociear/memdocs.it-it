@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 42362d2c4ccc83718721f5ca314b232274ade46a
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 52dd81efb13bcfcda02c8574e065814f49b5564c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383224"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911846"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Introduzione a Microsoft Intune App SDK
 
@@ -94,9 +94,9 @@ Per integrare Intune App SDK nelle app, è necessario consultare una delle guide
 
 Oltre ad abilitare l'app per i criteri di protezione delle app, è necessario soddisfare i requisiti seguenti affinché l'app possa funzionare correttamente con l'accesso condizionale basato su app di Azure Active Directory (AAD):
 
-* L'app deve essere compilata con la [libreria di autenticazione di Azure Active Directory ](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) e abilitata per l'autenticazione con broker AAD.
+* L'app deve essere compilata con la [libreria di autenticazione di Azure Active Directory ](/azure/active-directory/develop/active-directory-authentication-libraries) e abilitata per l'autenticazione con broker AAD.
 
-* L'[ID client AAD](https://docs.microsoft.com/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication#configure-a-native-client-application) per l'app deve essere univoco sulle piattaforme iOS e Android.
+* L'[ID client AAD](/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication#configure-a-native-client-application) per l'app deve essere univoco sulle piattaforme iOS e Android.
 
 ## <a name="configure-telemetry-for-your-app"></a>Configurazione della telemetria per l'app
 
@@ -108,7 +108,7 @@ Microsoft Intune raccoglie i dati sulle statistiche di utilizzo dell'app.
 
 * **Intune App SDK per Android**: Intune App SDK per Android non controlla la raccolta di dati dall'app. Per impostazione predefinita, l'applicazione Portale aziendale registra dati di telemetria. Questi dati vengono inviati a Microsoft Intune. In base ai criteri Microsoft, non vengono raccolte informazioni personali. 
 
-  * Se l'utente finale sceglie di non inviare questi dati, deve disattivare la telemetria in Impostazioni nell'app Portale aziendale. Per altre informazioni, vedere [Disattivare la raccolta dati di utilizzo di Microsoft](https://docs.microsoft.com/mem/intune/user-help/turn-off-microsoft-usage-data-collection-android). 
+  * Se l'utente finale sceglie di non inviare questi dati, deve disattivare la telemetria in Impostazioni nell'app Portale aziendale. Per altre informazioni, vedere [Disattivare la raccolta dati di utilizzo di Microsoft](../user-help/turn-off-microsoft-usage-data-collection-android.md). 
 
 ## <a name="line-of-business-app-version-numbers"></a>Numeri di versione di app line-of-business
 

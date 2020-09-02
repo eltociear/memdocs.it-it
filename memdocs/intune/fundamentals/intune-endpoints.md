@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c9586b27ce5040eb683fa22510c7c9a51aeee1d
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 0206af58be08130e67907bad18d7afa10e236d44
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262541"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912407"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Endpoint di rete per Microsoft Intune  
 
@@ -91,7 +91,7 @@ Se si usa Intune per distribuire script di PowerShell o app Win32, è necessario
 
 ## <a name="windows-push-notification-services-wns"></a>Servizi notifica push Windows (WNS)  
 
-Per i dispositivi Windows gestiti da Intune che vengono gestiti tramite Gestione dispositivi mobili (MDM), le azioni dei dispositivi e altre attività immediate richiedono l'uso dei servizi notifica push Windows. Per altre informazioni, vedere [Consentire il traffico di notifica Windows attraverso i firewall dell'organizzazione](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).  
+Per i dispositivi Windows gestiti da Intune che vengono gestiti tramite Gestione dispositivi mobili (MDM), le azioni dei dispositivi e altre attività immediate richiedono l'uso dei servizi notifica push Windows. Per altre informazioni, vedere [Consentire il traffico di notifica Windows attraverso i firewall dell'organizzazione](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).  
 
 ## <a name="delivery-optimization-port-requirements"></a>Requisiti delle porte per Ottimizzazione recapito  
 
@@ -101,7 +101,7 @@ Per il traffico peer-to-peer, Ottimizzazione recapito usa la porta 7680 per TCP/
 
 ### <a name="proxy-requirements"></a>Requisiti del proxy  
 
-Per usare Ottimizzazione recapito, è necessario consentire le richieste di intervalli di byte. Per altre informazioni, vedere [Requisiti proxy per Windows Update](https://docs.microsoft.com/windows/deployment/update/windows-update-troubleshooting).
+Per usare Ottimizzazione recapito, è necessario consentire le richieste di intervalli di byte. Per altre informazioni, vedere [Requisiti proxy per Windows Update](/windows/deployment/update/windows-update-troubleshooting).
 
 ### <a name="firewall-requirements"></a>Requisiti del firewall  
 
@@ -125,10 +125,10 @@ Per altre informazioni, vedere gli articoli di Apple [Porte TCP e UDP usate dai 
 
 ## <a name="android-port-information"></a>Informazioni sulle porte Android
 
-A seconda di come si sceglie di gestire i dispositivi Android, potrebbe essere necessario aprire le porte Google Android Enterprise e/o la notifica push Android. Per altre informazioni sui metodi di gestione di Android supportati, vedere la [documentazione relativa alla registrazione di Android](https://docs.microsoft.com/mem/intune/enrollment/android-enroll). 
+A seconda di come si sceglie di gestire i dispositivi Android, potrebbe essere necessario aprire le porte Google Android Enterprise e/o la notifica push Android. Per altre informazioni sui metodi di gestione di Android supportati, vedere la [documentazione relativa alla registrazione di Android](../enrollment/android-enroll.md). 
 
 > [!NOTE]
-> Dato che Google Mobile Services non è disponibile in Cina, i dispositivi in Cina gestiti da Intune non possono usare le funzionalità che richiedono Google Mobile Services. Queste funzionalità comprendono: funzionalità Google Play Protect come l'attestazione del dispositivo SafetyNet, la gestione delle app da Google Play Store, le funzionalità Android Enterprise (vedere questa [documentazione di Google](https://support.google.com/work/android/answer/6270910)). Inoltre, l'app Portale aziendale Intune per Android usa Google Play Services per comunicare con il servizio Microsoft Intune. Poiché Google Play Services non è disponibile in Cina, per il completamento di alcune attività possono essere necessarie fino a 8 ore. Per altre informazioni, vedere questo [articolo](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable).
+> Dato che Google Mobile Services non è disponibile in Cina, i dispositivi in Cina gestiti da Intune non possono usare le funzionalità che richiedono Google Mobile Services. Queste funzionalità comprendono: funzionalità Google Play Protect come l'attestazione del dispositivo SafetyNet, la gestione delle app da Google Play Store, le funzionalità Android Enterprise (vedere questa [documentazione di Google](https://support.google.com/work/android/answer/6270910)). Inoltre, l'app Portale aziendale Intune per Android usa Google Play Services per comunicare con il servizio Microsoft Intune. Poiché Google Play Services non è disponibile in Cina, per il completamento di alcune attività possono essere necessarie fino a 8 ore. Per altre informazioni, vedere questo [articolo](../apps/manage-without-gms.md#limitations-of-intune-device-administrator-management-when-gms-is-unavailable).
 
 ### <a name="google-android-enterprise"></a>Google Android Enterprise 
 
@@ -140,4 +140,4 @@ Intune si avvale di Google Firebase Cloud Messaging (FCM) per la notifica push p
 
 ## <a name="endpoint-analytics"></a>Analisi degli endpoint
 
-Per altre informazioni sugli endpoint necessari per l'analisi degli endpoint, vedere [Configurazione del proxy di analisi degli endpoint](https://docs.microsoft.com/mem/analytics/troubleshoot#bkmk_endpoints).
+Per altre informazioni sugli endpoint necessari per l'analisi degli endpoint, vedere [Configurazione del proxy di analisi degli endpoint](../../analytics/troubleshoot.md#bkmk_endpoints).

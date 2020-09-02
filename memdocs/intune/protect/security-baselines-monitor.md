@@ -16,12 +16,12 @@ ms.reviewer: laarrizz
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cecd39bcba7e16cc933086c99bbc0b403381d75d
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 1ccf9801c7a5977485c6c1864a69be2e46a4af55
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461794"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914872"
 ---
 # <a name="monitor-security-baselines-and-profiles-in-microsoft-intune"></a>Monitorare le baseline di sicurezza e i profili in Microsoft Intune
 
@@ -168,7 +168,7 @@ Nei dispositivi Windows 10 è disponibile un report di informazioni diagnostiche
 
   Ad esempio, cercare nella sezione **Enrolled configuration sources and target resources** (Origini di configurazione registrate e risorse di destinazione) o nella sezione **Unmanaged policies** (Criteri non gestiti). È possibile farsi un'idea del motivo per cui l'impostazione causa un errore o un conflitto.
 
-In [Diagnose MDM failures in Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) (Diagnosticare gli errori MDM in Windows 10) sono disponibili altre informazioni su questo report predefinito.
+In [Diagnose MDM failures in Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) (Diagnosticare gli errori MDM in Windows 10) sono disponibili altre informazioni su questo report predefinito.
 
 > [!TIP]
 >

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ad644d8438b23f36eccad24bee31ee92de5c040
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: d5b80cd7c90b7899e25b14c4cb2de1590530f43a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078848"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910809"
 ---
 # <a name="troubleshoot-device-actions-in-intune"></a>Risolvere i problemi delle azioni dei dispositivi in Intune
 
@@ -99,7 +99,7 @@ Perché uno dei criteri di conformità richiede l'impostazione di un passcode.
 ### <a name="i-cant-restart-a-windows-10-device-after-using-the-wipe-action"></a>Non è possibile riavviare un dispositivo Windows 10 dopo aver usato l'azione di cancellazione
 Questo problema può verificarsi se si usa l'opzione **Cancella i dati del dispositivo e si continua a cancellare anche in caso di perdita di alimentazione del dispositivo. Se si seleziona questa opzione, occorre notare che potrebbe impedire il riavvio di alcuni dispositivi Windows 10.** in un dispositivo Windows 10.
 
-Questo problema può verificarsi quando l'installazione di Windows presenta un danneggiamento importante che impedisce la reinstallazione del sistema operativo. In tal caso, il processo ha esito negativo e lascia il sistema nell'[Ambiente ripristino Windows]( https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference).
+Questo problema può verificarsi quando l'installazione di Windows presenta un danneggiamento importante che impedisce la reinstallazione del sistema operativo. In tal caso, il processo ha esito negativo e lascia il sistema nell'[Ambiente ripristino Windows]( /windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference).
 
 ### <a name="i-cant-restart-a-bitlocker-encrypted-device-after-using-the-wipe-action"></a>Non è possibile riavviare un dispositivo crittografato con BitLocker dopo aver usato l'azione di cancellazione
 Questo problema può verificarsi se si usa l'opzione **Cancella i dati del dispositivo e si continua a cancellare anche in caso di perdita di alimentazione del dispositivo. Se si seleziona questa opzione, occorre notare che potrebbe impedire il riavvio di alcuni dispositivi Windows 10.** in dispositivo crittografato con BitLocker.

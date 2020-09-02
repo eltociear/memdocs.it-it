@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16b7cc65ae043fb48b7f500bfcd65195c7ff7561
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3758764ae594412b35f33d07b635df78a2c26864
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79355699"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912271"
 ---
 # <a name="endpoint-protection-issues-and-possible-solutions-in-microsoft-intune"></a>Problemi di Endpoint Protection e possibili soluzioni in Microsoft Intune
 
@@ -31,7 +31,7 @@ Questo articolo elenca e descrive le possibili cause di alcuni errori e avvisi e
 
 ## <a name="microsoft-defender-error-codes"></a>Codici di errore di Windows Defender
 
-Esaminare i log eventi e i codici di errore per [risolvere i problemi relativi a Antivirus Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/troubleshoot-windows-defender-antivirus).
+Esaminare i log eventi e i codici di errore per [risolvere i problemi relativi a Antivirus Microsoft Defender](/windows/security/threat-protection/windows-defender-antivirus/troubleshoot-windows-defender-antivirus).
 
 ## <a name="common-intune-errors-and-possible-resolutions"></a>Errori comuni di Intune e possibili soluzioni
 

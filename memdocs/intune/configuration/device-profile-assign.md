@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, contperfq1
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 000ee384ff289b9511b2dde3b1468525ffed63d4
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 55835d5ee8527f54e530da5113f841ed108fa6f5
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820001"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915807"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Assegnare profili utente e profili di dispositivo in Microsoft Intune
 
@@ -31,7 +31,7 @@ Dopo aver creato un profilo, completo di tutte le impostazioni specificate, il p
 Questo articolo illustra come assegnare un profilo e include alcune informazioni sull'uso dei tag di ambito nei profili.
 
 > [!NOTE]  
-> Quando un profilo viene rimosso o non è più assegnato a un dispositivo, si possono verificare situazioni diverse, a seconda delle impostazioni presenti nel profilo. Le impostazioni si basano sui provider di servizi di configurazione (CSP) e ogni CSP può gestire la rimozione del profilo in modo diverso. Ad esempio, un'impostazione potrebbe mantenere il valore esistente e non tornare a un valore predefinito. Il comportamento è controllato da ogni CSP nel sistema operativo. Per un elenco di CSP di Windows, vedere il [riferimento sui provider di servizi di configurazione (CSP)](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
+> Quando un profilo viene rimosso o non è più assegnato a un dispositivo, si possono verificare situazioni diverse, a seconda delle impostazioni presenti nel profilo. Le impostazioni si basano sui provider di servizi di configurazione (CSP) e ogni CSP può gestire la rimozione del profilo in modo diverso. Ad esempio, un'impostazione potrebbe mantenere il valore esistente e non tornare a un valore predefinito. Il comportamento è controllato da ogni CSP nel sistema operativo. Per un elenco di CSP di Windows, vedere il [riferimento sui provider di servizi di configurazione (CSP)](/windows/client-management/mdm/configuration-service-provider-reference).
 >
 > Per modificare un'impostazione e usare un valore diverso, creare un nuovo profilo, configurare l'impostazione su **Non configurato** e assegnare il profilo. Dopo l'applicazione al dispositivo, gli utenti devono essere in grado di modificare l'impostazione scegliendo il valore preferito.
 >

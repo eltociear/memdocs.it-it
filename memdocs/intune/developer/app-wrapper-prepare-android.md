@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 69a694ab9da7987271214bc6919cd3b676f9814e
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 82c27aaef1f30e4f021f6370d5c7cf7ce157f3c0
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166060"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908854"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Preparare le app Android per i criteri di protezione delle app con lo strumento di wrapping delle app di Intune
 
@@ -99,7 +99,7 @@ Prendere nota della cartella in cui è installato lo strumento. Il percorso pred
 | **&lt;Parametri comuni&gt;** | (Facoltativo) Il comando supporta parametri PowerShell comuni, come verbose e debug. |
 
 
-- Per un elenco di parametri comuni, vedere il [Microsoft Script Center](https://technet.microsoft.com/library/hh847884.aspx).
+- Per un elenco di parametri comuni, vedere il [Microsoft Script Center](/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 - Per visualizzare informazioni dettagliate sull'uso dello strumento, immettere il seguente comando:
 

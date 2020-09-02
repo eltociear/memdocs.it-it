@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8ce02a86236e390983b4e1ecca8d48d4767e49e
-ms.sourcegitcommit: 9eebe77af18045fceb3d41b43d76b370fe92b30e
+ms.openlocfilehash: 0f6c70bcfa1bf9d23ff3555498cb199ff032bb34
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87821632"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910537"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Aggiungere app Google Play gestite a dispositivi Android Enterprise con Intune
 
@@ -183,7 +183,7 @@ Se è stata approvata un'app dallo Store e l'app non è ancora visualizzata nel 
 
 ## <a name="assigning-a-managed-google-play-app-to-android-enterprise-work-profile-and-corporate-owned-work-profile-devices"></a>Assegnazione di un'app Google Play gestita a dispositivi con profilo di lavoro e di proprietà aziendale con profilo di lavoro Android Enterprise
 
-Quando l'app viene visualizzata nel nodo **Licenze dell'app** del riquadro del carico di lavoro **App**, è possibile [assegnarla come qualsiasi altra app](/mem/intune/apps/apps-deploy) assegnandola ai gruppi di utenti.
+Quando l'app viene visualizzata nel nodo **Licenze dell'app** del riquadro del carico di lavoro **App**, è possibile [assegnarla come qualsiasi altra app](./apps-deploy.md) assegnandola ai gruppi di utenti.
 
 Dopo essere stata assegnata, l'app viene installata o resa disponibile per l'installazione nei dispositivi degli utenti selezionati come destinazione. All'utente del dispositivo non viene chiesto di approvare l'installazione. Per altre informazioni sui dispositivi con profilo di lavoro Android Enterprise, vedere [Configurare la registrazione di dispositivi con profilo di lavoro Android Enterprise](../enrollment/android-work-profile-enroll.md). 
 

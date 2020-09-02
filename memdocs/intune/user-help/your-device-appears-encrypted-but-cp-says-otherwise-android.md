@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: a7ce95d5c28b1b85f27fdd0aee74e3148abfb554
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: a6984f4e6eafee1f81340f483dc557fdb6091ec9
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882264"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910758"
 ---
 # <a name="device-encrypted-but-apps-say-otherwise"></a>Il dispositivo è crittografato, ma le app indicano il contrario
 
@@ -51,7 +51,7 @@ Questa sezione si applica solo all'app Portale aziendale. Se il dispositivo offr
 
 Alcuni dispositivi Android con la versione 7.0 o successive crittografano i dati in modi non coerenti con determinati standard della piattaforma Android. Questi metodi di crittografia mettono a rischio le informazioni sul dispositivo. Di conseguenza, questi dispositivi non sono supportati.
 
-Per un elenco non esaustivo di dispositivi Android supportati, vedere l'articolo [Sistemi operativi e browser supportati in Intune](https://docs.microsoft.com/intune/fundamentals/supported-devices-browsers#supported-samsung-knox-standard-devices). Se il dispositivo non è elencato, consultare il produttore del dispositivo o il responsabile del supporto tecnico.
+Per un elenco non esaustivo di dispositivi Android supportati, vedere l'articolo [Sistemi operativi e browser supportati in Intune](/intune/fundamentals/supported-devices-browsers#supported-samsung-knox-standard-devices). Se il dispositivo non è elencato, consultare il produttore del dispositivo o il responsabile del supporto tecnico.
 
 > [!Note]
 > Microsoft collabora con i produttori per risolvere i problemi rilevati durante i test o segnalati dagli utenti. Questo articolo verrà aggiornato quando saranno disponibili nuove informazioni.
@@ -62,4 +62,4 @@ Se il dispositivo non è stato aggiornato alla versione più recente di Android,
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Serve ancora assistenza? Contattare il supporto tecnico dell'azienda (accedere al [sito Web del portale aziendale](https://go.microsoft.com/fwlink/?linkid=2010980) per informazioni sui contatti) oppure scrivere al <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with enrolling my Android device&body=Describe the issue you're experiencing here.">team Microsoft Android</a>.  
+Serve ancora assistenza? Contattare il supporto tecnico dell'azienda (accedere al [sito Web del portale aziendale](https://go.microsoft.com/fwlink/?linkid=2010980) per informazioni sui contatti) oppure scrivere al <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with enrolling my Android device&body=Describe the issue you're experiencing here.">team Microsoft Android</a>.

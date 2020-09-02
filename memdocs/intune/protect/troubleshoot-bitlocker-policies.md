@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 92d1e1c5d1e2a66ed036d0ed7a5a75d40c737bf3
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 771c1133d10c256d29755ebc146197a6cb35ceee
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428968"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914906"
 ---
 # <a name="troubleshoot-bitlocker-policies-in-microsoft-intune"></a>Risolvere i problemi relativi ai criteri di BitLocker in Microsoft Intune
 
@@ -35,7 +35,7 @@ Con Microsoft Intune, sono disponibili i metodi seguenti per gestire BitLocker n
 
 - **Criteri di configurazione del dispositivo** - Alcune opzioni predefinite dei criteri sono disponibili in Intune quando si crea un profilo di configurazione del dispositivo per gestire Endpoint Protection. Per trovare queste opzioni, [creare un profilo di dispositivo per Endpoint Protection](endpoint-protection-configure.md#create-a-device-profile-containing-endpoint-protection-settings), selezionare **Windows 10 e versioni successive** per *Piattaforma* e quindi selezionare la categoria **Crittografia di Windows** per *Impostazioni*. 
 
-   Per informazioni sulle opzioni e sulle funzionalità disponibili, vedere quanto riportato di seguito: [Crittografia di Windows](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption).
+   Per informazioni sulle opzioni e sulle funzionalità disponibili, vedere quanto riportato di seguito: [Crittografia di Windows](/intune/endpoint-protection-windows-10#windows-encryption).
 
 - **Baseline di sicurezza** - le [baseline di sicurezza](security-baselines.md) sono gruppi noti di impostazioni e valori predefiniti consigliati dal team di sicurezza competente per proteggere i dispositivi Windows. Diverse origini di baseline, come *Baseline di sicurezza di MDM* o *Baseline di Microsoft Defender ATP* possono gestire le stesse impostazioni e anche impostazioni diverse tra di loro. Possono inoltre gestire le stesse impostazioni gestite con i criteri di configurazione del dispositivo. 
 
@@ -43,12 +43,12 @@ Oltre a Intune, per hardware conforme a standby moderno e HSTI, quando si usa un
 
 È anche possibile che le impostazioni di BitLocker siano gestite diversamente, ad esempio tramite Criteri di gruppo oppure manualmente dall'utente del dispositivo.
 
-Indipendentemente dalla modalità di applicazione delle impostazioni a un dispositivo, i criteri di BitLocker usano il [CSP di BitLocker](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) per configurare la crittografia sul dispositivo. Il CSP di BitLocker è integrato in Windows e quando Intune distribuisce un criterio di BitLocker a un dispositivo assegnato, è il CSP di BitLocker nel dispositivo a scrivere i valori appropriati nel Registro di sistema di Windows per rendere effettive le impostazioni del criterio.
+Indipendentemente dalla modalità di applicazione delle impostazioni a un dispositivo, i criteri di BitLocker usano il [CSP di BitLocker](/windows/client-management/mdm/bitlocker-csp) per configurare la crittografia sul dispositivo. Il CSP di BitLocker è integrato in Windows e quando Intune distribuisce un criterio di BitLocker a un dispositivo assegnato, è il CSP di BitLocker nel dispositivo a scrivere i valori appropriati nel Registro di sistema di Windows per rendere effettive le impostazioni del criterio.
 
 Per altre informazioni su BitLocker, vedere le risorse seguenti:
 
-- [BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview)
-- [Panoramica di BitLocker e domande frequenti sui requisiti](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview-and-requirements-faq)
+- [BitLocker](/windows/security/information-protection/bitlocker/bitlocker-overview)
+- [Panoramica di BitLocker e domande frequenti sui requisiti](/windows/security/information-protection/bitlocker/bitlocker-overview-and-requirements-faq)
 
 Una volta acquisite le nozioni generali sul funzionamento di questi criteri, è possibile esaminare in che modo verificare se le impostazioni di BitLocker vengono applicate correttamente a un client Windows.
 
@@ -109,7 +109,7 @@ Dopo aver distribuito i criteri di BitLocker in un dispositivo, visualizzare la 
 
 ![Chiave del Registro di sistema di BitLocker](./media/troubleshooting-bitlocker-policies/registry.png)
 
-Questi valori vengono configurati dal CSP di BitLocker. Verificare che i valori delle chiavi corrispondano alle impostazioni specificate nell'origine dei criteri di crittografia Windows di Intune. Per altre informazioni su ognuna di queste impostazioni, vedere [CSP BitLocker](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp).
+Questi valori vengono configurati dal CSP di BitLocker. Verificare che i valori delle chiavi corrispondano alle impostazioni specificate nell'origine dei criteri di crittografia Windows di Intune. Per altre informazioni su ognuna di queste impostazioni, vedere [CSP BitLocker](/windows/client-management/mdm/bitlocker-csp).
 
 > [!NOTE]
 > Anche il Visualizzatore eventi di Windows contiene varie informazioni correlate a BitLocker. La quantità di informazioni è troppo ampia per essere elencata in questo articolo, ma è sufficiente eseguire una ricerca di **API BitLocker** per ottenere molte informazioni utili.
@@ -136,7 +136,7 @@ EncryptionMethodWithXtsFdvDropDown: 6 (The value 6 refers to the 128 bit encrypt
 EncryptionMethodWithXtsRdvDropDown: 6 (The value 6 refers to the 128 bit encryption)
 ```
 
-Fare riferimento alla [documentazione del CSP di BitLocker](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) per determinare il significato dei singoli valori. A titolo esemplificativo, nell'immagine seguente è riportato un frammento di codice.
+Fare riferimento alla [documentazione del CSP di BitLocker](/windows/client-management/mdm/bitlocker-csp) per determinare il significato dei singoli valori. A titolo esemplificativo, nell'immagine seguente è riportato un frammento di codice.
 
 ![Finalità dei valori](./media/troubleshooting-bitlocker-policies/shared-example.png)
 
@@ -162,10 +162,10 @@ A questo punto dovrebbe essere chiaro come verificare che il criterio di BitLock
 - **Non viene distribuito l'intero criterio o il problema è limitato ad alcune impostazioni?** Nel caso in cui non vengono applicate solo alcune impostazioni del criterio, tenere presente quanto segue:
 
   1. **Non tutte le impostazioni di BitLocker sono supportate in tutte le versioni di Windows**.
-     Il criterio viene distribuito a un dispositivo come singola unità. Se pertanto alcune impostazioni si applicano e altre no, si può essere certi che il criterio è stato ricevuto. In questo scenario è possibile che le impostazioni non applicate non siano supportate dalla versione di Windows nel dispositivo. Per informazioni dettagliate sui requisiti di versione per ogni impostazione, vedere [CSP BitLocker](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) nella documentazione di Windows.
+     Il criterio viene distribuito a un dispositivo come singola unità. Se pertanto alcune impostazioni si applicano e altre no, si può essere certi che il criterio è stato ricevuto. In questo scenario è possibile che le impostazioni non applicate non siano supportate dalla versione di Windows nel dispositivo. Per informazioni dettagliate sui requisiti di versione per ogni impostazione, vedere [CSP BitLocker](/windows/client-management/mdm/bitlocker-csp) nella documentazione di Windows.
 
   2. **Non tutti i componenti hardware includono il supporto per BitLocker**.
-     Anche se si dispone della versione corretta di Windows, è possibile che l'hardware del dispositivo sottostante non soddisfi i requisiti per la crittografia BitLocker. I [requisiti di sistema per BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements) sono riportati nella documentazione di Windows, ma è soprattutto importante verificare che il dispositivo disponga di un chip TPM compatibile (1.2 o versione successiva) e di un BIOS conforme a Trusted Computing Group (TCG) o di un firmware UEFI.
+     Anche se si dispone della versione corretta di Windows, è possibile che l'hardware del dispositivo sottostante non soddisfi i requisiti per la crittografia BitLocker. I [requisiti di sistema per BitLocker](/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements) sono riportati nella documentazione di Windows, ma è soprattutto importante verificare che il dispositivo disponga di un chip TPM compatibile (1.2 o versione successiva) e di un BIOS conforme a Trusted Computing Group (TCG) o di un firmware UEFI.
      
 La **crittografia BitLocker non viene eseguita automaticamente**: i criteri di Endpoint Protection sono stati configurati, l'opzione "Avviso per la crittografia dischi di altro tipo" è stata impostata sul blocco e viene ancora visualizzata la crittografia guidata:
 
@@ -209,11 +209,11 @@ Quando si risolvono i problemi relativi al criterio di BitLocker con Intune e si
 
 Di seguito sono elencate altre risorse che possono risultare utili quando si usa BitLocker:
 
-- [Documentazione del prodotto BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview)
-- [Requisiti di sistema per BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements)
-- [Domande frequenti su BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-frequently-asked-questions)
-- [Documentazione del CSP di BitLocker](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)
-- [Impostazioni del criterio di crittografia di Windows per Intune](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption)
-- [Crittografia BitLocker automatica indipendente dall'hardware con AAD/MDM](https://blogs.technet.microsoft.com/home_is_where_i_lay_my_head/2017/06/07/hardware-independent-automatic-bitlocker-encryption-using-aadmdm/)
+- [Documentazione del prodotto BitLocker](/windows/security/information-protection/bitlocker/bitlocker-overview)
+- [Requisiti di sistema per BitLocker](/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements)
+- [Domande frequenti su BitLocker](/windows/security/information-protection/bitlocker/bitlocker-frequently-asked-questions)
+- [Documentazione del CSP di BitLocker](/windows/client-management/mdm/bitlocker-csp)
+- [Impostazioni del criterio di crittografia di Windows per Intune](/intune/endpoint-protection-windows-10#windows-encryption)
+- [Crittografia BitLocker automatica indipendente dall'hardware con AAD/MDM](/archive/blogs/home_is_where_i_lay_my_head/hardware-independent-automatic-bitlocker-encryption-using-aadmdm)
 - [Criteri CSP per la crittografia BitLocker nei dispositivi Autopilot](https://techcommunity.microsoft.com/t5/Windows-10-security/CSP-policy-for-bitLocker-encryption-on-autopilot-devices/m-p/284537)
-- [Procedura dettagliata per la creazione e la distribuzione del criterio di BitLocker con Intune](https://blogs.technet.microsoft.com/cbernier/2017/07/11/windows-10-intune-windows-bitlocker-management-yes/)
+- [Procedura dettagliata per la creazione e la distribuzione del criterio di BitLocker con Intune](/archive/blogs/cbernier/windows-10-intune-windows-bitlocker-management-yes)

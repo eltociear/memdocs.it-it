@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9dca2303d960937a529a902391d6c05539fc9d4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 701794ba476f87aaf079e39c834f3e8e3f2c280d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79359313"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913886"
 ---
 # <a name="intune-enrollment-method-capabilities-for-windows-devices"></a>Funzionalità di Intune per i metodi di registrazione dei dispositivi Windows
 [!INCLUDE[azure_portal](../includes/azure_portal.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "79359313"
 Esistono diversi metodi per registrare i dispositivi del personale in Intune. Ogni metodo presenta procedure consigliate e funzionalità diverse, come illustrato nelle tabelle seguenti.
 
 ## <a name="best-practices-by-enrollment-method"></a>Procedure consigliate per metodo di registrazione
-| **Procedure consigliate** | **[Aggiunto ad Azure AD](windows-enroll.md#enable-windows-10-automatic-enrollment)**|**[Aggiunto ad Azure AD con Autopilot (modalità definita dall'utente)](enrollment-autopilot.md)** |**[Aggiunto ad Azure AD con Autopilot (modalità di distribuzione automatica)](enrollment-autopilot.md)** |**[Bulk](windows-bulk-enroll.md)**|**[DEM](device-enrollment-manager-enroll.md)** | **[BYOD](device-enrollment.md#bring-your-own-device)** | **[Oggetto Criteri di gruppo](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)** | **[Co-gestione](https://docs.microsoft.com/configmgr/core/clients/manage/co-management-overview)** |
+| **Procedure consigliate** | **[Aggiunto ad Azure AD](windows-enroll.md#enable-windows-10-automatic-enrollment)**|**[Aggiunto ad Azure AD con Autopilot (modalità definita dall'utente)](../../autopilot/enrollment-autopilot.md)** |**[Aggiunto ad Azure AD con Autopilot (modalità di distribuzione automatica)](../../autopilot/enrollment-autopilot.md)** |**[Bulk](windows-bulk-enroll.md)**|**[DEM](device-enrollment-manager-enroll.md)** | **[BYOD](device-enrollment.md#bring-your-own-device)** | **[Oggetto Criteri di gruppo](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)** | **[Co-gestione](/configmgr/core/clients/manage/co-management-overview)** |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Usato comunemente in EDU|![X](./media/enrollment-method-capab/xmark.png)|![Segno di spunta](./media/enrollment-method-capab/checkmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![Segno di spunta](./media/enrollment-method-capab/checkmark.png)|![Segno di spunta](./media/enrollment-method-capab/checkmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![X](./media/enrollment-method-capab/xmark.png)|
 |I dispositivi possono essere condivisi|![X](./media/enrollment-method-capab/xmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![Segno di spunta](./media/enrollment-method-capab/checkmark.png)|![Segno di spunta](./media/enrollment-method-capab/checkmark.png)|![Segno di spunta](./media/enrollment-method-capab/checkmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![X](./media/enrollment-method-capab/xmark.png)|
@@ -39,7 +39,7 @@ Esistono diversi metodi per registrare i dispositivi del personale in Intune. Og
 
 ## <a name="capabilities-by-enrollment-method"></a>Procedure consigliate per metodo di registrazione
 
-| **Funzionalità** | **[Aggiunto ad Azure AD](windows-enroll.md#enable-windows-10-automatic-enrollment)**|**[Aggiunto ad Azure AD con Autopilot (modalità definita dall'utente)](enrollment-autopilot.md)** |**[Aggiunto ad Azure AD con Autopilot (modalità di distribuzione automatica)](enrollment-autopilot.md)** |**[Bulk](windows-bulk-enroll.md)**|**[DEM](device-enrollment-manager-enroll.md)** | **[BYOD](device-enrollment.md#bring-your-own-device)** | **[Oggetto Criteri di gruppo](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)** | **[Co-gestione](https://docs.microsoft.com/configmgr/core/clients/manage/co-management-overview)** |
+| **Funzionalità** | **[Aggiunto ad Azure AD](windows-enroll.md#enable-windows-10-automatic-enrollment)**|**[Aggiunto ad Azure AD con Autopilot (modalità definita dall'utente)](../../autopilot/enrollment-autopilot.md)** |**[Aggiunto ad Azure AD con Autopilot (modalità di distribuzione automatica)](../../autopilot/enrollment-autopilot.md)** |**[Bulk](windows-bulk-enroll.md)**|**[DEM](device-enrollment-manager-enroll.md)** | **[BYOD](device-enrollment.md#bring-your-own-device)** | **[Oggetto Criteri di gruppo](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)** | **[Co-gestione](/configmgr/core/clients/manage/co-management-overview)** |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Accesso condizionale                                      |![Segno di spunta](./media/enrollment-method-capab/checkmark.png)|![Segno di spunta](./media/enrollment-method-capab/checkmark.png)|![Segno di spunta](./media/enrollment-method-capab/checkmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![Segno di spunta](./media/enrollment-method-capab/checkmark.png)\*\*|![Segno di spunta](./media/enrollment-method-capab/checkmark.png)|![Segno di spunta](./media/enrollment-method-capab/checkmark.png)|![Segno di spunta](./media/enrollment-method-capab/checkmark.png)|
 |L'utente viene associato al dispositivo                    |![Segno di spunta](./media/enrollment-method-capab/checkmark.png)|![Segno di spunta](./media/enrollment-method-capab/checkmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![Segno di spunta](./media/enrollment-method-capab/checkmark.png)|![Segno di spunta](./media/enrollment-method-capab/checkmark.png)|![Segno di spunta](./media/enrollment-method-capab/checkmark.png)|
@@ -60,4 +60,3 @@ Esistono diversi metodi per registrare i dispositivi del personale in Intune. Og
 ## <a name="next-steps"></a>Passaggi successivi
 
 [Configurare la registrazione per Windows](windows-enroll.md)
-

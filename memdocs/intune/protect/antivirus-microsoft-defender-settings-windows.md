@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 92fa75794022123fd9456c40a50780a50f604662
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: ff5c8208cb1ee9357c501a3c457bc346879b241d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819780"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906702"
 ---
 # <a name="settings-for-windows-10-microsoft-defender-antivirus-policy-in-microsoft-intune"></a>Impostazioni per i criteri di Microsoft Defender Antivirus per Windows 10 in Microsoft Intune
 
@@ -36,7 +36,7 @@ Queste impostazioni sono disponibili nei profili seguenti:
 **Impostazioni**:
 
 - **Attiva la protezione fornita dal cloud**  
-  CSP: [AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
+  CSP: [AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 
   Per impostazione predefinita, nei dispositivi Windows 10 desktop Defender invia informazioni a Microsoft in merito a eventuali problemi riscontrati. Le informazioni vengono analizzate per acquisire altre informazioni sui problemi riscontrati dall'utente e da altri clienti e offrire soluzioni migliorate.
 
@@ -45,7 +45,7 @@ Queste impostazioni sono disponibili nei profili seguenti:
   - **Sì**: la protezione fornita dal cloud è attiva.  Gli utenti dei dispositivi non possono modificare questa impostazione.
 
 - **Livello di protezione fornita dal cloud**  
-  CSP: [CloudBlockLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
+  CSP: [CloudBlockLevel](/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
 
   Consente di configurare l'aggressività con cui Defender Antivirus deve bloccare e analizzare i file sospetti.
   - **Non configurata** (*impostazione predefinita*): livello di blocco predefinito di Defender.
@@ -54,7 +54,7 @@ Queste impostazioni sono disponibili nei profili seguenti:
   - **Tolleranza zero**: blocco di tutti i file eseguibili sconosciuti.
 
 - **Defender - Timeout esteso per il cloud in secondi**  
-  CSP: [CloudExtendedTimeout](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout)
+  CSP: [CloudExtendedTimeout](/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout)
 
   Defender Antivirus blocca automaticamente i file sospetti per 10 secondi mentre li analizza nel cloud per verificare che siano sicuri. È possibile aggiungere fino a 50 secondi a questo timeout.
 
@@ -70,17 +70,17 @@ Queste impostazioni sono disponibili nei profili seguenti:
 Per ogni impostazione in questo gruppo, è possibile espandere l'impostazione, selezionare **Aggiungi** e quindi specificare un valore per l'esclusione.
 
 - **Defender - Processi da escludere**  
-  CSP: [ExcludedProcesses](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
+  CSP: [ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
 
   Consente di specificare un elenco di file aperti dai processi da ignorare durante un'analisi. Il processo stesso non viene escluso dall'analisi.
 
 - **Estensioni di file da escludere dalle analisi e dalla protezione in tempo reale**  
-  CSP: [ExcludedExtensions](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
+  CSP: [ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
 
   Consente di specificare un elenco di estensioni di tipi di file da ignorare durante un'analisi.
 
 - **Defender - File e cartelle da escludere**  
-  CSP: [ExcludedPaths](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
+  CSP: [ExcludedPaths](/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
 
   Consente di specificare un elenco di file e percorsi di directory da ignorare durante un'analisi.
 
@@ -93,7 +93,7 @@ Queste impostazioni sono disponibili nei profili seguenti:
 **Impostazioni**:
 
 - **Attiva protezione in tempo reale**  
-  CSP: [AllowRealtimeMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
+  CSP: [AllowRealtimeMonitoring](/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
   Richiede che nei dispositivi desktop Windows 10 Defender usi la funzionalità di monitoraggio in tempo reale.
   - **Non configurata** (*impostazione predefinita*): l'impostazione viene ripristinata sul valore predefinito di sistema
@@ -127,7 +127,7 @@ Queste impostazioni sono disponibili nei profili seguenti:
   - **Sì**: impone l'uso del monitoraggio del comportamento in tempo reale. Gli utenti dei dispositivi non possono modificare questa impostazione.
 
 - **Attiva la protezione di rete**  
-  CSP: [EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
+  CSP: [EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
 
   Protegge gli utenti dei dispositivi durante l'uso di qualsiasi app da tentativi di phishing, da siti che ospitano exploit e da contenuto dannoso su Internet. La protezione impedisce anche ai browser di terze parti di connettersi a siti pericolosi.
 
@@ -321,14 +321,14 @@ Queste impostazioni sono disponibili nei profili seguenti:
   Specificare l'intervallo in ore (da zero a 24) da usare per il controllo delle firme. Se il valore è zero, non viene verificata la disponibilità di nuove firme. Se il valore è 2, il controllo viene eseguito ogni due ore e così via.
 
 - **Definisci le condivisioni file per il download degli aggiornamenti delle definizioni**  
-  CSP: [SignatureUpdateFallbackOrder](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefallbackorder)
+  CSP: [SignatureUpdateFallbackOrder](/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefallbackorder)
 
   Gestire i percorsi, ad esempio una condivisione file UNC, come percorso di origine del download per ottenere gli aggiornamenti delle definizioni. Dopo il completamento del download degli aggiornamenti delle definizioni da un'origine specificata, le origini rimanenti nell'elenco non verranno contattate.
 
   È possibile **aggiungere** singoli percorsi oppure **importare** un elenco di percorsi come file CSV.
 
 - **Definisci l'ordine delle origini per il download degli aggiornamenti delle definizioni**  
-  CSP: [SignatureUpdateFileSharesSources](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefilesharessources)
+  CSP: [SignatureUpdateFileSharesSources](/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefilesharessources)
 
   Specificare in quale ordine contattare i percorsi di origine specificati per ottenere gli aggiornamenti delle definizioni. Dopo il completamento del download degli aggiornamenti delle definizioni da un'origine specificata, le origini rimanenti nell'elenco non verranno contattate.
 
@@ -346,4 +346,3 @@ Queste impostazioni sono disponibili nei profili seguenti:
   - **Non configurata** (*impostazione predefinita* ): l'impostazione torna al valore predefinito del client, in base al quale l'interfaccia utente e le notifiche sono consentite.
   - **No**: l'interfaccia utente di Defender non è accessibile e le notifiche sono state eliminate.
   - **Sì**
-

@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: kerimh
-ms.openlocfilehash: e42d7f303d3d79e2683845b50c7d3dceb11f1686
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 3ffef32f4f33e79b25145dd4c0257b8a5bcfd32a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820443"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913767"
 ---
 # <a name="delivery-optimization-settings-in-microsoft-intune"></a>Impostazioni di Ottimizzazione recapito in Microsoft Intune
 
@@ -30,7 +30,7 @@ Questo articolo descrive come configurare le impostazioni di Ottimizzazione reca
 
 Per visualizzare un elenco delle impostazioni di Ottimizzazione recapito supportate da Intune, vedere [Impostazioni di Ottimizzazione recapito per Intune](delivery-optimization-settings.md).  
 
-Per informazioni sull'ottimizzazione recapito in Windows 10, vedere [Ottimizzazione recapito per gli aggiornamenti](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) nella documentazione di Windows.  
+Per informazioni sull'ottimizzazione recapito in Windows 10, vedere [Ottimizzazione recapito per gli aggiornamenti](/windows/deployment/update/waas-delivery-optimization) nella documentazione di Windows.  
 
 ## <a name="create-the-profile"></a>Creare il profilo
 

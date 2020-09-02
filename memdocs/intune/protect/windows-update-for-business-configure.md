@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4425178dde820bc1f9b0503d50406c007d090ca
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: b8d6bb9e69831d2804d93d3694671f8dd27da305
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252572"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915977"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Gestire gli aggiornamenti software di Windows 10 in Intune
 
@@ -38,7 +38,7 @@ Intune offre i tipi di criteri seguenti per gestire gli aggiornamenti:
 
 I criteri per gli anelli di aggiornamento di Windows 10 e gli aggiornamenti delle funzionalità di Windows 10 vengono assegnati a gruppi di dispositivi. È possibile usare entrambi i tipi di criteri nello stesso ambiente di Intune per gestire gli aggiornamenti software per i dispositivi Windows 10 e per creare una strategia di aggiornamento che rispecchi le esigenze aziendali.
 
-Per altre informazioni, vedere [Gestire gli aggiornamenti con Windows Update for Business](https://technet.microsoft.com/itpro/windows/manage/waas-manage-updates-wufb).
+Per altre informazioni, vedere [Gestire gli aggiornamenti con Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb).
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -182,7 +182,7 @@ Quando si usa Disinstalla, prendere in considerazione i seguenti aspetti:
 
   Si consideri ad esempio un anello di aggiornamento che ha un periodo di disinstallazione degli aggiornamenti delle funzionalità di 20 giorni. Dopo 25 giorni si decide di eseguire il rollback dell'aggiornamento delle funzionalità più recente e di usare l'opzione di disinstallazione.  I dispositivi che hanno installato l'aggiornamento delle funzionalità oltre 20 giorni prima non possono disinstallare l'aggiornamento perché sono stati rimossi i bit necessari come parte della manutenzione. I dispositivi che invece hanno installato l'aggiornamento delle funzionalità non oltre 19 giorni prima possono disinstallare l'aggiornamento, verificando di aver ricevuto il comando di disinstallazione prima di aver superato il periodo di disinstallazione di 20 giorni.
 
-Per altre informazioni sui criteri di Windows Update, vedere [Update CSP](https://docs.microsoft.com/windows/client-management/mdm/update-csp) (Provider del servizio di configurazione degli aggiornamenti) nella documentazione relativa alla gestione dei client di Windows.
+Per altre informazioni sui criteri di Windows Update, vedere [Update CSP](/windows/client-management/mdm/update-csp) (Provider del servizio di configurazione degli aggiornamenti) nella documentazione relativa alla gestione dei client di Windows.
 
 ##### <a name="to-uninstall-the-latest-windows-10-update"></a>Per disinstallare l'aggiornamento più recente di Windows 10
 
@@ -247,7 +247,7 @@ Da questa pagina è possibile effettuare le seguenti operazioni:
 
 ## <a name="validation-and-reporting-for-windows-10-updates"></a>Convalida e creazione di report per gli aggiornamenti di Windows 10
 
-Sia per gli anelli di aggiornamento di Windows 10 che per gli aggiornamenti delle funzionalità di Windows 10 usare i [report sulla conformità di Intune per gli aggiornamenti](windows-update-compliance-reports.md) per monitorare lo stato dell'aggiornamento dei dispositivi. Questa soluzione usa [Conformità aggiornamenti](https://docs.microsoft.com/windows/deployment/update/update-compliance-monitor) con la sottoscrizione di Azure.
+Sia per gli anelli di aggiornamento di Windows 10 che per gli aggiornamenti delle funzionalità di Windows 10 usare i [report sulla conformità di Intune per gli aggiornamenti](windows-update-compliance-reports.md) per monitorare lo stato dell'aggiornamento dei dispositivi. Questa soluzione usa [Conformità aggiornamenti](/windows/deployment/update/update-compliance-monitor) con la sottoscrizione di Azure.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

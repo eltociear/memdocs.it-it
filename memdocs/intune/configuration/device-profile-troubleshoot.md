@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6004526d8c9340e70e5149f2261eea07a916ed7
-ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
+ms.openlocfilehash: 849be91ccedab1f97b68b14e5bc2a51bc5a62f19
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871984"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915297"
 ---
 # <a name="common-questions-and-answers-with-device-policies-and-profiles-in-microsoft-intune"></a>Domande e risposte comuni per i criteri e i profili dei dispositivi in Microsoft Intune
 
@@ -149,7 +149,7 @@ Alcune impostazioni nei dispositivi Windows 10 potrebbero risultare "Non applica
 - L'impostazione è disponibile solo per le versioni più recenti di Windows e non per la versione del sistema operativo in esecuzione nel dispositivo.
 - L'impostazione è disponibile solo per edizioni specifiche di Windows o per SKU specifici, ad esempio Home, Professional, Enterprise e Education.
 
-Per altre informazioni sui requisiti relativi a versioni e SKU per le diverse impostazioni, vedere [Configuration Service Provider (CSP) reference](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) (Informazioni di riferimento sul provider di servizi di configurazione).
+Per altre informazioni sui requisiti relativi a versioni e SKU per le diverse impostazioni, vedere [Configuration Service Provider (CSP) reference](/windows/client-management/mdm/configuration-service-provider-reference) (Informazioni di riferimento sul provider di servizi di configurazione).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

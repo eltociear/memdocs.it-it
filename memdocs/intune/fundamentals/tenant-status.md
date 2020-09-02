@@ -16,19 +16,19 @@ ms.reviewer: crisk
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4d747a38dd8e2f95cafb25ec5705f83199f4c54
-ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
+ms.openlocfilehash: cd4c64e08177387561323b1e59bef3b976bf0bf3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83690684"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911183"
 ---
 # <a name="use-the-intune-tenant-status-page"></a>Usare la pagina Stato del tenant di Intune
 
 La pagina Stato del tenant di Microsoft Intune è un hub centralizzato in cui è possibile visualizzare dettagli aggiornati e importanti sul tenant. Queste informazioni includono la disponibilità e l'uso di licenze, lo stato del connettore e importanti comunicazioni sul servizio Intune.
 
 > [!TIP]
-> Un tenant è un'istanza di Azure Active Directory (Azure AD). La sottoscrizione a Intune è ospitata da un tenant di Azure AD. Per altre informazioni, vedere [Configurare un tenant](https://docs.microsoft.com/azure/active-directory/develop/quickstart-create-new-tenant) nella documentazione di Azure AD.
+> Un tenant è un'istanza di Azure Active Directory (Azure AD). La sottoscrizione a Intune è ospitata da un tenant di Azure AD. Per altre informazioni, vedere [Configurare un tenant](/azure/active-directory/develop/quickstart-create-new-tenant) nella documentazione di Azure AD.
 
 Per visualizzare il dashboard accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), passare ad **Amministrazione del tenant** e selezionare **Stato del tenant**.
 

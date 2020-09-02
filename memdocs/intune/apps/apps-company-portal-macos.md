@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a58e22af70a3cf119cb044a15b40ba581fe6452c
-ms.sourcegitcommit: 5c15b59cde085787b85f032f88add70a11d8e9a2
+ms.openlocfilehash: 1eb64f8ed2bc67b4800a4583010dea150ade421d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86452848"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914158"
 ---
 # <a name="add-the-macos-company-portal-app"></a>Aggiungere l'app Portale aziendale macOS
 
@@ -40,7 +40,7 @@ Per mantenere le app più sicure e aggiornate una volta installate, l'app Portal
 > L'app Portale aziendale può essere installata automaticamente solo nei dispositivi che usano Intune e sono già registrati usando la registrazione diretta o la registrazione automatica dei dispositivi. Per la registrazione manuale o di dispositivi personali, è necessario scaricare e installare l'app Portale aziendale per avviare la registrazione. Vedere [Dare istruzioni agli utenti di scaricare e installare l'app Portale aziendale](#instruct-users-to-download-and-install-company-portal).
 ## <a name="instruct-users-to-download-and-install-company-portal"></a>Dare istruzioni agli utenti di scaricare e installare l'app Portale aziendale
 
-È possibile dare istruzioni agli utenti di scaricare, installare e accedere all'app Portale aziendale per macOS. Per istruzioni sul download, l'installazione e l'accesso all'app Portale aziendale, vedere [Registrare il dispositivo macOS con l'app Portale aziendale](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp).
+È possibile dare istruzioni agli utenti di scaricare, installare e accedere all'app Portale aziendale per macOS. Per istruzioni sul download, l'installazione e l'accesso all'app Portale aziendale, vedere [Registrare il dispositivo macOS con l'app Portale aziendale](../user-help/enroll-your-device-in-intune-macos-cp.md).
 
 ##  <a name="install-company-portal-for-macos-as-a-macos-lob-app"></a>Installare Portale aziendale per macOS come app LOB di macOS
 
@@ -66,5 +66,5 @@ L'app Portale aziendale per macOS può essere scaricata e installata usando la f
 > Lo script richiederà l'accesso a Internet durante l'esecuzione per scaricare la versione corrente dell'app Portale aziendale per macOS. 
 ## <a name="next-steps"></a>Passaggi successivi
 - Per altre informazioni sull'assegnazione di app, vedere [Assegnare app ai gruppi](apps-deploy.md).
-- Per altre informazioni sulla configurazione della registrazione automatica dei dispositivi, vedere [Device Enrollment Program - Registrare dispositivi macOS](https://docs.microsoft.com/mem/intune/enrollment/device-enrollment-program-enroll-macos).
-- Per altre informazioni sulla configurazione delle impostazioni di Microsoft AutoUpdate in macOS, vedere [Aggiornamenti Mac](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/mac-updates).
+- Per altre informazioni sulla configurazione della registrazione automatica dei dispositivi, vedere [Device Enrollment Program - Registrare dispositivi macOS](../enrollment/device-enrollment-program-enroll-macos.md).
+- Per altre informazioni sulla configurazione delle impostazioni di Microsoft AutoUpdate in macOS, vedere [Aggiornamenti Mac](/windows/security/threat-protection/microsoft-defender-atp/mac-updates).

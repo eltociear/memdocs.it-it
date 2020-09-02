@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8610b619a4ac05f37b893060b3b3a2bcb1dae528
-ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
+ms.openlocfilehash: 63c9d9e4752e4b0d317667162255e368fc5a099c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83864855"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908555"
 ---
 # <a name="understand-intune-and-azure-ads-device-limit-restrictions"></a>Informazioni sulle restrizioni sul limite di dispositivi in Intune e Azure AD
 
@@ -39,7 +39,7 @@ Le restrizioni sul limite di dispositivi in Intune servono a impostare il numero
 
 ## <a name="azure-device-limit-restriction"></a>Restrizioni sul limite di dispositivi in Azure
 
-Le restrizioni sul limiti di dispositivi in Azure servono a impostare il numero massimo di dispositivi aggiunti o registrati in Azure AD. Per impostare il **Numero massimo di dispositivi per utente**, accedere al portale di Azure > **Azure Active Directory** > **Dispositivi**. Per altre informazioni, vedere [Configurare le impostazioni del dispositivo](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal)
+Le restrizioni sul limiti di dispositivi in Azure servono a impostare il numero massimo di dispositivi aggiunti o registrati in Azure AD. Per impostare il **Numero massimo di dispositivi per utente**, accedere al portale di Azure > **Azure Active Directory** > **Dispositivi**. Per altre informazioni, vedere [Configurare le impostazioni del dispositivo](/azure/active-directory/devices/device-management-azure-portal)
 
 ## <a name="settings-applied-based-on-user-affinity"></a>Impostazioni applicate in base all'affinità utente
 
@@ -114,6 +114,6 @@ Per la restrizione del limite di dispositivi in Azure, l'impostazione **Numero m
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- [Creare una restrizione sul limite di dispositivi.](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#configure-device-settings)
+- [Creare una restrizione sul limite di dispositivi.](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings)
 - [Configurare le impostazioni del dispositivo in Azure.](enrollment-restrictions-set.md#create-a-device-limit-restriction)
-- [Altre informazioni sulla registrazione e l'aggiunta a un dominio.](https://docs.microsoft.com/azure/active-directory/devices/overview#getting-devices-in-azure-ad)
+- [Altre informazioni sulla registrazione e l'aggiunta a un dominio.](/azure/active-directory/devices/overview#getting-devices-in-azure-ad)

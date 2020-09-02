@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/15/2020
+ms.date: 05/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,16 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 55a73806e343ac23525dbd2a28950d46285bf9a3
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: 98b1380254a784dfe8939c607ab574f7bdaa8752
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088531"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914991"
 ---
 # <a name="manage-devices-with-endpoint-security-in-microsoft-intune"></a>Gestire i dispositivi con la sicurezza degli endpoint in Microsoft Intune
 
-Nel ruolo di amministratore della sicurezza, è possibile usare la vista *Tutti dispositivi* nell'interfaccia di amministrazione di Microsoft Endpoint Manager per rivedere e gestire i dispositivi. La vista mostra un elenco di tutti i dispositivi in Azure Active Directory (Azure AD). Sono inclusi i dispositivi gestiti da Intune, Configuration Manager e in [co-gestione](https://docs.microsoft.com/configmgr/comanage/overview) tra Intune e Configuration Manager. I dispositivi possono trovarsi nel cloud e provenire dall'infrastruttura locale quando sono integrati in Azure AD.
+Nel ruolo di amministratore della sicurezza, è possibile usare la vista *Tutti dispositivi* nell'interfaccia di amministrazione di Microsoft Endpoint Manager per rivedere e gestire i dispositivi. La vista mostra un elenco di tutti i dispositivi in Azure Active Directory (Azure AD). Sono inclusi i dispositivi gestiti da Intune, Configuration Manager e in [co-gestione](/configmgr/comanage/overview) tra Intune e Configuration Manager. I dispositivi possono trovarsi nel cloud e provenire dall'infrastruttura locale quando sono integrati in Azure AD.
 
  Per trovare la vista, aprire l'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) e selezionare **Sicurezza degli endpoint** > **Tutti dispositivi**.
 
@@ -59,15 +59,13 @@ Prendere in considerazione i campi seguenti:
 
     Lo stato di conformità dei dispositivi gestiti da Configuration Manager non è visibile nell'interfaccia di amministrazione di Microsoft Endpoint Manager.
 
-    Per altre informazioni, vedere [Abilitare il collegamento di tenant](https://docs.microsoft.com/configmgr/tenant-attach/device-sync-actions) nella documentazione di Configuration Manager.
+    Per altre informazioni, vedere [Abilitare il collegamento di tenant](/configmgr/tenant-attach/device-sync-actions) nella documentazione di Configuration Manager.
 
   - **MDM/Agente di ConfigMgr**: questi dispositivi sono in co-gestione tra Intune e Configuration Manager.
 
-    Con la co-gestione è possibile [scegliere diversi carichi di lavoro di co-gestione](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) per determinare quali aspetti vengono gestiti da Configuration Manager o da Intune. Queste scelte influiscono sui criteri applicati dal dispositivo e sul modo in cui i dati di conformità vengono comunicati all'interfaccia di amministrazione.
+    Con la co-gestione è possibile [scegliere diversi carichi di lavoro di co-gestione](/configmgr/comanage/how-to-switch-workloads) per determinare quali aspetti vengono gestiti da Configuration Manager o da Intune. Queste scelte influiscono sui criteri applicati dal dispositivo e sul modo in cui i dati di conformità vengono comunicati all'interfaccia di amministrazione.
 
     Ad esempio, è possibile usare Intune per configurare i criteri per antivirus, firewall e crittografia. Questi tipi di criteri sono considerati criteri per *Endpoint Protection*. Per fare in modo che un dispositivo co-gestito usi i criteri di Intune e non i criteri di Configuration Manager, impostare il cursore di co-gestione relativo a Endpoint Protection su *Intune* o *Intune pilota*. Se il cursore è impostato su Configuration Manager, il dispositivo userà i criteri e le impostazioni di Configuration Manager.
-
-  - **Workspace ONE** - Questi dispositivi vengono gestiti dal partner per la conformità dei dispositivi, Workspace ONE. Per altre informazioni, vedere [Partner per la conformità dei dispositivi](../protect/device-compliance-partners.md).
 
 - **Conformità**: la conformità viene valutata in base ai criteri di conformità assegnati al dispositivo. L'origine di questi criteri e le informazioni contenute nella console dipendono dalla modalità di gestione del dispositivo: Intune, Configuration Manager o co-gestione. Affinché i dispositivi co-gestiti possano dichiarare lo stato di conformità, impostare il cursore di co-gestione relativo alla conformità del dispositivo su Intune o Intune pilota.  
 

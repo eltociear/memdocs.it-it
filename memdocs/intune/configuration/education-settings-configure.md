@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 52eae65e6735ad655c2e8db53e34383ccc5e3b30
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 7b1a605e456edb525afec306ff594ba7cc3895aa
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988393"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912730"
 ---
 # <a name="use-the-take-a-test-app-on-windows-10-devices-in-microsoft-intune"></a>Usare l'app Test ed esami nei dispositivi Windows 10 in Microsoft Intune
 
@@ -30,7 +30,7 @@ I profili di formazione in Intune hanno lo scopo di consentire agli studenti di 
 
 - Windows 10 e versioni successive
 
-Quando l'utente accede, l'app Test ed esami viene aperta automaticamente con il test da eseguire. Mentre il test è in corso, non è possibile eseguire altre applicazioni nel dispositivo. [Eseguire test in Windows 10](https://docs.microsoft.com/education/windows/take-tests-in-windows-10) offre altri dettagli dell'app Test ed esami.
+Quando l'utente accede, l'app Test ed esami viene aperta automaticamente con il test da eseguire. Mentre il test è in corso, non è possibile eseguire altre applicazioni nel dispositivo. [Eseguire test in Windows 10](/education/windows/take-tests-in-windows-10) offre altri dettagli dell'app Test ed esami.
 
 Questo articolo elenca i passaggi per creare un profilo di configurazione del dispositivo in Microsoft Intune e include anche informazioni da leggere e imparare sulle impostazioni di formazione disponibili per i dispositivi Windows 10.
 

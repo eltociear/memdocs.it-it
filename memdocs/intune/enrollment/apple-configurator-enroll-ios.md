@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7101ad9bffcd80bd608690f22db37abbbc7a7895
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 00d515743f2391d9c232b9ae5d97062a01302c48
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093788"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908820"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-configurator"></a>Configurare la registrazione di dispositivi iOS/iPadOS con Apple Configurator
 
@@ -60,7 +60,7 @@ Un profilo di registrazione dispositivi consente di definire le impostazioni app
 
 4. In **Affinità utente** scegliere se i dispositivi con questo profilo devono essere registrati con o senza un utente assegnato.
 
-    - **Registra con affinità utente**: scegliere questa opzione per i dispositivi che appartengono a utenti e che vogliono usare il portale aziendale per servizi come l'installazione di app. Il dispositivo deve essere associato a un utente con Assistente configurazione e può quindi accedere ai dati aziendali e alla posta elettronica. È supportata solo per la registrazione con Assistente configurazione. Per l'affinità utente è richiesto [endpoint misto/nome utente WS-Trust 1.3](https://technet.microsoft.com/library/adfs2-help-endpoints). [Altre informazioni](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
+    - **Registra con affinità utente**: scegliere questa opzione per i dispositivi che appartengono a utenti e che vogliono usare il portale aziendale per servizi come l'installazione di app. Il dispositivo deve essere associato a un utente con Assistente configurazione e può quindi accedere ai dati aziendali e alla posta elettronica. È supportata solo per la registrazione con Assistente configurazione. Per l'affinità utente è richiesto [endpoint misto/nome utente WS-Trust 1.3](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)). [Altre informazioni](/powershell/module/adfs/get-adfsendpoint?view=win10-ps).
 
     - **Registra senza affinità utente**: scegliere questa opzione per i dispositivi non associati a un singolo utente. Usare questa opzione per i dispositivi che eseguono attività senza accedere ai dati utente locali. Le app che richiedono l'associazione utente, inclusa l'app Portale aziendale usata per installare le app line-of-business, non funzioneranno. Obbligatorio per la registrazione diretta.
 
@@ -171,8 +171,3 @@ Le app che richiedono l'associazione utente, inclusa l'app Portale aziendale usa
 6. Nel dispositivo iOS/iPadOS aprire la finestra **Impostazioni** e passare a **Generale** > **Gestione dei dispositivi** > **Profilo di gestione**. Verificare che l'installazione del profilo sia inclusa nell'elenco e controllare le restrizioni dei criteri iOS/iPadOS e le app installate. La visualizzazione delle restrizioni dei criteri e delle app nel dispositivo può impiegare fino a 10 minuti.
 
 7. Distribuire i dispositivi. Il dispositivo iOS/iPadOS è ora registrato in Intune e gestito.
-
-
-
-
-

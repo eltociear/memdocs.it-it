@@ -17,12 +17,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: c20d2ef806df46036d3a785bb5f8603d485d3880
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: d14ee52decf1b6ef9b2566b3233a385c1331bcc5
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86460468"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910979"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Monitorare la crittografia dei dispositivi con Intune
 
@@ -59,7 +59,7 @@ Il riquadro Report sulla crittografia visualizza l'elenco dei dispositivi gestit
     - versione 1709 o successiva dell'edizione *Business*, *Enterprise* o *Education* oppure versione 1809 o successiva dell'edizione *Pro*
     - Il dispositivo deve avere un chip TPM
 
-    Per altre informazioni, vedere [BitLocker configuration service provider](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (Provider di servizi di configurazione BitLocker) nella documentazione di Windows.
+    Per altre informazioni, vedere [BitLocker configuration service provider](/windows/client-management/mdm/bitlocker-csp) (Provider di servizi di configurazione BitLocker) nella documentazione di Windows.
 
   - **Non pronto**: il dispositivo non ha funzionalità di crittografia complete, ma supporta comunque la crittografia. Un dispositivo Windows, ad esempio, può essere crittografato manualmente da un utente oppure tramite Criteri di gruppo, che è possibile impostare per consentire la crittografia senza un chip TPM.
   - **Non applicabile**: non sono disponibili informazioni sufficienti per classificare il dispositivo.

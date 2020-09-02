@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4934115915c41d696258aa54ee8f4b7c84d1809c
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 9a19a78002d0655cf63a8b757ea252fb8992603f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464993"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915263"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-corporate-owned-devices-with-work-profile"></a>Configurare la registrazione di Intune dei dispositivi di proprietà aziendale Android Enterprise con profilo di lavoro
 
@@ -83,7 +83,7 @@ Per configurare la gestione dei dispositivi di proprietà aziendale con profilo 
     - **Aggiungi dispositivi dove**: enrollmentProfileName
     - Nella casella centrale scegliere **Uguale a**.
     - Nell'ultimo campo immettere il nome del profilo di registrazione creato in precedenza.
-    Per altre informazioni sulle regole di appartenenza dinamica, vedere [Regole di appartenenza dinamica per i gruppi in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership). 
+    Per altre informazioni sulle regole di appartenenza dinamica, vedere [Regole di appartenenza dinamica per i gruppi in Azure Active Directory](/azure/active-directory/users-groups-roles/groups-dynamic-membership). 
 5. Scegliere **Aggiungi query** > **Crea**.
 
 ### <a name="revoke-tokens"></a>Revocare i token

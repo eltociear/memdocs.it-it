@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 49d1b8f407814fd368a7ff45bb94bc4c5ef7fd9d
-ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
+ms.openlocfilehash: 88b7f41b873697a7ec34bd1fc2f1098384ab1c18
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83556286"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915722"
 ---
 # <a name="windows-holographic-for-business-settings-to-manage-shared-devices-using-intune"></a>Impostazioni di Windows Holographic for Business per gestire i dispositivi condivisi con Intune
 
@@ -32,7 +32,7 @@ Con Microsoft Intune gli utenti possono accedere a tali dispositivi condivisi co
 
 Questo articolo elenca e descrive le impostazioni usate in un profilo di configurazione di dispositivi Windows Holographic for Business e versioni successive. Quando il profilo viene creato in Intune, l'amministratore lo distribuisce o lo assegna ai gruppi di dispositivi nell'organizzazione. Il profilo può anche essere assegnato a un gruppo di dispositivi contenente tipi di dispositivo e versioni del sistema operativo diversi.
 
-Per altre informazioni su questa funzionalità in Intune, vedere [Controllare l'accesso, gli account e le funzionalità di risparmio energia nei PC condivisi o nei dispositivi con più utenti](shared-user-device-settings.md). Per altre informazioni sul provider di servizi di configurazione di Windows, vedere [AccountManagement CSP](https://docs.microsoft.com/windows/client-management/mdm/accountmanagement-csp) (Provider di servizi di configurazione AccountManagement).
+Per altre informazioni su questa funzionalità in Intune, vedere [Controllare l'accesso, gli account e le funzionalità di risparmio energia nei PC condivisi o nei dispositivi con più utenti](shared-user-device-settings.md). Per altre informazioni sul provider di servizi di configurazione di Windows, vedere [AccountManagement CSP](/windows/client-management/mdm/accountmanagement-csp) (Provider di servizi di configurazione AccountManagement).
 
 ## <a name="before-your-begin"></a>Prima di iniziare
 

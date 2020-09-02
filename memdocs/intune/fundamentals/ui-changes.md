@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5ff2898f97bbef4cba0d14d4810a503d613cff18
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: f94fdd6dcad0b1d1e05caa38dbdfd63dd8746013
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077921"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915229"
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Dove si trovano le funzionalità di Intune in Azure?
 Con lo spostamento di Intune nel portale di Azure, alcune attività sono state riorganizzate in modo più logico. Ma ogni ottimizzazione implica la necessità di abituarsi a una nuova organizzazione. Questa guida di riferimento è pensata espressamente per chi conosce già Intune nel portale classico e vuole imparare a usarlo nel portale di Azure. Se questo articolo non fornisce informazioni su una funzionalità specifica, lasciare un commento alla fine dell'articolo in modo che possa essere aggiornato.
@@ -45,7 +45,7 @@ Impostazioni del portale aziendale|Amministrazione > Portale aziendale|**Gestisc
 
 
 ## <a name="where-do-i-manage-groups"></a>Dove si gestiscono i gruppi?
-Intune nel portale di Azure usa [Azure Active Directory (AD)](https://docs.microsoft.com/azure/active-directory/active-directory-groups-create-azure-portal) per gestire i gruppi.
+Intune nel portale di Azure usa [Azure Active Directory (AD)](/azure/active-directory/active-directory-groups-create-azure-portal) per gestire i gruppi.
 
 ## <a name="where-did-enrollment-rules-go"></a>Dove si trovano le regole di registrazione?
 Nel portale classico è possibile impostare regole per controllare la registrazione MDM dei dispositivi Windows e macOS mobili e moderni.
@@ -73,7 +73,7 @@ Nuove funzionalità di restrizione vengono aggiunte solo al portale di Azure.
 ## <a name="where-did-my-conditional-access-policies-go"></a>Dove si trovano i criteri di accesso condizionale?
 Dopo la migrazione del tenant al portale di Azure, i criteri di accesso condizionale del tenant continuano a essere applicati. Tuttavia, non è possibile visualizzarli o modificarli da Intune nel portale di Azure.
 
-Per visualizzare e apportare modifiche ai criteri di accesso condizionale dal portale di Azure, sarà necessario rimuovere i criteri precedenti dal portale classico e poi ricrearli nel portale di Azure. Per altre informazioni sulla migrazione dei criteri di accesso condizionale, vedere [Eseguire la migrazione di criteri classici](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-migration). 
+Per visualizzare e apportare modifiche ai criteri di accesso condizionale dal portale di Azure, sarà necessario rimuovere i criteri precedenti dal portale classico e poi ricrearli nel portale di Azure. Per altre informazioni sulla migrazione dei criteri di accesso condizionale, vedere [Eseguire la migrazione di criteri classici](/azure/active-directory/active-directory-conditional-access-migration). 
 
 ## <a name="where-did-my-compliance-policies-go"></a>Dove si trovano i criteri di conformità?
 Dopo la migrazione del tenant al portale di Azure, i criteri di conformità del tenant continuano a essere applicati. Tuttavia, non è possibile visualizzarli o modificarli da Intune nel portale di Azure.

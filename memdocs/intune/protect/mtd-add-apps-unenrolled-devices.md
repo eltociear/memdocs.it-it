@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f667b6ad9ba9f7c353d89b4d3fc4ff749499bfaf
-ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
+ms.openlocfilehash: ee05e72a4837ea894c7163551d0ce79a40ed1d82
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85972037"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912152"
 ---
 # <a name="add-mobile-threat-defense-apps-to-unenrolled-devices"></a>Aggiungere app Mobile Threat Defense a dispositivi non registrati
 
@@ -50,7 +50,7 @@ Quando si usano i criteri di protezione delle app di Intune con Mobile Threat De
 Tuttavia, se si vuole rendere disponibile l'app agli utenti finali tramite il Portale aziendale Intune, vedere le istruzioni per l'[aggiunta di app dello store iOS a Microsoft Intune](../apps/store-apps-ios.md). Usare questo [URL di iOS App Store per Microsoft Authenticator](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8) durante l'esecuzione della sezione **Configurare le informazioni sull'app**. Non dimenticare di [assegnare l'app a gruppi con Intune](../apps/apps-deploy.md) come passaggio finale.
 
 > [!NOTE]
-> Per i dispositivi iOS, perché gli utenti possano eseguire la verifica della propria identità in Azure AD, è necessario [Microsoft Authenticator](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to). Nei dispositivi Android il portale aziendale Intune funge da broker per la verifica dell'identità degli utenti da parte di Azure AD.
+> Per i dispositivi iOS, perché gli utenti possano eseguire la verifica della propria identità in Azure AD, è necessario [Microsoft Authenticator](/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to). Nei dispositivi Android il portale aziendale Intune funge da broker per la verifica dell'identità degli utenti da parte di Azure AD.
 
 ## <a name="making-mobile-threat-defense-apps-available-via-intune-optional"></a>Rendere disponibili app Mobile Threat Defense tramite Intune (facoltativo)
 

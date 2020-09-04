@@ -10,12 +10,12 @@ ms.assetid: c6b9ccd2-78d9-4f0e-b25a-70d0866300ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 57b353dd9dd9fcf7f97d10480f4067bd65a1f483
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 1c8710c50dc2feabebd7e8f0f84ac49b3b0dd35c
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88697977"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068022"
 ---
 # <a name="create-stand-alone-media"></a>Creare supporti autonomi
 
@@ -78,7 +78,7 @@ Per i supporti autonomi non sono supportate le azioni seguenti:
 >
 > In alternativa, usare un passaggio [Esegui riga di comando](../understand/task-sequence-steps.md#BKMK_RunCommandLine) personalizzato. Aggiungerlo dopo il passaggio [Imposta Windows e ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) e prima del primo passaggio **Installa pacchetto**. Il passaggio **Esegui riga di comando** esegue il comando WMIC seguente per abilitare l'agente di distribuzione software prima del primo passaggio Installa pacchetto:  
 >
-> `WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE`
+> `WMIC /namespace:\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE`
 
 ### <a name="distribute-all-content-associated-with-the-task-sequence"></a>Distribuire tutto il contenuto associato alla sequenza di attività
 

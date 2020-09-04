@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 54794a575cda4197bc11160d1c5e374d06c143c6
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 78150c497757c1a3f0b65a870c35516983711d9a
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995246"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193828"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Novità della versione 1902 di Configuration Manager Current Branch
 
@@ -351,7 +351,7 @@ Usare Configuration Manager per spostare le cartelle note di Windows in OneDrive
 
 Per altre informazioni su questa funzionalità di OneDrive for Business, vedere [Reindirizzare e spostare le cartelle note di Windows su OneDrive](/onedrive/redirect-known-folders).
 
-Prima di tutto [trovare l'ID del tenant di Microsoft 365](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id). Distribuire quindi il client di sincronizzazione di OneDrive versione 18.111.0603.0004 o successiva. Per altre informazioni, vedere [Distribuire le app OneDrive mediante Configuration Manager](https://docs.microsoft.com/onedrive/deploy-on-windows).  
+Prima di tutto [trovare l'ID del tenant di Microsoft 365](/onedrive/find-your-office-365-tenant-id). Distribuire quindi il client di sincronizzazione di OneDrive versione 18.111.0603.0004 o successiva. Per altre informazioni, vedere [Distribuire le app OneDrive mediante Configuration Manager](/onedrive/deploy-on-windows).  
 
 Per creare e distribuire un profilo di OneDrive for Business, nella console di Configuration Manager passare all'area di lavoro **Asset e conformità**. Espandere **Impostazioni di conformità** e selezionare il nodo **Profili di OneDrive for Business**.  
 

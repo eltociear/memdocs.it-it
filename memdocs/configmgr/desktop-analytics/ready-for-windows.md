@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
 ROBOTS: NOINDEX
-ms.openlocfilehash: 484b1d808484984b4beaf434c0c27f2f1bec4e10
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 2d431f744ab09aeb938a7961ebf713f71c0f8015
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995195"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193683"
 ---
 # <a name="ready-for-modern-desktop-retirement-faq"></a>Domande frequenti sul ritiro di Ready for modern desktop
 
@@ -49,7 +49,7 @@ Molti clienti hanno problemi a ottenere Windows 10 e Microsoft 365 Apps for ente
 
 La directory *Ready for modern desktop* includeva un elenco delle soluzioni software supportate e usate nei dispositivi commerciali che eseguono Windows 10 e Microsoft 365 Apps for enterprise. La directory offre un valido aiuto ai responsabili IT che stanno prendendo in considerazione l'idea di adottare le versioni più recenti di Windows 10 e Microsoft 365 per le distribuzioni.
 
-Il feedback dei responsabili IT è che vorrebbero che questi dati analitici si integrassero con gli strumenti che già usano per pianificare le distribuzioni. Per pianificare e gestire i progetti di aggiornamento di Windows 10 e Microsoft 365 Apps for enterprise, usare [Desktop Analytics](https://aka.ms/dadocs) e le [funzionalità di conformità di App di Microsoft 365](https://docs.microsoft.com/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) in Configuration Manager. 
+Il feedback dei responsabili IT è che vorrebbero che questi dati analitici si integrassero con gli strumenti che già usano per pianificare le distribuzioni. Per pianificare e gestire i progetti di aggiornamento di Windows 10 e Microsoft 365 Apps for enterprise, usare [Desktop Analytics](https://aka.ms/dadocs) e le [funzionalità di conformità di App di Microsoft 365](/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) in Configuration Manager. 
 
 > [!Note]
 > A partire dal 21 aprile 2020 Office 365 ProPlus viene rinominato come **App di Microsoft 365 per grandi imprese**. Per altre informazioni, vedere [Modifica del nome di Office 365 ProPlus](/deployoffice/name-change). È comunque possibile che vengano ancora visualizzati riferimenti al nome precedente nella console di Configuration Manager e nella documentazione di supporto mentre la console viene aggiornata.
@@ -122,4 +122,4 @@ Valutare le prestazioni delle soluzioni con i report sull'integrità e sulle met
 
 Assicurarsi che le applicazioni desktop siano compatibili adesso e che rimangano compatibili con Windows 10 in futuro. Per informazioni, vedere [Compatibilità delle applicazioni per sviluppatori](https://developer.microsoft.com/windows/desktop/app-compatibility).
 
-Se si sviluppano soluzioni per Microsoft 365 Apps for enterprise, vedere [Procedure consigliate per lo sviluppo di componenti aggiuntivi COM, VSTO e VBA in Office](https://docs.microsoft.com/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office).
+Se si sviluppano soluzioni per Microsoft 365 Apps for enterprise, vedere [Procedure consigliate per lo sviluppo di componenti aggiuntivi COM, VSTO e VBA in Office](/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office).

@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 76d1edf8598e1abd71b6fd1db7faffa1750110d4
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: eff1ec6a8346132853285195d8e96aa6b8d3a8fa
+ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129121"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432575"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Technical Preview per Configuration Manager
 
@@ -166,11 +166,8 @@ Le funzionalità seguenti sono state rilasciate con le versioni precedenti del r
 
 | Funzionalità        | Versione Technical Preview |
 |----------------|---------------------------|
-| Usare l'app Portale aziendale in dispositivi con co-gestione <!--3601237--> | [Tech preview 2006](2020/technical-preview-2006.md#bkmk_portal) |
 | Miglioramenti alle app disponibili tramite CMG <!--7033501--> | [Tech preview 2006](2020/technical-preview-2006.md#bkmk_availapp) |
-| Collegamento di tenant: miglioramenti alle azioni di Configuration Manager nell'interfaccia di amministrazione di Microsoft Endpoint Manager <!--7518897--> | [Tech preview 2006](2020/technical-preview-2006.md#bkmk_apps) |
 | Collegamento di tenant: sequenza temporale dispositivo nell'interfaccia di amministrazione <!--7141381--> | [Tech preview 2005](2020/technical-preview-2005.md#bkmk_timeline) |
-| Collegamento di tenant: installare un'applicazione dall'interfaccia di amministrazione <!--6024389--> | [Tech preview 2005](2020/technical-preview-2005.md#bkmk_apps) |
 | Collegamento di tenant: CMPivot dall'interfaccia di amministrazione <!--6024392--> | [Tech preview 2005](2020/technical-preview-2005.md#bkmk_cmpivot) |
 | Collegamento di tenant: eseguire script dall'interfaccia di amministrazione <!--6234688--> | [Tech preview 2005](2020/technical-preview-2005.md#bkmk_scripts) |
 | Miglioramenti dei cmdlet di Cloud Management Gateway <!--6978300--> | [Tech preview 2005](2020/technical-preview-2005.md#bkmk_pwshcmg) |

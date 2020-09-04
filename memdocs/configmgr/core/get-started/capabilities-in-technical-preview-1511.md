@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 7f6cc0caf4df54196dbdb1859a69f19b3bbcacaa
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: a7b61e1a609e0693ffcd30f3f7dc931f4cb38eef
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995484"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193639"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Funzionalità della versione Technical Preview 1511 per Configuration Manager
 
@@ -67,7 +67,7 @@ Quando Microsoft pubblica un nuovo aggiornamento dei client desktop di Microsoft
 
 4. È possibile verificare la conformità degli aggiornamenti di Microsoft 365 usando il monitoraggio integrato nella console o i report.  
 
-   Per istruzioni dettagliate, vedere [Gestire gli aggiornamenti del client di Microsoft 365 con Configuration Manager Technical Preview](https://docs.microsoft.com/deployoffice/manage-microsoft-365-apps-updates-configuration-manager).  
+   Per istruzioni dettagliate, vedere [Gestire gli aggiornamenti del client di Microsoft 365 con Configuration Manager Technical Preview](/deployoffice/manage-microsoft-365-apps-updates-configuration-manager).  
 
 ##  <a name="support-for-sql-server-alwayson-for-highly-available-databases"></a><a name="BKMK_AlwasyOn"></a> Supporto per SQL Server AlwaysOn per database a disponibilità elevata  
  Configuration Manager ora supporta l'utilizzo di un gruppo di disponibilità SQL Server AlwaysOn per ospitare il database del sito.  Quando si installa un nuovo sito, è possibile indirizzare il programma di installazione all'uso del gruppo di disponibilità anziché una normale istanza di SQL Server.  

@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 05ed0daf56275b2e0ed46b2f9dd93fd66eb360be
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 2ab05abee2889259cc6c92e9081e4d10e2123923
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995535"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193750"
 ---
 # <a name="capabilities-in-technical-preview-1609-for-configuration-manager"></a>Funzionalità della versione Technical Preview 1609 per Configuration Manager
 
@@ -347,7 +347,7 @@ Nel dashboard vengono visualizzati i grafici per:
 - Versioni dei client di Office 365
 - Lingue dei client di Office 365
 - Canali dei client di Office 365     
-Per altre informazioni, vedere [Panoramica dei canali di aggiornamento per App di Microsoft 365](https://docs.microsoft.com/deployoffice/overview-update-channels).
+Per altre informazioni, vedere [Panoramica dei canali di aggiornamento per App di Microsoft 365](/deployoffice/overview-update-channels).
 - Regole di distribuzione automatica con il client di Office 365 selezionato nel set dei prodotti disponibili.
 
 Sul dashboard è possibile eseguire le azioni seguenti:

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: e0ef22ec7bc5eb3d6b9ac3800b3e97374421944c
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: d850e582b43e08743e5a61b17e6958ddc6084af1
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819797"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194141"
 ---
 # <a name="manage-microsoft-365-apps-with-configuration-manager"></a>Gestire Microsoft 365 Apps con Configuration Manager
 
@@ -248,7 +248,7 @@ Per altre informazioni su come modificare le regole di distribuzione automatica,
 
 ## <a name="change-the-update-channel-after-you-enable-microsoft-365-apps-clients-to-receive-updates-from-configuration-manager"></a>Modificare il canale di aggiornamento dopo aver abilitato i client di Microsoft 365 Apps alla ricezione degli aggiornamenti da Configuration Manager
 
-Dopo la distribuzione di Microsoft 365 Apps, è possibile cambiare il canale di aggiornamento con Criteri di gruppo o lo Strumento di distribuzione di Office (ODT). Ad esempio, è possibile spostare un dispositivo da Canale semestrale a Canale semestrale (mirato). Quando si cambia il canale, Office viene aggiornato automaticamente senza dover reinstallare o scaricare la versione completa. Per altre informazioni, vedere [Cambiare il canale di aggiornamento per Microsoft 365 Apps per i dispositivi nell'organizzazione](https://docs.microsoft.com/deployoffice/change-update-channels).
+Dopo la distribuzione di Microsoft 365 Apps, è possibile cambiare il canale di aggiornamento con Criteri di gruppo o lo Strumento di distribuzione di Office (ODT). Ad esempio, è possibile spostare un dispositivo da Canale semestrale a Canale semestrale (mirato). Quando si cambia il canale, Office viene aggiornato automaticamente senza dover reinstallare o scaricare la versione completa. Per altre informazioni, vedere [Cambiare il canale di aggiornamento per Microsoft 365 Apps per i dispositivi nell'organizzazione](/deployoffice/change-update-channels).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

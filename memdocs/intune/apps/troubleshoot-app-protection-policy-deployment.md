@@ -15,12 +15,12 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - Intune
-ms.openlocfilehash: 7f4d3f8193eeaf9597d56c8cf1cd999147915e61
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 9aceb4d2b8b0b67af297fa5d15cdf66ae04a83f4
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531571"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996623"
 ---
 # <a name="troubleshooting-app-protection-policy-deployment-in-intune"></a>Risoluzione dei problemi di distribuzione dei criteri di protezione delle app in Intune
 
@@ -57,14 +57,14 @@ Sebbene sia possibile usare i criteri di protezione delle app di Intune indipend
 - L'utente deve appartenere a un gruppo di sicurezza interessato dai criteri di protezione delle app. Gli stessi criteri di protezione delle app devono avere come destinazione l'app specifica in uso.
 - Per i dispositivi Android, è necessaria l'app Portale aziendale per ricevere i criteri di protezione delle app.
 - Se si usano le app [Word, Excel o PowerPoint](https://products.office.com/business/office), è necessario soddisfare i requisiti aggiuntivi seguenti:
-    - L'utente deve avere una licenza per [App di Microsoft 365 Business o Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) collegata all'account Azure Active Directory (Azure AD). La sottoscrizione deve includere le app di Office nei dispositivi mobili e può includere un account di archiviazione cloud con [OneDrive for Business](https://onedrive.live.com/about/business/). È possibile assegnare licenze di Office 365 nell'[interfaccia di amministrazione di Microsoft 365](https://admin.microsoft.com) seguendo [queste istruzioni](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
+    - L'utente deve avere una licenza per [App di Microsoft 365 Business o Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) collegata all'account Azure Active Directory (Azure AD). La sottoscrizione deve includere le app di Office nei dispositivi mobili e può includere un account di archiviazione cloud con [OneDrive for Business](https://onedrive.live.com/about/business/). È possibile assegnare licenze di Microsoft 365 nell'[interfaccia di amministrazione di Microsoft 365](https://admin.microsoft.com) seguendo [queste istruzioni](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
     - L'utente deve avere un percorso gestito configurato usando la funzionalità granulare **Salva con nome**. Questo comando si trova nell'impostazione dei criteri di protezione delle applicazioni **Salva copie dei dati dell'organizzazione**. Se ad esempio il percorso gestito è OneDrive, l'app [OneDrive](https://onedrive.live.com/about/) deve essere configurata nell'app Word, Excel o PowerPoint dell'utente.
     - Se il percorso gestito è OneDrive, l'app deve essere impostata come destinazione dei criteri di protezione delle app distribuiti all'utente.
 
   > [!NOTE]
   > Le app per dispositivi mobili di Office attualmente supportano solo SharePoint Online e SharePoint locale.
 
-- Se si usano i criteri di protezione delle app di Intune insieme a risorse locali (Microsoft Skype for Business e Microsoft Exchange Server), è necessario abilitare l'[autenticazione moderna ibrida per Skype for Business ed Exchange](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview).
+- Se si usano i criteri di protezione delle app di Intune insieme a risorse locali (Microsoft Skype for Business e Microsoft Exchange Server), è necessario abilitare l'[autenticazione moderna ibrida per Skype for Business ed Exchange](/office365/enterprise/hybrid-modern-auth-overview).
 
 I criteri di protezione delle app di Intune richiedono coerenza dell'identità dell'utente tra l'app e [Intune App SDK](../developer/app-sdk-get-started.md). L'unico modo per assicurare coerenza è tramite l'autenticazione moderna. Esistono scenari in cui le app possono funzionare in una configurazione locale senza autenticazione moderna. Tuttavia, i risultati non sono coerenti o garantiti.
 
@@ -74,7 +74,7 @@ Per altre informazioni su come abilitare l'autenticazione moderna ibrida per le 
 [Disponibilità generale per l'autenticazione moderna ibrida per Skype for Business ed Exchange](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756)
 
 - **Configurazione locale**<br>
-[Autenticazione moderna ibrida per Skype for Business con AAD](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910)
+[Autenticazione moderna ibrida per Skype for Business con Azure AD](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910)
 
 ### <a name="check-app-protection-policy-status"></a>Controllare lo stato dei criteri di protezione delle app
 
@@ -83,7 +83,7 @@ Per controllare lo stato di protezione delle app, seguire questa procedura:
 1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selezionare **App** > **Monitor** > **Stato protezione app**e quindi selezionare il riquadro **Utenti assegnati**.
 3. Nella pagina **Segnalazione app** selezionare **Selezionare l'utente** per visualizzare un elenco di utenti e gruppi.
-4. Cercare e selezionare uno degli utenti interessati dall'elenco, quindi scegliere **Selezionare l'utente**. Nella parte superiore del riquadro Segnalazione app è possibile verificare se l'utente ha la licenza per la protezione delle app e dispone di una licenza per Office 365. È anche possibile visualizzare lo stato delle app per tutti i dispositivi dell'utente.
+4. Cercare e selezionare uno degli utenti interessati dall'elenco, quindi scegliere **Selezionare l'utente**. Nella parte superiore del riquadro Segnalazione app è possibile verificare se l'utente ha la licenza per la protezione delle app e ha una licenza per Microsoft 365. È anche possibile visualizzare lo stato delle app per tutti i dispositivi dell'utente.
 5. Prendere nota delle informazioni importanti, ad esempio app di destinazione, tipi di dispositivi, criteri, stato di archiviazione del dispositivo e ora dell'ultima sincronizzazione.
 
 > [!NOTE]
@@ -95,9 +95,9 @@ Per altre informazioni, vedere [Come convalidare la configurazione dei criteri d
 
 Nella maggior parte degli scenari gli utenti accedono ai propri account usando il nome dell'entità utente (UPN, User Principal Name). Tuttavia, in alcuni ambienti, ad esempio in scenari locali, gli utenti potrebbero usare un altro tipo di credenziali di accesso. In questi casi si potrebbe notare che l'UPN usato nell'app non corrisponde all'oggetto UPN in Azure AD. Quando si verifica questo problema, i criteri di protezione delle app non vengono applicati come previsto.
 
-Le procedure consigliate di Microsoft prevedono la corrispondenza tra il nome di accesso UPN e l'indirizzo SMTP primario. In questo modo gli utenti possono accedere alle app gestite, alla protezione delle app di Intune e ad altre risorse di Azure AD grazie a un'identità coerente. Per altre informazioni, vedere [Popolamento di UserPrincipalNamein in Azure AD](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-userprincipalname).
+Le procedure consigliate di Microsoft prevedono la corrispondenza tra il nome di accesso UPN e l'indirizzo SMTP primario. In questo modo gli utenti possono accedere alle app gestite, alla protezione delle app di Intune e ad altre risorse di Azure AD grazie a un'identità coerente. Per altre informazioni, vedere [Popolamento di UserPrincipalNamein in Azure AD](/azure/active-directory/connect/active-directory-aadconnect-userprincipalname).
 
-Se l'ambiente richiede metodi di accesso alternativi, vedere [Configurazione di un ID di accesso alternativo](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configuring-alternate-login-id), in particolare [Autenticazione moderna ibrida con ID alternativo](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configuring-alternate-login-id#hybrid-modern-authentication-with-alternate-id).
+Se l'ambiente richiede metodi di accesso alternativi, vedere [Configurazione di un ID di accesso alternativo](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id), in particolare [Autenticazione moderna ibrida con ID alternativo](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id#hybrid-modern-authentication-with-alternate-id).
 
 ### <a name="verify-that-the-user-is-targeted"></a>Verificare la destinazione dell'utente
 
@@ -115,7 +115,7 @@ Quando si assegnano i criteri a un gruppo di utenti, verificare che l'utente sia
 1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Selezionare **Gruppi > Tutti i gruppi**, quindi cercare e selezionare il gruppo usato per l'assegnazione dei criteri di protezione delle app.
 3. Selezionare **Membri** nella sezione **Gestisci**.
-4. Se l'utente interessato non è presente nell'elenco, vedere [Gestire l'accesso ad app e risorse usando gruppi di Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups) e le regole di appartenenza ai gruppi. Verificare che l'utente interessato sia incluso nel gruppo.
+4. Se l'utente interessato non è presente nell'elenco, vedere [Gestire l'accesso ad app e risorse usando gruppi di Azure Active Directory](/azure/active-directory/fundamentals/active-directory-manage-groups) e le regole di appartenenza ai gruppi. Verificare che l'utente interessato sia incluso nel gruppo.
 5. Assicurarsi che l'utente interessato non sia incluso in uno dei gruppi esclusi per i criteri.
 
 > [!IMPORTANT]

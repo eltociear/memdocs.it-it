@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d1574e07ca58debaef5bbc134a86d76aa21778a3
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: 25ec8099c628c4a39266a9352b3b4b9810698592
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347253"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996589"
 ---
 # <a name="us-government-endpoints-for-microsoft-intune"></a>Endpoint US Government per Microsoft Intune
 
@@ -49,15 +49,15 @@ Nelle tabelle seguenti sono elencati i servizi e le porte a cui accede il client
 
 ## <a name="us-government-customer-designated-endpoints"></a>Endpoint designati per i clienti delle distribuzioni US Government:
 - Portale di Azure: https:\//portal.azure.us/ 
-- Office 365: https:\//portal.office365.us/ 
+- Microsoft 365: https:\//portal.office365.us/ 
 - Portale aziendale di Intune: https:\//portal.manage.microsoft.us/ 
 - Interfaccia di amministrazione di Microsoft Endpoint Manager: https:\//endpoint.microsoft.us/
 
 ## <a name="partner-service-endpoints-that-intune-depends-on"></a>Endpoint dei servizi partner da cui dipende Intune:
-- Servizio AAD Sync: https:\//syncservice.gov.us.microsoftonline.com/DirectoryService.svc
+- Servizio Azure AD Sync: https:\//syncservice.gov.us.microsoftonline.com/DirectoryService.svc
 - Servizio token di sicurezza Evo: https:\//login.microsoftonline.us
 - Proxy di directory: https:\//directoryproxy.microsoftazure.us/DirectoryProxy.svc
-- AAD Graph: https:\//directory.microsoftazure.us and https:\//graph.microsoftazure.us
+- Azure AD Graph: https:\//directory.microsoftazure.us and https:\//graph.microsoftazure.us
 - MS Graph: https:\//graph.microsoft.us
 - ADRS: https:\//enterpriseregistration.microsoftonline.us
 

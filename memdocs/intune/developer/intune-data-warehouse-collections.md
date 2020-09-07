@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6d3f3ea7423cf87d2644611bcbd6e298ac60699
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 348bafecd462aa9e4722443c33b62311b2f97e1a
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820324"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993104"
 ---
 # <a name="intune-data-warehouse-collections"></a>Raccolte del data warehouse di Intune
 
@@ -69,7 +69,7 @@ L'entità **appType** elenca l'origine dell'installazione di un'app.
 | 3         | App di iOS Store                   | Un'app di iOS Store.                                 |
 | 4         | App LOB iOS                     | Un'app line-of-business iOS.                      |
 | 5         | App dello Store iOS gestita (MAM?)     | Un'app iOSstore abilitata per la gestione.       |
-| 6         | O365 Pro Plus Suite             | App di Microsoft 365 per Windows 10     |
+| 6         | Microsoft 365 Apps for enterprise        | App di Microsoft 365 per Windows 10     |
 | 7         | App Web                         | Un'app Web.                                        |
 | 8         | App di Windows Phone 8.1 Store     | Un'app dello Store per Windows Phone 8.1.                    |
 | 9         | App di Windows Store               | Un'app di Windows Store.                              |
@@ -235,7 +235,7 @@ L'entità **device** elenca tutti i dispositivi registrati in gestione e le prop
 | DeviceCategoryKey          | Chiave della categoria associata al dispositivo.                                                                                                                                     |
 | DeviceEnrollmentType       | Chiave del tipo di registrazione associata al dispositivo, che indica il metodo di registrazione.                                                                                             |
 | ComplianceStateKey         | Chiave dello stato di conformità associato a questo dispositivo.                                                                                                                             |
-| office365Version           | Versione di Office 365 installato nel dispositivo.                                                                                                                             |
+| office365Version           | Versione di Microsoft 365 installata nel dispositivo.                                                                                                                             |
 | OSVersion                  | Versione del sistema operativo del dispositivo.                                                                                                                                                |
 | EasDeviceId                | ID Exchange ActiveSync del dispositivo.                                                                                                                                                  |
 | SerialNumber               | SerialNumber                                                                                                                                                                           |
@@ -286,7 +286,7 @@ L'entità **deviceType** rappresenta il tipo di dispositivo a cui fanno riferime
 | 11           | Android           | Dispositivo Android gestito con l'amministratore del dispositivo   |
 | 12           | ISocConsumer      | Dispositivo consumer iSoc                                |
 | 13           | Unix              | Dispositivo UNIX                                         |
-| 14           | MacMDM            | Dispositivo Mac OS X gestito con l'agente MDM incorporato |
+| 14           | MacMDM            | Dispositivo OS X gestito con l'agente MDM incorporato |
 | 15           | HoloLens          | Dispositivo HoloLens                                       |
 | 16           | SurfaceHub        | Dispositivo Surface Hub                                  |
 | 17           | AndroidForWork    | Dispositivo Android gestito con il profilo proprietario Android  |
@@ -465,7 +465,7 @@ L'entità **MamApplicationInstance** elenca le app Gestione delle app mobili (MA
 |          Piattaforma          |                                                                          Piattaforma del dispositivo in cui è installata l'app MAM.                                                                           |                  2                   |
 |      PlatformVersion       |                                                                      Versione della piattaforma del dispositivo in cui è installata l'app MAM.                                                                       |                 2.2                  |
 |         SdkVersion         |                                                                            Versione dell'SDK MAM con cui è stato eseguito il wrapping dell'app MAM.                                                                            |                 3.2                  |
-| mamDeviceId | ID dispositivo a cui è associata l'istanza di applicazione MAM.   | 23/11/2016 12.00.00   |
+| mamDeviceId | ID del dispositivo a cui è associata l'istanza di applicazione MAM.   | 23/11/2016 12.00.00   |
 | mamDeviceType | Tipo di dispositivo a cui è associata l'istanza di applicazione MAM.   | 23/11/2016 12.00.00   |
 | mamDeviceName | Nome del dispositivo a cui è associata l'istanza di applicazione MAM.   | 23/11/2016 12.00.00   |
 |         IsDeleted          | Indica se il record dell'istanza di app MAM è stato aggiornato. <br>True: quest'istanza di app MAM ha un nuovo record con i campi aggiornati in questa tabella. <br>False: l'ultimo record per questa istanza di app MAM. |              True/False              |
@@ -595,7 +595,7 @@ L'entità **ownerType** indica se un dispositivo è aziendale, personale o scono
 | ownerTypeName | Rappresenta il tipo di proprietario dei dispositivi:  Corporate - il dispositivo è di proprietà dell'azienda.  Personal - il dispositivo è di proprietà personale (BYOD).   Unknown - nessuna informazione su questo dispositivo. | Corporate   Personal Unknown |
 
 > [!Note]  
-> Per la creazione di gruppi dinamici per i dispositivi in AzureAD, per il filtro `ownerTypeName` è necessario impostare il valore `deviceOwnership` su `Company`. Per altre informazioni, vedere [Regole per i dispositivi](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
+> Per la creazione di gruppi dinamici per i dispositivi in AzureAD, per il filtro `ownerTypeName` è necessario impostare il valore `deviceOwnership` su `Company`. Per altre informazioni, vedere [Regole per i dispositivi](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
 
 ## <a name="policies"></a>criteri
 l'entità **Policy** elenca profili di configurazione del dispositivo, profili di configurazione dell'app e criteri di conformità. È possibile assegnare i criteri con Gestione dispositivi mobili (MDM) a un gruppo nell'organizzazione.

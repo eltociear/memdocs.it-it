@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc307f22e3caa77357d8d3054a432c8d42c38fc4
-ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
+ms.openlocfilehash: 26545af603e71c0adff5a0c5dcdcbbc337ce4eb3
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88146508"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995178"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Risolvere problemi relativi a criteri e profili in Intune
 
@@ -122,15 +122,15 @@ Controllare lo [stato del tenant](../fundamentals/tenant-status.md) e verificare
 ## <a name="policy-troubleshooting-resources"></a>Risorse per la risoluzione dei problemi relativi ai criteri
 
 - [Risoluzione dei problemi relativi ai criteri iOS/iPadOS o Android che non si applicano ai dispositivi](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-tip-Troubleshooting-iOS-or-Android-policies-not-applying/ba-p/280154) (apre un altro sito Microsoft)
-- [Risoluzione degli errori relativi ai criteri di Intune in Windows 10](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (apre un blog)
+- [Risoluzione degli errori relativi ai criteri di Intune in Windows 10](/archive/blogs/configmgrdogs/troubleshooting-windows-10-intune-policy-failures) (apre un blog)
 - [Risolvere i problemi relativi alle impostazioni personalizzate CSP per Windows 10](https://support.microsoft.com/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (apre un altro sito Microsoft)
-- [Criteri di gruppo di Windows 10 e criteri MDM di Intune](https://blogs.technet.microsoft.com/cbernier/2018/04/02/windows-10-group-policy-vs-intune-mdm-policy-who-wins/) (apre un altro sito Microsoft)
+- [Criteri di gruppo di Windows 10 e criteri MDM di Intune](/archive/blogs/cbernier/windows-10-group-policy-vs-intune-mdm-policy-who-wins) (apre un altro sito Microsoft)
 
 ## <a name="alert-saving-of-access-rules-to-exchange-has-failed"></a>Avviso: Il salvataggio delle regole di accesso in Exchange non è riuscito
 
 **Problema**: viene visualizzato l'avviso **Il salvataggio delle regole di accesso in Exchange non è riuscito** nella console di amministrazione.
 
-Se sono stati creati criteri nell'area di lavoro Criteri di Exchange locale con la console di amministrazione ma si usa Office 365, le impostazioni dei criteri configurate non vengono applicate da Intune. Si noti l'origine dei criteri nell'avviso. Nell'area di lavoro Criteri di Exchange locale eliminare le regole precedenti. Le regole precedenti sono regole globali di Exchange in Intune per Exchange locale e non sono rilevanti per Office 365. In seguito, creare nuovi criteri per Office 365.
+Se sono stati creati criteri nell'area di lavoro Criteri di Exchange locale con la console di amministrazione, ma si usa Microsoft 365, le impostazioni dei criteri configurate non vengono applicate da Intune. Si noti l'origine dei criteri nell'avviso. Nell'area di lavoro Criteri di Exchange locale eliminare le regole precedenti. Le regole legacy sono regole globali di Exchange in Intune per Exchange locale e non sono rilevanti per Microsoft 365. In seguito, creare nuovi criteri per Microsoft 365.
 
 L'articolo [Risolvere i problemi di Intune Exchange Connector locale](../protect/troubleshoot-exchange-connector.md) può essere una risorsa utile.
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8814e1a2c6b1af48d71a0a82c02492e48b44dda9
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: 2c8d007ba2fccb92fd90de4da64945155678041d
+ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84271008"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281201"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Intune autonomo - Gestione di app Win32
 
@@ -240,7 +240,7 @@ I passaggi seguenti forniscono istruzioni per l'aggiunta di un'app di Windows a 
                 ![Screenshot del riquadro Regola di rilevamento - esistenza della cartella](./media/apps-win32-app-management/apps-win32-app-04.png)
         
         3. **Registro**: eseguire una verifica in base a valore, stringa, Integer o versione.
-            - **Percorso della chiave**: percorso completo della voce del Registro di sistema contenente il valore da rilevare.
+            - **Percorso della chiave**: percorso completo della voce del Registro di sistema contenente il valore da rilevare. Una sintassi valida è HKEY_LOCAL_MACHINE\Software\WinRAR o HKLM\Software\WinRAR.
             - **Nome valore**: nome del valore del Registro di sistema da rilevare. Se questo valore è vuoto, verrà eseguito il rilevamento della chiave. Il valore (predefinito) di una chiave verrà usato come valore di rilevamento se il metodo di rilevamento è diverso dall'esistenza del file o della cartella.
             - **Metodo di rilevamento**: selezionare il tipo di metodo di rilevamento usato per convalidare la presenza dell'app.
             - **Associata a un'app a 32 bit nei client a 64 bit**: selezionare **Sì** per eseguire ricerche nel Registro di sistema a 32 bit nei client a 64 bit. Selezionare **No** (impostazione predefinita) per eseguire ricerche nel Registro di sistema a 64 bit nei client a 64 bit. I client a 32 bit eseguiranno sempre ricerche nel registro di sistema a 32 bit.

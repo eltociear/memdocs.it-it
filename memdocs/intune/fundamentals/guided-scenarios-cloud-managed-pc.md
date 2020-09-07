@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4991ced4517ffe5902f876c196b47c2c2b50a8a6
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 1bfb903cbff6f4e2a47117f504981759c00b1d27
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262762"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993852"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>Scenario guidato - Desktop moderno gestito da cloud
 
@@ -55,14 +55,14 @@ In questo scenario guidato è necessario fornire il dispositivo di test e l'uten
 
 - Configurare un account utente di test in Azure Active Directory.
 - Creare un dispositivo di test che esegue Windows 10 versione 1903 o versione successiva.
-- (Facoltativo) [Registrare il dispositivo di test in Windows Autopilot](../enrollment/enrollment-autopilot.md#add-devices).
+- (Facoltativo) [Registrare il dispositivo di test in Windows Autopilot](../../autopilot/enrollment-autopilot.md#add-devices).
 - (Facoltativo) Abilitare le [informazioni personalizzate distintive dell'azienda nella pagina di accesso di Azure Active Directory dell'organizzazione](https://go.microsoft.com/fwlink/?linkid=2102455).
 
 ## <a name="step-2---user"></a>Passaggio 2 - Utente
 
 Scegliere un utente da configurare nel dispositivo. Questa persona sarà l'utente primario del dispositivo.
 
-Se si vogliono aggiungere altri utenti o dispositivi a questa configurazione, è sufficiente aggiungere gli utenti e i dispositivi ai gruppi di sicurezza AAD generati dalla procedura guidata. A differenza di altri scenari guidati, non è necessario eseguire la procedura guidata più di una volta, poiché la configurazione non è personalizzabile. È sufficiente aggiungere altri utenti e dispositivi ai gruppi AAD creati. Al termine della procedura guidata, sarà possibile visualizzare il gruppo generato con i criteri consigliati distribuiti.
+Se si vogliono aggiungere altri utenti o dispositivi a questa configurazione, è sufficiente aggiungere gli utenti e i dispositivi ai gruppi di sicurezza di Azure AD generati dalla procedura guidata. A differenza di altri scenari guidati, non è necessario eseguire la procedura guidata più di una volta, poiché la configurazione non è personalizzabile. È sufficiente aggiungere altri utenti e dispositivi ai gruppi di Azure AD creati. Al termine della procedura guidata, sarà possibile visualizzare il gruppo generato con i criteri consigliati distribuiti.
 
 ## <a name="step-3---device"></a>Passaggio 3 - Dispositivo
 
@@ -74,7 +74,7 @@ Windows Autopilot consente di automatizzare la configurazione dei nuovi disposit
 
 ### <a name="option-b--manual-device-enrollment"></a>Opzione B - Registrazione manuale del dispositivo
 
-Gli utenti possono configurare e registrare manualmente i nuovi dispositivi nella gestione dei dispositivi mobili. Al termine di questo scenario, reimpostare il dispositivo e fornire all'utente primario le istruzioni di registrazione per i dispositivi Windows. Per altre informazioni, vedere [Per aggiungere un dispositivo Windows 10 ad Azure AD in fase di completamento dell'installazione](https://docs.microsoft.com/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device).
+Gli utenti possono configurare e registrare manualmente i nuovi dispositivi nella gestione dei dispositivi mobili. Al termine di questo scenario, reimpostare il dispositivo e fornire all'utente primario le istruzioni di registrazione per i dispositivi Windows. Per altre informazioni, vedere [Per aggiungere un dispositivo Windows 10 ad Azure AD in fase di completamento dell'installazione](/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device).
 
 ## <a name="step-4---review--create"></a>Passaggio 4 - Verifica e creazione
 
@@ -90,12 +90,12 @@ Il passaggio finale consente di esaminare un riepilogo delle impostazioni config
         - Impostato su **Tutti** per l'app **Microsoft Intune** o,
         - Impostato su **In parte**. Inoltre, aggiungere il gruppo di utenti creato da questo scenario guidato.
 2. Verificare che l'utente selezionato sia in grado di aggiungere dispositivi ad Azure Active Directory.
-    - Verificare che l'aggiunta ad AAD sia:
+    - Assicurarsi che Aggiunta ad Azure AD sia:
         - Impostata su **Tutti** o
         - Impostata su **In parte**. Aggiungere anche il gruppo di utenti creato da questo scenario guidato.
 3. Seguire i passaggi appropriati nel dispositivo per aggiungerlo ad Azure AD in base a quanto segue:
-    - Con Autopilot. Per altre informazioni, vedere [Modalità definita dall'utente di Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven).
-    - Senza Autopilot: Per altre informazioni, vedere [Per aggiungere un dispositivo Windows 10 ad Azure AD in fase di completamento dell'installazione](https://docs.microsoft.com/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device).
+    - Con Autopilot. Per altre informazioni, vedere [Modalità definita dall'utente di Windows Autopilot](/windows/deployment/windows-autopilot/user-driven).
+    - Senza Autopilot: Per altre informazioni, vedere [Per aggiungere un dispositivo Windows 10 ad Azure AD in fase di completamento dell'installazione](/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device).
 
 ### <a name="what-happens-when-i-click-deploy"></a>Cosa accade quando si fa clic su Distribuisci?
 L'utente e il dispositivo verranno aggiunti ai nuovi gruppi di sicurezza. Verranno anche configurati con le impostazioni consigliate di Intune per la sicurezza e la produttività nell'ambiente aziendale o dell'istituto di istruzione. Dopo che l'utente ha aggiunto il dispositivo ad Azure AD, al dispositivo verranno aggiunte ulteriori app e impostazioni. Per altre informazioni su queste configurazioni aggiuntive, vedere [Avvio rapido: Registrare il dispositivo Windows 10](../enrollment/quickstart-enroll-windows-device.md).
@@ -122,7 +122,7 @@ Lo scenario guidato prevede anche l'assegnazione dell'utente al dispositivo Auto
 
 Dopo che l'utente ha aggiunto il dispositivo ad Azure Active Directory, al dispositivo verranno applicate le configurazioni seguenti:
 
-1. App di Microsoft 365 verrà installato automaticamente nel computer gestito dal cloud. Include applicazioni note, ovvero Access, Excel, OneNote, Outlook, PowerPoint, Publisher, Skype for Business e Word. È possibile usare queste applicazioni per connettersi ai servizi di Office 365, ad esempio SharePoint Online, Exchange Online e Skype for Business Online. App di Microsoft 365 viene aggiornato regolarmente con nuove funzionalità, a differenza delle versioni non in abbonamento di Office. Per un elenco delle nuove funzionalità, vedere Novità di Office 365.
+1. App di Microsoft 365 verrà installato automaticamente nel computer gestito dal cloud. Include applicazioni note, ovvero Access, Excel, OneNote, Outlook, PowerPoint, Publisher, Skype for Business e Word. È possibile usare queste applicazioni per connettersi ai servizi di Microsoft 365, ad esempio SharePoint Online, Exchange Online e Skype for Business Online. App di Microsoft 365 viene aggiornato regolarmente con nuove funzionalità, a differenza delle versioni non in abbonamento di Office. Per un elenco delle nuove funzionalità, vedere Novità di Microsoft 365.
 2. Le baseline di sicurezza di Windows verranno installate nel PC gestito dal cloud. Se è stato configurato Microsoft Defender Advanced Threat Protection, nello scenario guidato verranno configurate anche le impostazioni di base per Defender. Defender Advanced Threat Protection rende disponibile un nuovo livello di protezione post-violazione nello stack di sicurezza di Windows 10. Grazie a una combinazione di tecnologia client integrata in Windows 10 e un servizio cloud affidabile, consentirà di rilevare le minacce che hanno superato altre difese. 
 
 ## <a name="next-steps"></a>Passaggi successivi

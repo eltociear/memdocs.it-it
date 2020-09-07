@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 534a7f60668091e613ff9dd9fc8a388ec59a247a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f99ddee5a30b7fb6d604e91711d12ed81b53dd91
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989421"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993937"
 ---
 # <a name="add-groups-to-organize-users-and-devices"></a>Aggiungere gruppi per organizzare utenti e dispositivi
 
@@ -54,7 +54,7 @@ Usare la procedura seguente per creare un nuovo gruppo.
         >
         > Se il ruolo primario svolto è la gestione dei dispositivi, è consigliabile usare l'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-    - **Office 365**: Offre opportunità di collaborazione consentendo ai membri l'accesso a una cassetta postale condivisa, al calendario, ai file, al sito SharePoint e altro ancora. Questa opzione consente anche di concedere a utenti esterni all'organizzazione l'accesso al gruppo. Per altre informazioni, vedere [Informazioni su Gruppi di Office 365](https://support.office.com/article/learn-about-office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2).
+    - **Microsoft 365**: Offre opportunità di collaborazione consentendo ai membri l'accesso a una cassetta postale condivisa, al calendario, ai file, al sito SharePoint e altro ancora. Questa opzione consente anche di concedere a utenti esterni all'organizzazione l'accesso al gruppo. Per altre informazioni, vedere [Informazioni su Gruppi di Microsoft 365](https://support.office.com/article/learn-about-office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2).
 
 4. Immettere un **Nome gruppo** e una **Descrizione gruppo** per il nuovo gruppo. Immettere informazioni specifiche che consentano agli altri utenti di individuare la funzione del gruppo.
 
@@ -70,8 +70,8 @@ Usare la procedura seguente per creare un nuovo gruppo.
 
     Per altre informazioni su questi tipi di appartenenza e sulla creazione di espressioni dinamiche, vedere:
 
-    - [Creare un gruppo di base e aggiungere membri con Azure AD](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal)
-    - [Regole di appartenenza dinamica per i gruppi in Azure AD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership)
+    - [Creare un gruppo di base e aggiungere membri con Azure AD](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal)
+    - [Regole di appartenenza dinamica per i gruppi in Azure AD](/azure/active-directory/users-groups-roles/groups-dynamic-membership)
 
     > [!NOTE]
     > Nell'interfaccia di amministrazione, quando si creano utenti o gruppi, è possibile che non venga visualizzato **Azure Active Directory**. Ciononostante, viene usato Azure Active Directory.
@@ -106,4 +106,4 @@ Per raccomandazioni e materiale sussidiario sui profili di configurazione, veder
 ## <a name="see-also"></a>Vedere anche
 
 - [Controllo degli accessi in base al ruolo con Microsoft Intune](role-based-access-control.md)
-- [Gestire l'accesso alle risorse con i gruppi di Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-manage-groups)
+- [Gestire l'accesso alle risorse con i gruppi di Azure AD](/azure/active-directory/active-directory-manage-groups)

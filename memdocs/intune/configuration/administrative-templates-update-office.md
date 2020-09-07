@@ -1,6 +1,6 @@
 ---
-title: Aggiornare Office 365 usando modelli amministrativi in Microsoft Intune - Azure | Microsoft Docs
-description: Usare modelli amministrativi in Microsoft Intune per aggiornare le app di Office 365 alla versione più recente e scegliere la frequenza con cui Office controlla la disponibilità degli aggiornamenti. Vedere le chiavi del Registro di sistema del dispositivo aggiornate quando viene applicato un criterio di Intune a Office Update.
+title: Aggiornare Microsoft 365 usando modelli amministrativi in Microsoft Intune - Azure | Microsoft Docs
+description: Usare modelli amministrativi in Microsoft Intune per aggiornare le app di Microsoft 365 alla versione più recente e scegliere la frequenza con cui Office controlla la disponibilità degli aggiornamenti. Vedere le chiavi del Registro di sistema del dispositivo aggiornate quando viene applicato un criterio di Intune a Office Update.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -16,29 +16,29 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72b0ef53f0451314ef121f82524697ddfdc38cd3
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 2af6784db43b2513b57d850d85fa4deaa3052613
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531724"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193845"
 ---
-# <a name="use-update-channel-and-target-version-settings-to-update-office-365-with-microsoft-intune-administrative-templates"></a>Usare le impostazioni Canale di aggiornamento e Versione di destinazione per aggiornare Office 365 con i modelli amministrativi di Microsoft Intune
+# <a name="use-update-channel-and-target-version-settings-to-update-microsoft-365-with-microsoft-intune-administrative-templates"></a>Usare le impostazioni Canale di aggiornamento e Versione di destinazione per aggiornare Microsoft 365 con i modelli amministrativi di Microsoft Intune
 
-In Intune è possibile usare [modelli di Windows 10 per configurare le impostazioni di criteri di gruppo](administrative-templates-windows.md). Questo articolo illustra come aggiornare Office 365 usando un modello amministrativo in Intune. L'articolo include anche materiale sussidiario per verificare l'applicazione corretta dei criteri. Queste informazioni sono utili anche per la risoluzione dei problemi.
+In Intune è possibile usare [modelli di Windows 10 per configurare le impostazioni di criteri di gruppo](administrative-templates-windows.md). Questo articolo illustra come aggiornare Microsoft 365 usando un modello amministrativo in Intune. L'articolo include anche materiale sussidiario per verificare l'applicazione corretta dei criteri. Queste informazioni sono utili anche per la risoluzione dei problemi.
 
-In questo scenario viene creato un modello amministrativo in Intune che aggiorna Office 365 nei dispositivi.
+In questo scenario viene creato un modello amministrativo in Intune che aggiorna Microsoft 365 nei dispositivi.
 
 Per altre informazioni sui modelli amministrativi, vedere [Usare i modelli di Windows 10 per configurare le impostazioni di criteri di gruppo](administrative-templates-windows.md).
 
 Si applica a:
 
 - Windows 10 e versioni successive
-- Office 365
+- Microsoft 365
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Assicurarsi di [abilitare Aggiornamenti automatici di App di Microsoft 365](https://docs.microsoft.com/deployoffice/configure-update-settings-for-office-365-proplus) per le app di Office. È possibile eseguire questa operazione usando i criteri di gruppo o il modello ADMX di Office 2016 di Intune:
+Assicurarsi di [abilitare Aggiornamenti automatici di App di Microsoft 365](/deployoffice/configure-update-settings-for-office-365-proplus) per le app di Office. È possibile eseguire questa operazione usando i criteri di gruppo o il modello ADMX di Office 2016 di Intune:
 
 > [!div class="mx-imgBorder"]
 > ![Nel modello amministrativo di Intune impostare Abilita aggiornamenti automatici per Office](./media/administrative-templates-update-office/admx-enable-automatic-updates.png)
@@ -56,7 +56,7 @@ Assicurarsi di [abilitare Aggiornamenti automatici di App di Microsoft 365](http
 2. Assicurarsi di [assegnare i criteri](device-profile-assign.md) ai dispositivi Windows 10. Per testare i criteri, è anche possibile sincronizzarli:
 
     - [Sincronizzare i criteri in Intune](../remote-actions/device-sync.md)
-    - [Sincronizzare manualmente i criteri nel dispositivo](https://docs.microsoft.com/mem/intune/user-help/sync-your-device-manually-windows#sync-from-settings-app)
+    - [Sincronizzare manualmente i criteri nel dispositivo](../user-help/sync-your-device-manually-windows.md#sync-from-settings-app)
 
 ## <a name="check-the-intune-registry-keys"></a>Controllare le chiavi del Registro di sistema di Intune
 
@@ -79,7 +79,7 @@ Dopo aver assegnato i criteri e dopo la sincronizzazione del dispositivo, è pos
     > ![Esempio di chiave del Registro di sistema L_Updatebranch del modello amministrativo](./media/administrative-templates-update-office/admx-update-branch-registry-key.png)
 
     > [!TIP]
-    > In [Gestire App di Microsoft 365 con Configuration Manager](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) è disponibile un elenco dei valori con il relativo significato. I valori del registro sono basati sul canale di distribuzione selezionato:
+    > In [Gestire App di Microsoft 365 con Configuration Manager](/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) è disponibile un elenco dei valori con il relativo significato. I valori del registro sono basati sul canale di distribuzione selezionato:
     >
     >- Canale mensile                - value="Current"
     >- Canale mensile (mirato)     - value="Current"
@@ -97,9 +97,9 @@ A questo punto, i criteri di Intune vengono applicati correttamente al dispositi
     Vengono visualizzate le chiavi del Registro di sistema seguenti:
 
     - `UpdateChannel`: chiave dinamica che cambia, a seconda delle impostazioni configurate.
-    - `CDNBaseUrl`: impostato quando Office 365 viene installato nel dispositivo.
+    - `CDNBaseUrl`: impostato quando Microsoft 365 viene installato nel dispositivo.
 
-3. Osservare il valore `UpdateChannel`. Il valore indica la frequenza di aggiornamento di Office. In [Gestire App di Microsoft 365 con Configuration Manager](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) è disponibile un elenco dei valori con la relativa impostazione.
+3. Osservare il valore `UpdateChannel`. Il valore indica la frequenza di aggiornamento di Office. In [Gestire App di Microsoft 365 con Configuration Manager](/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) è disponibile un elenco dei valori con la relativa impostazione.
 
     Esaminando l'esempio seguente si noti che `UpdateChannel` è impostato su `http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60`, ovvero **mensile**:
 
@@ -134,7 +134,7 @@ Per testare i criteri, è possibile forzare le impostazioni dei criteri nel disp
 
     Dovrebbe essere aggiornato con il valore impostato nei criteri. In questo esempio il valore dovrebbe essere impostato su `http://officecdn.microsoft.com/pr/7ffbc6bf-bc32-4f92-8982-f9dd17fd3114`.
 
-A questo punto, il canale di aggiornamento di Office è stato modificato correttamente nel dispositivo. È possibile aprire un'app di Office 365 per un utente che riceve questo aggiornamento per verificare lo stato.
+A questo punto, il canale di aggiornamento di Office è stato modificato correttamente nel dispositivo. È possibile aprire un'app di Microsoft 365 per un utente che riceve questo aggiornamento per verificare lo stato.
 
 ## <a name="force-the-office-synchronization-to-update-account-information"></a>Forza la sincronizzazione di Office per aggiornare le informazioni dell'account  
 
@@ -142,7 +142,7 @@ Se si vuole eseguire altre operazioni, è possibile forzare l'aggiornamento alla
 
 ### <a name="step-1-force-the-office-version-to-update"></a>Passaggio 1: Forzare l'aggiornamento della versione di Office
 
-1. Verificare che la versione di Office supporti il canale di aggiornamento scelto. In [Cronologia degli aggiornamenti per App di Microsoft 365](https://docs.microsoft.com/officeupdates/update-history-office365-proplus-by-date) è disponibile un elenco dei numeri di build che supportano i diversi canali di aggiornamento.
+1. Verificare che la versione di Office supporti il canale di aggiornamento scelto. In [Cronologia degli aggiornamenti per App di Microsoft 365](/officeupdates/update-history-office365-proplus-by-date) è disponibile un elenco dei numeri di build che supportano i diversi canali di aggiornamento.
 
 2. Nel [modello amministrativo di Intune](administrative-templates-windows.md#create-the-template) passare all'impostazione **Versione di destinazione** e immettere la versione desiderata.
 
@@ -181,8 +181,8 @@ Provare a usare questi passaggi per testare i criteri prima di distribuirli a tu
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Aggiornare i valori del canale per i client Office 365](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)
+[Aggiornare i valori del canale per i client Microsoft 365](/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)
 
-[Panoramica del servizio di criteri del cloud di Office per App di Microsoft 365](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service)
+[Panoramica del servizio di criteri del cloud di Office per App di Microsoft 365](/deployoffice/overview-office-cloud-policy-service)
 
 [Usare i modelli di Windows 10 per configurare le impostazioni di criteri di gruppo (modelli ADMX) in Microsoft Intune](administrative-templates-windows.md)

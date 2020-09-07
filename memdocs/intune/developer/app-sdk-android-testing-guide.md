@@ -5,7 +5,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/18/2020
+ms.date: 09/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b47361bf4812de91d12c779a6eb58fef35e9d0f2
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 975ab2faa91a5e904beb5aa17b776061f122916d
+ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262048"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89286272"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developers-testing-guide"></a>Guida al testing di Microsoft Intune App SDK per sviluppatori di Android
 
@@ -33,7 +33,7 @@ Se non si dispone già di un tenant con la società, è possibile creare un tena
 1. Passare al [sito di creazione del tenant Microsoft CDX](https://cdx.transform.microsoft.com/my-tenants/create-tenant) e creare un tenant di Microsoft 365 Enterprise.
 2. [Configurare Intune](../fundamentals/setup-steps.md) per abilitare la gestione di dispositivi mobili (MDM).
 3. [Creare gli utenti](../fundamentals/users-add.md).
-4. [Creare i gruppi](../fundamentals/groups-add.md).
+4. [Creare i gruppi]../fundamentals/(groups-add.md).
 5. [Assegnare le licenze](../fundamentals/licenses-assign.md) appropriate per i test.
 
 
@@ -97,7 +97,7 @@ Se l'app richiede [controlli 'Apri da' integrati](app-sdk-android.md#opening-dat
     - La copia di testo dalla propria app in un'app non gestita (ad esempio Messaggi) viene bloccata.
 
 ### <a name="prevent-save"></a>Impedire il salvataggio
-Se l'app richiede [controlli Salva con nome integrati](app-sdk-android.md#example-data-transfer-between-apps-and-device-or-cloud-storage-locations), è possibile controllare la funzionalità **Salva con nome** come indicato di seguito:
+Se l'app richiede controlli Salva con nome integrati, è possibile controllare la funzionalità **Salva con nome** come indicato di seguito:
 
 1. Impostare **Impedisci 'Salva con nome'** su **Sì**.
 2. Confermare le condizioni seguenti:

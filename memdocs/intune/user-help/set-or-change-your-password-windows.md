@@ -1,11 +1,11 @@
 ---
 title: Impostare o modificare la password del dispositivo | Microsoft Docs
-description: ''
+description: Creare o cambiare la password nel dispositivo Windows 10 mobile o desktop.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/28/2018
+ms.date: 08/27/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,35 +17,30 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 0c4922bfa179436d30d73c4314662ee0cd7aa815
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: ec3fdfb5015cd1b0c0c43e94f9cf55762e4bf559
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881904"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057454"
 ---
-# <a name="make-your-device-safer-with-the-right-password"></a>Aumentare la sicurezza del dispositivo impostando la password corretta
+# <a name="set-a-device-password-on-windows-10-device"></a>Impostare una password nel dispositivo Windows 10
+Creare o cambiare la password nel dispositivo Windows 10 mobile o desktop. 
 
-L'accesso alle risorse aziendali, ad esempio la posta elettronica e i documenti, è un'operazione che gli utenti devono eseguire ogni giorno usando i propri dispositivi Windows. Le organizzazioni vogliono avere la certezza che i dispositivi degli utenti siano in grado di eseguire queste attività in modo sicuro. Un modo per garantire l'accesso sicuro alle risorse è imporre ai dispositivi l'uso di una password. Queste password vengono usate, ad esempio, per accedere al dispositivo dalla schermata di blocco.
+In un dispositivo mobile:
 
-Se il dispositivo Windows non è conforme ai criteri password del supporto tecnico dell'azienda, viene visualizzato un messaggio che descrive brevemente il problema e spiega quali operazioni eseguire per fare in modo che la password soddisfi i requisiti.
+1. Passare al menu **Start** > **Impostazioni**.
+2. Vengono aperte le impostazioni di sistema. Selezionare **Account** > **Opzioni di accesso**.
+3. Selezionare **Password** > **Cambia**.
+4. Seguire le istruzioni visualizzate per impostare una nuova password.  
 
-> [!Note]
-> Il supporto tecnico dell'azienda può impostare più requisiti per la password. Ad esempio, può essere necessario che la password contenga un certo numero di caratteri, un insieme di numeri e lettere. Poiché potrebbero essere impostati più requisiti, queste istruzioni spiegano solo come impostare o modificare la password. Non viene illustrata ogni possibile combinazione di requisiti.
+In un dispositivo desktop:  
+1. Premere **CTRL**+**ALT**+**CANC**.   
+2. Selezionare **Cambia password**.
+3. Seguire le istruzioni visualizzate per impostare una nuova password.  
 
-## <a name="to-change-your-password-on-windows-phone-81"></a>Per modificare la password in Windows Phone 8.1
+Per altre informazioni: 
+ 
+* Contattare un membro del supporto IT per informazioni sui requisiti per le password, su Portale aziendale o sui problemi di accesso alla rete. Per informazioni sul contatto vedere il [sito Web del portale aziendale](https://go.microsoft.com/fwlink/?linkid=2010980).  
+* Per altre informazioni sulle altre opzioni di accesso in Windows 10, vedere [Opzioni di accesso e protezione account di Windows 10](https://support.microsoft.com/help/4468253/windows-10-sign-in-options-and-privacy).  
 
-1. Dalla schermata **home** scegliere **Impostazioni** e quindi scegliere **Schermata di blocco**.
-2. Scorrere verso il basso fino a **Password** e scegliere **cambia la password**.
-3. Immettere la password corrente nella casella **Password attuale**.
-4. Immettere la nuova password nella casella **Nuova password** e quindi digitarla nuovamente nella casella **Conferma la password**.
-4. Scegliere **fatto**.
-
-## <a name="to-set-your-password-on-windows-phone-81"></a>Per impostare la password in un dispositivo Windows Phone 8.1
-
-1. Dalla schermata **home** scegliere **Impostazioni** e quindi scegliere **Schermata di blocco**.
-2. Scorrere verso il basso fino a **Password** e far scorrere la barra **Password** fino a **Sì**.
-3. Immettere la nuova password nella casella **Nuova password** e quindi digitarla nuovamente nella casella **Conferma la password**.
-4. Scegliere **fatto**.
-
-Serve ancora assistenza? Contattare l'amministratore IT. Per informazioni sul contatto vedere il [sito Web del portale aziendale](https://go.microsoft.com/fwlink/?linkid=2010980).

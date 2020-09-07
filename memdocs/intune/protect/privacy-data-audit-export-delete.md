@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6aa9195e8d0559a106be323108487579eb068b91
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2bdf057893ff24cd4bc5b671d53fbb5c75f597f5
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084802"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995994"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>Controllare, esportare o eliminare i dati personali in Intune
 
@@ -60,20 +60,20 @@ Esistono tre modi per rimuovere i dati personali dalla gestione di Intune:
 
 ### <a name="delete-a-user-from-intune"></a>Eliminare un utente da Intune
 
-Per eliminare i dati personali di un utente finale da Intune, un amministratore deve [eliminare l'utente da Azure Active Directory (AAD)](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user). Quando l'utente viene eliminato da AAD (eliminazione definitiva), Intune riceve il segnale di eliminazione da AAD, quindi avvia automaticamente la rimozione di tutti i dati personali dell'utente dal servizio Intune. Le informazioni dell'utente verranno eliminate dal servizio Intune entro 30 giorni dall'azione di rimozione.
+Per eliminare i dati personali di un utente finale da Intune, un amministratore deve [eliminare l'utente da Azure Active Directory (AAD)](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user). Quando l'utente viene eliminato da AAD (eliminazione definitiva), Intune riceve il segnale di eliminazione da AAD, quindi avvia automaticamente la rimozione di tutti i dati personali dell'utente dal servizio Intune. Le informazioni dell'utente verranno eliminate dal servizio Intune entro 30 giorni dall'azione di rimozione.
 
 ### <a name="reset-device-to-factory-settings"></a>Ripristino delle impostazioni predefinite del dispositivo
 Il ripristino delle impostazioni predefinite consente di ripristinare tutti i dati e le impostazioni personali e dell'azienda sulle impostazioni di fabbrica originali. È utile per fornire un dispositivo al dipendente successivo. I file dell'utente, le applicazioni installate dall'utente e le impostazioni non predefinite vengono rimosse e questi dati vengono eliminati dal servizio di Intune entro 30 giorni dall'azione di rimozione.
 
 ### <a name="user-self-removal-from-intune-management"></a>Rimozione in autonomia dell'utente dalla gestione di Intune
-Gli utenti possono rimuovere i dispositivi personali [Windows, Android o Apple](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-android) dalla gestione di Intune senza intervento dell'amministratore.   
+Gli utenti possono rimuovere i dispositivi personali [Windows, Android o Apple](../user-help/unenroll-your-device-from-intune-android.md) dalla gestione di Intune senza intervento dell'amministratore.   
 
 ### <a name="retire"></a>Ritiro
 L'azione **Ritira** consente di rimuovere i dati di cui è stato eseguito il provisioning da Intune, ad esempio le applicazioni aziendali, i dati sulle app gestite in Intune, le impostazioni dei criteri e i profili di posta elettronica sottoposti a provisioning con Intune. Questa azione lascia i dati personali dell'utente nel dispositivo.
 
 ### <a name="delete-a-tenant-from-microsoft-intune"></a>Eliminare un tenant da Microsoft Intune
 
-Se un cliente di tenant di Intune annulla il proprio account di Intune, tutti i dati del tenant vengono eliminati entro 180 giorni dopo la chiusura dell'account Intune da parte del cliente. Se il tenant AAD è associato ad altre sottoscrizioni aziendali Microsoft (Azure, Office 365), vengono eliminati solo i dati del cliente per Intune. La risorsa del tenant di AAD viene mantenuta per l'uso con altre sottoscrizioni. Se l'account di Intune è l'unica sottoscrizione associata al tenant di AAD, allora il tenant verrà eliminato insieme a tutte le risorse e ai dati del cliente.
+Se un cliente di tenant di Intune annulla il proprio account di Intune, tutti i dati del tenant vengono eliminati entro 180 giorni dopo la chiusura dell'account Intune da parte del cliente. Se il tenant Azure AD è associato ad altre sottoscrizioni aziendali Microsoft (Azure, Microsoft 365), vengono eliminati solo i dati del cliente per Intune. La risorsa del tenant di Azure AD viene mantenuta per l'uso con altre sottoscrizioni. Se l'account di Intune è l'unica sottoscrizione associata al tenant di Azure AD, allora il tenant verrà eliminato insieme a tutte le risorse e ai dati del cliente.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

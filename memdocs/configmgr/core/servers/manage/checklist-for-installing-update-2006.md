@@ -2,7 +2,7 @@
 title: Elenco di controllo per la versione 2006
 titleSuffix: Configuration Manager
 description: Informazioni sulle azioni da intraprendere prima di eseguire l'aggiornamento di Configuration Manager alla versione 2006.
-ms.date: 08/17/2020
+ms.date: 08/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6d359306-69ae-4873-ba90-964b6ae51d79
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 05264780ef3971a7aa8b2d1778f0fe27c90b0b71
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 842264dcbbf93be623f68854b158d33c2f505928
+ms.sourcegitcommit: 68631e0f7d5bd09ae0ee9dc301a561ee9df10931
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696464"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89245001"
 ---
 # <a name="checklist-for-installing-update-2006-for-configuration-manager"></a>Elenco di controllo per l'installazione dell'aggiornamento 2006 di Configuration Manager
 
@@ -68,36 +68,38 @@ La prima volta che si usa una console di Configuration Manager dopo l'aggiorname
 
 <!-- SCCMDocs#1397 -->
 
-<!-- As of May 11, 2020, version 2006 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version. -->
+A partire dal 31 agosto 2020, la versione 2006 è disponibile per l'installazione a livello globale da parte di tutti i clienti. Se in precedenza è stato scelto l'anello di aggiornamento anticipato, controllare la presenza di un aggiornamento a questa versione Current Branch.
 
-La versione 2006 viene attualmente rilasciata per l'anello di aggiornamento anticipato. Per installare questo aggiornamento, è necessario acconsentire esplicitamente. Lo script di PowerShell seguente aggiunge la gerarchia o il sito primario autonomo all'anello di aggiornamento anticipato per la versione 2006:
+<!--
+At this time, version 2006 is released for the early update ring. To install this update, you need to opt-in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2006:
 
-[Script di consenso esplicito per la versione 2006](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
+[Version 2006 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target --
 
-Microsoft firma digitalmente lo script e lo aggrega all'interno di un file eseguibile autoestraente firmato.
+Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable.
 
 > [!NOTE]
-> L'aggiornamento della versione 2006 è applicabile solo ai siti che eseguono la versione 1810 o successiva.
+> The version 2006 update is only applicable to sites running version 1810 or later.
 
-Per acconsentire esplicitamente all'anello di aggiornamento anticipato:
+To opt-in to the early update ring:
 
-1. Aprire una sessione di Windows PowerShell versione 5 **come amministratore**
+1. Open a Windows PowerShell version 5 session **as administrator**
 
     > [!IMPORTANT]
-    > Configuration Manager (Current Branch) attualmente non supporta PowerShell versione 7. Se è già stato installato PowerShell versione 7, è comunque possibile usare PowerShell versione 5. Per altre informazioni, vedere [Uso di PowerShell 7 side-by-side con Windows PowerShell 5.1](/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7#using-powershell-7-side-by-side-with-windows-powershell-51).
+    > Configuration Manager current branch doesn't currently support PowerShell version 7. If you've already installed PowerShell version 7, you can still use PowerShell version 5. For more information, see [Using PowerShell 7 side-by-side with Windows PowerShell 5.1](/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7#using-powershell-7-side-by-side-with-windows-powershell-51).
 
-1. Eseguire lo script **EnableEarlyUpdateRing2006.ps1** usando la sintassi seguente:
+1. Run the **EnableEarlyUpdateRing2006.ps1** script, using the following syntax:
 
     `EnableEarlyUpdateRing2006.ps1 <SiteServer_Name> | SiteServer_IP>`
 
-    Dove `SiteServer` fa riferimento al sito di amministrazione centrale o a un sito primario autonomo. Ad esempio, usare `EnableEarlyUpdateRing2006.ps1 cmprimary01`
+    Where `SiteServer` refers to the central administration site or standalone primary site server. For example, `EnableEarlyUpdateRing2006.ps1 cmprimary01`
 
-1. Verificare la disponibilità di aggiornamenti. Per altre informazioni, vedere [Ottenere gli aggiornamenti disponibili](install-in-console-updates.md#get-available-updates).
+1. Check for updates. For more information, see [Get available updates](install-in-console-updates.md#get-available-updates).
 
-L'aggiornamento della versione 2006 dovrebbe essere ora disponibile nella console.
+The version 2006 update should now be available in the console.
 
 > [!IMPORTANT]
-> Questo script si limita ad aggiungere il sito all'anello di aggiornamento anticipato per la versione 2006. Non si tratta di una modifica permanente.
+> This script only adds your site to the early update ring for version 2006. It's not a permanent change.
+-->
 
 ## <a name="checklist"></a>Elenco di controllo
 

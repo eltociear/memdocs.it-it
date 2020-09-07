@@ -19,12 +19,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2e32b6e1c5e976669e78d3cf00610fbd57b68dd1
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: 0d4ae3b78e9bbb2e6135bec4a0e1ab69e80092ba
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048039"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057403"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>Configurare l'accesso del dispositivo iOS alle risorse aziendali  
 
@@ -54,11 +54,11 @@ Quando il dispositivo è registrato, l'app Portale aziendale continuerà ad assi
 ### <a name="setting-notifications"></a>Impostazione delle notifiche  
 Se dopo la registrazione l'organizzazione applica un nuovo requisito di sicurezza, ad esempio l'autenticazione a più fattori, l'app Portale aziendale invierà una notifica. L'utente potrà quindi modificare le impostazioni per continuare a lavorare dal proprio dispositivo.  
 
-Per altre informazioni sulla registrazione, vedere [Che cosa avviene quando si installa l'app Portale aziendale e si registra il dispositivo?](https://docs.microsoft.com//mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios).  
+Per altre informazioni sulla registrazione, vedere [Che cosa avviene quando si installa l'app Portale aziendale e si registra il dispositivo?](//mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios).  
 
-## <a name="prerequisties"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisiti    
 
-* Passare all'App Store per scaricare e installare l'[app Portale aziendale Intune](install-and-sign-in-to-the-intune-company-portal-app-ios.md) nel dispositivo. 
+* Installare l'app Portale aziendale da [App Store](https://go.microsoft.com/fwlink/?linkid=2141414).
 * Avere a disposizione una connessione Wi-Fi fino al completamento di tutti i passaggi.
 * Avere accesso al Web browser Safari nel dispositivo.
 
@@ -188,4 +188,4 @@ Gli amministratori IT che riscontrano problemi durante la registrazione dei disp
 ## <a name="next-steps"></a>Passaggi successivi  
 Trovare app utili per le attività lavorative o scolastiche. Informazioni su [come vengono rese disponibili le app](use-managed-apps-on-your-device-ios.md) tramite il Portale aziendale.  
 
-Serve ancora assistenza? Rivolgersi al personale del supporto tecnico dell'azienda. È possibile trovare le informazioni di contatto nel [sito Web del portale aziendale](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Serve ancora assistenza? Rivolgersi al personale del supporto tecnico dell'azienda. È possibile trovare le informazioni di contatto nel [sito Web del portale aziendale](https://go.microsoft.com/fwlink/?linkid=2010980).

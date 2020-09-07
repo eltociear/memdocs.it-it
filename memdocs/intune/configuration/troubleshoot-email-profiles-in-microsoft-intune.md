@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 717ad28625b5eac97c26bcd09a21ef34250a7d39
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: 3d011d6111ede4bb5879e53e771d20b792bf00d3
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565717"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995127"
 ---
 # <a name="common-issues-and-resolutions-with-email-profiles-in-microsoft-intune"></a>Problemi comuni e soluzioni per i profili di posta elettronica in Microsoft Intune
 
@@ -51,7 +51,7 @@ In questi scenari occorre decidere se è più importante usare i gruppi di dispo
 
 ## <a name="device-already-has-an-email-profile-installed"></a>Nel dispositivo è già installato un profilo di posta elettronica
 
-Se gli utenti creano un profilo di posta elettronica prima di registrarsi in Intune o in Office 365 MDM, il profilo di posta elettronica distribuito da Intune potrebbe non funzionare nel modo previsto:
+Se gli utenti creano un profilo di posta elettronica prima di registrarsi in Intune o in Microsoft 365 MDM, il profilo di posta elettronica distribuito da Intune potrebbe non funzionare nel modo previsto:
 
 - **iOS/iPadOS**: Intune rileva un profilo di posta elettronica esistente duplicato in base all'indirizzo di posta elettronica e al nome host. Il profilo di posta elettronica creato dall'utente blocca la distribuzione del profilo creato da Intune. Questo scenario rappresenta un problema comune, dato che gli utenti di iOS/iPadOS in genere creano un profilo di posta elettronica e poi eseguono la registrazione. L'app Portale aziendale indica che l'utente non è conforme e potrebbe richiedergli di rimuovere il profilo di posta elettronica.
 

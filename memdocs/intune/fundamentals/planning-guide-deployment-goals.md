@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74fbf1af85fdaef7cebde5c58f7892015b433ff6
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 63ef6acb54f079f2a47800ae84cbe49cd4fabed3
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079230"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992642"
 ---
 # <a name="determine-deployment-goals-objectives-and-challenges"></a>Determinare scopi, obiettivi e sfide per la distribuzione
 
@@ -33,9 +33,9 @@ Per un piano di distribuzione efficace è prima necessario identificare gli scop
 
 Gli scopi della distribuzione sono i traguardi a lungo termine che si intende raggiungere con l'implementazione di Intune nell'organizzazione. Di seguito sono riportati alcuni esempi di tali scopi, con la relativa descrizione e informazioni sul valore aziendale.
 
-- **Assicurare l'integrazione con Office 365 e supportare l'uso delle app di Office Mobile**
+- **Assicurare l'integrazione con Microsoft 365 e supportare l'uso delle app per dispositivi mobili di Office**
 
-  - **Descrizione:** fornire una stretta integrazione con Office 365 e l'uso di app di Office per dispositivi mobili con protezione delle app.
+  - **Descrizione:** fornire una stretta integrazione con Microsoft 365 e l'uso di app di Office per dispositivi mobili con protezione delle app.
 
   - **Valore per l'azienda:** esperienza utente sicura e migliorata che permette agli utenti di usare app con cui hanno già familiarità e che preferiscono.
 

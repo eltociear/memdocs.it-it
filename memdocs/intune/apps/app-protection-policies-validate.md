@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0630c38a28499c0add8cacf4deb5356345167c99
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 02266ce355d4fc4b74487840a91b503d69bf7b2e
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990462"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996504"
 ---
 # <a name="how-to-validate-your-app-protection-policy-setup-in-microsoft-intune"></a>Come convalidare la configurazione dei criteri di protezione delle app in Microsoft Intune
 
@@ -39,20 +39,20 @@ Difficilmente gli utenti segnalano problemi poiché la protezione delle app è u
 Se dai test risulta che il comportamento dei criteri di protezione delle app è diverso dal previsto, verificare questi elementi:
 
 - Disponibilità della licenza per la protezione delle app
-- Disponibilità della licenza per Office 365
+- Disponibilità della licenza per Microsoft 365
 - Stato di ogni app di protezione delle app degli utenti I possibili stati per le app sono **Archiviato** e **Non archiviato**.
 
 ### <a name="user-app-protection-status"></a>Stato di protezione dell'app dell'utente
 1. Accedere all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Selezionare **App** > **Monitor** >  **Stato protezione app**e quindi selezionare il riquadro **Utenti assegnati**. 
 4. Nella pagina **Segnalazione app** selezionare **Selezionare l'utente** per visualizzare un elenco di utenti e gruppi. 
-5. Cercare e selezionare un utente nell'elenco e quindi scegliere **Selezionare l'utente**. Nella parte superiore del riquadro **Segnalazione app** è possibile verificare se l'utente ha la licenza per la protezione delle app. È anche possibile visualizzare se l'utente ha una licenza per Office 365 e lo stato dell'app per tutti i dispositivi dell'utente.
+5. Cercare e selezionare un utente nell'elenco e quindi scegliere **Selezionare l'utente**. Nella parte superiore del riquadro **Segnalazione app** è possibile verificare se l'utente ha la licenza per la protezione delle app. È anche possibile visualizzare se l'utente ha una licenza per Microsoft 365 e lo stato dell'app per tutti i dispositivi dell'utente.
 
 ## <a name="what-to-do"></a>Operazioni da eseguire
 Di seguito sono descritte le azioni da eseguire in base allo stato dell'utente:
 
 - Se l'utente non ha la licenza per la protezione delle app, assegnargli una [licenza di Intune](../fundamentals/licenses.md).
-- Se l'utente non ha una [licenza](../fundamentals/licenses.md) per Office 365, ottenerne una per l'utente.
+- Se l'utente non ha una [licenza](../fundamentals/licenses.md) per Microsoft 365, ottenerne una per l'utente.
 - Se un'app dell'utente è elencata come **Archiviazione non eseguita**, controllare se i [criteri di protezione delle app](app-protection-policies-validate.md) per tale app sono stati configurati correttamente.
 - Assicurarsi che queste condizioni vengano applicate a tutti gli utenti a cui si vogliono applicare i [criteri di protezione delle app](app-protection-policies-monitor.md).
 

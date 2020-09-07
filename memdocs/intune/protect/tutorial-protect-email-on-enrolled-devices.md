@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 24bdaf71f90e3da84fb26c4b69d9b81f43413c69
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: feabc9f889d0bce83c96df92f8154784e31b84e4
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079060"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996708"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>Esercitazione: Proteggere la posta elettronica di Exchange Online nei dispositivi gestiti
 
@@ -104,11 +104,11 @@ A questo punto si creeranno criteri di accesso condizionale che richiedono che t
 
 1. In Intune selezionare **Endpoint Security** (Sicurezza degli endpoint) > **Accesso condizionale** > **Nuovi criteri**.
 
-2. Per **Nome** immettere **Criteri di test per posta elettronica Office 365**.
+2. Per **Nome** immettere **Criteri di test per posta elettronica Microsoft 365**.
 
 3. In **Assegnazioni** selezionare **Utenti e gruppi**. Nella scheda **Includi** selezionare **Tutti gli utenti** e quindi selezionare **Fine**.
 
-4. In **Assegnazioni** selezionare **Applicazioni cloud o azioni**. Dato che si vuole proteggere la posta elettronica di Office 365 Exchange Online, si selezionerà questa app tramite la procedura seguente:
+4. In **Assegnazioni** selezionare **Applicazioni cloud o azioni**. Dato che si vuole proteggere la posta elettronica di Microsoft 365 Exchange Online, si selezionerà questa app tramite la procedura seguente:
 
    1. Nella scheda **Includi** scegliere **Selezionare le app**.
 
@@ -162,7 +162,7 @@ A questo punto si creeranno criteri di accesso condizionale che richiedono che t
 
 ## <a name="try-it-out"></a>Procedura
 
-Con i criteri creati, qualsiasi dispositivo iOS che tenta di accedere alla posta elettronica di Office 365 dovrà essere registrato in Intune e usare l'app per dispositivi mobili Outlook per iOS/iPadOS. Per testare questo scenario in un dispositivo iOS, provare ad accedere a Exchange Online usando le credenziali di un utente nel tenant di test. Verrà richiesto di registrare il dispositivo e installare l'app Outlook per dispositivi mobili.
+Con i criteri creati, qualsiasi dispositivo iOS che tenta di accedere alla posta elettronica di Microsoft 365 dovrà essere registrato in Intune e usare l'app per dispositivi mobili Outlook per iOS/iPadOS. Per testare questo scenario in un dispositivo iOS, provare ad accedere a Exchange Online usando le credenziali di un utente nel tenant di test. Verrà richiesto di registrare il dispositivo e installare l'app Outlook per dispositivi mobili.
 
 1. Per testare in un iPhone, passare a **Impostazioni** > **Password e account** > **Aggiungi account** > **Exchange**.
 
@@ -189,4 +189,4 @@ Quando i criteri di test non sono più necessari, è possibile rimuoverli.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-In questa esercitazione sono stati creati criteri che richiedono ai dispositivi iOS la registrazione in Intune e l'uso dell'app Outlook per accedere alla posta elettronica di Exchange Online. Per altre informazioni sull'uso di Intune con l'accesso condizionale per proteggere altri servizi e app, inclusi i client di Exchange ActiveSync per Office 365 Exchange Online, vedere [Configurare l'accesso condizionale](conditional-access.md).
+In questa esercitazione sono stati creati criteri che richiedono ai dispositivi iOS la registrazione in Intune e l'uso dell'app Outlook per accedere alla posta elettronica di Exchange Online. Per altre informazioni sull'uso di Intune con l'accesso condizionale per proteggere altri servizi e app, inclusi i client di Exchange ActiveSync per Microsoft 365 Exchange Online, vedere [Configurare l'accesso condizionale](conditional-access.md).

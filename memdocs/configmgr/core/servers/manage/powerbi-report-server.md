@@ -10,12 +10,12 @@ ms.assetid: 315e2613-dc71-46b1-80cb-26161d08103a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eaceea5f83bd93fee8261a94147383cde001f90b
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: dc8aa57bda5f5a29d72af854be9a18e4f32760f8
+ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699586"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432541"
 ---
 # <a name="integrate-with-power-bi-report-server"></a>Integrare il server di report di Power BI
 
@@ -103,9 +103,15 @@ Usare questo processo solo se non si ha già un punto di Reporting Services nel 
 
 1. Quando il report è pronto per il salvataggio, passare al menu **File**, selezionare **Salva con nome** e quindi scegliere **Server di report di Power BI**.
 
-1. Nella finestra **Selezione Server di report di Power BI** immettere l'URL per il punto di Reporting Services come **Nuovo indirizzo del server di report**. Ad esempio, `https://rsp.contoso.com/Reports`
+1. Nella finestra **Selezione Server di report di Power BI** immettere l'URL per il punto di Reporting Services come **Nuovo indirizzo del server di report**. Ad esempio, `https://rsp.contoso.com/Reports` Selezionare **OK**.
 
-Nella console di Configuration Manager viene visualizzato il nuovo report nell'elenco dei report di Power BI.
+1. Nella finestra **Salva report** fare doppio clic sulla cartella `ConfigMgr_<SiteCode>`. Ad esempio, `ConfigMgr_PS1`, dove `PS1` è il codice del sito ConfigMgr. Facoltativamente, è possibile scegliere o creare (dal server di report) una sottocartella in cui archiviarlo.
+    > [!TIP]
+    > I report e le cartelle di report con report di Power BI devono trovarsi nella cartella `ConfigMgr_<SiteCode>` nel server di report o non verranno visualizzati nella console di Configuration Manager.
+
+1. In **Nome file** immettere un nome per il report.
+
+Nella console di Configuration Manager viene visualizzato il nuovo report nell'elenco dei report di Power BI. Se i report non vengono visualizzati, verificare che i report siano stati salvati nella cartella `ConfigMgr_<SiteCode>`.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

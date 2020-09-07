@@ -17,12 +17,12 @@ ms.reviewer: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78f69edbc38bc41863783010a0e795290b7762c5
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: 492c6dd82e0b2c016da77b8dd6f10d9e3d4b5db6
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270923"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993062"
 ---
 # <a name="troubleshoot-integration-of-jamf-pro-with-microsoft-intune"></a>Risolvere i problemi di integrazione di Jamf Pro con Microsoft Intune
 
@@ -38,7 +38,7 @@ Prima di iniziare la risoluzione dei problemi, raccogliere alcune informazioni d
 - Esaminare i prerequisiti disponibili negli articoli seguenti, a seconda di come viene configurata l'integrazione di Jamf Pro con Intune:
   - [Usare Jamf Cloud Connector per integrare Jamf Pro con Intune](conditional-access-jamf-cloud-connector.md)
   - [Integrare Jamf Pro con Intune](conditional-access-integrate-jamf.md#prerequisites)
-- Tutti gli utenti devono disporre di licenze per Microsoft Intune e Microsoft AAD Premium P1
+- Tutti gli utenti devono disporre di licenze per Microsoft Intune e Microsoft Azure AD Premium P1
 - È necessario disporre di un account utente con autorizzazioni di integrazione per Microsoft Intune nella console di Jamf Pro.
 - È necessario disporre di un account utente con autorizzazioni di amministratore globale in Azure.
 
@@ -85,7 +85,7 @@ Dopo che un dispositivo è stato contrassegnato come *senza risposta* da Jamf Pr
 
 ### <a name="mac-devices-prompt-for-keychain-sign-in-when-you-open-an-app"></a>Nei dispositivi Mac viene richiesto l'accesso tramite il portachiavi all'apertura di un'app  
 
-Dopo aver configurato l'integrazione di Intune e Jamf Pro e aver distribuito i criteri di accesso condizionale, gli utenti dei dispositivi gestiti con Jamf Pro riceveranno una password all'apertura di applicazioni Microsoft Office 365 come Teams, Outlook e altre app che richiedono l'autenticazione di Azure AD. 
+Dopo aver configurato l'integrazione di Intune e Jamf Pro e aver distribuito i criteri di accesso condizionale, gli utenti dei dispositivi gestiti con Jamf Pro riceveranno una password all'apertura di applicazioni Microsoft 365 come Teams, Outlook e altre app che richiedono l'autenticazione di Azure AD. 
 
 Ad esempio, quando si apre Microsoft Teams viene visualizzato un messaggio di richiesta simile a quello nell'esempio seguente:
 
@@ -157,7 +157,7 @@ Nell'app Portale aziendale, l'utente potrebbe visualizzare **`Not registered`** 
 
 **Risoluzione**  
 Per modificare l'origine di registrazione da Intune a Jamf:
-1. [Annullare la registrazione del dispositivo macOS da Intune](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-macos). Per evitare ulteriori complicazioni per i dispositivi che non vengono rimossi completamente da Intune, vedere [*Causa 6*](#cause-6) in questo elenco di cause.  
+1. [Annullare la registrazione del dispositivo macOS da Intune](../user-help/unenroll-your-device-from-intune-macos.md). Per evitare ulteriori complicazioni per i dispositivi che non vengono rimossi completamente da Intune, vedere [*Causa 6*](#cause-6) in questo elenco di cause.  
 
 2. Nel dispositivo usare Jamf Self Service per aprire l'app Portale aziendale e quindi registrare il dispositivo in Intune. Per questa attività è necessario avere [usato Jamf per distribuire l'app Portale aziendale per macOS](conditional-access-assign-jamf.md#deploy-the-company-portal-app-for-macos-in-jamf-pro) e avere [creato un criterio in Jamf Pro che registra il dispositivo degli utenti con Azure AD](conditional-access-assign-jamf.md#create-a-policy-in-jamf-pro-to-have-users-register-their-devices-with-azure-active-directory).  
 

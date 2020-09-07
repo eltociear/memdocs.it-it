@@ -17,23 +17,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4ebc719d65024f26d1661d311bfbf9077bcdcbe3
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: b1531de9ceab57b26bc9af5faac08673b8b758b0
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86410913"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993105"
 ---
 # <a name="manage-team-collaboration-access-by-using-teams-for-ios-and-android-with-microsoft-intune"></a>Gestire l'accesso alla collaborazione in team usando Teams per iOS e Android con Microsoft Intune
 
 Microsoft Teams è l'hub per la collaborazione in team in Microsoft 365 che integra le persone, il contenuto e gli strumenti di cui ha bisogno il team per essere più coinvolto e ottenere maggiore efficienza.
 
-Le funzionalità di protezione più complete e più ampie per i dati di Office 365 sono disponibili con l'abbonamento alla suite Enterprise Mobility + Security, che include funzionalità di Microsoft Intune e Azure Active Directory Premium, come l'accesso condizionale. Come minimo, è consigliabile distribuire criteri di accesso condizionale che consentono di connettersi a Teams per iOS e Android solo dai dispositivi mobili e criteri di protezione delle app di Intune che garantiscono la protezione dell'esperienza di collaborazione.
+Le funzionalità di protezione più complete e più ampie per i dati di Microsoft 365 sono disponibili con l'abbonamento alla suite Enterprise Mobility + Security, che include funzionalità di Microsoft Intune e Azure Active Directory Premium, come l'accesso condizionale. Come minimo, è consigliabile distribuire criteri di accesso condizionale che consentono di connettersi a Teams per iOS e Android solo dai dispositivi mobili e criteri di protezione delle app di Intune che garantiscono la protezione dell'esperienza di collaborazione.
 
 ## <a name="apply-conditional-access"></a>Applicare l'accesso condizionale
-Le organizzazioni possono usare i criteri di accesso condizionale di Azure AD per assicurarsi che gli utenti possano accedere solo ai contenuti aziendali o dell'istituto di istruzione usando Teams per iOS e Android. A tale scopo, è necessario disporre di criteri di accesso condizionale destinati a tutti i potenziali utenti. Per informazioni dettagliate sulla creazione di questi criteri, vedere [Richiedere i criteri di protezione delle app per l'accesso alle app cloud con accesso condizionale](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access).
+Le organizzazioni possono usare i criteri di accesso condizionale di Azure AD per assicurarsi che gli utenti possano accedere solo ai contenuti aziendali o dell'istituto di istruzione usando Teams per iOS e Android. A tale scopo, è necessario disporre di criteri di accesso condizionale destinati a tutti i potenziali utenti. Per informazioni dettagliate sulla creazione di questi criteri, vedere [Richiedere i criteri di protezione delle app per l'accesso alle app cloud con accesso condizionale](/azure/active-directory/conditional-access/app-protection-based-conditional-access).
 
-1. Seguire "Passaggio 1: configurare criteri di accesso condizionale di Azure AD per Office 365"in [Scenario 1: le app di Office 365 richiedono app approvate con i criteri di protezione delle app](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies), che consente l'uso di Teams per iOS e Android, ma impedisce ad altri client per dispositivi mobili che supportano OAuth di terze parti di connettersi agli endpoint Office 365.
+1. Seguire "Passaggio 1: configurare criteri di accesso condizionale di Azure AD per Office 365"in [Scenario 1: le app di Office 365 richiedono app approvate con i criteri di protezione delle app](/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies), che consente l'uso di Teams per iOS e Android, ma impedisce ad altri client per dispositivi mobili che supportano OAuth di terze parti di connettersi agli endpoint Office 365.
 
    >[!NOTE]
    > Questo criterio garantisce che gli utenti di dispositivi mobili possano accedere a tutti gli endpoint di Office usando le app applicabili.

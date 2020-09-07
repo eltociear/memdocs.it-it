@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/17/2020
+ms.date: 08/31/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28bf8edb1b7c80e2362e9b145f38bd383dffa625
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: a5460e9c01da8a9a227caf5a03186a37f2c427bb
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820579"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194089"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Aggiungere impostazioni relative alle funzionalità dei dispositivi iOS, iPadOS e macOS in Intune
 
@@ -153,7 +153,11 @@ Queste impostazioni configurano un'estensione dell'app che abilita l'accesso Sin
 
 In Intune usare queste impostazioni per configurare un'estensione dell'app SSO creata dalla propria organizzazione, dal provider di identità, da Microsoft o da Apple. L'estensione dell'app SSO gestisce l'autenticazione per gli utenti. Queste impostazioni configurano le estensioni dell'app SSO di tipo reindirizzamento e credenziali.
 
-- Il tipo reindirizzamento è progettato per i protocolli di autenticazione moderni, ad esempio OpenID Connect, OAuth e SAML2. È possibile scegliere tra l'estensione per l'accesso Single Sign-On di Microsoft Azure AD ([plug-in Microsoft Enterprise Single Sign-On](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)) e un'estensione di reindirizzamento generica.
+- Il tipo reindirizzamento è progettato per i protocolli di autenticazione moderni, ad esempio OpenID Connect, OAuth e SAML2. È possibile scegliere tra l'estensione per l'accesso Single Sign-On di Microsoft Azure AD ([plug-in Microsoft Enterprise Single Sign-On](/azure/active-directory/develop/apple-sso-plugin)) e un'estensione di reindirizzamento generica.
+
+  > [!IMPORTANT]
+  > In macOS l'estensione per accesso Single Sign-On di Microsoft Azure AD è ancora in fase di sviluppo. È elencata nell'interfaccia utente di Intune, ma non funziona come previsto. In macOS non usare **Microsoft Azure AD** per il tipo di estensione dell'app per accesso Single Sign-On.
+
 - Il tipo credenziali è progettato per i flussi di autenticazione con richiesta e risposta. È possibile scegliere tra un'estensione con credenziali specifiche di Kerberos di Apple e un'estensione con credenziali generiche.
 
 Per un elenco delle impostazioni che è possibile configurare in Intune, vedere [Estensione dell'app Single Sign-On per iOS/iPadOS](ios-device-features-settings.md#single-sign-on-app-extension) ed [Estensione dell'app Single Sign-On per macOS](macos-device-features-settings.md#single-sign-on-app-extension).

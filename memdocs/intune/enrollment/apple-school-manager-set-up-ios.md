@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e919ac336532e8b641908b02c0e282ae9e1711e7
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 431dc3fec49609c4f163c9d7f471b60565611bc3
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85094015"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992838"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-school-manager"></a>Configurare la registrazione di dispositivi iOS/iPadOS con Apple School Manager
 
@@ -38,7 +38,7 @@ La registrazione di Apple School Manager non può essere usata con [Registrazion
 **Prerequisiti**
 - [Certificato push MDM Apple](apple-mdm-push-certificate-get.md)
 - [Autorità di gestione dei dispositivi mobili](../fundamentals/mdm-authority-set.md)
-- Se si usa ADFS, per l'affinità utente è richiesto un [endpoint misto/nome utente WS-Trust 1.3](https://technet.microsoft.com/library/adfs2-help-endpoints). [Altre informazioni](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
+- Se si usa ADFS, per l'affinità utente è richiesto un [endpoint misto/nome utente WS-Trust 1.3](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)). [Altre informazioni](/powershell/module/adfs/get-adfsendpoint?view=win10-ps).
 - Dispositivi acquistati dal programma [Apple School Management](http://school.apple.com)
 
 ## <a name="get-an-apple-token-and-assign-devices"></a>Ottenere un token Apple e assegnare i dispositivi
@@ -83,12 +83,12 @@ Ora che è stato installato il token, è possibile creare un profilo di registra
 1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS/iPadOS** > **Registrazione di iOS/iPadOS** > **Token del programma di registrazione**.
 2. Selezionare un token, scegliere **Profili** e quindi scegliere **Crea profilo**.
 
-3. In **Crea profilo** immettere un **nome** e una **descrizione** per il profilo per scopi amministrativi. Questi dettagli non vengono visualizzati agli utenti. È possibile usare questo campo **Nome** per creare un gruppo dinamico in Azure Active Directory. Usare il nome del profilo per definire il parametro enrollmentProfileName per assegnare i dispositivi con questo profilo di registrazione. Altre informazioni sui [gruppi dinamici di Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices).
+3. In **Crea profilo** immettere un **nome** e una **descrizione** per il profilo per scopi amministrativi. Questi dettagli non vengono visualizzati agli utenti. È possibile usare questo campo **Nome** per creare un gruppo dinamico in Azure Active Directory. Usare il nome del profilo per definire il parametro enrollmentProfileName per assegnare i dispositivi con questo profilo di registrazione. Altre informazioni sui [gruppi dinamici di Azure Active Directory](/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices).
 
     ![Nome e descrizione del profilo.](./media/apple-school-manager-set-up-ios/image05.png)
 
 4. In **Affinità utente** scegliere se i dispositivi con questo profilo devono essere registrati con o senza un utente assegnato.
-    - **Registra con affinità utente**: scegliere questa opzione per i dispositivi che appartengono a utenti e che vogliono usare il portale aziendale per servizi come l'installazione di app. Questa opzione consente anche agli utenti di autenticare i dispositivi tramite il portale aziendale. Se si usa ADFS, per l'affinità utente è richiesto un [endpoint misto/nome utente WS-Trust 1.3](https://technet.microsoft.com/library/adfs2-help-endpoints). [Altre informazioni](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).   La modalità iPad condiviso di Apple School Manager richiede la registrazione dell'utente senza affinità utente.
+    - **Registra con affinità utente**: scegliere questa opzione per i dispositivi che appartengono a utenti e che vogliono usare il portale aziendale per servizi come l'installazione di app. Questa opzione consente anche agli utenti di autenticare i dispositivi tramite il portale aziendale. Se si usa ADFS, per l'affinità utente è richiesto un [endpoint misto/nome utente WS-Trust 1.3](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)). [Altre informazioni](/powershell/module/adfs/get-adfsendpoint?view=win10-ps).   La modalità iPad condiviso di Apple School Manager richiede la registrazione dell'utente senza affinità utente.
 
     - **Registra senza affinità utente**: scegliere questa opzione per i dispositivi non associati a un singolo utente, come un dispositivo condiviso. Usare questa opzione per i dispositivi che eseguono attività senza accedere ai dati utente locali. Le app come l'app Portale aziendale non funzionano.
 
@@ -156,7 +156,7 @@ Ora che è stato installato il token, è possibile creare un profilo di registra
 
 1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **iOS/iPadOS** > **Registrazione di iOS/iPadOS** > **Token del programma di registrazione**.
 2. Selezionare un token di Apple School Manager e quindi scegliere **School Data Sync**.
-3. In **School Data Sync** scegliere **Consenti**. Questa impostazione consente a Intune di connettersi con SDS in Office 365.
+3. In **School Data Sync** scegliere **Consenti**. Questa impostazione consente a Intune di connettersi con SDS in Microsoft 365.
 4. Per abilitare una connessione tra Apple School Manager e Azure AD, scegliere **Configura Microsoft School Data Sync**. Altre informazioni su [come configurare School Data Sync](https://support.office.com/article/Install-the-School-Data-Sync-Toolkit-8e27426c-8c46-416e-b0df-c29b5f3f62e1).
 5. Fare clic su **Salva** > **OK**.
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c4e567c7812f53a7497f368ded47d72640443f6
-ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
+ms.openlocfilehash: 34f1aeb9ec265b7a6e09135bc931574732f5816d
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86137382"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994209"
 ---
 # <a name="intune-operated-by-21vianet-in-china"></a>Intune gestito da 21Vianet in Cina  
 
@@ -48,20 +48,20 @@ Poiché i servizi in Cina sono gestiti da un partner che si trova in Cina, in In
   - Funzionalità di Google Play Protect, ad esempio l'attestazione del dispositivo SafetyNet.
   - Gestione delle app da Google Play Store.
   - Funzionalità di Android Enterprise. Per altre informazioni, vedere la [documentazione Google](https://support.google.com/work/android/answer/6270910?hl=en).
-- L'app Portale aziendale Intune per Android usa Google Play Services per comunicare con il servizio Microsoft Intune. Poiché Google Play Services non è disponibile in Cina, per il completamento di alcune attività possono essere necessarie fino a 8 ore. Per altre informazioni, vedere questo [articolo](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable). 
+- L'app Portale aziendale Intune per Android usa Google Play Services per comunicare con il servizio Microsoft Intune. Poiché Google Play Services non è disponibile in Cina, per il completamento di alcune attività possono essere necessarie fino a 8 ore. Per altre informazioni, vedere questo [articolo](../apps/manage-without-gms.md#limitations-of-intune-device-administrator-management-when-gms-is-unavailable). 
 - Per attenersi alle normative locali e offrire funzionalità migliorate, l'esperienza client di Intune (app Portale aziendale) potrebbe essere diversa in Cina.
 - La limitazione della rete non è disponibile.
 - La disponibilità della gestione di applicazioni mobili (MAM, Mobile Application Management) è condizionale alle app che sono disponibili nella Repubblica popolare cinese.
 
 ## <a name="you-control-customer-data"></a>Controllo dei dati dei clienti
 
-In Microsoft Azure, Intune, Office 365 e Power BI gestiti da 21Vianet si ha pieno controllo sui dati:
+In Microsoft Azure, Intune, Microsoft 365 e Power BI gestiti da 21Vianet si ha pieno controllo sui dati:
 - Si sa dove si trovano i dati dei clienti.
 - Si controlla l'accesso ai dati dei clienti.
 - Si controllano i dati dei clienti se il servizio viene abbandonato.
 - Si ha la possibilità di controllare la sicurezza dei dati dei clienti.
 
-Con Microsoft Azure, Intune, Office 365 e Power BI gestiti da 21Vianet, si è titolari dei dati:
+Con Microsoft Azure, Intune, Microsoft 365 e Power BI gestiti da 21Vianet, si è proprietari dei dati:
 - 21Vianet non usa i dati dei clienti per la pubblicità.
 - Si controlla chi ha accesso ai dati dei clienti.
 - Si usa l'isolamento logico per separare i dati di ogni cliente.
@@ -72,8 +72,8 @@ Con Microsoft Azure, Intune, Office 365 e Power BI gestiti da 21Vianet, si è ti
 
 Il ruolo Amministratore tenant per Intune gestito da 21Vianet può richiedere dati per gli interessati nei modi seguenti:
 
-- Usando l'interfaccia di amministrazione di Azure Active Directory, un Amministratore tenant può eliminare definitivamente un interessato da Azure Active Directory e dai servizi correlati. Per altre informazioni, vedere [Richieste degli interessati per Azure -Eliminare](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-azure?view=o365-worldwide#step-5-delete)
-- I log generati dal sistema per i servizi Microsoft gestiti da 21Vianet possono essere esportati dagli Amministratori tenant usando l'esportazione dei log di dati. Per altre informazioni, vedere [Richieste degli interessati per Azure -Esportare](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-azure?view=o365-worldwide#step-6-export).
+- Usando l'interfaccia di amministrazione di Azure Active Directory, un Amministratore tenant può eliminare definitivamente un interessato da Azure Active Directory e dai servizi correlati. Per altre informazioni, vedere [Richieste degli interessati per Azure -Eliminare](/microsoft-365/compliance/gdpr-dsr-azure?view=o365-worldwide#step-5-delete)
+- I log generati dal sistema per i servizi Microsoft gestiti da 21Vianet possono essere esportati dagli Amministratori tenant usando l'esportazione dei log di dati. Per altre informazioni, vedere [Richieste degli interessati per Azure -Esportare](/microsoft-365/compliance/gdpr-dsr-azure?view=o365-worldwide#step-6-export).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

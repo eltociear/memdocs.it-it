@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b57bc0b7c76a6b67a26c7b1fdacb7880173a055c
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: fdb3a3defbaab5f952a2a5636a30f9734418f841
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429680"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993319"
 ---
 # <a name="windows-10-team-settings-to-allow-or-restrict-features-on-surface-hub-devices-using-intune"></a>Impostazioni dei dispositivi Windows 10 Team per consentire o limitare l'uso delle funzionalità su dispositivi Surface Hub tramite Intune
 
@@ -33,7 +33,7 @@ Questo articolo illustra le impostazioni relative alle restrizioni dei dispositi
 
 ## <a name="apps-and-experience"></a>App ed esperienza
 
-Queste impostazioni usano il [CSP SurfaceHub](https://docs.microsoft.com/windows/client-management/mdm/surfacehub-csp).
+Queste impostazioni usano il [CSP SurfaceHub](/windows/client-management/mdm/surfacehub-csp).
 
 - **Attiva lo schermo quando qualcuno è presente nella stanza**: **Blocca** impedisce alla schermata di riattivarsi automaticamente quando il sensore rileva la presenza di qualcuno nella stanza. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
 - **Informazioni sulla riunione visualizzate nella schermata iniziale**: scegliere le informazioni visualizzate nel riquadro riunioni della schermata iniziale. Le opzioni disponibili sono:
@@ -43,7 +43,7 @@ Queste impostazioni usano il [CSP SurfaceHub](https://docs.microsoft.com/windows
 - **URL dell'immagine di sfondo della schermata iniziale**: Immettere l'URL di un'immagine con estensione png che si vuole usare come sfondo personalizzato nella schermata **iniziale** sui dispositivi Windows 10 Team. L'immagine deve essere in formato png e l'URL deve iniziare con `https://`.
 - **Avvio automatico di Connessione**: **Blocca** impedisce l'apertura automatica dell'app Connessione all'avvio di una proiezione. Se bloccato, gli utenti possono avviare manualmente l'app Connessione dalle impostazioni dell'hub. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
 - **Suggerimenti di accesso**: **Blocca** disabilita la compilazione automatica della finestra di accesso con gli invitati delle riunioni pianificate. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
-- **Riunioni e file**: **Blocca** disabilita la funzionalità **Riunioni e file** nel menu Start. Questa funzionalità mostra le riunioni e i file dell'utente connesso da Office 365. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
+- **Riunioni e file**: **Blocca** disabilita la funzionalità **Riunioni e file** nel menu Start. Questa funzionalità mostra le riunioni e i file dell'utente connesso da Microsoft 365. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
 
 ## <a name="azure-operational-insights"></a>Azure Operational Insights
 
@@ -53,7 +53,7 @@ Queste impostazioni usano il [CSP SurfaceHub](https://docs.microsoft.com/windows
 
 ## <a name="maintenance"></a>Manutenzione
 
-Queste impostazioni usano il [CSP SurfaceHub](https://docs.microsoft.com/windows/client-management/mdm/surfacehub-csp).
+Queste impostazioni usano il [CSP SurfaceHub](/windows/client-management/mdm/surfacehub-csp).
 
 - **Finestra di manutenzione per gli aggiornamenti**: **Abilita** crea una finestra di manutenzione quando è possibile installare gli aggiornamenti. Immettere l'**Ora inizio** e **Durata in ore** della finestra di manutenzione, da 1 a 5 ore.
 
@@ -61,7 +61,7 @@ Queste impostazioni usano il [CSP SurfaceHub](https://docs.microsoft.com/windows
 
 ## <a name="session"></a>Sessione
 
-Queste impostazioni usano il [CSP SurfaceHub](https://docs.microsoft.com/windows/client-management/mdm/surfacehub-csp).
+Queste impostazioni usano il [CSP SurfaceHub](/windows/client-management/mdm/surfacehub-csp).
 
 - **Volume**: immettere il valore predefinito del volume per una nuova sessione, da 0 a 100. Quando il campo è vuoto, Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe impostare il volume su 45.
 - **Timeout schermo**: immettere il numero di minuti di attesa prima della disattivazione della schermata dell'hub.
@@ -71,7 +71,7 @@ Queste impostazioni usano il [CSP SurfaceHub](https://docs.microsoft.com/windows
 
 ## <a name="wireless-projection"></a>Proiezione wireless
 
-Queste impostazioni usano il [CSP SurfaceHub](https://docs.microsoft.com/windows/client-management/mdm/surfacehub-csp).
+Queste impostazioni usano il [CSP SurfaceHub](/windows/client-management/mdm/surfacehub-csp).
 
 - **PIN per proiezione wireless**: **Rendi obbligatorio** impone agli utenti di immettere un PIN prima di usare le funzionalità di proiezione wireless del dispositivo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.
 - **Proiezione wireless Miracast**: **Blocca** impedisce l'uso di dispositivi abilitati per Miracast nel progetto. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione.

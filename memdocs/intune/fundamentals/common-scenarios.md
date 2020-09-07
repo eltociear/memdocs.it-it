@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 644235178d39ff1e7c641383c4fb45dde80cf4b5
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: b5ed8b6974971e3e2e8182d32cad39a5481331b2
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531877"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994124"
 ---
 # <a name="common-ways-to-use-microsoft-intune"></a>Metodi comuni per l'uso di Microsoft Intune
 
@@ -50,21 +50,21 @@ In questi casi, l'unico modo per accedere ai dati aziendali è registrare il dis
 
 <!-- Learn more about how to plan and deploy Intune to help secure on-premises email and data. -->
 
-## <a name="protecting-your-office-365-email-and-data-so-it-can-be-safely-accessed-by-mobile-devices"></a>Protezione di dati e messaggi di posta elettronica di Office 365 in modo da consentire l'accesso sicuro dai dispositivi mobili
+## <a name="protecting-your-microsoft-365-email-and-data-so-it-can-be-safely-accessed-by-mobile-devices"></a>Protezione di dati e messaggi di posta elettronica di Microsoft 365 in modo da consentire l'accesso sicuro dai dispositivi mobili
 
-Proteggere i dati aziendali in Office 365 (posta elettronica, documenti, messaggi immediati, contatti) non potrebbe essere più semplice né più trasparente per gli utenti.
+Proteggere i dati aziendali in Microsoft 365 (posta elettronica, documenti, messaggi immediati, contatti) non potrebbe essere più semplice né più trasparente per gli utenti.
 
-Intune e Microsoft Enterprise Mobility + Security offrono un'esclusiva soluzione di accesso condizionale integrata per garantire che nessun utente, app o dispositivo possa accedere ai dati di Office 365 a meno che non soddisfi i requisiti di conformità dell'azienda (esecuzione dell'[autenticazione a più fattori](../enrollment/multi-factor-authentication.md), registrazione in Intune, uso dell'app gestita, versione del sistema operativo supportata, PIN del dispositivo, basso profilo di rischio dell'utente e così via).
+Intune e Microsoft Enterprise Mobility + Security offrono un'esclusiva soluzione di accesso condizionale integrata per garantire che nessun utente, app o dispositivo possa accedere ai dati di Microsoft 365 a meno che non soddisfi i requisiti di conformità dell'azienda (esecuzione dell'[autenticazione a più fattori](../enrollment/multi-factor-authentication.md), registrazione in Intune, uso dell'app gestita, versione del sistema operativo supportata, PIN del dispositivo, basso profilo di rischio dell'utente e così via).
 
-Le app Office per dispositivi mobili nei rispettivi app store sono predisposte per l'applicazione di criteri per il contenimento dei dati, configurabili in Intune. Ciò consente di impedire la condivisione dei dati con app (ad esempio, con le app di posta elettronica native) e posizioni di archiviazione (ad esempio, Dropbox) che non sono gestite dal reparto IT. Tutte queste funzionalità sono disponibili in Office 365 ed EMS. Non è necessario distribuire un'infrastruttura aggiuntiva per ottenere questo valore.
+Le app Office per dispositivi mobili nei rispettivi app store sono predisposte per l'applicazione di criteri per il contenimento dei dati, configurabili in Intune. Ciò consente di impedire la condivisione dei dati con app (ad esempio, con le app di posta elettronica native) e posizioni di archiviazione (ad esempio, Dropbox) che non sono gestite dal reparto IT. Tutte queste funzionalità sono disponibili in Microsoft 365 ed EMS. Non è necessario distribuire un'infrastruttura aggiuntiva per ottenere questo valore.
 
-Una procedura comune per la distribuzione di Office 365 prevede l'obbligo di registrare i dispositivi nel sistema di gestione se richiedono la configurazione completa con configurazioni aziendali per app, certificati, Wi-Fi o VPN, come spesso accade per i dispositivi di proprietà dell'azienda.  
+Una procedura comune per la distribuzione di Microsoft 365 prevede l'obbligo di registrare i dispositivi nel sistema di gestione se richiedono la configurazione completa con configurazioni aziendali per app, certificati, Wi-Fi o VPN, come spesso accade per i dispositivi di proprietà dell'azienda.  
 
 Se tuttavia l'utente deve semplicemente accedere alla posta elettronica e ai documenti aziendali, come spesso accade per i dispositivi personali, è possibile richiedere all'utente di usare le app di Office per dispositivi mobili, a cui sono stati applicati i [criteri di protezione delle app](../apps/app-protection-policies.md), ed evitare del tutto la registrazione del dispositivo.  
 
-In entrambi i casi, i dati di Office 365 verranno protetti dai criteri definiti dall'utente.
+In entrambi i casi, i dati di Microsoft 365 verranno protetti dai criteri definiti dall'utente.
 
-<!-- Learn more about how to plan and deploy Intune to help secure Office 365 email and data. -->
+<!-- Learn more about how to plan and deploy Intune to help secure Microsoft 365 email and data. -->
 
 ## <a name="offer-a-bring-your-own-device-program-to-all-employees"></a>Offrire un programma Bring Your Own Device a tutti i dipendenti
 
@@ -72,7 +72,7 @@ L'approccio Bring Your Own Device (BYOD) è sempre più popolare tra le organizz
 
 Quando la registrazione del dispositivo non è fattibile, Intune offre un approccio BYOD alternativo che consiste nel [limitare la gestione alle app che contengono dati aziendali](../apps/app-protection-policies.md). Intune protegge i dati aziendali anche se l'app in questione accede sia ai dati aziendali che ai dati personali, come avviene per le app Office per dispositivi mobili.  
 
-In qualità di amministratore, è possibile richiedere agli utenti di accedere a Office 365 dalle app Office per dispositivi mobili e di configurare le app con i criteri che assicurano la protezione dei dati (come la crittografia, la protezione con pin e così via). Questi criteri di protezione delle app evitano la perdita di dati in app e posizioni di archiviazione non gestite, all'interno o all'esterno delle app. Ad esempio, i criteri possono impedire a un utente di copiare il testo da un profilo di posta elettronica aziendale in un profilo di posta elettronica personale, anche se entrambi i profili sono configurati all'interno di Outlook Mobile. È possibile distribuire configurazioni simili per altri servizi e applicazioni richiesti dagli utenti BYOD.
+In qualità di amministratore, è possibile richiedere agli utenti di accedere a Microsoft 365 dalle app di Office per dispositivi mobili e di configurare le app con i criteri che assicurano la protezione dei dati (come la crittografia, la protezione con PIN e così via). Questi criteri di protezione delle app evitano la perdita di dati in app e posizioni di archiviazione non gestite, all'interno o all'esterno delle app. Ad esempio, i criteri possono impedire a un utente di copiare il testo da un profilo di posta elettronica aziendale in un profilo di posta elettronica personale, anche se entrambi i profili sono configurati all'interno di Outlook Mobile. È possibile distribuire configurazioni simili per altri servizi e applicazioni richiesti dagli utenti BYOD.
 
 <!-- Learn more about how to plan and deploy Intune to support BYOD.-->
 
@@ -96,7 +96,7 @@ La semplicità dell'esperienza utente in questo caso è essenziale. Per questo m
 
 <!-- Learn more about how to plan and deploy Intune to support shared tablets. -->
 
-## <a name="enable-your-employees-to-securely-access-office-365-from-an-unmanaged-public-kiosk"></a>Abilitare i dipendenti per l'accesso protetto a Office 365 da un chiosco pubblico non gestito
+## <a name="enable-your-employees-to-securely-access-microsoft-365-from-an-unmanaged-public-kiosk"></a>Abilitare i dipendenti per l'accesso sicuro a Microsoft 365 da un chiosco pubblico non gestito
 
 Talvolta i dipendenti devono usare dispositivi, app o browser che non è possibile gestire, ad esempio i computer pubblici disponibili presso le fiere e negli hotel.
 

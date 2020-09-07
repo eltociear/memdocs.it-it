@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5d296137f71b89abf65f20493fbc1151ffebf28
-ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
+ms.openlocfilehash: 5f72acb12f6e17b3634c0b87b8ad298a410fb83f
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84795585"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994226"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Risolvere i problemi di registrazione dei dispositivi Windows in Microsoft Intune
 
@@ -133,7 +133,7 @@ Assegnare una licenza di Intune valida all'utente e quindi registrare il disposi
 ### <a name="looks-like-the-mdm-terms-of-use-endpoint-is-not-correctly-configured"></a>L'endpoint delle condizioni per l'utilizzo della gestione di dispositivi mobili (MDM, Mobile Device Management) non è configurato correttamente.
 
 **Causa:** una delle condizioni seguenti è vera: 
- - Nel tenant viene usata la gestione di dispositivi mobili per Office 365 e Intune e l'utente che prova a registrare il dispositivo non ha una licenza di Intune o di Office 365 valida.     
+ - Nel tenant viene usata la gestione di dispositivi mobili per Microsoft 365 e Intune e l'utente che prova a registrare il dispositivo non ha una licenza di Intune o di Office 365 valida.     
 - I termini e le condizioni della gestione di dispositivi mobili in Azure AD sono vuoti o non contengono l'URL corretto.    
 
 #### <a name="resolution"></a>Soluzione
@@ -141,7 +141,7 @@ Assegnare una licenza di Intune valida all'utente e quindi registrare il disposi
 Per risolvere il problema, usare uno dei metodi seguenti: 
  
 ##### <a name="assign-a-valid-license-to-the-user"></a>Assegnare una licenza valida all'utente
-Passare all'[Interfaccia di amministrazione di Microsoft 365](https://admin.microsoft.com) e quindi assegnare una licenza di Intune o di Office 365 all'utente.
+Passare all'[Interfaccia di amministrazione di Microsoft 365](https://admin.microsoft.com) e quindi assegnare una licenza di Intune o di Microsoft 365 all'utente.
 
 ##### <a name="correct-the-mdm-terms-of-use-url"></a>Correggere l'URL delle condizioni per l'utilizzo di MDM
   1. Accedere al [portale di Azure](https://portal.azure.com/) e quindi selezionare **Azure Active Directory**.    
@@ -216,9 +216,9 @@ Per risolvere il problema in un ambiente Intune autonomo, seguire questa procedu
 
    Se si sceglie **Selezionato**, fare clic su **Selezionato** e quindi su **Aggiungi membri** per aggiungere tutti gli utenti che possono aggiungere i propri dispositivi ad Azure AD. Verificare che siano stati aggiunti tutti gli account Azure AD per il pacchetto di provisioning.
  
-Per altre informazioni su come creare un pacchetto di provisioning per Progettazione configurazione di Windows, vedere [Creare un pacchetto di provisioning per Windows 10](https://docs.microsoft.com/windows/configuration/provisioning-packages/provisioning-create-package).
+Per altre informazioni su come creare un pacchetto di provisioning per Progettazione configurazione di Windows, vedere [Creare un pacchetto di provisioning per Windows 10](/windows/configuration/provisioning-packages/provisioning-create-package).
 
-Per altre informazioni sull'app Configura PC scolastici, vedere [Usare l'app Configura PC scolastici](https://docs.microsoft.com/education/windows/use-set-up-school-pcs-app).
+Per altre informazioni sull'app Configura PC scolastici, vedere [Usare l'app Configura PC scolastici](/education/windows/use-set-up-school-pcs-app).
 
 
 ### <a name="auto-mdm-enroll-failed"></a>Registrazione MDM automatica: Operazione non riuscita 
@@ -276,7 +276,7 @@ Verificare che il formato di denominazione soddisfi i requisiti seguenti:
 **Causa:** questo problema si verifica in presenza di un proxy, di un firewall o di un altro dispositivo di rete che blocca l'accesso al provider di identità (IdP).
 
 #### <a name="resolution"></a>Soluzione
-Assicurarsi che l'accesso necessario ai servizi basati su Internet per Autopilot non sia bloccato. Per altre informazioni, vedere [Requisiti di rete di Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements-network).
+Assicurarsi che l'accesso necessario ai servizi basati su Internet per Autopilot non sia bloccato. Per altre informazioni, vedere [Requisiti di rete di Windows Autopilot](/windows/deployment/windows-autopilot/windows-autopilot-requirements-network).
 
 ### <a name="autopilot-device-enrollment-failed-with-error-hresult--0x80180022"></a>Registrazione del dispositivo Autopilot non riuscita con errore HRESULT = 0x80180022
 
@@ -294,7 +294,7 @@ Aggiornare il chip TPM alla versione 2.0.
 
 Se il problema persiste, controllare se lo stesso dispositivo si trova in due gruppi assegnati, a ognuno dei quali è assegnato un profilo di Autopilot diverso. Se si trova in due gruppi, determinare quale profilo di Autopilot deve essere applicato al dispositivo e quindi rimuovere l'assegnazione dell'altro profilo.
 
-Per altre informazioni su come distribuire un dispositivo Windows in modalità tutto schermo con Autopilot, vedere [Distribuzione di un chiosco multimediale con Windows Autopilot](https://blogs.technet.microsoft.com/mniehaus/2018/06/07/deploying-a-kiosk-using-windows-autopilot/).
+Per altre informazioni su come distribuire un dispositivo Windows in modalità tutto schermo con Autopilot, vedere [Distribuzione di un chiosco multimediale con Windows Autopilot](/archive/blogs/mniehaus/deploying-a-kiosk-using-windows-autopilot).
 
 
 ### <a name="securing-your-hardware-failed-0x800705b4"></a>Protezione dell'hardware (errore: 0x800705B4).
@@ -317,7 +317,7 @@ Registering your device for mobile management (Previous step failed)
 #### <a name="resolution"></a>Soluzione
 Verificare che il dispositivo di destinazione soddisfi entrambi i requisiti descritti nella sezione **Motivo**.
 
-Per altre informazioni su come distribuire un dispositivo Windows in modalità tutto schermo con Autopilot, vedere [Distribuzione di un chiosco multimediale con Windows Autopilot](https://blogs.technet.microsoft.com/mniehaus/2018/06/07/deploying-a-kiosk-using-windows-autopilot/).
+Per altre informazioni su come distribuire un dispositivo Windows in modalità tutto schermo con Autopilot, vedere [Distribuzione di un chiosco multimediale con Windows Autopilot](/archive/blogs/mniehaus/deploying-a-kiosk-using-windows-autopilot).
 
 
 ### <a name="something-went-wrong-error-code-80070774"></a>Si è verificato un errore. Codice errore 80070774.
@@ -365,7 +365,7 @@ Description:
 }
 ```
 
-Questo problema è in genere causato dalla delega non corretta di autorizzazioni all'unità organizzativa in cui vengono creati i dispositivi Windows Autopilot. Per altre informazioni, vedere [Aumentare il limite di account computer nell'unità organizzativa](windows-autopilot-hybrid.md#increase-the-computer-account-limit-in-the-organizational-unit).
+Questo problema è in genere causato dalla delega non corretta di autorizzazioni all'unità organizzativa in cui vengono creati i dispositivi Windows Autopilot. Per altre informazioni, vedere [Aumentare il limite di account computer nell'unità organizzativa](../../autopilot/windows-autopilot-hybrid.md#increase-the-computer-account-limit-in-the-organizational-unit).
 
 1. Aprire **Utenti e computer di Active Directory (DSA.msc)** .
 2. Fare clic con il pulsante destro del mouse sull'unità organizzativa che si userà per creare i computer aggiunti ad Azure AD ibrido > **Delega controllo**.
@@ -398,4 +398,4 @@ Tentare una delle operazioni seguenti:
 - [Controllare il blog del team di supporto di Microsoft Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
 - [Controllare il blog di Microsoft Enterprise Mobility + Security](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)
 - [Ottenere supporto per Microsoft Intune](../fundamentals/get-support.md)
-- [Individuare gli errori di registrazione di co-gestione](https://docs.microsoft.com/configmgr/comanage/how-to-monitor#enrollment-errors)
+- [Individuare gli errori di registrazione di co-gestione](/configmgr/comanage/how-to-monitor#enrollment-errors)

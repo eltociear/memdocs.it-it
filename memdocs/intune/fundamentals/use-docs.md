@@ -11,12 +11,12 @@ author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3d5d8d2d9882c033f3fbb726db937ba48d67fdc8
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 07574b0e08d3e46785b354551434007bc63bee44
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988181"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194073"
 ---
 # <a name="using-the-intune-docs"></a>Uso della documentazione di Intune
 
@@ -48,7 +48,7 @@ Per l'assistenza generale e il supporto per Intune, vedere [Come ottenere suppor
 
 ## <a name="provide-doc-feedback"></a>Aggiungere commenti e suggerimenti sulla documentazione
 
-La sezione Commenti e suggerimenti si trova nella parte inferiore di ogni articolo. Fare clic sul collegamento **Commenti e suggerimenti** in alto a destra di qualsiasi articolo per passare a questa sezione. La sezione Commenti e suggerimenti è integrata con Problemi di GitHub. Per altre informazioni sull'integrazione con Problemi di GitHub, vedere questo [post di blog sulla piattaforma di documentazione](https://docs.microsoft.com/teamblog/a-new-feedback-system-is-coming-to-docs).
+La sezione Commenti e suggerimenti si trova nella parte inferiore di ogni articolo. Fare clic sul collegamento **Commenti e suggerimenti** in alto a destra di qualsiasi articolo per passare a questa sezione. La sezione Commenti e suggerimenti è integrata con Problemi di GitHub. Per altre informazioni sull'integrazione con Problemi di GitHub, vedere questo [post di blog sulla piattaforma di documentazione](/teamblog/a-new-feedback-system-is-coming-to-docs).
 
 Per condividere commenti e suggerimenti sul servizio Intune (non sulla documentazione), fare clic su **Commenti e suggerimenti sul prodotto**.
 
@@ -68,13 +68,13 @@ Usare Problemi di GitHub per inviare i seguenti tipi di commenti e suggerimenti:
 - Localizzazione: commenti e suggerimenti sulla traduzione del contenuto.
 - Ottimizzazione del motore di ricerca (SEO): commenti e suggerimenti sui problemi che si verificano durante la ricerca di contenuto. Includere il motore di ricerca, le parole chiave e l'articolo di destinazione nei commenti.
 
-Se si segnalano problemi per argomenti non correlati alla documentazione, ad esempio [commenti e suggerimenti sui prodotti](https://microsoftintune.uservoice.com/forums/291681-ideas), [domande sui prodotti](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod) o [richieste di supporto](get-support.md), verranno chiusi e l'utente verrà reindirizzato al canale di feedback appropriato.
+Se si segnalano problemi per argomenti non correlati alla documentazione, ad esempio [commenti e suggerimenti sui prodotti](https://microsoftintune.uservoice.com/forums/291681-ideas), [domande sui prodotti](/answers/products/mem) o [richieste di supporto](get-support.md), verranno chiusi e l'utente verrà reindirizzato al canale di feedback appropriato.
 
 Per condividere commenti e suggerimenti sulla piattaforma docs.microsoft.com, vedere la sezione relativa al [feedback sulla documentazione](https://aka.ms/sitefeedback). La piattaforma include tutti i componenti di wrapping, ad esempio l'intestazione, il sommario e il menu a destra. Include anche indicazioni sull'esecuzione del rendering degli articoli nel browser, ad esempio il tipo di carattere, le finestre di avviso e gli ancoraggi delle pagine.
 
 ## <a name="contribute-to-docs"></a>Come contribuire alla documentazione
 
-La documentazione di Intune, come la maggior parte dei contenuti in docs.microsoft.com, è disponibile in modalità open source su GitHub. Questa raccolta accetta e incoraggia i contributi della community. Per altre informazioni su come iniziare, vedere la [guida per i collaboratori](https://docs.microsoft.com/contribute). Creare un [account GitHub](https://github.com/join) è l'unico prerequisito.
+La documentazione di Intune, come la maggior parte dei contenuti in docs.microsoft.com, è disponibile in modalità open source su GitHub. Questa raccolta accetta e incoraggia i contributi della community. Per altre informazioni su come iniziare, vedere la [guida per i collaboratori](/contribute). Creare un [account GitHub](https://github.com/join) è l'unico prerequisito.
 
 ### <a name="basic-steps-to-contribute-to-docs"></a>Procedura di base per contribuire ai documenti
 
@@ -82,7 +82,7 @@ La documentazione di Intune, come la maggior parte dei contenuti in docs.microso
 
 2. Per modificare il file di origine, fare clic sull'icona a forma di matita.  
 
-3. Apportare le modifiche nel markdown. Per altre informazioni, vedere [How to use Markdown for writing Docs](https://docs.microsoft.com/contribute/contribute-how-to-write-use-markdown) (Come usare il markdown per scrivere documenti).  
+3. Apportare le modifiche nel markdown. Per altre informazioni, vedere [How to use Markdown for writing Docs](/contribute/contribute-how-to-write-use-markdown) (Come usare il markdown per scrivere documenti).  
 
 4. Nella sezione di modifica del file immettere un commento di commit pubblico che descriva *cosa* è stato modificato. Quindi fare clic su **Propose file change** (Proponi modifica file).  
 
@@ -109,7 +109,7 @@ Per contribuire alla documentazione di Intune, seguire queste linee guida genera
 
 - Invece di inviare richieste pull di grandi dimensioni, [segnalare un problema](#provide-doc-feedback) e avviare una discussione. Si eviterà così di perdere tempo e sarà possibile stabilire come procedere.  
 
-- Leggere la [guida di stile Microsoft](https://aka.ms/MicrosoftStyle). Tenere presenti i [10 suggerimenti principali di Microsoft sullo stile e il tono](https://docs.microsoft.com/style-guide/top-10-tips-style-voice).  
+- Leggere la [guida di stile Microsoft](https://aka.ms/MicrosoftStyle). Tenere presenti i [10 suggerimenti principali di Microsoft sullo stile e il tono](/style-guide/top-10-tips-style-voice).  
 
 - Seguire il [flusso di lavoro di GitHub](https://guides.github.com/introduction/flow/).  
 
@@ -117,7 +117,7 @@ Per contribuire alla documentazione di Intune, seguire queste linee guida genera
 
 ## <a name="consolidation-of-documentation-for-microsoft-endpoint-manager"></a>Consolidamento della documentazione per Microsoft Endpoint Manager
 
-Per supportare meglio gli scenari combinati per Intune e Configuration Manager, la documentazione di Intune e Configuration Manager è stata consolidata nel sito di Microsoft Endpoint Manager. La documentazione di Intune è ora disponibile all'indirizzo [https://docs.microsoft.com/mem/intune](https://docs.microsoft.com/mem/intune) e la libreria della documentazione di Configuration Manager è disponibile all'indirizzo [https://docs.microsoft.com/mem/configmgr](https://docs.microsoft.com/mem/configmgr). Se si usa un URL precedente, tutti i collegamenti verranno reindirizzati automaticamente. Non è quindi necessario apportare alcuna modifica per poter leggere questi contenuti.
+Per supportare meglio gli scenari combinati per Intune e Configuration Manager, la documentazione di Intune e Configuration Manager è stata consolidata nel sito di Microsoft Endpoint Manager. La documentazione di Intune è ora disponibile all'indirizzo [../index.yml](../index.yml) e la libreria della documentazione di Configuration Manager è disponibile all'indirizzo [../../configmgr/index.yml](../../configmgr/index.yml). Se si usa un URL precedente, tutti i collegamenti verranno reindirizzati automaticamente. Non è quindi necessario apportare alcuna modifica per poter leggere questi contenuti.
 
 Tuttavia, se si inviano commenti o si contribuisce alla stesura degli articoli, sono necessarie alcune modifiche:
 

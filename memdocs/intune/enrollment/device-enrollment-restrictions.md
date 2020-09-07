@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5c2689e010c0ec75340e1a96952cf6ac162322da
-ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
+ms.openlocfilehash: 618be398d963e0a796ad9be7e8810201fc5e12f5
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87758279"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995093"
 ---
 # <a name="android-enterprise-device-enrollment-restrictions"></a>Restrizioni di registrazione dei dispositivi Android Enterprise
 
@@ -58,9 +58,9 @@ Per la sicurezza elevata (livello 3) del profilo di lavoro di Android Enterprise
 Per assicurarsi che l'organizzazione supporti la registrazione dei dispositivi completamente gestiti Android Enterprise, vedere [Registrare i dispositivi completamente gestiti](android-fully-managed-enroll.md#enroll-the-fully-managed-devices). 
 
 ## <a name="conditional-access-policies"></a>Criteri di accesso condizionale
-Le organizzazioni possono usare i criteri di accesso condizionale di Azure AD per assicurarsi che gli utenti possano accedere solo ai contenuti aziendali o dell'istituto di istruzione nei dispositivi Android registrati. A tale scopo, è necessario disporre di criteri di accesso condizionale destinati a tutti i potenziali utenti. Per informazioni dettagliate sulla creazione di questi criteri, vedere [Richiedere dispositivi gestiti per l'accesso alle app cloud con l'accesso condizionale](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices). 
+Le organizzazioni possono usare i criteri di accesso condizionale di Azure AD per assicurarsi che gli utenti possano accedere solo ai contenuti aziendali o dell'istituto di istruzione nei dispositivi Android registrati. A tale scopo, è necessario disporre di criteri di accesso condizionale destinati a tutti i potenziali utenti. Per informazioni dettagliate sulla creazione di questi criteri, vedere [Richiedere dispositivi gestiti per l'accesso alle app cloud con l'accesso condizionale](/azure/active-directory/conditional-access/require-managed-devices). 
 
-Seguire i passaggi descritti in [Scenario: Richiedere la registrazione per i dispositivi iOS e Android](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices#scenario-require-device-enrollment-for-ios-and-android-devices), per assicurarsi che solo i dispositivi mobili registrati conformi possano connettersi agli endpoint di Office 365.
+Seguire i passaggi descritti in [Scenario: Richiedere la registrazione per i dispositivi iOS e Android](/azure/active-directory/conditional-access/require-managed-devices#scenario-require-device-enrollment-for-ios-and-android-devices), per assicurarsi che solo i dispositivi mobili registrati conformi possano connettersi agli endpoint di Microsoft 365.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e40f9bc84e4969e963629479f22a6f988e025c4e
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: ed80cd89728a1ce58d37be8c16b8e61dcfbb5566
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985041"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992675"
 ---
 # <a name="create-a-device-based-conditional-access-policy"></a>Creare criteri di accesso condizionale basato su dispositivo
 
@@ -89,7 +89,7 @@ I criteri di accesso condizionale specificano le app o i servizi da proteggere, 
    - **Stato dispositivo**: i criteri di accesso condizionale verranno applicati a tutti gli stati dei dispositivi, a meno che non si scelga Sì specificando di escludere lo stato Dispositivo aggiunto ad Azure AD ibrido o Dispositivo contrassegnato come conforme (oppure entrambi).
 
      > [!TIP]
-     > Se si vogliono proteggere sia i **client con autenticazione moderna** sia i **client Exchange ActiveSync**, creare due criteri di accesso condizionale separati, uno per ogni tipo di client. Anche se Exchange ActiveSync supporta l'autenticazione moderna, l'unica condizione supportata da Exchange ActiveSync è quella relativa alla piattaforma. Non sono supportate altre condizioni, inclusa l'autenticazione a più fattori. Per proteggere in modo efficace l'accesso a Exchange Online da Exchange ActiveSync, creare criteri di accesso condizionale che specificano l'app cloud Office 365 Exchange Online e l'app client Exchange ActiveSync con l'opzione Applica i criteri solo alle piattaforme supportate selezionata.
+     > Se si vogliono proteggere sia i **client con autenticazione moderna** sia i **client Exchange ActiveSync**, creare due criteri di accesso condizionale separati, uno per ogni tipo di client. Anche se Exchange ActiveSync supporta l'autenticazione moderna, l'unica condizione supportata da Exchange ActiveSync è quella relativa alla piattaforma. Non sono supportate altre condizioni, inclusa l'autenticazione a più fattori. Per proteggere in modo efficace l'accesso a Exchange Online da Exchange ActiveSync, creare criteri di accesso condizionale che specificano l'app cloud Microsoft 365 Exchange Online e l'app client Exchange ActiveSync con l'opzione Applica i criteri solo alle piattaforme supportate selezionata.
 
 9. Seleziona **Chiudi**.
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/09/2020
+ms.date: 08/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 09ebf7fde0cedb907e105e42abe7338237d231af
-ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
+ms.openlocfilehash: 7d9fe4c3a48cbf333fffd83d013b6a2d5fcf4ed9
+ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84795704"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281133"
 ---
 # <a name="configure-microsoft-launcher"></a>Configurare Microsoft Launcher
 
@@ -69,9 +69,9 @@ La tabella seguente contiene un elenco delle chiavi di configurazione di Microso
 |    Set Device Wallpaper User Change   Allowed (Consentita modifica dello sfondo del dispositivo da parte dell'utente)    |    Bool    |    True    |    Consente di specificare se l'impostazione Set Device Wallpaper (Imposta sfondo dispositivo) può essere modificata dall'utente finale.<ul><li>Se è impostata su **True**, lo sfondo indicato nei criteri verrà applicato solo per la distribuzione iniziale. Successivamente, i criteri non verranno applicati per rispettare le eventuali modifiche apportate dall'utente.</li><li>Se è impostata su **False**, lo sfondo verrà applicato a ogni sincronizzazione.</li></ul><br>Nome chiave JSON:<br>`com.microsoft.launcher.Wallpaper.URL.UserChangeAllowed`        |
 |    Feed Enable (Abilitazione feed)    |    Boolean    |    True    |    Consente di abilitare il feed di Microsoft Launcher nel dispositivo quando l'utente scorre a destra sulla schermata iniziale.<ul><li>Se è impostata su **True**, il feed viene abilitato.</li><li>Se è impostata su **False**, il feed viene disattivato.</li></ul><br>Nome chiave JSON:<br>`com.microsoft.launcher.Feed.Enabled`    |
 |    Feed Enable User Change Allowed (Consentita modifica dell'abilitazione del feed da parte dell'utente)    |    Boolean    |    True    |     Consente di specificare se l'impostazione **Feed Enable** (Abilitazione feed) può essere modificata dall'utente finale.<ul><li>Se è impostata su **True**, il feed verrà applicato solo per la distribuzione iniziale. Successivamente, i criteri non verranno applicati per rispettare le eventuali modifiche apportate dall'utente.</li><li>Se è impostata su **False**, il feed app verrà applicato a ogni sincronizzazione.</li></ul><br>Nome chiave JSON:`com.microsoft.launcher.Feed.Enabled.UserChangeAllowed`    |
-|    Search Bar Placement (Posizione barra di ricerca)   |    Stringa    |    Ultimo    |  Consente di specificare la **posizione della barra di ricerca** nella schermata iniziale. <ul><li>Con l'impostazione **Bottom** (In basso) la barra di ricerca verrà posizionata nella parte inferiore della schermata iniziale.</li><li>Con l'impostazione **Top** (In alto) la barra di ricerca verrà posizionata nella parte superiore della schermata iniziale.</li><li>Con l'impostazione **Hide** (Nascondi), la barra di ricerca verrà rimossa dalla schermata iniziale.</li></ul><br>Nome chiave JSON:<br>`com.microsoft.launcher.Search.SearchBar.Placement`    |
+|    Search Bar Placement (Posizione barra di ricerca)   |    Stringa    |    Ultimo    |  Consente di specificare la **posizione della barra di ricerca** nella schermata iniziale. <ul><li>Con l'impostazione **Bottom** (In basso) la barra di ricerca verrà posizionata nella parte inferiore della schermata iniziale.</li><li>Con l'impostazione **Top** (In alto) la barra di ricerca verrà posizionata nella parte superiore della schermata iniziale.</li><li>Con l'impostazione **Hidden** (Nascosta), la barra di ricerca verrà rimossa dalla schermata iniziale.</li></ul><br>Nome chiave JSON:<br>`com.microsoft.launcher.Search.SearchBar.Placement`    |
 |    Search Bar Placement User Change Allowed (Utente autorizzato a modificare la posizione della barra di ricerca)   |    Bool    |    True    |  Consente di specificare se l'impostazione **Search Bar Placement** (Posizione barra di ricerca) può essere modificata dall'utente finale. <ul><li>Se è impostata su **True**, la posizione della barra di ricerca verrà applicata solo per la distribuzione iniziale. Successivamente, i criteri non verranno applicati per rispettare le eventuali modifiche apportate dall'utente.</li><li>Se è impostata su **false**, la posizione della barra di ricerca verrà applicata a ogni sincronizzazione.</li></ul><br>Nome chiave JSON:<br>`com.microsoft.launcher.Search.SearchBar.Placement.UserChangeAllowed`<p>**NOTA:** per Microsoft Launcher versione 6.2 e successive, questa impostazione non verrà più applicata. Di conseguenza, l'impostazione di questo valore su `True` non avrà alcun effetto. Gli utenti finali non saranno in grado di personalizzare il posizionamento della barra di ricerca nel dispositivo.    |
-|    Dock Mode (Modalità di ancoraggio)  |    Stringa    |    Mostra    | Consente di abilitare l'ancoraggio nel dispositivo quando l'utente scorre a destra sulla schermata iniziale.<ul><li>Con l'impostazione **Show** (Mostra) l'ancoraggio sarà abilitato.</li><li>Con l'impostazione **Hide** (Nascondi) l'ancoraggio verrà nascosto dalla schermata iniziale, ma l'utente potrà visualizzarlo quando necessario.</li><li>Con l'impostazione **Disabled** (Disabilitato) l'ancoraggio sarà disabilitato.</li></ul><br>Nome chiave JSON:<br>`com.microsoft.launcher.Dock.Mode`    |
+|    Dock Mode (Modalità di ancoraggio)  |    Stringa    |    Mostra    | Consente di abilitare l'ancoraggio nel dispositivo quando l'utente scorre a destra sulla schermata iniziale.<ul><li>Con l'impostazione **Show** (Mostra) l'ancoraggio sarà abilitato.</li><li>Con l'impostazione **Hidden** (Nascosto) l'ancoraggio verrà nascosto dalla schermata iniziale, ma l'utente potrà visualizzarlo quando necessario.</li><li>Con l'impostazione **Disabled** (Disabilitato) l'ancoraggio sarà disabilitato.</li></ul><br>Nome chiave JSON:<br>`com.microsoft.launcher.Dock.Mode`    |
 |   Dock Mode User Change Allowed (Utente autorizzato a modificare la modalità di ancoraggio)   |    Stringa    |    True    |  Consente di specificare se l'impostazione Dock Mode (Modalità di ancoraggio) può essere modificata dall'utente finale.<ul><li>Se è impostata su **True**, l'impostazione della modalità di ancoraggio verrà applicata solo per la distribuzione iniziale. Successivamente, i criteri non verranno applicati per rispettare le eventuali modifiche apportate dall'utente.</li><li>Se è impostata su **False**, l'impostazione della modalità di ancoraggio verrà applicata a ogni sincronizzazione.</li></ul><br>Nome chiave JSON:<br>`com.microsoft.launcher.Dock.Mode.UserChangeAllowed`    |
 
 ## <a name="enter-json-data"></a>Immettere dati JSON
@@ -219,7 +219,7 @@ Di seguito è riportato un esempio di script JSON con tutte le chiavi di configu
         }, 
         {
             "key": "com.microsoft.launcher.Wallpaper.Url", 
-            "valueBool": "http://www.contoso.com/wallpaper.png"
+            "valueString": "http://www.contoso.com/wallpaper.png"
         }, 
         {
             "key": "com.microsoft.launcher.HomeScreen.GridSize", 

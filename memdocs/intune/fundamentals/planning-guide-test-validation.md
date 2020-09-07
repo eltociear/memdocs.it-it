@@ -17,12 +17,12 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aeca72af3eadf55174f1ad97c1e294f48f131801
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ae07904d9fb21773fbc4caad18cb183d9565c401
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357233"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996300"
 ---
 # <a name="intune-testing-and-validation"></a>Test e convalida di Intune
 
@@ -40,7 +40,7 @@ Quando si testa l'implementazione di Microsoft Intune, prendere in considerazion
 
 Se un componente di progettazione non è presente in almeno un criterio di test allineato a un requisito o uno scenario, valutare se il componente di progettazione è necessario o meno. Assicurarsi inoltre di avere i seguenti elementi:
 
-- **Account:** account di test che dispongono delle licenze per EMS e Office 365 per testare tutti gli scenari dei casi d'uso.
+- **Account:** account di test che hanno le licenze per EMS e Microsoft 365 per testare tutti gli scenari dei casi d'uso.
 
 - **Dispositivi:** dispositivi di test di cui è possibile eseguire la cancellazione dei dati o il ripristino delle impostazioni predefinite.
 

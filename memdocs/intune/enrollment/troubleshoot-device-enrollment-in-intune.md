@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87f81c9f33fd267bcd57a14b59c88d36a937fecd
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: 5c0aadb15587822ca2500ec477b6264ce4e96ed2
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865823"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993523"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Risolvere i problemi di registrazione dei dispositivi in Microsoft Intune
 
@@ -47,8 +47,8 @@ Prima di iniziare la risoluzione dei problemi, verificare di aver configurato In
 
 Gli utenti dei dispositivi gestiti possono raccogliere log di registrazione e diagnostica da sottoporre all'analisi dell'amministratore. Le istruzioni per raccogliere i log sono disponibili nell'articolo:
 
-- [Inviare gli errori di registrazione all'amministratore IT](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-using-cable-android)
-- [Inviare gli errori iOS/iPadOS all'amministratore IT](https://docs.microsoft.com/mem/intune/user-help/send-errors-to-your-it-admin-ios)
+- [Inviare gli errori di registrazione all'amministratore IT](../user-help/send-logs-to-your-it-admin-using-cable-android.md)
+- [Inviare gli errori iOS/iPadOS all'amministratore IT](../user-help/send-errors-to-your-it-admin-ios.md)
 
 
 ## <a name="general-enrollment-issues"></a>Problemi di registrazione generali
@@ -121,12 +121,12 @@ Per evitare di raggiungere i limiti dei dispositivi, assicurarsi di rimuovere i 
 **Problema:** questo problema può verificarsi quando si aggiunge un secondo dominio verificato ad AD FS. Gli utenti con il suffisso del nome dell'entità utente (UPN) del secondo dominio potrebbero non essere in grado di accedere ai portali o di registrare dispositivi.
 
 
-<strong>Risoluzione:</strong> i clienti di Microsoft Office 365 devono distribuire un'istanza separata di Active Directory Federation Services (AD FS) 2.0 per ogni suffisso se:
+<strong>Risoluzione:</strong> i clienti di Microsoft 365 devono distribuire un'istanza separata di Active Directory Federation Services (AD FS) 2.0 per ogni suffisso se:
 - Usano l'accesso single sign-on (SSO) tramite AD FS 2.0
 - Hanno più domini di primo livello per i suffissi UPN degli utenti all'interno dell'organizzazione (ad esempio, @contoso.com o @fabrikam.com).
 
 
-Un [rollup per AD FS 2.0](https://support.microsoft.com/kb/2607496) interagisce con l'opzione <strong>SupportMultipleDomain</strong> per consentire al server AD FS di supportare questo scenario senza richiedere la presenza di altri server AD FS 2.0. Per altre informazioni, vedere [questo blog](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
+Un [rollup per AD FS 2.0](https://support.microsoft.com/kb/2607496) interagisce con l'opzione <strong>SupportMultipleDomain</strong> per consentire al server AD FS di supportare questo scenario senza richiedere la presenza di altri server AD FS 2.0. Per altre informazioni, vedere [questo blog](/archive/blogs/abizerh/supportmultipledomain-switch-when-managing-sso-to-office-365).
 
 
 ## <a name="android-issues"></a>Problemi di Android
@@ -215,7 +215,7 @@ L'utente potrebbe essere in grado di recuperare il certificato mancante seguendo
 
 Dopo aver immesso le credenziali aziendali ed essere stati reindirizzati per l'accesso federato, gli utenti potrebbero riscontrare l'errore di certificato mancante. In questo caso, l'errore può significare che manca un certificato intermedio nel server Active Directory Federation Services (ADFS)
 
-L'errore di certificato si verifica perché i dispositivi Android richiedono certificati intermedi da includere in un [messaggio Hello del server SSL](https://technet.microsoft.com/library/cc783349.aspx). Attualmente, un'installazione predefinita con server AD FS o server proxy WAP - AD FS invia solo il certificato SSL del servizio AD FS nella risposta Hello del server SSL a un messaggio Hello del client SSL.
+L'errore di certificato si verifica perché i dispositivi Android richiedono certificati intermedi da includere in un [messaggio Hello del server SSL](/previous-versions/windows/it-pro/windows-server-2003/cc783349(v=ws.10)). Attualmente, un'installazione predefinita con server AD FS o server proxy WAP - AD FS invia solo il certificato SSL del servizio AD FS nella risposta Hello del server SSL a un messaggio Hello del client SSL.
 
 Per risolvere il problema, importare i certificati nei certificati personali del computer sul server ADFS o proxy, come indicato di seguito:
 
@@ -294,9 +294,9 @@ Per registrare dispositivi gestiti con Registrazione automatica del dispositivo 
 Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
 ```
 
-Per altre informazioni, vedere la [documentazione di Get-AdfsEndpoint](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
+Per altre informazioni, vedere la [documentazione di Get-AdfsEndpoint](/powershell/module/adfs/get-adfsendpoint?view=win10-ps).
 
-Per altre informazioni, vedere [Procedure consigliate per la protezione di Active Directory Federation Services](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/operations/best-practices-securing-ad-fs). Per informazioni su come determinare se WS-Trust 1.3 Username/Mixed è abilitato nel provider di identità WS-Federation:
+Per altre informazioni, vedere [Procedure consigliate per la protezione di Active Directory Federation Services](/windows-server/identity/ad-fs/deployment/Best-Practices-Securing-AD-FS). Per informazioni su come determinare se WS-Trust 1.3 Username/Mixed è abilitato nel provider di identità WS-Federation:
 - Contattare il supporto tecnico Microsoft se si usa AD FS
 - Contattare il fornitore di identità di terze parti.
 

@@ -1,8 +1,8 @@
 ---
 title: Exchange senza gestione dei dispositivi
 titleSuffix: Microsoft Intune
-description: Usare Microsoft Intune per concedere ai dipendenti l'accesso alla posta elettronica Office 365 Exchange Online senza configurare un sistema di gestione dei dispositivi.
-keywords: Accesso alla posta elettronica di Office 365 Exchange
+description: Usare Microsoft Intune per concedere ai dipendenti l'accesso alla posta elettronica Microsoft 365 Exchange Online senza configurare un sistema di gestione dei dispositivi.
+keywords: Accesso alla posta elettronica di Microsoft 365 Exchange
 author: brenduns
 ms.author: brenduns
 manager: dougeby
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9669625225f8ad3960ece39e2a6b04849421ce6
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 8491d716751a4d370003583059546f17b689657e
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022186"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996130"
 ---
-# <a name="protect-office-365-exchange-online-without-requiring-device-management"></a>Proteggere Office 365 Exchange Online senza richiedere la gestione dei dispositivi
+# <a name="protect-microsoft-365-exchange-online-without-requiring-device-management"></a>Proteggere Microsoft 365 Exchange Online senza richiedere la gestione dei dispositivi
 
-Se si vuole, è possibile concedere ai dipendenti l'accesso alla posta elettronica aziendale senza dover configurare un sistema di gestione dei dispositivi. È possibile concedere l'accesso a Office 365 Exchange Online tramite Intune. Per completare la procedura necessaria, confermare di avere licenze per Microsoft 365 o Azure Active Directory (Premium) e Intune. I dipendenti devono avere un [dispositivo iOS/iPadOS o Android supportato](../fundamentals/supported-devices-browsers.md). 
+Se si vuole, è possibile concedere ai dipendenti l'accesso alla posta elettronica aziendale senza dover configurare un sistema di gestione dei dispositivi. È possibile concedere l'accesso a Microsoft 365 Exchange Online tramite Intune. Per completare la procedura necessaria, confermare di avere licenze per Microsoft 365 o Azure Active Directory (Premium) e Intune. I dipendenti devono avere un [dispositivo iOS/iPadOS o Android supportato](../fundamentals/supported-devices-browsers.md). 
 
 Se si decide di configurare un sistema di gestione dei dispositivi, è possibile farlo. Questo tipo di protezione delle app è indipendente dalla gestione dei dispositivi. 
 
@@ -48,8 +48,8 @@ Se si decide di configurare un sistema di gestione dei dispositivi, è possibile
 
 È stato usato l'accesso condizionale per incrementare la sicurezza dei dati aziendali. Come parte delle procedure successive, è possibile ottenere informazioni su altre strategie per incrementare la protezione dei dati aziendali, ad esempio: 
 
-* Configurazione dell'[accesso condizionale basato sulla conformità dei dispositivi, sul rischio dei dispositivi, sulla posizione e sugli attributi utente in Active Directory e Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal).  
+* Configurazione dell'[accesso condizionale basato sulla conformità dei dispositivi, sul rischio dei dispositivi, sulla posizione e sugli attributi utente in Active Directory e Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal).  
 * Configurazione dei criteri di protezione delle app per semplificare la protezione dei dati aziendali da perdite di dati intenzionali o accidentali. 
 * Sfruttamento delle funzionalità di Azure Information Protection per proteggere i dati aziendali all'esterno della rete aziendale. 
 
-Se si vuole ottenere assistenza per l'abilitazione di questi scenari o di altri scenari per EMS oppure Office 365 e sono disponibili almeno 150 licenze per Microsoft 365, Enterprise Mobility + Security o Azure Active Directory Premium, usare i propri [vantaggi FastTrack](https://docs.microsoft.com/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program). 
+Se si vuole ottenere assistenza per l'abilitazione di questi scenari o di altri scenari per EMS oppure Microsoft 365 e sono disponibili almeno 150 licenze per Microsoft 365, Enterprise Mobility + Security o Azure Active Directory Premium, usare i propri [vantaggi FastTrack](/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program).

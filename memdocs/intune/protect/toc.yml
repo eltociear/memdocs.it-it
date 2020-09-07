@@ -6,7 +6,7 @@
     - name: Panoramica sulla protezione del dispositivo
       href: device-protect.md
       displayName: compliant; noncompliant; mfa
-- name: Guide introduttive
+- name: Avvi rapidi
   items:
     - name: Creare criteri di conformità dei dispositivi
       href: quickstart-set-password-length-android.md
@@ -214,6 +214,8 @@
       items:
         - name: Usare i certificati per l'autenticazione
           href: certificates-configure.md
+        - name: Connettori di certificati
+          href: certificate-connectors.md
         - name: SCEP
           items:
             - name: Infrastruttura SCEP

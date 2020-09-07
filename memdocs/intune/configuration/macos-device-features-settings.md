@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/20/2020
+ms.date: 08/27/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79c389767ad3cb796e2cc7b4cd9a35015e17a837
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: e70952b0d90222bd31a4e9df997d70e9d528ef24
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819661"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194199"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Impostazioni relative alle funzionalità dei dispositivi macOS in Intune
 
@@ -267,7 +267,12 @@ Questa funzionalità si applica a:
 - **Tipo di estensione dell'app per accesso Single Sign-On**: scegliere il tipo di estensione dell'app per l'accesso Single Sign-On. Le opzioni disponibili sono:
 
   - **Non configurata**: non vengono usate le estensioni dell'app. Per disabilitare un'estensione dell'app, impostare il tipo di estensione dell'app per l'accesso Single Sign-On su **Non configurato**.
-  - **Microsoft Azure AD**: Usa il plug-in Microsoft Enterprise Single Sign-On, che è un'estensione dell'app per accesso Single Sign-On di tipo reindirizzamento. Questo plug-in offre l'accesso SSO per gli account Active Directory in tutte le applicazioni macOS che supportano la funzionalità [Enterprise Single Sign-On di Apple](https://developer.apple.com/documentation/authenticationservices). Usare questo tipo di estensione dell'app SSO per abilitare l'accesso Single Sign-On per le app Microsoft, le app dell'organizzazione e i siti Web che eseguono l'autenticazione con Azure AD.
+  - **Microsoft Azure AD**: 
+
+    > [!IMPORTANT]
+    > l'estensione per accesso Single Sign-On di Microsoft Azure AD è ancora in fase di sviluppo. È elencata nell'interfaccia utente di Intune, ma non funziona come previsto. Non usare **Microsoft Azure AD** per il tipo di estensione dell'app per accesso Single Sign-On.
+
+    Usa il plug-in Microsoft Enterprise Single Sign-On, che è un'estensione dell'app per accesso Single Sign-On di tipo reindirizzamento. Questo plug-in offre l'accesso SSO per gli account Active Directory in tutte le applicazioni macOS che supportano la funzionalità [Enterprise Single Sign-On di Apple](https://developer.apple.com/documentation/authenticationservices). Usare questo tipo di estensione dell'app SSO per abilitare l'accesso Single Sign-On per le app Microsoft, le app dell'organizzazione e i siti Web che eseguono l'autenticazione con Azure AD.
 
     Il plug-in per l'accesso Single Sign-On funge da broker di autenticazione avanzato e offre miglioramenti della sicurezza e dell'esperienza utente.
 
@@ -324,7 +329,7 @@ Questa funzionalità si applica a:
 - **Individuazione automatica** (solo Kerberos): quando questa opzione è impostata su **Blocca**, l'estensione Kerberos non usa automaticamente LDAP e DNS per determinare il rispettivo nome del sito di Active Directory. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire all'estensione di individuare automaticamente il nome del sito Active Directory.
 - **Modifiche della password** (solo Kerberos): **Blocca** impedisce agli utenti di modificare le password usate per accedere ai domini immessi. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe consentire le modifiche della password.  
 - **Sincronizzazione password** (solo Kerberos): scegliere **Abilita** per sincronizzare le password locali degli utenti per Azure AD. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe disabilitare la sincronizzazione delle password in Azure AD. Usare questa impostazione come alternativa o backup per l'accesso Single Sign-On. Questa impostazione non funziona se gli utenti hanno eseguito l'accesso con un account per dispositivi mobili Apple.
-- **Complessità della password di Windows Server Active Directory** (solo Kerberos): scegliere **Richiedi** per forzare le password degli utenti a soddisfare i requisiti di complessità delle password di Active Directory. Per altre informazioni, vedere [Le password devono essere conformi ai requisiti di complessità](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements). Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non richiedere agli utenti di rispettare i requisiti delle password di Active Directory.
+- **Complessità della password di Windows Server Active Directory** (solo Kerberos): scegliere **Richiedi** per forzare le password degli utenti a soddisfare i requisiti di complessità delle password di Active Directory. Per altre informazioni, vedere [Le password devono essere conformi ai requisiti di complessità](/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements). Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non richiedere agli utenti di rispettare i requisiti delle password di Active Directory.
 - **Lunghezza minima password** (solo Kerberos): immettere il numero minimo di caratteri che possono costituire le password degli utenti. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non applicare una lunghezza minima della password agli utenti.
 - **Limite di riutilizzo password** (solo Kerberos): immettere il numero di nuove password, da 1 a 24, che vengono usate prima che una password precedente possa essere usata nuovamente nel dominio. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non imporre un limite di riutilizzo delle password.
 - **Validità minima della password** (solo Kerberos): immettere il numero di giorni per cui viene usata una password nel dominio prima che gli utenti possano modificarla. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe non imporre una validità minima delle password prima che possano essere modificate.
@@ -344,7 +349,7 @@ Questa funzionalità si applica a:
 
   Se è impostata su **Sì**, tutti gli account utente esistenti vengono cancellati dai dispositivi. Per evitare la perdita di dati o per impedire il ripristino delle impostazioni predefinite, assicurarsi di capire gli effetti di questa impostazione sui dispositivi.
 
-  Per altre informazioni sulla modalità dispositivo condiviso, vedere [Panoramica della modalità dispositivo condiviso](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices).
+  Per altre informazioni sulla modalità dispositivo condiviso, vedere [Panoramica della modalità dispositivo condiviso](/azure/active-directory/develop/msal-shared-devices).
 
 - **ID bundle dell'app** (Microsoft Azure AD, Kerberos): **aggiungere** gli identificatori delle aggregazioni di app che devono usare l'accesso Single Sign-On nei dispositivi. A queste app viene concesso l'accesso al ticket di concessione ticket Kerberos e al ticket di autenticazione. Anche le app autenticano gli utenti per i servizi a cui sono autorizzati ad accedere.
 - **Mapping dell'area di autenticazione dei domini** (solo Kerberos): **aggiungere** i suffissi DNS di dominio che devono essere mappati all'area di autenticazione. Usare questa impostazione quando i nomi DNS degli host non corrispondono al nome dell'area di autenticazione. Probabilmente non è necessario creare questo mapping da dominio ad area di autenticazione personalizzato.

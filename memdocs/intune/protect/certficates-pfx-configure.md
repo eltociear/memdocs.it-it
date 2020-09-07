@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d71326dc46d404925bdd94bd5d1140f23151748c
-ms.sourcegitcommit: 24fcf19054dcd62429f6181cdc568d894e01b99a
+ms.openlocfilehash: b0f360509f456489a321e072c2acfbf26c14bf98
+ms.sourcegitcommit: 231e2c3913a1d585310dfab7ffcd5c78c6bc5703
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86946644"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970499"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Configurare e usare i certificati PKCS con Intune
 
@@ -40,12 +40,12 @@ Per usare i certificati PKCS con Intune, è necessaria l'infrastruttura seguente
 - **Dominio di Active Directory**:  
   tutti i server elencati in questa sezione devono essere aggiunti al dominio di Active Directory.
 
-  Per altre informazioni sull'installazione e sulla configurazione di Active Directory Domain Services, vedere [Pianificazione e progettazione di Active Directory Domain Services](https://docs.microsoft.com/windows-server/identity/ad-ds/plan/ad-ds-design-and-planning).
+  Per altre informazioni sull'installazione e sulla configurazione di Active Directory Domain Services, vedere [Pianificazione e progettazione di Active Directory Domain Services](/windows-server/identity/ad-ds/plan/ad-ds-design-and-planning).
 
 - **Autorità di certificazione**:  
    Un'autorità di certificazione globale (enterprise).
 
-  Per altre informazioni sull'installazione e sulla configurazione di Servizi certificati Active Directory (AD CS), vedere [Active Directory Certificate Services Step-by-Step Guide](https://technet.microsoft.com/library/cc772393) (Guida dettagliata di Servizi certificati Active Directory).
+  Per altre informazioni sull'installazione e sulla configurazione di Servizi certificati Active Directory (AD CS), vedere [Active Directory Certificate Services Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772393(v=ws.10)) (Guida dettagliata di Servizi certificati Active Directory).
 
   > [!WARNING]  
   > Intune richiede l'esecuzione di Servizi certificati Active Directory con un'autorità di certificazione globale (enterprise), non con un'autorità di certificazione autonoma (Standalone).
@@ -82,7 +82,7 @@ Per usare i certificati PKCS con Intune, è necessaria l'infrastruttura seguente
   - Connettore di certificati di Microsoft Intune: per scenari di autenticazione e firma S/MIME della posta elettronica
   - Connettore di certificati PFX per Microsoft Intune: per scenari di crittografia S/MIME della posta elettronica.
 
-  I connettori richiedono l'accesso alle stesse porte descritte in dettaglio per i dispositivi gestiti, come indicato nel [contenuto per l'endpoint del dispositivo](https://docs.microsoft.com/intune/fundamentals/intune-endpoints#access-for-managed-devices).
+  I connettori richiedono l'accesso alle stesse porte descritte in dettaglio per i dispositivi gestiti, come indicato nel [contenuto per l'endpoint del dispositivo](/intune/fundamentals/intune-endpoints#access-for-managed-devices).
 
   Intune supporta l'installazione del *connettore di certificati PFX* nello stesso server del *connettore di certificati di Microsoft Intune*.
   
@@ -119,6 +119,12 @@ Per l'autenticazione di un dispositivo con una VPN, una rete Wi-Fi o altre risor
     > Per impostazione predefinita, il parametro **Nome modello** corrisponde al valore **Nome visualizzato modello** *senza spazi*. Annotare il nome del modello, sarà necessario in un secondo momento.
 
 6. In **Gestione richiesta** selezionare **Rendi la chiave privata esportabile**.
+    
+    > [!NOTE]
+    > Diversamente da SCEP, con PKCS la chiave privata del certificato viene generata nel server in cui è installato il connettore e non nel dispositivo. È necessario che il modello di certificato consenta l'esportazione della chiave privata, in modo che Connettore di certificati sia in grado di esportare il certificato PFX e di inviarlo al dispositivo. 
+    >
+    > Tuttavia, si noti che i certificati vengono installati nel dispositivo stesso con la chiave privata contrassegnata come non esportabile.
+    
 7. In **Crittografia** verificare che il campo **Dimensioni minime chiave** sia impostato su 2048.
 8. In **Nome soggetto** scegliere **Inserisci nella richiesta**.
 9. In **Estensioni** verificare che nell'area **Criteri di applicazione** siano presenti Crittografia file system, Posta elettronica sicura e Autenticazione client.
@@ -160,7 +166,7 @@ Per l'autenticazione di un dispositivo con una VPN, una rete Wi-Fi o altre risor
 6. Nella scheda **Avanzate** è consigliabile lasciare selezionata l'opzione **Usa l'account di sistema del computer (impostazione predefinita)** .
 7. **Applica** > **Chiudi**
 8. Tornare al portale di Intune (**Intune** > **Configurazione dispositivo** > **Connettori di certificati**). Dopo alcuni istanti, viene visualizzato un segno di spunta verde e lo **stato della connessione** è **attivo**. Il server del connettore ora può comunicare con Intune.
-9. Se si ha un proxy web nel proprio ambiente di rete, possono essere necessarie operazioni di configurazione aggiuntive per abilitare il funzionamento del connettore. Per altre informazioni, vedere [Usare server proxy locali esistenti](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers) nella documentazione di Azure Active Directory.
+9. Se si ha un proxy web nel proprio ambiente di rete, possono essere necessarie operazioni di configurazione aggiuntive per abilitare il funzionamento del connettore. Per altre informazioni, vedere [Usare server proxy locali esistenti](/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers) nella documentazione di Azure Active Directory.
     - Android Enterprise (*Profilo di lavoro*)
     - iOS
     - macOS
@@ -292,16 +298,16 @@ Piattaforme:
   - **CN={{IMEINumber}}** : numero IMEI (International Mobile Equipment Identity) univoco usato per identificare un telefono cellulare.
   - **CN={{OnPrem_Distinguished_Name}}** : sequenza di nomi distinti relativi separati da virgola, ad esempio *CN=Giorgia Fanucci,OU=UserAccounts,DC=corp,DC=contoso,DC=com*.
 
-    Per usare la variabile *{{OnPrem_Distinguished_Name}}* , assicurarsi di sincronizzare l'attributo utente *onpremisesdistinguishedname* usando [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) con Azure AD.
+    Per usare la variabile *{{OnPrem_Distinguished_Name}}* , assicurarsi di sincronizzare l'attributo utente *onpremisesdistinguishedname* usando [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) con Azure AD.
 
   - **CN={{onPremisesSamAccountName}}** : gli amministratori possono sincronizzare l'attributo samAccountName da Active Directory ad Azure AD usando Azure AD Connect in un attributo denominato *onPremisesSamAccountName*. Intune può sostituire tale variabile come parte di una richiesta di emissione di certificati nel soggetto di un certificato. L'attributo samAccountName è il nome di accesso utente usato per supportare i client e i server da una versione precedente di Windows (precedente a Windows 2000). Il formato del nome di accesso dell'utente è: *NomeDomino\utenteTest* o solo *utenteTest*.
 
-    Per usare la variabile *{{onPremisesSamAccountName}}* , assicurarsi di sincronizzare l'attributo utente *onPremisesSamAccountName* usando [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) con Azure AD.
+    Per usare la variabile *{{onPremisesSamAccountName}}* , assicurarsi di sincronizzare l'attributo utente *onPremisesSamAccountName* usando [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) con Azure AD.
 
   Usando una combinazione di una o più variabili e stringhe statiche, è possibile creare un formato di nome soggetto personalizzato, ad esempio:  
   - **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**
   
-  Questo esempio include un formato di nome soggetto che usa le variabili CN ed E, oltre a stringhe per i valori di unità organizzativa (OU), organizzazione (O), località (L), stato (S) e paese (C). L'argomento [Funzione CertStrToName](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) visualizza questa funzione e le relative stringhe supportate.
+  Questo esempio include un formato di nome soggetto che usa le variabili CN ed E, oltre a stringhe per i valori di unità organizzativa (OU), organizzazione (O), località (L), stato (S) e paese (C). L'argomento [Funzione CertStrToName](/windows/win32/api/wincrypt/nf-wincrypt-certstrtonamea) visualizza questa funzione e le relative stringhe supportate.
 
 - **Tipo di certificato dispositivo**  
   Le opzioni di formato per il formato del nome soggetto includono le variabili seguenti: 

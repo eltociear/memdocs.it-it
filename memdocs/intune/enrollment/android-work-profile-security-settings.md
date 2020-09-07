@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/24/2020
+ms.date: 09/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4283caf8f21e87736b09a3d6c7b31f8daf1f6075
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: b661068515069b1bc4c20acdc1c9ad00a12fe7dd
+ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546827"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89286204"
 ---
 # <a name="android-enterprise-work-profile-security-configurations"></a>Configurazioni di sicurezza del profilo di lavoro Android
 
@@ -90,7 +90,9 @@ Il livello 1 è la configurazione di sicurezza minima consigliata per i disposit
 | Impostazioni del profilo di lavoro | Scadenza password (giorni) | Non configurato | È possibile che le organizzazioni debbano aggiornare questa impostazione in modo che corrisponda ai criteri delle password. |
 | Impostazioni del profilo di lavoro | Tipo di password richiesto | Complessa numerica ||
 | Impostazioni del profilo di lavoro | Impedisci riutilizzo delle password precedenti | Non configurato | È possibile che le organizzazioni debbano aggiornare questa impostazione in modo che corrisponda ai criteri delle password.|
+| Impostazioni del profilo di lavoro | Sblocco del viso | Non configurato ||
 | Impostazioni del profilo di lavoro | Sblocco con impronta digitale | Non configurato ||
+| Impostazioni del profilo di lavoro | Sblocco dell'iride | Non configurato ||
 | Impostazioni del profilo di lavoro | Smart Lock e altri agenti di attendibilità | Non configurato |||
 | Password del dispositivo | Lunghezza minima password | 6 | È possibile che le organizzazioni debbano aggiornare questa impostazione in modo che corrisponda ai criteri delle password. |
 | Password del dispositivo | Numero massimo di minuti di inattività fino al blocco dello schermo | 5 | È possibile che le organizzazioni debbano aggiornare questa impostazione in modo che corrisponda ai criteri delle password. |

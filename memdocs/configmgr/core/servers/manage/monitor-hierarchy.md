@@ -10,12 +10,12 @@ ms.assetid: 007dbb73-18a7-48a3-a489-97cf9fc4f140
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 66fc6744ef7d1aaf90a5e7339cc9a5174c0d33f6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 504943df58c0471a0ef821a269cc22b2d12d76d8
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694399"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068039"
 ---
 # <a name="monitor-the-hierarchy"></a>Monitorare la gerarchia
 
@@ -101,11 +101,7 @@ Per altre informazioni, vedere [Monitorare gli aggiornamenti software](../../../
 
 ## <a name="monitor-the-site-hierarchy"></a><a name="BKMK_SH_Node"></a> Monitorare la gerarchia di siti
 
-Il nodo **Gerarchia siti** dell'area di lavoro **Monitoraggio** offre una panoramica della gerarchia e dei collegamenti tra siti di Configuration Manager. È possibile utilizzare due viste:  
-
-- **Diagramma gerarchia**: visualizza la gerarchia come mappa topologica semplificata che mostra solo le informazioni più importanti. Per altre informazioni, vedere [Diagramma gerarchia](#hierarchy-diagram).  
-
-- **Vista geografica**: visualizza i siti in una mappa geografica con i percorsi del sito configurati. Per altre informazioni, vedere [Vista geografica](#geographical-view).  
+Il nodo **Gerarchia siti** dell'area di lavoro **Monitoraggio** offre una panoramica della gerarchia e dei collegamenti tra siti di Configuration Manager. 
 
 Usare il nodo **Gerarchia siti** per monitorare l'integrità di ogni sito. Monitorare anche i collegamenti di replica tra siti e la loro relazione con fattori esterni, come la posizione geografica.  
 
@@ -123,13 +119,16 @@ Le seguenti opzioni di modificano il diagramma gerarchia:
 
 #### <a name="groups"></a>Gruppi
 
-Configurare il numero di siti primari e secondari che attivano una modifica nel diagramma gerarchia. Questa modifica nella visualizzazione combina i siti in un unico oggetto, quindi si visualizza il numero totale di siti e un rollup di alto livello di messaggi di stato e stato dei siti. Le configurazioni dei gruppi non influenzano la vista geografica.  
+Configurare il numero di siti primari e secondari che attivano una modifica nel diagramma gerarchia. Questa modifica nella visualizzazione combina i siti in un unico oggetto, quindi si visualizza il numero totale di siti e un rollup di alto livello di messaggi di stato e stato dei siti.
 
 #### <a name="favorite-sites"></a>Siti preferiti
 
 Specificare i singoli siti come sito preferito. Un'icona a stella identifica un sito preferito nel diagramma gerarchia. I siti preferiti non sono combinati con altri siti quando si usano i gruppi. Vengono sempre visualizzati singolarmente.  
 
 ### <a name="geographical-view"></a>Vista geografica
+
+> [!IMPORTANT]
+> A partire dall'agosto 2020, questa funzionalità è deprecata. Usare l'opzione **Diagramma gerarchia**.<!--8116777-->
 
 la vista geografica visualizza la posizione di ogni sito su una mappa geografica. Visualizza solo i siti che è possibile configurare con una posizione. Quando si seleziona un sito in questa vista, vengono visualizzati i collegamenti di replica a siti padre o figlio. A differenza della vista Diagramma gerarchia, in questa vista non è possibile visualizzare i dettagli del messaggio di stato del sito o del collegamento di replica.  
 

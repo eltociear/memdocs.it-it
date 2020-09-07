@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/17/2020
+ms.date: 08/31/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8b08d5f1395c30b646885470c95fed2c7a96d3f9
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: b213769234d55fd2a542ac166afe59c6e8b9e6c2
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819610"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194107"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Impostazioni dei dispositivi Android Enterprise per consentire o limitare l'uso delle funzionalità tramite Intune
 
@@ -296,7 +296,7 @@ End of comment -->
 - **Numero di errori di accesso prima della cancellazione dei dati del dispositivo**: immettere il numero di password non corrette consentite prima che il dispositivo venga cancellato, da 4 a 11. `0` (zero) potrebbe disabilitare la funzionalità di cancellazione dei dispositivi. Quando il valore è vuoto, Intune non modifica o aggiorna questa impostazione.
 
   > [!NOTE]
-  > Ai dispositivi con profili di lavoro completamente gestiti, dedicati e di proprietà aziendale non verrà richiesto di impostare una password. Le impostazioni verranno applicate e sarà necessario impostare manualmente la password. Il criterio che impone questo segnalerà l'esito negativo fino a quando non si imposta la password che soddisfa i requisiti.
+  > Ai dispositivi con profili di lavoro completamente gestiti, dedicati e di proprietà aziendale non viene richiesto di impostare una password. Le impostazioni sono obbligatorie, ma gli utenti potrebbero non ricevere alcuna notifica in proposito. È necessario che gli utenti impostino manualmente la password. I criteri segnalano un errore finché l'utente non imposta una password che soddisfa i requisiti.
 
 ### <a name="power-settings"></a>Impostazioni di risparmio energia
 

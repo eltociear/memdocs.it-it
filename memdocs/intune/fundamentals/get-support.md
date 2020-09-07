@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f71a74c69235e8e079f2cd325582dbbe9bb4a3f1
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 2a476be4fb8c9d40150648e72d3203df564893dd
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820664"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994345"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Come ottenere supporto per Microsoft Intune
 
 Microsoft offre supporto globale tecnico e per la prevendita, la fatturazione e le sottoscrizioni di Microsoft Intune. Il supporto è disponibile sia online che telefonicamente per le sottoscrizioni a pagamento e di valutazione. Il supporto tecnico online è disponibile in lingua inglese e giapponese. Il supporto telefonico e il supporto online per la fatturazione sono disponibili anche in altre lingue.
 
-L'amministratore di Intune può usare l'opzione **Guida e supporto tecnico** per inviare un ticket di supporto online per Intune dal portale di Azure. Per creare e gestire una richiesta di assistenza, l'account deve avere un ruolo di Azure Active Directory (Azure AD) che includa l'*azione* **microsoft.office365.supportTickets**. Per informazioni sui ruoli e le autorizzazioni di Azure AD necessari per creare un ticket di supporto, vedere [Autorizzazioni del ruolo di amministratore in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal).
+L'amministratore di Intune può usare l'opzione **Guida e supporto tecnico** per inviare un ticket di supporto online per Intune dal portale di Azure. Per creare e gestire una richiesta di assistenza, l'account deve avere un ruolo di Azure Active Directory (Azure AD) che includa l'*azione* **microsoft.office365.supportTickets**. Per informazioni sui ruoli e le autorizzazioni di Azure AD necessari per creare un ticket di supporto, vedere [Autorizzazioni del ruolo di amministratore in Azure Active Directory](/azure/active-directory/active-directory-assign-admin-roles-azure-portal).
 
 >[!IMPORTANT]
 > Per il supporto tecnico dei prodotti di terze parti usati con Intune, come ad esempio Saaswedo, Cisco o Lookout, contattare prima il fornitore del prodotto. Prima di aprire una richiesta di supporto per Intune, verificare che l'altro prodotto sia stato configurato correttamente.
@@ -50,7 +50,7 @@ Quando si usa un tenant appena creato per Intune, è possibile che *Guida e supp
 
 I dettagli dell'errore includono un *ID sessione*, i dettagli dell'*estensione* e altro ancora.
 
-Questo problema si verifica quando l'account del nuovo tenant non è stato autenticato nell'**interfaccia di amministrazione di M365** all'indirizzo https://admin.microsoft.com o nel **portale di Office 365** all'indirizzo https://portal.office.com. Per risolvere il problema, selezionare il collegamento all'*interfaccia di amministrazione di M365* nel messaggio o visitare https://portal.office.com e accedere. Dopo l'autenticazione in uno dei siti, *Guida e supporto tecnico* per Intune diventa accessibile.
+Questo problema si verifica quando l'account del nuovo tenant non è stato autenticato nell'**interfaccia di amministrazione di Microsoft 365** all'indirizzo https://admin.microsoft.com o nel **portale di Office 365** all'indirizzo https://portal.office.com. Per risolvere il problema, selezionare il collegamento all'*interfaccia di amministrazione di Microsoft 365* nel messaggio o visitare https://portal.office.com e accedere. Dopo l'autenticazione in uno dei siti, *Guida e supporto tecnico* per Intune diventa accessibile.
 
 **Accedere a Guida e supporto tecnico**:
 

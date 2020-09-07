@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5ed7b8c0e8a4953dd2b125fbaf3e63ce74873a7
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 46e2f716808f5f3c91e44932572146d04c259484
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217488"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993903"
 ---
 # <a name="guided-scenario---secure-microsoft-office-mobile-apps"></a>Scenario guidato - Proteggi le app di Office per dispositivi mobili
 
@@ -52,7 +52,7 @@ I [criteri di protezione delle app di Intune](../apps/app-protection-policy.md) 
 - Criteri di rilocazione dei dati, ad esempio **Salva copie dei dati dell'organizzazione** e **Limita le operazioni taglia, copia e incolla**.
 - Impostazioni dei criteri di accesso per richiedere un PIN semplice per l'accesso e per bloccare l'esecuzione delle app gestite nei dispositivi jailbroken o rooted.
 
-L'accesso condizionale basato su app e la gestione delle app client consentono di aggiungere un livello di sicurezza, garantendo che solo le app client che supportano i criteri di protezione delle app di Intune possano accedere a Exchange Online e agli altri servizi di Office 365.
+L'accesso condizionale basato su app e la gestione delle app client consentono di aggiungere un livello di sicurezza, garantendo che solo le app client che supportano i criteri di protezione delle app di Intune possano accedere a Exchange Online e agli altri servizi di Microsoft 365.
 
 Consentendo solo all'app Microsoft Outlook di accedere a Exchange Online, è possibile bloccare le app di posta elettronica predefinite in iOS/iPadOS e Android. È inoltre possibile impedire di accedere a SharePoint Online alle app a cui non sono applicati criteri di protezione delle app di Intune.
 

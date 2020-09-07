@@ -18,21 +18,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 37bf4cf8d6381ab076f7c0cd0eb879ddf43d571c
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 9c4cc5fc662e27badcb0c1c1ae478ab700fce70e
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217103"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996470"
 ---
 # <a name="add-built-in-apps-to-microsoft-intune"></a>Aggiungere app predefinite in Microsoft Intune
 
-Il tipo di app *predefinito* semplifica l'assegnazione di app gestite dedicate, ad esempio le app di Office 365, ai dispositivi iOS/iPadOS e Android. È possibile assegnare app specifiche per questo tipo di app, come Excel, OneDrive, Outlook, Skype e altre ancora. Dopo aver aggiunto un'app, viene visualizzato il tipo di app, ovvero *App iOS predefinita* o *App Android predefinita*. Con il tipo di app predefinito, è possibile scegliere quali di queste app pubblicare nei dispositivi degli utenti.
+Il tipo di app *predefinito* semplifica l'assegnazione di app gestite dedicate, ad esempio le app di Microsoft 365, ai dispositivi iOS/iPadOS e Android. È possibile assegnare app specifiche per questo tipo di app, come Excel, OneDrive, Outlook, Skype e altre ancora. Dopo aver aggiunto un'app, viene visualizzato il tipo di app, ovvero *App iOS predefinita* o *App Android predefinita*. Con il tipo di app predefinito, è possibile scegliere quali di queste app pubblicare nei dispositivi degli utenti.
 
-Nelle versioni precedenti della console di Intune, Intune forniva diverse app di Office 365 gestite predefinite, ad esempio Outlook e OneDrive. I tipi di app per queste app gestite erano contrassegnati come *App dello Store iOS gestita* o *App di Android Store gestita*. Invece di usare questi tipi di app, è consigliabile usare il tipo di app predefinito. Il tipo di app predefinito offre una maggiore flessibilità per modificare ed eliminare le app di Office 365.
+Nelle versioni precedenti della console di Intune, Intune forniva diverse app di Microsoft 365 gestite predefinite, ad esempio Outlook e OneDrive. I tipi di app per queste app gestite erano contrassegnati come *App dello Store iOS gestita* o *App di Android Store gestita*. Invece di usare questi tipi di app, è consigliabile usare il tipo di app predefinito. Il tipo di app predefinito offre una maggiore flessibilità per modificare ed eliminare le app di Microsoft 365.
 
 >[!NOTE]
->Le app di Office 365 predefinite contrassegnate come *App dello Store iOS gestita* e *App di Android Store gestita* verranno rimosse dall'elenco di app quando verranno eliminate tutte le assegnazioni.
+>Le app di Microsoft 365 predefinite contrassegnate come *App dello Store iOS gestita* e *App di Android Store gestita* verranno rimosse dall'elenco di app quando verranno eliminate tutte le assegnazioni.
 
 ## <a name="add-a-built-in-app"></a>Aggiungere un'app predefinita
 

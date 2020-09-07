@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 08/27/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2ef0cf3909442cec818fd775bef4f848d6be5a83
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: ef1b6c82cae82763dc327f16e35d0e3bc522c3c7
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022314"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057471"
 ---
 # <a name="enroll-your-device-with-company-portal"></a>Registrare il dispositivo in Portale aziendale  
 Registrare il dispositivo Android personale o aziendale per ottenere accesso sicuro alla posta elettronica, alle app e ai dati aziendali. Il portale aziendale supporta i dispositivi Android, incluso Samsung Knox, che eseguono Android 4.4 e versioni successive.  
@@ -32,11 +32,24 @@ Registrare il dispositivo Android personale o aziendale per ottenere accesso sic
 > [!VIDEO https://www.youtube.com/embed/k0Q_sGLSx6o?rel=0]
 
 > [!NOTE]
-> Samsung Knox è un tipo di sicurezza che alcuni dispositivi Samsung usano per fornire protezione aggiuntiva oltre all'offerta prevista per i dispositivi Android nativi. Per determinare se il dispositivo è di tipo Samsung Knox, passare a **Impostazioni** > **Informazioni sul dispositivo**. Se non viene visualizzata l'indicazione **Versione Knox**, significa che il dispositivo è un dispositivo Android nativo.
+> Samsung Knox è un tipo di sicurezza che alcuni dispositivi Samsung usano per fornire protezione aggiuntiva oltre all'offerta prevista per i dispositivi Android nativi. Per determinare se il dispositivo è di tipo Samsung Knox, passare a **Impostazioni** > **Informazioni sul dispositivo**. Se non viene visualizzata l'indicazione **Versione Knox**, significa che il dispositivo è un dispositivo Android nativo.  
+
+## <a name="install-company-portal-app"></a>Installare l'app Portale aziendale  
+Installare l'app Portale aziendale Intune da [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal). Per l'elenco degli store nella Repubblica popolare cinese in cui è disponibile l'app, vedere [Installare l'app Portale aziendale nella Repubblica popolare cinese](install-company-portal-android-china.md).
+
+1. Toccare **Home** > **Play Store**.
+
+2. Cercare **Portale aziendale Intune**, quindi toccare l'app per aprirla. 
+
+    ![android-search-company-portal](./media/and-cpinstall-1-search-cp.png)
+
+4. Toccare **INSTALLA**.
+
+5. Quando vengono richieste le autorizzazioni dell'app, toccare **ACCETTA**.  
+
+    ![android-accept-company-portal-terms](./media/and-cpinstall-3-cp-accept.png)
 
 ## <a name="enroll-device"></a>Registrare il dispositivo  
-Assicurarsi di [installare l'app Portale aziendale Intune da Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal). Per l'elenco degli store nella Repubblica popolare cinese in cui è disponibile l'app, vedere [Installare l'app Portale aziendale nella Repubblica popolare cinese](install-company-portal-android-china.md).
-
 Durante la registrazione potrebbe essere richiesto di scegliere la categoria che descrive meglio come viene usato il dispositivo. Il team di supporto tecnico aziendale usa questa risposta per controllare le app a cui è possibile accedere.  
 
 1. Aprire l'app Portale aziendale e accedere con l'account aziendale o dell'istituto di istruzione.  

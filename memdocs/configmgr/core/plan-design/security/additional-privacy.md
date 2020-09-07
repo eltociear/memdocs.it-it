@@ -10,12 +10,12 @@ ms.assetid: 1fcc921f-085f-4b0b-9c53-1e0707211076
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f6d3f6dbbbb407ee63eb8253cbf3ca740a10479c
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: b419f313b9d4d300d286cf32605ebfe7e0e1573c
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699790"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068056"
 ---
 # <a name="additional-information-about-privacy-for-configuration-manager"></a>Altre informazioni sulla privacy per Configuration Manager
 
@@ -88,6 +88,9 @@ Per altre informazioni, vedere [Endpoint Protection](../../../protect/deploy-use
 
 
 ## <a name="site-hierarchy--geographical-view-with-bing-maps"></a>Gerarchia dei siti: visualizzazione geografica con Bing Maps
+
+> [!IMPORTANT]
+> A partire dall'agosto 2020, questa funzionalità è deprecata. Usare l'opzione **Diagramma gerarchia**.<!--8116777-->
 
 Nella console di Configuration Manager andare all'area di lavoro **Monitoraggio**, selezionare il nodo **Gerarchia siti** e passare a **Vista geografica**. Questa vista consente di usare le mappe fornite da Microsoft Bing Maps per visualizzare la topologia dei server fisici di Configuration Manager. Per abilitare questa funzionalità, le informazioni sulla posizione fornite dall'utente vengono inviate dal server al servizio Web di Bing Maps.
 

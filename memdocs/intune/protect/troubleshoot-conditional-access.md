@@ -18,18 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 088c3d6a281efcb1877d80d68382b1dc848ae321
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 7e51f7dc4bf76b9dc35b3eb560bc2dcbe9c48916
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663379"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993818"
 ---
 # <a name="troubleshoot-conditional-access"></a>Risolvere i problemi di accesso condizionale
 Questo articolo descrive cosa fare quando gli utenti non riescono ad accedere alle risorse protette con l'accesso condizionale o quando gli utenti possono accedere alle risorse protette mentre in realtà dovrebbero essere bloccati.
 
 Con Intune e l'accesso condizionale è possibile proteggere l'accesso a servizi, come ad esempio i seguenti:
-- Servizi di Office 365, ad esempio Exchange Online, SharePoint Online e Skype for business Online
+
+- Servizi di Microsoft 365, ad esempio Exchange Online, SharePoint Online e Skype for business Online
 - Exchange locale
 - Diversi altri servizi
 
@@ -49,7 +50,7 @@ Il funzionamento dell'accesso condizionale è subordinato al rispetto dei requis
 
 - Per Exchange locale, Intune Exchange Connector deve essere configurato correttamente. Per altre informazioni, vedere [Risoluzione dei problemi di Exchange Connector in Microsoft Intune](troubleshoot-exchange-connector.md).
 
-- Per Skype locale, è necessario configurare l'autenticazione moderna ibrida. Vedere [Panoramica dell'autenticazione moderna ibrida](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview).
+- Per Skype locale, è necessario configurare l'autenticazione moderna ibrida. Vedere [Panoramica dell'autenticazione moderna ibrida](/office365/enterprise/hybrid-modern-auth-overview).
 
 È possibile visualizzare queste condizioni per ogni dispositivo nel portale di Azure e nel report di inventario dei dispositivi.
 
@@ -77,11 +78,11 @@ Il funzionamento dell'accesso condizionale è subordinato al rispetto dei requis
 
 - Un dispositivo Android registrato e conforme può comunque essere bloccato e ricevere un avviso di quarantena quando prova ad accedere alle risorse aziendali. In questo caso assicurarsi che l'app Portale aziendale non sia in esecuzione, quindi selezionare il collegamento **Per iniziare** nel messaggio di posta elettronica di quarantena per attivare la valutazione. Questa operazione è necessaria solo quando l'accesso condizionale viene abilitato per la prima volta.
 
-- L'utente di un dispositivo Android registrato potrebbe visualizzare il messaggio "Non sono stati trovati certificati" e non potere accedere alle risorse di O365. L'utente deve abilitare l'opzione *Abilita l'accesso al browser* nel dispositivo registrato come indicato di seguito:
+- L'utente di un dispositivo Android registrato potrebbe visualizzare il messaggio "Non sono stati trovati certificati" e non potere accedere alle risorse di Microsoft 365. L'utente deve abilitare l'opzione *Abilita l'accesso al browser* nel dispositivo registrato come indicato di seguito:
   1. Aprire l'app Portale aziendale.
   2. Passare alla pagina Impostazioni facendo clic sui punti di sospensione (...) o sul tasto di menu.
   3. Selezionare il pulsante *Abilita l'accesso al browser*.
-  4. Nel browser Chrome disconnettersi da Office 365 e riavviare Chrome.  
+  4. Nel browser Chrome disconnettersi da Microsoft 365 e riavviare Chrome.  
 
 
 ## <a name="devices-are-blocked-and-no-quarantine-email-is-received"></a>I dispositivi sono bloccati e non è stato ricevuto alcun messaggio di posta elettronica di quarantena
@@ -94,7 +95,7 @@ Il funzionamento dell'accesso condizionale è subordinato al rispetto dei requis
 
 ## <a name="devices-are-noncompliant-but-users-are-not-blocked"></a>I dispositivi non sono conformi, ma gli utenti non sono bloccati
 
-- Nei PC Windows, l'accesso condizionale blocca solo le app native di posta elettronica, Office 2013 con autenticazione moderna o Office 2016. Il blocco delle versioni precedenti di Outlook o di tutte le app di posta elettronica nei PC Windows richiede le configurazioni di Registrazione dispositivo Azure AD e Active Directory Federation Services (AD FS), come illustrato in [Configurare SharePoint Online ed Exchange Online per l'accesso condizionale di Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-no-modern-authentication).
+- Nei PC Windows, l'accesso condizionale blocca solo le app native di posta elettronica, Office 2013 con autenticazione moderna o Office 2016. Il blocco delle versioni precedenti di Outlook o di tutte le app di posta elettronica nei PC Windows richiede le configurazioni di Registrazione dispositivo Azure AD e Active Directory Federation Services (AD FS), come illustrato in [Configurare SharePoint Online ed Exchange Online per l'accesso condizionale di Azure Active Directory](/azure/active-directory/active-directory-conditional-access-no-modern-authentication).
 
 - Se viene cancellato o ritirato da Intune in modo selettivo, il dispositivo potrebbe continuare ad avere accesso per alcune ore dopo il ritiro. Questo avviene perché Exchange memorizza nella cache i diritti di accesso per 6 ore. Prendere in considerazione altri metodi di protezione dei dati nei dispositivi ritirati in questo scenario.
 

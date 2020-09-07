@@ -16,32 +16,32 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3db207e4c1c75706c1f54762bf74c1757d342ac1
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: ac2133455d4440e8048e7b9aba8f9f9b13d98a53
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84973044"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996538"
 ---
 # <a name="manage-messaging-collaboration-access-by-using-outlook-for-ios-and-android-with-microsoft-intune"></a>Gestire l'accesso alla collaborazione tramite messaggistica usando Outlook per iOS e Android con Microsoft Intune
 
 L'app Outlook per iOS e Android è progettata per consentire agli utenti dell'organizzazione di essere più efficienti con i propri dispositivi mobili, riunendo posta elettronica, calendario, contatti e altri file.
 
-Le funzionalità di protezione più complete e più ampie per i dati di Office 365 sono disponibili con l'abbonamento alla suite Enterprise Mobility + Security, che include funzionalità di Microsoft Intune e Azure Active Directory Premium, come l'accesso condizionale. Come minimo, è consigliabile distribuire criteri di accesso condizionale che consentono di connettersi a Outlook per iOS e Android solo dai dispositivi mobili e criteri di protezione delle app di Intune che garantiscono la protezione dell'esperienza di collaborazione.
+Le funzionalità di protezione più complete e più ampie per i dati di Microsoft 365 sono disponibili con l'abbonamento alla suite Enterprise Mobility + Security, che include funzionalità di Microsoft Intune e Azure Active Directory Premium, come l'accesso condizionale. Come minimo, è consigliabile distribuire criteri di accesso condizionale che consentono di connettersi a Outlook per iOS e Android solo dai dispositivi mobili e criteri di protezione delle app di Intune che garantiscono la protezione dell'esperienza di collaborazione.
 
 ## <a name="apply-conditional-access"></a>Applicare l'accesso condizionale
-Le organizzazioni possono usare i criteri di accesso condizionale di Azure AD per assicurarsi che gli utenti possano accedere solo ai contenuti aziendali o dell'istituto di istruzione usando Outlook per iOS e Android. A tale scopo, è necessario disporre di criteri di accesso condizionale destinati a tutti i potenziali utenti. Per informazioni dettagliate sulla creazione di questi criteri, vedere [Richiedere i criteri di protezione delle app per l'accesso alle app cloud con accesso condizionale](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access).
+Le organizzazioni possono usare i criteri di accesso condizionale di Azure AD per assicurarsi che gli utenti possano accedere solo ai contenuti aziendali o dell'istituto di istruzione usando Outlook per iOS e Android. A tale scopo, è necessario disporre di criteri di accesso condizionale destinati a tutti i potenziali utenti. Per informazioni dettagliate sulla creazione di questi criteri, vedere [Richiedere i criteri di protezione delle app per l'accesso alle app cloud con accesso condizionale](/azure/active-directory/conditional-access/app-protection-based-conditional-access).
 
-1. Seguire "Passaggio 1: configurare criteri di accesso condizionale di Azure AD per Office 365"in [Scenario 1: Le app di Office 365 richiedono app approvate con criteri di protezione delle app](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies), che consente Outlook per iOS e Android, ma blocca la connessione a Exchange Online dai client Exchange ActiveSync compatibili con OAuth.
+1. Seguire "Passaggio 1: configurare criteri di accesso condizionale di Azure AD per Office 365"in [Scenario 1: Le app di Office 365 richiedono app approvate con criteri di protezione delle app](/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies), che consente Outlook per iOS e Android, ma blocca la connessione a Exchange Online dai client Exchange ActiveSync compatibili con OAuth.
 
    > [!NOTE]
    > Questo criterio garantisce che gli utenti di dispositivi mobili possano accedere a tutti gli endpoint di Office usando le app applicabili.
 
-2. Seguire "Passaggio 2: configurare criteri di accesso condizionale di Azure AD per Exchange Online con Active Sync (EAS)" in [Scenario 1: Le app di Office 365 richiedono app approvate con criteri di protezione delle app](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies), che impedisce ai client di Exchange ActiveSync che usano l'autenticazione di base di connettersi a Exchange Online.
+2. Seguire "Passaggio 2: configurare criteri di accesso condizionale di Azure AD per Exchange Online con Active Sync (EAS)" in [Scenario 1: Le app di Office 365 richiedono app approvate con criteri di protezione delle app](/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies), che impedisce ai client di Exchange ActiveSync che usano l'autenticazione di base di connettersi a Exchange Online.
 
-   I criteri precedenti sfruttano il controllo di concessione [Richiedi criteri di protezione dell'app](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-technical-reference), assicurando che un criterio di Protezione app di Intune venga applicato all'account associato in Outlook per iOS e Android prima di concedere l'accesso. Se l'utente non è assegnato a un criterio di Protezione app di Intune, non ha una licenza per Intune o l'app non è inclusa nel criterio Protezione app di Intune, il criterio impedisce all'utente di ottenere un token di accesso e di accedere ai dati di messaggistica.
+   I criteri precedenti sfruttano il controllo di concessione [Richiedi criteri di protezione dell'app](/azure/active-directory/active-directory-conditional-access-technical-reference), assicurando che un criterio di Protezione app di Intune venga applicato all'account associato in Outlook per iOS e Android prima di concedere l'accesso. Se l'utente non è assegnato a un criterio di Protezione app di Intune, non ha una licenza per Intune o l'app non è inclusa nel criterio Protezione app di Intune, il criterio impedisce all'utente di ottenere un token di accesso e di accedere ai dati di messaggistica.
 
-3. Infine, seguire [Procedura: Bloccare l'autenticazione legacy ad Azure AD con l'accesso condizionale](https://docs.microsoft.com/azure/active-directory/conditional-access/block-legacy-authentication) per bloccare l'autenticazione legacy per altri protocolli di Exchange su dispositivi iOS e Android. Questo criterio deve essere destinato solo all'app cloud Office 365 Exchange Online e alle piattaforme per dispositivi iOS e Android. Ciò garantisce che le app per dispositivi mobili che usano i protocolli Servizi Web di Exchange, IMAP4 o POP3 con l'autenticazione di base non possano connettersi a Exchange Online.
+3. Infine, seguire [Procedura: Bloccare l'autenticazione legacy ad Azure AD con l'accesso condizionale](/azure/active-directory/conditional-access/block-legacy-authentication) per bloccare l'autenticazione legacy per altri protocolli di Exchange su dispositivi iOS e Android. Questo criterio deve essere destinato solo all'app cloud Microsoft Exchange Online e alle piattaforme per dispositivi iOS e Android. Ciò garantisce che le app per dispositivi mobili che usano i protocolli Servizi Web di Exchange, IMAP4 o POP3 con l'autenticazione di base non possano connettersi a Exchange Online.
 
 ## <a name="create-intune-app-protection-policies"></a>Creare criteri di protezione delle app di Intune
 
@@ -79,7 +79,7 @@ La configurazione dell'app può essere eseguita tramite il canale di gestione di
 - Impostazioni S/MIME
 - Impostazioni di protezione dati
 
-Per procedure specifiche e documentazione dettagliata sulle impostazioni di configurazione delle app supportate da Outlook per iOS e Android, vedere [Distribuzione di impostazioni di configurazione delle app Outlook per iOS e Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
+Per procedure specifiche e documentazione dettagliata sulle impostazioni di configurazione delle app supportate da Outlook per iOS e Android, vedere [Distribuzione di impostazioni di configurazione delle app Outlook per iOS e Android](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

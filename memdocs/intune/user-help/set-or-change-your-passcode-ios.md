@@ -1,11 +1,11 @@
 ---
-title: Impostare o modificare il passcode | Microsoft Docs
-description: Impostare o modificare il passcode
+title: Impostare o cambiare il passcode del dispositivo | Portale aziendale Intune | Microsoft Docs
+description: Impostare o cambiare il passcode nel dispositivo iOS per soddisfare i requisiti di sicurezza delle organizzazioni.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/18/2019
+ms.date: 08/27/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,33 +17,32 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 85b98d9ea3a4953e26bf94f990e2c1321309f4de
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 4d4bc798b668fb0922183419eac01a2d3003eb16
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881931"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057488"
 ---
-# <a name="set-or-change-your-passcode"></a>Impostare o modificare il passcode
+# <a name="set-a-device-passcode-on-ios-device"></a>Impostare il passcode in un dispositivo iOS  
 
-Creare un nuovo passcode o modificarne uno esistente per soddisfare i requisiti dell'organizzazione. Il passcode impedisce a utenti non autorizzati di sbloccare e usare il dispositivo. 
+> [!TIP]
+> Per i passaggi più aggiornati, vedere la [documentazione di Apple](https://support.apple.com/HT204060). 
 
-L'organizzazione può impostare più requisiti per il passcode. Per un elenco dei requisiti comuni per le password, vedere i [requisiti per le password dei dispositivi per i dispositivi registrati](password-does-not-meet-it-administrator-requirements.md).  
-
-In caso di problemi durante la creazione o la modifica del passcode, contattare il responsabile del supporto IT.  
-
-
-## <a name="set-your-passcode"></a>Impostare il passcode
+Creare un passcode nuovo o più sicuro nel dispositivo iOS.  
 
 1. Toccare **Impostazioni** > **ID tocco e Passcode**.
 2. Nel menu **Touch ID e codice** toccare **Attiva codice**.
-3. Immettere un nuovo passcode che soddisfi i requisiti del supporto tecnico dell'azienda, quindi immetterlo nuovamente per la verifica.
+3. Immettere un nuovo passcode e quindi immetterlo di nuovo per confermare.  
 
-## <a name="change-your-passcode"></a>Modificare il passcode
+Per cambiare il passcode del dispositivo: 
 
 1. Toccare **Impostazioni** > **ID tocco e Passcode**.
-2. Immettere il passcode. Si apre il menu **Touch ID e codice**.
-2. Toccare **Cambia passcode** e immettere il passcode precedente.
-3. Immettere un nuovo passcode che soddisfi i requisiti del supporto tecnico dell'azienda, quindi immetterlo nuovamente per la verifica.
+2. Immettere il passcode corrente. 
+3. Si apre il menu **Touch ID e codice**. Toccare **Cambia passcode** e immettere di nuovo il passcode corrente, che sarà obsoleto a breve.  
+4. Immettere un nuovo passcode e quindi immetterlo di nuovo per confermare.  
 
-Serve ancora assistenza? Contattare l'amministratore IT. Per informazioni sul contatto vedere il [sito Web del portale aziendale](https://go.microsoft.com/fwlink/?linkid=2010980).
+
+## <a name="next-steps"></a>Passaggi successivi  
+
+Serve ancora aiuto o si hanno problemi di accesso alla rete dell'organizzazione? Contattare il responsabile del supporto IT. Per trovare le informazioni sul contatto, vedere il [sito Web Portale aziendale](https://go.microsoft.com/fwlink/?linkid=2010980).  

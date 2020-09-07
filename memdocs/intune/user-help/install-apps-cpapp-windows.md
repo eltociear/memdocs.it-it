@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: de3d4eb47a6a08c0ba2bdddb20312f7e95eb8c84
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 3975e2fcf7e43e4b7468664f9ccc27b692c40d85
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882206"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057315"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Installare e condividere app nel dispositivo
 
@@ -53,12 +53,12 @@ Installare le app nel dispositivo dall'app Portale aziendale per Windows.
 > [!IMPORTANT]
 > Se non è possibile installare un'app obbligatoria e l'organizzazione la rende disponibile per l'installazione manuale, selezionare **Riprova**. Potrebbero essere necessari fino a dieci minuti per visualizzare lo stato aggiornato. Se si seleziona di nuovo **Riprova** durante tale periodo di tempo e viene visualizzato un errore, questo non rappresenta un problema. Continuare ad attendere fino a dieci minuti per l'aggiornamento dello stato.   
 
-A seconda delle dimensioni dell'azienda, nel portale aziendale possono essere disponibili per il download più versioni di Office. Per informazioni specifiche sulla famiglia di prodotti Office per i dispositivi Windows, vedere [Installazione di Office 365 nel dispositivo Windows 10](./install-office-windows.md).
+A seconda delle dimensioni dell'azienda, nel portale aziendale possono essere disponibili per il download più versioni di Office. Per informazioni specifiche sulla famiglia di prodotti Office per i dispositivi Windows, vedere [Installazione di Microsoft 365 nel dispositivo Windows](./install-office-windows.md).
 
 ## <a name="share-apps"></a>Condividere le app  
 Consigliare le app e condividerle con i contatti del lavoro e dell'istituto di istruzione. I passaggi seguenti descrivono come condividere un collegamento direttamente dal Portale aziendale.
 
-1. Nel Portale aziendale fare clic con il pulsante destro del mouse o tenere premuto il tasto sinistro su qualsiasi applicazione per aprire il relativo [menu di scelta rapida](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus).  
+1. Nel Portale aziendale fare clic con il pulsante destro del mouse o tenere premuto il tasto sinistro su qualsiasi applicazione per aprire il relativo [menu di scelta rapida](//windows/uwp/design/controls-and-patterns/menus).  
 
     ![Viene visualizzata la home page dell'app Portale aziendale per Windows 10 con un elenco di applicazioni e dispositivi. Il menu di scelta rapida "Condividi" selezionabile è visibile sopra l'icona dell'app di esempio. ](./media/1808_ShareContext_CP_Windows.png)  
 
@@ -97,4 +97,4 @@ Per accedere a questa pagina, passare al menu di spostamento e selezionare **App
 
 Usare **Ordina per** per ridisporre le assegnazioni delle app in base al tipo, all'autore, in ordine alfabetico per nome o in ordine cronologico per data di pubblicazione Usare **Filtra per** per limitare le app visualizzate in base allo stato dell'installazione.  Se non è disponibile alcuna app, verrà visualizzato un messaggio che indica che non sono state installate app aziendali.  
 
-Servono altre informazioni? Contattare l'amministratore IT. Per informazioni sul contatto vedere il [sito Web del portale aziendale](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Servono altre informazioni? Contattare l'amministratore IT. Per informazioni sul contatto vedere il [sito Web del portale aziendale](https://go.microsoft.com/fwlink/?linkid=2010980).

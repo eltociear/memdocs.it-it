@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19de56bfab6e4f4cf2f1243c6cbaf98053e6ba5e
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 0b479f770053051e580a68aa810a60c35d745ac5
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663260"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996351"
 ---
 # <a name="implement-your-microsoft-intune-plan"></a>Implementare il piano di Microsoft Intune
 
@@ -37,7 +37,7 @@ I requisiti principali per la configurazione autonoma di Intune sono:
 
 - Sottoscrizione Enterprise Mobility + Security (EMS)/Intune
 
-- Sottoscrizione Office 365 (per le app di Office e le app gestite con criteri di protezione delle app)
+- Sottoscrizione Microsoft 365 (per le app di Office e le app gestite con criteri di protezione delle app)
 
 - Certificato APN Apple (per consentire la gestione della piattaforma per dispositivi iOS/iPadOS)
 
@@ -60,11 +60,11 @@ Come indicato in precedenza nella sezione relativa ai requisiti per Intune, è n
 
 - Altre informazioni su [come acquistare Microsoft Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-pricing).
 
-### <a name="task-2-add-office-365-subscription"></a>Attività 2: Aggiungere l'abbonamento a Office 365
+### <a name="task-2-add-microsoft-365-subscription"></a>Attività 2: Aggiungere l'abbonamento a Microsoft 365
 
-Questo passaggio è facoltativo. Se si prevede di usare Exchange Online e di gestire app Office Mobile con i criteri di protezione delle app, è necessaria una sottoscrizione Office 365. Se l'organizzazione non dispone di una sottoscrizione Office 365, contattare Microsoft o il team dell'account Microsoft e comunicare il proprio interesse per l'acquisto di Office 365.
+Questo passaggio è facoltativo. Se si prevede di usare Exchange Online e di gestire app Office Mobile con i criteri di protezione delle app, è necessario un abbonamento a Microsoft 365. Se l'organizzazione non ha un abbonamento a Microsoft 365, contattare Microsoft o il team dell'account Microsoft e comunicare il proprio interesse per l'acquisto di Microsoft 365.
 
-- Altre informazioni su [come acquistare Office 365](https://products.office.com/business/compare-office-365-for-business-plans).
+- Altre informazioni su [come acquistare Microsoft 365](https://products.office.com/business/compare-office-365-for-business-plans).
 
 ### <a name="task-3-add-users-groups-in-azure-ad"></a>Attività 3: Aggiungere gruppi di utenti in Azure AD
 
@@ -74,9 +74,9 @@ Potrebbe essere necessario aggiungere utenti o gruppi di sicurezza in Active Dir
 <!---why not send them to the AAD connect topic? Question out to Andre: https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect--->
 
 
-### <a name="task-4-assign-intune-and-office-365-user-licenses"></a>Attività 4: Assegnare licenze utente di Intune e Office 365
+### <a name="task-4-assign-intune-and-microsoft-365-user-licenses"></a>Attività 4: Assegnare le licenze utente di Intune e Microsoft 365
 
-A tutti gli utenti interessati dalla distribuzione di Office 365 ed EMS/Intune deve essere assegnata una licenza. È possibile assegnare licenze di EMS/Intune e Office 365 nell'interfaccia di amministrazione di Microsoft 365.
+A tutti gli utenti interessati dalla distribuzione di Microsoft 365 ed EMS/Intune deve essere assegnata una licenza. È possibile assegnare licenze di EMS/Intune e Microsoft 365 nell'interfaccia di amministrazione di Microsoft 365.
 
 - Altre informazioni su [come assegnare le licenze di Intune](licenses-assign.md).
 
@@ -130,7 +130,7 @@ Intune supporta l'accesso condizionale per Exchange Online, Exchange locale, Sha
 
 ### <a name="task-13-enroll-devices"></a>Attività 13: Registrare i dispositivi
 
-Intune supporta le piattaforme per dispositivi desktop iOS/iPadOS, Mac OS, Android e Windows. Registrare le piattaforme per dispositivi mobili a seconda delle esigenze, in base ai casi d'uso e ai requisiti per la distribuzione di Intune.
+Intune supporta le piattaforme per dispositivi desktop iOS/iPadOS, macOS, Android e Windows. Registrare le piattaforme per dispositivi mobili a seconda delle esigenze, in base ai casi d'uso e ai requisiti per la distribuzione di Intune.
 
 - Altre informazioni su [come registrare i dispositivi](../enrollment/device-enrollment.md).
 

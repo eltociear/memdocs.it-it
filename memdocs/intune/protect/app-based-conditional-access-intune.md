@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 27033c2452224bc93e335f3517c9548ad65666c4
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: e1619f3dde57b002ce8884e4af7d4a02e3d71b9f
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82080148"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992760"
 ---
 # <a name="app-based-conditional-access-with-intune"></a>Accesso condizionale basato su app con Intune
 
 I [criteri di protezione delle app di Intune](../apps/app-protection-policy.md) consentono di proteggere i dati aziendali sui dispositivi registrati in Intune. I criteri di protezione delle app possono essere usati anche nei dispositivi di proprietà dei dipendenti non registrati per la gestione in Intune. In questo caso, anche se il dispositivo non viene gestito dall'azienda, è comunque necessario assicurarsi che i dati e le risorse aziendali siano protetti.
 
-L'accesso condizionale basato su app e la gestione delle app client consentono di aggiungere un livello di sicurezza, garantendo che solo le app client che supportano i criteri di protezione delle app di Intune possano accedere a Exchange Online e agli altri servizi di Office 365.
+L'accesso condizionale basato su app e la gestione delle app client consentono di aggiungere un livello di sicurezza, garantendo che solo le app client che supportano i criteri di protezione delle app di Intune possano accedere a Exchange Online e agli altri servizi di Microsoft 365.
 
 > [!NOTE]
 > Un'app gestita è un'app a cui sono applicati criteri di protezione delle app e che può essere gestita da Intune.
@@ -47,9 +47,9 @@ Per altre informazioni, vedere i [prezzi di Enterprise Mobility](https://www.mic
 
 ## <a name="supported-apps"></a>App supportate
 
-Un elenco delle app che supportano l'accesso condizionale basato su app è disponibile nella [documentazione tecnica per l'accesso condizionale di Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-technical-reference).
+Un elenco delle app che supportano l'accesso condizionale basato su app è disponibile nella [documentazione tecnica per l'accesso condizionale di Azure Active Directory](/azure/active-directory/active-directory-conditional-access-technical-reference).
 
-L'accesso condizionale basato su app [supporta anche le app line-of-business (LOB)](app-modern-authentication-block.md), ma queste app devono usare l'[autenticazione moderna di Office 365](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a). 
+L'accesso condizionale basato su app [supporta anche le app line-of-business (LOB)](app-modern-authentication-block.md), ma queste app devono usare l'[autenticazione moderna di Microsoft 365](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a). 
 
 ## <a name="how-app-based-conditional-access-works"></a>Funzionamento dell'accesso condizionale basato su app
 

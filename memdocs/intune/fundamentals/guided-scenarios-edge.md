@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6fc1e75f38767de77f89dce2a85c747a7390e76d
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: ee6961de9a33f54db4f3fa8bb4c5a2bfa9406fbb
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217406"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993835"
 ---
 # <a name="guided-scenario---deploy-microsoft-edge-for-mobile"></a>Scenario guidato - Distribuisci Microsoft Edge per dispositivi mobili
 
@@ -34,7 +34,7 @@ Microsoft Edge consente agli utenti di evitare la confusione del Web con funzion
 > Se agli utenti non è consentita la registrazione di dispositivi iOS/iPadOS o Android, questo scenario non consentirà la registrazione e gli utenti dovranno installare Microsoft Edge autonomamente.
 Le funzionalità aziendali di Microsoft Edge abilitate dai criteri di Intune includono:
 
-- **Doppia identità**: gli utenti possono aggiungere sia un account aziendale che un account personale per l'esplorazione. Le due identità sono completamente separate, in modo analogo all'architettura e all'esperienza utente di Office 365 e Outlook. Gli amministratori di Intune potranno impostare i criteri desiderati per un'esperienza di esplorazione protetta nell'account aziendale.
+- **Doppia identità**: gli utenti possono aggiungere sia un account aziendale che un account personale per l'esplorazione. Le due identità sono completamente separate, in modo analogo all'architettura e all'esperienza in Microsoft 365 e Outlook. Gli amministratori di Intune potranno impostare i criteri desiderati per un'esperienza di esplorazione protetta nell'account aziendale.
 - **Integrazione dei criteri di protezione delle app di Intune**: ora gli amministratori possono applicare i criteri di protezione delle app a Microsoft Edge, tra cui controllare le operazioni Taglia, Copia e Incolla, impedire le acquisizioni di schermata e assicurare che i collegamenti selezionati dagli utenti si aprano solo in altre app gestite.
 - **Integrazione con il proxy di applicazione di Azure**: gli amministratori possono controllare l'accesso alle app SaaS e alle app Web, per assicurare che le app basate su browser vengano eseguite solo nel browser Microsoft Edge sicuro, sia che gli utenti finali si connettano dalla rete aziendale o da Internet.
 - **Collegamenti a Preferiti gestiti e alla home page**: per facilitare l'accesso, gli amministratori possono impostare gli URL in modo che vengano visualizzati nei preferiti quando gli utenti finali si trovano nel proprio contesto aziendale. Possono impostare un collegamento alla home page che viene visualizzato come collegamento principale quando un utente aziendale apre una nuova pagina o una nuova scheda in Microsoft Edge.

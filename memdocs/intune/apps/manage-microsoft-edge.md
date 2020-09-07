@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2eb5a5e87b54fd8a92fc40c6d1295250d90b05c4
-ms.sourcegitcommit: f6b14e6fe694a2a05c6ed92e67089e80a00a0908
+ms.openlocfilehash: ee7f02571e31656825f7f85fa128247126ecb890
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88501185"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995144"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>Gestire l'accesso Web usando Microsoft Edge per iOS e Android con Microsoft Intune
 
@@ -34,20 +34,20 @@ Edge per iOS è supportato in iOS 12.0 e versioni successive. Edge per Android �
 > [!NOTE]
 > Edge per iOS e Android non usa le impostazioni che gli utenti definiscono per il browser nativo nei propri dispositivi, perché Edge per iOS e Android non può accedere a tali impostazioni.
 
-Le funzionalità di protezione più complete e più ampie per i dati di Office 365 sono disponibili con l'abbonamento alla suite Enterprise Mobility + Security, che include funzionalità di Microsoft Intune e Azure Active Directory Premium, come l'accesso condizionale. Come minimo, è consigliabile implementare criteri di accesso condizionale che consentono di connettersi a Edge per iOS e Android solo dai dispositivi mobili e criteri di protezione delle app di Intune che garantiscono la protezione dell'esperienza di navigazione.
+Le funzionalità di protezione più complete e più ampie per i dati di Microsoft 365 sono disponibili con l'abbonamento alla suite Enterprise Mobility + Security, che include funzionalità di Microsoft Intune e Azure Active Directory Premium, come l'accesso condizionale. Come minimo, è consigliabile implementare criteri di accesso condizionale che consentono di connettersi a Edge per iOS e Android solo dai dispositivi mobili e criteri di protezione delle app di Intune che garantiscono la protezione dell'esperienza di navigazione.
 
 > [!NOTE]
 > Le clip Web (app Web aggiunte) nei dispositivi iOS verranno aperte in Edge per iOS e Android anziché in Intune Managed Browser quando devono essere aperte in un browser protetto. Le clip Web iOS precedenti devono essere ridestinate per assicurarsi che si aprano in Edge per iOS e Android anziché in Managed Browser.
 
 ## <a name="apply-conditional-access"></a>Applicare l'accesso condizionale
-Le organizzazioni possono usare i criteri di accesso condizionale di Azure AD per assicurarsi che gli utenti possano accedere solo ai contenuti aziendali o dell'istituto di istruzione usando Edge per iOS e Android. A tale scopo, è necessario disporre di criteri di accesso condizionale destinati a tutti i potenziali utenti. Per informazioni dettagliate sulla creazione di questi criteri, vedere [Richiedere i criteri di protezione delle app per l'accesso alle app cloud con accesso condizionale](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access).
+Le organizzazioni possono usare i criteri di accesso condizionale di Azure AD per assicurarsi che gli utenti possano accedere solo ai contenuti aziendali o dell'istituto di istruzione usando Edge per iOS e Android. A tale scopo, è necessario disporre di criteri di accesso condizionale destinati a tutti i potenziali utenti. Per informazioni dettagliate sulla creazione di questi criteri, vedere [Richiedere i criteri di protezione delle app per l'accesso alle app cloud con accesso condizionale](/azure/active-directory/conditional-access/app-protection-based-conditional-access).
 
-1. Seguire [Scenario 2: le app del browser richiedono app approvate con i criteri di protezione delle app](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-2-browser-apps-require-approved-apps-with-app-protection-policies), che consente l'uso di Edge per iOS e Android, ma impedisce ad altri Web browser di connettersi agli endpoint Office 365.
+1. Seguire [Scenario 2: le app del browser richiedono app approvate con i criteri di protezione delle app](/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-2-browser-apps-require-approved-apps-with-app-protection-policies), che consente l'uso di Edge per iOS e Android, ma impedisce ad altri Web browser di connettersi agli endpoint Office 365.
 
    >[!NOTE]
-   > Questi criteri garantiscono che gli utenti di dispositivi mobili possano accedere a tutti gli endpoint di Office 365 da Edge per iOS e Android. Questi criteri impediscono inoltre agli utenti di usare InPrivate per accedere agli endpoint di Office 365.
+   > Questi criteri garantiscono che gli utenti di dispositivi mobili possano accedere a tutti gli endpoint di Microsoft 365 da Edge per iOS e Android. Questi criteri impediscono inoltre agli utenti di usare InPrivate per accedere agli endpoint di Microsoft 365.
 
-Con l'accesso condizionale, è anche possibile fare riferimento a siti locali esposti a utenti esterni tramite il [proxy di applicazione AD Azure](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started).
+Con l'accesso condizionale, è anche possibile fare riferimento a siti locali esposti a utenti esterni tramite il [proxy di applicazione AD Azure](/azure/active-directory/active-directory-application-proxy-get-started).
 
 ## <a name="create-intune-app-protection-policies"></a>Creare criteri di protezione delle app di Intune
 
@@ -268,7 +268,7 @@ Per impostazione predefinita, la sincronizzazione di Microsoft Edge consente agl
 - Password
 - Indirizzi e altro (immissione del modulo di riempimento automatico)
 
-La funzionalità di sincronizzazione è abilitata tramite il consenso dell'utente e gli utenti possono attivare o disattivare la sincronizzazione per ogni tipo di dati elencato sopra. Per altre informazioni, vedere l'articolo [Sincronizzazione di Microsoft Edge](https://docs.microsoft.com/DeployEdge/microsoft-edge-enterprise-sync).
+La funzionalità di sincronizzazione è abilitata tramite il consenso dell'utente e gli utenti possono attivare o disattivare la sincronizzazione per ogni tipo di dati elencato sopra. Per altre informazioni, vedere l'articolo [Sincronizzazione di Microsoft Edge](/DeployEdge/microsoft-edge-enterprise-sync).
 
 Le organizzazioni possono disabilitare la sincronizzazione di Microsoft Edge per iOS e Android. 
 
@@ -343,7 +343,7 @@ I siti seguenti sono sempre consentiti indipendentemente dalle impostazioni dell
 
 ### <a name="manage-proxy-configuration"></a>Gestire configurazioni proxy
 
-È possibile usare Microsoft Edge per iOS e Android e [Azure AD Application Proxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) in combinazione per consentire agli utenti l'accesso ai siti Intranet con i dispositivi mobili. Ad esempio: 
+È possibile usare Microsoft Edge per iOS e Android e [Azure AD Application Proxy](/azure/active-directory/active-directory-application-proxy-get-started) in combinazione per consentire agli utenti l'accesso ai siti Intranet con i dispositivi mobili. Ad esempio: 
 
 - Un utente sta usando l'app per dispositivi mobili Outlook, protetta da Intune. L'utente fa clic su un collegamento a un sito Intranet in un messaggio di posta elettronica e Microsoft Edge per iOS e Android riconosce che tale sito Intranet è stato esposto all'utente tramite Application Proxy. L'utente viene automaticamente indirizzato tramite Application Proxy, per autenticarsi con l'autenticazione a più fattori applicabile e con l'accesso condizionale prima di accedere al sito Intranet. L'utente può così accedere ai siti interni anche da dispositivi mobili e il collegamento in Outlook funziona come previsto.
 - Un utente apre Edge per iOS e Android sul dispositivo iOS o Android. Se Edge per iOS e Android è protetto con Intune e Application Proxy è abilitato, l'utente può passare a un sito Intranet usando l'URL interno che è abituato a usare. Edge per iOS e Android riconosce che tale sito Intranet è stato esposto all'utente tramite Application Proxy. L'utente viene automaticamente indirizzato tramite Application Proxy, per eseguire l'autenticazione prima di raggiungere il sito Intranet. 
@@ -351,7 +351,7 @@ I siti seguenti sono sempre consentiti indipendentemente dalle impostazioni dell
 Prima di iniziare:
 
 - Configurare le applicazioni interne tramite Azure AD Application Proxy.
-  - Per configurare il proxy di applicazione e pubblicare le applicazioni, vedere la [documentazione del programma di installazione](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
+  - Per configurare il proxy di applicazione e pubblicare le applicazioni, vedere la [documentazione del programma di installazione](/azure/active-directory/manage-apps/application-proxy).
 - [Criteri di protezione delle app di Intune](app-protection-policy.md) devono essere assegnati all'app Edge per iOS e Android.
 - Le app Microsoft devono avere un criterio di protezione delle app con l'impostazione di trasferimento dei dati **Limita il trasferimento di contenuto Web con altre app** impostata su **Microsoft Edge**.
 
@@ -438,7 +438,7 @@ Gli utenti che hanno installato Edge per iOS e Android nel dispositivo iOS o And
 
 Per un elenco delle impostazioni archiviate nei log delle app, vedere [Esaminare i log di protezione delle app client](app-protection-policy-settings-log.md).
 
-Per informazioni su come visualizzare i log nei dispositivi Android, vedere [Inviare i log al supporto tecnico dell'azienda tramite posta elettronica](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android).
+Per informazioni su come visualizzare i log nei dispositivi Android, vedere [Inviare i log al supporto tecnico dell'azienda tramite posta elettronica](../user-help/send-logs-to-your-it-admin-by-email-android.md).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

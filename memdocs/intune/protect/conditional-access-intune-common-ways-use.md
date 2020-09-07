@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c1d4dacf29aa0c87a8356306d10bf05acbf3afb
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 52c8be7556fac2cf06d244fc8640a0ed7d173481
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462168"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992943"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Quali sono le modalità d'uso comuni dell'accesso condizionale con Intune?
 
@@ -35,24 +35,24 @@ Le informazioni di questo articolo illustrano come usare le funzionalità per la
 
 ## <a name="device-based-conditional-access"></a>Accesso condizionale basato sul dispositivo
 
-Intune e Azure Active Directory interagiscono per assicurarsi che solo i dispositivi gestiti e conformi abbiano accesso alla posta elettronica, ai servizi di Office 365, alle app SaaS (Software as a Service) e alle [app locali](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started). È anche possibile impostare un criterio in Azure Active Directory per consentire l'accesso ai servizi di Office 365 solo ai computer che appartengono a un dominio o ai dispositivi mobili registrati in Intune.
+Intune e Azure Active Directory interagiscono per assicurarsi che solo i dispositivi gestiti e conformi abbiano accesso alla posta elettronica, ai servizi di Microsoft 365, alle app SaaS (Software as a Service) e alle [app locali](/azure/active-directory/active-directory-application-proxy-get-started). È anche possibile impostare un criterio in Azure Active Directory per consentire l'accesso ai servizi di Microsoft 365 solo ai computer che appartengono a un dominio o ai dispositivi mobili registrati in Intune.
 
 Intune offre funzionalità per i criteri di conformità dei dispositivi che consentono di valutare lo stato di conformità dei dispositivi. Lo stato di conformità viene segnalato ad Azure Active Directory, che lo usa per l'applicazione dei criteri di accesso condizionale creati in Azure Active Directory quando l'utente prova ad accedere alle risorse aziendali.
 
-I criteri di accesso condizionale basato su dispositivo per Exchange Online e gli altri prodotti di Office 365 sono configurati nel [portale di Azure](../fundamentals/what-is-intune.md).
+I criteri di accesso condizionale basato su dispositivo per Exchange Online e gli altri prodotti di Microsoft 365 vengono configurati nel [portale di Azure](../fundamentals/what-is-intune.md).
 
-- Altre informazioni sulla [richiesta di dispositivi gestiti con accesso condizionale in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices).
+- Altre informazioni sulla [richiesta di dispositivi gestiti con accesso condizionale in Azure Active Directory](/azure/active-directory/conditional-access/require-managed-devices).
 
 - Altre informazioni sulla [conformità dei dispositivi di Intune](device-compliance-get-started.md).
 
-- Altre informazioni sui [browser supportati con accesso condizionale in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/conditional-access/technical-reference#supported-browsers).
+- Altre informazioni sui [browser supportati con accesso condizionale in Azure Active Directory](/azure/active-directory/conditional-access/technical-reference#supported-browsers).
 
 > [!NOTE]
 > Quando si abilita l'accesso in base al dispositivo per SharePoint Online o l’accesso in base al browser a Exchange Online sui dispositivi Android, gli utenti devono attivare l'opzione **Abilita l'accesso al browser** nel dispositivo registrato seguendo questa procedura:
 > 1. Avviare l' **app Portale aziendale**.
 > 2. Passare alla pagina **Impostazioni** facendo clic sui punti di sospensione (...) o sul tasto di menu.
 > 3. Scegliere il pulsante **Abilita l'accesso al browser** . 
-> 4. Nel browser Chrome disconnettersi da Office 365 e riavviare Chrome.
+> 4. Nel browser Chrome disconnettersi da Microsoft 365 e riavviare Chrome.
 
 ### <a name="conditional-access-based-on-network-access-control"></a>Accesso condizionale basato sul controllo di accesso alla rete
 
@@ -88,11 +88,11 @@ L'accesso condizionale per i PC offre funzionalità simili a quelle disponibili 
 
 - **Aggiunta alla rete aziendale e gestione di Intune:** qui l'utente può aggiungere i propri dispositivi personali per accedere ai servizi e alle risorse aziendali. È possibile usare l'aggiunta alla rete aziendale e registrare i dispositivi con la funzionalità MDM di Intune per ricevere criteri a livello di dispositivo, un'altra opzione per la valutazione dei criteri di accesso condizionale.
 
-Altre informazioni sulla [gestione dei dispositivi in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/overview).
+Altre informazioni sulla [gestione dei dispositivi in Azure Active Directory](/azure/active-directory/devices/overview).
 
 ## <a name="app-based-conditional-access"></a>Accesso condizionale basato su app
 
-Intune e Azure Active Directory interagiscono per verificare che solo le app gestite possano accedere alla posta elettronica aziendale o ad altri servizi di Office 365.
+Intune e Azure Active Directory interagiscono per assicurarsi che solo le app gestite possano accedere alla posta elettronica aziendale o ad altri servizi di Microsoft 365.
 
 - Altre informazioni sull'[accesso condizionale basato su app con Intune](app-based-conditional-access-intune.md).
 
@@ -111,7 +111,7 @@ Quando si applicano i criteri di accesso condizionale e di conformità dei dispo
 Se i dispositivi non soddisfano le condizioni previste, l'utente viene guidato nel processo di registrazione del dispositivo per la risoluzione del problema che rende il dispositivo non conforme.
 
 > [!NOTE]
-> A partire da luglio 2020, il supporto per Exchange Connector è deprecato e sostituito dall'[autenticazione moderna ibrida](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (HMA) di Exchange. L'uso di HMA non richiede la configurazione e l'uso di Exchange Connector in Intune. Con questa modifica, l'interfaccia utente per la configurazione e la gestione di Exchange Connector per Intune è stata rimossa dall'interfaccia di amministrazione di Microsoft Endpoint Manager, a meno che non si usi già Exchange Connector con la sottoscrizione.
+> A partire da luglio 2020, il supporto per Exchange Connector è deprecato e sostituito dall'[autenticazione moderna ibrida](/office365/enterprise/hybrid-modern-auth-overview) (HMA) di Exchange. L'uso di HMA non richiede la configurazione e l'uso di Exchange Connector in Intune. Con questa modifica, l'interfaccia utente per la configurazione e la gestione di Exchange Connector per Intune è stata rimossa dall'interfaccia di amministrazione di Microsoft Endpoint Manager, a meno che non si usi già Exchange Connector con la sottoscrizione.
 >
 > Se nel proprio ambiente è installato Exchange Connector, il tenant di Intune rimane supportato per l'uso e si continuerà ad avere accesso all'interfaccia utente che ne supporta la configurazione. Per altre informazioni, vedere [Installare il connettore locale per Exchange](../protect/exchange-connector-install.md). È possibile continuare a usare il connettore o configurare HMA e quindi disinstallare il connettore.
 >
@@ -162,7 +162,7 @@ Il server Exchange fornisce l'API e l'infrastruttura per mettere i dispositivi i
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Come configurare l'accesso condizionale in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
+[Come configurare l'accesso condizionale in Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal)
 
 [Configurare criteri di accesso condizionale basato su app](app-based-conditional-access-intune-create.md)
 

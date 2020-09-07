@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89635c9eb2849b4896ea3df85dd081d6e267627e
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: faa217bd5e56a304b80298f2039ad3c541612e54
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990201"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992804"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Usare i modelli di Windows 10 per configurare le impostazioni di Criteri di gruppo in Microsoft Intune
 
@@ -33,7 +33,7 @@ Questa funzionalità si applica a:
 
 - Windows 10 e versioni successive
 
-Le impostazioni di Windows sono simili alle impostazioni di Criteri di gruppo (GPO) in Active Directory (AD). Queste impostazioni sono incluse in Windows e sono [impostazioni supportate da ADMX](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies) che usano XML. Le impostazioni di Office e Microsoft Edge vengono inserite in ADMX e usano le impostazioni di ADMX nei [file dei modelli amministrativi di Office](https://www.microsoft.com/download/details.aspx?id=49030) e nei [file dei modelli amministrativi di Microsoft Edge](https://www.microsoftedgeinsider.com/enterprise). I modelli di Intune sono completamente basati sul cloud. Offrono un modo semplice e immediato di configurare le impostazioni e trovare quelle che interessano.
+Le impostazioni di Windows sono simili alle impostazioni di Criteri di gruppo (GPO) in Active Directory (AD). Queste impostazioni sono incluse in Windows e sono [impostazioni supportate da ADMX](/windows/client-management/mdm/understanding-admx-backed-policies) che usano XML. Le impostazioni di Office e Microsoft Edge vengono inserite in ADMX e usano le impostazioni di ADMX nei [file dei modelli amministrativi di Office](https://www.microsoft.com/download/details.aspx?id=49030) e nei [file dei modelli amministrativi di Microsoft Edge](https://www.microsoftedgeinsider.com/enterprise). I modelli di Intune sono completamente basati sul cloud. Offrono un modo semplice e immediato di configurare le impostazioni e trovare quelle che interessano.
 
 La funzionalità **Modelli amministrativi** è incorporata in Intune e non richiede alcuna personalizzazione, incluso l'uso di OMA-URI. Usare queste impostazioni dei modelli nella propria soluzione di gestione di dispositivi mobili (MDM) per gestire i dispositivi Windows 10 da una posizione centralizzata.
 
@@ -43,7 +43,7 @@ Questo articolo illustra i passaggi da eseguire per creare un modello per dispos
 
 - Alcune di queste impostazioni sono disponibili a partire da Windows 10 versione 1709 (RS2/build 15063). Alcune impostazioni non sono incluse in tutte le edizioni di Windows. Per un'esperienza ottimale, è consigliabile usare Windows 10 Enterprise versione 1903 (19H1/build 18362) e versioni successive.
 
-- Le impostazioni di Windows usano i [provider di servizi di configurazione (CSP) dei criteri di Windows](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies). I provider CSP funzionano in diverse edizioni di Windows, ad esempio Home, Professional, Enterprise e così via. Per verificare se un provider CSP funziona in un'edizione specifica, vedere i [provider di servizi di configurazione (CSP) di criteri di Windows](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies).
+- Le impostazioni di Windows usano i [provider di servizi di configurazione (CSP) dei criteri di Windows](/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies). I provider CSP funzionano in diverse edizioni di Windows, ad esempio Home, Professional, Enterprise e così via. Per verificare se un provider CSP funziona in un'edizione specifica, vedere i [provider di servizi di configurazione (CSP) di criteri di Windows](/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies).
 
 ## <a name="create-the-template"></a>Creare il modello
 
@@ -136,6 +136,6 @@ In questi modelli sono disponibili migliaia di impostazioni. Per trovare più fa
 
 Il modello è stato creato, ma non è ancora operativo. A questo punto [Assegnare il modello, detto anche profilo](device-profile-assign.md), e [monitorarne lo stato](device-profile-monitor.md).
 
-Aggiornare [Office 365 usando i modelli amministrativi](administrative-templates-update-office.md).
+Aggiornare [Microsoft 365 usando i modelli amministrativi](administrative-templates-update-office.md).
 
 [Esercitazione: Usare il cloud per configurare criteri di gruppo nei dispositivi Windows 10 con modelli ADMX e Microsoft Intune](tutorial-walkthrough-administrative-templates.md)

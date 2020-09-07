@@ -1,11 +1,11 @@
 ---
-title: Come accedere all'app del portale aziendale | Microsoft Docs
-description: Informazioni su come accedere all'app Portale aziendale su più piattaforme.
+title: Come accedere all'app Portale aziendale | Microsoft Docs
+description: Informazioni su dove ottenere l'app Portale aziendale e sui tre diversi modi per accedervi.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/31/2019
+ms.date: 08/27/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,81 +19,78 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 59555c8bb9a35d5b70b46836f2298bf3ed342b2d
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 28400d1aff176f83fd98b8ef1a825f468cd8847f
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881825"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057437"
 ---
-# <a name="sign-in-to-company-portal"></a>Accedere a Portale aziendale  
+# <a name="how-to-sign-in-to-company-portal"></a>Come accedere a Portale aziendale  
 
-Si può accedere all'app Portale aziendale in tre modi:
+Portale aziendale è disponibile per i dispositivi Windows 10, Android, iOS e macOS dalle posizioni seguenti (rispettivamente): 
 
-* Accesso con l'indirizzo di posta elettronica aziendale e la relativa password.  
+* [Microsoft Store](https://go.microsoft.com/fwlink/?linkid=2141417)  
+* [Google Play](https://go.microsoft.com/fwlink/?linkid=2141416)  
+* [App Store di Apple](https://go.microsoft.com/fwlink/?linkid=2141414)  
+* [Registra Mac](https://go.microsoft.com/fwlink/?linkid=853070): se si seleziona questo collegamento, il pacchetto di installazione di Portale aziendale verrà scaricato immediatamente nel dispositivo.  
+
+Si può accedere all'app Portale aziendale in tre modi.
+
+* Accesso con l'indirizzo di posta elettronica aziendale o dell'istituto di istruzione e la relativa password.  
 * Accesso con l'autenticazione basata su certificati.  
-* Accesso da un altro dispositivo.    
+* Accesso da un altro dispositivo.   
+
+Questo articolo descrive come eseguire l'accesso usando ognuno di questi metodi. Per un'esperienza ottimale, usare il metodo consigliato o richiesto dalla propria organizzazione. 
 
 
-## <a name="sign-in-with-your-email-address-and-password"></a>Accesso con l'indirizzo di posta elettronica e la password
-La procedura seguente è accompagnata da screenshot dell'app Portale aziendale per iOS.  
+## <a name="sign-in-with-school-or-work-account"></a>Accesso con l'account aziendale o dell'istituto di istruzione    
+Completare i passaggi seguenti per accedere a Portale aziendale con l'account aziendale o dell'istituto di istruzione. 
 
-1. Aprire l'app nel dispositivo e toccare **Accedi**.  
+1. Aprire l'app e toccare **Accedi**.  
 
-   ![Screenshot di esempio della pagina di accesso dell'app Portale aziendale.](./media/intune-ios-cp-signin-1908.png)
-
-
-2. Immettere l'**account aziendale o dell'istituto di istruzione** e toccare **Avanti**.
-
-   ![Viene chiesto all'utente di indicare solo l'indirizzo di posta elettronica anziché l'indirizzo di posta elettronica e la password nella stessa schermata.](./media/cp_ios_aad_signin_after_1804_002.png)
+2. Immettere l'indirizzo di posta elettronica associato all'account aziendale o dell'istituto di istruzione e quindi toccare **Avanti**.
 
 3. Immettere la password e toccare **Accedi**.
 
-   ![La password verrà richiesta all'utente dopo che l'indirizzo di posta elettronica è stato accettato.](./media/cp_ios_aad_signin_after_1804_003.png)
 
-4. L'app verificherà le credenziali. Al termine, è possibile accedere alle risorse dell'organizzazione e installare le app disponibili.  
+4. Attendere mentre l'app verifica le credenziali. Al termine, è possibile accedere alle funzionalità dell'app e alle risorse dell'organizzazione.  
 
-   ![Terminato il processo di autenticazione, l'app Portale aziendale esegue l'accesso e visualizza una barra di caricamento.](./media/cp_ios_aad_signin_after_1804_004.png)
-
-## <a name="sign-in-with-certificate-based-authentication"></a>Accesso con l'autenticazione basata su certificati
+## <a name="sign-in-with-certificate"></a>Accesso con il certificato  
 Questa opzione di accesso verrà visualizzata solo se l'organizzazione consente l'autenticazione basata su certificati ed è disponibile un certificato da usare.  
 
 1. Aprire l'app Portale aziendale nel dispositivo.  
 
-2. Immettere l'**Account aziendale o dell'istituto di istruzione**.  
+2. Immettere l'indirizzo di posta elettronica associato all'account aziendale o dell'istituto di istruzione e quindi toccare **Avanti**.   
 
-3. Toccare il collegamento **Sign in with a certificate** (Accedi con un certificato).  
+3. Toccare **Accedi con un certificato**.  
 
 4. Toccare **Continua** per usare il certificato.  
+5. Attendere mentre l'app verifica il certificato. Al termine, è possibile accedere alle funzionalità dell'app e alle risorse dell'organizzazione.  
 
-## <a name="sign-in-from-another-device"></a>Accesso da un altro dispositivo
+## <a name="sign-in-via-another-device"></a>Accesso tramite un altro dispositivo    
 
-Se la società usa smart card per accedere ai computer, è probabile che sia necessario eseguire l'autenticazione accedendo da un altro dispositivo.  
+Se normalmente si usa una smart card per accedere alle risorse di lavoro, seguire i passaggi elencati in questa sezione per accedere a Portale aziendale.  
 
-1. Aprire l'app Portale aziendale nel dispositivo. Assicurarsi che sia il dispositivo che si userà per accedere alle risorse di lavoro.       
+1. Aprire Portale aziendale nel dispositivo che si userà per accedere alle risorse di lavoro.  
 
-1. Selezionare **Accesso da un altro dispositivo**.  
+2. Selezionare **Accesso da un altro dispositivo**.  
 
-   ![La pagina di accesso del portale aziendale chiede all'utente di immettere l'indirizzo di posta elettronica.  Vengono visualizzati il pulsante "Avanti" e il collegamento "Accesso da un altro dispositivo". È incluso anche il collegamento "Problemi di accesso all'account?" Un collegamento nella parte inferiore porta alle informazioni sulla privacy e sui cookie di Microsoft.](./media/cp_ios_aad_signin_after_1804_005.png)
-
-2. Si riceve un codice univoco e monouso per accedere al portale aziendale. Copiare il codice.
+3. Prendere nota del codice di accesso monouso visualizzato (oppure tenere a portata di mano questa schermata per i due passaggi successivi). 
 
    ![Viene indicato come passare alla pagina https://microsoft.com/devicelogin con un passcode univoco dal computer di lavoro, quindi come usare il codice per l'accesso.](./media/cp_ios_aad_signin_after_1804_006.png)
 
-3. Nell'altro dispositivo (quello che si sta usando per eseguire l'autenticazione) aprire il browser e passare a [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin). Immettere o incollare il codice.  
+3. Passare all'altro dispositivo (quello che si sta usando per eseguire l'autenticazione) e passare a [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin).  
+
+4. Quando viene richiesto, immettere il codice.  
 
    ![Un'immagine del browser dell'utente nel computer di lavoro anziché nell'app portale aziendale. Nella pagina "Accesso dispositivo" visualizzata viene chiesto all'utente di immettere il codice ricevuto nell'app portale aziendale.](../fundamentals/media/whats-new-app-ui/cp_ios_aad_signin_from_another_device_after_1704_004.png)
 
 4. Selezionare __Continua__ per consentire a Portale aziendale di eseguire l'accesso nel dispositivo di lavoro.   
 
-   ![L'utente ha immesso il codice univoco nel campo e il sito "Accesso dispositivo" ha chiesto di confermare che il portale aziendale di Intune è l'app corretta per la ricezione dell'autorizzazione ad accedere.](../fundamentals/media/whats-new-app-ui/cp_ios_aad_signin_from_another_device_after_1704_005.png) 
+5. Quando la schermata indica che è stato effettuato l'accesso a Portale aziendale, è possibile chiudere il browser e passare al dispositivo di lavoro.  
 
-5. Dopo la verifica del codice, è possibile chiudere la finestra.  
 
-   ![Una pagina di conferma indica che l'utente ha eseguito l'accesso all'app portale aziendale sul proprio dispositivo e che questa pagina può essere chiusa.](../fundamentals/media/whats-new-app-ui/cp_ios_aad_signin_from_another_device_after_1704_006.png)
+## <a name="next-steps"></a>Passaggi successivi  
 
-6. L'app Portale aziendale esegue l'accesso nel dispositivo di lavoro.  
-
-   ![Dopo aver completato il processo di autenticazione, l'app del portale aziendale esegue l'accesso visualizzando una barra di caricamento.](./media/cp_ios_aad_signin_after_1804_007.png)
-
-Serve ancora assistenza? Contattare l'amministratore IT. Per informazioni sul contatto vedere il [sito Web del portale aziendale](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Può succedere di restare bloccati o di avere bisogno di assistenza. Contattare il responsabile del supporto IT. Per informazioni sul contatto vedere il [sito Web del portale aziendale](https://go.microsoft.com/fwlink/?linkid=2010980).  

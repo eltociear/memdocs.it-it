@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 572519d8ddf3558f1573f26b84fd6217108a24b3
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 267bf556447308ee0c81c5ad9c9bb8153df9532d
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988004"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994107"
 ---
 # <a name="configure-a-custom-domain-name"></a>Configurare un nome di dominio personalizzato
 
@@ -32,10 +32,10 @@ Quando l'organizzazione si iscrive a un servizio Microsoft basato su cloud come 
 
 Prima di creare account utente oppure sincronizzare gli account dall'istanza locale di Active Directory, è consigliabile decidere se usare solo il dominio .onmicrosoft.com oppure aggiungere uno o più nomi di dominio personalizzati. Per semplificare la gestione utenti, configurare un dominio personalizzato prima di aggiungere gli utenti. Configurando un dominio personalizzato, gli utenti possono eseguire l'accesso con le credenziali usate per accedere ad altre risorse del dominio.
 
-Quando si sottoscrive un servizio cloud Microsoft, l'istanza del servizio ottenuta è un [tenant di Azure AD](https://technet.microsoft.com/library/jj573650.aspx#BKMK_WhatIsAnAzureADTenant) di Microsoft, che fornisce identità e servizi di directory per il servizio cloud. Poiché le attività necessarie per configurare Intune in modo da usare il nome di dominio personalizzato aziendale sono le stesse che per altri tenant Azure Active Directory, è possibile usare le informazioni e le procedure disponibili in [Aggiungere un nome di dominio personalizzato ad Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-add-domain/).
+Quando si sottoscrive un servizio cloud Microsoft, l'istanza del servizio ottenuta è un [tenant di Azure AD](/previous-versions/azure/azure-services/jj573650(v=azure.100)#BKMK_WhatIsAnAzureADTenant) di Microsoft, che fornisce identità e servizi di directory per il servizio cloud. Poiché le attività necessarie per configurare Intune in modo da usare il nome di dominio personalizzato aziendale sono le stesse che per altri tenant Azure Active Directory, è possibile usare le informazioni e le procedure disponibili in [Aggiungere un nome di dominio personalizzato ad Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain).
 
 > [!TIP]
-> Per altre informazioni sui domini personalizzati, vedere [Panoramica concettuale dei nomi di dominio personalizzati in Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-add-domain-concepts/).
+> Per altre informazioni sui domini personalizzati, vedere [Panoramica concettuale dei nomi di dominio personalizzati in Azure Active Directory](/azure/active-directory/users-groups-roles/domains-manage).
 
 Non è possibile rinominare o rimuovere il nome di dominio onmicrosoft.com iniziale. È possibile aggiungere, verificare o rimuovere i nomi di dominio personalizzati usati con Intune in modo che l'identità aziendale risulti chiara.
 
@@ -52,8 +52,8 @@ Non è possibile rinominare o rimuovere il nome di dominio onmicrosoft.com inizi
     - **Utenti di Register.com**: seguire le [istruzioni dettagliate](https://support.office.com/article/Create-DNS-records-at-Register-com-for-Office-365-55bd8c38-3316-48ae-a368-4959b2c1684e#BKMK_verify) per creare il record TXT.
 5. [Potrebbe essere necessario creare record DNS aggiuntivi per le registrazioni di Intune](../enrollment/windows-enroll.md#simplify-windows-enrollment-without-azure-ad-premium).
 
-I passaggi per aggiungere e verificare un dominio personalizzato possono essere anche [eseguiti in Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-add-domain/).
+I passaggi per aggiungere e verificare un dominio personalizzato possono essere anche [eseguiti in Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain).
 
-Altre informazioni sono disponibili in [Informazioni sul dominio onmicrosoft.com iniziale in Office 365](https://support.office.com/article/About-your-initial-onmicrosoft-com-domain-in-Office-365-B9FC3018-8844-43F3-8DB1-1B3A8E9CFD5A)
+Altre informazioni sono disponibili in [Informazioni sul dominio onmicrosoft.com iniziale in Microsoft 365](https://support.office.com/article/About-your-initial-onmicrosoft-com-domain-in-Office-365-B9FC3018-8844-43F3-8DB1-1B3A8E9CFD5A)
 
 Creare un DNS CNAME che reindirizza la registrazione a server Intune per avere altre informazioni su come [semplificare la registrazione W senza Azure AD Premium](../enrollment/windows-enroll.md#simplify-windows-enrollment-without-azure-ad-premium).

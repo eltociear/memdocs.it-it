@@ -1,7 +1,7 @@
 ---
 title: 'Esercitazione: Proteggere la posta elettronica di Exchange Online nei dispositivi non gestiti'
 titleSuffix: Microsoft Intune
-description: Informazioni su come proteggere Office 365 Exchange Online con i criteri di protezione delle app di Intune e l'accesso condizionale di Azure AD.
+description: Informazioni su come proteggere Microsoft 365 Exchange Online con i criteri di protezione delle app di Intune e l'accesso condizionale di Azure AD.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f32ced29b6bb53f8c091ba1a0f42261a2baa493
-ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
+ms.openlocfilehash: 12b776af250a9d4a9bf0fb6c8ba7eec98540f883
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82605219"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993954"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>Esercitazione: Proteggere la posta elettronica di Exchange Online nei dispositivi non gestiti
 
@@ -120,7 +120,7 @@ Si definiranno ora due impostazioni di criteri di accesso condizionale in modo d
 
 4. In **Assegnazioni** selezionare **Utenti e gruppi**. Nella scheda **Includi** selezionare **Tutti gli utenti** e quindi selezionare **Fine**.
 
-5. In **Assegnazioni** selezionare **Applicazioni cloud o azioni**. Dato che si vuole proteggere la posta elettronica di Office 365 Exchange Online, si selezionerà questa app tramite la procedura seguente:
+5. In **Assegnazioni** selezionare **Applicazioni cloud o azioni**. Dato che si vuole proteggere la posta elettronica di Microsoft 365 Exchange Online, si selezionerà questa app tramite la procedura seguente:
 
    1. Nella scheda **Includi** scegliere **Selezionare le app**.
    2. Scegliere **Seleziona**.
@@ -170,7 +170,7 @@ La creazione dei criteri di accesso condizionale per i client con autenticazione
 
 4. In **Assegnazioni** selezionare **Utenti e gruppi**. Nella scheda *Includi* selezionare **Tutti gli utenti** e quindi selezionare **Fine**.
 
-5. In **Assegnazioni** selezionare **Applicazioni cloud o azioni**. Selezionare la posta elettronica di Office 365 Exchange Online seguendo questa procedura:
+5. In **Assegnazioni** selezionare **Applicazioni cloud o azioni**. Selezionare la posta elettronica di Microsoft 365 Exchange Online seguendo questa procedura:
 
    1. Nella scheda *Includi* scegliere **Selezionare le app**.
    2. Scegliere **Seleziona**.
@@ -205,7 +205,7 @@ I criteri di protezione delle app e l'accesso condizionale sono ora configurati 
 
 ## <a name="try-it-out"></a>Procedura
 
-Con i criteri creati, i dispositivi dovranno essere registrati in Intune e usare l'app Outlook per dispositivi mobili per accedere alla posta elettronica di Office 365. Per testare questo scenario in un dispositivo iOS, provare ad accedere a Exchange Online usando le credenziali di un utente nel tenant di test.
+Con i criteri creati, i dispositivi dovranno essere registrati in Intune e usare l'app Outlook per dispositivi mobili per accedere alla posta elettronica di Microsoft 365. Per testare questo scenario in un dispositivo iOS, provare ad accedere a Exchange Online usando le credenziali di un utente nel tenant di test.
 
 1. Per testare in un iPhone, passare a **Impostazioni** > **Password e account** > **Aggiungi account** > **Exchange**.
 

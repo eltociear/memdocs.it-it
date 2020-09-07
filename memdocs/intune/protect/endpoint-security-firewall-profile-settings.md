@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 08/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: d90870a60ea292939926816bb74b5d285dc6a09f
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 10d9320932e7835b8c2ecac46e35ea5a57375904
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431605"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068134"
 ---
 # <a name="firewall-policy-settings-for-endpoint-security-in-intune"></a>Impostazioni dei criteri di riduzione del firewall per la sicurezza degli endpoint di Intune
 
@@ -198,22 +198,22 @@ Le impostazioni seguenti sono configurate come [Criteri di sicurezza degli endpo
   - **Non configurato**
 
 - **Nome famiglia pacchetto**  
-  [Get-AppxPackage](https://docs.microsoft.com/previous-versions//hh856044(v=technet.10))
+  [Get-AppxPackage](/previous-versions//hh856044(v=technet.10))
 
   I nomi della famiglia di pacchetti possono essere recuperati mediante l'esecuzione del comando Get-AppxPackage da PowerShell.
 
 - **Percorso file**  
-  CSP: [FirewallRules/FirewallRuleName/App/FilePath](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#filepath)
+  CSP: [FirewallRules/FirewallRuleName/App/FilePath](/windows/client-management/mdm/firewall-csp#filepath)
 
   Per specificare il percorso del file di un'app, immettere il percorso delle app nel dispositivo client. Ad esempio: `C:\Windows\System\Notepad.exe` o `%WINDIR%\Notepad.exe`
 
 - **Nome del servizio**  
-  [FirewallRules/FirewallRuleName/App/ServiceName](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#servicename)
+  [FirewallRules/FirewallRuleName/App/ServiceName](/windows/client-management/mdm/firewall-csp#servicename)
 
   Usare un nome breve per un servizio Windows quando un servizio, non un'applicazione, sta inviando o ricevendo traffico. I nomi brevi del servizio vengono recuperati eseguendo il comando `Get-Service` da PowerShell.
 
 - **Protocollo**  
-  CSP: [FirewallRules/FirewallRuleName/Protocol](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#protocol)
+  CSP: [FirewallRules/FirewallRuleName/Protocol](/windows/client-management/mdm/firewall-csp#protocol)
 
   Selezionare il protocollo per questa regola per le porte.
   - I protocolli TLS, *TCP(6)* e *UDP(17)* , consentono di specificare porte o intervalli di porte.
@@ -228,7 +228,7 @@ Le impostazioni seguenti sono configurate come [Criteri di sicurezza degli endpo
   - **Non configurato**
 
 - **Utenti autorizzati**  
-  [FirewallRules/FirewallRuleName/LocalUserAuthorizationList](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localuserauthorizedlist)
+  [FirewallRules/FirewallRuleName/LocalUserAuthorizationList](/windows/client-management/mdm/firewall-csp#localuserauthorizedlist)
 
   Specificare un elenco di utenti locali autorizzati per questa regola. Non è possibile specificare un elenco di utenti autorizzati se il *Nome del servizio* in questo criterio è impostato come un servizio Windows. Se non viene specificato alcun utente autorizzato, il valore predefinito è *tutti gli utenti*.
 
@@ -237,9 +237,14 @@ Le impostazioni seguenti sono configurate come [Criteri di sicurezza degli endpo
   - **Sì** - Supporta qualsiasi indirizzo locale e non configura un intervallo di indirizzi.
 
 - **Intervalli di indirizzi locali**  
-  CSP: [FirewallRules/FirewallRuleName/LocalAddressRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localaddressranges)  
+  CSP: [FirewallRules/FirewallRuleName/LocalAddressRanges](/windows/client-management/mdm/firewall-csp#localaddressranges)  
 
-  Aggiunge uno o più indirizzi come un elenco delimitato da virgole di indirizzi locali coperti dalla regola. Le voci valide (token) includono le opzioni seguenti:
+  Gestire gli intervalli di indirizzi locali per questa regola. È possibile scegliere:
+  - **Aggiungi** per aggiungere uno o più indirizzi come elenco delimitato da virgole di indirizzi locali coperti dalla regola.
+  - **Importa** per importare un file CSV contenente un elenco di indirizzi da usare come intervalli di indirizzi locali.
+  - **Esporta** per esportare l'elenco corrente di intervalli di indirizzi locali come file CSV.
+
+  Le voci valide (token) includono le opzioni seguenti:
   - **Un asterisco**- Un asterisco (\*) indica qualsiasi indirizzo locale. Se presente, l'asterisco deve essere l'unico incluso nel token.
   - **Una subnet** - Specificare una subnet usando la notazione con subnet mask o prefisso di rete. Se non si specifica una subnet mask o un prefisso di rete, viene usata la subnet mask predefinita 255.255.255.255.
   - **Un indirizzo IPv6 valido**
@@ -253,9 +258,14 @@ Le impostazioni seguenti sono configurate come [Criteri di sicurezza degli endpo
   - **Sì** - Supporta qualsiasi indirizzo remoto e non configura un intervallo di indirizzi.
 
 - **Intervalli di indirizzi remoti**  
-  CSP: [FirewallRules/FirewallRuleName/RemoteAddressRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
+  CSP: [FirewallRules/FirewallRuleName/RemoteAddressRanges](/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
 
-  Aggiunge uno o più indirizzi come un elenco delimitato da virgole di indirizzi remoti coperti dalla regola. Le voci valide (token) includono le opzioni seguenti e non distinguono tra maiuscole e minuscole:
+  Gestire gli intervalli di indirizzi remoti per questa regola. È possibile scegliere:
+  - **Aggiungi** per aggiungere uno o più indirizzi come elenco delimitato da virgole di indirizzi remoti coperti dalla regola.
+  - **Importa** per importare un file CSV contenente un elenco di indirizzi da usare come intervalli di indirizzi remoti.
+  - **Esporta** per esportare l'elenco corrente di intervalli di indirizzi remoti come file CSV.
+
+  Le voci valide (token) includono le opzioni seguenti e non distinguono tra maiuscole e minuscole:
   - **Un asterisco**- Un asterisco (\*) indica qualsiasi indirizzo remoto. Se presente, l'asterisco deve essere l'unico incluso nel token.
   - **Defaultgateway**
   - **DHCP**

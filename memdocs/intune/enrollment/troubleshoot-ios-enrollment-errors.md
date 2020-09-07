@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 37724c4d9acdfcdb9e371a21a7b15c509de78c60
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: c81216ae7350beafcf1e090b278d5975d6fea086
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865473"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993292"
 ---
 # <a name="troubleshoot-iosipados-device-enrollment-problems-in-microsoft-intune"></a>Risoluzione dei problemi di registrazione dei dispositivi iOS/iPadOS in Microsoft Intune
 
@@ -87,7 +87,7 @@ Raccogliere le informazioni seguenti sul problema:
 **Causa:** l'utente che tenta di registrare il dispositivo non dispone di una licenza di Microsoft Intune.
 
 #### <a name="resolution"></a>Soluzione
-1. Passare all'[interfaccia di amministrazione di Office 365](https://admin.microsoft.com), quindi scegliere **Utenti > Utenti attivi**.
+1. Passare all'[Interfaccia di amministrazione di Microsoft 365](https://admin.microsoft.com) e quindi scegliere **Utenti > Utenti attivi**.
 2. Selezionare l'account utente a cui si vuole assegnare una licenza utente di Intune e quindi scegliere **Licenze di prodotto > Modifica**.
 3. **Attivare** la licenza che si vuole assegnare all'utente, quindi scegliere **Salva**.
 4. Registrare nuovamente il dispositivo.
@@ -181,7 +181,7 @@ Rinnovare il certificato APN, quindi eseguire di nuovo la registrazione del disp
 > Assicurarsi di rinnovare il certificato APN. Non sostituire il certificato APN. Se si sostituisce il certificato, è necessario registrare di nuovo tutti i dispositivi iOS/iPadOS in Intune. 
 
 - Per rinnovare il certificato APN in Intune autonomo, vedere [Rinnovare il certificato per le notifiche push MDM Apple](apple-mdm-push-certificate-get.md#renew-apple-mdm-push-certificate).
-- Per rinnovare il certificato APN in Office 365, vedere [Creare un certificato APN per dispositivi iOS/iPadOS](https://support.office.com/article/Create-an-APNs-Certificate-for-iOS-devices-522b43f4-a2ff-46f6-962a-dd4f47e546a7).
+- Per rinnovare il certificato APN in Microsoft 365, vedere [Creare un certificato APN per dispositivi iOS/iPadOS](https://support.office.com/article/Create-an-APNs-Certificate-for-iOS-devices-522b43f4-a2ff-46f6-962a-dd4f47e546a7).
 
 ### <a name="xpc_type_error-connection-invalid"></a>Connessione XPC_TYPE_ERROR non valida
 

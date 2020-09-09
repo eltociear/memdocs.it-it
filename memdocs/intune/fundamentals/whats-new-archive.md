@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 51fbb59fa0557df1757258b9463514c6355ff92d
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: faabd2656e8b72502c682eaab37a0cc5b484ea03
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88996249"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423935"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Novità di Microsoft Intune - mesi precedenti
 
@@ -447,7 +447,7 @@ Intune offre ora scenari guidati che consentono di completare un'attività speci
 Per altre informazioni, vedere [Panoramica degli scenari guidati di Intune](guided-scenarios-overview.md).
 
 #### <a name="additional-app-configuration-variable-available---4969237-----"></a>Disponibilità di una variabile di configurazione delle app aggiuntiva<!-- 4969237   -->
-Quando si creano criteri di configurazione delle app, è possibile includere la variabile di configurazione `AAD Device ID` come parte delle impostazioni di configurazione. In Intune selezionare **App client** > **Criteri di configurazione dell'app** > **Aggiungi**. Immettere i dettagli dei criteri di configurazione e selezionare **Impostazioni di configurazione** per visualizzare il pannello **Impostazioni di configurazione**. Per altre informazioni, vedere [Aggiungere criteri di configurazione delle app per i dispositivi Android Enterprise gestiti - Usare la finestra di progettazione di configurazione ](../apps/app-configuration-policies-use-android.md#use-the-configuration-designer).
+Quando si creano criteri di configurazione delle app, è possibile includere la variabile di configurazione `AAD_Device_ID` come parte delle impostazioni di configurazione. In Intune selezionare **App client** > **Criteri di configurazione dell'app** > **Aggiungi**. Immettere i dettagli dei criteri di configurazione e selezionare **Impostazioni di configurazione** per visualizzare il pannello **Impostazioni di configurazione**. Per altre informazioni, vedere [Aggiungere criteri di configurazione delle app per i dispositivi Android Enterprise gestiti - Usare la finestra di progettazione di configurazione ](../apps/app-configuration-policies-use-android.md#use-the-configuration-designer).
 
 #### <a name="create-groups-of-management-objects-called-policy-sets---3762880----"></a>Creare gruppi di oggetti di gestione denominati set di criteri<!-- 3762880  -->
 I set di criteri consentono di creare aggregazioni di riferimenti a entità di gestione già esistenti che devono essere identificate, selezionate e monitorate come una singola unità concettuale. I set di criteri non sostituiscono concetti o oggetti esistenti. È possibile continuare ad assegnare singoli oggetti in Intune ed è possibile fare riferimento a singoli oggetti come parte di un set di criteri. Pertanto, tutte le modifiche apportate ai singoli oggetti verranno rispecchiate nel set di criteri.  In Intune è possibile selezionare **Set di criteri** > **Crea** per creare un nuovo set di criteri.
@@ -479,7 +479,7 @@ Si applica a:
 #### <a name="engaged-restart-settings-are-removed-from-windows-update-rings----4464404--------"></a>Le impostazioni di riavvio in caso di occupato sono state rimosse dagli anelli di aggiornamento di Windows<!--  4464404      -->
 Come annunciato in precedenza, gli anelli di aggiornamento di Windows 10 di Intune ora [supportano impostazioni per le scadenze](../protect/windows-update-settings.md) e non supportano più il *riavvio in caso di occupato*. Le impostazioni per il *riavvio in caso di occupato* non sono più disponibili quando si configurano o gestiscono gli anelli di aggiornamento in Intune.  
 
-Questa modifica è in linea con le [modifiche di manutenzione di Windows](//windows/whats-new/whats-new-windows-10-version-1903#servicing) recenti e nei dispositivi che eseguono Windows 10 1903 o versione successiva le *scadenze* sostituiscono le configurazioni per il *riavvio in caso di occupato*.
+Questa modifica è in linea con le [modifiche di manutenzione di Windows](/windows/whats-new/whats-new-windows-10-version-1903#servicing) recenti e nei dispositivi che eseguono Windows 10 1903 o versione successiva le *scadenze* sostituiscono le configurazioni per il *riavvio in caso di occupato*.
 
 #### <a name="prevent-installation-of-apps-from-unknown-sources-on-android-enterprise-work-profile-devices---4760025-----"></a>Impedire l'installazione di app da origini sconosciute nei dispositivi con profilo di lavoro Android Enterprise<!-- 4760025   -->
 Nei dispositivi con profilo di lavoro Android Enterprise gli utenti non possono mai installare app da origini sconosciute. In questo aggiornamento è disponibile una nuova impostazione: **Impedisci le installazioni di app da origini sconosciute nel profilo personale**. Per impostazione predefinita, questa impostazione impedisce agli utenti di effettuare il sideload delle app da origini sconosciute nel profilo personale del dispositivo.
@@ -1346,7 +1346,7 @@ Gli amministratori IT noteranno che queste quattro app vengono aggiunte automati
 ### <a name="device-configuration"></a>Configurazione del dispositivo
 
 #### <a name="updated-pfx-certificate-connector-for-microsoft-intune---1533038---"></a>Connettore di certificati PFX per Microsoft Intune aggiornato<!-- 1533038 -->
-È stato rilasciato un aggiornamento per il [Connettore del certificato PFX per Microsoft Intune](../protect/certficates-pfx-configure.md#whats-new-for-connectors) che risolve un problema a causa del quale i certificati PFX esistenti continuano a essere rielaborati e, di conseguenza, il connettore smette di elaborare le nuove richieste.
+È stato rilasciato un aggiornamento per il [Connettore del certificato PFX per Microsoft Intune](../protect/certificate-connectors.md#whats-new-for-connectors) che risolve un problema a causa del quale i certificati PFX esistenti continuano a essere rielaborati e, di conseguenza, il connettore smette di elaborare le nuove richieste.
 
 #### <a name="intune-security-tasks-for-defender-atp-in-public-preview---3208597---"></a>Attività di sicurezza di Intune per Defender ATP (in anteprima pubblica)<!-- 3208597 -->
 Nella fase di anteprima pubblica, è possibile usare Intune per gestire le [attività di sicurezza per Microsoft Defender Advanced Threat Protection (ATP)](../protect/atp-manage-vulnerabilities.md). L'integrazione con ATP aggiunge un approccio basato sui rischi per individuare, classificare e correggere gli errori di configurazione e le vulnerabilità degli endpoint, riducendo il tempo tra l'individuazione e la mitigazione.
@@ -1400,7 +1400,7 @@ Per vedere l'impostazione disponibile, passare a [Configurare le impostazioni VP
 Si applica a: iOS
 
 #### <a name="updated-pfx-certificate-connector-for-microsoft-intune---doc-vso-1521237----"></a>Connettore di certificati PFX per Microsoft Intune aggiornato<!-- doc-vso 1521237  -->  
-È stato rilasciato un aggiornamento del [connettore di certificati PFX per Microsoft Intune](../protect/certficates-pfx-configure.md#whats-new-for-connectors) in cui l'intervallo di polling è stato ridotto da 5 minuti a 30 secondi.
+È stato rilasciato un aggiornamento del [connettore di certificati PFX per Microsoft Intune](../protect/certificate-connectors.md#whats-new-for-connectors) in cui l'intervallo di polling è stato ridotto da 5 minuti a 30 secondi.
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -1487,7 +1487,7 @@ Il supporto per i criteri di protezione app di Intune per l'impostazione delle *
 ### <a name="device-configuration"></a>Configurazione del dispositivo
 
 #### <a name="updated-certificate-connectors---icm-113304612---"></a>Connettori di certificati aggiornati<!-- ICM 113304612 -->
-Sono stati rilasciati aggiornamenti per il [connettore di certificati di Intune e il connettore di certificati PFX per Microsoft Intune](../protect/certficates-pfx-configure.md#whats-new-for-connectors). Le nuove versioni consentono di risolvere diversi problemi noti.
+Sono stati rilasciati aggiornamenti per il [connettore di certificati di Intune e il connettore di certificati PFX per Microsoft Intune](../protect/certificate-connectors.md#whats-new-for-connectors). Le nuove versioni consentono di risolvere diversi problemi noti.
 
 #### <a name="set-login-settings-and-control-restart-options-on-macos-devices---1210083----"></a>Configurare le impostazioni di accesso e controllare le opzioni di riavvio nei dispositivi macOS<!-- 1210083  -->
 Nei dispositivi macOS è possibile creare un profilo di configurazione del dispositivo (**Configurazione del dispositivo** > **Profili** > **Crea profilo** > scegliere **macOS** per la piattaforma > **Funzionalità del dispositivo** per il tipo di profilo). Questo aggiornamento include nuove impostazioni della finestra di accesso, ad esempio per la visualizzazione di un banner personalizzato, la scelta della modalità di accesso di un utente, la possibilità di visualizzare o nascondere le impostazioni di risparmio energia e altro ancora.

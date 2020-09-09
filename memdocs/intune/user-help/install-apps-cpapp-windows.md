@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 3975e2fcf7e43e4b7468664f9ccc27b692c40d85
-ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
+ms.openlocfilehash: 0639f5a92d4377212834f5c7089f534628e787d1
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89057315"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390858"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Installare e condividere app nel dispositivo
 
@@ -58,7 +58,7 @@ A seconda delle dimensioni dell'azienda, nel portale aziendale possono essere di
 ## <a name="share-apps"></a>Condividere le app  
 Consigliare le app e condividerle con i contatti del lavoro e dell'istituto di istruzione. I passaggi seguenti descrivono come condividere un collegamento direttamente dal Portale aziendale.
 
-1. Nel Portale aziendale fare clic con il pulsante destro del mouse o tenere premuto il tasto sinistro su qualsiasi applicazione per aprire il relativo [menu di scelta rapida](//windows/uwp/design/controls-and-patterns/menus).  
+1. Nel Portale aziendale fare clic con il pulsante destro del mouse o tenere premuto il tasto sinistro su qualsiasi applicazione per aprire il relativo [menu di scelta rapida](/windows/uwp/design/controls-and-patterns/menus).  
 
     ![Viene visualizzata la home page dell'app Portale aziendale per Windows 10 con un elenco di applicazioni e dispositivi. Il menu di scelta rapida "Condividi" selezionabile è visibile sopra l'icona dell'app di esempio. ](./media/1808_ShareContext_CP_Windows.png)  
 

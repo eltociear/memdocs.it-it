@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: d6cb9693f0bafcff22f3fce9d3f972e9eac41b22
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 1f0da16a34db49e1490334099b9236628afd4501
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88909092"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390552"
 ---
 # <a name="remove-your-windows-device-from-management"></a>Rimuovere il dispositivo Windows dalla gestione
 
@@ -57,7 +57,7 @@ Per rimuovere dalla gestione un dispositivo Windows 10 seguire questa procedura.
 
     ![Screenshot di esempio dell'app Portale aziendale per Windows, home page, con la sezione Dispositivi personali evidenziata.](./media/1809_CheckAccess_Context_Select_Device.png)
 
-2. Fare clic con il pulsante destro del mouse o tenere premuto il tasto sinistro su un dispositivo per aprire il relativo [menu di scelta rapida](//windows/uwp/design/controls-and-patterns/menus).  
+2. Fare clic con il pulsante destro del mouse o tenere premuto il tasto sinistro su un dispositivo per aprire il relativo [menu di scelta rapida](/windows/uwp/design/controls-and-patterns/menus).  
 
 3. Selezionare **Rimuovi**.  
 

@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2fcb7be9d5a75f17e2b9c347be9cd5d4eedd925d
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: ea17b57fc0881e189d0d57b823caece3610b4528
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907651"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390841"
 ---
 # <a name="rename-device-from-the-company-portal-app-for-windows"></a>Rinominare il dispositivo dall'app Portale aziendale per Windows
 Rinominare un dispositivo per riconoscerlo più facilmente dagli altri dispositivi. L'app Portale aziendale per Windows consente di rinominare i tipi seguenti di dispositivi connessi:  
@@ -47,7 +47,7 @@ Completare il passaggio seguente per rimuovere un dispositivo dalla pagina **Det
      ![Screenshot di esempio dell'app Portale aziendale per Windows, pagina Dettagli dispositivo, campo popup Rinomina.](./media/1808_RenameApp_Popup.png)  
 
 ## <a name="rename-device-from-device-context-menu"></a>Rinominare il dispositivo dal menu di scelta rapida  
-Completare il passaggio seguente per rimuovere un dispositivo tramite le azioni del [menu di scelta rapida](//windows/uwp/design/controls-and-patterns/menus).  
+Completare il passaggio seguente per rimuovere un dispositivo tramite le azioni del [menu di scelta rapida](/windows/uwp/design/controls-and-patterns/menus).  
 
 1. Nella pagina **Home** dell'app Portale aziendale passare a **Dispositivi personali**.
 

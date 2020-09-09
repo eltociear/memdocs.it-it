@@ -1,5 +1,3 @@
-
-
 ### <a name="apple"></a>Apple
 - Apple iOS 11.0 e versioni successive
 - Apple iPadOS 13.0 e versioni successive
@@ -15,7 +13,7 @@
 - Windows 10 (versioni Home, S, Pro, Education ed Enterprise)
 - Windows 10 Enterprise 2019 LTSC
 
-  Per altre informazioni sulla gestione dei dispositivi che eseguono Windows 10 2019 LTSC, vedere [Novità di Windows 10 Enterprise 2019 LTSC](https://docs.microsoft.com/windows/whats-new/ltsc/whats-new-windows-10-2019)
+  Per altre informazioni sulla gestione dei dispositivi che eseguono Windows 10 2019 LTSC, vedere [Novità di Windows 10 Enterprise 2019 LTSC](/windows/whats-new/ltsc/whats-new-windows-10-2019)
   
 - Windows 10 Mobile
 - Windows 10 IoT Enterprise (x86, x64)
@@ -26,13 +24,12 @@
 
 - Windows 10 Teams (Surface Hub)
 
-   Per altre informazioni sulla gestione dei dispositivi che eseguono Windows 10 Teams, vedere [Gestire Surface Hub con MDM](https://docs.microsoft.com/surface-hub/manage-settings-with-mdm-for-surface-hub)
+   Per altre informazioni sulla gestione dei dispositivi che eseguono Windows 10 Teams, vedere [Gestire Surface Hub con MDM](/surface-hub/manage-settings-with-mdm-for-surface-hub)
 - PC Windows 10 1709 (RS3) e versioni successive, PC Windows 8.1 R che eseguono Windows 8.1 (modalità di mantenimento)
 
 > [!NOTE]
-> Non tutte le edizioni di Windows supportano tutte le funzionalità del sistema operativo disponibili che vengono configurate tramite MDM. Vedere la [documentazione di riferimento sui provider di servizi di configurazione Windows](https://docs.microsoft.com/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers). Ogni provider di servizi di configurazione (CSP) evidenzia le edizioni di Windows supportate.
+> Non tutte le edizioni di Windows supportano tutte le funzionalità del sistema operativo disponibili che vengono configurate tramite MDM. Vedere la [documentazione di riferimento sui provider di servizi di configurazione Windows](/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers). Ogni provider di servizi di configurazione (CSP) evidenzia le edizioni di Windows supportate.
 
 Gli utenti con Enterprise Mobility + Security (EMS) possono anche usare [Azure Active Directory (Azure AD) per registrare i dispositivi Windows 10](/intune/windows-enroll).
 
 Per le linee guida sull'uso di macchine virtuali Windows 10 con Intune, vedere l'articolo relativo all'[uso di macchine virtuali Windows 10](../fundamentals/windows-10-virtual-machines.md).
-

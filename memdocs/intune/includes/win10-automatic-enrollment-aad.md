@@ -46,4 +46,4 @@ La registrazione automatica consente agli utenti di registrare i propri disposit
 
 6. Selezionare **Salva**.
 
-L'autenticazione a due fattori non è abilitata per il servizio per impostazione predefinita. Tuttavia l'autenticazione a due fattori è consigliabile quando si registra un dispositivo. Per attivare l'autenticazione a due fattori, configurare un provider di autenticazione a due fattori in Azure AD e configurare gli account utente per l'autenticazione a più fattori. Vedere [Introduzione al server Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud).
+L'autenticazione a due fattori non è abilitata per il servizio per impostazione predefinita. Tuttavia l'autenticazione a due fattori è consigliabile quando si registra un dispositivo. Per attivare l'autenticazione a due fattori, configurare un provider di autenticazione a due fattori in Azure AD e configurare gli account utente per l'autenticazione a più fattori. Vedere [Introduzione al server Azure Multi-Factor Authentication](/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud).

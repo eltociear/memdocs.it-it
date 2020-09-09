@@ -4,6 +4,7 @@ ms.reviewer: ''
 manager: laurawi
 description: Leggi le notizie e le risorse sugli aggiornamenti più recenti e le versioni precedenti di Windows Autopilot.
 keywords: MDM, installazione, Windows, Windows 10, OOBE, gestione, distribuzione, Autopilot, ZTD, zero-touch, partner, msfb, Intune
+ms.technology: windows
 ms.prod: w10
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
@@ -14,18 +15,18 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 840a46aa05f088f8c2ccb27d3b3a3ec368728ae9
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 736e01696cf503b63762c32a9acee3cb68c1e241
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907862"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606558"
 ---
 # <a name="windows-autopilot-whats-new"></a>Windows Autopilot: novità
 
 **Si applica a**
 
--   Windows 10
+- Windows 10
 
 ## <a name="windows-autopilot-update-history"></a>Cronologia aggiornamenti di Windows Autopilot
 
@@ -51,13 +52,13 @@ Inoltre, una novità di questa versione di Windows:
 - La pagina relativa allo stato della registrazione di Intune (ESP) ora tiene traccia delle estensioni di gestione di Intune.
 - [Cortana VoiceOver e riconoscimento vocale durante la configurazione guidata](windows-autopilot-scenarios.md#cortana-voiceover-and-speech-recognition-during-oobe) sono disabilitati per impostazione predefinita per tutti gli SKU di Windows 10 Pro Education e Enterprise.
 - [Windows Autopilot si aggiorna autonomamente durante la configurazione guidata](windows-autopilot-scenarios.md#windows-autopilot-is-self-updating-during-oobe). A partire da Windows 10, la versione 1903, gli aggiornamenti critici e funzionali di Autopilot verranno avviati automaticamente durante la configurazione guidata.
-- Windows Autopilot imposta il livello di dati di diagnostica su Full in Windows 10 versione 1903 e successive durante la configurazione guidata. 
+- Windows Autopilot imposta il livello di dati di diagnostica su completo durante la configurazione guidata nei dispositivi che eseguono Windows 10 versione 1903 o successiva. 
 
 ## <a name="new-in-windows-10-version-1809"></a>Novità in Windows 10 versione 1809
 
-La modalità di [distribuzione automatica](self-deploying.md) di Windows Autopilot consente un'esperienza di provisioning del dispositivo zero touch. È sufficiente accendere il dispositivo, connetterlo all'Ethernet e il dispositivo è completamente configurato da Windows Autopilot. Questa funzionalità di distribuzione automatica rimuove la necessità corrente di interagire con l'utente finale premendo il pulsante "Avanti" durante il processo di distribuzione. 
+La modalità di [distribuzione automatica](self-deploying.md) di Windows Autopilot è un processo di provisioning di dispositivi con zero touch. È sufficiente accendere il dispositivo, connettersi a Ethernet e Autopilot configura automaticamente il dispositivo. Gli utenti finali non devono premere il pulsante "Avanti" durante il processo di distribuzione. 
 
-È possibile usare la modalità di distribuzione automatica di Windows Autopilot per registrare il dispositivo in un tenant AAD, iscriversi al provider MDM dell'organizzazione ed eseguire il provisioning di criteri e applicazioni, il tutto senza l'autenticazione utente o l'interazione dell'utente necessaria. 
+È possibile usare la modalità di distribuzione automatica di Windows Autopilot per registrare il dispositivo in un tenant AAD, iscriversi al provider MDM dell'organizzazione ed effettuare il provisioning di criteri e applicazioni. Non è richiesta l'autenticazione utente o l'interazione dell'utente.
 
 >[!NOTE]
 >La finestra 10, versione 1903 o successiva è necessaria per usare la modalità di distribuzione automatica a causa di problemi con l'attestazione del dispositivo TPM in Windows 10, versione 1809.

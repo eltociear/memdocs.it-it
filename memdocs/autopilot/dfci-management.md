@@ -4,6 +4,7 @@ ms.reviewer: ''
 manager: laurawi
 description: Con la distribuzione di Windows Autopilot e Intune, è possibile gestire le impostazioni UEFI (BIOS) dopo che sono state registrate usando l'interfaccia di configurazione del firmware del dispositivo (DFCI)
 keywords: Autopilot, DFCI, UEFI, Windows 10
+ms.technology: windows
 ms.prod: w10
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -14,20 +15,20 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: df49fb939b709c15f2b01b3577f7fc7ced60140d
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 95979a3c53752bb77c31710e20de54dbc2781262
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88908346"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606614"
 ---
-# <a name="dfci-management"></a>Gestione DFCI
+# <a name="device-firmware-configuration-interface-dfci-management"></a>Gestione DFCI (device firmware Configuration Interface)
 
 **Si applica a**
 
--   Windows 10
+- Windows 10
 
-Con la distribuzione di Windows Autopilot e Intune, è possibile gestire le impostazioni di Unified Extensible Firmware Interface (UEFI) dopo che sono state registrate usando device firmware Configuration Interface (DFCI).  DFCI [consente a Windows di passare i comandi di gestione](/windows/client-management/mdm/uefi-csp) da INTUNE a UEFI ai dispositivi Autopilot distribuiti. Ciò consente di limitare il controllo dell'utente finale sulle impostazioni del BIOS. Ad esempio, è possibile bloccare le opzioni di avvio per impedire agli utenti di avviare un altro sistema operativo, ad esempio uno che non ha le stesse funzionalità di sicurezza.
+Con la distribuzione di Windows Autopilot e Intune, è possibile gestire le impostazioni di Unified Extensible Firmware Interface (UEFI) dopo che sono state registrate usando device firmware Configuration Interface (DFCI). DFCI [consente a Windows di passare i comandi di gestione](/windows/client-management/mdm/uefi-csp) da INTUNE a UEFI per i dispositivi Autopilot distribuiti. Questa funzionalità consente di limitare il controllo dell'utente finale sulle impostazioni del BIOS. Ad esempio, è possibile bloccare le opzioni di avvio per impedire agli utenti di avviare un altro sistema operativo, ad esempio uno che non ha le stesse funzionalità di sicurezza.
 
 Se un utente reinstalla una versione precedente di Windows, installare un sistema operativo separato o formattare il disco rigido, non può eseguire l'override della gestione DFCI. Questa funzionalità può anche impedire al malware di comunicare con processi del sistema operativo, inclusi processi del sistema operativo elevati. La catena di attendibilità di DFCI usa la crittografia a chiave pubblica e non dipende dalla sicurezza delle password UEFI locale. Questo livello di sicurezza impedisce agli utenti locali di accedere alle impostazioni gestite dai menu UEFI del dispositivo.
 
@@ -35,9 +36,18 @@ Per una panoramica di vantaggi, scenari e prerequisiti di DFCI, vedere Introduzi
 
 ## <a name="dfci-management-lifecycle"></a>Ciclo di vita della gestione DFCI
 
-Il ciclo di vita di gestione di DFCI può essere visualizzato come integrazione UEFI, registrazione del dispositivo, creazione di profili, registrazione, gestione, ritiro e ripristino. Vedere la figura seguente.
+Il ciclo di vita di gestione di DFCI include i processi seguenti:
+- Integrazione UEFI
+- Registrazione del dispositivo
+- Creazione del profilo
+- Registrazione
+- Gestione
+- Ritiro
+- Ripristino
 
-   ![Ciclo di vita](images/dfci.png)
+Vedere la figura seguente.
+
+ ![Ciclo di vita](images/dfci.png)
 
 ## <a name="requirements"></a>Requisiti
 
@@ -68,7 +78,7 @@ Vedere [creare i profili](/intune/configuration/device-firmware-configuration-in
 
 Sono in sospeso altri OEM.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Scenari di Microsoft DFCI](https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Scenarios/DfciScenarios/)<br>
 [Dispositivi Windows Autopilot e Surface](/surface/windows-autopilot-and-surface-devices)<br>

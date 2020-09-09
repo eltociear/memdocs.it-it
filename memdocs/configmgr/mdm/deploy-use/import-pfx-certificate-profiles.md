@@ -1,7 +1,7 @@
 ---
 title: Importare profili certificato PFX
 titleSuffix: Configuration Manager
-description: Informazioni su come usare i file PFX in Configuration Manager per generare certificati specifici dell'utente che supportano lo scambio di dati crittografati.
+description: Informazioni su come importare i file PFX in Configuration Manager per generare certificati specifici dell'utente che supportano lo scambio di dati crittografati.
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
@@ -10,12 +10,12 @@ ms.assetid: e3bb3e13-3037-4122-93bc-504bfd080a4d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: df5dfdeab010012a258fe59612a348c269081c45
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: ef8c1656c12ead992d5305cdf86b1ab8fcfcb836
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700498"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608433"
 ---
 # <a name="import-pfx-certificate-profiles"></a>Importare profili certificato PFX
 
@@ -70,9 +70,9 @@ Assegnare gli utenti di destinazione come utenti primari nei dispositivi Windows
 
 Per importare un certificato PFX, usare i cmdlet di PowerShell seguenti Configuration Manager per eseguire il provisioning di uno script di creazione PFX:
 
-- [Get-CMClientCertificatePfx](/powershell/module/configurationmanager/get-cmclientcertificatepfx?view=sccm-ps)
-- [Import-CMClientCertificatePfx](/powershell/module/configurationmanager/import-cmclientcertificatepfx?view=sccm-ps)
-- [Remove-CMClientCertificatePfx](/powershell/module/configurationmanager/remove-cmclientcertificatepfx?view=sccm-ps)
+- [Get-CMClientCertificatePfx](/powershell/module/configurationmanager/get-cmclientcertificatepfx)
+- [Import-CMClientCertificatePfx](/powershell/module/configurationmanager/import-cmclientcertificatepfx)
+- [Remove-CMClientCertificatePfx](/powershell/module/configurationmanager/remove-cmclientcertificatepfx)
 
 ### <a name="example-script"></a>Script di esempio
 
@@ -96,7 +96,7 @@ $pfxfile = "c:\p1.pfx"
 Import-CMClientCertificatePfx -UserName "$env:USERDOMAIN\$user" -Password (ConvertTo-SecureString -String $password -AsPlainText -Force) -CertificateProfilePfx (Get-CMCertificateProfilePfx -Fast -Name $PfxProfileDisplayName) -Path $pfxfile
 ```
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a>Vedi anche
 
 [Crea un nuovo profilo certificato](../../protect/deploy-use/create-certificate-profiles.md)
 

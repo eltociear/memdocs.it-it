@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19c5c1f8e7a68a31150baa079ce9b766b6df72df
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: c36b46cedb69ae0ce9d5559797fba78f5f7ab7f6
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88906753"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564279"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Rimuovere i dispositivi con la cancellazione, la disattivazione o l'annullamento manuale della registrazione
 
@@ -174,7 +174,7 @@ Per rimuovere i dispositivi dal portale di Intune, è possibile eliminarli dal r
 
 A causa di problemi di comunicazione o dispositivi mancanti può essere necessario eliminare dispositivi da Azure AD. È possibile usare l'azione **Elimina** per rimuovere dal portale di Azure i record dei dispositivi che sono sicuramente irraggiungibili e che molto probabilmente non comunicheranno più con Azure. L'azione **Elimina** non rimuove un dispositivo dalla gestione.
 
-1. Accedere ad [Azure Active Directory nel portale di Azure](https://aka.ms/accessaad) usando le proprie credenziali di amministratore. È anche possibile accedere all'[interfaccia di amministrazione di Microsoft 365](https://admin.microsoft.com). Nel menu selezionare **Interfacce di amministrazione** > **Azure AD**.
+1. Accedere ad [Azure Active Directory nel portale di Azure](https://azure.microsoft.com/services/active-directory/) usando le proprie credenziali di amministratore. È anche possibile accedere all'[interfaccia di amministrazione di Microsoft 365](https://admin.microsoft.com). Nel menu selezionare **Interfacce di amministrazione** > **Azure AD**.
 2. Creare una sottoscrizione di Azure, se non se ne possiede una. Se si ha un account a pagamento, per questa operazione non è necessario usare una carta di credito o effettuare un pagamento. Selezionare il collegamento per la sottoscrizione relativo alla **registrazione gratuita di Azure Active Directory**.
 3. Selezionare **Azure Active Directory** e quindi l'organizzazione.
 4. Selezionare la scheda **Utenti**.

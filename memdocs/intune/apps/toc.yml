@@ -202,6 +202,8 @@
               href: data-transfer-between-apps-manage-ios.md
         - name: Esaminare i log di protezione delle app
           href: app-protection-policy-settings-log.md
+    - name: Criteri per le app di Office
+      href: app-office-policies.md
     - name: Risoluzione dei problemi
       items:
         - name: Aiutare gli utenti nella risoluzione dei problemi

@@ -8,9 +8,15 @@
       href: client-details.md
     - name: Installare applicazioni (anteprima)
       href: applications.md
+    - name: Sequenza temporale del dispositivo (anteprima)
+      href: timeline.md
+    - name: Esplora risorse (anteprima)
+      href: resource-explorer.md
 - name: CMPivot per dispositivi collegati al tenant (anteprima)
   items:
-    - name: Panoramica di CMPivot
+    - name: Avvia CMPivot (anteprima)
+      href: cmpivot-start.md
+    - name: Panoramica dell'utilizzo di CMPivot
       href: cmpivot-overview-attached.md
     - name: Script di esempio CMPivot
       href: cmpivot-samples-attached.md
@@ -30,3 +36,9 @@
       href: troubleshoot-client-details.md
     - name: Installazione di applicazioni (anteprima)
       href: troubleshoot-applications.md
+    - name: Sequenza temporale (anteprima)
+      href: troubleshoot-timeline.md
+    - name: Esplora risorse (anteprima)
+      href: troubleshoot-resource-explorer.md
+    - name: CMPivot (anteprima)
+      href: troubleshoot-cmpivot.md

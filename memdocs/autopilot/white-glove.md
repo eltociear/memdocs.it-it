@@ -3,6 +3,7 @@ title: Distribuzione di Windows Autopilot per il guanto bianco
 description: Distribuzione di Windows Autopilot per il guanto bianco
 keywords: MDM, installazione, Windows, Windows 10, OOBE, gestione, distribuzione, Autopilot, ZTD, zero-touch, partner, msfb, Intune, pre-provisioning
 ms.prod: w10
+ms.technology: windows
 ms.mktglfcycl: deploy
 ms.localizationpriority: low
 ms.sitesec: library
@@ -11,14 +12,15 @@ audience: itproF
 manager: laurawi
 ms.audience: itpro
 author: greg-lindsay
+ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: df7b4bc3cbac23024dc8d108a91defebbf6dde38
-ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
+ms.openlocfilehash: 21b55882d4af8d4d20b6ff2690d23680141e2e47
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88614692"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643446"
 ---
 # <a name="windows-autopilot-for-white-glove-deployment"></a>Distribuzione di Windows Autopilot per il guanto bianco
 
@@ -26,17 +28,17 @@ ms.locfileid: "88614692"
 
 Windows Autopilot consente alle organizzazioni di effettuare facilmente il provisioning di nuovi dispositivi utilizzando l'immagine OEM preinstallata e i driver. Questo consente agli utenti finali di ottenere i propri dispositivi per l'azienda usando un processo semplice.
 
- ![OEM](images/wg01.png)
+ ![Processo OEM](images/wg01.png)
 
 Windows Autopilot può inoltre fornire un servizio di <I>guanto bianco</I> che consente ai partner o al personale IT di eseguire il pre-provisioning di un PC Windows 10 completamente configurato e pronto per l'azienda. Dal punto di vista dell'utente finale, l'esperienza basata sull'utente di Windows Autopilot è invariata, ma lo stato del dispositivo con provisioning completo è più veloce.
 
 Con **Windows Autopilot per la distribuzione del guanto bianco**, il processo di provisioning è suddiviso. Le porzioni che richiedono molto tempo vengono eseguite da IT, partner o OEM. L'utente finale completa semplicemente alcune impostazioni e criteri necessari per poter iniziare a usare il dispositivo.
 
- ![OEM](images/wg02.png)
+ ![Processo OEM con partner](images/wg02.png)
 
 Le distribuzioni di guanti bianchi usano Microsoft Intune in Windows 10, versione 1903 e successive. Le distribuzioni di questo tipo si basano su scenari basati sull' [utente](user-driven.md) di Windows Autopilot esistenti e supportano scenari di modalità guidati dall'utente per i dispositivi Azure Active Directory aggiunti e ibridi Azure Active Directory aggiunti.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 Oltre ai [requisiti di Windows Autopilot](software-requirements.md), per la distribuzione del guanto di Windows Autopilot è necessario anche:
 
@@ -86,7 +88,7 @@ Quando il cliente o l'amministratore IT ha assegnato tutte le app e le impostazi
 - Avviare il dispositivo (che esegue gli SKU di Windows 10 Pro, Enterprise o Education versione 1903 o successiva).
 - Dalla prima schermata OOBE (che potrebbe essere una selezione della lingua o una schermata di selezione delle impostazioni locali), non fare clic su **Avanti**. Premere invece il tasto Windows cinque volte per visualizzare una finestra di dialogo Opzioni aggiuntive. Da questa schermata scegliere l'opzione **provisioning di Windows Autopilot** , quindi fare clic su **continua**.
 
- ![choice](images/choice.png)
+ ![Opzione di provisioning di Windows Autopilot](images/choice.png)
 
 - Nella schermata **configurazione di Windows Autopilot** verranno visualizzate informazioni sul dispositivo:
  - Profilo di Autopilot assegnato al dispositivo.
@@ -96,13 +98,13 @@ Quando il cliente o l'amministratore IT ha assegnato tutte le app e le impostazi
  - **Nota**: i codici a matrice possono essere analizzati usando un'app complementare. L'app configura anche il dispositivo per specificare a chi appartiene. Un [esempio Open Source dell'app complementare](https://github.com/Microsoft/WindowsAutopilotCompanion) che si integra con Intune usando il API Graph è stato pubblicato in GitHub dal team di Autopilot.
 - Convalidare le informazioni visualizzate. Se sono necessarie modifiche, apportare le modifiche e quindi fare clic su **Aggiorna** per scaricare di nuovo i dettagli aggiornati sul profilo di Autopilot.
 
- ![destinazione](images/landing.png)
+ ![Schermata di configurazione di Windows Autopilot](images/landing.png)
 
 - Fare clic su **provision** per avviare il processo di provisioning.
 
 Se il processo di pre-provisioning viene completato correttamente:
 - Viene visualizzata una schermata di stato verde con informazioni sul dispositivo, inclusi gli stessi dettagli presentati in precedenza. Ad esempio, il profilo di Autopilot, il nome dell'organizzazione, l'utente assegnato e il codice a matrice. Viene inoltre fornito il tempo trascorso per i passaggi di pre-provisioning.
- ![White-Glove-result](images/white-glove-result.png)
+ ![Schermata di configurazione verde](images/white-glove-result.png)
 - Fare clic su **Richiudi** per arrestare il dispositivo. A questo punto, il dispositivo può essere spedito all'utente finale.
 
 >[!NOTE]

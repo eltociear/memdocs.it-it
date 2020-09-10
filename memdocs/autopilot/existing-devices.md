@@ -5,6 +5,7 @@ keywords: MDM, installazione, Windows, Windows 10, OOBE, gestione, distribuzione
 ms.reviewer: mniehaus
 manager: laurawi
 ms.prod: w10
+ms.technology: windows
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
 ms.sitesec: library
@@ -14,12 +15,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: fc13a3a73e5e043d01bf5c7a3d310c496714caee
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 685466a9760fa8aa688e76b10e1f44b7ac9eb37e
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88908393"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643562"
 ---
 # <a name="windows-autopilot-deployment-for-existing-devices"></a>Distribuzione di Windows Autopilot per i dispositivi esistenti
 
@@ -75,8 +76,8 @@ Vedere gli esempi seguenti.
     Install-Module WindowsAutopilotIntune -Force
     Install-Module Microsoft.Graph.Intune -Force
     ```
-    
-3. Immettere le righe seguenti e fornire le credenziali amministrative di Intune
+   
+3. Immettere le righe seguenti e fornire le credenziali amministrative di Intune:
    - Assicurarsi che l'account utente specificato disponga di diritti amministrativi sufficienti.
 
      ```powershell
@@ -87,7 +88,7 @@ Vedere gli esempi seguenti.
 
      ![Autenticazione di Azure AD](images/pwd.png)
 
-     Se è la prima volta che si usano le API Graph di Intune, verrà richiesto anche di abilitare le autorizzazioni di lettura e scrittura per Microsoft Intune PowerShell. Per abilitare le autorizzazioni seguenti:
+     Se è la prima volta che si usano le API Graph di Intune, verrà richiesto di abilitare Microsoft Intune autorizzazioni di lettura e scrittura di PowerShell. Per abilitare le autorizzazioni seguenti:
    - Selezionare il **consenso per conto dell'organizzazione**
    - Fare clic su **Accetto**
 
@@ -103,41 +104,41 @@ Vedere gli esempi seguenti.
     <pre style="overflow-y: visible">
     PS C:\> Get-AutopilotProfile | ConvertTo-AutopilotConfigurationJSON
     {
-        "CloudAssignedTenantId":  "1537de22-988c-4e93-b8a5-83890f34a69b",
-        "CloudAssignedForcedEnrollment":  1,
-        "Version":  2049,
-        "Comment_File":  "Profile Autopilot Profile",
-        "CloudAssignedAadServerData":  "{\"ZeroTouchConfig\":{\"CloudAssignedTenantUpn\":\"\",\"ForcedEnrollment\":1,\"CloudAssignedTenantDomain\":\"M365x373186.onmicrosoft.com\"}}",
-        "CloudAssignedTenantDomain":  "M365x373186.onmicrosoft.com",
-        "CloudAssignedDomainJoinMethod":  0,
-        "CloudAssignedOobeConfig":  28,
-        "ZtdCorrelationId":  "7F9E6025-1E13-45F3-BF82-A3E8C5B59EAC"
+        "CloudAssignedTenantId": "1537de22-988c-4e93-b8a5-83890f34a69b",
+        "CloudAssignedForcedEnrollment": 1,
+        "Version": 2049,
+        "Comment_File": "Profile Autopilot Profile",
+        "CloudAssignedAadServerData": "{\"ZeroTouchConfig\":{\"CloudAssignedTenantUpn\":\"\",\"ForcedEnrollment\":1,\"CloudAssignedTenantDomain\":\"M365x373186.onmicrosoft.com\"}}",
+        "CloudAssignedTenantDomain": "M365x373186.onmicrosoft.com",
+        "CloudAssignedDomainJoinMethod": 0,
+        "CloudAssignedOobeConfig": 28,
+        "ZtdCorrelationId": "7F9E6025-1E13-45F3-BF82-A3E8C5B59EAC"
     }</pre>
 
-    Ogni profilo è incapsulato tra parentesi graffe **{}**. Nell'esempio precedente viene visualizzato un solo profilo.     
+    Ogni profilo è incapsulato tra parentesi graffe **{}**. Nell'esempio precedente viene visualizzato un solo profilo.
 
     Per una descrizione delle proprietà usate nel file JSON, vedere la tabella seguente.
 
 
    |                          Proprietà                          |                                                                                                                                                                        Descrizione                                                                                                                                                                         |
    |------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   |                 Versione (numero, facoltativo)                 |                                                                                                                 Numero di versione che identifica il formato del file JSON.  Per Windows 10 1809, la versione specificata deve essere 2049.                                                                                                                  |
-   |           CloudAssignedTenantId (Guid, obbligatorio)           |                                                                                      ID del tenant Azure Active Directory da usare.  Si tratta del GUID per il tenant e si trova nelle proprietà del tenant.  Il valore non deve includere le parentesi graffe.                                                                                       |
-   |        CloudAssignedTenantDomain (stringa, obbligatorio)        |                                                                                                                                  Nome del tenant Azure Active Directory da usare, ad esempio: tenant.onmicrosoft.com.                                                                                                                                  |
-   |         CloudAssignedOobeConfig (numero, obbligatorio)         |                                                                           Si tratta di una bitmap che mostra quali impostazioni di Autopilot sono state configurate. I valori includono: SkipCortanaOptIn = 1, OobeUserNotLocalAdmin = 2, SkipExpressSettings = 4, SkipOemRegistration = 8, SkipEula = 16                                                                           |
-   |      CloudAssignedDomainJoinMethod (numero, obbligatorio)      |                                                                                                                                    Questa proprietà specifica se il dispositivo deve partecipare Azure Active Directory o Active Directory (Aggiunta ad Azure AD ibrido).  I valori includono: Active AD join = 0, Aggiunta ad Azure AD ibrido = 1                                                        |
-   |      CloudAssignedForcedEnrollment (numero, obbligatorio)      |                                                                                                                         Specifica che il dispositivo deve richiedere il join di AAD e la registrazione MDM.  <br>0 = non necessario, 1 = obbligatorio.                                                                                                                         |
+   |                 Versione (numero, facoltativo)                 | Numero di versione che identifica il formato del file JSON. Per Windows 10 1809, la versione specificata deve essere 2049.                                                                                                                  |
+   |           CloudAssignedTenantId (Guid, obbligatorio)           | ID del tenant Azure Active Directory da usare. Questa proprietà è il GUID del tenant e si trova nelle proprietà del tenant. Il valore non deve includere le parentesi graffe.                                                                                       |
+   |        CloudAssignedTenantDomain (stringa, obbligatorio)        | Nome del tenant Azure Active Directory da usare, ad esempio: tenant.onmicrosoft.com.                                                                                                                                  |
+   |         CloudAssignedOobeConfig (numero, obbligatorio)         | Questa proprietà è una bitmap che mostra quali impostazioni di Autopilot sono state configurate. I valori includono: SkipCortanaOptIn = 1, OobeUserNotLocalAdmin = 2, SkipExpressSettings = 4, SkipOemRegistration = 8, SkipEula = 16                                                                           |
+   |      CloudAssignedDomainJoinMethod (numero, obbligatorio)      |                                                                                                                                    Questa proprietà specifica se il dispositivo deve partecipare Azure Active Directory o Active Directory (Aggiunta ad Azure AD ibrido). I valori includono: Active AD join = 0, Aggiunta ad Azure AD ibrido = 1                                                        |
+   |      CloudAssignedForcedEnrollment (numero, obbligatorio)      |                                                                                                                         Specifica che il dispositivo deve richiedere Azure AD la registrazione di join e MDM. <br>0 = non necessario, 1 = obbligatorio.                                                                                                                         |
    |             ZtdCorrelationId (Guid, obbligatorio)              | Un GUID univoco (senza parentesi graffe) che verrà fornito a Intune come parte del processo di registrazione. ZtdCorrelationId verrà incluso nel messaggio di registrazione come "OfflineAutoPilotEnrollmentCorrelator". Questo attributo sarà presente solo se la registrazione viene eseguita in un dispositivo registrato con il provisioning con zero touch tramite registrazione offline. |
-   | CloudAssignedAadServerData (stringa JSON codificata, obbligatoria) |                                                  Stringa JSON incorporata utilizzata per la personalizzazione. Richiede la personalizzazione di AAD Corp abilitata. <br> Valore di esempio: "CloudAssignedAadServerData": "{ \" ZeroTouchConfig \" : { \" CloudAssignedTenantUpn \" : \" \" , \" CloudAssignedTenantDomain \" : \" tenant.onmicrosoft.com \" }}"                                                   |
-   |         CloudAssignedDeviceName (stringa, facoltativo)         |                                                                          Nome assegnato automaticamente al computer.  Segue la convenzione di denominazione del modello che può essere configurata in Intune come parte del profilo di Autopilot oppure può specificare un nome esplicito da usare.                                                                           |
+   | CloudAssignedAadServerData (stringa JSON codificata, obbligatoria) |                                                  Stringa JSON incorporata utilizzata per la personalizzazione. Richiede la personalizzazione di Azure AD Corp abilitata. <br> Valore di esempio: "CloudAssignedAadServerData": "{ \" ZeroTouchConfig \" : { \" CloudAssignedTenantUpn \" : \" \" , \" CloudAssignedTenantDomain \" : \" tenant.onmicrosoft.com \" }}"                                                   |
+   |         CloudAssignedDeviceName (stringa, facoltativo)         | Nome assegnato automaticamente al computer. Segue la convenzione del modello di denominazione configurata nel profilo Autopilot di Intune. In alternativa, è possibile specificare un nome esplicito da usare. |
 
 
-5. Il profilo di Autopilot deve essere salvato come file JSON in formato ASCII o ANSI. Per impostazione predefinita, Windows PowerShell è formato Unicode, pertanto se si tenta di reindirizzare l'output dei comandi in un file, è necessario specificare anche il formato del file. Ad esempio, per salvare il file in formato ASCII usando Windows PowerShell, è possibile creare una directory (ad esempio: c:\Autopilot) e salvare il profilo come illustrato di seguito: (usare la barra di scorrimento orizzontale nella parte inferiore se necessario per visualizzare l'intera stringa di comando)
+5. Il profilo di Autopilot deve essere salvato come file JSON in formato ASCII o ANSI. Per impostazione predefinita, Windows PowerShell è formato Unicode. Quindi, se si reindirizza l'output dei comandi in un file, specificare anche il formato del file. Ad esempio, per salvare il file in formato ASCII usando Windows PowerShell, è possibile creare una directory (ad esempio: c:\Autopilot) e salvare il profilo come illustrato di seguito: (usare la barra di scorrimento orizzontale nella parte inferiore se necessario per visualizzare l'intera stringa di comando)
 
     ```powershell
     Get-AutopilotProfile | ConvertTo-AutopilotConfigurationJSON | Out-File c:\Autopilot\AutopilotConfigurationFile.json -Encoding ASCII
     ```
-    **Importante**: il nome del file deve essere denominato **AutopilotConfigurationFile.json** , oltre a essere codificato come ASCII/ANSI. 
+    **Importante**: il nome del file deve essere denominato **AutopilotConfigurationFile.json** e deve essere codificato come ASCII/ANSI. 
 
     Se si preferisce, è possibile salvare il profilo in un file di testo e modificarlo nel blocco note. Nel blocco note, quando si sceglie **Salva con nome** , è necessario selezionare Salva come tipo: **tutti i file** e scegliere ANSI dall'elenco a discesa accanto a **codifica**. Vedere l'esempio seguente.
 
@@ -155,7 +156,7 @@ Vedere gli esempi seguenti.
 2. Sulla barra multifunzione fare clic su **Crea pacchetto**
 3. Nella **creazione guidata pacchetto e programma** immettere i dettagli del **pacchetto** e del **tipo di programma** seguenti:<br>
     - <u>Nome</u>: **Autopilot for existing devices config**
-    - Selezionare la casella di controllo **questo pacchetto contiene i file di origine**
+    - Selezionare **questo pacchetto contiene i file di origine**.
     - <u>Cartella di origine</u>: fare clic su **Sfoglia** e specificare un percorso UNC contenente il AutopilotConfigurationFile.jssu file. 
     - Fare clic su **OK** e quindi su **Avanti**.
     - <u>Tipo di programma</u>: **non creare un programma**
@@ -180,10 +181,13 @@ Vedere gli esempi seguenti.
 
 4. Fare clic su **Avanti**, quindi immettere le seguenti informazioni sulle **regole di appartenenza** :
    - Fare clic su **Aggiungi regola** e specificare una regola di raccolta diretta o basata su query per aggiungere i dispositivi Windows 7 di test di destinazione alla nuova raccolta.
-   - Se, ad esempio, il nome host del computer da cancellare e ricaricato è PC-01 e si desidera utilizzare il nome come attributo, fare clic su **Aggiungi regola > regola diretta > (apertura guidata) > avanti** , quindi immettere **PC-01** accanto a **valore**. Fare clic su **Avanti**, quindi scegliere **PC-01** in **risorse**. Vedere gli esempi seguenti.
+   - Se, ad esempio, il nome host del computer da cancellare e ricaricare è PC-01 e si desidera utilizzare il nome come attributo:
+      1. Fare clic su **Aggiungi regola > > regola diretta (si apre la procedura guidata) > avanti**.
+      2. Immettere **PC-01** accanto a **valore**.
+      3. Fare clic su **Next**  >  **PC-01** (in **Resources**). Vedere gli esempi seguenti.
 
-     ![Denominato Resource1 ](images/pc-01a.png)
-      ![ denominato risorsa 2](images/pc-01b.png)
+         ![Finestra di dialogo Individua risorse-finestra di dialogo ](images/pc-01a.png)
+          ![ Seleziona risorse](images/pc-01b.png)
 
 5. Continuare la creazione della raccolta dispositivi con le impostazioni predefinite:
     - USA aggiornamenti incrementali per questa raccolta: non selezionato
@@ -201,7 +205,7 @@ Vedere gli esempi seguenti.
 4. Nella creazione guidata della sequenza di attività immettere i dettagli seguenti:
    - <u>Nome sequenza di attività</u>: **Autopilot per i dispositivi esistenti**
    - <u>Immagine d'avvio</u>: fare clic su **Sfoglia** e selezionare un'immagine di avvio di Windows 10 (1803 o versione successiva)
-   - Fare clic su **Avanti**, quindi nella pagina Installa Windows fare clic su **Sfoglia** e selezionare un **pacchetto di immagini** Windows 10 e un **Indice immagine**, versione 1803 o successiva.
+   - Fare clic su **Avanti**  >  **Sfoglia** > selezionare un **pacchetto di immagini** Windows 10 e un **Indice immagine**, versione 1803 o successiva.
    - Selezionare la **partizione e formattare il computer di destinazione prima di installare la** casella di controllo sistema operativo.
    - Selezionare o deselezionare **la casella di controllo Configura sequenza attività per l'utilizzo con BitLocker** . Questo indirizzo è facoltativo.
    - <u>Codice Product Key</u> e <u>modalità di gestione licenze server</u>: facoltativamente, immettere un codice Product Key e la modalità di gestione licenze server.
@@ -220,13 +224,13 @@ Vedere gli esempi seguenti.
    - Deselezionare la casella di controllo **Acquisisci impostazioni utente e file** .
    - Deselezionare la casella di controllo **Acquisisci impostazioni di rete** .
    - Deselezionare la casella di controllo **Acquisisci impostazioni di Microsoft Windows** .
-   - Fare clic su **Next** (Avanti).
+   - Fare clic su **Avanti**.
 
      >[!NOTE]
-     >Poiché la sequenza di attività Autopilot for existing devices viene completata in Windows PE, la migrazione dei dati di utilità di migrazione stato utente (USMT) non è supportata perché non è possibile ripristinare lo stato utente nel nuovo sistema operativo.  Il Toolkit di migrazione stato utente (USMT), inoltre, non supporta i dispositivi aggiunti a Azure AD.
+     >Poiché la sequenza di attività Autopilot for existing devices viene completata in Windows PE, la migrazione dei dati di utilità di migrazione stato utente (USMT) non è supportata perché non è possibile ripristinare lo stato utente nel nuovo sistema operativo. Il Toolkit di migrazione stato utente (USMT), inoltre, non supporta i dispositivi aggiunti a Azure AD.
 
 7. Nella pagina Includi aggiornamenti scegliere una delle tre opzioni disponibili. Questa selezione è facoltativa.
-8. Nella pagina Installa applicazioni aggiungere le applicazioni, se necessario. Questo indirizzo è facoltativo.
+8. Nella pagina Installa applicazioni è possibile aggiungere facoltativamente applicazioni.
 9. Fare clic su **Avanti**, confermare le impostazioni, fare clic su **Avanti**, quindi fare clic su **Chiudi**.
 10. Fare clic con il pulsante destro del mouse sulla sequenza di attività Autopilot for existing devices e scegliere **modifica**.
 11. Nell'editor della sequenza di attività, nel gruppo **Installa sistema operativo** , fare clic sull'azione **Applica impostazioni Windows** .
@@ -234,22 +238,22 @@ Vedere gli esempi seguenti.
 13. Modificare il **nome** del gruppo da **nuovo gruppo** a **Autopilot per la configurazione dei dispositivi esistente**.
 14. Fare clic su **Aggiungi**, scegliere **generale**, quindi fare clic su **Esegui riga di comando**.
 15. Verificare che il passaggio **Esegui riga di comando** sia annidato sotto il gruppo **di configurazione Autopilot for existing devices** .
-16. Modificare il **nome** in **applica Autopilot per il file di configurazione dei dispositivi esistenti** e incollare il codice seguente nella casella di testo **riga di comando** , quindi fare clic su **applica**:
+16. Modificare il **nome** in **applica Autopilot per il file di configurazione dei dispositivi esistenti**, incollare il codice seguente nella casella di testo della **riga di comando** > **applica**:
     ```
     cmd.exe /c xcopy AutopilotConfigurationFile.json %OSDTargetSystemDrive%\windows\provisioning\Autopilot\ /c
     ```
-    -  **AutopilotConfigurationFile.js** deve essere il nome del file JSON presente nel pacchetto Autopilot for existing devices creato in precedenza.
+    - **AutopilotConfigurationFile.js** deve corrispondere al nome del file JSON presente nel pacchetto Autopilot for existing devices creato in precedenza.
 
-17. Nel passaggio **applica Autopilot per il file di configurazione dei dispositivi esistenti** selezionare la casella di controllo **pacchetto** , quindi fare clic su **Sfoglia**.
+17. Nel passaggio **Apply Autopilot for existing devices config file** selezionare il **pacchetto**  >  **Browse**.
 18. Selezionare il pacchetto **di configurazione Autopilot for existing devices creato in** precedenza e fare clic su **OK**. Un esempio viene visualizzato alla fine di questa sezione.
 19. Nel gruppo **Imposta sistema operativo** fare clic sull'attività **imposta Windows e Configuration Manager** .
 20. Fare clic su **Aggiungi** e quindi su **nuovo gruppo**.
 21. Modificare il **nome** da **nuovo gruppo** per **preparare il dispositivo per Autopilot**
-22. Verificare che il passaggio **preparazione del dispositivo per il gruppo Autopilot** sia l'ultimo passaggio della sequenza di attività. Se necessario, utilizzare il pulsante **Sposta giù** .
+22. Verificare che il gruppo **preparare il dispositivo per Autopilot** sia l'ultimo passaggio della sequenza di attività. Se necessario, utilizzare il pulsante **Sposta giù** .
 23. Con il gruppo **prepara dispositivo per Autopilot** selezionato, fare clic su **Aggiungi**, scegliere **Immagini** e quindi fare clic su **prepara client ConfigMgr per l'acquisizione**.
 24. Aggiungere un secondo passaggio facendo clic su **Aggiungi**, puntando a **Immagini**e facendo clic su **prepara Windows per l'acquisizione**. In questo passaggio usare le impostazioni seguenti:
     - <u>Compila automaticamente l'elenco di driver di archiviazione di massa</u>: **non selezionato**
-    - Non <u>reimpostare il flag di attivazione</u>: **non selezionato**
+    - <u>Non reimpostare il flag di attivazione</u>: **non selezionato**
     - <u>Arrestare il computer dopo l'esecuzione di questa azione</u>: **facoltativo**
 
     ![Sequenza di attività Autopilot](images/ap-ts-1.png)
@@ -257,7 +261,7 @@ Vedere gli esempi seguenti.
 25. Fare clic su **OK** per chiudere l'editor della sequenza di attività.
 
 > [!NOTE]
-> In Windows 10 1903 e 1909, il **AutopilotConfigurationFile.jsin** viene eliminato dal passaggio **prepara Windows per l'acquisizione** . Per ulteriori informazioni e per una soluzione alternativa, vedere la pagina relativa ai [problemi noti di Windows Autopilot](known-issues.md) .
+> In Windows 10 1903 e 1909, il **AutopilotConfigurationFile.jsin** viene eliminato dal passaggio **prepara Windows per l'acquisizione** . Per ulteriori informazioni e per una soluzione alternativa, vedere la pagina relativa ai [problemi noti di Windows Autopilot](known-issues.md).
 
 ### <a name="deploy-content-to-distribution-points"></a>Distribuire il contenuto nei punti di distribuzione
 
@@ -265,27 +269,27 @@ Assicurarsi quindi che tutto il contenuto necessario per la sequenza di attivit�
 
 1. Fare clic con il pulsante destro del mouse sulla sequenza attività **Autopilot for existing devices** e scegliere **Distribuisci contenuto**.
 2. Fare clic su **Avanti**, **controllare il contenuto da distribuire**e quindi fare clic su **Avanti**.
-3. Nella pagina specificare la distribuzione del contenuto fare clic su **Aggiungi** per specificare un **punto di distribuzione** o un gruppo di punti di **distribuzione**.
-4. Nella procedura guidata Aggiungi punti di distribuzione o Aggiungi gruppi di punti di distribuzione specificare le destinazioni di contenuto che consentiranno di recuperare il file JSON quando viene eseguita la sequenza di attività.
-5. Una volta specificata la distribuzione del contenuto, fare clic su **Avanti** due volte e quindi su **Chiudi**.
+3. Nella pagina specificare la distribuzione del contenuto fare clic su **Aggiungi** per specificare un **punto di distribuzione** o un gruppo di **punti di distribuzione**.
+4. Nella procedura guidata Aggiungi punti di distribuzione o Aggiungi gruppi di punti di distribuzione specificare le destinazioni di contenuto che consentono alla sequenza di attività di recuperare il file JSON.
+5. Al termine della specifica della distribuzione del contenuto, fare clic su **Avanti** due volte e quindi su **Chiudi**.
 
 ### <a name="deploy-the-os-with-autopilot-task-sequence"></a>Distribuire il sistema operativo con la sequenza di attività Autopilot
 
 1. Fare clic con il pulsante destro del mouse sulla sequenza attività **Autopilot for existing devices** e quindi scegliere **Distribuisci**.
 2. Nella distribuzione guidata del software immettere i dettagli seguenti **delle impostazioni** **generali** e di distribuzione:
-    - <u>Sequenza di attività</u>:  **Autopilot per i dispositivi esistenti**.
+    - <u>Sequenza di attività</u>: **Autopilot per i dispositivi esistenti**.
     - <u>Raccolta</u>: fare clic su **Sfoglia** e quindi selezionare **Autopilot per la raccolta di dispositivi esistente** (o un'altra raccolta desiderata).
     - Fare clic su **Avanti** per specificare **le impostazioni di distribuzione**.
     - <u>Azione</u>: **Install**.
-    - <u>Scopo</u>: **disponibile**. Facoltativamente, è possibile selezionare **obbligatorio** anziché **disponibile**. Questa operazione non è consigliata durante il test a causa dell'impatto potenziale delle configurazioni accidentali.
-    - <u>Rendere disponibile per gli elementi seguenti</u>: **solo Configuration Manager client**. Nota: scegliere l'opzione qui pertinente per il contesto del test. Se per il client di destinazione non è installato l'agente Configuration Manager o Windows, sarà necessario selezionare un'opzione che includa PXE o supporti di avvio.
+    - <u>Scopo</u>: **disponibile**. Facoltativamente, è possibile selezionare **obbligatorio** anziché **disponibile**. Questa impostazione non è consigliata durante il test perché le configurazioni accidentali possono avere un impatto negativo.
+    - <u>Rendere disponibile per gli elementi seguenti</u>: **solo Configuration Manager client**. Nota: scegliere l'opzione qui pertinente per il contesto del test. Se per il client di destinazione non è installato l'agente Configuration Manager o Windows, è necessario selezionare un'opzione che includa PXE o supporti di avvio.
     - Fare clic su **Avanti** per specificare i dettagli della **pianificazione** .
     - <u>Pianifica quando questa distribuzione diventerà disponibile</u>: facoltativo
     - <u>Pianifica al</u>termine della distribuzione: facoltativo
     - Fare clic su **Avanti** per specificare i dettagli **dell'esperienza utente** .
     - <u>Mostra stato sequenza di attività</u>: selezionato.
     - <u>Installazione software</u>: non selezionata.
-    - <u>Riavvio del sistema (se richiesto per completare l'installazione)</u>: non selezionato.
+    - <u>Riavvio del sistema (se necessario per completare l'installazione)</u>: non selezionato.
     - <u>Commit modificato alla scadenza o durante una finestra di manutenzione (riavvio necessario)</u>: facoltativo.
     - <u>Consenti l'esecuzione della sequenza di attività per il client su Internet</u>: facoltativo
     - Fare clic su **Avanti** per specificare i dettagli degli **avvisi** .
@@ -298,28 +302,31 @@ Assicurarsi quindi che tutto il contenuto necessario per la sequenza di attivit�
 
 ### <a name="complete-the-client-installation-process"></a>Completare il processo di installazione client
 
-1. Aprire Software Center nel computer client Windows 7 o Windows 8.1 di destinazione. A tale scopo, fare clic su Start e quindi digitare **software** nella casella di ricerca oppure digitare quanto segue al prompt dei comandi o di Windows PowerShell:
-
-    ```
-    C:\Windows\CCM\SCClient.exe
-    ```
+1. Nel computer client Windows 7 o Windows 8.1 di destinazione scegliere Avvia > digitare **Software Center** > premere INVIO.
 
 2. Nella raccolta software selezionare **Autopilot per i dispositivi esistenti** e fare clic su **Installa**. Vedere l'esempio seguente:
 
-    ![Denominato risorsa 2 ](images/sc.png) ![ denominato risorsa 2](images/sc1.png)
+    ![Finestra di ](images/sc.png) dialogo di conferma della pagina per i dispositivi esistenti di Autopilot ![](images/sc1.png)
 
-La sequenza di attività Scarica il contenuto, riavvia, formatta le unità e installa Windows 10. Il dispositivo proseguirà quindi per prepararsi a Autopilot. Una volta completata la sequenza di attività, il dispositivo avvierà la configurazione guidata e fornirà un'esperienza di Autopilot.
+La sequenza di attività:
+1. Scarica contenuto
+2. Riavviare il dispositivo
+3. Formattare le unità
+4. Installare Windows 10
+5. Prepararsi per Autopilot
+
+Al termine della sequenza di attività, il dispositivo avvierà la configurazione guidata e fornirà un'esperienza di Autopilot.
 
 ![Refresh-1 Refresh ](images/up-1.png)
  ![ -2 ](images/up-2.png)
  ![ Refresh-3](images/up-3.png)
 
 >[!NOTE]
->Se l'aggiunta di dispositivi a Active Directory (Aggiunta ad Azure AD ibrido), è necessario creare un profilo di configurazione del dispositivo di aggiunta al dominio destinato a "tutti i dispositivi" (poiché non è presente un Azure Active Directory oggetto dispositivo per il computer per la destinazione basata su gruppi).  Per ulteriori informazioni, vedere [modalità guidata dall'utente per l'aggiunta di Azure Active Directory ibrido](user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join) .
+>Se l'aggiunta di dispositivi a Active Directory (Aggiunta ad Azure AD ibrido), è necessario creare un profilo di configurazione del dispositivo di aggiunta al dominio destinato a "tutti i dispositivi" (poiché non è presente un Azure Active Directory oggetto dispositivo per il computer per la destinazione basata su gruppi). Per altre informazioni, vedere [modalità guidata dall'utente per l'aggiunta di Azure Active Directory ibride](user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join).
 
 ### <a name="register-the-device-for-windows-autopilot"></a>Registrare il dispositivo per Windows Autopilot
 
-I dispositivi di cui è stato effettuato il provisioning tramite Autopilot riceveranno l'esperienza di configurazione guidata guidato automatico guidato al primo avvio. Una volta eseguito l'aggiornamento a Windows 10, il dispositivo deve essere registrato per garantire un'esperienza di Autopilot continua in caso di reimpostazione del PC. È possibile abilitare la registrazione automatica per un gruppo assegnato usando l'impostazione **Converti tutti i dispositivi di destinazione in Autopilot** . Per altre informazioni, vedere [Creare un profilo di distribuzione Autopilot](enrollment-autopilot.md#create-an-autopilot-deployment-profile).
+I dispositivi di cui è stato effettuato il provisioning con Autopilot ricevono solo l'esperienza di configurazione guidata guidato automatico per il primo avvio. Dopo l'aggiornamento a Windows 10, assicurarsi di registrare il dispositivo in modo che disponga dell'esperienza Autopilot quando il computer viene reimpostato. È possibile abilitare la registrazione automatica per un gruppo assegnato usando l'impostazione **Converti tutti i dispositivi di destinazione in Autopilot** . Per altre informazioni, vedere [Creare un profilo di distribuzione Autopilot](enrollment-autopilot.md#create-an-autopilot-deployment-profile).
 
 Vedere anche [aggiunta di dispositivi a Windows Autopilot](add-devices.md).
 

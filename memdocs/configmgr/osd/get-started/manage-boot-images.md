@@ -10,12 +10,12 @@ ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 74b8b0f29172140a19c402c79b7ea9b7339cf3e5
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3ddcf0c9ff4a9af1e74a745d8bda326804365206
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88697637"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606312"
 ---
 # <a name="manage-boot-images-with-configuration-manager"></a>Gestire le immagini d'avvio con Configuration Manager
 
@@ -206,7 +206,7 @@ Nella scheda **Personalizzazione** selezionare una delle seguenti impostazioni:
 - **Imposta il layout di tastiera predefinito in WinPE**: <!--4910348-->A partire dalla versione 1910, configurare il layout predefinito della tastiera per un'immagine d'avvio. Se si seleziona una lingua diversa da en-US, Configuration Manager include ancora en-US nelle impostazioni locali di input disponibili. Nel dispositivo, il layout iniziale della tastiera corrisponde alle impostazioni locali selezionate, ma l'utente può passare a en-US se necessario.
 
 > [!Tip]
-> Usare il cmdlet di PowerShell [Set-CMBootImage](/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) per configurare queste impostazioni da uno script.
+> Usare il cmdlet di PowerShell [Set-CMBootImage](/powershell/module/configurationmanager/set-cmbootimage) per configurare queste impostazioni da uno script.
 
 #### <a name="optional-components"></a>Componenti facoltativi
 

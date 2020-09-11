@@ -10,12 +10,12 @@ ms.assetid: b06f781b-ab25-4d9a-b128-02cbd7cbcffe
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e647672b02c0122709b3c80fc012ed1fb82b1519
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: db1e0d78263d264c66eed7258db800397baad735
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696430"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607587"
 ---
 # <a name="database-replicas-for-management-points-for-configuration-manager"></a>Repliche di database per i punti di gestione per Configuration Manager
 
@@ -57,7 +57,7 @@ I siti primari di Configuration Manager possono usare una replica di database pe
 
     -   Il database del sito deve **pubblicare** la replica di database e ogni server di replica del database remoto deve **sottoscrivere** i dati pubblicati.  
 
-    -   L'istanza di SQL Server che ospita il database del sito e quella che ospita la replica di database devono essere entrambe configurate per supportare un valore **Max Text Repl Size** di 2 GB. Per un esempio di configurazione di SQL Server 2012, vedere [Configurare l'opzione di configurazione del server max text repl size](/sql/database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option?view=sql-server-ver15).  
+    -   L'istanza di SQL Server che ospita il database del sito e quella che ospita la replica di database devono essere entrambe configurate per supportare un valore **Max Text Repl Size** di 2 GB. Per un esempio di configurazione di SQL Server 2012, vedere [Configurare l'opzione di configurazione del server max text repl size](/sql/database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option).  
 
 -   **Certificato autofirmato**: per configurare una replica di database, è necessario creare un certificato autofirmato nel server di replica di database e renderlo disponibile per ogni punto di gestione che userà il server di replica di database.  
 
@@ -174,7 +174,7 @@ Usare la seguente procedura come esempio di configurazione di un server di repli
         -   Se SQL Server Agent viene eseguito usando un account diverso, selezionare **Esegui con l'account di Windows seguente**, quindi configurare l'account. È possibile specificare un account Windows o un account SQL Server.  
 
         > [!IMPORTANT]  
-        >  È necessario concedere all'account che esegue l'agente di distribuzione le autorizzazioni per l'autore come una sottoscrizione pull. Per informazioni sulla configurazione di queste autorizzazioni, vedere [Sicurezza agente di distribuzione](/sql/relational-databases/replication/distribution-agent-security?view=sql-server-ver15).  
+        >  È necessario concedere all'account che esegue l'agente di distribuzione le autorizzazioni per l'autore come una sottoscrizione pull. Per informazioni sulla configurazione di queste autorizzazioni, vedere [Sicurezza agente di distribuzione](/sql/relational-databases/replication/distribution-agent-security).  
 
       - Per **Connetti al server di distribuzione**, selezionare **Tramite rappresentazione dell'account del processo**.  
 
@@ -459,7 +459,7 @@ Per supportare la notifica client con una replica di database per un punto di ge
 -   Per ogni replica di database successiva in cui si usa questo script di configurazione, aggiornare il nome descrittivo per il certificato.  A questo scopo, modificare la riga **$enrollment.CertificateFriendlyName = "ConfigMgr SQL Server Identification Certificate"** e sostituire **ConfigMgr SQL Server Identification Certificate** con un nuovo nome, ad esempio  **ConfigMgr SQL Server Identification Certificate1**.  
 
 ##  <a name="manage-database-replica-configurations"></a><a name="BKMK_DBReplicaOps"></a> Gestire le configurazioni di replica di database  
- Quando si usa una replica di database in un sito, usare le informazioni nelle seguenti sezioni per integrare i processi di disinstallazione di un replica di database, disinstallazione di un sito che usa una replica di database oppure spostamento del database del sito in una nuova installazione di SQL Server. Quando si usano le informazioni delle seguenti sezioni per eliminare delle pubblicazioni, usare le informazioni disponibili per l'eliminazione di repliche transazionali per la versione di SQL Server usata per la replica di database. Per altre informazioni, vedere [Eliminare una pubblicazione](/sql/relational-databases/replication/publish/delete-a-publication?view=sql-server-ver15).  
+ Quando si usa una replica di database in un sito, usare le informazioni nelle seguenti sezioni per integrare i processi di disinstallazione di un replica di database, disinstallazione di un sito che usa una replica di database oppure spostamento del database del sito in una nuova installazione di SQL Server. Quando si usano le informazioni delle seguenti sezioni per eliminare delle pubblicazioni, usare le informazioni disponibili per l'eliminazione di repliche transazionali per la versione di SQL Server usata per la replica di database. Per altre informazioni, vedere [Eliminare una pubblicazione](/sql/relational-databases/replication/publish/delete-a-publication).  
 
 > [!NOTE]  
 >  Dopo aver ripristinato il database di un sito che era stato configurato per le repliche di database, prima di poter usare le repliche è necessario riconfigurare ciascuna replica del database, ricreando sia le pubblicazioni sia le sottoscrizioni.  

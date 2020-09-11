@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 67130932ee20849530c6e865971c7776c3e6b6b1
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 8ef60b82e6ab594689576520443bc74eac7bd17d
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819933"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606929"
 ---
 # <a name="deploy-bitlocker-management"></a>Distribuire la gestione di BitLocker
 
@@ -118,7 +118,7 @@ Per modificare le impostazioni di un criterio esistente, selezionarlo dall'elenc
 
 Quando si crea più di un criterio, è possibile configurarne la priorità relativa. Se si distribuiscono più criteri a un client, viene usato il valore di priorità per determinarne le impostazioni.
 
-A partire dalla versione 2006, è possibile usare i cmdlet di Windows PowerShell per questa attività. Per altre informazioni, vedere [New-CMBlmSetting](/powershell/module/configurationmanager/new-cmblmsetting?view=sccm-ps).
+A partire dalla versione 2006, è possibile usare i cmdlet di Windows PowerShell per questa attività. Per altre informazioni, vedere [New-CMBlmSetting](/powershell/module/configurationmanager/new-cmblmsetting).
 
 ## <a name="deploy-a-policy"></a>Distribuire un criterio
 
@@ -137,7 +137,7 @@ A partire dalla versione 2006, è possibile usare i cmdlet di Windows PowerShell
 > [!IMPORTANT]
 > Il client MBAM non avvierà le azioni di Crittografia unità BitLocker se è attiva una connessione RDP (Remote Desktop Protocol). Tutte le connessioni alla console remota devono essere chiuse e un utente deve essere connesso a una sessione della console fisica prima dell'avvio di Crittografia unità BitLocker.
 
-A partire dalla versione 2006, è possibile usare i cmdlet di Windows PowerShell per questa attività. Per altre informazioni, vedere [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment?view=sccm-ps).
+A partire dalla versione 2006, è possibile usare i cmdlet di Windows PowerShell per questa attività. Per altre informazioni, vedere [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment).
 
 ## <a name="monitor"></a>Monitoraggio
 

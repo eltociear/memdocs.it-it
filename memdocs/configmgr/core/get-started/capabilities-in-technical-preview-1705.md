@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 06119bfc096564f70922249121f63c3d2039efe8
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 99a053800971642b1c771329c2ff9b3a29ce7912
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995450"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607884"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-configuration-manager"></a>Funzionalità della versione Technical Preview 1705 per Configuration Manager
 
@@ -121,12 +121,12 @@ Con questa versione è ora possibile usare le repliche con commit asincrono nei 
 
 - Questa versione non supporta il failover per l'uso della replica con commit asincrono come database del sito.
   > [!CAUTION]  
-  > Poiché Configuration Manager non convalida lo stato della replica con commit asincrono per verificare che sia corrente, e [per comportamento normale del prodotto, una replica di questo tipo può non essere sincronizzata](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-2014#AvailabilityModes), l'uso di una replica con commit asincrono come database del sito può mettere a rischio l'integrità dei dati del sito.  
+  > Poiché Configuration Manager non convalida lo stato della replica con commit asincrono per verificare che sia corrente, e [per comportamento normale del prodotto, una replica di questo tipo può non essere sincronizzata](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server#AvailabilityModes), l'uso di una replica con commit asincrono come database del sito può mettere a rischio l'integrità dei dati del sito.  
 
 - In un gruppo di disponibilità è possibile usare lo stesso numero e tipo di repliche supportate dalla versione di SQL Server in uso.   In precedenza, il supporto era limitato a due repliche con commit sincrono.
 
 ### <a name="configure-an-asynchronous-commit-replica"></a>Configurare una replica con commit asincrono
-Per aggiungere una replica asincrona a un [gruppo di disponibilità usato con Configuration Manager](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md), non è necessaria eseguire gli script di configurazione necessari per configurare una replica sincrona, perché non viene offerto supporto per l'uso di tale replica asincrona come database del sito. Per altre informazioni, vedere [Aggiungere una replica secondaria a un gruppo di disponibilità](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server?view=sql-server-2014).
+Per aggiungere una replica asincrona a un [gruppo di disponibilità usato con Configuration Manager](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md), non è necessaria eseguire gli script di configurazione necessari per configurare una replica sincrona, perché non viene offerto supporto per l'uso di tale replica asincrona come database del sito. Per altre informazioni, vedere [Aggiungere una replica secondaria a un gruppo di disponibilità](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server).
 
 ### <a name="use-the-asynchronous-replica-to-recover-your-site"></a>Usare la replica asincrona per il ripristino del sito
 Prima di usare una replica asincrona per ripristinare il database del sito, è necessario arrestare il sito primario attivo per evitare altre operazioni di scrittura nel database del sito. Dopo aver arrestato il sito, è possibile usare una replica asincrona al posto di un [database ripristinato manualmente](../servers/manage/recover-sites.md#use-a-site-database-that-has-been-manually-recovered).

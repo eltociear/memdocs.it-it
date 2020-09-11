@@ -10,12 +10,12 @@ ms.assetid: 500a9aa6-68aa-44eb-bf49-350c1314a697
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ff992361959fcaad51acf3b78f5618e95f5af9e0
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: e8e4bf4eb11502d798ffa97500436494bc639aae
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692605"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607592"
 ---
 # <a name="custom-locations-for-configuration-manager-site-database-files"></a>Percorsi personalizzati per i file di database del sito di Configuration Manager
 
@@ -36,6 +36,6 @@ ms.locfileid: "88692605"
 
 -   Nel server del sito di Configuration Manager interrompere il servizio **SMS_Executive**.  
 
--   Per altre informazioni su come spostare un database utente, vedere [Spostare i database utente](/sql/relational-databases/databases/move-user-databases?view=sql-server-2014).  
+-   Per altre informazioni su come spostare un database utente, vedere [Spostare i database utente](/sql/relational-databases/databases/move-user-databases).  
 
 -   Al termine dello spostamento dei file di database, è necessario riavviare il servizio **SMS_Executive** sul server del sito di Configuration Manager.

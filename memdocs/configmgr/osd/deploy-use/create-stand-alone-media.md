@@ -10,12 +10,12 @@ ms.assetid: c6b9ccd2-78d9-4f0e-b25a-70d0866300ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1c8710c50dc2feabebd7e8f0f84ac49b3b0dd35c
-ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
+ms.openlocfilehash: 8ff3e0ee8f002a21e283b8a56f55d0daa2490253
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89068022"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606362"
 ---
 # <a name="create-stand-alone-media"></a>Creare supporti autonomi
 
@@ -151,7 +151,7 @@ Prima di eseguire la Creazione guidata del supporto per la sequenza di attività
         >
         > In un supporto autonomo vengono crittografati solo i passaggi delle sequenze di attività e le relative variabili. Il contenuto rimanente del supporto non viene crittografato. Non includere informazioni riservate negli script di sequenza di attività. Archiviare e implementare tutte le informazioni riservate usando variabili della sequenza di attività.  
 
-    - **Seleziona l'intervallo di date di validità per il supporto autonomo**: impostare le date di inizio e di scadenza facoltative per il supporto. Per impostazione predefinita, questa impostazione è disabilitata. Le date vengono confrontate con l'ora di sistema nel computer prima che il supporto autonomo venga eseguito. Quando l'ora di sistema è precedente all'ora di inizio o successiva all'ora di scadenza, il supporto autonomo non si avvia. Queste opzioni sono disponibili anche tramite il cmdlet PowerShell [New-CMStandaloneMedia](/powershell/module/configurationmanager/new-cmstandalonemedia?view=sccm-ps).  
+    - **Seleziona l'intervallo di date di validità per il supporto autonomo**: impostare le date di inizio e di scadenza facoltative per il supporto. Per impostazione predefinita, questa impostazione è disabilitata. Le date vengono confrontate con l'ora di sistema nel computer prima che il supporto autonomo venga eseguito. Quando l'ora di sistema è precedente all'ora di inizio o successiva all'ora di scadenza, il supporto autonomo non si avvia. Queste opzioni sono disponibili anche tramite il cmdlet PowerShell [New-CMStandaloneMedia](/powershell/module/configurationmanager/new-cmstandalonemedia).  
 
 6. Nella pagina **CD/DVD autonomo** selezionare la sequenza di attività per la distribuzione del sistema operativo. È possibile selezionare solo le sequenze di attività associate a un'immagine d'avvio. Verificare l'elenco di contenuti a cui si fa riferimento nella sequenza di attività.  
 

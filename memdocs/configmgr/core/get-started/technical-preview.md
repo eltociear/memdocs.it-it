@@ -2,7 +2,7 @@
 title: Versioni di Technical Preview
 titleSuffix: Configuration Manager
 description: Informazioni sulla versione Technical Preview che consente di testare nuove funzionalità e capacità in Configuration Manager.
-ms.date: 08/11/2020
+ms.date: 09/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eff1ec6a8346132853285195d8e96aa6b8d3a8fa
-ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
+ms.openlocfilehash: 2a5740d2ef1c0745d5df4995ba6ecb70015b7b13
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89432575"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564211"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Technical Preview per Configuration Manager
 
@@ -167,8 +167,6 @@ Le funzionalità seguenti sono state rilasciate con le versioni precedenti del r
 | Funzionalità        | Versione Technical Preview |
 |----------------|---------------------------|
 | Miglioramenti alle app disponibili tramite CMG <!--7033501--> | [Tech preview 2006](2020/technical-preview-2006.md#bkmk_availapp) |
-| Collegamento di tenant: sequenza temporale dispositivo nell'interfaccia di amministrazione <!--7141381--> | [Tech preview 2005](2020/technical-preview-2005.md#bkmk_timeline) |
-| Collegamento di tenant: CMPivot dall'interfaccia di amministrazione <!--6024392--> | [Tech preview 2005](2020/technical-preview-2005.md#bkmk_cmpivot) |
 | Collegamento di tenant: eseguire script dall'interfaccia di amministrazione <!--6234688--> | [Tech preview 2005](2020/technical-preview-2005.md#bkmk_scripts) |
 | Miglioramenti dei cmdlet di Cloud Management Gateway <!--6978300--> | [Tech preview 2005](2020/technical-preview-2005.md#bkmk_pwshcmg) |
 | Segnalare a Microsoft errori di configurazione e aggiornamento <!--5622909--> | [Tech preview 2005](2020/technical-preview-2005.md#report-setup-and-upgrade-failures-to-microsoft) |

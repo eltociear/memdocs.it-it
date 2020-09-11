@@ -10,12 +10,12 @@ ms.assetid: 309b9a09-a611-4ba2-90ab-dde51582cf87
 author: mestew
 manager: dougeby
 ms.author: mstewart
-ms.openlocfilehash: 3c31f97e2a494fa4b0d3e9e825a81b562859e5dd
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 7d9760a49815b9eb33c7886f4d9a8f9637dedd21
+ms.sourcegitcommit: 9f072da27aa64f46a9409470b5dac5bfac3a0fe5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240355"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89468312"
 ---
 # <a name="import-configuration-data-with-configuration-manager"></a>Importare dati di configurazione con Configuration Manager
 
@@ -28,8 +28,6 @@ Oltre a creare linee base ed elementi di configurazione nella console di Configu
 - Dati di configurazione esportati da System Center Configuration Manager 2012 e versioni successive.  
 
 - Dati di configurazione creati esternamente e conformi allo schema SML.  
-
-  Per un pacchetto di configurazione di esempio per la gestione della conformità per i ruoli del server del sito System Center Configuration Manager 2012, vedere la pagina di [download del pacchetto di configurazione di System Center Configuration Manager 2012](https://www.microsoft.com/download/details.aspx?id=30710&WT.mc_id=rss_alldownloads_all).  
 
 Quando si importa una linea di base di configurazione, il file CAB potrebbe includere anche alcuni o tutti gli elementi di configurazione a cui si fa riferimento nella linea di base. Durante il processo di importazione Configuration Manager verifica che tutti gli elementi di configurazione a cui si fa riferimento nella linea di base di configurazione siano inclusi anche nel file CAB o esistano già nel sito di Configuration Manager. Il processo di importazione ha esito negativo se si tenta di importare una linea di base di configurazione che fa riferimento a dati di configurazione che Configuration Manager non riesce a individuare.  
 

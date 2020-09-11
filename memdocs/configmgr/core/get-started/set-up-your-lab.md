@@ -10,12 +10,12 @@ ms.assetid: b1970688-0cd2-404f-a17f-9e2aa4a78758
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: c8159928e5fe3e8524c3282cfd1eb543dc9537da
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 7623663e340d964593854883fa588484e239b4d0
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696498"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607864"
 ---
 # <a name="set-up-a-configuration-manager-lab"></a>Configurare un lab di Configuration Manager
 
@@ -45,7 +45,7 @@ Le linee guida disponibili in questo argomento consentono di configurare un ambi
 
     -   **SQL_Latin1_General_CP1_CI_AS** come classe **SQL Collation** .  
 
-    -   **autenticazione di Windows**, [invece dell'autenticazione SQL](/sql/relational-databases/security/choose-an-authentication-mode?view=sql-server-ver15).  
+    -   **autenticazione di Windows**, [invece dell'autenticazione SQL](/sql/relational-databases/security/choose-an-authentication-mode).  
 
     -   È richiesta un'**istanza di SQL Server** dedicata.  
 

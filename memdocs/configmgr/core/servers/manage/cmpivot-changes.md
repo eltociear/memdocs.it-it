@@ -10,12 +10,12 @@ ms.assetid: a49a9564-0863-44c3-991e-a8e271fed586
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 20b23cec74ae3d201bc81fe1834e87e7eb8fcc13
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 32800284c415de6a36e856abf473bc6d8d729e6f
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129562"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608252"
 ---
 # <a name="changes-to-cmpivot"></a>Modifiche a CMPivot
 
@@ -359,7 +359,7 @@ Per fare in modo che CMPivot funzioni nel sito di amministrazione centrale in un
       1. Scegliere **Utilizza solo Kerberos**.
       1. Aggiungere il servizio SQL Server di ogni sito primario con porta e istanza.
       1. Verificare che queste modifiche siano conformi ai criteri di sicurezza aziendali.
-1. Verificare che il [nome SPN sia pubblicato](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover?view=sql-server-2017#SPNs) per il nome del listener SQL del sistema di amministrazione centrale e per ogni nome del listener SQL primario.
+1. Verificare che il [nome SPN sia pubblicato](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover#SPNs) per il nome del listener SQL del sistema di amministrazione centrale e per ogni nome del listener SQL primario.
 1. Riavviare le istanze di SQL Server primarie.
 1. Riavviare il server del sito e le istanze di SQL Server del sistema di amministrazione centrale.
 

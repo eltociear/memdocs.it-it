@@ -10,12 +10,12 @@ ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2dd722ddcf0e5ea6e944a76366204ac83ede05ec
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 5bdf2adbf4ba5f02869ba5058da84ee7738e0ce2
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698957"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608075"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Elenco dei controlli dei prerequisiti per Configuration Manager
 
@@ -741,7 +741,7 @@ L'account configurato per eseguire il servizio SQL Server per l'istanza di datab
 
 A partire dalla versione 1810, è possibile controllare se il database del sito ha un backlog di dati di rilevamento modifiche di SQL.<!--SCCMDocs-pr issue 3023-->  
 
-Eseguire manualmente il controllo tramite una stored procedure nel database del sito. Creare prima di tutto una [connessione di diagnostica](/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017) al database del sito. Il metodo più semplice è usare l'editor di query del motore di database di SQL Server Management Studio e connettersi a `admin:<instance name>`.
+Eseguire manualmente il controllo tramite una stored procedure nel database del sito. Creare prima di tutto una [connessione di diagnostica](/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators) al database del sito. Il metodo più semplice è usare l'editor di query del motore di database di SQL Server Management Studio e connettersi a `admin:<instance name>`.
 
 In una finestra di query di connessione amministrativa dedicata, eseguire i comandi seguenti:
 

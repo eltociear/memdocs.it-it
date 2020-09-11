@@ -10,12 +10,12 @@ ms.assetid: 230be984-d2cd-4d53-bd7a-bc24dd93fc22
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 25ccc3936d156a4d9b5442190ea957b2d1eaf1f6
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: bfed31b820ac1f09b240122207b5bf27e432b10a
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699705"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607527"
 ---
 # <a name="introduction-to-reporting-in-configuration-manager"></a>Introduzione alla creazione di report in Configuration Manager
 
@@ -39,7 +39,7 @@ Configuration Manager usa SQL Server Reporting Services come soluzione principal
 
 - Esporta report in una varietà dei formati più diffusi.  
 
-Per altre informazioni, vedere [Che cos'è SQL Server Reporting Services (SSRS)?](/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports?view=sql-server-ver15)
+Per altre informazioni, vedere [Che cos'è SQL Server Reporting Services (SSRS)?](/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports)
 
 ## <a name="power-bi-report-server"></a>Server di report di Power BI
 

@@ -10,12 +10,12 @@ ms.assetid: e6c1df1d-7728-4980-9199-bc32cde5439e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 0b79e0ec67fa7c1d7ede0af1549c8cda4dd3ee3c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e3dedef9ffe785ce7127fc371030cfd990d70e38
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700039"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608376"
 ---
 # <a name="manage-publications-in-updates-publisher"></a>Gestire le pubblicazioni in Updates Publisher
 
@@ -82,9 +82,6 @@ Per esportare una pubblicazione, passare all'**area di lavoro Pubblicazioni** e 
 Dopo aver selezionato la pubblicazione, scegliere **Esporta** nella scheda **Home** della barra multifunzione e specificare un percorso e un nome file per l'esportazione del catalogo.
 
 È anche possibile esportare (includere) aggiornamenti software dipendenti come parte dell'esportazione.
-
-## <a name="rename-a-publication"></a>Rinominare una pubblicazione
-Per rinominare una pubblicazione, selezionarla nell'**area di lavoro Pubblicazioni**, quindi scegliere **Modifica** dalla scheda **Pubblicazione** della barra multifunzione.
 
 ## <a name="delete-a-publication"></a>Eliminare una pubblicazione
 Per eliminare una pubblicazione, selezionarla nell'**area di lavoro Pubblicazioni**, quindi scegliere **Elimina** dalla scheda **Pubblicazione** della barra multifunzione.

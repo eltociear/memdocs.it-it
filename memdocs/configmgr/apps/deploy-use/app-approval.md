@@ -10,12 +10,12 @@ ms.assetid: 20493c86-6454-4b35-8f22-0d049b68b8bb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 15aba2a32e680ab9499f5295307c82daafbbed71
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 659dd91c4b6bbeba6e2e93d3318683a4006aa5ff
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695342"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606588"
 ---
 # <a name="approve-applications-in-configuration-manager"></a>Approvare le applicazioni in Configuration Manager
 
@@ -49,7 +49,7 @@ Dopo avere approvato un'applicazione per l'installazione, è possibile scegliere
 
 A partire dalla versione 1906, se si approva una richiesta di app nella console e poi la si rifiuta, è ora possibile approvarla nuovamente. L'app viene reinstallata nel client dopo l'approvazione.  <!-- 4224910 -->
 
-Automatizzare il processo di approvazione con il cmdlet di PowerShell [Approve-CMApprovalRequest](/powershell/module/configurationmanager/approve-cmapprovalrequest?view=sccm-ps). A partire dalla versione 1902 questo cmdlet include il parametro **InstallActionBehavior**. Usare questo parametro per specificare se installare l'applicazione immediatamente o fuori dall'orario di ufficio.<!-- SCCMDocs-pr issue #3418 -->
+Automatizzare il processo di approvazione con il cmdlet di PowerShell [Approve-CMApprovalRequest](/powershell/module/configurationmanager/approve-cmapprovalrequest). A partire dalla versione 1902 questo cmdlet include il parametro **InstallActionBehavior**. Usare questo parametro per specificare se installare l'applicazione immediatamente o fuori dall'orario di ufficio.<!-- SCCMDocs-pr issue #3418 -->
 
 A partire dalla versione 1906, è possibile visualizzare le distribuzioni che richiedono l'approvazione. Selezionare un'app nel nodo **Applicazioni**. Nel riquadro dei dettagli passare alla scheda **Distribuzioni**. Per impostazione predefinita viene visualizzata una nuova colonna **Richiede approvazione**.
 

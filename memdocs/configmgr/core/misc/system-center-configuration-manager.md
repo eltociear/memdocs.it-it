@@ -9,12 +9,13 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 8ccadb3736d2eeea88618f905be20d834a523f27
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+description: File segnaposto per la documentazione di Configuration Manager
+ms.openlocfilehash: 610b63659ece4bd270f52006171750cc604bd600
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695478"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607761"
 ---
 # <a name="configuration-manager"></a>Configuration Manager
 
@@ -22,4 +23,4 @@ ms.locfileid: "88695478"
 
 Benvenuti in Configuration Manager. È possibile usare Configuration Manager per fornire servizi IT più efficaci grazie a funzionalità per la distribuzione del software sicura e scalabile, la gestione delle impostazioni di conformità e la gestione completa degli asset di server, desktop e dispositivi mobili.  
 
-Il contenuto più aggiornato per questa versione di Configuration Manager è disponibile online nella posizione seguente: [Documentazione online per Configuration Manager](/configmgr).
+Il contenuto più aggiornato per questa versione di Configuration Manager è disponibile online nella posizione seguente: [Documentazione online per Configuration Manager](/mem/configmgr).

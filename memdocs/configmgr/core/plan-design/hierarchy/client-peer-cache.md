@@ -10,12 +10,12 @@ ms.assetid: 86cd5382-8b41-45db-a4f0-16265ae22657
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c302e839c2a41ba27d160db24928f7e202de78dc
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: 4d0bd136278053ded38d0d6ed4cfe4059ffe3037
+ms.sourcegitcommit: 0ec6d8dabb14f20b1d84f7b503f1b03aac2a30d4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110186"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89479315"
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>Peer cache per i client di Configuration Manager
 
@@ -54,7 +54,7 @@ La peer cache non sostituisce l'uso di altre soluzioni, come Windows BranchCache
 
 Per abilitare la peer cache, distribuire le [impostazioni client](#bkmk_settings) in una raccolta. I membri di tale raccolta fungono quindi da origine di peer cache per altri client all'interno dello stesso gruppo di limiti.  
 
-- Un client che agisce come origine contenuto peer invia un elenco di contenuti disponibili memorizzati nella cache al suo punto di gestione tramite messaggi di stato.
+- Un client che agisce come origine contenuto peer invia un elenco di contenuti disponibili memorizzati nella cache al suo punto di gestione tramite messaggi di stato. Un client di origine del contenuto peer invia anche un messaggio di stato al punto di gestione quando rimuove il contenuto dalla cache locale.
 
    > [!NOTE]
    > Vedere [Messaggi di stato in Configuration Manager](state-messaging-system-center-configuration-manager.md#7200-state_topictype_super_peer_update_cache_map) per l'elenco dei messaggi di stato dell'origine del contenuto peer applicabili, in particolare quelli con ID messaggio di stato 7200, 7201, 7202 e 7203.

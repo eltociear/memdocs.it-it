@@ -9,12 +9,13 @@ ms.assetid: 32609a30-465c-4406-b227-aca5c276e015
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7d12116cc3c2b2e05d1fc6e0a793b09380722572
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+description: Collegamenti ad articoli per installare il server del sito e i ruoli di Configuration Manager.
+ms.openlocfilehash: f0a52186b1ca42032903805ab394bf58d570930b
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701869"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606171"
 ---
 # <a name="deploy-servers-and-roles"></a>Distribuire server e ruoli
 
@@ -30,4 +31,4 @@ Dopo aver pianificato la topologia del sito e della gerarchia di Configuration M
 
 - [Configurare siti e gerarchie](configure/configure-sites-and-hierarchies.md)  
 
-- [Migrare i dati tra le gerarchie](../../migration/migrate-data-between-hierarchies.md)  
+- [Eseguire la migrazione dei dati tra le gerarchie](../../migration/migrate-data-between-hierarchies.md)  

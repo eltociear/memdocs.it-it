@@ -4,17 +4,18 @@ ms.date: 05/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
+description: Informazioni e regole per MMS 2019 Docathon
 ms.assetid: 8fe2ecfc-f5c1-4fa6-8703-245339400723
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: c6e4c0f7c6a1be519a33343508da3bd72cd2cd48
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 91430688fd2af93e5d5b5ce7eb0cbc6358388ea4
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695580"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607843"
 ---
 # <a name="mms-2019-docathon"></a>MMS 2019 Docathon
 
@@ -24,11 +25,11 @@ Perché partecipare? Docs.microsoft.com è una piattaforma open source per la do
 
 - Refusi
 - Precisazioni
-- Esempi
+- Esempio
 - Suggerimenti e indicazioni dal mondo reale
 - Revisione del contenuto, per maggiore leggibilità
 
-## <a name="set-up"></a>Configurazione
+## <a name="set-up"></a>Configurare
 
 Se non si è ancora configurati come collaboratori, eseguire in anticipo i passaggi seguenti.
 
@@ -40,7 +41,7 @@ Creare un [account GitHub](https://github.com/join)
 
 - Abilitare l'autenticazione a due fattori  
 
-#### <a name="additional-considerations"></a>Ulteriori considerazioni
+#### <a name="additional-considerations"></a>Altre considerazioni
 
 - Verificare i criteri adottati dalla propria società in merito ai contributi open source  
 
@@ -134,7 +135,7 @@ I riconoscimenti seguenti vengono calcolati in base al numero di contributi idon
 
 - [Stile Microsoft](https://aka.ms/MicrosoftStyle)
 
-    - [Guida rapida](/contribute/style-quick-start)
+    - [Avvio rapido](/contribute/style-quick-start)
 
     - [10 suggerimenti principali di Microsoft sullo stile e il tono](/style-guide/top-10-tips-style-voice)
 
@@ -252,6 +253,6 @@ Concorso dell'Evento Docathon del Microsoft Cloud + AI Developer Relations Conte
 
 13. PRIVACY
 
-    Microsoft si impegna a tutelare il diritto alla protezione dei dati personali dei Partecipanti. Microsoft usa le informazioni fornite in questo modulo per comunicare al Partecipante importanti informazioni sui propri prodotti, aggiornamenti e miglioramenti e per inviare informazioni su altri prodotti e servizi Microsoft. Microsoft si impegna a non condividere con terze parti le informazioni fornite dal Partecipante senza previa autorizzazione dello stesso, salvo quando ciò sia necessario per completare le transazioni o i servizi richiesti o in base a quanto stabilito dalla legge. Microsoft si impegna attivamente a garantire la sicurezza delle informazioni personali del Partecipante. Ciò avviene attraverso numerose procedure e tecnologie di protezione utili a impedire l'accesso, l'uso o la divulgazione non autorizzati delle informazioni personali del Partecipante. Le informazioni personali del Partecipante non verranno mai condivise all'esterno della società senza previa autorizzazione dello stesso, tranne alle condizioni descritte in precedenza.
+    Microsoft si impegna a tutelare il diritto alla protezione dei dati personali dei Partecipanti. Microsoft usa le informazioni fornite in questo modulo per comunicare al Partecipante importanti informazioni sui propri prodotti, aggiornamenti e miglioramenti e per inviare informazioni su altri prodotti e servizi Microsoft. Microsoft si impegna a non condividere con terze parti le informazioni fornite dal Partecipante senza previa autorizzazione dello stesso, salvo quando ciò sia necessario per completare le transazioni o i servizi richiesti o in base a quanto stabilito dalla legge. Microsoft si impegna a proteggere la riservatezza delle informazioni personali. usando un'ampia gamma di tecnologie e procedure di sicurezza per proteggere le informazioni personali da accesso, uso o divulgazione non autorizzati. Le informazioni personali del Partecipante non verranno mai condivise all'esterno della società senza previa autorizzazione dello stesso, tranne alle condizioni descritte in precedenza.
 
     Se si ritiene che Microsoft non abbia rispettato la presente informativa, contattare Microsoft inviando un messaggio tramite posta elettronica all'indirizzo privrc@microsoft.com o tramite il servizio postale all'indirizzo Microsoft Privacy Response Center, Microsoft Corporation, One Microsoft Way, Redmond, WA 98052.

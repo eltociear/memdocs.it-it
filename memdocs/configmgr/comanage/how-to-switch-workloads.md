@@ -10,12 +10,12 @@ manager: dougeby
 ms.date: 09/06/2019
 ms.topic: how-to
 ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
-ms.openlocfilehash: 88c8b34437ba52e700ef97885aafed40734a0f32
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: 50f606f008c52470b1742840fcde391f1030455c
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776957"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606824"
 ---
 # <a name="how-to-switch-configuration-manager-workloads-to-intune"></a>Come trasferire i carichi di lavoro di Configuration Manager a Intune
 
@@ -43,7 +43,7 @@ A partire dalla versione 1906, è possibile configurare raccolte pilota diverse 
 
 4. Passare alla scheda **Gestione temporanea** e modificare la **raccolta pilota** per alcuni carichi di lavoro, se necessario.
   
-   ![Screenshot della scheda Carichi di lavoro nella pagina delle proprietà di co-gestione](media/3555750-co-management-staging-tab.png)
+   ![Screenshot della scheda Gestione temporanea nella pagina delle proprietà di co-gestione](media/3555750-co-management-staging-tab.png)
 
 > [!Important]  
 > - Prima di trasferire eventuali carichi di lavoro, assicurarsi di configurare e distribuire correttamente il carico di lavoro corrispondente in Intune. Verificare che i carichi di lavoro siano sempre gestiti da uno degli strumenti di gestione per i dispositivi.
@@ -60,7 +60,7 @@ A partire dalla versione 1906, è possibile configurare raccolte pilota diverse 
 
 3. Passare alla scheda **Carichi di lavoro**. Per impostazione predefinita, a tutti i carichi di lavoro è applicata l'impostazione **Configuration Manager**. Per trasferire un carico di lavoro, spostare il dispositivo di scorrimento relativo al carico di lavoro sull'impostazione desiderata.  
 
-    ![Screenshot della scheda Carichi di lavoro nella pagina delle proprietà di co-gestione](media/properties-workloads.png)
+    ![Screenshot della scheda Carichi di lavoro nella pagina delle proprietà di co-gestione, versione 1902](media/properties-workloads.png)
 
     - **Configuration Manager**: Configuration Manager continua a gestire questo carico di lavoro.  
 

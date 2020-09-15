@@ -9,12 +9,13 @@ ms.assetid: 6d665cef-fc67-4686-bcb3-0572c0a3760c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3b598cfad1d3a73f77e91bf3b41baab60c6c3616
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+description: Collegamenti aggiuntivi alla documentazione della Guida di Configuration Manager
+ms.openlocfilehash: 00ac9ad91739a4144e3b8a4e44d6e5d31e8abada
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819695"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607827"
 ---
 # <a name="online-documentation-for-configuration-manager"></a>Documentazione online per Configuration Manager
 
@@ -40,7 +41,7 @@ Visualizzare la documentazione online per l'opzione Current Branch di Configurat
 
 - [Distribuire e gestire aggiornamenti software in Configuration Manager](../../sum/understand/software-updates-introduction.md)  
 
-- [Garantire la conformità dei dispositivi con Configuration Manager](../../compliance/understand/ensure-device-compliance.md)  
+- [Garantire la conformità di dispositivi con Configuration Manager](../../compliance/understand/ensure-device-compliance.md)  
 
 - [Proteggere i dati e l'infrastruttura del sito con Configuration Manager](../../protect/understand/protect-data-and-site-infrastructure.md)  
 

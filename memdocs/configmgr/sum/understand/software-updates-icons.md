@@ -10,12 +10,12 @@ ms.technology: configmgr-sum
 ms.assetid: 63c5ef72-5715-4d86-85a2-71beba469fab
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: ff616c9ee61e85e4e77aeef6254ca9922427270c
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 0ca0509893ecadc4c54d06ca98c18531959fb941
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129424"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608415"
 ---
 # <a name="icons-used-for-software-updates-in-configuration-manager"></a>Icone usate per gli aggiornamenti software in Configuration Manager
 
@@ -27,7 +27,7 @@ Gli aggiornamenti software sincronizzati vengono visualizzati nella console di C
  Gli aggiornamenti software sincronizzati sono rappresentati da una delle icone seguenti.  
 
 ### <a name="normal-icon"></a>Icona Normale  
- ![icona](../media/Normal.jpg "Icona Normale") L'icona con la freccia verde rappresenta un aggiornamento software normale.  
+ ![Icona Normale](../media/Normal.jpg) L'icona con la freccia verde rappresenta un aggiornamento software normale.  
 
  **Descrizione:**  
 
@@ -38,7 +38,7 @@ Gli aggiornamenti software sincronizzati vengono visualizzati nella console di C
  Non sono presenti problemi operativi.  
 
 ### <a name="expired-icon"></a>Icona Scaduto  
- ![icon](../media/Expired.jpg "Icona Scaduto") L'icona con la X nera rappresenta un aggiornamento software scaduto. È possibile identificare gli aggiornamenti software scaduti anche visualizzando la colonna **Scaduto** per l'aggiornamento software quando questo viene visualizzato nella console di Configuration Manager.  
+ ![Icona Scaduto](../media/Expired.jpg) L'icona con la X nera rappresenta un aggiornamento software scaduto. È possibile identificare gli aggiornamenti software scaduti anche visualizzando la colonna **Scaduto** per l'aggiornamento software quando questo viene visualizzato nella console di Configuration Manager.  
 
  **Descrizione:**  
 
@@ -49,7 +49,7 @@ Gli aggiornamenti software sincronizzati vengono visualizzati nella console di C
  Non sono presenti problemi operativi.
 
 ### <a name="superseded-icon"></a>Icona Sostituito  
- ![icon](../media/Superseded.jpg "Icona Sostituito") L'icona con la stella gialla rappresenta un aggiornamento software sostituito. È possibile identificare gli aggiornamenti software sostituiti anche visualizzando la colonna **Sostituito** per l'aggiornamento software quando questo viene visualizzato nella console di Configuration Manager.  
+ ![Icona Sostituito](../media/Superseded.jpg) L'icona con la stella gialla rappresenta un aggiornamento software sostituito. È possibile identificare gli aggiornamenti software sostituiti anche visualizzando la colonna **Sostituito** per l'aggiornamento software quando questo viene visualizzato nella console di Configuration Manager.  
 
  **Descrizione:**  
 
@@ -68,7 +68,7 @@ Gli aggiornamenti software sincronizzati vengono visualizzati nella console di C
   Quando possibile, distribuire l'aggiornamento software sostitutivo ai computer client anziché l'aggiornamento software sostituito. È possibile visualizzare un elenco degli aggiornamenti software che sostituiscono l'aggiornamento software nella scheda **Informazioni di sostituzione** delle proprietà dell'aggiornamento software.  
 
 ### <a name="invalid-icon"></a>Icona Non valido  
- ![icona](../media/Invalid.jpg "Icona Non valido") L'icona con la X rossa rappresenta un aggiornamento software non valido.  
+ ![Icona Non valido](../media/Invalid.jpg) L'icona con la X rossa rappresenta un aggiornamento software non valido.  
 
  **Descrizione:**  
 
@@ -83,7 +83,7 @@ Gli aggiornamenti software sincronizzati vengono visualizzati nella console di C
   Quando non è disponibile contenuto per un aggiornamento software, i client non riescono a installare l'aggiornamento software finché il contenuto non diventa disponibile in un punto di distribuzione. È possibile ridistribuire il contenuto nei punti di distribuzione usando l'azione **Ridistribuisci** . Quando non è disponibile contenuto per un aggiornamento software in una distribuzione creata in un sito padre, l'aggiornamento software deve essere replicato o ridistribuito al sito figlio. Per altre informazioni sulla ridistribuzione di contenuto, vedere [Gestire il contenuto distribuito](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_manage).  
 
 ### <a name="metadata-only-icon"></a>Icona Solo metadati
- ![icona](../media/MetadataOnly.png "Icona Solo metadati") L'icona con la freccia blu rappresenta un aggiornamento software solo di metadati.
+ ![Icona Solo metadati](../media/MetadataOnly.png) L'icona con la freccia blu rappresenta un aggiornamento software solo di metadati.
 
  **Descrizione:**  
 
@@ -97,28 +97,28 @@ Gli aggiornamenti software sincronizzati vengono visualizzati nella console di C
  I gruppi di aggiornamenti software sono rappresentati da una delle icone seguenti.  
 
 ### <a name="normal-icon"></a>Icona Normale  
- ![icona](../media/Normal.jpg "Icona Normale") L'icona con la freccia verde rappresenta un gruppo di aggiornamenti software che include solo gli aggiornamenti software normali.  
+ ![Gruppi di aggiornamento software - Icona Normale](../media/Normal.jpg) L'icona con la freccia verde rappresenta un gruppo di aggiornamenti software che include solo gli aggiornamenti software normali.  
 
  **Problemi operativi:**  
 
  Non sono presenti problemi operativi.  
 
 ### <a name="expired-icon"></a>Icona Scaduto  
- ![icona](../media/Expired.jpg "Icona Scaduto") L'icona con la X nera rappresenta un gruppo di aggiornamenti software che include uno o più aggiornamenti software scaduti.  
+ ![Gruppi di aggiornamento software - Icona Scaduto](../media/Expired.jpg) L'icona con la x nera rappresenta un gruppo di aggiornamenti software che include uno o più aggiornamenti software scaduti.  
 
  **Problemi operativi:**  
 
  Rimuovere o sostituire gli aggiornamenti software scaduti nel gruppo di aggiornamenti software, quando possibile.  
 
 ### <a name="superseded-icon"></a>Icona Sostituito  
- ![icona](../media/Superseded.jpg "Icona Sostituito") L'icona con la stella gialla rappresenta un gruppo di aggiornamenti software che include uno o più aggiornamenti software sostituiti.  
+ ![Gruppi di aggiornamento software - Icona Sostituito](../media/Superseded.jpg) L'icona con la stella gialla rappresenta un gruppo di aggiornamenti software che include uno o più aggiornamenti software sostituiti.  
 
  **Problemi operativi:**  
 
  Sostituire l'aggiornamento software sostituito nel gruppo di aggiornamenti software con l'aggiornamento software sostitutivo, quando possibile.  
 
 ### <a name="invalid-icon"></a>Icona Non valido  
- ![icona](../media/Invalid.jpg "Icona Non valido") L'icona con la X rossa rappresenta un gruppo di aggiornamenti software che include uno o più aggiornamenti software non validi.  
+ ![Gruppi di aggiornamento software - Icona Non valido](../media/Invalid.jpg) L'icona con la x rossa rappresenta un gruppo di aggiornamenti software che include uno o più aggiornamenti software non validi.  
 
  **Problemi operativi:**  
 

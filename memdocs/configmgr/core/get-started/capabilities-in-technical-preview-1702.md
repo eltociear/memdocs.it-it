@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 7a4c42891276b36fd888f0f70495bdcd504f23a1
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: e9fa71060b8125b7d0872a40d197f1c423217bad
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88693013"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607937"
 ---
 # <a name="capabilities-in-technical-preview-1702-for-configuration-manager"></a>Funzionalità della versione Technical Preview 1702 per Configuration Manager
 
@@ -186,11 +186,11 @@ Attenersi alla procedura seguente per impostare una sequenza di attività a impa
 
    Si supponga di configurare la notifica personalizzata seguente nelle proprietà.
 
-   ![Notifica personalizzata per una sequenza di attività](./media/user-notification.png)
+   ![Notifica personalizzata per le proprietà di una sequenza di attività](./media/user-notification.png)
 
    Verrà visualizzato il messaggio di notifica seguente quando l'utente finale apre il programma di installazione da Software Center.
 
-   ![Notifica personalizzata per una sequenza di attività](./media/user-notification-enduser.png)
+   ![Notifica personalizzata per le proprietà di una sequenza di attività - Software Center](./media/user-notification-enduser.png)
 
 ### <a name="configure-software-center-properties"></a>Configurare le proprietà di Software Center
 Attenersi alla procedura seguente per configurare i dettagli per la sequenza di attività visualizzata in Software Center. Tali dettagli sono solo a scopo informativo.  

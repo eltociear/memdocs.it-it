@@ -10,12 +10,12 @@ ms.assetid: 5ef1bff8-9733-4b5a-b65f-26b94accd210
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: feb9f4206df65ee34228577a9e589ddd1be72870
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 11a7330220ed1aa8f4c3f813418ea86e59e0e1fc
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127249"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608006"
 ---
 # <a name="device-restart-notifications-in-configuration-manager"></a>Notifiche di riavvio del dispositivo in Configuration Manager
 
@@ -51,7 +51,7 @@ Software Center mostra una notifica con un'opzione di sospensione e il tempo rim
 
 Software Center mostra questa notifica finale di conto alla rovescia che l'utente non può chiudere né sospendere.
 
-:::image type="content" source="media/3976435-final-restart-countdown.png" alt-text="Notifica finale del conto alla rovescia di Software Center":::
+:::image type="content" source="media/3976435-final-restart-countdown.png" alt-text="Conto alla rovescia finale per riavvio di Software Center":::
 
 A partire dalla versione 1906, l'utente non visualizzerà un indicatore di stato nella notifica di riavvio fino a quando non mancheranno meno di 24 ore al riavvio.
 
@@ -237,11 +237,11 @@ Se l'utente non ha riavviato il dispositivo dopo l'installazione, riceverà una 
 
 - Notifica temporanea quando si usa la finestra di dialogo di Software Center, non un avviso popup:
 
-    :::image type="content" source="media/3555947-1902-hide-notification.png" alt-text="Notifica di riavvio in sospeso di Software Center con pulsante di rinvio":::
+    :::image type="content" source="media/3555947-1902-hide-notification.png" alt-text="Notifica di riavvio in sospeso di Software Center con pulsante di rinvio nella versione 1902":::
 
 Se l'utente non ha riavviato dopo la notifica temporanea, riceverà la notifica finale del conto alla rovescia e non avrà la possibilità di chiuderla. L'intervallo di tempo in cui viene visualizzata la notifica finale è basato sull'impostazione client: **Visualizzare una finestra di dialogo che l'utente non può chiudere in cui viene indicato l'intervallo per il conto alla rovescia prima della disconnessione dell'utente o del riavvio del computer (minuti)** . Se, ad esempio, l'impostazione è 60, la notifica finale viene visualizzata un'ora prima che venga forzato il riavvio:
 
-:::image type="content" source="media/3555947-1902-final-countdown.png" alt-text="Notifica finale del conto alla rovescia di Software Center":::
+:::image type="content" source="media/3555947-1902-final-countdown.png" alt-text="Notifica finale del conto alla rovescia di Software Center nella versione 1902":::
 
 Le impostazioni seguenti devono avere una durata più breve della [finestra di manutenzione](../manage/collections/use-maintenance-windows.md) più breve applicata al computer:
 

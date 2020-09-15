@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: f52d6956cf860de8e45ac4e532500d32bcf077ba
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 3e618a8a0db81ad870c5aeedc89b01ba6089a0f8
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074504"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607923"
 ---
 # <a name="capabilities-in-technical-preview-1512-for-configuration-manager"></a>Funzionalità della versione Technical Preview 1512 per Configuration Manager
 
@@ -81,7 +81,7 @@ Nella Technical Preview 1512 sono state aggiunte le nuove impostazioni seguenti 
 
          Ad esempio, di seguito viene illustrata l'impostazione di Windows Defender in Windows 10 configurata dall'amministratore come abilitata e l'utente non è in grado di modificarla:  
 
-         ![TechRef&#95;WinDefender](../../core/get-started/media/TechRef_WinDefender.png "TechRef_WinDefender")  
+         ![Windows Defender -Invio automatico di file di esempio](../../core/get-started/media/TechRef_WinDefender.png)  
 
     In più, l'impostazione esistente **Exclude files and folders** (Escludi file e cartelle) nella sezione "Impostazioni di esclusione" dei criteri antimalware di Endpoint Protection è stata migliorata per consentire le esclusioni dei dispositivi. Ad esempio, ora è possibile specificare quanto segue come un'esclusione: **\device\mvfs** (per un file system multiversione). I criteri non convalidano il percorso del dispositivo: i criteri di protezione endpoint sono forniti al motore antimalware nel client che deve essere in grado di interpretare la stringa del dispositivo.  
 

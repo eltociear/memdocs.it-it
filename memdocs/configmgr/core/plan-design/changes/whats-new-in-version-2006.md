@@ -2,7 +2,7 @@
 title: Novità della versione 2006
 titleSuffix: Configuration Manager
 description: Informazioni dettagliate sulle modifiche e sulle nuove funzionalità introdotte nella versione 2006 di Configuration Manager Current Branch.
-ms.date: 09/01/2020
+ms.date: 09/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3c061236202e685a6b59eeca3254a80cc1ddabf9
-ms.sourcegitcommit: 9d5c7a5e6ec430dc02d6d345028f6b29f6579b20
+ms.openlocfilehash: 7e67773c359291db3c537ac0ed8fe6ce6fbcfc1f
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89385363"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607648"
 ---
 # <a name="whats-new-in-version-2006-of-configuration-manager-current-branch"></a>Novità della versione 2006 di Configuration Manager Current Branch
 
@@ -32,12 +32,26 @@ Per sfruttare i vantaggi delle nuove funzionalità di Configuration Manager, dop
 
 ## <a name="microsoft-endpoint-manager-tenant-attach"></a><a name="bkmk_tenant"></a> Collegamento del tenant di Microsoft Endpoint Manager
 
+### <a name="device-timeline-in-the-admin-center"></a><a name="bkmk_timeline"></a> Sequenza temporale dispositivo nell'interfaccia di amministrazione
+<!--7220536, CM7141381-->
+Quando Configuration Manager sincronizza un dispositivo con Microsoft Endpoint Manager tramite il collegamento al tenant, è possibile visualizzare una sequenza temporale degli eventi. Questa sequenza temporale mostra le attività precedenti eseguite sul dispositivo che possono risultare utili per la risoluzione dei problemi. Per altre informazioni, vedere [Sequenza temporale dispositivo nell'interfaccia di amministrazione](../../../tenant-attach/timeline.md).
+
+### <a name="resource-explorer-in-the-admin-center"></a><a name="bkmk_hinv"></a> Esplora inventario risorse nell'interfaccia di amministrazione
+<!--6479284-->
+Dall'interfaccia di amministrazione di Microsoft Endpoint Management è possibile visualizzare l'inventario hardware per i dispositivi Configuration Manager caricati usando Esplora inventario risorse. Per altre informazioni, vedere [Collegamento di tenant: Esplora inventario risorse nell'interfaccia di amministrazione](../../../tenant-attach/resource-explorer.md).
+
+### <a name="cmpivot-from-the-admin-center"></a><a name="bkmk_cmpivot"></a> CMPivot dall'interfaccia di amministrazione
+<!--6024392-->
+La potenza di CMPivot ora disponibile nell'interfaccia di amministrazione di Microsoft Endpoint Manager. Altri utenti tipo, ad esempio il personale del supporto tecnico, possono avviare query in tempo reale dal cloud su un singolo dispositivo gestito da ConfigMgr e restituire i risultati all'interfaccia di amministrazione. In questo modo è possibile usufruire di tutti i vantaggi tradizionali di CMPivot, che consente agli amministratori IT e ad altri utenti designati di valutare rapidamente lo stato dei dispositivi nel proprio ambiente e di intervenire di conseguenza.
+
+Per altre informazioni su CMPivot dall'interfaccia di amministrazione, vedere [Prerequisiti di CMPivot](../../../tenant-attach/cmpivot-start.md), [Panoramica di CMPivot](../../../tenant-attach/cmpivot-overview-attached.md) e [Script di esempio CMPivot](../../../tenant-attach/cmpivot-samples-attached.md).
+
 ### <a name="tenant-attach-microsoft-defender-antivirus-policies-in-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> Collegamento di tenant: Criteri di Microsoft Defender Antivirus nell'interfaccia di amministrazione di Microsoft Endpoint Manager
 <!--4812909-->
 È ora possibile creare i criteri per Microsoft Defender Antivirus nella console di Microsoft Endpoint Manager e distribuirli in raccolte di Configuration Manager. Per altre informazioni, tra cui istruzioni dettagliate e impostazioni disponibili, vedere gli articoli seguenti:
 - [Collegamento di tenant: Eseguire l'onboarding di client di Configuration Manager in Microsoft Defender ATP tramite l'interfaccia di amministrazione (anteprima)](../../../tenant-attach/atp-onboard.md)
 - [Collegamento di tenant: Distribuire i criteri antivirus di sicurezza degli endpoint dall'interfaccia di amministrazione (anteprima)](../../../tenant-attach/deploy-antivirus-policy.md)
-- [Impostazioni per i criteri di Microsoft Defender Antivirus per i dispositivi collegati ai tenant in Microsoft Intune](../../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json). 
+- [Impostazioni per i criteri di Microsoft Defender Antivirus per i dispositivi collegati ai tenant in Microsoft Intune](../../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json).
 
 ### <a name="install-applications-from-the-admin-center"></a>Installare applicazioni dall'interfaccia di amministrazione
 <!--7518897, 6024389-->
@@ -336,7 +350,7 @@ Starting with this version, the following features are no longer [pre-release](.
 ### Azure Active Directory user group discovery](../../servers/deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco)<!--3611956
 -->
 
-Per altre informazioni sulle modifiche apportate ai cmdlet di Windows PowerShell per Configuration Manager, vedere le [note sulla versione 2006 di PowerShell](/powershell/sccm/2006-release-notes?view=sccm-ps).
+Per altre informazioni sulle modifiche apportate ai cmdlet di Windows PowerShell per Configuration Manager, vedere le [note sulla versione 2006 di PowerShell](/powershell/sccm/2006-release-notes).
 
 Per altre informazioni sulle modifiche all'API REST del servizio di amministrazione, vedere le [note sulla versione del servizio di amministrazione](../../../develop/adminservice/release-notes.md#bkmk_2006).
 

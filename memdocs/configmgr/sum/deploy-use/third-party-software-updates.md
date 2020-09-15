@@ -10,12 +10,12 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3192cd8177075542ffc86ab236b817db5befca1d
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: bf50039a7c2fe8490c89f3e3b0adca275bb69e20
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696889"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607988"
 ---
 # <a name="enable-third-party-updates"></a>Abilitare gli aggiornamenti di terze parti 
 
@@ -125,7 +125,7 @@ Quando si sottoscrive un catalogo di terze parti nella console di Configuration 
 
 1. Nella console di Configuration Manager accedere all'area di lavoro **Raccolta software**. Espandere **Aggiornamenti software** e selezionare il nodo **Cataloghi di aggiornamenti software di terze parti**.  
 2. Selezionare il catalogo per cui eseguire la sottoscrizione e fare clic su **Sottoscrivi il catalogo** nella barra multifunzione. 
-    ![Aggiungi un catalogo personalizzato per gli aggiornamenti di terze parti](media/third-party-updates-subscribe.png)
+    ![Sottoscrizione del catalogo per gli aggiornamenti di terze parti](media/third-party-updates-subscribe.png)
 3. Rivedere e approvare il certificato del catalogo.  
    > [!NOTE]
    > 

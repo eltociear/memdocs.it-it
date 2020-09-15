@@ -9,12 +9,13 @@ ms.assetid: 7610bbd3-a67f-4a09-8115-e35d40d43b42
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2c733ef03482ddfc1f3e6502d7f5fe8ae0d20b76
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+description: Pianificare i criteri antimalware e la sicurezza di Windows Firewall
+ms.openlocfilehash: 2e3904b7b7232e92fd4a246d2e0519ef32fb67f6
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85590508"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606842"
 ---
 # <a name="planning-for-endpoint-protection-in-configuration-manager"></a>Pianificazione per Endpoint Protection in Configuration Manager
 
@@ -34,7 +35,7 @@ L'uso di Endpoint Protection con Configuration Manager offre i vantaggi seguenti
 
 -   Inviare notifiche di posta elettronica, usare il monitoraggio integrato nella console e visualizzare report per mantenere gli utenti amministratori informati quando viene rilevato malware nei computer client  
 
-I computer Windows 10 non richiedono client aggiuntivi per la gestione di Endpoint Protection. Nei computer con Windows 8.1 e versioni precedenti, viene installato il client di Endpoint Protection oltre al client di Configuration Manager. Il client di Endpoint Protection ha le funzionalità seguenti:  
+I computer Windows 10 non richiedono client aggiuntivi per la gestione di Endpoint Protection. In computer con Windows 8.1 e versioni precedenti, viene installato il client di Endpoint Protection oltre al client di Configuration Manager. Il client di Endpoint Protection ha le funzionalità seguenti:  
 
 -   Rilevamento e correzione di spyware e malware  
 
@@ -104,7 +105,7 @@ A partire dalla versione 1606 di Configuration Manager (Current Branch), Endpoin
 ### <a name="configure-custom-client-settings-for-endpoint-protection"></a>Configurare le impostazioni client personalizzate per Endpoint Protection  
  Quando si configurano le impostazioni client per Endpoint Protection, non usare le impostazioni client predefinite perché applicano le impostazioni a tutti i computer nella gerarchia. Al contrario, configurare le impostazioni client personalizzate e assegnare queste impostazioni a raccolte di computer nella gerarchia.  
 
- Quando si configurano impostazioni client personalizzate, è possibile eseguire le operazioni seguenti:  
+ Quando si configurano le impostazioni client personalizzate, è possibile effettuare le operazioni seguenti:  
 
 -   Personalizzare le impostazioni antimalware e sicurezza per le diverse parti dell'organizzazione.  
 -   Testare gli effetti dell'esecuzione Endpoint Protection in un piccolo gruppo di computer prima di distribuirlo all'intera gerarchia.  

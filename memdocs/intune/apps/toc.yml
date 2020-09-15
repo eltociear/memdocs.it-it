@@ -81,9 +81,17 @@
             - name: App line-of-business di macOS
               href: lob-apps-macos.md
             - name: Gestione delle app Win32
-              href: apps-win32-app-management.md
-            - name: Dispositivi in modalità S delle app Win32
-              href: apps-win32-s-mode.md
+              items:
+                - name: Panoramica di gestione delle app Win32
+                  href: apps-win32-app-management.md
+                - name: Preparare un'app Win32
+                  href: apps-win32-prepare.md
+                - name: Aggiungere un'app di Win32
+                  href: apps-win32-add.md
+                - name: Risolvere i problemi di un'app Win32
+                  href: apps-win32-troubleshoot.md
+                - name: Dispositivi in modalità S delle app Win32
+                  href: apps-win32-s-mode.md
         - name: Aggiungere app specifiche
           items:
             - name: App Portale aziendale - Autopilot

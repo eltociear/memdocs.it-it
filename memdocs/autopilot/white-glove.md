@@ -15,12 +15,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 21b55882d4af8d4d20b6ff2690d23680141e2e47
-ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
+ms.openlocfilehash: 61bddf4ffcb844a997e19ad4d954b2e2a8ec6b45
+ms.sourcegitcommit: dc2cca9eb70aef15037e8f7d18d671c513bfde85
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89643446"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90081710"
 ---
 # <a name="windows-autopilot-for-white-glove-deployment"></a>Distribuzione di Windows Autopilot per il guanto bianco
 
@@ -45,7 +45,7 @@ Oltre ai [requisiti di Windows Autopilot](software-requirements.md), per la dist
 - Windows 10, versione 1903 o successiva.
 - Una sottoscrizione di Intune.
 - Dispositivi fisici che supportano il TPM 2,0 e l'attestazione del dispositivo. Le macchine virtuali non sono supportate. Il processo di provisioning del guanto bianco usa le funzionalità di distribuzione automatica di Windows Autopilot, quindi è necessario il TPM 2,0.
-- Dispositivi fisici con connettività Ethernet. La connettività Wi-Fi non è supportata a causa della necessità di scegliere una lingua, impostazioni locali e tastiera per eseguire la connessione Wi-Fi. L'applicazione di questo requisito in un processo di pre-provisioning può impedire all'utente di scegliere la lingua, le impostazioni locali e la tastiera quando ricevono il dispositivo.
+- I dispositivi fisici con connettività Ethernet sono necessari per eseguire il pre-provisioning. La connettività Wi-Fi non è supportata a causa della necessità di scegliere una lingua, impostazioni locali e tastiera per eseguire la connessione Wi-Fi. L'applicazione di questo requisito in un processo di pre-provisioning può impedire all'utente di scegliere la lingua, le impostazioni locali e la tastiera quando ricevono il dispositivo. Per ulteriori informazioni, vedere [utilizzo di una connessione di rete wireless con il guanto bianco di Windows Autopilot](https://oofhours.com/2019/11/14/using-a-wireless-network-connection-with-windows-autopilot-white-glove/).
 
 >[!IMPORTANT]
 >Poiché l'OEM o il fornitore esegue il processo di guanto bianco, questo <u>non richiede l'accesso a un'infrastruttura di dominio locale dell'utente finale</u>. Si tratta di un tipico scenario ibrido Azure AD Unito perché il riavvio del dispositivo è stato posticipato. Il dispositivo viene risigillato prima del momento in cui è prevista la connettività a un controller di dominio e la rete di dominio viene contattata quando il dispositivo viene sbloccato in locale dall'utente finale.

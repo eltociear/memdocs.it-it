@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c98025ecf731e856de150d1cb5ffa854ef623c0e
-ms.sourcegitcommit: 15450a1e92d9f67f74ae619ffe192c15948107c5
+ms.openlocfilehash: 421c9ebcf15e9c45bd235c10062dd63179a9f59c
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89516305"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076190"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-windows-autopilot"></a>Registrare i dispositivi Windows in Intune usando Windows Autopilot
 
@@ -119,6 +119,9 @@ I profili di distribuzione AutoPilot vengono usati per configurare i dispositivi
     - **Nascondi le opzioni di cambio di account (richiede Windows 10 versione 1809 o successiva)** : scegliere **Nascondi** per impedire che le opzioni dell'account vengano visualizzate nella pagina di accesso aziendale e nella pagina degli errori di dominio. Per questa opzione è necessario [configurare le informazioni personalizzate distintive dell'azienda in Azure Active Directory](/azure/active-directory/fundamentals/customize-branding).
     - **Tipo di account utente**: scegliere il tipo di account utente (**Amministratore** o **Standard**). Per consentire all'utente che aggiunge il dispositivo di essere un amministratore locale, aggiungerlo al gruppo di amministratori locale. L'utente non viene abilitato come amministratore predefinito nel dispositivo.
     - **Consenti modalità " White Glove" per OOBE**  (richiede Windows 10, versione 1903 o successive; [requisiti fisici aggiuntivi](white-glove.md#prerequisites)): scegliere **Sì** per consentire il supporto per la modalità "White Glove".
+    > [!NOTE]
+    > Quando si imposta questa opzione su No (blocco del guanto bianco), tenere presente che sarà ancora possibile premere il tasto Windows cinque volte durante la configurazione guidata per richiamare il guanto bianco e proseguire verso il basso. Tuttavia, Intune imporrà successivamente questa impostazione e si verificherà una schermata rossa che indica un errore di pre-provisioning con codice di errore 0x80180005.
+
     - **Applica il modello di nome di dispositivo** (richiede Windows 10 versione 1809 o successive e un tipo di join per Azure AD): scegliere **Sì** per creare un modello da usare per assegnare il nome a un dispositivo durante la registrazione. I nomi non devono superare i 15 caratteri e possono contenere lettere, numeri e trattini. I nomi non possono contenere solo numeri. Usare la [macro %SERIAL%](/windows/client-management/mdm/accounts-csp) per aggiungere un numero di serie specifico per l'hardware. In alternativa, usare la [macro %RAND:x%](/windows/client-management/mdm/accounts-csp) per aggiungere una stringa casuale di numeri, dove x corrisponde al numero di cifre da aggiungere. È possibile specificare solo un prefisso per dispositivi ibridi in un [profilo di aggiunta a un dominio](./windows-autopilot-hybrid.md#create-and-assign-a-domain-join-profile). 
     - **Lingua (area geografica)** \*: scegliere la lingua da usare per il dispositivo. Questa opzione è disponibile solo se si è scelta l'opzione **Distribuzione automatica** in **Modalità di distribuzione**.
     - **Configura automaticamente la tastiera**\*: se è selezionata una **Lingua (area geografica)** , scegliere **Sì** per ignorare la pagina di selezione della tastiera. Questa opzione è disponibile solo se si è scelta l'opzione **Distribuzione automatica** in **Modalità di distribuzione**.

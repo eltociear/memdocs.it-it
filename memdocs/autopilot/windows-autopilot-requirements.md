@@ -17,12 +17,12 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: 37d249c75f18d52f7fa17a0e271f45b17465da1a
-ms.sourcegitcommit: 9d5c7a5e6ec430dc02d6d345028f6b29f6579b20
+ms.openlocfilehash: bf0b6d1f074de85793f025f9578892a126bbce3d
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89385333"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076078"
 ---
 # <a name="windows-autopilot-requirements"></a>Requisiti di Windows Autopilot
 
@@ -41,7 +41,7 @@ Windows Autopilot dipende da funzionalità specifiche disponibili nei servizi Wi
   - Windows 10 Pro for Workstations
   - Windows 10 Enterprise
   - Windows 10 Education
-  - Windows 10 Enterprise 2019 LTSC
+  - Windows 10 Enterprise 2019 LTSC (non supporta la modalità di distribuzione automatica)
 
 >[!NOTE]
 >Le procedure per la distribuzione di Windows Autopilot possono fare riferimento a prodotti e versioni specifici. L'inclusione di questi prodotti in questo contenuto non implica un'estensione del supporto per una versione che esula dal ciclo di vita del supporto. Windows Autopilot non supporta prodotti che esulano dal ciclo di vita del supporto. Per altre informazioni, vedere [Criteri relativi al ciclo di vita Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=208270).

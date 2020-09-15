@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/12/2020
+ms.date: 09/01/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e359a87cb9e62b6d7542d82d9819b5c132a8bc2
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 4dca7e5b790cd932841211b04cf463602df55a57
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88910265"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390773"
 ---
 # <a name="add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>Aggiungere l'app Portale aziendale di Windows 10 usando Microsoft Intune
 
@@ -33,6 +33,9 @@ Per gestire dispositivi e installare app, gli utenti possono installare l'app Po
 
  > [!IMPORTANT]
  > Se si scarica l'app Portale aziendale, per l'opzione descritta in questo articolo è necessario che gli aggiornamenti manuali siano assegnati ogni volta che viene rilasciato un aggiornamento dell'app. Per distribuire l'app Portale aziendale per i dispositivi Windows 10 con provisioning tramite Autopilot, vedere [Aggiungere dispositivi Autopilot all'app Portale aziendale di Windows 10](store-apps-company-portal-autopilot.md).
+
+> [!NOTE]
+> Il Portale aziendale supporta le applicazioni di Configuration Manager. Questa funzionalità consente agli utenti finali di visualizzare le applicazioni distribuite di Configuration Manager e Intune nel Portale aziendale per i clienti co-gestiti. Questa nuova versione del Portale aziendale visualizzerà le app distribuite di Configuration Manager per tutti i clienti con co-gestione. Questo supporto consente agli amministratori di consolidare le diverse esperienze del portale per gli utenti finali. Per altre informazioni, vedere [Usare l'app Portale aziendale in dispositivi con co-gestione](/mem/configmgr/comanage/company-portal).
 
 ## <a name="configure-settings-to-show-offline-apps"></a>Configurare le impostazioni per visualizzare le app offline
 1. Accedere a [Microsoft Store per le aziende](https://www.microsoft.com/business-store) con l'account amministratore.

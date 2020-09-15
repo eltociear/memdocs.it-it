@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/20/2020
+ms.date: 09/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c27a78d78678234b30ea80cfc192cb4250eca2e1
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 5bf1150a32db213c2c8b697625076a601377c1e6
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915569"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423765"
 ---
 # <a name="smime-overview-to-sign-and-encrypt-email-in-intune"></a>Panoramica di S/MIME per firmare e crittografare la posta elettronica in Intune
 
@@ -45,7 +45,11 @@ Per usare certificati di firma, creare nell'autorità di certificazione (CA) un 
 
 I certificati di firma in Intune usano certificati PKCS. [Configurare e usare i certificati PKCS](certficates-pfx-configure.md) descrive come distribuire e usare i certificati PKCS nell'ambiente Intune in uso. La procedura include i passaggi seguenti:
 
-- Download e installazione del connettore di certificati di Microsoft Intune per il supporto delle richieste di certificato PKCS. Il connettore ha gli stessi requisiti di rete dei [dispositivi gestiti](../fundamentals/intune-endpoints.md#access-for-managed-devices).
+- Download e installazione del connettore di certificati PFX per il supporto delle richieste di certificati PKCS. Il connettore ha gli stessi requisiti di rete dei [dispositivi gestiti](../fundamentals/intune-endpoints.md#access-for-managed-devices).
+  > [!IMPORTANT]
+  > A partire dalla versione 6.2008.60.607 del connettore di certificati PFX (rilasciata in agosto 2020), questo connettore supporta la distribuzione dei certificati per le richieste di certificati PCKS #12 e gestisce le richieste per i file PFX importati in Intune per la crittografia S/MIME della posta elettronica per un utente specifico. Non è più necessario usare il connettore Microsoft Intune quando si usano i profili di certificato PKCS.
+  > 
+  > Per altre informazioni, vedere [Connettori di certificati](certificate-connectors.md).
 - Creazione di un profilo certificato radice trusted peri dispositivi. Questo passaggio include l'uso di certificati radice trusted e intermedi per l'autorità di certificazione e quindi la distribuzione del profilo ai dispositivi.
 - Creazione di un profilo certificato PKCS tramite il modello di certificato creato. Questo profilo rilascia i certificati di firma ai dispositivi e distribuisce il profilo certificato PKCS a questi ultimi.
 

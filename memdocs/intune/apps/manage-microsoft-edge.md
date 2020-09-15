@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/05/2020
+ms.date: 09/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee7f02571e31656825f7f85fa128247126ecb890
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 9391be828452cbda25dd6c4f4ed75cffa2ef687c
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995144"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423748"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>Gestire l'accesso Web usando Microsoft Edge per iOS e Android con Microsoft Intune
 
@@ -310,7 +310,7 @@ I siti seguenti sono sempre consentiti indipendentemente dalle impostazioni dell
 
 - Quando si aggiungono gli URL all'elenco, farli precedere dal prefisso **http://** o **https://** .
 - È possibile usare il carattere jolly (\*) secondo le regole nell'elenco di modelli consentiti seguente.
-- Un carattere jolly può corrispondere solamente a un componente intero del nome host (separato da punti) o a parti intere del percorso (separate da barre). Ad esempio, `http://*contoso.com`**non** è supportato.
+- Un carattere jolly può corrispondere solamente a una parte (ad esempio, `news-contoso.com`) o al componente intero del nome host (ad esempio, `host.contoso.com`) o a parti intere del percorso separate da barre (`www.contoso.com/images`).
 - È possibile specificare numeri di porta nell'indirizzo. Se non si specifica un numero di porta, i valori usati sono:
   - Porta 80 per http
   - Porta 443 per https
@@ -321,11 +321,11 @@ I siti seguenti sono sempre consentiti indipendentemente dalle impostazioni dell
     |    `http://www.contoso.com`    |    Corrisponde a una singola pagina    |    `www.contoso.com`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`contoso.com/`    |
     |    `http://contoso.com`    |    Corrisponde a una singola pagina    |    `contoso.com/`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com`    |
     |    `http://www.contoso.com/*`   |    Cerca una corrispondenza con tutti gli URL che iniziano con `www.contoso.com`    |    `www.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com/videos/tvshows`    |    `host.contoso.com`<br>`host.contoso.com/images`    |
-    |    `http://*.contoso.com/*`    |    Corrisponde a tutti i sottodomini in `contoso.com`    |    `developer.contoso.com/resources`<br>`news.contoso.com/images`<br>`news.contoso.com/videos`    |    `contoso.host.com`
-    |    `http://*contoso.com/*`    |    Corrisponde a tutti i sottodomini che terminano con `contoso.com/`    |    `http://news-contoso.com`<br>`http://news-contoso.com.com/daily`    |    `http://news-contoso.host.com`    |
+    |    `http://*.contoso.com/*`    |    Corrisponde a tutti i sottodomini in `contoso.com`    |    `developer.contoso.com/resources`<br>`news.contoso.com/images`<br>`news.contoso.com/videos`    |    `contoso.host.com`<br>`news-contoso.com`
+    |    `http://*contoso.com/*`    |    Corrisponde a tutti i sottodomini che terminano con `contoso.com/`    |    `news-contoso.com`<br>`news-contoso.com.com/daily`    |    `news-contoso.host.com`<br>`news.contoso.com`    |
     `http://www.contoso.com/images`    |    Corrisponde a una singola cartella    |    `www.contoso.com/images`    |    `www.contoso.com/images/dogs`    |
-    |    `http://www.contoso.com:80`    |    Corrisponde a una singola pagina, tramite un numero di porta    |    `http://www.contoso.com:80`    |         |
-    |    `https://www.contoso.com`    |    Corrisponde a una singola pagina protetta    |    `https://www.contoso.com`    |    `http://www.contoso.com`    |
+    |    `http://www.contoso.com:80`    |    Corrisponde a una singola pagina, tramite un numero di porta    |    `www.contoso.com:80`    |         |
+    |    `https://www.contoso.com`    |    Corrisponde a una singola pagina protetta    |    `www.contoso.com`    |    `www.contoso.com`    |
     |    `http://www.contoso.com/images/*`    |    Corrisponde a una singola cartella e a tutte le sottocartelle    |    `www.contoso.com/images/dogs`<br>`www.contoso.com/images/cats`    |    `www.contoso.com/videos`    |
   
 - Di seguito sono riportati esempi di alcuni input che non è possibile specificare:
@@ -337,7 +337,6 @@ I siti seguenti sono sempre consentiti indipendentemente dalle impostazioni dell
   - Indirizzi IP
   - `https://*`
   - `http://*`
-  - `https://*contoso.com`
   - `http://www.contoso.com:*`
   - `http://www.contoso.com: /*`
 

@@ -1,11 +1,11 @@
 ---
 title: Configurare l'infrastruttura per supportare i profili di certificato SCEP con Microsoft Intune - Azure | Microsoft Docs
-description: Per usare SCEP in Microsoft Intune, configurare il dominio AD locale, creare un'autorità di certificazione, configurare il server del servizio Registrazione dispositivi di rete e installare Connettore di certificati di Intune.
+description: Per usare SCEP in Microsoft Intune, configurare il dominio AD locale, creare un'autorità di certificazione, configurare il server del servizio Registrazione dispositivi di rete e installare il connettore di certificati Microsoft.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/20/2020
+ms.date: 09/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b3d422978fe6e2cbb123b87311e5c175483b9f66
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 9e681129d5cc17e2e828a8f7a03e305f9b938b47
+ms.sourcegitcommit: 0ec6d8dabb14f20b1d84f7b503f1b03aac2a30d4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915994"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89479349"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Configurare l'infrastruttura per il supporto di SCEP con Intune
 
-Intune supporta l'uso di SCEP (Simple Certificate Enrollment Protocol) per [autenticare le connessioni alle app e alle risorse aziendali](certificates-configure.md). SCEP usa il certificato dell'autorità di certificazione (CA) per proteggere lo scambio di messaggi per la richiesta di firma del certificato. Quando l'infrastruttura supporta SCEP, è possibile usare i profili di *certificato SCEP* di Intune (un tipo di profilo di dispositivo in Intune) per distribuire i certificati nei dispositivi. Connettore di certificati di Microsoft Intune è necessario per usare i profili di certificato SCEP con Intune quando si usa un'autorità di certificazione di Servizi certificati Active Directory. Il connettore non è obbligatorio quando si usano [autorità di certificazione di terze parti](certificate-authority-add-scep-overview.md#set-up-third-party-ca-integration). 
+Intune supporta l'uso di SCEP (Simple Certificate Enrollment Protocol) per [autenticare le connessioni alle app e alle risorse aziendali](certificates-configure.md). SCEP usa il certificato dell'autorità di certificazione (CA) per proteggere lo scambio di messaggi per la richiesta di firma del certificato. Quando l'infrastruttura supporta SCEP, è possibile usare i profili di *certificato SCEP* di Intune (un tipo di profilo di dispositivo in Intune) per distribuire i certificati nei dispositivi. Il connettore Microsoft Intune è necessario per usare i profili di certificato SCEP con Intune quando si usa un'autorità di certificazione di Servizi certificati Active Directory. Il connettore non è obbligatorio quando si usano [autorità di certificazione di terze parti](certificate-authority-add-scep-overview.md#set-up-third-party-ca-integration). 
 
 Le informazioni contenute in questo articolo consentono di configurare l'infrastruttura per il supporto di SCEP quando si usa Servizi certificati Active Directory. Dopo la configurazione dell'infrastruttura, è possibile [creare e distribuire profili di certificato SCEP](certificates-profile-scep.md) con Intune.
 
@@ -46,25 +46,25 @@ L'infrastruttura locale seguente deve essere eseguita su server aggiunti a un do
 
   - Il server che ospita il servizio Registrazione dispositivi di rete deve essere aggiunto a un dominio e incluso stessa foresta della CA globale (enterprise).
   - Non è possibile usare il servizio Registrazione dispositivi di rete installato nel server che ospita la CA globale (enterprise).
-  - Il Connettore di certificati di Microsoft Intune verrà installato nello stesso server che ospita il servizio Registrazione dispositivi di rete.
+  - Il connettore Microsoft Intune verrà installato nello stesso server che ospita il servizio Registrazione dispositivi di rete.
 
   Per altre informazioni sul servizio Registrazione dispositivi di rete, vedere [Linee guida per il servizio Registrazione dispositivi di rete](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)) nella documentazione di Windows Server e [Uso di un Modulo criteri con il servizio Registrazione dispositivi di rete](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn473016(v=ws.11)).
 
-- **Connettore di certificati di Microsoft Intune** - Connettore di certificati di Microsoft Intune è necessario per usare i profili di certificato SCEP con Intune. Questo articolo include istruzioni per l'[installazione di questo connettore](#install-the-intune-certificate-connector).
+- **Connettore Microsoft Intune** - Il connettore Microsoft Intune è necessario per usare i profili di certificato SCEP con Intune. Questo articolo include istruzioni per l'[installazione di questo connettore](#install-the-microsoft-intune-connector).
 
   Il connettore supporta la modalità FIPS (Federal Information Processing Standard). Lo standard FIPS non è obbligatorio, ma quando è abilitato è possibile emettere e revocare i certificati.
   - Il connettore ha gli stessi requisiti di rete dei [dispositivi gestiti](../fundamentals/intune-endpoints.md#access-for-managed-devices).
   - Il connettore deve essere eseguito nello stesso server del ruolo del server Servizio Registrazione dispositivi di rete, ovvero un server che esegue Windows Server 2012 R2 o versione successiva.
   - .NET Framework 4.5 è richiesto dal connettore ed è incluso automaticamente in Windows Server 2012 R2.
-  - La sicurezza avanzata di Internet Explorer [deve essere disabilitata nel server che ospita il servizio Registrazione dispositivi di rete](/previous-versions/windows/it-pro/windows-server-2003/cc775800(v=ws.10)) e Connettore di certificati di Microsoft Intune.
+  - La configurazione della sicurezza avanzata di Internet Explorer [deve essere disabilitata nel server che ospita il servizio Registrazione dispositivi di rete](/previous-versions/windows/it-pro/windows-server-2003/cc775800(v=ws.10)) e il connettore Microsoft Intune.
 
-L'infrastruttura locale seguente è facoltativa:
+#### <a name="support-for-ndes-on-the-internet"></a>Supporto per il servizio Registrazione dispositivi di rete su Internet
 
-Per consentire ai dispositivi su Internet di ottenere i certificati, è necessario pubblicare l'URL del servizio Registrazione dispositivi di rete esternamente alla rete aziendale. È possibile usare Azure AD Application Proxy, il server proxy applicazione Web o un altro proxy inverso.
+Per consentire ai dispositivi su Internet di ottenere i certificati, è necessario pubblicare l'URL del servizio Registrazione dispositivi di rete esternamente alla rete aziendale. A tale scopo, è possibile usare *Azure AD Application Proxy* o un *server proxy applicazione Web*. È anche possibile usare un altro proxy inverso di propria scelta.
 
-- **Azure AD Application Proxy** (facoltativo) - È possibile usare Azure AD Application Proxy invece di un server proxy applicazione Web dedicato per pubblicare l'URL del servizio Registrazione dispositivi di rete in Internet. In questo modo, sia i dispositivi Intranet che i dispositivi con connessione Internet possono ottenere i certificati. Per altre informazioni, vedere [Come fornire l'accesso remoto sicuro alle applicazioni locali](/azure/active-directory/manage-apps/application-proxy).
+- **Azure AD Application Proxy** - È possibile usare Azure AD Application Proxy invece di un server proxy applicazione Web dedicato per pubblicare l'URL del servizio Registrazione dispositivi di rete in Internet. In questo modo, sia i dispositivi Intranet che i dispositivi con connessione Internet possono ottenere i certificati. Per altre informazioni, vedere [Integrazione con Azure AD Application Proxy in un server del Servizio Registrazione dispositivi di rete (NDES)](/azure/active-directory/manage-apps/active-directory-app-proxy-protect-ndes).
 
-- **Server proxy applicazione Web**  (facoltativo) - Usare un server che esegue Windows Server 2012 R2 o versioni successive come server proxy applicazione Web per pubblicare l'URL del servizio Registrazione dispositivi di rete in Internet.  In questo modo, sia i dispositivi Intranet che i dispositivi con connessione Internet possono ottenere i certificati.
+- **Server proxy applicazione Web**  - Usare un server che esegue Windows Server 2012 R2 o versioni successive come server proxy applicazione Web per pubblicare l'URL del servizio Registrazione dispositivi di rete in Internet.  In questo modo, sia i dispositivi Intranet che i dispositivi con connessione Internet possono ottenere i certificati.
 
   Il server che ospita WAP [deve installare un aggiornamento](/archive/blogs/ems/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2) che abilita il supporto per gli URL lunghi usati dal servizio Registrazione dispositivi di rete. Questo aggiornamento è incluso nell' [aggiornamento cumulativo di dicembre 2014](https://support.microsoft.com/kb/3013769)oppure può essere scaricato singolarmente da [KB3011135](https://support.microsoft.com/kb/3011135).
 
@@ -101,7 +101,7 @@ Quando si usa SCEP, vengono usati i certificati e i modelli seguenti.
 |Oggetto    |Dettagli    |
 |----------|-----------|
 |**Modello di certificato SCEP**         |Modello che verrà configurato nella CA emittente usata per soddisfare le richieste SCEP dei dispositivi. |
-|**Certificato di autenticazione client** |Richiesto dalla CA emittente o dalla CA pubblica.<br /> Questo certificato viene installato nel computer che ospita il servizio Registrazione dispositivi di rete e viene usato da Connettore di certificati di Microsoft Intune.<br /> Se per il certificato sono impostati gli utilizzi della chiave per l'*autenticazione client* e *server* (**Utilizzo chiavi avanzato**) nel modello di CA usato per emettere il certificato. È quindi possibile usare lo stesso certificato per l'autenticazione server e client. |
+|**Certificato di autenticazione client** |Richiesto dalla CA emittente o dalla CA pubblica.<br /> Questo certificato viene installato nel computer che ospita il servizio Registrazione dispositivi di rete e viene usato dal connettore Microsoft Intune.<br /> Se per il certificato sono impostati gli utilizzi della chiave per l'*autenticazione client* e *server* (**Utilizzo chiavi avanzato**) nel modello di CA usato per emettere il certificato. È quindi possibile usare lo stesso certificato per l'autenticazione server e client. |
 |**Certificato di autenticazione server** |Certificato del server Web richiesto dalla CA emittente o dalla CA pubblica.<br /> Questo certificato SSL viene installato e associato in IIS nel computer che ospita il servizio Registrazione dispositivi di rete.<br />Se per il certificato sono impostati gli utilizzi della chiave per l'*autenticazione client* e *server* (**Utilizzo chiavi avanzato**) nel modello di CA usato per emettere il certificato. È quindi possibile usare lo stesso certificato per l'autenticazione server e client. |
 |**Certificato CA radice attendibile**       |Per usare un profilo di certificato SCEP, i dispositivi devono considerare attendibile l'autorità di certificazione (CA) radice attendibile. Usare un *profilo di certificato attendibile* in Intune per eseguire il provisioning del certificato CA radice attendibile per utenti e dispositivi. <br/><br/> **-** Usare un singolo certificato CA radice attendibile per ogni piattaforma di sistema operativo e associare tale certificato a ogni profilo di certificato radice attendibile creato. <br /><br /> **-** È possibile usare certificati CA radice attendibili aggiuntivi, se necessario. Ad esempio, è possibile usare certificati aggiuntivi per fornire un trust a un'autorità di certificazione che firma i certificati di autenticazione del server per i punti di accesso Wi-Fi. Creare certificati CA radice attendibili aggiuntivi per le CA emittenti.  Nel profilo di certificato SCEP creato in Intune, assicurarsi di specificare il profilo CA radice attendibile per la CA emittente.<br/><br/> Per informazioni sul profilo di certificato attendibile, vedere [Esportare il certificato CA radice attendibile](certificates-configure.md#export-the-trusted-root-ca-certificate) e [Creare profili di certificato attendibili](certificates-configure.md#create-trusted-certificate-profiles) in *Usare i certificati per l'autenticazione in Intune*. |
 
@@ -177,7 +177,7 @@ Per le informazioni nelle sezioni seguenti è richiesta la conoscenza di Windows
 
 ### <a name="create-the-client-certificate-template"></a>Creare il modello di certificato client
 
-Connettore di certificati di Intune richiede un certificato con l'utilizzo chiavi avanzato *Autenticazione client* e il nome soggetto uguale al nome di dominio completo (FQDN) del computer in cui è installato il connettore. È necessario un modello con le proprietà seguenti:
+Il connettore Microsoft Intune richiede un certificato con l'utilizzo chiavi avanzato *Autenticazione client* e il nome soggetto uguale al nome di dominio completo (FQDN) del computer in cui è installato il connettore. È necessario un modello con le proprietà seguenti:
 
 - **Estensioni** > **Criteri di applicazione** deve contenere **Autenticazione client**
 - **Nome soggetto** > **Inserisci nella richiesta**.
@@ -192,13 +192,13 @@ Le comunicazioni tra i dispositivi gestiti e IIS nel server del servizio Registr
 - **Nome soggetto** > **Inserisci nella richiesta**.
 
 > [!NOTE]
-> Se è disponibile un certificato che soddisfa entrambi i requisiti dai modelli di certificato client e server, è possibile usare un solo certificato sia per IIS che per Connettore di certificati di Intune.
+> Se è disponibile un certificato che soddisfa entrambi i requisiti dai modelli di certificato client e server, è possibile usare un solo certificato sia per IIS che per il connettore Microsoft Intune.
 
 ### <a name="grant-permissions-for-certificate-revocation"></a>Concedere le autorizzazioni per la revoca dei certificati
 
 Affinché Intune sia in grado di revocare i certificati non più richiesti, è necessario concedere le autorizzazioni nell'autorità di certificazione.
 
-In Connettore di certificati di Intune è possibile usare l'**account di sistema** del server del servizio Registrazione dispositivi di rete o un account specifico, ad esempio l'**account del servizio Registrazione dispositivi di rete**.
+Per il connettore Microsoft Intune è possibile usare l'**account di sistema** del server del servizio Registrazione dispositivi di rete o un account specifico, ad esempio l'**account del servizio Registrazione dispositivi di rete**.
 
 1. Nella console dell'autorità di certificazione fare clic con il pulsante destro del mouse sul nome della CA e scegliere **Proprietà**.
 
@@ -336,7 +336,7 @@ Questi certificati sono il **certificato di autenticazione client** e il **certi
 
 - **Certificato di autenticazione client** 
 
-   Questo certificato viene usato durante l'installazione del connettore di certificati di Intune.
+   Questo certificato viene usato durante l'installazione del connettore Microsoft Intune.
 
    Richiedere e installare un certificato di **autenticazione client** alla CA interna o a un'autorità di certificazione pubblica.
    
@@ -372,10 +372,9 @@ Questi certificati sono il **certificato di autenticazione client** e il **certi
    
       1. Per **Certificato SSL**, specificare il certificato di autenticazione server.
 
+## <a name="install-the-microsoft-intune-connector"></a>Installare il connettore Microsoft Intune
 
-## <a name="install-the-intune-certificate-connector"></a>Installare Connettore di certificati di Intune
-
-Connettore di certificati di Microsoft Intune viene installato nel server in cui è in esecuzione il servizio Registrazione dispositivi di rete. Non è supportato l'uso del servizio Registrazione dispositivi di rete o di Connettore di certificati di Intune nello stesso server dell'autorità di certificazione (CA) emittente.
+Il connettore Microsoft Intune viene installato nel server in cui è in esecuzione il servizio Registrazione dispositivi di rete. Non è supportato l'uso del servizio Registrazione dispositivi di rete o del connettore Microsoft Intune nello stesso server dell'autorità di certificazione (CA) emittente.
 
 ### <a name="to-install-the-certificate-connector"></a>Per installare Connettore di certificati
 
@@ -389,7 +388,7 @@ Connettore di certificati di Microsoft Intune viene installato nel server in cui
 
 4. Al completamento del download, passare al server che ospita il ruolo del servizio Registrazione dispositivi di rete (NDES). Quindi:
 
-   1. Assicurarsi che .NET Framework 4.5 sia installato, perché è richiesto da Connettore di certificati di Intune. .NET Framework 4.5 è incluso automaticamente in Windows Server 2012 R2 e versioni più recenti.
+   1. Assicurarsi che .NET Framework 4.5 sia installato, perché è richiesto dal connettore Microsoft Intune. .NET Framework 4.5 è incluso automaticamente in Windows Server 2012 R2 e versioni più recenti.
 
    2. Per eseguire il programma di installazione (**NDESConnectorSetup.exe**), usare un account con autorizzazioni di amministratore per il server. Il programma di installazione installa anche il modulo dei criteri per il servizio Registrazione dispositivi di rete e il servizio Web del punto di registrazione certificati di IIS. Il servizio Web del punto di registrazione certificati, *CertificateRegistrationSvc*, viene eseguito come applicazione in IIS.
 
@@ -397,10 +396,10 @@ Connettore di certificati di Microsoft Intune viene installato nel server in cui
 
 5. Quando viene richiesto il certificato client per Connettore di certificati, scegliere **Seleziona** e selezionare il certificato di **autenticazione client** installato nel server del servizio Registrazione dispositivi di rete durante il passaggio 3 della procedura [Installare e associare i certificati nel server che ospita il servizio Registrazione dispositivi di rete](#install-and-bind-certificates-on-the-server-that-hosts-ndes) più indietro in questo articolo.
 
-   Dopo aver selezionato il certificato di autenticazione client, si torna all'area **certificato client per Connettore di certificati di Microsoft Intune**. Anche se il certificato selezionato non viene visualizzato, selezionare **Avanti** per visualizzare le proprietà del certificato. Selezionare **Avanti** e quindi **Installa**.
+   Dopo aver selezionato il certificato di autenticazione client, si torna all'area **Certificato client per il connettore Microsoft Intune**. Anche se il certificato selezionato non viene visualizzato, selezionare **Avanti** per visualizzare le proprietà del certificato. Selezionare **Avanti** e quindi **Installa**.
 
 > [!NOTE]
-> Prima di avviare il connettore di certificati di Intune, è necessario apportare le modifiche seguenti per i tenant GCC High.
+> Prima di avviare il connettore Microsoft Intune, è necessario apportare le modifiche seguenti per i tenant GCC High.
 > 
 > Apportare modifiche ai due file di configurazione indicati di seguito in modo da aggiornare gli endpoint di servizio per l'ambiente GCC High. Si noti che questi aggiornamenti modificano i suffissi degli URI da **.com** a **.us**. Sono disponibili in totale tre aggiornamenti degli URI, due aggiornamenti all'interno del file di configurazione NDESConnectorUI.exe.config e un aggiornamento nel file NDESConnector.exe.config.
 > 
@@ -437,7 +436,7 @@ Connettore di certificati di Microsoft Intune viene installato nel server in cui
 
    2. All'account usato deve essere assegnata una licenza di Intune valida.
 
-   3. Dopo aver eseguito l'accesso, Connettore di certificati di Intune scarica un certificato da Intune. Questo certificato viene usato per l'autenticazione tra il connettore e Intune. Se l'account usato non ha una licenza di Intune, il connettore (NDESConnectorUI.exe) non riesce a ottenere il certificato da Intune.  
+   3. Dopo aver eseguito l'accesso, il connettore Microsoft Intune scarica un certificato da Intune. Questo certificato viene usato per l'autenticazione tra il connettore e Intune. Se l'account usato non ha una licenza di Intune, il connettore (NDESConnectorUI.exe) non riesce a ottenere il certificato da Intune.  
 
       Se l'organizzazione usa un server proxy e il proxy è necessario per consentire al server del servizio Registrazione dispositivi di rete di accedere a Internet, selezionare **Usa server proxy**. Immettere quindi il nome del server proxy, la porta e le credenziali dell'account per la connessione.
 
@@ -450,9 +449,9 @@ Connettore di certificati di Microsoft Intune viene installato nel server in cui
 Per confermare che il servizio sia in esecuzione, aprire un browser e immettere il seguente URL. L'operazione dovrebbe restituire un errore **403**: `https://<FQDN_of_your_NDES_server>/certsrv/mscep/mscep.dll`
 
 > [!NOTE]
-> Connettore di certificati di Intune supporta TLS 1.2. Se il server che ospita il connettore supporta TLS 1.2, viene usato TLS 1.2. Se il server non supporta TLS 1.2, viene usato TLS 1.1. Attualmente, TLS 1.1 viene usato per l'autenticazione tra i dispositivi e il server.
+> Il connettore Microsoft Intune supporta TLS 1.2. Se il server che ospita il connettore supporta TLS 1.2, viene usato TLS 1.2. Se il server non supporta TLS 1.2, viene usato TLS 1.1. Attualmente, TLS 1.1 viene usato per l'autenticazione tra i dispositivi e il server.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
 [Creare un profilo certificato SCEP](certificates-profile-scep.md)  
-[Risolvere i problemi relativi a Connettore di certificati di Intune](troubleshoot-certificate-connector-events.md)
+[Risolvere i problemi relativi al connettore Microsoft Intune ](troubleshoot-certificate-connector-events.md)

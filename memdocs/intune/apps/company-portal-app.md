@@ -18,16 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec355eb1b388e384b5250e9c17f739cd05941ee7
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: 94ef57ddd9186678f4f09c74764f9fc110534db3
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89194230"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390810"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Come personalizzare le app Portale aziendale Intune, il sito Web Portale aziendale e l'app Intune
 
 Le app Portale aziendale, il sito Web Portale aziendale e l'app Intune in Android consentono agli utenti di accedere ai dati aziendali ed eseguire attività comuni. Le attività comuni possono includere la registrazione dei dispositivi, l'installazione di app e la ricerca di informazioni, ad esempio di assistenza dal reparto IT. Inoltre, consentono agli utenti di accedere in modo sicuro alle risorse aziendali. L'esperienza utente finale offre diverse pagine, ad esempio Pagina iniziale, App, Dettagli app, Dispositivi e Dettagli dispositivo. Per trovare rapidamente le app all'interno del Portale aziendale, è possibile filtrare le app nella pagina App.
+
+> [!NOTE]
+> Il Portale aziendale supporta le applicazioni di Configuration Manager. Questa funzionalità consente agli utenti finali di visualizzare le applicazioni distribuite di Configuration Manager e Intune nel Portale aziendale per i clienti co-gestiti. Questa nuova versione del Portale aziendale visualizzerà le app distribuite di Configuration Manager per tutti i clienti con co-gestione. Questo supporto consente agli amministratori di consolidare le diverse esperienze del portale per gli utenti finali. Per altre informazioni, vedere [Usare l'app Portale aziendale in dispositivi con co-gestione](/mem/configmgr/comanage/company-portal).
 
 ## <a name="customizing-the-user-experience"></a>Personalizzazione dell'esperienza utente
 
@@ -110,7 +113,7 @@ La tabella seguente include dettagli di configurazione specifici della registraz
 
 |    Opzioni di registrazione dei dispositivi    |    Descrizione    |    Richieste di elenco di controllo    |    Notifica    |    Stato dei dettagli del dispositivo    |    Stato dei dettagli dell'app (per app che richiedono la registrazione)    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
-|    Disponibile, con richieste di conferma    |    Esperienza predefinita con richieste di registrazione in tutte le posizioni possibili.    |    Sì    |    sì    |    sì    |    Sì    |
+|    Disponibile, con richieste di conferma    |    Esperienza predefinita con richieste di registrazione in tutte le posizioni possibili.    |    Sì    |    Sì    |    Sì    |    Sì    |
 |    Disponibile, senza richieste di conferma    |    L'utente può eseguire la registrazione tramite lo stato nei dettagli del dispositivo per il dispositivo corrente o dalle app che richiedono la registrazione.    |    No    |    No    |    Sì    |    Sì    |
 |    Non disponibile    |    Gli utenti non possono eseguire la registrazione.    |    No    |    No    |    No    |    No    |
 

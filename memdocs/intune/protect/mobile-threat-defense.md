@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/29/2020
+ms.date: 09/1/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 80b725393323484ecb33aad947a95894604c4d5a
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 0c6655f9d7aaa708e5dd0b2818c9cfc1ba4c9cdc
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88906889"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390790"
 ---
 # <a name="mobile-threat-defense-integration-with-intune"></a>Integrazione di Mobile Threat Defense in Intune
 
@@ -86,7 +86,9 @@ L'accesso viene consentito quando i problemi del dispositivo vengono risolti:<br
 ![Immagine che mostra l'accesso consentito da Mobile Threat Defense](./media/mobile-threat-defense/MTD-image-4.png)
 
 > [!NOTE]
-> È possibile usare più fornitori MTD con un unico tenant di Intune. Se tuttavia due o più fornitori sono configurati per l'uso nella stessa piattaforma, tutti i dispositivi che eseguono tale piattaforma devono installare le app MTD di tutti i fornitori e verificare la presenza di minacce. Il mancato invio dell'analisi con una qualsiasi delle app configurate comporta l'identificazione del dispositivo come non conforme. 
+> È consigliabile usare un fornitore di Mobile Threat Defense per ogni tenant e per ogni piattaforma. 
+> 
+> Per la conformità dei dispositivi è possibile usare più fornitori di Mobile Threat Defense con un unico tenant di Intune. Se tuttavia due o più fornitori sono configurati per l'uso nella stessa piattaforma, tutti i dispositivi che eseguono tale piattaforma devono installare le app MTD di tutti i fornitori e verificare la presenza di minacce. Il mancato invio dell'analisi con una qualsiasi delle app configurate comporta l'identificazione del dispositivo come non conforme. 
 
 ## <a name="mobile-threat-defense-partners"></a>Partner Mobile Threat Defense
 

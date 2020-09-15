@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/13/2020
+ms.date: 09/03/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d2c3e663b7bc5dfb263d8caad0a7c21d89ed2a93
-ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
+ms.openlocfilehash: 273efc6be6b3f93c04c0ce39c2688859d3c96c56
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86303437"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423884"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Impostazioni dei dispositivi iOS e iPadOS per consentire o limitare l'uso delle funzionalità tramite Intune
 
@@ -70,8 +70,9 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
   Per usare questa impostazione, impostare l'opzione **Acquisizione schermo** su **Blocca**.
 
   Questa funzionalità si applica a:  
-  - iOS 9.3 e versioni successive
-  - iPadOS 13.0 e versioni successive
+  - iOS 9.3 - iOS 12.x: richiede dispositivi con supervisione
+  - iOS 13.0 e versioni successive: non richiede dispositivi con supervisione
+  - iPadOS 13.0 e versioni successive: i dispositivi devono essere registrati con la registrazione del dispositivo o la registrazione automatica dei dispositivi
 
 - **Osservazione schermo non richiesta da parte dell'app Classroom**: **Consenti** permette ai docenti di osservare lo schermo dei dispositivi iOS/iPadOS degli studenti con l'app Classroom senza che questi ne siano a conoscenza. I dispositivi degli studenti registrati in una classe con l'app Classroom concedono automaticamente l'autorizzazione al docente del corso. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il sistema operativo potrebbe bloccare questa funzionalità.
 

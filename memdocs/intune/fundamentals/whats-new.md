@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/31/2020
+ms.date: 09/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7becc53b9464cad6f864f219f2d59046c2e61707
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: dc8fa6f2d4fe5171bd8a4ffe977eec7f6eed2093
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89193784"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564101"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Novità di Microsoft Intune
 
@@ -53,6 +53,44 @@ Per informazioni sulle novità di Microsoft Intune ogni settimana, vedere l'[int
 ### Monitor and troubleshoot
 ### Role-based access control
 ### Scripts
+
+<!-- ########################## -->
+## <a name="week-of-september-7-2020"></a>Settimana del 7 settembre 2020
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-management"></a>Gestione dei dispositivi
+
+#### <a name="tenant-attach-device-timeline-in-the-admin-center"></a>Collegamento di tenant: sequenza temporale dispositivo nell'interfaccia di amministrazione
+<!--7220536, CM7141381-->
+Quando Configuration Manager sincronizza un dispositivo con Microsoft Endpoint Manager tramite il collegamento al tenant, è possibile visualizzare una sequenza temporale degli eventi. Questa sequenza temporale mostra le attività precedenti eseguite sul dispositivo che possono risultare utili per la risoluzione dei problemi. Per altre informazioni, vedere [Collegamento di tenant: sequenza temporale dispositivo nell'interfaccia di amministrazione](../../configmgr/tenant-attach/timeline.md).
+
+#### <a name="tenant-attach-resource-explorer-in-the-admin-center"></a><a name="bkmk_hinv"></a> Collegamento di tenant: Esplora inventario risorse nell'interfaccia di amministrazione
+<!--IN7220536, CM6479284 -->
+Dall'interfaccia di amministrazione di Microsoft Endpoint Management è possibile visualizzare l'inventario hardware per i dispositivi Configuration Manager caricati usando Esplora inventario risorse. Per altre informazioni, vedere [Collegamento di tenant: Esplora inventario risorse nell'interfaccia di amministrazione](../../configmgr/tenant-attach/resource-explorer.md).
+
+#### <a name="tenant-attach-cmpivot-from-the-admin-center"></a>Collegamento di tenant: CMPivot dall'interfaccia di amministrazione
+<!--IN7220536, CM6024392-->
+La potenza di CMPivot ora disponibile nell'interfaccia di amministrazione di Microsoft Endpoint Manager. Altri utenti tipo, ad esempio il personale del supporto tecnico, possono avviare query in tempo reale dal cloud su un singolo dispositivo gestito da ConfigMgr e restituire i risultati all'interfaccia di amministrazione. In questo modo è possibile usufruire di tutti i vantaggi tradizionali di CMPivot, che consente agli amministratori IT e ad altri utenti designati di valutare rapidamente lo stato dei dispositivi nel proprio ambiente e di intervenire di conseguenza.
+
+Per altre informazioni su CMPivot dall'interfaccia di amministrazione, vedere [Prerequisiti di CMPivot](../../configmgr/tenant-attach/cmpivot-start.md), [Panoramica di CMPivot](../../configmgr/tenant-attach/cmpivot-overview-attached.md)e [Script di esempio CMPivot](../../configmgr/tenant-attach/cmpivot-samples-attached.md).
+
+## <a name="week-of-august-31-2020"></a>Settimana del 31 agosto 2020
+
+### <a name="device-configuration"></a>Configurazione del dispositivo
+
+#### <a name="new-version-of-the-pfx-certificate-connector-and-changes-for-pkcs-certificate-profile-support-----4839686----"></a>Nuova versione del connettore di certificati PFX e modifiche per il supporto del profilo di certificato PKCS <!--  4839686  -->
+
+È stata rilasciata una nuova versione del connettore di certificati PFX: versione **6.2008.60.607**. Questa nuova versione del connettore:
+
+- Supporta i profili di certificato PKCS su tutte le piattaforme supportate, ad eccezione di Windows 8.1
+ 
+  Nel connettore di certificati PFX è stato consolidato tutto il supporto per PCKS.  Questo significa che se non si usa SCEP nell'ambiente e non si usa il servizio Registrazione dispositivi di rete per altri scopi, è possibile rimuovere il connettore di certificati Microsoft e disinstallare il servizio Registrazione dispositivi di rete dall'ambiente. 
+ 
+- Dato che le funzionalità del connettore certificati Microsoft non sono state rimosse, è possibile continuare a usarle per supportare i profili di certificato PKCS.
+- Supporto della revoca dei certificati per Outlook S/MIME
+- È richiesto .NET Framework 4.7.2
+
+Per altre informazioni sui connettori di certificati, incluso un elenco di versioni per entrambi i connettori di certificati, vedere [Connettori di certificati](../protect/certificate-connectors.md)
+
 
 <!-- ########################## -->
 ## <a name="week-of-august-24-2020-2008-service-release"></a>Settimana del 24 agosto 2020 (versione del servizio 2008)
@@ -179,7 +217,7 @@ Gli amministratori di Microsoft Intune possono caricare in Intune un'immagine de
 ### <a name="app-management"></a>Gestione delle app
 
 #### <a name="the-company-portal-adds-configuration-manager-application-support---4297660---"></a>Il Portale aziendale aggiunge il supporto delle applicazioni di Configuration Manager<!-- 4297660 -->
-Il Portale aziendale supporta ora le applicazioni di Configuration Manager. Questa funzionalità consente agli utenti finali di visualizzare le applicazioni distribuite di Configuration Manager e Intune nel Portale aziendale per i clienti co-gestiti. Questo supporto consente agli amministratori di consolidare le diverse esperienze del portale per gli utenti finali. Per altre informazioni, vedere [Usare l'app Portale aziendale in dispositivi con co-gestione](../../configmgr/comanage/company-portal.md). 
+Il Portale aziendale supporta ora le applicazioni di Configuration Manager. Questa funzionalità consente agli utenti finali di visualizzare le applicazioni distribuite di Configuration Manager e Intune nel Portale aziendale per i clienti co-gestiti. Questa nuova versione del Portale aziendale visualizzerà le app distribuite di Configuration Manager per tutti i clienti con co-gestione. Questo supporto consente agli amministratori di consolidare le diverse esperienze del portale per gli utenti finali. Per altre informazioni, vedere [Usare l'app Portale aziendale in dispositivi con co-gestione](../../configmgr/comanage/company-portal.md). 
 
 ### <a name="device-security"></a>Sicurezza del dispositivo
 
@@ -639,6 +677,9 @@ Quando si [configura un modello di messaggio di notifica](../protect/actions-for
 #### <a name="admins-no-longer-require-an-intune-license-to-access-microsoft-endpoint-manager-admin-console--1335430---"></a>Gli amministratori non necessitano più di una licenza di Intune per accedere alla console di amministrazione di Microsoft Endpoint Manager.<!--1335430 -->
 È ora possibile impostare un interruttore a livello di tenant che rimuove il requisito di licenza di Intune per gli amministratori per accedere alla console di amministrazione di Microsoft Endpoint Manager ed eseguire query sull'API Graph. Una volta rimosso il requisito di licenza, non sarà mai possibile ripristinarlo. 
 
+
+> [!Note]
+> Per il completamento di alcune azioni, incluso il flusso del connettore TeamViewer, è ancora richiesta una licenza di Intune.
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->

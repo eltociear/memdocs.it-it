@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 09/3/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 6d94748356b342fe6dc9498d815edbdb92038af3
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 303acae2eba275907b70fcc52660217568913c62
+ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88913495"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432524"
 ---
 # <a name="attack-surface-reduction-policy-for-endpoint-security-in-intune"></a>Criteri di riduzione della superficie di attacco nella sicurezza degli endpoint in Intune
 
@@ -58,6 +58,9 @@ Visualizzare le [impostazioni per i profili di riduzione della superficie di att
 - **Controllo applicazione** - Le impostazioni di Controllo applicazione consentono di ridurre le minacce per la sicurezza, limitando le applicazioni che gli utenti possono eseguire e il codice eseguito nel nucleo (kernel) del sistema. È possibile gestire impostazioni che possono bloccare script non firmati e MSI e limitare Windows PowerShell in modo che venga eseguito in modalità di linguaggio vincolato.
 
   Per altre informazioni, vedere [Controllo applicazione](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) nella documentazione di Microsoft Defender ATP.
+  
+    > [!NOTE]
+    > Se si usa questa impostazione, il comportamento del CSP AppLocker richiede attualmente all'utente finale di riavviare il computer quando viene distribuito un criterio.
 
 - **Regole per la riduzione della superficie di attacco** -Configurare le impostazioni per le regole di riduzione della superficie di attacco che rilevano comportamenti usati in genere da malware e app per infettare i computer, tra cui:
   - File eseguibili e script usati nelle app di Office o nella posta elettronica Web che provano a scaricare o a eseguire file

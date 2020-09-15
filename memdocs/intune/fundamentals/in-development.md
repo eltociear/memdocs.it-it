@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: feb277f30401f31ddb400f5e3f6cd7709fa31c0b
-ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
+ms.openlocfilehash: f9ec657e7d2ee83f3f4f54f9a33a5a350faa4229
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89286238"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564245"
 ---
 # <a name="in-development-for-microsoft-intune"></a>In fase di sviluppo per Microsoft Intune
 
@@ -218,15 +218,6 @@ Gli script di PowerShell supporteranno i dispositivi registrati con Azure AD in 
 ### <a name="log-analytics-will-include-device-details-log--6014987----"></a>Log Analytics includerà il log dei dettagli del dispositivo<!--6014987  -->
 I log dei dettagli dei dispositivi di Intune saranno disponibili in **Report** > **Log Analytics**. È possibile correlare i dettagli dei dispositivi per creare query personalizzate e cartelle di lavoro di Azure.
 
-### <a name="tenant-attach-device-timeline-in-the-admin-center--7220536-cm7141381---"></a>Collegamento di tenant: sequenza temporale dispositivo nell'interfaccia di amministrazione<!--7220536, CM7141381 -->
-Quando Configuration Manager sincronizza un dispositivo con Microsoft Endpoint Manager tramite il collegamento al tenant, è possibile visualizzare una sequenza temporale degli eventi. Questa sequenza temporale mostra le attività precedenti eseguite sul dispositivo che possono risultare utili per la risoluzione dei problemi. Per altre informazioni, vedere [Configuration Manager technical preview 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_timeline).  
-
-### <a name="tenant-attach-install-an-application-from-the-admin-center---7220536-cm6024389---"></a>Collegamento di tenant: installare un'applicazione dall'interfaccia di amministrazione<!-- 7220536, CM6024389 -->
-Sarà possibile avviare l'installazione di un'applicazione in tempo reale per un dispositivo collegato al tenant dall'interfaccia di amministrazione di Microsoft Endpoint Management. Per altre informazioni, vedere [Configuration Manager technical preview 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_apps).
-
-### <a name="tenant-attach-cmpivot-from-the-admin-center--7220536-cm6024392---"></a>Collegamento di tenant: CMPivot dall'interfaccia di amministrazione<!--7220536, CM6024392 -->
-Sarà possibile sfruttare la potenza di [CMPivot](../../configmgr/tenant-attach/cmpivot-overview-attached.md) nell'interfaccia di amministrazione di Microsoft Endpoint Manager. Altri utenti tipo, ad esempio il personale del supporto tecnico, possono avviare query in tempo reale dal cloud su un singolo dispositivo gestito da ConfigMgr e restituire i risultati all'interfaccia di amministrazione. In questo modo è possibile usufruire di tutti i vantaggi tradizionali di CMPivot, che consente agli amministratori IT e ad altri utenti designati di valutare rapidamente lo stato dei dispositivi nel proprio ambiente e di intervenire di conseguenza. Per altre informazioni, vedere [Configuration Manager technical preview 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_cmpivot). 
-
 ### <a name="tenant-attach-run-scripts-from-the-admin-center--7220536-cm6234688---"></a>Collegamento di tenant: eseguire script dall'interfaccia di amministrazione<!--7220536, CM6234688 -->
 Sarà possibile sfruttare la potenza della funzionalità locale di Configuration Manager per [l'esecuzione di script](../../configmgr/apps/deploy-use/create-deploy-scripts.md) nell'interfaccia di amministrazione di Microsoft Endpoint Manager. Altri utenti tipo, ad esempio il personale del supporto tecnico, possono eseguire script di PowerShell dal cloud su un singolo dispositivo gestito di Configuration Manager. In questo modo è possibile usufruire di tutti i vantaggi tradizionali degli script di PowerShell che sono già stati definiti e approvati dall'amministratore di Configuration Manager nel nuovo ambiente. Per altre informazioni, vedere [Configuration Manager technical preview 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_scripts). 
 
@@ -275,11 +266,11 @@ In **Dispositivi** > **Analisi di Criteri di gruppo (anteprima)** è possibile i
 Si applica a:
 - Windows 10 e versioni successive
 
-#### <a name="new-windows-10-feature-update-report---6473121-----"></a>Nuovo report per gli aggiornamenti delle funzionalità di Windows 10<!-- 6473121   -->
-Il report **Errori degli aggiornamenti delle funzionalità** fornirà dettagli sugli errori per i dispositivi a cui sono destinati i criteri **Aggiornamenti delle funzionalità di Windows 10** e che hanno tentato di eseguire un aggiornamento. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) selezionare **Dispositivi** > **Monitoraggio** > **Errori degli aggiornamenti delle funzionalità** per visualizzare questo report.
-
 #### <a name="new-windows-10-feature-update-report---6473128----"></a>Nuovo report per gli aggiornamenti delle funzionalità di Windows 10<!-- 6473128  -->
 Il report **Aggiornamenti delle funzionalità di Windows** fornirà una visualizzazione generale della conformità per i dispositivi a cui sono destinati i criteri **Aggiornamenti delle funzionalità di Windows 10**. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) selezionare **Report** > **Aggiornamenti di Windows (anteprima)**  > **Errori degli aggiornamenti delle funzionalità** per visualizzare il riepilogo per questo report. Per visualizzare i report relativi a criteri specifici, selezionare la scheda **Report** e aprire il **report Aggiornamenti delle funzionalità di Windows**. 
+
+#### <a name="new-windows-10-feature-failures-update-report---6473121-----"></a>Nuovo report per gli errori degli aggiornamenti delle funzionalità di Windows 10<!-- 6473121   -->
+Il report **Errori degli aggiornamenti delle funzionalità** fornirà dettagli sugli errori per i dispositivi a cui sono destinati i criteri **Aggiornamenti delle funzionalità di Windows 10** e che hanno tentato di eseguire un aggiornamento. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) selezionare **Dispositivi** > **Monitoraggio** > **Errori degli aggiornamenti delle funzionalità** per visualizzare questo report.
 
 <!-- ***********************************************-->
 <!--

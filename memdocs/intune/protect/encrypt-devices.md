@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 8843ab5c8bf3d0e6970398c1ad81a8a2b3b8f9cb
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: 4c652907d105b4b0363b2113916e892360feab39
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89193964"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564262"
 ---
 # <a name="manage-bitlocker-policy-for-windows-10-in-intune"></a>Gestire i criteri BitLocker per Windows 10 in Intune
 
@@ -97,7 +97,7 @@ Per creare il tipo di criterio preferito usare una delle procedure seguenti.
    1. **Piattaforma**: Windows 10 e versioni successive
    2. **Tipo di profilo**: Protezione degli endpoint
 
-   ![Selezionare il profilo](./media/encrypt-devices/select-windows-bitlocker-dc.png)
+   ![Selezionare il profilo BitLocker](./media/encrypt-devices/select-windows-bitlocker-dc.png)
 
 4. Selezionare **Impostazioni** > **Crittografia di Windows**.
 
@@ -149,6 +149,8 @@ Intune offre l'accesso al pannello di Azure AD per BitLocker, per consentire di 
 2. Selezionare **Dispositivi** > **Tutti i dispositivi**.
 
 3. Selezionare un dispositivo nell'elenco e in *Monitoraggio* selezionare **Chiavi di ripristino**.
+
+4. Fare clic su **Mostra la chiave di ripristino**. Se si seleziona questa opzione verrà generata una voce del log di controllo nell'attività "KeyManagement".
   
    Quando le chiavi sono presenti in Azure AD, sono disponibili le informazioni seguenti:
    - ID chiave BitLocker
@@ -158,6 +160,8 @@ Intune offre l'accesso al pannello di Azure AD per BitLocker, per consentire di 
    Quando le chiavi non sono presenti in Azure AD, Intune visualizzerà il messaggio *Non sono state trovate chiavi BitLocker per questo dispositivo*.
 
 Le informazioni per BitLocker vengono ottenute tramite il [provider di servizi di configurazione BitLocker](/windows/client-management/mdm/bitlocker-csp). Il provider di servizi di configurazione (CSP) BitLocker è supportato in Windows 10 versione 1703 e successive e in Windows 10 Pro versione 1809 e successive.
+
+Per altre informazioni sulle voci del log di controllo, vedere [Log di controllo del portale di Azure](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#audit-logs).
 
 ### <a name="rotate-bitlocker-recovery-keys"></a>Ruotare le chiavi di ripristino di BitLocker
 

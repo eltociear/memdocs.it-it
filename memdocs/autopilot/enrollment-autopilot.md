@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 421c9ebcf15e9c45bd235c10062dd63179a9f59c
-ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
+ms.openlocfilehash: 15540f6dafa34c7511b36b76267f4fd0d188b07b
+ms.sourcegitcommit: e533cdf8722156a66b1cc46f710def96587345d0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076190"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90568597"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-windows-autopilot"></a>Registrare i dispositivi Windows in Intune usando Windows Autopilot
 
-Windows Autopilot semplifica la registrazione dei dispositivi in Intune. La compilazione e la gestione di immagini del sistema operativo personalizzate sono processi che richiedono molto tempo. Richiede tempo anche l'applicazione di queste immagini personalizzate del sistema operativo ai nuovi dispositivi per prepararli per l'uso prima della consegna agli utenti finali. Con Microsoft Intune e AutoPilot è possibile assegnare i nuovi dispositivi agli utenti finali senza la necessità di compilare, gestire e applicare le immagini del sistema operativo personalizzate ai dispositivi. Quando si usa Intune per gestire i dispositivi AutoPilot, è possibile gestire criteri, profili, applicazioni e così via sui dispositivi che sono stati registrati. Per una panoramica di vantaggi, scenari e prerequisiti, vedere [Panoramica di Windows Autopilot](windows-autopilot.md).
+Windows Autopilot semplifica la registrazione dei dispositivi in Intune. La compilazione e la gestione di immagini del sistema operativo personalizzate sono processi che richiedono molto tempo. Richiede tempo anche l'applicazione di queste immagini personalizzate del sistema operativo ai nuovi dispositivi per prepararli per l'uso prima della consegna agli utenti finali. Con Microsoft Intune e Windows Autopilot è possibile assegnare nuovi dispositivi agli utenti finali senza dover creare, gestire e applicare immagini del sistema operativo personalizzate ai dispositivi. Quando si usa Intune per gestire i dispositivi AutoPilot, è possibile gestire criteri, profili, applicazioni e così via sui dispositivi che sono stati registrati. Per una panoramica di vantaggi, scenari e prerequisiti, vedere [Panoramica di Windows Autopilot](windows-autopilot.md).
 
 Esistono quattro tipi di distribuzione Autopilot:
 
@@ -36,7 +36,7 @@ Esistono quattro tipi di distribuzione Autopilot:
 - [Autopilot per dispositivi esistenti](existing-devices.md) consente di distribuire facilmente la versione più recente di Windows 10 nei dispositivi esistenti
 - [Modalità Definita dall'utente](user-driven.md) per utenti tradizionali.
 
-Questo articolo illustra come configurare Autopilot su PC Windows. Per altre informazioni sull'uso di Autopilot per Hololens, vedere [Windows Autopilot per HoloLens 2](/hololens/hololens2-autopilot).
+Questo articolo illustra come configurare Autopilot su PC Windows. Per ulteriori informazioni su AUTOPILOT e HoloLens, vedere la pagina relativa a [Windows Autopilot per HoloLens 2](/hololens/hololens2-autopilot).
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -58,15 +58,22 @@ Per ulteriori informazioni, vedere il cmdlet di PowerShell informazioni.
 
     ![Screenshot dei dispositivi di Windows Autopilot](media/enrollment-autopilot/autopilot-import-device.png)
 
-2. In **Aggiungi dispositivi di Windows AutoPilot** passare a un file con estensione csv che elenca i dispositivi che si vuole aggiungere. Il file CSV deve elencare i numeri di serie, gli ID prodotto Windows, gli hash hardware, i tag dei gruppi dei dispositivi e facoltativamente l'utente assegnato. È possibile avere fino a 500 righe nell'elenco. Per dettagli su come ottenere informazioni sul dispositivo, vedere [Aggiunta di dispositivi a Windows Autopilot](add-devices.md#device-identification). Usare l'intestazione e il formato di riga indicati di seguito:
+2. In **Aggiungi dispositivi di Windows AutoPilot** passare a un file con estensione csv che elenca i dispositivi che si vuole aggiungere. Il file CSV deve essere un elenco:
+    - Numeri di serie.
+    - ID del prodotto Windows.
+    - Hash hardware.
+    - Tag di gruppo facoltativi.
+    - Utente assegnato facoltativo.
+  
+    È possibile avere fino a 500 righe nell'elenco. Per dettagli su come ottenere informazioni sul dispositivo, vedere [Aggiunta di dispositivi a Windows Autopilot](add-devices.md#device-identification). Usare l'intestazione e il formato di riga indicati di seguito:
 
-    `Device Serial Number,Windows Product ID,Hardware Hash,Group Tag,Assigned User`</br>
-    `<serialNumber>,<ProductID>,<hardwareHash>,<optionalGroupTag>,<optionalAssignedUser>`
+   `Device Serial Number,Windows Product ID,Hardware Hash,Group Tag,Assigned User`</br>
+   `<serialNumber>,<ProductID>,<hardwareHash>,<optionalGroupTag>,<optionalAssignedUser>`
 
-    ![Screenshot dell'aggiunta dei dispositivi di Windows Autopilot](media/enrollment-autopilot/autopilot-import-device-2.png)
+   ![Screenshot dell'aggiunta dei dispositivi di Windows Autopilot](media/enrollment-autopilot/autopilot-import-device-2.png)
 
-    >[!IMPORTANT]
-    > Quando si usa il caricamento CSV per assegnare un utente, assicurarsi di assegnare UPN validi. Se si assegna un UPN non valido (nome utente errato), il dispositivo potrebbe risultare inaccessibile fino a quando non si rimuove l'assegnazione non valida. Durante il caricamento CSV, l'unica convalida eseguita sulla colonna **Utente assegnato** consiste nel verificare la validità del nome di dominio. Non è possibile eseguire la convalida dei singoli UPN per assicurarsi che si stia assegnando un utente esistente o corretto.
+   >[!IMPORTANT]
+   > Quando si usa il caricamento CSV per assegnare un utente, assicurarsi di assegnare UPN validi. Se si assegna un UPN non valido (nome utente errato), il dispositivo potrebbe risultare inaccessibile fino a quando non si rimuove l'assegnazione non valida. Durante il caricamento CSV, l'unica convalida eseguita sulla colonna **Utente assegnato** consiste nel verificare la validità del nome di dominio. Non è possibile eseguire la convalida dei singoli UPN per assicurarsi che si stia assegnando un utente esistente o corretto.
 
 3. Scegliere **Importa** per avviare l'importazione delle informazioni sui dispositivi. L'importazione può richiedere alcuni minuti.
 
@@ -82,18 +89,18 @@ Per ulteriori informazioni, vedere il cmdlet di PowerShell informazioni.
     2. Immettere un **Nome gruppo** e una **Descrizione gruppo**.
     3. In **Tipo di appartenenza** scegliere **Assegnato** o **Dispositivo dinamico**.
 3. Se nel passaggio precedente si è scelto **Assegnato** come **Tipo di appartenenza**, nella scheda **Gruppo** scegliere **Membri** e aggiungere i dispositivi AutoPilot al gruppo.
-    I dispositivi Autopilot che non sono ancora registrati sono dispositivi il cui nome è uguale al numero di serie del dispositivo stesso.
-4. Se nel passaggio precedente si è scelto **Dispositivi dinamici** come **Tipo di appartenenza**, nella scheda **Gruppo** scegliere **Membri dispositivo dinamico** e digitare uno dei codici seguenti nella casella **Regola avanzata**. Queste regole eseguono la raccolta dei soli dispositivi Autopilot perché hanno come destinazione attributi in possesso solo dei dispositivi Autopilot. La creazione di un gruppo basato su attributi non Autopilot non garantirà che i dispositivi inclusi nel gruppo siano effettivamente registrati in Autopilot.
+ I dispositivi Autopilot che non sono ancora registrati sono dispositivi il cui nome è uguale al numero di serie del dispositivo stesso.
+4. Se nel passaggio precedente si è scelto **Dispositivi dinamici** come **Tipo di appartenenza**, nella scheda **Gruppo** scegliere **Membri dispositivo dinamico** e digitare uno dei codici seguenti nella casella **Regola avanzata**. Queste regole raccolgono solo i dispositivi Autopilot perché sono destinati solo agli attributi dei dispositivi Autopilot. La creazione di un gruppo basato su attributi non Autopilot non garantisce che i dispositivi inclusi nel gruppo siano registrati in Autopilot.
     - Se si vuole creare un gruppo che includa tutti i dispositivi AutoPilot, digitare: `(device.devicePhysicalIDs -any (_ -contains "[ZTDId]"))`
-    - Il campo del tag del gruppo di Intune è associato all'attributo OrderID nei dispositivi Azure AD. Se si vuole creare un gruppo che includa tutti i dispositivi Autopilot con un tag di gruppo (l'ID ordine del dispositivo di Azure AD) specifico, è necessario digitare: `(device.devicePhysicalIds -any (_ -eq "[OrderID]:179887111881"))`
+    - Il campo del tag del gruppo di Intune è associato all'attributo OrderID nei dispositivi Azure AD. Per creare un gruppo che includa tutti i dispositivi Autopilot con un tag di gruppo specifico (il Azure AD dispositivo OrderID), digitare: `(device.devicePhysicalIds -any (_ -eq "[OrderID]:179887111881"))`
     - Se si vuole creare un gruppo che includa tutti i dispositivi AutoPilot con un ID ordine d'acquisto specifico, digitare `(device.devicePhysicalIds -any (_ -eq "[PurchaseOrderId]:76222342342"))`
-    
+ 
     Dopo aver aggiunto il codice **Regola avanzata** scegliere **Salva**.
-5. Scegliere **Crea**.  
+5. Scegliere **Crea**. 
 
 ## <a name="create-an-autopilot-deployment-profile"></a>Creare un profilo di distribuzione Autopilot
 I profili di distribuzione AutoPilot vengono usati per configurare i dispositivi AutoPilot. È possibile creare fino a 350 profili per ogni tenant.
-1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **Windows** > **Registrazione Windows** > **Profili di distribuzione** > **Crea profilo** > **PC Windows** o **HoloLens**. Questo articolo illustra come configurare Autopilot su PC Windows. Per altre informazioni sull'uso di Autopilot per Hololens, vedere [Windows Autopilot per HoloLens 2](/hololens/hololens2-autopilot).
+1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **Windows** > **Registrazione Windows** > **Profili di distribuzione** > **Crea profilo** > **PC Windows** o **HoloLens**. Questo articolo illustra come configurare Autopilot su PC Windows. Per ulteriori informazioni su AUTOPILOT e HoloLens, vedere la pagina relativa a [Windows Autopilot per HoloLens 2](/hololens/hololens2-autopilot).
 2. Nella pagina **Informazioni di base** specificare un **Nome** e una **Descrizione** facoltativa.
 
     ![Screenshot della pagina Informazioni di base](media/enrollment-autopilot/create-profile-basics.png)
@@ -106,8 +113,8 @@ I profili di distribuzione AutoPilot vengono usati per configurare i dispositivi
 
     ![Screenshot della pagina Configurazione guidata](media/enrollment-autopilot/create-profile-out-of-box.png)
 
-   > [!NOTE]
-   > Le opzioni visualizzate in grigio o ombreggiate non sono attualmente supportate dalla modalità di distribuzione selezionata.
+    > [!NOTE]
+    > Le opzioni visualizzate in grigio o ombreggiate non sono attualmente supportate dalla modalità di distribuzione selezionata.
 
 6. Nella casella **Join to Azure AD as** (Connetti ad Azure AD come) scegliere **Aggiunto ad Azure AD**.
 7. Configurare le opzioni seguenti:
@@ -115,7 +122,7 @@ I profili di distribuzione AutoPilot vengono usati per configurare i dispositivi
     - **Impostazioni di privacy**: scegliere se si vuole visualizzare le impostazioni di privacy per gli utenti.
     >[!IMPORTANT]
     >Il valore predefinito per l'impostazione Dati di diagnostica varia in base alle versioni di Windows. Per i dispositivi che eseguono Windows 10, versione 1903, il valore predefinito è impostato su Completa durante l'esperienza predefinita. Per altre informazioni, vedere i [dati di diagnostica di Windows](/windows/privacy/windows-diagnostic-data) <br>
-    
+ 
     - **Nascondi le opzioni di cambio di account (richiede Windows 10 versione 1809 o successiva)** : scegliere **Nascondi** per impedire che le opzioni dell'account vengano visualizzate nella pagina di accesso aziendale e nella pagina degli errori di dominio. Per questa opzione è necessario [configurare le informazioni personalizzate distintive dell'azienda in Azure Active Directory](/azure/active-directory/fundamentals/customize-branding).
     - **Tipo di account utente**: scegliere il tipo di account utente (**Amministratore** o **Standard**). Per consentire all'utente che aggiunge il dispositivo di essere un amministratore locale, aggiungerlo al gruppo di amministratori locale. L'utente non viene abilitato come amministratore predefinito nel dispositivo.
     - **Consenti modalità " White Glove" per OOBE**  (richiede Windows 10, versione 1903 o successive; [requisiti fisici aggiuntivi](white-glove.md#prerequisites)): scegliere **Sì** per consentire il supporto per la modalità "White Glove".
@@ -140,46 +147,52 @@ I profili di distribuzione AutoPilot vengono usati per configurare i dispositivi
     ![Screenshot della pagina Rivedi](./media/enrollment-autopilot/create-profile-review.png)
 
 > [!NOTE]
-> Intune verificherà periodicamente la presenza di nuovi dispositivi nei gruppi assegnati e quindi avvierà il processo di assegnazione dei profili a quei dispositivi. Questo processo può richiedere alcuni minuti. Prima di distribuire un dispositivo, assicurarsi che questo processo sia stato completato.  In **Dispositivi** > **Windows** > **Registrazione Windows** > **Dispostivi** (in **Programma di distribuzione di Windows AutoPilot** è possibile verificare che lo stato del profilo passi da "Non assegnato" ad "Assegnazione" e infine ad "Assegnato".
+> Intune verificherà periodicamente la presenza di nuovi dispositivi nei gruppi assegnati e quindi avvierà il processo di assegnazione dei profili a quei dispositivi. Questo processo può richiedere alcuni minuti. Prima di distribuire un dispositivo, assicurarsi che questo processo sia stato completato. In **Dispositivi** > **Windows** > **Registrazione Windows** > **Dispostivi** (in **Programma di distribuzione di Windows AutoPilot** è possibile verificare che lo stato del profilo passi da "Non assegnato" ad "Assegnazione" e infine ad "Assegnato".
 
 ## <a name="edit-an-autopilot-deployment-profile"></a>Modificare un profilo di distribuzione di AutoPilot
-Dopo aver creato un profilo di distribuzione di AutoPilot, è possibile modificare alcune parti del profilo di distribuzione.   
+Dopo aver creato un profilo di distribuzione di AutoPilot, è possibile modificare alcune parti del profilo di distribuzione. 
 
 1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **Windows** > **Registrazione Windows** > **Profili di distribuzione**.
 2. Selezionare il profilo da modificare.
 3. Selezionare **Proprietà** a sinistra per modificare il nome o la descrizione del profilo di distribuzione. Fare clic su **Salva** dopo aver apportato le modifiche.
 5. Fare clic su **Impostazioni** per apportare modifiche alle impostazioni della configurazione guidata. Fare clic su **Salva** dopo aver apportato le modifiche.
 
-> [!NOTE]
-> Le modifiche al profilo vengono applicate ai dispositivi assegnati al profilo. Il profilo aggiornato non verrà tuttavia applicato a un dispositivo già registrato in Intune finché non saranno state completate la reimpostazione e la nuova registrazione del dispositivo.
+    > [!NOTE]
+    > Le modifiche al profilo vengono applicate ai dispositivi assegnati al profilo. Il profilo aggiornato non verrà tuttavia applicato a un dispositivo già registrato in Intune finché non saranno state completate la reimpostazione e la nuova registrazione del dispositivo.
 
 ## <a name="edit-autopilot-device-attributes"></a>Modificare gli attributi dei dispositivi Autopilot
 Dopo aver caricato un dispositivo Autopilot, è possibile modificarne alcuni attributi.
 
 1. Nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) selezionare **Dispositivi** > **Windows** > **Registrazione Windows** > **Dispositivi** (in **Programma di distribuzione di Windows AutoPilot**).
 2. Selezionare il dispositivo da modificare.
-3. Nel riquadro a destra della schermata è possibile modificare il nome del dispositivo, il tag di gruppo o il nome descrittivo (se è stato assegnato un utente).
+3. Nel riquadro a destra della schermata è possibile modificare:
+    - Nome del dispositivo.
+    - Tag di gruppo.
+    - Nome descrittivo dell'utente (se è stato assegnato un utente).
 4. Selezionare **Salva**.
 
 > [!NOTE]
 > I nomi dei dispositivi possono essere configurati per tutti i dispositivi, ma vengono ignorati nelle distribuzioni aggiunte ad Azure AD ibrido. Il nome del dispositivo deriva comunque dal profilo di aggiunta al dominio per i dispositivi di Azure AD ibrido.
 
-## <a name="alerts-for-windows-autopilot-unassigned-devices-----163236---"></a>Avvisi per dispositivi non assegnati Windows AutoPilot  <!-- 163236 -->  
+## <a name="alerts-for-windows-autopilot-unassigned-devices----163236---"></a>Avvisi per dispositivi non assegnati Windows AutoPilot <!-- 163236 --> 
 
 Gli avvisi indicheranno quanti dispositivi con il programma Autopilot non hanno profili di distribuzione di Autopilot. Usare le informazioni contenute nell'avviso per creare i profili e assegnarli ai dispositivi non assegnati. Selezionando l'avviso, verrà visualizzato un elenco completo di dispositivi Windows AutoPilot e le relative informazioni dettagliate.
 
-Per visualizzare gli avvisi per i dispositivi non assegnati, nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **Panoramica** > **Avvisi per la registrazione** > **Dispositivi non assegnati**.  
+Per visualizzare gli avvisi per i dispositivi non assegnati, nell'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) scegliere **Dispositivi** > **Panoramica** > **Avvisi per la registrazione** > **Dispositivi non assegnati**. 
 
 ## <a name="autopilot-deployments-report"></a>Report sulle distribuzioni Autopilot
 È possibile visualizzare informazioni dettagliate su ogni dispositivo distribuito tramite Windows Autopilot.
 Per visualizzare il report, passare all'[interfaccia di amministrazione di Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), scegliere **Dispositivi** > **Monitor** > **Distribuzioni di Autopilot**.
 I dati sono disponibili per 30 giorni dopo la distribuzione.
 
-Questo report è in anteprima. I record di distribuzione dei dispositivi sono attualmente attivati solo da nuovi eventi di registrazione di Intune. Ciò significa che tutte le distribuzioni che non attivano una nuova registrazione di Intune non verranno incluse in questo report. Questo include qualsiasi tipo di reimpostazione che mantiene la registrazione e la parte utente della modalità White Glove per Autopilot.
+Questo report è in anteprima. I record di distribuzione dei dispositivi sono attualmente attivati solo da nuovi eventi di registrazione di Intune. Le distribuzioni che non attivano una nuova registrazione di Intune non verranno visualizzate nel report. Questo caso include qualsiasi tipo di reimpostazione che mantiene la registrazione e la parte utente del guanto bianco di Autopilot.
 
 ## <a name="assign-a-user-to-a-specific-autopilot-device"></a>Assegnare un utente a un dispositivo Autopilot specifico
 
-È possibile assegnare un utente a un dispositivo Autopilot specifico. Questa assegnazione precompila un utente di Azure Active Directory nella pagina di accesso [distintiva dell'azienda](/azure/active-directory/fundamentals/customize-branding) durante l'installazione di Windows. Consente inoltre di definire il nome di un messaggio di saluto personalizzato. Questa informazione non viene precompilata nella pagina di accesso di Windows né la modifica. Solo gli utenti con licenza di Intune possono essere assegnati con questa procedura.
+È possibile assegnare un utente di Intune con licenza a un dispositivo Autopilot specifico. Questa assegnazione:
+- Pre-compila un utente da Azure Active Directory nella pagina di accesso [personalizzata dall'azienda](/azure/active-directory/fundamentals/customize-branding) durante l'installazione di Windows.
+- Consente di impostare un nome di saluto personalizzato.
+- Non esegue il pre-riempimento o la modifica dell'accesso Windows.
 
 Prerequisiti: il portale aziendale di Azure Active Directory deve essere configurato; Windows 10 versione 1809 o successiva.
 
@@ -207,7 +220,7 @@ Prerequisiti: il portale aziendale di Azure Active Directory deve essere configu
 
 - Eliminare i dispositivi da Windows Autopilot in **Dispositivi** > **Windows** > **Registrazione Windows** > **Dispositivi** (in **Programma di distribuzione di Windows AutoPilot**). Scegliere i dispositivi da eliminare, quindi scegliere **Elimina**. L'eliminazione dei dispositivi di Windows Autopilot richiede alcuni minuti.
 
-La rimozione completa di un dispositivo dal tenant richiede l'eliminazione dei record relativi a dispositivi di Intune, dispositivi di Azure Active Directory e dispositivi di Windows Autopilot. Queste operazioni possono essere eseguite in Intune:
+La rimozione completa di un dispositivo dal tenant richiede l'eliminazione dei record relativi a dispositivi di Intune, dispositivi di Azure Active Directory e dispositivi di Windows Autopilot. Queste eliminazioni possono essere eseguite da Intune:
 
 1. Se i dispositivi sono registrati in Intune, è necessario prima [eliminarli dal pannello Tutti i dispositivi di Intune](../intune/remote-actions/devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).
 
@@ -216,17 +229,17 @@ La rimozione completa di un dispositivo dal tenant richiede l'eliminazione dei r
 3. Eliminare i dispositivi da Windows Autopilot in **Dispositivi** > **Windows** > **Registrazione Windows** > **Dispositivi** (in **Programma di distribuzione di Windows AutoPilot**). Scegliere i dispositivi da eliminare, quindi scegliere **Elimina**. L'eliminazione dei dispositivi di Windows Autopilot richiede alcuni minuti.
 
 ## <a name="using-autopilot-in-other-portals"></a>Uso di AutoPilot in altri portali
-Se non si è interessati alla gestione di dispositivi mobili, è possibile usare AutoPilot in altri portali. Nonostante sia possibile l'uso di altri portali, è consigliabile usare solo Intune per gestire le distribuzioni AutoPilot. Quando si usano Intune e un altro portale, Intune non riesce a:  
+Se non si è interessati alla gestione di dispositivi mobili, è possibile usare AutoPilot in altri portali. Nonostante sia possibile l'uso di altri portali, è consigliabile usare solo Intune per gestire le distribuzioni AutoPilot. Quando si usano Intune e un altro portale, Intune non riesce a: 
 
-- Visualizzare le modifiche apportate ai profili creati in Intune ma modificati in un altro portale
-- Sincronizzare i profili creati in un altro portale
-- Visualizzare le modifiche apportate alle assegnazioni dei profili eseguite in un altro portale
-- Sincronizzare le assegnazioni dei profili eseguite in un altro portale
-- Visualizzare le modifiche dell'elenco dei dispositivi apportate in un altro portale
+- Visualizzare le modifiche ai profili creati in Intune, ma modificati in un altro portale.
+- Sincronizzare i profili creati in un altro portale.
+- Visualizzare le modifiche alle assegnazioni dei profili eseguite in un altro portale.
+- Sincronizzare le assegnazioni dei profili eseguite in un altro portale.
+- Consente di visualizzare le modifiche apportate all'elenco dei dispositivi in un altro portale.
 
 ## <a name="windows-autopilot-for-existing-devices"></a>Windows Autopilot per dispositivi esistenti
 
-È possibile raggruppare dispositivi Windows in base all'ID correlatore quando vengono registrati usando [AutoPilot per i dispositivi esistenti](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) tramite Configuration Manager. L'ID correlatore è un parametro del file di configurazione di Autopilot. L'[attributo del dispositivo Azure AD enrollmentProfileName](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) viene impostato automaticamente su "OfflineAutopilotprofile-\<correlator ID\>". In questo modo sarà possibile creare gruppi dinamici di Azure AD arbitrari in base all'ID correlatore tramite l'attributo enrollmentprofileName.
+È possibile raggruppare dispositivi Windows in base all'ID correlatore quando vengono registrati usando [AutoPilot per i dispositivi esistenti](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) tramite Configuration Manager. L'ID correlatore è un parametro del file di configurazione di Autopilot. L'[attributo del dispositivo Azure AD enrollmentProfileName](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) viene impostato automaticamente su "OfflineAutopilotprofile-\<correlator ID\>". È pertanto possibile creare gruppi dinamici di Azure AD arbitrari in base all'ID del correlatore usando l'attributo enrollmentprofileName.
 
 >[!WARNING] 
 > Dato che l'ID correlatore non è già elencato in Intune, il dispositivo può riportare qualsiasi ID correlatore desiderato. Se l'utente crea un ID correlatore corrispondente a un nome di profilo di Autopilot o di Registrazione automatica del dispositivo Apple, il dispositivo verrà aggiunto a un gruppo di dispositivi di Azure AD dinamico in base all'attributo enrollmentProfileName. Per evitare questo conflitto:

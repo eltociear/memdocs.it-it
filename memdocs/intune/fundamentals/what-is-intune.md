@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 939a9b46c3972bc4d575b3b58d08f5f6fb169239
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 6e8fa8db5e7a960677eeafaf03ca43662da9b8d3
+ms.sourcegitcommit: d6cbd1a1c2926064e074e3431471534eb142c905
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88996260"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012647"
 ---
 # <a name="microsoft-intune-is-an-mdm-and-mam-provider-for-your-devices"></a>Microsoft Intune è un provider MDM e MAM per i dispositivi
 
@@ -63,9 +63,11 @@ Quando i dispositivi vengono registrati e gestiti in Intune, gli amministratori 
 - [Proteggere i dispositivi con Microsoft Intune](../protect/device-protect.md)
 
 ### <a name="try-the-interactive-guide"></a>Provare la guida interattiva
-La guida interattiva [Gestire i dispositivi con Microsoft Endpoint Manager](https://mslearn.cloudguides.com/en-us/guides/Manage%20devices%20with%20Microsoft%20Endpoint%20Manager) presenta in modo dettagliato l'interfaccia di amministrazione di Microsoft Endpoint Manager per illustrare come gestire e proteggere le applicazioni desktop e per dispositivi mobili.</br></br>
+La guida interattiva [Gestire i dispositivi con Microsoft Endpoint Manager](https://mslearn.cloudguides.com/guides/Manage%20devices%20with%20Microsoft%20Endpoint%20Manager) presenta in modo dettagliato l'interfaccia di amministrazione di Microsoft Endpoint Manager per illustrare come gestire e proteggere le applicazioni desktop e per dispositivi mobili.</br></br>
 
-> [!VIDEO https://mslearn.cloudguides.com/en-us/guides/Manage%20devices%20with%20Microsoft%20Endpoint%20Manager]
+<div align=”center”>
+<iframe allowfullscreen width="95%" height="450" src="https://mslearn.cloudguides.com/guides/Manage%20devices%20with%20Microsoft%20Endpoint%20Manager" frameborder="0" scrolling="no" loading="lazy" importance="low"/></iframe>
+</div>
 
 ## <a name="manage-apps"></a>Gestire le app
 

@@ -19,19 +19,18 @@ ms.reviewer: jeyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2880ef5ba044f616f3b14e54c5e42b89eb58912a
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: ce421c40d3a4b1e8a92df139bb18fce22f6231eb
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048005"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606086"
 ---
 # <a name="install-company-portal-app-in-peoples-republic-of-china"></a>Installare l'app Portale aziendale nella Repubblica popolare cinese
 
 Installare l'app Portale aziendale Intune per accedere alle risorse aziendali o dell'istituto di istruzione dal proprio dispositivo Android. L'app è disponibile nella Repubblica popolare cinese e può essere installata dagli app store seguenti: 
 
 * [Google Play](https://go.microsoft.com/fwlink/?linkid=871947) (non disponibile in tutto il mondo)
-* [Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947) 
 * OPPO
 * [Lenovo](https://go.microsoft.com/fwlink/?linkid=2125082)
 * [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)

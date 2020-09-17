@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: da7ab26cc748b64426ec256a0814beae4ced1a5f
-ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
+ms.openlocfilehash: 776cc47865853ae9b52218c0b2257840aea09219
+ms.sourcegitcommit: 2339c927b6576db8878f34f167a9a45c5dc9f58d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89280933"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90689332"
 ---
 # <a name="adding-devices-to-windows-autopilot"></a>Aggiunta di dispositivi a Windows Autopilot
 
@@ -44,6 +44,8 @@ I clienti possono acquistare dispositivi da rivenditori, distributori o altri pa
 
 Come per gli OEM, ai partner CSP deve essere concessa l'autorizzazione per registrare i dispositivi per un'organizzazione. È possibile utilizzare la procedura descritta nella [pagina di consenso del cliente](registration-auth.md#csp-authorization). Il partner CSP richiede una relazione con l'organizzazione. L'amministratore globale dell'organizzazione approva la richiesta. Dopo l'approvazione, i partner CSP aggiungono dispositivi tramite il centro per i [partner](https://partner.microsoft.com/pcv/dashboard/overview), direttamente tramite il sito Web o tramite API disponibili che consentono di automatizzare le stesse attività.
 
+Per i dispositivi Surface, supporto tecnico Microsoft può essere utile per la registrazione del dispositivo.  Per altre informazioni, vedere [supporto per la registrazione di Surface per Windows Autopilot](https://docs.microsoft.com/surface/surface-autopilot-registration-support).
+
 Windows Autopilot non richiede autorizzazioni di amministratore delegato quando stabilisce la relazione tra il partner CSP e l'organizzazione. Come parte del processo di approvazione dell'amministratore globale, può scegliere di deselezionare la casella di controllo "Includi autorizzazioni amministrative delegate".
 
 > [!Note]
@@ -52,10 +54,11 @@ Windows Autopilot non richiede autorizzazioni di amministratore delegato quando 
 ## <a name="automatic-registration-of-existing-devices"></a>Registrazione automatica dei dispositivi esistenti
 
 È possibile registrare automaticamente un dispositivo esistente se è:
-- esecuzione di una versione supportata del canale semestrale di Windows 10
+- esecuzione di una versione supportata del canale semestrale di Windows 10.
 - registrato in un servizio MDM quale Intune.
 
 Per i dispositivi che soddisfano entrambi questi requisiti, il servizio MDM può chiedere al dispositivo l'hash hardware. Al termine, può registrare automaticamente il dispositivo con Windows Autopilot.
+
 Per istruzioni su come eseguire questa operazione con Microsoft Intune, vedere la pagina relativa alla [creazione di un profilo di distribuzione Autopilot](/intune/enrollment-autopilot#create-an-autopilot-deployment-profile) che descrive l'impostazione "Converti tutti i dispositivi di destinazione in Autopilot". 
 
 È possibile convertire automaticamente tali dispositivi in Windows usando l'impostazione **Converti tutti i dispositivi di destinazione in Autopilot** . Per altre informazioni, vedere [Creare un profilo di distribuzione Autopilot](https://docs.microsoft.com/intune/enrollment-autopilot#create-an-autopilot-deployment-profile). 

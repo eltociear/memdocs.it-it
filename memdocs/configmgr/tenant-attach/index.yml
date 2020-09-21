@@ -11,24 +11,48 @@ metadata:
   author: mestew
   ms.author: mstewart
   ms.date: 04/01/2020
-  ms.openlocfilehash: 80a602c8aa6be7599bbb579f41f34fb560d903c3
-  ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
+  ms.openlocfilehash: b3d6c2510cb26fb520c3b765a0931991aaed6e14
+  ms.sourcegitcommit: af4fc4f928203c1bfdb27499a56c91fe0ebae854
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 08/28/2020
-  ms.locfileid: "89067988"
+  ms.lasthandoff: 09/18/2020
+  ms.locfileid: "90802823"
 landingContent:
 - title: Informazioni sul collegamento di tenant
   linkLists:
-  - linkListType: overview
+  - linkListType: get-started
     links:
     - text: Abilitare il collegamento di tenant
       url: device-sync-actions.md
-    - text: Visualizzare i dettagli del client di ConfigMgr (anteprima)
-      url: client-details.md
   - linkListType: reference
     links:
     - text: Risolvere i problemi delle azioni del dispositivo e del collegamento di tenant
       url: troubleshoot.md
     - text: Risolvere i problemi dei dettagli del client di ConfigMgr (anteprima)
       url: troubleshoot-client-details.md
+- title: Ottenere informazioni sui dispositivi caricati
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Visualizzare i dettagli del client di ConfigMgr (anteprima)
+      url: client-details.md
+    - text: Sequenza temporale del dispositivo (anteprima)
+      url: timeline.md
+    - text: Esplora risorse (anteprima)
+      url: resource-explorer.md
+- title: Attività principali
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Esecuzione di script
+      url: scripts.md
+    - text: Installare applicazioni
+      url: applications.md
+    - text: Avviare CMPivot
+      url: cmpivot-start.md
+  - linkListType: concept
+    links:
+    - text: Panoramica dell'utilizzo di CMPivot
+      url: cmpivot-overview-attached.md
+    - text: Script di esempio CMPivot
+      url: cmpivot-samples-attached.md

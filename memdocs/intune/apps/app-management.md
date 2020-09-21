@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 09/03/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3b4a3334649b411390088a665f9a8fe9db8b47e1
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 68336d252cb3d3d3d49cc0c7a32e49e94ba5cdd7
+ms.sourcegitcommit: d6cbd1a1c2926064e074e3431471534eb142c905
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252306"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012664"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Informazioni sulla gestione delle app in Microsoft Intune
 
@@ -101,6 +101,7 @@ Nella parte superiore del menu di spostamento del carico di lavoro App sono disp
     - **Criteri di configurazione dell'app**: selezionare questa opzione per specificare le impostazioni che possono essere necessarie quando un utente esegue un'app. Per altre informazioni, vedere [Criteri di configurazione delle app](app-configuration-policies-use-ios.md), [Criteri di configurazione delle app per iOS](app-configuration-policies-use-ios.md) e [Criteri di configurazione delle app per Android](app-configuration-policies-overview.md).
     - **Profili di provisioning delle app iOS**: le app iOS includono un profilo di provisioning e codice firmato da un certificato. Quando il certificato scade, l'app non può più essere eseguita. Intune offre gli strumenti per assegnare in modo proattivo un nuovo criterio del profilo di provisioning ai dispositivi con app prossime alla scadenza. Per altre informazioni, vedere [Profili di provisioning delle app per iOS](app-provisioning-profile-ios.md).
     - **Criteri supplementari per la modalità S**: selezionare questa opzione per autorizzare l'esecuzione di applicazioni aggiuntive nei dispositivi gestiti in modalità S. Per altre informazioni, vedere [Criteri supplementari per la modalità S](apps-win32-s-mode.md).
+    - **Criteri per le app di Office**: selezionare questa opzione per creare criteri di gestione delle app per dispositivi mobili per le app di Office per dispositivi mobili che si connettono ai servizi di Microsoft 365. È anche possibile proteggere l'accesso alle cassette postali locali di Exchange creando criteri di protezione delle app di Intune per Outlook per iOS/iPadOS e Android abilitati con l'autenticazione moderna ibrida. È necessario che siano soddisfatti i requisiti per l'uso dei criteri per le app di Office. Per altre informazioni sui requisiti, vedere [Requisiti per l'uso del servizio criteri cloud di Office](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service#requirements-for-using-the-office-cloud-policy-service). I criteri di protezione delle app non sono supportati per le altre app che si connettono ai servizi locali di Exchange o SharePoint. Per informazioni correlate, vedere [Panoramica del servizio di criteri del cloud di Office per Microsoft 365 Apps for enterprise](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service).
     - **Set di criteri**: selezionare questa opzione per creare una raccolta assegnabile di app, criteri e altri oggetti di gestione creati. Per altre informazioni, vedere [Set di criteri](../fundamentals/policy-sets.md).
 - **Altro**:   
     - **Cancellazione selettiva di app**: selezionare questa opzione per rimuovere solo i dati aziendali dal dispositivo di un utente selezionato. Per altre informazioni, vedere [Cancellazione selettiva di app](apps-selective-wipe.md).
@@ -109,10 +110,10 @@ Nella parte superiore del menu di spostamento del carico di lavoro App sono disp
 - **Guida e supporto tecnico**: consente di risolvere i problemi, richiedere supporto o visualizzare lo stato di Intune. Per altre informazioni, vedere [Risolvere i problemi](../fundamentals/help-desk-operators.md).
 
 ### <a name="try-the-interactive-guide"></a>Provare la guida interattiva
-La guida interattiva [Gestire e proteggere le applicazioni per dispositivi mobili e desktop con Microsoft Endpoint Manager](https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager) presenta in modo dettagliato l'interfaccia di amministrazione di Microsoft Endpoint Manager per illustrare come gestire i dispositivi registrati in Intune, imporre la conformità con i criteri e proteggere i dati dell'organizzazione.</br></br>
+La guida interattiva [Gestire e proteggere le applicazioni per dispositivi mobili e desktop con Microsoft Endpoint Manager](https://mslearn.cloudguides.com/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager) presenta in modo dettagliato l'interfaccia di amministrazione di Microsoft Endpoint Manager per illustrare come gestire i dispositivi registrati in Intune, imporre la conformità con i criteri e proteggere i dati dell'organizzazione.</br></br>
 
 <div align=”center”>
-<iframe allowfullscreen width="95%" height="450" src="https://mslearn.cloudguides.com/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager" frameborder="0" scrolling="no"/></iframe>
+<iframe allowfullscreen width="95%" height="450" src="https://mslearn.cloudguides.com/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager" frameborder="0" scrolling="no" loading="lazy"/></iframe>
 </div>
 
 ## <a name="additional-information"></a>Informazioni aggiuntive

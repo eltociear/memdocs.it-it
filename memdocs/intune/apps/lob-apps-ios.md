@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/07/2020
+ms.date: 09/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4aee16fc0dacce46e75735a161ae2c56d3bdb15
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4e1850249acab42c3284b3e77c96a764bfad9898
+ms.sourcegitcommit: dc2cca9eb70aef15037e8f7d18d671c513bfde85
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990667"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90081791"
 ---
 # <a name="add-an-ios-line-of-business-app-to-microsoft-intune"></a>Aggiungere un'app line-of-business per iOS a Microsoft Intune
 
@@ -35,6 +35,8 @@ Usare le informazioni di questo articolo per aggiungere un'app line-of-business 
 > Gli utenti dei dispositivi iOS possono rimuovere alcune delle app iOS predefinite, ad esempio Borsa e Mappe. Non è possibile usare Intune per ridistribuire queste app. Se gli utenti eliminano queste app, devono accedere all'App Store e reinstallarle manualmente.
 >
 > Le app line-of-business iOS hanno un limite di dimensioni massimo di 2 GB per app.
+>
+> Gli iPad Apple condivisi non supportano le app line-of-business.
 
 > [!NOTE]
 > Gli identificatori del bundle, ad esempio *com.contoso.app*, sono progettati per essere identificatori univoci di un'app. Ad esempio, per installare una versione beta di un'app line-of-business accanto alla versione di produzione a scopo di test, la versione beta deve avere un identificatore univoco diverso (ad esempio *com.contoso.app-beta*). In caso contrario, la versione beta si sovrapporrà a quella di produzione e verrà considerata un aggiornamento. La ridenominazione del file con estensione ipa non ha alcun effetto su questo comportamento.
@@ -61,7 +63,7 @@ Usare le informazioni di questo articolo per aggiungere un'app line-of-business 
     - **Nome**: immettere il nome dell'app che viene visualizzato nel portale aziendale. Verificare che tutti i nomi di app usati siano univoci. Se il nome di un'app è usato due volte, solo una delle due app viene visualizzata nel portale aziendale.
     - **Descrizione**: immettere la descrizione dell'app. La descrizione viene visualizzata nel portale aziendale.
     - **Autore**: Immettere il nome dell'autore dell'app.
-    - **Sistema operativo minimo**: selezionare dall'elenco la versione minima del sistema operativo in cui è possibile installare l'app. L'installazione non verrà eseguita se si assegna l'app a un dispositivo con un sistema operativo precedente.
+    - **Sistema operativo minimo**: scegliere nell'elenco la versione minima del sistema operativo in cui è possibile installare l'app. L'installazione non verrà eseguita se si assegna l'app a un dispositivo con un sistema operativo precedente.
     - **Categoria**: selezionare una o più categorie di app predefinite o una categoria creata dall'utente. Le categorie consentono agli utenti di trovare più facilmente l'app nel portale aziendale.
     - **Visualizza come app in primo piano nel portale aziendale**: Visualizzare chiaramente l'app nella pagina principale del portale aziendale quando gli utenti cercano le app.
     - **URL di informazioni**: Immettere l'URL di un sito Web che include informazioni sull'app (facoltativo). L'URL viene visualizzato nel portale aziendale.

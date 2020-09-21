@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 1/15/2018
+ms.date: 9/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9fafc6a48e933fbcce692c560532736808cbf7c4
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: eec0f59504351f6b40e221a15d89a62e9a28be05
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915246"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076203"
 ---
 # <a name="enroll-your-android-enterprise-dedicated-fully-managed-or-corporate-owned-with-work-profile-devices"></a>Registrare i dispositivi Android Enterprise dedicati, completamente gestiti o di proprietà aziendale con profili di lavoro
 
-Dopo aver configurato [dispositivi dedicati](android-kiosk-enroll.md), [dispositivi completamente gestiti](android-fully-managed-enroll.md) o [dispositivi con profilo di lavoro di proprietà aziendale](android-corporate-owned-work-profile-enroll.md) Android Enterprise in Intune, è possibile registrarli. La registrazione di Intune per i dispositivi dedicati e i dispositivi completamente gestiti inizia con un ripristino delle impostazioni predefinite. La modalità di registrazione dei dispositivi Android Enterprise varia a seconda del sistema operativo.
+Dopo aver configurato [dispositivi dedicati](android-kiosk-enroll.md), [dispositivi completamente gestiti](android-fully-managed-enroll.md) o [dispositivi con profilo di lavoro di proprietà aziendale](android-corporate-owned-work-profile-enroll.md) Android Enterprise in Intune, è possibile registrarli. La registrazione di Intune per i dispositivi dedicati, completamente gestiti e di proprietà aziendale con un profilo di lavoro inizia con un ripristino delle impostazioni predefinite. La modalità di registrazione dei dispositivi Android Enterprise varia a seconda del sistema operativo.
 
 | Metodo di registrazione | Versione minima del sistema operativo Android per i dispositivi dedicati e completamente gestiti |
 | ----- | ----- |

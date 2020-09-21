@@ -2,11 +2,11 @@
 title: Archiviazione ed elaborazione dei dati in Intune
 titleSuffix: Microsoft Intune
 description: Informazioni su come vengono archiviati ed elaborati i dati personali in Intune.
-keywords: ''
+keywords: dati, privacy
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/18/2018
+ms.date: 09/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,40 +18,36 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9bb40b21d9a257586bbd38d24b2e9b6b0a9f8ce3
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 92c7c597a6d196ab5f8c3170cd5880682a280e73
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079536"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076064"
 ---
 # <a name="data-storage-and-processing-in-intune"></a>Archiviazione ed elaborazione dei dati in Intune
 
-Dopo la [raccolta dei dati](privacy-data-collect.md) in Intune, l'archiviazione e l'elaborazione di tali dati procede come indicato in dettaglio di seguito.
+### <a name="storing-customer-data"></a>Archiviazione dei dati dei clienti
 
-## <a name="storing-personal-data"></a>Archiviazione dei dati personali
-
-Tutti i dati non di telemetria raccolti vengono elaborati tramite il servizio Intune e archiviati in una o più delle posizioni di archiviazione seguenti: 
-
-- SQL Azure 
-- Raccolte affidabili (Service Fabric)  
-- Archiviazione di Azure 
-
-I dati di telemetria (log del servizio, log di prestazioni, errori e così via) fondamentali per il monitoraggio e la fornitura di un servizio stabile vengono inviati agli archivi dati di telemetria Microsoft.
+Dopo [aver raccolto i dati](privacy-data-collect.md), Intune segue i criteri standard di gestione dei dati per Microsoft 365 che specificano la modalità di archiviazione ed elaborazione dei dati dei clienti. Vedere [Dove sono archiviati i dati del tuo cliente Microsoft 365](https://docs.microsoft.com/microsoft-365/enterprise/o365-data-locations). I dati personali vengono elaborati entro i limiti di conformità controllati del servizio Intune in base alle misure di sicurezza tecnica assicurate tramite le [Condizioni per l'Utilizzo dei Servizi Online](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46).
 
 ### <a name="storage-locations"></a>Posizioni di archiviazione
 
 Microsoft offre e gestisce servizi di Intune in numerose aree in tutto il mondo. Intune rispetta le scelte per le posizioni di archiviazione effettuate dall'amministratore per i dati dei clienti.
 
-Per altre informazioni, vedere [Dove vengono archiviati i tuoi dati](https://www.microsoft.com/trust-center/privacy/data-location)
+Per altre informazioni, vedere [Posizioni dei data center](https://docs.microsoft.com/microsoft-365/enterprise/o365-data-locations?view=o365-worldwide#data-center-locations)
 
 ### <a name="personal-data-retention"></a>Conservazione dei dati personali
 
-In generale, i dati personali vengono conservati da Intune per 30 giorni dopo la rimozione dell'utente dalla gestione di Intune.
+I criteri standard di gestione dei dati di Microsoft 365 specificano per quanto tempo i dati dei clienti vengono conservati dopo l'eliminazione. Esistono due scenari in cui i dati dei clienti vengono eliminati:
 
-I dati di telemetria raccolti nell'ambito dell'utilizzo di Intune vengono conservati per un massimo di 30 giorni.
+-**eliminazione attiva**: Il tenant dispone di una sottoscrizione attiva e un utente o un amministratore elimina i dati oppure gli amministratori eliminano un utente.
+-**eliminazione passiva**: La sottoscrizione del tenant termina.
 
-I log di controllo vengono mantenuti fino a un massimo di un anno.
+Per ogni scenario di eliminazione, vedere [Conservazione dei dati, eliminazione e distruzione in Microsoft 365](https://docs.microsoft.com/microsoft-365/enterprise/microsoft-365-data-retention-deletion-and-destruction-overview?view=o365-worldwide).  
+
+In generale, i dati personali raccolti da Intune vengono rimossi entro 30 giorni dall'eliminazione. I log di controllo vengono mantenuti fino a un massimo di un anno per motivi di sicurezza. 
+
 
 ## <a name="processing-personal-data"></a>Elaborazione dei dati personali
 
@@ -60,15 +56,6 @@ Intune elabora i dati personali con sistemi certificati ISO. Per altre informazi
 ### <a name="profiling-and-marketing"></a>Profilatura e marketing
 
 Microsoft Intune non usa i dati personali raccolti nell'ambito della fornitura del servizio per scopi di profilatura o marketing. 
-
-### <a name="restrict-processing-of-personal-data"></a>Limitare l'elaborazione dei dati personali
-
-Per limitare l'elaborazione dei dati personali dell'utente, è possibile eliminare l'account utente come segue:
-1. Esportazione di una copia in formato elettronico dei dati personali dell'utente, tra cui
-    - account
-    - dati del servizio
-    - log associati
-2. Eliminazione dell'account utente e dei dati associati da Intune.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

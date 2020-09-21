@@ -17,24 +17,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d23af858db709deb041fa1259d7c7d203eaa65dd
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 148e549d72c3d5802bc9d86f7d0fd81d55b21aa7
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217714"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039228"
 ---
 # <a name="add-an-android-line-of-business-app-to-microsoft-intune"></a>Aggiungere un'app line-of-business per Android a Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Un'app line-of-business (LOB) è un'app che viene aggiunta in Intune dal file di installazione di un'app. Questo tipo di app viene in genere scritto internamente. Intune installa l'app line-of-business nel dispositivo dell'utente. 
+Un'app line-of-business (LOB) è un'app che viene aggiunta in Intune dal file di installazione di un'app. Questo tipo di app viene in genere scritto internamente. Intune installa l'app line-of-business nel dispositivo dell'utente. Ciò è valido solo per i dispositivi gestiti dall'amministratore del dispositivo.
 
 > [!Note]
 > Per altre informazioni sulle app line-of-business e su Google Play Developer Console, vedere [Pubblicazione di app line-of-business private di Google Play gestito tramite Google Developer Console](apps-add-android-for-work.md?#managed-google-play-private-lob-app-publishing-using-the-google-developer-console). 
 
 > [!Note]
-> Per i dispositivi Android for Work, vedere [Aggiungere app Google Play gestite a dispositivi Android Enterprise con Intune](apps-add-android-for-work.md). 
+> Per i dispositivi Android Enterprise, vedere [Aggiungere app Google Play gestite a dispositivi Android Enterprise con Intune](apps-add-android-for-work.md). 
 
 ## <a name="select-the-app-type"></a>Selezionare il tipo di app
 
@@ -58,7 +58,7 @@ Un'app line-of-business (LOB) è un'app che viene aggiunta in Intune dal file di
     - **Nome**: immettere il nome dell'app che viene visualizzato nel portale aziendale. Verificare che tutti i nomi di app usati siano univoci. Se il nome di un'app è usato due volte, solo una delle due app viene visualizzata nel portale aziendale.
     - **Descrizione**: immettere la descrizione dell'app. La descrizione viene visualizzata nel portale aziendale.
     - **Autore**: Immettere il nome dell'autore dell'app.
-    - **Sistema operativo minimo**: selezionare dall'elenco la versione minima del sistema operativo in cui è possibile installare l'app. L'installazione non verrà eseguita se si assegna l'app a un dispositivo con un sistema operativo precedente.
+    - **Sistema operativo minimo**: scegliere nell'elenco la versione minima del sistema operativo in cui è possibile installare l'app. L'installazione non verrà eseguita se si assegna l'app a un dispositivo con un sistema operativo precedente.
     - **Categoria**: selezionare una o più categorie di app predefinite o una categoria creata dall'utente. Le categorie consentono agli utenti di trovare più facilmente l'app nel portale aziendale.
     - **Visualizza come app in primo piano nel portale aziendale**: Visualizzare chiaramente l'app nella pagina principale del portale aziendale quando gli utenti cercano le app.
     - **URL di informazioni**: Immettere l'URL di un sito Web che include informazioni sull'app (facoltativo). L'URL viene visualizzato nel portale aziendale.

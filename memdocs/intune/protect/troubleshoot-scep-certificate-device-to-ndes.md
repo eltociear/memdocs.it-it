@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/30/2020
+ms.date: 08/28/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b35011577b6c5882a2f136d9b6d321b182c2be6a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 166681c4cdb2ac3652234c12e50bcb185c43dcbe
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83991084"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076176"
 ---
 # <a name="troubleshoot-device-to-ndes-server-communication-for-scep-certificate-profiles-in-microsoft-intune"></a>Risolvere i problemi di comunicazione tra dispositivo e server NDES per i profili di certificato SCEP in Microsoft Intune
 
@@ -191,6 +191,7 @@ Quando si passa all'URL del server SCEP, viene visualizzato il messaggio del ser
   ```
 
   Se l'installazione non riesce, rimuovere il connettore Microsoft Intune e quindi reinstallarlo.
+  Se l'installazione è stata completata correttamente e si continua a ricevere il messaggio NDES generale, eseguire il comando **iisreset** per riavviare IIS.
 
 #### <a name="http-error-503"></a>Errore HTTP 503
 

@@ -17,14 +17,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c6dcd41377234bbb1b40e513f16c3393d763b17f
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: a5f479dcad0c293c547edec24f0f835a4fc987e1
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088191"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574831"
 ---
 # <a name="unlicensed-admins"></a>Amministratori senza licenza
+
+> [!Important]
+> Questa opzione rimuove solo il requisito della licenza per gli amministratori per accedere a Microsoft Endpoint Manager. L'uso di altre caratteristiche o servizi come Azure Active Directory Premium può comunque richiedere una licenza per l'amministratore.
 
 È possibile concedere l'accesso all'interfaccia di amministrazione di Intune/Microsoft Endpoint Manager agli amministratori senza licenze di Intune.
 

@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: b8b91e25d01a64cfeee601c898c355111b960b7c
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 1755399ad67cd073c71f2a26ef4305bec5a53f51
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907872"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814873"
 ---
 # <a name="windows-autopilot-scenarios-and-capabilities"></a>Scenari e funzionalità di Windows Autopilot
 
@@ -27,13 +27,16 @@ ms.locfileid: "88907872"
 
 ## <a name="scenarios"></a>Scenari
 
-Windows Autopilot include il supporto per un elenco in continua crescita di scenari, progettati per supportare esigenze aziendali comuni. Queste esigenze possono variare in base al tipo di organizzazione e al passaggio a Windows 10 e [alla gestione moderna](/windows/client-management/manage-windows-10-in-your-organization-modern-management).
+Windows Autopilot supporta un elenco in continua crescita di scenari in cui le organizzazioni necessitano in genere. Queste esigenze variano in base a:
+- Tipo di organizzazione.
+- Stato di avanzamento in Windows 10.
+- Per quanto riguarda la [transizione alla gestione moderna](/windows/client-management/manage-windows-10-in-your-organization-modern-management).
 
 In questa guida vengono descritti gli scenari di Windows Autopilot seguenti:
 
-| Scenario | Ulteriori informazioni |
+| Scenario | Altre informazioni |
 | --- | --- |
-| Distribuire i dispositivi da configurare da un membro dell'organizzazione e configurati per tale persona | [Modalità definita dall'utente di Windows Autopilot](user-driven.md) |
+| Distribuire e configurare i dispositivi in modo che un utente finale possa configurarlo autonomamente | [Modalità definita dall'utente di Windows Autopilot](user-driven.md) |
 | Distribuire i dispositivi da configurare automaticamente per l'uso condiviso, come chiosco multimediale o come dispositivo di firma digitale.| [Modalità di distribuzione automatica di Windows Autopilot](self-deploying.md) |
 | Ridistribuire un dispositivo in uno stato pronto per l'azienda.| [Ripristino di Windows Autopilot](windows-autopilot-reset.md) |
 | Eseguire il pre-provisioning di un dispositivo con le applicazioni, i criteri e le impostazioni aggiornate.| [Trattamento esclusivo](white-glove.md) |
@@ -49,21 +52,25 @@ Questi scenari sono riepilogati nel video seguente.
 
 ### <a name="windows-autopilot-is-self-updating-during-oobe"></a>Windows Autopilot si aggiorna autonomamente durante la configurazione guidata
 
-A partire da Windows 10, versione 1903, gli aggiornamenti critici e funzionali di Autopilot inizieranno a essere scaricati automaticamente durante la configurazione guidata dopo che un dispositivo è connesso a una rete e gli [aggiornamenti critici del driver e della patch di Windows Zero-Day (ZDP)](/windows-hardware/customize/desktop/windows-updates-during-oobe) sono stati completati. L'utente o l'amministratore IT non può rifiutare esplicitamente questi aggiornamenti di Autopilot perché sono necessari per il corretto funzionamento della distribuzione di Windows Autopilot.  Windows segnalerà all'utente che il dispositivo sta controllando, scaricando e installando gli aggiornamenti.
+Per i dispositivi Windows 10, versione 1903 e successive, gli aggiornamenti funzionali e critici di Autopilot vengono scaricati automaticamente durante la configurazione guidata dopo:
+- Il dispositivo è connesso a una rete.
+- Sono stati completati gli [aggiornamenti critici del driver e della patch di Windows Zero-Day (ZDP)](/windows-hardware/customize/desktop/windows-updates-during-oobe) .
 
-Per ulteriori informazioni, vedere l' [aggiornamento di Windows Autopilot](autopilot-update.md) .
+Non è possibile rifiutare esplicitamente questi aggiornamenti di Autopilot perché sono necessari per la distribuzione di Windows Autopilot. Windows avvisa l'utente che il dispositivo sta controllando, scaricando e installando gli aggiornamenti.
+
+Per ulteriori informazioni, vedere l' [aggiornamento di Windows Autopilot](autopilot-update.md).
 
 ### <a name="cortana-voiceover-and-speech-recognition-during-oobe"></a>Cortana VoiceOver e riconoscimento vocale durante la configurazione guidata
 
-In Windows 10, la versione 1903 e successive Cortana VoiceOver e riconoscimento vocale durante la configurazione guidata è DISABILITAto per impostazione predefinita per tutti gli SKU di Windows 10 Pro, Education ed Enterprise.
+In Windows 10, versione 1903 e successive, Cortana VoiceOver e riconoscimento vocale durante la configurazione guidata sono DISABILITAti per impostazione predefinita. Questa impostazione predefinita si applica a tutti gli SKU di Windows 10 Pro, Education ed Enterprise.
 
 È anche possibile abilitare Cortana VoiceOver e riconoscimento vocale durante la configurazione guidata creando la chiave del registro di sistema seguente. Questa chiave non esiste per impostazione predefinita:
 
 HKLM\Software\Microsoft\Windows\CurrentVersion\OOBE\EnableVoiceForAllEditions
 
-Il valore della chiave è un DWORD con  **0** = disabled e **1** = Enabled.
+Il valore della chiave è un DWORD con **0** = disabled e **1** = Enabled.
 
-| valore | Descrizione |
+| Valore | Descrizione |
 | --- | --- |
 | 0 | Cortana VoiceOver è disabilitato |
 | 1 | Cortana VoiceOver è abilitato |

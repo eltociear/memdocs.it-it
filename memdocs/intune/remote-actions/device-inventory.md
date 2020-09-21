@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/12/2020
+ms.date: 09/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e6aa3c887a22c468d8d482ce2d4ba0da8202fceb
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 1cc9cf0bdba9a6dea77955a6b88d3221053ea50f
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88906821"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076142"
 ---
 # <a name="see-device-details-in-intune"></a>Visualizzare i dettagli del dispositivo in Intune
 
@@ -105,7 +105,7 @@ A seconda del gestore telefonico usato dai dispositivi, è possibile che non ven
 |Crittografato|Se **Sì** i dati archiviati nel dispositivo sono crittografati.|Windows, iOS/iPadOS, Android|
 
 > [!Note]  
-> Il numero di telefono non è incluso nell'inventario dei dispositivi Android Enterprise dedicati o completamente gestiti.
+> Il numero di telefono non è incluso nell'inventario dei dispositivi Android Enterprise dedicati, completamente gestiti o di proprietà aziendale con profilo di lavoro.
 
 ## <a name="next-steps"></a>Passaggi successivi
 Vedere le altre operazioni possibili per [gestire i dispositivi](device-management.md) con Intune.

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/20/2020
+ms.date: 09/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad78240aa9f2a1ef515be2635cfad0ce68e8ecc8
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 6989dc3559a1de950f5d2ec8280894f1f1983b61
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88909007"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574865"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>Impostazioni dei dispositivi iOS e iPadOS per usare le funzionalità iOS/iPadOS comuni in Intune
 
@@ -343,7 +343,7 @@ Questa funzionalità si applica a:
   - Gli URL devono iniziare con `http://` o `https://`.
 
 - **Configurazione aggiuntiva** (Microsoft Azure AD, reindirizzamento e credenziali): immettere i dati aggiuntivi specifici dell'estensione da passare all'estensione dell'app per l'accesso SSO:
-  - **Chiave**: immettere il nome dell'elemento che si vuole aggiungere, ad esempio `user name`.
+  - **Chiave**: immettere il nome dell'elemento che si vuole aggiungere, ad esempio `user name`. `AppAllowList` applica la distinzione maiuscole/minuscole. Assicurarsi di immettere esattamente "AppAllowList". 
   - **Tipo**: immettere il tipo di dati. Le opzioni disponibili sono:
 
     - Stringa

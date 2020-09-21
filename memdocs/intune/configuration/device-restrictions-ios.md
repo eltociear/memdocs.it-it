@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/03/2020
+ms.date: 09/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 273efc6be6b3f93c04c0ce39c2688859d3c96c56
-ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
+ms.openlocfilehash: ca9fb5b350cd9c89b8d4eb37144340b93e9ebbab
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89423884"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574814"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Impostazioni dei dispositivi iOS e iPadOS per consentire o limitare l'uso delle funzionalità tramite Intune
 
@@ -173,9 +173,9 @@ Queste impostazioni vengono aggiunte a un profilo di configurazione del disposit
   > [!NOTE]
   > Per i dispositivi registrati dall'utente, gli utenti possono impostare un PIN superiore a 6 cifre. Tuttavia, non vengono applicate più di 6 cifre nei dispositivi. Un amministratore, ad esempio, imposta una lunghezza minima di `8`. Nei dispositivi registrati dall'utente agli utenti viene richiesto di impostare solo un PIN di 6 cifre. Intune non impone un PIN superiore a 6 cifre nei dispositivi registrati dall'utente.
 
-- **Numero di errori di accesso prima della cancellazione dei dati del dispositivo**: immettere il numero di accessi non riusciti consentiti prima della cancellazione del dispositivo, da 4 a 11.
+- **Numero di errori di accesso prima della cancellazione dei dati del dispositivo**: immettere il numero di accessi non riusciti consentiti prima della cancellazione del dispositivo, da 2 a 11. Non è consigliabile impostare questo valore su `2` o `3`. L'immissione della password errata è molto comune. Spesso si verifica la cancellazione del dispositivo dopo due o tre tentativi di accesso con password errata. È consigliabile impostare questo valore su almeno `4`. 
   
-  iOS/iPadOS ha una funzionalità di sicurezza incorporata che può influire su questa impostazione. Ad esempio, iOS/iPadOS può ritardare l'attivazione del criterio a seconda del numero di errori di accesso. Immettere ripetutamente lo stesso passcode può essere considerato un solo tentativo. La [Guida di sicurezza iOS/iPadOS](https://www.apple.com/business/site/docs/iOS_Security_Guide.pdf) di Apple è una valida risorsa e offre dettagli più specifici sui passcode (apre il sito Web di Apple).
+  iOS/iPadOS ha una funzionalità di sicurezza incorporata che può influire su questa impostazione. Ad esempio, iOS/iPadOS può ritardare l'attivazione del criterio a seconda del numero di errori di accesso. Immettere ripetutamente lo stesso passcode può essere considerato un solo tentativo. La [Guida di sicurezza iOS/iPadOS](https://www.apple.com/business/site/docs/iOS_Security_Guide.pdf) di Apple è una valida risorsa e offre dettagli più specifici sui passcode (apre il sito Web di Apple). 
   
 - **Numero massimo di minuti dopo il blocco dello schermo prima che venga richiesta una password**<sup>1</sup>: specificare per quanto tempo i dispositivi rimangono inattivi prima che gli utenti debbano immettere di nuovo la password. Se il tempo immesso è più lungo dell'impostazione corrente nel dispositivo, il dispositivo ignora il tempo immesso.
 

@@ -12,6 +12,8 @@
       href: timeline.md
     - name: Esplora risorse (anteprima)
       href: resource-explorer.md
+    - name: Eseguire script (anteprima)
+      href: scripts.md
 - name: CMPivot per dispositivi collegati al tenant (anteprima)
   items:
     - name: Avvia CMPivot (anteprima)
@@ -28,6 +30,10 @@
       href: deploy-antivirus-policy.md
     - name: Impostazioni per i criteri di Microsoft Defender Antivirus
       href: ../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json
+- name: Informazioni di riferimento
+  items:
+    - name: Raccolta dati collegamento del tenant
+      href: data-collection.md
 - name: Risoluzione dei problemi
   items:
     - name: Azioni del dispositivo e collegamento di tenant
@@ -40,5 +46,7 @@
       href: troubleshoot-timeline.md
     - name: Esplora risorse (anteprima)
       href: troubleshoot-resource-explorer.md
+    - name: Eseguire script (anteprima)
+      href: troubleshoot-scripts.md
     - name: CMPivot (anteprima)
       href: troubleshoot-cmpivot.md

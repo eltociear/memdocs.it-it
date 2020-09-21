@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f70c8487d9cb30b2a7cced63e6e019541f73704
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 67de7db6587c1f80d849808c139bf1ae94f4bbd5
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327061"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643644"
 ---
 # <a name="quickstart-enroll-your-windows-10-device"></a>Guida introduttiva: Registrare il dispositivo Windows 10
 
@@ -87,7 +87,7 @@ Prima della registrazione di Windows 10 Desktop, è necessario verificare la ver
 
    ![Screenshot dell'account aggiunto](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-06.png)
 
-    Se i passaggi precedenti sono stati seguiti, ma non è ancora possibile accedere ai file e agli account di posta elettronica aziendali o dell'istituto di istruzione, seguire i passaggi in [Passaggi di risoluzione dei problemi da seguire se si visualizza "Accedi all'azienda o all'istituto di istruzione"](../user-help/troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-access-work-or-school).
+    Se i passaggi precedenti sono stati seguiti, ma non è ancora possibile accedere ai file e agli account di posta elettronica aziendali o dell'istituto di istruzione, seguire i passaggi in [Risolvere i problemi di registrazione dei dispositivi Windows 10](../user-help/troubleshoot-your-windows-10-device-windows.md).  
 
 ## <a name="confirm-your-device-enrollment-in-intune"></a>Verificare la registrazione del dispositivo in Intune
 

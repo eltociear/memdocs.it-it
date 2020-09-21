@@ -15,12 +15,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 38f140717d256d6edd4e9bd6cd0a66b6bc853740
-ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
+ms.openlocfilehash: ac359871b9f565b66d6d179048ae8c64ebf5392d
+ms.sourcegitcommit: 81f6b4cac6c991d34bc864f950c82e5b57e906c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90574580"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90779517"
 ---
 # <a name="troubleshooting-windows-autopilot"></a>Risoluzione dei problemi di Windows Autopilot
 
@@ -93,7 +93,7 @@ Quando la configurazione guidata include un comportamento imprevisto di Autopilo
 
 ### <a name="windows-10-version-1803-and-above"></a>Windows 10 versione 1803 e successive
 
-Windows 10 versione 1803 e successive aggiunge voci del registro eventi. È possibile usare le voci og per visualizzare i dettagli relativi alle impostazioni del profilo di Autopilot e al flusso della configurazione guidata. Queste voci possono essere visualizzate usando Visualizzatore eventi. Esaminare le informazioni in **registri applicazioni e servizi-> Microsoft-> Windows-> provisioning-Diagnostics-provider-> Autopilot** per le versioni precedenti alla 1903. Per la versione 1903 e successive, vedere **registri applicazioni e servizi-> Microsoft-> Windows-> ModernDeployment-Diagnostics-provider-> Autopilot**. È possibile registrare gli eventi seguenti, a seconda dello scenario e della configurazione del profilo:
+Windows 10 versione 1803 e successive aggiunge voci del registro eventi. È possibile utilizzare le voci di log per visualizzare i dettagli relativi alle impostazioni del profilo di Autopilot e al flusso della configurazione guidata. Queste voci possono essere visualizzate usando Visualizzatore eventi. Esaminare le informazioni in **registri applicazioni e servizi-> Microsoft-> Windows-> provisioning-Diagnostics-provider-> Autopilot** per le versioni precedenti alla 1903. Per la versione 1903 e successive, vedere **registri applicazioni e servizi-> Microsoft-> Windows-> ModernDeployment-Diagnostics-provider-> Autopilot**. È possibile registrare gli eventi seguenti, a seconda dello scenario e della configurazione del profilo:
 
 | ID evento | Type | Descrizione |
 |----------|------|-------------| 

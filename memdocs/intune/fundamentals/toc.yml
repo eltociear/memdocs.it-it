@@ -217,6 +217,8 @@
       items:
         - name: Report di Intune
           href: reports.md
+        - name: Esportare report con Graph
+          href: reports-export-graph-apis.md
         - name: Log di controllo per le attività di Intune
           href: monitor-audit-logs.md
         - name: Esaminare i log con Monitoraggio di Azure

@@ -28,6 +28,8 @@
       href: get-started/configure-classifications-and-products.md
     - name: Gestire le impostazioni per gli aggiornamenti software
       href: get-started/manage-settings-for-software-updates.md
+    - name: Configurare un punto di aggiornamento software per l'uso di SSL
+      href: get-started/software-update-point-ssl.md
     - name: Sincronizzare gli aggiornamenti software in ambienti disconnessi
       items:
         - name: Sincronizzare gli aggiornamenti software da un punto di aggiornamento software disconnesso

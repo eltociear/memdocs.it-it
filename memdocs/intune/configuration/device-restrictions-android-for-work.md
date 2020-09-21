@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/31/2020
+ms.date: 09/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b213769234d55fd2a542ac166afe59c6e8b9e6c2
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: 2e79017726e8b8924ac5502c7522b124f11e6c60
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89194107"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606957"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Impostazioni dei dispositivi Android Enterprise per consentire o limitare l'uso delle funzionalità tramite Intune
 
@@ -35,13 +35,13 @@ Questo articolo descrive le diverse impostazioni che è possibile controllare ne
 
 Queste impostazioni si applicano ai tipi di registrazione Android Enterprise in cui Intune controlla l'intero dispositivo, ad esempio i dispositivi Android Enterprise completamente gestiti, dedicati e di proprietà aziendale con profilo di lavoro.
 
-Alcune impostazioni non sono supportate da tutti i tipi di registrazione. Per vedere quali impostazioni sono supportate per ogni tipo di registrazione, vedere l'interfaccia utente. Ogni impostazione è riportata sotto un'intestazione che indica i tipi di registrazione in cui può essere usata.
+Alcune impostazioni non sono supportate da tutti i tipi di registrazione. Per vedere quali impostazioni sono supportate per ogni tipo di registrazione, vedere l'interfaccia utente. Ogni impostazione è riportata sotto un'intestazione che indica i tipi di registrazione che possono usare l'impostazione.
 
-![Intestazioni delle impostazioni.](./media/device-restrictions-android-for-work/setting-headers.png)
+:::image type="content" source="./media/device-restrictions-android-for-work/setting-headers.png" alt-text="Vedere le intestazioni delle impostazioni di utenti e account Android Enterprise e i tipi di registrazione a cui si applicano in Microsoft Intune ed Endpoint Manager.":::
 
 Alcune impostazioni si applicano solo a livello di profilo di lavoro per i dispositivi di proprietà aziendale con un profilo di lavoro. Queste impostazioni si applicano sempre all'intero dispositivo per i dispositivi completamente gestiti e dedicati. Queste impostazioni sono contrassegnate dal descrittore *(livello di profilo di lavoro)* nell'interfaccia utente.
 
-![Intestazioni delle impostazioni.](./media/device-restrictions-android-for-work/work-profile-level.png)
+:::image type="content" source="./media/device-restrictions-android-for-work/work-profile-level.png" alt-text="Vedere le impostazioni delle applicazioni Android Enterprise applicabili a livello di profilo di lavoro in Microsoft Intune ed Endpoint Manager.":::
 
 
 ### <a name="general"></a>Generale
@@ -239,7 +239,7 @@ Usare queste impostazioni per configurare un'esperienza di tipo chiosco multimed
 - **Completamente gestito**: configura l'app Microsoft Launcher nei dispositivi completamente gestiti.
 
   - **Imposta Microsoft Launcher come utilità di avvio predefinita**: l'opzione **Abilita** imposta Microsoft Launcher come utilità di avvio predefinita nella schermata iniziale. Se si imposta l'utilità di avvio come predefinita, gli utenti non possono usare un'altra utilità di avvio. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, Microsoft Launcher non viene impostato forzatamene come utilità di avvio predefinita.
-  - **Configura uno sfondo personalizzato**: **Abilita** consente di applicare una propria immagine come sfondo della schermata iniziale e di scegliere se gli utenti possono cambiare l'immagine. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il dispositivo mantiene lo sfondo corrente.
+  - **Configura uno sfondo personalizzato**: Nell'app Microsoft Launcher **Abilita** consente di applicare una propria immagine come sfondo della schermata iniziale e di scegliere se gli utenti possono cambiare l'immagine. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, il dispositivo mantiene lo sfondo corrente.
     - **Immettere l'URL dell'immagine di sfondo**: immettere l'URL dell'immagine di sfondo. Questa immagine viene visualizzata nella schermata iniziale del dispositivo. Immettere ad esempio `http://www.contoso.com/image.jpg`. 
     - **Consenti all'utente di modificare lo sfondo**: **Abilita** consente agli utenti di modificare l'immagine dello sfondo. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, agli utenti viene impedito di modificare lo sfondo.
   - **Abilita il feed del launcher**: **Abilita** attiva il feed del launcher, che mostra i calendari, i documenti e le attività recenti. Quando questa opzione è impostata su **Non configurato** (impostazione predefinita), Intune non modifica o aggiorna questa impostazione. Per impostazione predefinita, questo feed non viene visualizzato.

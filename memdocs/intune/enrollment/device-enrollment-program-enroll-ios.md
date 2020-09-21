@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a28d2810c3a93cd60013ae347c054783515196d7
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: d5ec26d03336e73f7dadf0912992b018058dc493
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907297"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574882"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Registrare automaticamente i dispositivi iOS/iPadOS con Registrazione automatica del dispositivo di Apple
 
@@ -226,8 +226,7 @@ Ora che è stato installato il token, è possibile creare un profilo di registra
 
 14. Se si sceglie **Consenti Apple Configurator per certificato** nel passaggio precedente, scegliere un certificato di Apple Configurator da importare.
 
-15. È possibile specificare un formato di denominazione per i dispositivi che viene applicato automaticamente alla registrazione e per ogni archiviazione successiva. Per creare un modello di denominazione, selezionare **Sì** in **Applica il modello di nome di dispositivo**. Nella casella **Modello del nome del dispositivo** immettere quindi il modello da usare per i nomi che usano questo profilo. È possibile specificare un formato modello che include il tipo di dispositivo e il numero di serie. 
-
+15. È possibile specificare un formato di denominazione per i dispositivi che viene applicato automaticamente alla registrazione e per ogni archiviazione successiva. Per creare un modello di denominazione, selezionare **Sì** in **Applica il modello di nome di dispositivo**. Nella casella **Modello del nome del dispositivo** immettere quindi il modello da usare per i nomi che usano questo profilo. È possibile specificare un formato modello che include il tipo di dispositivo e il numero di serie. Il modello di nome di dispositivo include il supporto per iPhone, iPad e iPod Touch. 
 16. Scegliere **Avanti: Personalizzazione dell'Assistente configurazione**.
 
 17. Nella pagina **Personalizzazione dell'Assistente configurazione** configurare le impostazioni di profilo seguenti: ![Personalizzazione dell'Assistente configurazione.](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)

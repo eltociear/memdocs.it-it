@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/24/2020
+ms.date: 09/08/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 348bafecd462aa9e4722443c33b62311b2f97e1a
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: e0a9ecebd86404d4218142d1a3acb591974b027d
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88993104"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608099"
 ---
 # <a name="intune-data-warehouse-collections"></a>Raccolte del data warehouse di Intune
 
@@ -34,30 +34,30 @@ L'entità **appRevision** elenca tutte le versioni di un'app.
 
 |          Proprietà          |                                      Descrizione                                      |                Esempio               |
 |----------------------------|---------------------------------------------------------------------------------------|--------------------------------------|
-| AppKey                     | Identificatore univoco dell'app.                                                         | 123                                  |
-| ApplicationId              | Identificatore univoco dell'app, simile ad AppKey, ma è una chiave naturale.        | b66bc706-ffff-7437-0340-032819502773 |
-| Revisione                   | La versione indicata dall'amministratore durante il caricamento del file binario.                   | 2                                    |
-| Titolo                      | Titolo dell'app.                                                                     | Excel                                |
-| Pubblicazione                  | Autore della pubblicazione dell'app.                                                                 | Microsoft                            |
-| UploadState                | Stato di caricamento dell'app.                                                              | 1                                    |
-| AppTypeKey                 | Riferimento ad AppType descritto nella sezione seguente.                            | 1                                    |
-| VppProgramTypeKey          | Riferimento a VppProgramType descritto di seguito.                                        | 30876                                |
-| CreationTime               | Ora di creazione della revisione.                                            | 23/11/2016 0:00                      |
-| ModifiedTime               | Ora dell'ultima modifica apportata a qualsiasi elemento relativo a questa revisione.                            | 23/11/2016 0:00                      |
-| Dimensioni                       | Dimensioni del file binario in byte.                                                          | 120.392.000                          |
-| StartDateInclusiveUTC      | Data e ora in formato UTC della creazione della revisione dell'app nel data warehouse.      | 23/11/2016 0:00                      |
-| EndDateExclusiveUTC        | Data e ora in formato UTC in cui la revisione dell'app è diventata obsoleta.                        | 23/11/2016 0:00                      |
-| IsCurrent                  | Indica se la versione dell'app è corrente o meno nel data warehouse.         | True/False                           |
-| RowLastModifiedDateTimeUTC | Data e ora in formato UTC dell'ultima modifica della versione dell'app nel data warehouse. | 23/11/2016 0:00                      |
+| appKey                     | Identificatore univoco dell'app.                                                         | 123                                  |
+| applicationId              | Identificatore univoco dell'app, simile ad AppKey, ma è una chiave naturale.        | b66bc706-ffff-7437-0340-032819502773 |
+| revision                   | La versione indicata dall'amministratore durante il caricamento del file binario.                   | 2                                    |
+| title                      | Titolo dell'app.                                                                     | Excel                                |
+| publisher                  | Autore della pubblicazione dell'app.                                                                 | Microsoft                            |
+| uploadState                | Stato di caricamento dell'app.                                                              | 1                                    |
+| appTypeKey                 | Riferimento ad AppType descritto nella sezione seguente.                            | 1                                    |
+| vppProgramTypeKey          | Riferimento a VppProgramType descritto di seguito.                                        | 30876                                |
+| creationTime               | Ora di creazione della revisione.                                            | 23/11/2016 0:00                      |
+| modifiedTime               | Ora dell'ultima modifica apportata a qualsiasi elemento relativo a questa revisione.                            | 23/11/2016 0:00                      |
+| size                       | Dimensioni del file binario in byte.                                                          | 120.392.000                          |
+| startDateInclusiveUTC      | Data e ora in formato UTC della creazione della revisione dell'app nel data warehouse.      | 23/11/2016 0:00                      |
+| endDateExclusiveUTC        | Data e ora in formato UTC in cui la revisione dell'app è diventata obsoleta.                        | 23/11/2016 0:00                      |
+| isCurrent                  | Indica se la versione dell'app è corrente o meno nel data warehouse.         | True/False                           |
+| rowLastModifiedDateTimeUTC | Data e ora in formato UTC dell'ultima modifica della versione dell'app nel data warehouse. | 23/11/2016 0:00                      |
 
 ## <a name="apptypes"></a>appTypes
 L'entità **appType** elenca l'origine dell'installazione di un'app.
 
 |   Proprietà  |        Descrizione        |
 |-------------|---------------------------|
-| AppTypeID   | ID per il tipo           |
-| AppTypeKey  | Chiave surrogata per la chiave |
-| AppTypeName | Tipo di app                  |
+| appTypeID   | ID per il tipo           |
+| appTypeKey  | Chiave surrogata per la chiave |
+| appTypeName | Tipo di app                  |
 
 ### <a name="example"></a>Esempio
 
@@ -82,28 +82,28 @@ La tabella seguente contiene un riepilogo dello stato di assegnazione dei criter
 
 |    Proprietà   |                                                                                      Descrizione                                                                                     |  Esempio |
 |---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| DateKey       | Chiave della data in cui è stato creato il riepilogo per i criteri di conformità.                                                                                                                   | 20161204 |
-| Sconosciuto       | Numero di dispositivi che sono offline o che non sono riusciti a comunicare con Intune o Azure AD per altri motivi.                                                                           | 5        |
-| NotApplicable | Numero di dispositivi in cui i criteri di conformità dei dispositivi assegnati dall'amministratore non sono applicabili.                                                                                     | 201      |
-| Conforme     | Numero di dispositivi che hanno applicato correttamente uno o più criteri di conformità dei dispositivi assegnati dall'amministratore.                                                                        | 4083     |
-| InGracePeriod | Numero di dispositivi che non sono conformi, ma che si trovano nel periodo di tolleranza definito dall'amministratore.                                                                                  | 57       |
-| NonCompliant  | Numero di dispositivi che non sono riusciti ad applicare uno o più criteri di conformità assegnati dall'amministratore o in cui l'utente non ha soddisfatto la conformità ai criteri assegnati dall'amministratore. | 43       |
-|    Errore      |    Numero di dispositivi che non sono riusciti a comunicare con Intune o Azure AD e che hanno restituito un messaggio di errore.                                                                          |    3     |
+| dateKey       | Chiave della data in cui è stato creato il riepilogo per i criteri di conformità.                                                                                                                   | 20161204 |
+| unknown       | Numero di dispositivi che sono offline o che non sono riusciti a comunicare con Intune o Azure AD per altri motivi.                                                                           | 5        |
+| notApplicable | Numero di dispositivi in cui i criteri di conformità dei dispositivi assegnati dall'amministratore non sono applicabili.                                                                                     | 201      |
+| compliant     | Numero di dispositivi che hanno applicato correttamente uno o più criteri di conformità dei dispositivi assegnati dall'amministratore.                                                                        | 4083     |
+| inGracePeriod | Numero di dispositivi che non sono conformi, ma che si trovano nel periodo di tolleranza definito dall'amministratore.                                                                                  | 57       |
+| nonCompliant  | Numero di dispositivi che non sono riusciti ad applicare uno o più criteri di conformità assegnati dall'amministratore o in cui l'utente non ha soddisfatto la conformità ai criteri assegnati dall'amministratore. | 43       |
+|    error      |    Numero di dispositivi che non sono riusciti a comunicare con Intune o Azure AD e che hanno restituito un messaggio di errore.                                                                          |    3     |
 
 ## <a name="compliancepolicystatusdeviceperpolicyactivities"></a>compliancePolicyStatusDevicePerPolicyActivities
 La tabella seguente contiene un riepilogo dello stato di assegnazione dei criteri di conformità ai dispositivi in base a ciascun criterio e al tipo di criterio. La tabella elenca il numero di dispositivi trovati in ogni stato di conformità per ogni criterio di conformità assegnato.
 
 |      Proprietà     |                                                                                      Descrizione                                                                                     |  Esempio |
 |-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| DateKey           | Chiave della data in cui è stato creato il riepilogo per i criteri di conformità.                                                                                                                   | 20161219 |
-| PolicyKey         | Chiave per il criterio di conformità per cui è stato creato il riepilogo.                                                                                                                   | 10178    |
-| PolicyPlatformKey | Chiave per il tipo di piattaforma del criterio di conformità per cui è stato creato il riepilogo.                                                                                            | 5        |
-| Sconosciuto           | Numero di dispositivi che sono offline o che non sono riusciti a comunicare con Intune o Azure AD per altri motivi.                                                                           | 13       |
-| NotApplicable     | Numero di dispositivi in cui i criteri di conformità dei dispositivi assegnati dall'amministratore non sono applicabili.                                                                                     | 3        |
-| Conforme         | Numero di dispositivi che hanno applicato correttamente uno o più criteri di conformità dei dispositivi assegnati dall'amministratore.                                                                        | 45       |
-| InGracePeriod     | Numero di dispositivi che non sono conformi, ma che si trovano nel periodo di tolleranza definito dall'amministratore.                                                                                  | 3        |
-| NonCompliant      | Numero di dispositivi che non sono riusciti ad applicare uno o più criteri di conformità assegnati dall'amministratore o in cui l'utente non ha soddisfatto la conformità ai criteri assegnati dall'amministratore. | 7        |
-| Errore             | Numero di dispositivi che non sono riusciti a comunicare con Intune o Azure AD e che hanno restituito un messaggio di errore.                                                                             | 3        |
+| dateKey           | Chiave della data in cui è stato creato il riepilogo per i criteri di conformità.                                                                                                                   | 20161219 |
+| policyKey         | Chiave per il criterio di conformità per cui è stato creato il riepilogo.                                                                                                                   | 10178    |
+| policyPlatformKey | Chiave per il tipo di piattaforma del criterio di conformità per cui è stato creato il riepilogo.                                                                                            | 5        |
+| unknown           | Numero di dispositivi che sono offline o che non sono riusciti a comunicare con Intune o Azure AD per altri motivi.                                                                           | 13       |
+| notApplicable     | Numero di dispositivi in cui i criteri di conformità dei dispositivi assegnati dall'amministratore non sono applicabili.                                                                                     | 3        |
+| compliant         | Numero di dispositivi che hanno applicato correttamente uno o più criteri di conformità dei dispositivi assegnati dall'amministratore.                                                                        | 45       |
+| inGracePeriod     | Numero di dispositivi che non sono conformi, ma che si trovano nel periodo di tolleranza definito dall'amministratore.                                                                                  | 3        |
+| nonCompliant      | Numero di dispositivi che non sono riusciti ad applicare uno o più criteri di conformità assegnati dall'amministratore o in cui l'utente non ha soddisfatto la conformità ai criteri assegnati dall'amministratore. | 7        |
+| error             | Numero di dispositivi che non sono riusciti a comunicare con Intune o Azure AD e che hanno restituito un messaggio di errore.                                                                             | 3        |
 ## <a name="compliancestates"></a>complianceStates
 
 |      Proprietà      |                       Descrizione                      |
@@ -129,24 +129,24 @@ L'entità **dates** rappresenta le date a cui si fa riferimento tra più entità
 
 |     Proprietà    |                       Descrizione                      |    Esempio    |
 |-----------------|--------------------------------------------------------|---------------|
-| DateKey         | Identificatore univoco della data nel data warehouse. | 20160703      |
-| FullDate        | Data nel formato di Data/ora completo.        | 7/3/2016 0:00 |
-| DayOfWeek       | Giorno della settimana                                            | 1             |
-| DayOfMonth      | Giorno del mese                                           | 3             |
-| DayOfYear       | Giorno dell'anno                                            | 185           |
-| WeekOfYear      | Settimana dell'anno                                           | 28            |
-| MonthOfYear     | Mese dell'anno                                      | 7             |
-| CalendarQuarter | Trimestre di calendario                                       | 3             |
-| CalendarYear    | Anno di calendario                                          | 2016          |
-| DateKey         | Identificatore univoco della data nel data warehouse. | 20160703      |
-| FullDate        | Data nel formato di Data/ora completo.        | 7/3/2016 0:00 |
-| DayOfWeek       | Giorno della settimana                                            | 1             |
-| DayOfMonth      | Giorno del mese                                           | 3             |
-| DayOfYear       | Giorno dell'anno                                            | 185           |
-| WeekOfYear      | Settimana dell'anno                                           | 28            |
-| MonthOfYear     | Mese dell'anno                                      | 7             |
-| CalendarQuarter | Trimestre di calendario                                       | 3             |
-| CalendarYear    | Anno di calendario                                          | 2016          |
+| dateKey         | Identificatore univoco della data nel data warehouse. | 20160703      |
+| fullDate        | Data nel formato di Data/ora completo.        | 7/3/2016 0:00 |
+| dayOfWeek       | Giorno della settimana                                            | 1             |
+| dayOfMonth      | Giorno del mese                                           | 3             |
+| dayOfYear       | Giorno dell'anno                                            | 185           |
+| weekOfYear      | Settimana dell'anno                                           | 28            |
+| monthOfYear     | Mese dell'anno                                      | 7             |
+| calendarQuarter | Trimestre di calendario                                       | 3             |
+| calendarYear    | Anno di calendario                                          | 2016          |
+| dateKey         | Identificatore univoco della data nel data warehouse. | 20160703      |
+| fullDate        | Data nel formato di Data/ora completo.        | 7/3/2016 0:00 |
+| dayOfWeek       | Giorno della settimana                                            | 1             |
+| dayOfMonth      | Giorno del mese                                           | 3             |
+| dayOfYear       | Giorno dell'anno                                            | 185           |
+| weekOfYear      | Settimana dell'anno                                           | 28            |
+| monthOfYear     | Mese dell'anno                                      | 7             |
+| calendarQuarter | Trimestre di calendario                                       | 3             |
+| calendarYear    | Anno di calendario                                          | 2016          |
 
 ## <a name="devicecategories"></a>deviceCategories
 
@@ -161,38 +161,38 @@ L'entità **DeviceConfigurationProfileDeviceActivity** elenca il numero di dispo
 
 |  Proprietà |                                          Descrizione                                          |  Esempio |
 |-----------|-----------------------------------------------------------------------------------------------|----------|
-| DateKey   | Chiave della data in cui l'archiviazione del profilo di configurazione dispositivo è stata registrata nel data warehouse. | 20160703 |
-| Pending   | Numero di dispositivi univoci in sospeso.                                                    | 123      |
-| Operazione riuscita | Numero di dispositivi univoci in stato completato.                                                    | 12       |
-| Errore     | Numero di dispositivi univoci in stato di errore.                                                      | 10       |
-| Operazione non riuscita    | Numero di dispositivi univoci in stato non riuscito.                                                     | 2        |
+| dateKey   | Chiave della data in cui l'archiviazione del profilo di configurazione dispositivo è stata registrata nel data warehouse. | 20160703 |
+| in sospeso   | Numero di dispositivi univoci in sospeso.                                                    | 123      |
+| riuscito | Numero di dispositivi univoci in stato completato.                                                    | 12       |
+| error     | Numero di dispositivi univoci in stato di errore.                                                      | 10       |
+| non riuscita    | Numero di dispositivi univoci in stato non riuscito.                                                     | 2        |
 
 ## <a name="deviceconfigurationprofileuseractivities"></a>deviceConfigurationProfileUserActivities 
 L'entità **DeviceConfigurationProfileUserActivity** elenca il numero di utenti con stato completato, in sospeso, non riuscito o di errore per ogni giorno. Il numero rispecchia i profili di configurazione dispositivo assegnati all'entità. Ad esempio, se un utente è nello stato completato per tutti i relativi criteri assegnati, incrementa di uno il contatore di completamento per tale giorno. Se a un utente sono assegnati due profili, uno con stato completato e l'altro con stato di errore, viene considerato l'utente con lo stato di errore. L'entità **DeviceConfigurationProfileUserActivity** elenca il numero di utenti in ogni stato diverso in un giorno specifico degli ultimi 30 giorni. 
 
 | Proprietà  | Descrizione  | Esempio  |
 |------------|----------------------------------------------------------------------------------------------|-----------|
-| DateKey  | Chiave data in cui l'archiviazione del profilo di configurazione dispositivo è stata registrata nel data warehouse.  | 20160703  |
-| Pending  | Numero di utenti univoci in sospeso.  | 123  |
-| Operazione riuscita  | Numero di utenti univoci in stato completato.  | 12  |
-| Errore  | Numero di utenti univoci in stato di errore.  | 10  |
-| Operazione non riuscita  | Numero di utenti univoci in stato non riuscito.  | 2  |
+| dateKey  | Chiave data in cui l'archiviazione del profilo di configurazione dispositivo è stata registrata nel data warehouse.  | 20160703  |
+| in sospeso  | Numero di utenti univoci in sospeso.  | 123  |
+| riuscito  | Numero di utenti univoci in stato completato.  | 12  |
+| error  | Numero di utenti univoci in stato di errore.  | 10  |
+| non riuscita  | Numero di utenti univoci in stato non riuscito.  | 2  |
 
 ## <a name="devicepropertyhistories"></a>devicePropertyHistories
 
 |          Proprietà          |                                                                                      Descrizione                                                                                     |
 |----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| DateKey                    | Riferimento alla tabella di data che indica il giorno.                                                                                                                                          |
-| DeviceKey                  | Identificatore univoco del dispositivo nel data warehouse - chiave surrogata. Si tratta di un riferimento alla tabella Device che contiene l'ID dispositivo Intune.                               |
-| DeviceName                 | Nome del dispositivo su piattaforme che consentono la denominazione di un dispositivo. Su altre piattaforme, Intune crea un nome da altre proprietà. Questo attributo non può essere disponibile per tutti i dispositivi. |
-| DeviceRegistrationStateKey | Chiave dell'attributo stato di registrazione dispositivo per il dispositivo.                                                                                                                    |
-| OwnerTypeKey               | Chiave dell'attributo tipo di proprietario per questo dispositivo: aziendale, personale o sconosciuto.                                                                                                  |
-| ManagementStateKey         | Chiave dello stato di gestione associato al dispositivo, che indica lo stato più recente di un'azione remota o se è jailbroken/rooted.                                                |
-| AzureADRegistered          | Indica se il dispositivo è registrato in Azure Active Directory.                                                                                                                             |
-| ComplianceStateKey         | Una chiave per ComplianceState.                                                                                                                                                            |
-| OSVersion                  | Versione del sistema operativo.                                                                                                                                                                          |
-| JailBroken                 | Indica se il dispositivo è jailbroken o rooted.                                                                                                                                         |
-| DeviceCategoryKey          | Chiave dell'attributo di categoria di dispositivo per questo dispositivo.                                                                                                                                    |
+| dateKey                    | Riferimento alla tabella di data che indica il giorno.                                                                                                                                          |
+| deviceKey                  | Identificatore univoco del dispositivo nel data warehouse - chiave surrogata. Si tratta di un riferimento alla tabella Device che contiene l'ID dispositivo Intune.                               |
+| deviceName                 | Nome del dispositivo su piattaforme che consentono la denominazione di un dispositivo. Su altre piattaforme, Intune crea un nome da altre proprietà. Questo attributo non può essere disponibile per tutti i dispositivi. |
+| deviceRegistrationStateKey | Chiave dell'attributo stato di registrazione dispositivo per il dispositivo.                                                                                                                    |
+| ownerTypeKey               | Chiave dell'attributo tipo di proprietario per questo dispositivo: aziendale, personale o sconosciuto.                                                                                                  |
+| managementStateKey         | Chiave dello stato di gestione associato al dispositivo, che indica lo stato più recente di un'azione remota o se è jailbroken/rooted.                                                |
+| azureADRegistered          | Indica se il dispositivo è registrato in Azure Active Directory.                                                                                                                             |
+| complianceStateKey         | Una chiave per ComplianceState.                                                                                                                                                            |
+| oSVersion                  | Versione del sistema operativo.                                                                                                                                                                          |
+| jailBroken                 | Indica se il dispositivo è jailbroken o rooted.                                                                                                                                         |
+| deviceCategoryKey          | Chiave dell'attributo di categoria di dispositivo per questo dispositivo.                                                                                                                                    |
 | physicalMemoryInBytes      | Memoria fisica in byte.                                                                                                                                    |
 | totalStorageSpaceInBytes      | Capacità di archiviazione totale in byte.                                                                                                                                    |
 
@@ -205,56 +205,56 @@ L'entità **DeviceRegistrationState** rappresenta il tipo di registrazione a cui
 | deviceRegistrationStateID   | Identificatore univoco per lo stato di registrazione                                            |
 | deviceRegistrationStateKey  | Identificatore univoco dello stato di registrazione nel data warehouse - chiave surrogata |
 | deviceRegistrationStateName | Stato di registrazione                                                                  |
-|    NotRegistered                     |    Non registrato                                                                                                                                                                  |
-|    Registrato                        |       Registrato                                                                                                                                                                   |
-|    Revocato                           |       Lo stato indica che l'amministratore IT ha bloccato il client e che il client può essere sbloccato. Un dispositivo può anche essere nello stato Revocato dopo la cancellazione o il ritiro.        |
-|    KeyConflict                       |    Conflitto di chiave                                                                                                                                                                    |
-|    ApprovalPending                   |    Approvazione in sospeso                                                                                                                                                                |
-|    CertificateReset                  |    Reimpostazione certificato                                                                                                                                                               |
-|    NotRegisteredPendingEnrollment    |    Non registrato con registrazione in sospeso                                                                                                                                               |
-|    Sconosciuto                           |    Stato sconosciuto                                                                                                                                                                   |
+|    notRegistered                     |    Non registrato                                                                                                                                                                  |
+|    registrarla                        |       Registrato                                                                                                                                                                   |
+|    revoked                           |       Lo stato indica che l'amministratore IT ha bloccato il client e che il client può essere sbloccato. Un dispositivo può anche essere nello stato Revocato dopo la cancellazione o il ritiro.        |
+|    keyConflict                       |    Conflitto di chiave                                                                                                                                                                    |
+|    approvalPending                   |    Approvazione in sospeso                                                                                                                                                                |
+|    certificateReset                  |    Reimpostazione certificato                                                                                                                                                               |
+|    notRegisteredPendingEnrollment    |    Non registrato con registrazione in sospeso                                                                                                                                               |
+|    unknown                           |    Stato sconosciuto                                                                                                                                                                   |
 
 ## <a name="devices"></a>devices
 L'entità **device** elenca tutti i dispositivi registrati in gestione e le proprietà corrispondenti.
 
 |          Proprietà          |                                                                                       Descrizione                                                                                      |
 |----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| DeviceKey                  | Identificatore univoco del dispositivo nel data warehouse - chiave surrogata.                                                                                                               |
-| DeviceId                   | Identificatore univoco del dispositivo.                                                                                                                                                     |
-| DeviceName                 | Nome del dispositivo su piattaforme che consentono la denominazione di un dispositivo. Nelle altre piattaforme Intune crea un nome in base ad altre proprietà. Questo attributo non può essere disponibile per tutti i dispositivi. |
-| DeviceTypeKey              | Chiave dell'attributo tipo di dispositivo per il dispositivo.                                                                                                                                    |
-| DeviceRegistrationState    | Chiave dell'attributo stato di registrazione client per il dispositivo.                                                                                                                      |
-| OwnerTypeKey               | Chiave dell'attributo tipo di proprietario per questo dispositivo: aziendale, personale o sconosciuto.                                                                                                    |
-| EnrolledDateTime           | Data e ora in cui è stato registrato questo dispositivo.                                                                                                                                         |
+| deviceKey                  | Identificatore univoco del dispositivo nel data warehouse - chiave surrogata.                                                                                                               |
+| deviceId                   | Identificatore univoco del dispositivo.                                                                                                                                                     |
+| deviceName                 | Nome del dispositivo su piattaforme che consentono la denominazione di un dispositivo. Nelle altre piattaforme Intune crea un nome in base ad altre proprietà. Questo attributo non può essere disponibile per tutti i dispositivi. |
+| deviceTypeKey              | Chiave dell'attributo tipo di dispositivo per il dispositivo.                                                                                                                                    |
+| deviceRegistrationState    | Chiave dell'attributo stato di registrazione client per il dispositivo.                                                                                                                      |
+| ownerTypeKey               | Chiave dell'attributo tipo di proprietario per questo dispositivo: aziendale, personale o sconosciuto.                                                                                                    |
+| enrolledDateTime           | Data e ora in cui è stato registrato questo dispositivo.                                                                                                                                         |
 | ethernetMacAddress           | Identificatore di rete univoco del dispositivo.                                                                                                                                         |
-| LastSyncDateTime           | Ultima archiviazione nota con Intune.                                                                                                                                              |
-| ManagementAgentKey         | Chiave dell'agente di gestione associato al dispositivo.                                                                                                                             |
-| ManagementStateKey         | Chiave dello stato di gestione associato al dispositivo, che indica lo stato più recente di un'azione remota o se è jailbroken/rooted.                                                |
-| AzureADDeviceId            | L'ID dispositivo Azure per questo dispositivo.                                                                                                                                                  |
-| AzureADRegistered          | Indica se il dispositivo è registrato in Azure Active Directory.                                                                                                                             |
-| DeviceCategoryKey          | Chiave della categoria associata al dispositivo.                                                                                                                                     |
-| DeviceEnrollmentType       | Chiave del tipo di registrazione associata al dispositivo, che indica il metodo di registrazione.                                                                                             |
-| ComplianceStateKey         | Chiave dello stato di conformità associato a questo dispositivo.                                                                                                                             |
+| lastSyncDateTime           | Ultima archiviazione nota con Intune.                                                                                                                                              |
+| managementAgentKey         | Chiave dell'agente di gestione associato al dispositivo.                                                                                                                             |
+| managementStateKey         | Chiave dello stato di gestione associato al dispositivo, che indica lo stato più recente di un'azione remota o se è jailbroken/rooted.                                                |
+| azureADDeviceId            | L'ID dispositivo Azure per questo dispositivo.                                                                                                                                                  |
+| azureADRegistered          | Indica se il dispositivo è registrato in Azure Active Directory.                                                                                                                             |
+| deviceCategoryKey          | Chiave della categoria associata al dispositivo.                                                                                                                                     |
+| deviceEnrollmentType       | Chiave del tipo di registrazione associata al dispositivo, che indica il metodo di registrazione.                                                                                             |
+| complianceStateKey         | Chiave dello stato di conformità associato a questo dispositivo.                                                                                                                             |
 | office365Version           | Versione di Microsoft 365 installata nel dispositivo.                                                                                                                             |
-| OSVersion                  | Versione del sistema operativo del dispositivo.                                                                                                                                                |
-| EasDeviceId                | ID Exchange ActiveSync del dispositivo.                                                                                                                                                  |
-| SerialNumber               | SerialNumber                                                                                                                                                                           |
-| UserId                     | Identificatore univoco per l'utente associato al dispositivo.                                                                                                                           |
-| RowLastModifiedDateTimeUTC | Data e ora in formato UTC dell'ultima modifica del dispositivo nel data warehouse.                                                                                                       |
-| Produttore               | Produttore del dispositivo                                                                                                                                                             |
-| Modello                      | Modello del dispositivo                                                                                                                                                                    |
-| OperatingSystem            | Sistema operativo del dispositivo. Windows, iOS/iPadOS e così via.                                                                                                                                   |
-| IsDeleted                  | Dati binari per indicare se il dispositivo viene eliminato o meno.                                                                                                                                 |
-| AndroidSecurityPatchLevel  | Livello di patch di protezione per Android                                                                                                                                                           |
-| MEID                       | MEID                                                                                                                                                                                   |
+| oSVersion                  | Versione del sistema operativo del dispositivo.                                                                                                                                                |
+| easDeviceId                | ID Exchange ActiveSync del dispositivo.                                                                                                                                                  |
+| serialNumber               | SerialNumber                                                                                                                                                                           |
+| userId                     | Identificatore univoco per l'utente associato al dispositivo.                                                                                                                           |
+| rowLastModifiedDateTimeUTC | Data e ora in formato UTC dell'ultima modifica del dispositivo nel data warehouse.                                                                                                       |
+| manufacturer               | Produttore del dispositivo                                                                                                                                                             |
+| model                      | Modello del dispositivo                                                                                                                                                                    |
+| operatingSystem            | Sistema operativo del dispositivo. Windows, iOS/iPadOS e così via.                                                                                                                                   |
+| isDeleted                  | Dati binari per indicare se il dispositivo viene eliminato o meno.                                                                                                                                 |
+| androidSecurityPatchLevel  | Livello di patch di protezione per Android                                                                                                                                                           |
+| mEID                       | MEID                                                                                                                                                                                   |
 | isSupervised               | Stato del dispositivo con supervisione                                                                                                                                                               |
-| FreeStorageSpaceInBytes    | Spazio di archiviazione disponibile in byte.                                                                                                                                                                 |
-| EncryptionState            | Stato della crittografia nel dispositivo.                                                                                                                                                      |
-| SubscriberCarrier          | Gestore telefonico del sottoscrittore del dispositivo                                                                                                                                                       |
-| PhoneNumber                | Numero di telefono del dispositivo                                                                                                                                                             |
-| IMEI                       | IMEI                                                                                                                                                                                   |
-| CellularTechnology         | Tecnologia cellulare del dispositivo.                                                                                                                                                    |
-| WiFiMacAddress             | MAC Wi-Fi                                                                                                                                                                              |
+| freeStorageSpaceInBytes    | Spazio di archiviazione disponibile in byte.                                                                                                                                                                 |
+| encryptionState            | Stato della crittografia nel dispositivo.                                                                                                                                                      |
+| subscriberCarrier          | Gestore telefonico del sottoscrittore del dispositivo                                                                                                                                                       |
+| phoneNumber                | Numero di telefono del dispositivo                                                                                                                                                             |
+| iMEI                       | IMEI                                                                                                                                                                                   |
+| cellularTechnology         | Tecnologia cellulare del dispositivo.                                                                                                                                                    |
+| wiFiMacAddress             | MAC Wi-Fi                                                                                                                                                                              |
 | windowsOsEdition             | Edizione del sistema operativo Windows.                                                                                                                                                                              |
 
 
@@ -263,9 +263,9 @@ L'entità **deviceType** rappresenta il tipo di dispositivo a cui fanno riferime
 
 |    Proprietà    |                                  Descrizione                                 |
 |----------------|------------------------------------------------------------------------------|
-| DeviceTypeID   | Identificatore univoco del tipo di dispositivo                                       |
-| DeviceTypeKey  | Identificatore univoco del tipo di dispositivo nel data warehouse - chiave surrogata |
-| DeviceTypeName | Tipo di dispositivo                                                                |
+| deviceTypeID   | Identificatore univoco del tipo di dispositivo                                       |
+| deviceTypeKey  | Identificatore univoco del tipo di dispositivo nel data warehouse - chiave surrogata |
+| deviceTypeName | Tipo di dispositivo                                                                |
 
 ### <a name="example"></a>Esempio
 
@@ -412,27 +412,27 @@ L'entità **EnrollmentFailureReason** indica un motivo più dettagliato per un e
 
 |       Proprietà      |                          Descrizione                          | Esempio |
 |---------------------|---------------------------------------------------------------|---------|
-| DateKey             | Identificatore univoco della data.                                | 123     |
-| TenantKey           | Identificatore univoco del tenant.                              | 456     |
-| DeviceKey           | Identificatore univoco del dispositivo.                              | 789     |
-| ExtensionVersionKey | Identificatore univoco della versione di IntuneManagementExtension. | 1       |
-| ExtensionStateKey   | Identificatore univoco dello stato di integrità.                            | 2       |
+| dateKey             | Identificatore univoco della data.                                | 123     |
+| tenantKey           | Identificatore univoco del tenant.                              | 456     |
+| deviceKey           | Identificatore univoco del dispositivo.                              | 789     |
+| extensionVersionKey | Identificatore univoco della versione di IntuneManagementExtension. | 1       |
+| extensionStateKey   | Identificatore univoco dello stato di integrità.                            | 2       |
 
 ## <a name="intunemanagementextensionhealthstates"></a>intuneManagementExtensionHealthStates
 **IntuneManagementExtensionHealthState** elenca tutti i possibili stati di integrità di **IntuneManagementExtension**.
 
 |      Proprietà     |                   Descrizione                  | Esempio |
 |-------------------|------------------------------------------------|---------|
-| ExtensionStateKey | Identificatore univoco dello stato di integrità.           | 2       |
-| ExtensionState    | Stato di integrità di IntuneManagementExtension. | Healthy |
+| extensionStateKey | Identificatore univoco dello stato di integrità.           | 2       |
+| extensionState    | Stato di integrità di IntuneManagementExtension. | Healthy |
 
 ## <a name="intunemanagementextensionversions"></a>intuneManagementExtensionVersions
 L'entità **IntuneManagementExtensionVersion** elenca tutte le versioni usate da **IntuneManagementExtension**.
 
 |       Proprietà      |                          Descrizione                          | Esempio |
 |---------------------|---------------------------------------------------------------|---------|
-| ExtensionVersionKey | Identificatore univoco della versione di IntuneManagementExtension. | 1       |
-| ExtensionVersion    | Numero della versione a 4 cifre.                                   | 1.0.2.0 |
+| extensionVersionKey | Identificatore univoco della versione di IntuneManagementExtension. | 1       |
+| extensionVersion    | Numero della versione a 4 cifre.                                   | 1.0.2.0 |
 
 ## <a name="mamapplications"></a>MamApplications
 
@@ -443,10 +443,10 @@ L'entità **MamApplication** elenca le app Line-of-Business (LOB) gestite attrav
 | mamApplicationKey |Identificatore univoco dell'applicazione MAM. | 432 |
 | mamApplicationName |Nome dell'applicazione MAM. |Esempio di nome dell'applicazione MAM |
 | mamApplicationId |ID applicazione dell'applicazione MAM. | 123 |
-| IsDeleted |Indica se il record dell'app MAM è stato aggiornato. <br>True: l'app MAM ha un nuovo record con i campi aggiornati in questa tabella. <br>False: l'ultimo record per questa app MAM. |True/False |
-| StartDateInclusiveUTC |Data e ora in formato UTC della creazione dell'app MAM nel data warehouse. |23/11/2016 12.00.00 |
-| DeletedDateUTC |Data e ora in formato UTC in cui IsDeleted è stato impostato su True. |23/11/2016 12.00.00 |
-| RowLastModifiedDateTimeUTC |Data e ora in formato UTC dell'ultima modifica dell'app MAM nel data warehouse. |23/11/2016 12.00.00 |
+| isDeleted |Indica se il record dell'app MAM è stato aggiornato. <br>True: l'app MAM ha un nuovo record con i campi aggiornati in questa tabella. <br>False: l'ultimo record per questa app MAM. |True/False |
+| startDateInclusiveUTC |Data e ora in formato UTC della creazione dell'app MAM nel data warehouse. |23/11/2016 12.00.00 |
+| deletedDateUTC |Data e ora in formato UTC in cui IsDeleted è stato impostato su True. |23/11/2016 12.00.00 |
+| rowLastModifiedDateTimeUTC |Data e ora in formato UTC dell'ultima modifica dell'app MAM nel data warehouse. |23/11/2016 12.00.00 |
 
 
 ## <a name="mamapplicationinstances"></a>MamApplicationInstances
@@ -456,22 +456,22 @@ L'entità **MamApplicationInstance** elenca le app Gestione delle app mobili (MA
 
 |          Proprietà          |                                                                                                  Descrizione                                                                                                  |               Esempio                |
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
-|   ApplicationInstanceKey   |                                                               Identificatore univoco dell'istanza dell'app MAM nel data warehouse, chiave surrogata.                                                                |                 123                  |
-|           UserId           |                                                                              ID dell'utente che ha installato l'app MAM.                                                                              | b66bc706-ffff-7437-0340-032819502773 |
-|   ApplicationInstanceId    |                                              Identificatore univoco dell'istanza dell'app MAM, simile ad ApplicationInstanceKey, ma l'identificatore è una chiave naturale.                                              | b66bc706-ffff-7437-0340-032819502773 |
+|   applicationInstanceKey   |                                                               Identificatore univoco dell'istanza dell'app MAM nel data warehouse, chiave surrogata.                                                                |                 123                  |
+|           userId           |                                                                              ID dell'utente che ha installato l'app MAM.                                                                              | b66bc706-ffff-7437-0340-032819502773 |
+|   applicationInstanceId    |                                              Identificatore univoco dell'istanza dell'app MAM, simile ad ApplicationInstanceKey, ma l'identificatore è una chiave naturale.                                              | b66bc706-ffff-7437-0340-032819502773 |
 | mamApplicationId | ID dell'applicazione MAM per cui è stata creata questa istanza di applicazione MAM.   | 23/11/2016 12.00.00   |
-|     ApplicationVersion     |                                                                                     Versione dell'applicazione dell'app MAM.                                                                                      |                  2                   |
-|        CreatedDate         |                                                                 Data di creazione del record dell'istanza di app MAM. Il valore può essere Null.                                                                 |        23/11/2016 12.00.00        |
+|     applicationVersion     |                                                                                     Versione dell'applicazione dell'app MAM.                                                                                      |                  2                   |
+|        createdDate         |                                                                 Data di creazione del record dell'istanza di app MAM. Il valore può essere Null.                                                                 |        23/11/2016 12.00.00        |
 |          Piattaforma          |                                                                          Piattaforma del dispositivo in cui è installata l'app MAM.                                                                           |                  2                   |
-|      PlatformVersion       |                                                                      Versione della piattaforma del dispositivo in cui è installata l'app MAM.                                                                       |                 2.2                  |
-|         SdkVersion         |                                                                            Versione dell'SDK MAM con cui è stato eseguito il wrapping dell'app MAM.                                                                            |                 3.2                  |
+|      platformVersion       |                                                                      Versione della piattaforma del dispositivo in cui è installata l'app MAM.                                                                       |                 2.2                  |
+|         sdkVersion         |                                                                            Versione dell'SDK MAM con cui è stato eseguito il wrapping dell'app MAM.                                                                            |                 3.2                  |
 | mamDeviceId | ID del dispositivo a cui è associata l'istanza di applicazione MAM.   | 23/11/2016 12.00.00   |
 | mamDeviceType | Tipo di dispositivo a cui è associata l'istanza di applicazione MAM.   | 23/11/2016 12.00.00   |
 | mamDeviceName | Nome del dispositivo a cui è associata l'istanza di applicazione MAM.   | 23/11/2016 12.00.00   |
-|         IsDeleted          | Indica se il record dell'istanza di app MAM è stato aggiornato. <br>True: quest'istanza di app MAM ha un nuovo record con i campi aggiornati in questa tabella. <br>False: l'ultimo record per questa istanza di app MAM. |              True/False              |
-|   StartDateInclusiveUTC    |                                                              Data e ora in formato UTC della creazione dell'istanza dell'app MAM nel data warehouse.                                                               |        23/11/2016 12.00.00        |
-|       DeletedDateUtc       |                                                                             Data e ora in formato UTC in cui IsDeleted è stato impostato su True.                                                                              |        23/11/2016 12.00.00        |
-| RowLastModifiedDateTimeUtc |                                                           Data e ora in formato UTC dell'ultima modifica apportata all'istanza dell'app MAM nel data warehouse.                                                            |        23/11/2016 12.00.00        |
+|         isDeleted          | Indica se il record dell'istanza di app MAM è stato aggiornato. <br>True: quest'istanza di app MAM ha un nuovo record con i campi aggiornati in questa tabella. <br>False: l'ultimo record per questa istanza di app MAM. |              True/False              |
+|   startDateInclusiveUtc    |                                                              Data e ora in formato UTC della creazione dell'istanza dell'app MAM nel data warehouse.                                                               |        23/11/2016 12.00.00        |
+|       deletedDateUtc       |                                                                             Data e ora in formato UTC in cui IsDeleted è stato impostato su True.                                                                              |        23/11/2016 12.00.00        |
+| rowLastModifiedDateTimeUtc |                                                           Data e ora in formato UTC dell'ultima modifica apportata all'istanza dell'app MAM nel data warehouse.                                                            |        23/11/2016 12.00.00        |
 
 ## <a name="mamcheckins"></a>MamCheckins
 
@@ -482,13 +482,13 @@ L'entità **MamCheckin** rappresenta i dati raccolti quando un'istanza di app Ge
 
 | Proprietà | Descrizione | Esempio |
 |---------|------------|--------|
-| DateKey |Chiave data in cui l'archiviazione dell'app MAM è stata registrata nel data warehouse. | 20160703 |
-| ApplicationInstanceKey |Chiave dell'istanza dell'app associata all'archiviazione dell'app MAM. | 123 |
-| UserKey |Chiave dell'utente associata all'archiviazione dell'app MAM. | 4323 |
+| dateKey |Chiave data in cui l'archiviazione dell'app MAM è stata registrata nel data warehouse. | 20160703 |
+| applicationInstanceKey |Chiave dell'istanza dell'app associata all'archiviazione dell'app MAM. | 123 |
+| userKey |Chiave dell'utente associata all'archiviazione dell'app MAM. | 4323 |
 | mamApplicationKey |Chiave applicazione associato all'archiviazione dell'applicazione MAM. | 432 |
-| DeviceHealthKey |Chiave di DeviceHealth associata all'archiviazione dell'app MAM. | 321 |
-| PlatformKey |Rappresenta la piattaforma del dispositivo associato all'archiviazione dell'app MAM. |123 |
-| LastCheckInDate |Data e ora dell'ultima archiviazione di questa app MAM. Il valore può essere Null. |23/11/2016 12.00.00 |
+| deviceHealthKey |Chiave di DeviceHealth associata all'archiviazione dell'app MAM. | 321 |
+| platformKey |Rappresenta la piattaforma del dispositivo associato all'archiviazione dell'app MAM. |123 |
+| lastCheckInDate |Data e ora dell'ultima archiviazione di questa app MAM. Il valore può essere Null. |23/11/2016 12.00.00 |
 
 ## <a name="mamdevicehealths"></a>MamDeviceHealths
 
@@ -496,10 +496,10 @@ L'entità **MamDeviceHealth** rappresenta i dispositivi in cui sono stati distri
 
 | Proprietà | Descrizione | Esempio |
 |---------|------------|--------|
-| DeviceHealthKey |Identificatore univoco del dispositivo e integrità associata nel data warehouse, chiave surrogata. |123 |
-| DeviceHealth |Identificatore univoco del dispositivo e integrità associata, simile a DeviceHealthKey ma l'identificatore è una chiave naturale. |b66bc706-ffff-7777-0340-032819502773 |
-| DeviceHealthName |Rappresenta lo stato del dispositivo. <br>Non disponibile- nessuna informazione su questo dispositivo. <br>Integro - dispositivo non jailbroken. <br>Non integro - dispositivo jailbroken. |Non disponibile Integro Non integro |
-| RowLastModifiedDateTimeUtc |Data e ora in formato UTC dell'ultima modifica apportata all'integrità del dispositivo MAM specifico nel data warehouse. |23/11/2016 12.00.00 |
+| deviceHealthKey |Identificatore univoco del dispositivo e integrità associata nel data warehouse, chiave surrogata. |123 |
+| deviceHealth |Identificatore univoco del dispositivo e integrità associata, simile a DeviceHealthKey ma l'identificatore è una chiave naturale. |b66bc706-ffff-7777-0340-032819502773 |
+| deviceHealthName |Rappresenta lo stato del dispositivo. <br>Non disponibile- nessuna informazione su questo dispositivo. <br>Integro - dispositivo non jailbroken. <br>Non integro - dispositivo jailbroken. |Non disponibile Integro Non integro |
+| rowLastModifiedDateTimeUtc |Data e ora in formato UTC dell'ultima modifica apportata all'integrità del dispositivo MAM specifico nel data warehouse. |23/11/2016 12.00.00 |
 
 ## <a name="mamplatforms"></a>MamPlatforms
 
@@ -508,19 +508,19 @@ L'entità **MamPlatform** elenca i nomi e i tipi di piattaforma in cui è stata 
 
 |          Proprietà          |                                    Descrizione                                    |                         Esempio                         |
 |----------------------------|-----------------------------------------------------------------------------------|---------------------------------------------------------|
-|        PlatformKey         |     Identificatore univoco della piattaforma nel data warehouse, chiave surrogata.      |                           123                           |
+|        platformKey         |     Identificatore univoco della piattaforma nel data warehouse, chiave surrogata.      |                           123                           |
 |          Piattaforma          | Identificatore univoco della piattaforma, simile a PlatformKey ma è una chiave naturale. |                           123                           |
-|        PlatformName        |                                   Nome della piattaforma                                   | Non disponibile <br>Nessuno <br>Windows <br>IOS <br>Android. |
-| RowLastModifiedDateTimeUtc | Data e ora in formato UTC dell'ultima modifica della piattaforma nel data warehouse.  |                 23/11/2016 12.00.00                  |
+|        platformName        |                                   Nome della piattaforma                                   | Non disponibile <br>Nessuno <br>Windows <br>IOS <br>Android. |
+| rowLastModifiedDateTimeUtc | Data e ora in formato UTC dell'ultima modifica della piattaforma nel data warehouse.  |                 23/11/2016 12.00.00                  |
 
 ## <a name="managementagenttypes"></a>managementAgentTypes
 L'entità **managementAgentType** rappresenta gli agenti usati per gestire un dispositivo.
 
 |         Proprietà        |                                       Descrizione                                       |
 |-------------------------|-----------------------------------------------------------------------------------------|
-| ManagementAgentTypeID   | Identificatore univoco del tipo di agente di gestione.                                         |
-| ManagementAgentTypeKey  | Identificatore univoco del tipo di agente di gestione nel data warehouse - chiave surrogata. |
-| ManagementAgentTypeName | Indica il tipo di agente che viene usato per gestire il dispositivo.                              |
+| managementAgentTypeID   | Identificatore univoco del tipo di agente di gestione.                                         |
+| managementAgentTypeKey  | Identificatore univoco del tipo di agente di gestione nel data warehouse - chiave surrogata. |
+| managementAgentTypeName | Indica il tipo di agente che viene usato per gestire il dispositivo.                              |
 
 ### <a name="example"></a>Esempio
 
@@ -569,21 +569,21 @@ L'entità MobileAppInstallState rappresenta lo stato di installazione per un'app
 
 |       Proprietà      |                        Descrizione                       |
 |---------------------|----------------------------------------------------------|
-| AppInstallStateKey  | ID univoco dello stato di installazione dell'app per l'account. |
-| AppInstallState     | Valore di enumerazione dello stato di installazione dell'app.                     |
-| AppInstallStateName | Nome dello stato di installazione dell'app.                           |
+| appInstallStateKey  | ID univoco dello stato di installazione dell'app per l'account. |
+| appInstallState     | Valore di enumerazione dello stato di installazione dell'app.                     |
+| appInstallStateName | Nome dello stato di installazione dell'app.                           |
 
 ## <a name="mobileappinstallstatuscounts"></a>mobileAppInstallStatusCounts
 Rappresenta uno stato di installazione di app per dispositivi mobili per un tipo di dispositivo di destinazione specificato mediante la gestione di applicazioni per dispositivi mobili tramite Microsoft Intune.
 
 |      Proprietà      |                                                          Descrizione                                                          |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------|
-| DateKey            | Chiave della data di registrazione dello stato di installazione dell'app.                                                                     |
-| AppKey             | Chiave dell'app per dispositivi mobili usata per identificare un'istanza di AppRevision.                                                          |
-| DeviceTypeKey      | Chiave del tipo di dispositivo associata all'applicazione per dispositivi mobili.                                                              |
-| AppInstallStateKey | Chiave dello stato di installazione dell'app usata per identificare un'istanza di MobileAppInstallState.                                         |
-| ErrorCode          | Codice di errore restituito dal programma di installazione dell'app, dalla piattaforma per dispositivi mobili o dal servizio in merito all'installazione dell'app. |
-| Conteggio              | Numero totale.                                                                                                                  |
+| dateKey            | Chiave della data di registrazione dello stato di installazione dell'app.                                                                     |
+| appKey             | Chiave dell'app per dispositivi mobili usata per identificare un'istanza di AppRevision.                                                          |
+| deviceTypeKey      | Chiave del tipo di dispositivo associata all'applicazione per dispositivi mobili.                                                              |
+| appInstallStateKey | Chiave dello stato di installazione dell'app usata per identificare un'istanza di MobileAppInstallState.                                         |
+| errorCode          | Codice di errore restituito dal programma di installazione dell'app, dalla piattaforma per dispositivi mobili o dal servizio in merito all'installazione dell'app. |
+| count              | Numero totale.                                                                                                                  |
 
 ## <a name="ownertypes"></a>ownerTypes
 L'entità **ownerType** indica se un dispositivo è aziendale, personale o sconosciuto.
@@ -602,67 +602,67 @@ l'entità **Policy** elenca profili di configurazione del dispositivo, profili d
 
 |          Proprietà          |                                                                       Descrizione                                                                      |                Esempio               |
 |----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
-| PolicyKey                  | Chiave univoca per rappresentare i criteri nel data warehouse.                                                                                              | 123                                  |
-| PolicyId                   | Identificatore univoco del criterio nel data warehouse.                                                                                                 | b66bc706-ffff-7437-0340-032819502773 |
-| PolicyName                 | Nome del criterio.                                                                                                                                    | "Windows 10 Baseline"                |
-| PolicyVersion              | Versione del criterio. Quando il criterio viene modificato o cambiato, viene creata una versione più recente.                                                             | 1, 2, 3                              |
-| IsDeleted                  | Indica se il record del criterio è stato aggiornato.  True: il criterio ha un nuovo record con campi aggiornati.  False: è l'ultimo record per il criterio. | True/False                           |
-| StartDateInclusiveUTC      | Data e ora in formato UTC della creazione del criterio nel data warehouse.                                                                              | 23/11/2016 0:00                      |
-| DeletedDateUTC             | Data e ora in formato UTC in cui IsDeleted è stato impostato su True.                                                                                                   | 23/11/2016 0:00                      |
-| RowLastModifiedDateTimeUTC | Data e ora in formato UTC dell'ultima modifica del criterio nel data warehouse.                                                                        | 23/11/2016 0:00                      |
+| policyKey                  | Chiave univoca per rappresentare i criteri nel data warehouse.                                                                                              | 123                                  |
+| policyId                   | Identificatore univoco del criterio nel data warehouse.                                                                                                 | b66bc706-ffff-7437-0340-032819502773 |
+| policyName                 | Nome del criterio.                                                                                                                                    | "Windows 10 Baseline"                |
+| policyVersion              | Versione del criterio. Quando il criterio viene modificato o cambiato, viene creata una versione più recente.                                                             | 1, 2, 3                              |
+| isDeleted                  | Indica se il record del criterio è stato aggiornato.  True: il criterio ha un nuovo record con campi aggiornati.  False: è l'ultimo record per il criterio. | True/False                           |
+| startDateInclusiveUTC      | Data e ora in formato UTC della creazione del criterio nel data warehouse.                                                                              | 23/11/2016 0:00                      |
+| deletedDateUTC             | Data e ora in formato UTC in cui IsDeleted è stato impostato su True.                                                                                                   | 23/11/2016 0:00                      |
+| rowLastModifiedDateTimeUTC | Data e ora in formato UTC dell'ultima modifica del criterio nel data warehouse.                                                                        | 23/11/2016 0:00                      |
 
 ## <a name="policydeviceactivities"></a>policyDeviceActivities
 La tabella seguente elenca il numero di dispositivi con stato completato, in sospeso, non riuscito o di errore ogni giorno. Il numero riflette i dati per ogni profilo del tipo di criteri. Ad esempio, se un dispositivo è nello stato completato per tutti i relativi criteri assegnati, incrementa di uno il contatore di completamento per tale giorno. Se a un dispositivo sono assegnati due profili, uno nello stato completato e l'altro in uno stato di errore, l'entità incrementa il contatore di completamento e colloca il dispositivo in stato di errore. L'entità **policyDeviceActivity** elenca il numero di dispositivi che sono in un determinato stato in un giorno specifico negli ultimi 30 giorni.
 
 |  Proprietà |                                           Descrizione                                           |        Esempio        |
 |-----------|-------------------------------------------------------------------------------------------------|-----------------------|
-| DateKey   | Chiave della data in cui l'archiviazione del profilo di configurazione dispositivo è stata registrata nel data warehouse. | 20160703              |
-| Pending   | Numero di dispositivi univoci in stato sospeso.                                                    | 123                   |
-| Operazione riuscita | Numero di dispositivi univoci in stato completato.                                                    | 12                    |
-| PolicyKey | Chiave dei criteri, può essere unita a Policy per ottenere policyName.                                  | Baseline Windows 10 |
-| Errore     | Numero di dispositivi univoci in stato di errore.                                                      | 10                    |
-| Operazione non riuscita    | Numero di dispositivi univoci in stato non riuscito.                                                     | 2                     |
+| dateKey   | Chiave della data in cui l'archiviazione del profilo di configurazione dispositivo è stata registrata nel data warehouse. | 20160703              |
+| in sospeso   | Numero di dispositivi univoci in stato sospeso.                                                    | 123                   |
+| riuscito | Numero di dispositivi univoci in stato completato.                                                    | 12                    |
+| policyKey | Chiave dei criteri, può essere unita a Policy per ottenere policyName.                                  | Baseline Windows 10 |
+| error     | Numero di dispositivi univoci in stato di errore.                                                      | 10                    |
+| non riuscita    | Numero di dispositivi univoci in stato non riuscito.                                                     | 2                     |
 
 ## <a name="policyplatformtypes"></a>policyPlatformTypes
 
 |        Proprietà        |                      Descrizione                      |     Esempio    |
 |------------------------|-------------------------------------------------------|----------------|
-| PolicyPlatformTypeKey  | Chiave univoca per il tipo di piattaforma dei criteri.        | 20170519       |
-| PolicyPlatformTypeId   | Identificatore univoco per il tipo di piattaforma dei criteri. | 1              |
-| PolicyPlatformTypeName | Nome del tipo di piattaforma dei criteri.              | AndroidForWork |
+| policyPlatformTypeKey  | Chiave univoca per il tipo di piattaforma dei criteri.        | 20170519       |
+| policyPlatformTypeId   | Identificatore univoco per il tipo di piattaforma dei criteri. | 1              |
+| policyPlatformTypeName | Nome del tipo di piattaforma dei criteri.              | AndroidForWork |
 
 ## <a name="policytypeactivities"></a>policyTypeActivities
 L'entità **PolicyTypeActivity** elenca il numero cumulativo di dispositivi nello stato completato, in sospeso, non riuscito o di errore. Vengono elencati questi stati rispetto a un profilo di configurazione del dispositivo, un profilo di configurazione dell'app o ai criteri di conformità per ogni giorno.
 
 |    Proprietà   |                                          Descrizione                                          |           Esempio           |
 |---------------|-----------------------------------------------------------------------------------------------|-----------------------------|
-| DateKey       | Chiave della data in cui l'archiviazione del profilo di configurazione dispositivo è stata registrata nel data warehouse. | 20160703                    |
-| PolicyKey     | Chiave dei criteri, può essere unita a Policy per ottenere policyName.                                | Windows 10 baseline         |
-| PolicyTypeKey | Tipo di chiave dei criteri, può essere unita al tipo di criterio per ottenere il nome del tipo di criterio.             | Criteri di conformità di Windows 10 |
-| Pending       | Numero di dispositivi univoci in sospeso.                                                    | 123                         |
-| Operazione riuscita     | Numero di dispositivi univoci in stato completato.                                                    | 12                          |
-| Errore         | Numero di dispositivi univoci in stato di errore.                                                      | 10                          |
-| Operazione non riuscita        | Numero di dispositivi univoci in stato non riuscito.                                                     | 2                           |
+| dateKey       | Chiave della data in cui l'archiviazione del profilo di configurazione dispositivo è stata registrata nel data warehouse. | 20160703                    |
+| policyKey     | Chiave dei criteri, può essere unita a Policy per ottenere policyName.                                | Windows 10 baseline         |
+| policyTypeKey | Tipo di chiave dei criteri, può essere unita al tipo di criterio per ottenere il nome del tipo di criterio.             | Criteri di conformità di Windows 10 |
+| in sospeso       | Numero di dispositivi univoci in sospeso.                                                    | 123                         |
+| riuscito     | Numero di dispositivi univoci in stato completato.                                                    | 12                          |
+| error         | Numero di dispositivi univoci in stato di errore.                                                      | 10                          |
+| non riuscita        | Numero di dispositivi univoci in stato non riuscito.                                                     | 2                           |
 
 ## <a name="policytypes"></a>policyTypes
 L'entità **PolicyType** elenca i tipi di profilo di configurazione del dispositivo, profili di configurazione dell'app e criteri di conformità. È possibile assegnare i criteri con Gestione dispositivi mobili (MDM) a un gruppo nell'organizzazione.
 
 |    Proprietà    |                       Descrizione                      |            Esempio            |
 |----------------|--------------------------------------------------------|-------------------------------|
-| PolicyTypeId   | Identificatore univoco del criterio nel sistema di origine.  | 123                           |
-| PolicyTypeKey  | Identificatore univoco del criterio nel data warehouse. | 1                             |
-| PolicyTypeName | Nome del tipo di criterio.                               | Criteri di conformità di Windows 10. |
+| policyTypeId   | Identificatore univoco del criterio nel sistema di origine.  | 123                           |
+| policyTypeKey  | Identificatore univoco del criterio nel data warehouse. | 1                             |
+| policyTypeName | Nome del tipo di criterio.                               | Criteri di conformità di Windows 10. |
 
 ## <a name="policyuseractivities"></a>policyUserActivities
 La tabella seguente elenca il numero di utenti con stato completato, in sospeso, non riuscito o di errore ogni giorno. Il numero riflette i dati per ogni profilo del tipo di criteri. Ad esempio, se un utente è nello stato completato per tutti i relativi criteri assegnati, incrementa di uno il contatore di completamento per tale giorno. Se a un utente sono assegnati due profili, uno con stato completato e l'altro con stato di errore, viene considerato l'utente con lo stato di errore. L'entità **PolicyUserActivity** elenca il numero di utenti in ogni stato in un giorno specifico negli ultimi 30 giorni.
 
 |  Proprietà |                                          Descrizione                                          |       Esempio       |
 |-----------|-----------------------------------------------------------------------------------------------|---------------------|
-| DateKey   | Chiave della data in cui l'archiviazione del profilo di configurazione dispositivo è stata registrata nel data warehouse. | 20160703            |
-| Pending   | Numero di dispositivi univoci in sospeso.                                                    | 123                 |
-| Operazione riuscita | Numero di dispositivi univoci in stato completato.                                                    | 12                  |
-| PolicyKey | Chiave dei criteri, può essere unita a Policy per ottenere policyName.                                | Windows 10 baseline |
-| Errore     | Numero di dispositivi univoci in stato di errore.                                                      | 10                  |
+| dateKey   | Chiave della data in cui l'archiviazione del profilo di configurazione dispositivo è stata registrata nel data warehouse. | 20160703            |
+| in sospeso   | Numero di dispositivi univoci in sospeso.                                                    | 123                 |
+| riuscito | Numero di dispositivi univoci in stato completato.                                                    | 12                  |
+| policyKey | Chiave dei criteri, può essere unita a Policy per ottenere policyName.                                | Windows 10 baseline |
+| error     | Numero di dispositivi univoci in stato di errore.                                                      | 10                  |
 
 ## <a name="termsandconditions"></a>termsAndConditions
 L'entità **termsAndConditions** rappresenta i metadati e il contenuto di un criterio Termini e condizioni specificato. Il contenuto dei criteri Termini e condizioni viene presentato agli utenti in occasione del primo tentativo di registrazione in Intune e successivamente in caso di modifiche per le quali un amministratore richiede di accettarli nuovamente. Consentono agli amministratori di comunicare le condizioni che un utente deve accettare per poter registrare il dispositivo in Intune.
@@ -686,11 +686,11 @@ L'entità **UserDeviceAssociation** contiene le associazioni utente-dispositivo 
 
 |        Name        |                                             Descrizione                                            |     Esempio     |
 |--------------------|----------------------------------------------------------------------------------------------------|-----------------|
-| UserKey            | Identificatore univoco dell'utente nel data warehouse   (chiave sostitutiva).                            | 123             |
-| DeviceKey          | Identificatore univoco del dispositivo nel data warehouse.                                             | 123             |
-| CreatedDateTimeUTC | Data e ora della creazione dell'associazione utente-dispositivo. Viene usato il formato UTC.                     | 23/11/2016 0:00 |
-| IsDeleted          | Indica che l'utente ha annullato la registrazione del dispositivo e che l'associazione non è più aggiornata. | True/False      |
-| EndedDateTimeUTC   | Data e ora in formato UTC in cui IsDeleted è stato impostato su True.                                               | 23/06/2017 0:00  |
+| userKey            | Identificatore univoco dell'utente nel data warehouse   (chiave sostitutiva).                            | 123             |
+| deviceKey          | Identificatore univoco del dispositivo nel data warehouse.                                             | 123             |
+| createdDateTimeUTC | Data e ora della creazione dell'associazione utente-dispositivo. Viene usato il formato UTC.                     | 23/11/2016 0:00 |
+| isDeleted          | Indica che l'utente ha annullato la registrazione del dispositivo e che l'associazione non è più aggiornata. | True/False      |
+| endedDateTimeUTC   | Data e ora in formato UTC in cui IsDeleted è stato impostato su True.                                               | 23/06/2017 0:00  |
 
 ## <a name="users"></a>user
 L'entità **user** elenca tutti gli utenti di Azure Active Directory (Azure AD) con licenze assegnate nell'organizzazione.
@@ -699,14 +699,14 @@ La raccolta di entità **user** contiene i dati utente. In questi record sono in
 
 |          Proprietà          |                                                                                                           Descrizione                                                                                                          |                Esempio               |
 |----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
-| UserKey                    | Identificatore univoco dell'utente nel data warehouse - chiave surrogata.                                                                                                                                                         | 123                                  |
-| UserId                     | Identificatore univoco dell'utente, simile a UserKey, ma è una chiave naturale.                                                                                                                                                    | b66bc706-ffff-7437-0340-032819502773 |
-| UserEmail                  | Indirizzo di posta elettronica dell'utente.                                                                                                                                                                                                     | John@constoso.com                    |
+| userKey                    | Identificatore univoco dell'utente nel data warehouse - chiave surrogata.                                                                                                                                                         | 123                                  |
+| userId                     | Identificatore univoco dell'utente, simile a UserKey, ma è una chiave naturale.                                                                                                                                                    | b66bc706-ffff-7437-0340-032819502773 |
+| userEmail                  | Indirizzo di posta elettronica dell'utente.                                                                                                                                                                                                     | John@constoso.com                    |
 | userPrincipalName                        | UPN dell'utente.                                                                                                                                                                                               | John@constoso.com                    |
-| DisplayName                | Nome visualizzato dell'utente.                                                                                                                                                                                                      | Luca                                 |
-| IntuneLicensed             | Specifica se l'utente ha una licenza per Intune.                                                                                                                                                                              | True/False                           |
-| IsDeleted                  | Indica se tutte le licenze dell'utente sono scadute e se l'utente è stato pertanto rimosso da Intune. Per un singolo record, questo flag non cambia. Per un nuovo stato utente viene creato invece un nuovo record. | True/False                           |
-| RowLastModifiedDateTimeUTC | Data e ora in formato UTC dell'ultima modifica del record nel data warehouse                                                                                                                                                 | 23/11/2016 0:00                      |
+| displayName                | Nome visualizzato dell'utente.                                                                                                                                                                                                      | Luca                                 |
+| intuneLicensed             | Specifica se l'utente ha una licenza per Intune.                                                                                                                                                                              | True/False                           |
+| isDeleted                  | Indica se tutte le licenze dell'utente sono scadute e se l'utente è stato pertanto rimosso da Intune. Per un singolo record, questo flag non cambia. Per un nuovo stato utente viene creato invece un nuovo record. | True/False                           |
+| rowLastModifiedDateTimeUTC | Data e ora in formato UTC dell'ultima modifica del record nel data warehouse                                                                                                                                                 | 23/11/2016 0:00                      |
 
 ## <a name="usertermsandconditionsacceptances"></a>userTermsAndConditionsAcceptances
 Un'entità **userTermsAndConditionsAcceptance** rappresenta lo stato di accettazione di un determinato criterio Termini e condizioni da parte di un utente specificato. Gli utenti devono accettare la versione più aggiornata delle condizioni per mantenere l'accesso al portale aziendale.
@@ -724,9 +724,9 @@ L'entità **vppProgramType** elenca i tipi di programma VPP possibili per un'app
 
 |      Proprietà      |          Descrizione         |
 |--------------------|------------------------------|
-| VppProgramTypeID   | ID per il tipo.           |
-| VppProgramTypeKey  | Chiave surrogata per la chiave. |
-| VppProgramTypeName | Tipo di programma VPP.          |
+| vppProgramTypeID   | ID per il tipo.           |
+| vppProgramTypeKey  | Chiave surrogata per la chiave. |
+| vppProgramTypeName | Tipo di programma VPP.          |
 
 ### <a name="example"></a>Esempio
 

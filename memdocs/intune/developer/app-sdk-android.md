@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 62ab2050052294291a93a646a245e493e2e1f574
-ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
+ms.openlocfilehash: e5b29043956a86934f7b1be18606d0b78f25dc50
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89286289"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608453"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Guida a Microsoft Intune App SDK per sviluppatori di Android
 
@@ -885,6 +885,10 @@ Quando MAM chiama il ricevente `MANAGEMENT_REMOVED` dell'app, saranno vere le co
 Quando il ricevente dell'app restituisce il controllo, non avrà più accesso alle chiavi di crittografia.
 
 ## <a name="configure-azure-active-directory-authentication-library-adal"></a>Configurare Azure Active Directory Authentication Library (ADAL)
+
+> [!NOTE]
+> A partire dal 30 giugno 2020 non verranno aggiunte nuove funzionalità ad Active Directory Authentication Library (ADAL). Il supporto tecnico e gli aggiornamenti della sicurezza saranno disponibili, ma non verrà più eseguito l'aggiornamento delle funzionalità. Le applicazioni dovranno essere aggiornate a Microsoft Authentication Library (MSAL) e Microsoft Graph. Per altre informazioni, vedere [Guida alla migrazione da ADAL a MSAL per Android](https://docs.microsoft.com/azure/active-directory/develop/migrate-android-adal-msal).
+
 
 Leggere prima di tutto le linee guida sull'integrazione di ADAL disponibili nel [repository ADAL su GitHub](https://github.com/AzureAD/azure-activedirectory-library-for-android).
 

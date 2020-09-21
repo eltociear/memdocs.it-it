@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 75f6585144f62636033c94f701a57cb70e018c26
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: 2fc05ced647e8784333c2a20bc13c27aa2bf3447
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051588"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076125"
 ---
 # <a name="set-up-the-enrollment-status-page"></a>Configurare la pagina relativa allo stato della registrazione
  
@@ -122,8 +122,8 @@ Per la preparazione del dispositivo, la pagina relativa allo stato della registr
 La pagina relativa allo stato della registrazione tiene traccia degli elementi seguenti di configurazione del dispositivo:
 
 - Criteri di sicurezza
-  - Un provider di servizi di configurazione per tutte le registrazioni.
-  - I provider di servizi di configurazione configurati da Intune non vengono tracciati qui.
+  - I criteri di Microsoft Edge, dell'accesso assegnato e di Kiosk Browser attualmente vengono rilevati.
+  - Gli altri criteri non lo sono.
 - Applicazioni
   - App line-of-business di identità del servizio gestita per computer.
   - App dello Store line-of-business con contesto di installazione = dispositivo.
@@ -138,8 +138,8 @@ La pagina relativa allo stato della registrazione tiene traccia degli elementi s
 Per la configurazione dell'account, la pagina relativa allo stato della registrazione tiene traccia degli elementi seguenti, se vengono assegnati all'utente attualmente connesso:
 
 - Criteri di sicurezza
-  - Un provider di servizi di configurazione per tutte le registrazioni.
-  - I provider di servizi di configurazione configurati da Intune non vengono tracciati qui.
+  - I criteri di Microsoft Edge, dell'accesso assegnato e di Kiosk Browser attualmente vengono rilevati.
+  - Gli altri criteri non lo sono.
 - Applicazioni
   - Le app line-of-business di identità del servizio gestita per utente assegnate a tutti i dispositivi, a tutti gli utenti o a un gruppo di utenti di cui l'utente che registra il dispositivo è membro.
   - Le app line-of-business di identità del servizio gestita per computer assegnate a tutti gli utenti o a un gruppo di utenti di cui l'utente che registra il dispositivo è membro.
@@ -152,53 +152,6 @@ Per la configurazione dell'account, la pagina relativa allo stato della registra
   - I profili VPN o Wi-Fi assegnati a tutti gli utenti o a un gruppo di utenti di cui l'utente che registra il dispositivo è membro.
 - Certificati
   - I profili di certificato assegnati a tutti gli utenti o a un gruppo di utenti di cui l'utente che registra il dispositivo è membro.
-
-### <a name="troubleshooting"></a>Risoluzione dei problemi
-
-Di seguito sono riportate alcune domande comuni per la risoluzione dei problemi correlati alla pagina relativa allo stato della registrazione.
-
-- Perché le applicazioni non sono state installate e tracciate tramite la pagina Stato registrazione?
-  - Per assicurarsi che le applicazioni vengano installate e tracciate tramite la pagina Stato registrazione, verificare che:
-      - Le app siano assegnate a un gruppo di Azure AD contenente il dispositivo (per le app destinate ai dispositivi) o l'utente (per le app destinate agli utenti), usando un'assegnazione "obbligatoria".  Le app destinate ai dispositivi vengono tracciate durante la fase dispositivo di ESP, mentre le app destinate agli utenti vengono registrate durante la fase utente di ESP.
-      - È possibile specificare **Impedisci l'uso del dispositivo fino al completamento dell'installazione di tutte le app e di tutti i profili** o includere l'app nell'elenco **Blocca l'uso del dispositivo fino all'installazione delle app necessarie**.
-      - Le app vengono installate in un contesto di dispositivo e non hanno regole di applicabilità del contesto utente.
-
-- Perché viene visualizzata la pagina relativa allo stato della registrazione per le distribuzioni non di Autopilot, ad esempio quando un utente accede per la prima volta a un dispositivo di Configuration Manager registrato in co-gestione?  
-  - La pagina relativa allo stato della registrazione indica lo stato dell'installazione per tutti i metodi di registrazione, tra cui
-      - AutoPilot
-      - Co-gestione di Configuration Manager
-      - quando un nuovo utente accede al dispositivo a cui vengono applicati i criteri della pagina relativa allo stato della registrazione per la prima volta
-      - quando l'impostazione **Mostra la pagina solo ai dispositivi sottoposti a provisioning dalla Configurazione guidata** è attiva e il criterio è impostato, solo il primo utente che accede al dispositivo riceve la pagina Stato della registrazione
-
-- Come si disabilita la pagina relativa allo stato della registrazione se è stata configurata nel dispositivo?
-  - I criteri della pagina relativa allo stato della registrazione vengono impostati per un dispositivo al momento della registrazione. Per disabilitare la pagina relativa allo stato della registrazione, è necessario disabilitare le sezioni Pagina relativa allo stato della registrazione di dispositivi e utenti. Le sezioni vengono disabilitate creando impostazioni URI OMA personalizzate con le configurazioni seguenti.
-
-      Disabilitare la pagina relativa allo stato della registrazione dell'utente:
-
-      ```
-      Name:  Disable User ESP (choose a name you desire)
-      Description:  (enter a description)
-      OMA-URI:  ./Vendor/MSFT/DMClient/Provider/MS DM Server/FirstSyncStatus/SkipUserStatusPage
-      Data type:  Boolean
-      Value:  True 
-      ```
-      Disabilitare la pagina relativa allo stato della registrazione del dispositivo:
-
-      ```
-      Name:  Disable Device ESP (choose a name you desire)
-      Description:  (enter a description)
-      OMA-URI:  ./Vendor/MSFT/DMClient/Provider/MS DM Server/FirstSyncStatus/SkipDeviceStatusPage
-      Data type:  Boolean
-      Value:  True 
-      ```
-- Come si raccolgono i file di log?
-  - Esistono due modi per raccogliere i file di log della pagina relativa allo stato della registrazione:
-      - Consentire agli utenti di raccogliere i log nei criteri ESP. Quando si verifica un timeout nella pagina relativa allo stato della registrazione, l'utente finale può scegliere di **raccogliere i log**. Se si inserisce un'unità USB, i file di log possono essere copiati nell'unità
-      - Aprire un prompt dei comandi immettendo la sequenza di tasti MAIUSC-F10, quindi immettere la seguente riga di comando per generare i file di log: 
-
-      ```
-      mdmdiagnosticstool.exe -area Autopilot -cab <pathToOutputCabFile>.cab 
-      ```
 
 ### <a name="known-issues"></a>Problemi noti
 
@@ -219,4 +172,6 @@ Di seguito sono riportati i problemi noti correlati alla pagina relativa allo st
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Dopo aver configurato le pagine di registrazione di Windows, è necessario imparare a gestire i dispositivi Windows. Per altre informazioni, vedere [Informazioni sulla gestione dei dispositivi in Microsoft Intune](../remote-actions/device-management.md).
+Dopo aver configurato le pagine di registrazione di Windows, è necessario imparare a [gestire i dispositivi Windows](../remote-actions/device-management.md).
+
+[Risolvere i problemi della pagina relativa allo stato della registrazione di Windows](https://docs.microsoft.com/troubleshoot/mem/intune/understand-troubleshoot-esp#troubleshooting)

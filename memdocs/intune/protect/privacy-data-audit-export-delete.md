@@ -2,11 +2,11 @@
 title: Controllare, esportare o eliminare i dati personali
 titleSuffix: Microsoft Intune
 description: Informazioni su come controllare, esportare o eliminare i dati personali.
-keywords: ''
+keywords: GDPR, dati personali, privacy
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/18/2018
+ms.date: 9/10/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2bdf057893ff24cd4bc5b671d53fbb5c75f597f5
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 5d792df5a4a8690751d7d140aa7fa89191aedb1b
+ms.sourcegitcommit: d6cbd1a1c2926064e074e3431471534eb142c905
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995994"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012630"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>Controllare, esportare o eliminare i dati personali in Intune
 
@@ -60,7 +60,7 @@ Esistono tre modi per rimuovere i dati personali dalla gestione di Intune:
 
 ### <a name="delete-a-user-from-intune"></a>Eliminare un utente da Intune
 
-Per eliminare i dati personali di un utente finale da Intune, un amministratore deve [eliminare l'utente da Azure Active Directory (AAD)](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user). Quando l'utente viene eliminato da AAD (eliminazione definitiva), Intune riceve il segnale di eliminazione da AAD, quindi avvia automaticamente la rimozione di tutti i dati personali dell'utente dal servizio Intune. Le informazioni dell'utente verranno eliminate dal servizio Intune entro 30 giorni dall'azione di rimozione.
+Per eliminare i dati personali di un utente finale da Intune, un amministratore deve [eliminare l'utente da Azure Active Directory (Azure AD)](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user). Quando l'utente viene eliminato da Azure AD (eliminazione definitiva), Intune riceve il segnale di eliminazione da Azure AD, quindi avvia automaticamente la rimozione di tutti i dati personali dell'utente dal servizio Intune. Le informazioni dell'utente verranno eliminate dal servizio Intune entro 30 giorni dall'azione di rimozione.
 
 ### <a name="reset-device-to-factory-settings"></a>Ripristino delle impostazioni predefinite del dispositivo
 Il ripristino delle impostazioni predefinite consente di ripristinare tutti i dati e le impostazioni personali e dell'azienda sulle impostazioni di fabbrica originali. È utile per fornire un dispositivo al dipendente successivo. I file dell'utente, le applicazioni installate dall'utente e le impostazioni non predefinite vengono rimosse e questi dati vengono eliminati dal servizio di Intune entro 30 giorni dall'azione di rimozione.
@@ -77,4 +77,4 @@ Se un cliente di tenant di Intune annulla il proprio account di Intune, tutti i 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Scoprire come [controllare, esportare o eliminare](privacy-data-audit-export-delete.md) i dati personali in Intune.
+Scoprire come [visualizzare e correggere](privacy-data-view-correct.md) i dati personali in Intune.

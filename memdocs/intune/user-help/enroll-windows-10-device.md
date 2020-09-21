@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/12/2020
+ms.date: 09/09/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,16 +15,16 @@ ms.assetid: 812e82df-76df-402b-bfe9-29302838f40e
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: jieyang
+ms.reviewer: amanh
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: cb9812505bb1a4560c7b5668aee5b83d5cc0aec7
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: 46f8d7d46e376d2fb8f1cab1b3d0b3bc583bdeed
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179588"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643499"
 ---
 # <a name="enroll-windows-10-devices-with-intune-company-portal"></a>Registrare dispositivi Windows 10 in Portale aziendale Intune
 
@@ -65,10 +65,6 @@ Questa procedura descrive come registrare un dispositivo che esegue Windows 10, 
 8. Per verificare la connessione, tornare a **Impostazioni** > **Account** > **Accedi all'azienda o all'istituto di istruzione**.  L'account dovrebbe ora essere elencato.  
 
 
-    ![Convalida della corretta configurazione della connessione](./media/w10-enroll-rs1-validate-successful-enrollment.png)  
-
-Non è ancora possibile accedere agli indirizzi di posta elettronica, ai file o ad altri dati aziendali o dell'istituto di istruzione? Informazioni su come [risolvere i problemi relativi agli account](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-access-work-or-school).  
-
 ## <a name="enroll-windows-10-version-1511-and-earlier-device"></a>Registrare un dispositivo con Windows 10 versione 1511 e precedenti  
 Questa procedura descrive come registrare un dispositivo che esegue Windows 10, versione 1511 e precedenti.  
 
@@ -91,7 +87,10 @@ Questa procedura descrive come registrare un dispositivo che esegue Windows 10, 
 
     ![Accesso](./media/W10-enroll-4-sign-in.png)  
 
-Non è ancora possibile accedere agli indirizzi di posta elettronica, ai file o ad altri dati aziendali o dell'istituto di istruzione? Informazioni su come [risolvere i problemi relativi agli account](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-your-account) durante la registrazione.  
+
+## <a name="troubleshooting"></a>Risoluzione dei problemi 
+Per un elenco non esaustivo dei messaggi di errore e altri rimedi ai problemi di connessione, vedere [Risolvere i problemi di registrazione dei dispositivi Windows 10](troubleshoot-your-windows-10-device-windows.md).  
+
 
 ## <a name="it-administrator-support"></a>Supporto per amministratori IT   
 

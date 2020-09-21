@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 08/10/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: b26cec11b2bdf64e6ef99d45395de00b43fa1bfa
-ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
+ms.openlocfilehash: e63bb965b8fed4c0266e359493bbfa67100862cb
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89564100"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90045056"
 ---
 Questi avvisi forniscono importanti informazioni utili per prepararsi per le modifiche e le funzionalità di Intune future.
 
@@ -108,7 +108,7 @@ A questo punto, i dispositivi con gestione di tipo amministratore di dispositivi
 - L'identificazione dei dispositivi come di proprietà dell'azienda con l'IMEI o il numero di serie non contrassegnerà automaticamente i dispositivi come di proprietà dell'azienda 
 - L'IMEI e il numero di serie non saranno più visibili agli amministratori IT in Intune 
 
-**Android 11**: la versione beta di Android 11 più recente viene testata continuamente per valutare l'effetto sui dispositivi gestiti dall'amministratore di dispositivi. Ecco cosa è stato riscontrato: 
+**Android 11**: di seguito sono indicate le modifiche che avranno effetto sul dispositivo gestito dall'amministratore dei dispositivi con l'aggiornamento ad Android 11: 
 - Per i dispositivi con amministratore di dispositivi (escluso Samsung) che eseguono Android 11 e versioni successive, Google ha rimosso la possibilità per gli agenti di gestione come Portale aziendale di imporre il blocco della fotocamera, anche prima dell'aggiornamento di ottobre dell'app Portale aziendale. I criteri di blocco della fotocamera applicati ai dispositivi prima dell'aggiornamento ad Android 11 continueranno a essere applicati.  
 - Con Android 11 i certificati radice attendibili non possono più essere distribuiti nei dispositivi registrati con amministratore di dispositivi, ad eccezione dei dispositivi Samsung. Gli utenti devono installare manualmente il certificato radice attendibile nel dispositivo. Con il certificato radice attendibile installato manualmente in un dispositivo, è quindi possibile usare SCEP per effettuare il provisioning dei certificati nel dispositivo. In questo scenario è comunque necessario creare e distribuire criteri di certificato attendibile nel dispositivo e collegare tali criteri al profilo di certificato SCEP. 
     - Se il certificato radice attendibile è disponibile nel dispositivo, il profilo di certificato SCEP verrà installato correttamente.  

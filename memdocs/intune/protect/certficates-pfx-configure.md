@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1024681ed42c192983ffde23777de72c40622c65
-ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
+ms.openlocfilehash: 28ca32bc65ee0c4647c22b10b6b5d47a25efa202
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89423722"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643620"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Configurare e usare i certificati PKCS con Intune
 
@@ -140,9 +140,13 @@ Prima di iniziare, [verificare i requisiti per il connettore](certificate-connec
    > [!WARNING]
    > Per impostazione predefinita, in Windows Server la **Configurazione sicurezza avanzata IE** è impostata su **On** e questo può causare problemi di accesso a Office 365.
 
-6. Chiudere la finestra.
+6. Selezionare la scheda **Account CA** e quindi immettere le credenziali per un account con l'autorizzazione Rilascio e gestione certificati sulla CA emittente. Queste credenziali verranno usate per eseguire la revoca di certificati nell'autorità di certificazione. 
 
-7. Nell'interfaccia di amministrazione di Microsoft Endpoint Manager tornare a **Amministrazione del tenant** > **Connettori e token** > **Connettori di certificati**. Dopo alcuni istanti, viene visualizzato un segno di spunta verde e lo stato della connessione si aggiorna. Il server del connettore ora può comunicare con Intune.
+    Scegliere **Applica** per applicare le modifiche.
+
+7. Chiudere la finestra.
+
+8. Nell'interfaccia di amministrazione di Microsoft Endpoint Manager tornare a **Amministrazione del tenant** > **Connettori e token** > **Connettori di certificati**. Dopo alcuni istanti, viene visualizzato un segno di spunta verde e lo stato della connessione si aggiorna. Il server del connettore ora può comunicare con Intune.
 
 ## <a name="create-a-trusted-certificate-profile"></a>Creare un profilo certificato attendibile
 

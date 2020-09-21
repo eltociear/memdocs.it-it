@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 22bfe44b95eedcdf87a41cfaaf959c72cfbe93e2
-ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
+ms.openlocfilehash: f91de698a518a8f8530ae42d5a8842d7876074a1
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89423816"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076220"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Usare i certificati per l'autenticazione in Microsoft Intune
 
@@ -46,10 +46,10 @@ Quando si usa un'autorità di certificazione (CA) Microsoft:
 
 - Per usare i profili certificato SCEP:
   - [configurare un server del servizio Registrazione dispositivi di rete (NDES)](certificates-scep-configure.md#set-up-ndes) per l'uso con Intune.
-  - [Installare il connettore di certificati Microsoft](certificates-scep-configure.md#install-the-microsoft-intune-connector):
+  - [Installare il connettore di certificati Microsoft](certificates-scep-configure.md#install-the-microsoft-intune-connector).
 
 - Per usare i profili di certificato PKCS:
-  - [Installare il connettore di certificati PFX per Microsoft Intune](certificates-imported-pfx-configure.
+  - [Installare il connettore di certificati PFX per Microsoft Intune](certficates-pfx-configure.md).
   
 - Per usare i certificati PKCS importati:
   - [Installare il connettore di certificati PFX per Microsoft Intune](certificates-imported-pfx-configure.md#download-install-and-configure-the-pfx-certificate-connector-for-microsoft-intune).

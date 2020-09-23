@@ -6,7 +6,7 @@
     - name: Panoramica sulla protezione del dispositivo
       href: device-protect.md
       displayName: compliant; noncompliant; mfa
-- name: Avvi rapidi
+- name: Guide introduttive
   items:
     - name: Creare criteri di conformità dei dispositivi
       href: quickstart-set-password-length-android.md
@@ -23,6 +23,8 @@
     - name: Privacy e dati personali
       href: privacy-personal-data.md
       items:
+        - name: Dati di diagnostica facoltativi nelle app client
+          href: client-apps-optional-data.md
         - name: Raccolta dati
           href: privacy-data-collect.md
         - name: Archiviazione ed elaborazione dei dati

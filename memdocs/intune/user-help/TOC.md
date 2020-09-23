@@ -22,6 +22,7 @@
 ##### [Registrare con Intercede](enroll-android-device-intercede.md)
 ##### [Registrare con DISA Purebred](enroll-android-device-disa-purebred.md)
 ### [Passa alla configurazione della gestione dei nuovi dispositivi](move-to-new-device-management-setup.md)
+### [Usare Microsoft Tunnel per Android](use-microsoft-tunnel-android.md)
 ### [Usare le app gestite nel dispositivo](use-managed-apps-on-your-device-android.md)
 ### [Crittografare il dispositivo](encrypt-your-device-android.md)
 ### [Impostare il PIN o la password](set-your-pin-or-password-android.md)
@@ -71,7 +72,7 @@
 ##### [Registrare con Entrust Datacard](enroll-ios-device-entrust-datacard.md)
 ##### [Registrare con Intercede](enroll-ios-device-intercede.md)
 ##### [Registrare con DISA Purebred](enroll-ios-device-disa-purebred.md)
-
+### [Usare Microsoft Tunnel per iOS](use-microsoft-tunnel-iOS.md)
 
 ### [Usare le app gestite nel dispositivo](use-managed-apps-on-your-device-ios.md)
 ### [Impostare o modificare il passcode](set-or-change-your-passcode-ios.md)

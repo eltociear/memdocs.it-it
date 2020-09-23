@@ -153,6 +153,8 @@
               href: network-bandwidth-use.md
             - name: Uso di macchine virtuali Windows 10 con Intune
               href: windows-10-virtual-machines.md
+            - name: Uso di Desktop virtuale Windows con Intune
+              href: windows-virtual-desktop.md
             - name: Endpoint di Intune
               href: intune-endpoints.md
             - name: Endpoint del Governo degli Stati Uniti di Intune

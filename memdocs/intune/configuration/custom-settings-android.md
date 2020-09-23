@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/17/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8012b11557971ff8a7e3a05360243010d891fa2e
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: b5f08f4ce77bf068ac67e6a83e4e15e9a11f6e2d
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262779"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814859"
 ---
 # <a name="use-custom-settings-for-android-devices-in-microsoft-intune"></a>Usare le impostazioni personalizzate per i dispositivi Android in Microsoft Intune
 
@@ -50,7 +50,7 @@ Questo articolo descrive come creare un profilo personalizzato per i dispositivi
 
     - **Nome**: immettere un nome descrittivo per il profilo. Assegnare ai profili nomi che possano essere identificati facilmente in un secondo momento. Un nome di profilo valido, ad esempio, è **Profilo personalizzato Android**.
     - **Descrizione**: Immettere una descrizione del profilo. Questa impostazione è facoltativa ma consigliata.
-    - **Piattaforma**: Selezionare **Android**.
+    - **Piattaforma**: Selezionare **Amministratore di dispositivi Android**.
     - **Tipo di profilo**: Selezionare **Personalizzato**.
 
 4. In **Impostazioni OMA-URI personalizzate** selezionare **Aggiungi**. Immettere le impostazioni seguenti:

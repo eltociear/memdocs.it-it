@@ -115,6 +115,14 @@
               href: encrypt-devices-filevault.md
             - name: Monitorare la crittografia del disco
               href: encryption-monitor.md
+    - name: Microsoft Tunnel
+      items:
+        - name: Panoramica di Microsoft Tunnel
+          href: microsoft-tunnel-overview.md
+        - name: Configurare Microsoft Tunnel
+          href: microsoft-tunnel-configure.md
+        - name: Monitorare Microsoft Tunnel
+          href: microsoft-tunnel-monitor.md
     - name: Protezione dell'identità
       items:
         - name: Windows Hello
@@ -338,6 +346,8 @@
           href: security-baseline-settings-defender-atp.md
         - name: Impostazioni delle baseline di Microsoft Edge
           href: security-baseline-settings-edge.md
+    - name: Strumenti da riga di comando di Microsoft Tunnel
+      href: microsoft-tunnel-reference.md
     - name: Impostazioni aggiornamento di Windows
       href: windows-update-settings.md
     - name: Codici di errore e descrizioni

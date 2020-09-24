@@ -3,19 +3,19 @@ title: Sicurezza e privacy per gli aggiornamenti software
 titleSuffix: Configuration Manager
 description: Seguire queste procedure consigliate per gli aggiornamenti software ed esaminare le informazioni sulla modalità di gestione delle informazioni sulla privacy di Configuration Manager.
 manager: dougeby
-ms.date: 10/06/2016
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 41d6d5d8-ba84-4efb-b105-4d1eed239824
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 5c7a1ac5e88aa669ae1d5e6bb9333e1f54fb5980
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0838f43abf7ff972ac3f6ca2cdf44dcafda323ca
+ms.sourcegitcommit: 6176a7825d6c663faa318a6818b7764bc70f08fc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708729"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90718723"
 ---
 # <a name="security-and-privacy-for-software-updates-in-configuration-manager"></a>Sicurezza e privacy per gli aggiornamenti software in Configuration Manager
 
@@ -42,7 +42,9 @@ Questo argomento contiene informazioni sulla sicurezza e la privacy per gli aggi
 
 -   Attivare SSL in WSUS (Windows Server Update Services) e seguire le procedure ottimali per la protezione di WSUS.  
 
-     Individuare e seguire le procedure di sicurezza consigliate per la versione di WSUS in uso con Configuration Manager.  
+     Individuare e seguire le procedure di sicurezza consigliate per la versione di WSUS in uso con Configuration Manager. 
+
+     Per altre informazioni sull'abilitazione di SSL, vedere l'esercitazione [Configurare un punto di aggiornamento software per l'uso di TLS/SSL con un certificato PKI](../get-started/software-update-point-ssl.md). 
 
     > [!IMPORTANT]  
     >  Se si configura il punto di aggiornamento software per attivare le comunicazioni SSL per il server WSUS, è necessario configurare radici virtuali per SSL nel server WSUS.  
@@ -57,7 +59,7 @@ Questo argomento contiene informazioni sulla sicurezza e la privacy per gli aggi
 
      Quando si installa WSUS nel punto di aggiornamento software, è possibile scegliere di utilizzare il sito Web IIS predefinito o di creare un sito Web WSUS personalizzato. Creare un sito Web personalizzato per WSUS in modo che IIS ospiti i servizi WSUS in un sito Web virtuale dedicato invece di condividere lo stesso sito Web usato dagli altri sistemi del sito di Configuration Manager o da altre applicazioni.  
 
-     Per altre informazioni, vedere [Configurare WSUS per l'uso di un sito Web personalizzato](plan-for-software-updates.md#BKMK_CustomWebSite).  
+     Per altre informazioni, vedere [Configure WSUS to use a custom web site](plan-for-software-updates.md#BKMK_CustomWebSite).  
 
 ##  <a name="privacy-information-for-software-updates"></a><a name="BKMK_Privacy_HardwareInventory"></a> Informazioni sulla privacy per gli aggiornamenti software  
  Gli aggiornamenti software consentono di esaminare i computer del client per stabilire quali aggiornamenti software sono necessari, quindi reinviano le informazioni al database del sito. Durante il processo di aggiornamento del software, Configuration Manager può trasmettere le informazioni tra i client e i server che identificano gli account di accesso e del computer.  

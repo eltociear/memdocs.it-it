@@ -10,12 +10,12 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 37abb7cba84c8e2479e59070e47c3f09b3b2b8d9
-ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
+ms.openlocfilehash: 49792ea588f01cc57a1dbce9cc137b94a0e4d291
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89606966"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574797"
 ---
 # <a name="task-sequence-steps"></a>Passaggi della sequenza di attività
 
@@ -1096,8 +1096,9 @@ Se il disco rigido è già crittografato ma BitLocker è disabilitato, il passag
 
 Usare le variabili della sequenza di attività seguenti con questo passaggio:  
 
-- [OSDBitLockerRecoveryPassword](task-sequence-variables.md#OSDBitLockerRecoveryPassword)  
-- [OSDBitLockerStartupKey](task-sequence-variables.md#OSDBitLockerStartupKey)  
+- [OSDBitLockerPIN](task-sequence-variables.md#OSDBitLockerPIN)
+- [OSDBitLockerRecoveryPassword](task-sequence-variables.md#OSDBitLockerRecoveryPassword)
+- [OSDBitLockerStartupKey](task-sequence-variables.md#OSDBitLockerStartupKey)
 
 ### <a name="cmdlets-for-enable-bitlocker"></a>Cmdlet per Attiva BitLocker
 
@@ -1592,12 +1593,20 @@ Usare questo passaggio per rimuovere o configurare il client di Configuration Ma
 
 Questo passaggio rimuove completamente il client di Configuration Manager, invece di rimuovere solo le informazioni sulla chiave. Quando la sequenza di attività distribuisce l'immagine del sistema operativo acquisita, installa ogni volta un nuovo client di Configuration Manager.  
 
-> [!Note]  
-> Il motore di esecuzione della sequenza di attività rimuove il client solo durante la sequenza di attività **Crea e acquisisci un'immagine del sistema operativo di riferimento**. Il motore di esecuzione della sequenza di attività non rimuove il client durante l'esecuzione di altri metodi di acquisizione, quali Acquisisci supporto o una sequenza di attività personalizzata.  
+> [!TIP]
+> Per impostazione predefinita, il motore della sequenza di attività rimuove il client solo durante la sequenza di attività **Crea e acquisisci un'immagine del sistema operativo di riferimento**. Il motore di esecuzione della sequenza di attività non rimuove il client durante l'esecuzione di altri metodi di acquisizione, quali Acquisisci supporto o una sequenza di attività personalizzata. È possibile sostituire questo comportamento per una sequenza di attività di distribuzione del sistema operativo. Impostare la variabile della sequenza di attività **SMSTSUninstallCCMClient** su **TRUE** prima del passaggio **Prepara client ConfigMgr per l'acquisizione**. Questa variabile e questo comportamento si applicano solo alle sequenze di attività di distribuzione del sistema operativo. Il client viene rimosso dopo il riavvio successivo del dispositivo.
 
 Questo passaggio della sequenza di attività viene eseguito solo nel sistema operativo completo. Non viene eseguito in Windows PE.  
 
 Per aggiungere questo passaggio nell'editor della sequenza di attività, selezionare **Aggiungi**, selezionare **Immagini** e quindi selezionare **Prepara client ConfigMgr per l'acquisizione**.
+
+
+### <a name="variables-for-prepare-configmgr-client-for-capture"></a>Variabili per Prepara client ConfigMgr per l'acquisizione
+
+Usare le variabili della sequenza di attività seguenti con questo passaggio:  
+
+- SMSTSUninstallCCMClient
+
 
 ### <a name="cmdlets-for-prepare-configmgr-client-for-capture"></a>Cmdlet per Prepara client ConfigMgr per l'acquisizione
 

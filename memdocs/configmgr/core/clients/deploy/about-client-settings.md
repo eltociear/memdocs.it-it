@@ -2,7 +2,7 @@
 title: Impostazioni client
 titleSuffix: Configuration Manager
 description: Informazioni sulle impostazioni predefinite e personalizzate per il controllo dei comportamenti client
-ms.date: 08/20/2020
+ms.date: 09/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8045df681560972a353e08ee43c10b6ae86dc50f
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 9e44c67e2dd7c78787d849e84784a39c40125dc0
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88693421"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076091"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Informazioni sulle impostazioni client in Configuration Manager
 
@@ -644,11 +644,9 @@ Impostare questa opzione su **Sì** per stabilire connessioni Desktop remoto a c
 ### <a name="select-the-user-portal"></a>Selezionare il portale per gli utenti
 
 <!--CMADO-3601237,INADO-4297660-->
-A partire dalla versione 2006, se si distribuisce il Portale aziendale a dispositivi co-gestiti, configurare questa impostazione su **Portale aziendale**. Questa impostazione assicura che gli utenti ricevano notifiche solo dal Portale aziendale.
+A partire dalla versione 2006, se si distribuisce il Portale aziendale a dispositivi co-gestiti, configurare questa impostazione su **Portale aziendale**. Questa impostazione garantisce che le notifiche di Configuration Manager e Intune avviino entrambe il Portale aziendale. Se una notifica di Configuration Manager riguarda uno scenario non supportato dal Portale aziendale, la selezione della notifica avvia Software Center.
 
-Se si installa il Portale aziendale in un dispositivo co-gestito, ma si configura questa impostazione su **Software Center**, gli utenti visualizzeranno le notifiche di entrambi i portali. Questa esperienza può essere disorientante per gli utenti.
-
-Se si cambia l'impostazione client per il Portale aziendale, quando un utente seleziona una notifica di Configuration Manager, viene avviato il Portale aziendale. Se la notifica riguarda uno scenario non supportato dal Portale aziendale, la selezione della notifica avvia Software Center.
+Se si installa il Portale aziendale in un dispositivo con co-gestione, ma si configura questa impostazione specificando **Software Center**, le notifiche di Configuration Manager avvieranno Software Center. Le notifiche di Intune avviano il Portale aziendale. Questo comportamento può confondere gli utenti che interagiscono con portali diversi.
 
 Il comportamento del Portale aziendale varia a seconda della configurazione del carico di lavoro di co-gestione. Per altre informazioni, vedere [Usare l'app Portale aziendale in dispositivi con co-gestione](../../../comanage/company-portal.md).
 

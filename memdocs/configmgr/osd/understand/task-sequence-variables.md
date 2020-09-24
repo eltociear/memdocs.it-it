@@ -10,12 +10,12 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 86a19970b58747d83ae8823eb8e2a85c40c03c4d
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 852ab8b709dcec90d7819a63a6cb6dbb2c781534
+ms.sourcegitcommit: 2339c927b6576db8878f34f167a9a45c5dc9f58d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88697348"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90689464"
 ---
 # <a name="task-sequence-variables"></a>Variabili della sequenza di attività
 
@@ -579,6 +579,12 @@ Se nel catalogo driver ci sono più driver di dispositivo compatibili con un dis
 (input)
 
 Elenco delimitato da virgole di ID categoria univoci del catalogo driver. Il passaggio **Applica automaticamente i driver** considera solo i driver in almeno una delle categorie specificate. Questo valore è facoltativo e non specificato per impostazione predefinita. Ottenere gli ID categoria disponibili enumerando l'elenco di oggetti **SMS_CategoryInstance** nel sito.
+
+### <a name="osdbitlockerpin"></a><a name="OSDBitLockerPIN"></a> OSDBitLockerPIN
+<!-- MEMDOcs #764 -->
+*Si applica al passaggio [Attiva BitLocker](task-sequence-steps.md#BKMK_EnableBitLocker).*
+
+Specificare il PIN per la crittografia BitLocker. Questa variabile è valida solo se la modalità BitLocker è **TPM e PIN**.
 
 ### <a name="osdbitlockerrebootcount"></a><a name="OSDBitLockerRebootCount"></a> OSDBitLockerRebootCount
 
@@ -1645,7 +1651,9 @@ usare questa variabile per mantenere temporaneamente il contenuto nella cache de
 
 ### <a name="smstspostaction"></a><a name="SMSTSPostAction"></a> SMSTSPostAction
 
-Specifica un comando che viene eseguito al termine della sequenza di attività. Ad esempio, specificare `shutdown.exe /r /t 30 /f` per riavviare il computer 30 secondi dopo il completamento della sequenza di attività.
+Specifica un comando che viene eseguito al termine della sequenza di attività. Appena prima di uscire dalla sequenza di attività, il processo TSManager genera l'azione successiva specificata. Non attende né registra alcuno stato, si chiude dopo aver chiamato il comando.<!-- MEMDocs #719 -->
+
+Ad esempio, specificare `shutdown.exe /r /t 30 /f` per riavviare il computer 30 secondi dopo il completamento della sequenza di attività.
 
 ### <a name="smstspreferredadvertid"></a><a name="SMSTSPreferredAdvertID"></a> SMSTSPreferredAdvertID
 

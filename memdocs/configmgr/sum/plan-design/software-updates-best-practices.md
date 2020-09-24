@@ -5,17 +5,17 @@ description: Usare queste procedure consigliate per aggiornamenti software in Co
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 07/30/2018
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 6d20389a-9de2-4a64-bced-9fc4fa519174
-ms.openlocfilehash: 3a48ce044f3d1aecbebf2ba93e936dd34b904140
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 2809a6852cc3739cfe48418580ba464c3abe956a
+ms.sourcegitcommit: 6176a7825d6c663faa318a6818b7764bc70f08fc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696639"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90718689"
 ---
 # <a name="best-practices-for-software-updates-in-configuration-manager"></a>Procedure consigliate per aggiornamenti software in Configuration Manager
 
@@ -53,7 +53,8 @@ Se i database di WSUS e Configuration Manager condividono la stessa istanza di S
 
 Quando si installa WSUS, selezionare l'impostazione **Archivia aggiornamenti in locale**. Questa impostazione fa in modo che WSUS scarichi le condizioni di licenza associate agli aggiornamenti software. Le condizioni vengono scaricate durante il processo di sincronizzazione e vengono archiviate nel disco rigido locale per il server WSUS. Se non si seleziona questa impostazione, i computer client potrebbero non completare le analisi di conformità per gli aggiornamenti software che hanno le condizioni di licenza. Il componente **Gestione sincronizzazione WSUS** del punto di aggiornamento software verifica che questa impostazione sia abilitata ogni 60 minuti, per impostazione predefinita.  
 
-
+### <a name="configure-your-software-update-points-to-use-tlsssl"></a><a name="bkmk_ssl"></a> Configurare i punti di aggiornamento software per l'uso di TLS/SSL
+La configurazione dei server Windows Server Update Services (WSUS) e dei punti di aggiornamento software corrispondenti per l'uso di TLS/SSL può limitare la capacità di utenti malintenzionati di attaccare un client in remoto ed elevare i privilegi. Per garantire l'applicazione dei protocolli di sicurezza ottimali, è consigliabile usare il protocollo TLS/SSL per proteggere l'infrastruttura di aggiornamento software. Per altre informazioni, vedere l'esercitazione [Configurare un punto di aggiornamento software per l'uso di TLS/SSL con un certificato PKI](../get-started/software-update-point-ssl.md).
 
 ## <a name="operational-best-practices"></a><a name="bkmk_operation"></a> Procedure operative consigliate  
 

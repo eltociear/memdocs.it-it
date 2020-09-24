@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5e9c911929dd5a99c6b63beed9c6b221e69e9b25
-ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
+ms.openlocfilehash: eef375cad028a6903a0fa28d1cc3f7562bcebf6f
+ms.sourcegitcommit: 2339c927b6576db8878f34f167a9a45c5dc9f58d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89607552"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90689413"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Preparare l'uso di gruppi di disponibilità Always On di SQL Server con Configuration Manager
 
@@ -390,6 +390,9 @@ Impostare il modello di recupero del database del sito su **Completo**. Questa c
 Se almeno uno dei nodi del gruppo di disponibilità continua a funzionare, usare l'opzione di ripristino del sito **Ignora ripristino database (utilizzare questa opzione se non si sono verificati errori nel database del sito)** .
 
 A partire dalla versione 1906, con il ripristino del sito è possibile ricreare il database in un gruppo SQL Always On. Questo processo funziona con il seeding sia manuale che automatico.<!-- SCCMDocs-pr#3846 -->
+
+> [!TIP]
+> Quando si esegue l'installazione o il ripristino guidato, la pagina **Nuovo database del gruppo di disponibilità** si applica solo alle configurazioni di seeding manuale. Con il seeding automatico, poiché non è disponibile un backup di database condiviso, la pagina della procedura guidata non viene visualizzata.<!-- SCCMDocs #2242 -->
 
 Nella versione 1902 e nelle versioni precedenti se tutti i nodi di un gruppo di disponibilità sono andati perduti, prima di poter ripristinare il sito è necessario ricreare il gruppo di disponibilità. Configuration Manager non è in grado di ricompilare o ripristinare il nodo di disponibilità. Ricreare il gruppo, ripristinare il backup e riconfigurare SQL. Quindi usare l'opzione di ripristino sito **Ignora ripristino database (utilizzare questa opzione se non si sono verificati errori nel database del sito)** .
 

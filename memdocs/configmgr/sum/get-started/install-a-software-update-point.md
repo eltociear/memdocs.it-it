@@ -5,17 +5,17 @@ description: I siti primari richiedono un punto di aggiornamento software nel si
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/27/2019
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b099a645-6434-498f-a408-1d438e394396
-ms.openlocfilehash: 0cddb8df51624a562597da17ea310db0a26081f3
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1f3ab3c108a7f8481aee84b6df5cd41b4b186246
+ms.sourcegitcommit: 6176a7825d6c663faa318a6818b7764bc70f08fc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696929"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90718842"
 ---
 # <a name="install-and-configure-a-software-update-point"></a>installare e configurare un punto di aggiornamento software  
 
@@ -69,7 +69,7 @@ ms.locfileid: "81696929"
 ### <a name="configure-ssl-communications-to-wsus"></a>Configurare le comunicazioni SSL in WSUS  
  È possibile configurare la comunicazione SSL nella pagina **Generale** della procedura guidata o nella scheda **Generale** nelle proprietà del punto di aggiornamento software.  
 
- Per altre informazioni su come usare SSL, vedere [Decide whether to configure WSUS to use SSL](../plan-design/plan-for-software-updates.md#BKMK_WSUSandSSL).  
+ Per altre informazioni sull'uso di SSL, vedere [Decidere se configurare WSUS per l'uso di SSL](../plan-design/plan-for-software-updates.md#BKMK_WSUSandSSL) e [Configurare un punto di aggiornamento software per l'uso di TLS/SSL con un certificato PKI](../get-started/software-update-point-ssl.md).  
 
 ### <a name="wsus-server-connection-account"></a>Account di connessione al server WSUS  
  È possibile configurare un account che il server del sito utilizzerà per connettersi a WSUS in esecuzione nel punto di aggiornamento software. Se non si configura questo account, Configuration Manager si connette a WSUS tramite l'account computer del server del sito. Configurare l'account di connessione al server WSUS nella pagina **Impostazioni proxy e account** della procedura guidata o nella scheda **Impostazioni proxy e account** nelle proprietà del punto di aggiornamento software.  È possibile configurare l'account nelle pagine della procedura guidata a seconda della versione di Configuration Manager in uso.  

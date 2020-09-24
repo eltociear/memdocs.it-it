@@ -2,7 +2,7 @@
 title: Monitorare i client
 titleSuffix: Configuration Manager
 description: Informazioni su come monitorare i client in Configuration Manager
-ms.date: 07/12/2019
+ms.date: 09/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2c8f57cf-1968-48de-87fb-4897432ed6e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 00a10e169db36c62b083c56114159b54185a1040
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: 8094db944a1430311f0c3bb8c94bc7043b12c5ae
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87525914"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574618"
 ---
 # <a name="how-to-monitor-clients-in-configuration-manager"></a>Come monitorare i client in Configuration Manager
 
@@ -76,11 +76,11 @@ Configuration Manager offre i seguenti tipi di informazioni come stato del clien
 <!--3599209-->
 La distribuzione di aggiornamenti software e altre app per proteggere l'ambiente raggiunge solo i client integri. I client di Configuration Manager non integri hanno effetti negativi sulla conformità complessiva. Determinare lo stato del client può essere difficile e molto dipende dalla base di partenza, ovvero dal numero totale di dispositivi nell'ambito di gestione. Ad esempio, se si rilevano tutti i sistemi di Active Directory, anche se alcuni record provengono da computer ritirati, il processo aumenta la base di partenza.
 
-A partire dalla versione 1902 è possibile visualizzare un dashboard con informazioni sull'integrità dei client di Configuration Manager nell'ambiente in uso. Il dashboard consente di visualizzare l'integrità dei client, l'integrità dello scenario e gli errori più comuni. È possibile filtrare la visualizzazione per diversi attributi per visualizzare i potenziali problemi per versione del sistema operativo e client.
+Configuration Manager offre un dashboard con informazioni sull'integrità dei client nell'ambiente. Il dashboard consente di visualizzare l'integrità dei client, l'integrità dello scenario e gli errori più comuni. È possibile filtrare la visualizzazione per diversi attributi per visualizzare i potenziali problemi per versione del sistema operativo e client.
 
 Nella console di Configuration Manager passare all'area di lavoro **Monitoraggio**. Espandere **Stato client** e selezionare il nodo **Dashboard sull'integrità del client**.
 
-![Screenshot del dashboard sull'integrità del client](media/3599209-client-health-dashboard.png)
+:::image type="content" source="media/3599209-client-health-dashboard.png" alt-text="Screenshot del dashboard sull'integrità del client" lightbox="media/3599209-client-health-dashboard.png":::
 
 > [!Tip]  
 > Nessuna modifica per ccmeval.  
@@ -91,18 +91,18 @@ Per impostazione predefinita, il dashboard sull'integrità del client mostra i c
 
 Nella parte superiore del dashboard è presente un set di filtri per modificare i dati visualizzati.
 
-- **Raccolta**: per impostazione predefinita, i dispositivi nel dashboard vengono visualizzati nella raccolta **Tutti i sistemi**. Selezionare una raccolta di dispositivi dall'elenco per limitare l'ambito della visualizzazione a un sottoinsieme di dispositivi in una raccolta specifica.  
+- **Integrità del client per i client nelle raccolte seguenti**: per impostazione predefinita, i dispositivi nel dashboard vengono visualizzati nella raccolta **Tutti i sistemi**. Selezionare una raccolta di dispositivi per limitare l'ambito della visualizzazione a un sottoinsieme di dispositivi in una raccolta specifica.  
 
-- **Online/offline**: per impostazione predefinita, nel dashboard vengono visualizzati solo i client online. Questo stato deriva dal canale di notifica client che aggiorna lo stato del client ogni cinque minuti. Per altre informazioni, vedere [Informazioni sullo stato del client](monitor-clients.md#bkmk_about).  
+- **Client attivi nel numero di giorni recenti indicato**: per impostazione predefinita, nel dashboard vengono visualizzati i client attivi negli ultimi tre giorni.  
 
-- **Active \# days** (N. giorni attività): per impostazione predefinita, nel dashboard vengono visualizzati i client attivi negli ultimi tre giorni.  
+- **Includi l'integrità del client per i client offline**: per impostazione predefinita, nel dashboard vengono visualizzati solo i client online. Questo stato deriva dal canale di notifica client che aggiorna lo stato del client ogni cinque minuti. Per altre informazioni, vedere [Informazioni sullo stato del client](monitor-clients.md#bkmk_about).  
 
-- **Failure only** (Solo errore): consente di limitare la visualizzazione solo ai dispositivi che segnalano un errore di integrità del client.  
+- **Mostra i dettagli solo dei client non integri**: consente di limitare la visualizzazione solo ai dispositivi che segnalano un errore di integrità del client.  
 
     > [!Tip]  
     > Usare questo filtro con i riquadri della versione del client e del sistema operativo. Per altre informazioni, vedere [Riquadri versione](#version-tiles).
 
-### <a name="client-health-percentage"></a>Percentuale di integrità del client
+### <a name="overall-client-health"></a>Integrità complessiva del client
 
 Questo riquadro illustra l'integrità complessiva dei client nella gerarchia.
 

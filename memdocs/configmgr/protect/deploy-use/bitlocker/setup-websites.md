@@ -2,7 +2,7 @@
 title: Configurare i portali di BitLocker
 titleSuffix: Configuration Manager
 description: Installare i componenti di gestione BitLocker per il portale self-service e il sito Web di amministrazione e monitoraggio
-ms.date: 08/11/2020
+ms.date: 09/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: how-to
@@ -10,12 +10,12 @@ ms.assetid: 1cd8ac9f-b7ba-4cf4-8cd2-d548b0d6b1df
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d1b07d30c7a593ec0bd70e6c330c57364186f2c8
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: f6834090cd2a58113fb26e298c0c451f846f5ce9
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88697263"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574593"
 ---
 # <a name="set-up-bitlocker-portals"></a>Configurare i portali di BitLocker
 
@@ -106,6 +106,8 @@ Questo processo usa uno script di PowerShell, MBAMWebSiteInstaller.ps1, per inst
 - `-IISWebSite`: il sito Web in cui lo script installa le applicazioni Web di MBAM. Per impostazione predefinita, usa il sito Web IIS predefinito. Creare il sito Web personalizzato prima di usare questo parametro.
 
 - `-InstallDirectory`: il percorso in cui lo script installa i file dell'applicazione Web. Per impostazione predefinita, il percorso è `C:\inetpub`. Creare la directory personalizzata prima di usare questo parametro.
+
+- `-DomainName` *si applica alla versione 2002 e successive*: specificare il nome di dominio NetBIOS del server con help desk o ruolo del portale Web self-service. È necessario solo se il nome di dominio NetBIOS non corrisponde al nome di dominio DNS. Questa configurazione è nota anche come spazio dei nomi di dominio indipendente. Ad esempio, `-DomainName fabrikham` dove il nome di dominio DNS è `contoso.com`.<!-- MEMDocs #759 -->
 
 - `-Uninstall`: disinstalla i siti del portale Web help desk/self-service di Gestione di BitLocker da un server Web in cui sono stati installati in precedenza.
 

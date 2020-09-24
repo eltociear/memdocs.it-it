@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-ms.openlocfilehash: 51e64f8f815c4ba90522acf6529cff4d971dd553
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 62f5059ef02d7b2594a506135abf332a8b6c0def
+ms.sourcegitcommit: 4b8c317c71535c2d464f336c03b5bebdd2c6d4c9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699807"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90083897"
 ---
 # <a name="integrate-with-windows-update-for-business"></a>Integrare Windows Update per le aziende
 
@@ -90,9 +90,9 @@ Per altre informazioni sul programma Windows Insider, vedere [Introduzione al pr
     - **Livello di conformità con Branch**: impostare il ramo per cui il dispositivo riceverà gli aggiornamenti di Windows. Scegliere il canale semestrale (mirato), il canale semestrale o una build di Windows Insider.
 
         > [!NOTE]
-        > Distribuire i criteri per **Canale semestrale (mirato)** a Windows 10, *versione 1903 o successiva*. Distribuire i criteri per **Canale semestrale** a Windows 10, *versione 1809 o precedente*.
+        > Distribuire i criteri per **Canale semestrale** a Windows 10, *versione 1903 o successiva*. Distribuire i criteri per **Canale semestrale (mirato)** a Windows 10, *versione 1809 o precedente*.
         >
-        > Se si distribuisce un criterio per **Canale semestrale** a Windows 10, versione 1903 o successiva, la distribuzione avrà esito negativo con l'errore **0x8004100C**.<!-- 5593139 -->
+        > Se si distribuisce un criterio per **Canale semestrale (mirato)** a Windows 10, versione 1903 o successiva, la distribuzione avrà esito negativo con l'errore **0x8004100c**.<!-- 5593139 -->
 
     - **Periodo di differimento (giorni)** :  specificare il numero di giorni per cui verranno posticipati gli aggiornamenti delle funzionalità. È possibile differire la ricezione di questi aggiornamenti delle funzionalità per massimo 365 giorni dopo il rilascio.
     - **Sospendi gli aggiornamenti delle funzionalità a partire da**: scegliere se sospendere la ricezione da parte dei dispositivi degli aggiornamenti delle funzionalità per un massimo di 35 giorni a partire dal momento in cui si sospendono gli aggiornamenti. Una volta trascorso il numero massimo di giorni, la sospensione della funzionalità scadrà automaticamente e il dispositivo analizzerà Windows Updates per gli aggiornamenti applicabili. Dopo questa analisi, è possibile sospendere nuovamente gli aggiornamenti. È possibile riprendere gli aggiornamenti delle funzionalità deselezionando la casella di controllo.

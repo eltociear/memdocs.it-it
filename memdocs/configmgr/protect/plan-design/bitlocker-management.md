@@ -2,7 +2,7 @@
 title: Pianificare la gestione di BitLocker
 titleSuffix: Configuration Manager
 description: Pianificare la gestione di Crittografia unità BitLocker con Configuration Manager
-ms.date: 08/11/2020
+ms.date: 09/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 22e78fdba1c004554d671ba2db96c61395f95ca2
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 193189e0e949aefdff15630476a306c1dc4ef2c7
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699960"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574532"
 ---
 # <a name="plan-for-bitlocker-management"></a>Pianificare la gestione di BitLocker
 
@@ -23,12 +23,12 @@ ms.locfileid: "88699960"
 
 <!-- 3601034 -->
 
-A partire dalla versione 1910, usare Configuration Manager per gestire Crittografia unità BitLocker per i client Windows locali aggiunti ad Active Directory. I client aggiunti ad Azure Active Directory o del gruppo di lavoro non sono supportati. Configuration Manager offre una gestione completa del ciclo di vita di BitLocker che può sostituire l'uso di Microsoft BitLocker Administration and Monitoring (MBAM).
+A partire dalla versione 1910, usare Configuration Manager per gestire Crittografia unità BitLocker per i client Windows locali aggiunti ad Active Directory. Configuration Manager offre una gestione completa del ciclo di vita di BitLocker che può sostituire l'uso di Microsoft BitLocker Administration and Monitoring (MBAM).
 
 > [!NOTE]
 > Configuration Manager non abilita questa funzionalità facoltativa per impostazione predefinita. Pertanto sarà necessario abilitarla prima di poterla usare. Per altre informazioni, vedere [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options) (Abilitare le funzioni facoltative dagli aggiornamenti).  
 
-Per altre informazioni, vedere [Panoramica di BitLocker](/windows/security/information-protection/bitlocker/bitlocker-overview).
+Per informazioni più generali su BitLocker, vedere [Panoramica di BitLocker](/windows/security/information-protection/bitlocker/bitlocker-overview).
 
 > [!TIP]
 > Per gestire la crittografia in dispositivi Windows 10 con co-gestione usando il servizio cloud Microsoft Endpoint Manager, spostare il [carico di lavoro **Endpoint Protection**](../../comanage/workloads.md#endpoint-protection) in Intune. Per altre informazioni sull'uso di Intune, vedere [Crittografia di Windows](/intune/protect/endpoint-protection-windows-10#windows-encryption).
@@ -71,6 +71,8 @@ Consentire ad altri utenti dell'organizzazione all'esterno della console di Conf
 Consentire agli utenti di ottenere in autonomia una chiave monouso per sbloccare un dispositivo crittografato con BitLocker. Una volta usata questa chiave, viene generata una nuova chiave per il dispositivo.
 
 ## <a name="prerequisites"></a>Prerequisiti
+
+- Non sono supportati i client aggiunti ad Azure Active Directory, i client di gruppo di lavoro o i client in domini non attendibili. Attualmente il client deve essere aggiunto ad Active Directory in locale. Questa configurazione consente di eseguire l'autenticazione con il servizio di ripristino per le chiavi del deposito.
 
 - Per creare un criterio di gestione di BitLocker, è necessario il ruolo di **amministratore completo** in Configuration Manager.
 

@@ -10,12 +10,12 @@ ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 17c22027ffc28f2e04e95b8223de27b8f26489fd
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: fff07351725e6606a49804bba79f226a9042c349
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698487"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039347"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Account usati in Configuration Manager
 
@@ -336,7 +336,7 @@ L'account deve essere membro del gruppo **Administrators** locale nei computer c
 > 4. A questo punto, rimuovere il vecchio account da Configuration Manager e dai servizi di dominio Active Directory  
 
 > [!IMPORTANT]  
-> Non concedere a questo account il diritto di accesso locale.  
+> Usare criteri di gruppo locali o di dominio per assegnare il diritto di utente di Windows a **Nega accesso locale**. Come membro del gruppo Amministratori, questo account avrà il diritto di accedere localmente, anche se non necessario. Per una maggiore sicurezza, negare in modo esplicito il diritto per questo account. Il diritto Nega sostituisce il diritto Consenti.<!--MEMDocs#744-->
 
 Per altre informazioni, vedere [Installazione push client](../../clients/deploy/plan/client-installation-methods.md#client-push-installation).
 

@@ -10,12 +10,12 @@ ms.assetid: 315e2613-dc71-46b1-80cb-26161d08103a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dc8aa57bda5f5a29d72af854be9a18e4f32760f8
-ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
+ms.openlocfilehash: 62d4e18fbd0c1d9346e25021a1b015f8146b747f
+ms.sourcegitcommit: 2339c927b6576db8878f34f167a9a45c5dc9f58d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89432541"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90689430"
 ---
 # <a name="integrate-with-power-bi-report-server"></a>Integrare il server di report di Power BI
 
@@ -70,6 +70,9 @@ Usare questo processo solo se si ha già un punto di Reporting Services nel sito
     1. Usare il database del server di report precedente.
 
     1. Usare **Configuration Manager del server di report** per ripristinare le **chiavi di crittografia**.
+
+    > [!TIP]
+    > Prima di aggiungere il ruolo del punto di Reporting Services in Configuration Manager, usare Configuration Manager in SQL Server Reporting Services per testare e verificare la configurazione. Per altre informazioni, vedere [Installare SQL Server Reporting Services](configuring-reporting.md#verify-sql-server-reporting-services-installation).<!-- MEMDocs #713 -->
 
 1. Aggiungere il ruolo del punto di Reporting Services in Configuration Manager.
 

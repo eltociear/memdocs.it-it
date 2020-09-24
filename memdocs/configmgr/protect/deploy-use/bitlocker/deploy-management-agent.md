@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8ef60b82e6ab594689576520443bc74eac7bd17d
-ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
+ms.openlocfilehash: 018b8f09b0f5595c854eee761f495974665a45ce
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89606929"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574679"
 ---
 # <a name="deploy-bitlocker-management"></a>Distribuire la gestione di BitLocker
 
@@ -214,7 +214,8 @@ Per risolvere questo problema, disabilitare prima di tutto BitLocker nel disposi
 
 Il gestore del client Gestione configurazione per BitLocker è dotato di riconoscimento della co-gestione. Se il dispositivo è co-gestito e si passa il [carico di lavoro Endpoint Protection](../../../comanage/workloads.md#endpoint-protection) a Intune, il client Configuration Manager ignora i criteri di BitLocker. Il dispositivo ottiene i criteri di crittografia di Windows da Intune.
 
-Quando si cambiano le autorità di gestione della crittografia e viene modificato anche l'algoritmo di crittografia prescelto, è necessario pianificare una [nuova esecuzione della crittografia](#re-encryption).
+> [!NOTE]
+> Il cambio delle autorità di gestione della crittografia mantenendo l'algoritmo di crittografia desiderato non richiede alcuna azione aggiuntiva nel client. Tuttavia, se si cambiano le autorità di gestione della crittografia e viene modificato anche l'algoritmo di crittografia prescelto, è necessario pianificare una [nuova esecuzione della crittografia](#re-encryption).
 
 Per altre informazioni sulla gestione di BitLocker con Intune, vedere gli articoli seguenti:
 
